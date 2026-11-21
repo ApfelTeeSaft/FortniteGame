@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWeap_WannaGun();  // RVA 0x010D4950 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4350 (end 0x010D4372)
+// Original VA: 0x00000001410D4350 | File offset: 0x010D3950
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0342A558) | Matching: see analysis/functions-uht-natives.json
+void AFortWeap_WannaGun::StaticRegisterNativesAFortWeap_WannaGun()
+{
+	UClass* Class = AFortWeap_WannaGun::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_LastHitActorClass", &AFortWeap_WannaGun::execOnRep_LastHitActorClass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

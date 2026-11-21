@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_NetworkSyncPoint::StaticRegisterNativesUAbilityTask_NetworkSyncPoint()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_NetworkSyncPoint, 1999078126u)
 // Original dynamic initializer: RVA 0x0009D4A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_NetworkSyncPoint> AutoInitializeUAbilityTask_NetworkSyncPoint(TEXT("UAbilityTask_NetworkSyncPoint"), sizeof(UAbilityTask_NetworkSyncPoint), 1999078126u);

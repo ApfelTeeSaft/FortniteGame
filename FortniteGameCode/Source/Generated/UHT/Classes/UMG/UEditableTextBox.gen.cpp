@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UEditableTextBox::StaticRegisterNativesUEditableTextBox()
-{
-}
 // IMPLEMENT_CLASS(UEditableTextBox, 3168398233u)
 // Original dynamic initializer: RVA 0x001B1E80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UEditableTextBox> AutoInitializeUEditableTextBox(TEXT("UEditableTextBox"), sizeof(UEditableTextBox), 3168398233u);

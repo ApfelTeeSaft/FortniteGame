@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortQuickBars::StaticRegisterNativesAFortQuickBars()
-{
-}
 // IMPLEMENT_CLASS(AFortQuickBars, 3802736932u)
 // Original dynamic initializer: RVA 0x00111340 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortQuickBars> AutoInitializeAFortQuickBars(TEXT("AFortQuickBars"), sizeof(AFortQuickBars), 3802736932u);

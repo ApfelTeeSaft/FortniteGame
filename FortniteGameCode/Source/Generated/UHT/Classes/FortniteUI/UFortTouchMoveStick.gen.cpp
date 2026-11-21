@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortTouchMoveStick::StaticRegisterNativesUFortTouchMoveStick()
-{
-}
 // IMPLEMENT_CLASS(UFortTouchMoveStick, 848341596u)
 // Original dynamic initializer: RVA 0x0025E550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTouchMoveStick> AutoInitializeUFortTouchMoveStick(TEXT("UFortTouchMoveStick"), sizeof(UFortTouchMoveStick), 848341596u);

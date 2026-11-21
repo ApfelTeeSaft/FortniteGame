@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortClientAnnouncement_ConversationCodeInterface::StaticRegisterNativesUFortClientAnnouncement_ConversationCodeInterface()
-{
-}
 // IMPLEMENT_CLASS(UFortClientAnnouncement_ConversationCodeInterface, 515559724u)
 // Original dynamic initializer: RVA 0x000EB210 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortClientAnnouncement_ConversationCodeInterface> AutoInitializeUFortClientAnnouncement_ConversationCodeInterface(TEXT("UFortClientAnnouncement_ConversationCodeInterface"), sizeof(UFortClientAnnouncement_ConversationCodeInterface), 515559724u);

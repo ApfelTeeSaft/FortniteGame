@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAutomationPerfMonitorManager::StaticRegisterNativesUAutomationPerfMonitorManager()
-{
-}
 // IMPLEMENT_CLASS(UAutomationPerfMonitorManager, 1466068163u)
 // Original dynamic initializer: RVA 0x000D8830 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAutomationPerfMonitorManager> AutoInitializeUAutomationPerfMonitorManager(TEXT("UAutomationPerfMonitorManager"), sizeof(UAutomationPerfMonitorManager), 1466068163u);

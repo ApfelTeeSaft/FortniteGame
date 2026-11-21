@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonRotator::StaticRegisterNativesUCommonRotator()
-{
-}
 // IMPLEMENT_CLASS(UCommonRotator, 3290760359u)
 // Original dynamic initializer: RVA 0x000960C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonRotator> AutoInitializeUCommonRotator(TEXT("UCommonRotator"), sizeof(UCommonRotator), 3290760359u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortAbilityTask_WaitTargetSelection::StaticRegisterNativesUFortAbilityTask_WaitTargetSelection()
-{
-}
 // IMPLEMENT_CLASS(UFortAbilityTask_WaitTargetSelection, 3473961120u)
 // Original dynamic initializer: RVA 0x000DFE60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAbilityTask_WaitTargetSelection> AutoInitializeUFortAbilityTask_WaitTargetSelection(TEXT("UFortAbilityTask_WaitTargetSelection"), sizeof(UFortAbilityTask_WaitTargetSelection), 3473961120u);

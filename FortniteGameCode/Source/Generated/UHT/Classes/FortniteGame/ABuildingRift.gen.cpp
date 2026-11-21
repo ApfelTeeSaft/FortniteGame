@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingRift::StaticRegisterNativesABuildingRift()
-{
-}
 // IMPLEMENT_CLASS(ABuildingRift, 1147470807u)
 // Original dynamic initializer: RVA 0x000DB070 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingRift> AutoInitializeABuildingRift(TEXT("ABuildingRift"), sizeof(ABuildingRift), 1147470807u);

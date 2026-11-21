@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UMotionControllerComponent::StaticRegisterNativesUMotionControllerComponent()
-{
-}
 // IMPLEMENT_CLASS(UMotionControllerComponent, 4101280895u)
 // Original dynamic initializer: RVA 0x0019BC70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMotionControllerComponent> AutoInitializeUMotionControllerComponent(TEXT("UMotionControllerComponent"), sizeof(UMotionControllerComponent), 4101280895u);

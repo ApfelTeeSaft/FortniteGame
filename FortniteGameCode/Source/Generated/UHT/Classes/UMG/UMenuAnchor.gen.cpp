@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UMenuAnchor::StaticRegisterNativesUMenuAnchor()
-{
-}
 // IMPLEMENT_CLASS(UMenuAnchor, 1697996854u)
 // Original dynamic initializer: RVA 0x001B2800 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMenuAnchor> AutoInitializeUMenuAnchor(TEXT("UMenuAnchor"), sizeof(UMenuAnchor), 1697996854u);

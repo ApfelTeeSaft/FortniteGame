@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USceneCaptureComponent();  // RVA 0x024C6DB0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6B40 (end 0x024C6B62)
+// Original VA: 0x00000001424C6B40 | File offset: 0x024C6140
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A0620) | Matching: see analysis/functions-uht-natives.json
+void USceneCaptureComponent::StaticRegisterNativesUSceneCaptureComponent()
+{
+	UClass* Class = USceneCaptureComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearHiddenComponents", &USceneCaptureComponent::execClearHiddenComponents },
+		{ "ClearShowOnlyComponents", &USceneCaptureComponent::execClearShowOnlyComponents },
+		{ "HideActorComponents", &USceneCaptureComponent::execHideActorComponents },
+		{ "HideComponent", &USceneCaptureComponent::execHideComponent },
+		{ "RemoveShowOnlyActorComponents", &USceneCaptureComponent::execRemoveShowOnlyActorComponents },
+		{ "RemoveShowOnlyComponent", &USceneCaptureComponent::execRemoveShowOnlyComponent },
+		{ "SetCaptureSortPriority", &USceneCaptureComponent::execSetCaptureSortPriority },
+		{ "ShowOnlyActorComponents", &USceneCaptureComponent::execShowOnlyActorComponents },
+		{ "ShowOnlyComponent", &USceneCaptureComponent::execShowOnlyComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USceneCaptureComponent_ClearHiddenComponents_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

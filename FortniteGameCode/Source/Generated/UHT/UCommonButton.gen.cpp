@@ -6,6 +6,52 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonButton();  // RVA 0x002C2CA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2980 (end 0x002C29A2)
+// Original VA: 0x00000001402C2980 | File offset: 0x002C1F80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7BC90) | Matching: see analysis/functions-uht-natives.json
+void UCommonButton::StaticRegisterNativesUCommonButton()
+{
+	UClass* Class = UCommonButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearSelection", &UCommonButton::execClearSelection },
+		{ "DisableButton", &UCommonButton::execDisableButton },
+		{ "DisableButtonWithReason", &UCommonButton::execDisableButtonWithReason },
+		{ "EnableButton", &UCommonButton::execEnableButton },
+		{ "GetCurrentButtonPadding", &UCommonButton::execGetCurrentButtonPadding },
+		{ "GetCurrentCustomPadding", &UCommonButton::execGetCurrentCustomPadding },
+		{ "GetCurrentTextStyle", &UCommonButton::execGetCurrentTextStyle },
+		{ "GetCurrentTextStyleClass", &UCommonButton::execGetCurrentTextStyleClass },
+		{ "GetInputAction", &UCommonButton::execGetInputAction },
+		{ "GetSelected", &UCommonButton::execGetSelected },
+		{ "GetShouldSelectUponReceivingFocus", &UCommonButton::execGetShouldSelectUponReceivingFocus },
+		{ "GetSingleMaterialStyleMID", &UCommonButton::execGetSingleMaterialStyleMID },
+		{ "GetStyle", &UCommonButton::execGetStyle },
+		{ "HandleButtonClicked", &UCommonButton::execHandleButtonClicked },
+		{ "HandleButtonDoubleClicked", &UCommonButton::execHandleButtonDoubleClicked },
+		{ "HandleButtonPressed", &UCommonButton::execHandleButtonPressed },
+		{ "HandleButtonReleased", &UCommonButton::execHandleButtonReleased },
+		{ "HandleFocusReceived", &UCommonButton::execHandleFocusReceived },
+		{ "HandleTriggeringActionCommited", &UCommonButton::execHandleTriggeringActionCommited },
+		{ "IsHovered", &UCommonButton::execIsHovered },
+		{ "IsInteractionEnabled", &UCommonButton::execIsInteractionEnabled },
+		{ "IsPressed", &UCommonButton::execIsPressed },
+		{ "NativeOnActionComplete", &UCommonButton::execNativeOnActionComplete },
+		{ "NativeOnActionProgress", &UCommonButton::execNativeOnActionProgress },
+		{ "OnInputMethodChanged", &UCommonButton::execOnInputMethodChanged },
+		{ "SetInputActionProgressMaterial", &UCommonButton::execSetInputActionProgressMaterial },
+		{ "SetIsInteractionEnabled", &UCommonButton::execSetIsInteractionEnabled },
+		{ "SetIsSelectable", &UCommonButton::execSetIsSelectable },
+		{ "SetIsSelected", &UCommonButton::execSetIsSelected },
+		{ "SetIsToggleable", &UCommonButton::execSetIsToggleable },
+		{ "SetMinDimensions", &UCommonButton::execSetMinDimensions },
+		{ "SetSelectedInternal", &UCommonButton::execSetSelectedInternal },
+		{ "SetShouldSelectUponReceivingFocus", &UCommonButton::execSetShouldSelectUponReceivingFocus },
+		{ "SetStyle", &UCommonButton::execSetStyle },
+		{ "SetTriggeredInputAction", &UCommonButton::execSetTriggeredInputAction },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonButton_ClearSelection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

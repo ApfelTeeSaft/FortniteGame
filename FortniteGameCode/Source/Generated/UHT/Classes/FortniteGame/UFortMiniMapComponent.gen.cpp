@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMiniMapComponent::StaticRegisterNativesUFortMiniMapComponent()
-{
-}
 // IMPLEMENT_CLASS(UFortMiniMapComponent, 3832814101u)
 // Original dynamic initializer: RVA 0x00101070 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMiniMapComponent> AutoInitializeUFortMiniMapComponent(TEXT("UFortMiniMapComponent"), sizeof(UFortMiniMapComponent), 3832814101u);

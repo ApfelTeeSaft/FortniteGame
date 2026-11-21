@@ -6,6 +6,34 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIHotSpotSlot();  // RVA 0x00F59750 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59210 (end 0x00F59232)
+// Original VA: 0x0000000140F59210 | File offset: 0x00F58810
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0325FE80) | Matching: see analysis/functions-uht-natives.json
+void UAIHotSpotSlot::StaticRegisterNativesUAIHotSpotSlot()
+{
+	UClass* Class = UAIHotSpotSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearSlot", &UAIHotSpotSlot::execClearSlot },
+		{ "GetHotSpot", &UAIHotSpotSlot::execGetHotSpot },
+		{ "GetSlotBounds", &UAIHotSpotSlot::execGetSlotBounds },
+		{ "GetSlotHeight", &UAIHotSpotSlot::execGetSlotHeight },
+		{ "GetSlotIndex", &UAIHotSpotSlot::execGetSlotIndex },
+		{ "GetSlotLocation", &UAIHotSpotSlot::execGetSlotLocation },
+		{ "GetSlotOwner", &UAIHotSpotSlot::execGetSlotOwner },
+		{ "GetSlotRadius", &UAIHotSpotSlot::execGetSlotRadius },
+		{ "GetSlotRotation", &UAIHotSpotSlot::execGetSlotRotation },
+		{ "GetSlotState", &UAIHotSpotSlot::execGetSlotState },
+		{ "GetSlotUserId", &UAIHotSpotSlot::execGetSlotUserId },
+		{ "HasUserId", &UAIHotSpotSlot::execHasUserId },
+		{ "IsAIAllowed", &UAIHotSpotSlot::execIsAIAllowed },
+		{ "IsEnabled", &UAIHotSpotSlot::execIsEnabled },
+		{ "SetSlotEnabled", &UAIHotSpotSlot::execSetSlotEnabled },
+		{ "SetSlotOwnerAndState", &UAIHotSpotSlot::execSetSlotOwnerAndState },
+		{ "SetSlotState", &UAIHotSpotSlot::execSetSlotState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAIHotSpotSlot_ClearSlot_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

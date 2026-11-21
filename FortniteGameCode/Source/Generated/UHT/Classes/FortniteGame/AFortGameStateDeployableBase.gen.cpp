@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortGameStateDeployableBase::StaticRegisterNativesAFortGameStateDeployableBase()
-{
-}
 // IMPLEMENT_CLASS(AFortGameStateDeployableBase, 3922668074u)
 // Original dynamic initializer: RVA 0x000F75B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStateDeployableBase> AutoInitializeAFortGameStateDeployableBase(TEXT("AFortGameStateDeployableBase"), sizeof(AFortGameStateDeployableBase), 3922668074u);

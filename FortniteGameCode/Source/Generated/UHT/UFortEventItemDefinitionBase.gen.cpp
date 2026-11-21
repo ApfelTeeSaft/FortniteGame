@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortEventItemDefinitionBase();  // RVA 0x00FDB5E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAAC0 (end 0x00FDAAE2)
+// Original VA: 0x0000000140FDAAC0 | File offset: 0x00FDA0C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0330EDB8) | Matching: see analysis/functions-uht-natives.json
+void UFortEventItemDefinitionBase::StaticRegisterNativesUFortEventItemDefinitionBase()
+{
+	UClass* Class = UFortEventItemDefinitionBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateCalendarPayload", &UFortEventItemDefinitionBase::execCreateCalendarPayload },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortEventItemDefinitionBase_CreateCalendarPayload_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameplayEffectDeliveryActor();  // RVA 0x00FE7AC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE76A0 (end 0x00FE76C2)
+// Original VA: 0x0000000140FE76A0 | File offset: 0x00FE6CA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033268D0) | Matching: see analysis/functions-uht-natives.json
+void AFortGameplayEffectDeliveryActor::StaticRegisterNativesAFortGameplayEffectDeliveryActor()
+{
+	UClass* Class = AFortGameplayEffectDeliveryActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BroadcastExplosion", &AFortGameplayEffectDeliveryActor::execBroadcastExplosion },
+		{ "DoExplosion", &AFortGameplayEffectDeliveryActor::execDoExplosion },
+		{ "GetCollisionComponent", &AFortGameplayEffectDeliveryActor::execGetCollisionComponent },
+		{ "IsBeingKilled", &AFortGameplayEffectDeliveryActor::execIsBeingKilled },
+		{ "Kill", &AFortGameplayEffectDeliveryActor::execKill },
+		{ "KillTimerExpired", &AFortGameplayEffectDeliveryActor::execKillTimerExpired },
+		{ "OnComponentOverlap", &AFortGameplayEffectDeliveryActor::execOnComponentOverlap },
+		{ "OnComponentTouch", &AFortGameplayEffectDeliveryActor::execOnComponentTouch },
+		{ "OnRep_IsBeingKilled", &AFortGameplayEffectDeliveryActor::execOnRep_IsBeingKilled },
+		{ "SetCollisionComponent", &AFortGameplayEffectDeliveryActor::execSetCollisionComponent },
+		{ "SetIgnoreInstigatorCollision", &AFortGameplayEffectDeliveryActor::execSetIgnoreInstigatorCollision },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_BroadcastExplosion_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

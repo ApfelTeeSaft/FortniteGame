@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPvPMission_3PtDomination::StaticRegisterNativesAFortPvPMission_3PtDomination()
-{
-}
 // IMPLEMENT_CLASS(AFortPvPMission_3PtDomination, 3001989432u)
 // Original dynamic initializer: RVA 0x0010E710 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPvPMission_3PtDomination> AutoInitializeAFortPvPMission_3PtDomination(TEXT("AFortPvPMission_3PtDomination"), sizeof(AFortPvPMission_3PtDomination), 3001989432u);

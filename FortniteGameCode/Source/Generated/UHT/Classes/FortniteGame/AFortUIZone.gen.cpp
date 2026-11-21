@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortUIZone::StaticRegisterNativesAFortUIZone()
-{
-}
 // IMPLEMENT_CLASS(AFortUIZone, 4053324327u)
 // Original dynamic initializer: RVA 0x0011BEB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortUIZone> AutoInitializeAFortUIZone(TEXT("AFortUIZone"), sizeof(AFortUIZone), 4053324327u);

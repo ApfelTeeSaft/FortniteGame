@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDailyRewards();  // RVA 0x0289B400 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AEE0 (end 0x0289AF02)
+// Original VA: 0x000000014289AEE0 | File offset: 0x0289A4E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C82780) | Matching: see analysis/functions-uht-natives.json
+void UFortDailyRewards::StaticRegisterNativesUFortDailyRewards()
+{
+	UClass* Class = UFortDailyRewards::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FinishedClaiming", &UFortDailyRewards::execFinishedClaiming },
+		{ "TryGetDailyRewardsData", &UFortDailyRewards::execTryGetDailyRewardsData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

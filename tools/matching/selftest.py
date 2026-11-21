@@ -117,6 +117,33 @@ def test_literal_elimination() -> None:
     print("literal elimination: ok")
 
 
+def test_exec_thunks() -> None:
+    """UHT CppImplName rules and the thunk walker on a hand-assembled validated-RPC thunk."""
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "analysis"))
+    import capstone
+    import natives as N
+    net = N.FUNC_NATIVE | N.FUNC_NET
+    assert N.impl_names("ServerFoo", net | N.FUNC_NETVALIDATE) == ("ServerFoo_Implementation", "ServerFoo_Validate")
+    assert N.impl_names("ClientBar", net) == ("ClientBar_Implementation", None)
+    assert N.impl_names("Resp", net | N.FUNC_NETRESPONSE) == ("Resp", None)
+    assert N.impl_names("OnHit", N.FUNC_NATIVE | N.FUNC_BLUEPRINTEVENT | 0x800) == ("OnHit_Implementation", None)
+    assert N.impl_names("GetX", N.FUNC_NATIVE) == ("GetX", None)
+    code = bytes.fromhex(
+        "488b4220" "4533c0" "4885c0" "488bd9" "410f95c0" "4c03c0" "4c894220"  # P_FINISH, rbx = Context
+        "488b01" "ff9020060000"                                            # Context->vtbl[0x620] (_Validate)
+        "84c0" "750d"                                                      # valid: skip the failure path
+        "488d0d00000000" "5b" "e900100000"                                 # failure path pops rbx, tail-jumps out
+        "488b03" "488bcb" "ffa028060000")                                  # Context->vtbl[0x628] (_Implementation)
+    md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
+    md.detail = True
+    t = N.Thunk(md, FakeImage({0x1000: code}), 0x1000, 0x1000 + len(code))
+    assert t.finish == 0x1000 + 20, t.finish
+    got = [(c["kind"], c.get("offset", c.get("target"))) for c in t.calls]
+    # The failure path's pop must not leak into the branch target: the last call is still virtual.
+    assert got == [("virtual", 0x620), ("direct", 0x1000 + 50 + 0x1000), ("virtual", 0x628)], got
+    print("exec thunks: ok")
+
+
 def test_local_prediction() -> None:
     from compare import local_prediction
     # Layout [a=0][b=8][s=16][c=24][d=32]; a layout gap in the reference between b and s.
@@ -162,6 +189,7 @@ def main() -> int:
     test_literals()
     test_leave_one_out()
     test_literal_elimination()
+    test_exec_thunks()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

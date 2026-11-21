@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce();  // RVA 0x005467D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005463A0 (end 0x005463C2)
+// Original VA: 0x00000001405463A0 | File offset: 0x005459A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2AB68) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_ApplyRootMotionJumpForce::StaticRegisterNativesUAbilityTask_ApplyRootMotionJumpForce()
+{
+	UClass* Class = UAbilityTask_ApplyRootMotionJumpForce::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyRootMotionJumpForce", &UAbilityTask_ApplyRootMotionJumpForce::execApplyRootMotionJumpForce },
+		{ "Finish", &UAbilityTask_ApplyRootMotionJumpForce::execFinish },
+		{ "OnLandedCallback", &UAbilityTask_ApplyRootMotionJumpForce::execOnLandedCallback },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_ApplyRootMotionJumpForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

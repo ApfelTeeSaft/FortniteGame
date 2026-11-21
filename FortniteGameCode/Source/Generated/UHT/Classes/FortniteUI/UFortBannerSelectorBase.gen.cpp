@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortBannerSelectorBase::StaticRegisterNativesUFortBannerSelectorBase()
-{
-}
 // IMPLEMENT_CLASS(UFortBannerSelectorBase, 372999868u)
 // Original dynamic initializer: RVA 0x00240240 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortBannerSelectorBase> AutoInitializeUFortBannerSelectorBase(TEXT("UFortBannerSelectorBase"), sizeof(UFortBannerSelectorBase), 372999868u);

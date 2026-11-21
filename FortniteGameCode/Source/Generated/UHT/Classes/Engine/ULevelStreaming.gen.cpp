@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ULevelStreaming::StaticRegisterNativesULevelStreaming()
-{
-}
 // IMPLEMENT_CLASS(ULevelStreaming, 3719338088u)
 // Original dynamic initializer: RVA 0x002051B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ULevelStreaming> AutoInitializeULevelStreaming(TEXT("ULevelStreaming"), sizeof(ULevelStreaming), 3719338088u);

@@ -6,6 +6,46 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnalyticsBlueprintLibrary();  // RVA 0x026817B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02681700 (end 0x02681722)
+// Original VA: 0x0000000142681700 | File offset: 0x02680D00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B897F0) | Matching: see analysis/functions-uht-natives.json
+void UAnalyticsBlueprintLibrary::StaticRegisterNativesUAnalyticsBlueprintLibrary()
+{
+	UClass* Class = UAnalyticsBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EndSession", &UAnalyticsBlueprintLibrary::execEndSession },
+		{ "FlushEvents", &UAnalyticsBlueprintLibrary::execFlushEvents },
+		{ "GetSessionId", &UAnalyticsBlueprintLibrary::execGetSessionId },
+		{ "GetUserId", &UAnalyticsBlueprintLibrary::execGetUserId },
+		{ "MakeEventAttribute", &UAnalyticsBlueprintLibrary::execMakeEventAttribute },
+		{ "RecordCurrencyGiven", &UAnalyticsBlueprintLibrary::execRecordCurrencyGiven },
+		{ "RecordCurrencyGivenWithAttributes", &UAnalyticsBlueprintLibrary::execRecordCurrencyGivenWithAttributes },
+		{ "RecordCurrencyPurchase", &UAnalyticsBlueprintLibrary::execRecordCurrencyPurchase },
+		{ "RecordError", &UAnalyticsBlueprintLibrary::execRecordError },
+		{ "RecordErrorWithAttributes", &UAnalyticsBlueprintLibrary::execRecordErrorWithAttributes },
+		{ "RecordEvent", &UAnalyticsBlueprintLibrary::execRecordEvent },
+		{ "RecordEventWithAttribute", &UAnalyticsBlueprintLibrary::execRecordEventWithAttribute },
+		{ "RecordEventWithAttributes", &UAnalyticsBlueprintLibrary::execRecordEventWithAttributes },
+		{ "RecordItemPurchase", &UAnalyticsBlueprintLibrary::execRecordItemPurchase },
+		{ "RecordProgress", &UAnalyticsBlueprintLibrary::execRecordProgress },
+		{ "RecordProgressWithAttributes", &UAnalyticsBlueprintLibrary::execRecordProgressWithAttributes },
+		{ "RecordProgressWithFullHierarchyAndAttributes", &UAnalyticsBlueprintLibrary::execRecordProgressWithFullHierarchyAndAttributes },
+		{ "RecordSimpleCurrencyPurchase", &UAnalyticsBlueprintLibrary::execRecordSimpleCurrencyPurchase },
+		{ "RecordSimpleCurrencyPurchaseWithAttributes", &UAnalyticsBlueprintLibrary::execRecordSimpleCurrencyPurchaseWithAttributes },
+		{ "RecordSimpleItemPurchase", &UAnalyticsBlueprintLibrary::execRecordSimpleItemPurchase },
+		{ "RecordSimpleItemPurchaseWithAttributes", &UAnalyticsBlueprintLibrary::execRecordSimpleItemPurchaseWithAttributes },
+		{ "SetAge", &UAnalyticsBlueprintLibrary::execSetAge },
+		{ "SetBuildInfo", &UAnalyticsBlueprintLibrary::execSetBuildInfo },
+		{ "SetGender", &UAnalyticsBlueprintLibrary::execSetGender },
+		{ "SetLocation", &UAnalyticsBlueprintLibrary::execSetLocation },
+		{ "SetSessionId", &UAnalyticsBlueprintLibrary::execSetSessionId },
+		{ "SetUserId", &UAnalyticsBlueprintLibrary::execSetUserId },
+		{ "StartSession", &UAnalyticsBlueprintLibrary::execStartSession },
+		{ "StartSessionWithAttributes", &UAnalyticsBlueprintLibrary::execStartSessionWithAttributes },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAnalyticsBlueprintLibrary_EndSession_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncement_Conversation();  // RVA 0x00FC00B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFAB0 (end 0x00FBFAD2)
+// Original VA: 0x0000000140FBFAB0 | File offset: 0x00FBF0B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032E5A40) | Matching: see analysis/functions-uht-natives.json
+void AFortClientAnnouncement_Conversation::StaticRegisterNativesAFortClientAnnouncement_Conversation()
+{
+	UClass* Class = AFortClientAnnouncement_Conversation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CurrentSentenceAudioFinished", &AFortClientAnnouncement_Conversation::execCurrentSentenceAudioFinished },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortClientAnnouncement_Conversation_CurrentSentenceAudioFinished_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

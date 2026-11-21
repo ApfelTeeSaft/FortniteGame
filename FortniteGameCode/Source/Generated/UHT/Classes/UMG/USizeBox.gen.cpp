@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USizeBox::StaticRegisterNativesUSizeBox()
-{
-}
 // IMPLEMENT_CLASS(USizeBox, 3990908133u)
 // Original dynamic initializer: RVA 0x001B3690 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USizeBox> AutoInitializeUSizeBox(TEXT("USizeBox"), sizeof(USizeBox), 3990908133u);

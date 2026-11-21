@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestObjectiveInfo();  // RVA 0x0109DB70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D1E0 (end 0x0109D202)
+// Original VA: 0x000000014109D1E0 | File offset: 0x0109C7E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033ED320) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestObjectiveInfo::StaticRegisterNativesUFortQuestObjectiveInfo()
+{
+	UClass* Class = UFortQuestObjectiveInfo::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisplayDynamicQuestUpdate", &UFortQuestObjectiveInfo::execDisplayDynamicQuestUpdate },
+		{ "GetOwningQuest", &UFortQuestObjectiveInfo::execGetOwningQuest },
+		{ "HasCompleted", &UFortQuestObjectiveInfo::execHasCompleted },
+		{ "IsActive", &UFortQuestObjectiveInfo::execIsActive },
+		{ "IsInProgress", &UFortQuestObjectiveInfo::execIsInProgress },
+		{ "IsVisibleToUser", &UFortQuestObjectiveInfo::execIsVisibleToUser },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestObjectiveInfo_DisplayDynamicQuestUpdate_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitConfirmCancel();  // RVA 0x0054D500 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CDB0 (end 0x0054CDD2)
+// Original VA: 0x000000014054CDB0 | File offset: 0x0054C3B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32560) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitConfirmCancel::StaticRegisterNativesUAbilityTask_WaitConfirmCancel()
+{
+	UClass* Class = UAbilityTask_WaitConfirmCancel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnCancelCallback", &UAbilityTask_WaitConfirmCancel::execOnCancelCallback },
+		{ "OnConfirmCallback", &UAbilityTask_WaitConfirmCancel::execOnConfirmCallback },
+		{ "OnLocalCancelCallback", &UAbilityTask_WaitConfirmCancel::execOnLocalCancelCallback },
+		{ "OnLocalConfirmCallback", &UAbilityTask_WaitConfirmCancel::execOnLocalConfirmCallback },
+		{ "WaitConfirmCancel", &UAbilityTask_WaitConfirmCancel::execWaitConfirmCancel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_OnCancelCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

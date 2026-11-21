@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTouchControlRegion();  // RVA 0x02904D00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904550 (end 0x02904572)
+// Original VA: 0x0000000142904550 | File offset: 0x02903B50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D31DB0) | Matching: see analysis/functions-uht-natives.json
+void UFortTouchControlRegion::StaticRegisterNativesUFortTouchControlRegion()
+{
+	UClass* Class = UFortTouchControlRegion::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CalculateMoveStickPos", &UFortTouchControlRegion::execCalculateMoveStickPos },
+		{ "IsMovePlayerRegionTouched", &UFortTouchControlRegion::execIsMovePlayerRegionTouched },
+		{ "IsRotatePlayerRegionTouched", &UFortTouchControlRegion::execIsRotatePlayerRegionTouched },
+		{ "MovePlayerRegionTick", &UFortTouchControlRegion::execMovePlayerRegionTick },
+		{ "MoveStickIsInLockPosition", &UFortTouchControlRegion::execMoveStickIsInLockPosition },
+		{ "MoveStickIsInSprintThreshold", &UFortTouchControlRegion::execMoveStickIsInSprintThreshold },
+		{ "OnMovePlayerRegionTouchEnded", &UFortTouchControlRegion::execOnMovePlayerRegionTouchEnded },
+		{ "OnMovePlayerRegionTouchMoved", &UFortTouchControlRegion::execOnMovePlayerRegionTouchMoved },
+		{ "OnMovePlayerRegionTouchStarted", &UFortTouchControlRegion::execOnMovePlayerRegionTouchStarted },
+		{ "OnRotatePlayerRegionTouchEnded", &UFortTouchControlRegion::execOnRotatePlayerRegionTouchEnded },
+		{ "OnRotatePlayerRegionTouchMoved", &UFortTouchControlRegion::execOnRotatePlayerRegionTouchMoved },
+		{ "OnRotatePlayerRegionTouchStarted", &UFortTouchControlRegion::execOnRotatePlayerRegionTouchStarted },
+		{ "SetLockOnStickPosition", &UFortTouchControlRegion::execSetLockOnStickPosition },
+		{ "UpdateLockOnStickOrigin", &UFortTouchControlRegion::execUpdateLockOnStickOrigin },
+		{ "UpdateLockOnStickPosition", &UFortTouchControlRegion::execUpdateLockOnStickPosition },
+		{ "UpdateMoveStickLock", &UFortTouchControlRegion::execUpdateMoveStickLock },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

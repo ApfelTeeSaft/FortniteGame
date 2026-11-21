@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonWidgetGroupBase::StaticRegisterNativesUCommonWidgetGroupBase()
-{
-}
 // IMPLEMENT_CLASS(UCommonWidgetGroupBase, 332465333u)
 // Original dynamic initializer: RVA 0x00096BD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonWidgetGroupBase> AutoInitializeUCommonWidgetGroupBase(TEXT("UCommonWidgetGroupBase"), sizeof(UCommonWidgetGroupBase), 332465333u);

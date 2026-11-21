@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ACineCameraActor();  // RVA 0x01C0B030 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0ABF0 (end 0x01C0AC12)
+// Original VA: 0x0000000141C0ABF0 | File offset: 0x01C0A1F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036AE748) | Matching: see analysis/functions-uht-natives.json
+void ACineCameraActor::StaticRegisterNativesACineCameraActor()
+{
+	UClass* Class = ACineCameraActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCineCameraComponent", &ACineCameraActor::execGetCineCameraComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ACineCameraActor_GetCineCameraComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

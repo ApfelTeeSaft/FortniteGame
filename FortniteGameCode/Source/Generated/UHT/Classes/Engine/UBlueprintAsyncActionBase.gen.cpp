@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UBlueprintAsyncActionBase::StaticRegisterNativesUBlueprintAsyncActionBase()
-{
-}
 // IMPLEMENT_CLASS(UBlueprintAsyncActionBase, 3543958695u)
 // Original dynamic initializer: RVA 0x001F3430 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBlueprintAsyncActionBase> AutoInitializeUBlueprintAsyncActionBase(TEXT("UBlueprintAsyncActionBase"), sizeof(UBlueprintAsyncActionBase), 3543958695u);

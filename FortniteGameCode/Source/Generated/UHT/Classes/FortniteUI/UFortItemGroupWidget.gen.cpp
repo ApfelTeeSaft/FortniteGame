@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemGroupWidget::StaticRegisterNativesUFortItemGroupWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortItemGroupWidget, 2326902819u)
 // Original dynamic initializer: RVA 0x002655E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemGroupWidget> AutoInitializeUFortItemGroupWidget(TEXT("UFortItemGroupWidget"), sizeof(UFortItemGroupWidget), 2326902819u);

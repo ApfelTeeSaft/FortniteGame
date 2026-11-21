@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSkillTreeCanvas::StaticRegisterNativesUFortSkillTreeCanvas()
-{
-}
 // IMPLEMENT_CLASS(UFortSkillTreeCanvas, 1328473999u)
 // Original dynamic initializer: RVA 0x0025AB60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSkillTreeCanvas> AutoInitializeUFortSkillTreeCanvas(TEXT("UFortSkillTreeCanvas"), sizeof(UFortSkillTreeCanvas), 1328473999u);

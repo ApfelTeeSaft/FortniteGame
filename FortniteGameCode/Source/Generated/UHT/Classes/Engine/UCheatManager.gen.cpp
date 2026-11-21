@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCheatManager::StaticRegisterNativesUCheatManager()
-{
-}
 // IMPLEMENT_CLASS(UCheatManager, 298652189u)
 // Original dynamic initializer: RVA 0x001F6F40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCheatManager> AutoInitializeUCheatManager(TEXT("UCheatManager"), sizeof(UCheatManager), 298652189u);

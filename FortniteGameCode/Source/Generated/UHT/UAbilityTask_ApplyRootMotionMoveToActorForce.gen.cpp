@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce();  // RVA 0x00546800 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005463D0 (end 0x005463F2)
+// Original VA: 0x00000001405463D0 | File offset: 0x005459D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2AD60) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_ApplyRootMotionMoveToActorForce::StaticRegisterNativesUAbilityTask_ApplyRootMotionMoveToActorForce()
+{
+	UClass* Class = UAbilityTask_ApplyRootMotionMoveToActorForce::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyRootMotionMoveToActorForce", &UAbilityTask_ApplyRootMotionMoveToActorForce::execApplyRootMotionMoveToActorForce },
+		{ "ApplyRootMotionMoveToTargetDataActorForce", &UAbilityTask_ApplyRootMotionMoveToActorForce::execApplyRootMotionMoveToTargetDataActorForce },
+		{ "OnRep_TargetLocation", &UAbilityTask_ApplyRootMotionMoveToActorForce::execOnRep_TargetLocation },
+		{ "OnTargetActorSwapped", &UAbilityTask_ApplyRootMotionMoveToActorForce::execOnTargetActorSwapped },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToActorForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

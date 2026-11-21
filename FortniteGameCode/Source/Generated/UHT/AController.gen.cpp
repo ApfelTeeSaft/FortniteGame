@@ -6,6 +6,42 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AController();  // RVA 0x023F7780 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7090 (end 0x023F70B2)
+// Original VA: 0x00000001423F7090 | File offset: 0x023F6690
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038C86B0) | Matching: see analysis/functions-uht-natives.json
+void AController::StaticRegisterNativesAController()
+{
+	UClass* Class = AController::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CastToPlayerController", &AController::execCastToPlayerController },
+		{ "ClientSetLocation", &AController::execClientSetLocation },
+		{ "ClientSetRotation", &AController::execClientSetRotation },
+		{ "GetControlRotation", &AController::execGetControlRotation },
+		{ "GetDesiredRotation", &AController::execGetDesiredRotation },
+		{ "GetViewTarget", &AController::execGetViewTarget },
+		{ "IsLocalController", &AController::execIsLocalController },
+		{ "IsLocalPlayerController", &AController::execIsLocalPlayerController },
+		{ "IsLookInputIgnored", &AController::execIsLookInputIgnored },
+		{ "IsMoveInputIgnored", &AController::execIsMoveInputIgnored },
+		{ "IsPlayerController", &AController::execIsPlayerController },
+		{ "K2_GetPawn", &AController::execK2_GetPawn },
+		{ "LineOfSightTo", &AController::execLineOfSightTo },
+		{ "OnRep_Pawn", &AController::execOnRep_Pawn },
+		{ "OnRep_PlayerState", &AController::execOnRep_PlayerState },
+		{ "Possess", &AController::execPossess },
+		{ "ResetIgnoreInputFlags", &AController::execResetIgnoreInputFlags },
+		{ "ResetIgnoreLookInput", &AController::execResetIgnoreLookInput },
+		{ "ResetIgnoreMoveInput", &AController::execResetIgnoreMoveInput },
+		{ "SetControlRotation", &AController::execSetControlRotation },
+		{ "SetIgnoreLookInput", &AController::execSetIgnoreLookInput },
+		{ "SetIgnoreMoveInput", &AController::execSetIgnoreMoveInput },
+		{ "SetInitialLocationAndRotation", &AController::execSetInitialLocationAndRotation },
+		{ "StopMovement", &AController::execStopMovement },
+		{ "UnPossess", &AController::execUnPossess },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AController_CastToPlayerController_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

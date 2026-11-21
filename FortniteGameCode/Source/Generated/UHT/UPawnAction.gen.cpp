@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPawnAction();  // RVA 0x01D31D70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31B30 (end 0x01D31B52)
+// Original VA: 0x0000000141D31B30 | File offset: 0x01D31130
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0370CC98) | Matching: see analysis/functions-uht-natives.json
+void UPawnAction::StaticRegisterNativesUPawnAction()
+{
+	UClass* Class = UPawnAction::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateActionInstance", &UPawnAction::execCreateActionInstance },
+		{ "Finish", &UPawnAction::execFinish },
+		{ "GetActionPriority", &UPawnAction::execGetActionPriority },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPawnAction_CreateActionInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

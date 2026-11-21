@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortHealthBarComponent::StaticRegisterNativesUFortHealthBarComponent()
-{
-}
 // IMPLEMENT_CLASS(UFortHealthBarComponent, 2475699798u)
 // Original dynamic initializer: RVA 0x000F9570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHealthBarComponent> AutoInitializeUFortHealthBarComponent(TEXT("UFortHealthBarComponent"), sizeof(UFortHealthBarComponent), 2475699798u);

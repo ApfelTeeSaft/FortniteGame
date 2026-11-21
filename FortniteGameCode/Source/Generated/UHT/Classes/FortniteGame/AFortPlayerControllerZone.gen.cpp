@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPlayerControllerZone::StaticRegisterNativesAFortPlayerControllerZone()
-{
-}
 // IMPLEMENT_CLASS(AFortPlayerControllerZone, 3700597210u)
 // Original dynamic initializer: RVA 0x0010C460 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerZone> AutoInitializeAFortPlayerControllerZone(TEXT("AFortPlayerControllerZone"), sizeof(AFortPlayerControllerZone), 3700597210u);

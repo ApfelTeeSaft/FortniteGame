@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortDirectAcquisitionWidgetBase::StaticRegisterNativesUFortDirectAcquisitionWidgetBase()
-{
-}
 // IMPLEMENT_CLASS(UFortDirectAcquisitionWidgetBase, 3983292448u)
 // Original dynamic initializer: RVA 0x002449A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDirectAcquisitionWidgetBase> AutoInitializeUFortDirectAcquisitionWidgetBase(TEXT("UFortDirectAcquisitionWidgetBase"), sizeof(UFortDirectAcquisitionWidgetBase), 3983292448u);

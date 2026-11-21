@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ALight::StaticRegisterNativesALight()
-{
-}
 // IMPLEMENT_CLASS(ALight, 3227379487u)
 // Original dynamic initializer: RVA 0x002050F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ALight> AutoInitializeALight(TEXT("ALight"), sizeof(ALight), 3227379487u);

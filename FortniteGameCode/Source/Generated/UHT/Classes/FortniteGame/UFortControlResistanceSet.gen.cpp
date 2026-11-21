@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortControlResistanceSet::StaticRegisterNativesUFortControlResistanceSet()
-{
-}
 // IMPLEMENT_CLASS(UFortControlResistanceSet, 2056049519u)
 // Original dynamic initializer: RVA 0x000EE470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortControlResistanceSet> AutoInitializeUFortControlResistanceSet(TEXT("UFortControlResistanceSet"), sizeof(UFortControlResistanceSet), 2056049519u);

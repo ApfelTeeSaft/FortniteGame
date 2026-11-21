@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortAthenaMatchmakingWidget::StaticRegisterNativesUFortAthenaMatchmakingWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortAthenaMatchmakingWidget, 3045069455u)
 // Original dynamic initializer: RVA 0x0023E280 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAthenaMatchmakingWidget> AutoInitializeUFortAthenaMatchmakingWidget(TEXT("UFortAthenaMatchmakingWidget"), sizeof(UFortAthenaMatchmakingWidget), 3045069455u);

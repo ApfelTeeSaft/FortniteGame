@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USeasonPassLevelWidget::StaticRegisterNativesUSeasonPassLevelWidget()
-{
-}
 // IMPLEMENT_CLASS(USeasonPassLevelWidget, 3208600952u)
 // Original dynamic initializer: RVA 0x00265780 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USeasonPassLevelWidget> AutoInitializeUSeasonPassLevelWidget(TEXT("USeasonPassLevelWidget"), sizeof(USeasonPassLevelWidget), 3208600952u);

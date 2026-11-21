@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UBuildingTurretComponent::StaticRegisterNativesUBuildingTurretComponent()
-{
-}
 // IMPLEMENT_CLASS(UBuildingTurretComponent, 742700684u)
 // Original dynamic initializer: RVA 0x000DCD60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingTurretComponent> AutoInitializeUBuildingTurretComponent(TEXT("UBuildingTurretComponent"), sizeof(UBuildingTurretComponent), 742700684u);

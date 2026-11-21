@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCapsuleComponent();  // RVA 0x023EE0E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDCD0 (end 0x023EDCF2)
+// Original VA: 0x00000001423EDCD0 | File offset: 0x023ED2D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038C0480) | Matching: see analysis/functions-uht-natives.json
+void UCapsuleComponent::StaticRegisterNativesUCapsuleComponent()
+{
+	UClass* Class = UCapsuleComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetScaledCapsuleHalfHeight", &UCapsuleComponent::execGetScaledCapsuleHalfHeight },
+		{ "GetScaledCapsuleHalfHeight_WithoutHemisphere", &UCapsuleComponent::execGetScaledCapsuleHalfHeight_WithoutHemisphere },
+		{ "GetScaledCapsuleRadius", &UCapsuleComponent::execGetScaledCapsuleRadius },
+		{ "GetScaledCapsuleSize", &UCapsuleComponent::execGetScaledCapsuleSize },
+		{ "GetScaledCapsuleSize_WithoutHemisphere", &UCapsuleComponent::execGetScaledCapsuleSize_WithoutHemisphere },
+		{ "GetShapeScale", &UCapsuleComponent::execGetShapeScale },
+		{ "GetUnscaledCapsuleHalfHeight", &UCapsuleComponent::execGetUnscaledCapsuleHalfHeight },
+		{ "GetUnscaledCapsuleHalfHeight_WithoutHemisphere", &UCapsuleComponent::execGetUnscaledCapsuleHalfHeight_WithoutHemisphere },
+		{ "GetUnscaledCapsuleRadius", &UCapsuleComponent::execGetUnscaledCapsuleRadius },
+		{ "GetUnscaledCapsuleSize", &UCapsuleComponent::execGetUnscaledCapsuleSize },
+		{ "GetUnscaledCapsuleSize_WithoutHemisphere", &UCapsuleComponent::execGetUnscaledCapsuleSize_WithoutHemisphere },
+		{ "SetCapsuleHalfHeight", &UCapsuleComponent::execSetCapsuleHalfHeight },
+		{ "SetCapsuleRadius", &UCapsuleComponent::execSetCapsuleRadius },
+		{ "SetCapsuleSize", &UCapsuleComponent::execSetCapsuleSize },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCapsuleComponent_GetScaledCapsuleHalfHeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

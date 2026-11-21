@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAISystem();  // RVA 0x01D22E60 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D228F0 (end 0x01D22912)
+// Original VA: 0x0000000141D228F0 | File offset: 0x01D21EF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F90A8) | Matching: see analysis/functions-uht-natives.json
+void UAISystem::StaticRegisterNativesUAISystem()
+{
+	UClass* Class = UAISystem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AIIgnorePlayers", &UAISystem::execAIIgnorePlayers },
+		{ "AILoggingVerbose", &UAISystem::execAILoggingVerbose },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAISystem_AIIgnorePlayers_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

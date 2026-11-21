@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHUDCenterPopupMessageWidget();  // RVA 0x028BBD30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBA30 (end 0x028BBA52)
+// Original VA: 0x00000001428BBA30 | File offset: 0x028BB030
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CB0D50) | Matching: see analysis/functions-uht-natives.json
+void UFortHUDCenterPopupMessageWidget::StaticRegisterNativesUFortHUDCenterPopupMessageWidget()
+{
+	UClass* Class = UFortHUDCenterPopupMessageWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCenterPopupMessageState", &UFortHUDCenterPopupMessageWidget::execGetCenterPopupMessageState },
+		{ "UpdateState", &UFortHUDCenterPopupMessageWidget::execUpdateState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHUDCenterPopupMessageWidget_GetCenterPopupMessageState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

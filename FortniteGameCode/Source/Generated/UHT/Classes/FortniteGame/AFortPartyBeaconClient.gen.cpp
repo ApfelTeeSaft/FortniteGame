@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPartyBeaconClient::StaticRegisterNativesAFortPartyBeaconClient()
-{
-}
 // IMPLEMENT_CLASS(AFortPartyBeaconClient, 4065731529u)
 // Original dynamic initializer: RVA 0x001072F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPartyBeaconClient> AutoInitializeAFortPartyBeaconClient(TEXT("AFortPartyBeaconClient"), sizeof(AFortPartyBeaconClient), 4065731529u);

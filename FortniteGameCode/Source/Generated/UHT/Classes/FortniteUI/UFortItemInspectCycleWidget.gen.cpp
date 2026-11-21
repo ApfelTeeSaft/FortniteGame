@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemInspectCycleWidget::StaticRegisterNativesUFortItemInspectCycleWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortItemInspectCycleWidget, 2028262458u)
 // Original dynamic initializer: RVA 0x0024CE40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemInspectCycleWidget> AutoInitializeUFortItemInspectCycleWidget(TEXT("UFortItemInspectCycleWidget"), sizeof(UFortItemInspectCycleWidget), 2028262458u);

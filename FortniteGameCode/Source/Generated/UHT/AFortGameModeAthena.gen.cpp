@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameModeAthena();  // RVA 0x00FE4440 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3F60 (end 0x00FE3F82)
+// Original VA: 0x0000000140FE3F60 | File offset: 0x00FE3560
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0331EA10) | Matching: see analysis/functions-uht-natives.json
+void AFortGameModeAthena::StaticRegisterNativesAFortGameModeAthena()
+{
+	UClass* Class = AFortGameModeAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnAircraftEnteredDropZone", &AFortGameModeAthena::execOnAircraftEnteredDropZone },
+		{ "OnAircraftExitedDropZone", &AFortGameModeAthena::execOnAircraftExitedDropZone },
+		{ "OnAircraftFlightEnded", &AFortGameModeAthena::execOnAircraftFlightEnded },
+		{ "OnEndGameKickPlayers", &AFortGameModeAthena::execOnEndGameKickPlayers },
+		{ "SafeZoneInsideChecks", &AFortGameModeAthena::execSafeZoneInsideChecks },
+		{ "TrySupplyDrop", &AFortGameModeAthena::execTrySupplyDrop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameModeAthena_OnAircraftEnteredDropZone_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

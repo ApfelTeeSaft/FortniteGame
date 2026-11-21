@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4590 (end 0x024D45B2)
+// Original VA: 0x00000001424D4590 | File offset: 0x024D3B90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039AEF78) | Matching: see analysis/functions-uht-natives.json
+void ASkyLight::StaticRegisterNativesASkyLight()
+{
+	UClass* Class = ASkyLight::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_bEnabled", &ASkyLight::execOnRep_bEnabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ASkyLight_OnRep_bEnabled_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name

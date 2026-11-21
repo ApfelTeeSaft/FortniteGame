@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortRegisteredPlayerInfo::StaticRegisterNativesUFortRegisteredPlayerInfo()
-{
-}
 // IMPLEMENT_CLASS(UFortRegisteredPlayerInfo, 1707079747u)
 // Original dynamic initializer: RVA 0x001114E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortRegisteredPlayerInfo> AutoInitializeUFortRegisteredPlayerInfo(TEXT("UFortRegisteredPlayerInfo"), sizeof(UFortRegisteredPlayerInfo), 1707079747u);

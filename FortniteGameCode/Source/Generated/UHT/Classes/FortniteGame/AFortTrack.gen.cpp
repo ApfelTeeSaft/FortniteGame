@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortTrack::StaticRegisterNativesAFortTrack()
-{
-}
 // IMPLEMENT_CLASS(AFortTrack, 3304805572u)
 // Original dynamic initializer: RVA 0x00117DC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTrack> AutoInitializeAFortTrack(TEXT("AFortTrack"), sizeof(AFortTrack), 3304805572u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPlayerParachute::StaticRegisterNativesAFortPlayerParachute()
-{
-}
 // IMPLEMENT_CLASS(AFortPlayerParachute, 1315811257u)
 // Original dynamic initializer: RVA 0x0010C4A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerParachute> AutoInitializeAFortPlayerParachute(TEXT("AFortPlayerParachute"), sizeof(AFortPlayerParachute), 1315811257u);

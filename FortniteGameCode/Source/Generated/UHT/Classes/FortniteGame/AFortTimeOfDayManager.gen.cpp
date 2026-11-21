@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortTimeOfDayManager::StaticRegisterNativesAFortTimeOfDayManager()
-{
-}
 // IMPLEMENT_CLASS(AFortTimeOfDayManager, 4162399111u)
 // Original dynamic initializer: RVA 0x00116500 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTimeOfDayManager> AutoInitializeAFortTimeOfDayManager(TEXT("AFortTimeOfDayManager"), sizeof(AFortTimeOfDayManager), 4162399111u);

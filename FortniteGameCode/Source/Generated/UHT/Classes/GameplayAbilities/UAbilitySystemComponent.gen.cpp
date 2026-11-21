@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilitySystemComponent::StaticRegisterNativesUAbilitySystemComponent()
-{
-}
 // IMPLEMENT_CLASS(UAbilitySystemComponent, 219976785u)
 // Original dynamic initializer: RVA 0x0009CD80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilitySystemComponent> AutoInitializeUAbilitySystemComponent(TEXT("UAbilitySystemComponent"), sizeof(UAbilitySystemComponent), 219976785u);

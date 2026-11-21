@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortGameStateZone::StaticRegisterNativesAFortGameStateZone()
-{
-}
 // IMPLEMENT_CLASS(AFortGameStateZone, 1421512874u)
 // Original dynamic initializer: RVA 0x000F8770 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStateZone> AutoInitializeAFortGameStateZone(TEXT("AFortGameStateZone"), sizeof(AFortGameStateZone), 1421512874u);

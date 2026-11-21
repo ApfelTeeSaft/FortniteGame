@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAtmosphericFogComponent();  // RVA 0x023DB240 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA5F0 (end 0x023DA612)
+// Original VA: 0x00000001423DA5F0 | File offset: 0x023D9BF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038AB2F0) | Matching: see analysis/functions-uht-natives.json
+void UAtmosphericFogComponent::StaticRegisterNativesUAtmosphericFogComponent()
+{
+	UClass* Class = UAtmosphericFogComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisableGroundScattering", &UAtmosphericFogComponent::execDisableGroundScattering },
+		{ "DisableSunDisk", &UAtmosphericFogComponent::execDisableSunDisk },
+		{ "SetAltitudeScale", &UAtmosphericFogComponent::execSetAltitudeScale },
+		{ "SetDefaultBrightness", &UAtmosphericFogComponent::execSetDefaultBrightness },
+		{ "SetDefaultLightColor", &UAtmosphericFogComponent::execSetDefaultLightColor },
+		{ "SetDensityMultiplier", &UAtmosphericFogComponent::execSetDensityMultiplier },
+		{ "SetDensityOffset", &UAtmosphericFogComponent::execSetDensityOffset },
+		{ "SetDistanceOffset", &UAtmosphericFogComponent::execSetDistanceOffset },
+		{ "SetDistanceScale", &UAtmosphericFogComponent::execSetDistanceScale },
+		{ "SetFogMultiplier", &UAtmosphericFogComponent::execSetFogMultiplier },
+		{ "SetPrecomputeParams", &UAtmosphericFogComponent::execSetPrecomputeParams },
+		{ "SetStartDistance", &UAtmosphericFogComponent::execSetStartDistance },
+		{ "SetSunMultiplier", &UAtmosphericFogComponent::execSetSunMultiplier },
+		{ "StartPrecompute", &UAtmosphericFogComponent::execStartPrecompute },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAtmosphericFogComponent_DisableGroundScattering_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingTrap::StaticRegisterNativesABuildingTrap()
-{
-}
 // IMPLEMENT_CLASS(ABuildingTrap, 883784336u)
 // Original dynamic initializer: RVA 0x000DBEC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingTrap> AutoInitializeABuildingTrap(TEXT("ABuildingTrap"), sizeof(ABuildingTrap), 883784336u);

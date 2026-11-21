@@ -6,6 +6,40 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMovieSceneSequencePlayer();  // RVA 0x01AC5510 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC3830 (end 0x01AC3852)
+// Original VA: 0x0000000141AC3830 | File offset: 0x01AC2E30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0363F1A0) | Matching: see analysis/functions-uht-natives.json
+void UMovieSceneSequencePlayer::StaticRegisterNativesUMovieSceneSequencePlayer()
+{
+	UClass* Class = UMovieSceneSequencePlayer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ChangePlaybackDirection", &UMovieSceneSequencePlayer::execChangePlaybackDirection },
+		{ "GetBoundObjects", &UMovieSceneSequencePlayer::execGetBoundObjects },
+		{ "GetDisableCameraCuts", &UMovieSceneSequencePlayer::execGetDisableCameraCuts },
+		{ "GetLength", &UMovieSceneSequencePlayer::execGetLength },
+		{ "GetPlaybackEnd", &UMovieSceneSequencePlayer::execGetPlaybackEnd },
+		{ "GetPlaybackPosition", &UMovieSceneSequencePlayer::execGetPlaybackPosition },
+		{ "GetPlaybackStart", &UMovieSceneSequencePlayer::execGetPlaybackStart },
+		{ "GetPlayRate", &UMovieSceneSequencePlayer::execGetPlayRate },
+		{ "GoToEndAndStop", &UMovieSceneSequencePlayer::execGoToEndAndStop },
+		{ "IsPaused", &UMovieSceneSequencePlayer::execIsPaused },
+		{ "IsPlaying", &UMovieSceneSequencePlayer::execIsPlaying },
+		{ "JumpToPosition", &UMovieSceneSequencePlayer::execJumpToPosition },
+		{ "Pause", &UMovieSceneSequencePlayer::execPause },
+		{ "Play", &UMovieSceneSequencePlayer::execPlay },
+		{ "PlayLooping", &UMovieSceneSequencePlayer::execPlayLooping },
+		{ "PlayReverse", &UMovieSceneSequencePlayer::execPlayReverse },
+		{ "Scrub", &UMovieSceneSequencePlayer::execScrub },
+		{ "SetDisableCameraCuts", &UMovieSceneSequencePlayer::execSetDisableCameraCuts },
+		{ "SetPlaybackPosition", &UMovieSceneSequencePlayer::execSetPlaybackPosition },
+		{ "SetPlaybackRange", &UMovieSceneSequencePlayer::execSetPlaybackRange },
+		{ "SetPlayRate", &UMovieSceneSequencePlayer::execSetPlayRate },
+		{ "StartPlayingNextTick", &UMovieSceneSequencePlayer::execStartPlayingNextTick },
+		{ "Stop", &UMovieSceneSequencePlayer::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMovieSceneSequencePlayer_ChangePlaybackDirection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

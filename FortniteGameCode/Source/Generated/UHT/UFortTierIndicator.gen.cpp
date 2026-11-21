@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTierIndicator();  // RVA 0x02904C70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029044F0 (end 0x02904512)
+// Original VA: 0x00000001429044F0 | File offset: 0x02903AF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D318D0) | Matching: see analysis/functions-uht-natives.json
+void UFortTierIndicator::StaticRegisterNativesUFortTierIndicator()
+{
+	UClass* Class = UFortTierIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearPreviewState", &UFortTierIndicator::execClearPreviewState },
+		{ "SetBrushSize", &UFortTierIndicator::execSetBrushSize },
+		{ "SetInterPipPadding", &UFortTierIndicator::execSetInterPipPadding },
+		{ "SetItemToRepresent", &UFortTierIndicator::execSetItemToRepresent },
+		{ "SetPreviewState", &UFortTierIndicator::execSetPreviewState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTierIndicator_ClearPreviewState_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

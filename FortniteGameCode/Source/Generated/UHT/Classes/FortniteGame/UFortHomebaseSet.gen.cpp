@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortHomebaseSet::StaticRegisterNativesUFortHomebaseSet()
-{
-}
 // IMPLEMENT_CLASS(UFortHomebaseSet, 3621664292u)
 // Original dynamic initializer: RVA 0x000FB060 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHomebaseSet> AutoInitializeUFortHomebaseSet(TEXT("UFortHomebaseSet"), sizeof(UFortHomebaseSet), 3621664292u);

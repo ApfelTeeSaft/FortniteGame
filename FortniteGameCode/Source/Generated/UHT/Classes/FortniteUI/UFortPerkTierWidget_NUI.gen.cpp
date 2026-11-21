@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPerkTierWidget_NUI::StaticRegisterNativesUFortPerkTierWidget_NUI()
-{
-}
 // IMPLEMENT_CLASS(UFortPerkTierWidget_NUI, 1347788591u)
 // Original dynamic initializer: RVA 0x00255B60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPerkTierWidget_NUI> AutoInitializeUFortPerkTierWidget_NUI(TEXT("UFortPerkTierWidget_NUI"), sizeof(UFortPerkTierWidget_NUI), 1347788591u);

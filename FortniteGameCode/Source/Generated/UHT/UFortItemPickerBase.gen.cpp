@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemPickerBase();  // RVA 0x028CF4C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF120 (end 0x028CF142)
+// Original VA: 0x00000001428CF120 | File offset: 0x028CE720
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD84D0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemPickerBase::StaticRegisterNativesUFortItemPickerBase()
+{
+	UClass* Class = UFortItemPickerBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanItemBeComitted", &UFortItemPickerBase::execCanItemBeComitted },
+		{ "CenterSelectedItemTileWidget", &UFortItemPickerBase::execCenterSelectedItemTileWidget },
+		{ "ClearSelection", &UFortItemPickerBase::execClearSelection },
+		{ "GetIndexForItem", &UFortItemPickerBase::execGetIndexForItem },
+		{ "GetSelectedItem", &UFortItemPickerBase::execGetSelectedItem },
+		{ "HandlePickerItemClicked", &UFortItemPickerBase::execHandlePickerItemClicked },
+		{ "HandlePickerItemDoubleClicked", &UFortItemPickerBase::execHandlePickerItemDoubleClicked },
+		{ "HandlePickerItemHovered", &UFortItemPickerBase::execHandlePickerItemHovered },
+		{ "HandlePickerItemSelected", &UFortItemPickerBase::execHandlePickerItemSelected },
+		{ "HandlePickerTileCreated", &UFortItemPickerBase::execHandlePickerTileCreated },
+		{ "HandlePickerTileDestroyed", &UFortItemPickerBase::execHandlePickerTileDestroyed },
+		{ "SetSelectedIndex", &UFortItemPickerBase::execSetSelectedIndex },
+		{ "SetSelectedItem", &UFortItemPickerBase::execSetSelectedItem },
+		{ "TryCommitSelectedItem", &UFortItemPickerBase::execTryCommitSelectedItem },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortItemPickerBase_OnItemSelectionEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

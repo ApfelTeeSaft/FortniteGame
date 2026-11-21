@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UVOIPTalker::StaticRegisterNativesUVOIPTalker()
-{
-}
 // IMPLEMENT_CLASS(UVOIPTalker, 3369332169u)
 // Original dynamic initializer: RVA 0x002219A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UVOIPTalker> AutoInitializeUVOIPTalker(TEXT("UVOIPTalker"), sizeof(UVOIPTalker), 3369332169u);

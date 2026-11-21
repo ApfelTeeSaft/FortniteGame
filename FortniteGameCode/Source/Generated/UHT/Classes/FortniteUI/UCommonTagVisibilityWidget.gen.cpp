@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonTagVisibilityWidget::StaticRegisterNativesUCommonTagVisibilityWidget()
-{
-}
 // IMPLEMENT_CLASS(UCommonTagVisibilityWidget, 2042612066u)
 // Original dynamic initializer: RVA 0x0023B6E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonTagVisibilityWidget> AutoInitializeUCommonTagVisibilityWidget(TEXT("UCommonTagVisibilityWidget"), sizeof(UCommonTagVisibilityWidget), 2042612066u);

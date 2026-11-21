@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemDetailsHostPanel::StaticRegisterNativesUFortItemDetailsHostPanel()
-{
-}
 // IMPLEMENT_CLASS(UFortItemDetailsHostPanel, 3238789805u)
 // Original dynamic initializer: RVA 0x0024CDA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemDetailsHostPanel> AutoInitializeUFortItemDetailsHostPanel(TEXT("UFortItemDetailsHostPanel"), sizeof(UFortItemDetailsHostPanel), 3238789805u);

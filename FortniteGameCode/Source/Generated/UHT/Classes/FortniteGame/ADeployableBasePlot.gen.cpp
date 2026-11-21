@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ADeployableBasePlot::StaticRegisterNativesADeployableBasePlot()
-{
-}
 // IMPLEMENT_CLASS(ADeployableBasePlot, 2814553429u)
 // Original dynamic initializer: RVA 0x000DE740 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ADeployableBasePlot> AutoInitializeADeployableBasePlot(TEXT("ADeployableBasePlot"), sizeof(ADeployableBasePlot), 2814553429u);

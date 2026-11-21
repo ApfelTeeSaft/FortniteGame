@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UStereoLayerFunctionLibrary::StaticRegisterNativesUStereoLayerFunctionLibrary()
-{
-}
 // IMPLEMENT_CLASS(UStereoLayerFunctionLibrary, 2903709714u)
 // Original dynamic initializer: RVA 0x0021E7D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UStereoLayerFunctionLibrary> AutoInitializeUStereoLayerFunctionLibrary(TEXT("UStereoLayerFunctionLibrary"), sizeof(UStereoLayerFunctionLibrary), 2903709714u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPerksWidget::StaticRegisterNativesUFortPerksWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortPerksWidget, 1921348807u)
 // Original dynamic initializer: RVA 0x00255BC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPerksWidget> AutoInitializeUFortPerksWidget(TEXT("UFortPerksWidget"), sizeof(UFortPerksWidget), 1921348807u);

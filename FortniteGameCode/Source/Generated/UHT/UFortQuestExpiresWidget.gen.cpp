@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestExpiresWidget();  // RVA 0x028ED2F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECC80 (end 0x028ECCA2)
+// Original VA: 0x00000001428ECC80 | File offset: 0x028EC280
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D09638) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestExpiresWidget::StaticRegisterNativesUFortQuestExpiresWidget()
+{
+	UClass* Class = UFortQuestExpiresWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnQuestExpirationUpdated", &UFortQuestExpiresWidget::execOnQuestExpirationUpdated },
+		{ "SetData", &UFortQuestExpiresWidget::execSetData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestExpiresWidget_OnQuestExpirationUpdated_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

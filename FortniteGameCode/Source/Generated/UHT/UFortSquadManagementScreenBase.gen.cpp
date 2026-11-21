@@ -6,6 +6,36 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadManagementScreenBase();  // RVA 0x028FB4D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB0E0 (end 0x028FB102)
+// Original VA: 0x00000001428FB0E0 | File offset: 0x028FA6E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D216A0) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadManagementScreenBase::StaticRegisterNativesUFortSquadManagementScreenBase()
+{
+	UClass* Class = UFortSquadManagementScreenBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIdOfSquadToManageBP", &UFortSquadManagementScreenBase::execGetIdOfSquadToManageBP },
+		{ "HandleBackInputAction", &UFortSquadManagementScreenBase::execHandleBackInputAction },
+		{ "HandleClosePickerInputAction", &UFortSquadManagementScreenBase::execHandleClosePickerInputAction },
+		{ "HandleCyclePickerSortInputAction", &UFortSquadManagementScreenBase::execHandleCyclePickerSortInputAction },
+		{ "HandleDifferentSquadSlotSelected", &UFortSquadManagementScreenBase::execHandleDifferentSquadSlotSelected },
+		{ "HandleInspectInputAction", &UFortSquadManagementScreenBase::execHandleInspectInputAction },
+		{ "HandleInventoryInputAction", &UFortSquadManagementScreenBase::execHandleInventoryInputAction },
+		{ "HandleManageInputAction", &UFortSquadManagementScreenBase::execHandleManageInputAction },
+		{ "HandleOpenSquadSlot", &UFortSquadManagementScreenBase::execHandleOpenSquadSlot },
+		{ "HandlePickerSelectionChanged", &UFortSquadManagementScreenBase::execHandlePickerSelectionChanged },
+		{ "HandlePickerSelectionCommitted", &UFortSquadManagementScreenBase::execHandlePickerSelectionCommitted },
+		{ "HandleSelectPickerSlotInputAction", &UFortSquadManagementScreenBase::execHandleSelectPickerSlotInputAction },
+		{ "HandleViewInAll", &UFortSquadManagementScreenBase::execHandleViewInAll },
+		{ "NavigateToSquadSlot", &UFortSquadManagementScreenBase::execNavigateToSquadSlot },
+		{ "SetIdOfSquadToManageBP", &UFortSquadManagementScreenBase::execSetIdOfSquadToManageBP },
+		{ "TryGetAttributeValueFromSquad", &UFortSquadManagementScreenBase::execTryGetAttributeValueFromSquad },
+		{ "TryGetSquadMainAttribute", &UFortSquadManagementScreenBase::execTryGetSquadMainAttribute },
+		{ "TryGetSquadTeamAttribute", &UFortSquadManagementScreenBase::execTryGetSquadTeamAttribute },
+		{ "TryGetStaticSquadDataBP", &UFortSquadManagementScreenBase::execTryGetStaticSquadDataBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSquadManagementScreenBase_GetIdOfSquadToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

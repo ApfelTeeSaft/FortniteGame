@@ -6,6 +6,44 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWeaponItemDefinition();  // RVA 0x010D8B70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8890 (end 0x010D88B2)
+// Original VA: 0x00000001410D8890 | File offset: 0x010D7E90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0342F930) | Matching: see analysis/functions-uht-natives.json
+void UFortWeaponItemDefinition::StaticRegisterNativesUFortWeaponItemDefinition()
+{
+	UClass* Class = UFortWeaponItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAnalyticTags", &UFortWeaponItemDefinition::execGetAnalyticTags },
+		{ "GetBaseAlteration", &UFortWeaponItemDefinition::execGetBaseAlteration },
+		{ "GetBaseCosmeticAlteration", &UFortWeaponItemDefinition::execGetBaseCosmeticAlteration },
+		{ "GetDegradedPercentage", &UFortWeaponItemDefinition::execGetDegradedPercentage },
+		{ "GetDisplayTier", &UFortWeaponItemDefinition::execGetDisplayTier },
+		{ "GetDisplayTierAsText", &UFortWeaponItemDefinition::execGetDisplayTierAsText },
+		{ "GetEquippedAbilities", &UFortWeaponItemDefinition::execGetEquippedAbilities },
+		{ "GetHitNotifyDuration", &UFortWeaponItemDefinition::execGetHitNotifyDuration },
+		{ "GetHitNotifyImage", &UFortWeaponItemDefinition::execGetHitNotifyImage },
+		{ "GetHitNotifyOpacityCurve", &UFortWeaponItemDefinition::execGetHitNotifyOpacityCurve },
+		{ "GetLowAmmoPercentage", &UFortWeaponItemDefinition::execGetLowAmmoPercentage },
+		{ "GetMuzzleBlockedImage", &UFortWeaponItemDefinition::execGetMuzzleBlockedImage },
+		{ "GetPrimaryFireAbility", &UFortWeaponItemDefinition::execGetPrimaryFireAbility },
+		{ "GetReloadAbility", &UFortWeaponItemDefinition::execGetReloadAbility },
+		{ "GetReticleCenterImage", &UFortWeaponItemDefinition::execGetReticleCenterImage },
+		{ "GetReticleCenterImageOffset", &UFortWeaponItemDefinition::execGetReticleCenterImageOffset },
+		{ "GetReticleCenterPerfectAimImage", &UFortWeaponItemDefinition::execGetReticleCenterPerfectAimImage },
+		{ "GetReticleCornerAngles", &UFortWeaponItemDefinition::execGetReticleCornerAngles },
+		{ "GetReticleImage", &UFortWeaponItemDefinition::execGetReticleImage },
+		{ "GetSecondaryFireAbility", &UFortWeaponItemDefinition::execGetSecondaryFireAbility },
+		{ "GetShortDisplayName", &UFortWeaponItemDefinition::execGetShortDisplayName },
+		{ "GetTriggerType", &UFortWeaponItemDefinition::execGetTriggerType },
+		{ "GetWeaponActorClass", &UFortWeaponItemDefinition::execGetWeaponActorClass },
+		{ "GetWeaponMeshOverride", &UFortWeaponItemDefinition::execGetWeaponMeshOverride },
+		{ "GetWeaponStatHandle", &UFortWeaponItemDefinition::execGetWeaponStatHandle },
+		{ "ShouldAllowTargetingDuringReload", &UFortWeaponItemDefinition::execShouldAllowTargetingDuringReload },
+		{ "TargetingPreventsReload", &UFortWeaponItemDefinition::execTargetingPreventsReload },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortBuildingTrapSet::StaticRegisterNativesUFortBuildingTrapSet()
-{
-}
 // IMPLEMENT_CLASS(UFortBuildingTrapSet, 1040329666u)
 // Original dynamic initializer: RVA 0x000E9450 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortBuildingTrapSet> AutoInitializeUFortBuildingTrapSet(TEXT("UFortBuildingTrapSet"), sizeof(UFortBuildingTrapSet), 1040329666u);

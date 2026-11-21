@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAtmosphericFogComponent::StaticRegisterNativesUAtmosphericFogComponent()
-{
-}
 // IMPLEMENT_CLASS(UAtmosphericFogComponent, 3733946409u)
 // Original dynamic initializer: RVA 0x001F1B50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAtmosphericFogComponent> AutoInitializeUAtmosphericFogComponent(TEXT("UAtmosphericFogComponent"), sizeof(UAtmosphericFogComponent), 3733946409u);

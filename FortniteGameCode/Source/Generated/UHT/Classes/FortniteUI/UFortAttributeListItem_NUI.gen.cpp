@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortAttributeListItem_NUI::StaticRegisterNativesUFortAttributeListItem_NUI()
-{
-}
 // IMPLEMENT_CLASS(UFortAttributeListItem_NUI, 4146567184u)
 // Original dynamic initializer: RVA 0x0023E320 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAttributeListItem_NUI> AutoInitializeUFortAttributeListItem_NUI(TEXT("UFortAttributeListItem_NUI"), sizeof(UFortAttributeListItem_NUI), 4146567184u);

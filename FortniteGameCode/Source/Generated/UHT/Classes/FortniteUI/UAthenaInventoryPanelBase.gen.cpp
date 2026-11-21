@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaInventoryPanelBase::StaticRegisterNativesUAthenaInventoryPanelBase()
-{
-}
 // IMPLEMENT_CLASS(UAthenaInventoryPanelBase, 3987544481u)
 // Original dynamic initializer: RVA 0x00239260 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaInventoryPanelBase> AutoInitializeUAthenaInventoryPanelBase(TEXT("UAthenaInventoryPanelBase"), sizeof(UAthenaInventoryPanelBase), 3987544481u);

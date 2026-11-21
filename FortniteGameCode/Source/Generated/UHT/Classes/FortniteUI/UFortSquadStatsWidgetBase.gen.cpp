@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadStatsWidgetBase::StaticRegisterNativesUFortSquadStatsWidgetBase()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadStatsWidgetBase, 2687514287u)
 // Original dynamic initializer: RVA 0x0025C240 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadStatsWidgetBase> AutoInitializeUFortSquadStatsWidgetBase(TEXT("UFortSquadStatsWidgetBase"), sizeof(UFortSquadStatsWidgetBase), 2687514287u);

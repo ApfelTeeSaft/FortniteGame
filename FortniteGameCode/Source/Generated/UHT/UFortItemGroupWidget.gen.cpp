@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemGroupWidget();  // RVA 0x02918A40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029187A0 (end 0x029187C2)
+// Original VA: 0x00000001429187A0 | File offset: 0x02917DA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D565D0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemGroupWidget::StaticRegisterNativesUFortItemGroupWidget()
+{
+	UClass* Class = UFortItemGroupWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetActiveSetBonusTags", &UFortItemGroupWidget::execGetActiveSetBonusTags },
+		{ "GetSquadId", &UFortItemGroupWidget::execGetSquadId },
+		{ "GetTotalAttributeBonuses", &UFortItemGroupWidget::execGetTotalAttributeBonuses },
+		{ "SetSquad", &UFortItemGroupWidget::execSetSquad },
+		{ "TryGetSquad", &UFortItemGroupWidget::execTryGetSquad },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemGroupWidget_GetActiveSetBonusTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

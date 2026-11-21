@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget();  // RVA 0x028947B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894310 (end 0x02894332)
+// Original VA: 0x0000000142894310 | File offset: 0x02893910
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C76A18) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookProgressionRewardDetailInspectWidget::StaticRegisterNativesUFortCollectionBookProgressionRewardDetailInspectWidget()
+{
+	UClass* Class = UFortCollectionBookProgressionRewardDetailInspectWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetXPRequired", &UFortCollectionBookProgressionRewardDetailInspectWidget::execGetXPRequired },
+		{ "SetAssociatedLevel", &UFortCollectionBookProgressionRewardDetailInspectWidget::execSetAssociatedLevel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookProgressionRewardDetailInspectWidget_GetXPRequired_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaEquippedItemBase::StaticRegisterNativesUAthenaEquippedItemBase()
-{
-}
 // IMPLEMENT_CLASS(UAthenaEquippedItemBase, 2973756023u)
 // Original dynamic initializer: RVA 0x002390E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaEquippedItemBase> AutoInitializeUAthenaEquippedItemBase(TEXT("UAthenaEquippedItemBase"), sizeof(UAthenaEquippedItemBase), 2973756023u);

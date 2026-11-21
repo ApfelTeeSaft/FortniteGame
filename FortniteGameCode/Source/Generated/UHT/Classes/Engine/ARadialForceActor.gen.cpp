@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ARadialForceActor::StaticRegisterNativesARadialForceActor()
-{
-}
 // IMPLEMENT_CLASS(ARadialForceActor, 3418971873u)
 // Original dynamic initializer: RVA 0x00217390 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ARadialForceActor> AutoInitializeARadialForceActor(TEXT("ARadialForceActor"), sizeof(ARadialForceActor), 3418971873u);

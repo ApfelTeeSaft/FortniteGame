@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEpicCMSTileCarousel();  // RVA 0x002E3CA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3970 (end 0x002E3992)
+// Original VA: 0x00000001402E3970 | File offset: 0x002E2F70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E8CED0) | Matching: see analysis/functions-uht-natives.json
+void UEpicCMSTileCarousel::StaticRegisterNativesUEpicCMSTileCarousel()
+{
+	UClass* Class = UEpicCMSTileCarousel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCurrentPageIndex", &UEpicCMSTileCarousel::execGetCurrentPageIndex },
+		{ "HandleTilePageAdded", &UEpicCMSTileCarousel::execHandleTilePageAdded },
+		{ "NextPage", &UEpicCMSTileCarousel::execNextPage },
+		{ "PreviousPage", &UEpicCMSTileCarousel::execPreviousPage },
+		{ "SetCurrentPageByIndex", &UEpicCMSTileCarousel::execSetCurrentPageByIndex },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

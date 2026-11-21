@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMediaSubtitlesPlayer::StaticRegisterNativesUFortMediaSubtitlesPlayer()
-{
-}
 // IMPLEMENT_CLASS(UFortMediaSubtitlesPlayer, 2356009744u)
 // Original dynamic initializer: RVA 0x000AF5A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMediaSubtitlesPlayer> AutoInitializeUFortMediaSubtitlesPlayer(TEXT("UFortMediaSubtitlesPlayer"), sizeof(UFortMediaSubtitlesPlayer), 2356009744u);

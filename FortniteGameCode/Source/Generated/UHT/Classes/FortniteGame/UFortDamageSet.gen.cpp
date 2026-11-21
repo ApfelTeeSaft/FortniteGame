@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortDamageSet::StaticRegisterNativesUFortDamageSet()
-{
-}
 // IMPLEMENT_CLASS(UFortDamageSet, 2571047835u)
 // Original dynamic initializer: RVA 0x000EE5B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDamageSet> AutoInitializeUFortDamageSet(TEXT("UFortDamageSet"), sizeof(UFortDamageSet), 2571047835u);

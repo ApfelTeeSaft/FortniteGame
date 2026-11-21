@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingItemCollectorActor::StaticRegisterNativesABuildingItemCollectorActor()
-{
-}
 // IMPLEMENT_CLASS(ABuildingItemCollectorActor, 2023708068u)
 // Original dynamic initializer: RVA 0x000DAED0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingItemCollectorActor> AutoInitializeABuildingItemCollectorActor(TEXT("ABuildingItemCollectorActor"), sizeof(ABuildingItemCollectorActor), 2023708068u);

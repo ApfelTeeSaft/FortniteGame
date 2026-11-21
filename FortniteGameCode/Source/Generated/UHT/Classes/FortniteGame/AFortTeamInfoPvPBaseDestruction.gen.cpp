@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortTeamInfoPvPBaseDestruction::StaticRegisterNativesAFortTeamInfoPvPBaseDestruction()
-{
-}
 // IMPLEMENT_CLASS(AFortTeamInfoPvPBaseDestruction, 3785139558u)
 // Original dynamic initializer: RVA 0x00114690 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTeamInfoPvPBaseDestruction> AutoInitializeAFortTeamInfoPvPBaseDestruction(TEXT("AFortTeamInfoPvPBaseDestruction"), sizeof(AFortTeamInfoPvPBaseDestruction), 3785139558u);

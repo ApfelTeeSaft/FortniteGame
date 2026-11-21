@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTask();  // RVA 0x01C9AAE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A970 (end 0x01C9A992)
+// Original VA: 0x0000000141C9A970 | File offset: 0x01C99F70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036C60D0) | Matching: see analysis/functions-uht-natives.json
+void UGameplayTask::StaticRegisterNativesUGameplayTask()
+{
+	UClass* Class = UGameplayTask::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EndTask", &UGameplayTask::execEndTask },
+		{ "ReadyForActivation", &UGameplayTask::execReadyForActivation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBangWrapper_NUI();  // RVA 0x0288CC90 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C770 (end 0x0288C792)
+// Original VA: 0x000000014288C770 | File offset: 0x0288BD70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6BB30) | Matching: see analysis/functions-uht-natives.json
+void UFortBangWrapper_NUI::StaticRegisterNativesUFortBangWrapper_NUI()
+{
+	UClass* Class = UFortBangWrapper_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetBangStateBP", &UFortBangWrapper_NUI::execSetBangStateBP },
+		{ "SetBangType", &UFortBangWrapper_NUI::execSetBangType },
+		{ "SetTutorialNameID", &UFortBangWrapper_NUI::execSetTutorialNameID },
+		{ "UnregisterTutorialNameID", &UFortBangWrapper_NUI::execUnregisterTutorialNameID },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBangWrapper_NUI_OnBangStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

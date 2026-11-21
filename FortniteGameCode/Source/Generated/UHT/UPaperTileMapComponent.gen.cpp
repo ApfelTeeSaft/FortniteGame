@@ -6,6 +6,36 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPaperTileMapComponent();  // RVA 0x00667940 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666E80 (end 0x00666EA2)
+// Original VA: 0x0000000140666E80 | File offset: 0x00666480
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F952A0) | Matching: see analysis/functions-uht-natives.json
+void UPaperTileMapComponent::StaticRegisterNativesUPaperTileMapComponent()
+{
+	UClass* Class = UPaperTileMapComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddNewLayer", &UPaperTileMapComponent::execAddNewLayer },
+		{ "CreateNewTileMap", &UPaperTileMapComponent::execCreateNewTileMap },
+		{ "GetLayerColor", &UPaperTileMapComponent::execGetLayerColor },
+		{ "GetMapSize", &UPaperTileMapComponent::execGetMapSize },
+		{ "GetTile", &UPaperTileMapComponent::execGetTile },
+		{ "GetTileCenterPosition", &UPaperTileMapComponent::execGetTileCenterPosition },
+		{ "GetTileCornerPosition", &UPaperTileMapComponent::execGetTileCornerPosition },
+		{ "GetTileMapColor", &UPaperTileMapComponent::execGetTileMapColor },
+		{ "GetTilePolygon", &UPaperTileMapComponent::execGetTilePolygon },
+		{ "MakeTileMapEditable", &UPaperTileMapComponent::execMakeTileMapEditable },
+		{ "OwnsTileMap", &UPaperTileMapComponent::execOwnsTileMap },
+		{ "RebuildCollision", &UPaperTileMapComponent::execRebuildCollision },
+		{ "ResizeMap", &UPaperTileMapComponent::execResizeMap },
+		{ "SetDefaultCollisionThickness", &UPaperTileMapComponent::execSetDefaultCollisionThickness },
+		{ "SetLayerCollision", &UPaperTileMapComponent::execSetLayerCollision },
+		{ "SetLayerColor", &UPaperTileMapComponent::execSetLayerColor },
+		{ "SetTile", &UPaperTileMapComponent::execSetTile },
+		{ "SetTileMap", &UPaperTileMapComponent::execSetTileMap },
+		{ "SetTileMapColor", &UPaperTileMapComponent::execSetTileMapColor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPaperTileMapComponent_AddNewLayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

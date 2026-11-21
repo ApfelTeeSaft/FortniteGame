@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UInterpToMovementComponent();  // RVA 0x0242F550 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242EED0 (end 0x0242EEF2)
+// Original VA: 0x000000014242EED0 | File offset: 0x0242E4D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03906930) | Matching: see analysis/functions-uht-natives.json
+void UInterpToMovementComponent::StaticRegisterNativesUInterpToMovementComponent()
+{
+	UClass* Class = UInterpToMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FinaliseControlPoints", &UInterpToMovementComponent::execFinaliseControlPoints },
+		{ "RestartMovement", &UInterpToMovementComponent::execRestartMovement },
+		{ "StopSimulating", &UInterpToMovementComponent::execStopSimulating },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UInterpToMovementComponent_OnInterpToResetDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

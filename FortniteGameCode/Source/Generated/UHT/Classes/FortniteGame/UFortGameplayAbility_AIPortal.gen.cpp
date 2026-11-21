@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortGameplayAbility_AIPortal::StaticRegisterNativesUFortGameplayAbility_AIPortal()
-{
-}
 // IMPLEMENT_CLASS(UFortGameplayAbility_AIPortal, 1871279523u)
 // Original dynamic initializer: RVA 0x000F65E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGameplayAbility_AIPortal> AutoInitializeUFortGameplayAbility_AIPortal(TEXT("UFortGameplayAbility_AIPortal"), sizeof(UFortGameplayAbility_AIPortal), 1871279523u);

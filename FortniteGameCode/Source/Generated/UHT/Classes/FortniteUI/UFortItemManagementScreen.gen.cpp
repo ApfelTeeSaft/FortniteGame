@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemManagementScreen::StaticRegisterNativesUFortItemManagementScreen()
-{
-}
 // IMPLEMENT_CLASS(UFortItemManagementScreen, 2834796796u)
 // Original dynamic initializer: RVA 0x0024F290 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemManagementScreen> AutoInitializeUFortItemManagementScreen(TEXT("UFortItemManagementScreen"), sizeof(UFortItemManagementScreen), 2834796796u);

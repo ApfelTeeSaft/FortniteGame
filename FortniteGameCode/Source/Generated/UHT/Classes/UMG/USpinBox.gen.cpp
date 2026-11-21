@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USpinBox::StaticRegisterNativesUSpinBox()
-{
-}
 // IMPLEMENT_CLASS(USpinBox, 1582862689u)
 // Original dynamic initializer: RVA 0x001B3770 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USpinBox> AutoInitializeUSpinBox(TEXT("USpinBox"), sizeof(USpinBox), 1582862689u);

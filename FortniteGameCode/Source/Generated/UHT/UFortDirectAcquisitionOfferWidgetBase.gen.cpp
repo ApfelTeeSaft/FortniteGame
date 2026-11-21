@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferWidgetBase();  // RVA 0x0289B670 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B000 (end 0x0289B022)
+// Original VA: 0x000000014289B000 | File offset: 0x0289A600
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C84EF0) | Matching: see analysis/functions-uht-natives.json
+void UFortDirectAcquisitionOfferWidgetBase::StaticRegisterNativesUFortDirectAcquisitionOfferWidgetBase()
+{
+	UClass* Class = UFortDirectAcquisitionOfferWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddOffer", &UFortDirectAcquisitionOfferWidgetBase::execAddOffer },
+		{ "GetOfferInfo", &UFortDirectAcquisitionOfferWidgetBase::execGetOfferInfo },
+		{ "HandleCurrentlyViewedAccountInfoChanged", &UFortDirectAcquisitionOfferWidgetBase::execHandleCurrentlyViewedAccountInfoChanged },
+		{ "RemoveAllOffers", &UFortDirectAcquisitionOfferWidgetBase::execRemoveAllOffers },
+		{ "SetupOffer", &UFortDirectAcquisitionOfferWidgetBase::execSetupOffer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDirectAcquisitionOfferWidgetBase_AddOffer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

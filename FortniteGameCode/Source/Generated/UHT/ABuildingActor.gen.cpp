@@ -6,6 +6,54 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingActor();  // RVA 0x00F61030 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60B40 (end 0x00F60B62)
+// Original VA: 0x0000000140F60B40 | File offset: 0x00F60140
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03268FD0) | Matching: see analysis/functions-uht-natives.json
+void ABuildingActor::StaticRegisterNativesABuildingActor()
+{
+	UClass* Class = ABuildingActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddEditorOnlyInstanceGameplayTags", &ABuildingActor::execAddEditorOnlyInstanceGameplayTags },
+		{ "ForceBuildingHealth", &ABuildingActor::execForceBuildingHealth },
+		{ "GameplayCue_Damage", &ABuildingActor::execGameplayCue_Damage },
+		{ "GameplayCue_Healing", &ABuildingActor::execGameplayCue_Healing },
+		{ "GameplayCue_InstantDeath", &ABuildingActor::execGameplayCue_InstantDeath },
+		{ "GetCentroid", &ABuildingActor::execGetCentroid },
+		{ "GetCurrentBuildingLevel", &ABuildingActor::execGetCurrentBuildingLevel },
+		{ "GetCustomState", &ABuildingActor::execGetCustomState },
+		{ "GetEditorTestTags", &ABuildingActor::execGetEditorTestTags },
+		{ "GetHealth", &ABuildingActor::execGetHealth },
+		{ "GetHealthPercent", &ABuildingActor::execGetHealthPercent },
+		{ "GetMaxHealth", &ABuildingActor::execGetMaxHealth },
+		{ "GetMissingHealth", &ABuildingActor::execGetMissingHealth },
+		{ "GetOwningController", &ABuildingActor::execGetOwningController },
+		{ "GetOwningPlayerState", &ABuildingActor::execGetOwningPlayerState },
+		{ "HandleDestroyed", &ABuildingActor::execHandleDestroyed },
+		{ "HasHealthLeft", &ABuildingActor::execHasHealthLeft },
+		{ "InitializeKismetSpawnedBuildingActor", &ABuildingActor::execInitializeKismetSpawnedBuildingActor },
+		{ "IsAcceptablePositionForPlacement", &ABuildingActor::execIsAcceptablePositionForPlacement },
+		{ "IsDamaged", &ABuildingActor::execIsDamaged },
+		{ "IsPlayerBuilt", &ABuildingActor::execIsPlayerBuilt },
+		{ "OnBuildingActorInitialized", &ABuildingActor::execOnBuildingActorInitialized },
+		{ "OnDayPhaseChanged", &ABuildingActor::execOnDayPhaseChanged },
+		{ "OnRep_AbilitySystemComponent", &ABuildingActor::execOnRep_AbilitySystemComponent },
+		{ "OnRep_bForceReplayRollback", &ABuildingActor::execOnRep_bForceReplayRollback },
+		{ "OnRep_BuildingAttributeSet", &ABuildingActor::execOnRep_BuildingAttributeSet },
+		{ "OnRep_CurrentBuildingLevel", &ABuildingActor::execOnRep_CurrentBuildingLevel },
+		{ "OnRep_CustomState", &ABuildingActor::execOnRep_CustomState },
+		{ "PlacedByPlacementTool", &ABuildingActor::execPlacedByPlacementTool },
+		{ "RemoveEditorOnlyInstanceGameplayTags", &ABuildingActor::execRemoveEditorOnlyInstanceGameplayTags },
+		{ "SetCanExportNavigationObstacle", &ABuildingActor::execSetCanExportNavigationObstacle },
+		{ "SetCustomState", &ABuildingActor::execSetCustomState },
+		{ "SetNavigationModifier", &ABuildingActor::execSetNavigationModifier },
+		{ "SetQuestHighlight", &ABuildingActor::execSetQuestHighlight },
+		{ "ShouldDie", &ABuildingActor::execShouldDie },
+		{ "SilentDie", &ABuildingActor::execSilentDie },
+		{ "UseDefaultHealthBar", &ABuildingActor::execUseDefaultHealthBar },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingActor_AddEditorOnlyInstanceGameplayTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

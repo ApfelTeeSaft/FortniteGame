@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPvPBaseCornerstone::StaticRegisterNativesAFortPvPBaseCornerstone()
-{
-}
 // IMPLEMENT_CLASS(AFortPvPBaseCornerstone, 832562157u)
 // Original dynamic initializer: RVA 0x0010D570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPvPBaseCornerstone> AutoInitializeAFortPvPBaseCornerstone(TEXT("AFortPvPBaseCornerstone"), sizeof(AFortPvPBaseCornerstone), 832562157u);

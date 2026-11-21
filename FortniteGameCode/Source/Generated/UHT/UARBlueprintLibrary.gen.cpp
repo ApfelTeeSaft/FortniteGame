@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UARBlueprintLibrary();  // RVA 0x02921790 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921630 (end 0x02921652)
+// Original VA: 0x0000000142921630 | File offset: 0x02920C30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D5AFC0) | Matching: see analysis/functions-uht-natives.json
+void UARBlueprintLibrary::StaticRegisterNativesUARBlueprintLibrary()
+{
+	UClass* Class = UARBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DebugDrawTrackedGeometry", &UARBlueprintLibrary::execDebugDrawTrackedGeometry },
+		{ "GetAllGeometries", &UARBlueprintLibrary::execGetAllGeometries },
+		{ "GetLocalToTrackingTransform", &UARBlueprintLibrary::execGetLocalToTrackingTransform },
+		{ "GetLocalToWorldTransform", &UARBlueprintLibrary::execGetLocalToWorldTransform },
+		{ "GetTrackedGeometry", &UARBlueprintLibrary::execGetTrackedGeometry },
+		{ "GetTrackingQuality", &UARBlueprintLibrary::execGetTrackingQuality },
+		{ "IsARActive", &UARBlueprintLibrary::execIsARActive },
+		{ "LineTraceTrackedObjects", &UARBlueprintLibrary::execLineTraceTrackedObjects },
+		{ "StartAR", &UARBlueprintLibrary::execStartAR },
+		{ "StopAR", &UARBlueprintLibrary::execStopAR },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UARBlueprintLibrary_DebugDrawTrackedGeometry_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

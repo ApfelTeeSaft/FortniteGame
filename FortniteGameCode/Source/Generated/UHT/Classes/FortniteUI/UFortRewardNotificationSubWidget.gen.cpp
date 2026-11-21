@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortRewardNotificationSubWidget::StaticRegisterNativesUFortRewardNotificationSubWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortRewardNotificationSubWidget, 1895406262u)
 // Original dynamic initializer: RVA 0x002586A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortRewardNotificationSubWidget> AutoInitializeUFortRewardNotificationSubWidget(TEXT("UFortRewardNotificationSubWidget"), sizeof(UFortRewardNotificationSubWidget), 1895406262u);

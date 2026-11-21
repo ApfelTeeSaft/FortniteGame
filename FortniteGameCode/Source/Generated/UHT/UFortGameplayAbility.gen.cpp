@@ -6,6 +6,44 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayAbility();  // RVA 0x00FE7AF0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE76D0 (end 0x00FE76F2)
+// Original VA: 0x0000000140FE76D0 | File offset: 0x00FE6CD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03325190) | Matching: see analysis/functions-uht-natives.json
+void UFortGameplayAbility::StaticRegisterNativesUFortGameplayAbility()
+{
+	UClass* Class = UFortGameplayAbility::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyAccuracyToTargetLocation", &UFortGameplayAbility::execApplyAccuracyToTargetLocation },
+		{ "ApplyGameplayEffectContainer", &UFortGameplayAbility::execApplyGameplayEffectContainer },
+		{ "BP_GetGameplayEffectContainer", &UFortGameplayAbility::execBP_GetGameplayEffectContainer },
+		{ "CalculateProjectileTrajectorySpline", &UFortGameplayAbility::execCalculateProjectileTrajectorySpline },
+		{ "ClearAIFocalPoint", &UFortGameplayAbility::execClearAIFocalPoint },
+		{ "DoesTargetHaveProhibitedTagsForAI", &UFortGameplayAbility::execDoesTargetHaveProhibitedTagsForAI },
+		{ "DoesTargetHaveTags", &UFortGameplayAbility::execDoesTargetHaveTags },
+		{ "EquipAbilityWeapon", &UFortGameplayAbility::execEquipAbilityWeapon },
+		{ "GetActivatingAbilityComponent", &UFortGameplayAbility::execGetActivatingAbilityComponent },
+		{ "GetActivatingPawn", &UFortGameplayAbility::execGetActivatingPawn },
+		{ "GetAIAbilityTarget", &UFortGameplayAbility::execGetAIAbilityTarget },
+		{ "GetAimLocationNearestPawn", &UFortGameplayAbility::execGetAimLocationNearestPawn },
+		{ "GetCurrentAbilitySourceLevel", &UFortGameplayAbility::execGetCurrentAbilitySourceLevel },
+		{ "GetCurrentSourceItemDefinition", &UFortGameplayAbility::execGetCurrentSourceItemDefinition },
+		{ "GetCurrentSourceWeapon", &UFortGameplayAbility::execGetCurrentSourceWeapon },
+		{ "GetDisplayStats", &UFortGameplayAbility::execGetDisplayStats },
+		{ "GetFireLocation", &UFortGameplayAbility::execGetFireLocation },
+		{ "GetFireRotation", &UFortGameplayAbility::execGetFireRotation },
+		{ "GetProjectileInitialValues", &UFortGameplayAbility::execGetProjectileInitialValues },
+		{ "GetTooltip", &UFortGameplayAbility::execGetTooltip },
+		{ "IsTargetOutsideOfMaxYawRotation", &UFortGameplayAbility::execIsTargetOutsideOfMaxYawRotation },
+		{ "K2_AbilityCompleted", &UFortGameplayAbility::execK2_AbilityCompleted },
+		{ "MakeGameplayEffectContainerSpec", &UFortGameplayAbility::execMakeGameplayEffectContainerSpec },
+		{ "OnGenericNotifyFromAnimation", &UFortGameplayAbility::execOnGenericNotifyFromAnimation },
+		{ "QueryGameplayEffectContainerTargetExecutionModifiers", &UFortGameplayAbility::execQueryGameplayEffectContainerTargetExecutionModifiers },
+		{ "SetAIFocalPoint", &UFortGameplayAbility::execSetAIFocalPoint },
+		{ "SetupPreviewImageOverride", &UFortGameplayAbility::execSetupPreviewImageOverride },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGameplayAbility_ApplyAccuracyToTargetLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

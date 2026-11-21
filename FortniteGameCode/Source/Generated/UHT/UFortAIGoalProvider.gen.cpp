@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAIGoalProvider();  // RVA 0x00F91460 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90C90 (end 0x00F90CB2)
+// Original VA: 0x0000000140F90C90 | File offset: 0x00F90290
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032AD3E8) | Matching: see analysis/functions-uht-natives.json
+void UFortAIGoalProvider::StaticRegisterNativesUFortAIGoalProvider()
+{
+	UClass* Class = UFortAIGoalProvider::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEncounterInfo", &UFortAIGoalProvider::execGetEncounterInfo },
+		{ "InitializeGoalProvider", &UFortAIGoalProvider::execInitializeGoalProvider },
+		{ "UpdateGoals", &UFortAIGoalProvider::execUpdateGoals },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAIGoalProvider_GetEncounterInfo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

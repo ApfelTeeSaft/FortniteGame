@@ -6,6 +6,42 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_APawn();  // RVA 0x024A08A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0480 (end 0x024A04A2)
+// Original VA: 0x00000001424A0480 | File offset: 0x0249FA80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03977EE0) | Matching: see analysis/functions-uht-natives.json
+void APawn::StaticRegisterNativesAPawn()
+{
+	UClass* Class = APawn::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddControllerPitchInput", &APawn::execAddControllerPitchInput },
+		{ "AddControllerRollInput", &APawn::execAddControllerRollInput },
+		{ "AddControllerYawInput", &APawn::execAddControllerYawInput },
+		{ "AddMovementInput", &APawn::execAddMovementInput },
+		{ "ConsumeMovementInputVector", &APawn::execConsumeMovementInputVector },
+		{ "DetachFromControllerPendingDestroy", &APawn::execDetachFromControllerPendingDestroy },
+		{ "GetBaseAimRotation", &APawn::execGetBaseAimRotation },
+		{ "GetController", &APawn::execGetController },
+		{ "GetControlRotation", &APawn::execGetControlRotation },
+		{ "GetLastMovementInputVector", &APawn::execGetLastMovementInputVector },
+		{ "GetMovementBaseActor", &APawn::execGetMovementBaseActor },
+		{ "GetMovementComponent", &APawn::execGetMovementComponent },
+		{ "GetNavAgentLocation", &APawn::execGetNavAgentLocation },
+		{ "GetPendingMovementInputVector", &APawn::execGetPendingMovementInputVector },
+		{ "IsControlled", &APawn::execIsControlled },
+		{ "IsLocallyControlled", &APawn::execIsLocallyControlled },
+		{ "IsMoveInputIgnored", &APawn::execIsMoveInputIgnored },
+		{ "IsPlayerControlled", &APawn::execIsPlayerControlled },
+		{ "K2_GetMovementInputVector", &APawn::execK2_GetMovementInputVector },
+		{ "LaunchPawn", &APawn::execLaunchPawn },
+		{ "OnRep_Controller", &APawn::execOnRep_Controller },
+		{ "OnRep_PlayerState", &APawn::execOnRep_PlayerState },
+		{ "PawnMakeNoise", &APawn::execPawnMakeNoise },
+		{ "SetCanAffectNavigationGeneration", &APawn::execSetCanAffectNavigationGeneration },
+		{ "SpawnDefaultController", &APawn::execSpawnDefaultController },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_APawn_AddControllerPitchInput_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

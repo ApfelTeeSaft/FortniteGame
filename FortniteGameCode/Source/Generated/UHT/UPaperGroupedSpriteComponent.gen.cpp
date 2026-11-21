@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPaperGroupedSpriteComponent();  // RVA 0x00667710 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666DC0 (end 0x00666DE2)
+// Original VA: 0x0000000140666DC0 | File offset: 0x006663C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F94180) | Matching: see analysis/functions-uht-natives.json
+void UPaperGroupedSpriteComponent::StaticRegisterNativesUPaperGroupedSpriteComponent()
+{
+	UClass* Class = UPaperGroupedSpriteComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddInstance", &UPaperGroupedSpriteComponent::execAddInstance },
+		{ "ClearInstances", &UPaperGroupedSpriteComponent::execClearInstances },
+		{ "GetInstanceCount", &UPaperGroupedSpriteComponent::execGetInstanceCount },
+		{ "GetInstanceTransform", &UPaperGroupedSpriteComponent::execGetInstanceTransform },
+		{ "RemoveInstance", &UPaperGroupedSpriteComponent::execRemoveInstance },
+		{ "SortInstancesAlongAxis", &UPaperGroupedSpriteComponent::execSortInstancesAlongAxis },
+		{ "UpdateInstanceColor", &UPaperGroupedSpriteComponent::execUpdateInstanceColor },
+		{ "UpdateInstanceTransform", &UPaperGroupedSpriteComponent::execUpdateInstanceTransform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

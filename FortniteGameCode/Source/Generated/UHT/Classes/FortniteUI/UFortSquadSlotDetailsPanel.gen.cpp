@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadSlotDetailsPanel::StaticRegisterNativesUFortSquadSlotDetailsPanel()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadSlotDetailsPanel, 577048738u)
 // Original dynamic initializer: RVA 0x0025C0C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadSlotDetailsPanel> AutoInitializeUFortSquadSlotDetailsPanel(TEXT("UFortSquadSlotDetailsPanel"), sizeof(UFortSquadSlotDetailsPanel), 577048738u);

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPickerContext();  // RVA 0x028E6C60 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6530 (end 0x028E6552)
+// Original VA: 0x00000001428E6530 | File offset: 0x028E5B30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFE400) | Matching: see analysis/functions-uht-natives.json
+void UFortPickerContext::StaticRegisterNativesUFortPickerContext()
+{
+	UClass* Class = UFortPickerContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DoesRadialCloseOnRelease", &UFortPickerContext::execDoesRadialCloseOnRelease },
+		{ "GetListPickerOption", &UFortPickerContext::execGetListPickerOption },
+		{ "GetNumPickerOptions", &UFortPickerContext::execGetNumPickerOptions },
+		{ "GetRadialPickerOptionImageAndLabel", &UFortPickerContext::execGetRadialPickerOptionImageAndLabel },
+		{ "GetRadialPickerOptionItem", &UFortPickerContext::execGetRadialPickerOptionItem },
+		{ "PickerCanceled", &UFortPickerContext::execPickerCanceled },
+		{ "PickerOptionAccepted", &UFortPickerContext::execPickerOptionAccepted },
+		{ "RestoreInputAxes", &UFortPickerContext::execRestoreInputAxes },
+		{ "SetFortPickerData", &UFortPickerContext::execSetFortPickerData },
+		{ "UseLeftThumbstick", &UFortPickerContext::execUseLeftThumbstick },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPickerContext_DoesRadialCloseOnRelease_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

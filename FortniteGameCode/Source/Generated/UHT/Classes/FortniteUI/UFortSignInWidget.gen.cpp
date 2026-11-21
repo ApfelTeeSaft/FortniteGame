@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSignInWidget::StaticRegisterNativesUFortSignInWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortSignInWidget, 2277914335u)
 // Original dynamic initializer: RVA 0x0025AB20 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSignInWidget> AutoInitializeUFortSignInWidget(TEXT("UFortSignInWidget"), sizeof(UFortSignInWidget), 2277914335u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaPlayerIndicatorBase::StaticRegisterNativesUAthenaPlayerIndicatorBase()
-{
-}
 // IMPLEMENT_CLASS(UAthenaPlayerIndicatorBase, 1343327097u)
 // Original dynamic initializer: RVA 0x0023B520 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaPlayerIndicatorBase> AutoInitializeUAthenaPlayerIndicatorBase(TEXT("UAthenaPlayerIndicatorBase"), sizeof(UAthenaPlayerIndicatorBase), 1343327097u);

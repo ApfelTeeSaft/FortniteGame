@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestTreeItemWidget();  // RVA 0x028ED3E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECD40 (end 0x028ECD62)
+// Original VA: 0x00000001428ECD40 | File offset: 0x028EC340
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D09B78) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestTreeItemWidget::StaticRegisterNativesUFortQuestTreeItemWidget()
+{
+	UClass* Class = UFortQuestTreeItemWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleQuestsUpdated", &UFortQuestTreeItemWidget::execHandleQuestsUpdated },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestTreeItemWidget_ExpansionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UParticleSystemComponent();  // RVA 0x024A0930 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A04B0 (end 0x024A04D2)
+// Original VA: 0x00000001424A04B0 | File offset: 0x0249FAB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03977400) | Matching: see analysis/functions-uht-natives.json
+void UParticleSystemComponent::StaticRegisterNativesUParticleSystemComponent()
+{
+	UClass* Class = UParticleSystemComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginTrails", &UParticleSystemComponent::execBeginTrails },
+		{ "CreateNamedDynamicMaterialInstance", &UParticleSystemComponent::execCreateNamedDynamicMaterialInstance },
+		{ "EndTrails", &UParticleSystemComponent::execEndTrails },
+		{ "GenerateParticleEvent", &UParticleSystemComponent::execGenerateParticleEvent },
+		{ "GetBeamEndPoint", &UParticleSystemComponent::execGetBeamEndPoint },
+		{ "GetBeamSourcePoint", &UParticleSystemComponent::execGetBeamSourcePoint },
+		{ "GetBeamSourceStrength", &UParticleSystemComponent::execGetBeamSourceStrength },
+		{ "GetBeamSourceTangent", &UParticleSystemComponent::execGetBeamSourceTangent },
+		{ "GetBeamTargetPoint", &UParticleSystemComponent::execGetBeamTargetPoint },
+		{ "GetBeamTargetStrength", &UParticleSystemComponent::execGetBeamTargetStrength },
+		{ "GetBeamTargetTangent", &UParticleSystemComponent::execGetBeamTargetTangent },
+		{ "GetNamedMaterial", &UParticleSystemComponent::execGetNamedMaterial },
+		{ "GetNumActiveParticles", &UParticleSystemComponent::execGetNumActiveParticles },
+		{ "SetActorParameter", &UParticleSystemComponent::execSetActorParameter },
+		{ "SetAutoAttachmentParameters", &UParticleSystemComponent::execSetAutoAttachmentParameters },
+		{ "SetAutoAttachParams", &UParticleSystemComponent::execSetAutoAttachParams },
+		{ "SetBeamEndPoint", &UParticleSystemComponent::execSetBeamEndPoint },
+		{ "SetBeamSourcePoint", &UParticleSystemComponent::execSetBeamSourcePoint },
+		{ "SetBeamSourceStrength", &UParticleSystemComponent::execSetBeamSourceStrength },
+		{ "SetBeamSourceTangent", &UParticleSystemComponent::execSetBeamSourceTangent },
+		{ "SetBeamTargetPoint", &UParticleSystemComponent::execSetBeamTargetPoint },
+		{ "SetBeamTargetStrength", &UParticleSystemComponent::execSetBeamTargetStrength },
+		{ "SetBeamTargetTangent", &UParticleSystemComponent::execSetBeamTargetTangent },
+		{ "SetColorParameter", &UParticleSystemComponent::execSetColorParameter },
+		{ "SetEmitterEnable", &UParticleSystemComponent::execSetEmitterEnable },
+		{ "SetFloatParameter", &UParticleSystemComponent::execSetFloatParameter },
+		{ "SetMaterialParameter", &UParticleSystemComponent::execSetMaterialParameter },
+		{ "SetTemplate", &UParticleSystemComponent::execSetTemplate },
+		{ "SetTrailSourceData", &UParticleSystemComponent::execSetTrailSourceData },
+		{ "SetVectorParameter", &UParticleSystemComponent::execSetVectorParameter },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UParticleSystemComponent_BeginTrails_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

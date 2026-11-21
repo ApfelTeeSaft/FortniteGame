@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilitySystemGlobals();  // RVA 0x005466A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546340 (end 0x00546362)
+// Original VA: 0x0000000140546340 | File offset: 0x00545940
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2A498) | Matching: see analysis/functions-uht-natives.json
+void UAbilitySystemGlobals::StaticRegisterNativesUAbilitySystemGlobals()
+{
+	UClass* Class = UAbilitySystemGlobals::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ToggleIgnoreAbilitySystemCooldowns", &UAbilitySystemGlobals::execToggleIgnoreAbilitySystemCooldowns },
+		{ "ToggleIgnoreAbilitySystemCosts", &UAbilitySystemGlobals::execToggleIgnoreAbilitySystemCosts },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCooldowns_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

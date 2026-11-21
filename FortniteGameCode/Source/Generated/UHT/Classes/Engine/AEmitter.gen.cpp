@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AEmitter::StaticRegisterNativesAEmitter()
-{
-}
 // IMPLEMENT_CLASS(AEmitter, 1782085140u)
 // Original dynamic initializer: RVA 0x001F9CA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AEmitter> AutoInitializeAEmitter(TEXT("AEmitter"), sizeof(AEmitter), 1782085140u);

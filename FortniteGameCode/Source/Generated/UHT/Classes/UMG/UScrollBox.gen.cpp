@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UScrollBox::StaticRegisterNativesUScrollBox()
-{
-}
 // IMPLEMENT_CLASS(UScrollBox, 3433332713u)
 // Original dynamic initializer: RVA 0x001B3650 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UScrollBox> AutoInitializeUScrollBox(TEXT("UScrollBox"), sizeof(UScrollBox), 3433332713u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPawnAction::StaticRegisterNativesUPawnAction()
-{
-}
 // IMPLEMENT_CLASS(UPawnAction, 798319730u)
 // Original dynamic initializer: RVA 0x001BF440 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPawnAction> AutoInitializeUPawnAction(TEXT("UPawnAction"), sizeof(UPawnAction), 798319730u);

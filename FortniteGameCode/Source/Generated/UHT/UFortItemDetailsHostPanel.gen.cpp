@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemDetailsHostPanel();  // RVA 0x028C9DE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9930 (end 0x028C9952)
+// Original VA: 0x00000001428C9930 | File offset: 0x028C8F30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCCC00) | Matching: see analysis/functions-uht-natives.json
+void UFortItemDetailsHostPanel::StaticRegisterNativesUFortItemDetailsHostPanel()
+{
+	UClass* Class = UFortItemDetailsHostPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetInspectMode", &UFortItemDetailsHostPanel::execSetInspectMode },
+		{ "SetItemToCompareWith", &UFortItemDetailsHostPanel::execSetItemToCompareWith },
+		{ "SetItemToDetail", &UFortItemDetailsHostPanel::execSetItemToDetail },
+		{ "SetItemViewContext", &UFortItemDetailsHostPanel::execSetItemViewContext },
+		{ "SetScrollWidget", &UFortItemDetailsHostPanel::execSetScrollWidget },
+		{ "ShouldPreviewUpgradingItem", &UFortItemDetailsHostPanel::execShouldPreviewUpgradingItem },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemDetailsHostPanel_HandleDifferentItemToCompareSet_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

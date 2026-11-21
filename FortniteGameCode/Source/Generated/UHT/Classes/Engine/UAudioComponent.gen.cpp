@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAudioComponent::StaticRegisterNativesUAudioComponent()
-{
-}
 // IMPLEMENT_CLASS(UAudioComponent, 3016457903u)
 // Original dynamic initializer: RVA 0x001F1B70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAudioComponent> AutoInitializeUAudioComponent(TEXT("UAudioComponent"), sizeof(UAudioComponent), 3016457903u);

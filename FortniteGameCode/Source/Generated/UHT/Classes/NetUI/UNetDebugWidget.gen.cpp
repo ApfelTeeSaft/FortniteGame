@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UNetDebugWidget::StaticRegisterNativesUNetDebugWidget()
-{
-}
 // IMPLEMENT_CLASS(UNetDebugWidget, 2283032612u)
 // Original dynamic initializer: RVA 0x000A6300 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UNetDebugWidget> AutoInitializeUNetDebugWidget(TEXT("UNetDebugWidget"), sizeof(UNetDebugWidget), 2283032612u);

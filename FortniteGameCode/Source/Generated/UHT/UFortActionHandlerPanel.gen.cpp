@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortActionHandlerPanel();  // RVA 0x02887700 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886DB0 (end 0x02886DD2)
+// Original VA: 0x0000000142886DB0 | File offset: 0x028863B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C60840) | Matching: see analysis/functions-uht-natives.json
+void UFortActionHandlerPanel::StaticRegisterNativesUFortActionHandlerPanel()
+{
+	UClass* Class = UFortActionHandlerPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ActivateActionHandler", &UFortActionHandlerPanel::execActivateActionHandler },
+		{ "DeactivateActionHandler", &UFortActionHandlerPanel::execDeactivateActionHandler },
+		{ "OnHandleAction", &UFortActionHandlerPanel::execOnHandleAction },
+		{ "RemoveOnPanelDeactivated", &UFortActionHandlerPanel::execRemoveOnPanelDeactivated },
+		{ "SetOnPanelActivated", &UFortActionHandlerPanel::execSetOnPanelActivated },
+		{ "SetOnPanelDeactivated", &UFortActionHandlerPanel::execSetOnPanelDeactivated },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

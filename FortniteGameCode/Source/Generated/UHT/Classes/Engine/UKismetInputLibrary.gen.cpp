@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UKismetInputLibrary::StaticRegisterNativesUKismetInputLibrary()
-{
-}
 // IMPLEMENT_CLASS(UKismetInputLibrary, 296881684u)
 // Original dynamic initializer: RVA 0x002045B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UKismetInputLibrary> AutoInitializeUKismetInputLibrary(TEXT("UKismetInputLibrary"), sizeof(UKismetInputLibrary), 296881684u);

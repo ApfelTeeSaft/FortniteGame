@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortMissionManager();  // RVA 0x0104A7D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A290 (end 0x0104A2B2)
+// Original VA: 0x000000014104A290 | File offset: 0x01049890
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033895A0) | Matching: see analysis/functions-uht-natives.json
+void AFortMissionManager::StaticRegisterNativesAFortMissionManager()
+{
+	UClass* Class = AFortMissionManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSpawnLocationActorsMatchingEntryItemQuery", &AFortMissionManager::execGetSpawnLocationActorsMatchingEntryItemQuery },
+		{ "GetSpawnLocationActorsThatHaveAddedTagsMatchingQuery", &AFortMissionManager::execGetSpawnLocationActorsThatHaveAddedTagsMatchingQuery },
+		{ "OnRep_CurrentUIFocusedMission", &AFortMissionManager::execOnRep_CurrentUIFocusedMission },
+		{ "OnRep_EarnedBadgesArray", &AFortMissionManager::execOnRep_EarnedBadgesArray },
+		{ "OnRep_Missions", &AFortMissionManager::execOnRep_Missions },
+		{ "OnRep_MissionUIActors", &AFortMissionManager::execOnRep_MissionUIActors },
+		{ "ShouldShowSecondaryMissionHeaders", &AFortMissionManager::execShouldShowSecondaryMissionHeaders },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortMissionManager_GetSpawnLocationActorsMatchingEntryItemQuery_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,36 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFOBConfigActor();  // RVA 0x00F66560 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66020 (end 0x00F66042)
+// Original VA: 0x0000000140F66020 | File offset: 0x00F65620
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032716B0) | Matching: see analysis/functions-uht-natives.json
+void ABuildingFOBConfigActor::StaticRegisterNativesABuildingFOBConfigActor()
+{
+	UClass* Class = ABuildingFOBConfigActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AttemptSelectFOBCore", &ABuildingFOBConfigActor::execAttemptSelectFOBCore },
+		{ "CanPerformIOOperation", &ABuildingFOBConfigActor::execCanPerformIOOperation },
+		{ "CanReloadFOB", &ABuildingFOBConfigActor::execCanReloadFOB },
+		{ "CanSaveFOB", &ABuildingFOBConfigActor::execCanSaveFOB },
+		{ "GetAllCoreChoices", &ABuildingFOBConfigActor::execGetAllCoreChoices },
+		{ "GetFOBMode", &ABuildingFOBConfigActor::execGetFOBMode },
+		{ "GetSelectedFOBCoreItemDefinition", &ABuildingFOBConfigActor::execGetSelectedFOBCoreItemDefinition },
+		{ "IsBuildingActorWithinFOB", &ABuildingFOBConfigActor::execIsBuildingActorWithinFOB },
+		{ "IsFinalized", &ABuildingFOBConfigActor::execIsFinalized },
+		{ "IsInitialized", &ABuildingFOBConfigActor::execIsInitialized },
+		{ "IsPlayerControllerFOBOwner", &ABuildingFOBConfigActor::execIsPlayerControllerFOBOwner },
+		{ "OnCoreInitialized", &ABuildingFOBConfigActor::execOnCoreInitialized },
+		{ "OnFinalizationFXMulticast", &ABuildingFOBConfigActor::execOnFinalizationFXMulticast },
+		{ "OnFinalized", &ABuildingFOBConfigActor::execOnFinalized },
+		{ "OnFOBModeSet", &ABuildingFOBConfigActor::execOnFOBModeSet },
+		{ "OnIOOperationCompleteMulticast", &ABuildingFOBConfigActor::execOnIOOperationCompleteMulticast },
+		{ "OnRep_bFinalized", &ABuildingFOBConfigActor::execOnRep_bFinalized },
+		{ "OnRep_FOBMode", &ABuildingFOBConfigActor::execOnRep_FOBMode },
+		{ "ReloadFOB", &ABuildingFOBConfigActor::execReloadFOB },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingFOBConfigActor_AttemptSelectFOBCore_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

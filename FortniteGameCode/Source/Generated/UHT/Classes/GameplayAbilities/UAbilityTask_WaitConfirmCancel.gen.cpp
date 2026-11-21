@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_WaitConfirmCancel::StaticRegisterNativesUAbilityTask_WaitConfirmCancel()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_WaitConfirmCancel, 1371323098u)
 // Original dynamic initializer: RVA 0x0009DD70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_WaitConfirmCancel> AutoInitializeUAbilityTask_WaitConfirmCancel(TEXT("UAbilityTask_WaitConfirmCancel"), sizeof(UAbilityTask_WaitConfirmCancel), 1371323098u);

@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCraftingBarWidget();  // RVA 0x0289B3D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AEB0 (end 0x0289AED2)
+// Original VA: 0x000000014289AEB0 | File offset: 0x0289A4B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C820B0) | Matching: see analysis/functions-uht-natives.json
+void UFortCraftingBarWidget::StaticRegisterNativesUFortCraftingBarWidget()
+{
+	UClass* Class = UFortCraftingBarWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandlePlayerStartedCrafting", &UFortCraftingBarWidget::execHandlePlayerStartedCrafting },
+		{ "HandlePlayerStoppedCrafting", &UFortCraftingBarWidget::execHandlePlayerStoppedCrafting },
+		{ "OnCompletedSetHidden", &UFortCraftingBarWidget::execOnCompletedSetHidden },
+		{ "SetHideCraftingBar", &UFortCraftingBarWidget::execSetHideCraftingBar },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCrafting_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

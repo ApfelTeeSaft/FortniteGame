@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortGameStatePvP::StaticRegisterNativesAFortGameStatePvP()
-{
-}
 // IMPLEMENT_CLASS(AFortGameStatePvP, 2870238171u)
 // Original dynamic initializer: RVA 0x000F7670 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStatePvP> AutoInitializeAFortGameStatePvP(TEXT("AFortGameStatePvP"), sizeof(AFortGameStatePvP), 2870238171u);

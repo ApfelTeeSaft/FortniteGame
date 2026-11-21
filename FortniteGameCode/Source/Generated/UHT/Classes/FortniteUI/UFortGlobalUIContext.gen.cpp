@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortGlobalUIContext::StaticRegisterNativesUFortGlobalUIContext()
-{
-}
 // IMPLEMENT_CLASS(UFortGlobalUIContext, 1288250790u)
 // Original dynamic initializer: RVA 0x00245B70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGlobalUIContext> AutoInitializeUFortGlobalUIContext(TEXT("UFortGlobalUIContext"), sizeof(UFortGlobalUIContext), 1288250790u);

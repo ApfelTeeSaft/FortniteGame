@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionTimerComponent();  // RVA 0x0104A9D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A350 (end 0x0104A372)
+// Original VA: 0x000000014104A350 | File offset: 0x01049950
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03389E40) | Matching: see analysis/functions-uht-natives.json
+void UFortMissionTimerComponent::StaticRegisterNativesUFortMissionTimerComponent()
+{
+	UClass* Class = UFortMissionTimerComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearMissionTimer", &UFortMissionTimerComponent::execClearMissionTimer },
+		{ "DummyTimer", &UFortMissionTimerComponent::execDummyTimer },
+		{ "GetCorrectTimeDisplayData", &UFortMissionTimerComponent::execGetCorrectTimeDisplayData },
+		{ "GetMissionTimerTimeRemaining", &UFortMissionTimerComponent::execGetMissionTimerTimeRemaining },
+		{ "GetNormalizedTime", &UFortMissionTimerComponent::execGetNormalizedTime },
+		{ "GetTimeText", &UFortMissionTimerComponent::execGetTimeText },
+		{ "IsMissionTimerPaused", &UFortMissionTimerComponent::execIsMissionTimerPaused },
+		{ "IsMissionTimerSet", &UFortMissionTimerComponent::execIsMissionTimerSet },
+		{ "IsTimerVisible", &UFortMissionTimerComponent::execIsTimerVisible },
+		{ "OnRep_TimerData", &UFortMissionTimerComponent::execOnRep_TimerData },
+		{ "OnRep_TimerVisibilityOverride", &UFortMissionTimerComponent::execOnRep_TimerVisibilityOverride },
+		{ "PauseMissionTimer", &UFortMissionTimerComponent::execPauseMissionTimer },
+		{ "ResetMissionTimer", &UFortMissionTimerComponent::execResetMissionTimer },
+		{ "SetMissionTimer", &UFortMissionTimerComponent::execSetMissionTimer },
+		{ "SetTimerDisplayFormat", &UFortMissionTimerComponent::execSetTimerDisplayFormat },
+		{ "SetTimerLabelText", &UFortMissionTimerComponent::execSetTimerLabelText },
+		{ "SetTimerVisibilityOverrideSetting", &UFortMissionTimerComponent::execSetTimerVisibilityOverrideSetting },
+		{ "UnpauseMissionTimer", &UFortMissionTimerComponent::execUnpauseMissionTimer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMissionTimerComponent_ClearMissionTimer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

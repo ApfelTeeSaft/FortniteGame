@@ -6,6 +6,40 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerAttrSet();  // RVA 0x0106AD50 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106A960 (end 0x0106A982)
+// Original VA: 0x000000014106A960 | File offset: 0x01069F60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033B8830) | Matching: see analysis/functions-uht-natives.json
+void UFortPlayerAttrSet::StaticRegisterNativesUFortPlayerAttrSet()
+{
+	UClass* Class = UFortPlayerAttrSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_CraftingTimeMultiplier", &UFortPlayerAttrSet::execOnRep_CraftingTimeMultiplier },
+		{ "OnRep_CraftItemLevelBonusMax", &UFortPlayerAttrSet::execOnRep_CraftItemLevelBonusMax },
+		{ "OnRep_CraftItemLevelBonusMin", &UFortPlayerAttrSet::execOnRep_CraftItemLevelBonusMin },
+		{ "OnRep_DoubleCraftChance", &UFortPlayerAttrSet::execOnRep_DoubleCraftChance },
+		{ "OnRep_DoubleItemLootChance", &UFortPlayerAttrSet::execOnRep_DoubleItemLootChance },
+		{ "OnRep_DoubleLootRollChance", &UFortPlayerAttrSet::execOnRep_DoubleLootRollChance },
+		{ "OnRep_ExtraLives", &UFortPlayerAttrSet::execOnRep_ExtraLives },
+		{ "OnRep_Fortitude_Team", &UFortPlayerAttrSet::execOnRep_Fortitude_Team },
+		{ "OnRep_HarvestingTool", &UFortPlayerAttrSet::execOnRep_HarvestingTool },
+		{ "OnRep_ItemMaxStack", &UFortPlayerAttrSet::execOnRep_ItemMaxStack },
+		{ "OnRep_ItemRegenCooldown", &UFortPlayerAttrSet::execOnRep_ItemRegenCooldown },
+		{ "OnRep_ItemRegenMaxStack", &UFortPlayerAttrSet::execOnRep_ItemRegenMaxStack },
+		{ "OnRep_MaxStamina", &UFortPlayerAttrSet::execOnRep_MaxStamina },
+		{ "OnRep_Offense_Team", &UFortPlayerAttrSet::execOnRep_Offense_Team },
+		{ "OnRep_Resistance_Team", &UFortPlayerAttrSet::execOnRep_Resistance_Team },
+		{ "OnRep_ResourceHarvesting", &UFortPlayerAttrSet::execOnRep_ResourceHarvesting },
+		{ "OnRep_ResurrectTeammateDuration", &UFortPlayerAttrSet::execOnRep_ResurrectTeammateDuration },
+		{ "OnRep_SprintCost", &UFortPlayerAttrSet::execOnRep_SprintCost },
+		{ "OnRep_Stamina", &UFortPlayerAttrSet::execOnRep_Stamina },
+		{ "OnRep_StaminaCost", &UFortPlayerAttrSet::execOnRep_StaminaCost },
+		{ "OnRep_StaminaRegenDelay", &UFortPlayerAttrSet::execOnRep_StaminaRegenDelay },
+		{ "OnRep_StaminaRegenRate", &UFortPlayerAttrSet::execOnRep_StaminaRegenRate },
+		{ "OnRep_Tech_Team", &UFortPlayerAttrSet::execOnRep_Tech_Team },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_CraftingTimeMultiplier_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonActivatablePanel();  // RVA 0x002C2C00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C28F0 (end 0x002C2912)
+// Original VA: 0x00000001402C28F0 | File offset: 0x002C1EF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7AFD0) | Matching: see analysis/functions-uht-natives.json
+void UCommonActivatablePanel::StaticRegisterNativesUCommonActivatablePanel()
+{
+	UClass* Class = UCommonActivatablePanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddInputActionHandler", &UCommonActivatablePanel::execAddInputActionHandler },
+		{ "AddInputActionHandlerWithProgress", &UCommonActivatablePanel::execAddInputActionHandlerWithProgress },
+		{ "AddInputActionNoHandler", &UCommonActivatablePanel::execAddInputActionNoHandler },
+		{ "BeginIntro", &UCommonActivatablePanel::execBeginIntro },
+		{ "BeginOutro", &UCommonActivatablePanel::execBeginOutro },
+		{ "EndIntro", &UCommonActivatablePanel::execEndIntro },
+		{ "EndOutro", &UCommonActivatablePanel::execEndOutro },
+		{ "GetInputActions", &UCommonActivatablePanel::execGetInputActions },
+		{ "HasInputActionHandler", &UCommonActivatablePanel::execHasInputActionHandler },
+		{ "IsActivated", &UCommonActivatablePanel::execIsActivated },
+		{ "IsIntroed", &UCommonActivatablePanel::execIsIntroed },
+		{ "OnBeginIntro", &UCommonActivatablePanel::execOnBeginIntro },
+		{ "OnBeginOutro", &UCommonActivatablePanel::execOnBeginOutro },
+		{ "PopPanel", &UCommonActivatablePanel::execPopPanel },
+		{ "RemoveAllInputActionHandlers", &UCommonActivatablePanel::execRemoveAllInputActionHandlers },
+		{ "RemoveInputActionHandler", &UCommonActivatablePanel::execRemoveInputActionHandler },
+		{ "SetActionHandlerState", &UCommonActivatablePanel::execSetActionHandlerState },
+		{ "SetActionHandlerStateFromHandle", &UCommonActivatablePanel::execSetActionHandlerStateFromHandle },
+		{ "SetActionHandlerStateFromHandleWithDisabledCommitEvent", &UCommonActivatablePanel::execSetActionHandlerStateFromHandleWithDisabledCommitEvent },
+		{ "SetActionHandlerStateWithDisabledCommitEvent", &UCommonActivatablePanel::execSetActionHandlerStateWithDisabledCommitEvent },
+		{ "SetInputActionHandler", &UCommonActivatablePanel::execSetInputActionHandler },
+		{ "SetInputActionHandlerWithProgress", &UCommonActivatablePanel::execSetInputActionHandlerWithProgress },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonActivatablePanel_AddInputActionHandler_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

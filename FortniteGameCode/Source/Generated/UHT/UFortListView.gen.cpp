@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortListView();  // RVA 0x028D72A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6CF0 (end 0x028D6D12)
+// Original VA: 0x00000001428D6CF0 | File offset: 0x028D62F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE3FB0) | Matching: see analysis/functions-uht-natives.json
+void UFortListView::StaticRegisterNativesUFortListView()
+{
+	UClass* Class = UFortListView::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddItem", &UFortListView::execAddItem },
+		{ "Clear", &UFortListView::execClear },
+		{ "ClearSelection", &UFortListView::execClearSelection },
+		{ "GetIndexForItem", &UFortListView::execGetIndexForItem },
+		{ "GetItemAt", &UFortListView::execGetItemAt },
+		{ "RemoveItemAt", &UFortListView::execRemoveItemAt },
+		{ "SetDataProvider", &UFortListView::execSetDataProvider },
+		{ "SetIndexSelected", &UFortListView::execSetIndexSelected },
+		{ "SetItemSelected", &UFortListView::execSetItemSelected },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortListView_AddItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

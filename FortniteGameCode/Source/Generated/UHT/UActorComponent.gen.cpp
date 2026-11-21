@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UActorComponent();  // RVA 0x023C85B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C79B0 (end 0x023C79D2)
+// Original VA: 0x00000001423C79B0 | File offset: 0x023C6FB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03891320) | Matching: see analysis/functions-uht-natives.json
+void UActorComponent::StaticRegisterNativesUActorComponent()
+{
+	UClass* Class = UActorComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Activate", &UActorComponent::execActivate },
+		{ "AddTickPrerequisiteActor", &UActorComponent::execAddTickPrerequisiteActor },
+		{ "AddTickPrerequisiteComponent", &UActorComponent::execAddTickPrerequisiteComponent },
+		{ "ComponentHasTag", &UActorComponent::execComponentHasTag },
+		{ "Deactivate", &UActorComponent::execDeactivate },
+		{ "GetComponentTickInterval", &UActorComponent::execGetComponentTickInterval },
+		{ "GetOwner", &UActorComponent::execGetOwner },
+		{ "IsActive", &UActorComponent::execIsActive },
+		{ "IsBeingDestroyed", &UActorComponent::execIsBeingDestroyed },
+		{ "IsComponentTickEnabled", &UActorComponent::execIsComponentTickEnabled },
+		{ "K2_DestroyComponent", &UActorComponent::execK2_DestroyComponent },
+		{ "OnRep_IsActive", &UActorComponent::execOnRep_IsActive },
+		{ "RemoveTickPrerequisiteActor", &UActorComponent::execRemoveTickPrerequisiteActor },
+		{ "RemoveTickPrerequisiteComponent", &UActorComponent::execRemoveTickPrerequisiteComponent },
+		{ "SetActive", &UActorComponent::execSetActive },
+		{ "SetAutoActivate", &UActorComponent::execSetAutoActivate },
+		{ "SetComponentTickEnabled", &UActorComponent::execSetComponentTickEnabled },
+		{ "SetComponentTickInterval", &UActorComponent::execSetComponentTickInterval },
+		{ "SetIsReplicated", &UActorComponent::execSetIsReplicated },
+		{ "SetTickableWhenPaused", &UActorComponent::execSetTickableWhenPaused },
+		{ "SetTickGroup", &UActorComponent::execSetTickGroup },
+		{ "ToggleActive", &UActorComponent::execToggleActive },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UActorComponent_Activate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

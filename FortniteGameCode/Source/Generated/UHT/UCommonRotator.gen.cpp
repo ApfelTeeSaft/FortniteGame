@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonRotator();  // RVA 0x002CA590 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA160 (end 0x002CA182)
+// Original VA: 0x00000001402CA160 | File offset: 0x002C9760
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E826D0) | Matching: see analysis/functions-uht-natives.json
+void UCommonRotator::StaticRegisterNativesUCommonRotator()
+{
+	UClass* Class = UCommonRotator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSelectedIndex", &UCommonRotator::execGetSelectedIndex },
+		{ "GetSelectedText", &UCommonRotator::execGetSelectedText },
+		{ "PopulateTextLabels", &UCommonRotator::execPopulateTextLabels },
+		{ "SetSelectedItem", &UCommonRotator::execSetSelectedItem },
+		{ "ShiftTextLeft", &UCommonRotator::execShiftTextLeft },
+		{ "ShiftTextRight", &UCommonRotator::execShiftTextRight },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonRotator_GetSelectedIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

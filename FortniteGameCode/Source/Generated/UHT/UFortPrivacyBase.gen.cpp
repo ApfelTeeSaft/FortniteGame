@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPrivacyBase();  // RVA 0x028E6DF0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E65F0 (end 0x028E6612)
+// Original VA: 0x00000001428E65F0 | File offset: 0x028E5BF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFFF80) | Matching: see analysis/functions-uht-natives.json
+void UFortPrivacyBase::StaticRegisterNativesUFortPrivacyBase()
+{
+	UClass* Class = UFortPrivacyBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddPrivacyButton", &UFortPrivacyBase::execAddPrivacyButton },
+		{ "ApplyPrivacySetting", &UFortPrivacyBase::execApplyPrivacySetting },
+		{ "HandleAllowFriendsButtonClicked", &UFortPrivacyBase::execHandleAllowFriendsButtonClicked },
+		{ "HandlePrivacyButtonSelected", &UFortPrivacyBase::execHandlePrivacyButtonSelected },
+		{ "SetTencentBuild", &UFortPrivacyBase::execSetTencentBuild },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

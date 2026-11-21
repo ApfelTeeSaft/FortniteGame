@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ASkeletalMeshActor();  // RVA 0x024CC9B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC560 (end 0x024CC582)
+// Original VA: 0x00000001424CC560 | File offset: 0x024CBB60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A70F0) | Matching: see analysis/functions-uht-natives.json
+void ASkeletalMeshActor::StaticRegisterNativesASkeletalMeshActor()
+{
+	UClass* Class = ASkeletalMeshActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_ReplicatedMaterial0", &ASkeletalMeshActor::execOnRep_ReplicatedMaterial0 },
+		{ "OnRep_ReplicatedMaterial1", &ASkeletalMeshActor::execOnRep_ReplicatedMaterial1 },
+		{ "OnRep_ReplicatedMesh", &ASkeletalMeshActor::execOnRep_ReplicatedMesh },
+		{ "OnRep_ReplicatedPhysAsset", &ASkeletalMeshActor::execOnRep_ReplicatedPhysAsset },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

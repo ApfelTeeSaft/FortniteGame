@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortUIStateWidget_NUI::StaticRegisterNativesUFortUIStateWidget_NUI()
-{
-}
 // IMPLEMENT_CLASS(UFortUIStateWidget_NUI, 1358759396u)
 // Original dynamic initializer: RVA 0x00262AA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUIStateWidget_NUI> AutoInitializeUFortUIStateWidget_NUI(TEXT("UFortUIStateWidget_NUI"), sizeof(UFortUIStateWidget_NUI), 1358759396u);

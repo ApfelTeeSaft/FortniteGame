@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIPerceptionStimuliSourceComponent();  // RVA 0x01D1BC40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B1D0 (end 0x01D1B1F2)
+// Original VA: 0x0000000141D1B1D0 | File offset: 0x01D1A7D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F1D40) | Matching: see analysis/functions-uht-natives.json
+void UAIPerceptionStimuliSourceComponent::StaticRegisterNativesUAIPerceptionStimuliSourceComponent()
+{
+	UClass* Class = UAIPerceptionStimuliSourceComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RegisterForSense", &UAIPerceptionStimuliSourceComponent::execRegisterForSense },
+		{ "RegisterWithPerceptionSystem", &UAIPerceptionStimuliSourceComponent::execRegisterWithPerceptionSystem },
+		{ "UnregisterFromPerceptionSystem", &UAIPerceptionStimuliSourceComponent::execUnregisterFromPerceptionSystem },
+		{ "UnregisterFromSense", &UAIPerceptionStimuliSourceComponent::execUnregisterFromSense },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAIPerceptionStimuliSourceComponent_RegisterForSense_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

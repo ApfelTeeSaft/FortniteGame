@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadManagementScreenBase::StaticRegisterNativesUFortSquadManagementScreenBase()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadManagementScreenBase, 2359611398u)
 // Original dynamic initializer: RVA 0x0025C080 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadManagementScreenBase> AutoInitializeUFortSquadManagementScreenBase(TEXT("UFortSquadManagementScreenBase"), sizeof(UFortSquadManagementScreenBase), 2359611398u);

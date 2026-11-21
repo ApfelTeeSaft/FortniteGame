@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPaperTileMapComponent::StaticRegisterNativesUPaperTileMapComponent()
-{
-}
 // IMPLEMENT_CLASS(UPaperTileMapComponent, 879629547u)
 // Original dynamic initializer: RVA 0x000AB6D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperTileMapComponent> AutoInitializeUPaperTileMapComponent(TEXT("UPaperTileMapComponent"), sizeof(UPaperTileMapComponent), 879629547u);

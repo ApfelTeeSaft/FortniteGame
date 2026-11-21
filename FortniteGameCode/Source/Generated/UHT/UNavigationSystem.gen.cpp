@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNavigationSystem();  // RVA 0x0248FB80 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F3E0 (end 0x0248F402)
+// Original VA: 0x000000014248F3E0 | File offset: 0x0248E9E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0395A050) | Matching: see analysis/functions-uht-natives.json
+void UNavigationSystem::StaticRegisterNativesUNavigationSystem()
+{
+	UClass* Class = UNavigationSystem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FindPathToActorSynchronously", &UNavigationSystem::execFindPathToActorSynchronously },
+		{ "FindPathToLocationSynchronously", &UNavigationSystem::execFindPathToLocationSynchronously },
+		{ "GetNavigationSystem", &UNavigationSystem::execGetNavigationSystem },
+		{ "GetPathCost", &UNavigationSystem::execGetPathCost },
+		{ "GetPathLength", &UNavigationSystem::execGetPathLength },
+		{ "GetRandomPointInNavigableRadius", &UNavigationSystem::execGetRandomPointInNavigableRadius },
+		{ "GetRandomReachablePointInRadius", &UNavigationSystem::execGetRandomReachablePointInRadius },
+		{ "IsNavigationBeingBuilt", &UNavigationSystem::execIsNavigationBeingBuilt },
+		{ "IsNavigationBeingBuiltOrLocked", &UNavigationSystem::execIsNavigationBeingBuiltOrLocked },
+		{ "K2_GetRandomPointInNavigableRadius", &UNavigationSystem::execK2_GetRandomPointInNavigableRadius },
+		{ "K2_GetRandomReachablePointInRadius", &UNavigationSystem::execK2_GetRandomReachablePointInRadius },
+		{ "K2_ProjectPointToNavigation", &UNavigationSystem::execK2_ProjectPointToNavigation },
+		{ "NavigationRaycast", &UNavigationSystem::execNavigationRaycast },
+		{ "OnNavigationBoundsUpdated", &UNavigationSystem::execOnNavigationBoundsUpdated },
+		{ "ProjectPointToNavigation", &UNavigationSystem::execProjectPointToNavigation },
+		{ "RegisterNavigationInvoker", &UNavigationSystem::execRegisterNavigationInvoker },
+		{ "ResetMaxSimultaneousTileGenerationJobsCount", &UNavigationSystem::execResetMaxSimultaneousTileGenerationJobsCount },
+		{ "SetGeometryGatheringMode", &UNavigationSystem::execSetGeometryGatheringMode },
+		{ "SetMaxSimultaneousTileGenerationJobsCount", &UNavigationSystem::execSetMaxSimultaneousTileGenerationJobsCount },
+		{ "SimpleMoveToActor", &UNavigationSystem::execSimpleMoveToActor },
+		{ "SimpleMoveToLocation", &UNavigationSystem::execSimpleMoveToLocation },
+		{ "UnregisterNavigationInvoker", &UNavigationSystem::execUnregisterNavigationInvoker },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UNavigationSystem_FindPathToActorSynchronously_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortReticle::StaticRegisterNativesUFortReticle()
-{
-}
 // IMPLEMENT_CLASS(UFortReticle, 1305009826u)
 // Original dynamic initializer: RVA 0x00258500 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortReticle> AutoInitializeUFortReticle(TEXT("UFortReticle"), sizeof(UFortReticle), 1305009826u);

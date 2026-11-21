@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPartyBeaconClient();  // RVA 0x01055FC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01055C60 (end 0x01055C82)
+// Original VA: 0x0000000141055C60 | File offset: 0x01055260
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0339B8F0) | Matching: see analysis/functions-uht-natives.json
+void AFortPartyBeaconClient::StaticRegisterNativesAFortPartyBeaconClient()
+{
+	UClass* Class = AFortPartyBeaconClient::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientAbandonResponse", &AFortPartyBeaconClient::execClientAbandonResponse },
+		{ "ClientAllowedToProceedFromReservation", &AFortPartyBeaconClient::execClientAllowedToProceedFromReservation },
+		{ "ClientAllowedToProceedFromReservationTimeout", &AFortPartyBeaconClient::execClientAllowedToProceedFromReservationTimeout },
+		{ "ClientReconnectResponse", &AFortPartyBeaconClient::execClientReconnectResponse },
+		{ "ServerAbandonExistingReservation", &AFortPartyBeaconClient::execServerAbandonExistingReservation },
+		{ "ServerEmptyServerReservationRequest", &AFortPartyBeaconClient::execServerEmptyServerReservationRequest },
+		{ "ServerReconnectExistingReservation", &AFortPartyBeaconClient::execServerReconnectExistingReservation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPartyBeaconClient_ClientAbandonResponse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

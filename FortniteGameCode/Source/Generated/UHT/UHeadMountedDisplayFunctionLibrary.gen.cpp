@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary();  // RVA 0x0199D320 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0199D210 (end 0x0199D232)
+// Original VA: 0x000000014199D210 | File offset: 0x0199C810
+// Recovery: confirmed (registers FNameNativePtrPair array 0x035E4CC0) | Matching: see analysis/functions-uht-natives.json
+void UHeadMountedDisplayFunctionLibrary::StaticRegisterNativesUHeadMountedDisplayFunctionLibrary()
+{
+	UClass* Class = UHeadMountedDisplayFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddDeviceVisualizationComponent", &UHeadMountedDisplayFunctionLibrary::execAddDeviceVisualizationComponent },
+		{ "EnableHMD", &UHeadMountedDisplayFunctionLibrary::execEnableHMD },
+		{ "EnableLowPersistenceMode", &UHeadMountedDisplayFunctionLibrary::execEnableLowPersistenceMode },
+		{ "EnumerateTrackedDevices", &UHeadMountedDisplayFunctionLibrary::execEnumerateTrackedDevices },
+		{ "GetDevicePose", &UHeadMountedDisplayFunctionLibrary::execGetDevicePose },
+		{ "GetDeviceWorldPose", &UHeadMountedDisplayFunctionLibrary::execGetDeviceWorldPose },
+		{ "GetHMDDeviceName", &UHeadMountedDisplayFunctionLibrary::execGetHMDDeviceName },
+		{ "GetHMDWornState", &UHeadMountedDisplayFunctionLibrary::execGetHMDWornState },
+		{ "GetNumOfTrackingSensors", &UHeadMountedDisplayFunctionLibrary::execGetNumOfTrackingSensors },
+		{ "GetOrientationAndPosition", &UHeadMountedDisplayFunctionLibrary::execGetOrientationAndPosition },
+		{ "GetPixelDensity", &UHeadMountedDisplayFunctionLibrary::execGetPixelDensity },
+		{ "GetPositionalTrackingCameraParameters", &UHeadMountedDisplayFunctionLibrary::execGetPositionalTrackingCameraParameters },
+		{ "GetScreenPercentage", &UHeadMountedDisplayFunctionLibrary::execGetScreenPercentage },
+		{ "GetTrackingOrigin", &UHeadMountedDisplayFunctionLibrary::execGetTrackingOrigin },
+		{ "GetTrackingSensorParameters", &UHeadMountedDisplayFunctionLibrary::execGetTrackingSensorParameters },
+		{ "GetTrackingToWorldTransform", &UHeadMountedDisplayFunctionLibrary::execGetTrackingToWorldTransform },
+		{ "GetVRFocusState", &UHeadMountedDisplayFunctionLibrary::execGetVRFocusState },
+		{ "GetWorldToMetersScale", &UHeadMountedDisplayFunctionLibrary::execGetWorldToMetersScale },
+		{ "HasValidTrackingPosition", &UHeadMountedDisplayFunctionLibrary::execHasValidTrackingPosition },
+		{ "IsHeadMountedDisplayConnected", &UHeadMountedDisplayFunctionLibrary::execIsHeadMountedDisplayConnected },
+		{ "IsHeadMountedDisplayEnabled", &UHeadMountedDisplayFunctionLibrary::execIsHeadMountedDisplayEnabled },
+		{ "IsInLowPersistenceMode", &UHeadMountedDisplayFunctionLibrary::execIsInLowPersistenceMode },
+		{ "IsSpectatorScreenModeControllable", &UHeadMountedDisplayFunctionLibrary::execIsSpectatorScreenModeControllable },
+		{ "ResetOrientationAndPosition", &UHeadMountedDisplayFunctionLibrary::execResetOrientationAndPosition },
+		{ "SetClippingPlanes", &UHeadMountedDisplayFunctionLibrary::execSetClippingPlanes },
+		{ "SetSpectatorScreenMode", &UHeadMountedDisplayFunctionLibrary::execSetSpectatorScreenMode },
+		{ "SetSpectatorScreenModeTexturePlusEyeLayout", &UHeadMountedDisplayFunctionLibrary::execSetSpectatorScreenModeTexturePlusEyeLayout },
+		{ "SetSpectatorScreenTexture", &UHeadMountedDisplayFunctionLibrary::execSetSpectatorScreenTexture },
+		{ "SetTrackingOrigin", &UHeadMountedDisplayFunctionLibrary::execSetTrackingOrigin },
+		{ "SetWorldToMetersScale", &UHeadMountedDisplayFunctionLibrary::execSetWorldToMetersScale },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_AddDeviceVisualizationComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

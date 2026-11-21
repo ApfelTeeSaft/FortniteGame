@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPickerContext::StaticRegisterNativesUFortPickerContext()
-{
-}
 // IMPLEMENT_CLASS(UFortPickerContext, 2917326488u)
 // Original dynamic initializer: RVA 0x00255C00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPickerContext> AutoInitializeUFortPickerContext(TEXT("UFortPickerContext"), sizeof(UFortPickerContext), 2917326488u);

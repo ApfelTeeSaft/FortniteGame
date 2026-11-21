@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPickup();  // RVA 0x01065740 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064F00 (end 0x01064F22)
+// Original VA: 0x0000000141064F00 | File offset: 0x01064500
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033ACC50) | Matching: see analysis/functions-uht-natives.json
+void AFortPickup::StaticRegisterNativesAFortPickup()
+{
+	UClass* Class = AFortPickup::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDisplayName", &AFortPickup::execGetDisplayName },
+		{ "GetInteractErrorText", &AFortPickup::execGetInteractErrorText },
+		{ "GetInteractText", &AFortPickup::execGetInteractText },
+		{ "OnRep_bPickedUp", &AFortPickup::execOnRep_bPickedUp },
+		{ "OnRep_PickupLocationData", &AFortPickup::execOnRep_PickupLocationData },
+		{ "OnRep_PickupOwnerData", &AFortPickup::execOnRep_PickupOwnerData },
+		{ "OnRep_PrimaryPickupItemEntry", &AFortPickup::execOnRep_PrimaryPickupItemEntry },
+		{ "OnRep_TossedFromContainer", &AFortPickup::execOnRep_TossedFromContainer },
+		{ "PickedUp", &AFortPickup::execPickedUp },
+		{ "TossPickup", &AFortPickup::execTossPickup },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPickup_GetDisplayName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

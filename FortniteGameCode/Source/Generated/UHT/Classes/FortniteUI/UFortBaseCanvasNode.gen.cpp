@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortBaseCanvasNode::StaticRegisterNativesUFortBaseCanvasNode()
-{
-}
 // IMPLEMENT_CLASS(UFortBaseCanvasNode, 1301522709u)
 // Original dynamic initializer: RVA 0x00253A70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortBaseCanvasNode> AutoInitializeUFortBaseCanvasNode(TEXT("UFortBaseCanvasNode"), sizeof(UFortBaseCanvasNode), 1301522709u);

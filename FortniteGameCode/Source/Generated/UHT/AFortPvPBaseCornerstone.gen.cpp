@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPvPBaseCornerstone();  // RVA 0x0108B5E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AE90 (end 0x0108AEB2)
+// Original VA: 0x000000014108AE90 | File offset: 0x0108A490
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D6390) | Matching: see analysis/functions-uht-natives.json
+void AFortPvPBaseCornerstone::StaticRegisterNativesAFortPvPBaseCornerstone()
+{
+	UClass* Class = AFortPvPBaseCornerstone::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnInvincibilityChanged", &AFortPvPBaseCornerstone::execOnInvincibilityChanged },
+		{ "OnRep_bInvincible", &AFortPvPBaseCornerstone::execOnRep_bInvincible },
+		{ "SetInvincibility", &AFortPvPBaseCornerstone::execSetInvincibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

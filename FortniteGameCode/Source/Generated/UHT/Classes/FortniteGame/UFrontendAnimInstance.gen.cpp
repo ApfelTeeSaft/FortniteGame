@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFrontendAnimInstance::StaticRegisterNativesUFrontendAnimInstance()
-{
-}
 // IMPLEMENT_CLASS(UFrontendAnimInstance, 3623441767u)
 // Original dynamic initializer: RVA 0x0011EA40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFrontendAnimInstance> AutoInitializeUFrontendAnimInstance(TEXT("UFrontendAnimInstance"), sizeof(UFrontendAnimInstance), 3623441767u);

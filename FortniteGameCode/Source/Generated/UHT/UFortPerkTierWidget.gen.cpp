@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6410 (end 0x028E6432)
+// Original VA: 0x00000001428E6410 | File offset: 0x028E5A10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFDA28) | Matching: see analysis/functions-uht-natives.json
+void UFortPerkTierWidget::StaticRegisterNativesUFortPerkTierWidget()
+{
+	UClass* Class = UFortPerkTierWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ProcessPerks", &UFortPerkTierWidget::execProcessPerks },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPerkTierWidget_OnGeneratePerk_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name

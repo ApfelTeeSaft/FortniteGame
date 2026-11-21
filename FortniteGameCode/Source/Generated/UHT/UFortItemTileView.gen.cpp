@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemTileView();  // RVA 0x028CF600 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF1E0 (end 0x028CF202)
+// Original VA: 0x00000001428CF1E0 | File offset: 0x028CE7E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD94B0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemTileView::StaticRegisterNativesUFortItemTileView()
+{
+	UClass* Class = UFortItemTileView::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CenterSelectedItemTileWidget", &UFortItemTileView::execCenterSelectedItemTileWidget },
+		{ "ContainsItem", &UFortItemTileView::execContainsItem },
+		{ "HandleItemWidgetCreated", &UFortItemTileView::execHandleItemWidgetCreated },
+		{ "HideNullItemTile", &UFortItemTileView::execHideNullItemTile },
+		{ "RefreshFilterAndSort", &UFortItemTileView::execRefreshFilterAndSort },
+		{ "RefreshSort", &UFortItemTileView::execRefreshSort },
+		{ "SetFilter", &UFortItemTileView::execSetFilter },
+		{ "SetFilterAndSorter", &UFortItemTileView::execSetFilterAndSorter },
+		{ "SetItemViewContext", &UFortItemTileView::execSetItemViewContext },
+		{ "SetSorter", &UFortItemTileView::execSetSorter },
+		{ "ShowNullItemTile", &UFortItemTileView::execShowNullItemTile },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortItemTileView_OnInventoryUpdated__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

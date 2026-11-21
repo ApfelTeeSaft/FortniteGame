@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingCapturePointActor::StaticRegisterNativesABuildingCapturePointActor()
-{
-}
 // IMPLEMENT_CLASS(ABuildingCapturePointActor, 2507767466u)
 // Original dynamic initializer: RVA 0x000D9830 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingCapturePointActor> AutoInitializeABuildingCapturePointActor(TEXT("ABuildingCapturePointActor"), sizeof(ABuildingCapturePointActor), 2507767466u);

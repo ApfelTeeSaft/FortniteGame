@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionDetailsWidget();  // RVA 0x028A3560 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2F80 (end 0x028A2FA2)
+// Original VA: 0x00000001428A2F80 | File offset: 0x028A2580
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8F420) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionDetailsWidget::StaticRegisterNativesUFortExpeditionDetailsWidget()
+{
+	UClass* Class = UFortExpeditionDetailsWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AbandonExpedition", &UFortExpeditionDetailsWidget::execAbandonExpedition },
+		{ "HandleAbandonExpeditionCompleted", &UFortExpeditionDetailsWidget::execHandleAbandonExpeditionCompleted },
+		{ "OnAbandonExpeditionCompleted", &UFortExpeditionDetailsWidget::execOnAbandonExpeditionCompleted },
+		{ "SetCurrentSquadId", &UFortExpeditionDetailsWidget::execSetCurrentSquadId },
+		{ "SetData", &UFortExpeditionDetailsWidget::execSetData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionDetailsWidget_AbandonExpedition_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,46 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerTrackerBase();  // RVA 0x028E6D90 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E65C0 (end 0x028E65E2)
+// Original VA: 0x00000001428E65C0 | File offset: 0x028E5BC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFF930) | Matching: see analysis/functions-uht-natives.json
+void UFortPlayerTrackerBase::StaticRegisterNativesUFortPlayerTrackerBase()
+{
+	UClass* Class = UFortPlayerTrackerBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBaseFortitude", &UFortPlayerTrackerBase::execGetBaseFortitude },
+		{ "GetBaseOffense", &UFortPlayerTrackerBase::execGetBaseOffense },
+		{ "GetBaseResistance", &UFortPlayerTrackerBase::execGetBaseResistance },
+		{ "GetBaseTech", &UFortPlayerTrackerBase::execGetBaseTech },
+		{ "GetBuffedFortitude", &UFortPlayerTrackerBase::execGetBuffedFortitude },
+		{ "GetBuffedOffense", &UFortPlayerTrackerBase::execGetBuffedOffense },
+		{ "GetBuffedResistance", &UFortPlayerTrackerBase::execGetBuffedResistance },
+		{ "GetBuffedTech", &UFortPlayerTrackerBase::execGetBuffedTech },
+		{ "GetHomebaseRating", &UFortPlayerTrackerBase::execGetHomebaseRating },
+		{ "GetModifiedHomebaseRating", &UFortPlayerTrackerBase::execGetModifiedHomebaseRating },
+		{ "GetTeamFortitude", &UFortPlayerTrackerBase::execGetTeamFortitude },
+		{ "GetTeamOffense", &UFortPlayerTrackerBase::execGetTeamOffense },
+		{ "GetTeamResistance", &UFortPlayerTrackerBase::execGetTeamResistance },
+		{ "GetTeamTech", &UFortPlayerTrackerBase::execGetTeamTech },
+		{ "HandleOnLocalPlayerInfoUpdated", &UFortPlayerTrackerBase::execHandleOnLocalPlayerInfoUpdated },
+		{ "HandleOnPlayerIdUpdated", &UFortPlayerTrackerBase::execHandleOnPlayerIdUpdated },
+		{ "HandlePartyLeft", &UFortPlayerTrackerBase::execHandlePartyLeft },
+		{ "HandleTeamMemberAdded", &UFortPlayerTrackerBase::execHandleTeamMemberAdded },
+		{ "HandleTeamMemberRemoved", &UFortPlayerTrackerBase::execHandleTeamMemberRemoved },
+		{ "HandleTeamMemberStateChanged", &UFortPlayerTrackerBase::execHandleTeamMemberStateChanged },
+		{ "HandleTeamMemberStateChangedId", &UFortPlayerTrackerBase::execHandleTeamMemberStateChangedId },
+		{ "HasModifiedStats", &UFortPlayerTrackerBase::execHasModifiedStats },
+		{ "RegisterAttributeChangedDelegates", &UFortPlayerTrackerBase::execRegisterAttributeChangedDelegates },
+		{ "ReRegisterAttributeChangedDelegates", &UFortPlayerTrackerBase::execReRegisterAttributeChangedDelegates },
+		{ "ResetPartyEvents", &UFortPlayerTrackerBase::execResetPartyEvents },
+		{ "SetTeamMember", &UFortPlayerTrackerBase::execSetTeamMember },
+		{ "SetUniqueId", &UFortPlayerTrackerBase::execSetUniqueId },
+		{ "SetUniqueIdInternal", &UFortPlayerTrackerBase::execSetUniqueIdInternal },
+		{ "UpdateBasedOnId", &UFortPlayerTrackerBase::execUpdateBasedOnId },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPlayerTrackerBase_GetBaseFortitude_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

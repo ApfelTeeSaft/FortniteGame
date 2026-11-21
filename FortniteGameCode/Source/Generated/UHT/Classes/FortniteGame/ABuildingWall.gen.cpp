@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingWall::StaticRegisterNativesABuildingWall()
-{
-}
 // IMPLEMENT_CLASS(ABuildingWall, 1263124386u)
 // Original dynamic initializer: RVA 0x000DCCE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingWall> AutoInitializeABuildingWall(TEXT("ABuildingWall"), sizeof(ABuildingWall), 1263124386u);

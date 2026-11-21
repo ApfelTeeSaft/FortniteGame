@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookSlotWidget();  // RVA 0x0289B310 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AE20 (end 0x0289AE42)
+// Original VA: 0x000000014289AE20 | File offset: 0x0289A420
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C81BF0) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookSlotWidget::StaticRegisterNativesUFortCollectionBookSlotWidget()
+{
+	UClass* Class = UFortCollectionBookSlotWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumItemsToSlot", &UFortCollectionBookSlotWidget::execGetNumItemsToSlot },
+		{ "GetSlotRowName", &UFortCollectionBookSlotWidget::execGetSlotRowName },
+		{ "HasItemsToSlot", &UFortCollectionBookSlotWidget::execHasItemsToSlot },
+		{ "IsItemSlotted", &UFortCollectionBookSlotWidget::execIsItemSlotted },
+		{ "OnItemDestroyed", &UFortCollectionBookSlotWidget::execOnItemDestroyed },
+		{ "OnSlottedItemOperationComplete", &UFortCollectionBookSlotWidget::execOnSlottedItemOperationComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortCollectionBookSlotWidget_FortCollectionBookSlottedItemUpdatedDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMainTabsScreenBase();  // RVA 0x028D73F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6DB0 (end 0x028D6DD2)
+// Original VA: 0x00000001428D6DB0 | File offset: 0x028D63B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE5418) | Matching: see analysis/functions-uht-natives.json
+void UFortMainTabsScreenBase::StaticRegisterNativesUFortMainTabsScreenBase()
+{
+	UClass* Class = UFortMainTabsScreenBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConstructTabs", &UFortMainTabsScreenBase::execConstructTabs },
+		{ "HandleFeatureNavigateRequest", &UFortMainTabsScreenBase::execHandleFeatureNavigateRequest },
+		{ "HandleFeatureStateChanged", &UFortMainTabsScreenBase::execHandleFeatureStateChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMainTabsScreenBase_ConstructTabs_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,65 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingSMActor();  // RVA 0x00F71E80 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71A30 (end 0x00F71A52)
+// Original VA: 0x0000000140F71A30 | File offset: 0x00F71030
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0327EE10) | Matching: see analysis/functions-uht-natives.json
+void ABuildingSMActor::StaticRegisterNativesABuildingSMActor()
+{
+	UClass* Class = ABuildingSMActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AttachBuildingActorToMe", &ABuildingSMActor::execAttachBuildingActorToMe },
+		{ "BlueprintOnStructurallyStable", &ABuildingSMActor::execBlueprintOnStructurallyStable },
+		{ "BlueprintOnStructurallyUnstable", &ABuildingSMActor::execBlueprintOnStructurallyUnstable },
+		{ "DetachBuildingActorFromMe", &ABuildingSMActor::execDetachBuildingActorFromMe },
+		{ "EditorOnlyRemoveInstanceMaterialScalarParameter", &ABuildingSMActor::execEditorOnlyRemoveInstanceMaterialScalarParameter },
+		{ "EditorOnlyRemoveInstanceMaterialTextureParameter", &ABuildingSMActor::execEditorOnlyRemoveInstanceMaterialTextureParameter },
+		{ "EditorOnlyRemoveInstanceMaterialVectorParameter", &ABuildingSMActor::execEditorOnlyRemoveInstanceMaterialVectorParameter },
+		{ "EditorOnlySetInstanceMaterialScalarParameter", &ABuildingSMActor::execEditorOnlySetInstanceMaterialScalarParameter },
+		{ "EditorOnlySetInstanceMaterialTextureParameter", &ABuildingSMActor::execEditorOnlySetInstanceMaterialTextureParameter },
+		{ "EditorOnlySetInstanceMaterialVectorParameter", &ABuildingSMActor::execEditorOnlySetInstanceMaterialVectorParameter },
+		{ "ForceIntoStructuralGridDuringRuntime", &ABuildingSMActor::execForceIntoStructuralGridDuringRuntime },
+		{ "GameplayCue_Abilities_Activation_Generic_BannerWallBuff1", &ABuildingSMActor::execGameplayCue_Abilities_Activation_Generic_BannerWallBuff1 },
+		{ "GameplayCue_Abilities_Activation_Generic_BannerWallBuff2", &ABuildingSMActor::execGameplayCue_Abilities_Activation_Generic_BannerWallBuff2 },
+		{ "GetAnimatingMID", &ABuildingSMActor::execGetAnimatingMID },
+		{ "GetAttachedBuildingActors", &ABuildingSMActor::execGetAttachedBuildingActors },
+		{ "GetBuildingMeshComponent", &ABuildingSMActor::execGetBuildingMeshComponent },
+		{ "GetIntenseWindMaterialsForPreview", &ABuildingSMActor::execGetIntenseWindMaterialsForPreview },
+		{ "GetLogicalBuildingIndex", &ABuildingSMActor::execGetLogicalBuildingIndex },
+		{ "GetReplacementDestructionReason", &ABuildingSMActor::execGetReplacementDestructionReason },
+		{ "GetWindPannerSpeedCurveForPreview", &ABuildingSMActor::execGetWindPannerSpeedCurveForPreview },
+		{ "GetWindSpeedCurveForPreview", &ABuildingSMActor::execGetWindSpeedCurveForPreview },
+		{ "HasDestructionLoot", &ABuildingSMActor::execHasDestructionLoot },
+		{ "IsStructurallySupported", &ABuildingSMActor::execIsStructurallySupported },
+		{ "IsSupportedByWorld", &ABuildingSMActor::execIsSupportedByWorld },
+		{ "MarkConnectedBuildingsForStructuralIntegrityCheck", &ABuildingSMActor::execMarkConnectedBuildingsForStructuralIntegrityCheck },
+		{ "MulticastPlayFullHealthEffects", &ABuildingSMActor::execMulticastPlayFullHealthEffects },
+		{ "MulticastRequestBuildingAnimation", &ABuildingSMActor::execMulticastRequestBuildingAnimation },
+		{ "OnDynamicShrinkAndDestroyEffectFinished", &ABuildingSMActor::execOnDynamicShrinkAndDestroyEffectFinished },
+		{ "OnLODOverrideEffectFinished", &ABuildingSMActor::execOnLODOverrideEffectFinished },
+		{ "OnRep_bCollisionBlockedByPawns", &ABuildingSMActor::execOnRep_bCollisionBlockedByPawns },
+		{ "OnRep_BuildingReplacementType", &ABuildingSMActor::execOnRep_BuildingReplacementType },
+		{ "OnRep_bUnderConstruction", &ABuildingSMActor::execOnRep_bUnderConstruction },
+		{ "OnRep_bUnderRepair", &ABuildingSMActor::execOnRep_bUnderRepair },
+		{ "OnRep_EditingPlayer", &ABuildingSMActor::execOnRep_EditingPlayer },
+		{ "OnRep_MetaData", &ABuildingSMActor::execOnRep_MetaData },
+		{ "OnRep_RelevantBASE", &ABuildingSMActor::execOnRep_RelevantBASE },
+		{ "OnRep_ReplicatedDrawScale3D", &ABuildingSMActor::execOnRep_ReplicatedDrawScale3D },
+		{ "OnRep_ReplicatedMIC", &ABuildingSMActor::execOnRep_ReplicatedMIC },
+		{ "OnRep_ResourceType", &ABuildingSMActor::execOnRep_ResourceType },
+		{ "OnRep_WeakSpotPositions", &ABuildingSMActor::execOnRep_WeakSpotPositions },
+		{ "ReadTextureData", &ABuildingSMActor::execReadTextureData },
+		{ "RepairBuilding", &ABuildingSMActor::execRepairBuilding },
+		{ "SetMirrored", &ABuildingSMActor::execSetMirrored },
+		{ "SetTextureData", &ABuildingSMActor::execSetTextureData },
+		{ "UpdateDynamicShrinkAndDestroyEffect", &ABuildingSMActor::execUpdateDynamicShrinkAndDestroyEffect },
+		{ "UpdateLODOverrideEffect", &ABuildingSMActor::execUpdateLODOverrideEffect },
+		{ "UpdateRepairMaterialAnim", &ABuildingSMActor::execUpdateRepairMaterialAnim },
+		{ "WillRegisterWithStructuralGrid", &ABuildingSMActor::execWillRegisterWithStructuralGrid },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingSMActor_AttachBuildingActorToMe_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

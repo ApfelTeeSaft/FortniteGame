@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilitySystemComponent();  // RVA 0x00F7D410 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CAA0 (end 0x00F7CAC2)
+// Original VA: 0x0000000140F7CAA0 | File offset: 0x00F7C0A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0328FCD0) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilitySystemComponent::StaticRegisterNativesUFortAbilitySystemComponent()
+{
+	UClass* Class = UFortAbilitySystemComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanActivateAbilityWithMatchingTag", &UFortAbilitySystemComponent::execCanActivateAbilityWithMatchingTag },
+		{ "FindAttributeInformation", &UFortAbilitySystemComponent::execFindAttributeInformation },
+		{ "GetAttributeMagnitude", &UFortAbilitySystemComponent::execGetAttributeMagnitude },
+		{ "HasActiveAbilityWithAnyMatchingTag", &UFortAbilitySystemComponent::execHasActiveAbilityWithAnyMatchingTag },
+		{ "NetMulticast_RefreshActiveGameplayEffectCueEvents", &UFortAbilitySystemComponent::execNetMulticast_RefreshActiveGameplayEffectCueEvents },
+		{ "SetLandingMontageReplication", &UFortAbilitySystemComponent::execSetLandingMontageReplication },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilitySystemComponent_CanActivateAbilityWithMatchingTag_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

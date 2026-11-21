@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortInventoryContext::StaticRegisterNativesUFortInventoryContext()
-{
-}
 // IMPLEMENT_CLASS(UFortInventoryContext, 2065307808u)
 // Original dynamic initializer: RVA 0x0024A0F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortInventoryContext> AutoInitializeUFortInventoryContext(TEXT("UFortInventoryContext"), sizeof(UFortInventoryContext), 2065307808u);

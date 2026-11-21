@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortCrackEffect();  // RVA 0x00FCB7A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCAFF0 (end 0x00FCB012)
+// Original VA: 0x0000000140FCAFF0 | File offset: 0x00FCA5F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F8288) | Matching: see analysis/functions-uht-natives.json
+void AFortCrackEffect::StaticRegisterNativesAFortCrackEffect()
+{
+	UClass* Class = AFortCrackEffect::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HasStartingPosition", &AFortCrackEffect::execHasStartingPosition },
+		{ "OnRep_HitNormal", &AFortCrackEffect::execOnRep_HitNormal },
+		{ "OnRep_PhysicalSurfaceType", &AFortCrackEffect::execOnRep_PhysicalSurfaceType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortCrackEffect_HasStartingPosition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

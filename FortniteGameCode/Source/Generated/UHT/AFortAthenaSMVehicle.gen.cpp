@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAthenaSMVehicle();  // RVA 0x00F9ED90 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E4B0 (end 0x00F9E4D2)
+// Original VA: 0x0000000140F9E4B0 | File offset: 0x00F9DAB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C0B10) | Matching: see analysis/functions-uht-natives.json
+void AFortAthenaSMVehicle::StaticRegisterNativesAFortAthenaSMVehicle()
+{
+	UClass* Class = AFortAthenaSMVehicle::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_MovementParams", &AFortAthenaSMVehicle::execOnRep_MovementParams },
+		{ "ServerUpdateMoveParams", &AFortAthenaSMVehicle::execServerUpdateMoveParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortAthenaSMVehicle_OnRep_MovementParams_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

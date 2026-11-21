@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameOptions();  // RVA 0x028AC3E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC1C0 (end 0x028AC1E2)
+// Original VA: 0x00000001428AC1C0 | File offset: 0x028AB7C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C9BAD0) | Matching: see analysis/functions-uht-natives.json
+void UFortGameOptions::StaticRegisterNativesUFortGameOptions()
+{
+	UClass* Class = UFortGameOptions::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConstructHUDTagList", &UFortGameOptions::execConstructHUDTagList },
+		{ "ConstructSettingList", &UFortGameOptions::execConstructSettingList },
+		{ "GetControllerPlatform", &UFortGameOptions::execGetControllerPlatform },
+		{ "GetDefaultGammaSettings", &UFortGameOptions::execGetDefaultGammaSettings },
+		{ "GetGammaSettings", &UFortGameOptions::execGetGammaSettings },
+		{ "GetHUDListWidget", &UFortGameOptions::execGetHUDListWidget },
+		{ "GetHUDSettings", &UFortGameOptions::execGetHUDSettings },
+		{ "GetOptionsListWidget", &UFortGameOptions::execGetOptionsListWidget },
+		{ "Initialize", &UFortGameOptions::execInitialize },
+		{ "SetControllerPlatform", &UFortGameOptions::execSetControllerPlatform },
+		{ "UpdateGammaSettings", &UFortGameOptions::execUpdateGammaSettings },
+		{ "UpdateHUDSettings", &UFortGameOptions::execUpdateHUDSettings },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGameOptions_ConstructHUDTagList_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

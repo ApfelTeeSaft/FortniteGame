@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UHomeBaseContext();  // RVA 0x00FFB160 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA500 (end 0x00FFA522)
+// Original VA: 0x0000000140FFA500 | File offset: 0x00FF9B00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0333EAF0) | Matching: see analysis/functions-uht-natives.json
+void UHomeBaseContext::StaticRegisterNativesUHomeBaseContext()
+{
+	UClass* Class = UHomeBaseContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BroadcastSquadSlotMarkedAsSeen", &UHomeBaseContext::execBroadcastSquadSlotMarkedAsSeen },
+		{ "ClearFrontEndOnlyExpeditionSquad", &UHomeBaseContext::execClearFrontEndOnlyExpeditionSquad },
+		{ "GetActiveCombatSquadId", &UHomeBaseContext::execGetActiveCombatSquadId },
+		{ "GetActiveDefenderSquadId", &UHomeBaseContext::execGetActiveDefenderSquadId },
+		{ "GetAllResourceCollectorRewardEstimates", &UHomeBaseContext::execGetAllResourceCollectorRewardEstimates },
+		{ "GetItemsInSquad", &UHomeBaseContext::execGetItemsInSquad },
+		{ "GetLocalPlayerHomebaseRating", &UHomeBaseContext::execGetLocalPlayerHomebaseRating },
+		{ "GetLocalTeamHomebaseRating", &UHomeBaseContext::execGetLocalTeamHomebaseRating },
+		{ "GetNodePageIdForHomebaseNode", &UHomeBaseContext::execGetNodePageIdForHomebaseNode },
+		{ "GetNumAccountLimitedItems", &UHomeBaseContext::execGetNumAccountLimitedItems },
+		{ "GetResourceCollectorRateInfo", &UHomeBaseContext::execGetResourceCollectorRateInfo },
+		{ "GetResourceCollectorRewardsEstimate", &UHomeBaseContext::execGetResourceCollectorRewardsEstimate },
+		{ "GetResourceCollectorRewardsEstimates", &UHomeBaseContext::execGetResourceCollectorRewardsEstimates },
+		{ "GetSquadSlotOfItem", &UHomeBaseContext::execGetSquadSlotOfItem },
+		{ "GetStaticSetBonusData", &UHomeBaseContext::execGetStaticSetBonusData },
+		{ "GetTeamHomebaseRating", &UHomeBaseContext::execGetTeamHomebaseRating },
+		{ "GetTotalHomebaseRating", &UHomeBaseContext::execGetTotalHomebaseRating },
+		{ "GetTotalSkillPointsEarned", &UHomeBaseContext::execGetTotalSkillPointsEarned },
+		{ "GetUnlockingHomebaseNodeIdForSquadSlot", &UHomeBaseContext::execGetUnlockingHomebaseNodeIdForSquadSlot },
+		{ "TryGetHomebaseNodeData", &UHomeBaseContext::execTryGetHomebaseNodeData },
+		{ "TryGetHomebaseNodePageData", &UHomeBaseContext::execTryGetHomebaseNodePageData },
+		{ "TryGetHomebaseSquadData", &UHomeBaseContext::execTryGetHomebaseSquadData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UHomeBaseContext_BroadcastSquadSlotMarkedAsSeen_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

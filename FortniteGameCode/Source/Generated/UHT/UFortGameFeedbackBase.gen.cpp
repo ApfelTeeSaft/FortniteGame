@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameFeedbackBase();  // RVA 0x028AC3B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC190 (end 0x028AC1B2)
+// Original VA: 0x00000001428AC190 | File offset: 0x028AB790
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C9B530) | Matching: see analysis/functions-uht-natives.json
+void UFortGameFeedbackBase::StaticRegisterNativesUFortGameFeedbackBase()
+{
+	UClass* Class = UFortGameFeedbackBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddButtonWithFeedbackType", &UFortGameFeedbackBase::execAddButtonWithFeedbackType },
+		{ "CancelFeedback", &UFortGameFeedbackBase::execCancelFeedback },
+		{ "InitiateDebugInfoForFeedback", &UFortGameFeedbackBase::execInitiateDebugInfoForFeedback },
+		{ "OnSelectionButtonChanged", &UFortGameFeedbackBase::execOnSelectionButtonChanged },
+		{ "SubmitFeedback", &UFortGameFeedbackBase::execSubmitFeedback },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGameFeedbackBase_AddButtonWithFeedbackType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

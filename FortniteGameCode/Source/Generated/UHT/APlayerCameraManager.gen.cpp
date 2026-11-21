@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_APlayerCameraManager();  // RVA 0x024A9DC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9810 (end 0x024A9832)
+// Original VA: 0x00000001424A9810 | File offset: 0x024A8E10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03983FA0) | Matching: see analysis/functions-uht-natives.json
+void APlayerCameraManager::StaticRegisterNativesAPlayerCameraManager()
+{
+	UClass* Class = APlayerCameraManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddCameraLensEffect", &APlayerCameraManager::execAddCameraLensEffect },
+		{ "AddNewCameraModifier", &APlayerCameraManager::execAddNewCameraModifier },
+		{ "ClearCameraLensEffects", &APlayerCameraManager::execClearCameraLensEffects },
+		{ "FindCameraModifierByClass", &APlayerCameraManager::execFindCameraModifierByClass },
+		{ "GetCameraLocation", &APlayerCameraManager::execGetCameraLocation },
+		{ "GetCameraRotation", &APlayerCameraManager::execGetCameraRotation },
+		{ "GetFOVAngle", &APlayerCameraManager::execGetFOVAngle },
+		{ "GetOwningPlayerController", &APlayerCameraManager::execGetOwningPlayerController },
+		{ "OnPhotographyMultiPartCaptureEnd", &APlayerCameraManager::execOnPhotographyMultiPartCaptureEnd },
+		{ "OnPhotographyMultiPartCaptureStart", &APlayerCameraManager::execOnPhotographyMultiPartCaptureStart },
+		{ "OnPhotographySessionEnd", &APlayerCameraManager::execOnPhotographySessionEnd },
+		{ "OnPhotographySessionStart", &APlayerCameraManager::execOnPhotographySessionStart },
+		{ "PhotographyCameraModify", &APlayerCameraManager::execPhotographyCameraModify },
+		{ "PlayCameraAnim", &APlayerCameraManager::execPlayCameraAnim },
+		{ "PlayCameraShake", &APlayerCameraManager::execPlayCameraShake },
+		{ "RemoveCameraLensEffect", &APlayerCameraManager::execRemoveCameraLensEffect },
+		{ "RemoveCameraModifier", &APlayerCameraManager::execRemoveCameraModifier },
+		{ "SetManualCameraFade", &APlayerCameraManager::execSetManualCameraFade },
+		{ "StartCameraFade", &APlayerCameraManager::execStartCameraFade },
+		{ "StopAllCameraAnims", &APlayerCameraManager::execStopAllCameraAnims },
+		{ "StopAllCameraShakes", &APlayerCameraManager::execStopAllCameraShakes },
+		{ "StopAllInstancesOfCameraAnim", &APlayerCameraManager::execStopAllInstancesOfCameraAnim },
+		{ "StopAllInstancesOfCameraShake", &APlayerCameraManager::execStopAllInstancesOfCameraShake },
+		{ "StopCameraAnimInst", &APlayerCameraManager::execStopCameraAnimInst },
+		{ "StopCameraFade", &APlayerCameraManager::execStopCameraFade },
+		{ "StopCameraShake", &APlayerCameraManager::execStopCameraShake },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_APlayerCameraManager_AddCameraLensEffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

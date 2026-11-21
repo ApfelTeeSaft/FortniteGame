@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingContainer::StaticRegisterNativesABuildingContainer()
-{
-}
 // IMPLEMENT_CLASS(ABuildingContainer, 2365160928u)
 // Original dynamic initializer: RVA 0x000D9890 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingContainer> AutoInitializeABuildingContainer(TEXT("ABuildingContainer"), sizeof(ABuildingContainer), 2365160928u);

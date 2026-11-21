@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UStereoLayerComponent::StaticRegisterNativesUStereoLayerComponent()
-{
-}
 // IMPLEMENT_CLASS(UStereoLayerComponent, 4067627262u)
 // Original dynamic initializer: RVA 0x0021E7B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UStereoLayerComponent> AutoInitializeUStereoLayerComponent(TEXT("UStereoLayerComponent"), sizeof(UStereoLayerComponent), 4067627262u);

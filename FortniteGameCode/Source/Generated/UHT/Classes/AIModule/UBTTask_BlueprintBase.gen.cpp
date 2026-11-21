@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UBTTask_BlueprintBase::StaticRegisterNativesUBTTask_BlueprintBase()
-{
-}
 // IMPLEMENT_CLASS(UBTTask_BlueprintBase, 296585807u)
 // Original dynamic initializer: RVA 0x001BC300 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBTTask_BlueprintBase> AutoInitializeUBTTask_BlueprintBase(TEXT("UBTTask_BlueprintBase"), sizeof(UBTTask_BlueprintBase), 296585807u);

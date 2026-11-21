@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMissionTimerComponent::StaticRegisterNativesUFortMissionTimerComponent()
-{
-}
 // IMPLEMENT_CLASS(UFortMissionTimerComponent, 1174423600u)
 // Original dynamic initializer: RVA 0x001040C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMissionTimerComponent> AutoInitializeUFortMissionTimerComponent(TEXT("UFortMissionTimerComponent"), sizeof(UFortMissionTimerComponent), 1174423600u);

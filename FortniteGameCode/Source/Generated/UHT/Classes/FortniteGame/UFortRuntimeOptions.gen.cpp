@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortRuntimeOptions::StaticRegisterNativesUFortRuntimeOptions()
-{
-}
 // IMPLEMENT_CLASS(UFortRuntimeOptions, 1816852599u)
 // Original dynamic initializer: RVA 0x00111580 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortRuntimeOptions> AutoInitializeUFortRuntimeOptions(TEXT("UFortRuntimeOptions"), sizeof(UFortRuntimeOptions), 1816852599u);

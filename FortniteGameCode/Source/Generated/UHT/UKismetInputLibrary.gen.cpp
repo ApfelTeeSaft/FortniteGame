@@ -6,6 +6,56 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetInputLibrary();  // RVA 0x02431A30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431790 (end 0x024317B2)
+// Original VA: 0x0000000142431790 | File offset: 0x02430D90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03914AE0) | Matching: see analysis/functions-uht-natives.json
+void UKismetInputLibrary::StaticRegisterNativesUKismetInputLibrary()
+{
+	UClass* Class = UKismetInputLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CalibrateTilt", &UKismetInputLibrary::execCalibrateTilt },
+		{ "EqualEqual_InputChordInputChord", &UKismetInputLibrary::execEqualEqual_InputChordInputChord },
+		{ "EqualEqual_KeyKey", &UKismetInputLibrary::execEqualEqual_KeyKey },
+		{ "GetAnalogValue", &UKismetInputLibrary::execGetAnalogValue },
+		{ "GetKey", &UKismetInputLibrary::execGetKey },
+		{ "GetUserIndex", &UKismetInputLibrary::execGetUserIndex },
+		{ "InputEvent_IsAltDown", &UKismetInputLibrary::execInputEvent_IsAltDown },
+		{ "InputEvent_IsCommandDown", &UKismetInputLibrary::execInputEvent_IsCommandDown },
+		{ "InputEvent_IsControlDown", &UKismetInputLibrary::execInputEvent_IsControlDown },
+		{ "InputEvent_IsLeftAltDown", &UKismetInputLibrary::execInputEvent_IsLeftAltDown },
+		{ "InputEvent_IsLeftCommandDown", &UKismetInputLibrary::execInputEvent_IsLeftCommandDown },
+		{ "InputEvent_IsLeftControlDown", &UKismetInputLibrary::execInputEvent_IsLeftControlDown },
+		{ "InputEvent_IsLeftShiftDown", &UKismetInputLibrary::execInputEvent_IsLeftShiftDown },
+		{ "InputEvent_IsRepeat", &UKismetInputLibrary::execInputEvent_IsRepeat },
+		{ "InputEvent_IsRightAltDown", &UKismetInputLibrary::execInputEvent_IsRightAltDown },
+		{ "InputEvent_IsRightCommandDown", &UKismetInputLibrary::execInputEvent_IsRightCommandDown },
+		{ "InputEvent_IsRightControlDown", &UKismetInputLibrary::execInputEvent_IsRightControlDown },
+		{ "InputEvent_IsRightShiftDown", &UKismetInputLibrary::execInputEvent_IsRightShiftDown },
+		{ "InputEvent_IsShiftDown", &UKismetInputLibrary::execInputEvent_IsShiftDown },
+		{ "Key_GetDisplayName", &UKismetInputLibrary::execKey_GetDisplayName },
+		{ "Key_IsFloatAxis", &UKismetInputLibrary::execKey_IsFloatAxis },
+		{ "Key_IsGamepadKey", &UKismetInputLibrary::execKey_IsGamepadKey },
+		{ "Key_IsKeyboardKey", &UKismetInputLibrary::execKey_IsKeyboardKey },
+		{ "Key_IsModifierKey", &UKismetInputLibrary::execKey_IsModifierKey },
+		{ "Key_IsMouseButton", &UKismetInputLibrary::execKey_IsMouseButton },
+		{ "Key_IsValid", &UKismetInputLibrary::execKey_IsValid },
+		{ "Key_IsVectorAxis", &UKismetInputLibrary::execKey_IsVectorAxis },
+		{ "PointerEvent_GetCursorDelta", &UKismetInputLibrary::execPointerEvent_GetCursorDelta },
+		{ "PointerEvent_GetEffectingButton", &UKismetInputLibrary::execPointerEvent_GetEffectingButton },
+		{ "PointerEvent_GetGestureDelta", &UKismetInputLibrary::execPointerEvent_GetGestureDelta },
+		{ "PointerEvent_GetGestureType", &UKismetInputLibrary::execPointerEvent_GetGestureType },
+		{ "PointerEvent_GetLastScreenSpacePosition", &UKismetInputLibrary::execPointerEvent_GetLastScreenSpacePosition },
+		{ "PointerEvent_GetPointerIndex", &UKismetInputLibrary::execPointerEvent_GetPointerIndex },
+		{ "PointerEvent_GetScreenSpacePosition", &UKismetInputLibrary::execPointerEvent_GetScreenSpacePosition },
+		{ "PointerEvent_GetTouchpadIndex", &UKismetInputLibrary::execPointerEvent_GetTouchpadIndex },
+		{ "PointerEvent_GetUserIndex", &UKismetInputLibrary::execPointerEvent_GetUserIndex },
+		{ "PointerEvent_GetWheelDelta", &UKismetInputLibrary::execPointerEvent_GetWheelDelta },
+		{ "PointerEvent_IsMouseButtonDown", &UKismetInputLibrary::execPointerEvent_IsMouseButtonDown },
+		{ "PointerEvent_IsTouchEvent", &UKismetInputLibrary::execPointerEvent_IsTouchEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetInputLibrary_CalibrateTilt_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

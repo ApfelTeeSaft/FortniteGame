@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaHUDPlayerActionAlertBase::StaticRegisterNativesUAthenaHUDPlayerActionAlertBase()
-{
-}
 // IMPLEMENT_CLASS(UAthenaHUDPlayerActionAlertBase, 3219962577u)
 // Original dynamic initializer: RVA 0x002391C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaHUDPlayerActionAlertBase> AutoInitializeUAthenaHUDPlayerActionAlertBase(TEXT("UAthenaHUDPlayerActionAlertBase"), sizeof(UAthenaHUDPlayerActionAlertBase), 3219962577u);

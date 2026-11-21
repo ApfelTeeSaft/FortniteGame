@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateWidget_NUI();  // RVA 0x02912000 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029117C0 (end 0x029117E2)
+// Original VA: 0x00000001429117C0 | File offset: 0x02910DC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D4AC20) | Matching: see analysis/functions-uht-natives.json
+void UFortUIStateWidget_NUI::StaticRegisterNativesUFortUIStateWidget_NUI()
+{
+	UClass* Class = UFortUIStateWidget_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "PopAllContentWidgets", &UFortUIStateWidget_NUI::execPopAllContentWidgets },
+		{ "PopContentWidget", &UFortUIStateWidget_NUI::execPopContentWidget },
+		{ "PopContentWidgetInternal", &UFortUIStateWidget_NUI::execPopContentWidgetInternal },
+		{ "PushContentWidget", &UFortUIStateWidget_NUI::execPushContentWidget },
+		{ "PushContentWidgetAdvanced", &UFortUIStateWidget_NUI::execPushContentWidgetAdvanced },
+		{ "PushContentWidgetInternal", &UFortUIStateWidget_NUI::execPushContentWidgetInternal },
+		{ "SetFrontEndVisibility", &UFortUIStateWidget_NUI::execSetFrontEndVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIStateWidget_NUI_OnEnterState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

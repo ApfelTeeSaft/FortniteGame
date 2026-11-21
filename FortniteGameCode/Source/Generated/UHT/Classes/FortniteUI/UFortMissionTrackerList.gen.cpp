@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMissionTrackerList::StaticRegisterNativesUFortMissionTrackerList()
-{
-}
 // IMPLEMENT_CLASS(UFortMissionTrackerList, 2109963760u)
 // Original dynamic initializer: RVA 0x00251570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMissionTrackerList> AutoInitializeUFortMissionTrackerList(TEXT("UFortMissionTrackerList"), sizeof(UFortMissionTrackerList), 2109963760u);

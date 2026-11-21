@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_URadialForceComponent();  // RVA 0x024C2C70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2510 (end 0x024C2532)
+// Original VA: 0x00000001424C2510 | File offset: 0x024C1B10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03995488) | Matching: see analysis/functions-uht-natives.json
+void URadialForceComponent::StaticRegisterNativesURadialForceComponent()
+{
+	UClass* Class = URadialForceComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddObjectTypeToAffect", &URadialForceComponent::execAddObjectTypeToAffect },
+		{ "FireImpulse", &URadialForceComponent::execFireImpulse },
+		{ "RemoveObjectTypeToAffect", &URadialForceComponent::execRemoveObjectTypeToAffect },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_URadialForceComponent_AddObjectTypeToAffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

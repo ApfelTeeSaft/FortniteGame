@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCapsuleComponent::StaticRegisterNativesUCapsuleComponent()
-{
-}
 // IMPLEMENT_CLASS(UCapsuleComponent, 890172698u)
 // Original dynamic initializer: RVA 0x001F6430 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCapsuleComponent> AutoInitializeUCapsuleComponent(TEXT("UCapsuleComponent"), sizeof(UCapsuleComponent), 890172698u);

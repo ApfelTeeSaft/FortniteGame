@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USceneCaptureComponent2D::StaticRegisterNativesUSceneCaptureComponent2D()
-{
-}
 // IMPLEMENT_CLASS(USceneCaptureComponent2D, 547260069u)
 // Original dynamic initializer: RVA 0x002197B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USceneCaptureComponent2D> AutoInitializeUSceneCaptureComponent2D(TEXT("USceneCaptureComponent2D"), sizeof(USceneCaptureComponent2D), 547260069u);

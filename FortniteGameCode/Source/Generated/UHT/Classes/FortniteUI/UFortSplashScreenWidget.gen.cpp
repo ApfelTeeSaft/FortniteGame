@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSplashScreenWidget::StaticRegisterNativesUFortSplashScreenWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortSplashScreenWidget, 2026575214u)
 // Original dynamic initializer: RVA 0x0025ADC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSplashScreenWidget> AutoInitializeUFortSplashScreenWidget(TEXT("UFortSplashScreenWidget"), sizeof(UFortSplashScreenWidget), 2026575214u);

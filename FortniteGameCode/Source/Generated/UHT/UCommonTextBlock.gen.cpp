@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonTextBlock();  // RVA 0x002CA5F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA1C0 (end 0x002CA1E2)
+// Original VA: 0x00000001402CA1C0 | File offset: 0x002C97C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E82F80) | Matching: see analysis/functions-uht-natives.json
+void UCommonTextBlock::StaticRegisterNativesUCommonTextBlock()
+{
+	UClass* Class = UCommonTextBlock::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ResetScrollState", &UCommonTextBlock::execResetScrollState },
+		{ "SetProperties", &UCommonTextBlock::execSetProperties },
+		{ "SetScrollStyle", &UCommonTextBlock::execSetScrollStyle },
+		{ "SetStyle", &UCommonTextBlock::execSetStyle },
+		{ "SetWrapTextWidth", &UCommonTextBlock::execSetWrapTextWidth },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonTextBlock_ResetScrollState_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

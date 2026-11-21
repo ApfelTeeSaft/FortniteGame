@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UMediaPlaylist::StaticRegisterNativesUMediaPlaylist()
-{
-}
 // IMPLEMENT_CLASS(UMediaPlaylist, 3761169027u)
 // Original dynamic initializer: RVA 0x00225F30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMediaPlaylist> AutoInitializeUMediaPlaylist(TEXT("UMediaPlaylist"), sizeof(UMediaPlaylist), 3761169027u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UInvalidationBox::StaticRegisterNativesUInvalidationBox()
-{
-}
 // IMPLEMENT_CLASS(UInvalidationBox, 1062234183u)
 // Original dynamic initializer: RVA 0x001B27C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UInvalidationBox> AutoInitializeUInvalidationBox(TEXT("UInvalidationBox"), sizeof(UInvalidationBox), 1062234183u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortAIPawn::StaticRegisterNativesAFortAIPawn()
-{
-}
 // IMPLEMENT_CLASS(AFortAIPawn, 2791580142u)
 // Original dynamic initializer: RVA 0x000E3470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAIPawn> AutoInitializeAFortAIPawn(TEXT("AFortAIPawn"), sizeof(AFortAIPawn), 2791580142u);

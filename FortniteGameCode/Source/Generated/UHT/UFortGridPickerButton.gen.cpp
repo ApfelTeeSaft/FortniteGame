@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGridPickerButton();  // RVA 0x028AC440 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC220 (end 0x028AC242)
+// Original VA: 0x00000001428AC220 | File offset: 0x028AB820
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C9DC18) | Matching: see analysis/functions-uht-natives.json
+void UFortGridPickerButton::StaticRegisterNativesUFortGridPickerButton()
+{
+	UClass* Class = UFortGridPickerButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnButtonClicked", &UFortGridPickerButton::execOnButtonClicked },
+		{ "SetIsOpen", &UFortGridPickerButton::execSetIsOpen },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

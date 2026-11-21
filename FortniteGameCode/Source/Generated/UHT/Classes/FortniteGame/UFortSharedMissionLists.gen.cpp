@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSharedMissionLists::StaticRegisterNativesUFortSharedMissionLists()
-{
-}
 // IMPLEMENT_CLASS(UFortSharedMissionLists, 4036825966u)
 // Original dynamic initializer: RVA 0x00112BF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSharedMissionLists> AutoInitializeUFortSharedMissionLists(TEXT("UFortSharedMissionLists"), sizeof(UFortSharedMissionLists), 4036825966u);

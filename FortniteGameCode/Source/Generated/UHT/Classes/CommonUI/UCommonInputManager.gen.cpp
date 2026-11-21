@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonInputManager::StaticRegisterNativesUCommonInputManager()
-{
-}
 // IMPLEMENT_CLASS(UCommonInputManager, 1349000277u)
 // Original dynamic initializer: RVA 0x00095730 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonInputManager> AutoInitializeUCommonInputManager(TEXT("UCommonInputManager"), sizeof(UCommonInputManager), 1349000277u);

@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UProceduralMeshComponent();  // RVA 0x0069BCE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BB00 (end 0x0069BB22)
+// Original VA: 0x000000014069BB00 | File offset: 0x0069B100
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FA2750) | Matching: see analysis/functions-uht-natives.json
+void UProceduralMeshComponent::StaticRegisterNativesUProceduralMeshComponent()
+{
+	UClass* Class = UProceduralMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddCollisionConvexMesh", &UProceduralMeshComponent::execAddCollisionConvexMesh },
+		{ "ClearAllMeshSections", &UProceduralMeshComponent::execClearAllMeshSections },
+		{ "ClearCollisionConvexMeshes", &UProceduralMeshComponent::execClearCollisionConvexMeshes },
+		{ "ClearMeshSection", &UProceduralMeshComponent::execClearMeshSection },
+		{ "CreateMeshSection", &UProceduralMeshComponent::execCreateMeshSection },
+		{ "CreateMeshSection_LinearColor", &UProceduralMeshComponent::execCreateMeshSection_LinearColor },
+		{ "GetNumSections", &UProceduralMeshComponent::execGetNumSections },
+		{ "IsMeshSectionVisible", &UProceduralMeshComponent::execIsMeshSectionVisible },
+		{ "SetMeshSectionVisible", &UProceduralMeshComponent::execSetMeshSectionVisible },
+		{ "UpdateMeshSection", &UProceduralMeshComponent::execUpdateMeshSection },
+		{ "UpdateMeshSection_LinearColor", &UProceduralMeshComponent::execUpdateMeshSection_LinearColor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

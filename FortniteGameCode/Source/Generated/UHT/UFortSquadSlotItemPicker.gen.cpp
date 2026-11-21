@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotItemPicker();  // RVA 0x028FB5D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB1D0 (end 0x028FB1F2)
+// Original VA: 0x00000001428FB1D0 | File offset: 0x028FA7D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D22860) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSlotItemPicker::StaticRegisterNativesUFortSquadSlotItemPicker()
+{
+	UClass* Class = UFortSquadSlotItemPicker::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CycleSortType", &UFortSquadSlotItemPicker::execCycleSortType },
+		{ "GetIdOfSquadSlotToManageBP", &UFortSquadSlotItemPicker::execGetIdOfSquadSlotToManageBP },
+		{ "SetIdOfSquadSlotToManageBP", &UFortSquadSlotItemPicker::execSetIdOfSquadSlotToManageBP },
+		{ "SetSortTypes", &UFortSquadSlotItemPicker::execSetSortTypes },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

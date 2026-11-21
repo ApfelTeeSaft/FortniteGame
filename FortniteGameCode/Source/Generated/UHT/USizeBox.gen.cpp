@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USizeBox();  // RVA 0x01BF3010 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2AF0 (end 0x01BF2B12)
+// Original VA: 0x0000000141BF2AF0 | File offset: 0x01BF20F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369D080) | Matching: see analysis/functions-uht-natives.json
+void USizeBox::StaticRegisterNativesUSizeBox()
+{
+	UClass* Class = USizeBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearHeightOverride", &USizeBox::execClearHeightOverride },
+		{ "ClearMaxAspectRatio", &USizeBox::execClearMaxAspectRatio },
+		{ "ClearMaxDesiredHeight", &USizeBox::execClearMaxDesiredHeight },
+		{ "ClearMaxDesiredWidth", &USizeBox::execClearMaxDesiredWidth },
+		{ "ClearMinDesiredHeight", &USizeBox::execClearMinDesiredHeight },
+		{ "ClearMinDesiredWidth", &USizeBox::execClearMinDesiredWidth },
+		{ "ClearWidthOverride", &USizeBox::execClearWidthOverride },
+		{ "SetHeightOverride", &USizeBox::execSetHeightOverride },
+		{ "SetMaxAspectRatio", &USizeBox::execSetMaxAspectRatio },
+		{ "SetMaxDesiredHeight", &USizeBox::execSetMaxDesiredHeight },
+		{ "SetMaxDesiredWidth", &USizeBox::execSetMaxDesiredWidth },
+		{ "SetMinDesiredHeight", &USizeBox::execSetMinDesiredHeight },
+		{ "SetMinDesiredWidth", &USizeBox::execSetMinDesiredWidth },
+		{ "SetWidthOverride", &USizeBox::execSetWidthOverride },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USizeBox_ClearHeightOverride_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USplineComponent::StaticRegisterNativesUSplineComponent()
-{
-}
 // IMPLEMENT_CLASS(USplineComponent, 1930139723u)
 // Original dynamic initializer: RVA 0x0021E1B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USplineComponent> AutoInitializeUSplineComponent(TEXT("USplineComponent"), sizeof(USplineComponent), 1930139723u);

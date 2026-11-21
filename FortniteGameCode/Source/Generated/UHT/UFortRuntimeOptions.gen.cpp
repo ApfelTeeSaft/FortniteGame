@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortRuntimeOptions();  // RVA 0x0109DDE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D300 (end 0x0109D322)
+// Original VA: 0x000000014109D300 | File offset: 0x0109C900
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033EFC48) | Matching: see analysis/functions-uht-natives.json
+void UFortRuntimeOptions::StaticRegisterNativesUFortRuntimeOptions()
+{
+	UClass* Class = UFortRuntimeOptions::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEnableMainMenuSocialButton", &UFortRuntimeOptions::execGetEnableMainMenuSocialButton },
+		{ "GetRuntimeOptions", &UFortRuntimeOptions::execGetRuntimeOptions },
+		{ "SetEnableMainMenuSocialButton", &UFortRuntimeOptions::execSetEnableMainMenuSocialButton },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

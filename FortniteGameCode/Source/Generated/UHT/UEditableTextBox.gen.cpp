@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEditableTextBox();  // RVA 0x01BE62E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5D90 (end 0x01BE5DB2)
+// Original VA: 0x0000000141BE5D90 | File offset: 0x01BE5390
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03692AC0) | Matching: see analysis/functions-uht-natives.json
+void UEditableTextBox::StaticRegisterNativesUEditableTextBox()
+{
+	UClass* Class = UEditableTextBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearError", &UEditableTextBox::execClearError },
+		{ "GetText", &UEditableTextBox::execGetText },
+		{ "HasError", &UEditableTextBox::execHasError },
+		{ "SetError", &UEditableTextBox::execSetError },
+		{ "SetHintText", &UEditableTextBox::execSetHintText },
+		{ "SetIsReadOnly", &UEditableTextBox::execSetIsReadOnly },
+		{ "SetText", &UEditableTextBox::execSetText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UEditableTextBox_OnEditableTextBoxChangedEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

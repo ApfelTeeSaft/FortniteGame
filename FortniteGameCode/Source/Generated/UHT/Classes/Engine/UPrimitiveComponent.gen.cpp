@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPrimitiveComponent::StaticRegisterNativesUPrimitiveComponent()
-{
-}
 // IMPLEMENT_CLASS(UPrimitiveComponent, 4111089980u)
 // Original dynamic initializer: RVA 0x00216420 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPrimitiveComponent> AutoInitializeUPrimitiveComponent(TEXT("UPrimitiveComponent"), sizeof(UPrimitiveComponent), 4111089980u);

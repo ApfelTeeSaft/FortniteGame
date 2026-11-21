@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHealthSet();  // RVA 0x00FFAF20 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA410 (end 0x00FFA432)
+// Original VA: 0x0000000140FFA410 | File offset: 0x00FF9A10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0333D590) | Matching: see analysis/functions-uht-natives.json
+void UFortHealthSet::StaticRegisterNativesUFortHealthSet()
+{
+	UClass* Class = UFortHealthSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_CurrentShield", &UFortHealthSet::execOnRep_CurrentShield },
+		{ "OnRep_Health", &UFortHealthSet::execOnRep_Health },
+		{ "OnRep_MaxHealth", &UFortHealthSet::execOnRep_MaxHealth },
+		{ "OnRep_Shield", &UFortHealthSet::execOnRep_Shield },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHealthSet_OnRep_CurrentShield_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

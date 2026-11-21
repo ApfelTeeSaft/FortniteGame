@@ -6,6 +6,34 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSpline();  // RVA 0x010A5BC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5070 (end 0x010A5092)
+// Original VA: 0x00000001410A5070 | File offset: 0x010A4670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F8910) | Matching: see analysis/functions-uht-natives.json
+void UFortSpline::StaticRegisterNativesUFortSpline()
+{
+	UClass* Class = UFortSpline::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddControlPoint", &UFortSpline::execAddControlPoint },
+		{ "ClearSpline", &UFortSpline::execClearSpline },
+		{ "DrawDebugSpline", &UFortSpline::execDrawDebugSpline },
+		{ "EnableConstantVelocity", &UFortSpline::execEnableConstantVelocity },
+		{ "GetBinormalFromTime", &UFortSpline::execGetBinormalFromTime },
+		{ "GetDuration", &UFortSpline::execGetDuration },
+		{ "GetEndPoint", &UFortSpline::execGetEndPoint },
+		{ "GetNormalFromTime", &UFortSpline::execGetNormalFromTime },
+		{ "GetPositionFromTime", &UFortSpline::execGetPositionFromTime },
+		{ "GetSplineLength", &UFortSpline::execGetSplineLength },
+		{ "GetSplineLengthAtTime", &UFortSpline::execGetSplineLengthAtTime },
+		{ "GetStartPoint", &UFortSpline::execGetStartPoint },
+		{ "GetTangentFromTime", &UFortSpline::execGetTangentFromTime },
+		{ "GetVelocityCorrectedTime", &UFortSpline::execGetVelocityCorrectedTime },
+		{ "IsValid", &UFortSpline::execIsValid },
+		{ "SetDuration", &UFortSpline::execSetDuration },
+		{ "SetupSpline", &UFortSpline::execSetupSpline },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSpline_AddControlPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

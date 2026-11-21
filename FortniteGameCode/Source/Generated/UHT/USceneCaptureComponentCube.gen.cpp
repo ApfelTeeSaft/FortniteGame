@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6B70 (end 0x024C6B92)
+// Original VA: 0x00000001424C6B70 | File offset: 0x024C6170
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A09C8) | Matching: see analysis/functions-uht-natives.json
+void USceneCaptureComponentCube::StaticRegisterNativesUSceneCaptureComponentCube()
+{
+	UClass* Class = USceneCaptureComponentCube::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CaptureScene", &USceneCaptureComponentCube::execCaptureScene },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

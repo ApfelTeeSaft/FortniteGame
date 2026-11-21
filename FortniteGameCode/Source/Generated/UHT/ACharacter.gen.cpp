@@ -6,6 +6,55 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ACharacter();  // RVA 0x023EE030 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDC40 (end 0x023EDC62)
+// Original VA: 0x00000001423EDC40 | File offset: 0x023ED240
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038C0D60) | Matching: see analysis/functions-uht-natives.json
+void ACharacter::StaticRegisterNativesACharacter()
+{
+	UClass* Class = ACharacter::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CacheInitialMeshOffset", &ACharacter::execCacheInitialMeshOffset },
+		{ "CanJump", &ACharacter::execCanJump },
+		{ "CanJumpInternal", &ACharacter::execCanJumpInternal },
+		{ "ClientAckGoodMove", &ACharacter::execClientAckGoodMove },
+		{ "ClientAdjustPosition", &ACharacter::execClientAdjustPosition },
+		{ "ClientAdjustRootMotionPosition", &ACharacter::execClientAdjustRootMotionPosition },
+		{ "ClientAdjustRootMotionSourcePosition", &ACharacter::execClientAdjustRootMotionSourcePosition },
+		{ "ClientCheatFly", &ACharacter::execClientCheatFly },
+		{ "ClientCheatGhost", &ACharacter::execClientCheatGhost },
+		{ "ClientCheatWalk", &ACharacter::execClientCheatWalk },
+		{ "ClientVeryShortAdjustPosition", &ACharacter::execClientVeryShortAdjustPosition },
+		{ "Crouch", &ACharacter::execCrouch },
+		{ "GetAnimRootMotionTranslationScale", &ACharacter::execGetAnimRootMotionTranslationScale },
+		{ "GetBaseRotationOffsetRotator", &ACharacter::execGetBaseRotationOffsetRotator },
+		{ "GetBaseTranslationOffset", &ACharacter::execGetBaseTranslationOffset },
+		{ "GetCurrentMontage", &ACharacter::execGetCurrentMontage },
+		{ "IsJumpProvidingForce", &ACharacter::execIsJumpProvidingForce },
+		{ "IsPlayingNetworkedRootMotionMontage", &ACharacter::execIsPlayingNetworkedRootMotionMontage },
+		{ "IsPlayingRootMotion", &ACharacter::execIsPlayingRootMotion },
+		{ "Jump", &ACharacter::execJump },
+		{ "LaunchCharacter", &ACharacter::execLaunchCharacter },
+		{ "OnJumped", &ACharacter::execOnJumped },
+		{ "OnRep_IsCrouched", &ACharacter::execOnRep_IsCrouched },
+		{ "OnRep_ReplicatedBasedMovement", &ACharacter::execOnRep_ReplicatedBasedMovement },
+		{ "OnRep_RootMotion", &ACharacter::execOnRep_RootMotion },
+		{ "OnWalkingOffLedge", &ACharacter::execOnWalkingOffLedge },
+		{ "PlayAnimMontage", &ACharacter::execPlayAnimMontage },
+		{ "RootMotionDebugClientPrintOnScreen", &ACharacter::execRootMotionDebugClientPrintOnScreen },
+		{ "ServerMove", &ACharacter::execServerMove },
+		{ "ServerMoveDual", &ACharacter::execServerMoveDual },
+		{ "ServerMoveDualHybridRootMotion", &ACharacter::execServerMoveDualHybridRootMotion },
+		{ "ServerMoveDualNoBase", &ACharacter::execServerMoveDualNoBase },
+		{ "ServerMoveNoBase", &ACharacter::execServerMoveNoBase },
+		{ "ServerMoveOld", &ACharacter::execServerMoveOld },
+		{ "SetReplicateMovement", &ACharacter::execSetReplicateMovement },
+		{ "StopAnimMontage", &ACharacter::execStopAnimMontage },
+		{ "StopJumping", &ACharacter::execStopJumping },
+		{ "UnCrouch", &ACharacter::execUnCrouch },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ACharacter_CacheInitialMeshOffset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

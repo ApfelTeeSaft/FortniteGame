@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameViewportClient();  // RVA 0x0241F100 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241ED40 (end 0x0241ED62)
+// Original VA: 0x000000014241ED40 | File offset: 0x0241E340
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F8CD8) | Matching: see analysis/functions-uht-natives.json
+void UGameViewportClient::StaticRegisterNativesUGameViewportClient()
+{
+	UClass* Class = UGameViewportClient::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetConsoleTarget", &UGameViewportClient::execSetConsoleTarget },
+		{ "ShowTitleSafeArea", &UGameViewportClient::execShowTitleSafeArea },
+		{ "SSSwapControllers", &UGameViewportClient::execSSSwapControllers },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameViewportClient_SetConsoleTarget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

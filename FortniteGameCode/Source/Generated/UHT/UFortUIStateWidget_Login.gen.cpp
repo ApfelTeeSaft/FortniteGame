@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateWidget_Login();  // RVA 0x02911FD0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911790 (end 0x029117B2)
+// Original VA: 0x0000000142911790 | File offset: 0x02910D90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D4A730) | Matching: see analysis/functions-uht-natives.json
+void UFortUIStateWidget_Login::StaticRegisterNativesUFortUIStateWidget_Login()
+{
+	UClass* Class = UFortUIStateWidget_Login::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CheckShowLoginMessage", &UFortUIStateWidget_Login::execCheckShowLoginMessage },
+		{ "GetPlatformDisplayName", &UFortUIStateWidget_Login::execGetPlatformDisplayName },
+		{ "HandlerBenchmarkFlow", &UFortUIStateWidget_Login::execHandlerBenchmarkFlow },
+		{ "IsLoggedIn", &UFortUIStateWidget_Login::execIsLoggedIn },
+		{ "OnErrorDialogDismissed", &UFortUIStateWidget_Login::execOnErrorDialogDismissed },
+		{ "ShowEulaWindow", &UFortUIStateWidget_Login::execShowEulaWindow },
+		{ "ShowPostLoginLogoutError", &UFortUIStateWidget_Login::execShowPostLoginLogoutError },
+		{ "ShowResultWindow", &UFortUIStateWidget_Login::execShowResultWindow },
+		{ "ShowSignInWindow", &UFortUIStateWidget_Login::execShowSignInWindow },
+		{ "ShowStatusWindow", &UFortUIStateWidget_Login::execShowStatusWindow },
+		{ "StartAutoLogin", &UFortUIStateWidget_Login::execStartAutoLogin },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIStateWidget_Login_ActivateWidgetOnFlowStack_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

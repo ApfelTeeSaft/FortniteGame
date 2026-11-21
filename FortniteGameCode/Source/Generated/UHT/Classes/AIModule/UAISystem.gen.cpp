@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAISystem::StaticRegisterNativesUAISystem()
-{
-}
 // IMPLEMENT_CLASS(UAISystem, 2156387114u)
 // Original dynamic initializer: RVA 0x001BA570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAISystem> AutoInitializeUAISystem(TEXT("UAISystem"), sizeof(UAISystem), 2156387114u);

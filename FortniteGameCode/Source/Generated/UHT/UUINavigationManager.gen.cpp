@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UUINavigationManager();  // RVA 0x02912030 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029117F0 (end 0x02911812)
+// Original VA: 0x00000001429117F0 | File offset: 0x02910DF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D495C0) | Matching: see analysis/functions-uht-natives.json
+void UUINavigationManager::StaticRegisterNativesUUINavigationManager()
+{
+	UClass* Class = UUINavigationManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearStack", &UUINavigationManager::execClearStack },
+		{ "GetDisplayName", &UUINavigationManager::execGetDisplayName },
+		{ "GetStackSize", &UUINavigationManager::execGetStackSize },
+		{ "NavigationToIndex", &UUINavigationManager::execNavigationToIndex },
+		{ "PopNavigation", &UUINavigationManager::execPopNavigation },
+		{ "PushNavigation", &UUINavigationManager::execPushNavigation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UUINavigationManager_ClearStack_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

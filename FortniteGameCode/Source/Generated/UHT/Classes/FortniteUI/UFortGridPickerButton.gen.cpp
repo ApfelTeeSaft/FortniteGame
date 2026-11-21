@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortGridPickerButton::StaticRegisterNativesUFortGridPickerButton()
-{
-}
 // IMPLEMENT_CLASS(UFortGridPickerButton, 3525987524u)
 // Original dynamic initializer: RVA 0x00245B90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGridPickerButton> AutoInitializeUFortGridPickerButton(TEXT("UFortGridPickerButton"), sizeof(UFortGridPickerButton), 3525987524u);

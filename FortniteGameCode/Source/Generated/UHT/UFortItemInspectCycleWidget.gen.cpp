@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemInspectCycleWidget();  // RVA 0x028C9EE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9A20 (end 0x028C9A42)
+// Original VA: 0x00000001428C9A20 | File offset: 0x028C9020
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCD8C0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemInspectCycleWidget::StaticRegisterNativesUFortItemInspectCycleWidget()
+{
+	UClass* Class = UFortItemInspectCycleWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetItemWithOffset_BP", &UFortItemInspectCycleWidget::execGetItemWithOffset_BP },
+		{ "SelectItemWithOffset", &UFortItemInspectCycleWidget::execSelectItemWithOffset },
+		{ "SelectNextItem", &UFortItemInspectCycleWidget::execSelectNextItem },
+		{ "SelectPreviousItem", &UFortItemInspectCycleWidget::execSelectPreviousItem },
+		{ "SetInputEnabled", &UFortItemInspectCycleWidget::execSetInputEnabled },
+		{ "SetItemToRepresent", &UFortItemInspectCycleWidget::execSetItemToRepresent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_BP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

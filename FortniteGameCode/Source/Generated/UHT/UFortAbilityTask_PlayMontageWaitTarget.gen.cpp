@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget();  // RVA 0x00F81EA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F817B0 (end 0x00F817D2)
+// Original VA: 0x0000000140F817B0 | File offset: 0x00F80DB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03295FB0) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilityTask_PlayMontageWaitTarget::StaticRegisterNativesUFortAbilityTask_PlayMontageWaitTarget()
+{
+	UClass* Class = UFortAbilityTask_PlayMontageWaitTarget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EnableScalingWithRateOfFire", &UFortAbilityTask_PlayMontageWaitTarget::execEnableScalingWithRateOfFire },
+		{ "OnTargetDataCancelledCallback", &UFortAbilityTask_PlayMontageWaitTarget::execOnTargetDataCancelledCallback },
+		{ "OnTargetDataReadyCallback", &UFortAbilityTask_PlayMontageWaitTarget::execOnTargetDataReadyCallback },
+		{ "PlayMontageInfoAndWaitForTrigger", &UFortAbilityTask_PlayMontageWaitTarget::execPlayMontageInfoAndWaitForTrigger },
+		{ "PlayMontageWaitTarget", &UFortAbilityTask_PlayMontageWaitTarget::execPlayMontageWaitTarget },
+		{ "PlayMontageWithCharPartsWait", &UFortAbilityTask_PlayMontageWaitTarget::execPlayMontageWithCharPartsWait },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_EnableScalingWithRateOfFire_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

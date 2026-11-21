@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionOverviewWidget();  // RVA 0x028A3650 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3040 (end 0x028A3062)
+// Original VA: 0x00000001428A3040 | File offset: 0x028A2640
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8F9E0) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionOverviewWidget::StaticRegisterNativesUFortExpeditionOverviewWidget()
+{
+	UClass* Class = UFortExpeditionOverviewWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleExpeditionTabButtonCreated", &UFortExpeditionOverviewWidget::execHandleExpeditionTabButtonCreated },
+		{ "HandleExpeditionTabSelected", &UFortExpeditionOverviewWidget::execHandleExpeditionTabSelected },
+		{ "OnExpeditionOverviewRefresh", &UFortExpeditionOverviewWidget::execOnExpeditionOverviewRefresh },
+		{ "OnExpeditionTabSelected", &UFortExpeditionOverviewWidget::execOnExpeditionTabSelected },
+		{ "UpdateExpeditionTabs", &UFortExpeditionOverviewWidget::execUpdateExpeditionTabs },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionOverviewWidget_HandleExpeditionTabButtonCreated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

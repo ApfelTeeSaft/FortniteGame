@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementScreen();  // RVA 0x028CF490 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF0F0 (end 0x028CF112)
+// Original VA: 0x00000001428CF0F0 | File offset: 0x028CE6F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD7F10) | Matching: see analysis/functions-uht-natives.json
+void UFortItemManagementScreen::StaticRegisterNativesUFortItemManagementScreen()
+{
+	UClass* Class = UFortItemManagementScreen::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelInventoryPanelTileViewRefresh", &UFortItemManagementScreen::execCancelInventoryPanelTileViewRefresh },
+		{ "CanItemBeMulched", &UFortItemManagementScreen::execCanItemBeMulched },
+		{ "CanRequestPopupMenuForSelectedItem", &UFortItemManagementScreen::execCanRequestPopupMenuForSelectedItem },
+		{ "ConsumeItem", &UFortItemManagementScreen::execConsumeItem },
+		{ "CraftItem", &UFortItemManagementScreen::execCraftItem },
+		{ "CycleSortType", &UFortItemManagementScreen::execCycleSortType },
+		{ "DropItem", &UFortItemManagementScreen::execDropItem },
+		{ "EnterComparisonMode", &UFortItemManagementScreen::execEnterComparisonMode },
+		{ "EnterDetailsMode", &UFortItemManagementScreen::execEnterDetailsMode },
+		{ "EnterMulchMode", &UFortItemManagementScreen::execEnterMulchMode },
+		{ "EquipItem", &UFortItemManagementScreen::execEquipItem },
+		{ "GetItemsToMulchBP", &UFortItemManagementScreen::execGetItemsToMulchBP },
+		{ "GetItemToCompareDetailsWith", &UFortItemManagementScreen::execGetItemToCompareDetailsWith },
+		{ "GetItemToDetail", &UFortItemManagementScreen::execGetItemToDetail },
+		{ "GetNumItemsToMulch", &UFortItemManagementScreen::execGetNumItemsToMulch },
+		{ "HandleItemToCompareWithChanged", &UFortItemManagementScreen::execHandleItemToCompareWithChanged },
+		{ "HandleItemToDetailChanged", &UFortItemManagementScreen::execHandleItemToDetailChanged },
+		{ "HasItemBeenSeen", &UFortItemManagementScreen::execHasItemBeenSeen },
+		{ "InspectItem", &UFortItemManagementScreen::execInspectItem },
+		{ "IsScreenWIFE", &UFortItemManagementScreen::execIsScreenWIFE },
+		{ "NotifyPanelActivated", &UFortItemManagementScreen::execNotifyPanelActivated },
+		{ "NotifyPanelDeactivated", &UFortItemManagementScreen::execNotifyPanelDeactivated },
+		{ "RequestPopupMenuForSelectedItem", &UFortItemManagementScreen::execRequestPopupMenuForSelectedItem },
+		{ "SetConsumeItemRequestInProgress", &UFortItemManagementScreen::execSetConsumeItemRequestInProgress },
+		{ "SetFrontendInventoryFilter", &UFortItemManagementScreen::execSetFrontendInventoryFilter },
+		{ "TransferItem", &UFortItemManagementScreen::execTransferItem },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemManagementScreen_CancelInventoryPanelTileViewRefresh_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

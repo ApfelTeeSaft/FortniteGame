@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHUDTargetUnderReticleWidget();  // RVA 0x028BBE30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBAF0 (end 0x028BBB12)
+// Original VA: 0x00000001428BBAF0 | File offset: 0x028BB0F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CB2510) | Matching: see analysis/functions-uht-natives.json
+void UFortHUDTargetUnderReticleWidget::StaticRegisterNativesUFortHUDTargetUnderReticleWidget()
+{
+	UClass* Class = UFortHUDTargetUnderReticleWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearTarget", &UFortHUDTargetUnderReticleWidget::execClearTarget },
+		{ "HandleOnHUDTargetUnderReticle", &UFortHUDTargetUnderReticleWidget::execHandleOnHUDTargetUnderReticle },
+		{ "OnTargetActorDestroyed", &UFortHUDTargetUnderReticleWidget::execOnTargetActorDestroyed },
+		{ "OnTargetChanged", &UFortHUDTargetUnderReticleWidget::execOnTargetChanged },
+		{ "OnTargetDestroyed", &UFortHUDTargetUnderReticleWidget::execOnTargetDestroyed },
+		{ "OnTargetDied", &UFortHUDTargetUnderReticleWidget::execOnTargetDied },
+		{ "OnTargetHealthChanged", &UFortHUDTargetUnderReticleWidget::execOnTargetHealthChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHUDTargetUnderReticleWidget_ClearTarget_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerStateOutpost();  // RVA 0x0108B470 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AD70 (end 0x0108AD92)
+// Original VA: 0x000000014108AD70 | File offset: 0x0108A370
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D4EC0) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerStateOutpost::StaticRegisterNativesAFortPlayerStateOutpost()
+{
+	UClass* Class = AFortPlayerStateOutpost::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanEditOutpost", &AFortPlayerStateOutpost::execCanEditOutpost },
+		{ "IsOutpostOwner", &AFortPlayerStateOutpost::execIsOutpostOwner },
+		{ "OnRep_CanEditOutpost", &AFortPlayerStateOutpost::execOnRep_CanEditOutpost },
+		{ "OnRep_CraftingTableItemsRemaing", &AFortPlayerStateOutpost::execOnRep_CraftingTableItemsRemaing },
+		{ "ServerSetCanEditOutpost", &AFortPlayerStateOutpost::execServerSetCanEditOutpost },
+		{ "SetCanEditOutpost", &AFortPlayerStateOutpost::execSetCanEditOutpost },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

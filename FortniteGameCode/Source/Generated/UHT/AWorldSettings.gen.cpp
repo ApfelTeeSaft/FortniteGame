@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AWorldSettings();  // RVA 0x024F0B10 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F05D0 (end 0x024F05F2)
+// Original VA: 0x00000001424F05D0 | File offset: 0x024EFBD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039D0B08) | Matching: see analysis/functions-uht-natives.json
+void AWorldSettings::StaticRegisterNativesAWorldSettings()
+{
+	UClass* Class = AWorldSettings::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_WorldGravityZ", &AWorldSettings::execOnRep_WorldGravityZ },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

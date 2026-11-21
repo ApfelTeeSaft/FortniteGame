@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingTrap();  // RVA 0x00F71F10 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71A90 (end 0x00F71AB2)
+// Original VA: 0x0000000140F71A90 | File offset: 0x00F71090
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032802C0) | Matching: see analysis/functions-uht-natives.json
+void ABuildingTrap::StaticRegisterNativesABuildingTrap()
+{
+	UClass* Class = ABuildingTrap::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddDamageComponent", &ABuildingTrap::execAddDamageComponent },
+		{ "AddTriggerComponent", &ABuildingTrap::execAddTriggerComponent },
+		{ "AttemptRetrigger", &ABuildingTrap::execAttemptRetrigger },
+		{ "BP_ShouldTrigger", &ABuildingTrap::execBP_ShouldTrigger },
+		{ "FinishTrigger", &ABuildingTrap::execFinishTrigger },
+		{ "GetAlterations", &ABuildingTrap::execGetAlterations },
+		{ "GetArmTime", &ABuildingTrap::execGetArmTime },
+		{ "GetBuildingAttachedTo", &ABuildingTrap::execGetBuildingAttachedTo },
+		{ "GetCenter", &ABuildingTrap::execGetCenter },
+		{ "GetDamageDelay", &ABuildingTrap::execGetDamageDelay },
+		{ "GetDurabilityPercent", &ABuildingTrap::execGetDurabilityPercent },
+		{ "GetFireDelay", &ABuildingTrap::execGetFireDelay },
+		{ "GetMaxDurability", &ABuildingTrap::execGetMaxDurability },
+		{ "GetReloadTime", &ABuildingTrap::execGetReloadTime },
+		{ "GetTouchingDamageTargets", &ABuildingTrap::execGetTouchingDamageTargets },
+		{ "GetTrapLevel", &ABuildingTrap::execGetTrapLevel },
+		{ "GetTrapRating", &ABuildingTrap::execGetTrapRating },
+		{ "HasDurability", &ABuildingTrap::execHasDurability },
+		{ "OnRep_AttachedTo", &ABuildingTrap::execOnRep_AttachedTo },
+		{ "OnRep_ReplicatedAppliedAlterations", &ABuildingTrap::execOnRep_ReplicatedAppliedAlterations },
+		{ "OnTriggerTouch", &ABuildingTrap::execOnTriggerTouch },
+		{ "TriggerIfAppropriate", &ABuildingTrap::execTriggerIfAppropriate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingTrap_AddDamageComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonInputManager();  // RVA 0x002C2E40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2A70 (end 0x002C2A92)
+// Original VA: 0x00000001402C2A70 | File offset: 0x002C2070
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7CC90) | Matching: see analysis/functions-uht-natives.json
+void UCommonInputManager::StaticRegisterNativesUCommonInputManager()
+{
+	UClass* Class = UCommonInputManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAvailableInputActions", &UCommonInputManager::execGetAvailableInputActions },
+		{ "GetGlobalInputHandlerPriorityFilter", &UCommonInputManager::execGetGlobalInputHandlerPriorityFilter },
+		{ "IsInputSuspended", &UCommonInputManager::execIsInputSuspended },
+		{ "IsPanelOnStack", &UCommonInputManager::execIsPanelOnStack },
+		{ "PopActivatablePanel", &UCommonInputManager::execPopActivatablePanel },
+		{ "PushActivatablePanel", &UCommonInputManager::execPushActivatablePanel },
+		{ "ResumeStartingOperationProcessing", &UCommonInputManager::execResumeStartingOperationProcessing },
+		{ "SetGlobalInputHandlerPriorityFilter", &UCommonInputManager::execSetGlobalInputHandlerPriorityFilter },
+		{ "StartListeningForExistingHeldAction", &UCommonInputManager::execStartListeningForExistingHeldAction },
+		{ "StopListeningForExistingHeldAction", &UCommonInputManager::execStopListeningForExistingHeldAction },
+		{ "SuspendStartingOperationProcessing", &UCommonInputManager::execSuspendStartingOperationProcessing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonInputManager_GetAvailableInputActions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

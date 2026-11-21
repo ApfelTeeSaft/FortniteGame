@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTheaterMapViewer();  // RVA 0x010BE180 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD5E0 (end 0x010BD602)
+// Original VA: 0x00000001410BD5E0 | File offset: 0x010BCBE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0340AB98) | Matching: see analysis/functions-uht-natives.json
+void AFortTheaterMapViewer::StaticRegisterNativesAFortTheaterMapViewer()
+{
+	UClass* Class = AFortTheaterMapViewer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleMarkedQuestsChanged", &AFortTheaterMapViewer::execHandleMarkedQuestsChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTheaterMapViewer_HandleMarkedQuestsChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

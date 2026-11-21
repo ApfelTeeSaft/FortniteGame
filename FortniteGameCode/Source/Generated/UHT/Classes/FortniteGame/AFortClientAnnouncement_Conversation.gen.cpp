@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortClientAnnouncement_Conversation::StaticRegisterNativesAFortClientAnnouncement_Conversation()
-{
-}
 // IMPLEMENT_CLASS(AFortClientAnnouncement_Conversation, 1088351781u)
 // Original dynamic initializer: RVA 0x000EB110 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortClientAnnouncement_Conversation> AutoInitializeAFortClientAnnouncement_Conversation(TEXT("AFortClientAnnouncement_Conversation"), sizeof(AFortClientAnnouncement_Conversation), 1088351781u);

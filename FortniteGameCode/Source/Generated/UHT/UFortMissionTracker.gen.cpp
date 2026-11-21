@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionTracker();  // RVA 0x028D74F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6E70 (end 0x028D6E92)
+// Original VA: 0x00000001428D6E70 | File offset: 0x028D6470
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE5C58) | Matching: see analysis/functions-uht-natives.json
+void UFortMissionTracker::StaticRegisterNativesUFortMissionTracker()
+{
+	UClass* Class = UFortMissionTracker::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleDebugHUDObjectiveHeightChanged", &UFortMissionTracker::execHandleDebugHUDObjectiveHeightChanged },
+		{ "HandleSizeEstimateChanged", &UFortMissionTracker::execHandleSizeEstimateChanged },
+		{ "RefreshSizeEstimate", &UFortMissionTracker::execRefreshSizeEstimate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMissionTracker_HandleDebugHUDObjectiveHeightChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

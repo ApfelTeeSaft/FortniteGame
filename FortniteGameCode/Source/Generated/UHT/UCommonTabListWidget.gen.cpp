@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonTabListWidget();  // RVA 0x002CA5C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA190 (end 0x002CA1B2)
+// Original VA: 0x00000001402CA190 | File offset: 0x002C9790
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E82890) | Matching: see analysis/functions-uht-natives.json
+void UCommonTabListWidget::StaticRegisterNativesUCommonTabListWidget()
+{
+	UClass* Class = UCommonTabListWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisableTabWithReason", &UCommonTabListWidget::execDisableTabWithReason },
+		{ "GetActiveTab", &UCommonTabListWidget::execGetActiveTab },
+		{ "GetLinkedSwitcher", &UCommonTabListWidget::execGetLinkedSwitcher },
+		{ "GetSelectedTabId", &UCommonTabListWidget::execGetSelectedTabId },
+		{ "GetTabButtonByID", &UCommonTabListWidget::execGetTabButtonByID },
+		{ "GetTabCount", &UCommonTabListWidget::execGetTabCount },
+		{ "GetTabIdAtIndex", &UCommonTabListWidget::execGetTabIdAtIndex },
+		{ "HandleNextTabInputAction", &UCommonTabListWidget::execHandleNextTabInputAction },
+		{ "HandlePreviousTabInputAction", &UCommonTabListWidget::execHandlePreviousTabInputAction },
+		{ "HandleTabButtonSelected", &UCommonTabListWidget::execHandleTabButtonSelected },
+		{ "HandleTabCreated", &UCommonTabListWidget::execHandleTabCreated },
+		{ "HandleTabRemoved", &UCommonTabListWidget::execHandleTabRemoved },
+		{ "RegisterTab", &UCommonTabListWidget::execRegisterTab },
+		{ "RemoveAllTabs", &UCommonTabListWidget::execRemoveAllTabs },
+		{ "RemoveTab", &UCommonTabListWidget::execRemoveTab },
+		{ "SelectTabByID", &UCommonTabListWidget::execSelectTabByID },
+		{ "SetLinkedSwitcher", &UCommonTabListWidget::execSetLinkedSwitcher },
+		{ "SetListeningForInput", &UCommonTabListWidget::execSetListeningForInput },
+		{ "SetTabEnabled", &UCommonTabListWidget::execSetTabEnabled },
+		{ "SetTabVisibility", &UCommonTabListWidget::execSetTabVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

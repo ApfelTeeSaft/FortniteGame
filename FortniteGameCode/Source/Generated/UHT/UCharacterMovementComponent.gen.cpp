@@ -6,6 +6,52 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCharacterMovementComponent();  // RVA 0x023EE150 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDD00 (end 0x023EDD22)
+// Original VA: 0x00000001423EDD00 | File offset: 0x023ED300
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038C1AB0) | Matching: see analysis/functions-uht-natives.json
+void UCharacterMovementComponent::StaticRegisterNativesUCharacterMovementComponent()
+{
+	UClass* Class = UCharacterMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddForce", &UCharacterMovementComponent::execAddForce },
+		{ "AddImpulse", &UCharacterMovementComponent::execAddImpulse },
+		{ "CalcVelocity", &UCharacterMovementComponent::execCalcVelocity },
+		{ "CapsuleTouched", &UCharacterMovementComponent::execCapsuleTouched },
+		{ "ClearAccumulatedForces", &UCharacterMovementComponent::execClearAccumulatedForces },
+		{ "DisableMovement", &UCharacterMovementComponent::execDisableMovement },
+		{ "GetAnalogInputModifier", &UCharacterMovementComponent::execGetAnalogInputModifier },
+		{ "GetCharacterOwner", &UCharacterMovementComponent::execGetCharacterOwner },
+		{ "GetCurrentAcceleration", &UCharacterMovementComponent::execGetCurrentAcceleration },
+		{ "GetImpartedMovementBaseVelocity", &UCharacterMovementComponent::execGetImpartedMovementBaseVelocity },
+		{ "GetMaxAcceleration", &UCharacterMovementComponent::execGetMaxAcceleration },
+		{ "GetMaxBrakingDeceleration", &UCharacterMovementComponent::execGetMaxBrakingDeceleration },
+		{ "GetMaxJumpHeight", &UCharacterMovementComponent::execGetMaxJumpHeight },
+		{ "GetMaxJumpHeightWithJumpTime", &UCharacterMovementComponent::execGetMaxJumpHeightWithJumpTime },
+		{ "GetMinAnalogSpeed", &UCharacterMovementComponent::execGetMinAnalogSpeed },
+		{ "GetMovementBase", &UCharacterMovementComponent::execGetMovementBase },
+		{ "GetPerchRadiusThreshold", &UCharacterMovementComponent::execGetPerchRadiusThreshold },
+		{ "GetValidPerchRadius", &UCharacterMovementComponent::execGetValidPerchRadius },
+		{ "IsWalkable", &UCharacterMovementComponent::execIsWalkable },
+		{ "IsWalking", &UCharacterMovementComponent::execIsWalking },
+		{ "K2_ComputeFloorDist", &UCharacterMovementComponent::execK2_ComputeFloorDist },
+		{ "K2_FindFloor", &UCharacterMovementComponent::execK2_FindFloor },
+		{ "K2_GetModifiedMaxAcceleration", &UCharacterMovementComponent::execK2_GetModifiedMaxAcceleration },
+		{ "K2_GetWalkableFloorAngle", &UCharacterMovementComponent::execK2_GetWalkableFloorAngle },
+		{ "K2_GetWalkableFloorZ", &UCharacterMovementComponent::execK2_GetWalkableFloorZ },
+		{ "SetAvoidanceEnabled", &UCharacterMovementComponent::execSetAvoidanceEnabled },
+		{ "SetAvoidanceGroup", &UCharacterMovementComponent::execSetAvoidanceGroup },
+		{ "SetAvoidanceGroupMask", &UCharacterMovementComponent::execSetAvoidanceGroupMask },
+		{ "SetGroupsToAvoid", &UCharacterMovementComponent::execSetGroupsToAvoid },
+		{ "SetGroupsToAvoidMask", &UCharacterMovementComponent::execSetGroupsToAvoidMask },
+		{ "SetGroupsToIgnore", &UCharacterMovementComponent::execSetGroupsToIgnore },
+		{ "SetGroupsToIgnoreMask", &UCharacterMovementComponent::execSetGroupsToIgnoreMask },
+		{ "SetMovementMode", &UCharacterMovementComponent::execSetMovementMode },
+		{ "SetWalkableFloorAngle", &UCharacterMovementComponent::execSetWalkableFloorAngle },
+		{ "SetWalkableFloorZ", &UCharacterMovementComponent::execSetWalkableFloorZ },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCharacterMovementComponent_AddForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

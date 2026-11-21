@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921660 (end 0x02921682)
+// Original VA: 0x0000000142921660 | File offset: 0x02920C60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D5B3E0) | Matching: see analysis/functions-uht-natives.json
+void UARPlaneGeometry::StaticRegisterNativesUARPlaneGeometry()
+{
+	UClass* Class = UARPlaneGeometry::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCenter", &UARPlaneGeometry::execGetCenter },
+		{ "GetExtent", &UARPlaneGeometry::execGetExtent },
+		{ "GetLocalToTrackingTransform", &UARPlaneGeometry::execGetLocalToTrackingTransform },
+		{ "GetLocalToWorldTransform", &UARPlaneGeometry::execGetLocalToWorldTransform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UARPlaneGeometry_GetCenter_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name

@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010500D0 (end 0x010500F2)
+// Original VA: 0x00000001410500D0 | File offset: 0x0104F6D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03392570) | Matching: see analysis/functions-uht-natives.json
+void UFortNotificationHandler::StaticRegisterNativesUFortNotificationHandler()
+{
+	UClass* Class = UFortNotificationHandler::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearNotification", &UFortNotificationHandler::execClearNotification },
+		{ "NotificationShown", &UFortNotificationHandler::execNotificationShown },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortNotificationHandler_ClearNotification_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

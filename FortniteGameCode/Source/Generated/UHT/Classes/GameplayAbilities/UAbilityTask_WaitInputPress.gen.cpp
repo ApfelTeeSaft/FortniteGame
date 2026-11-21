@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_WaitInputPress::StaticRegisterNativesUAbilityTask_WaitInputPress()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_WaitInputPress, 3599827587u)
 // Original dynamic initializer: RVA 0x0009DEF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_WaitInputPress> AutoInitializeUAbilityTask_WaitInputPress(TEXT("UAbilityTask_WaitInputPress"), sizeof(UAbilityTask_WaitInputPress), 3599827587u);

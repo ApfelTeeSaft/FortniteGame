@@ -6,6 +6,52 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerOutpost();  // RVA 0x01077790 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077540 (end 0x01077562)
+// Original VA: 0x0000000141077540 | File offset: 0x01076B40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C3750) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerOutpost::StaticRegisterNativesAFortPlayerControllerOutpost()
+{
+	UClass* Class = AFortPlayerControllerOutpost::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanUpgradeBuilding", &AFortPlayerControllerOutpost::execCanUpgradeBuilding },
+		{ "CanUpgradeBuildingFromDefinition", &AFortPlayerControllerOutpost::execCanUpgradeBuildingFromDefinition },
+		{ "ClientOnBuildingLevelChanged", &AFortPlayerControllerOutpost::execClientOnBuildingLevelChanged },
+		{ "ClientOnOutpostRefundOccurred", &AFortPlayerControllerOutpost::execClientOnOutpostRefundOccurred },
+		{ "DumpInventory", &AFortPlayerControllerOutpost::execDumpInventory },
+		{ "GetBuildingLevel", &AFortPlayerControllerOutpost::execGetBuildingLevel },
+		{ "GetBuildingLevelFromDefinition", &AFortPlayerControllerOutpost::execGetBuildingLevelFromDefinition },
+		{ "GetBuildingMaxLevel", &AFortPlayerControllerOutpost::execGetBuildingMaxLevel },
+		{ "GetBuildingMaxLevelFromDefinition", &AFortPlayerControllerOutpost::execGetBuildingMaxLevelFromDefinition },
+		{ "GetBuildingUpgradeCost", &AFortPlayerControllerOutpost::execGetBuildingUpgradeCost },
+		{ "GetBuildingUpgradeCostFromDefinition", &AFortPlayerControllerOutpost::execGetBuildingUpgradeCostFromDefinition },
+		{ "GetOutpostCoreLevel", &AFortPlayerControllerOutpost::execGetOutpostCoreLevel },
+		{ "GetPendingFabricationProgress", &AFortPlayerControllerOutpost::execGetPendingFabricationProgress },
+		{ "GetPendingItemToFabricate", &AFortPlayerControllerOutpost::execGetPendingItemToFabricate },
+		{ "IsFabricationPending", &AFortPlayerControllerOutpost::execIsFabricationPending },
+		{ "IsOutpostOwner", &AFortPlayerControllerOutpost::execIsOutpostOwner },
+		{ "OnRep_DisintegrationStartTime", &AFortPlayerControllerOutpost::execOnRep_DisintegrationStartTime },
+		{ "OnRep_PostDepositedResources", &AFortPlayerControllerOutpost::execOnRep_PostDepositedResources },
+		{ "OnRep_QuantumGooCompleted", &AFortPlayerControllerOutpost::execOnRep_QuantumGooCompleted },
+		{ "OnRep_QuantumGooIncoming", &AFortPlayerControllerOutpost::execOnRep_QuantumGooIncoming },
+		{ "ServerAbortDisintegration", &AFortPlayerControllerOutpost::execServerAbortDisintegration },
+		{ "ServerActivateCraftingTable", &AFortPlayerControllerOutpost::execServerActivateCraftingTable },
+		{ "ServerDeactivateCraftingTable", &AFortPlayerControllerOutpost::execServerDeactivateCraftingTable },
+		{ "ServerDepositPOSTResource", &AFortPlayerControllerOutpost::execServerDepositPOSTResource },
+		{ "ServerDisintegrateItem", &AFortPlayerControllerOutpost::execServerDisintegrateItem },
+		{ "ServerFabricateItem", &AFortPlayerControllerOutpost::execServerFabricateItem },
+		{ "ServerLeaveOutpostAsParty", &AFortPlayerControllerOutpost::execServerLeaveOutpostAsParty },
+		{ "ServerMoveItemFromStorageVault", &AFortPlayerControllerOutpost::execServerMoveItemFromStorageVault },
+		{ "ServerMoveItemToStorageVault", &AFortPlayerControllerOutpost::execServerMoveItemToStorageVault },
+		{ "ServerNotifyPendingFabricationCompleted", &AFortPlayerControllerOutpost::execServerNotifyPendingFabricationCompleted },
+		{ "ServerUpgradeBuilding", &AFortPlayerControllerOutpost::execServerUpgradeBuilding },
+		{ "ServerUpgradePOST", &AFortPlayerControllerOutpost::execServerUpgradePOST },
+		{ "ToggleOwnerInPIE", &AFortPlayerControllerOutpost::execToggleOwnerInPIE },
+		{ "UpgradeBuilding", &AFortPlayerControllerOutpost::execUpgradeBuilding },
+		{ "UpgradeBuildingByDefinition", &AFortPlayerControllerOutpost::execUpgradeBuildingByDefinition },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerOutpost_CanUpgradeBuilding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

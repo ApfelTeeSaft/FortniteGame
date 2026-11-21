@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncementManager();  // RVA 0x00FC0020 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFA50 (end 0x00FBFA72)
+// Original VA: 0x0000000140FBFA50 | File offset: 0x00FBF050
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032E63E8) | Matching: see analysis/functions-uht-natives.json
+void AFortClientAnnouncementManager::StaticRegisterNativesAFortClientAnnouncementManager()
+{
+	UClass* Class = AFortClientAnnouncementManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_CancelledAnnouncements", &AFortClientAnnouncementManager::execOnRep_CancelledAnnouncements },
+		{ "OnRep_ClientAnnouncements", &AFortClientAnnouncementManager::execOnRep_ClientAnnouncements },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortClientAnnouncementManager_OnRep_CancelledAnnouncements_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

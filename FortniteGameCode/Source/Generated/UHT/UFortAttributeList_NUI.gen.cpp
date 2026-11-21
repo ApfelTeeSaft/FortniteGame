@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAttributeList_NUI();  // RVA 0x0288CC00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C6E0 (end 0x0288C702)
+// Original VA: 0x000000014288C6E0 | File offset: 0x0288BCE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6ACA8) | Matching: see analysis/functions-uht-natives.json
+void UFortAttributeList_NUI::StaticRegisterNativesUFortAttributeList_NUI()
+{
+	UClass* Class = UFortAttributeList_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearPreviewData", &UFortAttributeList_NUI::execClearPreviewData },
+		{ "SetData", &UFortAttributeList_NUI::execSetData },
+		{ "SetPreviewData", &UFortAttributeList_NUI::execSetPreviewData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAttributeList_NUI_ClearPreviewData_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

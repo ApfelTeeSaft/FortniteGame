@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAIController();  // RVA 0x00F87C60 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87330 (end 0x00F87352)
+// Original VA: 0x0000000140F87330 | File offset: 0x00F86930
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0329D0D0) | Matching: see analysis/functions-uht-natives.json
+void AFortAIController::StaticRegisterNativesAFortAIController()
+{
+	UClass* Class = AFortAIController::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateBuildingActor", &AFortAIController::execCreateBuildingActor },
+		{ "GetEncounterInfo", &AFortAIController::execGetEncounterInfo },
+		{ "GetGoalActor", &AFortAIController::execGetGoalActor },
+		{ "IgnoreProximityForDuration", &AFortAIController::execIgnoreProximityForDuration },
+		{ "IsAllowedToSleep", &AFortAIController::execIsAllowedToSleep },
+		{ "IsIgnoringProximity", &AFortAIController::execIsIgnoringProximity },
+		{ "LockBehaviorResource", &AFortAIController::execLockBehaviorResource },
+		{ "LockMovementResource", &AFortAIController::execLockMovementResource },
+		{ "OnBuildingActorGoalDestroyed", &AFortAIController::execOnBuildingActorGoalDestroyed },
+		{ "SetAlwaysGameplayRelevant", &AFortAIController::execSetAlwaysGameplayRelevant },
+		{ "SetFullPeripheralVision", &AFortAIController::execSetFullPeripheralVision },
+		{ "SetGoalActor", &AFortAIController::execSetGoalActor },
+		{ "SetIsSleeping", &AFortAIController::execSetIsSleeping },
+		{ "SetPawnAIType", &AFortAIController::execSetPawnAIType },
+		{ "SetTeam", &AFortAIController::execSetTeam },
+		{ "SetupCustomVIM", &AFortAIController::execSetupCustomVIM },
+		{ "UnlockBehaviorResource", &AFortAIController::execUnlockBehaviorResource },
+		{ "UnlockMovementResource", &AFortAIController::execUnlockMovementResource },
+		{ "UnregisterForGoalDetection", &AFortAIController::execUnregisterForGoalDetection },
+		{ "WakeUp", &AFortAIController::execWakeUp },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortAIController_CreateBuildingActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

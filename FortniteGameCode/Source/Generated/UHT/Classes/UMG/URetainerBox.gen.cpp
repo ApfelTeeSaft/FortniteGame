@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void URetainerBox::StaticRegisterNativesURetainerBox()
-{
-}
 // IMPLEMENT_CLASS(URetainerBox, 3410626991u)
 // Original dynamic initializer: RVA 0x001B2A40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<URetainerBox> AutoInitializeURetainerBox(TEXT("URetainerBox"), sizeof(URetainerBox), 3410626991u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortCheatManager::StaticRegisterNativesUFortCheatManager()
-{
-}
 // IMPLEMENT_CLASS(UFortCheatManager, 1437645853u)
 // Original dynamic initializer: RVA 0x000EA8E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCheatManager> AutoInitializeUFortCheatManager(TEXT("UFortCheatManager"), sizeof(UFortCheatManager), 1437645853u);

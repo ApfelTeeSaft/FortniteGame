@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ADeployableBasePlot();  // RVA 0x00F7D220 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C9B0 (end 0x00F7C9D2)
+// Original VA: 0x0000000140F7C9B0 | File offset: 0x00F7BFB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0328E9A0) | Matching: see analysis/functions-uht-natives.json
+void ADeployableBasePlot::StaticRegisterNativesADeployableBasePlot()
+{
+	UClass* Class = ADeployableBasePlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumOfItemsInPlot", &ADeployableBasePlot::execGetNumOfItemsInPlot },
+		{ "GetOccupantNetID", &ADeployableBasePlot::execGetOccupantNetID },
+		{ "GetPlayerStart", &ADeployableBasePlot::execGetPlayerStart },
+		{ "HandleBuildingStateTransition", &ADeployableBasePlot::execHandleBuildingStateTransition },
+		{ "IsBuildingActorWithinBuildableSpace", &ADeployableBasePlot::execIsBuildingActorWithinBuildableSpace },
+		{ "IsOccupant", &ADeployableBasePlot::execIsOccupant },
+		{ "IsOccupied", &ADeployableBasePlot::execIsOccupied },
+		{ "OnBuildingStateTransition", &ADeployableBasePlot::execOnBuildingStateTransition },
+		{ "OnCurrentBuildingStateSet", &ADeployableBasePlot::execOnCurrentBuildingStateSet },
+		{ "OnRep_BuildableSpaceExpansionVector", &ADeployableBasePlot::execOnRep_BuildableSpaceExpansionVector },
+		{ "OnRep_CurrentBuildingState", &ADeployableBasePlot::execOnRep_CurrentBuildingState },
+		{ "OnRep_OccupantNetID", &ADeployableBasePlot::execOnRep_OccupantNetID },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ADeployableBasePlot_GetNumOfItemsInPlot_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

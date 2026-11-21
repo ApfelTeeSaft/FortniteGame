@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UActorComponent::StaticRegisterNativesUActorComponent()
-{
-}
 // IMPLEMENT_CLASS(UActorComponent, 3249282995u)
 // Original dynamic initializer: RVA 0x001EBFA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UActorComponent> AutoInitializeUActorComponent(TEXT("UActorComponent"), sizeof(UActorComponent), 3249282995u);

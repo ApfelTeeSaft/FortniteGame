@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadSlotItemPicker::StaticRegisterNativesUFortSquadSlotItemPicker()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadSlotItemPicker, 2997734919u)
 // Original dynamic initializer: RVA 0x0025C120 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadSlotItemPicker> AutoInitializeUFortSquadSlotItemPicker(TEXT("UFortSquadSlotItemPicker"), sizeof(UFortSquadSlotItemPicker), 2997734919u);

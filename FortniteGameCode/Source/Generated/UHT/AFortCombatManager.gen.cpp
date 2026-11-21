@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortCombatManager();  // RVA 0x00FC5F80 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC54B0 (end 0x00FC54D2)
+// Original VA: 0x0000000140FC54B0 | File offset: 0x00FC4AB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032EFB00) | Matching: see analysis/functions-uht-natives.json
+void AFortCombatManager::StaticRegisterNativesAFortCombatManager()
+{
+	UClass* Class = AFortCombatManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEventHeatPercent", &AFortCombatManager::execGetEventHeatPercent },
+		{ "GetEventHeatPercentTotal", &AFortCombatManager::execGetEventHeatPercentTotal },
+		{ "OnRep_CombatEventHeat", &AFortCombatManager::execOnRep_CombatEventHeat },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

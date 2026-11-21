@@ -6,6 +6,90 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USkeletalMeshComponent();  // RVA 0x024CCA10 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC5C0 (end 0x024CC5E2)
+// Original VA: 0x00000001424CC5C0 | File offset: 0x024CBBC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A74C0) | Matching: see analysis/functions-uht-natives.json
+void USkeletalMeshComponent::StaticRegisterNativesUSkeletalMeshComponent()
+{
+	UClass* Class = USkeletalMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AccumulateAllBodiesBelowPhysicsBlendWeight", &USkeletalMeshComponent::execAccumulateAllBodiesBelowPhysicsBlendWeight },
+		{ "AddForceToAllBodiesBelow", &USkeletalMeshComponent::execAddForceToAllBodiesBelow },
+		{ "AddImpulseToAllBodiesBelow", &USkeletalMeshComponent::execAddImpulseToAllBodiesBelow },
+		{ "AllowAnimCurveEvaluation", &USkeletalMeshComponent::execAllowAnimCurveEvaluation },
+		{ "BindClothToMasterPoseComponent", &USkeletalMeshComponent::execBindClothToMasterPoseComponent },
+		{ "BreakConstraint", &USkeletalMeshComponent::execBreakConstraint },
+		{ "ClearMorphTargets", &USkeletalMeshComponent::execClearMorphTargets },
+		{ "FindConstraintBoneName", &USkeletalMeshComponent::execFindConstraintBoneName },
+		{ "ForceClothNextUpdateTeleport", &USkeletalMeshComponent::execForceClothNextUpdateTeleport },
+		{ "ForceClothNextUpdateTeleportAndReset", &USkeletalMeshComponent::execForceClothNextUpdateTeleportAndReset },
+		{ "GetAllowedAnimCurveEvaluate", &USkeletalMeshComponent::execGetAllowedAnimCurveEvaluate },
+		{ "GetAnimationMode", &USkeletalMeshComponent::execGetAnimationMode },
+		{ "GetAnimInstance", &USkeletalMeshComponent::execGetAnimInstance },
+		{ "GetBoneMass", &USkeletalMeshComponent::execGetBoneMass },
+		{ "GetClothingSimulationInteractor", &USkeletalMeshComponent::execGetClothingSimulationInteractor },
+		{ "GetClothMaxDistanceScale", &USkeletalMeshComponent::execGetClothMaxDistanceScale },
+		{ "GetCurrentJointAngles", &USkeletalMeshComponent::execGetCurrentJointAngles },
+		{ "GetDisableAnimCurves", &USkeletalMeshComponent::execGetDisableAnimCurves },
+		{ "GetDisablePostProcessBlueprint", &USkeletalMeshComponent::execGetDisablePostProcessBlueprint },
+		{ "GetMorphTarget", &USkeletalMeshComponent::execGetMorphTarget },
+		{ "GetPlayRate", &USkeletalMeshComponent::execGetPlayRate },
+		{ "GetPosition", &USkeletalMeshComponent::execGetPosition },
+		{ "GetPostProcessInstance", &USkeletalMeshComponent::execGetPostProcessInstance },
+		{ "GetSkeletalCenterOfMass", &USkeletalMeshComponent::execGetSkeletalCenterOfMass },
+		{ "GetTeleportDistanceThreshold", &USkeletalMeshComponent::execGetTeleportDistanceThreshold },
+		{ "GetTeleportRotationThreshold", &USkeletalMeshComponent::execGetTeleportRotationThreshold },
+		{ "IsBodyGravityEnabled", &USkeletalMeshComponent::execIsBodyGravityEnabled },
+		{ "IsClothingSimulationSuspended", &USkeletalMeshComponent::execIsClothingSimulationSuspended },
+		{ "IsPlaying", &USkeletalMeshComponent::execIsPlaying },
+		{ "K2_GetClosestPointOnPhysicsAsset", &USkeletalMeshComponent::execK2_GetClosestPointOnPhysicsAsset },
+		{ "OverrideAnimationData", &USkeletalMeshComponent::execOverrideAnimationData },
+		{ "Play", &USkeletalMeshComponent::execPlay },
+		{ "PlayAnimation", &USkeletalMeshComponent::execPlayAnimation },
+		{ "ResetAllBodiesSimulatePhysics", &USkeletalMeshComponent::execResetAllBodiesSimulatePhysics },
+		{ "ResetAllowedAnimCurveEvaluation", &USkeletalMeshComponent::execResetAllowedAnimCurveEvaluation },
+		{ "ResetAnimInstanceDynamics", &USkeletalMeshComponent::execResetAnimInstanceDynamics },
+		{ "ResetClothTeleportMode", &USkeletalMeshComponent::execResetClothTeleportMode },
+		{ "ResumeClothingSimulation", &USkeletalMeshComponent::execResumeClothingSimulation },
+		{ "SetAllBodiesBelowPhysicsBlendWeight", &USkeletalMeshComponent::execSetAllBodiesBelowPhysicsBlendWeight },
+		{ "SetAllBodiesBelowSimulatePhysics", &USkeletalMeshComponent::execSetAllBodiesBelowSimulatePhysics },
+		{ "SetAllBodiesPhysicsBlendWeight", &USkeletalMeshComponent::execSetAllBodiesPhysicsBlendWeight },
+		{ "SetAllBodiesSimulatePhysics", &USkeletalMeshComponent::execSetAllBodiesSimulatePhysics },
+		{ "SetAllMotorsAngularDriveParams", &USkeletalMeshComponent::execSetAllMotorsAngularDriveParams },
+		{ "SetAllMotorsAngularPositionDrive", &USkeletalMeshComponent::execSetAllMotorsAngularPositionDrive },
+		{ "SetAllMotorsAngularVelocityDrive", &USkeletalMeshComponent::execSetAllMotorsAngularVelocityDrive },
+		{ "SetAllowAnimCurveEvaluation", &USkeletalMeshComponent::execSetAllowAnimCurveEvaluation },
+		{ "SetAllowedAnimCurvesEvaluation", &USkeletalMeshComponent::execSetAllowedAnimCurvesEvaluation },
+		{ "SetAngularLimits", &USkeletalMeshComponent::execSetAngularLimits },
+		{ "SetAnimation", &USkeletalMeshComponent::execSetAnimation },
+		{ "SetAnimationMode", &USkeletalMeshComponent::execSetAnimationMode },
+		{ "SetAnimInstanceClass", &USkeletalMeshComponent::execSetAnimInstanceClass },
+		{ "SetBodyNotifyRigidBodyCollision", &USkeletalMeshComponent::execSetBodyNotifyRigidBodyCollision },
+		{ "SetClothMaxDistanceScale", &USkeletalMeshComponent::execSetClothMaxDistanceScale },
+		{ "SetConstraintProfile", &USkeletalMeshComponent::execSetConstraintProfile },
+		{ "SetConstraintProfileForAll", &USkeletalMeshComponent::execSetConstraintProfileForAll },
+		{ "SetDisableAnimCurves", &USkeletalMeshComponent::execSetDisableAnimCurves },
+		{ "SetDisablePostProcessBlueprint", &USkeletalMeshComponent::execSetDisablePostProcessBlueprint },
+		{ "SetEnableBodyGravity", &USkeletalMeshComponent::execSetEnableBodyGravity },
+		{ "SetEnableGravityOnAllBodiesBelow", &USkeletalMeshComponent::execSetEnableGravityOnAllBodiesBelow },
+		{ "SetEnablePhysicsBlending", &USkeletalMeshComponent::execSetEnablePhysicsBlending },
+		{ "SetMorphTarget", &USkeletalMeshComponent::execSetMorphTarget },
+		{ "SetNotifyRigidBodyCollisionBelow", &USkeletalMeshComponent::execSetNotifyRigidBodyCollisionBelow },
+		{ "SetPhysicsBlendWeight", &USkeletalMeshComponent::execSetPhysicsBlendWeight },
+		{ "SetPlayRate", &USkeletalMeshComponent::execSetPlayRate },
+		{ "SetPosition", &USkeletalMeshComponent::execSetPosition },
+		{ "SetTeleportDistanceThreshold", &USkeletalMeshComponent::execSetTeleportDistanceThreshold },
+		{ "SetTeleportRotationThreshold", &USkeletalMeshComponent::execSetTeleportRotationThreshold },
+		{ "SetUpdateAnimationInEditor", &USkeletalMeshComponent::execSetUpdateAnimationInEditor },
+		{ "SnapshotPose", &USkeletalMeshComponent::execSnapshotPose },
+		{ "Stop", &USkeletalMeshComponent::execStop },
+		{ "SuspendClothingSimulation", &USkeletalMeshComponent::execSuspendClothingSimulation },
+		{ "ToggleDisablePostProcessBlueprint", &USkeletalMeshComponent::execToggleDisablePostProcessBlueprint },
+		{ "UnbindClothFromMasterPoseComponent", &USkeletalMeshComponent::execUnbindClothFromMasterPoseComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USkeletalMeshComponent_AccumulateAllBodiesBelowPhysicsBlendWeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortCraftingBarWidget::StaticRegisterNativesUFortCraftingBarWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortCraftingBarWidget, 3978651790u)
 // Original dynamic initializer: RVA 0x002426D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCraftingBarWidget> AutoInitializeUFortCraftingBarWidget(TEXT("UFortCraftingBarWidget"), sizeof(UFortCraftingBarWidget), 3978651790u);

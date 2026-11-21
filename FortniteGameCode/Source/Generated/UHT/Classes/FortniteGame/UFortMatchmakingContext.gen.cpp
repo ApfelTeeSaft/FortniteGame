@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMatchmakingContext::StaticRegisterNativesUFortMatchmakingContext()
-{
-}
 // IMPLEMENT_CLASS(UFortMatchmakingContext, 3755945936u)
 // Original dynamic initializer: RVA 0x000FD170 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMatchmakingContext> AutoInitializeUFortMatchmakingContext(TEXT("UFortMatchmakingContext"), sizeof(UFortMatchmakingContext), 3755945936u);

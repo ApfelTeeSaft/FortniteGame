@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCMSContext::StaticRegisterNativesUCMSContext()
-{
-}
 // IMPLEMENT_CLASS(UCMSContext, 546558783u)
 // Original dynamic initializer: RVA 0x0023B6C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCMSContext> AutoInitializeUCMSContext(TEXT("UCMSContext"), sizeof(UCMSContext), 546558783u);

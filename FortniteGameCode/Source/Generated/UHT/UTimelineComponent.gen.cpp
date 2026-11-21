@@ -6,6 +6,40 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTimelineComponent();  // RVA 0x024ECE40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC3E0 (end 0x024EC402)
+// Original VA: 0x00000001424EC3E0 | File offset: 0x024EB9E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039CAB20) | Matching: see analysis/functions-uht-natives.json
+void UTimelineComponent::StaticRegisterNativesUTimelineComponent()
+{
+	UClass* Class = UTimelineComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIgnoreTimeDilation", &UTimelineComponent::execGetIgnoreTimeDilation },
+		{ "GetPlaybackPosition", &UTimelineComponent::execGetPlaybackPosition },
+		{ "GetPlayRate", &UTimelineComponent::execGetPlayRate },
+		{ "GetTimelineLength", &UTimelineComponent::execGetTimelineLength },
+		{ "IsLooping", &UTimelineComponent::execIsLooping },
+		{ "IsPlaying", &UTimelineComponent::execIsPlaying },
+		{ "IsReversing", &UTimelineComponent::execIsReversing },
+		{ "OnRep_Timeline", &UTimelineComponent::execOnRep_Timeline },
+		{ "Play", &UTimelineComponent::execPlay },
+		{ "PlayFromStart", &UTimelineComponent::execPlayFromStart },
+		{ "Reverse", &UTimelineComponent::execReverse },
+		{ "ReverseFromEnd", &UTimelineComponent::execReverseFromEnd },
+		{ "SetFloatCurve", &UTimelineComponent::execSetFloatCurve },
+		{ "SetIgnoreTimeDilation", &UTimelineComponent::execSetIgnoreTimeDilation },
+		{ "SetLinearColorCurve", &UTimelineComponent::execSetLinearColorCurve },
+		{ "SetLooping", &UTimelineComponent::execSetLooping },
+		{ "SetNewTime", &UTimelineComponent::execSetNewTime },
+		{ "SetPlaybackPosition", &UTimelineComponent::execSetPlaybackPosition },
+		{ "SetPlayRate", &UTimelineComponent::execSetPlayRate },
+		{ "SetTimelineLength", &UTimelineComponent::execSetTimelineLength },
+		{ "SetTimelineLengthMode", &UTimelineComponent::execSetTimelineLengthMode },
+		{ "SetVectorCurve", &UTimelineComponent::execSetVectorCurve },
+		{ "Stop", &UTimelineComponent::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTimelineComponent_GetIgnoreTimeDilation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

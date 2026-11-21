@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortInventory::StaticRegisterNativesAFortInventory()
-{
-}
 // IMPLEMENT_CLASS(AFortInventory, 1137148060u)
 // Original dynamic initializer: RVA 0x000FAF60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortInventory> AutoInitializeAFortInventory(TEXT("AFortInventory"), sizeof(AFortInventory), 1137148060u);

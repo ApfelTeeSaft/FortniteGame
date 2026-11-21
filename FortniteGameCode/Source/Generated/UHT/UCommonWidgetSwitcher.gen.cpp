@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetSwitcher();  // RVA 0x002D05E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0300 (end 0x002D0322)
+// Original VA: 0x00000001402D0300 | File offset: 0x002CF900
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E86840) | Matching: see analysis/functions-uht-natives.json
+void UCommonWidgetSwitcher::StaticRegisterNativesUCommonWidgetSwitcher()
+{
+	UClass* Class = UCommonWidgetSwitcher::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ActivateNextWidget", &UCommonWidgetSwitcher::execActivateNextWidget },
+		{ "ActivatePreviousWidget", &UCommonWidgetSwitcher::execActivatePreviousWidget },
+		{ "ActivateWidget", &UCommonWidgetSwitcher::execActivateWidget },
+		{ "DeactivateWidget", &UCommonWidgetSwitcher::execDeactivateWidget },
+		{ "HandleActiveWidgetDeactivated", &UCommonWidgetSwitcher::execHandleActiveWidgetDeactivated },
+		{ "HasWidgets", &UCommonWidgetSwitcher::execHasWidgets },
+		{ "SetActiveWidget_Advanced", &UCommonWidgetSwitcher::execSetActiveWidget_Advanced },
+		{ "SetActiveWidgetIndex_Advanced", &UCommonWidgetSwitcher::execSetActiveWidgetIndex_Advanced },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

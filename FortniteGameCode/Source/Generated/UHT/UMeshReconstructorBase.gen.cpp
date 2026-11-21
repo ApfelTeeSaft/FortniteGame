@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMeshReconstructorBase();  // RVA 0x01D5EDE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5ECF0 (end 0x01D5ED12)
+// Original VA: 0x0000000141D5ECF0 | File offset: 0x01D5E2F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03720C20) | Matching: see analysis/functions-uht-natives.json
+void UMeshReconstructorBase::StaticRegisterNativesUMeshReconstructorBase()
+{
+	UClass* Class = UMeshReconstructorBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConnectMRMesh", &UMeshReconstructorBase::execConnectMRMesh },
+		{ "DisconnectMRMesh", &UMeshReconstructorBase::execDisconnectMRMesh },
+		{ "IsReconstructionPaused", &UMeshReconstructorBase::execIsReconstructionPaused },
+		{ "IsReconstructionStarted", &UMeshReconstructorBase::execIsReconstructionStarted },
+		{ "PauseReconstruction", &UMeshReconstructorBase::execPauseReconstruction },
+		{ "StartReconstruction", &UMeshReconstructorBase::execStartReconstruction },
+		{ "StopReconstruction", &UMeshReconstructorBase::execStopReconstruction },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMeshReconstructorBase_ConnectMRMesh_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

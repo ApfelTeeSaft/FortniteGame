@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookRewardCardWidget();  // RVA 0x0289B180 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AD00 (end 0x0289AD22)
+// Original VA: 0x000000014289AD00 | File offset: 0x0289A300
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C81160) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookRewardCardWidget::StaticRegisterNativesUFortCollectionBookRewardCardWidget()
+{
+	UClass* Class = UFortCollectionBookRewardCardWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearRewards", &UFortCollectionBookRewardCardWidget::execClearRewards },
+		{ "HasRewards", &UFortCollectionBookRewardCardWidget::execHasRewards },
+		{ "SetRewards", &UFortCollectionBookRewardCardWidget::execSetRewards },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortCollectionBookRewardCardWidget_OnDisplayedItemChangedEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

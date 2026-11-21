@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonTextBlock::StaticRegisterNativesUCommonTextBlock()
-{
-}
 // IMPLEMENT_CLASS(UCommonTextBlock, 3562800132u)
 // Original dynamic initializer: RVA 0x00096100 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonTextBlock> AutoInitializeUCommonTextBlock(TEXT("UCommonTextBlock"), sizeof(UCommonTextBlock), 3562800132u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortWeaponRanged::StaticRegisterNativesAFortWeaponRanged()
-{
-}
 // IMPLEMENT_CLASS(AFortWeaponRanged, 2532238662u)
 // Original dynamic initializer: RVA 0x0011D320 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortWeaponRanged> AutoInitializeAFortWeaponRanged(TEXT("AFortWeaponRanged"), sizeof(AFortWeaponRanged), 2532238662u);

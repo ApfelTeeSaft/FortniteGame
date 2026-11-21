@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AMatineeActor();  // RVA 0x02486630 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485EB0 (end 0x02485ED2)
+// Original VA: 0x0000000142485EB0 | File offset: 0x024854B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0394EA80) | Matching: see analysis/functions-uht-natives.json
+void AMatineeActor::StaticRegisterNativesAMatineeActor()
+{
+	UClass* Class = AMatineeActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ChangePlaybackDirection", &AMatineeActor::execChangePlaybackDirection },
+		{ "EnableGroupByName", &AMatineeActor::execEnableGroupByName },
+		{ "Pause", &AMatineeActor::execPause },
+		{ "Play", &AMatineeActor::execPlay },
+		{ "Reverse", &AMatineeActor::execReverse },
+		{ "SetLoopingState", &AMatineeActor::execSetLoopingState },
+		{ "SetPosition", &AMatineeActor::execSetPosition },
+		{ "Stop", &AMatineeActor::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AMatineeActor_ChangePlaybackDirection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

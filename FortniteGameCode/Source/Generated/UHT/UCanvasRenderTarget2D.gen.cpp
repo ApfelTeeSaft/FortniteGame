@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCanvasRenderTarget2D();  // RVA 0x023EE0A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDCA0 (end 0x023EDCC2)
+// Original VA: 0x00000001423EDCA0 | File offset: 0x023ED2A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038C00D0) | Matching: see analysis/functions-uht-natives.json
+void UCanvasRenderTarget2D::StaticRegisterNativesUCanvasRenderTarget2D()
+{
+	UClass* Class = UCanvasRenderTarget2D::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateCanvasRenderTarget2D", &UCanvasRenderTarget2D::execCreateCanvasRenderTarget2D },
+		{ "GetSize", &UCanvasRenderTarget2D::execGetSize },
+		{ "UpdateResource", &UCanvasRenderTarget2D::execUpdateResource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCanvasRenderTarget2D_CreateCanvasRenderTarget2D_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

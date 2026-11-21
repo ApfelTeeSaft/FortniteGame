@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortQuestItemDefinition::StaticRegisterNativesUFortQuestItemDefinition()
-{
-}
 // IMPLEMENT_CLASS(UFortQuestItemDefinition, 563161599u)
 // Original dynamic initializer: RVA 0x00110740 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestItemDefinition> AutoInitializeUFortQuestItemDefinition(TEXT("UFortQuestItemDefinition"), sizeof(UFortQuestItemDefinition), 563161599u);

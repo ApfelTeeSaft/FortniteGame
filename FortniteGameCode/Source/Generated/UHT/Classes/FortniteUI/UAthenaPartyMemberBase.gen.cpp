@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaPartyMemberBase::StaticRegisterNativesUAthenaPartyMemberBase()
-{
-}
 // IMPLEMENT_CLASS(UAthenaPartyMemberBase, 4212944192u)
 // Original dynamic initializer: RVA 0x0023B4C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaPartyMemberBase> AutoInitializeUAthenaPartyMemberBase(TEXT("UAthenaPartyMemberBase"), sizeof(UAthenaPartyMemberBase), 4212944192u);

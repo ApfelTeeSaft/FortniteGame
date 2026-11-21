@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeCanvas();  // RVA 0x028F5490 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4E70 (end 0x028F4E92)
+// Original VA: 0x00000001428F4E70 | File offset: 0x028F4470
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D131E8) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreeCanvas::StaticRegisterNativesUFortSkillTreeCanvas()
+{
+	UClass* Class = UFortSkillTreeCanvas::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleButtonGroupSelectionChanged", &UFortSkillTreeCanvas::execHandleButtonGroupSelectionChanged },
+		{ "HandleButtonGroupSelectionCleared", &UFortSkillTreeCanvas::execHandleButtonGroupSelectionCleared },
+		{ "HandleNodeButtonClicked", &UFortSkillTreeCanvas::execHandleNodeButtonClicked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

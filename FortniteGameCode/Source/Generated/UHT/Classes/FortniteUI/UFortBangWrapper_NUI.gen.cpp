@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortBangWrapper_NUI::StaticRegisterNativesUFortBangWrapper_NUI()
-{
-}
 // IMPLEMENT_CLASS(UFortBangWrapper_NUI, 3111058323u)
 // Original dynamic initializer: RVA 0x0023E3A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortBangWrapper_NUI> AutoInitializeUFortBangWrapper_NUI(TEXT("UFortBangWrapper_NUI"), sizeof(UFortBangWrapper_NUI), 3111058323u);

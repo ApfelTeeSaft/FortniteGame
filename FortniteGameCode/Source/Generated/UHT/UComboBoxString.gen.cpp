@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UComboBoxString();  // RVA 0x01BE6200 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5CD0 (end 0x01BE5CF2)
+// Original VA: 0x0000000141BE5CD0 | File offset: 0x01BE52D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036920A0) | Matching: see analysis/functions-uht-natives.json
+void UComboBoxString::StaticRegisterNativesUComboBoxString()
+{
+	UClass* Class = UComboBoxString::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddOption", &UComboBoxString::execAddOption },
+		{ "ClearOptions", &UComboBoxString::execClearOptions },
+		{ "ClearSelection", &UComboBoxString::execClearSelection },
+		{ "FindOptionIndex", &UComboBoxString::execFindOptionIndex },
+		{ "GetOptionAtIndex", &UComboBoxString::execGetOptionAtIndex },
+		{ "GetOptionCount", &UComboBoxString::execGetOptionCount },
+		{ "GetSelectedOption", &UComboBoxString::execGetSelectedOption },
+		{ "RefreshOptions", &UComboBoxString::execRefreshOptions },
+		{ "RemoveOption", &UComboBoxString::execRemoveOption },
+		{ "SetSelectedOption", &UComboBoxString::execSetSelectedOption },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UComboBoxString_OnOpeningEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

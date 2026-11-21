@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USeasonPassLevelWidget();  // RVA 0x02918CB0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029188F0 (end 0x02918912)
+// Original VA: 0x00000001429188F0 | File offset: 0x02917EF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D56A38) | Matching: see analysis/functions-uht-natives.json
+void USeasonPassLevelWidget::StaticRegisterNativesUSeasonPassLevelWidget()
+{
+	UClass* Class = USeasonPassLevelWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AttemptClaim", &USeasonPassLevelWidget::execAttemptClaim },
+		{ "GetLevelInfo", &USeasonPassLevelWidget::execGetLevelInfo },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USeasonPassLevelWidget_AttemptClaim_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

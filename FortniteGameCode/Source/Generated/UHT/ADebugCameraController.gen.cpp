@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ADebugCameraController();  // RVA 0x023FE360 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDB20 (end 0x023FDB42)
+// Original VA: 0x00000001423FDB20 | File offset: 0x023FD120
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CE270) | Matching: see analysis/functions-uht-natives.json
+void ADebugCameraController::StaticRegisterNativesADebugCameraController()
+{
+	UClass* Class = ADebugCameraController::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSelectedActor", &ADebugCameraController::execGetSelectedActor },
+		{ "SetPawnMovementSpeedScale", &ADebugCameraController::execSetPawnMovementSpeedScale },
+		{ "ShowDebugSelectedInfo", &ADebugCameraController::execShowDebugSelectedInfo },
+		{ "ToggleDisplay", &ADebugCameraController::execToggleDisplay },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ADebugCameraController_GetSelectedActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

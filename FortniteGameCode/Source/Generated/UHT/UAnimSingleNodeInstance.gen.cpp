@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnimSingleNodeInstance();  // RVA 0x023D65F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5820 (end 0x023D5842)
+// Original VA: 0x00000001423D5820 | File offset: 0x023D4E20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038A2980) | Matching: see analysis/functions-uht-natives.json
+void UAnimSingleNodeInstance::StaticRegisterNativesUAnimSingleNodeInstance()
+{
+	UClass* Class = UAnimSingleNodeInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAnimationAsset", &UAnimSingleNodeInstance::execGetAnimationAsset },
+		{ "GetLength", &UAnimSingleNodeInstance::execGetLength },
+		{ "PlayAnim", &UAnimSingleNodeInstance::execPlayAnim },
+		{ "SetAnimationAsset", &UAnimSingleNodeInstance::execSetAnimationAsset },
+		{ "SetBlendSpaceInput", &UAnimSingleNodeInstance::execSetBlendSpaceInput },
+		{ "SetLooping", &UAnimSingleNodeInstance::execSetLooping },
+		{ "SetPlaying", &UAnimSingleNodeInstance::execSetPlaying },
+		{ "SetPlayRate", &UAnimSingleNodeInstance::execSetPlayRate },
+		{ "SetPosition", &UAnimSingleNodeInstance::execSetPosition },
+		{ "SetPositionWithPreviousTime", &UAnimSingleNodeInstance::execSetPositionWithPreviousTime },
+		{ "SetPreviewCurveOverride", &UAnimSingleNodeInstance::execSetPreviewCurveOverride },
+		{ "SetReverse", &UAnimSingleNodeInstance::execSetReverse },
+		{ "StopAnim", &UAnimSingleNodeInstance::execStopAnim },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAnimSingleNodeInstance_GetAnimationAsset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

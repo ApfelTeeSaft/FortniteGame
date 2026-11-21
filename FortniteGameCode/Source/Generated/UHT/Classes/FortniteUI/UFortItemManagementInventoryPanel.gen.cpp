@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemManagementInventoryPanel::StaticRegisterNativesUFortItemManagementInventoryPanel()
-{
-}
 // IMPLEMENT_CLASS(UFortItemManagementInventoryPanel, 2833885797u)
 // Original dynamic initializer: RVA 0x0024CE80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemManagementInventoryPanel> AutoInitializeUFortItemManagementInventoryPanel(TEXT("UFortItemManagementInventoryPanel"), sizeof(UFortItemManagementInventoryPanel), 2833885797u);

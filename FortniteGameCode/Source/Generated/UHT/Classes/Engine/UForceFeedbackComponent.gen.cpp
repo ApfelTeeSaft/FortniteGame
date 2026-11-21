@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UForceFeedbackComponent::StaticRegisterNativesUForceFeedbackComponent()
-{
-}
 // IMPLEMENT_CLASS(UForceFeedbackComponent, 3389289977u)
 // Original dynamic initializer: RVA 0x001FF420 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UForceFeedbackComponent> AutoInitializeUForceFeedbackComponent(TEXT("UForceFeedbackComponent"), sizeof(UForceFeedbackComponent), 3389289977u);

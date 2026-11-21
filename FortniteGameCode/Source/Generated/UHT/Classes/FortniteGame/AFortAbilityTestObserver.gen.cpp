@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortAbilityTestObserver::StaticRegisterNativesAFortAbilityTestObserver()
-{
-}
 // IMPLEMENT_CLASS(AFortAbilityTestObserver, 3952073883u)
 // Original dynamic initializer: RVA 0x000DFD00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAbilityTestObserver> AutoInitializeAFortAbilityTestObserver(TEXT("AFortAbilityTestObserver"), sizeof(AFortAbilityTestObserver), 3952073883u);

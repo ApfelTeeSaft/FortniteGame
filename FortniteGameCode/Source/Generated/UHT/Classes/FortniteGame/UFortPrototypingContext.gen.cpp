@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPrototypingContext::StaticRegisterNativesUFortPrototypingContext()
-{
-}
 // IMPLEMENT_CLASS(UFortPrototypingContext, 1878462817u)
 // Original dynamic initializer: RVA 0x0010D610 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPrototypingContext> AutoInitializeUFortPrototypingContext(TEXT("UFortPrototypingContext"), sizeof(UFortPrototypingContext), 1878462817u);

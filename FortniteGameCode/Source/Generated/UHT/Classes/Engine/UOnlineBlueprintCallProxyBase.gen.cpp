@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UOnlineBlueprintCallProxyBase::StaticRegisterNativesUOnlineBlueprintCallProxyBase()
-{
-}
 // IMPLEMENT_CLASS(UOnlineBlueprintCallProxyBase, 1899118183u)
 // Original dynamic initializer: RVA 0x0020EE30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UOnlineBlueprintCallProxyBase> AutoInitializeUOnlineBlueprintCallProxyBase(TEXT("UOnlineBlueprintCallProxyBase"), sizeof(UOnlineBlueprintCallProxyBase), 1899118183u);

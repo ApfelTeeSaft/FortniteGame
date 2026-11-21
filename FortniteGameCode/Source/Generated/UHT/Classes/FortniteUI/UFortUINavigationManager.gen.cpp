@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortUINavigationManager::StaticRegisterNativesUFortUINavigationManager()
-{
-}
 // IMPLEMENT_CLASS(UFortUINavigationManager, 2612846695u)
 // Original dynamic initializer: RVA 0x00262900 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUINavigationManager> AutoInitializeUFortUINavigationManager(TEXT("UFortUINavigationManager"), sizeof(UFortUINavigationManager), 2612846695u);

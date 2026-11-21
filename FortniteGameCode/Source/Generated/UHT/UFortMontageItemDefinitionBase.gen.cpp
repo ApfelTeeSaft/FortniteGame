@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMontageItemDefinitionBase();  // RVA 0x0104AAA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A380 (end 0x0104A3A2)
+// Original VA: 0x000000014104A380 | File offset: 0x01049980
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0338A428) | Matching: see analysis/functions-uht-natives.json
+void UFortMontageItemDefinitionBase::StaticRegisterNativesUFortMontageItemDefinitionBase()
+{
+	UClass* Class = UFortMontageItemDefinitionBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAnimation", &UFortMontageItemDefinitionBase::execGetAnimation },
+		{ "GetAnimationHardReference", &UFortMontageItemDefinitionBase::execGetAnimationHardReference },
+		{ "PreviewInPIE", &UFortMontageItemDefinitionBase::execPreviewInPIE },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMontageItemDefinitionBase_GetAnimation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

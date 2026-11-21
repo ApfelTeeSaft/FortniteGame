@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortNumericTextBlock::StaticRegisterNativesUFortNumericTextBlock()
-{
-}
 // IMPLEMENT_CLASS(UFortNumericTextBlock, 431756938u)
 // Original dynamic initializer: RVA 0x00253BB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortNumericTextBlock> AutoInitializeUFortNumericTextBlock(TEXT("UFortNumericTextBlock"), sizeof(UFortNumericTextBlock), 431756938u);

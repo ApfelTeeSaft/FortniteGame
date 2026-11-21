@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMovementComponent();  // RVA 0x0248B5F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AEB0 (end 0x0248AED2)
+// Original VA: 0x000000014248AEB0 | File offset: 0x0248A4B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03954430) | Matching: see analysis/functions-uht-natives.json
+void UMovementComponent::StaticRegisterNativesUMovementComponent()
+{
+	UClass* Class = UMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConstrainDirectionToPlane", &UMovementComponent::execConstrainDirectionToPlane },
+		{ "ConstrainLocationToPlane", &UMovementComponent::execConstrainLocationToPlane },
+		{ "ConstrainNormalToPlane", &UMovementComponent::execConstrainNormalToPlane },
+		{ "GetGravityZ", &UMovementComponent::execGetGravityZ },
+		{ "GetMaxSpeed", &UMovementComponent::execGetMaxSpeed },
+		{ "GetPhysicsVolume", &UMovementComponent::execGetPhysicsVolume },
+		{ "GetPlaneConstraintAxisSetting", &UMovementComponent::execGetPlaneConstraintAxisSetting },
+		{ "GetPlaneConstraintNormal", &UMovementComponent::execGetPlaneConstraintNormal },
+		{ "GetPlaneConstraintOrigin", &UMovementComponent::execGetPlaneConstraintOrigin },
+		{ "IsExceedingMaxSpeed", &UMovementComponent::execIsExceedingMaxSpeed },
+		{ "K2_GetMaxSpeedModifier", &UMovementComponent::execK2_GetMaxSpeedModifier },
+		{ "K2_GetModifiedMaxSpeed", &UMovementComponent::execK2_GetModifiedMaxSpeed },
+		{ "K2_MoveUpdatedComponent", &UMovementComponent::execK2_MoveUpdatedComponent },
+		{ "PhysicsVolumeChanged", &UMovementComponent::execPhysicsVolumeChanged },
+		{ "SetPlaneConstraintAxisSetting", &UMovementComponent::execSetPlaneConstraintAxisSetting },
+		{ "SetPlaneConstraintEnabled", &UMovementComponent::execSetPlaneConstraintEnabled },
+		{ "SetPlaneConstraintFromVectors", &UMovementComponent::execSetPlaneConstraintFromVectors },
+		{ "SetPlaneConstraintNormal", &UMovementComponent::execSetPlaneConstraintNormal },
+		{ "SetPlaneConstraintOrigin", &UMovementComponent::execSetPlaneConstraintOrigin },
+		{ "SetUpdatedComponent", &UMovementComponent::execSetUpdatedComponent },
+		{ "SnapUpdatedComponentToPlane", &UMovementComponent::execSnapUpdatedComponentToPlane },
+		{ "StopMovementImmediately", &UMovementComponent::execStopMovementImmediately },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMovementComponent_ConstrainDirectionToPlane_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

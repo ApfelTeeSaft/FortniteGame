@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPrivacyBase::StaticRegisterNativesUFortPrivacyBase()
-{
-}
 // IMPLEMENT_CLASS(UFortPrivacyBase, 1703911946u)
 // Original dynamic initializer: RVA 0x00255D00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPrivacyBase> AutoInitializeUFortPrivacyBase(TEXT("UFortPrivacyBase"), sizeof(UFortPrivacyBase), 1703911946u);

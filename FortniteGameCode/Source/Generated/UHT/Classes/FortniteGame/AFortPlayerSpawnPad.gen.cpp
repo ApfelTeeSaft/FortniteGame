@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPlayerSpawnPad::StaticRegisterNativesAFortPlayerSpawnPad()
-{
-}
 // IMPLEMENT_CLASS(AFortPlayerSpawnPad, 2189359071u)
 // Original dynamic initializer: RVA 0x0010D370 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerSpawnPad> AutoInitializeAFortPlayerSpawnPad(TEXT("AFortPlayerSpawnPad"), sizeof(AFortPlayerSpawnPad), 2189359071u);

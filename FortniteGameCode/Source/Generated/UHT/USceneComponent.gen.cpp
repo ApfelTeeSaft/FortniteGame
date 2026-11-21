@@ -6,6 +6,77 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USceneComponent();  // RVA 0x024C6E20 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6BA0 (end 0x024C6BC2)
+// Original VA: 0x00000001424C6BA0 | File offset: 0x024C61A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A0BA0) | Matching: see analysis/functions-uht-natives.json
+void USceneComponent::StaticRegisterNativesUSceneComponent()
+{
+	UClass* Class = USceneComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DetachFromParent", &USceneComponent::execDetachFromParent },
+		{ "DoesSocketExist", &USceneComponent::execDoesSocketExist },
+		{ "GetAllSocketNames", &USceneComponent::execGetAllSocketNames },
+		{ "GetAttachParent", &USceneComponent::execGetAttachParent },
+		{ "GetAttachSocketName", &USceneComponent::execGetAttachSocketName },
+		{ "GetChildComponent", &USceneComponent::execGetChildComponent },
+		{ "GetChildrenComponents", &USceneComponent::execGetChildrenComponents },
+		{ "GetComponentVelocity", &USceneComponent::execGetComponentVelocity },
+		{ "GetForwardVector", &USceneComponent::execGetForwardVector },
+		{ "GetNumChildrenComponents", &USceneComponent::execGetNumChildrenComponents },
+		{ "GetParentComponents", &USceneComponent::execGetParentComponents },
+		{ "GetPhysicsVolume", &USceneComponent::execGetPhysicsVolume },
+		{ "GetRelativeTransform", &USceneComponent::execGetRelativeTransform },
+		{ "GetRightVector", &USceneComponent::execGetRightVector },
+		{ "GetShouldUpdatePhysicsVolume", &USceneComponent::execGetShouldUpdatePhysicsVolume },
+		{ "GetSocketLocation", &USceneComponent::execGetSocketLocation },
+		{ "GetSocketQuaternion", &USceneComponent::execGetSocketQuaternion },
+		{ "GetSocketRotation", &USceneComponent::execGetSocketRotation },
+		{ "GetSocketTransform", &USceneComponent::execGetSocketTransform },
+		{ "GetUpVector", &USceneComponent::execGetUpVector },
+		{ "IsAnySimulatingPhysics", &USceneComponent::execIsAnySimulatingPhysics },
+		{ "IsSimulatingPhysics", &USceneComponent::execIsSimulatingPhysics },
+		{ "IsVisible", &USceneComponent::execIsVisible },
+		{ "K2_AddLocalOffset", &USceneComponent::execK2_AddLocalOffset },
+		{ "K2_AddLocalRotation", &USceneComponent::execK2_AddLocalRotation },
+		{ "K2_AddLocalTransform", &USceneComponent::execK2_AddLocalTransform },
+		{ "K2_AddRelativeLocation", &USceneComponent::execK2_AddRelativeLocation },
+		{ "K2_AddRelativeRotation", &USceneComponent::execK2_AddRelativeRotation },
+		{ "K2_AddWorldOffset", &USceneComponent::execK2_AddWorldOffset },
+		{ "K2_AddWorldRotation", &USceneComponent::execK2_AddWorldRotation },
+		{ "K2_AddWorldTransform", &USceneComponent::execK2_AddWorldTransform },
+		{ "K2_AttachTo", &USceneComponent::execK2_AttachTo },
+		{ "K2_AttachToComponent", &USceneComponent::execK2_AttachToComponent },
+		{ "K2_DetachFromComponent", &USceneComponent::execK2_DetachFromComponent },
+		{ "K2_GetComponentLocation", &USceneComponent::execK2_GetComponentLocation },
+		{ "K2_GetComponentRotation", &USceneComponent::execK2_GetComponentRotation },
+		{ "K2_GetComponentScale", &USceneComponent::execK2_GetComponentScale },
+		{ "K2_GetComponentToWorld", &USceneComponent::execK2_GetComponentToWorld },
+		{ "K2_SetRelativeLocation", &USceneComponent::execK2_SetRelativeLocation },
+		{ "K2_SetRelativeLocationAndRotation", &USceneComponent::execK2_SetRelativeLocationAndRotation },
+		{ "K2_SetRelativeRotation", &USceneComponent::execK2_SetRelativeRotation },
+		{ "K2_SetRelativeTransform", &USceneComponent::execK2_SetRelativeTransform },
+		{ "K2_SetWorldLocation", &USceneComponent::execK2_SetWorldLocation },
+		{ "K2_SetWorldLocationAndRotation", &USceneComponent::execK2_SetWorldLocationAndRotation },
+		{ "K2_SetWorldRotation", &USceneComponent::execK2_SetWorldRotation },
+		{ "K2_SetWorldTransform", &USceneComponent::execK2_SetWorldTransform },
+		{ "OnRep_AttachChildren", &USceneComponent::execOnRep_AttachChildren },
+		{ "OnRep_AttachParent", &USceneComponent::execOnRep_AttachParent },
+		{ "OnRep_AttachSocketName", &USceneComponent::execOnRep_AttachSocketName },
+		{ "OnRep_Transform", &USceneComponent::execOnRep_Transform },
+		{ "OnRep_Visibility", &USceneComponent::execOnRep_Visibility },
+		{ "ResetRelativeTransform", &USceneComponent::execResetRelativeTransform },
+		{ "SetAbsolute", &USceneComponent::execSetAbsolute },
+		{ "SetHiddenInGame", &USceneComponent::execSetHiddenInGame },
+		{ "SetRelativeScale3D", &USceneComponent::execSetRelativeScale3D },
+		{ "SetShouldUpdatePhysicsVolume", &USceneComponent::execSetShouldUpdatePhysicsVolume },
+		{ "SetVisibility", &USceneComponent::execSetVisibility },
+		{ "SetWorldScale3D", &USceneComponent::execSetWorldScale3D },
+		{ "SnapTo", &USceneComponent::execSnapTo },
+		{ "ToggleVisibility", &USceneComponent::execToggleVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USceneComponent_DetachFromParent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,40 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPaperFlipbookComponent();  // RVA 0x006676E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666D90 (end 0x00666DB2)
+// Original VA: 0x0000000140666D90 | File offset: 0x00666390
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F93B70) | Matching: see analysis/functions-uht-natives.json
+void UPaperFlipbookComponent::StaticRegisterNativesUPaperFlipbookComponent()
+{
+	UClass* Class = UPaperFlipbookComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFlipbook", &UPaperFlipbookComponent::execGetFlipbook },
+		{ "GetFlipbookFramerate", &UPaperFlipbookComponent::execGetFlipbookFramerate },
+		{ "GetFlipbookLength", &UPaperFlipbookComponent::execGetFlipbookLength },
+		{ "GetFlipbookLengthInFrames", &UPaperFlipbookComponent::execGetFlipbookLengthInFrames },
+		{ "GetPlaybackPosition", &UPaperFlipbookComponent::execGetPlaybackPosition },
+		{ "GetPlaybackPositionInFrames", &UPaperFlipbookComponent::execGetPlaybackPositionInFrames },
+		{ "GetPlayRate", &UPaperFlipbookComponent::execGetPlayRate },
+		{ "IsLooping", &UPaperFlipbookComponent::execIsLooping },
+		{ "IsPlaying", &UPaperFlipbookComponent::execIsPlaying },
+		{ "IsReversing", &UPaperFlipbookComponent::execIsReversing },
+		{ "OnRep_SourceFlipbook", &UPaperFlipbookComponent::execOnRep_SourceFlipbook },
+		{ "Play", &UPaperFlipbookComponent::execPlay },
+		{ "PlayFromStart", &UPaperFlipbookComponent::execPlayFromStart },
+		{ "Reverse", &UPaperFlipbookComponent::execReverse },
+		{ "ReverseFromEnd", &UPaperFlipbookComponent::execReverseFromEnd },
+		{ "SetFlipbook", &UPaperFlipbookComponent::execSetFlipbook },
+		{ "SetLooping", &UPaperFlipbookComponent::execSetLooping },
+		{ "SetNewTime", &UPaperFlipbookComponent::execSetNewTime },
+		{ "SetPlaybackPosition", &UPaperFlipbookComponent::execSetPlaybackPosition },
+		{ "SetPlaybackPositionInFrames", &UPaperFlipbookComponent::execSetPlaybackPositionInFrames },
+		{ "SetPlayRate", &UPaperFlipbookComponent::execSetPlayRate },
+		{ "SetSpriteColor", &UPaperFlipbookComponent::execSetSpriteColor },
+		{ "Stop", &UPaperFlipbookComponent::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPaperFlipbookComponent_GetFlipbook_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

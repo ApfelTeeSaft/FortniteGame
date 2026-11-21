@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortClientAnnouncement_TutorialInterface::StaticRegisterNativesUFortClientAnnouncement_TutorialInterface()
-{
-}
 // IMPLEMENT_CLASS(UFortClientAnnouncement_TutorialInterface, 1468466977u)
 // Original dynamic initializer: RVA 0x000EB250 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortClientAnnouncement_TutorialInterface> AutoInitializeUFortClientAnnouncement_TutorialInterface(TEXT("UFortClientAnnouncement_TutorialInterface"), sizeof(UFortClientAnnouncement_TutorialInterface), 1468466977u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UBuildingEditModeSupport::StaticRegisterNativesUBuildingEditModeSupport()
-{
-}
 // IMPLEMENT_CLASS(UBuildingEditModeSupport, 8314497u)
 // Original dynamic initializer: RVA 0x000D9AD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingEditModeSupport> AutoInitializeUBuildingEditModeSupport(TEXT("UBuildingEditModeSupport"), sizeof(UBuildingEditModeSupport), 8314497u);

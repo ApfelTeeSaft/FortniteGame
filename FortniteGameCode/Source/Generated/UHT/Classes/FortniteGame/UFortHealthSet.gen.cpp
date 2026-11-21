@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortHealthSet::StaticRegisterNativesUFortHealthSet()
-{
-}
 // IMPLEMENT_CLASS(UFortHealthSet, 3929370752u)
 // Original dynamic initializer: RVA 0x000F95B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHealthSet> AutoInitializeUFortHealthSet(TEXT("UFortHealthSet"), sizeof(UFortHealthSet), 3929370752u);

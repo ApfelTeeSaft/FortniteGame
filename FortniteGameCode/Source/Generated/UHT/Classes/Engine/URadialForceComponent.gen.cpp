@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void URadialForceComponent::StaticRegisterNativesURadialForceComponent()
-{
-}
 // IMPLEMENT_CLASS(URadialForceComponent, 2948086422u)
 // Original dynamic initializer: RVA 0x00217450 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<URadialForceComponent> AutoInitializeURadialForceComponent(TEXT("URadialForceComponent"), sizeof(URadialForceComponent), 2948086422u);

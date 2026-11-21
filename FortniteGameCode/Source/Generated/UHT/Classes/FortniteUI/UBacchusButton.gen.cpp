@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UBacchusButton::StaticRegisterNativesUBacchusButton()
-{
-}
 // IMPLEMENT_CLASS(UBacchusButton, 4191731126u)
 // Original dynamic initializer: RVA 0x0023B680 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBacchusButton> AutoInitializeUBacchusButton(TEXT("UBacchusButton"), sizeof(UBacchusButton), 4191731126u);

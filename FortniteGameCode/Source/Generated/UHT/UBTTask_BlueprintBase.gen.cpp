@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBTTask_BlueprintBase();  // RVA 0x01D28DA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D287F0 (end 0x01D28812)
+// Original VA: 0x0000000141D287F0 | File offset: 0x01D27DF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03700ED0) | Matching: see analysis/functions-uht-natives.json
+void UBTTask_BlueprintBase::StaticRegisterNativesUBTTask_BlueprintBase()
+{
+	UClass* Class = UBTTask_BlueprintBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FinishAbort", &UBTTask_BlueprintBase::execFinishAbort },
+		{ "FinishExecute", &UBTTask_BlueprintBase::execFinishExecute },
+		{ "IsTaskAborting", &UBTTask_BlueprintBase::execIsTaskAborting },
+		{ "IsTaskExecuting", &UBTTask_BlueprintBase::execIsTaskExecuting },
+		{ "SetFinishOnMessage", &UBTTask_BlueprintBase::execSetFinishOnMessage },
+		{ "SetFinishOnMessageWithId", &UBTTask_BlueprintBase::execSetFinishOnMessageWithId },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBTTask_BlueprintBase_FinishAbort_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

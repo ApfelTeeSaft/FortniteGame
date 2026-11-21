@@ -6,6 +6,34 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAIDirector();  // RVA 0x00F87CA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87360 (end 0x00F87382)
+// Original VA: 0x0000000140F87360 | File offset: 0x00F86960
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0329ED60) | Matching: see analysis/functions-uht-natives.json
+void AFortAIDirector::StaticRegisterNativesAFortAIDirector()
+{
+	UClass* Class = AFortAIDirector::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Activate", &AFortAIDirector::execActivate },
+		{ "ConvertInvalidDirectionsToValidDirections", &AFortAIDirector::execConvertInvalidDirectionsToValidDirections },
+		{ "Deactivate", &AFortAIDirector::execDeactivate },
+		{ "GetAmbientThreatEncounterSpawnLocations", &AFortAIDirector::execGetAmbientThreatEncounterSpawnLocations },
+		{ "GetEncounterDirectionFromVector", &AFortAIDirector::execGetEncounterDirectionFromVector },
+		{ "GetNumPlayers", &AFortAIDirector::execGetNumPlayers },
+		{ "GetRiftsFromClosestActiveEncounterTo", &AFortAIDirector::execGetRiftsFromClosestActiveEncounterTo },
+		{ "GetVectorFromEncounterDirection", &AFortAIDirector::execGetVectorFromEncounterDirection },
+		{ "IsAnyActiveEncounterRelevantToDefender", &AFortAIDirector::execIsAnyActiveEncounterRelevantToDefender },
+		{ "IsAnyActiveEncounterRelevantToPlayer", &AFortAIDirector::execIsAnyActiveEncounterRelevantToPlayer },
+		{ "IsAnyAIRelevantToPlayer", &AFortAIDirector::execIsAnyAIRelevantToPlayer },
+		{ "IsAnyEncounterGoalWithinDistanceOfPoint", &AFortAIDirector::execIsAnyEncounterGoalWithinDistanceOfPoint },
+		{ "IsLineTooCloseToPatrolWards", &AFortAIDirector::execIsLineTooCloseToPatrolWards },
+		{ "IsPointTooCloseToPatrolWards", &AFortAIDirector::execIsPointTooCloseToPatrolWards },
+		{ "OnDayPhaseChanged", &AFortAIDirector::execOnDayPhaseChanged },
+		{ "RegisterPatrolWard", &AFortAIDirector::execRegisterPatrolWard },
+		{ "UnregisterPatrolWard", &AFortAIDirector::execUnregisterPatrolWard },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortAIDirector_Activate_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

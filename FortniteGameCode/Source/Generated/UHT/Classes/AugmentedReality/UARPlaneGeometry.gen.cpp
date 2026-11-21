@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UARPlaneGeometry::StaticRegisterNativesUARPlaneGeometry()
-{
-}
 // IMPLEMENT_CLASS(UARPlaneGeometry, 3306592616u)
 // Original dynamic initializer: RVA 0x00267BF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UARPlaneGeometry> AutoInitializeUARPlaneGeometry(TEXT("UARPlaneGeometry"), sizeof(UARPlaneGeometry), 3306592616u);

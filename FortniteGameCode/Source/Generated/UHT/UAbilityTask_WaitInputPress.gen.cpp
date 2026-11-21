@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitInputPress();  // RVA 0x0054D770 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CFF0 (end 0x0054D012)
+// Original VA: 0x000000014054CFF0 | File offset: 0x0054C5F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F33080) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitInputPress::StaticRegisterNativesUAbilityTask_WaitInputPress()
+{
+	UClass* Class = UAbilityTask_WaitInputPress::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnPressCallback", &UAbilityTask_WaitInputPress::execOnPressCallback },
+		{ "WaitInputPress", &UAbilityTask_WaitInputPress::execWaitInputPress },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitInputPress_OnPressCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIMessagesPageBase();  // RVA 0x02911D20 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911670 (end 0x02911692)
+// Original VA: 0x0000000142911670 | File offset: 0x02910C70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D48EA8) | Matching: see analysis/functions-uht-natives.json
+void UFortUIMessagesPageBase::StaticRegisterNativesUFortUIMessagesPageBase()
+{
+	UClass* Class = UFortUIMessagesPageBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FillMessagesList", &UFortUIMessagesPageBase::execFillMessagesList },
+		{ "OnMessageAvailable", &UFortUIMessagesPageBase::execOnMessageAvailable },
+		{ "OnNotificationCleared", &UFortUIMessagesPageBase::execOnNotificationCleared },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIMessagesPageBase_FillMessagesList_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

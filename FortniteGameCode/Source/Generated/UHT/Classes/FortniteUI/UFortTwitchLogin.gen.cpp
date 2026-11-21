@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortTwitchLogin::StaticRegisterNativesUFortTwitchLogin()
-{
-}
 // IMPLEMENT_CLASS(UFortTwitchLogin, 1325318369u)
 // Original dynamic initializer: RVA 0x00260BD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTwitchLogin> AutoInitializeUFortTwitchLogin(TEXT("UFortTwitchLogin"), sizeof(UFortTwitchLogin), 1325318369u);

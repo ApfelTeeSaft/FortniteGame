@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UClothingSimulationInteractorNv();  // RVA 0x02524930 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02524570 (end 0x02524592)
+// Original VA: 0x0000000142524570 | File offset: 0x02523B70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039D9710) | Matching: see analysis/functions-uht-natives.json
+void UClothingSimulationInteractorNv::StaticRegisterNativesUClothingSimulationInteractorNv()
+{
+	UClass* Class = UClothingSimulationInteractorNv::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisableGravityOverride", &UClothingSimulationInteractorNv::execDisableGravityOverride },
+		{ "EnableGravityOverride", &UClothingSimulationInteractorNv::execEnableGravityOverride },
+		{ "SetAnimDriveDamperStiffness", &UClothingSimulationInteractorNv::execSetAnimDriveDamperStiffness },
+		{ "SetAnimDriveSpringStiffness", &UClothingSimulationInteractorNv::execSetAnimDriveSpringStiffness },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UClothingSimulationInteractorNv_DisableGravityOverride_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPhysicsConstraintComponent();  // RVA 0x024A0B30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0570 (end 0x024A0592)
+// Original VA: 0x00000001424A0570 | File offset: 0x0249FB70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039793C0) | Matching: see analysis/functions-uht-natives.json
+void UPhysicsConstraintComponent::StaticRegisterNativesUPhysicsConstraintComponent()
+{
+	UClass* Class = UPhysicsConstraintComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakConstraint", &UPhysicsConstraintComponent::execBreakConstraint },
+		{ "GetConstraintForce", &UPhysicsConstraintComponent::execGetConstraintForce },
+		{ "GetCurrentSwing1", &UPhysicsConstraintComponent::execGetCurrentSwing1 },
+		{ "GetCurrentSwing2", &UPhysicsConstraintComponent::execGetCurrentSwing2 },
+		{ "GetCurrentTwist", &UPhysicsConstraintComponent::execGetCurrentTwist },
+		{ "IsBroken", &UPhysicsConstraintComponent::execIsBroken },
+		{ "SetAngularBreakable", &UPhysicsConstraintComponent::execSetAngularBreakable },
+		{ "SetAngularDriveMode", &UPhysicsConstraintComponent::execSetAngularDriveMode },
+		{ "SetAngularDriveParams", &UPhysicsConstraintComponent::execSetAngularDriveParams },
+		{ "SetAngularOrientationDrive", &UPhysicsConstraintComponent::execSetAngularOrientationDrive },
+		{ "SetAngularOrientationTarget", &UPhysicsConstraintComponent::execSetAngularOrientationTarget },
+		{ "SetAngularSwing1Limit", &UPhysicsConstraintComponent::execSetAngularSwing1Limit },
+		{ "SetAngularSwing2Limit", &UPhysicsConstraintComponent::execSetAngularSwing2Limit },
+		{ "SetAngularTwistLimit", &UPhysicsConstraintComponent::execSetAngularTwistLimit },
+		{ "SetAngularVelocityDrive", &UPhysicsConstraintComponent::execSetAngularVelocityDrive },
+		{ "SetAngularVelocityDriveSLERP", &UPhysicsConstraintComponent::execSetAngularVelocityDriveSLERP },
+		{ "SetAngularVelocityDriveTwistAndSwing", &UPhysicsConstraintComponent::execSetAngularVelocityDriveTwistAndSwing },
+		{ "SetAngularVelocityTarget", &UPhysicsConstraintComponent::execSetAngularVelocityTarget },
+		{ "SetConstrainedComponents", &UPhysicsConstraintComponent::execSetConstrainedComponents },
+		{ "SetConstraintReferenceFrame", &UPhysicsConstraintComponent::execSetConstraintReferenceFrame },
+		{ "SetConstraintReferenceOrientation", &UPhysicsConstraintComponent::execSetConstraintReferenceOrientation },
+		{ "SetConstraintReferencePosition", &UPhysicsConstraintComponent::execSetConstraintReferencePosition },
+		{ "SetDisableCollision", &UPhysicsConstraintComponent::execSetDisableCollision },
+		{ "SetLinearBreakable", &UPhysicsConstraintComponent::execSetLinearBreakable },
+		{ "SetLinearDriveParams", &UPhysicsConstraintComponent::execSetLinearDriveParams },
+		{ "SetLinearPositionDrive", &UPhysicsConstraintComponent::execSetLinearPositionDrive },
+		{ "SetLinearPositionTarget", &UPhysicsConstraintComponent::execSetLinearPositionTarget },
+		{ "SetLinearVelocityDrive", &UPhysicsConstraintComponent::execSetLinearVelocityDrive },
+		{ "SetLinearVelocityTarget", &UPhysicsConstraintComponent::execSetLinearVelocityTarget },
+		{ "SetLinearXLimit", &UPhysicsConstraintComponent::execSetLinearXLimit },
+		{ "SetLinearYLimit", &UPhysicsConstraintComponent::execSetLinearYLimit },
+		{ "SetLinearZLimit", &UPhysicsConstraintComponent::execSetLinearZLimit },
+		{ "SetOrientationDriveSLERP", &UPhysicsConstraintComponent::execSetOrientationDriveSLERP },
+		{ "SetOrientationDriveTwistAndSwing", &UPhysicsConstraintComponent::execSetOrientationDriveTwistAndSwing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPhysicsConstraintComponent_BreakConstraint_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

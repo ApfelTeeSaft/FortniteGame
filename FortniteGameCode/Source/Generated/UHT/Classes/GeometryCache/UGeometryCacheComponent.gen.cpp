@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UGeometryCacheComponent::StaticRegisterNativesUGeometryCacheComponent()
-{
-}
 // IMPLEMENT_CLASS(UGeometryCacheComponent, 2252282405u)
 // Original dynamic initializer: RVA 0x001C04C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGeometryCacheComponent> AutoInitializeUGeometryCacheComponent(TEXT("UGeometryCacheComponent"), sizeof(UGeometryCacheComponent), 2252282405u);

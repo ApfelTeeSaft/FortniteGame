@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortCarriedObject::StaticRegisterNativesAFortCarriedObject()
-{
-}
 // IMPLEMENT_CLASS(AFortCarriedObject, 3882494349u)
 // Original dynamic initializer: RVA 0x000E8FF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortCarriedObject> AutoInitializeAFortCarriedObject(TEXT("AFortCarriedObject"), sizeof(AFortCarriedObject), 3882494349u);

@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsTeleportScreenWidget();  // RVA 0x028ED4D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECE30 (end 0x028ECE52)
+// Original VA: 0x00000001428ECE30 | File offset: 0x028EC430
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0A588) | Matching: see analysis/functions-uht-natives.json
+void UFortResultsTeleportScreenWidget::StaticRegisterNativesUFortResultsTeleportScreenWidget()
+{
+	UClass* Class = UFortResultsTeleportScreenWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "StartExitTimer", &UFortResultsTeleportScreenWidget::execStartExitTimer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

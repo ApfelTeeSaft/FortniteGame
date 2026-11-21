@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UTileView::StaticRegisterNativesUTileView()
-{
-}
 // IMPLEMENT_CLASS(UTileView, 3298561936u)
 // Original dynamic initializer: RVA 0x001B41D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UTileView> AutoInitializeUTileView(TEXT("UTileView"), sizeof(UTileView), 3298561936u);

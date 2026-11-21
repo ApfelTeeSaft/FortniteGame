@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface();  // RVA 0x00FC0250 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFB40 (end 0x00FBFB62)
+// Original VA: 0x0000000140FBFB40 | File offset: 0x00FBF140
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032E5B20) | Matching: see analysis/functions-uht-natives.json
+void UFortClientAnnouncement_ConversationCodeInterface::StaticRegisterNativesUFortClientAnnouncement_ConversationCodeInterface()
+{
+	UClass* Class = UFortClientAnnouncement_ConversationCodeInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsPlayingConversation", &UFortClientAnnouncement_ConversationCodeInterface::execIsPlayingConversation },
+		{ "IsPlayingSentence", &UFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentence },
+		{ "IsPlayingSentenceIndex", &UFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentenceIndex },
+		{ "PlayConversation", &UFortClientAnnouncement_ConversationCodeInterface::execPlayConversation },
+		{ "PlayConversationFromSentence", &UFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentence },
+		{ "PlayConversationFromSentenceIndex", &UFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentenceIndex },
+		{ "StopConversation", &UFortClientAnnouncement_ConversationCodeInterface::execStopConversation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingConversation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

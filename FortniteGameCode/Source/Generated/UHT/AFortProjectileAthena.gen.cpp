@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortProjectileAthena();  // RVA 0x0108B510 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AE00 (end 0x0108AE22)
+// Original VA: 0x000000014108AE00 | File offset: 0x0108A400
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D5BC0) | Matching: see analysis/functions-uht-natives.json
+void AFortProjectileAthena::StaticRegisterNativesAFortProjectileAthena()
+{
+	UClass* Class = AFortProjectileAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "KillAfterNoPawnHit", &AFortProjectileAthena::execKillAfterNoPawnHit },
+		{ "OnRep_FireStart", &AFortProjectileAthena::execOnRep_FireStart },
+		{ "OnRep_PawnHitResult", &AFortProjectileAthena::execOnRep_PawnHitResult },
+		{ "ServerNotifyPawnHit", &AFortProjectileAthena::execServerNotifyPawnHit },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortProjectileAthena_KillAfterNoPawnHit_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

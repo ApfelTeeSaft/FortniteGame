@@ -6,6 +6,59 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AAIHotSpot();  // RVA 0x00F59690 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F591E0 (end 0x00F59202)
+// Original VA: 0x0000000140F591E0 | File offset: 0x00F587E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0325F1E0) | Matching: see analysis/functions-uht-natives.json
+void AAIHotSpot::StaticRegisterNativesAAIHotSpot()
+{
+	UClass* Class = AAIHotSpot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AssignFromWaitingList", &AAIHotSpot::execAssignFromWaitingList },
+		{ "AssignGroupToHotspot", &AAIHotSpot::execAssignGroupToHotspot },
+		{ "AssignToHotspot", &AAIHotSpot::execAssignToHotspot },
+		{ "AssignToSlotByIndex", &AAIHotSpot::execAssignToSlotByIndex },
+		{ "CanUseSlotByIndex", &AAIHotSpot::execCanUseSlotByIndex },
+		{ "FindBestSlotIndex", &AAIHotSpot::execFindBestSlotIndex },
+		{ "FindBestSlotIndices", &AAIHotSpot::execFindBestSlotIndices },
+		{ "GetAssignedAI", &AAIHotSpot::execGetAssignedAI },
+		{ "GetAssignedAICount", &AAIHotSpot::execGetAssignedAICount },
+		{ "GetSlotByIndex", &AAIHotSpot::execGetSlotByIndex },
+		{ "GetSlotByOwner", &AAIHotSpot::execGetSlotByOwner },
+		{ "GetSlotCount", &AAIHotSpot::execGetSlotCount },
+		{ "GetSlotIndexByOwner", &AAIHotSpot::execGetSlotIndexByOwner },
+		{ "GetSlotLocationByIndex", &AAIHotSpot::execGetSlotLocationByIndex },
+		{ "GetSlotOwnerByIndex", &AAIHotSpot::execGetSlotOwnerByIndex },
+		{ "GetSlotRotationByIndex", &AAIHotSpot::execGetSlotRotationByIndex },
+		{ "GetSlotStateByIndex", &AAIHotSpot::execGetSlotStateByIndex },
+		{ "GetSlotStateByOwner", &AAIHotSpot::execGetSlotStateByOwner },
+		{ "GetSlotUserIdByIndex", &AAIHotSpot::execGetSlotUserIdByIndex },
+		{ "HasAssignedAI", &AAIHotSpot::execHasAssignedAI },
+		{ "HasEnabledSlots", &AAIHotSpot::execHasEnabledSlots },
+		{ "IsAIAllowed", &AAIHotSpot::execIsAIAllowed },
+		{ "IsEnabled", &AAIHotSpot::execIsEnabled },
+		{ "IsSlotlessAssignmentAllowed", &AAIHotSpot::execIsSlotlessAssignmentAllowed },
+		{ "OccupySlotByIndex", &AAIHotSpot::execOccupySlotByIndex },
+		{ "OnAssignedClaimedBehavior", &AAIHotSpot::execOnAssignedClaimedBehavior },
+		{ "OnAssignedOccupiedBehavior", &AAIHotSpot::execOnAssignedOccupiedBehavior },
+		{ "OnAssignedSlotlessBehavior", &AAIHotSpot::execOnAssignedSlotlessBehavior },
+		{ "OnHotSpotDisabled", &AAIHotSpot::execOnHotSpotDisabled },
+		{ "OnHotSpotEnabled", &AAIHotSpot::execOnHotSpotEnabled },
+		{ "OnMoveToSlotFinished", &AAIHotSpot::execOnMoveToSlotFinished },
+		{ "OnRemovedBehavior", &AAIHotSpot::execOnRemovedBehavior },
+		{ "OnRemovedSlotlessBehavior", &AAIHotSpot::execOnRemovedSlotlessBehavior },
+		{ "OnSlotBlocked", &AAIHotSpot::execOnSlotBlocked },
+		{ "OnSlotClaimed", &AAIHotSpot::execOnSlotClaimed },
+		{ "OnSlotDisabled", &AAIHotSpot::execOnSlotDisabled },
+		{ "OnSlotEnabled", &AAIHotSpot::execOnSlotEnabled },
+		{ "OnSlotFreed", &AAIHotSpot::execOnSlotFreed },
+		{ "OnSlotOccupied", &AAIHotSpot::execOnSlotOccupied },
+		{ "RemoveFromHotspot", &AAIHotSpot::execRemoveFromHotspot },
+		{ "RemoveGroupFromHotspot", &AAIHotSpot::execRemoveGroupFromHotspot },
+		{ "SetEnabled", &AAIHotSpot::execSetEnabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AAIHotSpot_AssignFromWaitingList_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

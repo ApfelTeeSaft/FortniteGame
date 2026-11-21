@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonPoolableWidgetInterface::StaticRegisterNativesUCommonPoolableWidgetInterface()
-{
-}
 // IMPLEMENT_CLASS(UCommonPoolableWidgetInterface, 462215900u)
 // Original dynamic initializer: RVA 0x00096080 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonPoolableWidgetInterface> AutoInitializeUCommonPoolableWidgetInterface(TEXT("UCommonPoolableWidgetInterface"), sizeof(UCommonPoolableWidgetInterface), 462215900u);

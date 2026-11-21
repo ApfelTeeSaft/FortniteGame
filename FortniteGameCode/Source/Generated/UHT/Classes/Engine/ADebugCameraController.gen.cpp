@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ADebugCameraController::StaticRegisterNativesADebugCameraController()
-{
-}
 // IMPLEMENT_CLASS(ADebugCameraController, 1043388985u)
 // Original dynamic initializer: RVA 0x001F8200 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ADebugCameraController> AutoInitializeADebugCameraController(TEXT("ADebugCameraController"), sizeof(ADebugCameraController), 1043388985u);

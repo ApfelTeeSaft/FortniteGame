@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortUIManagerWidget_NUI::StaticRegisterNativesUFortUIManagerWidget_NUI()
-{
-}
 // IMPLEMENT_CLASS(UFortUIManagerWidget_NUI, 240148617u)
 // Original dynamic initializer: RVA 0x00260C90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUIManagerWidget_NUI> AutoInitializeUFortUIManagerWidget_NUI(TEXT("UFortUIManagerWidget_NUI"), sizeof(UFortUIManagerWidget_NUI), 240148617u);

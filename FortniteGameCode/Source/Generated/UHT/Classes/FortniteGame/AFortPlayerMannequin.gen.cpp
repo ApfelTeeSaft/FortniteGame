@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPlayerMannequin::StaticRegisterNativesAFortPlayerMannequin()
-{
-}
 // IMPLEMENT_CLASS(AFortPlayerMannequin, 3520992507u)
 // Original dynamic initializer: RVA 0x0010C480 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerMannequin> AutoInitializeAFortPlayerMannequin(TEXT("AFortPlayerMannequin"), sizeof(AFortPlayerMannequin), 3520992507u);

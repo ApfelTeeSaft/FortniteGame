@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortLightningActor::StaticRegisterNativesAFortLightningActor()
-{
-}
 // IMPLEMENT_CLASS(AFortLightningActor, 118274684u)
 // Original dynamic initializer: RVA 0x000FCDF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLightningActor> AutoInitializeAFortLightningActor(TEXT("AFortLightningActor"), sizeof(AFortLightningActor), 118274684u);

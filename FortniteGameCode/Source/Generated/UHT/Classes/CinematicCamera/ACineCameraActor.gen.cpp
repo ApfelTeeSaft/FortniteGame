@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ACineCameraActor::StaticRegisterNativesACineCameraActor()
-{
-}
 // IMPLEMENT_CLASS(ACineCameraActor, 4179635059u)
 // Original dynamic initializer: RVA 0x001B5840 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ACineCameraActor> AutoInitializeACineCameraActor(TEXT("ACineCameraActor"), sizeof(ACineCameraActor), 4179635059u);

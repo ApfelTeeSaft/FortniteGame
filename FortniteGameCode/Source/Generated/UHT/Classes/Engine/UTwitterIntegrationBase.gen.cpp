@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UTwitterIntegrationBase::StaticRegisterNativesUTwitterIntegrationBase()
-{
-}
 // IMPLEMENT_CLASS(UTwitterIntegrationBase, 566021815u)
 // Original dynamic initializer: RVA 0x00220140 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UTwitterIntegrationBase> AutoInitializeUTwitterIntegrationBase(TEXT("UTwitterIntegrationBase"), sizeof(UTwitterIntegrationBase), 566021815u);

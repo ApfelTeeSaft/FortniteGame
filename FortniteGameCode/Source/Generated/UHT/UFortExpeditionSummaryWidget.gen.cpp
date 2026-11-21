@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionSummaryWidget();  // RVA 0x028A3710 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3100 (end 0x028A3122)
+// Original VA: 0x00000001428A3100 | File offset: 0x028A2700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8FDC8) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionSummaryWidget::StaticRegisterNativesUFortExpeditionSummaryWidget()
+{
+	UClass* Class = UFortExpeditionSummaryWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BindInventoryDelegates", &UFortExpeditionSummaryWidget::execBindInventoryDelegates },
+		{ "OnRefreshSummaryWidget", &UFortExpeditionSummaryWidget::execOnRefreshSummaryWidget },
+		{ "UnbindInventoryDelegates", &UFortExpeditionSummaryWidget::execUnbindInventoryDelegates },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionSummaryWidget_BindInventoryDelegates_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

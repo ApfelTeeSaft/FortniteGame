@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonTreeView();  // RVA 0x002CA6B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA250 (end 0x002CA272)
+// Original VA: 0x00000001402CA250 | File offset: 0x002C9850
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E83220) | Matching: see analysis/functions-uht-natives.json
+void UCommonTreeView::StaticRegisterNativesUCommonTreeView()
+{
+	UClass* Class = UCommonTreeView::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DynamicHandleItemClickedCommonButton", &UCommonTreeView::execDynamicHandleItemClickedCommonButton },
+		{ "RequestRefresh", &UCommonTreeView::execRequestRefresh },
+		{ "SetItemExpansion", &UCommonTreeView::execSetItemExpansion },
+		{ "SetSelection", &UCommonTreeView::execSetSelection },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

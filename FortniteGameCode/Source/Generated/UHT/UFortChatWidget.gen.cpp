@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortChatWidget();  // RVA 0x028945B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894160 (end 0x02894182)
+// Original VA: 0x0000000142894160 | File offset: 0x02893760
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C75DC8) | Matching: see analysis/functions-uht-natives.json
+void UFortChatWidget::StaticRegisterNativesUFortChatWidget()
+{
+	UClass* Class = UFortChatWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FocusChatEntry", &UFortChatWidget::execFocusChatEntry },
+		{ "SetControllerActionBrush", &UFortChatWidget::execSetControllerActionBrush },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortChatWidget_FocusChatEntry_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

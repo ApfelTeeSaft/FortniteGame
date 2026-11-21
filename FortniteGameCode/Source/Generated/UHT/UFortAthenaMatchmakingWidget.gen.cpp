@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAthenaMatchmakingWidget();  // RVA 0x0288CAD0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C5F0 (end 0x0288C612)
+// Original VA: 0x000000014288C5F0 | File offset: 0x0288BBF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6A680) | Matching: see analysis/functions-uht-natives.json
+void UFortAthenaMatchmakingWidget::StaticRegisterNativesUFortAthenaMatchmakingWidget()
+{
+	UClass* Class = UFortAthenaMatchmakingWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetActivePlaylists", &UFortAthenaMatchmakingWidget::execGetActivePlaylists },
+		{ "OnCancelButtonPressed", &UFortAthenaMatchmakingWidget::execOnCancelButtonPressed },
+		{ "OnChangeTeamFillChanged", &UFortAthenaMatchmakingWidget::execOnChangeTeamFillChanged },
+		{ "OnPlayButtonPressed", &UFortAthenaMatchmakingWidget::execOnPlayButtonPressed },
+		{ "OnPlaylistRotatorChanged", &UFortAthenaMatchmakingWidget::execOnPlaylistRotatorChanged },
+		{ "SetCurrentPlaylist", &UFortAthenaMatchmakingWidget::execSetCurrentPlaylist },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

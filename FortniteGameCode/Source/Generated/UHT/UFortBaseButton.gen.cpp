@@ -6,6 +6,34 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseButton();  // RVA 0x02894430 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894010 (end 0x02894032)
+// Original VA: 0x0000000142894010 | File offset: 0x02893610
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C755B0) | Matching: see analysis/functions-uht-natives.json
+void UFortBaseButton::StaticRegisterNativesUFortBaseButton()
+{
+	UClass* Class = UFortBaseButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ForceClick", &UFortBaseButton::execForceClick },
+		{ "GetCurrentButtonPadding", &UFortBaseButton::execGetCurrentButtonPadding },
+		{ "GetCurrentCustomPadding", &UFortBaseButton::execGetCurrentCustomPadding },
+		{ "GetCurrentFont", &UFortBaseButton::execGetCurrentFont },
+		{ "GetCurrentStateStyle", &UFortBaseButton::execGetCurrentStateStyle },
+		{ "GetSelected", &UFortBaseButton::execGetSelected },
+		{ "GetSelectionGroupIndex", &UFortBaseButton::execGetSelectionGroupIndex },
+		{ "GetStyle", &UFortBaseButton::execGetStyle },
+		{ "OnButtonClicked", &UFortBaseButton::execOnButtonClicked },
+		{ "SetBangVisibility", &UFortBaseButton::execSetBangVisibility },
+		{ "SetBrushSize", &UFortBaseButton::execSetBrushSize },
+		{ "SetClickable", &UFortBaseButton::execSetClickable },
+		{ "SetClickMethod", &UFortBaseButton::execSetClickMethod },
+		{ "SetHovered", &UFortBaseButton::execSetHovered },
+		{ "SetSelected", &UFortBaseButton::execSetSelected },
+		{ "SetSelectionGroup", &UFortBaseButton::execSetSelectionGroup },
+		{ "SetStyle", &UFortBaseButton::execSetStyle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBaseButton_ForceClick_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

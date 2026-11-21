@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestItem();  // RVA 0x010964D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01095E70 (end 0x01095E92)
+// Original VA: 0x0000000141095E70 | File offset: 0x01095470
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033E57B0) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestItem::StaticRegisterNativesUFortQuestItem()
+{
+	UClass* Class = UFortQuestItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanPinQuest", &UFortQuestItem::execCanPinQuest },
+		{ "DoesQuestExpire", &UFortQuestItem::execDoesQuestExpire },
+		{ "GetAchievedCount", &UFortQuestItem::execGetAchievedCount },
+		{ "GetBroadcasterGrantWindowEnd", &UFortQuestItem::execGetBroadcasterGrantWindowEnd },
+		{ "GetMissionConfigData", &UFortQuestItem::execGetMissionConfigData },
+		{ "GetObjectiveInfo", &UFortQuestItem::execGetObjectiveInfo },
+		{ "GetPercentageComplete", &UFortQuestItem::execGetPercentageComplete },
+		{ "GetPreviewAllSelectableRewards", &UFortQuestItem::execGetPreviewAllSelectableRewards },
+		{ "GetPreviewRewards", &UFortQuestItem::execGetPreviewRewards },
+		{ "GetPreviewSelectableRewards", &UFortQuestItem::execGetPreviewSelectableRewards },
+		{ "GetQuestDefinitionBP", &UFortQuestItem::execGetQuestDefinitionBP },
+		{ "GetQuestState", &UFortQuestItem::execGetQuestState },
+		{ "GetRemainingExpirationDuration", &UFortQuestItem::execGetRemainingExpirationDuration },
+		{ "GetTwitchBroadcasterChannelId", &UFortQuestItem::execGetTwitchBroadcasterChannelId },
+		{ "HasCompletedObjective", &UFortQuestItem::execHasCompletedObjective },
+		{ "HasCompletedObjectiveWithName", &UFortQuestItem::execHasCompletedObjectiveWithName },
+		{ "HasCompletedQuest", &UFortQuestItem::execHasCompletedQuest },
+		{ "HasQuestExpired", &UFortQuestItem::execHasQuestExpired },
+		{ "HasVisibleRewards", &UFortQuestItem::execHasVisibleRewards },
+		{ "IsObjectiveInProgress", &UFortQuestItem::execIsObjectiveInProgress },
+		{ "IsObjectiveWithNameInProgress", &UFortQuestItem::execIsObjectiveWithNameInProgress },
+		{ "IsQuestInProgress", &UFortQuestItem::execIsQuestInProgress },
+		{ "IsQuestPinned", &UFortQuestItem::execIsQuestPinned },
+		{ "IsVisibleToUser", &UFortQuestItem::execIsVisibleToUser },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestItem_CanPinQuest_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

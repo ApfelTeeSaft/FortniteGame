@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMovieWidget();  // RVA 0x028D7610 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6F30 (end 0x028D6F52)
+// Original VA: 0x00000001428D6F30 | File offset: 0x028D6530
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE6800) | Matching: see analysis/functions-uht-natives.json
+void UFortMovieWidget::StaticRegisterNativesUFortMovieWidget()
+{
+	UClass* Class = UFortMovieWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetMediaPlayer", &UFortMovieWidget::execGetMediaPlayer },
+		{ "GetMediaSoundComponent", &UFortMovieWidget::execGetMediaSoundComponent },
+		{ "GetMediaTexture", &UFortMovieWidget::execGetMediaTexture },
+		{ "HasPlayerForSource", &UFortMovieWidget::execHasPlayerForSource },
+		{ "RequestPlayMovie", &UFortMovieWidget::execRequestPlayMovie },
+		{ "RequestStopMovie", &UFortMovieWidget::execRequestStopMovie },
+		{ "SetMediaSource", &UFortMovieWidget::execSetMediaSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

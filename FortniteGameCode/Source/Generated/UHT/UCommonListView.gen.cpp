@@ -6,6 +6,44 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonListView();  // RVA 0x002CA420 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA040 (end 0x002CA062)
+// Original VA: 0x00000001402CA040 | File offset: 0x002C9640
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E81920) | Matching: see analysis/functions-uht-natives.json
+void UCommonListView::StaticRegisterNativesUCommonListView()
+{
+	UClass* Class = UCommonListView::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddItem", &UCommonListView::execAddItem },
+		{ "CancelScrollIntoView", &UCommonListView::execCancelScrollIntoView },
+		{ "Clear", &UCommonListView::execClear },
+		{ "ClearSelection", &UCommonListView::execClearSelection },
+		{ "DynamicHandleItemClickedCommonButton", &UCommonListView::execDynamicHandleItemClickedCommonButton },
+		{ "DynamicHandleItemClickedUserWidget", &UCommonListView::execDynamicHandleItemClickedUserWidget },
+		{ "DynamicHandleItemDoubleClickedCommonButton", &UCommonListView::execDynamicHandleItemDoubleClickedCommonButton },
+		{ "DynamicHandleItemHoveredCommonButton", &UCommonListView::execDynamicHandleItemHoveredCommonButton },
+		{ "DynamicHandleItemUnhoveredCommonButton", &UCommonListView::execDynamicHandleItemUnhoveredCommonButton },
+		{ "GetIndexForItem", &UCommonListView::execGetIndexForItem },
+		{ "GetItemAt", &UCommonListView::execGetItemAt },
+		{ "GetNumItems", &UCommonListView::execGetNumItems },
+		{ "GetNumItemsSelected", &UCommonListView::execGetNumItemsSelected },
+		{ "GetSelectedItem", &UCommonListView::execGetSelectedItem },
+		{ "GetSelectedItems", &UCommonListView::execGetSelectedItems },
+		{ "GetSelectionModeBP", &UCommonListView::execGetSelectionModeBP },
+		{ "IsItemVisible", &UCommonListView::execIsItemVisible },
+		{ "IsRefreshPending", &UCommonListView::execIsRefreshPending },
+		{ "ScrollIntoView", &UCommonListView::execScrollIntoView },
+		{ "SetDataProvider", &UCommonListView::execSetDataProvider },
+		{ "SetDesiredItemPadding", &UCommonListView::execSetDesiredItemPadding },
+		{ "SetItemHeight", &UCommonListView::execSetItemHeight },
+		{ "SetItemSelection", &UCommonListView::execSetItemSelection },
+		{ "SetSelectedIndex", &UCommonListView::execSetSelectedIndex },
+		{ "SetSelectedItem", &UCommonListView::execSetSelectedItem },
+		{ "SetSelectionMode", &UCommonListView::execSetSelectionMode },
+		{ "SetSimulateDoubleClickOnSelectedItemClick", &UCommonListView::execSetSimulateDoubleClickOnSelectedItemClick },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonListView_AddItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortDeployableBaseManager();  // RVA 0x00FD0020 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFA20 (end 0x00FCFA42)
+// Original VA: 0x0000000140FCFA20 | File offset: 0x00FCF020
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03300C20) | Matching: see analysis/functions-uht-natives.json
+void AFortDeployableBaseManager::StaticRegisterNativesAFortDeployableBaseManager()
+{
+	UClass* Class = AFortDeployableBaseManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BroadcastHordeWaveStinger", &AFortDeployableBaseManager::execBroadcastHordeWaveStinger },
+		{ "GetAllDeployableBasePlots", &AFortDeployableBaseManager::execGetAllDeployableBasePlots },
+		{ "GetAvailableTiers", &AFortDeployableBaseManager::execGetAvailableTiers },
+		{ "GetCurrent", &AFortDeployableBaseManager::execGetCurrent },
+		{ "GetDeployableBasePlotFromLocation", &AFortDeployableBaseManager::execGetDeployableBasePlotFromLocation },
+		{ "GetDeployableBaseUseType", &AFortDeployableBaseManager::execGetDeployableBaseUseType },
+		{ "GetHighestDefeatedTierForPlayerAndLayout", &AFortDeployableBaseManager::execGetHighestDefeatedTierForPlayerAndLayout },
+		{ "GetTierOutputForSelectedTier", &AFortDeployableBaseManager::execGetTierOutputForSelectedTier },
+		{ "ReloadAllPlots", &AFortDeployableBaseManager::execReloadAllPlots },
+		{ "SetKeepDeployableBasesOnLogout", &AFortDeployableBaseManager::execSetKeepDeployableBasesOnLogout },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortDeployableBaseManager_BroadcastHordeWaveStinger_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UMovieSceneSequencePlayer::StaticRegisterNativesUMovieSceneSequencePlayer()
-{
-}
 // IMPLEMENT_CLASS(UMovieSceneSequencePlayer, 1567386725u)
 // Original dynamic initializer: RVA 0x001A4A50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMovieSceneSequencePlayer> AutoInitializeUMovieSceneSequencePlayer(TEXT("UMovieSceneSequencePlayer"), sizeof(UMovieSceneSequencePlayer), 1567386725u);

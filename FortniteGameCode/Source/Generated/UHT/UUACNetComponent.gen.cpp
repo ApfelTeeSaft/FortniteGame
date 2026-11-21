@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UUACNetComponent();  // RVA 0x0068ECC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0068EC90 (end 0x0068ECB2)
+// Original VA: 0x000000014068EC90 | File offset: 0x0068E290
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F9F898) | Matching: see analysis/functions-uht-natives.json
+void UUACNetComponent::StaticRegisterNativesUUACNetComponent()
+{
+	UClass* Class = UUACNetComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SendClientHello", &UUACNetComponent::execSendClientHello },
+		{ "SendPacketToClient", &UUACNetComponent::execSendPacketToClient },
+		{ "SendPacketToServer", &UUACNetComponent::execSendPacketToServer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UUACNetComponent_SendClientHello_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

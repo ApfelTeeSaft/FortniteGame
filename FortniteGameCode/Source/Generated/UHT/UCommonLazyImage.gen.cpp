@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonLazyImage();  // RVA 0x002CA3B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9FE0 (end 0x002CA002)
+// Original VA: 0x00000001402C9FE0 | File offset: 0x002C95E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E81500) | Matching: see analysis/functions-uht-natives.json
+void UCommonLazyImage::StaticRegisterNativesUCommonLazyImage()
+{
+	UClass* Class = UCommonLazyImage::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ForwardLoadingStateChanged", &UCommonLazyImage::execForwardLoadingStateChanged },
+		{ "IsLoading", &UCommonLazyImage::execIsLoading },
+		{ "SetBrushFromLazyDisplayAsset", &UCommonLazyImage::execSetBrushFromLazyDisplayAsset },
+		{ "SetBrushFromLazyMaterial", &UCommonLazyImage::execSetBrushFromLazyMaterial },
+		{ "SetBrushFromLazyTexture", &UCommonLazyImage::execSetBrushFromLazyTexture },
+		{ "ShowDefaultImage", &UCommonLazyImage::execShowDefaultImage },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

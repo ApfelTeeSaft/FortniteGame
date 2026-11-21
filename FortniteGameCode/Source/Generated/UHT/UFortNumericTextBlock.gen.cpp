@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortNumericTextBlock();  // RVA 0x028DE560 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE090 (end 0x028DE0B2)
+// Original VA: 0x00000001428DE090 | File offset: 0x028DD690
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF21B0) | Matching: see analysis/functions-uht-natives.json
+void UFortNumericTextBlock::StaticRegisterNativesUFortNumericTextBlock()
+{
+	UClass* Class = UFortNumericTextBlock::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DirectlySet", &UFortNumericTextBlock::execDirectlySet },
+		{ "GetCurrentValue", &UFortNumericTextBlock::execGetCurrentValue },
+		{ "InterpolateSet", &UFortNumericTextBlock::execInterpolateSet },
+		{ "IsInterpolatingNumber", &UFortNumericTextBlock::execIsInterpolatingNumber },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortNumericTextBlock_DirectlySet_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

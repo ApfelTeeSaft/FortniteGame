@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPlayerControllerSpectating::StaticRegisterNativesAFortPlayerControllerSpectating()
-{
-}
 // IMPLEMENT_CLASS(AFortPlayerControllerSpectating, 308864523u)
 // Original dynamic initializer: RVA 0x0010B940 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerSpectating> AutoInitializeAFortPlayerControllerSpectating(TEXT("AFortPlayerControllerSpectating"), sizeof(AFortPlayerControllerSpectating), 308864523u);

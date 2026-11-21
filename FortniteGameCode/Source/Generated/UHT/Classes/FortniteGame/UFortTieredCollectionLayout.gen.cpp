@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortTieredCollectionLayout::StaticRegisterNativesUFortTieredCollectionLayout()
-{
-}
 // IMPLEMENT_CLASS(UFortTieredCollectionLayout, 2312175541u)
 // Original dynamic initializer: RVA 0x00116520 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTieredCollectionLayout> AutoInitializeUFortTieredCollectionLayout(TEXT("UFortTieredCollectionLayout"), sizeof(UFortTieredCollectionLayout), 2312175541u);

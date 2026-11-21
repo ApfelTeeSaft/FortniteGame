@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UForceFeedbackComponent();  // RVA 0x0240FE50 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240F9D0 (end 0x0240F9F2)
+// Original VA: 0x000000014240F9D0 | File offset: 0x0240EFD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F05B0) | Matching: see analysis/functions-uht-natives.json
+void UForceFeedbackComponent::StaticRegisterNativesUForceFeedbackComponent()
+{
+	UClass* Class = UForceFeedbackComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AdjustAttenuation", &UForceFeedbackComponent::execAdjustAttenuation },
+		{ "BP_GetAttenuationSettingsToApply", &UForceFeedbackComponent::execBP_GetAttenuationSettingsToApply },
+		{ "Play", &UForceFeedbackComponent::execPlay },
+		{ "SetForceFeedbackEffect", &UForceFeedbackComponent::execSetForceFeedbackEffect },
+		{ "SetIntensityMultiplier", &UForceFeedbackComponent::execSetIntensityMultiplier },
+		{ "Stop", &UForceFeedbackComponent::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UForceFeedbackComponent_AdjustAttenuation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

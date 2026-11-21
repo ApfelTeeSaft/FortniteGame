@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortInputOptions();  // RVA 0x028BBF20 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBB80 (end 0x028BBBA2)
+// Original VA: 0x00000001428BBB80 | File offset: 0x028BB180
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CB2EE0) | Matching: see analysis/functions-uht-natives.json
+void UFortInputOptions::StaticRegisterNativesUFortInputOptions()
+{
+	UClass* Class = UFortInputOptions::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ChangeBinding", &UFortInputOptions::execChangeBinding },
+		{ "ConstructKeyBindList", &UFortInputOptions::execConstructKeyBindList },
+		{ "GetBindedKeyNameBP", &UFortInputOptions::execGetBindedKeyNameBP },
+		{ "GetListWidget", &UFortInputOptions::execGetListWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortInputOptions_ChangeBinding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

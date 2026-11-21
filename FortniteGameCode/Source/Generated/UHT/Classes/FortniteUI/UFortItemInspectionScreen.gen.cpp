@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemInspectionScreen::StaticRegisterNativesUFortItemInspectionScreen()
-{
-}
 // IMPLEMENT_CLASS(UFortItemInspectionScreen, 1472181351u)
 // Original dynamic initializer: RVA 0x0024CE60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemInspectionScreen> AutoInitializeUFortItemInspectionScreen(TEXT("UFortItemInspectionScreen"), sizeof(UFortItemInspectionScreen), 1472181351u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemPickerBase::StaticRegisterNativesUFortItemPickerBase()
-{
-}
 // IMPLEMENT_CLASS(UFortItemPickerBase, 920175000u)
 // Original dynamic initializer: RVA 0x0024F2B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemPickerBase> AutoInitializeUFortItemPickerBase(TEXT("UFortItemPickerBase"), sizeof(UFortItemPickerBase), 920175000u);

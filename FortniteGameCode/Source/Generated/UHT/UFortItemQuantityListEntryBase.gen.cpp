@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemQuantityListEntryBase();  // RVA 0x028CF560 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF180 (end 0x028CF1A2)
+// Original VA: 0x00000001428CF180 | File offset: 0x028CE780
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD8970) | Matching: see analysis/functions-uht-natives.json
+void UFortItemQuantityListEntryBase::StaticRegisterNativesUFortItemQuantityListEntryBase()
+{
+	UClass* Class = UFortItemQuantityListEntryBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearPreviewData", &UFortItemQuantityListEntryBase::execClearPreviewData },
+		{ "GetItemDefinition", &UFortItemQuantityListEntryBase::execGetItemDefinition },
+		{ "GetItemInstance", &UFortItemQuantityListEntryBase::execGetItemInstance },
+		{ "GetPreviewData", &UFortItemQuantityListEntryBase::execGetPreviewData },
+		{ "IsBeingPreviewed", &UFortItemQuantityListEntryBase::execIsBeingPreviewed },
+		{ "SetItemDefinitionAndQuantity", &UFortItemQuantityListEntryBase::execSetItemDefinitionAndQuantity },
+		{ "SetItemInstanceAndQuantity", &UFortItemQuantityListEntryBase::execSetItemInstanceAndQuantity },
+		{ "SetPreviewData", &UFortItemQuantityListEntryBase::execSetPreviewData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_ClearPreviewData_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AExponentialHeightFog::StaticRegisterNativesAExponentialHeightFog()
-{
-}
 // IMPLEMENT_CLASS(AExponentialHeightFog, 1734555960u)
 // Original dynamic initializer: RVA 0x001FF2C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AExponentialHeightFog> AutoInitializeAExponentialHeightFog(TEXT("AExponentialHeightFog"), sizeof(AExponentialHeightFog), 1734555960u);

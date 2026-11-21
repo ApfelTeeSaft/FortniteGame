@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortTierIndicator::StaticRegisterNativesUFortTierIndicator()
-{
-}
 // IMPLEMENT_CLASS(UFortTierIndicator, 2925394518u)
 // Original dynamic initializer: RVA 0x0025E4B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTierIndicator> AutoInitializeUFortTierIndicator(TEXT("UFortTierIndicator"), sizeof(UFortTierIndicator), 2925394518u);

@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMenuAnchor();  // RVA 0x01BED590 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED000 (end 0x01BED022)
+// Original VA: 0x0000000141BED000 | File offset: 0x01BEC600
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036974B0) | Matching: see analysis/functions-uht-natives.json
+void UMenuAnchor::StaticRegisterNativesUMenuAnchor()
+{
+	UClass* Class = UMenuAnchor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Close", &UMenuAnchor::execClose },
+		{ "GetMenuPosition", &UMenuAnchor::execGetMenuPosition },
+		{ "HasOpenSubMenus", &UMenuAnchor::execHasOpenSubMenus },
+		{ "IsOpen", &UMenuAnchor::execIsOpen },
+		{ "Open", &UMenuAnchor::execOpen },
+		{ "ShouldOpenDueToClick", &UMenuAnchor::execShouldOpenDueToClick },
+		{ "ToggleOpen", &UMenuAnchor::execToggleOpen },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMenuAnchor_Close_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

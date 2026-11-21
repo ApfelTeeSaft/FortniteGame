@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_PlayMontageAndWait::StaticRegisterNativesUAbilityTask_PlayMontageAndWait()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_PlayMontageAndWait, 2781268737u)
 // Original dynamic initializer: RVA 0x0009D4C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_PlayMontageAndWait> AutoInitializeUAbilityTask_PlayMontageAndWait(TEXT("UAbilityTask_PlayMontageAndWait"), sizeof(UAbilityTask_PlayMontageAndWait), 2781268737u);

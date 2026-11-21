@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonButtonGroup::StaticRegisterNativesUCommonButtonGroup()
-{
-}
 // IMPLEMENT_CLASS(UCommonButtonGroup, 4050680980u)
 // Original dynamic initializer: RVA 0x00095650 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonButtonGroup> AutoInitializeUCommonButtonGroup(TEXT("UCommonButtonGroup"), sizeof(UCommonButtonGroup), 4050680980u);

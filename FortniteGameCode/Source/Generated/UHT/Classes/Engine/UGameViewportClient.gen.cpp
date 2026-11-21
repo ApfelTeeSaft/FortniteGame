@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UGameViewportClient::StaticRegisterNativesUGameViewportClient()
-{
-}
 // IMPLEMENT_CLASS(UGameViewportClient, 3070892350u)
 // Original dynamic initializer: RVA 0x00200130 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameViewportClient> AutoInitializeUGameViewportClient(TEXT("UGameViewportClient"), sizeof(UGameViewportClient), 3070892350u);

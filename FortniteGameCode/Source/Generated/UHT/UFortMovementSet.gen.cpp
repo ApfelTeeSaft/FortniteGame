@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMovementSet();  // RVA 0x0104AB40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A3E0 (end 0x0104A402)
+// Original VA: 0x000000014104A3E0 | File offset: 0x010499E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0338AA28) | Matching: see analysis/functions-uht-natives.json
+void UFortMovementSet::StaticRegisterNativesUFortMovementSet()
+{
+	UClass* Class = UFortMovementSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_SpeedMultiplier", &UFortMovementSet::execOnRep_SpeedMultiplier },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMovementSet_OnRep_SpeedMultiplier_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

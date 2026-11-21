@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWeaponAttrSet();  // RVA 0x010D8B40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8860 (end 0x010D8882)
+// Original VA: 0x00000001410D8860 | File offset: 0x010D7E60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0342F270) | Matching: see analysis/functions-uht-natives.json
+void UFortWeaponAttrSet::StaticRegisterNativesUFortWeaponAttrSet()
+{
+	UClass* Class = UFortWeaponAttrSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_AccumulatedWeaponChanceToNotConsumeAmmo", &UFortWeaponAttrSet::execOnRep_AccumulatedWeaponChanceToNotConsumeAmmo },
+		{ "OnRep_CharacterItemDurabilityDecayModifier", &UFortWeaponAttrSet::execOnRep_CharacterItemDurabilityDecayModifier },
+		{ "OnRep_WeaponAmmoClipSize", &UFortWeaponAttrSet::execOnRep_WeaponAmmoClipSize },
+		{ "OnRep_WeaponChanceToNotConsumeAmmo", &UFortWeaponAttrSet::execOnRep_WeaponChanceToNotConsumeAmmo },
+		{ "OnRep_WeaponHorizontalRecoil", &UFortWeaponAttrSet::execOnRep_WeaponHorizontalRecoil },
+		{ "OnRep_WeaponRateOfFire", &UFortWeaponAttrSet::execOnRep_WeaponRateOfFire },
+		{ "OnRep_WeaponReloadSpeed", &UFortWeaponAttrSet::execOnRep_WeaponReloadSpeed },
+		{ "OnRep_WeaponVerticalRecoil", &UFortWeaponAttrSet::execOnRep_WeaponVerticalRecoil },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_AccumulatedWeaponChanceToNotConsumeAmmo_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

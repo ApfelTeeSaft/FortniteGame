@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortOutpostContext::StaticRegisterNativesUFortOutpostContext()
-{
-}
 // IMPLEMENT_CLASS(UFortOutpostContext, 4184668191u)
 // Original dynamic initializer: RVA 0x00105BB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortOutpostContext> AutoInitializeUFortOutpostContext(TEXT("UFortOutpostContext"), sizeof(UFortOutpostContext), 4184668191u);

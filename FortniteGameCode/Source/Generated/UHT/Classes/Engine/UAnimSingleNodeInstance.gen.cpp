@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAnimSingleNodeInstance::StaticRegisterNativesUAnimSingleNodeInstance()
-{
-}
 // IMPLEMENT_CLASS(UAnimSingleNodeInstance, 4186500650u)
 // Original dynamic initializer: RVA 0x001EFA40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAnimSingleNodeInstance> AutoInitializeUAnimSingleNodeInstance(TEXT("UAnimSingleNodeInstance"), sizeof(UAnimSingleNodeInstance), 4186500650u);

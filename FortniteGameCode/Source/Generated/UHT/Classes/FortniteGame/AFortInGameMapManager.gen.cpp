@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortInGameMapManager::StaticRegisterNativesAFortInGameMapManager()
-{
-}
 // IMPLEMENT_CLASS(AFortInGameMapManager, 4232071167u)
 // Original dynamic initializer: RVA 0x000FAF00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortInGameMapManager> AutoInitializeAFortInGameMapManager(TEXT("AFortInGameMapManager"), sizeof(AFortInGameMapManager), 4232071167u);

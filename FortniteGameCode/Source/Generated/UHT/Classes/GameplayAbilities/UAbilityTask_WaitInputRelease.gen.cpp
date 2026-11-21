@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_WaitInputRelease::StaticRegisterNativesUAbilityTask_WaitInputRelease()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_WaitInputRelease, 3372116897u)
 // Original dynamic initializer: RVA 0x0009DF10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_WaitInputRelease> AutoInitializeUAbilityTask_WaitInputRelease(TEXT("UAbilityTask_WaitInputRelease"), sizeof(UAbilityTask_WaitInputRelease), 3372116897u);

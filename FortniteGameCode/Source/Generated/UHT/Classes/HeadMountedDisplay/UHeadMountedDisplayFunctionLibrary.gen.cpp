@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UHeadMountedDisplayFunctionLibrary::StaticRegisterNativesUHeadMountedDisplayFunctionLibrary()
-{
-}
 // IMPLEMENT_CLASS(UHeadMountedDisplayFunctionLibrary, 2837835737u)
 // Original dynamic initializer: RVA 0x0019BC50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UHeadMountedDisplayFunctionLibrary> AutoInitializeUHeadMountedDisplayFunctionLibrary(TEXT("UHeadMountedDisplayFunctionLibrary"), sizeof(UHeadMountedDisplayFunctionLibrary), 2837835737u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UEpicCMSTileBase::StaticRegisterNativesUEpicCMSTileBase()
-{
-}
 // IMPLEMENT_CLASS(UEpicCMSTileBase, 957572841u)
 // Original dynamic initializer: RVA 0x00097880 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UEpicCMSTileBase> AutoInitializeUEpicCMSTileBase(TEXT("UEpicCMSTileBase"), sizeof(UEpicCMSTileBase), 957572841u);

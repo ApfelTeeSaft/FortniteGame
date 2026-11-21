@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UNavMovementComponent::StaticRegisterNativesUNavMovementComponent()
-{
-}
 // IMPLEMENT_CLASS(UNavMovementComponent, 2355272650u)
 // Original dynamic initializer: RVA 0x0020DC90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UNavMovementComponent> AutoInitializeUNavMovementComponent(TEXT("UNavMovementComponent"), sizeof(UNavMovementComponent), 2355272650u);

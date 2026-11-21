@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotSelectorButton();  // RVA 0x028FB630 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB230 (end 0x028FB252)
+// Original VA: 0x00000001428FB230 | File offset: 0x028FA830
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D23500) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSlotSelectorButton::StaticRegisterNativesUFortSquadSlotSelectorButton()
+{
+	UClass* Class = UFortSquadSlotSelectorButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIdOfSquadSlotToManageBP", &UFortSquadSlotSelectorButton::execGetIdOfSquadSlotToManageBP },
+		{ "GetInPreviewMode", &UFortSquadSlotSelectorButton::execGetInPreviewMode },
+		{ "GetPopupMenu", &UFortSquadSlotSelectorButton::execGetPopupMenu },
+		{ "IsSquadSlotLockedBP", &UFortSquadSlotSelectorButton::execIsSquadSlotLockedBP },
+		{ "OpenSquadSlot", &UFortSquadSlotSelectorButton::execOpenSquadSlot },
+		{ "SetIdOfSquadSlotToManageBP", &UFortSquadSlotSelectorButton::execSetIdOfSquadSlotToManageBP },
+		{ "SquadSlotWidgetUpdated", &UFortSquadSlotSelectorButton::execSquadSlotWidgetUpdated },
+		{ "ViewInAll", &UFortSquadSlotSelectorButton::execViewInAll },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSquadSlotSelectorButton_GetIdOfSquadSlotToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortCollectionBookSlotButton::StaticRegisterNativesUFortCollectionBookSlotButton()
-{
-}
 // IMPLEMENT_CLASS(UFortCollectionBookSlotButton, 1761402711u)
 // Original dynamic initializer: RVA 0x002425F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookSlotButton> AutoInitializeUFortCollectionBookSlotButton(TEXT("UFortCollectionBookSlotButton"), sizeof(UFortCollectionBookSlotButton), 1761402711u);

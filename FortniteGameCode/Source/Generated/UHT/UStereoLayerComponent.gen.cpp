@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UStereoLayerComponent();  // RVA 0x024E79D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7040 (end 0x024E7062)
+// Original VA: 0x00000001424E7040 | File offset: 0x024E6640
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039C3E80) | Matching: see analysis/functions-uht-natives.json
+void UStereoLayerComponent::StaticRegisterNativesUStereoLayerComponent()
+{
+	UClass* Class = UStereoLayerComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPriority", &UStereoLayerComponent::execGetPriority },
+		{ "GetQuadSize", &UStereoLayerComponent::execGetQuadSize },
+		{ "GetTexture", &UStereoLayerComponent::execGetTexture },
+		{ "GetUVRect", &UStereoLayerComponent::execGetUVRect },
+		{ "MarkTextureForUpdate", &UStereoLayerComponent::execMarkTextureForUpdate },
+		{ "SetPriority", &UStereoLayerComponent::execSetPriority },
+		{ "SetQuadSize", &UStereoLayerComponent::execSetQuadSize },
+		{ "SetTexture", &UStereoLayerComponent::execSetTexture },
+		{ "SetUVRect", &UStereoLayerComponent::execSetUVRect },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UStereoLayerComponent_GetPriority_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

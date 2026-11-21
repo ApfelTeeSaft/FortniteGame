@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortReticle();  // RVA 0x028ED530 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECE90 (end 0x028ECEB2)
+// Original VA: 0x00000001428ECE90 | File offset: 0x028EC490
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0A940) | Matching: see analysis/functions-uht-natives.json
+void UFortReticle::StaticRegisterNativesUFortReticle()
+{
+	UClass* Class = UFortReticle::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnContextualReticleChanged", &UFortReticle::execOnContextualReticleChanged },
+		{ "OnPawnSet", &UFortReticle::execOnPawnSet },
+		{ "OnReticleColorChanged", &UFortReticle::execOnReticleColorChanged },
+		{ "OnWeaponEquipped", &UFortReticle::execOnWeaponEquipped },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortReticle_OnContextualReticleChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

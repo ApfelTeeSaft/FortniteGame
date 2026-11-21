@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortMarkActor::StaticRegisterNativesAFortMarkActor()
-{
-}
 // IMPLEMENT_CLASS(AFortMarkActor, 2364630529u)
 // Original dynamic initializer: RVA 0x000FD050 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortMarkActor> AutoInitializeAFortMarkActor(TEXT("AFortMarkActor"), sizeof(AFortMarkActor), 2364630529u);

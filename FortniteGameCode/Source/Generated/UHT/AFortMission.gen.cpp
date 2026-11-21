@@ -6,6 +6,77 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortMission();  // RVA 0x01038520 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037690 (end 0x010376B2)
+// Original VA: 0x0000000141037690 | File offset: 0x01036C90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0337A890) | Matching: see analysis/functions-uht-natives.json
+void AFortMission::StaticRegisterNativesAFortMission()
+{
+	UClass* Class = AFortMission::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddCompletionTag", &AFortMission::execAddCompletionTag },
+		{ "AddCompletionTags", &AFortMission::execAddCompletionTags },
+		{ "AddGoalsToAssignment", &AFortMission::execAddGoalsToAssignment },
+		{ "AddGoalsToEncounterAssignment", &AFortMission::execAddGoalsToEncounterAssignment },
+		{ "AddGoalToAssignment", &AFortMission::execAddGoalToAssignment },
+		{ "AddGoalToEncounterAssignment", &AFortMission::execAddGoalToEncounterAssignment },
+		{ "AddParticipantAccount", &AFortMission::execAddParticipantAccount },
+		{ "AttemptMissionSave", &AFortMission::execAttemptMissionSave },
+		{ "BlueprintCanPlayerParticipate", &AFortMission::execBlueprintCanPlayerParticipate },
+		{ "ChooseRandomReward", &AFortMission::execChooseRandomReward },
+		{ "CreateEncounterAssignment", &AFortMission::execCreateEncounterAssignment },
+		{ "CreateEncounterSequence", &AFortMission::execCreateEncounterSequence },
+		{ "FindGoalLocationsForEncounterAssignment", &AFortMission::execFindGoalLocationsForEncounterAssignment },
+		{ "FocusThisMission", &AFortMission::execFocusThisMission },
+		{ "GetActorsSpawnedMatchingQuery", &AFortMission::execGetActorsSpawnedMatchingQuery },
+		{ "GetAllObjectives", &AFortMission::execGetAllObjectives },
+		{ "GetBuildingDamageLootTier", &AFortMission::execGetBuildingDamageLootTier },
+		{ "GetConfigData", &AFortMission::execGetConfigData },
+		{ "GetCurrentBluGloRewards", &AFortMission::execGetCurrentBluGloRewards },
+		{ "GetCurrentFocusDisplayText", &AFortMission::execGetCurrentFocusDisplayText },
+		{ "GetCurrentFocusPercentage", &AFortMission::execGetCurrentFocusPercentage },
+		{ "GetDaysRemainingBeforeOverPar", &AFortMission::execGetDaysRemainingBeforeOverPar },
+		{ "GetExpectedCompletionTime", &AFortMission::execGetExpectedCompletionTime },
+		{ "GetMissionGuid", &AFortMission::execGetMissionGuid },
+		{ "GetMissionName", &AFortMission::execGetMissionName },
+		{ "GetObjectiveByHandle", &AFortMission::execGetObjectiveByHandle },
+		{ "GetObjectiveHandlesWithTag", &AFortMission::execGetObjectiveHandlesWithTag },
+		{ "GetObjectiveStatusByHandle", &AFortMission::execGetObjectiveStatusByHandle },
+		{ "GetParticipatingMissionControllers", &AFortMission::execGetParticipatingMissionControllers },
+		{ "GetPawnDamageLootTier", &AFortMission::execGetPawnDamageLootTier },
+		{ "GetRewardItemsByTag", &AFortMission::execGetRewardItemsByTag },
+		{ "GetSpawnLocationActorsMatchingQuery", &AFortMission::execGetSpawnLocationActorsMatchingQuery },
+		{ "GetSpawnLocationsMatchingQuery", &AFortMission::execGetSpawnLocationsMatchingQuery },
+		{ "GrantRewardsByTag", &AFortMission::execGrantRewardsByTag },
+		{ "HasMissionPar", &AFortMission::execHasMissionPar },
+		{ "InitializeActorsForMission", &AFortMission::execInitializeActorsForMission },
+		{ "InitializeActorsForMissionMatchingItemIdentifyingQuery", &AFortMission::execInitializeActorsForMissionMatchingItemIdentifyingQuery },
+		{ "IsPlayerParticipating", &AFortMission::execIsPlayerParticipating },
+		{ "OnRep_ActiveObjectives", &AFortMission::execOnRep_ActiveObjectives },
+		{ "OnRep_bIsMissionVisible", &AFortMission::execOnRep_bIsMissionVisible },
+		{ "OnRep_CurrentFocusDisplayData", &AFortMission::execOnRep_CurrentFocusDisplayData },
+		{ "OnRep_MissionInfo", &AFortMission::execOnRep_MissionInfo },
+		{ "OnRep_MissionStatus", &AFortMission::execOnRep_MissionStatus },
+		{ "OnRep_PotentialBadgesArray", &AFortMission::execOnRep_PotentialBadgesArray },
+		{ "OnRep_QuestOwnerAccount", &AFortMission::execOnRep_QuestOwnerAccount },
+		{ "OnRep_UIIndex", &AFortMission::execOnRep_UIIndex },
+		{ "OnWaveCompleted", &AFortMission::execOnWaveCompleted },
+		{ "ProvideAllPotentialBadges", &AFortMission::execProvideAllPotentialBadges },
+		{ "RecordResourceActorSpawn", &AFortMission::execRecordResourceActorSpawn },
+		{ "RemoveGoalFromEncounterAssignment", &AFortMission::execRemoveGoalFromEncounterAssignment },
+		{ "RemoveGoalsFromEncounterAssignment", &AFortMission::execRemoveGoalsFromEncounterAssignment },
+		{ "RemoveParticipantAccount", &AFortMission::execRemoveParticipantAccount },
+		{ "SendBotLogicMessage", &AFortMission::execSendBotLogicMessage },
+		{ "SetToSilentDestroy", &AFortMission::execSetToSilentDestroy },
+		{ "SetUiVisibility", &AFortMission::execSetUiVisibility },
+		{ "SpawnAtPlacementActorsAsArray", &AFortMission::execSpawnAtPlacementActorsAsArray },
+		{ "StartMissionAIEncounter", &AFortMission::execStartMissionAIEncounter },
+		{ "StartMissionAIEncounterFromGeneratedProfile", &AFortMission::execStartMissionAIEncounterFromGeneratedProfile },
+		{ "StopEncounterSequence", &AFortMission::execStopEncounterSequence },
+		{ "StopMissionAIEncounter", &AFortMission::execStopMissionAIEncounter },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortMission_AddCompletionTag_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

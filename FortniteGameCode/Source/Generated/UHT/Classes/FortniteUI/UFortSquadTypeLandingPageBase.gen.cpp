@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadTypeLandingPageBase::StaticRegisterNativesUFortSquadTypeLandingPageBase()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadTypeLandingPageBase, 3526718635u)
 // Original dynamic initializer: RVA 0x0025C260 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadTypeLandingPageBase> AutoInitializeUFortSquadTypeLandingPageBase(TEXT("UFortSquadTypeLandingPageBase"), sizeof(UFortSquadTypeLandingPageBase), 3526718635u);

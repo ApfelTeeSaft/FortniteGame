@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameState();  // RVA 0x00FEE630 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEDFB0 (end 0x00FEDFD2)
+// Original VA: 0x0000000140FEDFB0 | File offset: 0x00FED5B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332DBC0) | Matching: see analysis/functions-uht-natives.json
+void AFortGameState::StaticRegisterNativesAFortGameState()
+{
+	UClass* Class = AFortGameState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Client_InitiateEndOfDayRecap", &AFortGameState::execClient_InitiateEndOfDayRecap },
+		{ "DemoEndOfDayRecap", &AFortGameState::execDemoEndOfDayRecap },
+		{ "GetGameplayState", &AFortGameState::execGetGameplayState },
+		{ "GetTimeOfDayManager", &AFortGameState::execGetTimeOfDayManager },
+		{ "GetWorldDaysElapsed", &AFortGameState::execGetWorldDaysElapsed },
+		{ "OnRep_AnnouncementManager", &AFortGameState::execOnRep_AnnouncementManager },
+		{ "OnRep_CurrentWUID", &AFortGameState::execOnRep_CurrentWUID },
+		{ "OnRep_FeedbackManager", &AFortGameState::execOnRep_FeedbackManager },
+		{ "OnRep_GameplayState", &AFortGameState::execOnRep_GameplayState },
+		{ "OnRep_GameSessionID", &AFortGameState::execOnRep_GameSessionID },
+		{ "OnRep_MissionManager", &AFortGameState::execOnRep_MissionManager },
+		{ "OnRep_MusicManagerSubclass", &AFortGameState::execOnRep_MusicManagerSubclass },
+		{ "OnRep_Teams", &AFortGameState::execOnRep_Teams },
+		{ "OnRep_TimeOfDayManager", &AFortGameState::execOnRep_TimeOfDayManager },
+		{ "OnRep_WorldDaysElapsed", &AFortGameState::execOnRep_WorldDaysElapsed },
+		{ "OnRep_WorldManager", &AFortGameState::execOnRep_WorldManager },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameState_Client_InitiateEndOfDayRecap_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

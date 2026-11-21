@@ -6,6 +6,79 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMediaPlayer();  // RVA 0x025DE900 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE6A0 (end 0x025DE6C2)
+// Original VA: 0x00000001425DE6A0 | File offset: 0x025DDCA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B63BF0) | Matching: see analysis/functions-uht-natives.json
+void UMediaPlayer::StaticRegisterNativesUMediaPlayer()
+{
+	UClass* Class = UMediaPlayer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanPause", &UMediaPlayer::execCanPause },
+		{ "CanPlaySource", &UMediaPlayer::execCanPlaySource },
+		{ "CanPlayUrl", &UMediaPlayer::execCanPlayUrl },
+		{ "Close", &UMediaPlayer::execClose },
+		{ "GetAudioTrackChannels", &UMediaPlayer::execGetAudioTrackChannels },
+		{ "GetAudioTrackSampleRate", &UMediaPlayer::execGetAudioTrackSampleRate },
+		{ "GetAudioTrackType", &UMediaPlayer::execGetAudioTrackType },
+		{ "GetDesiredPlayerName", &UMediaPlayer::execGetDesiredPlayerName },
+		{ "GetDuration", &UMediaPlayer::execGetDuration },
+		{ "GetHorizontalFieldOfView", &UMediaPlayer::execGetHorizontalFieldOfView },
+		{ "GetMediaName", &UMediaPlayer::execGetMediaName },
+		{ "GetNumTrackFormats", &UMediaPlayer::execGetNumTrackFormats },
+		{ "GetNumTracks", &UMediaPlayer::execGetNumTracks },
+		{ "GetPlayerName", &UMediaPlayer::execGetPlayerName },
+		{ "GetPlaylist", &UMediaPlayer::execGetPlaylist },
+		{ "GetPlaylistIndex", &UMediaPlayer::execGetPlaylistIndex },
+		{ "GetRate", &UMediaPlayer::execGetRate },
+		{ "GetSelectedTrack", &UMediaPlayer::execGetSelectedTrack },
+		{ "GetSupportedRates", &UMediaPlayer::execGetSupportedRates },
+		{ "GetTime", &UMediaPlayer::execGetTime },
+		{ "GetTrackDisplayName", &UMediaPlayer::execGetTrackDisplayName },
+		{ "GetTrackFormat", &UMediaPlayer::execGetTrackFormat },
+		{ "GetTrackLanguage", &UMediaPlayer::execGetTrackLanguage },
+		{ "GetUrl", &UMediaPlayer::execGetUrl },
+		{ "GetVerticalFieldOfView", &UMediaPlayer::execGetVerticalFieldOfView },
+		{ "GetVideoTrackAspectRatio", &UMediaPlayer::execGetVideoTrackAspectRatio },
+		{ "GetVideoTrackDimensions", &UMediaPlayer::execGetVideoTrackDimensions },
+		{ "GetVideoTrackFrameRate", &UMediaPlayer::execGetVideoTrackFrameRate },
+		{ "GetVideoTrackFrameRates", &UMediaPlayer::execGetVideoTrackFrameRates },
+		{ "GetVideoTrackType", &UMediaPlayer::execGetVideoTrackType },
+		{ "GetViewRotation", &UMediaPlayer::execGetViewRotation },
+		{ "HasError", &UMediaPlayer::execHasError },
+		{ "IsBuffering", &UMediaPlayer::execIsBuffering },
+		{ "IsConnecting", &UMediaPlayer::execIsConnecting },
+		{ "IsLooping", &UMediaPlayer::execIsLooping },
+		{ "IsPaused", &UMediaPlayer::execIsPaused },
+		{ "IsPlaying", &UMediaPlayer::execIsPlaying },
+		{ "IsPreparing", &UMediaPlayer::execIsPreparing },
+		{ "IsReady", &UMediaPlayer::execIsReady },
+		{ "Next", &UMediaPlayer::execNext },
+		{ "OpenFile", &UMediaPlayer::execOpenFile },
+		{ "OpenPlaylist", &UMediaPlayer::execOpenPlaylist },
+		{ "OpenPlaylistIndex", &UMediaPlayer::execOpenPlaylistIndex },
+		{ "OpenSource", &UMediaPlayer::execOpenSource },
+		{ "OpenUrl", &UMediaPlayer::execOpenUrl },
+		{ "Pause", &UMediaPlayer::execPause },
+		{ "Play", &UMediaPlayer::execPlay },
+		{ "Previous", &UMediaPlayer::execPrevious },
+		{ "Reopen", &UMediaPlayer::execReopen },
+		{ "Rewind", &UMediaPlayer::execRewind },
+		{ "Seek", &UMediaPlayer::execSeek },
+		{ "SelectTrack", &UMediaPlayer::execSelectTrack },
+		{ "SetDesiredPlayerName", &UMediaPlayer::execSetDesiredPlayerName },
+		{ "SetLooping", &UMediaPlayer::execSetLooping },
+		{ "SetRate", &UMediaPlayer::execSetRate },
+		{ "SetTrackFormat", &UMediaPlayer::execSetTrackFormat },
+		{ "SetVideoTrackFrameRate", &UMediaPlayer::execSetVideoTrackFrameRate },
+		{ "SetViewField", &UMediaPlayer::execSetViewField },
+		{ "SetViewRotation", &UMediaPlayer::execSetViewRotation },
+		{ "SupportsRate", &UMediaPlayer::execSupportsRate },
+		{ "SupportsScrubbing", &UMediaPlayer::execSupportsScrubbing },
+		{ "SupportsSeeking", &UMediaPlayer::execSupportsSeeking },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMediaPlayer_CanPause_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

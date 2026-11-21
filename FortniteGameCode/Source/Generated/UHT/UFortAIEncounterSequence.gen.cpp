@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAIEncounterSequence();  // RVA 0x00F8C580 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BD40 (end 0x00F8BD62)
+// Original VA: 0x0000000140F8BD40 | File offset: 0x00F8B340
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032A6510) | Matching: see analysis/functions-uht-natives.json
+void UFortAIEncounterSequence::StaticRegisterNativesUFortAIEncounterSequence()
+{
+	UClass* Class = UFortAIEncounterSequence::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EncounterBelongsToSequence", &UFortAIEncounterSequence::execEncounterBelongsToSequence },
+		{ "GetCurrentEncounter", &UFortAIEncounterSequence::execGetCurrentEncounter },
+		{ "GetEncounterIndexInSequence", &UFortAIEncounterSequence::execGetEncounterIndexInSequence },
+		{ "GetNumEncountersInSequence", &UFortAIEncounterSequence::execGetNumEncountersInSequence },
+		{ "HasEncounter", &UFortAIEncounterSequence::execHasEncounter },
+		{ "IsOnFinalIndexInSequence", &UFortAIEncounterSequence::execIsOnFinalIndexInSequence },
+		{ "Next", &UFortAIEncounterSequence::execNext },
+		{ "Previous", &UFortAIEncounterSequence::execPrevious },
+		{ "StartCurrentEncounter", &UFortAIEncounterSequence::execStartCurrentEncounter },
+		{ "StopCurrentEncounter", &UFortAIEncounterSequence::execStopCurrentEncounter },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAIEncounterSequence_EncounterBelongsToSequence_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

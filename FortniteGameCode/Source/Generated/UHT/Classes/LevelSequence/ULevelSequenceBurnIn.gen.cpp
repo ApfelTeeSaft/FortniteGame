@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ULevelSequenceBurnIn::StaticRegisterNativesULevelSequenceBurnIn()
-{
-}
 // IMPLEMENT_CLASS(ULevelSequenceBurnIn, 365866391u)
 // Original dynamic initializer: RVA 0x001C0C90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ULevelSequenceBurnIn> AutoInitializeULevelSequenceBurnIn(TEXT("ULevelSequenceBurnIn"), sizeof(ULevelSequenceBurnIn), 365866391u);

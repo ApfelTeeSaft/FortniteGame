@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULevelSequenceBurnIn();  // RVA 0x01D4EDE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E860 (end 0x01D4E882)
+// Original VA: 0x0000000141D4E860 | File offset: 0x01D4DE60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0371A2B8) | Matching: see analysis/functions-uht-natives.json
+void ULevelSequenceBurnIn::StaticRegisterNativesULevelSequenceBurnIn()
+{
+	UClass* Class = ULevelSequenceBurnIn::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSettingsClass", &ULevelSequenceBurnIn::execGetSettingsClass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULevelSequenceBurnIn_GetSettingsClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

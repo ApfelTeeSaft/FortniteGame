@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortWorldManager::StaticRegisterNativesAFortWorldManager()
-{
-}
 // IMPLEMENT_CLASS(AFortWorldManager, 3939852103u)
 // Original dynamic initializer: RVA 0x0011E820 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortWorldManager> AutoInitializeAFortWorldManager(TEXT("AFortWorldManager"), sizeof(AFortWorldManager), 3939852103u);

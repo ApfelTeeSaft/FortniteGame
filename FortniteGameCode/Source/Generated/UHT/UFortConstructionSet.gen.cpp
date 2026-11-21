@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortConstructionSet();  // RVA 0x00FC61B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC55A0 (end 0x00FC55C2)
+// Original VA: 0x0000000140FC55A0 | File offset: 0x00FC4BA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F1070) | Matching: see analysis/functions-uht-natives.json
+void UFortConstructionSet::StaticRegisterNativesUFortConstructionSet()
+{
+	UClass* Class = UFortConstructionSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_BuildCost", &UFortConstructionSet::execOnRep_BuildCost },
+		{ "OnRep_BuildingSkill", &UFortConstructionSet::execOnRep_BuildingSkill },
+		{ "OnRep_BuildSpeed", &UFortConstructionSet::execOnRep_BuildSpeed },
+		{ "OnRep_MaxBuildLevel", &UFortConstructionSet::execOnRep_MaxBuildLevel },
+		{ "OnRep_RepairCost", &UFortConstructionSet::execOnRep_RepairCost },
+		{ "OnRep_RepairSpeed", &UFortConstructionSet::execOnRep_RepairSpeed },
+		{ "OnRep_TrapArmSpeed", &UFortConstructionSet::execOnRep_TrapArmSpeed },
+		{ "OnRep_TrapBaseDamage", &UFortConstructionSet::execOnRep_TrapBaseDamage },
+		{ "OnRep_TrapDiceCritChance", &UFortConstructionSet::execOnRep_TrapDiceCritChance },
+		{ "OnRep_TrapDiceCritMultiplier", &UFortConstructionSet::execOnRep_TrapDiceCritMultiplier },
+		{ "OnRep_TrapHealingSource", &UFortConstructionSet::execOnRep_TrapHealingSource },
+		{ "OnRep_TrapMaxDurability", &UFortConstructionSet::execOnRep_TrapMaxDurability },
+		{ "OnRep_TrapReloadSpeed", &UFortConstructionSet::execOnRep_TrapReloadSpeed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortConstructionSet_OnRep_BuildCost_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

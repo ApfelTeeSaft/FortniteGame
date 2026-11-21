@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortQuestManager::StaticRegisterNativesUFortQuestManager()
-{
-}
 // IMPLEMENT_CLASS(UFortQuestManager, 190779916u)
 // Original dynamic initializer: RVA 0x00110780 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestManager> AutoInitializeUFortQuestManager(TEXT("UFortQuestManager"), sizeof(UFortQuestManager), 190779916u);

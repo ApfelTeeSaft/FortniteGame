@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWidgetComponent();  // RVA 0x01C00DC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00B50 (end 0x01C00B72)
+// Original VA: 0x0000000141C00B50 | File offset: 0x01C00150
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A9A30) | Matching: see analysis/functions-uht-natives.json
+void UWidgetComponent::StaticRegisterNativesUWidgetComponent()
+{
+	UClass* Class = UWidgetComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDrawSize", &UWidgetComponent::execGetDrawSize },
+		{ "GetMaterialInstance", &UWidgetComponent::execGetMaterialInstance },
+		{ "GetOwnerPlayer", &UWidgetComponent::execGetOwnerPlayer },
+		{ "GetRenderTarget", &UWidgetComponent::execGetRenderTarget },
+		{ "GetUserWidgetObject", &UWidgetComponent::execGetUserWidgetObject },
+		{ "RequestRedraw", &UWidgetComponent::execRequestRedraw },
+		{ "SetBackgroundColor", &UWidgetComponent::execSetBackgroundColor },
+		{ "SetDrawSize", &UWidgetComponent::execSetDrawSize },
+		{ "SetOwnerPlayer", &UWidgetComponent::execSetOwnerPlayer },
+		{ "SetTintColorAndOpacity", &UWidgetComponent::execSetTintColorAndOpacity },
+		{ "SetWidget", &UWidgetComponent::execSetWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UWidgetComponent_GetDrawSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

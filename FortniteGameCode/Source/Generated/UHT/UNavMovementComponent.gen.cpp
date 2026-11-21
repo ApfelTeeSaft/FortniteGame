@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNavMovementComponent();  // RVA 0x0248FA00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F380 (end 0x0248F3A2)
+// Original VA: 0x000000014248F380 | File offset: 0x0248E980
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0395BB60) | Matching: see analysis/functions-uht-natives.json
+void UNavMovementComponent::StaticRegisterNativesUNavMovementComponent()
+{
+	UClass* Class = UNavMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsCrouching", &UNavMovementComponent::execIsCrouching },
+		{ "IsFalling", &UNavMovementComponent::execIsFalling },
+		{ "IsFlying", &UNavMovementComponent::execIsFlying },
+		{ "IsMovingOnGround", &UNavMovementComponent::execIsMovingOnGround },
+		{ "IsSwimming", &UNavMovementComponent::execIsSwimming },
+		{ "StopActiveMovement", &UNavMovementComponent::execStopActiveMovement },
+		{ "StopMovementKeepPathing", &UNavMovementComponent::execStopMovementKeepPathing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UNavMovementComponent_IsCrouching_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

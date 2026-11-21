@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerStateAthena();  // RVA 0x0108B380 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AD40 (end 0x0108AD62)
+// Original VA: 0x000000014108AD40 | File offset: 0x0108A340
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D49C0) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerStateAthena::StaticRegisterNativesAFortPlayerStateAthena()
+{
+	UClass* Class = AFortPlayerStateAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientReportDBNO", &AFortPlayerStateAthena::execClientReportDBNO },
+		{ "ClientReportKill", &AFortPlayerStateAthena::execClientReportKill },
+		{ "GetSpectatorCount", &AFortPlayerStateAthena::execGetSpectatorCount },
+		{ "IsDisconnected", &AFortPlayerStateAthena::execIsDisconnected },
+		{ "OnRep_DeathInfo", &AFortPlayerStateAthena::execOnRep_DeathInfo },
+		{ "OnRep_Downs", &AFortPlayerStateAthena::execOnRep_Downs },
+		{ "OnRep_Kills", &AFortPlayerStateAthena::execOnRep_Kills },
+		{ "OnRep_MapIndicatorPos", &AFortPlayerStateAthena::execOnRep_MapIndicatorPos },
+		{ "OnRep_Place", &AFortPlayerStateAthena::execOnRep_Place },
+		{ "OnRep_SpectatingTarget", &AFortPlayerStateAthena::execOnRep_SpectatingTarget },
+		{ "OnRep_SquadId", &AFortPlayerStateAthena::execOnRep_SquadId },
+		{ "ServerSetInAircraft", &AFortPlayerStateAthena::execServerSetInAircraft },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerStateAthena_ClientReportDBNO_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

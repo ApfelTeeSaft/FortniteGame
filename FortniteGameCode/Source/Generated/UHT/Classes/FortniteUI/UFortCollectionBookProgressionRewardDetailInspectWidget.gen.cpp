@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortCollectionBookProgressionRewardDetailInspectWidget::StaticRegisterNativesUFortCollectionBookProgressionRewardDetailInspectWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardDetailInspectWidget, 376891899u)
 // Original dynamic initializer: RVA 0x002404A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookProgressionRewardDetailInspectWidget> AutoInitializeUFortCollectionBookProgressionRewardDetailInspectWidget(TEXT("UFortCollectionBookProgressionRewardDetailInspectWidget"), sizeof(UFortCollectionBookProgressionRewardDetailInspectWidget), 376891899u);

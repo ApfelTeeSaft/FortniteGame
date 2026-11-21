@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7980 (end 0x023C79A2)
+// Original VA: 0x00000001423C7980 | File offset: 0x023C6F80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03891CE0) | Matching: see analysis/functions-uht-natives.json
+void AAmbientSound::StaticRegisterNativesAAmbientSound()
+{
+	UClass* Class = AAmbientSound::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AdjustVolume", &AAmbientSound::execAdjustVolume },
+		{ "FadeIn", &AAmbientSound::execFadeIn },
+		{ "FadeOut", &AAmbientSound::execFadeOut },
+		{ "Play", &AAmbientSound::execPlay },
+		{ "Stop", &AAmbientSound::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AAmbientSound_AdjustVolume_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

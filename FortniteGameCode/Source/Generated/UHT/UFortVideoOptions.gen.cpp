@@ -6,6 +6,50 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortVideoOptions();  // RVA 0x02918B90 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918860 (end 0x02918882)
+// Original VA: 0x0000000142918860 | File offset: 0x02917E60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D54A50) | Matching: see analysis/functions-uht-natives.json
+void UFortVideoOptions::StaticRegisterNativesUFortVideoOptions()
+{
+	UClass* Class = UFortVideoOptions::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AntiAliasingQualityChanged", &UFortVideoOptions::execAntiAliasingQualityChanged },
+		{ "EffectsQualityChanged", &UFortVideoOptions::execEffectsQualityChanged },
+		{ "FrameRateLimitChanged", &UFortVideoOptions::execFrameRateLimitChanged },
+		{ "GetAntiAliasingQuality", &UFortVideoOptions::execGetAntiAliasingQuality },
+		{ "GetCurrentDisplayResolution", &UFortVideoOptions::execGetCurrentDisplayResolution },
+		{ "GetCurrentFPS", &UFortVideoOptions::execGetCurrentFPS },
+		{ "GetCurrentWindowMode", &UFortVideoOptions::execGetCurrentWindowMode },
+		{ "GetEffectsQuality", &UFortVideoOptions::execGetEffectsQuality },
+		{ "GetMotionBlur", &UFortVideoOptions::execGetMotionBlur },
+		{ "GetOverallQualityLevel", &UFortVideoOptions::execGetOverallQualityLevel },
+		{ "GetPossibleDisplayResolutions", &UFortVideoOptions::execGetPossibleDisplayResolutions },
+		{ "GetPossibleFPS", &UFortVideoOptions::execGetPossibleFPS },
+		{ "GetPossibleWindowModes", &UFortVideoOptions::execGetPossibleWindowModes },
+		{ "GetPostProcessQuality", &UFortVideoOptions::execGetPostProcessQuality },
+		{ "GetShadowQuality", &UFortVideoOptions::execGetShadowQuality },
+		{ "GetShowFPS", &UFortVideoOptions::execGetShowFPS },
+		{ "GetShowGrass", &UFortVideoOptions::execGetShowGrass },
+		{ "GetTextureQuality", &UFortVideoOptions::execGetTextureQuality },
+		{ "GetUseVsync", &UFortVideoOptions::execGetUseVsync },
+		{ "GetViewDistanceQuality", &UFortVideoOptions::execGetViewDistanceQuality },
+		{ "InitializeValues", &UFortVideoOptions::execInitializeValues },
+		{ "IsWindowedFullscreen", &UFortVideoOptions::execIsWindowedFullscreen },
+		{ "MotionBlurChanged", &UFortVideoOptions::execMotionBlurChanged },
+		{ "OnQualitySelectorChanged", &UFortVideoOptions::execOnQualitySelectorChanged },
+		{ "PostProcessQualityChanged", &UFortVideoOptions::execPostProcessQualityChanged },
+		{ "ResolutionChanged", &UFortVideoOptions::execResolutionChanged },
+		{ "ShadowQualityChanged", &UFortVideoOptions::execShadowQualityChanged },
+		{ "ShowFPSChanged", &UFortVideoOptions::execShowFPSChanged },
+		{ "ShowGrassChanged", &UFortVideoOptions::execShowGrassChanged },
+		{ "TextureQualityChanged", &UFortVideoOptions::execTextureQualityChanged },
+		{ "UseVsyncChanged", &UFortVideoOptions::execUseVsyncChanged },
+		{ "ViewDistanceQualityChanged", &UFortVideoOptions::execViewDistanceQualityChanged },
+		{ "WindowModeChanged", &UFortVideoOptions::execWindowModeChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

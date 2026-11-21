@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AGameplayCueNotify_Actor::StaticRegisterNativesAGameplayCueNotify_Actor()
-{
-}
 // IMPLEMENT_CLASS(AGameplayCueNotify_Actor, 3672328890u)
 // Original dynamic initializer: RVA 0x0009EC00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameplayCueNotify_Actor> AutoInitializeAGameplayCueNotify_Actor(TEXT("AGameplayCueNotify_Actor"), sizeof(AGameplayCueNotify_Actor), 3672328890u);

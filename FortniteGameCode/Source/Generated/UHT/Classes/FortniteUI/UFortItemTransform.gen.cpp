@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemTransform::StaticRegisterNativesUFortItemTransform()
-{
-}
 // IMPLEMENT_CLASS(UFortItemTransform, 1568904050u)
 // Original dynamic initializer: RVA 0x0024F390 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemTransform> AutoInitializeUFortItemTransform(TEXT("UFortItemTransform"), sizeof(UFortItemTransform), 1568904050u);

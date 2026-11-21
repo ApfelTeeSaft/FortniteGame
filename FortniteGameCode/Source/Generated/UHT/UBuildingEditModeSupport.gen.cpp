@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBuildingEditModeSupport();  // RVA 0x00F66860 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F660E0 (end 0x00F66102)
+// Original VA: 0x0000000140F660E0 | File offset: 0x00F656E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03270CA0) | Matching: see analysis/functions-uht-natives.json
+void UBuildingEditModeSupport::StaticRegisterNativesUBuildingEditModeSupport()
+{
+	UClass* Class = UBuildingEditModeSupport::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnSuccessfulMatchInteractComplete", &UBuildingEditModeSupport::execOnSuccessfulMatchInteractComplete },
+		{ "OnSuccessfulMatchInteractParamUpdate", &UBuildingEditModeSupport::execOnSuccessfulMatchInteractParamUpdate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBuildingEditModeSupport_OnSuccessfulMatchInteractComplete_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

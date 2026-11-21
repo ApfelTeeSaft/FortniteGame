@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotDetailsPanel();  // RVA 0x028FB530 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB140 (end 0x028FB162)
+// Original VA: 0x00000001428FB140 | File offset: 0x028FA740
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D21AC0) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSlotDetailsPanel::StaticRegisterNativesUFortSquadSlotDetailsPanel()
+{
+	UClass* Class = UFortSquadSlotDetailsPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIdOfSquadSlotToManageBP", &UFortSquadSlotDetailsPanel::execGetIdOfSquadSlotToManageBP },
+		{ "GetItemInSquadSlotBP", &UFortSquadSlotDetailsPanel::execGetItemInSquadSlotBP },
+		{ "GetSlottingRestrictionReasons", &UFortSquadSlotDetailsPanel::execGetSlottingRestrictionReasons },
+		{ "IsSquadSlotLockedBP", &UFortSquadSlotDetailsPanel::execIsSquadSlotLockedBP },
+		{ "SetIdOfSquadSlotToManageBP", &UFortSquadSlotDetailsPanel::execSetIdOfSquadSlotToManageBP },
+		{ "SetScrollWidget", &UFortSquadSlotDetailsPanel::execSetScrollWidget },
+		{ "TryGetItemToPreviewInSlot", &UFortSquadSlotDetailsPanel::execTryGetItemToPreviewInSlot },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSquadSlotDetailsPanel_GetIdOfSquadSlotToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

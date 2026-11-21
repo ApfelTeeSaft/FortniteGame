@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPlayerInput();  // RVA 0x024B7E40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7720 (end 0x024B7742)
+// Original VA: 0x00000001424B7720 | File offset: 0x024B6D20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0398CE70) | Matching: see analysis/functions-uht-natives.json
+void UPlayerInput::StaticRegisterNativesUPlayerInput()
+{
+	UClass* Class = UPlayerInput::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearSmoothing", &UPlayerInput::execClearSmoothing },
+		{ "InvertAxis", &UPlayerInput::execInvertAxis },
+		{ "InvertAxisKey", &UPlayerInput::execInvertAxisKey },
+		{ "SetBind", &UPlayerInput::execSetBind },
+		{ "SetMouseSensitivity", &UPlayerInput::execSetMouseSensitivity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPlayerInput_ClearSmoothing_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

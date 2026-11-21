@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USphereComponent();  // RVA 0x024DC3A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB560 (end 0x024DB582)
+// Original VA: 0x00000001424DB560 | File offset: 0x024DAB60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039B7E50) | Matching: see analysis/functions-uht-natives.json
+void USphereComponent::StaticRegisterNativesUSphereComponent()
+{
+	UClass* Class = USphereComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetScaledSphereRadius", &USphereComponent::execGetScaledSphereRadius },
+		{ "GetShapeScale", &USphereComponent::execGetShapeScale },
+		{ "GetUnscaledSphereRadius", &USphereComponent::execGetUnscaledSphereRadius },
+		{ "SetSphereRadius", &USphereComponent::execSetSphereRadius },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USphereComponent_GetScaledSphereRadius_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

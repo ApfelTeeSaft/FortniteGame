@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemCategoryIndicator::StaticRegisterNativesUFortItemCategoryIndicator()
-{
-}
 // IMPLEMENT_CLASS(UFortItemCategoryIndicator, 3177564788u)
 // Original dynamic initializer: RVA 0x0024CCC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemCategoryIndicator> AutoInitializeUFortItemCategoryIndicator(TEXT("UFortItemCategoryIndicator"), sizeof(UFortItemCategoryIndicator), 3177564788u);

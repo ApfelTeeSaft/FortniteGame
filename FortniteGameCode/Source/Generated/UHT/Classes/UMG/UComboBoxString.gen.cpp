@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UComboBoxString::StaticRegisterNativesUComboBoxString()
-{
-}
 // IMPLEMENT_CLASS(UComboBoxString, 2334016628u)
 // Original dynamic initializer: RVA 0x001B1E00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UComboBoxString> AutoInitializeUComboBoxString(TEXT("UComboBoxString"), sizeof(UComboBoxString), 2334016628u);

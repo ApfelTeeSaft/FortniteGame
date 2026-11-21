@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTasksComponent();  // RVA 0x01C9AC70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AA30 (end 0x01C9AA52)
+// Original VA: 0x0000000141C9AA30 | File offset: 0x01C9A030
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036C6A10) | Matching: see analysis/functions-uht-natives.json
+void UGameplayTasksComponent::StaticRegisterNativesUGameplayTasksComponent()
+{
+	UClass* Class = UGameplayTasksComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "K2_RunGameplayTask", &UGameplayTasksComponent::execK2_RunGameplayTask },
+		{ "OnRep_SimulatedTasks", &UGameplayTasksComponent::execOnRep_SimulatedTasks },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameplayTasksComponent_K2_RunGameplayTask_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCMSContext();  // RVA 0x02887580 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886C90 (end 0x02886CB2)
+// Original VA: 0x0000000142886C90 | File offset: 0x02886290
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C5FAE0) | Matching: see analysis/functions-uht-natives.json
+void UCMSContext::StaticRegisterNativesUCMSContext()
+{
+	UClass* Class = UCMSContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLatestEmergencyNotice", &UCMSContext::execGetLatestEmergencyNotice },
+		{ "GetLatestNews", &UCMSContext::execGetLatestNews },
+		{ "IsNewNewsAvailable", &UCMSContext::execIsNewNewsAvailable },
+		{ "MarkNewsAsViewed", &UCMSContext::execMarkNewsAsViewed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCMSContext_GetLatestEmergencyNotice_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

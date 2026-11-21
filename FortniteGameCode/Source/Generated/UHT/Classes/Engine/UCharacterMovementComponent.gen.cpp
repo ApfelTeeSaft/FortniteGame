@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCharacterMovementComponent::StaticRegisterNativesUCharacterMovementComponent()
-{
-}
 // IMPLEMENT_CLASS(UCharacterMovementComponent, 3300660237u)
 // Original dynamic initializer: RVA 0x001F6470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCharacterMovementComponent> AutoInitializeUCharacterMovementComponent(TEXT("UCharacterMovementComponent"), sizeof(UCharacterMovementComponent), 3300660237u);

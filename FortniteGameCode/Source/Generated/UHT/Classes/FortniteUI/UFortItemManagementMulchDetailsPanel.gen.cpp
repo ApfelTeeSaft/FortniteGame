@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemManagementMulchDetailsPanel::StaticRegisterNativesUFortItemManagementMulchDetailsPanel()
-{
-}
 // IMPLEMENT_CLASS(UFortItemManagementMulchDetailsPanel, 2643596508u)
 // Original dynamic initializer: RVA 0x0024CF20 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemManagementMulchDetailsPanel> AutoInitializeUFortItemManagementMulchDetailsPanel(TEXT("UFortItemManagementMulchDetailsPanel"), sizeof(UFortItemManagementMulchDetailsPanel), 2643596508u);

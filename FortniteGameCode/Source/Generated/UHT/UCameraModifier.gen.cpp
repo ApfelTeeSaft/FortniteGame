@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCameraModifier();  // RVA 0x023EAA30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9F70 (end 0x023E9F92)
+// Original VA: 0x00000001423E9F70 | File offset: 0x023E9570
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B9CC0) | Matching: see analysis/functions-uht-natives.json
+void UCameraModifier::StaticRegisterNativesUCameraModifier()
+{
+	UClass* Class = UCameraModifier::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisableModifier", &UCameraModifier::execDisableModifier },
+		{ "EnableModifier", &UCameraModifier::execEnableModifier },
+		{ "GetViewTarget", &UCameraModifier::execGetViewTarget },
+		{ "IsDisabled", &UCameraModifier::execIsDisabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCameraModifier_BlueprintModifyCamera_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

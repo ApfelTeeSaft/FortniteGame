@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortThreatVisualsManager::StaticRegisterNativesAFortThreatVisualsManager()
-{
-}
 // IMPLEMENT_CLASS(AFortThreatVisualsManager, 498712444u)
 // Original dynamic initializer: RVA 0x001164E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortThreatVisualsManager> AutoInitializeAFortThreatVisualsManager(TEXT("AFortThreatVisualsManager"), sizeof(AFortThreatVisualsManager), 498712444u);

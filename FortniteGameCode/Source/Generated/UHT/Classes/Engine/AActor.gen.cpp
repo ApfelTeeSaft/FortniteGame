@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AActor::StaticRegisterNativesAActor()
-{
-}
 // IMPLEMENT_CLASS(AActor, 1269707568u)
 // Original dynamic initializer: RVA 0x001EBBB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AActor> AutoInitializeAActor(TEXT("AActor"), sizeof(AActor), 1269707568u);

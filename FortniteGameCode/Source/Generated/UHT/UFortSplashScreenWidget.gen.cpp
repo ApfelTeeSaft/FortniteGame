@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSplashScreenWidget();  // RVA 0x028F5860 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F50B0 (end 0x028F50D2)
+// Original VA: 0x00000001428F50B0 | File offset: 0x028F46B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D14DC8) | Matching: see analysis/functions-uht-natives.json
+void UFortSplashScreenWidget::StaticRegisterNativesUFortSplashScreenWidget()
+{
+	UClass* Class = UFortSplashScreenWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CloseSplashScreen", &UFortSplashScreenWidget::execCloseSplashScreen },
+		{ "ResetFromAccountLinkingFlow", &UFortSplashScreenWidget::execResetFromAccountLinkingFlow },
+		{ "ShouldBypassSplashScreen", &UFortSplashScreenWidget::execShouldBypassSplashScreen },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSplashScreenWidget_CloseSplashScreen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

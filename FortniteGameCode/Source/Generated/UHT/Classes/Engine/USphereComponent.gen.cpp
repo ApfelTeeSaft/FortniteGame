@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USphereComponent::StaticRegisterNativesUSphereComponent()
-{
-}
 // IMPLEMENT_CLASS(USphereComponent, 3768231627u)
 // Original dynamic initializer: RVA 0x0021C8D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USphereComponent> AutoInitializeUSphereComponent(TEXT("USphereComponent"), sizeof(USphereComponent), 3768231627u);

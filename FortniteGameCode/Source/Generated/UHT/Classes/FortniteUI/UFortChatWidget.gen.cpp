@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortChatWidget::StaticRegisterNativesUFortChatWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortChatWidget, 3997668755u)
 // Original dynamic initializer: RVA 0x00240360 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortChatWidget> AutoInitializeUFortChatWidget(TEXT("UFortChatWidget"), sizeof(UFortChatWidget), 3997668755u);

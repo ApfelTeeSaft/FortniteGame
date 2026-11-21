@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortKeybindWidget();  // RVA 0x028CF780 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF330 (end 0x028CF352)
+// Original VA: 0x00000001428CF330 | File offset: 0x028CE930
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CDA680) | Matching: see analysis/functions-uht-natives.json
+void UFortKeybindWidget::StaticRegisterNativesUFortKeybindWidget()
+{
+	UClass* Class = UFortKeybindWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBrushForKey", &UFortKeybindWidget::execGetBrushForKey },
+		{ "IsHoldKeybind", &UFortKeybindWidget::execIsHoldKeybind },
+		{ "SetBoundAction", &UFortKeybindWidget::execSetBoundAction },
+		{ "SetForcedHoldKeybind", &UFortKeybindWidget::execSetForcedHoldKeybind },
+		{ "SetForcedHoldKeybindStatus", &UFortKeybindWidget::execSetForcedHoldKeybindStatus },
+		{ "SetShowProgressCountDown", &UFortKeybindWidget::execSetShowProgressCountDown },
+		{ "StartHoldProgress", &UFortKeybindWidget::execStartHoldProgress },
+		{ "StopHoldProgress", &UFortKeybindWidget::execStopHoldProgress },
+		{ "UpdateKeybindWidget", &UFortKeybindWidget::execUpdateKeybindWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

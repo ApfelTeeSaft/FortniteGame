@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetCarousel();  // RVA 0x002D0540 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0270 (end 0x002D0292)
+// Original VA: 0x00000001402D0270 | File offset: 0x002CF870
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E863D0) | Matching: see analysis/functions-uht-natives.json
+void UCommonWidgetCarousel::StaticRegisterNativesUCommonWidgetCarousel()
+{
+	UClass* Class = UCommonWidgetCarousel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginAutoScrolling", &UCommonWidgetCarousel::execBeginAutoScrolling },
+		{ "EndAutoScrolling", &UCommonWidgetCarousel::execEndAutoScrolling },
+		{ "GetActiveWidgetIndex", &UCommonWidgetCarousel::execGetActiveWidgetIndex },
+		{ "GetWidgetAtIndex", &UCommonWidgetCarousel::execGetWidgetAtIndex },
+		{ "NextPage", &UCommonWidgetCarousel::execNextPage },
+		{ "PreviousPage", &UCommonWidgetCarousel::execPreviousPage },
+		{ "SetActiveWidget", &UCommonWidgetCarousel::execSetActiveWidget },
+		{ "SetActiveWidgetIndex", &UCommonWidgetCarousel::execSetActiveWidgetIndex },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonWidgetCarousel_BeginAutoScrolling_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

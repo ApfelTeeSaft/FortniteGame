@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTutorialContext();  // RVA 0x0290A8E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A680 (end 0x0290A6A2)
+// Original VA: 0x000000014290A680 | File offset: 0x02909C80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3C470) | Matching: see analysis/functions-uht-natives.json
+void UFortTutorialContext::StaticRegisterNativesUFortTutorialContext()
+{
+	UClass* Class = UFortTutorialContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearTutorialCallouts", &UFortTutorialContext::execClearTutorialCallouts },
+		{ "ContinueTutorial", &UFortTutorialContext::execContinueTutorial },
+		{ "DisableTutorialCallout", &UFortTutorialContext::execDisableTutorialCallout },
+		{ "EnableTutorialCallout", &UFortTutorialContext::execEnableTutorialCallout },
+		{ "GetHiddenTutorialCallouts", &UFortTutorialContext::execGetHiddenTutorialCallouts },
+		{ "GetTutorialCallouts", &UFortTutorialContext::execGetTutorialCallouts },
+		{ "HideTutorialCallout", &UFortTutorialContext::execHideTutorialCallout },
+		{ "OnNewAnnouncementStartedOnClient", &UFortTutorialContext::execOnNewAnnouncementStartedOnClient },
+		{ "ShouldPromptToSkipTutorial", &UFortTutorialContext::execShouldPromptToSkipTutorial },
+		{ "SkipTutorial", &UFortTutorialContext::execSkipTutorial },
+		{ "UnhideAllTutorialCallouts", &UFortTutorialContext::execUnhideAllTutorialCallouts },
+		{ "UnhideTutorialCallout", &UFortTutorialContext::execUnhideTutorialCallout },
+		{ "UpdateTutorialAnnouncement", &UFortTutorialContext::execUpdateTutorialAnnouncement },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTutorialContext_ClearTutorialCallouts_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

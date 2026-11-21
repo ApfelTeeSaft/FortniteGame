@@ -6,6 +6,85 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpContext();  // RVA 0x01023C20 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010235B0 (end 0x010235D2)
+// Original VA: 0x00000001410235B0 | File offset: 0x01022BB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03368920) | Matching: see analysis/functions-uht-natives.json
+void UFortMcpContext::StaticRegisterNativesUFortMcpContext()
+{
+	UClass* Class = UFortMcpContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AbandonExpedition", &UFortMcpContext::execAbandonExpedition },
+		{ "ApplyAlteration", &UFortMcpContext::execApplyAlteration },
+		{ "AreMissionRewardsAvailable", &UFortMcpContext::execAreMissionRewardsAvailable },
+		{ "CancelEpicPurchasingDisplay", &UFortMcpContext::execCancelEpicPurchasingDisplay },
+		{ "CancelLoginFlowDisplay", &UFortMcpContext::execCancelLoginFlowDisplay },
+		{ "CanPurchaseOffer", &UFortMcpContext::execCanPurchaseOffer },
+		{ "ClaimAllResourceCollectors", &UFortMcpContext::execClaimAllResourceCollectors },
+		{ "ClaimResourceCollectors", &UFortMcpContext::execClaimResourceCollectors },
+		{ "CollectExpedition", &UFortMcpContext::execCollectExpedition },
+		{ "ConvertItem", &UFortMcpContext::execConvertItem },
+		{ "DisplayEmptyStoreDialog", &UFortMcpContext::execDisplayEmptyStoreDialog },
+		{ "DoesPlatformSupportFriendCodes", &UFortMcpContext::execDoesPlatformSupportFriendCodes },
+		{ "DownloadEULA", &UFortMcpContext::execDownloadEULA },
+		{ "GetAccountItemWithDefinition", &UFortMcpContext::execGetAccountItemWithDefinition },
+		{ "GetAllAlterations", &UFortMcpContext::execGetAllAlterations },
+		{ "GetAllHeroes", &UFortMcpContext::execGetAllHeroes },
+		{ "GetAllResourceCollectors", &UFortMcpContext::execGetAllResourceCollectors },
+		{ "GetAppName", &UFortMcpContext::execGetAppName },
+		{ "GetAthenaProfile", &UFortMcpContext::execGetAthenaProfile },
+		{ "GetBattlePassInfoForPlayer", &UFortMcpContext::execGetBattlePassInfoForPlayer },
+		{ "GetCurrentlyViewedAccountInfo", &UFortMcpContext::execGetCurrentlyViewedAccountInfo },
+		{ "GetDefaultHero", &UFortMcpContext::execGetDefaultHero },
+		{ "GetEULAText", &UFortMcpContext::execGetEULAText },
+		{ "GetFriendCodeDescription", &UFortMcpContext::execGetFriendCodeDescription },
+		{ "GetFriendCodeDisplayName", &UFortMcpContext::execGetFriendCodeDisplayName },
+		{ "GetGroupXpBonusPercent", &UFortMcpContext::execGetGroupXpBonusPercent },
+		{ "GetHeroXpBalance", &UFortMcpContext::execGetHeroXpBalance },
+		{ "GetHomeBaseInfo", &UFortMcpContext::execGetHomeBaseInfo },
+		{ "GetHomeBaseInfoForPlayer", &UFortMcpContext::execGetHomeBaseInfoForPlayer },
+		{ "GetLoadoutForPlayer", &UFortMcpContext::execGetLoadoutForPlayer },
+		{ "GetLocalAccountInfo", &UFortMcpContext::execGetLocalAccountInfo },
+		{ "GetLoginStatusText", &UFortMcpContext::execGetLoginStatusText },
+		{ "GetMcpProfile", &UFortMcpContext::execGetMcpProfile },
+		{ "GetNumFriendCodesToIssue", &UFortMcpContext::execGetNumFriendCodesToIssue },
+		{ "GetPersonalXpBonusPercent", &UFortMcpContext::execGetPersonalXpBonusPercent },
+		{ "GetPersonnelXpBalance", &UFortMcpContext::execGetPersonnelXpBalance },
+		{ "GetPlayersXPPercentContributionToLocalPlayer", &UFortMcpContext::execGetPlayersXPPercentContributionToLocalPlayer },
+		{ "GetRestXpBalance", &UFortMcpContext::execGetRestXpBalance },
+		{ "GetRestXpBonusPercent", &UFortMcpContext::execGetRestXpBonusPercent },
+		{ "GetSchematicXpBalance", &UFortMcpContext::execGetSchematicXpBalance },
+		{ "GetTencentIdString", &UFortMcpContext::execGetTencentIdString },
+		{ "GetUpgradeXPBalance", &UFortMcpContext::execGetUpgradeXPBalance },
+		{ "GetXpBoostBalance", &UFortMcpContext::execGetXpBoostBalance },
+		{ "GrantPendingDifficultyIncreaseRewards", &UFortMcpContext::execGrantPendingDifficultyIncreaseRewards },
+		{ "GrantPendingMissionAlertRewards", &UFortMcpContext::execGrantPendingMissionAlertRewards },
+		{ "HasEULADownloaded", &UFortMcpContext::execHasEULADownloaded },
+		{ "HasPendingDifficultyIncreaseRewards", &UFortMcpContext::execHasPendingDifficultyIncreaseRewards },
+		{ "HasPendingMissionAlertRewards", &UFortMcpContext::execHasPendingMissionAlertRewards },
+		{ "IsAllowedConversionIndex", &UFortMcpContext::execIsAllowedConversionIndex },
+		{ "IsDailyRewardAvailable", &UFortMcpContext::execIsDailyRewardAvailable },
+		{ "IsLocalPlayersUniqueID", &UFortMcpContext::execIsLocalPlayersUniqueID },
+		{ "IsOwned", &UFortMcpContext::execIsOwned },
+		{ "IssueFriendCode", &UFortMcpContext::execIssueFriendCode },
+		{ "ListMtxPackages", &UFortMcpContext::execListMtxPackages },
+		{ "MarkItemSeen", &UFortMcpContext::execMarkItemSeen },
+		{ "OpenMissionRewards", &UFortMcpContext::execOpenMissionRewards },
+		{ "PurchaseOffer", &UFortMcpContext::execPurchaseOffer },
+		{ "PurchaseRealMoneyCatalogEntry", &UFortMcpContext::execPurchaseRealMoneyCatalogEntry },
+		{ "QueryUnredeemedFriendCodes", &UFortMcpContext::execQueryUnredeemedFriendCodes },
+		{ "RecycleItem", &UFortMcpContext::execRecycleItem },
+		{ "RecycleItemBatch", &UFortMcpContext::execRecycleItemBatch },
+		{ "RegisterForEpicPurchasingDisplay", &UFortMcpContext::execRegisterForEpicPurchasingDisplay },
+		{ "RegisterForLoginFlow", &UFortMcpContext::execRegisterForLoginFlow },
+		{ "SendFriendCodePlatformMessage", &UFortMcpContext::execSendFriendCodePlatformMessage },
+		{ "SetItemFavoriteStatus", &UFortMcpContext::execSetItemFavoriteStatus },
+		{ "StartExpedition", &UFortMcpContext::execStartExpedition },
+		{ "TransmogItem", &UFortMcpContext::execTransmogItem },
+		{ "UpgradeItemRarity", &UFortMcpContext::execUpgradeItemRarity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

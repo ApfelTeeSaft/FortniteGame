@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionBuildSquadWidget();  // RVA 0x028A3530 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2F50 (end 0x028A2F72)
+// Original VA: 0x00000001428A2F50 | File offset: 0x028A2550
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8F1D0) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionBuildSquadWidget::StaticRegisterNativesUFortExpeditionBuildSquadWidget()
+{
+	UClass* Class = UFortExpeditionBuildSquadWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearTemporaryExpeditionSquadState", &UFortExpeditionBuildSquadWidget::execClearTemporaryExpeditionSquadState },
+		{ "HandleDifferentSquadSlotSelected", &UFortExpeditionBuildSquadWidget::execHandleDifferentSquadSlotSelected },
+		{ "HandleStartExpeditionCompleted", &UFortExpeditionBuildSquadWidget::execHandleStartExpeditionCompleted },
+		{ "IsExpeditionValidToStart", &UFortExpeditionBuildSquadWidget::execIsExpeditionValidToStart },
+		{ "IsSquadSlotLocked", &UFortExpeditionBuildSquadWidget::execIsSquadSlotLocked },
+		{ "OnRefreshBuildSquadWidget", &UFortExpeditionBuildSquadWidget::execOnRefreshBuildSquadWidget },
+		{ "OnStartExpeditionCompleted", &UFortExpeditionBuildSquadWidget::execOnStartExpeditionCompleted },
+		{ "SetCurrentSquadId", &UFortExpeditionBuildSquadWidget::execSetCurrentSquadId },
+		{ "SetData", &UFortExpeditionBuildSquadWidget::execSetData },
+		{ "StartExpedition", &UFortExpeditionBuildSquadWidget::execStartExpedition },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_ClearTemporaryExpeditionSquadState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

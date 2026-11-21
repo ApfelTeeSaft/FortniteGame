@@ -6,6 +6,61 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayAbility();  // RVA 0x0054D8F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D110 (end 0x0054D132)
+// Original VA: 0x000000014054D110 | File offset: 0x0054C710
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F33D90) | Matching: see analysis/functions-uht-natives.json
+void UGameplayAbility::StaticRegisterNativesUGameplayAbility()
+{
+	UClass* Class = UGameplayAbility::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BP_ApplyGameplayEffectToOwner", &UGameplayAbility::execBP_ApplyGameplayEffectToOwner },
+		{ "BP_ApplyGameplayEffectToTarget", &UGameplayAbility::execBP_ApplyGameplayEffectToTarget },
+		{ "BP_RemoveGameplayEffectFromOwnerWithAssetTags", &UGameplayAbility::execBP_RemoveGameplayEffectFromOwnerWithAssetTags },
+		{ "BP_RemoveGameplayEffectFromOwnerWithGrantedTags", &UGameplayAbility::execBP_RemoveGameplayEffectFromOwnerWithGrantedTags },
+		{ "BP_RemoveGameplayEffectFromOwnerWithHandle", &UGameplayAbility::execBP_RemoveGameplayEffectFromOwnerWithHandle },
+		{ "CancelTaskByInstanceName", &UGameplayAbility::execCancelTaskByInstanceName },
+		{ "ConfirmTaskByInstanceName", &UGameplayAbility::execConfirmTaskByInstanceName },
+		{ "EndAbilityState", &UGameplayAbility::execEndAbilityState },
+		{ "EndTaskByInstanceName", &UGameplayAbility::execEndTaskByInstanceName },
+		{ "GetAbilityLevel", &UGameplayAbility::execGetAbilityLevel },
+		{ "GetActorInfo", &UGameplayAbility::execGetActorInfo },
+		{ "GetAvatarActorFromActorInfo", &UGameplayAbility::execGetAvatarActorFromActorInfo },
+		{ "GetContextFromOwner", &UGameplayAbility::execGetContextFromOwner },
+		{ "GetCooldownTimeRemaining", &UGameplayAbility::execGetCooldownTimeRemaining },
+		{ "GetCurrentMontage", &UGameplayAbility::execGetCurrentMontage },
+		{ "GetCurrentSourceObject", &UGameplayAbility::execGetCurrentSourceObject },
+		{ "GetGrantedByEffectContext", &UGameplayAbility::execGetGrantedByEffectContext },
+		{ "GetOwningActorFromActorInfo", &UGameplayAbility::execGetOwningActorFromActorInfo },
+		{ "GetOwningComponentFromActorInfo", &UGameplayAbility::execGetOwningComponentFromActorInfo },
+		{ "InvalidateClientPredictionKey", &UGameplayAbility::execInvalidateClientPredictionKey },
+		{ "K2_AddGameplayCue", &UGameplayAbility::execK2_AddGameplayCue },
+		{ "K2_AddGameplayCueWithParams", &UGameplayAbility::execK2_AddGameplayCueWithParams },
+		{ "K2_ApplyGameplayEffectSpecToOwner", &UGameplayAbility::execK2_ApplyGameplayEffectSpecToOwner },
+		{ "K2_ApplyGameplayEffectSpecToTarget", &UGameplayAbility::execK2_ApplyGameplayEffectSpecToTarget },
+		{ "K2_CancelAbility", &UGameplayAbility::execK2_CancelAbility },
+		{ "K2_CheckAbilityCooldown", &UGameplayAbility::execK2_CheckAbilityCooldown },
+		{ "K2_CheckAbilityCost", &UGameplayAbility::execK2_CheckAbilityCost },
+		{ "K2_CommitAbility", &UGameplayAbility::execK2_CommitAbility },
+		{ "K2_CommitAbilityCooldown", &UGameplayAbility::execK2_CommitAbilityCooldown },
+		{ "K2_CommitAbilityCost", &UGameplayAbility::execK2_CommitAbilityCost },
+		{ "K2_EndAbility", &UGameplayAbility::execK2_EndAbility },
+		{ "K2_ExecuteGameplayCue", &UGameplayAbility::execK2_ExecuteGameplayCue },
+		{ "K2_ExecuteGameplayCueWithParams", &UGameplayAbility::execK2_ExecuteGameplayCueWithParams },
+		{ "K2_RemoveGameplayCue", &UGameplayAbility::execK2_RemoveGameplayCue },
+		{ "MakeOutgoingGameplayEffectSpec", &UGameplayAbility::execMakeOutgoingGameplayEffectSpec },
+		{ "MakeTargetLocationInfoFromOwnerActor", &UGameplayAbility::execMakeTargetLocationInfoFromOwnerActor },
+		{ "MakeTargetLocationInfoFromOwnerSkeletalMeshComponent", &UGameplayAbility::execMakeTargetLocationInfoFromOwnerSkeletalMeshComponent },
+		{ "MontageJumpToSection", &UGameplayAbility::execMontageJumpToSection },
+		{ "MontageSetNextSectionName", &UGameplayAbility::execMontageSetNextSectionName },
+		{ "MontageStop", &UGameplayAbility::execMontageStop },
+		{ "RemoveGrantedByEffect", &UGameplayAbility::execRemoveGrantedByEffect },
+		{ "SendGameplayEvent", &UGameplayAbility::execSendGameplayEvent },
+		{ "SetCanBeCanceled", &UGameplayAbility::execSetCanBeCanceled },
+		{ "SetShouldBlockOtherAbilities", &UGameplayAbility::execSetShouldBlockOtherAbilities },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameplayAbility_BP_ApplyGameplayEffectToOwner_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

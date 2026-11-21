@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFOBCoreActor();  // RVA 0x00F6C1A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BCF0 (end 0x00F6BD12)
+// Original VA: 0x0000000140F6BCF0 | File offset: 0x00F6B2F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03276C20) | Matching: see analysis/functions-uht-natives.json
+void ABuildingFOBCoreActor::StaticRegisterNativesABuildingFOBCoreActor()
+{
+	UClass* Class = ABuildingFOBCoreActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFOBBoundsBoxOverlappedActors", &ABuildingFOBCoreActor::execGetFOBBoundsBoxOverlappedActors },
+		{ "GetFOBBoundsCenterAndExtents", &ABuildingFOBCoreActor::execGetFOBBoundsCenterAndExtents },
+		{ "GetSimpleDeathFXTransform", &ABuildingFOBCoreActor::execGetSimpleDeathFXTransform },
+		{ "IsActive", &ABuildingFOBCoreActor::execIsActive },
+		{ "IsActorWithinFOBBounds", &ABuildingFOBCoreActor::execIsActorWithinFOBBounds },
+		{ "MarkTargetable", &ABuildingFOBCoreActor::execMarkTargetable },
+		{ "MarkVulnerable", &ABuildingFOBCoreActor::execMarkVulnerable },
+		{ "OnActiveStatusChanged", &ABuildingFOBCoreActor::execOnActiveStatusChanged },
+		{ "OnRep_bActive", &ABuildingFOBCoreActor::execOnRep_bActive },
+		{ "OnRep_bTargetable", &ABuildingFOBCoreActor::execOnRep_bTargetable },
+		{ "OnRep_bVulnerable", &ABuildingFOBCoreActor::execOnRep_bVulnerable },
+		{ "OnTargetableStatusChanged", &ABuildingFOBCoreActor::execOnTargetableStatusChanged },
+		{ "OnVulnerableStatusChanged", &ABuildingFOBCoreActor::execOnVulnerableStatusChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingFOBCoreActor_GetFOBBoundsBoxOverlappedActors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

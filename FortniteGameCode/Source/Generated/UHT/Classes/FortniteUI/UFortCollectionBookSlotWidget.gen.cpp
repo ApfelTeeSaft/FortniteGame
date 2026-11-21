@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortCollectionBookSlotWidget::StaticRegisterNativesUFortCollectionBookSlotWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortCollectionBookSlotWidget, 3440958683u)
 // Original dynamic initializer: RVA 0x00242650 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookSlotWidget> AutoInitializeUFortCollectionBookSlotWidget(TEXT("UFortCollectionBookSlotWidget"), sizeof(UFortCollectionBookSlotWidget), 3440958683u);

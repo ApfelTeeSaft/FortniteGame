@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemGroupSlotWidget();  // RVA 0x02918A00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918770 (end 0x02918792)
+// Original VA: 0x0000000142918770 | File offset: 0x02917D70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D55DF0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemGroupSlotWidget::StaticRegisterNativesUFortItemGroupSlotWidget()
+{
+	UClass* Class = UFortItemGroupSlotWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelSlottingPreview", &UFortItemGroupSlotWidget::execCancelSlottingPreview },
+		{ "CreatePickerWidget", &UFortItemGroupSlotWidget::execCreatePickerWidget },
+		{ "GetSquadId", &UFortItemGroupSlotWidget::execGetSquadId },
+		{ "HandleItemPickerSelectionCommittedInternal", &UFortItemGroupSlotWidget::execHandleItemPickerSelectionCommittedInternal },
+		{ "InitializeSlot", &UFortItemGroupSlotWidget::execInitializeSlot },
+		{ "IsItemCompatible", &UFortItemGroupSlotWidget::execIsItemCompatible },
+		{ "IsManagerSlot", &UFortItemGroupSlotWidget::execIsManagerSlot },
+		{ "SetItem", &UFortItemGroupSlotWidget::execSetItem },
+		{ "SetSlottingPreviewItem", &UFortItemGroupSlotWidget::execSetSlottingPreviewItem },
+		{ "TryGetSquad", &UFortItemGroupSlotWidget::execTryGetSquad },
+		{ "TryGetSquadSlot", &UFortItemGroupSlotWidget::execTryGetSquadSlot },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

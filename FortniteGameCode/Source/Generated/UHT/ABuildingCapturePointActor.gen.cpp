@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingCapturePointActor();  // RVA 0x00F66440 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F65FC0 (end 0x00F65FE2)
+// Original VA: 0x0000000140F65FC0 | File offset: 0x00F655C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0326F670) | Matching: see analysis/functions-uht-natives.json
+void ABuildingCapturePointActor::StaticRegisterNativesABuildingCapturePointActor()
+{
+	UClass* Class = ABuildingCapturePointActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCaptureState", &ABuildingCapturePointActor::execGetCaptureState },
+		{ "OnCapturePointActiveStateChange", &ABuildingCapturePointActor::execOnCapturePointActiveStateChange },
+		{ "OnCapturePointLockStateChange", &ABuildingCapturePointActor::execOnCapturePointLockStateChange },
+		{ "OnCapturePointStateChange", &ABuildingCapturePointActor::execOnCapturePointStateChange },
+		{ "OnEnterCapturePoint", &ABuildingCapturePointActor::execOnEnterCapturePoint },
+		{ "OnLeaveCapturePoint", &ABuildingCapturePointActor::execOnLeaveCapturePoint },
+		{ "OnRep_bActivated", &ABuildingCapturePointActor::execOnRep_bActivated },
+		{ "OnRep_bLocked", &ABuildingCapturePointActor::execOnRep_bLocked },
+		{ "OnRep_CaptureState", &ABuildingCapturePointActor::execOnRep_CaptureState },
+		{ "OnRep_ReplicatedCapturePercentage", &ABuildingCapturePointActor::execOnRep_ReplicatedCapturePercentage },
+		{ "SetActivatedState", &ABuildingCapturePointActor::execSetActivatedState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

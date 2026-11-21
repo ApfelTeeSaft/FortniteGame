@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameplayAbilityTargetActor();  // RVA 0x0055BD40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055AFF0 (end 0x0055B012)
+// Original VA: 0x000000014055AFF0 | File offset: 0x0055A5F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F3BB08) | Matching: see analysis/functions-uht-natives.json
+void AGameplayAbilityTargetActor::StaticRegisterNativesAGameplayAbilityTargetActor()
+{
+	UClass* Class = AGameplayAbilityTargetActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelTargeting", &AGameplayAbilityTargetActor::execCancelTargeting },
+		{ "ConfirmTargeting", &AGameplayAbilityTargetActor::execConfirmTargeting },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AGameplayAbilityTargetActor_CancelTargeting_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

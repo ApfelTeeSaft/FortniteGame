@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingContainer();  // RVA 0x00F664D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F65FF0 (end 0x00F66012)
+// Original VA: 0x0000000140F65FF0 | File offset: 0x00F655F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0326FE70) | Matching: see analysis/functions-uht-natives.json
+void ABuildingContainer::StaticRegisterNativesABuildingContainer()
+{
+	UClass* Class = ABuildingContainer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BounceContainer", &ABuildingContainer::execBounceContainer },
+		{ "GetLootTier", &ABuildingContainer::execGetLootTier },
+		{ "OnRep_bAlreadySearched", &ABuildingContainer::execOnRep_bAlreadySearched },
+		{ "RaiseTreasure", &ABuildingContainer::execRaiseTreasure },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingContainer_BounceContainer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

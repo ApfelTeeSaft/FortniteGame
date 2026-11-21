@@ -6,6 +6,75 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerAthena();  // RVA 0x01077630 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010773F0 (end 0x01077412)
+// Original VA: 0x00000001410773F0 | File offset: 0x010769F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C1D80) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerAthena::StaticRegisterNativesAFortPlayerControllerAthena()
+{
+	UClass* Class = AFortPlayerControllerAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelSoloMatchmaking", &AFortPlayerControllerAthena::execCancelSoloMatchmaking },
+		{ "CanFollowTeammate", &AFortPlayerControllerAthena::execCanFollowTeammate },
+		{ "CanQueueForSoloMatchmaking", &AFortPlayerControllerAthena::execCanQueueForSoloMatchmaking },
+		{ "ClientBotStartDogpile", &AFortPlayerControllerAthena::execClientBotStartDogpile },
+		{ "ClientBotStopDogpile", &AFortPlayerControllerAthena::execClientBotStopDogpile },
+		{ "ClientNotifyTeamWon", &AFortPlayerControllerAthena::execClientNotifyTeamWon },
+		{ "ClientNotifyWon", &AFortPlayerControllerAthena::execClientNotifyWon },
+		{ "ClientReceiveSquadQuickChatMessage", &AFortPlayerControllerAthena::execClientReceiveSquadQuickChatMessage },
+		{ "ClientSendEndBattleRoyaleMatchForPlayer", &AFortPlayerControllerAthena::execClientSendEndBattleRoyaleMatchForPlayer },
+		{ "ClientSendMatchStatsForPlayer", &AFortPlayerControllerAthena::execClientSendMatchStatsForPlayer },
+		{ "ClientSendTeamStatsForPlayer", &AFortPlayerControllerAthena::execClientSendTeamStatsForPlayer },
+		{ "ClientUnreliableSendMessage", &AFortPlayerControllerAthena::execClientUnreliableSendMessage },
+		{ "ClientVoiceChat3DChannelJoin", &AFortPlayerControllerAthena::execClientVoiceChat3DChannelJoin },
+		{ "ClientVoiceChatChannelJoin", &AFortPlayerControllerAthena::execClientVoiceChatChannelJoin },
+		{ "ClientVoiceChatLogin", &AFortPlayerControllerAthena::execClientVoiceChatLogin },
+		{ "FollowNextTeammate", &AFortPlayerControllerAthena::execFollowNextTeammate },
+		{ "FollowPreviousTeammate", &AFortPlayerControllerAthena::execFollowPreviousTeammate },
+		{ "FullscreenMapCursorHorizontal", &AFortPlayerControllerAthena::execFullscreenMapCursorHorizontal },
+		{ "FullscreenMapCursorHorizontal_Gamepad", &AFortPlayerControllerAthena::execFullscreenMapCursorHorizontal_Gamepad },
+		{ "FullscreenMapCursorPlace", &AFortPlayerControllerAthena::execFullscreenMapCursorPlace },
+		{ "FullscreenMapCursorRemove", &AFortPlayerControllerAthena::execFullscreenMapCursorRemove },
+		{ "FullscreenMapCursorVertical", &AFortPlayerControllerAthena::execFullscreenMapCursorVertical },
+		{ "FullscreenMapCursorVertical_Gamepad", &AFortPlayerControllerAthena::execFullscreenMapCursorVertical_Gamepad },
+		{ "GetFPSForHUD", &AFortPlayerControllerAthena::execGetFPSForHUD },
+		{ "GetMatchReport", &AFortPlayerControllerAthena::execGetMatchReport },
+		{ "GetRevertPlayerListenerChangeFlag", &AFortPlayerControllerAthena::execGetRevertPlayerListenerChangeFlag },
+		{ "GetSpectatingPlayerName", &AFortPlayerControllerAthena::execGetSpectatingPlayerName },
+		{ "GetSquadKills", &AFortPlayerControllerAthena::execGetSquadKills },
+		{ "HighlightNumberReturned", &AFortPlayerControllerAthena::execHighlightNumberReturned },
+		{ "IsInAircraft", &AFortPlayerControllerAthena::execIsInAircraft },
+		{ "IsSoloMatchmaking", &AFortPlayerControllerAthena::execIsSoloMatchmaking },
+		{ "IsSquadDead", &AFortPlayerControllerAthena::execIsSquadDead },
+		{ "IsTeamDead", &AFortPlayerControllerAthena::execIsTeamDead },
+		{ "MultiKillExpired", &AFortPlayerControllerAthena::execMultiKillExpired },
+		{ "MutePlayer", &AFortPlayerControllerAthena::execMutePlayer },
+		{ "OnRep_ViewTargetDBNO", &AFortPlayerControllerAthena::execOnRep_ViewTargetDBNO },
+		{ "OnRep_ViewTargetHealth", &AFortPlayerControllerAthena::execOnRep_ViewTargetHealth },
+		{ "OnRep_ViewTargetShield", &AFortPlayerControllerAthena::execOnRep_ViewTargetShield },
+		{ "QueueForSoloMatchmaking", &AFortPlayerControllerAthena::execQueueForSoloMatchmaking },
+		{ "ServerAttemptAircraftJump", &AFortPlayerControllerAthena::execServerAttemptAircraftJump },
+		{ "ServerAttemptExitVehicle", &AFortPlayerControllerAthena::execServerAttemptExitVehicle },
+		{ "ServerDBNOReviveInterrupted", &AFortPlayerControllerAthena::execServerDBNOReviveInterrupted },
+		{ "ServerDBNOReviveStarted", &AFortPlayerControllerAthena::execServerDBNOReviveStarted },
+		{ "ServerFollowTeammate", &AFortPlayerControllerAthena::execServerFollowTeammate },
+		{ "ServerGenerateMockMatchReport", &AFortPlayerControllerAthena::execServerGenerateMockMatchReport },
+		{ "ServerPlaceMapCursor", &AFortPlayerControllerAthena::execServerPlaceMapCursor },
+		{ "ServerPlaySquadQuickChatMessage", &AFortPlayerControllerAthena::execServerPlaySquadQuickChatMessage },
+		{ "ServerRemoveMapCursor", &AFortPlayerControllerAthena::execServerRemoveMapCursor },
+		{ "ServerSendSquadFriend", &AFortPlayerControllerAthena::execServerSendSquadFriend },
+		{ "ServerVoiceChatReconnected", &AFortPlayerControllerAthena::execServerVoiceChatReconnected },
+		{ "ServerVoiceChatRejoinChannel", &AFortPlayerControllerAthena::execServerVoiceChatRejoinChannel },
+		{ "ShowHighlightSummary", &AFortPlayerControllerAthena::execShowHighlightSummary },
+		{ "SpawnVehicle", &AFortPlayerControllerAthena::execSpawnVehicle },
+		{ "SpectateOnDeath", &AFortPlayerControllerAthena::execSpectateOnDeath },
+		{ "StopRecordingHighlights", &AFortPlayerControllerAthena::execStopRecordingHighlights },
+		{ "UnMutePlayer", &AFortPlayerControllerAthena::execUnMutePlayer },
+		{ "UpdateRichPresenceTimer", &AFortPlayerControllerAthena::execUpdateRichPresenceTimer },
+		{ "VoiceChatChannelJoinFailed", &AFortPlayerControllerAthena::execVoiceChatChannelJoinFailed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerAthena_CancelSoloMatchmaking_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

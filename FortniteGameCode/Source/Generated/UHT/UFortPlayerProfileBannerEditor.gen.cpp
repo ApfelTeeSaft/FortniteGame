@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerProfileBannerEditor();  // RVA 0x028E6D00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6590 (end 0x028E65B2)
+// Original VA: 0x00000001428E6590 | File offset: 0x028E5B90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFF670) | Matching: see analysis/functions-uht-natives.json
+void UFortPlayerProfileBannerEditor::StaticRegisterNativesUFortPlayerProfileBannerEditor()
+{
+	UClass* Class = UFortPlayerProfileBannerEditor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CommitChosenIconAndColor", &UFortPlayerProfileBannerEditor::execCommitChosenIconAndColor },
+		{ "HandleEditorActivated", &UFortPlayerProfileBannerEditor::execHandleEditorActivated },
+		{ "HandleEditorDeactivated", &UFortPlayerProfileBannerEditor::execHandleEditorDeactivated },
+		{ "RefreshBannerEditor", &UFortPlayerProfileBannerEditor::execRefreshBannerEditor },
+		{ "SetBannerColor", &UFortPlayerProfileBannerEditor::execSetBannerColor },
+		{ "SetBannerIcon", &UFortPlayerProfileBannerEditor::execSetBannerIcon },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPlayerProfileBannerEditor_CommitChosenIconAndColor_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

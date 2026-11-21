@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortAthenaSMVehicle::StaticRegisterNativesAFortAthenaSMVehicle()
-{
-}
 // IMPLEMENT_CLASS(AFortAthenaSMVehicle, 3102829223u)
 // Original dynamic initializer: RVA 0x000E66B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAthenaSMVehicle> AutoInitializeAFortAthenaSMVehicle(TEXT("AFortAthenaSMVehicle"), sizeof(AFortAthenaSMVehicle), 3102829223u);

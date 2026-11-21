@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UStereoLayerFunctionLibrary();  // RVA 0x024E7A00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7070 (end 0x024E7092)
+// Original VA: 0x00000001424E7070 | File offset: 0x024E6670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039C40D0) | Matching: see analysis/functions-uht-natives.json
+void UStereoLayerFunctionLibrary::StaticRegisterNativesUStereoLayerFunctionLibrary()
+{
+	UClass* Class = UStereoLayerFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EnableAutoLoadingSplashScreen", &UStereoLayerFunctionLibrary::execEnableAutoLoadingSplashScreen },
+		{ "HideSplashScreen", &UStereoLayerFunctionLibrary::execHideSplashScreen },
+		{ "SetSplashScreen", &UStereoLayerFunctionLibrary::execSetSplashScreen },
+		{ "ShowSplashScreen", &UStereoLayerFunctionLibrary::execShowSplashScreen },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UStereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerDeployableBase();  // RVA 0x01077670 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077420 (end 0x01077442)
+// Original VA: 0x0000000141077420 | File offset: 0x01076A20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C2A30) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerDeployableBase::StaticRegisterNativesAFortPlayerControllerDeployableBase()
+{
+	UClass* Class = AFortPlayerControllerDeployableBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientOnHordeTierComplete", &AFortPlayerControllerDeployableBase::execClientOnHordeTierComplete },
+		{ "ClientOnHordeTierInitialized", &AFortPlayerControllerDeployableBase::execClientOnHordeTierInitialized },
+		{ "ClientOnHordeWaveComplete", &AFortPlayerControllerDeployableBase::execClientOnHordeWaveComplete },
+		{ "MoveAllItemsFromDeployableBase", &AFortPlayerControllerDeployableBase::execMoveAllItemsFromDeployableBase },
+		{ "MoveAllItemsToDeployableBase", &AFortPlayerControllerDeployableBase::execMoveAllItemsToDeployableBase },
+		{ "MoveItemFromDeployableBase", &AFortPlayerControllerDeployableBase::execMoveItemFromDeployableBase },
+		{ "MoveItemToDeployableBase", &AFortPlayerControllerDeployableBase::execMoveItemToDeployableBase },
+		{ "ServerMoveAllItemsFromDeployableBase", &AFortPlayerControllerDeployableBase::execServerMoveAllItemsFromDeployableBase },
+		{ "ServerMoveAllItemsToDeployableBase", &AFortPlayerControllerDeployableBase::execServerMoveAllItemsToDeployableBase },
+		{ "ServerMoveItemFromDeployableBase", &AFortPlayerControllerDeployableBase::execServerMoveItemFromDeployableBase },
+		{ "ServerMoveItemToDeployableBase", &AFortPlayerControllerDeployableBase::execServerMoveItemToDeployableBase },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ClientOnHordeTierComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

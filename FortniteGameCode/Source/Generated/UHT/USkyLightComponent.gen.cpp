@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USkyLightComponent();  // RVA 0x024D5170 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4620 (end 0x024D4642)
+// Original VA: 0x00000001424D4620 | File offset: 0x024D3C20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039AF050) | Matching: see analysis/functions-uht-natives.json
+void USkyLightComponent::StaticRegisterNativesUSkyLightComponent()
+{
+	UClass* Class = USkyLightComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RecaptureSky", &USkyLightComponent::execRecaptureSky },
+		{ "SetCubemap", &USkyLightComponent::execSetCubemap },
+		{ "SetCubemapBlend", &USkyLightComponent::execSetCubemapBlend },
+		{ "SetIndirectLightingIntensity", &USkyLightComponent::execSetIndirectLightingIntensity },
+		{ "SetIntensity", &USkyLightComponent::execSetIntensity },
+		{ "SetLightColor", &USkyLightComponent::execSetLightColor },
+		{ "SetLowerHemisphereColor", &USkyLightComponent::execSetLowerHemisphereColor },
+		{ "SetMinOcclusion", &USkyLightComponent::execSetMinOcclusion },
+		{ "SetOcclusionContrast", &USkyLightComponent::execSetOcclusionContrast },
+		{ "SetOcclusionExponent", &USkyLightComponent::execSetOcclusionExponent },
+		{ "SetOcclusionTint", &USkyLightComponent::execSetOcclusionTint },
+		{ "SetVolumetricScatteringIntensity", &USkyLightComponent::execSetVolumetricScatteringIntensity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USkyLightComponent_RecaptureSky_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

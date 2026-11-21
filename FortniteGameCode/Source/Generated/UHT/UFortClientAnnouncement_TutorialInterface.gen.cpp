@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface();  // RVA 0x00FC02B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFBA0 (end 0x00FBFBC2)
+// Original VA: 0x0000000140FBFBA0 | File offset: 0x00FBF1A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032E60F0) | Matching: see analysis/functions-uht-natives.json
+void UFortClientAnnouncement_TutorialInterface::StaticRegisterNativesUFortClientAnnouncement_TutorialInterface()
+{
+	UClass* Class = UFortClientAnnouncement_TutorialInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HideTutorialWidget", &UFortClientAnnouncement_TutorialInterface::execHideTutorialWidget },
+		{ "SetButtonEnabled", &UFortClientAnnouncement_TutorialInterface::execSetButtonEnabled },
+		{ "SetDetailText", &UFortClientAnnouncement_TutorialInterface::execSetDetailText },
+		{ "SetHAlign", &UFortClientAnnouncement_TutorialInterface::execSetHAlign },
+		{ "SetLightboxDisableInputOnly", &UFortClientAnnouncement_TutorialInterface::execSetLightboxDisableInputOnly },
+		{ "SetLightboxEnabled", &UFortClientAnnouncement_TutorialInterface::execSetLightboxEnabled },
+		{ "SetNameText", &UFortClientAnnouncement_TutorialInterface::execSetNameText },
+		{ "SetPadding", &UFortClientAnnouncement_TutorialInterface::execSetPadding },
+		{ "SetSystemText", &UFortClientAnnouncement_TutorialInterface::execSetSystemText },
+		{ "SetTitleText", &UFortClientAnnouncement_TutorialInterface::execSetTitleText },
+		{ "SetVAlign", &UFortClientAnnouncement_TutorialInterface::execSetVAlign },
+		{ "WaitForContinue", &UFortClientAnnouncement_TutorialInterface::execWaitForContinue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_HideTutorialWidget_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

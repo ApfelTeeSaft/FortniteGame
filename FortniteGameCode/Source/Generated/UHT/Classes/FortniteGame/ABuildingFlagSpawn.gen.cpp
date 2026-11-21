@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingFlagSpawn::StaticRegisterNativesABuildingFlagSpawn()
-{
-}
 // IMPLEMENT_CLASS(ABuildingFlagSpawn, 619976150u)
 // Original dynamic initializer: RVA 0x000D9910 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingFlagSpawn> AutoInitializeABuildingFlagSpawn(TEXT("ABuildingFlagSpawn"), sizeof(ABuildingFlagSpawn), 619976150u);

@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAutomationPerfMonitorManager();  // RVA 0x00F61200 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60B70 (end 0x00F60B92)
+// Original VA: 0x0000000140F60B70 | File offset: 0x00F60170
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032684B0) | Matching: see analysis/functions-uht-natives.json
+void UAutomationPerfMonitorManager::StaticRegisterNativesUAutomationPerfMonitorManager()
+{
+	UClass* Class = UAutomationPerfMonitorManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPerfMonitorInstance", &UAutomationPerfMonitorManager::execGetPerfMonitorInstance },
+		{ "GetStatAverage", &UAutomationPerfMonitorManager::execGetStatAverage },
+		{ "IsRecordingFTestPerf", &UAutomationPerfMonitorManager::execIsRecordingFTestPerf },
+		{ "StartRecordingFTestPerf", &UAutomationPerfMonitorManager::execStartRecordingFTestPerf },
+		{ "StopRecordingFTestPerf", &UAutomationPerfMonitorManager::execStopRecordingFTestPerf },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAnalyticsBlueprintLibrary::StaticRegisterNativesUAnalyticsBlueprintLibrary()
-{
-}
 // IMPLEMENT_CLASS(UAnalyticsBlueprintLibrary, 2954254372u)
 // Original dynamic initializer: RVA 0x00228940 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAnalyticsBlueprintLibrary> AutoInitializeUAnalyticsBlueprintLibrary(TEXT("UAnalyticsBlueprintLibrary"), sizeof(UAnalyticsBlueprintLibrary), 2954254372u);

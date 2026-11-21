@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPhysicsHandleComponent();  // RVA 0x024A9E60 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9870 (end 0x024A9892)
+// Original VA: 0x00000001424A9870 | File offset: 0x024A8E70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03982780) | Matching: see analysis/functions-uht-natives.json
+void UPhysicsHandleComponent::StaticRegisterNativesUPhysicsHandleComponent()
+{
+	UClass* Class = UPhysicsHandleComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetGrabbedComponent", &UPhysicsHandleComponent::execGetGrabbedComponent },
+		{ "GetTargetLocationAndRotation", &UPhysicsHandleComponent::execGetTargetLocationAndRotation },
+		{ "GrabComponent", &UPhysicsHandleComponent::execGrabComponent },
+		{ "GrabComponentAtLocation", &UPhysicsHandleComponent::execGrabComponentAtLocation },
+		{ "GrabComponentAtLocationWithRotation", &UPhysicsHandleComponent::execGrabComponentAtLocationWithRotation },
+		{ "ReleaseComponent", &UPhysicsHandleComponent::execReleaseComponent },
+		{ "SetAngularDamping", &UPhysicsHandleComponent::execSetAngularDamping },
+		{ "SetAngularStiffness", &UPhysicsHandleComponent::execSetAngularStiffness },
+		{ "SetInterpolationSpeed", &UPhysicsHandleComponent::execSetInterpolationSpeed },
+		{ "SetLinearDamping", &UPhysicsHandleComponent::execSetLinearDamping },
+		{ "SetLinearStiffness", &UPhysicsHandleComponent::execSetLinearStiffness },
+		{ "SetTargetLocation", &UPhysicsHandleComponent::execSetTargetLocation },
+		{ "SetTargetLocationAndRotation", &UPhysicsHandleComponent::execSetTargetLocationAndRotation },
+		{ "SetTargetRotation", &UPhysicsHandleComponent::execSetTargetRotation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

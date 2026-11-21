@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6B10 (end 0x024C6B32)
+// Original VA: 0x00000001424C6B10 | File offset: 0x024C6110
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A0888) | Matching: see analysis/functions-uht-natives.json
+void USceneCaptureComponent2D::StaticRegisterNativesUSceneCaptureComponent2D()
+{
+	UClass* Class = USceneCaptureComponent2D::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddOrUpdateBlendable", &USceneCaptureComponent2D::execAddOrUpdateBlendable },
+		{ "CaptureScene", &USceneCaptureComponent2D::execCaptureScene },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name

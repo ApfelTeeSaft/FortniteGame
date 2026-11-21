@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionTrackerList();  // RVA 0x028D7550 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6ED0 (end 0x028D6EF2)
+// Original VA: 0x00000001428D6ED0 | File offset: 0x028D64D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE5EC8) | Matching: see analysis/functions-uht-natives.json
+void UFortMissionTrackerList::StaticRegisterNativesUFortMissionTrackerList()
+{
+	UClass* Class = UFortMissionTrackerList::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleMissionsUpdated", &UFortMissionTrackerList::execHandleMissionsUpdated },
+		{ "HandleSizeEstimateChanged", &UFortMissionTrackerList::execHandleSizeEstimateChanged },
+		{ "UpdateVisibility", &UFortMissionTrackerList::execUpdateVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMissionTrackerList_HandleMissionsUpdated_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

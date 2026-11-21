@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AHUD();  // RVA 0x0241F0A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241ECE0 (end 0x0241ED02)
+// Original VA: 0x000000014241ECE0 | File offset: 0x0241E2E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F94E0) | Matching: see analysis/functions-uht-natives.json
+void AHUD::StaticRegisterNativesAHUD()
+{
+	UClass* Class = AHUD::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddDebugText", &AHUD::execAddDebugText },
+		{ "AddHitBox", &AHUD::execAddHitBox },
+		{ "Deproject", &AHUD::execDeproject },
+		{ "DrawLine", &AHUD::execDrawLine },
+		{ "DrawMaterial", &AHUD::execDrawMaterial },
+		{ "DrawMaterialSimple", &AHUD::execDrawMaterialSimple },
+		{ "DrawMaterialTriangle", &AHUD::execDrawMaterialTriangle },
+		{ "DrawRect", &AHUD::execDrawRect },
+		{ "DrawText", &AHUD::execDrawText },
+		{ "DrawTexture", &AHUD::execDrawTexture },
+		{ "DrawTextureSimple", &AHUD::execDrawTextureSimple },
+		{ "GetActorsInSelectionRectangle", &AHUD::execGetActorsInSelectionRectangle },
+		{ "GetOwningPawn", &AHUD::execGetOwningPawn },
+		{ "GetOwningPlayerController", &AHUD::execGetOwningPlayerController },
+		{ "GetTextSize", &AHUD::execGetTextSize },
+		{ "NextDebugTarget", &AHUD::execNextDebugTarget },
+		{ "PreviousDebugTarget", &AHUD::execPreviousDebugTarget },
+		{ "Project", &AHUD::execProject },
+		{ "RemoveAllDebugStrings", &AHUD::execRemoveAllDebugStrings },
+		{ "RemoveDebugText", &AHUD::execRemoveDebugText },
+		{ "ShowDebug", &AHUD::execShowDebug },
+		{ "ShowDebugForReticleTargetToggle", &AHUD::execShowDebugForReticleTargetToggle },
+		{ "ShowDebugToggleSubCategory", &AHUD::execShowDebugToggleSubCategory },
+		{ "ShowHUD", &AHUD::execShowHUD },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AHUD_AddDebugText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonListItem();  // RVA 0x002CA3F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA010 (end 0x002CA032)
+// Original VA: 0x00000001402CA010 | File offset: 0x002C9610
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E81690) | Matching: see analysis/functions-uht-natives.json
+void UCommonListItem::StaticRegisterNativesUCommonListItem()
+{
+	UClass* Class = UCommonListItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DoesItemHaveChildren", &UCommonListItem::execDoesItemHaveChildren },
+		{ "GetIndentLevel", &UCommonListItem::execGetIndentLevel },
+		{ "IsItemExpanded", &UCommonListItem::execIsItemExpanded },
+		{ "Private_OnExpanderArrowShiftClicked", &UCommonListItem::execPrivate_OnExpanderArrowShiftClicked },
+		{ "RegisterOnClicked", &UCommonListItem::execRegisterOnClicked },
+		{ "SetExpanded", &UCommonListItem::execSetExpanded },
+		{ "SetIndexInList", &UCommonListItem::execSetIndexInList },
+		{ "SetSelected", &UCommonListItem::execSetSelected },
+		{ "ToggleExpansion", &UCommonListItem::execToggleExpansion },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonListItem_DoesItemHaveChildren_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

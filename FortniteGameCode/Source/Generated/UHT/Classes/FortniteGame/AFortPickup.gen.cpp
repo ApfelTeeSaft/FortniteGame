@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPickup::StaticRegisterNativesAFortPickup()
-{
-}
 // IMPLEMENT_CLASS(AFortPickup, 3577192923u)
 // Original dynamic initializer: RVA 0x00108D00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPickup> AutoInitializeAFortPickup(TEXT("AFortPickup"), sizeof(AFortPickup), 3577192923u);

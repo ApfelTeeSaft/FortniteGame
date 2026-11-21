@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AAudioVolume();  // RVA 0x023DAFE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA4D0 (end 0x023DA4F2)
+// Original VA: 0x00000001423DA4D0 | File offset: 0x023D9AD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038AC560) | Matching: see analysis/functions-uht-natives.json
+void AAudioVolume::StaticRegisterNativesAAudioVolume()
+{
+	UClass* Class = AAudioVolume::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_bEnabled", &AAudioVolume::execOnRep_bEnabled },
+		{ "SetEnabled", &AAudioVolume::execSetEnabled },
+		{ "SetInteriorSettings", &AAudioVolume::execSetInteriorSettings },
+		{ "SetPriority", &AAudioVolume::execSetPriority },
+		{ "SetReverbSettings", &AAudioVolume::execSetReverbSettings },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AAudioVolume_OnRep_bEnabled_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

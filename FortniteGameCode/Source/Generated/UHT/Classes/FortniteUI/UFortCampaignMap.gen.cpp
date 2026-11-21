@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortCampaignMap::StaticRegisterNativesUFortCampaignMap()
-{
-}
 // IMPLEMENT_CLASS(UFortCampaignMap, 3829562103u)
 // Original dynamic initializer: RVA 0x00240300 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCampaignMap> AutoInitializeUFortCampaignMap(TEXT("UFortCampaignMap"), sizeof(UFortCampaignMap), 3829562103u);

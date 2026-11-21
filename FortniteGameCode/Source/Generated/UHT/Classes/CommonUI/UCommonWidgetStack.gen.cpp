@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonWidgetStack::StaticRegisterNativesUCommonWidgetStack()
-{
-}
 // IMPLEMENT_CLASS(UCommonWidgetStack, 1250554686u)
 // Original dynamic initializer: RVA 0x00096BF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonWidgetStack> AutoInitializeUCommonWidgetStack(TEXT("UCommonWidgetStack"), sizeof(UCommonWidgetStack), 1250554686u);

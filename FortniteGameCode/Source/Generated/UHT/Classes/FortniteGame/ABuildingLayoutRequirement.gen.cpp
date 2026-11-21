@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingLayoutRequirement::StaticRegisterNativesABuildingLayoutRequirement()
-{
-}
 // IMPLEMENT_CLASS(ABuildingLayoutRequirement, 891639280u)
 // Original dynamic initializer: RVA 0x000DAEF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingLayoutRequirement> AutoInitializeABuildingLayoutRequirement(TEXT("ABuildingLayoutRequirement"), sizeof(ABuildingLayoutRequirement), 891639280u);

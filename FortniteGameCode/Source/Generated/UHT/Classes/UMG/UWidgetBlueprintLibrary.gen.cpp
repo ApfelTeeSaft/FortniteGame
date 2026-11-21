@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UWidgetBlueprintLibrary::StaticRegisterNativesUWidgetBlueprintLibrary()
-{
-}
 // IMPLEMENT_CLASS(UWidgetBlueprintLibrary, 1459121832u)
 // Original dynamic initializer: RVA 0x001B4D20 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UWidgetBlueprintLibrary> AutoInitializeUWidgetBlueprintLibrary(TEXT("UWidgetBlueprintLibrary"), sizeof(UWidgetBlueprintLibrary), 1459121832u);

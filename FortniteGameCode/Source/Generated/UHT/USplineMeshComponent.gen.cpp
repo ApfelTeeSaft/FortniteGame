@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USplineMeshComponent();  // RVA 0x024DD790 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD550 (end 0x024DD572)
+// Original VA: 0x00000001424DD550 | File offset: 0x024DCB50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039BDBA0) | Matching: see analysis/functions-uht-natives.json
+void USplineMeshComponent::StaticRegisterNativesUSplineMeshComponent()
+{
+	UClass* Class = USplineMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBoundaryMax", &USplineMeshComponent::execGetBoundaryMax },
+		{ "GetBoundaryMin", &USplineMeshComponent::execGetBoundaryMin },
+		{ "GetEndOffset", &USplineMeshComponent::execGetEndOffset },
+		{ "GetEndPosition", &USplineMeshComponent::execGetEndPosition },
+		{ "GetEndRoll", &USplineMeshComponent::execGetEndRoll },
+		{ "GetEndScale", &USplineMeshComponent::execGetEndScale },
+		{ "GetEndTangent", &USplineMeshComponent::execGetEndTangent },
+		{ "GetForwardAxis", &USplineMeshComponent::execGetForwardAxis },
+		{ "GetSplineUpDir", &USplineMeshComponent::execGetSplineUpDir },
+		{ "GetStartOffset", &USplineMeshComponent::execGetStartOffset },
+		{ "GetStartPosition", &USplineMeshComponent::execGetStartPosition },
+		{ "GetStartRoll", &USplineMeshComponent::execGetStartRoll },
+		{ "GetStartScale", &USplineMeshComponent::execGetStartScale },
+		{ "GetStartTangent", &USplineMeshComponent::execGetStartTangent },
+		{ "SetBoundaryMax", &USplineMeshComponent::execSetBoundaryMax },
+		{ "SetBoundaryMin", &USplineMeshComponent::execSetBoundaryMin },
+		{ "SetEndOffset", &USplineMeshComponent::execSetEndOffset },
+		{ "SetEndPosition", &USplineMeshComponent::execSetEndPosition },
+		{ "SetEndRoll", &USplineMeshComponent::execSetEndRoll },
+		{ "SetEndScale", &USplineMeshComponent::execSetEndScale },
+		{ "SetEndTangent", &USplineMeshComponent::execSetEndTangent },
+		{ "SetForwardAxis", &USplineMeshComponent::execSetForwardAxis },
+		{ "SetSplineUpDir", &USplineMeshComponent::execSetSplineUpDir },
+		{ "SetStartAndEnd", &USplineMeshComponent::execSetStartAndEnd },
+		{ "SetStartOffset", &USplineMeshComponent::execSetStartOffset },
+		{ "SetStartPosition", &USplineMeshComponent::execSetStartPosition },
+		{ "SetStartRoll", &USplineMeshComponent::execSetStartRoll },
+		{ "SetStartScale", &USplineMeshComponent::execSetStartScale },
+		{ "SetStartTangent", &USplineMeshComponent::execSetStartTangent },
+		{ "UpdateMesh", &USplineMeshComponent::execUpdateMesh },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USplineMeshComponent_GetBoundaryMax_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortBotStructureBuilder::StaticRegisterNativesAFortBotStructureBuilder()
-{
-}
 // IMPLEMENT_CLASS(AFortBotStructureBuilder, 2368149513u)
 // Original dynamic initializer: RVA 0x000E8FB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortBotStructureBuilder> AutoInitializeAFortBotStructureBuilder(TEXT("AFortBotStructureBuilder"), sizeof(AFortBotStructureBuilder), 2368149513u);

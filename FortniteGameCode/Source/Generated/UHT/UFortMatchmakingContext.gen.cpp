@@ -6,6 +6,40 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMatchmakingContext();  // RVA 0x0101E750 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DE20 (end 0x0101DE42)
+// Original VA: 0x000000014101DE20 | File offset: 0x0101D420
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03360400) | Matching: see analysis/functions-uht-natives.json
+void UFortMatchmakingContext::StaticRegisterNativesUFortMatchmakingContext()
+{
+	UClass* Class = UFortMatchmakingContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelMatchmaking", &UFortMatchmakingContext::execCancelMatchmaking },
+		{ "CheckRejoinStatus", &UFortMatchmakingContext::execCheckRejoinStatus },
+		{ "DisconnectFromLobby", &UFortMatchmakingContext::execDisconnectFromLobby },
+		{ "EnterOutpost", &UFortMatchmakingContext::execEnterOutpost },
+		{ "EnterPvPFOB", &UFortMatchmakingContext::execEnterPvPFOB },
+		{ "GetCustomMatchmakingKey", &UFortMatchmakingContext::execGetCustomMatchmakingKey },
+		{ "GetLobbyBeaconClient", &UFortMatchmakingContext::execGetLobbyBeaconClient },
+		{ "GetLobbyWaitForPlayersTimeRemaining", &UFortMatchmakingContext::execGetLobbyWaitForPlayersTimeRemaining },
+		{ "IsConnectedToGame", &UFortMatchmakingContext::execIsConnectedToGame },
+		{ "IsCustomMatchmakingKeyEnabled", &UFortMatchmakingContext::execIsCustomMatchmakingKeyEnabled },
+		{ "IsInLobby", &UFortMatchmakingContext::execIsInLobby },
+		{ "IsJoinableGameAvailable", &UFortMatchmakingContext::execIsJoinableGameAvailable },
+		{ "IsMatchmakingLocal", &UFortMatchmakingContext::execIsMatchmakingLocal },
+		{ "IsOutpostPermitted", &UFortMatchmakingContext::execIsOutpostPermitted },
+		{ "IsWorldRecordLoaded", &UFortMatchmakingContext::execIsWorldRecordLoaded },
+		{ "JoinFromLobby", &UFortMatchmakingContext::execJoinFromLobby },
+		{ "NeedToCheckRejoinStatus", &UFortMatchmakingContext::execNeedToCheckRejoinStatus },
+		{ "ReadyUp", &UFortMatchmakingContext::execReadyUp },
+		{ "SetCustomMatchmakingKey", &UFortMatchmakingContext::execSetCustomMatchmakingKey },
+		{ "StartCriticalMission", &UFortMatchmakingContext::execStartCriticalMission },
+		{ "StartMatchmaking", &UFortMatchmakingContext::execStartMatchmaking },
+		{ "StartOnboardingMission", &UFortMatchmakingContext::execStartOnboardingMission },
+		{ "StartQuickPlay", &UFortMatchmakingContext::execStartQuickPlay },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMatchmakingContext_CancelMatchmaking_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

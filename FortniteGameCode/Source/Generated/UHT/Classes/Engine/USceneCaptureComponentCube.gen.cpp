@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USceneCaptureComponentCube::StaticRegisterNativesUSceneCaptureComponentCube()
-{
-}
 // IMPLEMENT_CLASS(USceneCaptureComponentCube, 2844973158u)
 // Original dynamic initializer: RVA 0x002197F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USceneCaptureComponentCube> AutoInitializeUSceneCaptureComponentCube(TEXT("USceneCaptureComponentCube"), sizeof(USceneCaptureComponentCube), 2844973158u);

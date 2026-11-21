@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemQuantityListEntryBase::StaticRegisterNativesUFortItemQuantityListEntryBase()
-{
-}
 // IMPLEMENT_CLASS(UFortItemQuantityListEntryBase, 4196434698u)
 // Original dynamic initializer: RVA 0x0024F310 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemQuantityListEntryBase> AutoInitializeUFortItemQuantityListEntryBase(TEXT("UFortItemQuantityListEntryBase"), sizeof(UFortItemQuantityListEntryBase), 4196434698u);

@@ -6,6 +6,55 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWidget();  // RVA 0x01BFB310 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFAF40 (end 0x01BFAF62)
+// Original VA: 0x0000000141BFAF40 | File offset: 0x01BFA540
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A4710) | Matching: see analysis/functions-uht-natives.json
+void UWidget::StaticRegisterNativesUWidget()
+{
+	UClass* Class = UWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ForceLayoutPrepass", &UWidget::execForceLayoutPrepass },
+		{ "ForceVolatile", &UWidget::execForceVolatile },
+		{ "GetCachedGeometry", &UWidget::execGetCachedGeometry },
+		{ "GetClipping", &UWidget::execGetClipping },
+		{ "GetDesiredSize", &UWidget::execGetDesiredSize },
+		{ "GetIsEnabled", &UWidget::execGetIsEnabled },
+		{ "GetOwningPlayer", &UWidget::execGetOwningPlayer },
+		{ "GetParent", &UWidget::execGetParent },
+		{ "GetRenderOpacity", &UWidget::execGetRenderOpacity },
+		{ "GetVisibility", &UWidget::execGetVisibility },
+		{ "HasAnyUserFocus", &UWidget::execHasAnyUserFocus },
+		{ "HasFocusedDescendants", &UWidget::execHasFocusedDescendants },
+		{ "HasKeyboardFocus", &UWidget::execHasKeyboardFocus },
+		{ "HasMouseCapture", &UWidget::execHasMouseCapture },
+		{ "HasUserFocus", &UWidget::execHasUserFocus },
+		{ "HasUserFocusedDescendants", &UWidget::execHasUserFocusedDescendants },
+		{ "InvalidateLayoutAndVolatility", &UWidget::execInvalidateLayoutAndVolatility },
+		{ "IsHovered", &UWidget::execIsHovered },
+		{ "IsVisible", &UWidget::execIsVisible },
+		{ "RemoveFromParent", &UWidget::execRemoveFromParent },
+		{ "ResetCursor", &UWidget::execResetCursor },
+		{ "SetAllNavigationRules", &UWidget::execSetAllNavigationRules },
+		{ "SetClipping", &UWidget::execSetClipping },
+		{ "SetCursor", &UWidget::execSetCursor },
+		{ "SetIsEnabled", &UWidget::execSetIsEnabled },
+		{ "SetKeyboardFocus", &UWidget::execSetKeyboardFocus },
+		{ "SetNavigationRule", &UWidget::execSetNavigationRule },
+		{ "SetRenderAngle", &UWidget::execSetRenderAngle },
+		{ "SetRenderOpacity", &UWidget::execSetRenderOpacity },
+		{ "SetRenderScale", &UWidget::execSetRenderScale },
+		{ "SetRenderShear", &UWidget::execSetRenderShear },
+		{ "SetRenderTransform", &UWidget::execSetRenderTransform },
+		{ "SetRenderTransformPivot", &UWidget::execSetRenderTransformPivot },
+		{ "SetRenderTranslation", &UWidget::execSetRenderTranslation },
+		{ "SetToolTip", &UWidget::execSetToolTip },
+		{ "SetToolTipText", &UWidget::execSetToolTipText },
+		{ "SetUserFocus", &UWidget::execSetUserFocus },
+		{ "SetVisibility", &UWidget::execSetVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UWidget_GenerateWidgetForObject__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

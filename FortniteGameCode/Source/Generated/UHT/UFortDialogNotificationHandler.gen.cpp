@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDialogNotificationHandler();  // RVA 0x00FD6FE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6B00 (end 0x00FD6B22)
+// Original VA: 0x0000000140FD6B00 | File offset: 0x00FD6100
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033078F0) | Matching: see analysis/functions-uht-natives.json
+void UFortDialogNotificationHandler::StaticRegisterNativesUFortDialogNotificationHandler()
+{
+	UClass* Class = UFortDialogNotificationHandler::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Accept", &UFortDialogNotificationHandler::execAccept },
+		{ "Decline", &UFortDialogNotificationHandler::execDecline },
+		{ "SetDialogDescription", &UFortDialogNotificationHandler::execSetDialogDescription },
+		{ "Timeout", &UFortDialogNotificationHandler::execTimeout },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

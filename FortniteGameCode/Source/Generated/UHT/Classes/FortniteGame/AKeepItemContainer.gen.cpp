@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AKeepItemContainer::StaticRegisterNativesAKeepItemContainer()
-{
-}
 // IMPLEMENT_CLASS(AKeepItemContainer, 3808149916u)
 // Original dynamic initializer: RVA 0x0011FF00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AKeepItemContainer> AutoInitializeAKeepItemContainer(TEXT("AKeepItemContainer"), sizeof(AKeepItemContainer), 3808149916u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPlayerControllerGameplay::StaticRegisterNativesAFortPlayerControllerGameplay()
-{
-}
 // IMPLEMENT_CLASS(AFortPlayerControllerGameplay, 3892094907u)
 // Original dynamic initializer: RVA 0x0010B880 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerGameplay> AutoInitializeAFortPlayerControllerGameplay(TEXT("AFortPlayerControllerGameplay"), sizeof(AFortPlayerControllerGameplay), 3892094907u);

@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D2A0 (end 0x0109D2C2)
+// Original VA: 0x000000014109D2A0 | File offset: 0x0109C8A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033EF580) | Matching: see analysis/functions-uht-natives.json
+void UFortRegisteredPlayerInfo::StaticRegisterNativesUFortRegisteredPlayerInfo()
+{
+	UClass* Class = UFortRegisteredPlayerInfo::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAbilitySystemComponent", &UFortRegisteredPlayerInfo::execGetAbilitySystemComponent },
+		{ "GetPlayerName", &UFortRegisteredPlayerInfo::execGetPlayerName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name

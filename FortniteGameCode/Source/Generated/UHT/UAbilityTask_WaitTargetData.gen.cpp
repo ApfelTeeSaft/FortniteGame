@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitTargetData();  // RVA 0x0054D850 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D0B0 (end 0x0054D0D2)
+// Original VA: 0x000000014054D0B0 | File offset: 0x0054C6B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F33430) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitTargetData::StaticRegisterNativesUAbilityTask_WaitTargetData()
+{
+	UClass* Class = UAbilityTask_WaitTargetData::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginSpawningActor", &UAbilityTask_WaitTargetData::execBeginSpawningActor },
+		{ "FinishSpawningActor", &UAbilityTask_WaitTargetData::execFinishSpawningActor },
+		{ "OnTargetDataCancelledCallback", &UAbilityTask_WaitTargetData::execOnTargetDataCancelledCallback },
+		{ "OnTargetDataReadyCallback", &UAbilityTask_WaitTargetData::execOnTargetDataReadyCallback },
+		{ "OnTargetDataReplicatedCallback", &UAbilityTask_WaitTargetData::execOnTargetDataReplicatedCallback },
+		{ "OnTargetDataReplicatedCancelledCallback", &UAbilityTask_WaitTargetData::execOnTargetDataReplicatedCancelledCallback },
+		{ "WaitTargetData", &UAbilityTask_WaitTargetData::execWaitTargetData },
+		{ "WaitTargetDataUsingActor", &UAbilityTask_WaitTargetData::execWaitTargetDataUsingActor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitTargetData_BeginSpawningActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

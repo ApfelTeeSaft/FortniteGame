@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemTileView::StaticRegisterNativesUFortItemTileView()
-{
-}
 // IMPLEMENT_CLASS(UFortItemTileView, 902270905u)
 // Original dynamic initializer: RVA 0x0024F370 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemTileView> AutoInitializeUFortItemTileView(TEXT("UFortItemTileView"), sizeof(UFortItemTileView), 902270905u);

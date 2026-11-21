@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPanelWidget::StaticRegisterNativesUPanelWidget()
-{
-}
 // IMPLEMENT_CLASS(UPanelWidget, 2177386227u)
 // Original dynamic initializer: RVA 0x001B29E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPanelWidget> AutoInitializeUPanelWidget(TEXT("UPanelWidget"), sizeof(UPanelWidget), 2177386227u);

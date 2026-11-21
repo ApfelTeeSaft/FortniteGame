@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameStateBase();  // RVA 0x0241F040 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241ECB0 (end 0x0241ECD2)
+// Original VA: 0x000000014241ECB0 | File offset: 0x0241E2B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F7EF0) | Matching: see analysis/functions-uht-natives.json
+void AGameStateBase::StaticRegisterNativesAGameStateBase()
+{
+	UClass* Class = AGameStateBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPlayerRespawnDelay", &AGameStateBase::execGetPlayerRespawnDelay },
+		{ "GetPlayerStartTime", &AGameStateBase::execGetPlayerStartTime },
+		{ "GetServerWorldTimeSeconds", &AGameStateBase::execGetServerWorldTimeSeconds },
+		{ "HasBegunPlay", &AGameStateBase::execHasBegunPlay },
+		{ "HasMatchStarted", &AGameStateBase::execHasMatchStarted },
+		{ "OnRep_GameModeClass", &AGameStateBase::execOnRep_GameModeClass },
+		{ "OnRep_ReplicatedHasBegunPlay", &AGameStateBase::execOnRep_ReplicatedHasBegunPlay },
+		{ "OnRep_ReplicatedWorldTimeSeconds", &AGameStateBase::execOnRep_ReplicatedWorldTimeSeconds },
+		{ "OnRep_SpectatorClass", &AGameStateBase::execOnRep_SpectatorClass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AGameStateBase_GetPlayerRespawnDelay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

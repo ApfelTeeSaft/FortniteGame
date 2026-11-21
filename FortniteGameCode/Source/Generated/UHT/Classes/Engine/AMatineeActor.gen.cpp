@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AMatineeActor::StaticRegisterNativesAMatineeActor()
-{
-}
 // IMPLEMENT_CLASS(AMatineeActor, 514527181u)
 // Original dynamic initializer: RVA 0x0020AC90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AMatineeActor> AutoInitializeAMatineeActor(TEXT("AMatineeActor"), sizeof(AMatineeActor), 514527181u);

@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortInGameMapManager();  // RVA 0x010067C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010061B0 (end 0x010061D2)
+// Original VA: 0x00000001410061B0 | File offset: 0x010057B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03349EB0) | Matching: see analysis/functions-uht-natives.json
+void AFortInGameMapManager::StaticRegisterNativesAFortInGameMapManager()
+{
+	UClass* Class = AFortInGameMapManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BroadcastExplorationEvents", &AFortInGameMapManager::execBroadcastExplorationEvents },
+		{ "GetCurrent", &AFortInGameMapManager::execGetCurrent },
+		{ "OnRep_MapData", &AFortInGameMapManager::execOnRep_MapData },
+		{ "PaintOnFog", &AFortInGameMapManager::execPaintOnFog },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

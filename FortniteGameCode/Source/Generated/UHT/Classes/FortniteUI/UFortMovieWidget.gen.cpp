@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMovieWidget::StaticRegisterNativesUFortMovieWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortMovieWidget, 1168684143u)
 // Original dynamic initializer: RVA 0x002515F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMovieWidget> AutoInitializeUFortMovieWidget(TEXT("UFortMovieWidget"), sizeof(UFortMovieWidget), 1168684143u);

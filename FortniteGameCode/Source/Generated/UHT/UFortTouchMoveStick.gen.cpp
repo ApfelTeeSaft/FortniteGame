@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTouchMoveStick();  // RVA 0x02904D60 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029045B0 (end 0x029045D2)
+// Original VA: 0x00000001429045B0 | File offset: 0x02903BB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D32360) | Matching: see analysis/functions-uht-natives.json
+void UFortTouchMoveStick::StaticRegisterNativesUFortTouchMoveStick()
+{
+	UClass* Class = UFortTouchMoveStick::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHalfHeight", &UFortTouchMoveStick::execGetHalfHeight },
+		{ "HandleTouchEnded", &UFortTouchMoveStick::execHandleTouchEnded },
+		{ "HandleTouchStarted", &UFortTouchMoveStick::execHandleTouchStarted },
+		{ "SetMovementLockStatus", &UFortTouchMoveStick::execSetMovementLockStatus },
+		{ "SetStickPosition", &UFortTouchMoveStick::execSetStickPosition },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTouchMoveStick_GetHalfHeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

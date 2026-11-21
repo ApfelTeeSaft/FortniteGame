@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerKeep();  // RVA 0x01077730 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010774E0 (end 0x01077502)
+// Original VA: 0x00000001410774E0 | File offset: 0x01076AE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C3100) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerKeep::StaticRegisterNativesAFortPlayerControllerKeep()
+{
+	UClass* Class = AFortPlayerControllerKeep::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientSetPermaniteAvailability", &AFortPlayerControllerKeep::execClientSetPermaniteAvailability },
+		{ "ClientUnloadFoundations", &AFortPlayerControllerKeep::execClientUnloadFoundations },
+		{ "DumpItemData", &AFortPlayerControllerKeep::execDumpItemData },
+		{ "ResetContainers", &AFortPlayerControllerKeep::execResetContainers },
+		{ "RestoreContainers", &AFortPlayerControllerKeep::execRestoreContainers },
+		{ "SetPermaniteAvailability", &AFortPlayerControllerKeep::execSetPermaniteAvailability },
+		{ "StreamInStuff", &AFortPlayerControllerKeep::execStreamInStuff },
+		{ "StreamOutStuff", &AFortPlayerControllerKeep::execStreamOutStuff },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerKeep_ClientSetPermaniteAvailability_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

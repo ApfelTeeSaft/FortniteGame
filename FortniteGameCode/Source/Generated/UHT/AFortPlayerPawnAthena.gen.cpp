@@ -6,6 +6,58 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerPawnAthena();  // RVA 0x0107FE30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FAA0 (end 0x0107FAC2)
+// Original VA: 0x000000014107FAA0 | File offset: 0x0107F0A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033CCC30) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerPawnAthena::StaticRegisterNativesAFortPlayerPawnAthena()
+{
+	UClass* Class = AFortPlayerPawnAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GameplayCue_Damage", &AFortPlayerPawnAthena::execGameplayCue_Damage },
+		{ "GetContrailParticleSystem", &AFortPlayerPawnAthena::execGetContrailParticleSystem },
+		{ "GetIsSlopeSliding", &AFortPlayerPawnAthena::execGetIsSlopeSliding },
+		{ "GetSlopeSlidingAngles", &AFortPlayerPawnAthena::execGetSlopeSlidingAngles },
+		{ "GetSlopeSlidingNormal", &AFortPlayerPawnAthena::execGetSlopeSlidingNormal },
+		{ "IsActivelySkydiving", &AFortPlayerPawnAthena::execIsActivelySkydiving },
+		{ "IsActivelyStrafingInAir", &AFortPlayerPawnAthena::execIsActivelyStrafingInAir },
+		{ "IsControllingVehicle", &AFortPlayerPawnAthena::execIsControllingVehicle },
+		{ "IsInVehicle", &AFortPlayerPawnAthena::execIsInVehicle },
+		{ "IsParachuteForcedOpen", &AFortPlayerPawnAthena::execIsParachuteForcedOpen },
+		{ "IsParachuteOpen", &AFortPlayerPawnAthena::execIsParachuteOpen },
+		{ "IsPassivelySkydiving", &AFortPlayerPawnAthena::execIsPassivelySkydiving },
+		{ "IsSkydiving", &AFortPlayerPawnAthena::execIsSkydiving },
+		{ "IsSkydivingFromBus", &AFortPlayerPawnAthena::execIsSkydivingFromBus },
+		{ "IsSkydivingFromLaunchPad", &AFortPlayerPawnAthena::execIsSkydivingFromLaunchPad },
+		{ "IsUsingUmbrella", &AFortPlayerPawnAthena::execIsUsingUmbrella },
+		{ "MarkSafe", &AFortPlayerPawnAthena::execMarkSafe },
+		{ "NetMulticast_Athena_BatchedDamageCues", &AFortPlayerPawnAthena::execNetMulticast_Athena_BatchedDamageCues },
+		{ "NetMulticast_InvokeGameplayCueAdded", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAdded },
+		{ "NetMulticast_InvokeGameplayCueAdded_WithParams", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAdded_WithParams },
+		{ "NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec },
+		{ "NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams },
+		{ "NetMulticast_InvokeGameplayCueExecuted", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted },
+		{ "NetMulticast_InvokeGameplayCueExecuted_FromSpec", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted_FromSpec },
+		{ "NetMulticast_InvokeGameplayCueExecuted_WithParams", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted_WithParams },
+		{ "NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams },
+		{ "NetMulticast_InvokeGameplayCuesExecuted", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCuesExecuted },
+		{ "NetMulticast_InvokeGameplayCuesExecuted_WithParams", &AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCuesExecuted_WithParams },
+		{ "OnCapsuleBeginOverlap", &AFortPlayerPawnAthena::execOnCapsuleBeginOverlap },
+		{ "OnRep_CustomizationLoadout", &AFortPlayerPawnAthena::execOnRep_CustomizationLoadout },
+		{ "OnRep_DrivingVehicle", &AFortPlayerPawnAthena::execOnRep_DrivingVehicle },
+		{ "OnRep_IsOutsideSafeZone", &AFortPlayerPawnAthena::execOnRep_IsOutsideSafeZone },
+		{ "OnRep_IsParachuteOpen", &AFortPlayerPawnAthena::execOnRep_IsParachuteOpen },
+		{ "OnRep_IsSkydiving", &AFortPlayerPawnAthena::execOnRep_IsSkydiving },
+		{ "OnRep_IsSlopeSliding", &AFortPlayerPawnAthena::execOnRep_IsSlopeSliding },
+		{ "OnRep_ParachuteAttachment", &AFortPlayerPawnAthena::execOnRep_ParachuteAttachment },
+		{ "OnRep_ReplicatedAnimMontage", &AFortPlayerPawnAthena::execOnRep_ReplicatedAnimMontage },
+		{ "OnRep_WeaponActivated", &AFortPlayerPawnAthena::execOnRep_WeaponActivated },
+		{ "SetBushEnabled", &AFortPlayerPawnAthena::execSetBushEnabled },
+		{ "StartConsumableUseAudio", &AFortPlayerPawnAthena::execStartConsumableUseAudio },
+		{ "StopConsumableUseAudio", &AFortPlayerPawnAthena::execStopConsumableUseAudio },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerPawnAthena_BushStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

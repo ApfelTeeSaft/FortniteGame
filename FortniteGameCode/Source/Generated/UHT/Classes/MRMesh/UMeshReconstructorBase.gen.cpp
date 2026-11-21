@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UMeshReconstructorBase::StaticRegisterNativesUMeshReconstructorBase()
-{
-}
 // IMPLEMENT_CLASS(UMeshReconstructorBase, 2435645244u)
 // Original dynamic initializer: RVA 0x001C1E10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMeshReconstructorBase> AutoInitializeUMeshReconstructorBase(TEXT("UMeshReconstructorBase"), sizeof(UMeshReconstructorBase), 2435645244u);

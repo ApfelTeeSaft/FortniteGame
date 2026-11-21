@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPawnSensingComponent::StaticRegisterNativesUPawnSensingComponent()
-{
-}
 // IMPLEMENT_CLASS(UPawnSensingComponent, 3028804600u)
 // Original dynamic initializer: RVA 0x001BF520 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPawnSensingComponent> AutoInitializeUPawnSensingComponent(TEXT("UPawnSensingComponent"), sizeof(UPawnSensingComponent), 3028804600u);

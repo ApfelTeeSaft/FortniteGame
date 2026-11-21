@@ -6,6 +6,32 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USpinBox();  // RVA 0x01BF3160 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2BE0 (end 0x01BF2C02)
+// Original VA: 0x0000000141BF2BE0 | File offset: 0x01BF21E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369DEB0) | Matching: see analysis/functions-uht-natives.json
+void USpinBox::StaticRegisterNativesUSpinBox()
+{
+	UClass* Class = USpinBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearMaxSliderValue", &USpinBox::execClearMaxSliderValue },
+		{ "ClearMaxValue", &USpinBox::execClearMaxValue },
+		{ "ClearMinSliderValue", &USpinBox::execClearMinSliderValue },
+		{ "ClearMinValue", &USpinBox::execClearMinValue },
+		{ "GetMaxSliderValue", &USpinBox::execGetMaxSliderValue },
+		{ "GetMaxValue", &USpinBox::execGetMaxValue },
+		{ "GetMinSliderValue", &USpinBox::execGetMinSliderValue },
+		{ "GetMinValue", &USpinBox::execGetMinValue },
+		{ "GetValue", &USpinBox::execGetValue },
+		{ "SetForegroundColor", &USpinBox::execSetForegroundColor },
+		{ "SetMaxSliderValue", &USpinBox::execSetMaxSliderValue },
+		{ "SetMaxValue", &USpinBox::execSetMaxValue },
+		{ "SetMinSliderValue", &USpinBox::execSetMinSliderValue },
+		{ "SetMinValue", &USpinBox::execSetMinValue },
+		{ "SetValue", &USpinBox::execSetValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_USpinBox_OnSpinBoxBeginSliderMovement__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

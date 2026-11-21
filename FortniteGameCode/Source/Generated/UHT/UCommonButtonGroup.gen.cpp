@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonButtonGroup();  // RVA 0x002C2CD0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C29B0 (end 0x002C29D2)
+// Original VA: 0x00000001402C29B0 | File offset: 0x002C1FB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7C420) | Matching: see analysis/functions-uht-natives.json
+void UCommonButtonGroup::StaticRegisterNativesUCommonButtonGroup()
+{
+	UClass* Class = UCommonButtonGroup::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DeselectAll", &UCommonButtonGroup::execDeselectAll },
+		{ "FindButtonIndex", &UCommonButtonGroup::execFindButtonIndex },
+		{ "GetButtonAtIndex", &UCommonButtonGroup::execGetButtonAtIndex },
+		{ "GetSelectedButtonIndex", &UCommonButtonGroup::execGetSelectedButtonIndex },
+		{ "HasAnyButtons", &UCommonButtonGroup::execHasAnyButtons },
+		{ "OnButtonHovered", &UCommonButtonGroup::execOnButtonHovered },
+		{ "OnButtonUnhovered", &UCommonButtonGroup::execOnButtonUnhovered },
+		{ "OnHandleButtonClicked", &UCommonButtonGroup::execOnHandleButtonClicked },
+		{ "OnHandleButtonDoubleClicked", &UCommonButtonGroup::execOnHandleButtonDoubleClicked },
+		{ "OnSelectionStateChanged", &UCommonButtonGroup::execOnSelectionStateChanged },
+		{ "SelectButtonAtIndex", &UCommonButtonGroup::execSelectButtonAtIndex },
+		{ "SelectNextButton", &UCommonButtonGroup::execSelectNextButton },
+		{ "SelectPreviousButton", &UCommonButtonGroup::execSelectPreviousButton },
+		{ "SetSelectionRequired", &UCommonButtonGroup::execSetSelectionRequired },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonButtonGroup_DeselectAll_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

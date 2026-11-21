@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortAIGoalProvider::StaticRegisterNativesUFortAIGoalProvider()
-{
-}
 // IMPLEMENT_CLASS(UFortAIGoalProvider, 1137782213u)
 // Original dynamic initializer: RVA 0x000E34F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAIGoalProvider> AutoInitializeUFortAIGoalProvider(TEXT("UFortAIGoalProvider"), sizeof(UFortAIGoalProvider), 1137782213u);

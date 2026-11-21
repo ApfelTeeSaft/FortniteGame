@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemCooldownWidget::StaticRegisterNativesUFortItemCooldownWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortItemCooldownWidget, 1549322706u)
 // Original dynamic initializer: RVA 0x0024CD20 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemCooldownWidget> AutoInitializeUFortItemCooldownWidget(TEXT("UFortItemCooldownWidget"), sizeof(UFortItemCooldownWidget), 1549322706u);

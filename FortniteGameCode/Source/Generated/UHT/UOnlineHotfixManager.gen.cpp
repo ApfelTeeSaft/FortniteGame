@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UOnlineHotfixManager();  // RVA 0x005D33F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005D33C0 (end 0x005D33E2)
+// Original VA: 0x00000001405D33C0 | File offset: 0x005D29C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F6C0B0) | Matching: see analysis/functions-uht-natives.json
+void UOnlineHotfixManager::StaticRegisterNativesUOnlineHotfixManager()
+{
+	UClass* Class = UOnlineHotfixManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "StartHotfixProcess", &UOnlineHotfixManager::execStartHotfixProcess },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UOnlineHotfixManager_StartHotfixProcess_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

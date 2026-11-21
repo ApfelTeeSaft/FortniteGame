@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStatePvP();  // RVA 0x00FEE7B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE0D0 (end 0x00FEE0F2)
+// Original VA: 0x0000000140FEE0D0 | File offset: 0x00FED6D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332EA40) | Matching: see analysis/functions-uht-natives.json
+void AFortGameStatePvP::StaticRegisterNativesAFortGameStatePvP()
+{
+	UClass* Class = AFortGameStatePvP::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAverageHomebaseRating", &AFortGameStatePvP::execGetAverageHomebaseRating },
+		{ "GetFOBFinalizationTimeRemaining", &AFortGameStatePvP::execGetFOBFinalizationTimeRemaining },
+		{ "GetItemCollector", &AFortGameStatePvP::execGetItemCollector },
+		{ "GetMatchLevel", &AFortGameStatePvP::execGetMatchLevel },
+		{ "GetRoundTimeAccumulated", &AFortGameStatePvP::execGetRoundTimeAccumulated },
+		{ "GetStartMatchDelayTimer", &AFortGameStatePvP::execGetStartMatchDelayTimer },
+		{ "GetTotalHomebaseRating", &AFortGameStatePvP::execGetTotalHomebaseRating },
+		{ "IsExperimentalCraftingFeatureActive", &AFortGameStatePvP::execIsExperimentalCraftingFeatureActive },
+		{ "OnRep_ItemCollector", &AFortGameStatePvP::execOnRep_ItemCollector },
+		{ "OnRep_MatchLevel", &AFortGameStatePvP::execOnRep_MatchLevel },
+		{ "OnRep_RoundTimeRemaining", &AFortGameStatePvP::execOnRep_RoundTimeRemaining },
+		{ "OnRep_StalemateTimeRemaining", &AFortGameStatePvP::execOnRep_StalemateTimeRemaining },
+		{ "SetGameDifficultyRow", &AFortGameStatePvP::execSetGameDifficultyRow },
+		{ "SetMatchLevel", &AFortGameStatePvP::execSetMatchLevel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameStatePvP_GetAverageHomebaseRating_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

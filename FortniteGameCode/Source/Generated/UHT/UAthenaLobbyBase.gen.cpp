@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaLobbyBase();  // RVA 0x028871B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886AE0 (end 0x02886B02)
+// Original VA: 0x0000000142886AE0 | File offset: 0x028860E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C5E178) | Matching: see analysis/functions-uht-natives.json
+void UAthenaLobbyBase::StaticRegisterNativesUAthenaLobbyBase()
+{
+	UClass* Class = UAthenaLobbyBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "QueryForHeadlessReminder", &UAthenaLobbyBase::execQueryForHeadlessReminder },
+		{ "ShowHighlightSummary", &UAthenaLobbyBase::execShowHighlightSummary },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaLobbyBase_OnBeginCursorOverPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

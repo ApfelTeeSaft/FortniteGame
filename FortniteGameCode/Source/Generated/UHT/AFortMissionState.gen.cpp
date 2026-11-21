@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortMissionState();  // RVA 0x0104A800 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A2C0 (end 0x0104A2E2)
+// Original VA: 0x000000014104A2C0 | File offset: 0x010498C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03389A30) | Matching: see analysis/functions-uht-natives.json
+void AFortMissionState::StaticRegisterNativesAFortMissionState()
+{
+	UClass* Class = AFortMissionState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnAllPlayersLoadedInWrapper", &AFortMissionState::execOnAllPlayersLoadedInWrapper },
+		{ "SendMissionUIEvent", &AFortMissionState::execSendMissionUIEvent },
+		{ "SetTimerForOnAllPlayersLoadedIn", &AFortMissionState::execSetTimerForOnAllPlayersLoadedIn },
+		{ "UpdateUI", &AFortMissionState::execUpdateUI },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortMissionState_OnAllPlayersLoadedIn_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

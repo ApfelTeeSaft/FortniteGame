@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559F10 (end 0x02559F32)
+// Original VA: 0x0000000142559F10 | File offset: 0x02559510
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B48B20) | Matching: see analysis/functions-uht-natives.json
+void USynthComponent::StaticRegisterNativesUSynthComponent()
+{
+	UClass* Class = USynthComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsPlaying", &USynthComponent::execIsPlaying },
+		{ "SetSubmixSend", &USynthComponent::execSetSubmixSend },
+		{ "SetVolumeMultiplier", &USynthComponent::execSetVolumeMultiplier },
+		{ "Start", &USynthComponent::execStart },
+		{ "Stop", &USynthComponent::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USynthComponent_IsPlaying_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 8 candidate(s) by name

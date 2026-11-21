@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonPopupMenu::StaticRegisterNativesUCommonPopupMenu()
-{
-}
 // IMPLEMENT_CLASS(UCommonPopupMenu, 1932755492u)
 // Original dynamic initializer: RVA 0x000960A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonPopupMenu> AutoInitializeUCommonPopupMenu(TEXT("UCommonPopupMenu"), sizeof(UCommonPopupMenu), 1932755492u);

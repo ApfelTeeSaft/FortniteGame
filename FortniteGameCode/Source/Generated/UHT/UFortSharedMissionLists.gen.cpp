@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSharedMissionLists();  // RVA 0x010A59C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4FB0 (end 0x010A4FD2)
+// Original VA: 0x00000001410A4FB0 | File offset: 0x010A45B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F7A78) | Matching: see analysis/functions-uht-natives.json
+void UFortSharedMissionLists::StaticRegisterNativesUFortSharedMissionLists()
+{
+	UClass* Class = UFortSharedMissionLists::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "UpdatePIEPlayers", &UFortSharedMissionLists::execUpdatePIEPlayers },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSharedMissionLists_UpdatePIEPlayers_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

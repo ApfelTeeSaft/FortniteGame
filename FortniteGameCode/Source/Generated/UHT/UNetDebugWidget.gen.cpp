@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNetDebugWidget();  // RVA 0x00589630 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00589600 (end 0x00589622)
+// Original VA: 0x0000000140589600 | File offset: 0x00588C00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F54068) | Matching: see analysis/functions-uht-natives.json
+void UNetDebugWidget::StaticRegisterNativesUNetDebugWidget()
+{
+	UClass* Class = UNetDebugWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "StartTimer", &UNetDebugWidget::execStartTimer },
+		{ "StopTimer", &UNetDebugWidget::execStopTimer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UNetDebugWidget_StartTimer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

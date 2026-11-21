@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9560 (end 0x010C9582)
+// Original VA: 0x00000001410C9560 | File offset: 0x010C8B60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0341CEF8) | Matching: see analysis/functions-uht-natives.json
+void UFortTwitchAccount::StaticRegisterNativesUFortTwitchAccount()
+{
+	UClass* Class = UFortTwitchAccount::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleQuestsUpdated", &UFortTwitchAccount::execHandleQuestsUpdated },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTwitchAccount_HandleQuestsUpdated_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name

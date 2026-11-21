@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingItemCollectorActor();  // RVA 0x00F6C350 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BDE0 (end 0x00F6BE02)
+// Original VA: 0x0000000140F6BDE0 | File offset: 0x00F6B3E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03277F20) | Matching: see analysis/functions-uht-natives.json
+void ABuildingItemCollectorActor::StaticRegisterNativesABuildingItemCollectorActor()
+{
+	UClass* Class = ABuildingItemCollectorActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumberOfTeamCaptures", &ABuildingItemCollectorActor::execGetNumberOfTeamCaptures },
+		{ "GetTeamDepositAmount", &ABuildingItemCollectorActor::execGetTeamDepositAmount },
+		{ "GetTeamDepositGoal", &ABuildingItemCollectorActor::execGetTeamDepositGoal },
+		{ "GetTeamReachedGoalCount", &ABuildingItemCollectorActor::execGetTeamReachedGoalCount },
+		{ "OnItemCollectorStateChanged", &ABuildingItemCollectorActor::execOnItemCollectorStateChanged },
+		{ "OnRep_ControllingTeam", &ABuildingItemCollectorActor::execOnRep_ControllingTeam },
+		{ "OnRep_ItemCollectorState", &ABuildingItemCollectorActor::execOnRep_ItemCollectorState },
+		{ "OnRep_TeamDepositAmounts", &ABuildingItemCollectorActor::execOnRep_TeamDepositAmounts },
+		{ "OnRep_TeamDepositGoals", &ABuildingItemCollectorActor::execOnRep_TeamDepositGoals },
+		{ "OnTeamReachedDepositGoal", &ABuildingItemCollectorActor::execOnTeamReachedDepositGoal },
+		{ "SetItemCollectorState", &ABuildingItemCollectorActor::execSetItemCollectorState },
+		{ "UpdateTeamDepositValues", &ABuildingItemCollectorActor::execUpdateTeamDepositValues },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingItemCollectorActor_GetNumberOfTeamCaptures_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortNotificationHandler::StaticRegisterNativesUFortNotificationHandler()
-{
-}
 // IMPLEMENT_CLASS(UFortNotificationHandler, 3436822300u)
 // Original dynamic initializer: RVA 0x00105AD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortNotificationHandler> AutoInitializeUFortNotificationHandler(TEXT("UFortNotificationHandler"), sizeof(UFortNotificationHandler), 3436822300u);

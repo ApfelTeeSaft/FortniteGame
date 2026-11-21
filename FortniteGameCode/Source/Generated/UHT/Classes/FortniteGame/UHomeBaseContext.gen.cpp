@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UHomeBaseContext::StaticRegisterNativesUHomeBaseContext()
-{
-}
 // IMPLEMENT_CLASS(UHomeBaseContext, 1749593939u)
 // Original dynamic initializer: RVA 0x000F9710 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UHomeBaseContext> AutoInitializeUHomeBaseContext(TEXT("UHomeBaseContext"), sizeof(UHomeBaseContext), 1749593939u);

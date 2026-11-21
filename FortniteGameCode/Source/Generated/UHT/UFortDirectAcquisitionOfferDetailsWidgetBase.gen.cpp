@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase();  // RVA 0x0289B610 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AFA0 (end 0x0289AFC2)
+// Original VA: 0x000000014289AFA0 | File offset: 0x0289A5A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C85070) | Matching: see analysis/functions-uht-natives.json
+void UFortDirectAcquisitionOfferDetailsWidgetBase::StaticRegisterNativesUFortDirectAcquisitionOfferDetailsWidgetBase()
+{
+	UClass* Class = UFortDirectAcquisitionOfferDetailsWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AutoEquip", &UFortDirectAcquisitionOfferDetailsWidgetBase::execAutoEquip },
+		{ "GetOfferInfo", &UFortDirectAcquisitionOfferDetailsWidgetBase::execGetOfferInfo },
+		{ "HandleCurrentlyViewedAccountInfoChanged", &UFortDirectAcquisitionOfferDetailsWidgetBase::execHandleCurrentlyViewedAccountInfoChanged },
+		{ "SetPagedItems", &UFortDirectAcquisitionOfferDetailsWidgetBase::execSetPagedItems },
+		{ "SetupOffer", &UFortDirectAcquisitionOfferDetailsWidgetBase::execSetupOffer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_AutoEquip_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

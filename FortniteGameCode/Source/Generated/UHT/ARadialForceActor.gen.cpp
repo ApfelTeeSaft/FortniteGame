@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ARadialForceActor();  // RVA 0x024C2B40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C24B0 (end 0x024C24D2)
+// Original VA: 0x00000001424C24B0 | File offset: 0x024C1AB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03995390) | Matching: see analysis/functions-uht-natives.json
+void ARadialForceActor::StaticRegisterNativesARadialForceActor()
+{
+	UClass* Class = ARadialForceActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisableForce", &ARadialForceActor::execDisableForce },
+		{ "EnableForce", &ARadialForceActor::execEnableForce },
+		{ "FireImpulse", &ARadialForceActor::execFireImpulse },
+		{ "ToggleForce", &ARadialForceActor::execToggleForce },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ARadialForceActor_DisableForce_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

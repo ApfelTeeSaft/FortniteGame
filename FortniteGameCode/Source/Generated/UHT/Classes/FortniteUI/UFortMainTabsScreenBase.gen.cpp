@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMainTabsScreenBase::StaticRegisterNativesUFortMainTabsScreenBase()
-{
-}
 // IMPLEMENT_CLASS(UFortMainTabsScreenBase, 942391440u)
 // Original dynamic initializer: RVA 0x00251490 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMainTabsScreenBase> AutoInitializeUFortMainTabsScreenBase(TEXT("UFortMainTabsScreenBase"), sizeof(UFortMainTabsScreenBase), 942391440u);

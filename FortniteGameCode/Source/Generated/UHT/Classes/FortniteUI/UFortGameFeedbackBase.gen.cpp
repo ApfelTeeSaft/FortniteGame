@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortGameFeedbackBase::StaticRegisterNativesUFortGameFeedbackBase()
-{
-}
 // IMPLEMENT_CLASS(UFortGameFeedbackBase, 3545280654u)
 // Original dynamic initializer: RVA 0x00245B30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGameFeedbackBase> AutoInitializeUFortGameFeedbackBase(TEXT("UFortGameFeedbackBase"), sizeof(UFortGameFeedbackBase), 3545280654u);

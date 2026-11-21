@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AWorldSettings::StaticRegisterNativesAWorldSettings()
-{
-}
 // IMPLEMENT_CLASS(AWorldSettings, 1315617746u)
 // Original dynamic initializer: RVA 0x00221940 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AWorldSettings> AutoInitializeAWorldSettings(TEXT("AWorldSettings"), sizeof(AWorldSettings), 1315617746u);

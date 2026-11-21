@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortOutpostContext();  // RVA 0x01050E20 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01050100 (end 0x01050122)
+// Original VA: 0x0000000141050100 | File offset: 0x0104F700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03394460) | Matching: see analysis/functions-uht-natives.json
+void UFortOutpostContext::StaticRegisterNativesUFortOutpostContext()
+{
+	UClass* Class = UFortOutpostContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanUpgradeBuilding", &UFortOutpostContext::execCanUpgradeBuilding },
+		{ "CanUpgradeBuildingFromDefinition", &UFortOutpostContext::execCanUpgradeBuildingFromDefinition },
+		{ "CanUpgradePOST", &UFortOutpostContext::execCanUpgradePOST },
+		{ "DepositPOSTResource", &UFortOutpostContext::execDepositPOSTResource },
+		{ "GetBuildingLevel", &UFortOutpostContext::execGetBuildingLevel },
+		{ "GetBuildingLevelFromDefinition", &UFortOutpostContext::execGetBuildingLevelFromDefinition },
+		{ "GetBuildingMaxLevel", &UFortOutpostContext::execGetBuildingMaxLevel },
+		{ "GetBuildingMaxLevelFromDefinition", &UFortOutpostContext::execGetBuildingMaxLevelFromDefinition },
+		{ "GetBuildingUpgradeCost", &UFortOutpostContext::execGetBuildingUpgradeCost },
+		{ "GetBuildingUpgradeCostFromDefinition", &UFortOutpostContext::execGetBuildingUpgradeCostFromDefinition },
+		{ "GetHarvestingToolForLevel", &UFortOutpostContext::execGetHarvestingToolForLevel },
+		{ "GetNextPOSTLevelRequirements", &UFortOutpostContext::execGetNextPOSTLevelRequirements },
+		{ "GetOutpostCoreLevel", &UFortOutpostContext::execGetOutpostCoreLevel },
+		{ "GetPOSTBuildingHealthMod", &UFortOutpostContext::execGetPOSTBuildingHealthMod },
+		{ "LeaveOutpostAsParty", &UFortOutpostContext::execLeaveOutpostAsParty },
+		{ "UpgradeBuilding", &UFortOutpostContext::execUpgradeBuilding },
+		{ "UpgradeBuildingByDefinition", &UFortOutpostContext::execUpgradeBuildingByDefinition },
+		{ "UpgradePOST", &UFortOutpostContext::execUpgradePOST },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOutpostContext_CanUpgradeBuilding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

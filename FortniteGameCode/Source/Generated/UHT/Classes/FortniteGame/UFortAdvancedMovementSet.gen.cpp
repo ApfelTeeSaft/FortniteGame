@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortAdvancedMovementSet::StaticRegisterNativesUFortAdvancedMovementSet()
-{
-}
 // IMPLEMENT_CLASS(UFortAdvancedMovementSet, 2461745396u)
 // Original dynamic initializer: RVA 0x000DFFC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAdvancedMovementSet> AutoInitializeUFortAdvancedMovementSet(TEXT("UFortAdvancedMovementSet"), sizeof(UFortAdvancedMovementSet), 2461745396u);

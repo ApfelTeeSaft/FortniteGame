@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitInputRelease();  // RVA 0x0054D7A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D020 (end 0x0054D042)
+// Original VA: 0x000000014054D020 | File offset: 0x0054C620
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F33160) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitInputRelease::StaticRegisterNativesUAbilityTask_WaitInputRelease()
+{
+	UClass* Class = UAbilityTask_WaitInputRelease::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnReleaseCallback", &UAbilityTask_WaitInputRelease::execOnReleaseCallback },
+		{ "WaitInputRelease", &UAbilityTask_WaitInputRelease::execWaitInputRelease },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitInputRelease_OnReleaseCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

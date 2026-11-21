@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMotionControllerComponent();  // RVA 0x0199D350 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0199D240 (end 0x0199D262)
+// Original VA: 0x000000014199D240 | File offset: 0x0199C840
+// Recovery: confirmed (registers FNameNativePtrPair array 0x035E5620) | Matching: see analysis/functions-uht-natives.json
+void UMotionControllerComponent::StaticRegisterNativesUMotionControllerComponent()
+{
+	UClass* Class = UMotionControllerComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetParameterValue", &UMotionControllerComponent::execGetParameterValue },
+		{ "GetTrackingSource", &UMotionControllerComponent::execGetTrackingSource },
+		{ "IsTracked", &UMotionControllerComponent::execIsTracked },
+		{ "SetAssociatedPlayerIndex", &UMotionControllerComponent::execSetAssociatedPlayerIndex },
+		{ "SetCustomDisplayMesh", &UMotionControllerComponent::execSetCustomDisplayMesh },
+		{ "SetDisplayModelSource", &UMotionControllerComponent::execSetDisplayModelSource },
+		{ "SetShowDeviceModel", &UMotionControllerComponent::execSetShowDeviceModel },
+		{ "SetTrackingMotionSource", &UMotionControllerComponent::execSetTrackingMotionSource },
+		{ "SetTrackingSource", &UMotionControllerComponent::execSetTrackingSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMotionControllerComponent_GetParameterValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

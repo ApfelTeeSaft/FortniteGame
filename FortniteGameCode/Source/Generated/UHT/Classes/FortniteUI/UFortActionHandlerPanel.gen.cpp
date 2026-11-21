@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortActionHandlerPanel::StaticRegisterNativesUFortActionHandlerPanel()
-{
-}
 // IMPLEMENT_CLASS(UFortActionHandlerPanel, 588000550u)
 // Original dynamic initializer: RVA 0x0023B7C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortActionHandlerPanel> AutoInitializeUFortActionHandlerPanel(TEXT("UFortActionHandlerPanel"), sizeof(UFortActionHandlerPanel), 588000550u);

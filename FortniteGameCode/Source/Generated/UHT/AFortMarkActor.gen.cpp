@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortMarkActor();  // RVA 0x0101E580 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DDF0 (end 0x0101DE12)
+// Original VA: 0x000000014101DDF0 | File offset: 0x0101D3F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0335FC98) | Matching: see analysis/functions-uht-natives.json
+void AFortMarkActor::StaticRegisterNativesAFortMarkActor()
+{
+	UClass* Class = AFortMarkActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_AttachedToActor", &AFortMarkActor::execOnRep_AttachedToActor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortMarkActor_OnRep_AttachedToActor_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

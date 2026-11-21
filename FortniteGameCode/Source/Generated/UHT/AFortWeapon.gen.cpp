@@ -6,6 +6,65 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWeapon();  // RVA 0x010D4980 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4380 (end 0x010D43A2)
+// Original VA: 0x00000001410D4380 | File offset: 0x010D3980
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0342A650) | Matching: see analysis/functions-uht-natives.json
+void AFortWeapon::StaticRegisterNativesAFortWeapon()
+{
+	UClass* Class = AFortWeapon::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientGivenTo", &AFortWeapon::execClientGivenTo },
+		{ "ClientReportShotFlags", &AFortWeapon::execClientReportShotFlags },
+		{ "DetermineReticleColor", &AFortWeapon::execDetermineReticleColor },
+		{ "GameplayCue_Impact", &AFortWeapon::execGameplayCue_Impact },
+		{ "GameplayCue_Weapons_Activation", &AFortWeapon::execGameplayCue_Weapons_Activation },
+		{ "GetAlterations", &AFortWeapon::execGetAlterations },
+		{ "GetBulletsPerClip", &AFortWeapon::execGetBulletsPerClip },
+		{ "GetChargePercent", &AFortWeapon::execGetChargePercent },
+		{ "GetCoreAnimation", &AFortWeapon::execGetCoreAnimation },
+		{ "GetCurrentMaxChargePercent", &AFortWeapon::execGetCurrentMaxChargePercent },
+		{ "GetDamageStartLocation", &AFortWeapon::execGetDamageStartLocation },
+		{ "GetLocalMagazineAmmoCount", &AFortWeapon::execGetLocalMagazineAmmoCount },
+		{ "GetLocalRemainingAmmo", &AFortWeapon::execGetLocalRemainingAmmo },
+		{ "GetMagazineAmmoCount", &AFortWeapon::execGetMagazineAmmoCount },
+		{ "GetMeleeAttackPlayRate", &AFortWeapon::execGetMeleeAttackPlayRate },
+		{ "GetMuzzleLocation", &AFortWeapon::execGetMuzzleLocation },
+		{ "GetMuzzleSocketTransform", &AFortWeapon::execGetMuzzleSocketTransform },
+		{ "GetRange", &AFortWeapon::execGetRange },
+		{ "GetReloadProgress", &AFortWeapon::execGetReloadProgress },
+		{ "GetReloadTime", &AFortWeapon::execGetReloadTime },
+		{ "GetRemainingAmmo", &AFortWeapon::execGetRemainingAmmo },
+		{ "GetReticleColor", &AFortWeapon::execGetReticleColor },
+		{ "GetSupportsAutoFireAtReticleTargetMode", &AFortWeapon::execGetSupportsAutoFireAtReticleTargetMode },
+		{ "IsAutoFireReticleTargetInRange", &AFortWeapon::execIsAutoFireReticleTargetInRange },
+		{ "IsProjectileWeapon", &AFortWeapon::execIsProjectileWeapon },
+		{ "IsReloading", &AFortWeapon::execIsReloading },
+		{ "OnPawnMontageBlendingOut", &AFortWeapon::execOnPawnMontageBlendingOut },
+		{ "OnPawnMontageStarted", &AFortWeapon::execOnPawnMontageStarted },
+		{ "OnRep_AmmoCount", &AFortWeapon::execOnRep_AmmoCount },
+		{ "OnRep_ChargeStatusPack", &AFortWeapon::execOnRep_ChargeStatusPack },
+		{ "OnRep_CosmeticStatValue", &AFortWeapon::execOnRep_CosmeticStatValue },
+		{ "OnRep_EquippedWeaponDestroyWrapper", &AFortWeapon::execOnRep_EquippedWeaponDestroyWrapper },
+		{ "OnRep_ReplicatedAppliedAlterations", &AFortWeapon::execOnRep_ReplicatedAppliedAlterations },
+		{ "OnRep_ReplicatedWeaponData", &AFortWeapon::execOnRep_ReplicatedWeaponData },
+		{ "PlayForceFeedback", &AFortWeapon::execPlayForceFeedback },
+		{ "PlayNativeImpactFX", &AFortWeapon::execPlayNativeImpactFX },
+		{ "PlayReloadFX", &AFortWeapon::execPlayReloadFX },
+		{ "PlayWeaponFireFX", &AFortWeapon::execPlayWeaponFireFX },
+		{ "Reload", &AFortWeapon::execReload },
+		{ "ResetTempWeaponMaterialOverride", &AFortWeapon::execResetTempWeaponMaterialOverride },
+		{ "ServerReleaseWeaponPrimaryAbility", &AFortWeapon::execServerReleaseWeaponPrimaryAbility },
+		{ "ServerResetShotReport", &AFortWeapon::execServerResetShotReport },
+		{ "ServerSetChargeState", &AFortWeapon::execServerSetChargeState },
+		{ "SetShouldDrawNativeReticle", &AFortWeapon::execSetShouldDrawNativeReticle },
+		{ "SetWeaponVisibility", &AFortWeapon::execSetWeaponVisibility },
+		{ "StopForceFeedback", &AFortWeapon::execStopForceFeedback },
+		{ "StopWeaponFireFX", &AFortWeapon::execStopWeaponFireFX },
+		{ "UseWeaponDurability", &AFortWeapon::execUseWeaponDurability },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortWeapon_ClientGivenTo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

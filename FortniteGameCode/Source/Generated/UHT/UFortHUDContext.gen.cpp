@@ -6,6 +6,64 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHUDContext();  // RVA 0x028BBD60 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBA60 (end 0x028BBA82)
+// Original VA: 0x00000001428BBA60 | File offset: 0x028BB060
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CB18D0) | Matching: see analysis/functions-uht-natives.json
+void UFortHUDContext::StaticRegisterNativesUFortHUDContext()
+{
+	UClass* Class = UFortHUDContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddPointOfInterest", &UFortHUDContext::execAddPointOfInterest },
+		{ "AreHUDElementsVisible", &UFortHUDContext::execAreHUDElementsVisible },
+		{ "AreIndicatorsEnabled", &UFortHUDContext::execAreIndicatorsEnabled },
+		{ "EnterCameraMode", &UFortHUDContext::execEnterCameraMode },
+		{ "EnterCursorMode", &UFortHUDContext::execEnterCursorMode },
+		{ "ForwardOnAbilityDecisionWindowStackUpdated", &UFortHUDContext::execForwardOnAbilityDecisionWindowStackUpdated },
+		{ "ForwardOnMissionsUpdated", &UFortHUDContext::execForwardOnMissionsUpdated },
+		{ "ForwardOnNumSurvivorsRescuedChanged", &UFortHUDContext::execForwardOnNumSurvivorsRescuedChanged },
+		{ "ForwardOnWeaponEquipped", &UFortHUDContext::execForwardOnWeaponEquipped },
+		{ "GetBluGloManager", &UFortHUDContext::execGetBluGloManager },
+		{ "GetCurrentBasicMissionInfo", &UFortHUDContext::execGetCurrentBasicMissionInfo },
+		{ "GetCurrentHero", &UFortHUDContext::execGetCurrentHero },
+		{ "GetCurrentHUDState", &UFortHUDContext::execGetCurrentHUDState },
+		{ "GetEarnedBadges", &UFortHUDContext::execGetEarnedBadges },
+		{ "GetFocusedBuildingInfo", &UFortHUDContext::execGetFocusedBuildingInfo },
+		{ "GetFocusedMission", &UFortHUDContext::execGetFocusedMission },
+		{ "GetGameStateZone", &UFortHUDContext::execGetGameStateZone },
+		{ "GetIndicatorsState", &UFortHUDContext::execGetIndicatorsState },
+		{ "GetKillerVisualInfoFromDeathReport", &UFortHUDContext::execGetKillerVisualInfoFromDeathReport },
+		{ "GetMissionManager", &UFortHUDContext::execGetMissionManager },
+		{ "GetMissionOverviewObjectives", &UFortHUDContext::execGetMissionOverviewObjectives },
+		{ "GetMissionRewards", &UFortHUDContext::execGetMissionRewards },
+		{ "GetPlayerStateZone", &UFortHUDContext::execGetPlayerStateZone },
+		{ "GetPotentialBadges", &UFortHUDContext::execGetPotentialBadges },
+		{ "GetScoreDisplayFactor", &UFortHUDContext::execGetScoreDisplayFactor },
+		{ "GetTeamCornerstone", &UFortHUDContext::execGetTeamCornerstone },
+		{ "GetTimeToDelayEndOfDayZoneWidgetDisplay", &UFortHUDContext::execGetTimeToDelayEndOfDayZoneWidgetDisplay },
+		{ "HandleBuildingModeChanged", &UFortHUDContext::execHandleBuildingModeChanged },
+		{ "HandleFocusedBuildingHealthChanged", &UFortHUDContext::execHandleFocusedBuildingHealthChanged },
+		{ "HandleLocalPawnDied", &UFortHUDContext::execHandleLocalPawnDied },
+		{ "HandleLocalPawnRevived", &UFortHUDContext::execHandleLocalPawnRevived },
+		{ "HandleLocalPawnSpawned", &UFortHUDContext::execHandleLocalPawnSpawned },
+		{ "HandleLocalPlayerKillsChanged", &UFortHUDContext::execHandleLocalPlayerKillsChanged },
+		{ "HandleLocalPlayerPlaceChanged", &UFortHUDContext::execHandleLocalPlayerPlaceChanged },
+		{ "HandleLocalPlayerViewTargetChanged", &UFortHUDContext::execHandleLocalPlayerViewTargetChanged },
+		{ "IsInCursorMode", &UFortHUDContext::execIsInCursorMode },
+		{ "IsInEditMode", &UFortHUDContext::execIsInEditMode },
+		{ "IsPreparingMgmtMenu", &UFortHUDContext::execIsPreparingMgmtMenu },
+		{ "RemovePointOfInterest", &UFortHUDContext::execRemovePointOfInterest },
+		{ "RequestMgmtMenuTab", &UFortHUDContext::execRequestMgmtMenuTab },
+		{ "SetCursorModeLocked", &UFortHUDContext::execSetCursorModeLocked },
+		{ "SetHUDElementVisibility", &UFortHUDContext::execSetHUDElementVisibility },
+		{ "SetIndicatorsAllowed", &UFortHUDContext::execSetIndicatorsAllowed },
+		{ "SetIndicatorsState", &UFortHUDContext::execSetIndicatorsState },
+		{ "SetPreparingMgmtMenu", &UFortHUDContext::execSetPreparingMgmtMenu },
+		{ "ShouldOnlyShowNextPrevBuildingSlotKeybinds", &UFortHUDContext::execShouldOnlyShowNextPrevBuildingSlotKeybinds },
+		{ "UpdateTrapAttachedToBuilding", &UFortHUDContext::execUpdateTrapAttachedToBuilding },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHUDContext_AddPointOfInterest_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

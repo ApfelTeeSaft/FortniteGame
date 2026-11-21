@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBuildingConnectivityComponent();  // RVA 0x00F66680 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F660B0 (end 0x00F660D2)
+// Original VA: 0x0000000140F660B0 | File offset: 0x00F656B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0326F9A0) | Matching: see analysis/functions-uht-natives.json
+void UBuildingConnectivityComponent::StaticRegisterNativesUBuildingConnectivityComponent()
+{
+	UClass* Class = UBuildingConnectivityComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanConnectTo", &UBuildingConnectivityComponent::execCanConnectTo },
+		{ "DisconnectAll", &UBuildingConnectivityComponent::execDisconnectAll },
+		{ "DrawDebugData", &UBuildingConnectivityComponent::execDrawDebugData },
+		{ "IsConnectedTo", &UBuildingConnectivityComponent::execIsConnectedTo },
+		{ "K2_IsPowered", &UBuildingConnectivityComponent::execK2_IsPowered },
+		{ "OnPlaced", &UBuildingConnectivityComponent::execOnPlaced },
+		{ "OnRep_bIsPowered", &UBuildingConnectivityComponent::execOnRep_bIsPowered },
+		{ "OnRep_bIsProvidingPower", &UBuildingConnectivityComponent::execOnRep_bIsProvidingPower },
+		{ "OnRep_Connections", &UBuildingConnectivityComponent::execOnRep_Connections },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBuildingConnectivityComponent_CanConnectTo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

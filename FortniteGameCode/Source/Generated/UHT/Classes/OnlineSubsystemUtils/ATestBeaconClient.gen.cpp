@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ATestBeaconClient::StaticRegisterNativesATestBeaconClient()
-{
-}
 // IMPLEMENT_CLASS(ATestBeaconClient, 1243238942u)
 // Original dynamic initializer: RVA 0x00099260 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ATestBeaconClient> AutoInitializeATestBeaconClient(TEXT("ATestBeaconClient"), sizeof(ATestBeaconClient), 1243238942u);

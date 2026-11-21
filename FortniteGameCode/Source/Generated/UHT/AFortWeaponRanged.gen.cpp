@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWeaponRanged();  // RVA 0x010D8B00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8830 (end 0x010D8852)
+// Original VA: 0x00000001410D8830 | File offset: 0x010D7E30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x034303B0) | Matching: see analysis/functions-uht-natives.json
+void AFortWeaponRanged::StaticRegisterNativesAFortWeaponRanged()
+{
+	UClass* Class = AFortWeaponRanged::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DeactivateBeamFX", &AFortWeaponRanged::execDeactivateBeamFX },
+		{ "GetADSTransitionInTime", &AFortWeaponRanged::execGetADSTransitionInTime },
+		{ "GetADSTransitionOutTime", &AFortWeaponRanged::execGetADSTransitionOutTime },
+		{ "GetTimeToNextFire", &AFortWeaponRanged::execGetTimeToNextFire },
+		{ "InitializeBeamFX", &AFortWeaponRanged::execInitializeBeamFX },
+		{ "IsUsingFirstPersonCamera", &AFortWeaponRanged::execIsUsingFirstPersonCamera },
+		{ "IsUsingScope", &AFortWeaponRanged::execIsUsingScope },
+		{ "IsUsingScopeOrFirstPersonCamera", &AFortWeaponRanged::execIsUsingScopeOrFirstPersonCamera },
+		{ "ShouldDisplayAmmoCounter", &AFortWeaponRanged::execShouldDisplayAmmoCounter },
+		{ "ShouldSpawnBulletShellFX", &AFortWeaponRanged::execShouldSpawnBulletShellFX },
+		{ "UseFirstPersonTargeting", &AFortWeaponRanged::execUseFirstPersonTargeting },
+		{ "UseScopeTargeting", &AFortWeaponRanged::execUseScopeTargeting },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortWeaponRanged_DeactivateBeamFX_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

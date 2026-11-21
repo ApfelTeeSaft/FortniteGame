@@ -3372,6 +3372,109 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesAActor();
+	static void execActorHasTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetachRootComponentFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFlushNetDormancy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceNetUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorEnableCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorEyesViewPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorForwardVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorRelativeScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorRightVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorTickInterval(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorUpVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllChildActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttachedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttachParentActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttachParentSocketName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetComponentByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetComponentsByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetComponentsByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDistanceTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDotProductTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameTimeSinceCreation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHorizontalDistanceTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHorizontalDotProductTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputAxisKeyValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputAxisValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputVectorAxisValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstigator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstigatorController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOverlappingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOverlappingComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParentActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParentComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRemoteRole(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquaredDistanceTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTickableWhenPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVerticalDistanceTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAuthority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActorBeingDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActorTickEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsChildActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOverlappingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddActorLocalOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddActorLocalRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddActorLocalTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddActorWorldOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddActorWorldRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddActorWorldTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AttachRootComponentTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AttachRootComponentToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AttachToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AttachToComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DestroyActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DestroyComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DetachFromActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetActorLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetActorRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetRootComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetActorLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetActorLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetActorRelativeLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetActorRelativeRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetActorRelativeTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetActorRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetActorTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_TeleportTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeMIDForMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeNoise(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AttachmentReplication(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Instigator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Owner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicateMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrestreamTextures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorEnableCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorHiddenInGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorRelativeScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorTickEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorTickInterval(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNetDormancy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReplicateMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReplicates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTickableWhenPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTickGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSnapRootComponentTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTearOff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWasRecentlyRendered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2F0];  // sizeof(AActor) = 0x318
 };
@@ -3389,6 +3492,31 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAController();
+	static void execCastToPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControlRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDesiredRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocalController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocalPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLookInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineOfSightTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Pawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPossess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetIgnoreInputFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetIgnoreLookInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetIgnoreMoveInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetControlRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIgnoreLookInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIgnoreMoveInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInitialLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnPossess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x68];  // sizeof(AController) = 0x380
 };
@@ -3406,6 +3534,25 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAAIController();
+	static void execClaimTaskResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAIPerceptionComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocalPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocalPointOnActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetImmediateMoveDestination(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMoveStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathFollowingComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPartialPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ClearFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetFocalPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveToLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnGameplayTaskResourcesClaimed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunBehaviorTree(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMoveBlockDetection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnclaimTaskResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseBlackboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(AAIController) = 0x410
 };
@@ -3423,6 +3570,48 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAAIHotSpot();
+	static void execAssignFromWaitingList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAssignGroupToHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAssignToHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAssignToSlotByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanUseSlotByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindBestSlotIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindBestSlotIndices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAssignedAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAssignedAICount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotByOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotIndexByOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotLocationByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotOwnerByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotRotationByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotStateByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotStateByOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotUserIdByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAssignedAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasEnabledSlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAIAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSlotlessAssignmentAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOccupySlotByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAssignedClaimedBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAssignedOccupiedBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAssignedSlotlessBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHotSpotDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHotSpotEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMoveToSlotFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRemovedBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRemovedSlotlessBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotBlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotClaimed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotFreed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotOccupied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveFromHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGroupFromHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x188];  // sizeof(AAIHotSpot) = 0x4A0
 };
@@ -3440,6 +3629,30 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAHUD();
+	static void execAddDebugText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddHitBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeproject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawMaterialSimple(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawMaterialTriangle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawRect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawTextureSimple(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorsInSelectionRectangle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNextDebugTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPreviousDebugTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAllDebugStrings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveDebugText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowDebugForReticleTargetToggle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowDebugToggleSubCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF0];  // sizeof(AHUD) = 0x408
 };
@@ -3472,6 +3685,31 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000004000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAPawn();
+	static void execAddControllerPitchInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddControllerRollInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddControllerYawInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddMovementInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConsumeMovementInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetachFromControllerPendingDestroy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseAimRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControlRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastMovementInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMovementBaseActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMovementComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNavAgentLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPendingMovementInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsControlled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocallyControlled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerControlled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetMovementInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLaunchPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Controller(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPawnMakeNoise(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanAffectNavigationGeneration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDefaultController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(APawn) = 0x378
 };
@@ -3560,6 +3798,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAAmbientSound();
+	static void execAdjustVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFadeIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFadeOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x8];  // sizeof(AAmbientSound) = 0x320
 };
@@ -3641,6 +3884,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAAudioVolume();
+	static void execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInteriorSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReverbSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(AAudioVolume) = 0x3A0
 };
@@ -3658,6 +3906,43 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingActor();
+	static void execAddEditorOnlyInstanceGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceBuildingHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_Healing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_InstantDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCentroid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCustomState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEditorTestTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHealthPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissingHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningPlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasHealthLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeKismetSpawnedBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAcceptablePositionForPlacement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDamaged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerBuilt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBuildingActorInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDayPhaseChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AbilitySystemComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bForceReplayRollback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_BuildingAttributeSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CustomState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlacedByPlacementTool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveEditorOnlyInstanceGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanExportNavigationObstacle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCustomState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNavigationModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetQuestHighlight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDie(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSilentDie(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseDefaultHealthBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x358];  // sizeof(ABuildingActor) = 0x670
 };
@@ -3771,6 +4056,54 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingSMActor();
+	static void execAttachBuildingActorToMe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprintOnStructurallyStable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprintOnStructurallyUnstable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetachBuildingActorFromMe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlyRemoveInstanceMaterialScalarParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlyRemoveInstanceMaterialTextureParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlyRemoveInstanceMaterialVectorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlySetInstanceMaterialScalarParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlySetInstanceMaterialTextureParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlySetInstanceMaterialVectorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceIntoStructuralGridDuringRuntime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_Abilities_Activation_Generic_BannerWallBuff1(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_Abilities_Activation_Generic_BannerWallBuff2(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnimatingMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttachedBuildingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIntenseWindMaterialsForPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLogicalBuildingIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReplacementDestructionReason(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWindPannerSpeedCurveForPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWindSpeedCurveForPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasDestructionLoot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsStructurallySupported(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSupportedByWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkConnectedBuildingsForStructuralIntegrityCheck(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMulticastPlayFullHealthEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMulticastRequestBuildingAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDynamicShrinkAndDestroyEffectFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLODOverrideEffectFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bCollisionBlockedByPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_BuildingReplacementType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bUnderConstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bUnderRepair(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_EditingPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MetaData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RelevantBASE(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedDrawScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedMIC(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ResourceType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeakSpotPositions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReadTextureData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRepairBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMirrored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextureData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateDynamicShrinkAndDestroyEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateLODOverrideEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateRepairMaterialAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWillRegisterWithStructuralGrid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x740];  // sizeof(ABuildingSMActor) = 0xDB0
 };
@@ -3835,6 +4168,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingCapturePointActor();
+	static void execGetCaptureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCapturePointActiveStateChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCapturePointLockStateChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCapturePointStateChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnEnterCapturePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLeaveCapturePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CaptureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedCapturePercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActivatedState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(ABuildingCapturePointActor) = 0x810
 };
@@ -3904,6 +4248,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingContainer();
+	static void execBounceContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLootTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bAlreadySearched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRaiseTreasure(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x110];  // sizeof(ABuildingContainer) = 0xF10
 };
@@ -3953,6 +4301,25 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingFOBConfigActor();
+	static void execAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanPerformIOOperation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanSaveFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllCoreChoices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFOBMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedFOBCoreItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBuildingActorWithinFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerControllerFOBOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCoreInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFinalizationFXMulticast(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFOBModeSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnIOOperationCompleteMulticast(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_FOBMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x310];  // sizeof(ABuildingFOBConfigActor) = 0xA80
 };
@@ -3970,6 +4337,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingFOBCoreActor();
+	static void execGetFOBBoundsBoxOverlappedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFOBBoundsCenterAndExtents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSimpleDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActorWithinFOBBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkTargetable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkVulnerable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnActiveStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bTargetable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bVulnerable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetableStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnVulnerableStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x130];  // sizeof(ABuildingFOBCoreActor) = 0x8A0
 };
@@ -4003,6 +4383,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingFlagSpawn();
+	static void execIsSpawnedObjectAwayFromBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCarriedObjectAttachedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCarriedObjectDetachedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnCarriedObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(ABuildingFlagSpawn) = 0x7D0
 };
@@ -4038,6 +4422,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingFoundation();
+	static void execEditorOnlyAddAdditionalWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlyClearAdditionalWorlds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorOnlyRemoveAdditionalWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLevelShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLevelStreamedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_LevelToStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x140];  // sizeof(ABuildingFoundation) = 0xEF0
 };
@@ -4122,6 +4512,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingItemCollectorActor();
+	static void execGetNumberOfTeamCaptures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamDepositAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamDepositGoal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamReachedGoalCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnItemCollectorStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ControllingTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ItemCollectorState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TeamDepositAmounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TeamDepositGoals(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTeamReachedDepositGoal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemCollectorState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateTeamDepositValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC0];  // sizeof(ABuildingItemCollectorActor) = 0x830
 };
@@ -4154,6 +4556,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingLayoutRequirement();
+	static void execActivateRequirement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RequirementStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRequirementSatisfyingActorDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRequiredResourceType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRequirementVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(ABuildingLayoutRequirement) = 0xE10
 };
@@ -4291,6 +4698,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingPropAtlas();
+	static void execGetDefenseAnimSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefenseProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeAudio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeRings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayRingDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayRingsIdleLoop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayRingSpinning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayRingsReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestoreRingsHierarchy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupAnimationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupAnimationTransition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopRingSpinning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x140];  // sizeof(ABuildingPropAtlas) = 0xF40
 };
@@ -4340,6 +4759,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingRift();
+	static void execBroadcastRiftSpawningAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RiftIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RiftIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(ABuildingRift) = 0x710
 };
@@ -4389,6 +4811,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingTrap();
+	static void execAddDamageComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTriggerComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAttemptRetrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_ShouldTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinishTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetArmTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingAttachedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDamageDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDurabilityPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFireDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReloadTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchingDamageTargets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrapLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrapRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AttachedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedAppliedAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTriggerTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerIfAppropriate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x120];  // sizeof(ABuildingTrap) = 0xED0
 };
@@ -4489,6 +4933,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesABuildingWall();
+	static void execIsDoorOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bDoorCollisionDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bDoorOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF0];  // sizeof(ABuildingWall) = 0xEA0
 };
@@ -4573,6 +5020,44 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesACharacter();
+	static void execCacheInitialMeshOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanJumpInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAckGoodMove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAdjustPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAdjustRootMotionPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAdjustRootMotionSourcePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCheatFly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCheatGhost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCheatWalk(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientVeryShortAdjustPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCrouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnimRootMotionTranslationScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseRotationOffsetRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseTranslationOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsJumpProvidingForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingNetworkedRootMotionMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingRootMotion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLaunchCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnJumped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsCrouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedBasedMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RootMotion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWalkingOffLedge(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRootMotionDebugClientPrintOnScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveDual(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveDualHybridRootMotion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveDualNoBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveNoBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveOld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReplicateMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopJumping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnCrouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x3A8];  // sizeof(ACharacter) = 0x720
 };
@@ -4590,6 +5075,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesACineCameraActor();
+	static void execGetCineCameraComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(ACineCameraActor) = 0x8B0
 };
@@ -4660,6 +5146,132 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000002000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAPlayerController();
+	static void execActivateTouchInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddPitchInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddRollInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddYawInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAudioListenerAttenuationOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAudioListenerOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAddTextureStreamingLoc(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCancelPendingMapChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCapBandwidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientClearCameraLensEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCommitMapChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientEnableNetworkVoice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientEndOnlineSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientFlushLevelStreaming(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientForceGarbageCollection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientGameEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientGotoState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientIgnoreLookInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientIgnoreMoveInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPlayCameraAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPlayCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPlayForceFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPlaySound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPlaySoundAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPrepareMapChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPrestreamTextures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReceiveLocalizedMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientRepObjRef(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientRestart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientRetryClientRestart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReturnToMainMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReturnToMainMenuWithTextReason(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetBlockOnAsyncLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetCameraFade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetCameraMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetCinematicMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetForceMipLevelsToBeResident(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetSpectatorWaiting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSpawnCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientStartOnlineSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientStopCameraAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientStopCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientStopForceFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientTeamMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientTravel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientTravelInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientUnmutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientUpdateLevelStreamingStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientUpdateMultipleLevelsStreamingStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientVoiceHandshakeComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientWasKicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConsoleKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeprojectMousePositionToWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeprojectScreenPositionToWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableCheats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFOV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocalLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResultUnderCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResultUnderCursorByChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResultUnderCursorForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResultUnderFinger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResultUnderFingerByChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResultUnderFingerForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputAnalogKeyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputAnalogStickState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputKeyTimeDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputMotionState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputMouseDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputTouchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputVectorKeyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMousePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpectatorPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewportSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInputKeyDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLocalTravel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnServerStartedVisualLogger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayDynamicForceFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayHapticEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProjectWorldLocationToScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestartLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendToConsole(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAcknowledgePossession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerChangeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCheckClientPossession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCheckClientPossessionReliable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerNotifyLoadedWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRestartPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetSpectatorLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetSpectatorWaiting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerShortTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerToggleAILogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUnmutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateLevelVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateMultipleLevelsVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerVerifyViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerViewNextPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerViewPrevPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerViewSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAudioListenerAttenuationOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAudioListenerOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCinematicMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetControllerLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHapticsByValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMouseCursorWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMouseLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetViewTargetWithBlend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVirtualJoystickVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopHapticEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwitchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleSpeaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWasInputKeyJustPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWasInputKeyJustReleased(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x300];  // sizeof(APlayerController) = 0x680
 };
@@ -4677,6 +5289,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesADebugCameraController();
+	static void execGetSelectedActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPawnMovementSpeedScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowDebugSelectedInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(ADebugCameraController) = 0x6C8
 };
@@ -4796,6 +5412,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesADeployableBasePlot();
+	static void execGetNumOfItemsInPlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOccupantNetID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleBuildingStateTransition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBuildingActorWithinBuildableSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOccupant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOccupied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBuildingStateTransition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCurrentBuildingStateSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_BuildableSpaceExpansionVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentBuildingState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_OccupantNetID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2D0];  // sizeof(ADeployableBasePlot) = 0xA40
 };
@@ -4828,6 +5456,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesALight();
+	static void execGetBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAffectTranslucentLighting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCastShadows(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFunctionFadeDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFunctionMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFunctionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(ALight) = 0x328
 };
@@ -4894,6 +5535,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAEmitter();
+	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnParticleSystemFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bCurrentlyActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFloatParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaterialParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVectorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(AEmitter) = 0x368
 };
@@ -4928,6 +5581,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAExponentialHeightFog();
+	static void execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(AExponentialHeightFog) = 0x328
 };
@@ -4981,6 +5635,26 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortAIController();
+	static void execCreateBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGoalActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIgnoreProximityForDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAllowedToSleep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsIgnoringProximity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLockBehaviorResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLockMovementResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBuildingActorGoalDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAlwaysGameplayRelevant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFullPeripheralVision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGoalActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsSleeping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPawnAIType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupCustomVIM(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockBehaviorResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockMovementResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterForGoalDetection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWakeUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x150];  // sizeof(AFortAIController) = 0x560
 };
@@ -4998,6 +5672,23 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortAIDirector();
+	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConvertInvalidDirectionsToValidDirections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAmbientThreatEncounterSpawnLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEncounterDirectionFromVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRiftsFromClosestActiveEncounterTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVectorFromEncounterDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnyActiveEncounterRelevantToDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnyActiveEncounterRelevantToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnyAIRelevantToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnyEncounterGoalWithinDistanceOfPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLineTooCloseToPatrolWards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPointTooCloseToPatrolWards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDayPhaseChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterPatrolWard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterPatrolWard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x8C8];  // sizeof(AFortAIDirector) = 0xBE0
 };
@@ -5179,6 +5870,100 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPawn();
+	static void execAlignRotationToHitDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAnimMontage_LocalJumpToSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAnimMontage_LocalSetNextSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyKnockback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAttachAssetToSocket(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearJumpFlashCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetachAssetFromSocket(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoFatalDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEquipWeaponDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFollowingTheLeaderEmoteStopped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceKill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_InstantDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAssetSkeletalMeshComponentAttachment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControlRecoveryBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControlResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentMontageSectionTimeLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSentenceSpeechText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDamageZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultTargetingOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultTargetingRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHealthPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKnockbackMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKnockbackThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalViewingPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxControlResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMeleeComboCounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMeleeReticleStrikeAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMovementPredictionPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMyMovementBaseActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPawnMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShieldOrHealthPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSphericalHitDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleIsDying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleIsHiddenForDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCurrentMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideBodyOnDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeDeathHitSocket(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActionInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAllowChainStun(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFrontalHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsStaggered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWeaponHolstered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLaunchCharacterJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAllMontageInstancesEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMontageEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMontageStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bWeaponHolstered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DamageZoneActiveBitMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsKnockedBack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_JumpFlashCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PawnUniqueID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PushMomentum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Sentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TeleportCounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_VocalChords(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPawnStartFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPawnStopFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPickUpActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayFootStepSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayLocalAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrototypeCharacterMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveCallout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetFallingHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerInternalEquipWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTeleportNearLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCallout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetControlRecoveryBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFNameBasedOnHitDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHolsterWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsKnockedBack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPawnAndControlRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPawnVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpawnSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnCameraLensEffectDirectional(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnSoundLensEffectDirectional(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartPushMomentum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopPushMomentum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerFeedbackEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x850];  // sizeof(AFortPawn) = 0xF70
 };
@@ -5197,6 +5982,64 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesAFortAIPawn();
+	static void execAddFortAbilitySet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddUnreachablePickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanHitTargetWithAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAIFocalPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinishedEncounterSpawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceKillNoDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCharacterGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentAimTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefenderItemInstanceId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDifficultyLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGroundSpeedForUrgency(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetImpactPhysicalSurfaceSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMovementStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMovementUrgency(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScoreValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpawnLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpawnPointValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpawnRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrabPickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasTether(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInCombat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInsideTetherBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_FindExistingItemForDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetDefenderItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnEncounterSpawnEnableMeleeAttacking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnEncounterSpawnEnableRangedAttacking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AppearanceOverrideEntryIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bIsSleeping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentAIRotationRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentFortAILODLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_EnableBlockingCollisionWithOtherAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Inventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MinimapViewableDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSleepingAIsFloorBuildingActorDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetAIRotationRateToDefault(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAIFocalPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAIRotationRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAIType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlockCollisionWithOtherAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanSleep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionProfileName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentAimTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDefenderTrap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEyeColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsCharging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinimapViewableDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinimumAILOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMovementUrgency(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldStartSleeping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSkinColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWeaponCollisionComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerNoWeaponSpeech(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTurnOnSleepingOptimizations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xBE0];  // sizeof(AFortAIPawn) = 0x1B50
 };
@@ -5214,6 +6057,54 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortWeapon();
+	static void execClientGivenTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReportShotFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetermineReticleColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_Impact(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGameplayCue_Weapons_Activation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBulletsPerClip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChargePercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCoreAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentMaxChargePercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDamageStartLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalMagazineAmmoCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalRemainingAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMagazineAmmoCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMeleeAttackPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMuzzleLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMuzzleSocketTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReloadProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReloadTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRemainingAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReticleColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSupportsAutoFireAtReticleTargetMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAutoFireReticleTargetInRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsProjectileWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsReloading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPawnMontageBlendingOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPawnMontageStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AmmoCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ChargeStatusPack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CosmeticStatValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_EquippedWeaponDestroyWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedAppliedAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedWeaponData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayForceFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayNativeImpactFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayReloadFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayWeaponFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetTempWeaponMaterialOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReleaseWeaponPrimaryAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerResetShotReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetChargeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldDrawNativeReticle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWeaponVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopForceFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopWeaponFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseWeaponDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x738];  // sizeof(AFortWeapon) = 0xA50
 };
@@ -5231,6 +6122,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortDecoTool();
+	static void execClientDestroyDecoPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCarriedActorDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CarriedActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSpawnDeco(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(AFortDecoTool) = 0xAA0
 };
@@ -5269,6 +6165,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortAbilityTestObserver();
+	static void execStartObserving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopObserving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWasAbilityActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWasAbilityTagActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(AFortAbilityTestObserver) = 0x348
 };
@@ -5286,6 +6186,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortGameplayEffectDeliveryActor();
+	static void execBroadcastExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCollisionComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBeingKilled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKillTimerExpired(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnComponentOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnComponentTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsBeingKilled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIgnoreInstigatorCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2F8];  // sizeof(AFortGameplayEffectDeliveryActor) = 0x610
 };
@@ -5319,6 +6230,9 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesAFortAthenaAircraft();
+	static void execGetDropEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDropStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_JumpFlashCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x120];  // sizeof(AFortAthenaAircraft) = 0x438
 };
@@ -5388,6 +6302,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortAthenaSMVehicle();
+	static void execOnRep_MovementParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateMoveParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x128];  // sizeof(AFortAthenaSMVehicle) = 0x4C0
 };
@@ -5527,6 +6443,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortBotStructureBuilder();
+	static void execBuildAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBuildingDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunDeconstructor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(AFortBotStructureBuilder) = 0x350
 };
@@ -5562,6 +6481,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortCarriedObject();
+	static void execGetHoldingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HolderInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReturnToSpawnPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x158];  // sizeof(AFortCarriedObject) = 0x470
 };
@@ -5579,6 +6501,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortClientAnnouncement();
+	static void execCancelClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(AFortClientAnnouncement) = 0x388
 };
@@ -5596,6 +6521,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortClientAnnouncementManager();
+	static void execOnRep_CancelledAnnouncements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ClientAnnouncements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x188];  // sizeof(AFortClientAnnouncementManager) = 0x4A0
 };
@@ -5650,6 +6577,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortClientAnnouncement_Conversation();
+	static void execCurrentSentenceAudioFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(AFortClientAnnouncement_Conversation) = 0x3D8
 };
@@ -5769,6 +6697,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortCombatManager();
+	static void execGetEventHeatPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEventHeatPercentTotal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CombatEventHeat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x878];  // sizeof(AFortCombatManager) = 0xB90
 };
@@ -5809,6 +6740,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortCrackEffect();
+	static void execHasStartingPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HitNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PhysicalSurfaceType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE0];  // sizeof(AFortCrackEffect) = 0x3F8
 };
@@ -5826,6 +6760,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortCustomizableAbilityDecoTool();
+	static void execBPPressSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBPPressTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBPReleaseSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBPReleaseTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBPServerPressSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBPServerReleaseSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPressSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPressTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReleaseSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReleaseTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class AFortDamageNumbersActor : public AFortClientOnlyActor
@@ -5995,6 +6939,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortDeployableBaseManager();
+	static void execBroadcastHordeWaveStinger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllDeployableBasePlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAvailableTiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeployableBasePlotFromLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeployableBaseUseType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHighestDefeatedTierForPlayerAndLayout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTierOutputForSelectedTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReloadAllPlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetKeepDeployableBasesOnLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2C8];  // sizeof(AFortDeployableBaseManager) = 0x5E0
 };
@@ -6012,6 +6966,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPickup();
+	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInteractErrorText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInteractText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bPickedUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PickupLocationData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PickupOwnerData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PrimaryPickupItemEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TossedFromContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPickedUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTossPickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x218];  // sizeof(AFortPickup) = 0x530
 };
@@ -6216,6 +7180,32 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAPlayerCameraManager();
+	static void execAddCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddNewCameraModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearCameraLensEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindCameraModifierByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCameraLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCameraRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFOVAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPhotographyMultiPartCaptureEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPhotographyMultiPartCaptureStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPhotographySessionEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPhotographySessionStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPhotographyCameraModify(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayCameraAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveCameraModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetManualCameraFade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartCameraFade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAllCameraAnims(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAllCameraShakes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAllInstancesOfCameraAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAllInstancesOfCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopCameraAnimInst(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopCameraFade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x22C8];  // sizeof(APlayerCameraManager) = 0x25E0
 };
@@ -6271,6 +7261,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAGameModeBase();
+	static void execCanSpectate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChangeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChoosePlayerStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindPlayerStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultPawnClassForController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumSpectators(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleStartingNewPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMatchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeHUDForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitStartSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_FindPlayerStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMustSpectate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayerCanRestart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestartPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestartPlayerAtPlayerStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestartPlayerAtTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReturnToMainMenuHost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDefaultPawnAtTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDefaultPawnFor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(AGameModeBase) = 0x3B8
 };
@@ -6288,6 +7301,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAGameMode();
+	static void execAbortMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMatchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMatchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMatchInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReadyToEndMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReadyToStartMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestartGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBandwidthLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(AGameMode) = 0x400
 };
@@ -6305,6 +7329,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameMode();
+	static void execDumpReservations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnEndOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x330];  // sizeof(AFortGameMode) = 0x730
 };
@@ -6322,6 +7348,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameModeZone();
+	static void execOnEveningReached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMorningReached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReplicateHealthAndShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x100];  // sizeof(AFortGameModeZone) = 0x830
 };
@@ -6356,6 +7385,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameModeAthena();
+	static void execOnAircraftEnteredDropZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAircraftExitedDropZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAircraftFlightEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnEndGameKickPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSafeZoneInsideChecks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTrySupplyDrop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x420];  // sizeof(AFortGameModeAthena) = 0xCC0
 };
@@ -6539,6 +7574,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameSession();
+	static void execDumpReservations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x100];  // sizeof(AFortGameSession) = 0x430
 };
@@ -6573,6 +7609,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAGameStateBase();
+	static void execGetPlayerRespawnDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetServerWorldTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasBegunPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMatchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GameModeClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedHasBegunPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedWorldTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SpectatorClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(AGameStateBase) = 0x358
 };
@@ -6590,6 +7635,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAGameState();
+	static void execOnRep_ElapsedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MatchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(AGameState) = 0x378
 };
@@ -6607,6 +7654,22 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameState();
+	static void execClient_InitiateEndOfDayRecap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDemoEndOfDayRecap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeOfDayManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldDaysElapsed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AnnouncementManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentWUID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_FeedbackManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GameplayState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GameSessionID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MusicManagerSubclass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Teams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TimeOfDayManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WorldDaysElapsed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WorldManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x458];  // sizeof(AFortGameState) = 0x7D0
 };
@@ -6625,6 +7688,61 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesAFortGameStateZone();
+	static void execApplyPlayerAbilityRestriction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBeginGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanSpawnDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefenderToRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayVotesForChoice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumAllowedDifficultyIncreases(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumGameplayVotes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumSurvivorsDead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumSurvivorsRescued(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumSurvivorsSpawned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUIMapManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGloballyBlockAbilitiesWithTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGloballyUnblockAbilitiesWithTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasActiveGameplayModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBuildingAtLayoutRequirementsAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBuildingWithoutLayoutRequirementsAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDefenderItemDeployed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyBeginGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyEndGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifySurvivorDead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifySurvivorRescued(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifySurvivorSpawned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDefenderDeployed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDefenderRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ActiveGameplayModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GameDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GameplayVotes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionAlertData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionGenerator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_NumSurvivorsRescued(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerBuildingSkillLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerSharedTrapAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerStructuresChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedWorldTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TheaterUniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ZoneDifficultyInfoRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWaveBasedModifiersAppliedMulticast(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWaveEncounterStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWaveStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterGameplayModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemovePlayerAbilityRestriction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunPerfMemCheatScript(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerFireAIDirectorEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerFireAIDirectorEventBatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBuildingAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDifficultyIncreaseRewardTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDisablePlayerTeleportingDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubmitGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterGameplayModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA70];  // sizeof(AFortGameStateZone) = 0x1240
 };
@@ -6642,6 +7760,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameStatePvP();
+	static void execGetAverageHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFOBFinalizationTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemCollector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRoundTimeAccumulated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartMatchDelayTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsExperimentalCraftingFeatureActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ItemCollector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RoundTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StalemateTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x140];  // sizeof(AFortGameStatePvP) = 0x1380
 };
@@ -6659,6 +7791,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameStateAthena();
+	static void execGetAerialPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBattleBusForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSafeZoneIndicator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Aircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentPlaylistId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GamePhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WinningPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WinningTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x240];  // sizeof(AFortGameStateAthena) = 0x15C0
 };
@@ -6676,6 +7817,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameStateDeployableBase();
+	static void execGetDeployableBaseUseType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DeployableBaseManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGameDifficultyExplicitly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(AFortGameStateDeployableBase) = 0x1280
 };
@@ -6727,6 +7872,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortGameStateKeep();
+	static void execOnRep_PermaniteBoundariesInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(AFortGameStateKeep) = 0x1290
 };
@@ -6814,6 +7960,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAGameplayCueNotify_Actor();
+	static void execK2_EndGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnOwnerDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWhileActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA8];  // sizeof(AGameplayCueNotify_Actor) = 0x3C0
 };
@@ -7053,6 +8205,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortInGameMapManager();
+	static void execBroadcastExplorationEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MapData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPaintOnFog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x168];  // sizeof(AFortInGameMapManager) = 0x480
 };
@@ -7102,6 +8258,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortInventory();
+	static void execHandleInventoryLocalUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1D8];  // sizeof(AFortInventory) = 0x4F0
 };
@@ -7189,6 +8346,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortKeepDefenseManager();
+	static void execGetNumberAliveEnemies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWaveDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGoToNextWave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSkipWarmup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartAIEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartEventFromList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xD0];  // sizeof(AFortKeepDefenseManager) = 0x3E8
 };
@@ -7206,6 +8371,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortLauncherAthena();
+	static void execOnRepLaunchServerInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(AFortLauncherAthena) = 0xF10
 };
@@ -7259,6 +8425,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortLightningActor();
+	static void execCleanupLightning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGenerateBoltLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeLightning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(AFortLightningActor) = 0x370
 };
@@ -7293,6 +8462,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAOnlineBeaconClient();
+	static void execClientOnConnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(AOnlineBeaconClient) = 0x3D0
 };
@@ -7310,6 +8480,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesALobbyBeaconClient();
+	static void execClientAckJoiningServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientJoinGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientLoginComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPlayerJoined(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPlayerLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetInviteFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientWasKicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCheat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDisconnectFromLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerKickPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerLoginPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerNotifyJoiningServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetPartyOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1A0];  // sizeof(ALobbyBeaconClient) = 0x570
 };
@@ -7386,6 +8569,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortLobbyBeaconClientRM();
+	static void execClientBroadcastLobbyPlayerPadTop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateNewlyJoinedPlayerInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateReadyStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLocalReadyStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateNewlyJoinedPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(AFortLobbyBeaconClientRM) = 0x5A0
 };
@@ -7514,6 +8702,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesALobbyBeaconPlayerState();
+	static void execOnRep_InLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PartyOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x158];  // sizeof(ALobbyBeaconPlayerState) = 0x470
 };
@@ -7531,6 +8721,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortLobbyBeaconPlayerState();
+	static void execOnRep_CharacterGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CharXP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ConsoleOSSName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ConsoleUniqueNetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Gadgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HeroId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HeroSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HomeBaseVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_LobbyTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1E0];  // sizeof(AFortLobbyBeaconPlayerState) = 0x650
 };
@@ -7563,6 +8763,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortLobbyBeaconPlayerStatePvP();
+	static void execOnRep_bReadiedUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(AFortLobbyBeaconPlayerStatePvP) = 0x660
 };
@@ -7597,6 +8798,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesALobbyBeaconState();
+	static void execOnRep_LobbyStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WaitForPlayersTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2B8];  // sizeof(ALobbyBeaconState) = 0x5D0
 };
@@ -7614,6 +8817,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortLobbyBeaconState();
+	static void execOnRep_MissionGeneratorClassPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionGeneratorDetailsRequirement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(AFortLobbyBeaconState) = 0x660
 };
@@ -7661,6 +8866,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortLobbyBeaconStatePvP();
+	static void execOnRep_PvPLobbyTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(AFortLobbyBeaconStatePvP) = 0x670
 };
@@ -7678,6 +8884,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortLobbyBeaconStateRM();
+	static void execOnRep_LobbyTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(AFortLobbyBeaconStateRM) = 0x670
 };
@@ -7695,6 +8902,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortMarkActor();
+	static void execOnRep_AttachedToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC8];  // sizeof(AFortMarkActor) = 0x3E0
 };
@@ -7712,6 +8920,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortMissionState();
+	static void execOnAllPlayersLoadedInWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendMissionUIEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimerForOnAllPlayersLoadedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(AFortMissionState) = 0x350
 };
@@ -7729,6 +8941,66 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortMission();
+	static void execAddCompletionTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddCompletionTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGoalsToAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGoalsToEncounterAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGoalToAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGoalToEncounterAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddParticipantAccount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAttemptMissionSave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprintCanPlayerParticipate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChooseRandomReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateEncounterAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateEncounterSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindGoalLocationsForEncounterAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFocusThisMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorsSpawnedMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllObjectives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingDamageLootTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConfigData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentBluGloRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentFocusDisplayText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentFocusPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDaysRemainingBeforeOverPar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExpectedCompletionTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectiveByHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectiveHandlesWithTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectiveStatusByHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParticipatingMissionControllers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPawnDamageLootTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardItemsByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpawnLocationActorsMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpawnLocationsMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantRewardsByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMissionPar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeActorsForMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeActorsForMissionMatchingItemIdentifyingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerParticipating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ActiveObjectives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bIsMissionVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentFocusDisplayData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PotentialBadgesArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_QuestOwnerAccount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_UIIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWaveCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProvideAllPotentialBadges(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordResourceActorSpawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGoalFromEncounterAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGoalsFromEncounterAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveParticipantAccount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendBotLogicMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetToSilentDestroy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUiVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAtPlacementActorsAsArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartMissionAIEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartMissionAIEncounterFromGeneratedProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopEncounterSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopMissionAIEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x340];  // sizeof(AFortMission) = 0x690
 };
@@ -7763,6 +9035,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortMissionManager();
+	static void execGetSpawnLocationActorsMatchingEntryItemQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpawnLocationActorsThatHaveAddedTagsMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentUIFocusedMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_EarnedBadgesArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Missions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MissionUIActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowSecondaryMissionHeaders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x338];  // sizeof(AFortMissionManager) = 0x650
 };
@@ -7881,6 +9160,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortObjectiveBase();
+	static void execAttemptMissionSave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableTick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectiveDisplayString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectiveTimerTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardItemsByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimerComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantRewardsByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsObjectiveTimerPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRelevantToASpecificTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRelevantToTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bIsObjectiveVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ObjectiveStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ObjectiveVisibilityOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPauseObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUiVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUIVisibilityOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartPlayingObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnpauseObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x98];  // sizeof(AFortObjectiveBase) = 0x3E8
 };
@@ -7945,6 +9247,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAPartyBeaconClient();
+	static void execClientCancelReservationResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReservationResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendReservationFull(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendReservationUpdates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCancelReservationRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReservationRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateReservationRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x140];  // sizeof(APartyBeaconClient) = 0x510
 };
@@ -7962,6 +9271,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPartyBeaconClient();
+	static void execClientAbandonResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAllowedToProceedFromReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAllowedToProceedFromReservationTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReconnectResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAbandonExistingReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerEmptyServerReservationRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReconnectExistingReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF0];  // sizeof(AFortPartyBeaconClient) = 0x600
 };
@@ -8043,6 +9359,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPawn_InteractablePawn();
+	static void execBlueprintCanInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprintGetInteractionString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprintOnBeginInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprintOnInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(AFortPawn_InteractablePawn) = 0x1B60
 };
@@ -8205,6 +9525,188 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesAFortPlayerController();
+	static void execActivateSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddItemToQuickBars(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCheat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCheatAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAddHeroSpecialization(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientAddScoreNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCancelCrafting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCreateOrJoinChatRoom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientExecuteInventoryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientFinishedInteractionInZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientForceCancelBuildingTool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientForceProfileQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientGivePlayerLocalAccountItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientJoinConsoleSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnGenericPlayerInitialization(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOpenChoiceUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPingMinimap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReadyCheckComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReceivedAttributeSources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReceivePresetTeamChat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientRegisterWithParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReportDamagedResourceBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientRequestReadyCheck(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendConfirmationMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetActionMappingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetInviteFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetSpectatorCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientStayWithParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientStopUIFeedbackEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientTriggerUIFeedbackEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientUpdateRichPresence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeployDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpHomebaseRatingInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEmote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFixupInteractionWidgetsOnUnzoom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceUpdateQuickbar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFortClientPlaySound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFortClientPlaySoundAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorUnderReticle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAIDirectorDataManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAtNameHomeBaseScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAwardManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCollectionBookManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameAccountId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLockOnState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRegisteredPlayerInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRotatePawnToCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGivePlayerAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleOutpostInventoryLocalUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleWorldInventoryLocalUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasLockOnTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActionInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAutoFireFromReticleModeEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsClientBot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsClientTimingOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInBuildMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsNearActiveEncounters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingEmote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRequirementsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingFirstPersonCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingGamepad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_FindExistingItemForDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLocalOnBlueprintEdit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLocalOnUiChoiceCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLocalPlayForceFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLocalStopForceFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bHasServerFinishedLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CheatMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CombatManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IntensityGraphInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_LatestRewardReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PIDContributionsGraphInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PIDValuesGraphInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PinnedSchematics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_QuickBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_UpdatedObjectiveStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_UpdatedUnsavedPrimaryMissionProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenChoiceUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayEmoteItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySpatialSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPostHeroStatCollectionBookProgressMade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPostHeroStatMissionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPostHeroStatSkillPointsEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintDebugInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintEventInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveItemFromQuickBars(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetInputRotationScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReturnToMainMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAddPawnMovementInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAnnouncementStoppedOnClient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAttemptInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAttemptPinSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAttemptUnpinSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerBeginEditingBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerBroadcastUIFeedbackEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCheat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCheatAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerClientPawnLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCraftSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCreateAIDirectorDataManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCreateBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCreateCombatManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDeployDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDisassembleInventoryItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDropCarriedObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerEditBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerEmote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerEndEditingBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerExecuteInventoryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerExecutePresetTeamChat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerGiftInventoryItemToOtherPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerHandleMissionEvent_StartLeavingZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerHandleMissionEvent_ToggledCursorMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerHandleMissionEvent_ToggledEditMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerItemWillBeDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerKickPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerKillAllAIPawnsAroundPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerLoadingScreenDropped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerModDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerModifyStat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPingMinimap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPlayEmoteItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReadyToStartMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReleaseInventoryItemKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRemoveDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRemoveInventoryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRemoveInventoryStateValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRepairBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReplyToReadyCheck(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReportClientFPS(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRequestAIDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRequestAttributeSources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRequestGameplayAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReturnToMainMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSendClientProgressUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSendProfilerData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetAutoEquipBetterItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetClientHasFinishedLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetInventoryStateValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetMarkText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetPartyOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetReadyToContinue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetupWeakSpotsOnBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSpawnInventoryDrop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSpawnMark(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSpotActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerStartIntensityGraphing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerStartPIDContributionsGraphing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerStartPIDValueGraphing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSuicide(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTeamChatRoomReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTeleportToReticle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTouchActiveTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTriggerCombatEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTriggerCombatEventBatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTriggerGenericObjectiveEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUIChoiceCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpgradeBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAtNameHomeBaseScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAutoFireFromReticleMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCinematicModeWithWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCinematicOverrideClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFirstPersonCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputPitchScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputYawScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLockOnTargetStickCoords(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRotatePawnToCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartReadyCheck(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSuicide(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSuppressEventNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwapQuickBarFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleClientBot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleFullScreenMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleVirtualCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1DE0];  // sizeof(AFortPlayerController) = 0x2460
 };
@@ -8222,6 +9724,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerControllerGameplay();
+	static void execAreHUDElementsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshHUDElementVisibilitiesToSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetHUDElementVisibilityToSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHUDElementVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(AFortPlayerControllerGameplay) = 0x24F0
 };
@@ -8239,6 +9745,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerControllerZone();
+	static void execClientOnPawnDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnPawnRevived(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnPawnSpawned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnZoneEndScoreReports(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendPartyJoinInfoToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopDeathInputComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushDeathInputComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSendLoadoutConfig(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSendPartyJoinInfoToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetShouldDisablePlayerTeleportingDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSubmitGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTriggerSetupTeleportCameraEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x4B0];  // sizeof(AFortPlayerControllerZone) = 0x29A0
 };
@@ -8274,6 +9792,64 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerControllerAthena();
+	static void execCancelSoloMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanFollowTeammate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanQueueForSoloMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientBotStartDogpile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientBotStopDogpile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientNotifyTeamWon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientNotifyWon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReceiveSquadQuickChatMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendEndBattleRoyaleMatchForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendMatchStatsForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSendTeamStatsForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientUnreliableSendMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientVoiceChat3DChannelJoin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientVoiceChatChannelJoin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientVoiceChatLogin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFollowNextTeammate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFollowPreviousTeammate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFullscreenMapCursorHorizontal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFullscreenMapCursorHorizontal_Gamepad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFullscreenMapCursorPlace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFullscreenMapCursorRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFullscreenMapCursorVertical(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFullscreenMapCursorVertical_Gamepad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFPSForHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMatchReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRevertPlayerListenerChangeFlag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpectatingPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadKills(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHighlightNumberReturned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInAircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSoloMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadDead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTeamDead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiKillExpired(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ViewTargetDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ViewTargetHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ViewTargetShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execQueueForSoloMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAttemptAircraftJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAttemptExitVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDBNOReviveInterrupted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDBNOReviveStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerFollowTeammate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerGenerateMockMatchReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPlaceMapCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPlaySquadQuickChatMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRemoveMapCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSendSquadFriend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerVoiceChatReconnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerVoiceChatRejoinChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowHighlightSummary(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpectateOnDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopRecordingHighlights(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateRichPresenceTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVoiceChatChannelJoinFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x740];  // sizeof(AFortPlayerControllerAthena) = 0x30E0
 };
@@ -8291,6 +9867,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerControllerDeployableBase();
+	static void execClientOnHordeTierComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnHordeTierInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnHordeWaveComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveAllItemsFromDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveAllItemsToDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveItemFromDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveItemToDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveAllItemsFromDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveAllItemsToDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveItemFromDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveItemToDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x170];  // sizeof(AFortPlayerControllerDeployableBase) = 0x2B10
 };
@@ -8349,6 +9936,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerControllerKeep();
+	static void execClientSetPermaniteAvailability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientUnloadFoundations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpItemData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetContainers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestoreContainers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPermaniteAvailability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStreamInStuff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStreamOutStuff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(AFortPlayerControllerKeep) = 0x29C0
 };
@@ -8385,6 +9980,41 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerControllerOutpost();
+	static void execCanUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanUpgradeBuildingFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnBuildingLevelChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientOnOutpostRefundOccurred(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingLevelFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingMaxLevelFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingUpgradeCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingUpgradeCostFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostCoreLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPendingFabricationProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPendingItemToFabricate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFabricationPending(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOutpostOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DisintegrationStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PostDepositedResources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_QuantumGooCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_QuantumGooIncoming(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAbortDisintegration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerActivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDeactivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDepositPOSTResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerDisintegrateItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerFabricateItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerLeaveOutpostAsParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveItemFromStorageVault(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerMoveItemToStorageVault(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerNotifyPendingFabricationCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpgradePOST(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleOwnerInPIE(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpgradeBuildingByDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(AFortPlayerControllerOutpost) = 0x2A20
 };
@@ -8417,6 +10047,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerControllerSpectating();
+	static void execFollowNextPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFollowPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFollowPrevPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(AFortPlayerControllerSpectating) = 0x2580
 };
@@ -8434,6 +10067,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesASkeletalMeshActor();
+	static void execOnRep_ReplicatedMaterial0(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedMaterial1(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedPhysAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x88];  // sizeof(ASkeletalMeshActor) = 0x3A0
 };
@@ -8451,6 +10088,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPlayerMannequin();
+	static void execCyclePartBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllPartSkeletalMeshComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPartSkeletalMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemovePart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSkeletalMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWeaponSkeletalMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleGenderBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateMorphTargets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x190];  // sizeof(AFortPlayerMannequin) = 0x530
 };
@@ -8468,6 +10116,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPlayerParachute();
+	static void execGetFortPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParachuteRootMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ParachuteItemDef(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(AFortPlayerParachute) = 0x340
 };
@@ -8486,6 +10138,56 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesAFortPlayerPawn();
+	static void execAddAttachment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanPredictJumpApex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientNotifyAbilityFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCharacterBodyType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCharacterGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExtraLives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomeActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxStamina(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPawnLOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSkeletalMeshForPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStamina(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStasisMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInStasis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInternalServerSetTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSprinting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingHoverboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListCharacterParts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AccelerationPack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AnimTrailDisableFlashCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AttachmentMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CharPartAnimMontageInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomizeCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAttachment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerChooseGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerChoosePart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCycleAccessoryColorSwatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCycleColorSwatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCyclePart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerHandlePickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPlayUnableToPerformActionMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRespawnFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRootMotionInterruptNotifyStopMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSendAimbotDetectionStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetAimbotDetection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetAttachment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerToggleBodyType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerToggleGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHomeActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStasisMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwitchToNextPart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwitchToPreviousPart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimeFromJumpApex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleBodyType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateAimbotDetectionStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x790];  // sizeof(AFortPlayerPawn) = 0x1700
 };
@@ -8503,6 +10205,47 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerPawnAthena();
+	static void execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetContrailParticleSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIsSlopeSliding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlopeSlidingAngles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlopeSlidingNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActivelySkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActivelyStrafingInAir(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsControllingVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsParachuteForcedOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsParachuteOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPassivelySkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSkydivingFromBus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSkydivingFromLaunchPad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingUmbrella(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkSafe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_Athena_BatchedDamageCues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAdded_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueExecuted_FromSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueExecuted_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCuesExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCuesExecuted_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCapsuleBeginOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CustomizationLoadout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DrivingVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsOutsideSafeZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsParachuteOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsSkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsSlopeSliding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ParachuteAttachment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBushEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartConsumableUseAudio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopConsumableUseAudio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x5E0];  // sizeof(AFortPlayerPawnAthena) = 0x1CE0
 };
@@ -8520,6 +10263,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPlayerSpawnPad();
+	static void execChestProgressionUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPossessedPlayerPawnsByID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardedChestIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeChestProgression(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrestreamChestTextures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(AFortPlayerSpawnPad) = 0xDD0
 };
@@ -8588,6 +10336,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAPlayerState();
+	static void execGetPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bIsInactive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Score(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_UniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC8];  // sizeof(APlayerState) = 0x3E0
 };
@@ -8605,6 +10359,31 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPlayerState();
+	static void execAreUniqueIDsIdentical(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientNotifyAwardGranted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlatformUniqueNetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerOSSName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUniqueID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsConsolePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AccessoryColorSwatches(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bHasStartedPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CharacterColorSwatches(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CharacterParts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentCharXP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HeroID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HomeActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PartyOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlatformUniqueNetIdString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PlayerTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ScoreStatChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SessionOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ShowHeroBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ShowHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetShowHeroBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetShowHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateScoreStatChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x790];  // sizeof(AFortPlayerState) = 0xB70
 };
@@ -8622,6 +10401,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPlayerStateZone();
+	static void execGetNumOfAccumulatedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AccumulatedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_NumRejoins(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x250];  // sizeof(AFortPlayerStateZone) = 0xDC0
 };
@@ -8657,6 +10439,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPlayerStateAthena();
+	static void execClientReportDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientReportKill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpectatorCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDisconnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DeathInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Downs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Kills(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MapIndicatorPos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Place(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SpectatingTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetInAircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x650];  // sizeof(AFortPlayerStateAthena) = 0x1490
 };
@@ -8734,6 +10528,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPlayerStateOutpost();
+	static void execCanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOutpostOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CraftingTableItemsRemaing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetCanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class AFortProjectileBase : public AFortGameplayEffectDeliveryActor
@@ -8749,6 +10549,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortProjectileBase();
+	static void execGetGravityScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwnerPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBounceCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GravityScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedMaxSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnStopCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGravityScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x180];  // sizeof(AFortProjectileBase) = 0x790
 };
@@ -8766,6 +10573,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortProjectileAthena();
+	static void execKillAfterNoPawnHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_FireStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PawnHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerNotifyPawnHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(AFortProjectileAthena) = 0x830
 };
@@ -8817,6 +10628,24 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesAStrategicBuildingActor();
+	static void execApplyProximityPulseEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAttemptIncrementLevelUnlockProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentLevelUnlockProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeathEffectsLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeathEffectsRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeathEffectsScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxLevelUnlockProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveItemFromStrategicBuildingToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnActiveStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnConstructionEndedPlayEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnConstructionStartedPlayEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnConstructionTickPlayEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ConstructionProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProcessDeferredTouchActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupIndicators(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupVisibilityComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x140];  // sizeof(AStrategicBuildingActor) = 0x8B0
 };
@@ -8834,6 +10663,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortPvPBaseCornerstone();
+	static void execOnInvincibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bInvincible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInvincibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(AFortPvPBaseCornerstone) = 0x8E0
 };
@@ -8883,6 +10715,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortPvPMission_3PtDomination();
+	static void execCapturePointSetterHackTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(AFortPvPMission_3PtDomination) = 0x6C8
 };
@@ -9012,6 +10845,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortQuickBars();
+	static void execDisableSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEmptySlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_PrimaryQuickBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SecondaryQuickBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerActivateSlotInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAddItemInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerRemoveItemInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSwapItemsInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x338];  // sizeof(AFortQuickBars) = 0x650
 };
@@ -9226,6 +11069,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortTeamInfoPvPBaseDestruction();
+	static void execGetStrategicBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamCornerstone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamFOBCores(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamFOBCoresAndSpawnTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AllFOBCoresLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TeamFOBCoreBuildingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x258];  // sizeof(AFortTeamInfoPvPBaseDestruction) = 0x670
 };
@@ -9310,6 +11161,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortTheaterMapViewer();
+	static void execHandleMarkedQuestsChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2F8];  // sizeof(AFortTheaterMapViewer) = 0x610
 };
@@ -9345,6 +11197,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortThreatVisualsManager();
+	static void execBeginThreatVisualsPrecursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCloudsAreHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetThreatCloud(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetThreatClouds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GoalActorLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HideClouds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StormWinds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ThreatLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetMinimumCloudAltitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCloudsAreHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinimumCloudAltitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStormsExist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x200];  // sizeof(AFortThreatVisualsManager) = 0x518
 };
@@ -9362,6 +11226,31 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortTimeOfDayManager();
+	static void execBreakExponentialHeightFogValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFFToTimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviousDayPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStormStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetThreatClouds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeOfDayManagerFromContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeExponentialHeightFogValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HeightFogEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TimeOfDayInit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDayPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDirectionalLightColorMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFogDirectionalInscatteringMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpecificTimeOfDayInEditor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStormStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDayAbsoluteSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDayFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDayInHours(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDayManagerVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDaySpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDaySpeedFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUseSpecificTimeOfDayEditing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDebugForceStormEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleSkipNight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x868];  // sizeof(AFortTimeOfDayManager) = 0xB80
 };
@@ -9397,6 +11286,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortTrack();
+	static void execGetOutgoingNeighborFromSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathDistanceToTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSplineFromIncomingNeighbor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSplineFromPositionAndOrientation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsConnectedToTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsConnectedToTrackList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ConfigurationIdx(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_NeighborsByDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SwitchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x190];  // sizeof(AFortTrack) = 0xF90
 };
@@ -9483,6 +11382,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortUIZone();
+	static void execToggleTargetInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleTargetInfoAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleTargetInfoLock(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleTargetInfoPaths(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleTargetInfoSensing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x460];  // sizeof(AFortUIZone) = 0x8D0
 };
@@ -9564,6 +11468,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortWeap_BuildingTool();
+	static void execOnBlueprintPaperPulseUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DefaultMetadata(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x140];  // sizeof(AFortWeap_BuildingTool) = 0xBB0
 };
@@ -9581,6 +11487,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAFortWeap_EditingTool();
+	static void execOnRep_EditActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(AFortWeap_EditingTool) = 0xA80
 };
@@ -9598,6 +11505,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortWeaponRanged();
+	static void execDeactivateBeamFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetADSTransitionInTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetADSTransitionOutTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeToNextFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeBeamFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingFirstPersonCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingScope(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingScopeOrFirstPersonCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDisplayAmmoCounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldSpawnBulletShellFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseFirstPersonTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseScopeTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x228];  // sizeof(AFortWeaponRanged) = 0xC78
 };
@@ -9615,6 +11534,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortWeap_WannaGun();
+	static void execOnRep_LastHitActorClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x68];  // sizeof(AFortWeap_WannaGun) = 0xCE0
 };
@@ -9682,6 +11602,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAFortWorldManager();
+	static void execOnRep_InitialGlobalWind(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x6E8];  // sizeof(AFortWorldManager) = 0xA00
 };
@@ -9699,6 +11620,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("game"); }
 	static void StaticRegisterNativesAWorldSettings();
+	static void execOnRep_WorldGravityZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1C0];  // sizeof(AWorldSettings) = 0x4D8
 };
@@ -9767,6 +11689,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAGameplayAbilityTargetActor();
+	static void execCancelTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConfirmTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1C8];  // sizeof(AGameplayAbilityTargetActor) = 0x4E0
 };
@@ -10045,6 +11969,25 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAKeepHeart();
+	static void execDelayedVoteSuccess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDestroyNonPermaniteStructures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAveragePermaniteLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeAllPermaniteCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldStreamingInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleVoteComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWorldStreamedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWorldStreamingIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyEncounterEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyEncounterStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDefenseLevelChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetContainers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestoreContainers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestoreKeepHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPermaniteAvailability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStreamInWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStreamOutWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpgradeAllPermaniteStructures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(AKeepHeart) = 0xE90
 };
@@ -10062,6 +12005,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesAKeepItemContainer();
+	static void execGetContainerNameAndLevelKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLootTierOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HostUpgradeLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SearchedBy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestoreLoot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(AKeepItemContainer) = 0xF80
 };
@@ -10416,6 +12366,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesAMatineeActor();
+	static void execChangePlaybackDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableGroupByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLoopingState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA8];  // sizeof(AMatineeActor) = 0x3C0
 };
@@ -10986,6 +12944,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesARadialForceActor();
+	static void execDisableForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x8];  // sizeof(ARadialForceActor) = 0x320
 };
@@ -11074,6 +13036,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesASkyLight();
+	static void execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(ASkyLight) = 0x328
 };
@@ -11140,6 +13103,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesATestBeaconClient();
+	static void execClientPing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPong(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class ATestBeaconHost : public AOnlineBeaconHostObject
@@ -11642,6 +13607,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUActorComponent();
+	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execComponentHasTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetComponentTickInterval(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBeingDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsComponentTickEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DestroyComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAutoActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetComponentTickEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetComponentTickInterval(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsReplicated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTickableWhenPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTickGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC8];  // sizeof(UActorComponent) = 0xF0
 };
@@ -11659,6 +13646,66 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000008000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSceneComponent();
+	static void execDetachFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesSocketExist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllSocketNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttachParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttachSocketName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChildComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChildrenComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetComponentVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetForwardVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumChildrenComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParentComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicsVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRelativeTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRightVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShouldUpdatePhysicsVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocketLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocketQuaternion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocketRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocketTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnySimulatingPhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSimulatingPhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddLocalOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddLocalRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddLocalTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddRelativeLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddRelativeRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddWorldOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddWorldRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddWorldTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AttachTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AttachToComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DetachFromComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetComponentLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetComponentRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetComponentScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetComponentToWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetRelativeLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetRelativeLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetRelativeRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetRelativeTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetWorldLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetWorldRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetWorldTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AttachChildren(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AttachParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_AttachSocketName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Transform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Visibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetRelativeTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAbsolute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHiddenInGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRelativeScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldUpdatePhysicsVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSnapTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1A0];  // sizeof(USceneComponent) = 0x290
 };
@@ -11676,6 +13723,111 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000010000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPrimitiveComponent();
+	static void execAddAngularImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddAngularImpulseInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddAngularImpulseInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddForceAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddForceAtLocationLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddImpulseAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddRadialForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddRadialImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTorque(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTorqueInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddTorqueInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanCharacterStepUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMoveIgnoreActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMoveIgnoreComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCopyArrayOfMoveIgnoreActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCopyArrayOfMoveIgnoreComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateAndSetMaterialInstanceDynamic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateAndSetMaterialInstanceDynamicFromMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAngularDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCenterOfMass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClosestPointOnCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCollisionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCollisionObjectType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCollisionProfileName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCollisionResponseToChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGenerateOverlapEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInertiaTensor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLinearDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMassScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaterialFromCollisionFaceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumMaterials(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOverlappingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOverlappingComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicsAngularVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicsAngularVelocityInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicsAngularVelocityInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicsLinearVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicsLinearVelocityAtPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWalkableSlopeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIgnoreActorWhenMoving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIgnoreComponentWhenMoving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnyRigidBodyAwake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsGravityEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOverlappingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOverlappingComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsCollisionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsPhysicsCollisionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsQueryCollisionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_LineTraceComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPutRigidBodyToSleep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScaleByMomentOfInertia(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllMassScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllPhysicsAngularVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllPhysicsAngularVelocityInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllPhysicsAngularVelocityInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllPhysicsLinearVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllUseCCD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoundsScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCastShadow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCenterOfMass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionObjectType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionProfileName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionResponseToAllChannels(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionResponseToChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstraintMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCullDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCustomDepthStencilValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCustomDepthStencilWriteMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnableGravity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGenerateOverlapEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLockedAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMassOverrideInKg(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMassScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaterialByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNotifyRigidBodyCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOnlyOwnerSee(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOwnerNoSee(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsAngularVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsAngularVelocityInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsAngularVelocityInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsLinearVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsMaxAngularVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsMaxAngularVelocityInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsMaxAngularVelocityInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysMaterialOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReceivesDecals(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderCustomDepth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderInMainPass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderInMono(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSimulatePhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSingleSampleShadowFromStationaryLights(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTranslucentSortPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUseCCD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWalkableSlopeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWakeAllRigidBodies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWakeRigidBody(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x3D0];  // sizeof(UPrimitiveComponent) = 0x660
 };
@@ -11708,6 +13860,23 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAIHotSpotSlot();
+	static void execClearSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHotSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotUserId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasUserId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAIAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSlotEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSlotOwnerAndState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSlotState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x98];  // sizeof(UAIHotSpotSlot) = 0xC0
 };
@@ -11725,6 +13894,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAIHotSpotSlotGenerator();
+	static void execAddSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGenerateSlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHotSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UAIHotSpotSlotGenerator_OnBoundingBox : public UAIHotSpotSlotGenerator
@@ -11757,6 +13929,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAIPerceptionComponent();
+	static void execGetActorsPerception(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentlyPerceivedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKnownPerceivedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPerceivedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPerceivedHostileActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnOwnerEndPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestStimuliListenerUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSenseEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xD8];  // sizeof(UAIPerceptionComponent) = 0x1C8
 };
@@ -11804,6 +13984,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAIPerceptionStimuliSourceComponent();
+	static void execRegisterForSense(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterWithPerceptionSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterFromPerceptionSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterFromSense(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UAIPerceptionStimuliSourceComponent) = 0x108
 };
@@ -12305,6 +14489,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAISystem();
+	static void execAIIgnorePlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAILoggingVerbose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xD8];  // sizeof(UAISystem) = 0x128
 };
@@ -12322,6 +14508,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUGameplayTask();
+	static void execEndTask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReadyForActivation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UGameplayTask) = 0x68
 };
@@ -12407,6 +14595,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUARBlueprintLibrary();
+	static void execDebugDrawTrackedGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllGeometries(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalToTrackingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalToWorldTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackedGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackingQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsARActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineTraceTrackedObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartAR(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAR(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UARKitCameraOverlayMaterialLoader : public UObject
@@ -12456,6 +14654,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUARPlaneGeometry();
+	static void execGetCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExtent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalToTrackingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalToWorldTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x58];  // sizeof(UARPlaneGeometry) = 0x90
 };
@@ -12564,6 +14766,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGameplayTasksComponent();
+	static void execK2_RunGameplayTask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SimulatedTasks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UGameplayTasksComponent) = 0x170
 };
@@ -12581,6 +14785,70 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAbilitySystemComponent();
+	static void execBP_ApplyGameplayEffectSpecToSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_ApplyGameplayEffectSpecToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_ApplyGameplayEffectToSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_ApplyGameplayEffectToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientActivateAbilityFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientActivateAbilitySucceed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientActivateAbilitySucceedWithEventData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientCancelAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientEndAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientPrintDebug_Response(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientSetReplicatedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientTryActivateAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayEffectCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayEffectMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUserAbilityActivationInhibited(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsGameplayCueActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_InitStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeEffectContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeOutgoingSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAdded_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueExecuted_FromSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCueExecuted_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCuesExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_InvokeGameplayCuesExecuted_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ActivateAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ClientDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_OwningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ServerDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActiveEffectsWithAppliedTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActiveEffectsWithGrantedTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActiveEffectsWithSourceTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActiveEffectsWithTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActiveGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActiveGameplayEffectBySourceEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAbilityRPCBatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCancelAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCurrentMontageJumpToSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCurrentMontageSetNextSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerCurrentMontageSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerEndAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPrintDebug_Request(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerPrintDebug_RequestWithStrings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetInputPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetInputReleased(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetReplicatedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetReplicatedEventWithPayload(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetReplicatedTargetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetReplicatedTargetDataCancelled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTryActivateAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTryActivateAbilityWithEventData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveGameplayEffectLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveGameplayEffectLevelUsingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserAbilityActivationInhibited(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetCancel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetConfirm(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryActivateAbilitiesByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryActivateAbilityByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1600];  // sizeof(UAbilitySystemComponent) = 0x1770
 };
@@ -12598,6 +14866,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilitySystemGlobals();
+	static void execToggleIgnoreAbilitySystemCooldowns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleIgnoreAbilitySystemCosts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x328];  // sizeof(UAbilitySystemGlobals) = 0x350
 };
@@ -12731,6 +15001,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_ApplyRootMotionJumpForce();
+	static void execApplyRootMotionJumpForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinish(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLandedCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x58];  // sizeof(UAbilityTask_ApplyRootMotionJumpForce) = 0x110
 };
@@ -12748,6 +15021,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_ApplyRootMotionMoveToActorForce();
+	static void execApplyRootMotionMoveToActorForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyRootMotionMoveToTargetDataActorForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TargetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetActorSwapped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x78];  // sizeof(UAbilityTask_ApplyRootMotionMoveToActorForce) = 0x130
 };
@@ -12819,6 +15096,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_NetworkSyncPoint();
+	static void execOnSignalCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitNetSync(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UAbilityTask_NetworkSyncPoint) = 0x98
 };
@@ -12836,6 +15115,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_PlayMontageAndWait();
+	static void execCreatePlayMontageAndWaitProxy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMontageBlendingOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMontageEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMontageInterrupted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF0];  // sizeof(UAbilityTask_PlayMontageAndWait) = 0x170
 };
@@ -13026,6 +15309,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_WaitCancel();
+	static void execOnCancelCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLocalCancelCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitCancel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UAbilityTask_WaitCancel) = 0x98
 };
@@ -13062,6 +15348,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_WaitConfirmCancel();
+	static void execOnCancelCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnConfirmCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLocalCancelCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLocalConfirmCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitConfirmCancel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UAbilityTask_WaitConfirmCancel) = 0xA8
 };
@@ -13281,6 +15572,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_WaitInputPress();
+	static void execOnPressCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitInputPress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UAbilityTask_WaitInputPress) = 0xA0
 };
@@ -13298,6 +15591,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_WaitInputRelease();
+	static void execOnReleaseCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitInputRelease(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UAbilityTask_WaitInputRelease) = 0xA0
 };
@@ -13353,6 +15648,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAbilityTask_WaitTargetData();
+	static void execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDataCancelledCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDataReadyCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDataReplicatedCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDataReplicatedCancelledCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitTargetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitTargetDataUsingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UAbilityTask_WaitTargetData) = 0xC0
 };
@@ -13405,6 +15708,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUOnlineBlueprintCallProxyBase();
+	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UAchievementQueryCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -13620,6 +15924,44 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUWidget();
+	static void execForceLayoutPrepass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceVolatile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCachedGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClipping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDesiredSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRenderOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAnyUserFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasFocusedDescendants(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasKeyboardFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMouseCapture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasUserFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasUserFocusedDescendants(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvalidateLayoutAndVolatility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllNavigationRules(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClipping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetKeyboardFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNavigationRule(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderShear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderTransformPivot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderTranslation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetToolTip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetToolTipText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xD8];  // sizeof(UWidget) = 0x100
 };
@@ -13678,6 +16020,35 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAnalyticsBlueprintLibrary();
+	static void execEndSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFlushEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSessionId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUserId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeEventAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordCurrencyGiven(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordCurrencyGivenWithAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordCurrencyPurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordErrorWithAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordEventWithAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordEventWithAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordItemPurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordProgressWithAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordProgressWithFullHierarchyAndAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordSimpleCurrencyPurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordSimpleCurrencyPurchaseWithAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordSimpleItemPurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecordSimpleItemPurchaseWithAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAge(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBuildInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSessionId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartSessionWithAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UAndroidPermissionCallbackProxy : public UObject
@@ -14042,6 +16413,61 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUAnimInstance();
+	static void execCalculateDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMorphTargets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentActiveMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentStateName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurveValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceAssetPlayerLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceAssetPlayerTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceAssetPlayerTimeFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceAssetPlayerTimeFromEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceAssetPlayerTimeFromEndFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceCurrentStateElapsedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceMachineWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceStateWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceTransitionCrossfadeDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceTransitionTimeElapsed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceTransitionTimeElapsedFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRelevantAnimLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRelevantAnimTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRelevantAnimTimeFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRelevantAnimTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRelevantAnimTimeRemainingFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSyncGroupPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeToClosestMarker(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMarkerBeenHitThisFrame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnyMontagePlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingSlotAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSyncGroupBetweenMarkers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLockAIResources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_GetBlendTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_GetCurrentSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_GetIsStopped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_GetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_GetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_IsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_IsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_JumpToSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_JumpToSectionsEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_Pause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_Play(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_Resume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_SetNextSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_SetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_SetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontage_Stop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySlotAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySlotAnimationAsDynamicMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSavePoseSnapshot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMorphTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRootMotionMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSnapshotPose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopSlotAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetPawnOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockAIResources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x358];  // sizeof(UAnimInstance) = 0x380
 };
@@ -14323,6 +16749,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAnimSingleNodeInstance();
+	static void execGetAnimationAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimationAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlendSpaceInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPositionWithPreviousTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviewCurveOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UAnimSingleNodeInstance) = 0x390
 };
@@ -14675,6 +17114,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBlueprintAsyncActionBase();
+	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UAsyncActionLoadPrimaryAssetBase : public UBlueprintAsyncActionBase
@@ -14850,6 +17290,50 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUUserWidget();
+	static void execAddToPlayerScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelLatentActions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAlignmentInViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnchorsInViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnimationCurrentTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnimationPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnimationPlayingForward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnyAnimationPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsListeningForInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListenForInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAnimationFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAnimationStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPauseAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayAnimationTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterInputComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveFromViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReverseAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAlignmentInViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnchorsInViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDesiredSizeInViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForegroundColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputActionBlocking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputActionPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNumLoopsToPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOwningLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOwningPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaybackSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPositionInViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAllAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAnimationsAndLatentActions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopListeningForAllInputActions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopListeningForInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterInputComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x108];  // sizeof(UUserWidget) = 0x208
 };
@@ -14915,6 +17399,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemDefinition();
+	static void execCreateTemporaryInstanceFromExistingItemBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateTemporaryItemInstanceBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCustomizePreviewMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCustomizePreviewPrefab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLargePreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPersistentName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewMeshOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewPrefabAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewSkeletalMeshAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewStaticMeshAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShortDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSingleLineDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSmallPreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSmallPreviewImageBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInventorySizeLimited(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowPreviewOnCurrentHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x270];  // sizeof(UFortItemDefinition) = 0x2A0
 };
@@ -15040,6 +17546,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonActivatablePanel();
+	static void execAddInputActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddInputActionHandlerWithProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddInputActionNoHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBeginIntro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBeginOutro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndIntro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndOutro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputActions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasInputActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsIntroed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBeginIntro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBeginOutro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopPanel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAllInputActionHandlers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveInputActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActionHandlerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActionHandlerStateFromHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActionHandlerStateFromHandleWithDisabledCommitEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActionHandlerStateWithDisabledCommitEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputActionHandlerWithProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1B0];  // sizeof(UCommonActivatablePanel) = 0x3C0
 };
@@ -15112,6 +17640,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHUDElementWidget();
+	static void execHandleOnHUDElementVisibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleOnHUDResetToDefaults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortHUDElementWidget) = 0x238
 };
@@ -15147,6 +17677,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMontageItemDefinitionBase();
+	static void execGetAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnimationHardReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPreviewInPIE(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UFortMontageItemDefinitionBase) = 0x370
 };
@@ -15179,6 +17712,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortEventItemDefinitionBase();
+	static void execCreateCalendarPayload(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UFortEventItemDefinitionBase) = 0x330
 };
@@ -15213,6 +17747,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemPickerBase();
+	static void execCanItemBeComitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCenterSelectedItemTileWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIndexForItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerItemClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerItemDoubleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerItemHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerTileCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerTileDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryCommitSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x68];  // sizeof(UFortItemPickerBase) = 0x278
 };
@@ -15230,6 +17778,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaCustomizationPicker();
+	static void execBeginCustomizationCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndCustomizationCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UAthenaCustomizationPicker) = 0x2C8
 };
@@ -15247,6 +17797,41 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonButton();
+	static void execClearSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableButtonWithReason(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentButtonPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentCustomPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentTextStyleClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShouldSelectUponReceivingFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSingleMaterialStyleMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleButtonDoubleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleButtonPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleButtonReleased(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleFocusReceived(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTriggeringActionCommited(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInteractionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNativeOnActionComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNativeOnActionProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputActionProgressMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsInteractionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsSelectable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsToggleable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinDimensions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldSelectUponReceivingFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTriggeredInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x570];  // sizeof(UCommonButton) = 0x780
 };
@@ -15381,6 +17966,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaEquippedItemBase();
+	static void execOnBuildingMaterialChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLocalAmmoChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPawnChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWeaponChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWorldItemsChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetViewModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UAthenaEquippedItemBase) = 0x250
 };
@@ -15490,6 +18081,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAccountItem();
+	static void execHasBeenSeenLocally(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFavorite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkItemAsSeenBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UFortAccountItem) = 0x140
 };
@@ -15609,6 +18203,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUIStateWidget_NUI();
+	static void execPopAllContentWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopContentWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopContentWidgetInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushContentWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushContentWidgetAdvanced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushContentWidgetInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFrontEndVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UFortUIStateWidget_NUI) = 0x3E0
 };
@@ -15641,6 +18242,52 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaHUDContext();
+	static void execBeginUseFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelSwap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanCurrentWeaponAutoFireFromReticle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableAutoRunFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndUseFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExecuteActionNameFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireFromHUDStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireFromHUDStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBatteryLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedInventoryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchAimSensitivity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchBaseSensitivity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchScopeSensitivity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleGamePhaseChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPlayerBeginSkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPlayerDBNOStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleUIGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasLockOnTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasWifi(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAutoFireFromReticleModeEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsCrouching(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsCurrentWeaponFiring(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInBuildMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInSelectWidgetToMoveMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMovingSelectedWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsShowViewerCountEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSwapping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingAutoFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingScope(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnClientSettingUpdatedShowViewers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectWidgetToMove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAutoFireFromReticleMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLockOnStickCoords(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedInventoryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectWidgetToMoveMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTargetingToggleable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartOrFinishSwap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopTargettingFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTakeItemSelectionInputFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTakeLookInputFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTakeMovementInputFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateSelectedWidgetMoveOffsetVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseOrRleoadFromHUDStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseOrRleoadFromHUDStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x138];  // sizeof(UAthenaHUDContext) = 0x160
 };
@@ -15691,6 +18338,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaHUDPlayerActionAlertBase();
+	static void execRequestNextAlert(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UAthenaHUDPlayerActionAlertBase) = 0x258
 };
@@ -15792,6 +18440,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaInventoryPanelBase();
+	static void execAdvanceSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAttemptToUpdateFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFocusTileView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileViewForItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCursorModeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemDoubleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTileViewItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UAthenaInventoryPanelBase) = 0x440
 };
@@ -15879,6 +18537,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaLobbyBase();
+	static void execQueryForHeadlessReminder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowHighlightSummary(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UAthenaLobbyBase) = 0x460
 };
@@ -15992,6 +18652,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaPartyMemberBase();
+	static void execSetSquadMemberIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleMute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UAthenaPartyMemberBase) = 0x220
 };
@@ -16057,6 +18719,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaPlayerIndicatorBase();
+	static void execRefreshCurrentPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x8];  // sizeof(UAthenaPlayerIndicatorBase) = 0x278
 };
@@ -16366,6 +19029,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAtmosphericFogComponent();
+	static void execDisableGroundScattering(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableSunDisk(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAltitudeScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDefaultBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDefaultLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDensityMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDensityOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDistanceOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDistanceScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFogMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPrecomputeParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSunMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartPrecompute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1E0];  // sizeof(UAtmosphericFogComponent) = 0x470
 };
@@ -16383,6 +19060,26 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAudioComponent();
+	static void execAdjustAttenuation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdjustVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_GetAttenuationSettingsToApply(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFadeIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFadeOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoolParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFloatParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIntParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLowPassFilterEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLowPassFilterFrequency(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPitchMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSubmixSend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUISound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumeMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWaveParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x5E0];  // sizeof(UAudioComponent) = 0x870
 };
@@ -16471,6 +19168,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUAutomationPerfMonitorManager();
+	static void execGetPerfMonitorInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStatAverage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRecordingFTestPerf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartRecordingFTestPerf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopRecordingFTestPerf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UAutomationPerfMonitorManager) = 0xA8
 };
@@ -17137,6 +19839,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUBTTask_BlueprintBase();
+	static void execFinishAbort(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinishExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTaskAborting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTaskExecuting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFinishOnMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFinishOnMessageWithId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UBTTask_BlueprintBase) = 0xA0
 };
@@ -17407,6 +20115,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBacchusButton();
+	static void execOnClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHUDStateUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetButtonSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UBacchusButton) = 0x248
 };
@@ -17454,6 +20165,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPanelWidget();
+	static void execAddChild(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearChildren(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChildAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChildIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChildrenCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAnyChildren(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasChild(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveChild(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveChildAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UPanelWidget) = 0x118
 };
@@ -17635,6 +20355,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBrainComponent();
+	static void execIsPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRunning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestartLogic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopLogic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UBrainComponent) = 0x150
 };
@@ -18107,6 +20831,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBlueprintPlatformLibrary();
+	static void execCancelLocalNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAllLocalNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLaunchNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScheduleLocalNotificationAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScheduleLocalNotificationBadgeAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScheduleLocalNotificationBadgeFromNow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScheduleLocalNotificationFromNow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UBlueprintSetLibrary : public UBlueprintFunctionLibrary
@@ -18362,6 +21093,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBoxComponent();
+	static void execGetScaledBoxExtent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnscaledBoxExtent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoxExtent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UBoxComponent) = 0x690
 };
@@ -18596,6 +21330,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBuildingConnectivityComponent();
+	static void execCanConnectTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisconnectAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsConnectedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsPowered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bIsPowered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_bIsProvidingPower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Connections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE0];  // sizeof(UBuildingConnectivityComponent) = 0x370
 };
@@ -18743,6 +21486,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBuildingEditModeSupport();
+	static void execOnSuccessfulMatchInteractComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSuccessfulMatchInteractParamUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x288];  // sizeof(UBuildingEditModeSupport) = 0x2B0
 };
@@ -18895,6 +21640,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUBuildingTurretComponent();
+	static void execAttemptSetCurrentTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChooseBestTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFiringTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPerformTargetValidation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CurrentTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetingBeginOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetingEndOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTargetingOverlapComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UBuildingTurretComponent) = 0x140
 };
@@ -19057,6 +21811,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCMSContext();
+	static void execGetLatestEmergencyNotice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLatestNews(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsNewNewsAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkNewsAsViewed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x108];  // sizeof(UCMSContext) = 0x130
 };
@@ -19140,6 +21898,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCameraModifier();
+	static void execDisableModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UCameraModifier) = 0x48
 };
@@ -19326,6 +22088,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCanvasRenderTarget2D();
+	static void execCreateCanvasRenderTarget2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UCanvasRenderTarget2D) = 0x108
 };
@@ -19343,6 +22108,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCapsuleComponent();
+	static void execGetScaledCapsuleHalfHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScaledCapsuleHalfHeight_WithoutHemisphere(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScaledCapsuleRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScaledCapsuleSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScaledCapsuleSize_WithoutHemisphere(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShapeScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnscaledCapsuleHalfHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnscaledCapsuleHalfHeight_WithoutHemisphere(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnscaledCapsuleRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnscaledCapsuleSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnscaledCapsuleSize_WithoutHemisphere(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCapsuleHalfHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCapsuleRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCapsuleSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UCapsuleComponent) = 0x690
 };
@@ -19360,6 +22139,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMovementComponent();
+	static void execConstrainDirectionToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConstrainLocationToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConstrainNormalToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGravityZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicsVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaneConstraintAxisSetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaneConstraintNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaneConstraintOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsExceedingMaxSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetMaxSpeedModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetModifiedMaxSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_MoveUpdatedComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPhysicsVolumeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaneConstraintAxisSetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaneConstraintEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaneConstraintFromVectors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaneConstraintNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaneConstraintOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUpdatedComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSnapUpdatedComponentToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopMovementImmediately(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UMovementComponent) = 0x138
 };
@@ -19377,6 +22178,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUNavMovementComponent();
+	static void execIsCrouching(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFalling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFlying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMovingOnGround(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSwimming(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopActiveMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopMovementKeepPathing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UNavMovementComponent) = 0x170
 };
@@ -19418,6 +22226,41 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCharacterMovementComponent();
+	static void execAddForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCalcVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAccumulatedForces(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnalogInputModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCharacterOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetImpartedMovementBaseVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxBrakingDeceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxJumpHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxJumpHeightWithJumpTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinAnalogSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMovementBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPerchRadiusThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValidPerchRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWalkable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWalking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ComputeFloorDist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_FindFloor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetModifiedMaxAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetWalkableFloorAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetWalkableFloorZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAvoidanceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAvoidanceGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAvoidanceGroupMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToAvoid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToAvoidMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToIgnore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToIgnoreMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMovementMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWalkableFloorAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWalkableFloorZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x648];  // sizeof(UCharacterMovementComponent) = 0x7C0
 };
@@ -19469,6 +22312,61 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCheatManager();
+	static void execBugIt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBugItGo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBugItStringCreator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChangeSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCheatScript(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDamageTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugCapsuleSweep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugCapsuleSweepCapture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugCapsuleSweepChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugCapsuleSweepClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugCapsuleSweepComplex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugCapsuleSweepPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugCapsuleSweepSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDestroyAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDestroyAllPawnsExceptTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDestroyPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDestroyServerStatReplicator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDestroyTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableDebugCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpChatState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpOnlineSessionState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpPartyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpVoiceMutingState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableDebugCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFlushLog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFreezeFrame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGhost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvertMouse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogLoc(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnlyLoadLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayersOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRebuildNavigation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerToggleAILogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMouseSensitivityToDefault(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNavDrawDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlomo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnServerStatReplicator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStreamLevelIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStreamLevelOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSummon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTeleport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestCollisionDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleAILogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDebugCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleServerStatReplicatorClientOverwrite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleServerStatReplicatorUpdateStatNet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateSafeArea(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWalk(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UCheatManager) = 0x78
 };
@@ -19804,6 +22702,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUClothingSimulationInteractor();
+	static void execClothConfigUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPhysicsAssetUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x8];  // sizeof(UClothingSimulationInteractor) = 0x30
 };
@@ -19821,6 +22721,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUClothingSimulationInteractorNv();
+	static void execDisableGravityOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableGravityOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimDriveDamperStiffness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimDriveSpringStiffness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UClothingSimulationInteractorNv) = 0x40
 };
@@ -19925,6 +22829,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUComboBoxString();
+	static void execAddOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindOptionIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOptionAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOptionCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xAA0];  // sizeof(UComboBoxString) = 0xBA0
 };
@@ -20065,6 +22979,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonWidgetGroupBase();
+	static void execAddWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UCommonButtonGroup : public UCommonWidgetGroupBase
@@ -20080,6 +22997,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonButtonGroup();
+	static void execDeselectAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindButtonIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetButtonAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedButtonIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAnyButtons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnButtonHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnButtonUnhovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHandleButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHandleButtonDoubleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSelectionStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectButtonAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectNextButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectPreviousButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectionRequired(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UCommonButtonGroup) = 0x98
 };
@@ -20209,6 +23140,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("CommonUI"); }
 	static void StaticRegisterNativesUCommonTextBlock();
+	static void execResetScrollState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetProperties(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScrollStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWrapTextWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UCommonTextBlock) = 0x270
 };
@@ -20285,6 +23221,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonInputManager();
+	static void execGetAvailableInputActions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGlobalInputHandlerPriorityFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInputSuspended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPanelOnStack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopActivatablePanel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushActivatablePanel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResumeStartingOperationProcessing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGlobalInputHandlerPriorityFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartListeningForExistingHeldAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopListeningForExistingHeldAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSuspendStartingOperationProcessing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x298];  // sizeof(UCommonInputManager) = 0x2C0
 };
@@ -20345,6 +23292,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonLazyImage();
+	static void execForwardLoadingStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromLazyDisplayAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromLazyMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromLazyTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowDefaultImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UCommonLazyImage) = 0x210
 };
@@ -20362,6 +23315,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonPoolableWidgetInterface();
+	static void execOnAcquireFromPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnReleaseToPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UCommonListItem : public UCommonPoolableWidgetInterface
@@ -20377,6 +23332,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonListItem();
+	static void execDoesItemHaveChildren(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIndentLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsItemExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrivate_OnExpanderArrowShiftClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterOnClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIndexInList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleExpansion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UCommonListView : public UWidget
@@ -20392,6 +23356,33 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonListView();
+	static void execAddItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelScrollIntoView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleItemClickedCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleItemClickedUserWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleItemDoubleClickedCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleItemHoveredCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleItemUnhoveredCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIndexForItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumItemsSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectionModeBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsItemVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRefreshPending(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScrollIntoView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDataProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDesiredItemPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectionMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSimulateDoubleClickOnSelectedItemClick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1D0];  // sizeof(UCommonListView) = 0x2D0
 };
@@ -20466,6 +23457,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonObjectListItem();
+	static void execGetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UCommonPopupMenu : public UCommonActivatablePanel
@@ -20481,6 +23475,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonPopupMenu();
+	static void execHandlePostDifferentContextProviderSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePreDifferentContextProviderSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnIsOpenChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestClose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetContextProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOwningMenuAnchor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UCommonPopupMenu) = 0x3D0
 };
@@ -20498,6 +23498,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonRotator();
+	static void execGetSelectedIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopulateTextLabels(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShiftTextLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShiftTextRight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UCommonRotator) = 0x7F0
 };
@@ -20515,6 +23521,26 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonTabListWidget();
+	static void execDisableTabWithReason(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLinkedSwitcher(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedTabId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTabButtonByID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTabCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTabIdAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleNextTabInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePreviousTabInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTabButtonSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTabCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTabRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAllTabs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectTabByID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinkedSwitcher(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetListeningForInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTabEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTabVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC8];  // sizeof(UCommonTabListWidget) = 0x2D8
 };
@@ -20532,6 +23558,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonTagVisibilityWidget();
+	static void execHandleOnHUDElementVisibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleOnHUDResetToDefaults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitialize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UCommonTagVisibilityWidget) = 0x160
 };
@@ -20607,6 +23636,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonTreeView();
+	static void execDynamicHandleItemClickedCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestRefresh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemExpansion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UCommonTreeView) = 0x2F0
 };
@@ -20624,6 +23657,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonUIContext();
+	static void execGetCurrentInputType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputActionButtonIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingGamepad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingPointerInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGamepadInputType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xB8];  // sizeof(UCommonUIContext) = 0xE0
 };
@@ -20691,6 +23731,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonWidgetCarousel();
+	static void execBeginAutoScrolling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndAutoScrolling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWidgetAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNextPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPreviousPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x778];  // sizeof(UCommonWidgetCarousel) = 0x890
 };
@@ -20731,6 +23779,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonWidgetSwitcher();
+	static void execActivateNextWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execActivatePreviousWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execActivateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleActiveWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveWidget_Advanced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveWidgetIndex_Advanced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UCommonWidgetSwitcher) = 0x180
 };
@@ -20748,6 +23804,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("CommonUI"); }
 	static void StaticRegisterNativesUCommonWidgetStack();
+	static void execActivateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopWigdet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UDynamicBlueprintBinding : public UObject
@@ -22301,6 +25361,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSphereComponent();
+	static void execGetScaledSphereRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShapeScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnscaledSphereRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSphereRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(USphereComponent) = 0x690
 };
@@ -22638,6 +25702,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUEditableTextBox();
+	static void execClearError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHintText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsReadOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x868];  // sizeof(UEditableTextBox) = 0x968
 };
@@ -23606,6 +26677,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUEpicCMSTileBase();
+	static void execDynamicHandleIconLoadingStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLaunch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x118];  // sizeof(UEpicCMSTileBase) = 0x898
 };
@@ -23623,6 +26696,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUEpicCMSTileCarousel();
+	static void execGetCurrentPageIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTilePageAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNextPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPreviousPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentPageByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UEpicCMSTileCarousel) = 0x258
 };
@@ -23837,6 +26915,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUInstancedStaticMeshComponent();
+	static void execAddInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddInstanceWorldSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearInstances(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstancesOverlappingBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstancesOverlappingSphere(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCullDistances(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateInstanceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF0];  // sizeof(UInstancedStaticMeshComponent) = 0x7E0
 };
@@ -24055,6 +27143,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUForceFeedbackComponent();
+	static void execAdjustAttenuation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_GetAttenuationSettingsToApply(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForceFeedbackEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIntensityMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE0];  // sizeof(UForceFeedbackComponent) = 0x370
 };
@@ -24219,6 +27313,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCharacterAttrSet();
+	static void execOnRep_Fortitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxCharacterLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Offense(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Resistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Tech(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(UFortCharacterAttrSet) = 0xD0
 };
@@ -24351,6 +27450,22 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAIEncounterInfo();
+	static void execCreateEncounterAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEncounterHasReservedSpawnRequestForEnemySpawner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSpawnAreaDirections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEncounterDataManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEncounterTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPawnNumberLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGroupHasAIRemainingToSpawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnEncounterPawnDamaged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnGameDifficultyChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnGoalTakeDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterAISpawner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestActivation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterActivationState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPawnNumberLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAIPawnReservedForEnemySpawner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnRegisterAISpawner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC40];  // sizeof(UFortAIEncounterInfo) = 0xC68
 };
@@ -24402,6 +27517,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAIEncounterSequence();
+	static void execEncounterBelongsToSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEncounterIndexInSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumEncountersInSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOnFinalIndexInSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrevious(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartCurrentEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopCurrentEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortAIEncounterSequence) = 0x78
 };
@@ -24451,6 +27576,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAIGoalProvider();
+	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeGoalProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateGoals(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UFortAIGoalProvider) = 0x48
 };
@@ -25006,6 +28134,12 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUFortAbilitySystemComponent();
+	static void execCanActivateAbilityWithMatchingTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindAttributeInformation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasActiveAbilityWithAnyMatchingTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNetMulticast_RefreshActiveGameplayEffectCueEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLandingMontageReplication(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x200];  // sizeof(UFortAbilitySystemComponent) = 0x1970
 };
@@ -25238,6 +28372,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUFortAbilityTask_PlayMontageWaitTarget();
+	static void execEnableScalingWithRateOfFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDataCancelledCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDataReadyCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayMontageInfoAndWaitForTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayMontageWaitTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayMontageWithCharPartsWait(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xB0];  // sizeof(UFortAbilityTask_PlayMontageWaitTarget) = 0x130
 };
@@ -25312,6 +28452,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUFortAbilityTask_WaitTargetSelection();
+	static void execOnTargetDataCancelledCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDataReadyCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitTargetSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortAbilityTask_WaitTargetSelection) = 0xC0
 };
@@ -25554,6 +28697,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUserWidget();
+	static void execAddGrantCheatMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddStoreCheatMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortUserWidget) = 0x218
 };
@@ -25571,6 +28716,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortActionHandlerPanel();
+	static void execActivateActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivateActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHandleAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveOnPanelDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOnPanelActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOnPanelDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortActionHandlerPanel) = 0x240
 };
@@ -25707,6 +28858,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAdvancedMovementSet();
+	static void execOnRep_BrakingDecelerationFalling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_BrakingDecelerationWalking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_BrakingFrictionFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_GroundFriction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_JumpZVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MinAnalogWalkSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE0];  // sizeof(UFortAdvancedMovementSet) = 0x110
 };
@@ -25851,6 +29009,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAlterationsWidget();
+	static void execProcessAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortAlterationsWidget) = 0x230
 };
@@ -25868,6 +29027,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAlterationsWidget_NUI();
+	static void execProcessAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToCompareWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortAlterationsWidget_NUI) = 0x240
 };
@@ -26773,6 +29936,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAthenaMatchmakingWidget();
+	static void execGetActivePlaylists(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCancelButtonPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnChangeTeamFillChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPlayButtonPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPlaylistRotatorChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentPlaylist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x118];  // sizeof(UFortAthenaMatchmakingWidget) = 0x328
 };
@@ -26893,6 +30062,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAttributeList();
+	static void execClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearPreviewData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviewData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortAttributeList) = 0x230
 };
@@ -26910,6 +30083,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAttributeListItem();
+	static void execClearPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentAttributeCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayAttributeCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayPreviewCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisplayAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviewAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE8];  // sizeof(UFortAttributeListItem) = 0x2F0
 };
@@ -26927,6 +30106,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAttributeListItem_NUI();
+	static void execClearPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentAttributeCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayAttributeCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayPreviewCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPreviewAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisplayAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviewAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF8];  // sizeof(UFortAttributeListItem_NUI) = 0x308
 };
@@ -26944,6 +30130,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAttributeList_NUI();
+	static void execClearPreviewData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviewData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortAttributeList_NUI) = 0x240
 };
@@ -27609,6 +30798,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortBangWrapper_NUI();
+	static void execSetBangStateBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBangType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTutorialNameID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterTutorialNameID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortBangWrapper_NUI) = 0x228
 };
@@ -27626,6 +30819,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortBannerSelectorBase();
+	static void execCompleteHomebaseBannerSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCompleteHomebaseName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleBannerNameChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasIllegalChars(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerNameValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateErrorText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortBannerSelectorBase) = 0x400
 };
@@ -27681,6 +30880,23 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortBaseButton();
+	static void execForceClick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentButtonPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentCustomPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentStateStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectionGroupIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBangVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClickable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClickMethod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectionGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x548];  // sizeof(UFortBaseButton) = 0x760
 };
@@ -27715,6 +30931,21 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortBaseCanvasNode();
+	static void execDoesDrillDownToCurrentNodePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrillDownToNodePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCosts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeDataCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeStyleDataCopy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewMediaSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPurchasePercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPurchaseRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleNodeStateChangedInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOwned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPurchaseable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectNode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortBaseCanvasNode) = 0x280
 };
@@ -27810,6 +31041,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortBotMissionLogic();
+	static void execClearAllLocated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkAllLocated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkSingleLocator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGoalsInvulnerable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnStructureBuilder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortBotMissionLogic) = 0x78
 };
@@ -27861,6 +31099,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHealthSet();
+	static void execOnRep_CurrentShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Health(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Shield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x4A0];  // sizeof(UFortHealthSet) = 0x4D0
 };
@@ -27878,6 +31120,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortBuildingActorSet();
+	static void execOnRep_BuildTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RepairTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortBuildingActorSet) = 0x510
 };
@@ -27984,6 +31228,33 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortWeaponItemDefinition();
+	static void execGetAnalyticTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseAlteration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseCosmeticAlteration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDegradedPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayTierAsText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEquippedAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitNotifyDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitNotifyImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitNotifyOpacityCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLowAmmoPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMuzzleBlockedImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryFireAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReloadAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReticleCenterImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReticleCenterImageOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReticleCenterPerfectAimImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReticleCornerAngles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReticleImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSecondaryFireAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShortDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTriggerType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWeaponActorClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWeaponMeshOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWeaponStatHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldAllowTargetingDuringReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetingPreventsReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2B0];  // sizeof(UFortWeaponItemDefinition) = 0x750
 };
@@ -28018,6 +31289,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortBuildingTrapSet();
+	static void execOnRep_Durability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x180];  // sizeof(UFortBuildingTrapSet) = 0x690
 };
@@ -28126,6 +31398,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCampaignMap();
+	static void execOnSwipeLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSwipeRight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x130];  // sizeof(UFortCampaignMap) = 0x340
 };
@@ -28415,6 +31689,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortChatContainer();
+	static void execAttachChatWindowToNativeWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNativeWidgetHost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortChatContainer) = 0x230
 };
@@ -28449,6 +31725,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortChatWidget();
+	static void execFocusChatEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetControllerActionBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UFortChatWidget) = 0x158
 };
@@ -28466,6 +31744,376 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUFortCheatManager();
+	static void execAddAllScores(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddBuildingScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddCombatScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddDebugSpawnAIGroupTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddKillFeedMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSuspiciousBlockOfExecutableMemory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddUtilityScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAllowRespawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyGameplayModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyWeaponAlteration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreContextMenusEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAthenaEndlessGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAutoSlotSurvivors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBackpackSetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBadass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBeautyMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBotStartDogpile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBotStopDogpile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBounceContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildFree(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearDebugSpawnAIGroupTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearEncounterSimulatedNumberOfPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearEncounterSpawnPointsCap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearEncounterSpawnPointsCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearKeepSave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMapFog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearRespawnTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConstructTileWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCountPlayerBuiltBuildingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCraftFree(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCycleCurrentEncounterToDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCycleEncounterEQSQueryToDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCycleTheaterDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugAbilityTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugAttributeClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugAttributeModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugBuildingDetection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugBuildingGroups(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugForceEnsure(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugHideLoadingScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugHotSpots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugKickPlayerDueToInactivity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugLoadingScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugStructuralSupport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugThisAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugUseDedicatedServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDevSkipTutorial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDiscardAILogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpActiveGameplayEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpActorsWithAssetTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpAllActiveMissions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpAllActorsWithAssetTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpAppliedHomebaseEffectsWithCoreAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDumpGameStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableFixedTimeStep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableNewCustomizationPanel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableSubtitles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEncounterCurrentUtilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEncounterInitialUtilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEncounterSetDifficultyLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEncounterSpawnProbabilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEncounterTopUtilityPercentages(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndLiveStreamingWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEvolveHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExecuteNewMissionGeneration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExtAuthReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFakeDownHighlight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFakeKillHighlight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceAILODs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceHeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceSaveMissionStateAndWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceServerShutdown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceSetHeroRemoteCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceUnlockHordeTiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFortniteForceCharLOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGenerateMockMatchReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGeneratePolysInPathingRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllReplStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameStat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReplStat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWTFRotations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllConsumables(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllIngredients(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllMelee(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllPistols(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllRifles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllShotguns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllTraps(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAllWeapons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAthenaAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAthenaConsumables(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAthenaFullKit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAthenaTraps(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveAthenaWeapons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveBluGlo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveCheatInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveConsumable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveDeployablePlotAllIngredients(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveGadget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveGadgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveGoodWeapons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveHeroSpecialization(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveMetal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGivePickaxe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveResources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveSBA(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveSpecificItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveStone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveTrap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveUsefulThings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveWeapons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveWood(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantHeroSupportAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantHeroTacticalAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideGameplayCaptureUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideHUDElement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKillPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListActiveEncounters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListAIUtilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListCheats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListConsumables(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListEmotes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListGadgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListMissionGenerators(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListMissions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListPlayerIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListSpawnGroups(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListTraps(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListWeapons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLiveStreamingSelectedViewers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadMissionGenerator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeAIsGod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeBuildingActorsGod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGods(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpApplyAlteration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpApplyStash(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpCheat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpClaimAllAvailableCollectionBookRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpClaimAllResourceCollectors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpCompleteCurrentPrimaryMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpCompleteHexMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpConvertItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpEarnScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpEquipCharCosmetic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpForceHttpFailRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpGetCachedPersistence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpGetCurrencyAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpGetHexMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpGetPersonnelXP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpGetSchematicXP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpGetUnredeemedCodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpGetVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpHostGetAllPlayerCachedPersistence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpHostGetPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpIssueCodeToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpJoinFromPartyInviteToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpOpenCardPack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpPrintFriendInviteToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpPrintPartyInviteToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpRecycleItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpRedeemPurchases(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpRefreshCatalog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpRefreshProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpResetPersistence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpSlotItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpStorageTransfer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpTestFriendCodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpTestFriendCodes_OnQueryUnredeemedFriendCodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpTestVerifyProfileToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMcpUpgradeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMissionForceFailure(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMissionForcePrimarySuccess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMissionForceSuccess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMMS(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execModItemDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPain(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPerfMemStatMonitor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintScriptedActionManagerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintShotReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintTileWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execQueryHighlightCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRedoHuskSpecialEventModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshTheaters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegenerateZoneMissions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegenerateZoneMissionsWithDifficultyLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReInitHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReloadUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReloadUMG(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveDebugSpawnAIGroupTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGameplayModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReplayLastPerfTest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReRandomizeTiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetEncounterWave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetLastSeenAthenaStoreRefreshTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetMaxAITracking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRespawnPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRespawnPlayerServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunMonteCarlo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunPawnScriptLocally(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunPerfMemCheatScript(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendMissionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendQuestEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendTwitchToastNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActionMappingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAimMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAthenaHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCameraDistanceMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCameraFOVMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCameraPrototype(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCapturePercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCloudAltitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCombatGraphHistoryLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConsole60FPSMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCullValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentEncounterToDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDifficultyIncreaseRewardTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterDirections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterGraphsHistoryLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterSimulatedNumberOfPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterSpawnPointsCap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterSpawnPointsCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEncounterTopUtilityPercentages(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGameDifficultyOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGameStat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGlobalWind(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHealthPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHeroClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHeroLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHordePlotExpansionSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputPresetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInteractExtent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInteractionDistances(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetJumpStaminaCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLFG(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxClouds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPvPRoundTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPvPStalemateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReplStat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRespawnTimerOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSafeZoneLocationToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSafeZoneRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldDaysElapsed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowActiveGameplayModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowAllMinimapIcons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowGameplayCaptureUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowHighlightSummary(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowHUDElement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSimulateLoot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSimulateLootDrops(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSkipAircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSkipSafeZones(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAIGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAIGroupFromExternalSpawner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAIGroupWithUpgrade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnScriptedPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnScriptedPawnsInFormation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartLiveStreamingWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopDummyDebugEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopHighlights(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwapPickerThumbstick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwitchTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTeleportToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTeleportToLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTeleportToMissionActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestBanhammer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestBehaviorScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestCancelLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestChangePartyPrivacy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestChangePartySize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestCheckBansAtMatchStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestCloseClientConfirmationMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestDisconnect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestEncryptAPI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestJoin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestKnockback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestLeaveGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestOutpostUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestSafeZoneLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestSetOutpostDefenseActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestStructQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestStun(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTestUpgradeOutpostItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleAIAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleAIDespawning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleAIDirectorLogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleAISpawnCap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleAISpawning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleAutoSlotting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleBuildingActorsTransparency(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleBuildingHighlights(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleCharacterBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleCharacterHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleCombatGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleContextMenus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDebugHUDObjectiveHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDrawRunVariationDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDrawTargetSelectionDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDrawTargetSelectionDebugByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDrawTurnTransitionDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleEncounterEQSDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleEncounterModifierTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleExplorationBadgeView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleExplorationLogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleFactorGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleFloorsOnMiniMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleForceUsingGamepad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleFreezeAILOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleGameDifficultyHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleHeroVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleIndestructibleKeep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleInfiniteAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleInfiniteDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleInfiniteStamina(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleIntensityGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleIntensityHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleInteractTrace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleInvincibleCornerstones(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleInWorldScoreNumbers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleItemIdsOnCards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleLogCharacterCustomization(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleMaxAIHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleNoCoolDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTogglePickers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTogglePickupSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTogglePIDContributionsGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTogglePIDValuesGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTogglePlayerNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleSecondaryMissionHeaders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleShotLogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleSpawnPointsHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleTreeVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleUnlimitedAIHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleUnlimitedHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleUseNewItemCards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleUtilitiesGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleVoiceDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleWalkOnWalls(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleWindDebugDeltaBoundsDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleWindDebugDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleWindDebugVolumeDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerOutOfStaminaFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTutorialAddHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTutorialAddHighlight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTutorialListAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTutorialListHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTutorialListHighlights(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTutorialRemoveHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTutorialRemoveHighlight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnforceAILODs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockAllDefenders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockAllZones(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewStuck(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWannaGun(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWriteLootReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortCheatManager) = 0xC8
 };
@@ -28532,6 +32180,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortClientAnnouncement_ConversationCodeInterface();
+	static void execIsPlayingConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingSentenceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayConversationFromSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayConversationFromSentenceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortClientAnnouncement_ConversationInterface : public UInterface
@@ -28563,6 +32218,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortClientAnnouncement_TutorialInterface();
+	static void execHideTutorialWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetButtonEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDetailText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHAlign(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightboxDisableInputOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightboxEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNameText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSystemText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTitleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVAlign(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitForContinue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortClientBotManager : public UObject
@@ -28922,6 +32589,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookGenericRewardWidget();
+	static void execClearRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRewardStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentItemToDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRewardStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortCollectionBookGenericRewardWidget) = 0x228
 };
@@ -28965,6 +32639,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookOverviewWidget();
+	static void execOnActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnGetChildrenForPageCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPageItemClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPageItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortCollectionBookOverviewWidget) = 0x250
 };
@@ -28982,6 +32661,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookPage();
+	static void execGetPageState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSectionState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UFortCollectionBookPage) = 0x70
 };
@@ -29122,6 +32803,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookProgressionRewardDetailInspectWidget();
+	static void execGetXPRequired(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAssociatedLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortCollectionBookProgressionRewardDetailInspectWidget) = 0x228
 };
@@ -29212,6 +32895,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookRewardCardWidget();
+	static void execClearRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UFortCollectionBookRewardCardWidget) = 0x290
 };
@@ -29332,6 +33018,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookSlotButton();
+	static void execOnSlottedItemUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x8];  // sizeof(UFortCollectionBookSlotButton) = 0x788
 };
@@ -29384,6 +33071,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookSlotWidget();
+	static void execGetNumItemsToSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasItemsToSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsItemSlotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnItemDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlottedItemOperationComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x128];  // sizeof(UFortCollectionBookSlotWidget) = 0x338
 };
@@ -29401,6 +33094,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCollectionBookWidget();
+	static void execOnCollectionBookPageClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookSectionClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookSectionCloseRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPreviewXPChangeRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortCollectionBookWidget) = 0x420
 };
@@ -29488,6 +33186,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortConstructionSet();
+	static void execOnRep_BuildCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_BuildingSkill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_BuildSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxBuildLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RepairCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_RepairSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TrapArmSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TrapBaseDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TrapDiceCritChance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TrapDiceCritMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TrapHealingSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TrapMaxDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TrapReloadSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1A0];  // sizeof(UFortConstructionSet) = 0x1D0
 };
@@ -29628,6 +33339,31 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDecoItemDefinition();
+	static void execGetBlueprintClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGridSnapSizeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxPlacementDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlacementPreviewClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlacementTypeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRotationAngleIncrement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequiresPermissionToEditWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequiresPlayerPlaceableAttachmentActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldAllowAnyFloorPlacement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldAllowPlacementOnBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldAllowPlacementOnWorldGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldAllowStairsWhenAttachingToFloors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldAttachWhenPlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldCancelAbilityOnUnequip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldCancelToolWhenPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldConsumeWhenPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDestroySmallObjectsWhenPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDisableLocationLerpWhilePlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDisableRotationLerpWhilePlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDisableScaleLerpWhilePlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldForceIgnoreBuildingOverlaps(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldForceIgnoreOverlapTest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldIgnoreCollisionWithCriticalActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldSnapYawToHorizontalAxes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldUseRelativeCameraRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UFortDecoItemDefinition) = 0x7D0
 };
@@ -29679,6 +33415,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortControlResistanceSet();
+	static void execOnRep_ControlResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxControlResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x210];  // sizeof(UFortControlResistanceSet) = 0x240
 };
@@ -29738,6 +33476,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCraftingBarWidget();
+	static void execHandlePlayerStartedCrafting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePlayerStoppedCrafting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCompletedSetHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHideCraftingBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortCraftingBarWidget) = 0x260
 };
@@ -29851,6 +33593,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDailyRewards();
+	static void execFinishedClaiming(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetDailyRewardsData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortDailyRewardsItem : public UCommonUserWidget
@@ -29984,6 +33728,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDamageSet();
+	static void execOnRep_DiceCritChance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DiceCritMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HealthDamageScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_KnockbackMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_KnockbackZAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_OutgoingAbilityDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_OutgoingBaseAbilityDamageMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_OutgoingBaseDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_OutgoingBaseEnvironmentalDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_OutgoingBaseImpactDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ShieldDamageScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StunTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponSkill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ZoneCritMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x200];  // sizeof(UFortDamageSet) = 0x230
 };
@@ -30181,6 +33939,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemTileView();
+	static void execCenterSelectedItemTileWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execContainsItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemWidgetCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideNullItemTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshFilterAndSort(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshSort(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFilterAndSorter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemViewContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSorter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowNullItemTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x120];  // sizeof(UFortItemTileView) = 0x400
 };
@@ -30448,6 +34217,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortNotificationHandler();
+	static void execClearNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotificationShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortNotificationHandler) = 0x40
 };
@@ -30465,6 +34236,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDialogNotificationHandler();
+	static void execAccept(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDecline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDialogDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x180];  // sizeof(UFortDialogNotificationHandler) = 0x1C0
 };
@@ -31258,6 +35033,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDirectAcquisitionOfferDetailsWidgetBase();
+	static void execAutoEquip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOfferInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCurrentlyViewedAccountInfoChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPagedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UFortDirectAcquisitionOfferDetailsWidgetBase) = 0x450
 };
@@ -31332,6 +35112,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDirectAcquisitionOfferWidgetBase();
+	static void execAddOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOfferInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCurrentlyViewedAccountInfoChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAllOffers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortDirectAcquisitionOfferWidgetBase) = 0x798
 };
@@ -31349,6 +35134,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDirectAcquisitionWidgetBase();
+	static void execGetDailyStoreEndDate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonStoreEndDate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWeeklyStoreEndDate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerRefresh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortDirectAcquisitionWidgetBase) = 0x440
 };
@@ -31673,6 +35462,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionBuildSquadWidget();
+	static void execClearTemporaryExpeditionSquadState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleDifferentSquadSlotSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleStartExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsExpeditionValidToStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadSlotLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRefreshBuildSquadWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnStartExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UFortExpeditionBuildSquadWidget) = 0x420
 };
@@ -31690,6 +35489,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionDetailsWidget();
+	static void execAbandonExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleAbandonExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAbandonExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortExpeditionDetailsWidget) = 0x250
 };
@@ -31707,6 +35511,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionExpiresWidget();
+	static void execOnExpeditionExpirationUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortExpeditionExpiresWidget) = 0x220
 };
@@ -31772,6 +35578,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionListItemWidget();
+	static void execOnItemChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortExpeditionListItemWidget) = 0x798
 };
@@ -31843,6 +35650,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionOverviewWidget();
+	static void execHandleExpeditionTabButtonCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleExpeditionTabSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnExpeditionOverviewRefresh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnExpeditionTabSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateExpeditionTabs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortExpeditionOverviewWidget) = 0x238
 };
@@ -31878,6 +35690,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionReturnsWidget();
+	static void execOnExpeditionInProgressUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortExpeditionReturnsWidget) = 0x220
 };
@@ -31895,6 +35709,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionRewardsWidget();
+	static void execHandleCollectionExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProcessNextReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshRewardsUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortExpeditionRewardsWidget) = 0x238
 };
@@ -31912,6 +35729,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortExpeditionSummaryWidget();
+	static void execBindInventoryDelegates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRefreshSummaryWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnbindInventoryDelegates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortExpeditionSummaryWidget) = 0x250
 };
@@ -32079,6 +35899,87 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortFrontEndContext();
+	static void execAreProfilesAvailableToWIFE(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBindToFeatureStateAndInitialize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBroadcastMainTabSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanCompleteQuestInActiveTileMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanCompleteQuestInFocusedOrActiveTileMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanFindTileForQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanShowLockerSlotType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSelectedTheater(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceSetFeatureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountLevelUpRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveTileMissionDetails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllTheaterData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAvailableAthenaPlaylists(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAvailableDifficulties(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentTheaterName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefenderSquadIDByTheaterID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDesiredPlayButtonCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFabricatorDisintegrationSecondsRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFabricatorIncomingGooAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFabricatorStoredGooAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFeatureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFeatureStateReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusedOrActiveTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusedOrActiveTileMissionDetails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusedTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFrontEndCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHarvestingToolForLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroPlayerPawnByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroPlayerPawnForCurrentDisplayedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemFromItemQuantityPair(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLobbyBackgroundLevelName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxAvailableDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMCPRegion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMeshForCurrentDisplayedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostCoreLevelByItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostCoreLevelByTheaterId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostStructureMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostStructureUpgradeCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecommendedDifficultyIndexesInAvailableDifficulties(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecommendedTeamDifficulties(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequirementText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReturnToFrontendBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectableGadgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedTheaterData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedTheaterId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTheaterData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTheaterName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTheaterRegionCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTheaterType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileMissionDetails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUITestingClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideAthenaStoreNewItemBang(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActiveTileMissionValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayEvolutionEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayLevelUpEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushContentWidget_Adv(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunBenchmarkAndApplyBestSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectDefaultTheater(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectDefaultTheaterTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectGadgetForSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectTileForQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendFrontendEnteredEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendPlayQuestAnalytic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFrontEndCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFrontEndVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHeroChoice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPersonalHeroChoice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSeenLoginMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedTheater(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldRunInitialBenchmark(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowLoginMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowAthenaStoreNewItemBang(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSkipInitialBenchmark(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetAttributeInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateNewAccountItemBangCounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewVaultItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewVaultItemFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2B8];  // sizeof(UFortFrontEndContext) = 0x2E0
 };
@@ -32206,6 +36107,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGameFeedbackBase();
+	static void execAddButtonWithFeedbackType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitiateDebugInfoForFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSelectionButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubmitFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(UFortGameFeedbackBase) = 0x480
 };
@@ -32259,6 +36165,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGameOptions();
+	static void execConstructHUDTagList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConstructSettingList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControllerPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultGammaSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGammaSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHUDListWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHUDSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOptionsListWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitialize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetControllerPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateGammaSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateHUDSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortGameOptions) = 0x258
 };
@@ -32276,6 +36194,71 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("GameUserSettings"); }
 	static void StaticRegisterNativesUGameUserSettings();
+	static void execApplyHardwareBenchmarkResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyNonResolutionSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyResolutionSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplySettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConfirmVideoMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableHDRDisplayOutput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAntiAliasingQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAudioQualityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentHDRDisplayNits(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultResolution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultResolutionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultWindowMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultWindowPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDesktopResolution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFoliageQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFrameRateLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFullscreenMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameUserSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastConfirmedFullscreenMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastConfirmedScreenResolution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOverallScalabilityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPostProcessingQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreferredFullscreenMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecommendedResolutionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResolutionScaleInformation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResolutionScaleInformationEx(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScreenResolution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShadowQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextureQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewDistanceQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVisualEffectQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDirty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDynamicResolutionDirty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDynamicResolutionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFullscreenModeDirty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHDREnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsScreenResolutionDirty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVSyncDirty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVSyncEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetToCurrentSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRevertVideoMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRunHardwareBenchmark(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSaveSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAntiAliasingQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAudioQualityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBenchmarkFallbackValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDynamicResolutionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFoliageQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFrameRateLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFullscreenMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOverallScalabilityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPostProcessingQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetResolutionScaleNormalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetResolutionScaleValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetResolutionScaleValueEx(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScreenResolution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShadowQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextureQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetToDefaults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetViewDistanceQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVisualEffectQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVSyncEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSupportsHDRDisplayOutput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execValidateSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE8];  // sizeof(UGameUserSettings) = 0x110
 };
@@ -32327,6 +36310,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGameViewportClient();
+	static void execSetConsoleTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowTitleSafeArea(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSSSwapControllers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x5E8];  // sizeof(UGameViewportClient) = 0x620
 };
@@ -32378,6 +36364,50 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGameplayAbility();
+	static void execBP_ApplyGameplayEffectToOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_ApplyGameplayEffectToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_RemoveGameplayEffectFromOwnerWithAssetTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_RemoveGameplayEffectFromOwnerWithGrantedTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_RemoveGameplayEffectFromOwnerWithHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelTaskByInstanceName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConfirmTaskByInstanceName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndAbilityState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndTaskByInstanceName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAbilityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAvatarActorFromActorInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetContextFromOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCooldownTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSourceObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGrantedByEffectContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningActorFromActorInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningComponentFromActorInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvalidateClientPredictionKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddGameplayCueWithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ApplyGameplayEffectSpecToOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ApplyGameplayEffectSpecToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_CancelAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_CheckAbilityCooldown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_CheckAbilityCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_CommitAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_CommitAbilityCooldown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_CommitAbilityCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_EndAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ExecuteGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ExecuteGameplayCueWithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_RemoveGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeOutgoingGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeTargetLocationInfoFromOwnerActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeTargetLocationInfoFromOwnerSkeletalMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontageJumpToSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontageSetNextSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMontageStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGrantedByEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendGameplayEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanBeCanceled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldBlockOtherAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x5D8];  // sizeof(UGameplayAbility) = 0x600
 };
@@ -32395,6 +36425,33 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGameplayAbility();
+	static void execApplyAccuracyToTargetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyGameplayEffectContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBP_GetGameplayEffectContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCalculateProjectileTrajectorySpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAIFocalPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesTargetHaveProhibitedTagsForAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesTargetHaveTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEquipAbilityWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActivatingAbilityComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActivatingPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAIAbilityTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAimLocationNearestPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentAbilitySourceLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSourceWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFireLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFireRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetProjectileInitialValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTargetOutsideOfMaxYawRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AbilityCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGameplayEffectContainerSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnGenericNotifyFromAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execQueryGameplayEffectContainerTargetExecutionModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAIFocalPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupPreviewImageOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x4B0];  // sizeof(UFortGameplayAbility) = 0xAB0
 };
@@ -32456,6 +36513,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGameplayAbility_AIPortal();
+	static void execGetPortalBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPortalInPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPortalOutPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPortalOutPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execModifyCollisions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortGameplayAbility_AIPortal) = 0xB10
 };
@@ -32773,6 +36835,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGameplayTagVolumeInterface();
+	static void execApplyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortGiftBoxItem : public UFortAccountItem
@@ -32822,6 +36885,112 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGlobalUIContext();
+	static void execAllowLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAllowQuit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAutoSelectSubGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBindToFeatureStateAndInitialize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanMatchmake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCheckFlag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearForceSetFeatureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearLastGameSummaryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearLastMissionReports(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearRatingWidgetInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSelectionGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCloseExternalNotificationWindowIfOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execContentInstallationProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCopyToClipboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisplayStateContent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceSetFeatureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountGameplayRestrictionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllPlayerInputPresetNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllPlayerInputPresetNamesForSubGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAthenaCodeOfConductURL(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBackendName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCollectionBookManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConningDifficultyXpModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConningXpModifierMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentInputPresetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFeatureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFeatureStateReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFeedbackTitle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputDetailsForAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKeyForAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKeyTextForAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastGameSummaryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastMissionInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastMissionRewardReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMessageManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNextNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlatformDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScoreReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonalEventManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSessionId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStringNameOfEventPlaylist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSubGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWatermark(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAccesstoMultipleSubGames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompletedOnboardingObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideBang(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputActionHoldStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputActionHoldStopped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAllContentInstalled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBattleRoyaleMatchmakingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBluGloEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDesktopPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDuoQueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent1QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent2QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent3QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent4QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent5QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent6QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent7QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent8QueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFiftyFiftyQueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsGamepadAttached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHUDVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInOutpostZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMobileApp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPendingLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlatoonQueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaylistQueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadQueueEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUIVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingGamepad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProcessConfirmationResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProcessNotificationResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execQueryGameBackendVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execQuitGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterScriptedAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterScriptedActions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterToReceiveNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReturnToSubGameSelect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendExperienceRatingAnalytic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendLeaveZoneAnalytic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendUINavigationAnalytic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBangFromCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentInputPresetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRatingWidgetFeedbackTitle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSubGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldCloseMenuOnEscape(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowRateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowAthenaMatchReadyExternalNotificationWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowBang(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowConsoleAccountPicker(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowWebURL(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerCompletedQuestStickies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerNewQuestStickies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerUIFeedbackEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnbindToFeatureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterScriptedAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterToReceiveNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x368];  // sizeof(UFortGlobalUIContext) = 0x390
 };
@@ -32919,6 +37088,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGridPickerButton();
+	static void execOnButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UFortGridPickerButton) = 0x298
 };
@@ -32951,6 +37122,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGridPickerTile();
+	static void execForwardClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortGridPickerTile) = 0x228
 };
@@ -32985,6 +37157,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHUDCenterPopupMessageWidget();
+	static void execGetCenterPopupMessageState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortHUDCenterPopupMessageWidget) = 0x248
 };
@@ -33002,6 +37176,53 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHUDContext();
+	static void execAddPointOfInterest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreHUDElementsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreIndicatorsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterCameraMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterCursorMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForwardOnAbilityDecisionWindowStackUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForwardOnMissionsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForwardOnNumSurvivorsRescuedChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForwardOnWeaponEquipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBluGloManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentBasicMissionInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentHUDState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEarnedBadges(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusedBuildingInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusedMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameStateZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIndicatorsState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKillerVisualInfoFromDeathReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionOverviewObjectives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerStateZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPotentialBadges(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScoreDisplayFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamCornerstone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeToDelayEndOfDayZoneWidgetDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleBuildingModeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleFocusedBuildingHealthChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPawnDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPawnRevived(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPawnSpawned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPlayerKillsChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPlayerPlaceChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleLocalPlayerViewTargetChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInCursorMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInEditMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPreparingMgmtMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemovePointOfInterest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestMgmtMenuTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCursorModeLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHUDElementVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIndicatorsAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIndicatorsState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreparingMgmtMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldOnlyShowNextPrevBuildingSlotKeybinds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateTrapAttachedToBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x588];  // sizeof(UFortHUDContext) = 0x5B0
 };
@@ -33070,6 +37291,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHUDTargetUnderReticleWidget();
+	static void execClearTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleOnHUDTargetUnderReticle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetActorDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTargetHealthChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UFortHUDTargetUnderReticleWidget) = 0x258
 };
@@ -33119,6 +37347,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHealthBarComponent();
+	static void execGetHealthBarDisplayText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DisplayText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_IsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHealthBarDisplayText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHealthBarVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHealthBarWidgetVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortHealthBarComponent) = 0x2E0
 };
@@ -33363,6 +37597,25 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadManagementScreenBase();
+	static void execGetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleBackInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleClosePickerInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCyclePickerSortInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleDifferentSquadSlotSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInspectInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleManageInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleOpenSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerSelectionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePickerSelectionCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleSelectPickerSlotInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleViewInAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetAttributeValueFromSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSquadMainAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSquadTeamAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetStaticSquadDataBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xD0];  // sizeof(UFortSquadManagementScreenBase) = 0x4C0
 };
@@ -33751,6 +38004,31 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHomebaseSet();
+	static void execOnRep_InventorySizeBonus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_AmmoStash_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_Armory_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_Medical_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_PermaniteCap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_Storage_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_StructureCap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Keep_Workshop_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Manor_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Manor_StructureCap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxLevelBonus_Alterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxLevelBonus_Global(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxLevelBonus_Personnel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxLevelBonus_Schematics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxLevelBonus_Schematics_Melee(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxLevelBonus_Schematics_Ranged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxLevelBonus_Schematics_Traps(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ResearchPointMaxBonus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StorageInventorySizeBonus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SupplyDrop_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SupplyDrop_Magnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WorldInventorySizeBonus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x520];  // sizeof(UFortHomebaseSet) = 0x550
 };
@@ -33809,6 +38087,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUOnlineHotfixManager();
+	static void execStartHotfixProcess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x3A8];  // sizeof(UOnlineHotfixManager) = 0x3D0
 };
@@ -33996,6 +38275,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortInitializationInterface();
+	static void execMatchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNeedsWorldReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWorldReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortInitializeFromObjectInterface : public UInterface
@@ -34026,6 +38308,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortInputOptions();
+	static void execChangeBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConstructKeyBindList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBindedKeyNameBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetListWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortInputOptions) = 0x258
 };
@@ -34110,6 +38396,92 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortInventoryContext();
+	static void execActivateItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreAnyItemsAnimate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreAnyItemsUnseenForInventoryFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreRecipeRequirementsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanCraftSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanDisassembleItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanEvolve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanPinSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanRecycle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanUpgradeItemRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCraftAndSlotSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCraftSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDestroyWorldItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesItemMatchFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDropItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDropItemOnQuickBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnumerateRecyclingWarningsForItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEquipItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountItemsByFilterType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountItemsByType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBackpackItemCounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBackpackOverflowFromAddingItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConversionRecipesFromItemDefintion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCountOfHeroItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCountOfVaultLimitedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentAmmoItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentResourceCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeployableBaseItemCounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeployableBaseOverflowFromAddingItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisassembleRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEquippedWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEvolveRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayTagByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroAbilityPerks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseUnlockedTransmogKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemInstancesByDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemLevelRecyclingWarningThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemRarityRecyclingWarningThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemTierRecyclingWarningThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumInInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPersonnelResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPinnedSchematicList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuickbarFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuickBarSlottedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecycleRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecyclingCatalystDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecyclingWarningText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResourceCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResourceIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSchematicResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStorageCapacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStorageNumItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStorageOverflowFromAddingItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSupportBonusPerks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTierText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalItemQuantityByDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTransformKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTransmogSacrificeDataFromItemDefintion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrapAttachTypeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeItemRarityRecipeFromItemDefintion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUserFriendlyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVaultItemLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVaultItemLimitStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVoucherResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldItemList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldItemListForDeployableBaseThePlayerIsIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasEvolutions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasGameplayTagContainerExact(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasTrapReadyForBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasUnavailableItemsInStorage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPickAxeEquipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRecyclable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSchematicPinned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSlotHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTrapAvailableForBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLockAllSchematics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeItemQuantityPair(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveItemFromQuickBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSchematicPinned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSortAccountItemArrayForTransmog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockAllSchematics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x178];  // sizeof(UFortInventoryContext) = 0x1A0
 };
@@ -34274,6 +38646,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemCategoryIndicator();
+	static void execClearLabelColorOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLabelColorOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOrdinalOfCategoryToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortItemCategoryIndicator) = 0x130
 };
@@ -34364,6 +38740,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemCooldownWidget();
+	static void execOnWorldItemDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(UFortItemCooldownWidget) = 0x2A0
 };
@@ -34439,6 +38817,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemDetailsHostPanel();
+	static void execSetInspectMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToCompareWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToDetail(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemViewContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScrollWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldPreviewUpgradingItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x68];  // sizeof(UFortItemDetailsHostPanel) = 0x278
 };
@@ -34531,6 +38915,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemGroupSlotPicker();
+	static void execBeginUpgradePreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetectCandidateSynergiesAndMatches(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndUpgradePreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCandidateFitnessValueForSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCandidateItemSlottingRestrictions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCompatibleCandidateItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentlySlottedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemSlottingRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlotIndexInGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemSetInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSignalSelectionCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortItemGroupSlotPicker) = 0x248
 };
@@ -34548,6 +38945,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemGroupSlotWidget();
+	static void execCancelSlottingPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreatePickerWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemPickerSelectionCommittedInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsItemCompatible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsManagerSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSlottingPreviewItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xD8];  // sizeof(UFortItemGroupSlotWidget) = 0x2F0
 };
@@ -34565,6 +38973,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemGroupWidget();
+	static void execGetActiveSetBonusTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalAttributeBonuses(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortItemGroupWidget) = 0x240
 };
@@ -34621,6 +39034,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemInspectCycleWidget();
+	static void execGetItemWithOffset_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectItemWithOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectNextItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectPreviousItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortItemInspectCycleWidget) = 0x250
 };
@@ -34638,6 +39057,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemInspectionScreen();
+	static void execGetCycleWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortItemInspectionScreen) = 0x3D0
 };
@@ -34655,6 +39075,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemManagementInventoryPanel();
+	static void execAddItemStackToMulch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdvanceSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCycleSortType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQualifiedFilterDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSupportedSortTypesForCurrentInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeItemDefinitionsForCurrentInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCraftItemStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCursorModeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleFilterTabButtonCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleFilterTabSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemDoubleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemHoverChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleInventoryUpdatedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemWidgetCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSwitchPanelAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshCraftingSort(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSortType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwitchPanelFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateSchematicTiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x110];  // sizeof(UFortItemManagementInventoryPanel) = 0x320
 };
@@ -34743,6 +39185,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemManagementMulchDetailsPanel();
+	static void execCommitMulch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemCountsToMulch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemsToMulch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSpaceAvailableForMulch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortItemManagementMulchDetailsPanel) = 0x228
 };
@@ -34760,6 +39206,32 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemManagementScreen();
+	static void execCancelInventoryPanelTileViewRefresh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanItemBeMulched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanRequestPopupMenuForSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConsumeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCraftItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCycleSortType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDropItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterComparisonMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterDetailsMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterMulchMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEquipItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemsToMulchBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemToCompareDetailsWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemToDetail(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumItemsToMulch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemToCompareWithChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemToDetailChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasItemBeenSeen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInspectItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsScreenWIFE(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyPanelActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyPanelDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestPopupMenuForSelectedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConsumeItemRequestInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFrontendInventoryFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransferItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x3B0];  // sizeof(UFortItemManagementScreen) = 0x770
 };
@@ -34817,6 +39289,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemQuantityListEntryBase();
+	static void execClearPreviewData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBeingPreviewed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemDefinitionAndQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemInstanceAndQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviewData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortItemQuantityListEntryBase) = 0x238
 };
@@ -34851,6 +39331,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemTransform();
+	static void execProcessPendingSeenTransformKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortItemTypeFunctionLibrary : public UBlueprintFunctionLibrary
@@ -35001,6 +39482,30 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortItemWidget();
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIconTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemToCompare(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStackCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasSecondaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasTertiaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEquipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInventoryOverflowItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsItemValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSlotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFortItemDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFortItemUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCooldownMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOnGetItemToCompareDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortItemWidget) = 0x798
 };
@@ -35116,6 +39621,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortKeybindWidget();
+	static void execGetBrushForKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHoldKeybind(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoundAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForcedHoldKeybind(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForcedHoldKeybindStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShowProgressCountDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartHoldProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopHoldProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateKeybindWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x58];  // sizeof(UFortKeybindWidget) = 0x268
 };
@@ -35483,6 +39997,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortListView();
+	static void execAddItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIndexForItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveItemAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDataProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIndexSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x68];  // sizeof(UFortListView) = 0x168
 };
@@ -35639,6 +40162,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMainTabsScreenBase();
+	static void execConstructTabs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleFeatureNavigateRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleFeatureStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UFortMainTabsScreenBase) = 0x430
 };
@@ -35707,6 +40233,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUFortMatchmakingContext();
+	static void execCancelMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCheckRejoinStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisconnectFromLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterPvPFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCustomMatchmakingKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLobbyBeaconClient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLobbyWaitForPlayersTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsConnectedToGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsCustomMatchmakingKeyEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsJoinableGameAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMatchmakingLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOutpostPermitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWorldRecordLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execJoinFromLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNeedToCheckRejoinStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReadyUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCustomMatchmakingKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartCriticalMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartOnboardingMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartQuickPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x180];  // sizeof(UFortMatchmakingContext) = 0x1A8
 };
@@ -35875,6 +40424,74 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void StaticRegisterNativesUFortMcpContext();
+	static void execAbandonExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyAlteration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreMissionRewardsAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelEpicPurchasingDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelLoginFlowDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanPurchaseOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClaimAllResourceCollectors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClaimResourceCollectors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCollectExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConvertItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisplayEmptyStoreDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesPlatformSupportFriendCodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDownloadEULA(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountItemWithDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllHeroes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllResourceCollectors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAppName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAthenaProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBattlePassInfoForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentlyViewedAccountInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEULAText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFriendCodeDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFriendCodeDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGroupXpBonusPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroXpBalance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomeBaseInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomeBaseInfoForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLoadoutForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalAccountInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLoginStatusText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMcpProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumFriendCodesToIssue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPersonalXpBonusPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPersonnelXpBalance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayersXPPercentContributionToLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRestXpBalance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRestXpBonusPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSchematicXpBalance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTencentIdString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeXPBalance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetXpBoostBalance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantPendingDifficultyIncreaseRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantPendingMissionAlertRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasEULADownloaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPendingDifficultyIncreaseRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPendingMissionAlertRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAllowedConversionIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDailyRewardAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocalPlayersUniqueID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOwned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIssueFriendCode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execListMtxPackages(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkItemSeen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenMissionRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPurchaseOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPurchaseRealMoneyCatalogEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execQueryUnredeemedFriendCodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecycleItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRecycleItemBatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterForEpicPurchasingDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterForLoginFlow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendFriendCodePlatformMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemFavoriteStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransmogItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpgradeItemRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x488];  // sizeof(UFortMcpContext) = 0x4B0
 };
@@ -36099,6 +40716,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMediaSubtitlesPlayer();
+	static void execBindToMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSubtitles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortMediaSubtitlesPlayer) = 0x58
 };
@@ -36233,6 +40854,20 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUFortMiniMapComponent();
+	static void execOnRep_MiniMapData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOverrideLocalMiniMapIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOverrideLocalMiniMapIndicatorIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIconColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIconColorPulsesPerSecond(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIconPulseColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIconScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIconSizePulsesPerSecond(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIndicatorIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapIndicatorIsVisibleOnMiniMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapLocationOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMiniMapViewableDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupMiniMapComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xB8];  // sizeof(UFortMiniMapComponent) = 0x1C8
 };
@@ -36574,6 +41209,24 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMissionTimerComponent();
+	static void execClearMissionTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDummyTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCorrectTimeDisplayData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionTimerTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalizedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMissionTimerPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMissionTimerSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTimerVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TimerData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_TimerVisibilityOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPauseMissionTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetMissionTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMissionTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimerDisplayFormat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimerLabelText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimerVisibilityOverrideSetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnpauseMissionTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x78];  // sizeof(UFortMissionTimerComponent) = 0x168
 };
@@ -36606,6 +41259,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMissionTracker();
+	static void execHandleDebugHUDObjectiveHeightChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleSizeEstimateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshSizeEstimate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortMissionTracker) = 0x268
 };
@@ -36624,6 +41280,9 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUFortMissionTrackerEntry();
+	static void execHandleMissionInfoSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleObjectivesChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA8];  // sizeof(UFortMissionTrackerEntry) = 0x2B8
 };
@@ -36642,6 +41301,9 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUFortMissionTrackerList();
+	static void execHandleMissionsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleSizeEstimateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(UFortMissionTrackerList) = 0x2A0
 };
@@ -36659,6 +41321,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMissionTrackerSubEntry();
+	static void execNotifyVisibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortMissionTrackerSubEntry) = 0x248
 };
@@ -36779,6 +41442,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMovementSet();
+	static void execOnRep_SpeedMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x120];  // sizeof(UFortMovementSet) = 0x150
 };
@@ -36796,6 +41460,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMovieWidget();
+	static void execGetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMediaSoundComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMediaTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPlayerForSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestPlayMovie(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestStopMovie(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMediaSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortMovieWidget) = 0x240
 };
@@ -36928,6 +41599,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMultiSizeItemCard();
+	static void execGetCardSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCardSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEmptyItemType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetQuantityOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldCollapseBorderPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldDisplayItemAsReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldUseNewItemCards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortMultiSizeItemCard) = 0x160
 };
@@ -37320,6 +41998,28 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUNavigationSystem();
+	static void execFindPathToActorSynchronously(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindPathToLocationSynchronously(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNavigationSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRandomPointInNavigableRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRandomReachablePointInRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsNavigationBeingBuilt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsNavigationBeingBuiltOrLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetRandomPointInNavigableRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetRandomReachablePointInRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ProjectPointToNavigation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigationRaycast(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnNavigationBoundsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProjectPointToNavigation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterNavigationInvoker(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetMaxSimultaneousTileGenerationJobsCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGeometryGatheringMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxSimultaneousTileGenerationJobsCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSimpleMoveToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSimpleMoveToLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterNavigationInvoker(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x448];  // sizeof(UNavigationSystem) = 0x470
 };
@@ -37614,6 +42314,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortNumericTextBlock();
+	static void execDirectlySet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInterpolateSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInterpolatingNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortNumericTextBlock) = 0x270
 };
@@ -37824,6 +42528,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortOptionsMenu();
+	static void execClearCachedEula(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNeedsLanguageChangeConfirmation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNeedsVideoChangeConfirmation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnApply(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnResetToDefaults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnVideoAccept(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetClientHUDSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetGameOptionsSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowAccountOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowControllerOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowInputOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowVideoOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortOptionsMenuInputData : public UDataAsset
@@ -37961,6 +42678,24 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortOutpostContext();
+	static void execCanUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanUpgradeBuildingFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanUpgradePOST(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDepositPOSTResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingLevelFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingMaxLevelFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingUpgradeCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingUpgradeCostFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHarvestingToolForLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNextPOSTLevelRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostCoreLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPOSTBuildingHealthMod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLeaveOutpostAsParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpgradeBuildingByDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpgradePOST(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortOutpostContext) = 0x68
 };
@@ -38163,6 +42898,75 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPartyContext();
+	static void execAcceptFriendRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAttemptRefreshFriendsList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanBeInvited(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanBeInvitedNetID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanBeJoined(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelFriendRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanDisplayFriendsActionNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanShowExternalProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearPendingInvites(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveFriendsList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConsoleFriendRichPresenceText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentPartyMaxSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFriendRequestStatusForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPartyMemberLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPartyPlaylist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPartyProgression(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPartyTeamFill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerTeamMemberInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalTeamTeamMemberInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxTeamSizeForSelectedTheater(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumPlayersInLocalParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPartyInvites(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPartyMemberDisplayState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPartyPrivacySetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPartySuggestion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPartySuggestions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocialItemCategories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocialItemList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePendingInvites(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPendingFriendRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPendingPartyInvitation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAthenaPartyMemberReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEntirePartyInFrontEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInLocalPlayersParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLFG(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocalPlayerInParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocalPlayerInPersistentParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocalPlayerPartyLeader(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPartyMemberMuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerBlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayerInOurParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTeamMemberFriend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidNetID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execJoinParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKickPartyMember(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLeaveParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMutePartyMember(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPromotePartyMemberToLeader(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRejectFriendRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRejectPartyInvite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendFriendRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendPartyInvite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendPartyInviteNetID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetChatWhisperTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFriendInvitesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLFG(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLocalPartyMemberLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPartyInvitesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPartyPrivacySetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPartyProgression(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldPartyInvitesBeEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowHeroPortraits(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowExternalFriendsUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowExternalProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowLocalPlayerExternalProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnmutePartyMember(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x618];  // sizeof(UFortPartyContext) = 0x640
 };
@@ -38332,6 +43136,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPerkTierWidget();
+	static void execProcessPerks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UFortPerkTierWidget) = 0x238
 };
@@ -38349,6 +43154,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPerkTierWidget_NUI();
+	static void execProcessPerks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortPerkTierWidget_NUI) = 0x260
 };
@@ -38423,6 +43229,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPerksWidget();
+	static void execProcessPerkTiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortPerksWidget) = 0x230
 };
@@ -38440,6 +43247,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPerksWidget_NUI();
+	static void execProcessPerks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProcessPerkTiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x78];  // sizeof(UFortPerksWidget_NUI) = 0x288
 };
@@ -38490,6 +43301,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPickerContext();
+	static void execDoesRadialCloseOnRelease(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetListPickerOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumPickerOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRadialPickerOptionImageAndLabel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRadialPickerOptionItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPickerCanceled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPickerOptionAccepted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestoreInputAxes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFortPickerData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseLeftThumbstick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x110];  // sizeof(UFortPickerContext) = 0x138
 };
@@ -38629,6 +43450,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPlayerAttrSet();
+	static void execOnRep_CraftingTimeMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CraftItemLevelBonusMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CraftItemLevelBonusMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DoubleCraftChance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DoubleItemLootChance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_DoubleLootRollChance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ExtraLives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Fortitude_Team(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_HarvestingTool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ItemMaxStack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ItemRegenCooldown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ItemRegenMaxStack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_MaxStamina(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Offense_Team(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Resistance_Team(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ResourceHarvesting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ResurrectTeammateDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SprintCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Stamina(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StaminaCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StaminaRegenDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StaminaRegenRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Tech_Team(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x3F0];  // sizeof(UFortPlayerAttrSet) = 0x420
 };
@@ -38741,6 +43585,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Input"); }
 	static void StaticRegisterNativesUPlayerInput();
+	static void execClearSmoothing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvertAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvertAxisKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBind(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMouseSensitivity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x380];  // sizeof(UPlayerInput) = 0x3A8
 };
@@ -38809,6 +43658,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPlayerProfileBannerEditor();
+	static void execCommitChosenIconAndColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleEditorActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleEditorDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRefreshBannerEditor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBannerColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBannerIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x180];  // sizeof(UFortPlayerProfileBannerEditor) = 0x390
 };
@@ -38877,6 +43732,35 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPlayerTrackerBase();
+	static void execGetBaseFortitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseOffense(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseTech(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuffedFortitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuffedOffense(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuffedResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuffedTech(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetModifiedHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamFortitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamOffense(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamTech(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleOnLocalPlayerInfoUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleOnPlayerIdUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePartyLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTeamMemberAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTeamMemberRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTeamMemberStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTeamMemberStateChangedId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasModifiedStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterAttributeChangedDelegates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReRegisterAttributeChangedDelegates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetPartyEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTeamMember(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUniqueIdInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateBasedOnId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortPlayerTrackerBase) = 0x250
 };
@@ -38941,6 +43825,79 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000040000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSkeletalMeshComponent();
+	static void execAccumulateAllBodiesBelowPhysicsBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddForceToAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddImpulseToAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAllowAnimCurveEvaluation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBindClothToMasterPoseComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakConstraint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMorphTargets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindConstraintBoneName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceClothNextUpdateTeleport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceClothNextUpdateTeleportAndReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllowedAnimCurveEvaluate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnimationMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnimInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoneMass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClothingSimulationInteractor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClothMaxDistanceScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentJointAngles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisableAnimCurves(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisablePostProcessBlueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMorphTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPostProcessInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSkeletalCenterOfMass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeleportDistanceThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeleportRotationThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBodyGravityEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsClothingSimulationSuspended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetClosestPointOnPhysicsAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOverrideAnimationData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetAllBodiesSimulatePhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetAllowedAnimCurveEvaluation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetAnimInstanceDynamics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetClothTeleportMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResumeClothingSimulation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllBodiesBelowPhysicsBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllBodiesBelowSimulatePhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllBodiesPhysicsBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllBodiesSimulatePhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllMotorsAngularDriveParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllMotorsAngularPositionDrive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllMotorsAngularVelocityDrive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllowAnimCurveEvaluation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllowedAnimCurvesEvaluation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularLimits(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimationMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimInstanceClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBodyNotifyRigidBodyCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClothMaxDistanceScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstraintProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstraintProfileForAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisableAnimCurves(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisablePostProcessBlueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnableBodyGravity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnableGravityOnAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnablePhysicsBlending(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMorphTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNotifyRigidBodyCollisionBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTeleportDistanceThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTeleportRotationThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUpdateAnimationInEditor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSnapshotPose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSuspendClothingSimulation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleDisablePostProcessBlueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnbindClothFromMasterPoseComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x500];  // sizeof(USkeletalMeshComponent) = 0xD10
 };
@@ -38975,6 +43932,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPrivacyBase();
+	static void execAddPrivacyButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyPrivacySetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleAllowFriendsButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePrivacyButtonSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTencentBuild(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UFortPrivacyBase) = 0x470
 };
@@ -39041,6 +44003,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPrototypingContext();
+	static void execGetPrototypingStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UFortPrototypingContext) = 0x70
 };
@@ -40302,6 +45265,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQueryTwoPointSolver();
+	static void execAddNamedFloatParamA(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddNamedFloatParamB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRandomRotationOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCustomRotationA(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSkipToNextPointA(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC8];  // sizeof(UFortQueryTwoPointSolver) = 0xF0
 };
@@ -40338,6 +45307,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestExpiresWidget();
+	static void execOnQuestExpirationUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortQuestExpiresWidget) = 0x220
 };
@@ -40355,6 +45326,30 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestItem();
+	static void execCanPinQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesQuestExpire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAchievedCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBroadcasterGrantWindowEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionConfigData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectiveInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPercentageComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewAllSelectableRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewSelectableRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestDefinitionBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRemainingExpirationDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTwitchBroadcasterChannelId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompletedObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompletedObjectiveWithName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompletedQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasQuestExpired(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasVisibleRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsObjectiveInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsObjectiveWithNameInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsQuestInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsQuestPinned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVisibleToUser(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(UFortQuestItem) = 0x1E0
 };
@@ -40372,6 +45367,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestItemDefinition();
+	static void execAllowsTileMatching(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExpandsStormShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClaimConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCompletionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHiddenRewards_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIntroConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectives_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrerequisiteObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrerequisiteQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardHeaderText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardInfo_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewards_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectableRewards_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectRewardsConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDeprecated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldAutoLaunch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1C0];  // sizeof(UFortQuestItemDefinition) = 0x4D0
 };
@@ -40406,6 +45423,38 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestManager();
+	static void execClaimNextCompletedQuestReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClaimQuestReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClaimSelectedQuestReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceTriggerQuestsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBroadcasterQuestWithOpenWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCompletedQuests(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentQuests(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentQuestsCategories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMainQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNextUnseenQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPinnedQuests(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestWithDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRemainingDailyQuestRerolls(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSourceAndContextTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnseenQuestCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantFirstDailyQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompletedObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompletedObjectiveWithName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompletedQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasQuestBeenSeenLocally(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasUnsavedPrimaryMissionProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasUnseenQuests(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMainQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsObjectiveInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsObjectiveWithNameInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsQuestInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkQuestSeen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkQuestsSeen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRerollDailyQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendCustomStatEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetQuestPinned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x278];  // sizeof(UFortQuestManager) = 0x2A0
 };
@@ -40440,6 +45489,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestObjectiveInfo();
+	static void execDisplayDynamicQuestUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVisibleToUser(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x88];  // sizeof(UFortQuestObjectiveInfo) = 0xB0
 };
@@ -40475,6 +45530,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestScreen();
+	static void execProcessPendingSeenQuestItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortQuestTrackerEntry : public UCommonUserWidget
@@ -40509,6 +45565,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestTrackerList();
+	static void execHandleHUDFinalObjectiveHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePinnedQuestsChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleQuestEntryCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleQuestsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleSizeEstimateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortQuestTrackerList) = 0x248
 };
@@ -40526,6 +45587,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestTrackerSubEntry();
+	static void execHandleQuestsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyCompletionAnimationFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortQuestTrackerSubEntry) = 0x250
 };
@@ -40543,6 +45606,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortQuestTreeItemWidget();
+	static void execHandleQuestsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortQuestTreeItemWidget) = 0x790
 };
@@ -40684,6 +45748,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortRegisteredPlayerInfo();
+	static void execGetAbilitySystemComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x228];  // sizeof(UFortRegisteredPlayerInfo) = 0x250
 };
@@ -40754,6 +45820,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortRejoinWindowBase();
+	static void execStartTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortRejoinWindowBase) = 0x3D0
 };
@@ -40804,6 +45872,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortResultsTeleportScreenWidget();
+	static void execStartExitTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UFortResultsTeleportScreenWidget) = 0x270
 };
@@ -40821,6 +45890,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortResultsWidget();
+	static void execGetRewardsByType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalMissionPointsEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetZoneCompletionResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDataFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogXPData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestExitZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendEndOfRoundFriendInviteAnalytic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendEndOfRoundScreenAnalytic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendEndOfRoundUpVoteAnalytic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerSetupTeleportCameraEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC0];  // sizeof(UFortResultsWidget) = 0x480
 };
@@ -40838,6 +45917,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortReticle();
+	static void execOnContextualReticleChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPawnSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnReticleColorChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnWeaponEquipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortReticle) = 0x260
 };
@@ -40891,6 +45974,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortRewardNotificationSubWidget();
+	static void execAddInputActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInspectItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPrimaryActionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPrimaryActionHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAllInputActionHandlers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveInputActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputActionHandlerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPrimaryActionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPrimaryActionHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPrimaryActionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransitionIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransitionOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortRewardNotificationSubWidget) = 0x238
 };
@@ -41081,6 +46177,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortRewardNotificationWidget();
+	static void execAddCollectionBookData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddDifficultyIncreaseRewardData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddEpicQuestData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddExpeditionData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddMissionAlertData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddMissionData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddQuestData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPrimaryActionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPrimaryActionHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetAllRewardData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPrimaryActionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPrimaryActionHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPrimaryActionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1B0];  // sizeof(UFortRewardNotificationWidget) = 0x570
 };
@@ -41151,6 +46260,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("RuntimeOptions"); }
 	static void StaticRegisterNativesUFortRuntimeOptions();
+	static void execGetEnableMainMenuSocialButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRuntimeOptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnableMainMenuSocialButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortRuntimeOptions) = 0x78
 };
@@ -41359,6 +46471,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSharedMissionLists();
+	static void execUpdatePIEPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x130];  // sizeof(UFortSharedMissionLists) = 0x158
 };
@@ -41391,6 +46504,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSignInWidget();
+	static void execHandleBackSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleForgotPassword(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleSignInRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTextCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartSignIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateSignInButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF0];  // sizeof(UFortSignInWidget) = 0x4B0
 };
@@ -41459,6 +46578,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSkillTreeCanvas();
+	static void execHandleButtonGroupSelectionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleButtonGroupSelectionCleared(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleNodeButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1A8];  // sizeof(UFortSkillTreeCanvas) = 0x2C0
 };
@@ -41709,6 +46831,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSocialImportPanel();
+	static void execDynamicHandleCancelClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleClaimClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleErrorCloseClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleErrorRetryClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDynamicHandleImportClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowPanel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xD0];  // sizeof(UFortSocialImportPanel) = 0x4C0
 };
@@ -41902,6 +47030,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSplashScreenWidget();
+	static void execCloseSplashScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetFromAccountLinkingFlow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldBypassSplashScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortSplashScreenWidget) = 0x400
 };
@@ -41919,6 +47050,23 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSpline();
+	static void execAddControlPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableConstantVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBinormalFromTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalFromTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPositionFromTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSplineLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSplineLengthAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTangentFromTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVelocityCorrectedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortSpline) = 0x68
 };
@@ -42070,6 +47218,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadSlotDetailsPanel();
+	static void execGetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemInSquadSlotBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSlottingRestrictionReasons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadSlotLockedBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScrollWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetItemToPreviewInSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UFortSquadSlotDetailsPanel) = 0x270
 };
@@ -42125,6 +47280,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadSlotItemPicker();
+	static void execCycleSortType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSortTypes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1D8];  // sizeof(UFortSquadSlotItemPicker) = 0x450
 };
@@ -42160,6 +47319,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadSlotSelectorButton();
+	static void execGetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInPreviewMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPopupMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadSlotLockedBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSquadSlotWidgetUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewInAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UFortSquadSlotSelectorButton) = 0x800
 };
@@ -42280,6 +47447,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadStatsWidgetBase();
+	static void execGetLocalPlayerId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestShowPreviewStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestStatsUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UFortSquadStatsWidgetBase) = 0x248
 };
@@ -42297,6 +47467,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadTypeLandingPageBase();
+	static void execHandleBackInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleManageInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePendingNavigationOp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UFortSquadTypeLandingPageBase) = 0x430
 };
@@ -42415,6 +47588,42 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortStoreContext();
+	static void execCardAddedToSummaryComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCardBackRevealComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCardEntryComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCardExitComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCardFlipComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCardFrontRevealComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCardPackDestroyComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCardPackOpeningComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChoiceResultComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDismissError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterCardPackStore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterCurrencyStore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnterRealMoneyStore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execErrorOccurred(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExitCardPackStore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExitCurrencyStore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExitRealMoneyStore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExitSummary(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExitWebPayment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireInteractionAnalyticsEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFreshenCache(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumUnopenedCardPacksRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviousState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRarityColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStoreState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeUntilDailyLimitReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeUntilMarketplaceRefresh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWaitingForMcp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeChoice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakePurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenWebPayment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRealMoneyPurchaseFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRealMoneyPurchaseStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStoreHasStarsForSale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xB0];  // sizeof(UFortStoreContext) = 0xD8
 };
@@ -42651,6 +47860,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTabListWidgetBase();
+	static void execGetPreregisteredTabInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFirstTabActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLastTabActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterAllPreregisteredTabInfos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterFortTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNextTabInputActionData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviousTabInputActionData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTabHiddenState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x78];  // sizeof(UFortTabListWidgetBase) = 0x350
 };
@@ -42984,6 +48201,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTierIndicator();
+	static void execClearPreviewState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInterPipPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPreviewState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UFortTierIndicator) = 0x120
 };
@@ -43001,6 +48223,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTieredCollectionLayout();
+	static void execGetCollectionLayoutDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionPointsForTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldUseTierAsRandomSeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE8];  // sizeof(UFortTieredCollectionLayout) = 0x118
 };
@@ -43283,6 +48508,22 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTouchControlRegion();
+	static void execCalculateMoveStickPos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMovePlayerRegionTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRotatePlayerRegionTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMovePlayerRegionTick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveStickIsInLockPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveStickIsInSprintThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMovePlayerRegionTouchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMovePlayerRegionTouchMoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMovePlayerRegionTouchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRotatePlayerRegionTouchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRotatePlayerRegionTouchMoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRotatePlayerRegionTouchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLockOnStickPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateLockOnStickOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateLockOnStickPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateMoveStickLock(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x110];  // sizeof(UFortTouchControlRegion) = 0x320
 };
@@ -43317,6 +48558,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTouchMoveStick();
+	static void execGetHalfHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTouchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTouchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMovementLockStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStickPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortTrackMovementComponent : public UMovementComponent
@@ -43332,6 +48578,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTrackMovementComponent();
+	static void execFlipDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsReverseDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_ReplicatedTrackMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(UFortTrackMovementComponent) = 0x1D8
 };
@@ -43503,6 +48755,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTutorialContext();
+	static void execClearTutorialCallouts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execContinueTutorial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableTutorialCallout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableTutorialCallout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHiddenTutorialCallouts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTutorialCallouts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideTutorialCallout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnNewAnnouncementStartedOnClient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldPromptToSkipTutorial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSkipTutorial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnhideAllTutorialCallouts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnhideTutorialCallout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateTutorialAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC0];  // sizeof(UFortTutorialContext) = 0xE8
 };
@@ -43520,6 +48785,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTwitchAccount();
+	static void execHandleQuestsUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x2D0];  // sizeof(UFortTwitchAccount) = 0x300
 };
@@ -43552,6 +48818,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTwitchLogin();
+	static void execCancelLoginFlow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLinkedTwitchAccountName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLoggedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLoginFlowModalCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLoginFlowModalDismissed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortTwitchLogin) = 0x260
 };
@@ -43569,6 +48843,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTwitchLoginModalWidget();
+	static void execOnNativeHostContentChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortUIBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
@@ -43656,6 +48931,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUINotification();
+	static void execClearNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetImageOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotificationShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTakeAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x78];  // sizeof(UFortUINotification) = 0xA0
 };
@@ -43736,6 +49016,30 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUFortUIManagerWidget_NUI();
+	static void exec_BPGetCurrentUIState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateUIStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDecrementShouldBlockSubtitlePortrait(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCachedWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentUIStateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNavigationManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUIManagerWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUINavigationManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUINotificationQueue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIncrementShouldBlockSubtitlePortrait(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsStateContentDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKillConfirmationDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopAllContentWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopContentWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushContentWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushContentWidgetAdvanced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleaseNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFrontEndVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStateContentDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldBlockSubtitlePortrait(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowErrorDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1C0];  // sizeof(UFortUIManagerWidget_NUI) = 0x3D0
 };
@@ -43793,6 +49097,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUIMessagesPageBase();
+	static void execFillMessagesList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMessageAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnNotificationCleared(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortUIMessagesPageBase) = 0x3F0
 };
@@ -43810,6 +49117,12 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUUINavigationManager();
+	static void execClearStack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStackSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigationToIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopNavigation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushNavigation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UUINavigationManager) = 0x48
 };
@@ -43827,6 +49140,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUINavigationManager();
+	static void execAttemptMatchmakeForQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAttemptPlayQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanNavigateToQuestObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCenterWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCompletePendingNavigationOp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPendingNavigationOp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToCollectionBook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToExpeditions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToFeature(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToItemManagementScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToNodePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToNodePageByGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToQuestObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushItemInspectionScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushItemManagementScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushSkillTreeNode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushSkillTreePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushSquadManagementScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScrollWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetPendingNavigationOp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x100];  // sizeof(UFortUINavigationManager) = 0x148
 };
@@ -43844,6 +49179,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUINotificationQueue();
+	static void execGetNextNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterToReceiveNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterToReceiveNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortUINotificationQueue) = 0x50
 };
@@ -44035,6 +49374,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUIStateWidget_Login();
+	static void execCheckShowLoginMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlatformDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlerBenchmarkFlow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLoggedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnErrorDialogDismissed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowEulaWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowPostLoginLogoutError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowResultWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowSignInWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowStatusWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartAutoLogin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x100];  // sizeof(UFortUIStateWidget_Login) = 0x4E0
 };
@@ -44169,6 +49519,39 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortVideoOptions();
+	static void execAntiAliasingQualityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectsQualityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFrameRateLimitChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAntiAliasingQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentDisplayResolution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentFPS(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentWindowMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEffectsQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMotionBlur(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOverallQualityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPossibleDisplayResolutions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPossibleFPS(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPossibleWindowModes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPostProcessQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShadowQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowFPS(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowGrass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextureQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUseVsync(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewDistanceQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInitializeValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWindowedFullscreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMotionBlurChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnQualitySelectorChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPostProcessQualityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResolutionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShadowQualityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowFPSChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowGrassChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextureQualityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseVsyncChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execViewDistanceQualityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWindowModeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UFortVideoOptions) = 0x280
 };
@@ -44203,6 +49586,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortWeaponAttrSet();
+	static void execOnRep_AccumulatedWeaponChanceToNotConsumeAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_CharacterItemDurabilityDecayModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponAmmoClipSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponChanceToNotConsumeAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponHorizontalRecoil(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponRateOfFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponReloadSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_WeaponVerticalRecoil(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x100];  // sizeof(UFortWeaponAttrSet) = 0x130
 };
@@ -44367,6 +49758,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortWorldItem();
+	static void execGetOwnedGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkItemAsSeenInFrontend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSeenInFrontend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1F0];  // sizeof(UFortWorldItem) = 0x2C0
 };
@@ -44618,6 +50012,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFrontendAnimInstance();
+	static void execPlayIntro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayOutro(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UFrontendAnimInstance) = 0x3F0
 };
@@ -44779,6 +50176,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGameplayCueInterface();
+	static void execForwardGameplayCueToParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UGameplayCueNotify_HitImpact : public UGameplayCueNotify_Static
@@ -44938,6 +50336,110 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGameplayStatics();
+	static void execActivateReverbEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyPointDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyRadialDamage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyRadialDamageWithFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreAnyListenersWithinRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreSubtitlesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBeginDeferredActorSpawnFromClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBeginSpawningActorFromBlueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBeginSpawningActorFromClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprint_PredictProjectilePath_Advanced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprint_PredictProjectilePath_ByObjectType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprint_PredictProjectilePath_ByTraceChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprintSuggestProjectileVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCancelAsyncLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSoundMixClassOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSoundMixModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreatePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateSaveGameObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateSaveGameObjectFromBlueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateSound2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivateReverbEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeleteGameInSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeprojectScreenToWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesSaveGameExist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableLiveStreaming(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindCollisionUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFlushLevelStreaming(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccurateRealTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorArrayAverageLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorArrayBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllActorsOfClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllActorsWithInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllActorsWithTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAudioTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentLevelName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentReverbEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGlobalTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIntOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKeyValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlatformName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerCameraManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerControllerID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRealTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStreamingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSurfaceType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnpausedTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldDeltaSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldOriginLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrassOverlappingSphereCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasLaunchOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsGamePaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadGameFromSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadStreamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execParseOption(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayDialogue2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayDialogueAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySound2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlaySoundAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayWorldCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopSoundMixModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProjectWorldToScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushSoundMixModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRebaseLocalOriginOntoZero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRebaseZeroOriginOntoLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemovePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSaveGameToSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBaseSoundMix(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGamePaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGlobalListenerFocusParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGlobalPitchModulation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGlobalTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlayerControllerID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSoundMixClassOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSubtitlesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldOriginLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDecalAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDecalAttached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDialogue2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDialogueAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDialogueAttached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnEmitterAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnEmitterAttached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnForceFeedbackAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnForceFeedbackAttached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnSound2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnSoundAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnSoundAttached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSuggestProjectileVelocity_CustomArc(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnloadStreamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UGameplayTagAssetInterface : public UInterface
@@ -45245,6 +50747,21 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGeometryCacheComponent();
+	static void execGetPlaybackSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartTimeOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlayingReversed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayFromStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayReversed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayReversedFromEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGeometryCache(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaybackSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartTimeOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UGeometryCacheComponent) = 0x700
 };
@@ -45461,6 +50978,36 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUHeadMountedDisplayFunctionLibrary();
+	static void execAddDeviceVisualizationComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableHMD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableLowPersistenceMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnumerateTrackedDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDevicePose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeviceWorldPose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHMDDeviceName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHMDWornState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumOfTrackingSensors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOrientationAndPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPixelDensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPositionalTrackingCameraParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScreenPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackingOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackingSensorParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackingToWorldTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVRFocusState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldToMetersScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasValidTrackingPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHeadMountedDisplayConnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHeadMountedDisplayEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInLowPersistenceMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSpectatorScreenModeControllable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetOrientationAndPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClippingPlanes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpectatorScreenMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpectatorScreenModeTexturePlusEyeLayout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpectatorScreenTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTrackingOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldToMetersScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UHeartbeatManager : public UObject
@@ -45510,6 +51057,28 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUHomeBaseContext();
+	static void execBroadcastSquadSlotMarkedAsSeen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearFrontEndOnlyExpeditionSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveCombatSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveDefenderSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllResourceCollectorRewardEstimates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemsInSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalTeamHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodePageIdForHomebaseNode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumAccountLimitedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResourceCollectorRateInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResourceCollectorRewardsEstimate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResourceCollectorRewardsEstimates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadSlotOfItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStaticSetBonusData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalSkillPointsEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnlockingHomebaseNodeIdForSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetHomebaseNodeData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetHomebaseNodePageData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetHomebaseSquadData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA8];  // sizeof(UHomeBaseContext) = 0xD0
 };
@@ -45927,6 +51496,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Input"); }
 	static void StaticRegisterNativesUInputSettings();
+	static void execAddActionMapping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddAxisMapping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceRebuildKeymaps(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActionMappingByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActionNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAxisMappingByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAxisNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActionMapping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAxisMapping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSaveKeyMappings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UInputSettings) = 0xA8
 };
@@ -46326,6 +51906,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUInterpToMovementComponent();
+	static void execFinaliseControlPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestartMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopSimulating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(UInterpToMovementComponent) = 0x1D8
 };
@@ -47162,6 +52745,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUInvalidationBox();
+	static void execGetCanCache(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvalidateCache(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanCache(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UInvalidationBox) = 0x130
 };
@@ -47319,6 +52905,45 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUKismetInputLibrary();
+	static void execCalibrateTilt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_InputChordInputChord(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_KeyKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnalogValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUserIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsAltDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsCommandDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsControlDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsLeftAltDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsLeftCommandDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsLeftControlDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsLeftShiftDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsRepeat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsRightAltDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsRightCommandDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsRightControlDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsRightShiftDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInputEvent_IsShiftDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_GetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_IsFloatAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_IsGamepadKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_IsKeyboardKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_IsModifierKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_IsMouseButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_IsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKey_IsVectorAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetCursorDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetEffectingButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetGestureDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetGestureType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetLastScreenSpacePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetPointerIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetScreenSpacePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetTouchpadIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetUserIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_GetWheelDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_IsMouseButtonDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointerEvent_IsTouchEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UKismetInternationalizationLibrary : public UBlueprintFunctionLibrary
@@ -47379,6 +53004,394 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUKismetMathLibrary();
+	static void execAbs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAbs_Int(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAcos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_DateTimeTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_Vector2DFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_Vector2DVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_VectorFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_VectorInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdd_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAnd_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAtan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAtan2(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBooleanAND(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBooleanNAND(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBooleanNOR(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBooleanOR(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBooleanXOR(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakRandomStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakRotIntoAxes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakTimespan2(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCInterpTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClamp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClampAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClampAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClampVectorSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClassIsChildOf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execComposeRotators(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execComposeTransforms(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_BoolToByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_BoolToFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_BoolToInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ByteToFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ByteToInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ColorToLinearColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_FloatToLinearColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_FloatToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntToBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntToByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntToFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntToIntVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntVectorToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_LinearColorToColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_LinearColorToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_RotatorToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_Vector2DToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_VectorToLinearColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_VectorToRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_VectorToTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_VectorToVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConvertTransformToRelative(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateVectorFromYawPitch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCross_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCrossProduct2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDateTimeFromIsoString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDateTimeFromString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDateTimeMaxValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDateTimeMinValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDaysInMonth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDaysInYear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegAcos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegAsin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegAtan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegAtan2(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegCos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegreesToRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegSin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDegTan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_TimespanFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_Vector2DFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_Vector2DVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_VectorFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_VectorInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDivide_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDot_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDotProduct2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_BoolBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_ClassClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_DateTimeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_NameName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_ObjectObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_RotatorRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_TransformTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_Vector2DVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFCeil(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFClamp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFFloor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindClosestPointOnLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindClosestPointOnSegment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindLookAtRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindNearestPointsOnLineSegments(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFInterpEaseInOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFInterpTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFInterpTo_Constant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFixedTurn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFloatSpringInterp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFMod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFromDays(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFromHours(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFromMilliseconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFromMinutes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFromSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFTrunc(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFTruncVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAxes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAzimuthAndElevation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDayOfYear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDays(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDirectionUnitVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetForwardVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHour(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHour12(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHours(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxElement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMillisecond(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMilliseconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinElement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinutes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMonth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPointDistanceToLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPointDistanceToSegment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReflectionVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRightVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSecond(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTAU(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalDays(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalHours(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalMilliseconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalMinutes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVectorArrayAverage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetYawPitchFromVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetYear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreater_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreater_DateTimeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreater_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreater_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreater_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreaterEqual_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreaterEqual_DateTimeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreaterEqual_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreaterEqual_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreaterEqual_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGreaterGreater_VectorRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGridSnap_Float(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHSVToRGB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHSVToRGB_Vector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHypotenuse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInRange_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInRange_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInverseTransformDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInverseTransformLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInverseTransformRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvertTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAfternoon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLeapYear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMorning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPointInBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPointInBoxWithTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLerp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLess_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLess_DateTimeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLess_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLess_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLess_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLessEqual_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLessEqual_DateTimeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLessEqual_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLessEqual_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLessEqual_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLessLess_VectorRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLinearColorLerp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLinearColorLerpUsingHSV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLinePlaneIntersection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLinePlaneIntersection_OriginNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoge(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeBox2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakePlaneFromPointAndNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakePulsatingValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRandomStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotationFromAxes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromXY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromXZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromYX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromYZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromZX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeRotFromZY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeTimespan2(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMapRangeClamped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMapRangeUnclamped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMaxOfByteArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMaxOfFloatArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMaxOfIntArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMinimumAreaRectangle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMinOfByteArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMinOfFloatArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMinOfIntArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMirrorVectorByNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_IntFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_LinearColorFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_LinearColorLinearColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_RotatorFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_RotatorInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_TimespanFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_Vector2DFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_Vector2DVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_VectorFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_VectorInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiply_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiplyByPi(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMultiplyMultiply_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNearlyEqual_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNearlyEqual_TransformTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNegateRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNegateVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNormal2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNormalizeAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNormalizedDeltaRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNormalizeToRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNot_Int(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNot_PreBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_BoolBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_ClassClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_DateTimeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_NameName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_ObjectObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_RotatorRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_Vector2DVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOr_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPercent_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPercent_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPercent_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPointsAreCoplanar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProjectPointOnToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProjectVectorOnToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProjectVectorOnToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRadiansToDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomBoolFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomBoolWithWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomBoolWithWeightFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomFloatFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomFloatInRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomFloatInRangeFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomInteger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomIntegerFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomIntegerInRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomIntegerInRangeFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomPointInBoundingBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomRotatorFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInConeInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInConeInDegreesFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInConeInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInConeInRadiansFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInEllipticalConeInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInEllipticalConeInDegreesFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInEllipticalConeInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomUnitVectorInEllipticalConeInRadiansFromStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execREase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetFloatSpringState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetRandomStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetVectorSpringState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRGBToHSV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRGBToHSV_Vector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRInterpTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRInterpTo_Constant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRLerp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRotateAngleAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRotatorFromAxisAndAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSeedRandomStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRandomStreamSeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSignOfFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSignOfInteger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSqrt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSquare(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_ByteByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_DateTimeDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_DateTimeTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_FloatFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_TimespanTimespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_Vector2DFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_Vector2DVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_VectorFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_VectorInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSubtract_VectorVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTEase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimespanFromString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimespanMaxValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimespanMinValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimespanRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimespanZeroValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTInterpTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTLerp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToday(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransform_Determinant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransformDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransformLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransformRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUtcNow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVEase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVector2DInterpTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVector2DInterpTo_Constant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVectorSpringInterp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVInterpTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVInterpTo_Constant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVLerp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVSize2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVSize2DSquared(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVSizeSquared(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVSizeXY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execXor_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UKismetNodeHelperLibrary : public UBlueprintFunctionLibrary
@@ -47573,6 +53586,220 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUKismetSystemLibrary();
+	static void execAddFloatHistorySample(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxOverlapActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxOverlapComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxTraceMulti(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxTraceMultiByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxTraceMultiForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxTraceSingle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxTraceSingleByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBoxTraceSingleForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakSoftObjectPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanLaunchURL(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleOverlapActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleOverlapComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleTraceMulti(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleTraceMultiByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleTraceMultiForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleTraceSingle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleTraceSingleByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCapsuleTraceSingleForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCollectGarbage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execComponentOverlapActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execComponentOverlapComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execControlScreensaver(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ClassToSoftClassReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_InterfaceToObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ObjectToSoftObjectReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_PrimaryAssetIdToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_PrimaryAssetTypeToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_SoftClassReferenceToClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_SoftClassReferenceToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_SoftObjectReferenceToObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_SoftObjectReferenceToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateCopyForUndoBuffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesImplementInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugArrow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugCapsule(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugCircle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugCone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugConeInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugCoordinateSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugCylinder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugFloatHistoryLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugFloatHistoryTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugFrustum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugSphere(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_PrimaryAssetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_PrimaryAssetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_SoftClassReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_SoftObjectReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExecuteConsoleCommand(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFlushDebugStrings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFlushPersistentDebugLines(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceCloseAdBanner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorListFromComponentList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAdIDCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClassDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClassFromPrimaryAssetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCommandLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetComponentBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConsoleVariableFloatValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConsoleVariableIntValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConvenientWindowedResolutions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentBundleState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultLanguage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultLocale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDeviceId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEngineVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameBundleId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameTimeInSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalCurrencyCode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalCurrencySymbol(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinYResolutionFor3DView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinYResolutionForUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectFromPrimaryAssetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlatformUserName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreferredLanguages(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryAssetIdFromClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryAssetIdFromObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryAssetIdFromSoftClassReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryAssetIdFromSoftObjectReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryAssetIdList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryAssetsWithBundleState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRenderingDetailMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRenderingMaterialQualityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSoftClassReferenceFromPrimaryAssetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSoftObjectReferenceFromPrimaryAssetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSupportedFullscreenResolutions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUniqueDeviceId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVolumeButtonsHandledBySystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideAdBanner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsControllerAssignedToGamepad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDedicatedServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInterstitialAdAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInterstitialAdRequested(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLoggedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPackagedForDistribution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsStandalone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidPrimaryAssetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidPrimaryAssetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidSoftClassReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidSoftObjectReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ClearAndInvalidateTimerHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ClearTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ClearTimerDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ClearTimerHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTimerElapsedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTimerElapsedTimeDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTimerElapsedTimeHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTimerRemainingTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTimerRemainingTimeDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTimerRemainingTimeHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_InvalidateTimerHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsTimerActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsTimerActiveDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsTimerActiveHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsTimerPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsTimerPausedDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsTimerPausedHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_IsValidTimerHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_PauseTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_PauseTimerDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_PauseTimerHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetTimerDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_TimerExists(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_TimerExistsDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_TimerExistsHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_UnPauseTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_UnPauseTimerDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_UnPauseTimerHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLaunchURL(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineTraceMulti(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineTraceMultiByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineTraceMultiForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineTraceSingle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineTraceSingleByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLineTraceSingleForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadAssetClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadInterstitialAd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralByte(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeSoftObjectPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMoveComponentTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_PrimaryAssetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_PrimaryAssetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_SoftClassReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_SoftObjectReference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrintWarning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execQuitGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterForRemoteNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetGamepadAssignments(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetGamepadAssignmentToController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRetriggerableDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoolPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBytePropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClassPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCollisionProfileNameProperty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFloatPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInterfacePropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIntPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearColorPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNamePropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetObjectPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRotatorPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSoftClassPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSoftObjectPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStringPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStructurePropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSuppressViewportTransitionMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTransformPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserActivity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVectorPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumeButtonsHandledBySystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWindowTitle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowAdBanner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowInterstitialAd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowPlatformSpecificAchievementsScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowPlatformSpecificLeaderboardScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereOverlapActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereOverlapComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereTraceMulti(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereTraceMultiByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereTraceMultiForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereTraceSingle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereTraceSingleByProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSphereTraceSingleForObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStackTrace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnloadPrimaryAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnloadPrimaryAssetList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterForRemoteNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UKismetTextLibrary : public UBlueprintFunctionLibrary
@@ -48125,6 +54352,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesULevelSequenceBurnIn();
+	static void execGetSettingsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(ULevelSequenceBurnIn) = 0x258
 };
@@ -48174,6 +54402,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMovieSceneSequencePlayer();
+	static void execChangePlaybackDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoundObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisableCameraCuts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaybackEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaybackStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGoToEndAndStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execJumpToPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScrub(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisableCameraCuts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaybackRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartPlayingNextTick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x7D8];  // sizeof(UMovieSceneSequencePlayer) = 0x800
 };
@@ -48209,6 +54460,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesULevelStreaming();
+	static void execCreateInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevelScriptActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldAssetPackageFName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLevelLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLevelVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsStreamingStatePending(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLevelLODIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldBeVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x118];  // sizeof(ULevelStreaming) = 0x140
 };
@@ -51823,6 +58082,68 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMediaPlayer();
+	static void execCanPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanPlaySource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanPlayUrl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAudioTrackChannels(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAudioTrackSampleRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAudioTrackType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDesiredPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHorizontalFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMediaName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumTrackFormats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumTracks(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaylist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaylistIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSupportedRates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackFormat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackLanguage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUrl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVerticalFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVideoTrackAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVideoTrackDimensions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVideoTrackFrameRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVideoTrackFrameRates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVideoTrackType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBuffering(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsConnecting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPreparing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenFile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenPlaylist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenPlaylistIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenUrl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrevious(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReopen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRewind(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSeek(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDesiredPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTrackFormat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVideoTrackFrameRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetViewField(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetViewRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSupportsRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSupportsScrubbing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSupportsSeeking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x168];  // sizeof(UMediaPlayer) = 0x190
 };
@@ -51840,6 +58161,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMediaPlaylist();
+	static void execAdd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddFile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddUrl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrevious(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRandom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInsert(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReplace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UMediaPlaylist) = 0x38
 };
@@ -51857,6 +58190,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSynthComponent();
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSubmixSend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumeMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x400];  // sizeof(USynthComponent) = 0x690
 };
@@ -51914,6 +58252,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMenuAnchor();
+	static void execClose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMenuPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasOpenSubMenus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldOpenDueToClick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToggleOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UMenuAnchor) = 0x158
 };
@@ -51931,6 +58276,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMeshReconstructorBase();
+	static void execConnectMRMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisconnectMRMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsReconstructionPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsReconstructionStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPauseReconstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartReconstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopReconstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UMeshSimplificationSettings : public UDeveloperSettings
@@ -52068,6 +58420,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMotionControllerComponent();
+	static void execGetParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrackingSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTracked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAssociatedPlayerIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCustomDisplayMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisplayModelSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShowDeviceModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTrackingMotionSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTrackingSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xC0];  // sizeof(UMotionControllerComponent) = 0x720
 };
@@ -52085,6 +58446,22 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUMotionTrackedDeviceFunctionLibrary();
+	static void execDisableMotionTrackingForComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableMotionTrackingOfAllControllers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableMotionTrackingOfControllersForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableMotionTrackingOfDevice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableMotionTrackingOfSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableMotionTrackingForComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableMotionTrackingOfDevice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableMotionTrackingOfSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnumerateMotionSources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaximumMotionTrackedControllerCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMotionTrackingEnabledControllerCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMotionTrackedDeviceCountManagementNecessary(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMotionTrackingEnabledForComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMotionTrackingEnabledForDevice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMotionTrackingEnabledForSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsControllerMotionTrackingEnabledByDefault(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UMouseCursorBinding : public UPropertyBinding
@@ -54055,6 +60432,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUNetDebugWidget();
+	static void execStartTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x108];  // sizeof(UNetDebugWidget) = 0x310
 };
@@ -54368,6 +60747,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPaperFlipbook();
+	static void execGetKeyFrameIndexAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumFrames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumKeyFrames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpriteAtFrame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpriteAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidKeyFrameIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UPaperFlipbook) = 0x50
 };
@@ -54385,6 +60771,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPaperFlipbookComponent();
+	static void execGetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFlipbookFramerate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFlipbookLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFlipbookLengthInFrames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaybackPositionInFrames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsReversing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_SourceFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayFromStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReverseFromEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNewTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaybackPositionInFrames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpriteColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UPaperFlipbookComponent) = 0x6D0
 };
@@ -54402,6 +60811,14 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPaperGroupedSpriteComponent();
+	static void execAddInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearInstances(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstanceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSortInstancesAlongAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateInstanceColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateInstanceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UPaperGroupedSpriteComponent) = 0x6C0
 };
@@ -54539,6 +60956,86 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSplineComponent();
+	static void execAddPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSplineLocalPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSplinePointAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSplineWorldPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSplinePoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindDirectionClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindInputKeyClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindLocationClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindRightVectorClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindRollClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindRotationClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindScaleClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindTangentClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindTransformClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindUpVectorClosestToWorldLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetArriveTangentAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultUpVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDirectionAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDirectionAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDirectionAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDistanceAlongSplineAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputKeyAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLeaveTangentAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalLocationAndTangentAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocationAndTangentAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocationAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocationAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocationAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumberOfSplinePoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRightVectorAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRightVectorAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRightVectorAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRollAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRollAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRollAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRotationAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRotationAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRotationAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScaleAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScaleAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScaleAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSplineLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSplinePointType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTangentAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTangentAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTangentAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTransformAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTransformAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTransformAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpVectorAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpVectorAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpVectorAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldDirectionAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldDirectionAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldLocationAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldLocationAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldLocationAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldRotationAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldRotationAtTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorldTangentAtDistanceAlongSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsClosedLoop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClosedLoop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClosedLoopAtPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDefaultUpVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDrawDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLocationAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedSplineSegmentColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSplineLocalPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSplinePoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSplinePointType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSplineWorldPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTangentAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTangentsAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUnselectedSplineSegmentColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUpVectorAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldLocationAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xF0];  // sizeof(USplineComponent) = 0x750
 };
@@ -54607,6 +61104,25 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPaperTileMapComponent();
+	static void execAddNewLayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateNewTileMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLayerColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMapSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileCenterPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileCornerPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileMapColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTilePolygon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeTileMapEditable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOwnsTileMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRebuildCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResizeMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDefaultCollisionThickness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLayerCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLayerColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTileMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTileMapColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UPaperTileMapComponent) = 0x6E0
 };
@@ -56653,6 +63169,36 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUParticleSystemComponent();
+	static void execBeginTrails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateNamedDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndTrails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGenerateParticleEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBeamEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBeamSourcePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBeamSourceStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBeamSourceTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBeamTargetPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBeamTargetStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBeamTargetTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNamedMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumActiveParticles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAutoAttachmentParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAutoAttachParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBeamEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBeamSourcePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBeamSourceStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBeamSourceTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBeamTargetPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBeamTargetStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBeamTargetTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEmitterEnable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFloatParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaterialParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTrailSourceData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVectorParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x250];  // sizeof(UParticleSystemComponent) = 0x8B0
 };
@@ -56687,6 +63233,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPawnAction();
+	static void execCreateActionInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinish(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActionPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA8];  // sizeof(UPawnAction) = 0xD0
 };
@@ -56826,6 +63375,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPawnSensingComponent();
+	static void execGetPeripheralVisionAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPeripheralVisionCosine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPeripheralVisionAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSensingInterval(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSensingUpdatesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x48];  // sizeof(UPawnSensingComponent) = 0x138
 };
@@ -56917,6 +63471,40 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPhysicsConstraintComponent();
+	static void execBreakConstraint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConstraintForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSwing1(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSwing2(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentTwist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBroken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularBreakable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularDriveMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularDriveParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularOrientationDrive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularOrientationTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularSwing1Limit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularSwing2Limit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularTwistLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularVelocityDrive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularVelocityDriveSLERP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularVelocityDriveTwistAndSwing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularVelocityTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstrainedComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstraintReferenceFrame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstraintReferenceOrientation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstraintReferencePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisableCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearBreakable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearDriveParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearPositionDrive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearPositionTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearVelocityDrive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearVelocityTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearXLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearYLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearZLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOrientationDriveSLERP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOrientationDriveTwistAndSwing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x240];  // sizeof(UPhysicsConstraintComponent) = 0x4D0
 };
@@ -56951,6 +63539,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPhysicsHandleComponent();
+	static void execGetGrabbedComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrabComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrabComponentAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrabComponentAtLocationWithRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleaseComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAngularStiffness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInterpolationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearStiffness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTargetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTargetLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTargetRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xB0];  // sizeof(UPhysicsHandleComponent) = 0x1A0
 };
@@ -57041,6 +63643,15 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	static void StaticRegisterNativesUSceneCaptureComponent();
+	static void execClearHiddenComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearShowOnlyComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideActorComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveShowOnlyActorComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveShowOnlyComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCaptureSortPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowOnlyActorComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowOnlyComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(USceneCaptureComponent) = 0x320
 };
@@ -57426,6 +64037,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUProceduralMeshComponent();
+	static void execAddCollisionConvexMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAllMeshSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearCollisionConvexMeshes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMeshSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateMeshSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateMeshSection_LinearColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMeshSectionVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMeshSectionVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateMeshSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateMeshSection_LinearColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UProceduralMeshComponent) = 0x6F0
 };
@@ -57603,6 +64225,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesURadialForceComponent();
+	static void execAddObjectTypeToAffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveObjectTypeToAffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(URadialForceComponent) = 0x2C0
 };
@@ -57720,6 +64345,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesURetainerBox();
+	static void execGetEffectMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestRender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEffectMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextureParameter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(URetainerBox) = 0x148
 };
@@ -57976,6 +64605,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSceneCaptureComponent2D();
+	static void execAddOrUpdateBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCaptureScene(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x5B0];  // sizeof(USceneCaptureComponent2D) = 0x8D0
 };
@@ -57993,6 +64624,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSceneCaptureComponentCube();
+	static void execCaptureScene(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UScrollBar : public UWidget
@@ -58043,6 +64675,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUScrollBox();
+	static void execGetScrollOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScrollToEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScrollToStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScrollWidgetIntoView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllowOverscroll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAlwaysShowScrollbar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOrientation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScrollbarThickness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScrollBarVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScrollOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x678];  // sizeof(UScrollBox) = 0x790
 };
@@ -58115,6 +64757,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSeasonPassLevelWidget();
+	static void execAttemptClaim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(USeasonPassLevelWidget) = 0x228
 };
@@ -58279,6 +64923,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSizeBox();
+	static void execClearHeightOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMaxAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMaxDesiredHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMaxDesiredWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMinDesiredHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMinDesiredWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearWidthOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHeightOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxDesiredHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxDesiredWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinDesiredHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinDesiredWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWidthOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(USizeBox) = 0x148
 };
@@ -58413,6 +65071,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSkyLightComponent();
+	static void execRecaptureSky(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCubemap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCubemapBlend(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIndirectLightingIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLowerHemisphereColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinOcclusion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOcclusionContrast(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOcclusionExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOcclusionTint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricScatteringIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x1B0];  // sizeof(USkyLightComponent) = 0x470
 };
@@ -59592,6 +66262,21 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSpinBox();
+	static void execClearMaxSliderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMaxValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMinSliderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMinValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxSliderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinSliderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForegroundColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxSliderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaxValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinSliderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x3B8];  // sizeof(USpinBox) = 0x4B8
 };
@@ -59626,6 +66311,36 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUSplineMeshComponent();
+	static void execGetBoundaryMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoundaryMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEndOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEndPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEndRoll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEndScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEndTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetForwardAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSplineUpDir(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartRoll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoundaryMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoundaryMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEndOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEndPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEndRoll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEndScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEndTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForwardAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSplineUpDir(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartAndEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartRoll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(USplineMeshComponent) = 0x790
 };
@@ -59756,6 +66471,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUStereoLayerComponent();
+	static void execGetPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuadSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUVRect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkTextureForUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetQuadSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUVRect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(UStereoLayerComponent) = 0x330
 };
@@ -59773,6 +66497,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUStereoLayerFunctionLibrary();
+	static void execEnableAutoLoadingSplashScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideSplashScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSplashScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowSplashScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UStoreCardObject : public UObject
@@ -60310,6 +67038,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUTileView();
+	static void execRequestListRefresh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x40];  // sizeof(UTileView) = 0x140
 };
@@ -60327,6 +67058,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUTimelineComponent();
+	static void execGetIgnoreTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimelineLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsReversing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_Timeline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayFromStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReverseFromEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFloatCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIgnoreTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLinearColorCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNewTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimelineLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimelineLengthMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVectorCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xE0];  // sizeof(UTimelineComponent) = 0x1D0
 };
@@ -60446,6 +67200,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUTwitterIntegrationBase();
+	static void execAuthorizeAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanShowTweetUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowTweetUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTwitterRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UUACNetComponent : public UActorComponent
@@ -60461,6 +67222,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUUACNetComponent();
+	static void execSendClientHello(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendPacketToClient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendPacketToServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xB0];  // sizeof(UUACNetComponent) = 0x1A0
 };
@@ -60632,6 +67396,11 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUVOIPTalker();
+	static void execBPOnTalkingBegin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBPOnTalkingEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateTalkerForPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVoiceLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterWithPlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x38];  // sizeof(UVOIPTalker) = 0x128
 };
@@ -61053,6 +67822,58 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUWidgetBlueprintLibrary();
+	static void execCancelDragDrop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCaptureJoystick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCaptureMouse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearUserFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateDragDropOperation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetectDrag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDetectDragIfPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDismissAllMenus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawLines(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawTextFormatted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndDragDrop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllWidgetsOfClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllWidgetsWithInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBrushResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBrushResourceAsMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBrushResourceAsTexture2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDragDroppingContent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDynamicMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputEventFromCharacterEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputEventFromKeyEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputEventFromNavigationEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInputEventFromPointerEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetKeyEventFromAnalogInputEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSafeZonePadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDragDropping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLockMouse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeBrushFromAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeBrushFromMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeBrushFromTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNoResourceBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleaseJoystickCapture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleaseMouseCapture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestorePreviousWindowTitleBarState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushResourceToMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushResourceToTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFocusToGameViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHardwareCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputMode_GameAndUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputMode_GameAndUIEx(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputMode_GameOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputMode_UIOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputMode_UIOnlyEx(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMousePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWindowTitleBarState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnhandled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockMouse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UWidgetComponent : public UMeshComponent
@@ -61068,6 +67889,17 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUWidgetComponent();
+	static void execGetDrawSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwnerPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUserWidgetObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestRedraw(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBackgroundColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDrawSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOwnerPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTintColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x120];  // sizeof(UWidgetComponent) = 0x7B0
 };

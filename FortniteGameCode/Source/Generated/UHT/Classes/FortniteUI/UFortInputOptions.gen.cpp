@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortInputOptions::StaticRegisterNativesUFortInputOptions()
-{
-}
 // IMPLEMENT_CLASS(UFortInputOptions, 3150393963u)
 // Original dynamic initializer: RVA 0x00248380 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortInputOptions> AutoInitializeUFortInputOptions(TEXT("UFortInputOptions"), sizeof(UFortInputOptions), 3150393963u);

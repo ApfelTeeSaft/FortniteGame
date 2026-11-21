@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortInventory();  // RVA 0x01006850 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010061E0 (end 0x01006202)
+// Original VA: 0x00000001410061E0 | File offset: 0x010057E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0334A918) | Matching: see analysis/functions-uht-natives.json
+void AFortInventory::StaticRegisterNativesAFortInventory()
+{
+	UClass* Class = AFortInventory::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleInventoryLocalUpdate", &AFortInventory::execHandleInventoryLocalUpdate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

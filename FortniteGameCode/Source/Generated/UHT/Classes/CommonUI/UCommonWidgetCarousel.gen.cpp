@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonWidgetCarousel::StaticRegisterNativesUCommonWidgetCarousel()
-{
-}
 // IMPLEMENT_CLASS(UCommonWidgetCarousel, 4248239053u)
 // Original dynamic initializer: RVA 0x00096BB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonWidgetCarousel> AutoInitializeUCommonWidgetCarousel(TEXT("UCommonWidgetCarousel"), sizeof(UCommonWidgetCarousel), 4248239053u);

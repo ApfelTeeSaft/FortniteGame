@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementInventoryPanel();  // RVA 0x028C9F60 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9A80 (end 0x028C9AA2)
+// Original VA: 0x00000001428C9A80 | File offset: 0x028C9080
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCDB80) | Matching: see analysis/functions-uht-natives.json
+void UFortItemManagementInventoryPanel::StaticRegisterNativesUFortItemManagementInventoryPanel()
+{
+	UClass* Class = UFortItemManagementInventoryPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddItemStackToMulch", &UFortItemManagementInventoryPanel::execAddItemStackToMulch },
+		{ "AdvanceSelection", &UFortItemManagementInventoryPanel::execAdvanceSelection },
+		{ "CycleSortType", &UFortItemManagementInventoryPanel::execCycleSortType },
+		{ "GetQualifiedFilterDisplayName", &UFortItemManagementInventoryPanel::execGetQualifiedFilterDisplayName },
+		{ "GetSupportedSortTypesForCurrentInventory", &UFortItemManagementInventoryPanel::execGetSupportedSortTypesForCurrentInventory },
+		{ "GetUpgradeItemDefinitionsForCurrentInventory", &UFortItemManagementInventoryPanel::execGetUpgradeItemDefinitionsForCurrentInventory },
+		{ "HandleCraftItemStarted", &UFortItemManagementInventoryPanel::execHandleCraftItemStarted },
+		{ "HandleCursorModeChanged", &UFortItemManagementInventoryPanel::execHandleCursorModeChanged },
+		{ "HandleFilterTabButtonCreated", &UFortItemManagementInventoryPanel::execHandleFilterTabButtonCreated },
+		{ "HandleFilterTabSelected", &UFortItemManagementInventoryPanel::execHandleFilterTabSelected },
+		{ "HandleInventoryItemClicked", &UFortItemManagementInventoryPanel::execHandleInventoryItemClicked },
+		{ "HandleInventoryItemDoubleClicked", &UFortItemManagementInventoryPanel::execHandleInventoryItemDoubleClicked },
+		{ "HandleInventoryItemHoverChanged", &UFortItemManagementInventoryPanel::execHandleInventoryItemHoverChanged },
+		{ "HandleInventoryItemSelected", &UFortItemManagementInventoryPanel::execHandleInventoryItemSelected },
+		{ "HandleInventoryUpdatedEvent", &UFortItemManagementInventoryPanel::execHandleInventoryUpdatedEvent },
+		{ "HandleItemWidgetCreated", &UFortItemManagementInventoryPanel::execHandleItemWidgetCreated },
+		{ "IsSwitchPanelAvailable", &UFortItemManagementInventoryPanel::execIsSwitchPanelAvailable },
+		{ "RefreshCraftingSort", &UFortItemManagementInventoryPanel::execRefreshCraftingSort },
+		{ "SetFilter", &UFortItemManagementInventoryPanel::execSetFilter },
+		{ "SetSortType", &UFortItemManagementInventoryPanel::execSetSortType },
+		{ "SwitchPanelFocus", &UFortItemManagementInventoryPanel::execSwitchPanelFocus },
+		{ "UpdateSchematicTiles", &UFortItemManagementInventoryPanel::execUpdateSchematicTiles },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemManagementInventoryPanel_AddItemStackToMulch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

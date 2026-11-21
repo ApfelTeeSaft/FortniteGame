@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ALobbyBeaconClient();  // RVA 0x005C21C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2030 (end 0x005C2052)
+// Original VA: 0x00000001405C2030 | File offset: 0x005C1630
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F66F40) | Matching: see analysis/functions-uht-natives.json
+void ALobbyBeaconClient::StaticRegisterNativesALobbyBeaconClient()
+{
+	UClass* Class = ALobbyBeaconClient::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientAckJoiningServer", &ALobbyBeaconClient::execClientAckJoiningServer },
+		{ "ClientJoinGame", &ALobbyBeaconClient::execClientJoinGame },
+		{ "ClientLoginComplete", &ALobbyBeaconClient::execClientLoginComplete },
+		{ "ClientPlayerJoined", &ALobbyBeaconClient::execClientPlayerJoined },
+		{ "ClientPlayerLeft", &ALobbyBeaconClient::execClientPlayerLeft },
+		{ "ClientSetInviteFlags", &ALobbyBeaconClient::execClientSetInviteFlags },
+		{ "ClientWasKicked", &ALobbyBeaconClient::execClientWasKicked },
+		{ "ServerCheat", &ALobbyBeaconClient::execServerCheat },
+		{ "ServerDisconnectFromLobby", &ALobbyBeaconClient::execServerDisconnectFromLobby },
+		{ "ServerKickPlayer", &ALobbyBeaconClient::execServerKickPlayer },
+		{ "ServerLoginPlayer", &ALobbyBeaconClient::execServerLoginPlayer },
+		{ "ServerNotifyJoiningServer", &ALobbyBeaconClient::execServerNotifyJoiningServer },
+		{ "ServerSetPartyOwner", &ALobbyBeaconClient::execServerSetPartyOwner },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ALobbyBeaconClient_ClientAckJoiningServer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortPlayerControllerAthena::StaticRegisterNativesAFortPlayerControllerAthena()
-{
-}
 // IMPLEMENT_CLASS(AFortPlayerControllerAthena, 2481322669u)
 // Original dynamic initializer: RVA 0x0010B800 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerAthena> AutoInitializeAFortPlayerControllerAthena(TEXT("AFortPlayerControllerAthena"), sizeof(AFortPlayerControllerAthena), 2481322669u);

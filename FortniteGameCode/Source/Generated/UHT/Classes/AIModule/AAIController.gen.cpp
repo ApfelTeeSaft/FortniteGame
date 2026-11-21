@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AAIController::StaticRegisterNativesAAIController()
-{
-}
 // IMPLEMENT_CLASS(AAIController, 585478183u)
 // Original dynamic initializer: RVA 0x001B8E90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AAIController> AutoInitializeAAIController(TEXT("AAIController"), sizeof(AAIController), 585478183u);

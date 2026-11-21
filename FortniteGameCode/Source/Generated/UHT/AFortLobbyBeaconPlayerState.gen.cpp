@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconPlayerState();  // RVA 0x0101E3D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DD00 (end 0x0101DD22)
+// Original VA: 0x000000014101DD00 | File offset: 0x0101D300
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0335ED00) | Matching: see analysis/functions-uht-natives.json
+void AFortLobbyBeaconPlayerState::StaticRegisterNativesAFortLobbyBeaconPlayerState()
+{
+	UClass* Class = AFortLobbyBeaconPlayerState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_CharacterGender", &AFortLobbyBeaconPlayerState::execOnRep_CharacterGender },
+		{ "OnRep_CharXP", &AFortLobbyBeaconPlayerState::execOnRep_CharXP },
+		{ "OnRep_ConsoleOSSName", &AFortLobbyBeaconPlayerState::execOnRep_ConsoleOSSName },
+		{ "OnRep_ConsoleUniqueNetId", &AFortLobbyBeaconPlayerState::execOnRep_ConsoleUniqueNetId },
+		{ "OnRep_Gadgets", &AFortLobbyBeaconPlayerState::execOnRep_Gadgets },
+		{ "OnRep_HeroId", &AFortLobbyBeaconPlayerState::execOnRep_HeroId },
+		{ "OnRep_HeroSquadId", &AFortLobbyBeaconPlayerState::execOnRep_HeroSquadId },
+		{ "OnRep_HeroType", &AFortLobbyBeaconPlayerState::execOnRep_HeroType },
+		{ "OnRep_HomeBaseVersion", &AFortLobbyBeaconPlayerState::execOnRep_HomeBaseVersion },
+		{ "OnRep_LobbyTimeRemaining", &AFortLobbyBeaconPlayerState::execOnRep_LobbyTimeRemaining },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_CharacterGender_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

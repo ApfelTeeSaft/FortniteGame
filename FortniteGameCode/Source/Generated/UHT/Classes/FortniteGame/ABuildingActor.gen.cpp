@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingActor::StaticRegisterNativesABuildingActor()
-{
-}
 // IMPLEMENT_CLASS(ABuildingActor, 1659360332u)
 // Original dynamic initializer: RVA 0x000D8710 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingActor> AutoInitializeABuildingActor(TEXT("ABuildingActor"), sizeof(ABuildingActor), 1659360332u);

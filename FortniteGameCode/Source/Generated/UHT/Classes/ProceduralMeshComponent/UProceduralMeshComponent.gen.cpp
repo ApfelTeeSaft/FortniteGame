@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UProceduralMeshComponent::StaticRegisterNativesUProceduralMeshComponent()
-{
-}
 // IMPLEMENT_CLASS(UProceduralMeshComponent, 1073651143u)
 // Original dynamic initializer: RVA 0x000AD980 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UProceduralMeshComponent> AutoInitializeUProceduralMeshComponent(TEXT("UProceduralMeshComponent"), sizeof(UProceduralMeshComponent), 1073651143u);

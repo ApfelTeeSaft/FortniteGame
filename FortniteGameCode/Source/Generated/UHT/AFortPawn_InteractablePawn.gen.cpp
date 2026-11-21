@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064ED0 (end 0x01064EF2)
+// Original VA: 0x0000000141064ED0 | File offset: 0x010644D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033AB270) | Matching: see analysis/functions-uht-natives.json
+void AFortPawn_InteractablePawn::StaticRegisterNativesAFortPawn_InteractablePawn()
+{
+	UClass* Class = AFortPawn_InteractablePawn::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BlueprintCanInteract", &AFortPawn_InteractablePawn::execBlueprintCanInteract },
+		{ "BlueprintGetInteractionString", &AFortPawn_InteractablePawn::execBlueprintGetInteractionString },
+		{ "BlueprintOnBeginInteract", &AFortPawn_InteractablePawn::execBlueprintOnBeginInteract },
+		{ "BlueprintOnInteract", &AFortPawn_InteractablePawn::execBlueprintOnInteract },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

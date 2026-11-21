@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFoundation();  // RVA 0x00F6C2A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BD50 (end 0x00F6BD72)
+// Original VA: 0x0000000140F6BD50 | File offset: 0x00F6B350
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03277160) | Matching: see analysis/functions-uht-natives.json
+void ABuildingFoundation::StaticRegisterNativesABuildingFoundation()
+{
+	UClass* Class = ABuildingFoundation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EditorOnlyAddAdditionalWorld", &ABuildingFoundation::execEditorOnlyAddAdditionalWorld },
+		{ "EditorOnlyClearAdditionalWorlds", &ABuildingFoundation::execEditorOnlyClearAdditionalWorlds },
+		{ "EditorOnlyRemoveAdditionalWorld", &ABuildingFoundation::execEditorOnlyRemoveAdditionalWorld },
+		{ "OnLevelShown", &ABuildingFoundation::execOnLevelShown },
+		{ "OnLevelStreamedIn", &ABuildingFoundation::execOnLevelStreamedIn },
+		{ "OnRep_LevelToStream", &ABuildingFoundation::execOnRep_LevelToStream },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingFoundation_EditorOnlyAddAdditionalWorld_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

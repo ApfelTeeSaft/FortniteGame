@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStateDeployableBase();  // RVA 0x00FEE690 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE010 (end 0x00FEE032)
+// Original VA: 0x0000000140FEE010 | File offset: 0x00FED610
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332E5E0) | Matching: see analysis/functions-uht-natives.json
+void AFortGameStateDeployableBase::StaticRegisterNativesAFortGameStateDeployableBase()
+{
+	UClass* Class = AFortGameStateDeployableBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDeployableBaseUseType", &AFortGameStateDeployableBase::execGetDeployableBaseUseType },
+		{ "OnRep_DeployableBaseManager", &AFortGameStateDeployableBase::execOnRep_DeployableBaseManager },
+		{ "SetGameDifficultyExplicitly", &AFortGameStateDeployableBase::execSetGameDifficultyExplicitly },
+		{ "SetGameDifficultyRow", &AFortGameStateDeployableBase::execSetGameDifficultyRow },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameStateDeployableBase_GetDeployableBaseUseType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

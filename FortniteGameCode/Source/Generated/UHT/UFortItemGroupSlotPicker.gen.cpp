@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemGroupSlotPicker();  // RVA 0x029189C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918740 (end 0x02918762)
+// Original VA: 0x0000000142918740 | File offset: 0x02917D40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D55AB0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemGroupSlotPicker::StaticRegisterNativesUFortItemGroupSlotPicker()
+{
+	UClass* Class = UFortItemGroupSlotPicker::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginUpgradePreview", &UFortItemGroupSlotPicker::execBeginUpgradePreview },
+		{ "DetectCandidateSynergiesAndMatches", &UFortItemGroupSlotPicker::execDetectCandidateSynergiesAndMatches },
+		{ "EndUpgradePreview", &UFortItemGroupSlotPicker::execEndUpgradePreview },
+		{ "GetCandidateFitnessValueForSlot", &UFortItemGroupSlotPicker::execGetCandidateFitnessValueForSlot },
+		{ "GetCandidateItemSlottingRestrictions", &UFortItemGroupSlotPicker::execGetCandidateItemSlottingRestrictions },
+		{ "GetCompatibleCandidateItems", &UFortItemGroupSlotPicker::execGetCompatibleCandidateItems },
+		{ "GetCurrentlySlottedItem", &UFortItemGroupSlotPicker::execGetCurrentlySlottedItem },
+		{ "GetItemSlottingRestrictionReasonText", &UFortItemGroupSlotPicker::execGetItemSlottingRestrictionReasonText },
+		{ "GetSlotIndexInGroup", &UFortItemGroupSlotPicker::execGetSlotIndexInGroup },
+		{ "GetSquadId", &UFortItemGroupSlotPicker::execGetSquadId },
+		{ "HandleItemSetInternal", &UFortItemGroupSlotPicker::execHandleItemSetInternal },
+		{ "SetSelection", &UFortItemGroupSlotPicker::execSetSelection },
+		{ "SignalSelectionCommitted", &UFortItemGroupSlotPicker::execSignalSelectionCommitted },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortItemGroupSlotPicker_OnItemPickerSelectionChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

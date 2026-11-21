@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AOnlineBeaconClient();  // RVA 0x0032E750 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E070 (end 0x0032E092)
+// Original VA: 0x000000014032E070 | File offset: 0x0032D670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAE2F0) | Matching: see analysis/functions-uht-natives.json
+void AOnlineBeaconClient::StaticRegisterNativesAOnlineBeaconClient()
+{
+	UClass* Class = AOnlineBeaconClient::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientOnConnected", &AOnlineBeaconClient::execClientOnConnected },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AOnlineBeaconClient_ClientOnConnected_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

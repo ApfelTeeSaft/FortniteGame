@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortKeepDefenseManager::StaticRegisterNativesAFortKeepDefenseManager()
-{
-}
 // IMPLEMENT_CLASS(AFortKeepDefenseManager, 4255600340u)
 // Original dynamic initializer: RVA 0x000FC430 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortKeepDefenseManager> AutoInitializeAFortKeepDefenseManager(TEXT("AFortKeepDefenseManager"), sizeof(AFortKeepDefenseManager), 4255600340u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortWeap_EditingTool::StaticRegisterNativesAFortWeap_EditingTool()
-{
-}
 // IMPLEMENT_CLASS(AFortWeap_EditingTool, 1845579385u)
 // Original dynamic initializer: RVA 0x0011BF30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortWeap_EditingTool> AutoInitializeAFortWeap_EditingTool(TEXT("AFortWeap_EditingTool"), sizeof(AFortWeap_EditingTool), 1845579385u);

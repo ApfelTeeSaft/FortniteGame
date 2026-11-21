@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPaperFlipbook();  // RVA 0x006676B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666D60 (end 0x00666D82)
+// Original VA: 0x0000000140666D60 | File offset: 0x00666360
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F93900) | Matching: see analysis/functions-uht-natives.json
+void UPaperFlipbook::StaticRegisterNativesUPaperFlipbook()
+{
+	UClass* Class = UPaperFlipbook::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetKeyFrameIndexAtTime", &UPaperFlipbook::execGetKeyFrameIndexAtTime },
+		{ "GetNumFrames", &UPaperFlipbook::execGetNumFrames },
+		{ "GetNumKeyFrames", &UPaperFlipbook::execGetNumKeyFrames },
+		{ "GetSpriteAtFrame", &UPaperFlipbook::execGetSpriteAtFrame },
+		{ "GetSpriteAtTime", &UPaperFlipbook::execGetSpriteAtTime },
+		{ "GetTotalDuration", &UPaperFlipbook::execGetTotalDuration },
+		{ "IsValidKeyFrameIndex", &UPaperFlipbook::execIsValidKeyFrameIndex },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

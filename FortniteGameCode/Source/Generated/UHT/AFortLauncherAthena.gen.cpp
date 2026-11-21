@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortLauncherAthena();  // RVA 0x0101E190 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DC10 (end 0x0101DC32)
+// Original VA: 0x000000014101DC10 | File offset: 0x0101D210
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0335DA68) | Matching: see analysis/functions-uht-natives.json
+void AFortLauncherAthena::StaticRegisterNativesAFortLauncherAthena()
+{
+	UClass* Class = AFortLauncherAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRepLaunchServerInfo", &AFortLauncherAthena::execOnRepLaunchServerInfo },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

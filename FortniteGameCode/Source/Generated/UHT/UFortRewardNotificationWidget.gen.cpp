@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortRewardNotificationWidget();  // RVA 0x028ED7E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED0A0 (end 0x028ED0C2)
+// Original VA: 0x00000001428ED0A0 | File offset: 0x028EC6A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0B6C0) | Matching: see analysis/functions-uht-natives.json
+void UFortRewardNotificationWidget::StaticRegisterNativesUFortRewardNotificationWidget()
+{
+	UClass* Class = UFortRewardNotificationWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddCollectionBookData", &UFortRewardNotificationWidget::execAddCollectionBookData },
+		{ "AddDifficultyIncreaseRewardData", &UFortRewardNotificationWidget::execAddDifficultyIncreaseRewardData },
+		{ "AddEpicQuestData", &UFortRewardNotificationWidget::execAddEpicQuestData },
+		{ "AddExpeditionData", &UFortRewardNotificationWidget::execAddExpeditionData },
+		{ "AddMissionAlertData", &UFortRewardNotificationWidget::execAddMissionAlertData },
+		{ "AddMissionData", &UFortRewardNotificationWidget::execAddMissionData },
+		{ "AddQuestData", &UFortRewardNotificationWidget::execAddQuestData },
+		{ "IsPrimaryActionEnabled", &UFortRewardNotificationWidget::execIsPrimaryActionEnabled },
+		{ "IsPrimaryActionHidden", &UFortRewardNotificationWidget::execIsPrimaryActionHidden },
+		{ "ResetAllRewardData", &UFortRewardNotificationWidget::execResetAllRewardData },
+		{ "SetPrimaryActionEnabled", &UFortRewardNotificationWidget::execSetPrimaryActionEnabled },
+		{ "SetPrimaryActionHidden", &UFortRewardNotificationWidget::execSetPrimaryActionHidden },
+		{ "SetPrimaryActionText", &UFortRewardNotificationWidget::execSetPrimaryActionText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortRewardNotificationWidget_AddCollectionBookData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

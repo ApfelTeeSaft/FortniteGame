@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UInstancedStaticMeshComponent();  // RVA 0x02428030 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427590 (end 0x024275B2)
+// Original VA: 0x0000000142427590 | File offset: 0x02426B90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03900A50) | Matching: see analysis/functions-uht-natives.json
+void UInstancedStaticMeshComponent::StaticRegisterNativesUInstancedStaticMeshComponent()
+{
+	UClass* Class = UInstancedStaticMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddInstance", &UInstancedStaticMeshComponent::execAddInstance },
+		{ "AddInstanceWorldSpace", &UInstancedStaticMeshComponent::execAddInstanceWorldSpace },
+		{ "ClearInstances", &UInstancedStaticMeshComponent::execClearInstances },
+		{ "GetInstanceCount", &UInstancedStaticMeshComponent::execGetInstanceCount },
+		{ "GetInstancesOverlappingBox", &UInstancedStaticMeshComponent::execGetInstancesOverlappingBox },
+		{ "GetInstancesOverlappingSphere", &UInstancedStaticMeshComponent::execGetInstancesOverlappingSphere },
+		{ "GetInstanceTransform", &UInstancedStaticMeshComponent::execGetInstanceTransform },
+		{ "RemoveInstance", &UInstancedStaticMeshComponent::execRemoveInstance },
+		{ "SetCullDistances", &UInstancedStaticMeshComponent::execSetCullDistances },
+		{ "UpdateInstanceTransform", &UInstancedStaticMeshComponent::execUpdateInstanceTransform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UInstancedStaticMeshComponent_AddInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

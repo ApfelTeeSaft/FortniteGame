@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029116D0 (end 0x029116F2)
+// Original VA: 0x00000001429116D0 | File offset: 0x02910CD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D49C60) | Matching: see analysis/functions-uht-natives.json
+void UFortUINotificationQueue::StaticRegisterNativesUFortUINotificationQueue()
+{
+	UClass* Class = UFortUINotificationQueue::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNextNotification", &UFortUINotificationQueue::execGetNextNotification },
+		{ "RegisterToReceiveNotifications", &UFortUINotificationQueue::execRegisterToReceiveNotifications },
+		{ "RemoveNotification", &UFortUINotificationQueue::execRemoveNotification },
+		{ "UnregisterToReceiveNotifications", &UFortUINotificationQueue::execUnregisterToReceiveNotifications },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUINotificationQueue_GetNextNotification_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

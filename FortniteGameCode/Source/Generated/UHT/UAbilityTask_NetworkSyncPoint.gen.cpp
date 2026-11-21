@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_NetworkSyncPoint();  // RVA 0x00546900 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546490 (end 0x005464B2)
+// Original VA: 0x0000000140546490 | File offset: 0x00545A90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2B458) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_NetworkSyncPoint::StaticRegisterNativesUAbilityTask_NetworkSyncPoint()
+{
+	UClass* Class = UAbilityTask_NetworkSyncPoint::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnSignalCallback", &UAbilityTask_NetworkSyncPoint::execOnSignalCallback },
+		{ "WaitNetSync", &UAbilityTask_NetworkSyncPoint::execWaitNetSync },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_NetworkSyncPoint_OnSignalCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

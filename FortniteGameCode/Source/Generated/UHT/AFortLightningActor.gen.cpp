@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortLightningActor();  // RVA 0x0101E1F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DC40 (end 0x0101DC62)
+// Original VA: 0x000000014101DC40 | File offset: 0x0101D240
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0335DFC8) | Matching: see analysis/functions-uht-natives.json
+void AFortLightningActor::StaticRegisterNativesAFortLightningActor()
+{
+	UClass* Class = AFortLightningActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CleanupLightning", &AFortLightningActor::execCleanupLightning },
+		{ "GenerateBoltLocations", &AFortLightningActor::execGenerateBoltLocations },
+		{ "InitializeLightning", &AFortLightningActor::execInitializeLightning },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortLightningActor_CleanupLightning_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

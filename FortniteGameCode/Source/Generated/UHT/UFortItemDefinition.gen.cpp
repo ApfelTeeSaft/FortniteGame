@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemDefinition();  // RVA 0x0100C050 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BBD0 (end 0x0100BBF2)
+// Original VA: 0x000000014100BBD0 | File offset: 0x0100B1D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03353C40) | Matching: see analysis/functions-uht-natives.json
+void UFortItemDefinition::StaticRegisterNativesUFortItemDefinition()
+{
+	UClass* Class = UFortItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateTemporaryInstanceFromExistingItemBP", &UFortItemDefinition::execCreateTemporaryInstanceFromExistingItemBP },
+		{ "CreateTemporaryItemInstanceBP", &UFortItemDefinition::execCreateTemporaryItemInstanceBP },
+		{ "CustomizePreviewMesh", &UFortItemDefinition::execCustomizePreviewMesh },
+		{ "CustomizePreviewPrefab", &UFortItemDefinition::execCustomizePreviewPrefab },
+		{ "GetDescription", &UFortItemDefinition::execGetDescription },
+		{ "GetDisplayName", &UFortItemDefinition::execGetDisplayName },
+		{ "GetDisplayStats", &UFortItemDefinition::execGetDisplayStats },
+		{ "GetLargePreviewImage", &UFortItemDefinition::execGetLargePreviewImage },
+		{ "GetPersistentName", &UFortItemDefinition::execGetPersistentName },
+		{ "GetPreviewAssets", &UFortItemDefinition::execGetPreviewAssets },
+		{ "GetPreviewMeshOffset", &UFortItemDefinition::execGetPreviewMeshOffset },
+		{ "GetPreviewPrefabAsset", &UFortItemDefinition::execGetPreviewPrefabAsset },
+		{ "GetPreviewSkeletalMeshAsset", &UFortItemDefinition::execGetPreviewSkeletalMeshAsset },
+		{ "GetPreviewStaticMeshAsset", &UFortItemDefinition::execGetPreviewStaticMeshAsset },
+		{ "GetRarity", &UFortItemDefinition::execGetRarity },
+		{ "GetShortDescription", &UFortItemDefinition::execGetShortDescription },
+		{ "GetSingleLineDescription", &UFortItemDefinition::execGetSingleLineDescription },
+		{ "GetSmallPreviewImage", &UFortItemDefinition::execGetSmallPreviewImage },
+		{ "GetSmallPreviewImageBrush", &UFortItemDefinition::execGetSmallPreviewImageBrush },
+		{ "GetTooltip", &UFortItemDefinition::execGetTooltip },
+		{ "IsInventorySizeLimited", &UFortItemDefinition::execIsInventorySizeLimited },
+		{ "ShouldShowPreviewOnCurrentHero", &UFortItemDefinition::execShouldShowPreviewOnCurrentHero },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemDefinition_CreateTemporaryInstanceFromExistingItemBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

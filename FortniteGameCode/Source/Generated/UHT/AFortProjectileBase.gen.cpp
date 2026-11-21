@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortProjectileBase();  // RVA 0x0108B540 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AE30 (end 0x0108AE52)
+// Original VA: 0x000000014108AE30 | File offset: 0x0108A430
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D5CE0) | Matching: see analysis/functions-uht-natives.json
+void AFortProjectileBase::StaticRegisterNativesAFortProjectileBase()
+{
+	UClass* Class = AFortProjectileBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetGravityScale", &AFortProjectileBase::execGetGravityScale },
+		{ "GetOwnerPlayerController", &AFortProjectileBase::execGetOwnerPlayerController },
+		{ "OnBounceCallback", &AFortProjectileBase::execOnBounceCallback },
+		{ "OnRep_GravityScale", &AFortProjectileBase::execOnRep_GravityScale },
+		{ "OnRep_ReplicatedMaxSpeed", &AFortProjectileBase::execOnRep_ReplicatedMaxSpeed },
+		{ "OnStopCallback", &AFortProjectileBase::execOnStopCallback },
+		{ "SetGravityScale", &AFortProjectileBase::execSetGravityScale },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortProjectileBase_GetGravityScale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

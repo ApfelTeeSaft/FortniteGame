@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortWeaponItemDefinition::StaticRegisterNativesUFortWeaponItemDefinition()
-{
-}
 // IMPLEMENT_CLASS(UFortWeaponItemDefinition, 107673333u)
 // Original dynamic initializer: RVA 0x0011D360 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortWeaponItemDefinition> AutoInitializeUFortWeaponItemDefinition(TEXT("UFortWeaponItemDefinition"), sizeof(UFortWeaponItemDefinition), 107673333u);

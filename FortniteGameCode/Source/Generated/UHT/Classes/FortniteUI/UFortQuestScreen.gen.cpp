@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortQuestScreen::StaticRegisterNativesUFortQuestScreen()
-{
-}
 // IMPLEMENT_CLASS(UFortQuestScreen, 1778329815u)
 // Original dynamic initializer: RVA 0x00265600 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestScreen> AutoInitializeUFortQuestScreen(TEXT("UFortQuestScreen"), sizeof(UFortQuestScreen), 1778329815u);

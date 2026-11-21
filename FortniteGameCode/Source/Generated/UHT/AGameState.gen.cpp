@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameState();  // RVA 0x0241F010 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241EC80 (end 0x0241ECA2)
+// Original VA: 0x000000014241EC80 | File offset: 0x0241E280
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F7E18) | Matching: see analysis/functions-uht-natives.json
+void AGameState::StaticRegisterNativesAGameState()
+{
+	UClass* Class = AGameState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_ElapsedTime", &AGameState::execOnRep_ElapsedTime },
+		{ "OnRep_MatchState", &AGameState::execOnRep_MatchState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AGameState_OnRep_ElapsedTime_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

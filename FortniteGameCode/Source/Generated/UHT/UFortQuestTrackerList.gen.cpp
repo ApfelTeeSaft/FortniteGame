@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestTrackerList();  // RVA 0x028ED380 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECCE0 (end 0x028ECD02)
+// Original VA: 0x00000001428ECCE0 | File offset: 0x028EC2E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D098C0) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestTrackerList::StaticRegisterNativesUFortQuestTrackerList()
+{
+	UClass* Class = UFortQuestTrackerList::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleHUDFinalObjectiveHidden", &UFortQuestTrackerList::execHandleHUDFinalObjectiveHidden },
+		{ "HandlePinnedQuestsChanged", &UFortQuestTrackerList::execHandlePinnedQuestsChanged },
+		{ "HandleQuestEntryCreated", &UFortQuestTrackerList::execHandleQuestEntryCreated },
+		{ "HandleQuestsUpdated", &UFortQuestTrackerList::execHandleQuestsUpdated },
+		{ "HandleSizeEstimateChanged", &UFortQuestTrackerList::execHandleSizeEstimateChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestTrackerList_GetQuestsToDisplay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

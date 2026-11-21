@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonWidgetSwitcher::StaticRegisterNativesUCommonWidgetSwitcher()
-{
-}
 // IMPLEMENT_CLASS(UCommonWidgetSwitcher, 2074739543u)
 // Original dynamic initializer: RVA 0x00096C10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonWidgetSwitcher> AutoInitializeUCommonWidgetSwitcher(TEXT("UCommonWidgetSwitcher"), sizeof(UCommonWidgetSwitcher), 2074739543u);

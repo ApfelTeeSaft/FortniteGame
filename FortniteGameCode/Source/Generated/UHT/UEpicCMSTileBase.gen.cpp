@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEpicCMSTileBase();  // RVA 0x002E3C70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3940 (end 0x002E3962)
+// Original VA: 0x00000001402E3940 | File offset: 0x002E2F40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E8CDA8) | Matching: see analysis/functions-uht-natives.json
+void UEpicCMSTileBase::StaticRegisterNativesUEpicCMSTileBase()
+{
+	UClass* Class = UEpicCMSTileBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DynamicHandleIconLoadingStateChanged", &UEpicCMSTileBase::execDynamicHandleIconLoadingStateChanged },
+		{ "Launch", &UEpicCMSTileBase::execLaunch },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UEpicCMSTileBase_DynamicHandleIconLoadingStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

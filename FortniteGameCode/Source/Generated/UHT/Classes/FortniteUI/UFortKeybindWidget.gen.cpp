@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortKeybindWidget::StaticRegisterNativesUFortKeybindWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortKeybindWidget, 3866733346u)
 // Original dynamic initializer: RVA 0x0024F470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortKeybindWidget> AutoInitializeUFortKeybindWidget(TEXT("UFortKeybindWidget"), sizeof(UFortKeybindWidget), 3866733346u);

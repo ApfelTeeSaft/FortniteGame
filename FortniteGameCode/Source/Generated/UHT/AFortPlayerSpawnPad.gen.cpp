@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerSpawnPad();  // RVA 0x0108B2B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108ACE0 (end 0x0108AD02)
+// Original VA: 0x000000014108ACE0 | File offset: 0x0108A2E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D3960) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerSpawnPad::StaticRegisterNativesAFortPlayerSpawnPad()
+{
+	UClass* Class = AFortPlayerSpawnPad::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ChestProgressionUpdate", &AFortPlayerSpawnPad::execChestProgressionUpdate },
+		{ "GetPossessedPlayerPawnsByID", &AFortPlayerSpawnPad::execGetPossessedPlayerPawnsByID },
+		{ "GetRewardedChestIndex", &AFortPlayerSpawnPad::execGetRewardedChestIndex },
+		{ "InitializeChestProgression", &AFortPlayerSpawnPad::execInitializeChestProgression },
+		{ "PrestreamChestTextures", &AFortPlayerSpawnPad::execPrestreamChestTextures },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ASkyLight::StaticRegisterNativesASkyLight()
-{
-}
 // IMPLEMENT_CLASS(ASkyLight, 1249314479u)
 // Original dynamic initializer: RVA 0x0021A910 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ASkyLight> AutoInitializeASkyLight(TEXT("ASkyLight"), sizeof(ASkyLight), 1249314479u);

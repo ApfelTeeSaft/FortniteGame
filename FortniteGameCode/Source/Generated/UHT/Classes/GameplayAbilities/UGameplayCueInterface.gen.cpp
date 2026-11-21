@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UGameplayCueInterface::StaticRegisterNativesUGameplayCueInterface()
-{
-}
 // IMPLEMENT_CLASS(UGameplayCueInterface, 1242886516u)
 // Original dynamic initializer: RVA 0x0009ECA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameplayCueInterface> AutoInitializeUGameplayCueInterface(TEXT("UGameplayCueInterface"), sizeof(UGameplayCueInterface), 1242886516u);

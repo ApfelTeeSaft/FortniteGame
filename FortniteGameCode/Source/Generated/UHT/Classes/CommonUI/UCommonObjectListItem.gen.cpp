@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonObjectListItem::StaticRegisterNativesUCommonObjectListItem()
-{
-}
 // IMPLEMENT_CLASS(UCommonObjectListItem, 3756189935u)
 // Original dynamic initializer: RVA 0x00096060 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonObjectListItem> AutoInitializeUCommonObjectListItem(TEXT("UCommonObjectListItem"), sizeof(UCommonObjectListItem), 3756189935u);

@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemWidget();  // RVA 0x028CF6C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF270 (end 0x028CF292)
+// Original VA: 0x00000001428CF270 | File offset: 0x028CE870
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD99A0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemWidget::StaticRegisterNativesUFortItemWidget()
+{
+	UClass* Class = UFortItemWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDescription", &UFortItemWidget::execGetDescription },
+		{ "GetDisplayName", &UFortItemWidget::execGetDisplayName },
+		{ "GetDurability", &UFortItemWidget::execGetDurability },
+		{ "GetIconTexture", &UFortItemWidget::execGetIconTexture },
+		{ "GetItem", &UFortItemWidget::execGetItem },
+		{ "GetItemToCompare", &UFortItemWidget::execGetItemToCompare },
+		{ "GetLevel", &UFortItemWidget::execGetLevel },
+		{ "GetRarity", &UFortItemWidget::execGetRarity },
+		{ "GetStackCount", &UFortItemWidget::execGetStackCount },
+		{ "GetType", &UFortItemWidget::execGetType },
+		{ "HasDurability", &UFortItemWidget::execHasDurability },
+		{ "HasLevel", &UFortItemWidget::execHasLevel },
+		{ "HasSecondaryCategory", &UFortItemWidget::execHasSecondaryCategory },
+		{ "HasTertiaryCategory", &UFortItemWidget::execHasTertiaryCategory },
+		{ "IsEquipped", &UFortItemWidget::execIsEquipped },
+		{ "IsInventoryOverflowItem", &UFortItemWidget::execIsInventoryOverflowItem },
+		{ "IsItemValid", &UFortItemWidget::execIsItemValid },
+		{ "IsSchematic", &UFortItemWidget::execIsSchematic },
+		{ "IsSlotted", &UFortItemWidget::execIsSlotted },
+		{ "OnFortItemDestroyed", &UFortItemWidget::execOnFortItemDestroyed },
+		{ "OnFortItemUpdated", &UFortItemWidget::execOnFortItemUpdated },
+		{ "SetCooldownMaterial", &UFortItemWidget::execSetCooldownMaterial },
+		{ "SetItem", &UFortItemWidget::execSetItem },
+		{ "SetOnGetItemToCompareDelegate", &UFortItemWidget::execSetOnGetItemToCompareDelegate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortItemWidget_OnGetItemToCompare__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

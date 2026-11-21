@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPaperGroupedSpriteComponent::StaticRegisterNativesUPaperGroupedSpriteComponent()
-{
-}
 // IMPLEMENT_CLASS(UPaperGroupedSpriteComponent, 2653628167u)
 // Original dynamic initializer: RVA 0x000AB570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperGroupedSpriteComponent> AutoInitializeUPaperGroupedSpriteComponent(TEXT("UPaperGroupedSpriteComponent"), sizeof(UPaperGroupedSpriteComponent), 2653628167u);

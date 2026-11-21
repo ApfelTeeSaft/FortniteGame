@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortBotMissionLogic::StaticRegisterNativesUFortBotMissionLogic()
-{
-}
 // IMPLEMENT_CLASS(UFortBotMissionLogic, 4056058346u)
 // Original dynamic initializer: RVA 0x000E93B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortBotMissionLogic> AutoInitializeUFortBotMissionLogic(TEXT("UFortBotMissionLogic"), sizeof(UFortBotMissionLogic), 4056058346u);

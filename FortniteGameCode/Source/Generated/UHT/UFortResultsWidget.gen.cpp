@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsWidget();  // RVA 0x028ED500 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECE60 (end 0x028ECE82)
+// Original VA: 0x00000001428ECE60 | File offset: 0x028EC460
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0A6B0) | Matching: see analysis/functions-uht-natives.json
+void UFortResultsWidget::StaticRegisterNativesUFortResultsWidget()
+{
+	UClass* Class = UFortResultsWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetRewardsByType", &UFortResultsWidget::execGetRewardsByType },
+		{ "GetTotalMissionPointsEarned", &UFortResultsWidget::execGetTotalMissionPointsEarned },
+		{ "GetZoneCompletionResult", &UFortResultsWidget::execGetZoneCompletionResult },
+		{ "IsDataFinalized", &UFortResultsWidget::execIsDataFinalized },
+		{ "LogXPData", &UFortResultsWidget::execLogXPData },
+		{ "RequestExitZone", &UFortResultsWidget::execRequestExitZone },
+		{ "SendEndOfRoundFriendInviteAnalytic", &UFortResultsWidget::execSendEndOfRoundFriendInviteAnalytic },
+		{ "SendEndOfRoundScreenAnalytic", &UFortResultsWidget::execSendEndOfRoundScreenAnalytic },
+		{ "SendEndOfRoundUpVoteAnalytic", &UFortResultsWidget::execSendEndOfRoundUpVoteAnalytic },
+		{ "TriggerSetupTeleportCameraEvent", &UFortResultsWidget::execTriggerSetupTeleportCameraEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortResultsWidget_GetRewardsByType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

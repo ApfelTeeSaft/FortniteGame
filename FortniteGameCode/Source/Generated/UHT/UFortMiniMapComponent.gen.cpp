@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMiniMapComponent();  // RVA 0x01038780 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010376C0 (end 0x010376E2)
+// Original VA: 0x00000001410376C0 | File offset: 0x01036CC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03379FC0) | Matching: see analysis/functions-uht-natives.json
+void UFortMiniMapComponent::StaticRegisterNativesUFortMiniMapComponent()
+{
+	UClass* Class = UFortMiniMapComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_MiniMapData", &UFortMiniMapComponent::execOnRep_MiniMapData },
+		{ "OverrideLocalMiniMapIcon", &UFortMiniMapComponent::execOverrideLocalMiniMapIcon },
+		{ "OverrideLocalMiniMapIndicatorIsVisible", &UFortMiniMapComponent::execOverrideLocalMiniMapIndicatorIsVisible },
+		{ "SetMiniMapIcon", &UFortMiniMapComponent::execSetMiniMapIcon },
+		{ "SetMiniMapIconColor", &UFortMiniMapComponent::execSetMiniMapIconColor },
+		{ "SetMiniMapIconColorPulsesPerSecond", &UFortMiniMapComponent::execSetMiniMapIconColorPulsesPerSecond },
+		{ "SetMiniMapIconPulseColor", &UFortMiniMapComponent::execSetMiniMapIconPulseColor },
+		{ "SetMiniMapIconScale", &UFortMiniMapComponent::execSetMiniMapIconScale },
+		{ "SetMiniMapIconSizePulsesPerSecond", &UFortMiniMapComponent::execSetMiniMapIconSizePulsesPerSecond },
+		{ "SetMiniMapIndicatorIsVisible", &UFortMiniMapComponent::execSetMiniMapIndicatorIsVisible },
+		{ "SetMiniMapIndicatorIsVisibleOnMiniMap", &UFortMiniMapComponent::execSetMiniMapIndicatorIsVisibleOnMiniMap },
+		{ "SetMiniMapLocationOffset", &UFortMiniMapComponent::execSetMiniMapLocationOffset },
+		{ "SetMiniMapViewableDistance", &UFortMiniMapComponent::execSetMiniMapViewableDistance },
+		{ "SetupMiniMapComponent", &UFortMiniMapComponent::execSetupMiniMapComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

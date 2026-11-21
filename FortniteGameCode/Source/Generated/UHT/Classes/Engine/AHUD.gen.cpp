@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AHUD::StaticRegisterNativesAHUD()
-{
-}
 // IMPLEMENT_CLASS(AHUD, 1175314171u)
 // Original dynamic initializer: RVA 0x002000F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AHUD> AutoInitializeAHUD(TEXT("AHUD"), sizeof(AHUD), 1175314171u);

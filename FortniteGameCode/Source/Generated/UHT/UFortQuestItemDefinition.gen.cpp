@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestItemDefinition();  // RVA 0x01096500 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01095EA0 (end 0x01095EC2)
+// Original VA: 0x0000000141095EA0 | File offset: 0x010954A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033E6210) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestItemDefinition::StaticRegisterNativesUFortQuestItemDefinition()
+{
+	UClass* Class = UFortQuestItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AllowsTileMatching", &UFortQuestItemDefinition::execAllowsTileMatching },
+		{ "ExpandsStormShield", &UFortQuestItemDefinition::execExpandsStormShield },
+		{ "GetCategory", &UFortQuestItemDefinition::execGetCategory },
+		{ "GetClaimConversation", &UFortQuestItemDefinition::execGetClaimConversation },
+		{ "GetCompletionText", &UFortQuestItemDefinition::execGetCompletionText },
+		{ "GetHiddenRewards_BP", &UFortQuestItemDefinition::execGetHiddenRewards_BP },
+		{ "GetIntroConversation", &UFortQuestItemDefinition::execGetIntroConversation },
+		{ "GetObjectives_BP", &UFortQuestItemDefinition::execGetObjectives_BP },
+		{ "GetPrerequisiteObjective", &UFortQuestItemDefinition::execGetPrerequisiteObjective },
+		{ "GetPrerequisiteQuest", &UFortQuestItemDefinition::execGetPrerequisiteQuest },
+		{ "GetQuestType", &UFortQuestItemDefinition::execGetQuestType },
+		{ "GetRewardDescription", &UFortQuestItemDefinition::execGetRewardDescription },
+		{ "GetRewardHeaderText", &UFortQuestItemDefinition::execGetRewardHeaderText },
+		{ "GetRewardInfo_BP", &UFortQuestItemDefinition::execGetRewardInfo_BP },
+		{ "GetRewards_BP", &UFortQuestItemDefinition::execGetRewards_BP },
+		{ "GetRewardType", &UFortQuestItemDefinition::execGetRewardType },
+		{ "GetSelectableRewards_BP", &UFortQuestItemDefinition::execGetSelectableRewards_BP },
+		{ "GetSelectRewardsConversation", &UFortQuestItemDefinition::execGetSelectRewardsConversation },
+		{ "GetWeight", &UFortQuestItemDefinition::execGetWeight },
+		{ "IsDeprecated", &UFortQuestItemDefinition::execIsDeprecated },
+		{ "IsHidden", &UFortQuestItemDefinition::execIsHidden },
+		{ "ShouldAutoLaunch", &UFortQuestItemDefinition::execShouldAutoLaunch },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestItemDefinition_AllowsTileMatching_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

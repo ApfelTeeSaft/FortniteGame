@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ABuildingPropAtlas::StaticRegisterNativesABuildingPropAtlas()
-{
-}
 // IMPLEMENT_CLASS(ABuildingPropAtlas, 1598448763u)
 // Original dynamic initializer: RVA 0x000DB010 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingPropAtlas> AutoInitializeABuildingPropAtlas(TEXT("ABuildingPropAtlas"), sizeof(ABuildingPropAtlas), 1598448763u);

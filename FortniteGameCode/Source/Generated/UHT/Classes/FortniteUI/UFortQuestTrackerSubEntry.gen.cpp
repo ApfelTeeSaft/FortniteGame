@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortQuestTrackerSubEntry::StaticRegisterNativesUFortQuestTrackerSubEntry()
-{
-}
 // IMPLEMENT_CLASS(UFortQuestTrackerSubEntry, 1205579581u)
 // Original dynamic initializer: RVA 0x00258400 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestTrackerSubEntry> AutoInitializeUFortQuestTrackerSubEntry(TEXT("UFortQuestTrackerSubEntry"), sizeof(UFortQuestTrackerSubEntry), 1205579581u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AGameStateBase::StaticRegisterNativesAGameStateBase()
-{
-}
 // IMPLEMENT_CLASS(AGameStateBase, 3895622908u)
 // Original dynamic initializer: RVA 0x002000B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameStateBase> AutoInitializeAGameStateBase(TEXT("AGameStateBase"), sizeof(AGameStateBase), 3895622908u);

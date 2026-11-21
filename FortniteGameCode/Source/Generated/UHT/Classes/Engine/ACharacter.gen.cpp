@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ACharacter::StaticRegisterNativesACharacter()
-{
-}
 // IMPLEMENT_CLASS(ACharacter, 161091864u)
 // Original dynamic initializer: RVA 0x001F63D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ACharacter> AutoInitializeACharacter(TEXT("ACharacter"), sizeof(ACharacter), 161091864u);

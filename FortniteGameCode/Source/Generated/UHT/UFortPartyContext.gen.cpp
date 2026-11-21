@@ -6,6 +6,86 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPartyContext();  // RVA 0x01056150 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01055CF0 (end 0x01055D12)
+// Original VA: 0x0000000141055CF0 | File offset: 0x010552F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0339C270) | Matching: see analysis/functions-uht-natives.json
+void UFortPartyContext::StaticRegisterNativesUFortPartyContext()
+{
+	UClass* Class = UFortPartyContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AcceptFriendRequest", &UFortPartyContext::execAcceptFriendRequest },
+		{ "AttemptRefreshFriendsList", &UFortPartyContext::execAttemptRefreshFriendsList },
+		{ "CanBeInvited", &UFortPartyContext::execCanBeInvited },
+		{ "CanBeInvitedNetID", &UFortPartyContext::execCanBeInvitedNetID },
+		{ "CanBeJoined", &UFortPartyContext::execCanBeJoined },
+		{ "CancelFriendRequest", &UFortPartyContext::execCancelFriendRequest },
+		{ "CanDisplayFriendsActionNotifications", &UFortPartyContext::execCanDisplayFriendsActionNotifications },
+		{ "CanShowExternalProfile", &UFortPartyContext::execCanShowExternalProfile },
+		{ "ClearPendingInvites", &UFortPartyContext::execClearPendingInvites },
+		{ "GetActiveFriendsList", &UFortPartyContext::execGetActiveFriendsList },
+		{ "GetConsoleFriendRichPresenceText", &UFortPartyContext::execGetConsoleFriendRichPresenceText },
+		{ "GetCurrentPartyMaxSize", &UFortPartyContext::execGetCurrentPartyMaxSize },
+		{ "GetFriendRequestStatusForPlayer", &UFortPartyContext::execGetFriendRequestStatusForPlayer },
+		{ "GetLocalPartyMemberLocation", &UFortPartyContext::execGetLocalPartyMemberLocation },
+		{ "GetLocalPartyPlaylist", &UFortPartyContext::execGetLocalPartyPlaylist },
+		{ "GetLocalPartyProgression", &UFortPartyContext::execGetLocalPartyProgression },
+		{ "GetLocalPartyTeamFill", &UFortPartyContext::execGetLocalPartyTeamFill },
+		{ "GetLocalPlayerDisplayName", &UFortPartyContext::execGetLocalPlayerDisplayName },
+		{ "GetLocalPlayerTeam", &UFortPartyContext::execGetLocalPlayerTeam },
+		{ "GetLocalPlayerTeamMemberInfo", &UFortPartyContext::execGetLocalPlayerTeamMemberInfo },
+		{ "GetLocalTeamTeamMemberInfo", &UFortPartyContext::execGetLocalTeamTeamMemberInfo },
+		{ "GetMaxTeamSizeForSelectedTheater", &UFortPartyContext::execGetMaxTeamSizeForSelectedTheater },
+		{ "GetNumPlayersInLocalParty", &UFortPartyContext::execGetNumPlayersInLocalParty },
+		{ "GetPartyInvites", &UFortPartyContext::execGetPartyInvites },
+		{ "GetPartyMemberDisplayState", &UFortPartyContext::execGetPartyMemberDisplayState },
+		{ "GetPartyPrivacySetting", &UFortPartyContext::execGetPartyPrivacySetting },
+		{ "GetPartySuggestion", &UFortPartyContext::execGetPartySuggestion },
+		{ "GetPartySuggestions", &UFortPartyContext::execGetPartySuggestions },
+		{ "GetSocialItemCategories", &UFortPartyContext::execGetSocialItemCategories },
+		{ "GetSocialItemList", &UFortPartyContext::execGetSocialItemList },
+		{ "GetTeamInfo", &UFortPartyContext::execGetTeamInfo },
+		{ "HandlePendingInvites", &UFortPartyContext::execHandlePendingInvites },
+		{ "HasPendingFriendRequest", &UFortPartyContext::execHasPendingFriendRequest },
+		{ "HasPendingPartyInvitation", &UFortPartyContext::execHasPendingPartyInvitation },
+		{ "IsAthenaPartyMemberReady", &UFortPartyContext::execIsAthenaPartyMemberReady },
+		{ "IsEntirePartyInFrontEnd", &UFortPartyContext::execIsEntirePartyInFrontEnd },
+		{ "IsInLocalPlayersParty", &UFortPartyContext::execIsInLocalPlayersParty },
+		{ "IsLFG", &UFortPartyContext::execIsLFG },
+		{ "IsLocalPlayerInParty", &UFortPartyContext::execIsLocalPlayerInParty },
+		{ "IsLocalPlayerInPersistentParty", &UFortPartyContext::execIsLocalPlayerInPersistentParty },
+		{ "IsLocalPlayerPartyLeader", &UFortPartyContext::execIsLocalPlayerPartyLeader },
+		{ "IsPartyMemberMuted", &UFortPartyContext::execIsPartyMemberMuted },
+		{ "IsPlayerBlocked", &UFortPartyContext::execIsPlayerBlocked },
+		{ "IsPlayerInOurParty", &UFortPartyContext::execIsPlayerInOurParty },
+		{ "IsTeamMemberFriend", &UFortPartyContext::execIsTeamMemberFriend },
+		{ "IsValidNetID", &UFortPartyContext::execIsValidNetID },
+		{ "JoinParty", &UFortPartyContext::execJoinParty },
+		{ "KickPartyMember", &UFortPartyContext::execKickPartyMember },
+		{ "LeaveParty", &UFortPartyContext::execLeaveParty },
+		{ "MutePartyMember", &UFortPartyContext::execMutePartyMember },
+		{ "PromotePartyMemberToLeader", &UFortPartyContext::execPromotePartyMemberToLeader },
+		{ "RejectFriendRequest", &UFortPartyContext::execRejectFriendRequest },
+		{ "RejectPartyInvite", &UFortPartyContext::execRejectPartyInvite },
+		{ "SendFriendRequest", &UFortPartyContext::execSendFriendRequest },
+		{ "SendPartyInvite", &UFortPartyContext::execSendPartyInvite },
+		{ "SendPartyInviteNetID", &UFortPartyContext::execSendPartyInviteNetID },
+		{ "SetChatWhisperTarget", &UFortPartyContext::execSetChatWhisperTarget },
+		{ "SetFriendInvitesEnabled", &UFortPartyContext::execSetFriendInvitesEnabled },
+		{ "SetLFG", &UFortPartyContext::execSetLFG },
+		{ "SetLocalPartyMemberLocation", &UFortPartyContext::execSetLocalPartyMemberLocation },
+		{ "SetPartyInvitesEnabled", &UFortPartyContext::execSetPartyInvitesEnabled },
+		{ "SetPartyPrivacySetting", &UFortPartyContext::execSetPartyPrivacySetting },
+		{ "SetPartyProgression", &UFortPartyContext::execSetPartyProgression },
+		{ "ShouldPartyInvitesBeEnabled", &UFortPartyContext::execShouldPartyInvitesBeEnabled },
+		{ "ShouldShowHeroPortraits", &UFortPartyContext::execShouldShowHeroPortraits },
+		{ "ShowExternalFriendsUI", &UFortPartyContext::execShowExternalFriendsUI },
+		{ "ShowExternalProfile", &UFortPartyContext::execShowExternalProfile },
+		{ "ShowLocalPlayerExternalProfile", &UFortPartyContext::execShowLocalPlayerExternalProfile },
+		{ "UnmutePartyMember", &UFortPartyContext::execUnmutePartyMember },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortPartyContext_OnAthenaReadyStateChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

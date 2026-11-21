@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UClothingSimulationInteractorNv::StaticRegisterNativesUClothingSimulationInteractorNv()
-{
-}
 // IMPLEMENT_CLASS(UClothingSimulationInteractorNv, 829059939u)
 // Original dynamic initializer: RVA 0x00223670 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UClothingSimulationInteractorNv> AutoInitializeUClothingSimulationInteractorNv(TEXT("UClothingSimulationInteractorNv"), sizeof(UClothingSimulationInteractorNv), 829059939u);

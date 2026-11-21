@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAIHotSpotSlot::StaticRegisterNativesUAIHotSpotSlot()
-{
-}
 // IMPLEMENT_CLASS(UAIHotSpotSlot, 4233074455u)
 // Original dynamic initializer: RVA 0x000D7330 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAIHotSpotSlot> AutoInitializeUAIHotSpotSlot(TEXT("UAIHotSpotSlot"), sizeof(UAIHotSpotSlot), 4233074455u);

@@ -6,6 +6,42 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseSet();  // RVA 0x010069D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006270 (end 0x01006292)
+// Original VA: 0x0000000141006270 | File offset: 0x01005870
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03348760) | Matching: see analysis/functions-uht-natives.json
+void UFortHomebaseSet::StaticRegisterNativesUFortHomebaseSet()
+{
+	UClass* Class = UFortHomebaseSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_InventorySizeBonus", &UFortHomebaseSet::execOnRep_InventorySizeBonus },
+		{ "OnRep_Keep_AmmoStash_Level", &UFortHomebaseSet::execOnRep_Keep_AmmoStash_Level },
+		{ "OnRep_Keep_Armory_Level", &UFortHomebaseSet::execOnRep_Keep_Armory_Level },
+		{ "OnRep_Keep_Level", &UFortHomebaseSet::execOnRep_Keep_Level },
+		{ "OnRep_Keep_Medical_Level", &UFortHomebaseSet::execOnRep_Keep_Medical_Level },
+		{ "OnRep_Keep_PermaniteCap", &UFortHomebaseSet::execOnRep_Keep_PermaniteCap },
+		{ "OnRep_Keep_Storage_Level", &UFortHomebaseSet::execOnRep_Keep_Storage_Level },
+		{ "OnRep_Keep_StructureCap", &UFortHomebaseSet::execOnRep_Keep_StructureCap },
+		{ "OnRep_Keep_Workshop_Level", &UFortHomebaseSet::execOnRep_Keep_Workshop_Level },
+		{ "OnRep_Manor_Level", &UFortHomebaseSet::execOnRep_Manor_Level },
+		{ "OnRep_Manor_StructureCap", &UFortHomebaseSet::execOnRep_Manor_StructureCap },
+		{ "OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01", &UFortHomebaseSet::execOnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01 },
+		{ "OnRep_MaxLevelBonus_Alterations", &UFortHomebaseSet::execOnRep_MaxLevelBonus_Alterations },
+		{ "OnRep_MaxLevelBonus_Global", &UFortHomebaseSet::execOnRep_MaxLevelBonus_Global },
+		{ "OnRep_MaxLevelBonus_Personnel", &UFortHomebaseSet::execOnRep_MaxLevelBonus_Personnel },
+		{ "OnRep_MaxLevelBonus_Schematics", &UFortHomebaseSet::execOnRep_MaxLevelBonus_Schematics },
+		{ "OnRep_MaxLevelBonus_Schematics_Melee", &UFortHomebaseSet::execOnRep_MaxLevelBonus_Schematics_Melee },
+		{ "OnRep_MaxLevelBonus_Schematics_Ranged", &UFortHomebaseSet::execOnRep_MaxLevelBonus_Schematics_Ranged },
+		{ "OnRep_MaxLevelBonus_Schematics_Traps", &UFortHomebaseSet::execOnRep_MaxLevelBonus_Schematics_Traps },
+		{ "OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01", &UFortHomebaseSet::execOnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01 },
+		{ "OnRep_ResearchPointMaxBonus", &UFortHomebaseSet::execOnRep_ResearchPointMaxBonus },
+		{ "OnRep_StorageInventorySizeBonus", &UFortHomebaseSet::execOnRep_StorageInventorySizeBonus },
+		{ "OnRep_SupplyDrop_Level", &UFortHomebaseSet::execOnRep_SupplyDrop_Level },
+		{ "OnRep_SupplyDrop_Magnitude", &UFortHomebaseSet::execOnRep_SupplyDrop_Magnitude },
+		{ "OnRep_WorldInventorySizeBonus", &UFortHomebaseSet::execOnRep_WorldInventorySizeBonus },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_InventorySizeBonus_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

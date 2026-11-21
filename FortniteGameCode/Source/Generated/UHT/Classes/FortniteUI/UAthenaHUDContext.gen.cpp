@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaHUDContext::StaticRegisterNativesUAthenaHUDContext()
-{
-}
 // IMPLEMENT_CLASS(UAthenaHUDContext, 3141754721u)
 // Original dynamic initializer: RVA 0x00239160 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaHUDContext> AutoInitializeUAthenaHUDContext(TEXT("UAthenaHUDContext"), sizeof(UAthenaHUDContext), 3141754721u);

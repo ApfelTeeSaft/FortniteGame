@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortBaseButton::StaticRegisterNativesUFortBaseButton()
-{
-}
 // IMPLEMENT_CLASS(UFortBaseButton, 671997873u)
 // Original dynamic initializer: RVA 0x00240260 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortBaseButton> AutoInitializeUFortBaseButton(TEXT("UFortBaseButton"), sizeof(UFortBaseButton), 671997873u);

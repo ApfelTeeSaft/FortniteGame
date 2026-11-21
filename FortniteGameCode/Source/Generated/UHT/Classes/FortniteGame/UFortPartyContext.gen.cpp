@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPartyContext::StaticRegisterNativesUFortPartyContext()
-{
-}
 // IMPLEMENT_CLASS(UFortPartyContext, 32185782u)
 // Original dynamic initializer: RVA 0x001073F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPartyContext> AutoInitializeUFortPartyContext(TEXT("UFortPartyContext"), sizeof(UFortPartyContext), 32185782u);

@@ -6,6 +6,72 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCheatManager();  // RVA 0x023F77C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F70C0 (end 0x023F70E2)
+// Original VA: 0x00000001423F70C0 | File offset: 0x023F66C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038C6480) | Matching: see analysis/functions-uht-natives.json
+void UCheatManager::StaticRegisterNativesUCheatManager()
+{
+	UClass* Class = UCheatManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BugIt", &UCheatManager::execBugIt },
+		{ "BugItGo", &UCheatManager::execBugItGo },
+		{ "BugItStringCreator", &UCheatManager::execBugItStringCreator },
+		{ "ChangeSize", &UCheatManager::execChangeSize },
+		{ "CheatScript", &UCheatManager::execCheatScript },
+		{ "DamageTarget", &UCheatManager::execDamageTarget },
+		{ "DebugCapsuleSweep", &UCheatManager::execDebugCapsuleSweep },
+		{ "DebugCapsuleSweepCapture", &UCheatManager::execDebugCapsuleSweepCapture },
+		{ "DebugCapsuleSweepChannel", &UCheatManager::execDebugCapsuleSweepChannel },
+		{ "DebugCapsuleSweepClear", &UCheatManager::execDebugCapsuleSweepClear },
+		{ "DebugCapsuleSweepComplex", &UCheatManager::execDebugCapsuleSweepComplex },
+		{ "DebugCapsuleSweepPawn", &UCheatManager::execDebugCapsuleSweepPawn },
+		{ "DebugCapsuleSweepSize", &UCheatManager::execDebugCapsuleSweepSize },
+		{ "DestroyAll", &UCheatManager::execDestroyAll },
+		{ "DestroyAllPawnsExceptTarget", &UCheatManager::execDestroyAllPawnsExceptTarget },
+		{ "DestroyPawns", &UCheatManager::execDestroyPawns },
+		{ "DestroyServerStatReplicator", &UCheatManager::execDestroyServerStatReplicator },
+		{ "DestroyTarget", &UCheatManager::execDestroyTarget },
+		{ "DisableDebugCamera", &UCheatManager::execDisableDebugCamera },
+		{ "DumpChatState", &UCheatManager::execDumpChatState },
+		{ "DumpOnlineSessionState", &UCheatManager::execDumpOnlineSessionState },
+		{ "DumpPartyState", &UCheatManager::execDumpPartyState },
+		{ "DumpVoiceMutingState", &UCheatManager::execDumpVoiceMutingState },
+		{ "EnableDebugCamera", &UCheatManager::execEnableDebugCamera },
+		{ "FlushLog", &UCheatManager::execFlushLog },
+		{ "Fly", &UCheatManager::execFly },
+		{ "FreezeFrame", &UCheatManager::execFreezeFrame },
+		{ "Ghost", &UCheatManager::execGhost },
+		{ "God", &UCheatManager::execGod },
+		{ "InvertMouse", &UCheatManager::execInvertMouse },
+		{ "LogLoc", &UCheatManager::execLogLoc },
+		{ "OnlyLoadLevel", &UCheatManager::execOnlyLoadLevel },
+		{ "PlayersOnly", &UCheatManager::execPlayersOnly },
+		{ "RebuildNavigation", &UCheatManager::execRebuildNavigation },
+		{ "ServerToggleAILogging", &UCheatManager::execServerToggleAILogging },
+		{ "SetMouseSensitivityToDefault", &UCheatManager::execSetMouseSensitivityToDefault },
+		{ "SetNavDrawDistance", &UCheatManager::execSetNavDrawDistance },
+		{ "SetWorldOrigin", &UCheatManager::execSetWorldOrigin },
+		{ "Slomo", &UCheatManager::execSlomo },
+		{ "SpawnServerStatReplicator", &UCheatManager::execSpawnServerStatReplicator },
+		{ "StreamLevelIn", &UCheatManager::execStreamLevelIn },
+		{ "StreamLevelOut", &UCheatManager::execStreamLevelOut },
+		{ "Summon", &UCheatManager::execSummon },
+		{ "Teleport", &UCheatManager::execTeleport },
+		{ "TestCollisionDistance", &UCheatManager::execTestCollisionDistance },
+		{ "ToggleAILogging", &UCheatManager::execToggleAILogging },
+		{ "ToggleDebugCamera", &UCheatManager::execToggleDebugCamera },
+		{ "ToggleServerStatReplicatorClientOverwrite", &UCheatManager::execToggleServerStatReplicatorClientOverwrite },
+		{ "ToggleServerStatReplicatorUpdateStatNet", &UCheatManager::execToggleServerStatReplicatorUpdateStatNet },
+		{ "UpdateSafeArea", &UCheatManager::execUpdateSafeArea },
+		{ "ViewActor", &UCheatManager::execViewActor },
+		{ "ViewClass", &UCheatManager::execViewClass },
+		{ "ViewPlayer", &UCheatManager::execViewPlayer },
+		{ "ViewSelf", &UCheatManager::execViewSelf },
+		{ "Walk", &UCheatManager::execWalk },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCheatManager_BugIt_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

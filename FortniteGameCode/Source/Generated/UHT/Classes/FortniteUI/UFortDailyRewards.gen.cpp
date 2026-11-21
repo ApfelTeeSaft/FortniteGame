@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortDailyRewards::StaticRegisterNativesUFortDailyRewards()
-{
-}
 // IMPLEMENT_CLASS(UFortDailyRewards, 1050237626u)
 // Original dynamic initializer: RVA 0x002426F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDailyRewards> AutoInitializeUFortDailyRewards(TEXT("UFortDailyRewards"), sizeof(UFortDailyRewards), 1050237626u);

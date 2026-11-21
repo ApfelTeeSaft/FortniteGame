@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBuildingActorSet();  // RVA 0x00FAD740 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACD20 (end 0x00FACD42)
+// Original VA: 0x0000000140FACD20 | File offset: 0x00FAC320
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032CFED8) | Matching: see analysis/functions-uht-natives.json
+void UFortBuildingActorSet::StaticRegisterNativesUFortBuildingActorSet()
+{
+	UClass* Class = UFortBuildingActorSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_BuildTime", &UFortBuildingActorSet::execOnRep_BuildTime },
+		{ "OnRep_RepairTime", &UFortBuildingActorSet::execOnRep_RepairTime },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBuildingActorSet_OnRep_BuildTime_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

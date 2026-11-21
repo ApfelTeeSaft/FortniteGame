@@ -6,6 +6,53 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortStoreContext();  // RVA 0x028FB850 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB380 (end 0x028FB3A2)
+// Original VA: 0x00000001428FB380 | File offset: 0x028FA980
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D24FC0) | Matching: see analysis/functions-uht-natives.json
+void UFortStoreContext::StaticRegisterNativesUFortStoreContext()
+{
+	UClass* Class = UFortStoreContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CardAddedToSummaryComplete", &UFortStoreContext::execCardAddedToSummaryComplete },
+		{ "CardBackRevealComplete", &UFortStoreContext::execCardBackRevealComplete },
+		{ "CardEntryComplete", &UFortStoreContext::execCardEntryComplete },
+		{ "CardExitComplete", &UFortStoreContext::execCardExitComplete },
+		{ "CardFlipComplete", &UFortStoreContext::execCardFlipComplete },
+		{ "CardFrontRevealComplete", &UFortStoreContext::execCardFrontRevealComplete },
+		{ "CardPackDestroyComplete", &UFortStoreContext::execCardPackDestroyComplete },
+		{ "CardPackOpeningComplete", &UFortStoreContext::execCardPackOpeningComplete },
+		{ "ChoiceResultComplete", &UFortStoreContext::execChoiceResultComplete },
+		{ "DismissError", &UFortStoreContext::execDismissError },
+		{ "EnterCardPackStore", &UFortStoreContext::execEnterCardPackStore },
+		{ "EnterCurrencyStore", &UFortStoreContext::execEnterCurrencyStore },
+		{ "EnterRealMoneyStore", &UFortStoreContext::execEnterRealMoneyStore },
+		{ "ErrorOccurred", &UFortStoreContext::execErrorOccurred },
+		{ "ExitCardPackStore", &UFortStoreContext::execExitCardPackStore },
+		{ "ExitCurrencyStore", &UFortStoreContext::execExitCurrencyStore },
+		{ "ExitRealMoneyStore", &UFortStoreContext::execExitRealMoneyStore },
+		{ "ExitSummary", &UFortStoreContext::execExitSummary },
+		{ "ExitWebPayment", &UFortStoreContext::execExitWebPayment },
+		{ "FireInteractionAnalyticsEvent", &UFortStoreContext::execFireInteractionAnalyticsEvent },
+		{ "FreshenCache", &UFortStoreContext::execFreshenCache },
+		{ "GetAccountItems", &UFortStoreContext::execGetAccountItems },
+		{ "GetCard", &UFortStoreContext::execGetCard },
+		{ "GetNumUnopenedCardPacksRemaining", &UFortStoreContext::execGetNumUnopenedCardPacksRemaining },
+		{ "GetPreviousState", &UFortStoreContext::execGetPreviousState },
+		{ "GetRarityColor", &UFortStoreContext::execGetRarityColor },
+		{ "GetStoreState", &UFortStoreContext::execGetStoreState },
+		{ "GetTimeUntilDailyLimitReset", &UFortStoreContext::execGetTimeUntilDailyLimitReset },
+		{ "GetTimeUntilMarketplaceRefresh", &UFortStoreContext::execGetTimeUntilMarketplaceRefresh },
+		{ "IsWaitingForMcp", &UFortStoreContext::execIsWaitingForMcp },
+		{ "MakeChoice", &UFortStoreContext::execMakeChoice },
+		{ "MakePurchase", &UFortStoreContext::execMakePurchase },
+		{ "OpenWebPayment", &UFortStoreContext::execOpenWebPayment },
+		{ "RealMoneyPurchaseFinished", &UFortStoreContext::execRealMoneyPurchaseFinished },
+		{ "RealMoneyPurchaseStart", &UFortStoreContext::execRealMoneyPurchaseStart },
+		{ "StoreHasStarsForSale", &UFortStoreContext::execStoreHasStarsForSale },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortStoreContext_CardAddedToSummaryComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookOverviewWidget();  // RVA 0x02894640 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028941F0 (end 0x02894212)
+// Original VA: 0x00000001428941F0 | File offset: 0x028937F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C761E0) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookOverviewWidget::StaticRegisterNativesUFortCollectionBookOverviewWidget()
+{
+	UClass* Class = UFortCollectionBookOverviewWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnActivated", &UFortCollectionBookOverviewWidget::execOnActivated },
+		{ "OnDeactivated", &UFortCollectionBookOverviewWidget::execOnDeactivated },
+		{ "OnGetChildrenForPageCategory", &UFortCollectionBookOverviewWidget::execOnGetChildrenForPageCategory },
+		{ "OnPageItemClicked", &UFortCollectionBookOverviewWidget::execOnPageItemClicked },
+		{ "OnPageItemSelected", &UFortCollectionBookOverviewWidget::execOnPageItemSelected },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookOverviewWidget_OnActivated_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

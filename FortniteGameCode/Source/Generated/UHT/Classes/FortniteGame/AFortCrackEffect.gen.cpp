@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortCrackEffect::StaticRegisterNativesAFortCrackEffect()
-{
-}
 // IMPLEMENT_CLASS(AFortCrackEffect, 631551421u)
 // Original dynamic initializer: RVA 0x000EE330 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortCrackEffect> AutoInitializeAFortCrackEffect(TEXT("AFortCrackEffect"), sizeof(AFortCrackEffect), 631551421u);

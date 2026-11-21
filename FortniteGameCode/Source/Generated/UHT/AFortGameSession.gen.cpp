@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEDF80 (end 0x00FEDFA2)
+// Original VA: 0x0000000140FEDF80 | File offset: 0x00FED580
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332D610) | Matching: see analysis/functions-uht-natives.json
+void AFortGameSession::StaticRegisterNativesAFortGameSession()
+{
+	UClass* Class = AFortGameSession::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DumpReservations", &AFortGameSession::execDumpReservations },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameSession_DumpReservations_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

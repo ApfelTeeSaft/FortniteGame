@@ -6,6 +6,82 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameUserSettings();  // RVA 0x0241F0D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241ED10 (end 0x0241ED32)
+// Original VA: 0x000000014241ED10 | File offset: 0x0241E310
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F8140) | Matching: see analysis/functions-uht-natives.json
+void UGameUserSettings::StaticRegisterNativesUGameUserSettings()
+{
+	UClass* Class = UGameUserSettings::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyHardwareBenchmarkResults", &UGameUserSettings::execApplyHardwareBenchmarkResults },
+		{ "ApplyNonResolutionSettings", &UGameUserSettings::execApplyNonResolutionSettings },
+		{ "ApplyResolutionSettings", &UGameUserSettings::execApplyResolutionSettings },
+		{ "ApplySettings", &UGameUserSettings::execApplySettings },
+		{ "ConfirmVideoMode", &UGameUserSettings::execConfirmVideoMode },
+		{ "EnableHDRDisplayOutput", &UGameUserSettings::execEnableHDRDisplayOutput },
+		{ "GetAntiAliasingQuality", &UGameUserSettings::execGetAntiAliasingQuality },
+		{ "GetAudioQualityLevel", &UGameUserSettings::execGetAudioQualityLevel },
+		{ "GetCurrentHDRDisplayNits", &UGameUserSettings::execGetCurrentHDRDisplayNits },
+		{ "GetDefaultResolution", &UGameUserSettings::execGetDefaultResolution },
+		{ "GetDefaultResolutionScale", &UGameUserSettings::execGetDefaultResolutionScale },
+		{ "GetDefaultWindowMode", &UGameUserSettings::execGetDefaultWindowMode },
+		{ "GetDefaultWindowPosition", &UGameUserSettings::execGetDefaultWindowPosition },
+		{ "GetDesktopResolution", &UGameUserSettings::execGetDesktopResolution },
+		{ "GetFoliageQuality", &UGameUserSettings::execGetFoliageQuality },
+		{ "GetFrameRateLimit", &UGameUserSettings::execGetFrameRateLimit },
+		{ "GetFullscreenMode", &UGameUserSettings::execGetFullscreenMode },
+		{ "GetGameUserSettings", &UGameUserSettings::execGetGameUserSettings },
+		{ "GetLastConfirmedFullscreenMode", &UGameUserSettings::execGetLastConfirmedFullscreenMode },
+		{ "GetLastConfirmedScreenResolution", &UGameUserSettings::execGetLastConfirmedScreenResolution },
+		{ "GetOverallScalabilityLevel", &UGameUserSettings::execGetOverallScalabilityLevel },
+		{ "GetPostProcessingQuality", &UGameUserSettings::execGetPostProcessingQuality },
+		{ "GetPreferredFullscreenMode", &UGameUserSettings::execGetPreferredFullscreenMode },
+		{ "GetRecommendedResolutionScale", &UGameUserSettings::execGetRecommendedResolutionScale },
+		{ "GetResolutionScaleInformation", &UGameUserSettings::execGetResolutionScaleInformation },
+		{ "GetResolutionScaleInformationEx", &UGameUserSettings::execGetResolutionScaleInformationEx },
+		{ "GetScreenResolution", &UGameUserSettings::execGetScreenResolution },
+		{ "GetShadowQuality", &UGameUserSettings::execGetShadowQuality },
+		{ "GetTextureQuality", &UGameUserSettings::execGetTextureQuality },
+		{ "GetViewDistanceQuality", &UGameUserSettings::execGetViewDistanceQuality },
+		{ "GetVisualEffectQuality", &UGameUserSettings::execGetVisualEffectQuality },
+		{ "IsDirty", &UGameUserSettings::execIsDirty },
+		{ "IsDynamicResolutionDirty", &UGameUserSettings::execIsDynamicResolutionDirty },
+		{ "IsDynamicResolutionEnabled", &UGameUserSettings::execIsDynamicResolutionEnabled },
+		{ "IsFullscreenModeDirty", &UGameUserSettings::execIsFullscreenModeDirty },
+		{ "IsHDREnabled", &UGameUserSettings::execIsHDREnabled },
+		{ "IsScreenResolutionDirty", &UGameUserSettings::execIsScreenResolutionDirty },
+		{ "IsVSyncDirty", &UGameUserSettings::execIsVSyncDirty },
+		{ "IsVSyncEnabled", &UGameUserSettings::execIsVSyncEnabled },
+		{ "LoadSettings", &UGameUserSettings::execLoadSettings },
+		{ "ResetToCurrentSettings", &UGameUserSettings::execResetToCurrentSettings },
+		{ "RevertVideoMode", &UGameUserSettings::execRevertVideoMode },
+		{ "RunHardwareBenchmark", &UGameUserSettings::execRunHardwareBenchmark },
+		{ "SaveSettings", &UGameUserSettings::execSaveSettings },
+		{ "SetAntiAliasingQuality", &UGameUserSettings::execSetAntiAliasingQuality },
+		{ "SetAudioQualityLevel", &UGameUserSettings::execSetAudioQualityLevel },
+		{ "SetBenchmarkFallbackValues", &UGameUserSettings::execSetBenchmarkFallbackValues },
+		{ "SetDynamicResolutionEnabled", &UGameUserSettings::execSetDynamicResolutionEnabled },
+		{ "SetFoliageQuality", &UGameUserSettings::execSetFoliageQuality },
+		{ "SetFrameRateLimit", &UGameUserSettings::execSetFrameRateLimit },
+		{ "SetFullscreenMode", &UGameUserSettings::execSetFullscreenMode },
+		{ "SetOverallScalabilityLevel", &UGameUserSettings::execSetOverallScalabilityLevel },
+		{ "SetPostProcessingQuality", &UGameUserSettings::execSetPostProcessingQuality },
+		{ "SetResolutionScaleNormalized", &UGameUserSettings::execSetResolutionScaleNormalized },
+		{ "SetResolutionScaleValue", &UGameUserSettings::execSetResolutionScaleValue },
+		{ "SetResolutionScaleValueEx", &UGameUserSettings::execSetResolutionScaleValueEx },
+		{ "SetScreenResolution", &UGameUserSettings::execSetScreenResolution },
+		{ "SetShadowQuality", &UGameUserSettings::execSetShadowQuality },
+		{ "SetTextureQuality", &UGameUserSettings::execSetTextureQuality },
+		{ "SetToDefaults", &UGameUserSettings::execSetToDefaults },
+		{ "SetViewDistanceQuality", &UGameUserSettings::execSetViewDistanceQuality },
+		{ "SetVisualEffectQuality", &UGameUserSettings::execSetVisualEffectQuality },
+		{ "SetVSyncEnabled", &UGameUserSettings::execSetVSyncEnabled },
+		{ "SupportsHDRDisplayOutput", &UGameUserSettings::execSupportsHDRDisplayOutput },
+		{ "ValidateSettings", &UGameUserSettings::execValidateSettings },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameUserSettings_ApplyHardwareBenchmarkResults_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

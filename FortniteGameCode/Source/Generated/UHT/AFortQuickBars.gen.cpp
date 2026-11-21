@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortQuickBars();  // RVA 0x0109DA50 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D120 (end 0x0109D142)
+// Original VA: 0x000000014109D120 | File offset: 0x0109C720
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033EE4D0) | Matching: see analysis/functions-uht-natives.json
+void AFortQuickBars::StaticRegisterNativesAFortQuickBars()
+{
+	UClass* Class = AFortQuickBars::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisableSlot", &AFortQuickBars::execDisableSlot },
+		{ "Empty", &AFortQuickBars::execEmpty },
+		{ "EmptySlot", &AFortQuickBars::execEmptySlot },
+		{ "EnableSlot", &AFortQuickBars::execEnableSlot },
+		{ "OnRep_PrimaryQuickBar", &AFortQuickBars::execOnRep_PrimaryQuickBar },
+		{ "OnRep_SecondaryQuickBar", &AFortQuickBars::execOnRep_SecondaryQuickBar },
+		{ "ServerActivateSlotInternal", &AFortQuickBars::execServerActivateSlotInternal },
+		{ "ServerAddItemInternal", &AFortQuickBars::execServerAddItemInternal },
+		{ "ServerRemoveItemInternal", &AFortQuickBars::execServerRemoveItemInternal },
+		{ "ServerSwapItemsInternal", &AFortQuickBars::execServerSwapItemsInternal },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortQuickBars_DisableSlot_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

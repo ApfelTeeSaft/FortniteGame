@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortCollectionBookRewardCardWidget::StaticRegisterNativesUFortCollectionBookRewardCardWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortCollectionBookRewardCardWidget, 510317059u)
 // Original dynamic initializer: RVA 0x00242550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookRewardCardWidget> AutoInitializeUFortCollectionBookRewardCardWidget(TEXT("UFortCollectionBookRewardCardWidget"), sizeof(UFortCollectionBookRewardCardWidget), 510317059u);

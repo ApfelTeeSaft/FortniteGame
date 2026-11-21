@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortListView::StaticRegisterNativesUFortListView()
-{
-}
 // IMPLEMENT_CLASS(UFortListView, 453304344u)
 // Original dynamic initializer: RVA 0x002513D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortListView> AutoInitializeUFortListView(TEXT("UFortListView"), sizeof(UFortListView), 453304344u);

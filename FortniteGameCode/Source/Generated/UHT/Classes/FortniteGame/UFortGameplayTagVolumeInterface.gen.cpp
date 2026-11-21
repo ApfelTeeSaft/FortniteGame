@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortGameplayTagVolumeInterface::StaticRegisterNativesUFortGameplayTagVolumeInterface()
-{
-}
 // IMPLEMENT_CLASS(UFortGameplayTagVolumeInterface, 2316809786u)
 // Original dynamic initializer: RVA 0x000F77D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGameplayTagVolumeInterface> AutoInitializeUFortGameplayTagVolumeInterface(TEXT("UFortGameplayTagVolumeInterface"), sizeof(UFortGameplayTagVolumeInterface), 2316809786u);

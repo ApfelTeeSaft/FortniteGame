@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTwitchLogin();  // RVA 0x0290A910 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A6B0 (end 0x0290A6D2)
+// Original VA: 0x000000014290A6B0 | File offset: 0x02909CB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3C700) | Matching: see analysis/functions-uht-natives.json
+void UFortTwitchLogin::StaticRegisterNativesUFortTwitchLogin()
+{
+	UClass* Class = UFortTwitchLogin::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelLoginFlow", &UFortTwitchLogin::execCancelLoginFlow },
+		{ "GetAccountName", &UFortTwitchLogin::execGetAccountName },
+		{ "GetLinkedTwitchAccountName", &UFortTwitchLogin::execGetLinkedTwitchAccountName },
+		{ "IsLoggedIn", &UFortTwitchLogin::execIsLoggedIn },
+		{ "Login", &UFortTwitchLogin::execLogin },
+		{ "Logout", &UFortTwitchLogin::execLogout },
+		{ "OnLoginFlowModalCreated", &UFortTwitchLogin::execOnLoginFlowModalCreated },
+		{ "OnLoginFlowModalDismissed", &UFortTwitchLogin::execOnLoginFlowModalDismissed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

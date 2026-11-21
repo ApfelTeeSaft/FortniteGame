@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UInputSettings::StaticRegisterNativesUInputSettings()
-{
-}
 // IMPLEMENT_CLASS(UInputSettings, 3646492110u)
 // Original dynamic initializer: RVA 0x00200CA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UInputSettings> AutoInitializeUInputSettings(TEXT("UInputSettings"), sizeof(UInputSettings), 3646492110u);

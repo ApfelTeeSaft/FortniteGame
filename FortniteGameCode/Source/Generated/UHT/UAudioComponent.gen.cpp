@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAudioComponent();  // RVA 0x023DB270 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA620 (end 0x023DA642)
+// Original VA: 0x00000001423DA620 | File offset: 0x023D9C20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038AB9B0) | Matching: see analysis/functions-uht-natives.json
+void UAudioComponent::StaticRegisterNativesUAudioComponent()
+{
+	UClass* Class = UAudioComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AdjustAttenuation", &UAudioComponent::execAdjustAttenuation },
+		{ "AdjustVolume", &UAudioComponent::execAdjustVolume },
+		{ "BP_GetAttenuationSettingsToApply", &UAudioComponent::execBP_GetAttenuationSettingsToApply },
+		{ "FadeIn", &UAudioComponent::execFadeIn },
+		{ "FadeOut", &UAudioComponent::execFadeOut },
+		{ "IsPlaying", &UAudioComponent::execIsPlaying },
+		{ "Play", &UAudioComponent::execPlay },
+		{ "SetBoolParameter", &UAudioComponent::execSetBoolParameter },
+		{ "SetFloatParameter", &UAudioComponent::execSetFloatParameter },
+		{ "SetIntParameter", &UAudioComponent::execSetIntParameter },
+		{ "SetLowPassFilterEnabled", &UAudioComponent::execSetLowPassFilterEnabled },
+		{ "SetLowPassFilterFrequency", &UAudioComponent::execSetLowPassFilterFrequency },
+		{ "SetPaused", &UAudioComponent::execSetPaused },
+		{ "SetPitchMultiplier", &UAudioComponent::execSetPitchMultiplier },
+		{ "SetSound", &UAudioComponent::execSetSound },
+		{ "SetSubmixSend", &UAudioComponent::execSetSubmixSend },
+		{ "SetUISound", &UAudioComponent::execSetUISound },
+		{ "SetVolumeMultiplier", &UAudioComponent::execSetVolumeMultiplier },
+		{ "SetWaveParameter", &UAudioComponent::execSetWaveParameter },
+		{ "Stop", &UAudioComponent::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAudioComponent_AdjustAttenuation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

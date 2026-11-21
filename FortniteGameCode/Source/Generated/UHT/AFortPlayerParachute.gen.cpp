@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerParachute();  // RVA 0x0107FDD0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FA40 (end 0x0107FA62)
+// Original VA: 0x000000014107FA40 | File offset: 0x0107F040
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033CBB90) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerParachute::StaticRegisterNativesAFortPlayerParachute()
+{
+	UClass* Class = AFortPlayerParachute::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFortPlayerPawn", &AFortPlayerParachute::execGetFortPlayerPawn },
+		{ "GetParachuteRootMesh", &AFortPlayerParachute::execGetParachuteRootMesh },
+		{ "OnRep_ParachuteItemDef", &AFortPlayerParachute::execOnRep_ParachuteItemDef },
+		{ "OnRep_PlayerPawn", &AFortPlayerParachute::execOnRep_PlayerPawn },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerParachute_GetFortPlayerPawn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

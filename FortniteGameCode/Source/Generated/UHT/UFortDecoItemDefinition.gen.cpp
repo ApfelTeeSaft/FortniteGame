@@ -6,6 +6,42 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDecoItemDefinition();  // RVA 0x00FD0050 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFA50 (end 0x00FCFA72)
+// Original VA: 0x0000000140FCFA50 | File offset: 0x00FCF050
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032FEDB0) | Matching: see analysis/functions-uht-natives.json
+void UFortDecoItemDefinition::StaticRegisterNativesUFortDecoItemDefinition()
+{
+	UClass* Class = UFortDecoItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBlueprintClass", &UFortDecoItemDefinition::execGetBlueprintClass },
+		{ "GetGridSnapSizeOverride", &UFortDecoItemDefinition::execGetGridSnapSizeOverride },
+		{ "GetMaxPlacementDistance", &UFortDecoItemDefinition::execGetMaxPlacementDistance },
+		{ "GetPlacementPreviewClass", &UFortDecoItemDefinition::execGetPlacementPreviewClass },
+		{ "GetPlacementTypeOverride", &UFortDecoItemDefinition::execGetPlacementTypeOverride },
+		{ "GetRotationAngleIncrement", &UFortDecoItemDefinition::execGetRotationAngleIncrement },
+		{ "RequiresPermissionToEditWorld", &UFortDecoItemDefinition::execRequiresPermissionToEditWorld },
+		{ "RequiresPlayerPlaceableAttachmentActors", &UFortDecoItemDefinition::execRequiresPlayerPlaceableAttachmentActors },
+		{ "ShouldAllowAnyFloorPlacement", &UFortDecoItemDefinition::execShouldAllowAnyFloorPlacement },
+		{ "ShouldAllowPlacementOnBuildings", &UFortDecoItemDefinition::execShouldAllowPlacementOnBuildings },
+		{ "ShouldAllowPlacementOnWorldGeometry", &UFortDecoItemDefinition::execShouldAllowPlacementOnWorldGeometry },
+		{ "ShouldAllowStairsWhenAttachingToFloors", &UFortDecoItemDefinition::execShouldAllowStairsWhenAttachingToFloors },
+		{ "ShouldAttachWhenPlacing", &UFortDecoItemDefinition::execShouldAttachWhenPlacing },
+		{ "ShouldCancelAbilityOnUnequip", &UFortDecoItemDefinition::execShouldCancelAbilityOnUnequip },
+		{ "ShouldCancelToolWhenPlaced", &UFortDecoItemDefinition::execShouldCancelToolWhenPlaced },
+		{ "ShouldConsumeWhenPlaced", &UFortDecoItemDefinition::execShouldConsumeWhenPlaced },
+		{ "ShouldDestroySmallObjectsWhenPlaced", &UFortDecoItemDefinition::execShouldDestroySmallObjectsWhenPlaced },
+		{ "ShouldDisableLocationLerpWhilePlacing", &UFortDecoItemDefinition::execShouldDisableLocationLerpWhilePlacing },
+		{ "ShouldDisableRotationLerpWhilePlacing", &UFortDecoItemDefinition::execShouldDisableRotationLerpWhilePlacing },
+		{ "ShouldDisableScaleLerpWhilePlacing", &UFortDecoItemDefinition::execShouldDisableScaleLerpWhilePlacing },
+		{ "ShouldForceIgnoreBuildingOverlaps", &UFortDecoItemDefinition::execShouldForceIgnoreBuildingOverlaps },
+		{ "ShouldForceIgnoreOverlapTest", &UFortDecoItemDefinition::execShouldForceIgnoreOverlapTest },
+		{ "ShouldIgnoreCollisionWithCriticalActors", &UFortDecoItemDefinition::execShouldIgnoreCollisionWithCriticalActors },
+		{ "ShouldSnapYawToHorizontalAxes", &UFortDecoItemDefinition::execShouldSnapYawToHorizontalAxes },
+		{ "ShouldUseRelativeCameraRotation", &UFortDecoItemDefinition::execShouldUseRelativeCameraRotation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDecoItemDefinition_GetBlueprintClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

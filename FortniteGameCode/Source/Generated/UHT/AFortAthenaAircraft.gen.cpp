@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAthenaAircraft();  // RVA 0x00F9ECF0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E480 (end 0x00F9E4A2)
+// Original VA: 0x0000000140F9E480 | File offset: 0x00F9DA80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C0440) | Matching: see analysis/functions-uht-natives.json
+void AFortAthenaAircraft::StaticRegisterNativesAFortAthenaAircraft()
+{
+	UClass* Class = AFortAthenaAircraft::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDropEndTime", &AFortAthenaAircraft::execGetDropEndTime },
+		{ "GetDropStartTime", &AFortAthenaAircraft::execGetDropStartTime },
+		{ "OnRep_JumpFlashCount", &AFortAthenaAircraft::execOnRep_JumpFlashCount },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_AFortAthenaAircraft_FortAthenaAircraftDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

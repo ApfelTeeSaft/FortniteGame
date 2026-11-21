@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemTransform();  // RVA 0x028CF630 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF210 (end 0x028CF232)
+// Original VA: 0x00000001428CF210 | File offset: 0x028CE810
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD9728) | Matching: see analysis/functions-uht-natives.json
+void UFortItemTransform::StaticRegisterNativesUFortItemTransform()
+{
+	UClass* Class = UFortItemTransform::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ProcessPendingSeenTransformKeys", &UFortItemTransform::execProcessPendingSeenTransformKeys },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

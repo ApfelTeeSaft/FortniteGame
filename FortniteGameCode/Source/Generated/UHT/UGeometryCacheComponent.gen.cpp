@@ -6,6 +6,32 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGeometryCacheComponent();  // RVA 0x01D40030 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FD90 (end 0x01D3FDB2)
+// Original VA: 0x0000000141D3FD90 | File offset: 0x01D3F390
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03714640) | Matching: see analysis/functions-uht-natives.json
+void UGeometryCacheComponent::StaticRegisterNativesUGeometryCacheComponent()
+{
+	UClass* Class = UGeometryCacheComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPlaybackSpeed", &UGeometryCacheComponent::execGetPlaybackSpeed },
+		{ "GetStartTimeOffset", &UGeometryCacheComponent::execGetStartTimeOffset },
+		{ "IsLooping", &UGeometryCacheComponent::execIsLooping },
+		{ "IsPlaying", &UGeometryCacheComponent::execIsPlaying },
+		{ "IsPlayingReversed", &UGeometryCacheComponent::execIsPlayingReversed },
+		{ "Pause", &UGeometryCacheComponent::execPause },
+		{ "Play", &UGeometryCacheComponent::execPlay },
+		{ "PlayFromStart", &UGeometryCacheComponent::execPlayFromStart },
+		{ "PlayReversed", &UGeometryCacheComponent::execPlayReversed },
+		{ "PlayReversedFromEnd", &UGeometryCacheComponent::execPlayReversedFromEnd },
+		{ "SetGeometryCache", &UGeometryCacheComponent::execSetGeometryCache },
+		{ "SetLooping", &UGeometryCacheComponent::execSetLooping },
+		{ "SetPlaybackSpeed", &UGeometryCacheComponent::execSetPlaybackSpeed },
+		{ "SetStartTimeOffset", &UGeometryCacheComponent::execSetStartTimeOffset },
+		{ "Stop", &UGeometryCacheComponent::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGeometryCacheComponent_GetPlaybackSpeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

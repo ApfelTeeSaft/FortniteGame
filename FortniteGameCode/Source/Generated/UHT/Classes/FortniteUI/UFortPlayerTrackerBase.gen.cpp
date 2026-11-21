@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPlayerTrackerBase::StaticRegisterNativesUFortPlayerTrackerBase()
-{
-}
 // IMPLEMENT_CLASS(UFortPlayerTrackerBase, 1275022735u)
 // Original dynamic initializer: RVA 0x00255CC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPlayerTrackerBase> AutoInitializeUFortPlayerTrackerBase(TEXT("UFortPlayerTrackerBase"), sizeof(UFortPlayerTrackerBase), 1275022735u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UUserWidget::StaticRegisterNativesUUserWidget()
-{
-}
 // IMPLEMENT_CLASS(UUserWidget, 3843233650u)
 // Original dynamic initializer: RVA 0x001B4250 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UUserWidget> AutoInitializeUUserWidget(TEXT("UUserWidget"), sizeof(UUserWidget), 3843233650u);

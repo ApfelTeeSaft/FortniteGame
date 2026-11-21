@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UWidget::StaticRegisterNativesUWidget()
-{
-}
 // IMPLEMENT_CLASS(UWidget, 4287492281u)
 // Original dynamic initializer: RVA 0x001B4310 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UWidget> AutoInitializeUWidget(TEXT("UWidget"), sizeof(UWidget), 4287492281u);

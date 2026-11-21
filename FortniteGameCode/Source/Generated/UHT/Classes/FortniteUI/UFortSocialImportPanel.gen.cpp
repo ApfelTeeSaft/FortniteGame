@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSocialImportPanel::StaticRegisterNativesUFortSocialImportPanel()
-{
-}
 // IMPLEMENT_CLASS(UFortSocialImportPanel, 3992038725u)
 // Original dynamic initializer: RVA 0x0025AD00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSocialImportPanel> AutoInitializeUFortSocialImportPanel(TEXT("UFortSocialImportPanel"), sizeof(UFortSocialImportPanel), 3992038725u);

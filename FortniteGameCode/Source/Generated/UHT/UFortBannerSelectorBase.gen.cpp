@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBannerSelectorBase();  // RVA 0x02894400 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02893FE0 (end 0x02894002)
+// Original VA: 0x0000000142893FE0 | File offset: 0x028935E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C74E50) | Matching: see analysis/functions-uht-natives.json
+void UFortBannerSelectorBase::StaticRegisterNativesUFortBannerSelectorBase()
+{
+	UClass* Class = UFortBannerSelectorBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CompleteHomebaseBannerSelection", &UFortBannerSelectorBase::execCompleteHomebaseBannerSelection },
+		{ "CompleteHomebaseName", &UFortBannerSelectorBase::execCompleteHomebaseName },
+		{ "HandleBannerNameChanged", &UFortBannerSelectorBase::execHandleBannerNameChanged },
+		{ "HasIllegalChars", &UFortBannerSelectorBase::execHasIllegalChars },
+		{ "IsPlayerNameValid", &UFortBannerSelectorBase::execIsPlayerNameValid },
+		{ "UpdateErrorText", &UFortBannerSelectorBase::execUpdateErrorText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBannerSelectorBase_CompleteHomebaseBannerSelection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

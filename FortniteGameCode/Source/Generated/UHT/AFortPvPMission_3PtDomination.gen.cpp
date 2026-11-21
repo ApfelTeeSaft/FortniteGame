@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPvPMission_3PtDomination();  // RVA 0x01093130 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01092E90 (end 0x01092EB2)
+// Original VA: 0x0000000141092E90 | File offset: 0x01092490
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033DC998) | Matching: see analysis/functions-uht-natives.json
+void AFortPvPMission_3PtDomination::StaticRegisterNativesAFortPvPMission_3PtDomination()
+{
+	UClass* Class = AFortPvPMission_3PtDomination::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CapturePointSetterHackTimer", &AFortPvPMission_3PtDomination::execCapturePointSetterHackTimer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSetterHackTimer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

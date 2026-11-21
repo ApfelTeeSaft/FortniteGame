@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortLobbyBeaconClientRM::StaticRegisterNativesAFortLobbyBeaconClientRM()
-{
-}
 // IMPLEMENT_CLASS(AFortLobbyBeaconClientRM, 3572604396u)
 // Original dynamic initializer: RVA 0x000FCE70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLobbyBeaconClientRM> AutoInitializeAFortLobbyBeaconClientRM(TEXT("AFortLobbyBeaconClientRM"), sizeof(AFortLobbyBeaconClientRM), 3572604396u);

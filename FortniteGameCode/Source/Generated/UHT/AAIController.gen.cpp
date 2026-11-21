@@ -6,6 +6,36 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AAIController();  // RVA 0x01D1BA70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B110 (end 0x01D1B132)
+// Original VA: 0x0000000141D1B110 | File offset: 0x01D1A710
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F0B10) | Matching: see analysis/functions-uht-natives.json
+void AAIController::StaticRegisterNativesAAIController()
+{
+	UClass* Class = AAIController::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClaimTaskResource", &AAIController::execClaimTaskResource },
+		{ "GetAIPerceptionComponent", &AAIController::execGetAIPerceptionComponent },
+		{ "GetFocalPoint", &AAIController::execGetFocalPoint },
+		{ "GetFocalPointOnActor", &AAIController::execGetFocalPointOnActor },
+		{ "GetFocusActor", &AAIController::execGetFocusActor },
+		{ "GetImmediateMoveDestination", &AAIController::execGetImmediateMoveDestination },
+		{ "GetMoveStatus", &AAIController::execGetMoveStatus },
+		{ "GetPathFollowingComponent", &AAIController::execGetPathFollowingComponent },
+		{ "HasPartialPath", &AAIController::execHasPartialPath },
+		{ "K2_ClearFocus", &AAIController::execK2_ClearFocus },
+		{ "K2_SetFocalPoint", &AAIController::execK2_SetFocalPoint },
+		{ "K2_SetFocus", &AAIController::execK2_SetFocus },
+		{ "MoveToActor", &AAIController::execMoveToActor },
+		{ "MoveToLocation", &AAIController::execMoveToLocation },
+		{ "OnGameplayTaskResourcesClaimed", &AAIController::execOnGameplayTaskResourcesClaimed },
+		{ "RunBehaviorTree", &AAIController::execRunBehaviorTree },
+		{ "SetMoveBlockDetection", &AAIController::execSetMoveBlockDetection },
+		{ "UnclaimTaskResource", &AAIController::execUnclaimTaskResource },
+		{ "UseBlackboard", &AAIController::execUseBlackboard },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AAIController_ClaimTaskResource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

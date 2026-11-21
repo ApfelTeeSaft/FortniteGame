@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBoxComponent();  // RVA 0x023EA850 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9EE0 (end 0x023E9F02)
+// Original VA: 0x00000001423E9EE0 | File offset: 0x023E94E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B8908) | Matching: see analysis/functions-uht-natives.json
+void UBoxComponent::StaticRegisterNativesUBoxComponent()
+{
+	UClass* Class = UBoxComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetScaledBoxExtent", &UBoxComponent::execGetScaledBoxExtent },
+		{ "GetUnscaledBoxExtent", &UBoxComponent::execGetUnscaledBoxExtent },
+		{ "SetBoxExtent", &UBoxComponent::execSetBoxExtent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBoxComponent_GetScaledBoxExtent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

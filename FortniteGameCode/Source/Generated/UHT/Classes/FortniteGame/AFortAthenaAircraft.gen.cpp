@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortAthenaAircraft::StaticRegisterNativesAFortAthenaAircraft()
-{
-}
 // IMPLEMENT_CLASS(AFortAthenaAircraft, 2126471927u)
 // Original dynamic initializer: RVA 0x000E6650 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAthenaAircraft> AutoInitializeAFortAthenaAircraft(TEXT("AFortAthenaAircraft"), sizeof(AFortAthenaAircraft), 2126471927u);

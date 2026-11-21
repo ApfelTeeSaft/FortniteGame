@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ALight();  // RVA 0x02470300 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FE60 (end 0x0246FE82)
+// Original VA: 0x000000014246FE60 | File offset: 0x0246F460
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03930B80) | Matching: see analysis/functions-uht-natives.json
+void ALight::StaticRegisterNativesALight()
+{
+	UClass* Class = ALight::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBrightness", &ALight::execGetBrightness },
+		{ "GetLightColor", &ALight::execGetLightColor },
+		{ "IsEnabled", &ALight::execIsEnabled },
+		{ "OnRep_bEnabled", &ALight::execOnRep_bEnabled },
+		{ "SetAffectTranslucentLighting", &ALight::execSetAffectTranslucentLighting },
+		{ "SetBrightness", &ALight::execSetBrightness },
+		{ "SetCastShadows", &ALight::execSetCastShadows },
+		{ "SetEnabled", &ALight::execSetEnabled },
+		{ "SetLightColor", &ALight::execSetLightColor },
+		{ "SetLightFunctionFadeDistance", &ALight::execSetLightFunctionFadeDistance },
+		{ "SetLightFunctionMaterial", &ALight::execSetLightFunctionMaterial },
+		{ "SetLightFunctionScale", &ALight::execSetLightFunctionScale },
+		{ "ToggleEnabled", &ALight::execToggleEnabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ALight_GetBrightness_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

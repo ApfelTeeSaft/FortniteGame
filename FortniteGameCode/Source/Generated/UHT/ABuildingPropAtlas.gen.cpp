@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingPropAtlas();  // RVA 0x00F6C540 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BE40 (end 0x00F6BE62)
+// Original VA: 0x0000000140F6BE40 | File offset: 0x00F6B440
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032787A0) | Matching: see analysis/functions-uht-natives.json
+void ABuildingPropAtlas::StaticRegisterNativesABuildingPropAtlas()
+{
+	UClass* Class = ABuildingPropAtlas::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDefenseAnimSpeed", &ABuildingPropAtlas::execGetDefenseAnimSpeed },
+		{ "GetDefenseProgress", &ABuildingPropAtlas::execGetDefenseProgress },
+		{ "InitializeAudio", &ABuildingPropAtlas::execInitializeAudio },
+		{ "InitializeRings", &ABuildingPropAtlas::execInitializeRings },
+		{ "PlayRingDamage", &ABuildingPropAtlas::execPlayRingDamage },
+		{ "PlayRingsIdleLoop", &ABuildingPropAtlas::execPlayRingsIdleLoop },
+		{ "PlayRingSpinning", &ABuildingPropAtlas::execPlayRingSpinning },
+		{ "PlayRingsReset", &ABuildingPropAtlas::execPlayRingsReset },
+		{ "RestoreRingsHierarchy", &ABuildingPropAtlas::execRestoreRingsHierarchy },
+		{ "SetupAnimationSpeed", &ABuildingPropAtlas::execSetupAnimationSpeed },
+		{ "SetupAnimationTransition", &ABuildingPropAtlas::execSetupAnimationTransition },
+		{ "StopRingSpinning", &ABuildingPropAtlas::execStopRingSpinning },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingPropAtlas_GetDefenseAnimSpeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

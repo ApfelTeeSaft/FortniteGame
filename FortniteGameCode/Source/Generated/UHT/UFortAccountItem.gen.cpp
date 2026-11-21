@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountItem();  // RVA 0x00F82080 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F818A0 (end 0x00F818C2)
+// Original VA: 0x0000000140F818A0 | File offset: 0x00F80EA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03297568) | Matching: see analysis/functions-uht-natives.json
+void UFortAccountItem::StaticRegisterNativesUFortAccountItem()
+{
+	UClass* Class = UFortAccountItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HasBeenSeenLocally", &UFortAccountItem::execHasBeenSeenLocally },
+		{ "IsFavorite", &UFortAccountItem::execIsFavorite },
+		{ "MarkItemAsSeenBP", &UFortAccountItem::execMarkItemAsSeenBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAccountItem_HasBeenSeenLocally_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

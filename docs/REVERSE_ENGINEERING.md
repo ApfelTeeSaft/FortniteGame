@@ -162,20 +162,90 @@ UHT-generated tables in plaintext `.rdata` name functions directly. The output i
 
 | Table | Layout | Found |
 | --- | --- | --- |
-| `FNameNativePtrPair[]` (per class, in `StaticRegisterNatives<Class>`) | {name, exec thunk} | 956 arrays, 4,460 entries, 4,215 distinct exec thunks (some ICF-folded) |
-| `FClassFunctionLinkInfo[]` (per class, in `FClassParams`) | {`Z_Construct_UFunction_*`, name} | 1,249 arrays, 11,130 entries |
+| `FNameNativePtrPair[]` (per class, in `StaticRegisterNatives<Class>`) | {name, exec thunk} | 1,155 class arrays, 9,902 entries, 9,193 distinct exec thunks (some ICF-folded) |
+| `FClassFunctionLinkInfo[]` (per class, in `FClassParams`) | {`Z_Construct_UFunction_*`, name} | 1,243 arrays, 11,102 entries |
 
 The two layouts interleave the same pointer kinds, so a run read at the wrong 8-byte
-alignment looks like the other table with one entry fewer. Each run takes the reading with
-the longer run.
+alignment looks like the other table with one entry fewer. A run is kept only when it is
+longer than every run of the other kind that overlaps its shifted reading.
+
+An exec thunk with no parameters is P_FINISH and a tail call. It is a leaf function without
+a `.pdata` entry, and 1,374 thunks are of this kind. Pointers to them are accepted when the
+code starts with P_FINISH's load of `Stack.Code` (`mov r64, [rdx+0x20]`). The first version
+of the scanner accepted only `.pdata` starts, so these entries split their arrays and hid
+their starts. Accepting them raised the attributed arrays from 696 to 1,155 and their entries
+from 3,070 to 9,902. The scanner had also kept 7 fragments of native arrays as
+function-link arrays; they are now dropped. The 16 remaining unattributed arrays are libcurl protocol tables, not UHT data.
 
 Class attribution follows unique RIP-relative `LEA` references in the decrypted code: the
 native array is loaded by exactly one function (`StaticRegisterNatives<Class>`). That
 function's address is loaded by exactly one function (`GetPrivateStaticClass`), which also
-loads `TEXT("<Class>") + 1`, i.e. a wide string + 2. This attributes 696 of 956 arrays. No
-class, registrar or `GetPrivateStaticClass` is shared between attributions. In total
-16,734 denominator functions (10.6 %) now carry reflection-derived names. Names from these
-tables count as `confirmed`; class attribution as `high-confidence inferred`.
+loads `TEXT("<Class>") + 1`, i.e. a wide string + 2. This attributes 1,155 of 1,171 arrays.
+No class, registrar or `GetPrivateStaticClass` is shared between attributions. In total
+21,231 denominator functions now carry reflection-derived names. Names from these tables
+count as `confirmed`; class attribution as `high-confidence inferred`. With the corrected
+arrays, all 1,155 `StaticRegisterNatives<Class>` match exactly.
+
+## Native implementations (`tools/analysis/natives.py`)
+
+Each exec thunk calls the C++ function it wraps. UHT 4.20 chooses that function's name
+(`CppImplName`, `ParserHelper.h`) from the UFunction's flags:
+- native RPCs (`FUNC_Net`, unless `FUNC_NetResponse`) call `<Name>_Implementation`, first
+  checked by `<Name>_Validate` when `FUNC_NetValidate` is set;
+- native Blueprint events call `<Name>_Implementation`;
+- everything else calls `<Name>`.
+
+The flags come from the function's `FFunctionParams` record (`+0x20`).
+
+The thunk is disassembled from P_FINISH's store to `Stack.Code` onwards. Aliases of Stack,
+Context and Context's vtable pointer are tracked through registers, spills to stack slots
+(`rsp`- or `rbp`-relative), and across branches. The native call is:
+- either a direct call or tail jump to a function that no other exec thunk calls. Helpers
+  such as the `FString` copy are shared by many thunks.
+- or a call through Context's vtable.
+
+A thunk is named only when exactly the predicted calls are found, in order: one, or the
+`_Validate` / `_Implementation` pair. For a validated RPC, the `RPC_ValidateFailed` literal
+must agree with the predicted name.
+
+A direct native that is not static must receive Context in rcx. Of the 5,189 member
+natives, 10 did not; those natives were inlined into the thunk, so the call belongs to one
+of their callees. They stay unresolved.
+
+A second check is the module range. A monolithic link keeps a module's objects together,
+so a native lies next to its package's generated code. 104 named natives do not: identical
+code folded with another module's, or a static native inlined around an outside call. They
+are kept as `low-confidence inferred`.
+
+| Result | Count |
+| --- | --- |
+| exec thunks attributed to a class | 9,193 (1,374 leaf) |
+| direct natives named | 6,758, 6,654 high-confidence (5,104 in the denominator, 1,654 leaf) |
+| virtual natives, located by vtable offset | 1,451 |
+| unresolved | 1,005: inlined or shared natives 559, linker-folded thunks 328, flags unknown 219, other call counts 76, no P_FINISH store 25, member call without Context 10, target already a generated function 1 |
+
+Engine headers corroborate the results where the local UE4.20.0 source declares the
+function:
+- 2,653 of the 2,673 direct natives are non-virtual (99.25 %). The other 20 are declared
+  `virtual` in public 4.20.0 but called directly here, a candidate engine difference
+  ([ENGINE_DIFFERENCES.md](ENGINE_DIFFERENCES.md) #4):
+  - `UAbilitySystemComponent`: `MakeEffectContext`, `MakeOutgoingSpec`,
+    `OnRep_ActivateAbilities`, `OnRep_ReplicatedAnimMontage`, `RemoveActiveGameplayEffect`,
+    `RemoveActiveGameplayEffectBySourceEffect`, `SetActiveGameplayEffectLevel`,
+    `SetUserAbilityActivationInhibited`, `TargetCancel`, `TargetConfirm`;
+  - `UGameplayAbility::RemoveGrantedByEffect`, `UActorComponent::OnRep_IsActive`;
+  - `UUserWidget::GetOwningLocalPlayer`, `UWidget::IsHovered`;
+  - `UCheatManager::InvertMouse`, `UCheatManager::SetMouseSensitivityToDefault`;
+  - `UCharacterMovementComponent::K2_ComputeFloorDist`, `UCharacterMovementComponent::K2_FindFloor`;
+  - `ADefaultPawn::LookUpAtRate`, `ADefaultPawn::TurnAtRate`.
+- 345 of the 355 virtual natives are declared `virtual` (97.2 %). The 10 others are
+  header-inline natives whose inlined body calls a different virtual function (for example
+  `AController::IsLocalPlayerController`). This error mode cannot be told apart in the
+  binary alone, so virtual offsets are evidence for vtable modelling, not names of
+  addresses.
+
+Exec thunks stay unmatched. Each depends on its native's address, which nothing else
+corroborates, and on decoded parameter properties.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 

@@ -6,6 +6,49 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestManager();  // RVA 0x01096560 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01095F00 (end 0x01095F22)
+// Original VA: 0x0000000141095F00 | File offset: 0x01095500
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033E6E70) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestManager::StaticRegisterNativesUFortQuestManager()
+{
+	UClass* Class = UFortQuestManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClaimNextCompletedQuestReward", &UFortQuestManager::execClaimNextCompletedQuestReward },
+		{ "ClaimQuestReward", &UFortQuestManager::execClaimQuestReward },
+		{ "ClaimSelectedQuestReward", &UFortQuestManager::execClaimSelectedQuestReward },
+		{ "ForceTriggerQuestsUpdated", &UFortQuestManager::execForceTriggerQuestsUpdated },
+		{ "GetBroadcasterQuestWithOpenWindow", &UFortQuestManager::execGetBroadcasterQuestWithOpenWindow },
+		{ "GetCompletedQuests", &UFortQuestManager::execGetCompletedQuests },
+		{ "GetCurrentQuests", &UFortQuestManager::execGetCurrentQuests },
+		{ "GetCurrentQuestsCategories", &UFortQuestManager::execGetCurrentQuestsCategories },
+		{ "GetMainQuest", &UFortQuestManager::execGetMainQuest },
+		{ "GetNextUnseenQuest", &UFortQuestManager::execGetNextUnseenQuest },
+		{ "GetPinnedQuests", &UFortQuestManager::execGetPinnedQuests },
+		{ "GetQuestCategory", &UFortQuestManager::execGetQuestCategory },
+		{ "GetQuestWithDefinition", &UFortQuestManager::execGetQuestWithDefinition },
+		{ "GetRemainingDailyQuestRerolls", &UFortQuestManager::execGetRemainingDailyQuestRerolls },
+		{ "GetSourceAndContextTags", &UFortQuestManager::execGetSourceAndContextTags },
+		{ "GetUnseenQuestCount", &UFortQuestManager::execGetUnseenQuestCount },
+		{ "GrantFirstDailyQuest", &UFortQuestManager::execGrantFirstDailyQuest },
+		{ "HasCompletedObjective", &UFortQuestManager::execHasCompletedObjective },
+		{ "HasCompletedObjectiveWithName", &UFortQuestManager::execHasCompletedObjectiveWithName },
+		{ "HasCompletedQuest", &UFortQuestManager::execHasCompletedQuest },
+		{ "HasQuestBeenSeenLocally", &UFortQuestManager::execHasQuestBeenSeenLocally },
+		{ "HasUnsavedPrimaryMissionProgress", &UFortQuestManager::execHasUnsavedPrimaryMissionProgress },
+		{ "HasUnseenQuests", &UFortQuestManager::execHasUnseenQuests },
+		{ "IsMainQuest", &UFortQuestManager::execIsMainQuest },
+		{ "IsObjectiveInProgress", &UFortQuestManager::execIsObjectiveInProgress },
+		{ "IsObjectiveWithNameInProgress", &UFortQuestManager::execIsObjectiveWithNameInProgress },
+		{ "IsQuestInProgress", &UFortQuestManager::execIsQuestInProgress },
+		{ "MarkQuestSeen", &UFortQuestManager::execMarkQuestSeen },
+		{ "MarkQuestsSeen", &UFortQuestManager::execMarkQuestsSeen },
+		{ "RerollDailyQuest", &UFortQuestManager::execRerollDailyQuest },
+		{ "SendCustomStatEvent", &UFortQuestManager::execSendCustomStatEvent },
+		{ "SetQuestPinned", &UFortQuestManager::execSetQuestPinned },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestManager_ClaimNextCompletedQuestReward_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

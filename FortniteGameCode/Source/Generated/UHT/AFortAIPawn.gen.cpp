@@ -6,6 +6,75 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAIPawn();  // RVA 0x00F91390 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90C30 (end 0x00F90C52)
+// Original VA: 0x0000000140F90C30 | File offset: 0x00F90230
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032AE7B0) | Matching: see analysis/functions-uht-natives.json
+void AFortAIPawn::StaticRegisterNativesAFortAIPawn()
+{
+	UClass* Class = AFortAIPawn::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddFortAbilitySet", &AFortAIPawn::execAddFortAbilitySet },
+		{ "AddUnreachablePickup", &AFortAIPawn::execAddUnreachablePickup },
+		{ "CanHitTargetWithAbility", &AFortAIPawn::execCanHitTargetWithAbility },
+		{ "ClearAIFocalPoint", &AFortAIPawn::execClearAIFocalPoint },
+		{ "FinishedEncounterSpawn", &AFortAIPawn::execFinishedEncounterSpawn },
+		{ "ForceKillNoDBNO", &AFortAIPawn::execForceKillNoDBNO },
+		{ "GetCharacterGender", &AFortAIPawn::execGetCharacterGender },
+		{ "GetCurrentAimTarget", &AFortAIPawn::execGetCurrentAimTarget },
+		{ "GetDefenderItemInstanceId", &AFortAIPawn::execGetDefenderItemInstanceId },
+		{ "GetDifficultyLevel", &AFortAIPawn::execGetDifficultyLevel },
+		{ "GetGroundSpeedForUrgency", &AFortAIPawn::execGetGroundSpeedForUrgency },
+		{ "GetImpactPhysicalSurfaceSound", &AFortAIPawn::execGetImpactPhysicalSurfaceSound },
+		{ "GetMovementStyle", &AFortAIPawn::execGetMovementStyle },
+		{ "GetMovementUrgency", &AFortAIPawn::execGetMovementUrgency },
+		{ "GetScoreValue", &AFortAIPawn::execGetScoreValue },
+		{ "GetSpawnLocation", &AFortAIPawn::execGetSpawnLocation },
+		{ "GetSpawnPointValue", &AFortAIPawn::execGetSpawnPointValue },
+		{ "GetSpawnRotation", &AFortAIPawn::execGetSpawnRotation },
+		{ "GrabPickup", &AFortAIPawn::execGrabPickup },
+		{ "HasTether", &AFortAIPawn::execHasTether },
+		{ "IsDefender", &AFortAIPawn::execIsDefender },
+		{ "IsInCombat", &AFortAIPawn::execIsInCombat },
+		{ "IsInsideTetherBounds", &AFortAIPawn::execIsInsideTetherBounds },
+		{ "K2_FindExistingItemForDefinition", &AFortAIPawn::execK2_FindExistingItemForDefinition },
+		{ "K2_GetDefenderItem", &AFortAIPawn::execK2_GetDefenderItem },
+		{ "OnEncounterSpawnEnableMeleeAttacking", &AFortAIPawn::execOnEncounterSpawnEnableMeleeAttacking },
+		{ "OnEncounterSpawnEnableRangedAttacking", &AFortAIPawn::execOnEncounterSpawnEnableRangedAttacking },
+		{ "OnRep_AppearanceOverrideEntryIndex", &AFortAIPawn::execOnRep_AppearanceOverrideEntryIndex },
+		{ "OnRep_bIsSleeping", &AFortAIPawn::execOnRep_bIsSleeping },
+		{ "OnRep_CurrentAIRotationRate", &AFortAIPawn::execOnRep_CurrentAIRotationRate },
+		{ "OnRep_CurrentFortAILODLevel", &AFortAIPawn::execOnRep_CurrentFortAILODLevel },
+		{ "OnRep_CurrentWeapon", &AFortAIPawn::execOnRep_CurrentWeapon },
+		{ "OnRep_EnableBlockingCollisionWithOtherAI", &AFortAIPawn::execOnRep_EnableBlockingCollisionWithOtherAI },
+		{ "OnRep_Inventory", &AFortAIPawn::execOnRep_Inventory },
+		{ "OnRep_MinimapViewableDistance", &AFortAIPawn::execOnRep_MinimapViewableDistance },
+		{ "OnSleepingAIsFloorBuildingActorDied", &AFortAIPawn::execOnSleepingAIsFloorBuildingActorDied },
+		{ "ResetAIRotationRateToDefault", &AFortAIPawn::execResetAIRotationRateToDefault },
+		{ "ReviveFromDBNO", &AFortAIPawn::execReviveFromDBNO },
+		{ "SetAIFocalPoint", &AFortAIPawn::execSetAIFocalPoint },
+		{ "SetAIRotationRate", &AFortAIPawn::execSetAIRotationRate },
+		{ "SetAIType", &AFortAIPawn::execSetAIType },
+		{ "SetBlockCollisionWithOtherAI", &AFortAIPawn::execSetBlockCollisionWithOtherAI },
+		{ "SetCanInteract", &AFortAIPawn::execSetCanInteract },
+		{ "SetCanSleep", &AFortAIPawn::execSetCanSleep },
+		{ "SetCollisionProfileName", &AFortAIPawn::execSetCollisionProfileName },
+		{ "SetCurrentAimTarget", &AFortAIPawn::execSetCurrentAimTarget },
+		{ "SetDefenderTrap", &AFortAIPawn::execSetDefenderTrap },
+		{ "SetEncounterInfo", &AFortAIPawn::execSetEncounterInfo },
+		{ "SetEyeColor", &AFortAIPawn::execSetEyeColor },
+		{ "SetIsCharging", &AFortAIPawn::execSetIsCharging },
+		{ "SetMinimapViewableDistance", &AFortAIPawn::execSetMinimapViewableDistance },
+		{ "SetMinimumAILOD", &AFortAIPawn::execSetMinimumAILOD },
+		{ "SetMovementUrgency", &AFortAIPawn::execSetMovementUrgency },
+		{ "SetShouldStartSleeping", &AFortAIPawn::execSetShouldStartSleeping },
+		{ "SetSkinColor", &AFortAIPawn::execSetSkinColor },
+		{ "SetWeaponCollisionComponent", &AFortAIPawn::execSetWeaponCollisionComponent },
+		{ "TriggerNoWeaponSpeech", &AFortAIPawn::execTriggerNoWeaponSpeech },
+		{ "TurnOnSleepingOptimizations", &AFortAIPawn::execTurnOnSleepingOptimizations },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortAIPawn_AddFortAbilitySet_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_WaitCancel::StaticRegisterNativesUAbilityTask_WaitCancel()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_WaitCancel, 2160784884u)
 // Original dynamic initializer: RVA 0x0009DD30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_WaitCancel> AutoInitializeUAbilityTask_WaitCancel(TEXT("UAbilityTask_WaitCancel"), sizeof(UAbilityTask_WaitCancel), 2160784884u);

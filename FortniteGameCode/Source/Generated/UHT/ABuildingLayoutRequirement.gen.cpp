@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingLayoutRequirement();  // RVA 0x00F6C390 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BE10 (end 0x00F6BE32)
+// Original VA: 0x0000000140F6BE10 | File offset: 0x00F6B410
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03278240) | Matching: see analysis/functions-uht-natives.json
+void ABuildingLayoutRequirement::StaticRegisterNativesABuildingLayoutRequirement()
+{
+	UClass* Class = ABuildingLayoutRequirement::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ActivateRequirement", &ABuildingLayoutRequirement::execActivateRequirement },
+		{ "OnRep_RequirementStatus", &ABuildingLayoutRequirement::execOnRep_RequirementStatus },
+		{ "OnRequirementSatisfyingActorDied", &ABuildingLayoutRequirement::execOnRequirementSatisfyingActorDied },
+		{ "SetRequiredResourceType", &ABuildingLayoutRequirement::execSetRequiredResourceType },
+		{ "SetRequirementVisible", &ABuildingLayoutRequirement::execSetRequirementVisible },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingLayoutRequirement_ActivateRequirement_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

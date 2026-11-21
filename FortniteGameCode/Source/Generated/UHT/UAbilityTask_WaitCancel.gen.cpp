@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitCancel();  // RVA 0x0054D4A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CD50 (end 0x0054CD72)
+// Original VA: 0x000000014054CD50 | File offset: 0x0054C350
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32398) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitCancel::StaticRegisterNativesUAbilityTask_WaitCancel()
+{
+	UClass* Class = UAbilityTask_WaitCancel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnCancelCallback", &UAbilityTask_WaitCancel::execOnCancelCallback },
+		{ "OnLocalCancelCallback", &UAbilityTask_WaitCancel::execOnLocalCancelCallback },
+		{ "WaitCancel", &UAbilityTask_WaitCancel::execWaitCancel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitCancel_OnCancelCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

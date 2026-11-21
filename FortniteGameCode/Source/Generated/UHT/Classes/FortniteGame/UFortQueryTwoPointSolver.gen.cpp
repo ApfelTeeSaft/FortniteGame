@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortQueryTwoPointSolver::StaticRegisterNativesUFortQueryTwoPointSolver()
-{
-}
 // IMPLEMENT_CLASS(UFortQueryTwoPointSolver, 1063048689u)
 // Original dynamic initializer: RVA 0x001106E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQueryTwoPointSolver> AutoInitializeUFortQueryTwoPointSolver(TEXT("UFortQueryTwoPointSolver"), sizeof(UFortQueryTwoPointSolver), 1063048689u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortVideoOptions::StaticRegisterNativesUFortVideoOptions()
-{
-}
 // IMPLEMENT_CLASS(UFortVideoOptions, 3173442927u)
 // Original dynamic initializer: RVA 0x002656C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortVideoOptions> AutoInitializeUFortVideoOptions(TEXT("UFortVideoOptions"), sizeof(UFortVideoOptions), 3173442927u);

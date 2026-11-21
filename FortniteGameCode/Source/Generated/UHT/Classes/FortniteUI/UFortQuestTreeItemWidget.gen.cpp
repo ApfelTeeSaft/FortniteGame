@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortQuestTreeItemWidget::StaticRegisterNativesUFortQuestTreeItemWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortQuestTreeItemWidget, 2532511481u)
 // Original dynamic initializer: RVA 0x00258420 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestTreeItemWidget> AutoInitializeUFortQuestTreeItemWidget(TEXT("UFortQuestTreeItemWidget"), sizeof(UFortQuestTreeItemWidget), 2532511481u);

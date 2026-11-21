@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USkyLightComponent::StaticRegisterNativesUSkyLightComponent()
-{
-}
 // IMPLEMENT_CLASS(USkyLightComponent, 2742132154u)
 // Original dynamic initializer: RVA 0x0021A9B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USkyLightComponent> AutoInitializeUSkyLightComponent(TEXT("USkyLightComponent"), sizeof(USkyLightComponent), 2742132154u);

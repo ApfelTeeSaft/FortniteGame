@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerZone();  // RVA 0x0107FD70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107F9E0 (end 0x0107FA02)
+// Original VA: 0x000000014107F9E0 | File offset: 0x0107EFE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033CB010) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerZone::StaticRegisterNativesAFortPlayerControllerZone()
+{
+	UClass* Class = AFortPlayerControllerZone::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientOnPawnDied", &AFortPlayerControllerZone::execClientOnPawnDied },
+		{ "ClientOnPawnRevived", &AFortPlayerControllerZone::execClientOnPawnRevived },
+		{ "ClientOnPawnSpawned", &AFortPlayerControllerZone::execClientOnPawnSpawned },
+		{ "ClientOnZoneEndScoreReports", &AFortPlayerControllerZone::execClientOnZoneEndScoreReports },
+		{ "ClientSendPartyJoinInfoToPlayer", &AFortPlayerControllerZone::execClientSendPartyJoinInfoToPlayer },
+		{ "PopDeathInputComponent", &AFortPlayerControllerZone::execPopDeathInputComponent },
+		{ "PushDeathInputComponent", &AFortPlayerControllerZone::execPushDeathInputComponent },
+		{ "ServerSendLoadoutConfig", &AFortPlayerControllerZone::execServerSendLoadoutConfig },
+		{ "ServerSendPartyJoinInfoToPlayer", &AFortPlayerControllerZone::execServerSendPartyJoinInfoToPlayer },
+		{ "ServerSetShouldDisablePlayerTeleportingDuringMissionResults", &AFortPlayerControllerZone::execServerSetShouldDisablePlayerTeleportingDuringMissionResults },
+		{ "ServerSubmitGameplayVote", &AFortPlayerControllerZone::execServerSubmitGameplayVote },
+		{ "ServerTriggerSetupTeleportCameraEvent", &AFortPlayerControllerZone::execServerTriggerSetupTeleportCameraEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

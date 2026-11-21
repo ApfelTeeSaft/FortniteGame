@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_URetainerBox();  // RVA 0x01BED950 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED180 (end 0x01BED1A2)
+// Original VA: 0x0000000141BED180 | File offset: 0x01BEC780
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03698820) | Matching: see analysis/functions-uht-natives.json
+void URetainerBox::StaticRegisterNativesURetainerBox()
+{
+	UClass* Class = URetainerBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEffectMaterial", &URetainerBox::execGetEffectMaterial },
+		{ "RequestRender", &URetainerBox::execRequestRender },
+		{ "SetEffectMaterial", &URetainerBox::execSetEffectMaterial },
+		{ "SetTextureParameter", &URetainerBox::execSetTextureParameter },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_URetainerBox_GetEffectMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

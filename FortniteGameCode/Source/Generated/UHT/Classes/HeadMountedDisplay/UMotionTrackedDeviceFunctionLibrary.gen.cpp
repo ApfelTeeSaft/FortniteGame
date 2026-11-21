@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UMotionTrackedDeviceFunctionLibrary::StaticRegisterNativesUMotionTrackedDeviceFunctionLibrary()
-{
-}
 // IMPLEMENT_CLASS(UMotionTrackedDeviceFunctionLibrary, 1843160161u)
 // Original dynamic initializer: RVA 0x0019BC90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMotionTrackedDeviceFunctionLibrary> AutoInitializeUMotionTrackedDeviceFunctionLibrary(TEXT("UMotionTrackedDeviceFunctionLibrary"), sizeof(UMotionTrackedDeviceFunctionLibrary), 1843160161u);

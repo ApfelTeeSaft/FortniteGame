@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTwitchLoginModalWidget();  // RVA 0x0290A940 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A6E0 (end 0x0290A702)
+// Original VA: 0x000000014290A6E0 | File offset: 0x02909CE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3C908) | Matching: see analysis/functions-uht-natives.json
+void UFortTwitchLoginModalWidget::StaticRegisterNativesUFortTwitchLoginModalWidget()
+{
+	UClass* Class = UFortTwitchLoginModalWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnNativeHostContentChanged", &UFortTwitchLoginModalWidget::execOnNativeHostContentChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTwitchLoginModalWidget_OnNativeHostContentChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

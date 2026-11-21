@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTrackMovementComponent();  // RVA 0x010CAD30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C94D0 (end 0x010C94F2)
+// Original VA: 0x00000001410C94D0 | File offset: 0x010C8AD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0341C7A0) | Matching: see analysis/functions-uht-natives.json
+void UFortTrackMovementComponent::StaticRegisterNativesUFortTrackMovementComponent()
+{
+	UClass* Class = UFortTrackMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FlipDirection", &UFortTrackMovementComponent::execFlipDirection },
+		{ "GetDistanceAlongSpline", &UFortTrackMovementComponent::execGetDistanceAlongSpline },
+		{ "GetSpline", &UFortTrackMovementComponent::execGetSpline },
+		{ "GetTrack", &UFortTrackMovementComponent::execGetTrack },
+		{ "IsReverseDirection", &UFortTrackMovementComponent::execIsReverseDirection },
+		{ "OnRep_ReplicatedTrackMovement", &UFortTrackMovementComponent::execOnRep_ReplicatedTrackMovement },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTrackMovementComponent_FlipDirection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

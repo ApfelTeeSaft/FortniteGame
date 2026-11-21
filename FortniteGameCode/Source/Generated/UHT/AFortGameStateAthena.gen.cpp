@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStateAthena();  // RVA 0x00FEE660 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEDFE0 (end 0x00FEE002)
+// Original VA: 0x0000000140FEDFE0 | File offset: 0x00FED5E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332E140) | Matching: see analysis/functions-uht-natives.json
+void AFortGameStateAthena::StaticRegisterNativesAFortGameStateAthena()
+{
+	UClass* Class = AFortGameStateAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAerialPhase", &AFortGameStateAthena::execGetAerialPhase },
+		{ "GetAircraft", &AFortGameStateAthena::execGetAircraft },
+		{ "GetBattleBusForPlayer", &AFortGameStateAthena::execGetBattleBusForPlayer },
+		{ "GetSafeZoneIndicator", &AFortGameStateAthena::execGetSafeZoneIndicator },
+		{ "OnRep_Aircraft", &AFortGameStateAthena::execOnRep_Aircraft },
+		{ "OnRep_CurrentPlaylistId", &AFortGameStateAthena::execOnRep_CurrentPlaylistId },
+		{ "OnRep_GamePhase", &AFortGameStateAthena::execOnRep_GamePhase },
+		{ "OnRep_WinningPlayerName", &AFortGameStateAthena::execOnRep_WinningPlayerName },
+		{ "OnRep_WinningTeam", &AFortGameStateAthena::execOnRep_WinningTeam },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameStateAthena_GetAerialPhase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

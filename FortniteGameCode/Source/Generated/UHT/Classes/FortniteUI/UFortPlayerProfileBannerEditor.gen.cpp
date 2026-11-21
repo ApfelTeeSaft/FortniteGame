@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPlayerProfileBannerEditor::StaticRegisterNativesUFortPlayerProfileBannerEditor()
-{
-}
 // IMPLEMENT_CLASS(UFortPlayerProfileBannerEditor, 3313958003u)
 // Original dynamic initializer: RVA 0x00255C60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPlayerProfileBannerEditor> AutoInitializeUFortPlayerProfileBannerEditor(TEXT("UFortPlayerProfileBannerEditor"), sizeof(UFortPlayerProfileBannerEditor), 3313958003u);

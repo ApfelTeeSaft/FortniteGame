@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTeamInfoPvPBaseDestruction();  // RVA 0x010B3910 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2DA0 (end 0x010B2DC2)
+// Original VA: 0x00000001410B2DA0 | File offset: 0x010B23A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03400C10) | Matching: see analysis/functions-uht-natives.json
+void AFortTeamInfoPvPBaseDestruction::StaticRegisterNativesAFortTeamInfoPvPBaseDestruction()
+{
+	UClass* Class = AFortTeamInfoPvPBaseDestruction::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetStrategicBuildingActor", &AFortTeamInfoPvPBaseDestruction::execGetStrategicBuildingActor },
+		{ "GetTeamCornerstone", &AFortTeamInfoPvPBaseDestruction::execGetTeamCornerstone },
+		{ "GetTeamFOBCores", &AFortTeamInfoPvPBaseDestruction::execGetTeamFOBCores },
+		{ "GetTeamFOBCoresAndSpawnTags", &AFortTeamInfoPvPBaseDestruction::execGetTeamFOBCoresAndSpawnTags },
+		{ "OnRep_AllFOBCoresLoaded", &AFortTeamInfoPvPBaseDestruction::execOnRep_AllFOBCoresLoaded },
+		{ "OnRep_TeamExperience", &AFortTeamInfoPvPBaseDestruction::execOnRep_TeamExperience },
+		{ "OnRep_TeamFOBCoreBuildingActors", &AFortTeamInfoPvPBaseDestruction::execOnRep_TeamFOBCoreBuildingActors },
+		{ "OnRep_TeamLevel", &AFortTeamInfoPvPBaseDestruction::execOnRep_TeamLevel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTeamInfoPvPBaseDestruction_GetStrategicBuildingActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

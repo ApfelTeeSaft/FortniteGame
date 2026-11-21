@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPrototypingContext();  // RVA 0x0108B6E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AEC0 (end 0x0108AEE2)
+// Original VA: 0x000000014108AEC0 | File offset: 0x0108A4C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D6008) | Matching: see analysis/functions-uht-natives.json
+void UFortPrototypingContext::StaticRegisterNativesUFortPrototypingContext()
+{
+	UClass* Class = UFortPrototypingContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPrototypingStatus", &UFortPrototypingContext::execGetPrototypingStatus },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingStatusChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

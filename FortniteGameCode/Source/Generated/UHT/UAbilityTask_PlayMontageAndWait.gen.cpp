@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_PlayMontageAndWait();  // RVA 0x00546930 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005464C0 (end 0x005464E2)
+// Original VA: 0x00000001405464C0 | File offset: 0x00545AC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2B540) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_PlayMontageAndWait::StaticRegisterNativesUAbilityTask_PlayMontageAndWait()
+{
+	UClass* Class = UAbilityTask_PlayMontageAndWait::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreatePlayMontageAndWaitProxy", &UAbilityTask_PlayMontageAndWait::execCreatePlayMontageAndWaitProxy },
+		{ "OnMontageBlendingOut", &UAbilityTask_PlayMontageAndWait::execOnMontageBlendingOut },
+		{ "OnMontageEnded", &UAbilityTask_PlayMontageAndWait::execOnMontageEnded },
+		{ "OnMontageInterrupted", &UAbilityTask_PlayMontageAndWait::execOnMontageInterrupted },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

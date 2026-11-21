@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AKeepItemContainer();  // RVA 0x010E9C80 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8CF0 (end 0x010E8D12)
+// Original VA: 0x00000001410E8CF0 | File offset: 0x010E82F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x034468B0) | Matching: see analysis/functions-uht-natives.json
+void AKeepItemContainer::StaticRegisterNativesAKeepItemContainer()
+{
+	UClass* Class = AKeepItemContainer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetContainerNameAndLevelKey", &AKeepItemContainer::execGetContainerNameAndLevelKey },
+		{ "GetLootTierOverride", &AKeepItemContainer::execGetLootTierOverride },
+		{ "InitializeContainer", &AKeepItemContainer::execInitializeContainer },
+		{ "OnRep_HostUpgradeLevel", &AKeepItemContainer::execOnRep_HostUpgradeLevel },
+		{ "OnRep_SearchedBy", &AKeepItemContainer::execOnRep_SearchedBy },
+		{ "ResetContainer", &AKeepItemContainer::execResetContainer },
+		{ "RestoreLoot", &AKeepItemContainer::execRestoreLoot },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

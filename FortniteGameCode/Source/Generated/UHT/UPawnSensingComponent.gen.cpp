@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPawnSensingComponent();  // RVA 0x01D31ED0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31B90 (end 0x01D31BB2)
+// Original VA: 0x0000000141D31B90 | File offset: 0x01D31190
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0370D440) | Matching: see analysis/functions-uht-natives.json
+void UPawnSensingComponent::StaticRegisterNativesUPawnSensingComponent()
+{
+	UClass* Class = UPawnSensingComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPeripheralVisionAngle", &UPawnSensingComponent::execGetPeripheralVisionAngle },
+		{ "GetPeripheralVisionCosine", &UPawnSensingComponent::execGetPeripheralVisionCosine },
+		{ "SetPeripheralVisionAngle", &UPawnSensingComponent::execSetPeripheralVisionAngle },
+		{ "SetSensingInterval", &UPawnSensingComponent::execSetSensingInterval },
+		{ "SetSensingUpdatesEnabled", &UPawnSensingComponent::execSetSensingUpdatesEnabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UPawnSensingComponent_HearNoiseDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

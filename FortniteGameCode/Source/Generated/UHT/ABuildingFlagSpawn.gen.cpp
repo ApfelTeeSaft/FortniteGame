@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFlagSpawn();  // RVA 0x00F66590 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66050 (end 0x00F66072)
+// Original VA: 0x0000000140F66050 | File offset: 0x00F65650
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03271130) | Matching: see analysis/functions-uht-natives.json
+void ABuildingFlagSpawn::StaticRegisterNativesABuildingFlagSpawn()
+{
+	UClass* Class = ABuildingFlagSpawn::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsSpawnedObjectAwayFromBase", &ABuildingFlagSpawn::execIsSpawnedObjectAwayFromBase },
+		{ "OnCarriedObjectAttachedEvent", &ABuildingFlagSpawn::execOnCarriedObjectAttachedEvent },
+		{ "OnCarriedObjectDetachedEvent", &ABuildingFlagSpawn::execOnCarriedObjectDetachedEvent },
+		{ "SpawnCarriedObject", &ABuildingFlagSpawn::execSpawnCarriedObject },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

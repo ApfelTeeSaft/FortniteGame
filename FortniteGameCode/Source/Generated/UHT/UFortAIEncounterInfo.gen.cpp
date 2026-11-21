@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAIEncounterInfo();  // RVA 0x00F8C4F0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BCB0 (end 0x00F8BCD2)
+// Original VA: 0x0000000140F8BCB0 | File offset: 0x00F8B2B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032A5520) | Matching: see analysis/functions-uht-natives.json
+void UFortAIEncounterInfo::StaticRegisterNativesUFortAIEncounterInfo()
+{
+	UClass* Class = UFortAIEncounterInfo::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateEncounterAssignment", &UFortAIEncounterInfo::execCreateEncounterAssignment },
+		{ "EncounterHasReservedSpawnRequestForEnemySpawner", &UFortAIEncounterInfo::execEncounterHasReservedSpawnRequestForEnemySpawner },
+		{ "GetCurrentSpawnAreaDirections", &UFortAIEncounterInfo::execGetCurrentSpawnAreaDirections },
+		{ "GetEncounterDataManager", &UFortAIEncounterInfo::execGetEncounterDataManager },
+		{ "GetEncounterTimeSeconds", &UFortAIEncounterInfo::execGetEncounterTimeSeconds },
+		{ "GetPawnNumberLimit", &UFortAIEncounterInfo::execGetPawnNumberLimit },
+		{ "GroupHasAIRemainingToSpawn", &UFortAIEncounterInfo::execGroupHasAIRemainingToSpawn },
+		{ "OnEncounterPawnDamaged", &UFortAIEncounterInfo::execOnEncounterPawnDamaged },
+		{ "OnGameDifficultyChanged", &UFortAIEncounterInfo::execOnGameDifficultyChanged },
+		{ "OnGoalTakeDamage", &UFortAIEncounterInfo::execOnGoalTakeDamage },
+		{ "RegisterAISpawner", &UFortAIEncounterInfo::execRegisterAISpawner },
+		{ "RequestActivation", &UFortAIEncounterInfo::execRequestActivation },
+		{ "SetEncounterActivationState", &UFortAIEncounterInfo::execSetEncounterActivationState },
+		{ "SetPawnNumberLimit", &UFortAIEncounterInfo::execSetPawnNumberLimit },
+		{ "SpawnAIPawnReservedForEnemySpawner", &UFortAIEncounterInfo::execSpawnAIPawnReservedForEnemySpawner },
+		{ "UnRegisterAISpawner", &UFortAIEncounterInfo::execUnRegisterAISpawner },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAIEncounterInfo_CreateEncounterAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

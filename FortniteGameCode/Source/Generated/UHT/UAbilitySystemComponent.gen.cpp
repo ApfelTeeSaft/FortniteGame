@@ -6,6 +6,81 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilitySystemComponent();  // RVA 0x00538410 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005383B0 (end 0x005383D2)
+// Original VA: 0x00000001405383B0 | File offset: 0x005379B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F242F0) | Matching: see analysis/functions-uht-natives.json
+void UAbilitySystemComponent::StaticRegisterNativesUAbilitySystemComponent()
+{
+	UClass* Class = UAbilitySystemComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BP_ApplyGameplayEffectSpecToSelf", &UAbilitySystemComponent::execBP_ApplyGameplayEffectSpecToSelf },
+		{ "BP_ApplyGameplayEffectSpecToTarget", &UAbilitySystemComponent::execBP_ApplyGameplayEffectSpecToTarget },
+		{ "BP_ApplyGameplayEffectToSelf", &UAbilitySystemComponent::execBP_ApplyGameplayEffectToSelf },
+		{ "BP_ApplyGameplayEffectToTarget", &UAbilitySystemComponent::execBP_ApplyGameplayEffectToTarget },
+		{ "ClientActivateAbilityFailed", &UAbilitySystemComponent::execClientActivateAbilityFailed },
+		{ "ClientActivateAbilitySucceed", &UAbilitySystemComponent::execClientActivateAbilitySucceed },
+		{ "ClientActivateAbilitySucceedWithEventData", &UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData },
+		{ "ClientCancelAbility", &UAbilitySystemComponent::execClientCancelAbility },
+		{ "ClientEndAbility", &UAbilitySystemComponent::execClientEndAbility },
+		{ "ClientPrintDebug_Response", &UAbilitySystemComponent::execClientPrintDebug_Response },
+		{ "ClientSetReplicatedEvent", &UAbilitySystemComponent::execClientSetReplicatedEvent },
+		{ "ClientTryActivateAbility", &UAbilitySystemComponent::execClientTryActivateAbility },
+		{ "GetActiveEffects", &UAbilitySystemComponent::execGetActiveEffects },
+		{ "GetGameplayEffectCount", &UAbilitySystemComponent::execGetGameplayEffectCount },
+		{ "GetGameplayEffectMagnitude", &UAbilitySystemComponent::execGetGameplayEffectMagnitude },
+		{ "GetUserAbilityActivationInhibited", &UAbilitySystemComponent::execGetUserAbilityActivationInhibited },
+		{ "IsGameplayCueActive", &UAbilitySystemComponent::execIsGameplayCueActive },
+		{ "K2_InitStats", &UAbilitySystemComponent::execK2_InitStats },
+		{ "MakeEffectContext", &UAbilitySystemComponent::execMakeEffectContext },
+		{ "MakeOutgoingSpec", &UAbilitySystemComponent::execMakeOutgoingSpec },
+		{ "NetMulticast_InvokeGameplayCueAdded", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueAdded },
+		{ "NetMulticast_InvokeGameplayCueAdded_WithParams", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueAdded_WithParams },
+		{ "NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec },
+		{ "NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams },
+		{ "NetMulticast_InvokeGameplayCueExecuted", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueExecuted },
+		{ "NetMulticast_InvokeGameplayCueExecuted_FromSpec", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueExecuted_FromSpec },
+		{ "NetMulticast_InvokeGameplayCueExecuted_WithParams", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueExecuted_WithParams },
+		{ "NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams },
+		{ "NetMulticast_InvokeGameplayCuesExecuted", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCuesExecuted },
+		{ "NetMulticast_InvokeGameplayCuesExecuted_WithParams", &UAbilitySystemComponent::execNetMulticast_InvokeGameplayCuesExecuted_WithParams },
+		{ "OnRep_ActivateAbilities", &UAbilitySystemComponent::execOnRep_ActivateAbilities },
+		{ "OnRep_ClientDebugString", &UAbilitySystemComponent::execOnRep_ClientDebugString },
+		{ "OnRep_OwningActor", &UAbilitySystemComponent::execOnRep_OwningActor },
+		{ "OnRep_ReplicatedAnimMontage", &UAbilitySystemComponent::execOnRep_ReplicatedAnimMontage },
+		{ "OnRep_ServerDebugString", &UAbilitySystemComponent::execOnRep_ServerDebugString },
+		{ "RemoveActiveEffectsWithAppliedTags", &UAbilitySystemComponent::execRemoveActiveEffectsWithAppliedTags },
+		{ "RemoveActiveEffectsWithGrantedTags", &UAbilitySystemComponent::execRemoveActiveEffectsWithGrantedTags },
+		{ "RemoveActiveEffectsWithSourceTags", &UAbilitySystemComponent::execRemoveActiveEffectsWithSourceTags },
+		{ "RemoveActiveEffectsWithTags", &UAbilitySystemComponent::execRemoveActiveEffectsWithTags },
+		{ "RemoveActiveGameplayEffect", &UAbilitySystemComponent::execRemoveActiveGameplayEffect },
+		{ "RemoveActiveGameplayEffectBySourceEffect", &UAbilitySystemComponent::execRemoveActiveGameplayEffectBySourceEffect },
+		{ "ServerAbilityRPCBatch", &UAbilitySystemComponent::execServerAbilityRPCBatch },
+		{ "ServerCancelAbility", &UAbilitySystemComponent::execServerCancelAbility },
+		{ "ServerCurrentMontageJumpToSectionName", &UAbilitySystemComponent::execServerCurrentMontageJumpToSectionName },
+		{ "ServerCurrentMontageSetNextSectionName", &UAbilitySystemComponent::execServerCurrentMontageSetNextSectionName },
+		{ "ServerCurrentMontageSetPlayRate", &UAbilitySystemComponent::execServerCurrentMontageSetPlayRate },
+		{ "ServerEndAbility", &UAbilitySystemComponent::execServerEndAbility },
+		{ "ServerPrintDebug_Request", &UAbilitySystemComponent::execServerPrintDebug_Request },
+		{ "ServerPrintDebug_RequestWithStrings", &UAbilitySystemComponent::execServerPrintDebug_RequestWithStrings },
+		{ "ServerSetInputPressed", &UAbilitySystemComponent::execServerSetInputPressed },
+		{ "ServerSetInputReleased", &UAbilitySystemComponent::execServerSetInputReleased },
+		{ "ServerSetReplicatedEvent", &UAbilitySystemComponent::execServerSetReplicatedEvent },
+		{ "ServerSetReplicatedEventWithPayload", &UAbilitySystemComponent::execServerSetReplicatedEventWithPayload },
+		{ "ServerSetReplicatedTargetData", &UAbilitySystemComponent::execServerSetReplicatedTargetData },
+		{ "ServerSetReplicatedTargetDataCancelled", &UAbilitySystemComponent::execServerSetReplicatedTargetDataCancelled },
+		{ "ServerTryActivateAbility", &UAbilitySystemComponent::execServerTryActivateAbility },
+		{ "ServerTryActivateAbilityWithEventData", &UAbilitySystemComponent::execServerTryActivateAbilityWithEventData },
+		{ "SetActiveGameplayEffectLevel", &UAbilitySystemComponent::execSetActiveGameplayEffectLevel },
+		{ "SetActiveGameplayEffectLevelUsingQuery", &UAbilitySystemComponent::execSetActiveGameplayEffectLevelUsingQuery },
+		{ "SetUserAbilityActivationInhibited", &UAbilitySystemComponent::execSetUserAbilityActivationInhibited },
+		{ "TargetCancel", &UAbilitySystemComponent::execTargetCancel },
+		{ "TargetConfirm", &UAbilitySystemComponent::execTargetConfirm },
+		{ "TryActivateAbilitiesByTag", &UAbilitySystemComponent::execTryActivateAbilitiesByTag },
+		{ "TryActivateAbilityByClass", &UAbilitySystemComponent::execTryActivateAbilityByClass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityAbilityKey__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

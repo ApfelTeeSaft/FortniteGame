@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortUIMessagesPageBase::StaticRegisterNativesUFortUIMessagesPageBase()
-{
-}
 // IMPLEMENT_CLASS(UFortUIMessagesPageBase, 367426404u)
 // Original dynamic initializer: RVA 0x002628E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUIMessagesPageBase> AutoInitializeUFortUIMessagesPageBase(TEXT("UFortUIMessagesPageBase"), sizeof(UFortUIMessagesPageBase), 367426404u);

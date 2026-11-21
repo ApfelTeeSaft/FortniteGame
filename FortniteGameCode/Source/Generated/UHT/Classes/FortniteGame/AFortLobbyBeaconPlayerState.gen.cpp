@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortLobbyBeaconPlayerState::StaticRegisterNativesAFortLobbyBeaconPlayerState()
-{
-}
 // IMPLEMENT_CLASS(AFortLobbyBeaconPlayerState, 3548095484u)
 // Original dynamic initializer: RVA 0x000FCF30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLobbyBeaconPlayerState> AutoInitializeAFortLobbyBeaconPlayerState(TEXT("AFortLobbyBeaconPlayerState"), sizeof(AFortLobbyBeaconPlayerState), 3548095484u);

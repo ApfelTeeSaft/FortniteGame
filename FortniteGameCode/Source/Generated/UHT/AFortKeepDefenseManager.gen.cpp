@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortKeepDefenseManager();  // RVA 0x0100BFF0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BBA0 (end 0x0100BBC2)
+// Original VA: 0x000000014100BBA0 | File offset: 0x0100B1A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03354FA0) | Matching: see analysis/functions-uht-natives.json
+void AFortKeepDefenseManager::StaticRegisterNativesAFortKeepDefenseManager()
+{
+	UClass* Class = AFortKeepDefenseManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumberAliveEnemies", &AFortKeepDefenseManager::execGetNumberAliveEnemies },
+		{ "GetWaveDescription", &AFortKeepDefenseManager::execGetWaveDescription },
+		{ "GoToNextWave", &AFortKeepDefenseManager::execGoToNextWave },
+		{ "SkipWarmup", &AFortKeepDefenseManager::execSkipWarmup },
+		{ "StartAIEncounter", &AFortKeepDefenseManager::execStartAIEncounter },
+		{ "StartEvent", &AFortKeepDefenseManager::execStartEvent },
+		{ "StartEventFromList", &AFortKeepDefenseManager::execStartEventFromList },
+		{ "StopEvent", &AFortKeepDefenseManager::execStopEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortKeepDefenseManager_GetNumberAliveEnemies_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -3,25 +3,25 @@
 Stage 1 (exact-match client decompilation): **in progress**. A validated decrypted image of
 the reference build now supplies plaintext function bodies. Stages 2–4 have not started.
 
-| Item | State (verified 2026-11-20) |
+| Item | State (verified 2026-11-21) |
 | --- | --- |
 | Reference | `FortniteClient-Win64-Shipping.exe`, 82,298,304 bytes, SHA-256 `9731a6b5…eb449102`, linked 2018-02-14, `++Fortnite+Release-2.5-CL-3889387`, version resource `4.20.0-3889387` |
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **26,579 / 157,719** primary `.pdata` functions (16.85 %, 1,458,859 bytes):
+| Exact functions | **27,313 / 157,719** primary `.pdata` functions (17.32 %, 1,490,601 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 26,572 generated UHT functions:
-  - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 696 `StaticRegisterNatives*`,
-    923 `FCompiledInDefer` initializers;
+- 27,306 generated UHT functions:
+  - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
+    1,189 `FCompiledInDefer` initializers;
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,860 `StaticStruct`, 1,782 `NewStructOps`,
     1,888 `StaticRegisterNatives` and 1,253 `FCompiledInDeferStruct` initializers;
-  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 374 `<Enum>_StaticEnum` and 248 `FCompiledInDeferEnum` initializers.
+  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 380 `<Enum>_StaticEnum` and 251 `FCompiledInDeferEnum` initializers.
 
-Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 696 `StaticClass` thunks, 1,248 `AutoInitialize` initializers and `FCommandLine::IsInitialized` |
-| Relocation-equivalent | 9,252 in the denominator, mostly:
+Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers and `FCommandLine::IsInitialized` |
+| Relocation-equivalent | 8,977 in the denominator, mostly:
 - the 3,283 `GetPrivateStaticClass` bodies (template-instance and literal fields);
 - registration initializers blocked by `&C::StaticClass`, or by package-name literals that
   hand-written code also uses;
@@ -29,7 +29,13 @@ Generated code is compiled in 182 unity units in the reference's recovered sourc
 
 One enum registration initializer is `partial` (shared literal copy, see
 `docs/REVERSE_ENGINEERING.md`). The per-manifest counts are in `analysis/functions-uht-*.json` |
-| Named functions | 16,734 denominator functions (10.6 %) named from UHT reflection tables: 4,215 exec thunks, 11,127 `Z_Construct_UFunction_*` creators, and registrar/`GetPrivateStaticClass` pairs for 696 attributed classes. See `analysis/reflection-natives.json` |
+| Named functions | 26,335 denominator functions (16.70 %):
+- from UHT reflection tables: 7,819 exec thunks, 11,102 `Z_Construct_UFunction_*` creators, and
+  registrar/`GetPrivateStaticClass` pairs for 1,155 attributed classes (`analysis/reflection-natives.json`);
+- 5,104 native implementations called by their exec thunks, 5,063 of them high-confidence
+  (`analysis/native-implementations.json`).
+
+Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Also 1,451 virtual natives located by vtable offset |
 | Whole-file identity | Not achievable as things stand: encrypted bodies on disk, a protector section and rewritten import references, a patched entry stub, and an Authenticode signature |
 | IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA yet |
 
@@ -83,8 +89,12 @@ One enum registration initializer is `partial` (shared literal copy, see
      - `GetPrivateStaticClass` fields (`InternalConstructor<C>` / `InternalVTableHelperCtorCaller<C>`,
        ICF-folded empty `StaticRegisterNatives`);
      - package-name literals in the registration initializers.
-   - The remaining class constructors, 3,326 `GetPrivateStaticClass` bodies and the 4,215
-     exec thunks.
+   - The remaining class constructors and the 3,326 `GetPrivateStaticClass` bodies.
+   - Exec thunks (9,193; `docs/REVERSE_ENGINEERING.md`, "Native implementations"). Each
+     calls its native, whose address has no evidence independent of the thunk. A thunk can
+     therefore be exact only when its native is virtual: the call goes through a vtable
+     offset with no relocation. That needs each class's vtable slots modelled, and the
+     parameter properties (`PropPointers`) decoded for the `P_GET_*` reads.
 4. Run the IDA export on the decrypted image for call graphs and cross-references.
 
 ## Reproduce

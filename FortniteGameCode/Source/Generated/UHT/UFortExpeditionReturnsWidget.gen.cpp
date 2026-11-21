@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionReturnsWidget();  // RVA 0x028A36B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A30A0 (end 0x028A30C2)
+// Original VA: 0x00000001428A30A0 | File offset: 0x028A26A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8FBD8) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionReturnsWidget::StaticRegisterNativesUFortExpeditionReturnsWidget()
+{
+	UClass* Class = UFortExpeditionReturnsWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnExpeditionInProgressUpdated", &UFortExpeditionReturnsWidget::execOnExpeditionInProgressUpdated },
+		{ "SetData", &UFortExpeditionReturnsWidget::execSetData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionReturnsWidget_OnExpeditionInProgressUpdated_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

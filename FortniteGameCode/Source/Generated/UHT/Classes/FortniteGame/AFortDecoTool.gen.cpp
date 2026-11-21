@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortDecoTool::StaticRegisterNativesAFortDecoTool()
-{
-}
 // IMPLEMENT_CLASS(AFortDecoTool, 3453171697u)
 // Original dynamic initializer: RVA 0x000EFAA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortDecoTool> AutoInitializeAFortDecoTool(TEXT("AFortDecoTool"), sizeof(AFortDecoTool), 3453171697u);

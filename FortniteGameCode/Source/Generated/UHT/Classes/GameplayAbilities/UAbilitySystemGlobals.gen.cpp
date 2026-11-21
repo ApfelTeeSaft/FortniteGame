@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilitySystemGlobals::StaticRegisterNativesUAbilitySystemGlobals()
-{
-}
 // IMPLEMENT_CLASS(UAbilitySystemGlobals, 377977568u)
 // Original dynamic initializer: RVA 0x0009D320 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilitySystemGlobals> AutoInitializeUAbilitySystemGlobals(TEXT("UAbilitySystemGlobals"), sizeof(UAbilitySystemGlobals), 377977568u);

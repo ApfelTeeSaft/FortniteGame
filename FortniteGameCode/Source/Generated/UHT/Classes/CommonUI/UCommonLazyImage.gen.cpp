@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonLazyImage::StaticRegisterNativesUCommonLazyImage()
-{
-}
 // IMPLEMENT_CLASS(UCommonLazyImage, 3021258143u)
 // Original dynamic initializer: RVA 0x00095FA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonLazyImage> AutoInitializeUCommonLazyImage(TEXT("UCommonLazyImage"), sizeof(UCommonLazyImage), 3021258143u);

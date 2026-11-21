@@ -6,6 +6,40 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameModeBase();  // RVA 0x0240FCA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240F970 (end 0x0240F992)
+// Original VA: 0x000000014240F970 | File offset: 0x0240EF70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F0EA0) | Matching: see analysis/functions-uht-natives.json
+void AGameModeBase::StaticRegisterNativesAGameModeBase()
+{
+	UClass* Class = AGameModeBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanSpectate", &AGameModeBase::execCanSpectate },
+		{ "ChangeName", &AGameModeBase::execChangeName },
+		{ "ChoosePlayerStart", &AGameModeBase::execChoosePlayerStart },
+		{ "FindPlayerStart", &AGameModeBase::execFindPlayerStart },
+		{ "GetDefaultPawnClassForController", &AGameModeBase::execGetDefaultPawnClassForController },
+		{ "GetNumPlayers", &AGameModeBase::execGetNumPlayers },
+		{ "GetNumSpectators", &AGameModeBase::execGetNumSpectators },
+		{ "HandleStartingNewPlayer", &AGameModeBase::execHandleStartingNewPlayer },
+		{ "HasMatchStarted", &AGameModeBase::execHasMatchStarted },
+		{ "InitializeHUDForPlayer", &AGameModeBase::execInitializeHUDForPlayer },
+		{ "InitStartSpot", &AGameModeBase::execInitStartSpot },
+		{ "K2_FindPlayerStart", &AGameModeBase::execK2_FindPlayerStart },
+		{ "MustSpectate", &AGameModeBase::execMustSpectate },
+		{ "PlayerCanRestart", &AGameModeBase::execPlayerCanRestart },
+		{ "ResetLevel", &AGameModeBase::execResetLevel },
+		{ "RestartPlayer", &AGameModeBase::execRestartPlayer },
+		{ "RestartPlayerAtPlayerStart", &AGameModeBase::execRestartPlayerAtPlayerStart },
+		{ "RestartPlayerAtTransform", &AGameModeBase::execRestartPlayerAtTransform },
+		{ "ReturnToMainMenuHost", &AGameModeBase::execReturnToMainMenuHost },
+		{ "ShouldReset", &AGameModeBase::execShouldReset },
+		{ "SpawnDefaultPawnAtTransform", &AGameModeBase::execSpawnDefaultPawnAtTransform },
+		{ "SpawnDefaultPawnFor", &AGameModeBase::execSpawnDefaultPawnFor },
+		{ "StartPlay", &AGameModeBase::execStartPlay },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AGameModeBase_CanSpectate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortHUDCenterPopupMessageWidget::StaticRegisterNativesUFortHUDCenterPopupMessageWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortHUDCenterPopupMessageWidget, 2373493009u)
 // Original dynamic initializer: RVA 0x00248240 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHUDCenterPopupMessageWidget> AutoInitializeUFortHUDCenterPopupMessageWidget(TEXT("UFortHUDCenterPopupMessageWidget"), sizeof(UFortHUDCenterPopupMessageWidget), 2373493009u);

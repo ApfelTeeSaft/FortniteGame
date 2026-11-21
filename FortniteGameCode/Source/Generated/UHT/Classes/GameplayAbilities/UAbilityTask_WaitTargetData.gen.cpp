@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_WaitTargetData::StaticRegisterNativesUAbilityTask_WaitTargetData()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_WaitTargetData, 1571357926u)
 // Original dynamic initializer: RVA 0x0009DF70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_WaitTargetData> AutoInitializeUAbilityTask_WaitTargetData(TEXT("UAbilityTask_WaitTargetData"), sizeof(UAbilityTask_WaitTargetData), 1571357926u);

@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886CC0 (end 0x02886CE2)
+// Original VA: 0x0000000142886CC0 | File offset: 0x028862C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C5FC08) | Matching: see analysis/functions-uht-natives.json
+void UCommonTagVisibilityWidget::StaticRegisterNativesUCommonTagVisibilityWidget()
+{
+	UClass* Class = UCommonTagVisibilityWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleOnHUDElementVisibilityChanged", &UCommonTagVisibilityWidget::execHandleOnHUDElementVisibilityChanged },
+		{ "HandleOnHUDResetToDefaults", &UCommonTagVisibilityWidget::execHandleOnHUDResetToDefaults },
+		{ "Initialize", &UCommonTagVisibilityWidget::execInitialize },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

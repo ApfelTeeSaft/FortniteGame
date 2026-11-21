@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonUIContext();  // RVA 0x002D0450 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D01E0 (end 0x002D0202)
+// Original VA: 0x00000001402D01E0 | File offset: 0x002CF7E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E857F0) | Matching: see analysis/functions-uht-natives.json
+void UCommonUIContext::StaticRegisterNativesUCommonUIContext()
+{
+	UClass* Class = UCommonUIContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCurrentInputType", &UCommonUIContext::execGetCurrentInputType },
+		{ "GetInputActionButtonIcon", &UCommonUIContext::execGetInputActionButtonIcon },
+		{ "GetInputManager", &UCommonUIContext::execGetInputManager },
+		{ "IsUsingGamepad", &UCommonUIContext::execIsUsingGamepad },
+		{ "IsUsingPointerInput", &UCommonUIContext::execIsUsingPointerInput },
+		{ "IsUsingTouch", &UCommonUIContext::execIsUsingTouch },
+		{ "SetGamepadInputType", &UCommonUIContext::execSetGamepadInputType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UCommonUIContext_InputMethodChangedDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortCarriedObject();  // RVA 0x00FAD140 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACCC0 (end 0x00FACCE2)
+// Original VA: 0x0000000140FACCC0 | File offset: 0x00FAC2C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032D0C78) | Matching: see analysis/functions-uht-natives.json
+void AFortCarriedObject::StaticRegisterNativesAFortCarriedObject()
+{
+	UClass* Class = AFortCarriedObject::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHoldingActor", &AFortCarriedObject::execGetHoldingActor },
+		{ "OnRep_HolderInfo", &AFortCarriedObject::execOnRep_HolderInfo },
+		{ "ReturnToSpawnPoint", &AFortCarriedObject::execReturnToSpawnPoint },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortCarriedObject_GetHoldingActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

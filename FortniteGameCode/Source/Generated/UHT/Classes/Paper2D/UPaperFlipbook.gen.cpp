@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPaperFlipbook::StaticRegisterNativesUPaperFlipbook()
-{
-}
 // IMPLEMENT_CLASS(UPaperFlipbook, 948811139u)
 // Original dynamic initializer: RVA 0x000AB530 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperFlipbook> AutoInitializeUPaperFlipbook(TEXT("UPaperFlipbook"), sizeof(UPaperFlipbook), 948811139u);

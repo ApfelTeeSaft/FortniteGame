@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWorldItem();  // RVA 0x010DC9B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC250 (end 0x010DC272)
+// Original VA: 0x00000001410DC250 | File offset: 0x010DB850
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03436E48) | Matching: see analysis/functions-uht-natives.json
+void UFortWorldItem::StaticRegisterNativesUFortWorldItem()
+{
+	UClass* Class = UFortWorldItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetOwnedGameplayTags", &UFortWorldItem::execGetOwnedGameplayTags },
+		{ "MarkItemAsSeenInFrontend", &UFortWorldItem::execMarkItemAsSeenInFrontend },
+		{ "SeenInFrontend", &UFortWorldItem::execSeenInFrontend },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortWorldItem_GetOwnedGameplayTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

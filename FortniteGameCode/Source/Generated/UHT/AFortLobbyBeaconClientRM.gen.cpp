@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconClientRM();  // RVA 0x0101E2B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DCD0 (end 0x0101DCF2)
+// Original VA: 0x000000014101DCD0 | File offset: 0x0101D2D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0335E960) | Matching: see analysis/functions-uht-natives.json
+void AFortLobbyBeaconClientRM::StaticRegisterNativesAFortLobbyBeaconClientRM()
+{
+	UClass* Class = AFortLobbyBeaconClientRM::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientBroadcastLobbyPlayerPadTop", &AFortLobbyBeaconClientRM::execClientBroadcastLobbyPlayerPadTop },
+		{ "ServerUpdateNewlyJoinedPlayerInternal", &AFortLobbyBeaconClientRM::execServerUpdateNewlyJoinedPlayerInternal },
+		{ "ServerUpdateReadyStatus", &AFortLobbyBeaconClientRM::execServerUpdateReadyStatus },
+		{ "SetLocalReadyStatus", &AFortLobbyBeaconClientRM::execSetLocalReadyStatus },
+		{ "UpdateNewlyJoinedPlayer", &AFortLobbyBeaconClientRM::execUpdateNewlyJoinedPlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortLobbyBeaconClientRM_ClientBroadcastLobbyPlayerPadTop_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

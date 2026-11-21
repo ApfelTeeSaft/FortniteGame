@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UTimelineComponent::StaticRegisterNativesUTimelineComponent()
-{
-}
 // IMPLEMENT_CLASS(UTimelineComponent, 3869473079u)
 // Original dynamic initializer: RVA 0x002200C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UTimelineComponent> AutoInitializeUTimelineComponent(TEXT("UTimelineComponent"), sizeof(UTimelineComponent), 3869473079u);

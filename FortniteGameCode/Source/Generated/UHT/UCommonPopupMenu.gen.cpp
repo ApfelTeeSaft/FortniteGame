@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonPopupMenu();  // RVA 0x002CA560 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA130 (end 0x002CA152)
+// Original VA: 0x00000001402CA130 | File offset: 0x002C9730
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E82560) | Matching: see analysis/functions-uht-natives.json
+void UCommonPopupMenu::StaticRegisterNativesUCommonPopupMenu()
+{
+	UClass* Class = UCommonPopupMenu::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandlePostDifferentContextProviderSet", &UCommonPopupMenu::execHandlePostDifferentContextProviderSet },
+		{ "HandlePreDifferentContextProviderSet", &UCommonPopupMenu::execHandlePreDifferentContextProviderSet },
+		{ "OnIsOpenChanged", &UCommonPopupMenu::execOnIsOpenChanged },
+		{ "RequestClose", &UCommonPopupMenu::execRequestClose },
+		{ "SetContextProvider", &UCommonPopupMenu::execSetContextProvider },
+		{ "SetOwningMenuAnchor", &UCommonPopupMenu::execSetOwningMenuAnchor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonPopupMenu_HandlePostDifferentContextProviderSet_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

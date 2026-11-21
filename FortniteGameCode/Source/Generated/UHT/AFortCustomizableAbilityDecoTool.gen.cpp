@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortCustomizableAbilityDecoTool();  // RVA 0x00FCB7E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB020 (end 0x00FCB042)
+// Original VA: 0x0000000140FCB020 | File offset: 0x00FCA620
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F86D0) | Matching: see analysis/functions-uht-natives.json
+void AFortCustomizableAbilityDecoTool::StaticRegisterNativesAFortCustomizableAbilityDecoTool()
+{
+	UClass* Class = AFortCustomizableAbilityDecoTool::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BPPressSecondaryFire", &AFortCustomizableAbilityDecoTool::execBPPressSecondaryFire },
+		{ "BPPressTrigger", &AFortCustomizableAbilityDecoTool::execBPPressTrigger },
+		{ "BPReleaseSecondaryFire", &AFortCustomizableAbilityDecoTool::execBPReleaseSecondaryFire },
+		{ "BPReleaseTrigger", &AFortCustomizableAbilityDecoTool::execBPReleaseTrigger },
+		{ "BPServerPressSecondaryFire", &AFortCustomizableAbilityDecoTool::execBPServerPressSecondaryFire },
+		{ "BPServerReleaseSecondaryFire", &AFortCustomizableAbilityDecoTool::execBPServerReleaseSecondaryFire },
+		{ "ServerPressSecondaryFire", &AFortCustomizableAbilityDecoTool::execServerPressSecondaryFire },
+		{ "ServerPressTrigger", &AFortCustomizableAbilityDecoTool::execServerPressTrigger },
+		{ "ServerReleaseSecondaryFire", &AFortCustomizableAbilityDecoTool::execServerReleaseSecondaryFire },
+		{ "ServerReleaseTrigger", &AFortCustomizableAbilityDecoTool::execServerReleaseTrigger },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPOnEquip_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

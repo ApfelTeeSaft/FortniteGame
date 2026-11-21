@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonTabListWidget::StaticRegisterNativesUCommonTabListWidget()
-{
-}
 // IMPLEMENT_CLASS(UCommonTabListWidget, 4259496370u)
 // Original dynamic initializer: RVA 0x000960E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonTabListWidget> AutoInitializeUCommonTabListWidget(TEXT("UCommonTabListWidget"), sizeof(UCommonTabListWidget), 4259496370u);

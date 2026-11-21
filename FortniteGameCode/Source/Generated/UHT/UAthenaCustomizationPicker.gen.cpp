@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaCustomizationPicker();  // RVA 0x0287F2C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EC60 (end 0x0287EC82)
+// Original VA: 0x000000014287EC60 | File offset: 0x0287E260
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C51C98) | Matching: see analysis/functions-uht-natives.json
+void UAthenaCustomizationPicker::StaticRegisterNativesUAthenaCustomizationPicker()
+{
+	UClass* Class = UAthenaCustomizationPicker::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginCustomizationCategory", &UAthenaCustomizationPicker::execBeginCustomizationCategory },
+		{ "EndCustomizationCategory", &UAthenaCustomizationPicker::execEndCustomizationCategory },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticChangeSaveEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

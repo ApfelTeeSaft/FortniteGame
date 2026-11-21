@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerGameplay();  // RVA 0x01077700 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010774B0 (end 0x010774D2)
+// Original VA: 0x00000001410774B0 | File offset: 0x01076AB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C2FD0) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerGameplay::StaticRegisterNativesAFortPlayerControllerGameplay()
+{
+	UClass* Class = AFortPlayerControllerGameplay::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreHUDElementsVisible", &AFortPlayerControllerGameplay::execAreHUDElementsVisible },
+		{ "RefreshHUDElementVisibilitiesToSettings", &AFortPlayerControllerGameplay::execRefreshHUDElementVisibilitiesToSettings },
+		{ "ResetHUDElementVisibilityToSettings", &AFortPlayerControllerGameplay::execResetHUDElementVisibilityToSettings },
+		{ "SetHUDElementVisibility", &AFortPlayerControllerGameplay::execSetHUDElementVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerGameplay_AreHUDElementsVisible_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

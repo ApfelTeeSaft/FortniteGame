@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonActivatablePanel::StaticRegisterNativesUCommonActivatablePanel()
-{
-}
 // IMPLEMENT_CLASS(UCommonActivatablePanel, 3350225185u)
 // Original dynamic initializer: RVA 0x000955D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonActivatablePanel> AutoInitializeUCommonActivatablePanel(TEXT("UCommonActivatablePanel"), sizeof(UCommonActivatablePanel), 3350225185u);

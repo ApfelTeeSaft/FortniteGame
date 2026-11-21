@@ -57,6 +57,7 @@ tools in this order:
 
 ```
 python tools/analysis/reflection.py      # analysis/reflection-natives.json
+python tools/analysis/natives.py         # analysis/native-implementations.json (names only; not used by codegen)
 python tools/analysis/unity_order.py     # analysis/unity-order.json (unity source order, units)
 python tools/codegen/uht_creators.py     # class fragments: StaticRegisterNatives, creators, constructor
 python tools/codegen/uht_structs.py      # USTRUCT fragments

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortTwitchLoginModalWidget::StaticRegisterNativesUFortTwitchLoginModalWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortTwitchLoginModalWidget, 4021523392u)
 // Original dynamic initializer: RVA 0x00260BF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTwitchLoginModalWidget> AutoInitializeUFortTwitchLoginModalWidget(TEXT("UFortTwitchLoginModalWidget"), sizeof(UFortTwitchLoginModalWidget), 4021523392u);

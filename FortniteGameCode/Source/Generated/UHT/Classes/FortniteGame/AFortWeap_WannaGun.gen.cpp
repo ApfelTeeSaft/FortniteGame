@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortWeap_WannaGun::StaticRegisterNativesAFortWeap_WannaGun()
-{
-}
 // IMPLEMENT_CLASS(AFortWeap_WannaGun, 4240828767u)
 // Original dynamic initializer: RVA 0x0011BF50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortWeap_WannaGun> AutoInitializeAFortWeap_WannaGun(TEXT("AFortWeap_WannaGun"), sizeof(AFortWeap_WannaGun), 4240828767u);

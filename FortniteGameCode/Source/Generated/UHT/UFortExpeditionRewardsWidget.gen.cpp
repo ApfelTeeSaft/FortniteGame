@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionRewardsWidget();  // RVA 0x028A36E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A30D0 (end 0x028A30F2)
+// Original VA: 0x00000001428A30D0 | File offset: 0x028A26D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8FC98) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionRewardsWidget::StaticRegisterNativesUFortExpeditionRewardsWidget()
+{
+	UClass* Class = UFortExpeditionRewardsWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleCollectionExpeditionCompleted", &UFortExpeditionRewardsWidget::execHandleCollectionExpeditionCompleted },
+		{ "ProcessNextReward", &UFortExpeditionRewardsWidget::execProcessNextReward },
+		{ "RefreshRewardsUI", &UFortExpeditionRewardsWidget::execRefreshRewardsUI },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionRewardsWidget_HandleCollectionExpeditionCompleted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

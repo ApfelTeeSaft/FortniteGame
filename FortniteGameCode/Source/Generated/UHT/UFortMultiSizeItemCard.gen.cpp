@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMultiSizeItemCard();  // RVA 0x028DE420 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDFD0 (end 0x028DDFF2)
+// Original VA: 0x00000001428DDFD0 | File offset: 0x028DD5D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF0640) | Matching: see analysis/functions-uht-natives.json
+void UFortMultiSizeItemCard::StaticRegisterNativesUFortMultiSizeItemCard()
+{
+	UClass* Class = UFortMultiSizeItemCard::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCardSize", &UFortMultiSizeItemCard::execGetCardSize },
+		{ "SetCardSize", &UFortMultiSizeItemCard::execSetCardSize },
+		{ "SetEmptyItemType", &UFortMultiSizeItemCard::execSetEmptyItemType },
+		{ "SetQuantityOverride", &UFortMultiSizeItemCard::execSetQuantityOverride },
+		{ "SetShouldCollapseBorderPadding", &UFortMultiSizeItemCard::execSetShouldCollapseBorderPadding },
+		{ "SetShouldDisplayItemAsReward", &UFortMultiSizeItemCard::execSetShouldDisplayItemAsReward },
+		{ "ShouldUseNewItemCards", &UFortMultiSizeItemCard::execShouldUseNewItemCards },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMultiSizeItemCard_GetCardSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

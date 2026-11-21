@@ -6,6 +6,28 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerMannequin();  // RVA 0x0107FDA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FA10 (end 0x0107FA32)
+// Original VA: 0x000000014107FA10 | File offset: 0x0107F010
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033CB890) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerMannequin::StaticRegisterNativesAFortPlayerMannequin()
+{
+	UClass* Class = AFortPlayerMannequin::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CyclePartBP", &AFortPlayerMannequin::execCyclePartBP },
+		{ "GetAllPartSkeletalMeshComponents", &AFortPlayerMannequin::execGetAllPartSkeletalMeshComponents },
+		{ "GetGender", &AFortPlayerMannequin::execGetGender },
+		{ "GetPartSkeletalMeshComponent", &AFortPlayerMannequin::execGetPartSkeletalMeshComponent },
+		{ "RemovePart", &AFortPlayerMannequin::execRemovePart },
+		{ "SetHeroType", &AFortPlayerMannequin::execSetHeroType },
+		{ "SetPart", &AFortPlayerMannequin::execSetPart },
+		{ "SetSkeletalMesh", &AFortPlayerMannequin::execSetSkeletalMesh },
+		{ "SetWeaponSkeletalMesh", &AFortPlayerMannequin::execSetWeaponSkeletalMesh },
+		{ "ToggleGenderBP", &AFortPlayerMannequin::execToggleGenderBP },
+		{ "UpdateMorphTargets", &AFortPlayerMannequin::execUpdateMorphTargets },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerMannequin_CyclePartBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

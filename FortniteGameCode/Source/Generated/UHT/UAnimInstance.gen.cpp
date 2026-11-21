@@ -6,6 +6,72 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnimInstance();  // RVA 0x023CE4E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CD9D0 (end 0x023CD9F2)
+// Original VA: 0x00000001423CD9D0 | File offset: 0x023CCFD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03899AF0) | Matching: see analysis/functions-uht-natives.json
+void UAnimInstance::StaticRegisterNativesUAnimInstance()
+{
+	UClass* Class = UAnimInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CalculateDirection", &UAnimInstance::execCalculateDirection },
+		{ "ClearMorphTargets", &UAnimInstance::execClearMorphTargets },
+		{ "GetCurrentActiveMontage", &UAnimInstance::execGetCurrentActiveMontage },
+		{ "GetCurrentStateName", &UAnimInstance::execGetCurrentStateName },
+		{ "GetCurveValue", &UAnimInstance::execGetCurveValue },
+		{ "GetInstanceAssetPlayerLength", &UAnimInstance::execGetInstanceAssetPlayerLength },
+		{ "GetInstanceAssetPlayerTime", &UAnimInstance::execGetInstanceAssetPlayerTime },
+		{ "GetInstanceAssetPlayerTimeFraction", &UAnimInstance::execGetInstanceAssetPlayerTimeFraction },
+		{ "GetInstanceAssetPlayerTimeFromEnd", &UAnimInstance::execGetInstanceAssetPlayerTimeFromEnd },
+		{ "GetInstanceAssetPlayerTimeFromEndFraction", &UAnimInstance::execGetInstanceAssetPlayerTimeFromEndFraction },
+		{ "GetInstanceCurrentStateElapsedTime", &UAnimInstance::execGetInstanceCurrentStateElapsedTime },
+		{ "GetInstanceMachineWeight", &UAnimInstance::execGetInstanceMachineWeight },
+		{ "GetInstanceStateWeight", &UAnimInstance::execGetInstanceStateWeight },
+		{ "GetInstanceTransitionCrossfadeDuration", &UAnimInstance::execGetInstanceTransitionCrossfadeDuration },
+		{ "GetInstanceTransitionTimeElapsed", &UAnimInstance::execGetInstanceTransitionTimeElapsed },
+		{ "GetInstanceTransitionTimeElapsedFraction", &UAnimInstance::execGetInstanceTransitionTimeElapsedFraction },
+		{ "GetOwningActor", &UAnimInstance::execGetOwningActor },
+		{ "GetOwningComponent", &UAnimInstance::execGetOwningComponent },
+		{ "GetRelevantAnimLength", &UAnimInstance::execGetRelevantAnimLength },
+		{ "GetRelevantAnimTime", &UAnimInstance::execGetRelevantAnimTime },
+		{ "GetRelevantAnimTimeFraction", &UAnimInstance::execGetRelevantAnimTimeFraction },
+		{ "GetRelevantAnimTimeRemaining", &UAnimInstance::execGetRelevantAnimTimeRemaining },
+		{ "GetRelevantAnimTimeRemainingFraction", &UAnimInstance::execGetRelevantAnimTimeRemainingFraction },
+		{ "GetSyncGroupPosition", &UAnimInstance::execGetSyncGroupPosition },
+		{ "GetTimeToClosestMarker", &UAnimInstance::execGetTimeToClosestMarker },
+		{ "HasMarkerBeenHitThisFrame", &UAnimInstance::execHasMarkerBeenHitThisFrame },
+		{ "IsAnyMontagePlaying", &UAnimInstance::execIsAnyMontagePlaying },
+		{ "IsPlayingSlotAnimation", &UAnimInstance::execIsPlayingSlotAnimation },
+		{ "IsSyncGroupBetweenMarkers", &UAnimInstance::execIsSyncGroupBetweenMarkers },
+		{ "LockAIResources", &UAnimInstance::execLockAIResources },
+		{ "Montage_GetBlendTime", &UAnimInstance::execMontage_GetBlendTime },
+		{ "Montage_GetCurrentSection", &UAnimInstance::execMontage_GetCurrentSection },
+		{ "Montage_GetIsStopped", &UAnimInstance::execMontage_GetIsStopped },
+		{ "Montage_GetPlayRate", &UAnimInstance::execMontage_GetPlayRate },
+		{ "Montage_GetPosition", &UAnimInstance::execMontage_GetPosition },
+		{ "Montage_IsActive", &UAnimInstance::execMontage_IsActive },
+		{ "Montage_IsPlaying", &UAnimInstance::execMontage_IsPlaying },
+		{ "Montage_JumpToSection", &UAnimInstance::execMontage_JumpToSection },
+		{ "Montage_JumpToSectionsEnd", &UAnimInstance::execMontage_JumpToSectionsEnd },
+		{ "Montage_Pause", &UAnimInstance::execMontage_Pause },
+		{ "Montage_Play", &UAnimInstance::execMontage_Play },
+		{ "Montage_Resume", &UAnimInstance::execMontage_Resume },
+		{ "Montage_SetNextSection", &UAnimInstance::execMontage_SetNextSection },
+		{ "Montage_SetPlayRate", &UAnimInstance::execMontage_SetPlayRate },
+		{ "Montage_SetPosition", &UAnimInstance::execMontage_SetPosition },
+		{ "Montage_Stop", &UAnimInstance::execMontage_Stop },
+		{ "PlaySlotAnimation", &UAnimInstance::execPlaySlotAnimation },
+		{ "PlaySlotAnimationAsDynamicMontage", &UAnimInstance::execPlaySlotAnimationAsDynamicMontage },
+		{ "SavePoseSnapshot", &UAnimInstance::execSavePoseSnapshot },
+		{ "SetMorphTarget", &UAnimInstance::execSetMorphTarget },
+		{ "SetRootMotionMode", &UAnimInstance::execSetRootMotionMode },
+		{ "SnapshotPose", &UAnimInstance::execSnapshotPose },
+		{ "StopSlotAnimation", &UAnimInstance::execStopSlotAnimation },
+		{ "TryGetPawnOwner", &UAnimInstance::execTryGetPawnOwner },
+		{ "UnlockAIResources", &UAnimInstance::execUnlockAIResources },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAnimInstance_BlueprintBeginPlay_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

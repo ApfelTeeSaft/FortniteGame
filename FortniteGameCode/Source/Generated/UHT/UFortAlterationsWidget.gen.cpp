@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C440 (end 0x0288C462)
+// Original VA: 0x000000014288C440 | File offset: 0x0288BA40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C699F0) | Matching: see analysis/functions-uht-natives.json
+void UFortAlterationsWidget::StaticRegisterNativesUFortAlterationsWidget()
+{
+	UClass* Class = UFortAlterationsWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ProcessAlterations", &UFortAlterationsWidget::execProcessAlterations },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

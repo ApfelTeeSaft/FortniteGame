@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UParticleSystemComponent::StaticRegisterNativesUParticleSystemComponent()
-{
-}
 // IMPLEMENT_CLASS(UParticleSystemComponent, 1437480045u)
 // Original dynamic initializer: RVA 0x00213C70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UParticleSystemComponent> AutoInitializeUParticleSystemComponent(TEXT("UParticleSystemComponent"), sizeof(UParticleSystemComponent), 1437480045u);

@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerStateZone();  // RVA 0x0108B4D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108ADD0 (end 0x0108ADF2)
+// Original VA: 0x000000014108ADD0 | File offset: 0x0108A3D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D50E8) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerStateZone::StaticRegisterNativesAFortPlayerStateZone()
+{
+	UClass* Class = AFortPlayerStateZone::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumOfAccumulatedItem", &AFortPlayerStateZone::execGetNumOfAccumulatedItem },
+		{ "OnRep_AccumulatedItems", &AFortPlayerStateZone::execOnRep_AccumulatedItems },
+		{ "OnRep_NumRejoins", &AFortPlayerStateZone::execOnRep_NumRejoins },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerStateZone_GetNumOfAccumulatedItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

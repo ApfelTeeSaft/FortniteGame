@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPlayerAttrSet::StaticRegisterNativesUFortPlayerAttrSet()
-{
-}
 // IMPLEMENT_CLASS(UFortPlayerAttrSet, 3528852993u)
 // Original dynamic initializer: RVA 0x0010A3C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPlayerAttrSet> AutoInitializeUFortPlayerAttrSet(TEXT("UFortPlayerAttrSet"), sizeof(UFortPlayerAttrSet), 3528852993u);

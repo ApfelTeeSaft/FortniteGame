@@ -6,6 +6,42 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerState();  // RVA 0x0108B350 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AD10 (end 0x0108AD32)
+// Original VA: 0x000000014108AD10 | File offset: 0x0108A310
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D3E00) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerState::StaticRegisterNativesAFortPlayerState()
+{
+	UClass* Class = AFortPlayerState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreUniqueIDsIdentical", &AFortPlayerState::execAreUniqueIDsIdentical },
+		{ "ClientNotifyAwardGranted", &AFortPlayerState::execClientNotifyAwardGranted },
+		{ "GetCurrentPawn", &AFortPlayerState::execGetCurrentPawn },
+		{ "GetPlatformUniqueNetId", &AFortPlayerState::execGetPlatformUniqueNetId },
+		{ "GetPlayerOSSName", &AFortPlayerState::execGetPlayerOSSName },
+		{ "GetUniqueID", &AFortPlayerState::execGetUniqueID },
+		{ "IsConsolePlayer", &AFortPlayerState::execIsConsolePlayer },
+		{ "OnRep_AccessoryColorSwatches", &AFortPlayerState::execOnRep_AccessoryColorSwatches },
+		{ "OnRep_bHasStartedPlaying", &AFortPlayerState::execOnRep_bHasStartedPlaying },
+		{ "OnRep_CharacterColorSwatches", &AFortPlayerState::execOnRep_CharacterColorSwatches },
+		{ "OnRep_CharacterParts", &AFortPlayerState::execOnRep_CharacterParts },
+		{ "OnRep_CurrentCharXP", &AFortPlayerState::execOnRep_CurrentCharXP },
+		{ "OnRep_HeroID", &AFortPlayerState::execOnRep_HeroID },
+		{ "OnRep_HeroType", &AFortPlayerState::execOnRep_HeroType },
+		{ "OnRep_HomeActor", &AFortPlayerState::execOnRep_HomeActor },
+		{ "OnRep_PartyOwner", &AFortPlayerState::execOnRep_PartyOwner },
+		{ "OnRep_PlatformUniqueNetIdString", &AFortPlayerState::execOnRep_PlatformUniqueNetIdString },
+		{ "OnRep_PlayerTeam", &AFortPlayerState::execOnRep_PlayerTeam },
+		{ "OnRep_ScoreStatChanged", &AFortPlayerState::execOnRep_ScoreStatChanged },
+		{ "OnRep_SessionOwner", &AFortPlayerState::execOnRep_SessionOwner },
+		{ "OnRep_ShowHeroBackpack", &AFortPlayerState::execOnRep_ShowHeroBackpack },
+		{ "OnRep_ShowHeroHeadAccessories", &AFortPlayerState::execOnRep_ShowHeroHeadAccessories },
+		{ "ServerSetShowHeroBackpack", &AFortPlayerState::execServerSetShowHeroBackpack },
+		{ "ServerSetShowHeroHeadAccessories", &AFortPlayerState::execServerSetShowHeroHeadAccessories },
+		{ "UpdateScoreStatChanged", &AFortPlayerState::execUpdateScoreStatChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerState_AreUniqueIDsIdentical_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

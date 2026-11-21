@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AEmitter();  // RVA 0x02404D50 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404510 (end 0x02404532)
+// Original VA: 0x0000000142404510 | File offset: 0x02403B10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038D79E0) | Matching: see analysis/functions-uht-natives.json
+void AEmitter::StaticRegisterNativesAEmitter()
+{
+	UClass* Class = AEmitter::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Activate", &AEmitter::execActivate },
+		{ "Deactivate", &AEmitter::execDeactivate },
+		{ "IsActive", &AEmitter::execIsActive },
+		{ "OnParticleSystemFinished", &AEmitter::execOnParticleSystemFinished },
+		{ "OnRep_bCurrentlyActive", &AEmitter::execOnRep_bCurrentlyActive },
+		{ "SetActorParameter", &AEmitter::execSetActorParameter },
+		{ "SetColorParameter", &AEmitter::execSetColorParameter },
+		{ "SetFloatParameter", &AEmitter::execSetFloatParameter },
+		{ "SetMaterialParameter", &AEmitter::execSetMaterialParameter },
+		{ "SetTemplate", &AEmitter::execSetTemplate },
+		{ "SetVectorParameter", &AEmitter::execSetVectorParameter },
+		{ "ToggleActive", &AEmitter::execToggleActive },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AEmitter_Activate_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

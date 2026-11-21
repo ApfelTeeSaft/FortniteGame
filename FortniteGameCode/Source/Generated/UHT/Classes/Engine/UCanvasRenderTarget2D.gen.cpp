@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCanvasRenderTarget2D::StaticRegisterNativesUCanvasRenderTarget2D()
-{
-}
 // IMPLEMENT_CLASS(UCanvasRenderTarget2D, 731889106u)
 // Original dynamic initializer: RVA 0x001F6410 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCanvasRenderTarget2D> AutoInitializeUCanvasRenderTarget2D(TEXT("UCanvasRenderTarget2D"), sizeof(UCanvasRenderTarget2D), 731889106u);

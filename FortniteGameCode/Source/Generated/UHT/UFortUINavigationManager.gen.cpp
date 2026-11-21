@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUINavigationManager();  // RVA 0x02911D50 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029116A0 (end 0x029116C2)
+// Original VA: 0x00000001429116A0 | File offset: 0x02910CA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D49760) | Matching: see analysis/functions-uht-natives.json
+void UFortUINavigationManager::StaticRegisterNativesUFortUINavigationManager()
+{
+	UClass* Class = UFortUINavigationManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AttemptMatchmakeForQuest", &UFortUINavigationManager::execAttemptMatchmakeForQuest },
+		{ "AttemptPlayQuest", &UFortUINavigationManager::execAttemptPlayQuest },
+		{ "CanNavigateToQuestObjective", &UFortUINavigationManager::execCanNavigateToQuestObjective },
+		{ "CenterWidget", &UFortUINavigationManager::execCenterWidget },
+		{ "CompletePendingNavigationOp", &UFortUINavigationManager::execCompletePendingNavigationOp },
+		{ "HasPendingNavigationOp", &UFortUINavigationManager::execHasPendingNavigationOp },
+		{ "NavigateToCollectionBook", &UFortUINavigationManager::execNavigateToCollectionBook },
+		{ "NavigateToExpeditions", &UFortUINavigationManager::execNavigateToExpeditions },
+		{ "NavigateToFeature", &UFortUINavigationManager::execNavigateToFeature },
+		{ "NavigateToItem", &UFortUINavigationManager::execNavigateToItem },
+		{ "NavigateToItemManagementScreen", &UFortUINavigationManager::execNavigateToItemManagementScreen },
+		{ "NavigateToNodePage", &UFortUINavigationManager::execNavigateToNodePage },
+		{ "NavigateToNodePageByGameplayTagContainer", &UFortUINavigationManager::execNavigateToNodePageByGameplayTagContainer },
+		{ "NavigateToQuestObjective", &UFortUINavigationManager::execNavigateToQuestObjective },
+		{ "NavigateToSquadSlot", &UFortUINavigationManager::execNavigateToSquadSlot },
+		{ "PushItemInspectionScreen", &UFortUINavigationManager::execPushItemInspectionScreen },
+		{ "PushItemManagementScreen", &UFortUINavigationManager::execPushItemManagementScreen },
+		{ "PushSkillTreeNode", &UFortUINavigationManager::execPushSkillTreeNode },
+		{ "PushSkillTreePage", &UFortUINavigationManager::execPushSkillTreePage },
+		{ "PushSquadManagementScreen", &UFortUINavigationManager::execPushSquadManagementScreen },
+		{ "SetScrollWidget", &UFortUINavigationManager::execSetScrollWidget },
+		{ "TryGetPendingNavigationOp", &UFortUINavigationManager::execTryGetPendingNavigationOp },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUINavigationManager_AttemptMatchmakeForQuest_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

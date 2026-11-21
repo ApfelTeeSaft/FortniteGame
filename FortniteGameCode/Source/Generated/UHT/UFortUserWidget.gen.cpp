@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918830 (end 0x02918852)
+// Original VA: 0x0000000142918830 | File offset: 0x02917E30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D54538) | Matching: see analysis/functions-uht-natives.json
+void UFortUserWidget::StaticRegisterNativesUFortUserWidget()
+{
+	UClass* Class = UFortUserWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddGrantCheatMenu", &UFortUserWidget::execAddGrantCheatMenu },
+		{ "AddStoreCheatMenu", &UFortUserWidget::execAddStoreCheatMenu },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUserWidget_AddGrantCheatMenu_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name

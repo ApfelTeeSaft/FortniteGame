@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortRejoinWindowBase();  // RVA 0x028ED470 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECDD0 (end 0x028ECDF2)
+// Original VA: 0x00000001428ECDD0 | File offset: 0x028EC3D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0A408) | Matching: see analysis/functions-uht-natives.json
+void UFortRejoinWindowBase::StaticRegisterNativesUFortRejoinWindowBase()
+{
+	UClass* Class = UFortRejoinWindowBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "StartTimeout", &UFortRejoinWindowBase::execStartTimeout },
+		{ "StopTimeout", &UFortRejoinWindowBase::execStopTimeout },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

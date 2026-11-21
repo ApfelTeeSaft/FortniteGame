@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWeap_EditingTool();  // RVA 0x010D4920 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4320 (end 0x010D4342)
+// Original VA: 0x00000001410D4320 | File offset: 0x010D3920
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0342A4B8) | Matching: see analysis/functions-uht-natives.json
+void AFortWeap_EditingTool::StaticRegisterNativesAFortWeap_EditingTool()
+{
+	UClass* Class = AFortWeap_EditingTool::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_EditActor", &AFortWeap_EditingTool::execOnRep_EditActor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortWeap_EditingTool_OnRep_EditActor_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

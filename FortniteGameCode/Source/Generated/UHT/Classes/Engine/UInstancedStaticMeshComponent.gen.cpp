@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UInstancedStaticMeshComponent::StaticRegisterNativesUInstancedStaticMeshComponent()
-{
-}
 // IMPLEMENT_CLASS(UInstancedStaticMeshComponent, 65592595u)
 // Original dynamic initializer: RVA 0x00200D00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UInstancedStaticMeshComponent> AutoInitializeUInstancedStaticMeshComponent(TEXT("UInstancedStaticMeshComponent"), sizeof(UInstancedStaticMeshComponent), 65592595u);

@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetStack();  // RVA 0x002D05B0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D02D0 (end 0x002D02F2)
+// Original VA: 0x00000001402D02D0 | File offset: 0x002CF8D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E86670) | Matching: see analysis/functions-uht-natives.json
+void UCommonWidgetStack::StaticRegisterNativesUCommonWidgetStack()
+{
+	UClass* Class = UCommonWidgetStack::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ActivateWidget", &UCommonWidgetStack::execActivateWidget },
+		{ "DeactivateWidget", &UCommonWidgetStack::execDeactivateWidget },
+		{ "PopWigdet", &UCommonWidgetStack::execPopWigdet },
+		{ "PushWidget", &UCommonWidgetStack::execPushWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonWidgetStack_ActivateWidget_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

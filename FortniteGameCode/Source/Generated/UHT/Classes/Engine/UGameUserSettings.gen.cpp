@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UGameUserSettings::StaticRegisterNativesUGameUserSettings()
-{
-}
 // IMPLEMENT_CLASS(UGameUserSettings, 474070331u)
 // Original dynamic initializer: RVA 0x00200110 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameUserSettings> AutoInitializeUGameUserSettings(TEXT("UGameUserSettings"), sizeof(UGameUserSettings), 474070331u);

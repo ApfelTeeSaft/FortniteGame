@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USynthComponent::StaticRegisterNativesUSynthComponent()
-{
-}
 // IMPLEMENT_CLASS(USynthComponent, 1112999218u)
 // Original dynamic initializer: RVA 0x002246E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USynthComponent> AutoInitializeUSynthComponent(TEXT("USynthComponent"), sizeof(USynthComponent), 1112999218u);

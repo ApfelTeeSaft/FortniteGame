@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortExpeditionRewardsWidget::StaticRegisterNativesUFortExpeditionRewardsWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortExpeditionRewardsWidget, 438855713u)
 // Original dynamic initializer: RVA 0x00244B60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortExpeditionRewardsWidget> AutoInitializeUFortExpeditionRewardsWidget(TEXT("UFortExpeditionRewardsWidget"), sizeof(UFortExpeditionRewardsWidget), 438855713u);

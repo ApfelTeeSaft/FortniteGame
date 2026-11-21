@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortTouchControlRegion::StaticRegisterNativesUFortTouchControlRegion()
-{
-}
 // IMPLEMENT_CLASS(UFortTouchControlRegion, 2128704415u)
 // Original dynamic initializer: RVA 0x0025E510 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTouchControlRegion> AutoInitializeUFortTouchControlRegion(TEXT("UFortTouchControlRegion"), sizeof(UFortTouchControlRegion), 2128704415u);

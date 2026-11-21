@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadSlotSelectorButton::StaticRegisterNativesUFortSquadSlotSelectorButton()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadSlotSelectorButton, 1886962062u)
 // Original dynamic initializer: RVA 0x0025C160 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadSlotSelectorButton> AutoInitializeUFortSquadSlotSelectorButton(TEXT("UFortSquadSlotSelectorButton"), sizeof(UFortSquadSlotSelectorButton), 1886962062u);

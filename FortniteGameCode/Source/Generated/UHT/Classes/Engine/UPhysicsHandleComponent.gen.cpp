@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPhysicsHandleComponent::StaticRegisterNativesUPhysicsHandleComponent()
-{
-}
 // IMPLEMENT_CLASS(UPhysicsHandleComponent, 132082784u)
 // Original dynamic initializer: RVA 0x00214950 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPhysicsHandleComponent> AutoInitializeUPhysicsHandleComponent(TEXT("UPhysicsHandleComponent"), sizeof(UPhysicsHandleComponent), 132082784u);

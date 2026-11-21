@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIManagerWidget_NUI();  // RVA 0x0290AA30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A7D0 (end 0x0290A7F2)
+// Original VA: 0x000000014290A7D0 | File offset: 0x02909DD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3DD00) | Matching: see analysis/functions-uht-natives.json
+void UFortUIManagerWidget_NUI::StaticRegisterNativesUFortUIManagerWidget_NUI()
+{
+	UClass* Class = UFortUIManagerWidget_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "_BPGetCurrentUIState", &UFortUIManagerWidget_NUI::exec_BPGetCurrentUIState },
+		{ "CreateNotification", &UFortUIManagerWidget_NUI::execCreateNotification },
+		{ "CreateUIStateTrigger", &UFortUIManagerWidget_NUI::execCreateUIStateTrigger },
+		{ "DecrementShouldBlockSubtitlePortrait", &UFortUIManagerWidget_NUI::execDecrementShouldBlockSubtitlePortrait },
+		{ "GetCachedWidget", &UFortUIManagerWidget_NUI::execGetCachedWidget },
+		{ "GetCurrentUIStateWidget", &UFortUIManagerWidget_NUI::execGetCurrentUIStateWidget },
+		{ "GetNavigationManager", &UFortUIManagerWidget_NUI::execGetNavigationManager },
+		{ "GetUIManagerWidget", &UFortUIManagerWidget_NUI::execGetUIManagerWidget },
+		{ "GetUINavigationManager", &UFortUIManagerWidget_NUI::execGetUINavigationManager },
+		{ "GetUINotificationQueue", &UFortUIManagerWidget_NUI::execGetUINotificationQueue },
+		{ "IncrementShouldBlockSubtitlePortrait", &UFortUIManagerWidget_NUI::execIncrementShouldBlockSubtitlePortrait },
+		{ "IsStateContentDisplayed", &UFortUIManagerWidget_NUI::execIsStateContentDisplayed },
+		{ "KillConfirmationDialog", &UFortUIManagerWidget_NUI::execKillConfirmationDialog },
+		{ "PopAllContentWidgets", &UFortUIManagerWidget_NUI::execPopAllContentWidgets },
+		{ "PopContentWidget", &UFortUIManagerWidget_NUI::execPopContentWidget },
+		{ "PushContentWidget", &UFortUIManagerWidget_NUI::execPushContentWidget },
+		{ "PushContentWidgetAdvanced", &UFortUIManagerWidget_NUI::execPushContentWidgetAdvanced },
+		{ "RegisterStateTrigger", &UFortUIManagerWidget_NUI::execRegisterStateTrigger },
+		{ "ReleaseNotification", &UFortUIManagerWidget_NUI::execReleaseNotification },
+		{ "SetFrontEndVisibility", &UFortUIManagerWidget_NUI::execSetFrontEndVisibility },
+		{ "SetStateContentDisplayed", &UFortUIManagerWidget_NUI::execSetStateContentDisplayed },
+		{ "ShouldBlockSubtitlePortrait", &UFortUIManagerWidget_NUI::execShouldBlockSubtitlePortrait },
+		{ "ShowErrorDialog", &UFortUIManagerWidget_NUI::execShowErrorDialog },
+		{ "UnregisterStateTrigger", &UFortUIManagerWidget_NUI::execUnregisterStateTrigger },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

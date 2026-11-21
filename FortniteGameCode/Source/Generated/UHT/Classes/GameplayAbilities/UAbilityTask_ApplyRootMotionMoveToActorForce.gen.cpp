@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAbilityTask_ApplyRootMotionMoveToActorForce::StaticRegisterNativesUAbilityTask_ApplyRootMotionMoveToActorForce()
-{
-}
 // IMPLEMENT_CLASS(UAbilityTask_ApplyRootMotionMoveToActorForce, 4263276016u)
 // Original dynamic initializer: RVA 0x0009D400 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_ApplyRootMotionMoveToActorForce> AutoInitializeUAbilityTask_ApplyRootMotionMoveToActorForce(TEXT("UAbilityTask_ApplyRootMotionMoveToActorForce"), sizeof(UAbilityTask_ApplyRootMotionMoveToActorForce), 4263276016u);

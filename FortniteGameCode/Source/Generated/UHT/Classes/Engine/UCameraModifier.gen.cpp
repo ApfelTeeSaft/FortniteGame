@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCameraModifier::StaticRegisterNativesUCameraModifier()
-{
-}
 // IMPLEMENT_CLASS(UCameraModifier, 4198297412u)
 // Original dynamic initializer: RVA 0x001F4D30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCameraModifier> AutoInitializeUCameraModifier(TEXT("UCameraModifier"), sizeof(UCameraModifier), 4198297412u);

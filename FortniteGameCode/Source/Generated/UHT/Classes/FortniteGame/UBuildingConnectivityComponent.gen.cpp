@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UBuildingConnectivityComponent::StaticRegisterNativesUBuildingConnectivityComponent()
-{
-}
 // IMPLEMENT_CLASS(UBuildingConnectivityComponent, 1671748314u)
 // Original dynamic initializer: RVA 0x000D99B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingConnectivityComponent> AutoInitializeUBuildingConnectivityComponent(TEXT("UBuildingConnectivityComponent"), sizeof(UBuildingConnectivityComponent), 1671748314u);

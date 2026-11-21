@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AAmbientSound::StaticRegisterNativesAAmbientSound()
-{
-}
 // IMPLEMENT_CLASS(AAmbientSound, 3952766051u)
 // Original dynamic initializer: RVA 0x001EBF40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AAmbientSound> AutoInitializeAAmbientSound(TEXT("AAmbientSound"), sizeof(AAmbientSound), 3952766051u);

@@ -6,6 +6,9 @@ decrypted image):
 * FNameNativePtrPair arrays {const char* NameUTF8; FNativeFuncPtr Pointer;}, one per class,
   built by UHT in StaticRegisterNatives<Class>(). Each pairs a UFunction name with its exec
   thunk (<Class>::exec<Name>).
+  A thunk with nothing to do after P_FINISH but a tail call is a leaf function without a
+  .pdata entry. Such an entry is accepted when its pointer is to code starting with
+  P_FINISH's load of Stack.Code; otherwise it would split the array and hide its start.
 * FClassFunctionLinkInfo arrays {UFunction* (*CreateFuncPtr)(); const char* FuncNameUTF8;},
   which pair every UFunction (including events and delegate signatures) with its
   Z_Construct_UFunction_<Class>_<Name> creator.
@@ -40,6 +43,7 @@ from compare import load_decrypted  # noqa: E402
 from pe import PEImage  # noqa: E402
 
 IDENT = re.compile(rb"[A-Za-z_][A-Za-z0-9_]{0,200}\x00")
+LEAF_THUNK = re.compile(rb"[\x48\x4c]\x8b[\x42\x4a\x52\x5a\x62\x6a\x72\x7a]\x20")
 OUT = ROOT / "analysis" / "reflection-natives.json"
 
 
@@ -82,7 +86,10 @@ def main() -> int:
         a, b = ptr(off), ptr(off + 8)
         if a is None or b is None:
             continue
-        if b in starts and ident_at(a):
+        # Exec thunks may be leaf functions (P_FINISH then a tail call) without a .pdata
+        # entry. Such a thunk reads no parameter (that would call FFrame::Step), so it starts
+        # with P_FINISH's load of Stack.Code: mov r64, [rdx+0x20].
+        if (b in starts or (text.contains_rva(b) and LEAF_THUNK.match(dimg.read(b, 4)))) and ident_at(a):
             nf[off] = (ident_at(a), b)
         if a in starts and ident_at(b):
             fn[off] = (a, ident_at(b))
@@ -101,18 +108,20 @@ def main() -> int:
         return out
 
     native_runs, link_runs = runs(nf), runs(fn)
-    link_len = {r[0]: len(r) for r in link_runs}
-    native_len = {r[0]: len(r) for r in native_runs}
-    natives, links = [], []
-    for r in native_runs:
-        # A link array read 8 bytes early yields native-looking pairs that are one shorter.
-        shadow = max(link_len.get(r[0] - 8, 0), link_len.get(r[0] + 8, 0))
-        if len(r) > shadow:
-            natives.append(r)
-    for r in link_runs:
-        shadow = max(native_len.get(r[0] - 8, 0), native_len.get(r[0] + 8, 0))
-        if len(r) > shadow:
-            links.append(r)
+
+    def keep(own: list[list[int]], other: list[list[int]]) -> list[list[int]]:
+        # An array of one kind read 8 bytes off looks like the other kind, one entry shorter,
+        # or in fragments where a leaf exec thunk is not a .pdata start. A run is kept only
+        # when it is longer than every run of the other kind overlapping its shifted reading.
+        length = {o: len(r) for r in other for o in r}
+        out = []
+        for r in own:
+            shadow = max((length.get(o + d, 0) for o in r for d in (-8, 8)), default=0)
+            if len(r) > shadow:
+                out.append(r)
+        return out
+
+    natives, links = keep(native_runs, link_runs), keep(link_runs, native_runs)
 
     # RIP-relative LEA index over the decrypted main .text: target -> [site RVA].
     code = dimg.read(text.rva, text.rawsize)

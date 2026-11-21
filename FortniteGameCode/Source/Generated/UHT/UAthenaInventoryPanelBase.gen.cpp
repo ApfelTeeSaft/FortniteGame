@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaInventoryPanelBase();  // RVA 0x0287F5C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EE10 (end 0x0287EE32)
+// Original VA: 0x000000014287EE10 | File offset: 0x0287E410
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C53500) | Matching: see analysis/functions-uht-natives.json
+void UAthenaInventoryPanelBase::StaticRegisterNativesUAthenaInventoryPanelBase()
+{
+	UClass* Class = UAthenaInventoryPanelBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AdvanceSelection", &UAthenaInventoryPanelBase::execAdvanceSelection },
+		{ "AttemptToUpdateFocus", &UAthenaInventoryPanelBase::execAttemptToUpdateFocus },
+		{ "FocusTileView", &UAthenaInventoryPanelBase::execFocusTileView },
+		{ "GetTileViewForItem", &UAthenaInventoryPanelBase::execGetTileViewForItem },
+		{ "HandleCursorModeChanged", &UAthenaInventoryPanelBase::execHandleCursorModeChanged },
+		{ "HandleInventoryItemClicked", &UAthenaInventoryPanelBase::execHandleInventoryItemClicked },
+		{ "HandleInventoryItemDoubleClicked", &UAthenaInventoryPanelBase::execHandleInventoryItemDoubleClicked },
+		{ "HandleInventoryItemHovered", &UAthenaInventoryPanelBase::execHandleInventoryItemHovered },
+		{ "HandleInventoryItemSelected", &UAthenaInventoryPanelBase::execHandleInventoryItemSelected },
+		{ "HandleTileViewItemSelected", &UAthenaInventoryPanelBase::execHandleTileViewItemSelected },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaInventoryPanelBase_AdvanceSelection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

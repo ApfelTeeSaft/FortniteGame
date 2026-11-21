@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMissionTrackerEntry::StaticRegisterNativesUFortMissionTrackerEntry()
-{
-}
 // IMPLEMENT_CLASS(UFortMissionTrackerEntry, 4145221132u)
 // Original dynamic initializer: RVA 0x00251550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMissionTrackerEntry> AutoInitializeUFortMissionTrackerEntry(TEXT("UFortMissionTrackerEntry"), sizeof(UFortMissionTrackerEntry), 4145221132u);

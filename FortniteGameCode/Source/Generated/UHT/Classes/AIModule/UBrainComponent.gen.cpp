@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UBrainComponent::StaticRegisterNativesUBrainComponent()
-{
-}
 // IMPLEMENT_CLASS(UBrainComponent, 2415957345u)
 // Original dynamic initializer: RVA 0x001BA970 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBrainComponent> AutoInitializeUBrainComponent(TEXT("UBrainComponent"), sizeof(UBrainComponent), 2415957345u);

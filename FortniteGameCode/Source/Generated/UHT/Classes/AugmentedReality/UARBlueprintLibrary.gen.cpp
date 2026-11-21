@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UARBlueprintLibrary::StaticRegisterNativesUARBlueprintLibrary()
-{
-}
 // IMPLEMENT_CLASS(UARBlueprintLibrary, 565927587u)
 // Original dynamic initializer: RVA 0x00267BD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UARBlueprintLibrary> AutoInitializeUARBlueprintLibrary(TEXT("UARBlueprintLibrary"), sizeof(UARBlueprintLibrary), 565927587u);

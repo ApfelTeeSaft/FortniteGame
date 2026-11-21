@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMultiSizeItemCard::StaticRegisterNativesUFortMultiSizeItemCard()
-{
-}
 // IMPLEMENT_CLASS(UFortMultiSizeItemCard, 489051845u)
 // Original dynamic initializer: RVA 0x00253AF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMultiSizeItemCard> AutoInitializeUFortMultiSizeItemCard(TEXT("UFortMultiSizeItemCard"), sizeof(UFortMultiSizeItemCard), 489051845u);

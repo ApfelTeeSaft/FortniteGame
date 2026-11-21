@@ -6,6 +6,63 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDContext();  // RVA 0x0287F440 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287ED50 (end 0x0287ED72)
+// Original VA: 0x000000014287ED50 | File offset: 0x0287E350
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C527D0) | Matching: see analysis/functions-uht-natives.json
+void UAthenaHUDContext::StaticRegisterNativesUAthenaHUDContext()
+{
+	UClass* Class = UAthenaHUDContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginUseFromHUD", &UAthenaHUDContext::execBeginUseFromHUD },
+		{ "CancelSwap", &UAthenaHUDContext::execCancelSwap },
+		{ "CanCurrentWeaponAutoFireFromReticle", &UAthenaHUDContext::execCanCurrentWeaponAutoFireFromReticle },
+		{ "EnableAutoRunFromHUD", &UAthenaHUDContext::execEnableAutoRunFromHUD },
+		{ "EndUseFromHUD", &UAthenaHUDContext::execEndUseFromHUD },
+		{ "ExecuteActionNameFromHUD", &UAthenaHUDContext::execExecuteActionNameFromHUD },
+		{ "FireFromHUDStart", &UAthenaHUDContext::execFireFromHUDStart },
+		{ "FireFromHUDStop", &UAthenaHUDContext::execFireFromHUDStop },
+		{ "GetBatteryLevel", &UAthenaHUDContext::execGetBatteryLevel },
+		{ "GetLocalTime", &UAthenaHUDContext::execGetLocalTime },
+		{ "GetSelectedInventoryItem", &UAthenaHUDContext::execGetSelectedInventoryItem },
+		{ "GetTouchAimSensitivity", &UAthenaHUDContext::execGetTouchAimSensitivity },
+		{ "GetTouchBaseSensitivity", &UAthenaHUDContext::execGetTouchBaseSensitivity },
+		{ "GetTouchScopeSensitivity", &UAthenaHUDContext::execGetTouchScopeSensitivity },
+		{ "HandleGamePhaseChange", &UAthenaHUDContext::execHandleGamePhaseChange },
+		{ "HandleLocalPlayerBeginSkydiving", &UAthenaHUDContext::execHandleLocalPlayerBeginSkydiving },
+		{ "HandleLocalPlayerDBNOStateChanged", &UAthenaHUDContext::execHandleLocalPlayerDBNOStateChanged },
+		{ "HandleUIGameplayCue", &UAthenaHUDContext::execHandleUIGameplayCue },
+		{ "HasLockOnTarget", &UAthenaHUDContext::execHasLockOnTarget },
+		{ "HasWifi", &UAthenaHUDContext::execHasWifi },
+		{ "IsAutoFireFromReticleModeEnabled", &UAthenaHUDContext::execIsAutoFireFromReticleModeEnabled },
+		{ "IsCrouching", &UAthenaHUDContext::execIsCrouching },
+		{ "IsCurrentWeaponFiring", &UAthenaHUDContext::execIsCurrentWeaponFiring },
+		{ "IsInBuildMode", &UAthenaHUDContext::execIsInBuildMode },
+		{ "IsInSelectWidgetToMoveMode", &UAthenaHUDContext::execIsInSelectWidgetToMoveMode },
+		{ "IsMovingSelectedWidget", &UAthenaHUDContext::execIsMovingSelectedWidget },
+		{ "IsShowViewerCountEnabled", &UAthenaHUDContext::execIsShowViewerCountEnabled },
+		{ "IsSwapping", &UAthenaHUDContext::execIsSwapping },
+		{ "IsTargeting", &UAthenaHUDContext::execIsTargeting },
+		{ "IsUsingAutoFire", &UAthenaHUDContext::execIsUsingAutoFire },
+		{ "IsUsingScope", &UAthenaHUDContext::execIsUsingScope },
+		{ "OnClientSettingUpdatedShowViewers", &UAthenaHUDContext::execOnClientSettingUpdatedShowViewers },
+		{ "SelectWidgetToMove", &UAthenaHUDContext::execSelectWidgetToMove },
+		{ "SetAutoFireFromReticleMode", &UAthenaHUDContext::execSetAutoFireFromReticleMode },
+		{ "SetLockOnStickCoords", &UAthenaHUDContext::execSetLockOnStickCoords },
+		{ "SetSelectedInventoryItem", &UAthenaHUDContext::execSetSelectedInventoryItem },
+		{ "SetSelectWidgetToMoveMode", &UAthenaHUDContext::execSetSelectWidgetToMoveMode },
+		{ "SetTargetingToggleable", &UAthenaHUDContext::execSetTargetingToggleable },
+		{ "StartOrFinishSwap", &UAthenaHUDContext::execStartOrFinishSwap },
+		{ "StopTargettingFromHUD", &UAthenaHUDContext::execStopTargettingFromHUD },
+		{ "TakeItemSelectionInputFromHUD", &UAthenaHUDContext::execTakeItemSelectionInputFromHUD },
+		{ "TakeLookInputFromHUD", &UAthenaHUDContext::execTakeLookInputFromHUD },
+		{ "TakeMovementInputFromHUD", &UAthenaHUDContext::execTakeMovementInputFromHUD },
+		{ "UpdateSelectedWidgetMoveOffsetVector", &UAthenaHUDContext::execUpdateSelectedWidgetMoveOffsetVector },
+		{ "UseOrRleoadFromHUDStart", &UAthenaHUDContext::execUseOrRleoadFromHUDStart },
+		{ "UseOrRleoadFromHUDStop", &UAthenaHUDContext::execUseOrRleoadFromHUDStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaHUDContext_BeginUseFromHUD_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

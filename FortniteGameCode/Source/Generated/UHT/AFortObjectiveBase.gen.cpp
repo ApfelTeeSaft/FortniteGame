@@ -6,6 +6,40 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortObjectiveBase();  // RVA 0x01050BB0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01050070 (end 0x01050092)
+// Original VA: 0x0000000141050070 | File offset: 0x0104F670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03392790) | Matching: see analysis/functions-uht-natives.json
+void AFortObjectiveBase::StaticRegisterNativesAFortObjectiveBase()
+{
+	UClass* Class = AFortObjectiveBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AttemptMissionSave", &AFortObjectiveBase::execAttemptMissionSave },
+		{ "ClearObjectiveTimer", &AFortObjectiveBase::execClearObjectiveTimer },
+		{ "EnableTick", &AFortObjectiveBase::execEnableTick },
+		{ "GetMission", &AFortObjectiveBase::execGetMission },
+		{ "GetMissionGuid", &AFortObjectiveBase::execGetMissionGuid },
+		{ "GetObjectiveDisplayString", &AFortObjectiveBase::execGetObjectiveDisplayString },
+		{ "GetObjectiveTimerTimeRemaining", &AFortObjectiveBase::execGetObjectiveTimerTimeRemaining },
+		{ "GetRewardItemsByTag", &AFortObjectiveBase::execGetRewardItemsByTag },
+		{ "GetTimerComponent", &AFortObjectiveBase::execGetTimerComponent },
+		{ "GrantRewardsByTag", &AFortObjectiveBase::execGrantRewardsByTag },
+		{ "IsObjectiveTimerPaused", &AFortObjectiveBase::execIsObjectiveTimerPaused },
+		{ "IsRelevantToASpecificTeam", &AFortObjectiveBase::execIsRelevantToASpecificTeam },
+		{ "IsRelevantToTeam", &AFortObjectiveBase::execIsRelevantToTeam },
+		{ "OnRep_bIsObjectiveVisible", &AFortObjectiveBase::execOnRep_bIsObjectiveVisible },
+		{ "OnRep_ObjectiveStatus", &AFortObjectiveBase::execOnRep_ObjectiveStatus },
+		{ "OnRep_ObjectiveVisibilityOverride", &AFortObjectiveBase::execOnRep_ObjectiveVisibilityOverride },
+		{ "PauseObjectiveTimer", &AFortObjectiveBase::execPauseObjectiveTimer },
+		{ "SetObjectiveTimer", &AFortObjectiveBase::execSetObjectiveTimer },
+		{ "SetUiVisibility", &AFortObjectiveBase::execSetUiVisibility },
+		{ "SetUIVisibilityOverride", &AFortObjectiveBase::execSetUIVisibilityOverride },
+		{ "StartPlayingObjective", &AFortObjectiveBase::execStartPlayingObjective },
+		{ "StopObjective", &AFortObjectiveBase::execStopObjective },
+		{ "UnpauseObjectiveTimer", &AFortObjectiveBase::execUnpauseObjectiveTimer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortObjectiveBase_AttemptMissionSave_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

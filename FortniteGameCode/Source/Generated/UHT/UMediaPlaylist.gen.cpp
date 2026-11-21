@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMediaPlaylist();  // RVA 0x025DE930 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE6D0 (end 0x025DE6F2)
+// Original VA: 0x00000001425DE6D0 | File offset: 0x025DDCD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B648B0) | Matching: see analysis/functions-uht-natives.json
+void UMediaPlaylist::StaticRegisterNativesUMediaPlaylist()
+{
+	UClass* Class = UMediaPlaylist::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Add", &UMediaPlaylist::execAdd },
+		{ "AddFile", &UMediaPlaylist::execAddFile },
+		{ "AddUrl", &UMediaPlaylist::execAddUrl },
+		{ "Get", &UMediaPlaylist::execGet },
+		{ "GetNext", &UMediaPlaylist::execGetNext },
+		{ "GetPrevious", &UMediaPlaylist::execGetPrevious },
+		{ "GetRandom", &UMediaPlaylist::execGetRandom },
+		{ "Insert", &UMediaPlaylist::execInsert },
+		{ "Num", &UMediaPlaylist::execNum },
+		{ "Remove", &UMediaPlaylist::execRemove },
+		{ "RemoveAt", &UMediaPlaylist::execRemoveAt },
+		{ "Replace", &UMediaPlaylist::execReplace },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMediaPlaylist_Add_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

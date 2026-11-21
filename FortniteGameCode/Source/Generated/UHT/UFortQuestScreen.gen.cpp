@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestScreen();  // RVA 0x02918A70 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029187D0 (end 0x029187F2)
+// Original VA: 0x00000001429187D0 | File offset: 0x02917DD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D56788) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestScreen::StaticRegisterNativesUFortQuestScreen()
+{
+	UClass* Class = UFortQuestScreen::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ProcessPendingSeenQuestItems", &UFortQuestScreen::execProcessPendingSeenQuestItems },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestScreen_ProcessPendingSeenQuestItems_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

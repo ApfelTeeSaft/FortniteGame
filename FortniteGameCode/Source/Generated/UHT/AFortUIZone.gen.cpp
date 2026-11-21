@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortUIZone();  // RVA 0x010D4860 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D42C0 (end 0x010D42E2)
+// Original VA: 0x00000001410D42C0 | File offset: 0x010D38C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03428E40) | Matching: see analysis/functions-uht-natives.json
+void AFortUIZone::StaticRegisterNativesAFortUIZone()
+{
+	UClass* Class = AFortUIZone::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ToggleTargetInfo", &AFortUIZone::execToggleTargetInfo },
+		{ "ToggleTargetInfoAI", &AFortUIZone::execToggleTargetInfoAI },
+		{ "ToggleTargetInfoLock", &AFortUIZone::execToggleTargetInfoLock },
+		{ "ToggleTargetInfoPaths", &AFortUIZone::execToggleTargetInfoPaths },
+		{ "ToggleTargetInfoSensing", &AFortUIZone::execToggleTargetInfoSensing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortUIZone_ToggleTargetInfo_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

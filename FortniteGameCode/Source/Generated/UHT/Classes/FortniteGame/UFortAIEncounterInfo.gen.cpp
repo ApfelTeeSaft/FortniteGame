@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortAIEncounterInfo::StaticRegisterNativesUFortAIEncounterInfo()
-{
-}
 // IMPLEMENT_CLASS(UFortAIEncounterInfo, 417998318u)
 // Original dynamic initializer: RVA 0x000E22E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAIEncounterInfo> AutoInitializeUFortAIEncounterInfo(TEXT("UFortAIEncounterInfo"), sizeof(UFortAIEncounterInfo), 417998318u);

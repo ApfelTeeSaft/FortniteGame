@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemCategoryIndicator();  // RVA 0x028C9C90 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9870 (end 0x028C9892)
+// Original VA: 0x00000001428C9870 | File offset: 0x028C8E70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCB0A0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemCategoryIndicator::StaticRegisterNativesUFortItemCategoryIndicator()
+{
+	UClass* Class = UFortItemCategoryIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearLabelColorOverride", &UFortItemCategoryIndicator::execClearLabelColorOverride },
+		{ "SetItemToRepresent", &UFortItemCategoryIndicator::execSetItemToRepresent },
+		{ "SetLabelColorOverride", &UFortItemCategoryIndicator::execSetLabelColorOverride },
+		{ "SetOrdinalOfCategoryToRepresent", &UFortItemCategoryIndicator::execSetOrdinalOfCategoryToRepresent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverride_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

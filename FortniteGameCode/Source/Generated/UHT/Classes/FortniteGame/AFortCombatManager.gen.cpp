@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortCombatManager::StaticRegisterNativesAFortCombatManager()
-{
-}
 // IMPLEMENT_CLASS(AFortCombatManager, 935726391u)
 // Original dynamic initializer: RVA 0x000EC640 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortCombatManager> AutoInitializeAFortCombatManager(TEXT("AFortCombatManager"), sizeof(AFortCombatManager), 935726391u);

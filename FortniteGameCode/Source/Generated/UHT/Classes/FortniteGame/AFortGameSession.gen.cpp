@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortGameSession::StaticRegisterNativesAFortGameSession()
-{
-}
 // IMPLEMENT_CLASS(AFortGameSession, 702837740u)
 // Original dynamic initializer: RVA 0x000F7530 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameSession> AutoInitializeAFortGameSession(TEXT("AFortGameSession"), sizeof(AFortGameSession), 702837740u);

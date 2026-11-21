@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDamageSet();  // RVA 0x00FCBB80 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB1A0 (end 0x00FCB1C2)
+// Original VA: 0x0000000140FCB1A0 | File offset: 0x00FCA7A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F9550) | Matching: see analysis/functions-uht-natives.json
+void UFortDamageSet::StaticRegisterNativesUFortDamageSet()
+{
+	UClass* Class = UFortDamageSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_DiceCritChance", &UFortDamageSet::execOnRep_DiceCritChance },
+		{ "OnRep_DiceCritMultiplier", &UFortDamageSet::execOnRep_DiceCritMultiplier },
+		{ "OnRep_HealthDamageScale", &UFortDamageSet::execOnRep_HealthDamageScale },
+		{ "OnRep_KnockbackMagnitude", &UFortDamageSet::execOnRep_KnockbackMagnitude },
+		{ "OnRep_KnockbackZAngle", &UFortDamageSet::execOnRep_KnockbackZAngle },
+		{ "OnRep_OutgoingAbilityDamage", &UFortDamageSet::execOnRep_OutgoingAbilityDamage },
+		{ "OnRep_OutgoingBaseAbilityDamageMultiplier", &UFortDamageSet::execOnRep_OutgoingBaseAbilityDamageMultiplier },
+		{ "OnRep_OutgoingBaseDamage", &UFortDamageSet::execOnRep_OutgoingBaseDamage },
+		{ "OnRep_OutgoingBaseEnvironmentalDamage", &UFortDamageSet::execOnRep_OutgoingBaseEnvironmentalDamage },
+		{ "OnRep_OutgoingBaseImpactDamage", &UFortDamageSet::execOnRep_OutgoingBaseImpactDamage },
+		{ "OnRep_ShieldDamageScale", &UFortDamageSet::execOnRep_ShieldDamageScale },
+		{ "OnRep_StunTime", &UFortDamageSet::execOnRep_StunTime },
+		{ "OnRep_WeaponSkill", &UFortDamageSet::execOnRep_WeaponSkill },
+		{ "OnRep_ZoneCritMultiplier", &UFortDamageSet::execOnRep_ZoneCritMultiplier },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDamageSet_OnRep_DiceCritChance_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

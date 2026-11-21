@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void ASkeletalMeshActor::StaticRegisterNativesASkeletalMeshActor()
-{
-}
 // IMPLEMENT_CLASS(ASkeletalMeshActor, 683747865u)
 // Original dynamic initializer: RVA 0x00219FB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ASkeletalMeshActor> AutoInitializeASkeletalMeshActor(TEXT("ASkeletalMeshActor"), sizeof(ASkeletalMeshActor), 683747865u);

@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortControlResistanceSet();  // RVA 0x00FCB990 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB140 (end 0x00FCB162)
+// Original VA: 0x0000000140FCB140 | File offset: 0x00FCA740
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F7868) | Matching: see analysis/functions-uht-natives.json
+void UFortControlResistanceSet::StaticRegisterNativesUFortControlResistanceSet()
+{
+	UClass* Class = UFortControlResistanceSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_ControlResistance", &UFortControlResistanceSet::execOnRep_ControlResistance },
+		{ "OnRep_MaxControlResistance", &UFortControlResistanceSet::execOnRep_MaxControlResistance },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortControlResistanceSet_OnRep_ControlResistance_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

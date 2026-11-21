@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortWeaponAttrSet::StaticRegisterNativesUFortWeaponAttrSet()
-{
-}
 // IMPLEMENT_CLASS(UFortWeaponAttrSet, 2890296020u)
 // Original dynamic initializer: RVA 0x0011D340 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortWeaponAttrSet> AutoInitializeUFortWeaponAttrSet(TEXT("UFortWeaponAttrSet"), sizeof(UFortWeaponAttrSet), 2890296020u);

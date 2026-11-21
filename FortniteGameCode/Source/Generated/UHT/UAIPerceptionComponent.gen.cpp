@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIPerceptionComponent();  // RVA 0x01D1BBD0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B1A0 (end 0x01D1B1C2)
+// Original VA: 0x0000000141D1B1A0 | File offset: 0x01D1A7A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F1A90) | Matching: see analysis/functions-uht-natives.json
+void UAIPerceptionComponent::StaticRegisterNativesUAIPerceptionComponent()
+{
+	UClass* Class = UAIPerceptionComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetActorsPerception", &UAIPerceptionComponent::execGetActorsPerception },
+		{ "GetCurrentlyPerceivedActors", &UAIPerceptionComponent::execGetCurrentlyPerceivedActors },
+		{ "GetKnownPerceivedActors", &UAIPerceptionComponent::execGetKnownPerceivedActors },
+		{ "GetPerceivedActors", &UAIPerceptionComponent::execGetPerceivedActors },
+		{ "GetPerceivedHostileActors", &UAIPerceptionComponent::execGetPerceivedHostileActors },
+		{ "OnOwnerEndPlay", &UAIPerceptionComponent::execOnOwnerEndPlay },
+		{ "RequestStimuliListenerUpdate", &UAIPerceptionComponent::execRequestStimuliListenerUpdate },
+		{ "SetSenseEnabled", &UAIPerceptionComponent::execSetSenseEnabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAIPerceptionComponent_GetActorsPerception_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

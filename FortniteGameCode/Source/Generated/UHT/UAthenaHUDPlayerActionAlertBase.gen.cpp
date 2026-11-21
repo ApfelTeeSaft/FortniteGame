@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase();  // RVA 0x0287F4D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EDB0 (end 0x0287EDD2)
+// Original VA: 0x000000014287EDB0 | File offset: 0x0287E3B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C53198) | Matching: see analysis/functions-uht-natives.json
+void UAthenaHUDPlayerActionAlertBase::StaticRegisterNativesUAthenaHUDPlayerActionAlertBase()
+{
+	UClass* Class = UAthenaHUDPlayerActionAlertBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RequestNextAlert", &UAthenaHUDPlayerActionAlertBase::execRequestNextAlert },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortDecoItemDefinition::StaticRegisterNativesUFortDecoItemDefinition()
-{
-}
 // IMPLEMENT_CLASS(UFortDecoItemDefinition, 1355181804u)
 // Original dynamic initializer: RVA 0x000EFB00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDecoItemDefinition> AutoInitializeUFortDecoItemDefinition(TEXT("UFortDecoItemDefinition"), sizeof(UFortDecoItemDefinition), 1355181804u);

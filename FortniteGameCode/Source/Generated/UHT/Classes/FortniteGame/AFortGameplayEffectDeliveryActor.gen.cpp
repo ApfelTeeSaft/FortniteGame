@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortGameplayEffectDeliveryActor::StaticRegisterNativesAFortGameplayEffectDeliveryActor()
-{
-}
 // IMPLEMENT_CLASS(AFortGameplayEffectDeliveryActor, 4235147503u)
 // Original dynamic initializer: RVA 0x000F6580 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameplayEffectDeliveryActor> AutoInitializeAFortGameplayEffectDeliveryActor(TEXT("AFortGameplayEffectDeliveryActor"), sizeof(AFortGameplayEffectDeliveryActor), 4235147503u);

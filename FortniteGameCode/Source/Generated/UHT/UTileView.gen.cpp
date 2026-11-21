@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTileView();  // RVA 0x01BFB100 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFADC0 (end 0x01BFADE2)
+// Original VA: 0x0000000141BFADC0 | File offset: 0x01BFA3C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A2D50) | Matching: see analysis/functions-uht-natives.json
+void UTileView::StaticRegisterNativesUTileView()
+{
+	UClass* Class = UTileView::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RequestListRefresh", &UTileView::execRequestListRefresh },
+		{ "SetItemHeight", &UTileView::execSetItemHeight },
+		{ "SetItemWidth", &UTileView::execSetItemWidth },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTileView_RequestListRefresh_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

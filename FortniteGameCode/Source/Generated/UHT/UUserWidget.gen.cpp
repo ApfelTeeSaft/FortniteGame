@@ -6,6 +6,61 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UUserWidget();  // RVA 0x01BFB1D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFAE50 (end 0x01BFAE72)
+// Original VA: 0x0000000141BFAE50 | File offset: 0x01BFA450
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A3480) | Matching: see analysis/functions-uht-natives.json
+void UUserWidget::StaticRegisterNativesUUserWidget()
+{
+	UClass* Class = UUserWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddToPlayerScreen", &UUserWidget::execAddToPlayerScreen },
+		{ "AddToViewport", &UUserWidget::execAddToViewport },
+		{ "CancelLatentActions", &UUserWidget::execCancelLatentActions },
+		{ "GetAlignmentInViewport", &UUserWidget::execGetAlignmentInViewport },
+		{ "GetAnchorsInViewport", &UUserWidget::execGetAnchorsInViewport },
+		{ "GetAnimationCurrentTime", &UUserWidget::execGetAnimationCurrentTime },
+		{ "GetIsVisible", &UUserWidget::execGetIsVisible },
+		{ "GetOwningLocalPlayer", &UUserWidget::execGetOwningLocalPlayer },
+		{ "GetOwningPlayerPawn", &UUserWidget::execGetOwningPlayerPawn },
+		{ "IsAnimationPlaying", &UUserWidget::execIsAnimationPlaying },
+		{ "IsAnimationPlayingForward", &UUserWidget::execIsAnimationPlayingForward },
+		{ "IsAnyAnimationPlaying", &UUserWidget::execIsAnyAnimationPlaying },
+		{ "IsInViewport", &UUserWidget::execIsInViewport },
+		{ "IsListeningForInputAction", &UUserWidget::execIsListeningForInputAction },
+		{ "IsPlayingAnimation", &UUserWidget::execIsPlayingAnimation },
+		{ "ListenForInputAction", &UUserWidget::execListenForInputAction },
+		{ "OnAnimationFinished", &UUserWidget::execOnAnimationFinished },
+		{ "OnAnimationStarted", &UUserWidget::execOnAnimationStarted },
+		{ "PauseAnimation", &UUserWidget::execPauseAnimation },
+		{ "PlayAnimation", &UUserWidget::execPlayAnimation },
+		{ "PlayAnimationTo", &UUserWidget::execPlayAnimationTo },
+		{ "PlaySound", &UUserWidget::execPlaySound },
+		{ "RegisterInputComponent", &UUserWidget::execRegisterInputComponent },
+		{ "RemoveFromViewport", &UUserWidget::execRemoveFromViewport },
+		{ "ReverseAnimation", &UUserWidget::execReverseAnimation },
+		{ "SetAlignmentInViewport", &UUserWidget::execSetAlignmentInViewport },
+		{ "SetAnchorsInViewport", &UUserWidget::execSetAnchorsInViewport },
+		{ "SetColorAndOpacity", &UUserWidget::execSetColorAndOpacity },
+		{ "SetDesiredSizeInViewport", &UUserWidget::execSetDesiredSizeInViewport },
+		{ "SetForegroundColor", &UUserWidget::execSetForegroundColor },
+		{ "SetInputActionBlocking", &UUserWidget::execSetInputActionBlocking },
+		{ "SetInputActionPriority", &UUserWidget::execSetInputActionPriority },
+		{ "SetNumLoopsToPlay", &UUserWidget::execSetNumLoopsToPlay },
+		{ "SetOwningLocalPlayer", &UUserWidget::execSetOwningLocalPlayer },
+		{ "SetOwningPlayer", &UUserWidget::execSetOwningPlayer },
+		{ "SetPadding", &UUserWidget::execSetPadding },
+		{ "SetPlaybackSpeed", &UUserWidget::execSetPlaybackSpeed },
+		{ "SetPositionInViewport", &UUserWidget::execSetPositionInViewport },
+		{ "StopAllAnimations", &UUserWidget::execStopAllAnimations },
+		{ "StopAnimation", &UUserWidget::execStopAnimation },
+		{ "StopAnimationsAndLatentActions", &UUserWidget::execStopAnimationsAndLatentActions },
+		{ "StopListeningForAllInputActions", &UUserWidget::execStopListeningForAllInputActions },
+		{ "StopListeningForInputAction", &UUserWidget::execStopListeningForInputAction },
+		{ "UnregisterInputComponent", &UUserWidget::execUnregisterInputComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UUserWidget_AddToPlayerScreen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

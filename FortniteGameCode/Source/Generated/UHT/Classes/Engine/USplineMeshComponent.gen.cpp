@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void USplineMeshComponent::StaticRegisterNativesUSplineMeshComponent()
-{
-}
 // IMPLEMENT_CLASS(USplineMeshComponent, 252120460u)
 // Original dynamic initializer: RVA 0x0021E1D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USplineMeshComponent> AutoInitializeUSplineMeshComponent(TEXT("USplineMeshComponent"), sizeof(USplineMeshComponent), 252120460u);

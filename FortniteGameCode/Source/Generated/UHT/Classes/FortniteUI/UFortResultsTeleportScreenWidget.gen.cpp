@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortResultsTeleportScreenWidget::StaticRegisterNativesUFortResultsTeleportScreenWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortResultsTeleportScreenWidget, 2422792583u)
 // Original dynamic initializer: RVA 0x002584C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortResultsTeleportScreenWidget> AutoInitializeUFortResultsTeleportScreenWidget(TEXT("UFortResultsTeleportScreenWidget"), sizeof(UFortResultsTeleportScreenWidget), 2422792583u);

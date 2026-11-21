@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMontageItemDefinitionBase::StaticRegisterNativesUFortMontageItemDefinitionBase()
-{
-}
 // IMPLEMENT_CLASS(UFortMontageItemDefinitionBase, 550869462u)
 // Original dynamic initializer: RVA 0x00104140 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMontageItemDefinitionBase> AutoInitializeUFortMontageItemDefinitionBase(TEXT("UFortMontageItemDefinitionBase"), sizeof(UFortMontageItemDefinitionBase), 550869462u);

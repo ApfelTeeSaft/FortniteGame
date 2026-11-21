@@ -6,6 +6,67 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerPawn();  // RVA 0x0107FE00 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FA70 (end 0x0107FA92)
+// Original VA: 0x000000014107FA70 | File offset: 0x0107F070
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033CBF60) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerPawn::StaticRegisterNativesAFortPlayerPawn()
+{
+	UClass* Class = AFortPlayerPawn::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddAttachment", &AFortPlayerPawn::execAddAttachment },
+		{ "CanPredictJumpApex", &AFortPlayerPawn::execCanPredictJumpApex },
+		{ "ClientNotifyAbilityFailed", &AFortPlayerPawn::execClientNotifyAbilityFailed },
+		{ "GetCharacterBodyType", &AFortPlayerPawn::execGetCharacterBodyType },
+		{ "GetCharacterGender", &AFortPlayerPawn::execGetCharacterGender },
+		{ "GetExtraLives", &AFortPlayerPawn::execGetExtraLives },
+		{ "GetGender", &AFortPlayerPawn::execGetGender },
+		{ "GetHomeActor", &AFortPlayerPawn::execGetHomeActor },
+		{ "GetMaxStamina", &AFortPlayerPawn::execGetMaxStamina },
+		{ "GetPawnLOD", &AFortPlayerPawn::execGetPawnLOD },
+		{ "GetSkeletalMeshForPartType", &AFortPlayerPawn::execGetSkeletalMeshForPartType },
+		{ "GetStamina", &AFortPlayerPawn::execGetStamina },
+		{ "GetStasisMode", &AFortPlayerPawn::execGetStasisMode },
+		{ "HandleInStasis", &AFortPlayerPawn::execHandleInStasis },
+		{ "InternalServerSetTargeting", &AFortPlayerPawn::execInternalServerSetTargeting },
+		{ "IsSprinting", &AFortPlayerPawn::execIsSprinting },
+		{ "IsUsingHoverboard", &AFortPlayerPawn::execIsUsingHoverboard },
+		{ "ListCharacterParts", &AFortPlayerPawn::execListCharacterParts },
+		{ "OnRep_AccelerationPack", &AFortPlayerPawn::execOnRep_AccelerationPack },
+		{ "OnRep_AnimTrailDisableFlashCount", &AFortPlayerPawn::execOnRep_AnimTrailDisableFlashCount },
+		{ "OnRep_AttachmentMesh", &AFortPlayerPawn::execOnRep_AttachmentMesh },
+		{ "OnRep_CharPartAnimMontageInfo", &AFortPlayerPawn::execOnRep_CharPartAnimMontageInfo },
+		{ "OnRep_IsDBNO", &AFortPlayerPawn::execOnRep_IsDBNO },
+		{ "OnRep_IsTargeting", &AFortPlayerPawn::execOnRep_IsTargeting },
+		{ "RandomizeCharacter", &AFortPlayerPawn::execRandomizeCharacter },
+		{ "RemoveAttachment", &AFortPlayerPawn::execRemoveAttachment },
+		{ "ReviveFromDBNO", &AFortPlayerPawn::execReviveFromDBNO },
+		{ "ServerChooseGender", &AFortPlayerPawn::execServerChooseGender },
+		{ "ServerChoosePart", &AFortPlayerPawn::execServerChoosePart },
+		{ "ServerCycleAccessoryColorSwatch", &AFortPlayerPawn::execServerCycleAccessoryColorSwatch },
+		{ "ServerCycleColorSwatch", &AFortPlayerPawn::execServerCycleColorSwatch },
+		{ "ServerCyclePart", &AFortPlayerPawn::execServerCyclePart },
+		{ "ServerHandlePickup", &AFortPlayerPawn::execServerHandlePickup },
+		{ "ServerPlayUnableToPerformActionMontage", &AFortPlayerPawn::execServerPlayUnableToPerformActionMontage },
+		{ "ServerRespawnFromDBNO", &AFortPlayerPawn::execServerRespawnFromDBNO },
+		{ "ServerReviveFromDBNO", &AFortPlayerPawn::execServerReviveFromDBNO },
+		{ "ServerRootMotionInterruptNotifyStopMontage", &AFortPlayerPawn::execServerRootMotionInterruptNotifyStopMontage },
+		{ "ServerSendAimbotDetectionStatus", &AFortPlayerPawn::execServerSendAimbotDetectionStatus },
+		{ "ServerSetAimbotDetection", &AFortPlayerPawn::execServerSetAimbotDetection },
+		{ "ServerSetAttachment", &AFortPlayerPawn::execServerSetAttachment },
+		{ "ServerToggleBodyType", &AFortPlayerPawn::execServerToggleBodyType },
+		{ "ServerToggleGender", &AFortPlayerPawn::execServerToggleGender },
+		{ "SetHomeActor", &AFortPlayerPawn::execSetHomeActor },
+		{ "SetStasisMode", &AFortPlayerPawn::execSetStasisMode },
+		{ "SwitchToNextPart", &AFortPlayerPawn::execSwitchToNextPart },
+		{ "SwitchToPreviousPart", &AFortPlayerPawn::execSwitchToPreviousPart },
+		{ "TimeFromJumpApex", &AFortPlayerPawn::execTimeFromJumpApex },
+		{ "ToggleBodyType", &AFortPlayerPawn::execToggleBodyType },
+		{ "ToggleGender", &AFortPlayerPawn::execToggleGender },
+		{ "UpdateAimbotDetectionStatus", &AFortPlayerPawn::execUpdateAimbotDetectionStatus },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerPawn_AddAttachment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

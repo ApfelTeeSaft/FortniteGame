@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayAbility_AIPortal();  // RVA 0x00FE7B50 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7730 (end 0x00FE7752)
+// Original VA: 0x0000000140FE7730 | File offset: 0x00FE6D30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03325A90) | Matching: see analysis/functions-uht-natives.json
+void UFortGameplayAbility_AIPortal::StaticRegisterNativesUFortGameplayAbility_AIPortal()
+{
+	UClass* Class = UFortGameplayAbility_AIPortal::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPortalBuilding", &UFortGameplayAbility_AIPortal::execGetPortalBuilding },
+		{ "GetPortalInPoint", &UFortGameplayAbility_AIPortal::execGetPortalInPoint },
+		{ "GetPortalOutPoint", &UFortGameplayAbility_AIPortal::execGetPortalOutPoint },
+		{ "HasPortalOutPoint", &UFortGameplayAbility_AIPortal::execHasPortalOutPoint },
+		{ "ModifyCollisions", &UFortGameplayAbility_AIPortal::execModifyCollisions },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

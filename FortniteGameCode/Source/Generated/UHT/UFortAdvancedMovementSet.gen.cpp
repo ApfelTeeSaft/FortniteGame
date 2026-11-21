@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAdvancedMovementSet();  // RVA 0x00F821C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81930 (end 0x00F81952)
+// Original VA: 0x0000000140F81930 | File offset: 0x00F80F30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03297CB0) | Matching: see analysis/functions-uht-natives.json
+void UFortAdvancedMovementSet::StaticRegisterNativesUFortAdvancedMovementSet()
+{
+	UClass* Class = UFortAdvancedMovementSet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_BrakingDecelerationFalling", &UFortAdvancedMovementSet::execOnRep_BrakingDecelerationFalling },
+		{ "OnRep_BrakingDecelerationWalking", &UFortAdvancedMovementSet::execOnRep_BrakingDecelerationWalking },
+		{ "OnRep_BrakingFrictionFactor", &UFortAdvancedMovementSet::execOnRep_BrakingFrictionFactor },
+		{ "OnRep_GroundFriction", &UFortAdvancedMovementSet::execOnRep_GroundFriction },
+		{ "OnRep_JumpZVelocity", &UFortAdvancedMovementSet::execOnRep_JumpZVelocity },
+		{ "OnRep_MaxAcceleration", &UFortAdvancedMovementSet::execOnRep_MaxAcceleration },
+		{ "OnRep_MinAnalogWalkSpeed", &UFortAdvancedMovementSet::execOnRep_MinAnalogWalkSpeed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_BrakingDecelerationFalling_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

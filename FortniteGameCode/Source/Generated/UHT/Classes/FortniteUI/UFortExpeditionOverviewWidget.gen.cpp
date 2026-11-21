@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortExpeditionOverviewWidget::StaticRegisterNativesUFortExpeditionOverviewWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortExpeditionOverviewWidget, 3523274542u)
 // Original dynamic initializer: RVA 0x00244B00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortExpeditionOverviewWidget> AutoInitializeUFortExpeditionOverviewWidget(TEXT("UFortExpeditionOverviewWidget"), sizeof(UFortExpeditionOverviewWidget), 3523274542u);

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UScrollBox();  // RVA 0x01BF2FA0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2A90 (end 0x01BF2AB2)
+// Original VA: 0x0000000141BF2A90 | File offset: 0x01BF2090
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369CD10) | Matching: see analysis/functions-uht-natives.json
+void UScrollBox::StaticRegisterNativesUScrollBox()
+{
+	UClass* Class = UScrollBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetScrollOffset", &UScrollBox::execGetScrollOffset },
+		{ "ScrollToEnd", &UScrollBox::execScrollToEnd },
+		{ "ScrollToStart", &UScrollBox::execScrollToStart },
+		{ "ScrollWidgetIntoView", &UScrollBox::execScrollWidgetIntoView },
+		{ "SetAllowOverscroll", &UScrollBox::execSetAllowOverscroll },
+		{ "SetAlwaysShowScrollbar", &UScrollBox::execSetAlwaysShowScrollbar },
+		{ "SetOrientation", &UScrollBox::execSetOrientation },
+		{ "SetScrollbarThickness", &UScrollBox::execSetScrollbarThickness },
+		{ "SetScrollBarVisibility", &UScrollBox::execSetScrollBarVisibility },
+		{ "SetScrollOffset", &UScrollBox::execSetScrollOffset },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UScrollBox_GetScrollOffset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

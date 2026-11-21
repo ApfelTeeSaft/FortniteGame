@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAttributeListItem_NUI();  // RVA 0x0288CBC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C6B0 (end 0x0288C6D2)
+// Original VA: 0x000000014288C6B0 | File offset: 0x0288BCB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6AFD0) | Matching: see analysis/functions-uht-natives.json
+void UFortAttributeListItem_NUI::StaticRegisterNativesUFortAttributeListItem_NUI()
+{
+	UClass* Class = UFortAttributeListItem_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearPreview", &UFortAttributeListItem_NUI::execClearPreview },
+		{ "GetCurrentAttributeCopy", &UFortAttributeListItem_NUI::execGetCurrentAttributeCopy },
+		{ "GetDisplayAttributeCopy", &UFortAttributeListItem_NUI::execGetDisplayAttributeCopy },
+		{ "GetDisplayPreviewCopy", &UFortAttributeListItem_NUI::execGetDisplayPreviewCopy },
+		{ "HasPreviewAttribute", &UFortAttributeListItem_NUI::execHasPreviewAttribute },
+		{ "SetDisplayAttribute", &UFortAttributeListItem_NUI::execSetDisplayAttribute },
+		{ "SetPreviewAttribute", &UFortAttributeListItem_NUI::execSetPreviewAttribute },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAttributeListItem_NUI_ClearPreview_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPlayerInput::StaticRegisterNativesUPlayerInput()
-{
-}
 // IMPLEMENT_CLASS(UPlayerInput, 2179435459u)
 // Original dynamic initializer: RVA 0x002162C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPlayerInput> AutoInitializeUPlayerInput(TEXT("UPlayerInput"), sizeof(UPlayerInput), 2179435459u);

@@ -6,6 +6,69 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWidgetBlueprintLibrary();  // RVA 0x01C00D90 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00B20 (end 0x01C00B42)
+// Original VA: 0x0000000141C00B20 | File offset: 0x01C00120
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A8E00) | Matching: see analysis/functions-uht-natives.json
+void UWidgetBlueprintLibrary::StaticRegisterNativesUWidgetBlueprintLibrary()
+{
+	UClass* Class = UWidgetBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelDragDrop", &UWidgetBlueprintLibrary::execCancelDragDrop },
+		{ "CaptureJoystick", &UWidgetBlueprintLibrary::execCaptureJoystick },
+		{ "CaptureMouse", &UWidgetBlueprintLibrary::execCaptureMouse },
+		{ "ClearUserFocus", &UWidgetBlueprintLibrary::execClearUserFocus },
+		{ "Create", &UWidgetBlueprintLibrary::execCreate },
+		{ "CreateDragDropOperation", &UWidgetBlueprintLibrary::execCreateDragDropOperation },
+		{ "DetectDrag", &UWidgetBlueprintLibrary::execDetectDrag },
+		{ "DetectDragIfPressed", &UWidgetBlueprintLibrary::execDetectDragIfPressed },
+		{ "DismissAllMenus", &UWidgetBlueprintLibrary::execDismissAllMenus },
+		{ "DrawBox", &UWidgetBlueprintLibrary::execDrawBox },
+		{ "DrawLine", &UWidgetBlueprintLibrary::execDrawLine },
+		{ "DrawLines", &UWidgetBlueprintLibrary::execDrawLines },
+		{ "DrawText", &UWidgetBlueprintLibrary::execDrawText },
+		{ "DrawTextFormatted", &UWidgetBlueprintLibrary::execDrawTextFormatted },
+		{ "EndDragDrop", &UWidgetBlueprintLibrary::execEndDragDrop },
+		{ "GetAllWidgetsOfClass", &UWidgetBlueprintLibrary::execGetAllWidgetsOfClass },
+		{ "GetAllWidgetsWithInterface", &UWidgetBlueprintLibrary::execGetAllWidgetsWithInterface },
+		{ "GetBrushResource", &UWidgetBlueprintLibrary::execGetBrushResource },
+		{ "GetBrushResourceAsMaterial", &UWidgetBlueprintLibrary::execGetBrushResourceAsMaterial },
+		{ "GetBrushResourceAsTexture2D", &UWidgetBlueprintLibrary::execGetBrushResourceAsTexture2D },
+		{ "GetDragDroppingContent", &UWidgetBlueprintLibrary::execGetDragDroppingContent },
+		{ "GetDynamicMaterial", &UWidgetBlueprintLibrary::execGetDynamicMaterial },
+		{ "GetInputEventFromCharacterEvent", &UWidgetBlueprintLibrary::execGetInputEventFromCharacterEvent },
+		{ "GetInputEventFromKeyEvent", &UWidgetBlueprintLibrary::execGetInputEventFromKeyEvent },
+		{ "GetInputEventFromNavigationEvent", &UWidgetBlueprintLibrary::execGetInputEventFromNavigationEvent },
+		{ "GetInputEventFromPointerEvent", &UWidgetBlueprintLibrary::execGetInputEventFromPointerEvent },
+		{ "GetKeyEventFromAnalogInputEvent", &UWidgetBlueprintLibrary::execGetKeyEventFromAnalogInputEvent },
+		{ "GetSafeZonePadding", &UWidgetBlueprintLibrary::execGetSafeZonePadding },
+		{ "Handled", &UWidgetBlueprintLibrary::execHandled },
+		{ "IsDragDropping", &UWidgetBlueprintLibrary::execIsDragDropping },
+		{ "LockMouse", &UWidgetBlueprintLibrary::execLockMouse },
+		{ "MakeBrushFromAsset", &UWidgetBlueprintLibrary::execMakeBrushFromAsset },
+		{ "MakeBrushFromMaterial", &UWidgetBlueprintLibrary::execMakeBrushFromMaterial },
+		{ "MakeBrushFromTexture", &UWidgetBlueprintLibrary::execMakeBrushFromTexture },
+		{ "NoResourceBrush", &UWidgetBlueprintLibrary::execNoResourceBrush },
+		{ "ReleaseJoystickCapture", &UWidgetBlueprintLibrary::execReleaseJoystickCapture },
+		{ "ReleaseMouseCapture", &UWidgetBlueprintLibrary::execReleaseMouseCapture },
+		{ "RestorePreviousWindowTitleBarState", &UWidgetBlueprintLibrary::execRestorePreviousWindowTitleBarState },
+		{ "SetBrushResourceToMaterial", &UWidgetBlueprintLibrary::execSetBrushResourceToMaterial },
+		{ "SetBrushResourceToTexture", &UWidgetBlueprintLibrary::execSetBrushResourceToTexture },
+		{ "SetFocusToGameViewport", &UWidgetBlueprintLibrary::execSetFocusToGameViewport },
+		{ "SetHardwareCursor", &UWidgetBlueprintLibrary::execSetHardwareCursor },
+		{ "SetInputMode_GameAndUI", &UWidgetBlueprintLibrary::execSetInputMode_GameAndUI },
+		{ "SetInputMode_GameAndUIEx", &UWidgetBlueprintLibrary::execSetInputMode_GameAndUIEx },
+		{ "SetInputMode_GameOnly", &UWidgetBlueprintLibrary::execSetInputMode_GameOnly },
+		{ "SetInputMode_UIOnly", &UWidgetBlueprintLibrary::execSetInputMode_UIOnly },
+		{ "SetInputMode_UIOnlyEx", &UWidgetBlueprintLibrary::execSetInputMode_UIOnlyEx },
+		{ "SetMousePosition", &UWidgetBlueprintLibrary::execSetMousePosition },
+		{ "SetUserFocus", &UWidgetBlueprintLibrary::execSetUserFocus },
+		{ "SetWindowTitleBarState", &UWidgetBlueprintLibrary::execSetWindowTitleBarState },
+		{ "Unhandled", &UWidgetBlueprintLibrary::execUnhandled },
+		{ "UnlockMouse", &UWidgetBlueprintLibrary::execUnlockMouse },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UWidgetBlueprintLibrary_CancelDragDrop_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

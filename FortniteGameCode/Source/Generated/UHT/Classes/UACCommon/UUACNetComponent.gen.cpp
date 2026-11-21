@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UUACNetComponent::StaticRegisterNativesUUACNetComponent()
-{
-}
 // IMPLEMENT_CLASS(UUACNetComponent, 118349215u)
 // Original dynamic initializer: RVA 0x000AD790 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UUACNetComponent> AutoInitializeUUACNetComponent(TEXT("UUACNetComponent"), sizeof(UUACNetComponent), 118349215u);

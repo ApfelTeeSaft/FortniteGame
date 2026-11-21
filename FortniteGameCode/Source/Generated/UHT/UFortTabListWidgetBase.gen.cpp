@@ -6,6 +6,25 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTabListWidgetBase();  // RVA 0x02904BE0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904460 (end 0x02904482)
+// Original VA: 0x0000000142904460 | File offset: 0x02903A60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D314E0) | Matching: see analysis/functions-uht-natives.json
+void UFortTabListWidgetBase::StaticRegisterNativesUFortTabListWidgetBase()
+{
+	UClass* Class = UFortTabListWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPreregisteredTabInfo", &UFortTabListWidgetBase::execGetPreregisteredTabInfo },
+		{ "IsFirstTabActive", &UFortTabListWidgetBase::execIsFirstTabActive },
+		{ "IsLastTabActive", &UFortTabListWidgetBase::execIsLastTabActive },
+		{ "RegisterAllPreregisteredTabInfos", &UFortTabListWidgetBase::execRegisterAllPreregisteredTabInfos },
+		{ "RegisterFortTab", &UFortTabListWidgetBase::execRegisterFortTab },
+		{ "SetNextTabInputActionData", &UFortTabListWidgetBase::execSetNextTabInputActionData },
+		{ "SetPreviousTabInputActionData", &UFortTabListWidgetBase::execSetPreviousTabInputActionData },
+		{ "SetTabHiddenState", &UFortTabListWidgetBase::execSetTabHiddenState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortTabListWidgetBase_OnTabContentCreated__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

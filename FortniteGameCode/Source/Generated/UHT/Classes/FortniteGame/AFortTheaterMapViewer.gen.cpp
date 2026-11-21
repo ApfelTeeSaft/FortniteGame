@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AFortTheaterMapViewer::StaticRegisterNativesAFortTheaterMapViewer()
-{
-}
 // IMPLEMENT_CLASS(AFortTheaterMapViewer, 1829459545u)
 // Original dynamic initializer: RVA 0x001164A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTheaterMapViewer> AutoInitializeAFortTheaterMapViewer(TEXT("AFortTheaterMapViewer"), sizeof(AFortTheaterMapViewer), 1829459545u);

@@ -6,6 +6,22 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortDecoTool();  // RVA 0x00FCFFC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCF9F0 (end 0x00FCFA12)
+// Original VA: 0x0000000140FCF9F0 | File offset: 0x00FCEFF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032FF7B0) | Matching: see analysis/functions-uht-natives.json
+void AFortDecoTool::StaticRegisterNativesAFortDecoTool()
+{
+	UClass* Class = AFortDecoTool::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientDestroyDecoPreview", &AFortDecoTool::execClientDestroyDecoPreview },
+		{ "OnCarriedActorDestroyed", &AFortDecoTool::execOnCarriedActorDestroyed },
+		{ "OnRep_CarriedActor", &AFortDecoTool::execOnRep_CarriedActor },
+		{ "OnRep_ItemDefinition", &AFortDecoTool::execOnRep_ItemDefinition },
+		{ "ServerSpawnDeco", &AFortDecoTool::execServerSpawnDeco },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortDecoTool_ClientDestroyDecoPreview_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

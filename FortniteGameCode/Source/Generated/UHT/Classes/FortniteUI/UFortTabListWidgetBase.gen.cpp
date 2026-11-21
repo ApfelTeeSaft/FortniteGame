@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortTabListWidgetBase::StaticRegisterNativesUFortTabListWidgetBase()
-{
-}
 // IMPLEMENT_CLASS(UFortTabListWidgetBase, 3624956100u)
 // Original dynamic initializer: RVA 0x0025E450 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTabListWidgetBase> AutoInitializeUFortTabListWidgetBase(TEXT("UFortTabListWidgetBase"), sizeof(UFortTabListWidgetBase), 3624956100u);

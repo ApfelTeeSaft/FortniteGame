@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonTreeView::StaticRegisterNativesUCommonTreeView()
-{
-}
 // IMPLEMENT_CLASS(UCommonTreeView, 95310353u)
 // Original dynamic initializer: RVA 0x00096180 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonTreeView> AutoInitializeUCommonTreeView(TEXT("UCommonTreeView"), sizeof(UCommonTreeView), 95310353u);

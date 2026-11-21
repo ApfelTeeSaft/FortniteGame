@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameplayCueNotify_Actor();  // RVA 0x0055BEC0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B050 (end 0x0055B072)
+// Original VA: 0x000000014055B050 | File offset: 0x0055A650
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F3DC70) | Matching: see analysis/functions-uht-natives.json
+void AGameplayCueNotify_Actor::StaticRegisterNativesAGameplayCueNotify_Actor()
+{
+	UClass* Class = AGameplayCueNotify_Actor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "K2_EndGameplayCue", &AGameplayCueNotify_Actor::execK2_EndGameplayCue },
+		{ "OnActive", &AGameplayCueNotify_Actor::execOnActive },
+		{ "OnExecute", &AGameplayCueNotify_Actor::execOnExecute },
+		{ "OnOwnerDestroyed", &AGameplayCueNotify_Actor::execOnOwnerDestroyed },
+		{ "OnRemove", &AGameplayCueNotify_Actor::execOnRemove },
+		{ "WhileActive", &AGameplayCueNotify_Actor::execWhileActive },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AGameplayCueNotify_Actor_K2_EndGameplayCue_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UOnlineHotfixManager::StaticRegisterNativesUOnlineHotfixManager()
-{
-}
 // IMPLEMENT_CLASS(UOnlineHotfixManager, 2737238916u)
 // Original dynamic initializer: RVA 0x000A94A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UOnlineHotfixManager> AutoInitializeUOnlineHotfixManager(TEXT("UOnlineHotfixManager"), sizeof(UOnlineHotfixManager), 2737238916u);

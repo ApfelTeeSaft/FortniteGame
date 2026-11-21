@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBuildingTurretComponent();  // RVA 0x00F786E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78070 (end 0x00F78092)
+// Original VA: 0x0000000140F78070 | File offset: 0x00F77670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03287070) | Matching: see analysis/functions-uht-natives.json
+void UBuildingTurretComponent::StaticRegisterNativesUBuildingTurretComponent()
+{
+	UClass* Class = UBuildingTurretComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AttemptSetCurrentTarget", &UBuildingTurretComponent::execAttemptSetCurrentTarget },
+		{ "ChooseBestTarget", &UBuildingTurretComponent::execChooseBestTarget },
+		{ "IsValidTarget", &UBuildingTurretComponent::execIsValidTarget },
+		{ "OnFiringTimer", &UBuildingTurretComponent::execOnFiringTimer },
+		{ "OnPerformTargetValidation", &UBuildingTurretComponent::execOnPerformTargetValidation },
+		{ "OnRep_CurrentTarget", &UBuildingTurretComponent::execOnRep_CurrentTarget },
+		{ "OnTargetingBeginOverlap", &UBuildingTurretComponent::execOnTargetingBeginOverlap },
+		{ "OnTargetingEndOverlap", &UBuildingTurretComponent::execOnTargetingEndOverlap },
+		{ "SetTargetingOverlapComponent", &UBuildingTurretComponent::execSetTargetingOverlapComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBuildingTurretComponent_AttemptSetCurrentTarget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

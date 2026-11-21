@@ -6,6 +6,26 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPanelWidget();  // RVA 0x01BED890 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED120 (end 0x01BED142)
+// Original VA: 0x0000000141BED120 | File offset: 0x01BEC720
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03698420) | Matching: see analysis/functions-uht-natives.json
+void UPanelWidget::StaticRegisterNativesUPanelWidget()
+{
+	UClass* Class = UPanelWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddChild", &UPanelWidget::execAddChild },
+		{ "ClearChildren", &UPanelWidget::execClearChildren },
+		{ "GetChildAt", &UPanelWidget::execGetChildAt },
+		{ "GetChildIndex", &UPanelWidget::execGetChildIndex },
+		{ "GetChildrenCount", &UPanelWidget::execGetChildrenCount },
+		{ "HasAnyChildren", &UPanelWidget::execHasAnyChildren },
+		{ "HasChild", &UPanelWidget::execHasChild },
+		{ "RemoveChild", &UPanelWidget::execRemoveChild },
+		{ "RemoveChildAt", &UPanelWidget::execRemoveChildAt },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPanelWidget_AddChild_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

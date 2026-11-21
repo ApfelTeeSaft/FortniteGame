@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDirectAcquisitionWidgetBase();  // RVA 0x028A3430 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2E90 (end 0x028A2EB2)
+// Original VA: 0x00000001428A2E90 | File offset: 0x028A2490
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8E360) | Matching: see analysis/functions-uht-natives.json
+void UFortDirectAcquisitionWidgetBase::StaticRegisterNativesUFortDirectAcquisitionWidgetBase()
+{
+	UClass* Class = UFortDirectAcquisitionWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDailyStoreEndDate", &UFortDirectAcquisitionWidgetBase::execGetDailyStoreEndDate },
+		{ "GetSeasonStoreEndDate", &UFortDirectAcquisitionWidgetBase::execGetSeasonStoreEndDate },
+		{ "GetWeeklyStoreEndDate", &UFortDirectAcquisitionWidgetBase::execGetWeeklyStoreEndDate },
+		{ "TriggerRefresh", &UFortDirectAcquisitionWidgetBase::execTriggerRefresh },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDirectAcquisitionWidgetBase_GenerateOfferWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

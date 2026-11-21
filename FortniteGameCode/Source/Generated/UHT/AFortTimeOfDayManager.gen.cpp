@@ -6,6 +6,42 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTimeOfDayManager();  // RVA 0x010BE220 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD670 (end 0x010BD692)
+// Original VA: 0x00000001410BD670 | File offset: 0x010BCC70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0340CBD0) | Matching: see analysis/functions-uht-natives.json
+void AFortTimeOfDayManager::StaticRegisterNativesAFortTimeOfDayManager()
+{
+	UClass* Class = AFortTimeOfDayManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakExponentialHeightFogValues", &AFortTimeOfDayManager::execBreakExponentialHeightFogValues },
+		{ "FFToTimeOfDay", &AFortTimeOfDayManager::execFFToTimeOfDay },
+		{ "GetPreviousDayPhase", &AFortTimeOfDayManager::execGetPreviousDayPhase },
+		{ "GetStormStrength", &AFortTimeOfDayManager::execGetStormStrength },
+		{ "GetThreatClouds", &AFortTimeOfDayManager::execGetThreatClouds },
+		{ "GetTimeOfDayManagerFromContext", &AFortTimeOfDayManager::execGetTimeOfDayManagerFromContext },
+		{ "MakeExponentialHeightFogValues", &AFortTimeOfDayManager::execMakeExponentialHeightFogValues },
+		{ "OnRep_HeightFogEnabled", &AFortTimeOfDayManager::execOnRep_HeightFogEnabled },
+		{ "OnRep_TimeOfDay", &AFortTimeOfDayManager::execOnRep_TimeOfDay },
+		{ "OnRep_TimeOfDayInit", &AFortTimeOfDayManager::execOnRep_TimeOfDayInit },
+		{ "SetDayPhase", &AFortTimeOfDayManager::execSetDayPhase },
+		{ "SetDirectionalLightColorMultiplier", &AFortTimeOfDayManager::execSetDirectionalLightColorMultiplier },
+		{ "SetFogDirectionalInscatteringMultiplier", &AFortTimeOfDayManager::execSetFogDirectionalInscatteringMultiplier },
+		{ "SetSpecificTimeOfDayInEditor", &AFortTimeOfDayManager::execSetSpecificTimeOfDayInEditor },
+		{ "SetStormStrength", &AFortTimeOfDayManager::execSetStormStrength },
+		{ "SetTimeOfDay", &AFortTimeOfDayManager::execSetTimeOfDay },
+		{ "SetTimeOfDayAbsoluteSpeed", &AFortTimeOfDayManager::execSetTimeOfDayAbsoluteSpeed },
+		{ "SetTimeOfDayFloat", &AFortTimeOfDayManager::execSetTimeOfDayFloat },
+		{ "SetTimeOfDayInHours", &AFortTimeOfDayManager::execSetTimeOfDayInHours },
+		{ "SetTimeOfDayManagerVisibility", &AFortTimeOfDayManager::execSetTimeOfDayManagerVisibility },
+		{ "SetTimeOfDaySpeed", &AFortTimeOfDayManager::execSetTimeOfDaySpeed },
+		{ "SetTimeOfDaySpeedFloat", &AFortTimeOfDayManager::execSetTimeOfDaySpeedFloat },
+		{ "SetUseSpecificTimeOfDayEditing", &AFortTimeOfDayManager::execSetUseSpecificTimeOfDayEditing },
+		{ "ToggleDebugForceStormEffects", &AFortTimeOfDayManager::execToggleDebugForceStormEffects },
+		{ "ToggleSkipNight", &AFortTimeOfDayManager::execToggleSkipNight },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

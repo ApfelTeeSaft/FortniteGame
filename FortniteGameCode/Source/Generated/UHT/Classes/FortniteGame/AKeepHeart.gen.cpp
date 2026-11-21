@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void AKeepHeart::StaticRegisterNativesAKeepHeart()
-{
-}
 // IMPLEMENT_CLASS(AKeepHeart, 4063395517u)
 // Original dynamic initializer: RVA 0x0011E8A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AKeepHeart> AutoInitializeAKeepHeart(TEXT("AKeepHeart"), sizeof(AKeepHeart), 4063395517u);

@@ -6,6 +6,23 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialImportPanel();  // RVA 0x028F5720 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5020 (end 0x028F5042)
+// Original VA: 0x00000001428F5020 | File offset: 0x028F4620
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D14410) | Matching: see analysis/functions-uht-natives.json
+void UFortSocialImportPanel::StaticRegisterNativesUFortSocialImportPanel()
+{
+	UClass* Class = UFortSocialImportPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DynamicHandleCancelClicked", &UFortSocialImportPanel::execDynamicHandleCancelClicked },
+		{ "DynamicHandleClaimClicked", &UFortSocialImportPanel::execDynamicHandleClaimClicked },
+		{ "DynamicHandleErrorCloseClicked", &UFortSocialImportPanel::execDynamicHandleErrorCloseClicked },
+		{ "DynamicHandleErrorRetryClicked", &UFortSocialImportPanel::execDynamicHandleErrorRetryClicked },
+		{ "DynamicHandleImportClicked", &UFortSocialImportPanel::execDynamicHandleImportClicked },
+		{ "ShowPanel", &UFortSocialImportPanel::execShowPanel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSocialImportPanel_DynamicHandleCancelClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

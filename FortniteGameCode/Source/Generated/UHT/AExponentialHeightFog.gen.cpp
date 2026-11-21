@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240F910 (end 0x0240F932)
+// Original VA: 0x000000014240F910 | File offset: 0x0240EF10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038EF578) | Matching: see analysis/functions-uht-natives.json
+void AExponentialHeightFog::StaticRegisterNativesAExponentialHeightFog()
+{
+	UClass* Class = AExponentialHeightFog::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_bEnabled", &AExponentialHeightFog::execOnRep_bEnabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortHUDTargetUnderReticleWidget::StaticRegisterNativesUFortHUDTargetUnderReticleWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortHUDTargetUnderReticleWidget, 2192250194u)
 // Original dynamic initializer: RVA 0x002482E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHUDTargetUnderReticleWidget> AutoInitializeUFortHUDTargetUnderReticleWidget(TEXT("UFortHUDTargetUnderReticleWidget"), sizeof(UFortHUDTargetUnderReticleWidget), 2192250194u);

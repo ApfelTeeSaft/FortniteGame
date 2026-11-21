@@ -6,6 +6,32 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseCanvasNode();  // RVA 0x028DE350 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDF10 (end 0x028DDF32)
+// Original VA: 0x00000001428DDF10 | File offset: 0x028DD510
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF1A70) | Matching: see analysis/functions-uht-natives.json
+void UFortBaseCanvasNode::StaticRegisterNativesUFortBaseCanvasNode()
+{
+	UClass* Class = UFortBaseCanvasNode::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DoesDrillDownToCurrentNodePage", &UFortBaseCanvasNode::execDoesDrillDownToCurrentNodePage },
+		{ "DrillDownToNodePage", &UFortBaseCanvasNode::execDrillDownToNodePage },
+		{ "GetCosts", &UFortBaseCanvasNode::execGetCosts },
+		{ "GetNodeDataCopy", &UFortBaseCanvasNode::execGetNodeDataCopy },
+		{ "GetNodeID", &UFortBaseCanvasNode::execGetNodeID },
+		{ "GetNodeStyleDataCopy", &UFortBaseCanvasNode::execGetNodeStyleDataCopy },
+		{ "GetPreviewMediaSource", &UFortBaseCanvasNode::execGetPreviewMediaSource },
+		{ "GetPurchasePercent", &UFortBaseCanvasNode::execGetPurchasePercent },
+		{ "GetPurchaseRestrictionReasonText", &UFortBaseCanvasNode::execGetPurchaseRestrictionReasonText },
+		{ "HandleNodeStateChangedInternal", &UFortBaseCanvasNode::execHandleNodeStateChangedInternal },
+		{ "IsLocked", &UFortBaseCanvasNode::execIsLocked },
+		{ "IsOwned", &UFortBaseCanvasNode::execIsOwned },
+		{ "IsPurchaseable", &UFortBaseCanvasNode::execIsPurchaseable },
+		{ "Purchase", &UFortBaseCanvasNode::execPurchase },
+		{ "SelectNode", &UFortBaseCanvasNode::execSelectNode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortBaseCanvasNode_OnNodeStateChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

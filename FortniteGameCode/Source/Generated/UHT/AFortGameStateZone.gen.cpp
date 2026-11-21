@@ -6,6 +6,72 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStateZone();  // RVA 0x00FF3500 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF2FC0 (end 0x00FF2FE2)
+// Original VA: 0x0000000140FF2FC0 | File offset: 0x00FF25C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03334CE0) | Matching: see analysis/functions-uht-natives.json
+void AFortGameStateZone::StaticRegisterNativesAFortGameStateZone()
+{
+	UClass* Class = AFortGameStateZone::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyPlayerAbilityRestriction", &AFortGameStateZone::execApplyPlayerAbilityRestriction },
+		{ "BeginGameplayVote", &AFortGameStateZone::execBeginGameplayVote },
+		{ "CanSpawnDefender", &AFortGameStateZone::execCanSpawnDefender },
+		{ "EndGameplayVote", &AFortGameStateZone::execEndGameplayVote },
+		{ "GetActiveModifiers", &AFortGameStateZone::execGetActiveModifiers },
+		{ "GetDefenderToRemove", &AFortGameStateZone::execGetDefenderToRemove },
+		{ "GetGameDifficulty", &AFortGameStateZone::execGetGameDifficulty },
+		{ "GetGameplayVote", &AFortGameStateZone::execGetGameplayVote },
+		{ "GetGameplayVotesForChoice", &AFortGameStateZone::execGetGameplayVotesForChoice },
+		{ "GetNumAllowedDifficultyIncreases", &AFortGameStateZone::execGetNumAllowedDifficultyIncreases },
+		{ "GetNumGameplayVotes", &AFortGameStateZone::execGetNumGameplayVotes },
+		{ "GetNumSurvivorsDead", &AFortGameStateZone::execGetNumSurvivorsDead },
+		{ "GetNumSurvivorsRescued", &AFortGameStateZone::execGetNumSurvivorsRescued },
+		{ "GetNumSurvivorsSpawned", &AFortGameStateZone::execGetNumSurvivorsSpawned },
+		{ "GetTotalScore", &AFortGameStateZone::execGetTotalScore },
+		{ "GetUIMapManager", &AFortGameStateZone::execGetUIMapManager },
+		{ "GloballyBlockAbilitiesWithTags", &AFortGameStateZone::execGloballyBlockAbilitiesWithTags },
+		{ "GloballyUnblockAbilitiesWithTags", &AFortGameStateZone::execGloballyUnblockAbilitiesWithTags },
+		{ "HasActiveGameplayModifiers", &AFortGameStateZone::execHasActiveGameplayModifiers },
+		{ "IsBuildingAtLayoutRequirementsAllowed", &AFortGameStateZone::execIsBuildingAtLayoutRequirementsAllowed },
+		{ "IsBuildingWithoutLayoutRequirementsAllowed", &AFortGameStateZone::execIsBuildingWithoutLayoutRequirementsAllowed },
+		{ "IsDefenderItemDeployed", &AFortGameStateZone::execIsDefenderItemDeployed },
+		{ "NotifyBeginGameplayVote", &AFortGameStateZone::execNotifyBeginGameplayVote },
+		{ "NotifyEndGameplayVote", &AFortGameStateZone::execNotifyEndGameplayVote },
+		{ "NotifySurvivorDead", &AFortGameStateZone::execNotifySurvivorDead },
+		{ "NotifySurvivorRescued", &AFortGameStateZone::execNotifySurvivorRescued },
+		{ "NotifySurvivorSpawned", &AFortGameStateZone::execNotifySurvivorSpawned },
+		{ "OnDefenderDeployed", &AFortGameStateZone::execOnDefenderDeployed },
+		{ "OnDefenderRemoved", &AFortGameStateZone::execOnDefenderRemoved },
+		{ "OnRep_ActiveGameplayModifiers", &AFortGameStateZone::execOnRep_ActiveGameplayModifiers },
+		{ "OnRep_GameDifficulty", &AFortGameStateZone::execOnRep_GameDifficulty },
+		{ "OnRep_GameplayVotes", &AFortGameStateZone::execOnRep_GameplayVotes },
+		{ "OnRep_MissionAlertData", &AFortGameStateZone::execOnRep_MissionAlertData },
+		{ "OnRep_MissionGenerator", &AFortGameStateZone::execOnRep_MissionGenerator },
+		{ "OnRep_MissionRewards", &AFortGameStateZone::execOnRep_MissionRewards },
+		{ "OnRep_NumSurvivorsRescued", &AFortGameStateZone::execOnRep_NumSurvivorsRescued },
+		{ "OnRep_PlayerBuildingSkillLevel", &AFortGameStateZone::execOnRep_PlayerBuildingSkillLevel },
+		{ "OnRep_PlayerSharedTrapAttributes", &AFortGameStateZone::execOnRep_PlayerSharedTrapAttributes },
+		{ "OnRep_PlayerStructuresChanged", &AFortGameStateZone::execOnRep_PlayerStructuresChanged },
+		{ "OnRep_ReplicatedWorldTimeSeconds", &AFortGameStateZone::execOnRep_ReplicatedWorldTimeSeconds },
+		{ "OnRep_TheaterUniqueId", &AFortGameStateZone::execOnRep_TheaterUniqueId },
+		{ "OnRep_ZoneDifficultyInfoRow", &AFortGameStateZone::execOnRep_ZoneDifficultyInfoRow },
+		{ "OnWaveBasedModifiersAppliedMulticast", &AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast },
+		{ "OnWaveEncounterStarted", &AFortGameStateZone::execOnWaveEncounterStarted },
+		{ "OnWaveStart", &AFortGameStateZone::execOnWaveStart },
+		{ "RegisterGameplayModifier", &AFortGameStateZone::execRegisterGameplayModifier },
+		{ "RemovePlayerAbilityRestriction", &AFortGameStateZone::execRemovePlayerAbilityRestriction },
+		{ "RunPerfMemCheatScript", &AFortGameStateZone::execRunPerfMemCheatScript },
+		{ "ServerFireAIDirectorEvent", &AFortGameStateZone::execServerFireAIDirectorEvent },
+		{ "ServerFireAIDirectorEventBatch", &AFortGameStateZone::execServerFireAIDirectorEventBatch },
+		{ "SetBuildingAllowed", &AFortGameStateZone::execSetBuildingAllowed },
+		{ "SetDifficultyIncreaseRewardTier", &AFortGameStateZone::execSetDifficultyIncreaseRewardTier },
+		{ "ShouldDisablePlayerTeleportingDuringMissionResults", &AFortGameStateZone::execShouldDisablePlayerTeleportingDuringMissionResults },
+		{ "SubmitGameplayVote", &AFortGameStateZone::execSubmitGameplayVote },
+		{ "UnregisterGameplayModifier", &AFortGameStateZone::execUnregisterGameplayModifier },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameStateZone_ApplyPlayerAbilityRestriction_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

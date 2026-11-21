@@ -6,6 +6,36 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AKeepHeart();  // RVA 0x010E3080 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E28C0 (end 0x010E28E2)
+// Original VA: 0x00000001410E28C0 | File offset: 0x010E1EC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0343E8E0) | Matching: see analysis/functions-uht-natives.json
+void AKeepHeart::StaticRegisterNativesAKeepHeart()
+{
+	UClass* Class = AKeepHeart::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DelayedVoteSuccess", &AKeepHeart::execDelayedVoteSuccess },
+		{ "DestroyNonPermaniteStructures", &AKeepHeart::execDestroyNonPermaniteStructures },
+		{ "GetAveragePermaniteLevel", &AKeepHeart::execGetAveragePermaniteLevel },
+		{ "GetUpgradeAllPermaniteCost", &AKeepHeart::execGetUpgradeAllPermaniteCost },
+		{ "GetWorldStreamingInProgress", &AKeepHeart::execGetWorldStreamingInProgress },
+		{ "HandleVoteComplete", &AKeepHeart::execHandleVoteComplete },
+		{ "IsWorldStreamedIn", &AKeepHeart::execIsWorldStreamedIn },
+		{ "IsWorldStreamingIn", &AKeepHeart::execIsWorldStreamingIn },
+		{ "NotifyEncounterEnded", &AKeepHeart::execNotifyEncounterEnded },
+		{ "NotifyEncounterStarted", &AKeepHeart::execNotifyEncounterStarted },
+		{ "OnDefenseLevelChanged", &AKeepHeart::execOnDefenseLevelChanged },
+		{ "ResetContainers", &AKeepHeart::execResetContainers },
+		{ "RestoreContainers", &AKeepHeart::execRestoreContainers },
+		{ "RestoreKeepHealth", &AKeepHeart::execRestoreKeepHealth },
+		{ "SetPermaniteAvailability", &AKeepHeart::execSetPermaniteAvailability },
+		{ "StartVote", &AKeepHeart::execStartVote },
+		{ "StreamInWorld", &AKeepHeart::execStreamInWorld },
+		{ "StreamOutWorld", &AKeepHeart::execStreamOutWorld },
+		{ "UpgradeAllPermaniteStructures", &AKeepHeart::execUpgradeAllPermaniteStructures },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AKeepHeart_DelayedVoteSuccess_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

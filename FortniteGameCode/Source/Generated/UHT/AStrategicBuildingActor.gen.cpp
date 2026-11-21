@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AStrategicBuildingActor();  // RVA 0x010F18E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1250 (end 0x010F1272)
+// Original VA: 0x00000001410F1250 | File offset: 0x010F0850
+// Recovery: confirmed (registers FNameNativePtrPair array 0x034509E0) | Matching: see analysis/functions-uht-natives.json
+void AStrategicBuildingActor::StaticRegisterNativesAStrategicBuildingActor()
+{
+	UClass* Class = AStrategicBuildingActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyProximityPulseEffects", &AStrategicBuildingActor::execApplyProximityPulseEffects },
+		{ "AttemptIncrementLevelUnlockProgress", &AStrategicBuildingActor::execAttemptIncrementLevelUnlockProgress },
+		{ "GetCurrentLevelUnlockProgress", &AStrategicBuildingActor::execGetCurrentLevelUnlockProgress },
+		{ "GetDeathEffectsLocation", &AStrategicBuildingActor::execGetDeathEffectsLocation },
+		{ "GetDeathEffectsRotation", &AStrategicBuildingActor::execGetDeathEffectsRotation },
+		{ "GetDeathEffectsScale", &AStrategicBuildingActor::execGetDeathEffectsScale },
+		{ "GetMaxLevelUnlockProgress", &AStrategicBuildingActor::execGetMaxLevelUnlockProgress },
+		{ "GiveItemFromStrategicBuildingToPlayer", &AStrategicBuildingActor::execGiveItemFromStrategicBuildingToPlayer },
+		{ "IsActive", &AStrategicBuildingActor::execIsActive },
+		{ "OnActiveStatusChanged", &AStrategicBuildingActor::execOnActiveStatusChanged },
+		{ "OnConstructionEndedPlayEffects", &AStrategicBuildingActor::execOnConstructionEndedPlayEffects },
+		{ "OnConstructionStartedPlayEffects", &AStrategicBuildingActor::execOnConstructionStartedPlayEffects },
+		{ "OnConstructionTickPlayEffects", &AStrategicBuildingActor::execOnConstructionTickPlayEffects },
+		{ "OnRep_bIsActive", &AStrategicBuildingActor::execOnRep_bIsActive },
+		{ "OnRep_ConstructionProgress", &AStrategicBuildingActor::execOnRep_ConstructionProgress },
+		{ "ProcessDeferredTouchActors", &AStrategicBuildingActor::execProcessDeferredTouchActors },
+		{ "SetupIndicators", &AStrategicBuildingActor::execSetupIndicators },
+		{ "SetupVisibilityComponent", &AStrategicBuildingActor::execSetupVisibilityComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AStrategicBuildingActor_ApplyProximityPulseEffects_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

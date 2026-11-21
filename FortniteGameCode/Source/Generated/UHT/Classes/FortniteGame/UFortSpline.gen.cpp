@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSpline::StaticRegisterNativesUFortSpline()
-{
-}
 // IMPLEMENT_CLASS(UFortSpline, 1068650940u)
 // Original dynamic initializer: RVA 0x00112D30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSpline> AutoInitializeUFortSpline(TEXT("UFortSpline"), sizeof(UFortSpline), 1068650940u);

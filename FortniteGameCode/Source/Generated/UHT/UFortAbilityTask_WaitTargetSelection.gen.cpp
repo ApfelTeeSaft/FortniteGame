@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection();  // RVA 0x00F81F80 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81840 (end 0x00F81862)
+// Original VA: 0x0000000140F81840 | File offset: 0x00F80E40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032966C8) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilityTask_WaitTargetSelection::StaticRegisterNativesUFortAbilityTask_WaitTargetSelection()
+{
+	UClass* Class = UFortAbilityTask_WaitTargetSelection::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnTargetDataCancelledCallback", &UFortAbilityTask_WaitTargetSelection::execOnTargetDataCancelledCallback },
+		{ "OnTargetDataReadyCallback", &UFortAbilityTask_WaitTargetSelection::execOnTargetDataReadyCallback },
+		{ "WaitTargetSelection", &UFortAbilityTask_WaitTargetSelection::execWaitTargetSelection },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataCancelledCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

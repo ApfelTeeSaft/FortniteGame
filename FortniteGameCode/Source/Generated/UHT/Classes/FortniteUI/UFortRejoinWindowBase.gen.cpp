@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortRejoinWindowBase::StaticRegisterNativesUFortRejoinWindowBase()
-{
-}
 // IMPLEMENT_CLASS(UFortRejoinWindowBase, 2527501086u)
 // Original dynamic initializer: RVA 0x00258480 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortRejoinWindowBase> AutoInitializeUFortRejoinWindowBase(TEXT("UFortRejoinWindowBase"), sizeof(UFortRejoinWindowBase), 2527501086u);

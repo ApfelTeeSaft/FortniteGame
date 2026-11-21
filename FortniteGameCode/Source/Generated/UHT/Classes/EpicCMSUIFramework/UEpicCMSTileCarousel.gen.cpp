@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UEpicCMSTileCarousel::StaticRegisterNativesUEpicCMSTileCarousel()
-{
-}
 // IMPLEMENT_CLASS(UEpicCMSTileCarousel, 3767257918u)
 // Original dynamic initializer: RVA 0x000978A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UEpicCMSTileCarousel> AutoInitializeUEpicCMSTileCarousel(TEXT("UEpicCMSTileCarousel"), sizeof(UEpicCMSTileCarousel), 3767257918u);

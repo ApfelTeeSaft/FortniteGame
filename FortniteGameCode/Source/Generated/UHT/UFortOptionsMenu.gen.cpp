@@ -6,6 +6,30 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortOptionsMenu();  // RVA 0x028DE590 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE0C0 (end 0x028DE0E2)
+// Original VA: 0x00000001428DE0C0 | File offset: 0x028DD6C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF27A0) | Matching: see analysis/functions-uht-natives.json
+void UFortOptionsMenu::StaticRegisterNativesUFortOptionsMenu()
+{
+	UClass* Class = UFortOptionsMenu::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearCachedEula", &UFortOptionsMenu::execClearCachedEula },
+		{ "NeedsLanguageChangeConfirmation", &UFortOptionsMenu::execNeedsLanguageChangeConfirmation },
+		{ "NeedsVideoChangeConfirmation", &UFortOptionsMenu::execNeedsVideoChangeConfirmation },
+		{ "OnApply", &UFortOptionsMenu::execOnApply },
+		{ "OnReset", &UFortOptionsMenu::execOnReset },
+		{ "OnResetToDefaults", &UFortOptionsMenu::execOnResetToDefaults },
+		{ "OnVideoAccept", &UFortOptionsMenu::execOnVideoAccept },
+		{ "ResetClientHUDSettings", &UFortOptionsMenu::execResetClientHUDSettings },
+		{ "ResetGameOptionsSettings", &UFortOptionsMenu::execResetGameOptionsSettings },
+		{ "ShowAccountOptions", &UFortOptionsMenu::execShowAccountOptions },
+		{ "ShowControllerOptions", &UFortOptionsMenu::execShowControllerOptions },
+		{ "ShowInputOptions", &UFortOptionsMenu::execShowInputOptions },
+		{ "ShowVideoOptions", &UFortOptionsMenu::execShowVideoOptions },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOptionsMenu_ClearCachedEula_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UNavigationSystem::StaticRegisterNativesUNavigationSystem()
-{
-}
 // IMPLEMENT_CLASS(UNavigationSystem, 2064042095u)
 // Original dynamic initializer: RVA 0x0020DD90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UNavigationSystem> AutoInitializeUNavigationSystem(TEXT("UNavigationSystem"), sizeof(UNavigationSystem), 2064042095u);

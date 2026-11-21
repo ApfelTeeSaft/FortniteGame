@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPerksWidget_NUI();  // RVA 0x028E6C30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6500 (end 0x028E6522)
+// Original VA: 0x00000001428E6500 | File offset: 0x028E5B00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFD880) | Matching: see analysis/functions-uht-natives.json
+void UFortPerksWidget_NUI::StaticRegisterNativesUFortPerksWidget_NUI()
+{
+	UClass* Class = UFortPerksWidget_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ProcessPerks", &UFortPerksWidget_NUI::execProcessPerks },
+		{ "ProcessPerkTiers", &UFortPerksWidget_NUI::execProcessPerkTiers },
+		{ "SetHero", &UFortPerksWidget_NUI::execSetHero },
+		{ "SetState", &UFortPerksWidget_NUI::execSetState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPerksWidget_NUI_OnGeneratePerk_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

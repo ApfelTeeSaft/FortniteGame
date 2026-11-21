@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaCustomizationPicker::StaticRegisterNativesUAthenaCustomizationPicker()
-{
-}
 // IMPLEMENT_CLASS(UAthenaCustomizationPicker, 993514603u)
 // Original dynamic initializer: RVA 0x00239060 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaCustomizationPicker> AutoInitializeUAthenaCustomizationPicker(TEXT("UAthenaCustomizationPicker"), sizeof(UAthenaCustomizationPicker), 993514603u);

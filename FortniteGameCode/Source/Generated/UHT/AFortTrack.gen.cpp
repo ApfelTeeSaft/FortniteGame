@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTrack();  // RVA 0x010CA9A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9350 (end 0x010C9372)
+// Original VA: 0x00000001410C9350 | File offset: 0x010C8950
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0341C180) | Matching: see analysis/functions-uht-natives.json
+void AFortTrack::StaticRegisterNativesAFortTrack()
+{
+	UClass* Class = AFortTrack::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetOutgoingNeighborFromSpline", &AFortTrack::execGetOutgoingNeighborFromSpline },
+		{ "GetPathDistanceToTrack", &AFortTrack::execGetPathDistanceToTrack },
+		{ "GetSplineFromIncomingNeighbor", &AFortTrack::execGetSplineFromIncomingNeighbor },
+		{ "GetSplineFromPositionAndOrientation", &AFortTrack::execGetSplineFromPositionAndOrientation },
+		{ "InitializeTrack", &AFortTrack::execInitializeTrack },
+		{ "IsConnectedToTrack", &AFortTrack::execIsConnectedToTrack },
+		{ "IsConnectedToTrackList", &AFortTrack::execIsConnectedToTrackList },
+		{ "OnRep_ConfigurationIdx", &AFortTrack::execOnRep_ConfigurationIdx },
+		{ "OnRep_NeighborsByDirection", &AFortTrack::execOnRep_NeighborsByDirection },
+		{ "OnRep_SwitchState", &AFortTrack::execOnRep_SwitchState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTrack_GetOutgoingNeighborFromSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

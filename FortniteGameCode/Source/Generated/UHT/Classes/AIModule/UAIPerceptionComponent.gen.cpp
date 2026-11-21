@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAIPerceptionComponent::StaticRegisterNativesUAIPerceptionComponent()
-{
-}
 // IMPLEMENT_CLASS(UAIPerceptionComponent, 2578818525u)
 // Original dynamic initializer: RVA 0x001B8F70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAIPerceptionComponent> AutoInitializeUAIPerceptionComponent(TEXT("UAIPerceptionComponent"), sizeof(UAIPerceptionComponent), 2578818525u);

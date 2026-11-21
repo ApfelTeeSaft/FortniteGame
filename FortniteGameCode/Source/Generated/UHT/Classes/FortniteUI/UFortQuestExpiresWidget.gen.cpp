@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortQuestExpiresWidget::StaticRegisterNativesUFortQuestExpiresWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortQuestExpiresWidget, 754071881u)
 // Original dynamic initializer: RVA 0x00258380 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestExpiresWidget> AutoInitializeUFortQuestExpiresWidget(TEXT("UFortQuestExpiresWidget"), sizeof(UFortQuestExpiresWidget), 754071881u);

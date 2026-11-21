@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ALobbyBeaconState();  // RVA 0x005C2250 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2090 (end 0x005C20B2)
+// Original VA: 0x00000001405C2090 | File offset: 0x005C1690
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F67598) | Matching: see analysis/functions-uht-natives.json
+void ALobbyBeaconState::StaticRegisterNativesALobbyBeaconState()
+{
+	UClass* Class = ALobbyBeaconState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_LobbyStarted", &ALobbyBeaconState::execOnRep_LobbyStarted },
+		{ "OnRep_WaitForPlayersTimeRemaining", &ALobbyBeaconState::execOnRep_WaitForPlayersTimeRemaining },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ALobbyBeaconState_OnRep_LobbyStarted_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;

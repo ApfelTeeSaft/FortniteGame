@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UCommonListView::StaticRegisterNativesUCommonListView()
-{
-}
 // IMPLEMENT_CLASS(UCommonListView, 3731617275u)
 // Original dynamic initializer: RVA 0x00095FE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonListView> AutoInitializeUCommonListView(TEXT("UCommonListView"), sizeof(UCommonListView), 3731617275u);

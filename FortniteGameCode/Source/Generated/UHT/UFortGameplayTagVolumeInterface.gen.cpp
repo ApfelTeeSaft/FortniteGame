@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayTagVolumeInterface();  // RVA 0x00FEE9D0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE160 (end 0x00FEE182)
+// Original VA: 0x0000000140FEE160 | File offset: 0x00FED760
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332CED8) | Matching: see analysis/functions-uht-natives.json
+void UFortGameplayTagVolumeInterface::StaticRegisterNativesUFortGameplayTagVolumeInterface()
+{
+	UClass* Class = UFortGameplayTagVolumeInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyTags", &UFortGameplayTagVolumeInterface::execApplyTags },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGameplayTagVolumeInterface_ApplyTags_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
