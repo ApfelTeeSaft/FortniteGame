@@ -24,6 +24,16 @@ void UFortItemDefinition::execCustomizePreviewPrefab(UObject* Context, FFrame& S
 	P_THIS->CustomizePreviewPrefab(Z_Param_PrefabInstance);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01011CC0 (end 0x01011D99)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDisplayName) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bBaseName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetDisplayName(Z_Param_bBaseName);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01013080 (end 0x010130FE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPersistentName) | Matching: see analysis/functions-uht-exec.json
 void UFortItemDefinition::execGetPersistentName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -40,6 +50,24 @@ void UFortItemDefinition::execGetRarity(UObject* Context, FFrame& Stack, void* c
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(EFortRarity*)Z_Param__Result=P_THIS->GetRarity();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013C60 (end 0x01013CDD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetShortDescription) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetShortDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetShortDescription();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013DE0 (end 0x01013E5D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSingleLineDescription) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetSingleLineDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetSingleLineDescription();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01018E50 (end 0x01018E7F)

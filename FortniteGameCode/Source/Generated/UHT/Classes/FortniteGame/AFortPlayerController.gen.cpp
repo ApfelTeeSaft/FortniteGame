@@ -161,6 +161,44 @@ void AFortPlayerController::execClientReportDamagedResourceBuilding(UObject* Con
 	P_THIS->ClientReportDamagedResourceBuilding_Implementation(Z_Param_BuildingSMActor,EFortResourceType::Type(Z_Param_PotentialResourceType),Z_Param_PotentialResourceCount,Z_Param_bDestroyed,Z_Param_bJustHitWeakspot);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106E890 (end 0x0106EA6D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientRequestReadyCheck) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execClientRequestReadyCheck(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_QueryText);
+	P_GET_PROPERTY(UTextProperty,Z_Param_YesText);
+	P_GET_PROPERTY(UTextProperty,Z_Param_NoText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ClientRequestReadyCheck_Validate(Z_Param_QueryText,Z_Param_YesText,Z_Param_NoText))
+	{
+		RPC_ValidateFailed(TEXT("ClientRequestReadyCheck_Validate"));
+		return;
+	}
+	P_THIS->ClientRequestReadyCheck_Implementation(Z_Param_QueryText,Z_Param_YesText,Z_Param_NoText);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106EA70 (end 0x0106EB72)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSendConfirmationMessage) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execClientSendConfirmationMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_ConfirmationMessage);
+	P_GET_UBOOL(Z_Param_bClientQuitAfterMessage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSendConfirmationMessage_Implementation(Z_Param_ConfirmationMessage,Z_Param_bClientQuitAfterMessage);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106EB80 (end 0x0106EC35)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSendMessage) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execClientSendMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_Message);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSendMessage_Implementation(Z_Param_Message);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0106EC40 (end 0x0106ED06)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetActionMappingEnabled) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerController::execClientSetActionMappingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -603,6 +641,24 @@ void AFortPlayerController::execServerDropCarriedObject(UObject* Context, FFrame
 		return;
 	}
 	P_THIS->ServerDropCarriedObject_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01071B10 (end 0x01071C8E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerEditBuildingActor) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerEditBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingSMActor,Z_Param_BuildingActorToEdit);
+	P_GET_OBJECT(UClass,Z_Param_NewBuildingClass);
+	P_GET_PROPERTY(UIntProperty,Z_Param_RotationIterations);
+	P_GET_UBOOL(Z_Param_bMirrored);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerEditBuildingActor_Validate(Z_Param_BuildingActorToEdit,Z_Param_NewBuildingClass,Z_Param_RotationIterations,Z_Param_bMirrored))
+	{
+		RPC_ValidateFailed(TEXT("ServerEditBuildingActor_Validate"));
+		return;
+	}
+	P_THIS->ServerEditBuildingActor_Implementation(Z_Param_BuildingActorToEdit,Z_Param_NewBuildingClass,Z_Param_RotationIterations,Z_Param_bMirrored);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01071C90 (end 0x01071D45)
@@ -1100,6 +1156,23 @@ void AFortPlayerController::execServerSpawnInventoryDrop(UObject* Context, FFram
 		return;
 	}
 	P_THIS->ServerSpawnInventoryDrop_Implementation(Z_Param_ItemGuid,Z_Param_Count);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010743A0 (end 0x01074524)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSpawnMark) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerSpawnMark(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_ActorToAttachTo);
+	P_GET_STRUCT(FVector,Z_Param_AttachOffset);
+	P_GET_PROPERTY(UTextProperty,Z_Param_PreapprovedText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSpawnMark_Validate(Z_Param_ActorToAttachTo,Z_Param_AttachOffset,Z_Param_PreapprovedText))
+	{
+		RPC_ValidateFailed(TEXT("ServerSpawnMark_Validate"));
+		return;
+	}
+	P_THIS->ServerSpawnMark_Implementation(Z_Param_ActorToAttachTo,Z_Param_AttachOffset,Z_Param_PreapprovedText);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01074530 (end 0x010745E5)

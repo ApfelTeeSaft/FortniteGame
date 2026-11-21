@@ -96,6 +96,16 @@ void UFortCheatManager::execForceServerShutdown(UObject* Context, FFrame& Stack,
 	P_THIS->ForceServerShutdown(Z_Param_ExitCode);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB7480 (end 0x00FB7504)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execKillPawns) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execKillPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_aClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->KillPawns(Z_Param_aClass);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB93A0 (end 0x00FB93BF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execReviveFromDBNO) | Matching: see analysis/functions-uht-exec.json
 void UFortCheatManager::execReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -33,6 +33,15 @@ void UFortItem::execGetCoolDownTimeRemaining(UObject* Context, FFrame& Stack, vo
 	*(float*)Z_Param__Result=P_THIS->GetCoolDownTimeRemaining(Z_Param_FortPC,Z_Param_Out_CooldownDuration);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01008E30 (end 0x01008EAD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDescription) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetDescription();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02422B20 (end 0x02422B51)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDurability) | Matching: see analysis/functions-uht-exec.json
 void UFortItem::execGetDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -132,6 +141,16 @@ void UFortItem::execGetOwningController(UObject* Context, FFrame& Stack, void* c
 	*(AFortPlayerController**)Z_Param__Result=P_THIS->GetOwningController();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010095D0 (end 0x010096B0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPrimaryCategory) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetPrimaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_ItemCategoryText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetPrimaryCategory(Z_Param_Out_ItemCategoryText);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010096E0 (end 0x01009718)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRarityColor) | Matching: see analysis/functions-uht-exec.json
 void UFortItem::execGetRarityColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -175,6 +194,15 @@ void UFortItem::execGetSchematicResultType(UObject* Context, FFrame& Stack, void
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(EFortItemType*)Z_Param__Result=P_THIS->GetSchematicResultType();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009880 (end 0x010098FD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSearchTags) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetSearchTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetSearchTags();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79990 (end 0x00F799BF)

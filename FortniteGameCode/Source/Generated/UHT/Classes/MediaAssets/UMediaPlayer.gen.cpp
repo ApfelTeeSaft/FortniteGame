@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025E0690 (end 0x025E070D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMediaName) | Matching: see analysis/functions-uht-exec.json
+void UMediaPlayer::execGetMediaName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetMediaName();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UMediaPlayer, 3753575513u)
 // Original dynamic initializer: RVA 0x00225F10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMediaPlayer> AutoInitializeUMediaPlayer(TEXT("UMediaPlayer"), sizeof(UMediaPlayer), 3753575513u);

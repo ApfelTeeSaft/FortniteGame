@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01052B20 (end 0x01052B9D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetObjectiveDisplayString) | Matching: see analysis/functions-uht-exec.json
+void AFortObjectiveBase::execGetObjectiveDisplayString(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetObjectiveDisplayString();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01053410 (end 0x0105343F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execStartPlayingObjective) | Matching: see analysis/functions-uht-exec.json
 void AFortObjectiveBase::execStartPlayingObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

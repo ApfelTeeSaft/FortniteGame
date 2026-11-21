@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC5E0 (end 0x024AC676)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddCameraLensEffect) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execAddCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_LensEffectEmitterClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AEmitterCameraLensEffectBase**)Z_Param__Result=P_THIS->AddCameraLensEffect(Z_Param_LensEffectEmitterClass);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC680 (end 0x024AC716)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddNewCameraModifier) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execAddNewCameraModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_ModifierClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UCameraModifier**)Z_Param__Result=P_THIS->AddNewCameraModifier(Z_Param_ModifierClass);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC970 (end 0x024AC98F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClearCameraLensEffects) | Matching: see analysis/functions-uht-exec.json
 void APlayerCameraManager::execClearCameraLensEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +31,16 @@ void APlayerCameraManager::execClearCameraLensEffects(UObject* Context, FFrame& 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ClearCameraLensEffects();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF650 (end 0x024AF6E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFindCameraModifierByClass) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execFindCameraModifierByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_ModifierClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UCameraModifier**)Z_Param__Result=P_THIS->FindCameraModifierByClass(Z_Param_ModifierClass);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF770 (end 0x024AF7A1)
@@ -99,6 +129,19 @@ void APlayerCameraManager::execPlayCameraAnim(UObject* Context, FFrame& Stack, v
 	*(UCameraAnimInst**)Z_Param__Result=P_THIS->PlayCameraAnim(Z_Param_Anim,Z_Param_Rate,Z_Param_Scale,Z_Param_BlendInTime,Z_Param_BlendOutTime,Z_Param_bLoop,Z_Param_bRandomStartTime,Z_Param_Duration,ECameraAnimPlaySpace::Type(Z_Param_PlaySpace),Z_Param_UserPlaySpaceRot);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B1AF0 (end 0x024B1C56)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayCameraShake) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execPlayCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_ShakeClass);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Scale);
+	P_GET_PROPERTY(UByteProperty,Z_Param_PlaySpace);
+	P_GET_STRUCT(FRotator,Z_Param_UserPlaySpaceRot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UCameraShake**)Z_Param__Result=P_THIS->PlayCameraShake(Z_Param_ShakeClass,Z_Param_Scale,ECameraAnimPlaySpace::Type(Z_Param_PlaySpace),Z_Param_UserPlaySpaceRot);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2170 (end 0x024B21F4)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveCameraLensEffect) | Matching: see analysis/functions-uht-exec.json
 void APlayerCameraManager::execRemoveCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -175,6 +218,17 @@ void APlayerCameraManager::execStopAllInstancesOfCameraAnim(UObject* Context, FF
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->StopAllInstancesOfCameraAnim(Z_Param_Anim,Z_Param_bImmediate);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B4480 (end 0x024B4546)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopAllInstancesOfCameraShake) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execStopAllInstancesOfCameraShake(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_Shake);
+	P_GET_UBOOL(Z_Param_bImmediately);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopAllInstancesOfCameraShake(Z_Param_Shake,Z_Param_bImmediately);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B4550 (end 0x024B4616)

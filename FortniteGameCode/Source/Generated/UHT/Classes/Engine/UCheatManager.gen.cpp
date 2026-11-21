@@ -129,6 +129,16 @@ void UCheatManager::execDebugCapsuleSweepSize(UObject* Context, FFrame& Stack, v
 	P_THIS->DebugCapsuleSweepSize(Z_Param_HalfHeight,Z_Param_Radius);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9880 (end 0x023F9904)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDestroyAll) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDestroyAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_aClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyAll(Z_Param_aClass);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9910 (end 0x023F992F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execDestroyAllPawnsExceptTarget) | Matching: see analysis/functions-uht-exec.json
 void UCheatManager::execDestroyAllPawnsExceptTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -136,6 +146,16 @@ void UCheatManager::execDestroyAllPawnsExceptTarget(UObject* Context, FFrame& St
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->DestroyAllPawnsExceptTarget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC2D0 (end 0x002CC354)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDestroyPawns) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDestroyPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_aClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyPawns(Z_Param_aClass);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9950 (end 0x023F996F), leaf (no .pdata)
@@ -382,6 +402,16 @@ void UCheatManager::execViewActor(UObject* Context, FFrame& Stack, void* const Z
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ViewActor(Z_Param_ActorName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023BF9B0 (end 0x023BFA34)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execViewClass) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execViewClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UClass,Z_Param_DesiredClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ViewClass(Z_Param_DesiredClass);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA700 (end 0x023FA79A)

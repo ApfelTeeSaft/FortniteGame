@@ -188,7 +188,18 @@ def test_uht_parameters() -> None:
     t = P.parameter(arr("Locs", const | out | ref, {"type": "Struct", "flags": 0, "func": base + 0x400}), names, base)
     assert t["decl"] == "TArray<FVector> const& Locs", t
     assert P.parameter(arr("Names", 0, {"type": "Str", "flags": 0, "func": 0}), names, base) is None  # FString elements: not modelled
-    assert P.parameter(rec("Text", "Label", 0), names, base) is None                # not modelled
+    t = P.parameter(rec("Text", "Label", 0), names, base)
+    assert (t["decl"], t["line"]) == ("FText Label", "P_GET_PROPERTY(UTextProperty,Z_Param_Label);"), t
+    t = P.parameter(rec("Text", "Label", const | out | ref), names, base)
+    assert (t["decl"], t["line"]) == ("FText const& Label", "P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_Label);"), t
+    wrapper = P.CPF_UOBJECTWRAPPER
+    t = P.parameter(rec("Class", "Kind", wrapper, 0x100), names, base)               # TSubclassOf<AActor>
+    assert (t["decl"], t["line"]) == ("TSubclassOf<AActor> Kind", "P_GET_OBJECT(UClass,Z_Param_Kind);"), t
+    t = P.parameter(rec("Class", "Kind", wrapper | out, 0x100), names, base)         # bPassAsNoPtr
+    assert t["line"] == "P_GET_OBJECT_REF_NO_PTR(TSubclassOf<AActor>,Z_Param_Out_Kind);", t
+    t = P.parameter(rec("Class", "Kind", wrapper | out | P.CPF_RETURNPARM, 0x100), names, base)
+    assert (t["ret"], t["store"]) == ("TSubclassOf<AActor>", "TSubclassOf<AActor>"), t
+    assert P.parameter(rec("Interface", "Item", 0), names, base) is None            # not modelled
     assert P.enum_declarations(names) == ["enum class EMode : uint8 {};", "namespace ERes { enum Type {}; }"]
     print("uht parameters: ok")
 

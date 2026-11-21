@@ -69,6 +69,20 @@ void ABuildingActor::execInitializeKismetSpawnedBuildingActor(UObject* Context, 
 	P_THIS->InitializeKismetSpawnedBuildingActor(Z_Param_BuildingOwner,Z_Param_SpawningController);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62C60 (end 0x00F62E7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAcceptablePositionForPlacement) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execIsAcceptablePositionForPlacement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_InLocation);
+	P_GET_STRUCT_REF(FRotator,Z_Param_Out_InRotation);
+	P_GET_OBJECT(AFortDecoTool,Z_Param_DecoTool);
+	P_GET_UBOOL(Z_Param_bIsCDO);
+	P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_OutFailureReason);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsAcceptablePositionForPlacement_Implementation(Z_Param_Out_InLocation,Z_Param_Out_InRotation,Z_Param_DecoTool,Z_Param_bIsCDO,Z_Param_Out_OutFailureReason);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62F00 (end 0x00F62FBB)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBuildingActorInitialized) | Matching: see analysis/functions-uht-exec.json
 void ABuildingActor::execOnBuildingActorInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

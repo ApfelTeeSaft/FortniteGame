@@ -19,8 +19,8 @@ CPF_ReferenceParm. Only types whose C++ form the generated headers model are sup
 bool, the integer and floating-point types, uint8 without an enum, FName, and pointers to
 reflected classes (UClass* for class properties without TSubclassOf), the core structs
 ScriptRecovered.h defines (FVector, FRotator, FVector2D, FLinearColor, FGuid, FGameplayTag,
-FGameplayAbilitySpecHandle; P_GET_STRUCT), enums, FString, and TArrays of trivially
-copyable elements (ContainersRecovered.h).
+FGameplayAbilitySpecHandle; P_GET_STRUCT), enums, FString, TArrays of trivially
+copyable elements (ContainersRecovered.h), FText and TSubclassOf (TextRecovered.h).
 
 FString parameters. HeaderParser drops CPF_ConstParm from 'const FString&' parameters (only
 UHT's own data keeps the reference), so a by-value FString and a const reference carry the
@@ -177,6 +177,18 @@ def parameter(p: dict, names: Names, base: int, strings_by_ref: bool = False) ->
         ctype, line = f"{c}*", f"P_GET_OBJECT{ref}({c},{pname});"
     elif t == "Class" and not p["flags"] & CPF_UOBJECTWRAPPER:
         ctype, line = "UClass*", f"P_GET_OBJECT{ref}(UClass,{pname});"
+    elif t == "Class":
+        # TSubclassOf<MetaClass> (FClassPropertyParams: MetaClassFunc +0x38). ExportFunctionThunk
+        # reads it as a UClass*, except an out parameter, which it passes as the wrapper itself
+        # (bPassAsNoPtr: P_GET_OBJECT_REF_NO_PTR).
+        meta = names.classes.get(p["func"] - base) if p["func"] else None
+        if meta is None:
+            return None
+        ctype = f"TSubclassOf<{meta}>"
+        line = (f"P_GET_OBJECT_REF_NO_PTR({ctype},{pname});" if out and not retp
+                else f"P_GET_OBJECT(UClass,{pname});")
+    elif t == "Text":
+        ctype, line = "FText", f"P_GET_PROPERTY{ref}(UTextProperty,{pname});"
     else:
         return None
     return {"decl": _with_qualifiers(p, ctype, p["name"]), "line": line, "arg": arg or pname,
@@ -232,7 +244,7 @@ def function_signature(dimg, base: int, rec: int, names: Names, strings_by_ref: 
             r = t["ret"]
             if ret is not None or not (r in REGISTER_RETURN or r.endswith("*") or r == "FName"
                                        or r in names.used_enums or r[1:] in MODELLED_STRUCTS
-                                       or r == "FString" or r.startswith("TArray<")):
+                                       or r in ("FString", "FText") or r.startswith(("TArray<", "TSubclassOf<"))):
                 return None
             ret, store = r, t["store"]
             continue

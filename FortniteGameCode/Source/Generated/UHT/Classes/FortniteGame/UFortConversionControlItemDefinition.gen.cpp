@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCD2F0 (end 0x00FCD36D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRewardName) | Matching: see analysis/functions-uht-exec.json
+void UFortConversionControlItemDefinition::execGetRewardName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetRewardName();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortConversionControlItemDefinition, 1460094003u)
 // Original dynamic initializer: RVA 0x000EE4B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortConversionControlItemDefinition> AutoInitializeUFortConversionControlItemDefinition(TEXT("UFortConversionControlItemDefinition"), sizeof(UFortConversionControlItemDefinition), 1460094003u);

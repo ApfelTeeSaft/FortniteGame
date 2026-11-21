@@ -41,6 +41,16 @@ void AFortPlayerControllerAthena::execClientNotifyWon(UObject* Context, FFrame& 
 	P_THIS->ClientNotifyWon_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107A000 (end 0x0107A0B5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientUnreliableSendMessage) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientUnreliableSendMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_Message);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientUnreliableSendMessage_Implementation(Z_Param_Message);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107A0C0 (end 0x0107A200)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientVoiceChat3DChannelJoin) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerAthena::execClientVoiceChat3DChannelJoin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

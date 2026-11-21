@@ -18,6 +18,20 @@ void UFortTooltip::execBP_GetNumericValue(UObject* Context, FFrame& Stack, void*
 	*(bool*)Z_Param__Result=P_THIS->BP_GetNumericValue_Implementation(Z_Param_ObjectToDescribe,Z_Param_Out_Tag,Z_Param_Context,Z_Param_Out_Token,Z_Param_Out_OutVal);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CCED0 (end 0x010CD0E2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBP_GetTextForToken) | Matching: see analysis/functions-uht-exec.json
+void UFortTooltip::execBP_GetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_ObjectToDescribe);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_Tag);
+	P_GET_OBJECT(UFortTooltipContext,Z_Param_Context);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_Token);
+	P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_OutText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->BP_GetTextForToken_Implementation(Z_Param_ObjectToDescribe,Z_Param_Out_Tag,Z_Param_Context,Z_Param_Out_Token,Z_Param_Out_OutText);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTooltip, 724688137u)
 // Original dynamic initializer: RVA 0x00117F00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTooltip> AutoInitializeUFortTooltip(TEXT("UFortTooltip"), sizeof(UFortTooltip), 724688137u);

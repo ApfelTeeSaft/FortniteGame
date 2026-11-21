@@ -148,6 +148,17 @@ def _cstr(dimg, base: int, va: int) -> str:
     return dimg.read(va - base, 256).split(b"\0")[0].decode()
 
 
+def function_end(dimg, rfs: dict, rva: int) -> int:
+    """End of a function with a .pdata entry, following contiguous chained fragments (the
+    shrink-wrapped tail of, for example, FText's release)."""
+    from unwind import UNW_FLAG_CHAININFO, parse_unwind
+    img = dimg.original
+    end = rfs[rva].end
+    while end in rfs and parse_unwind(img, rfs[end].unwind).flags & UNW_FLAG_CHAININFO:
+        end = rfs[end].end
+    return end
+
+
 def leaf_end(md, dimg, rva: int) -> int | None:
     """End of a leaf thunk: just after its first unconditional exit."""
     for ins in md.disasm(dimg.read(rva, LEAF_LIMIT), rva):
@@ -269,7 +280,7 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         stats["exec thunks with parameters"] += bool(sig["params"])
         body.append("\tP_NATIVE_END;")
         r = int(exec_rva, 16)
-        end = rfs[r].end if r in rfs else leaf_end(md, dimg, r)
+        end = function_end(dimg, rfs, r) if r in rfs else leaf_end(md, dimg, r)
         if end is None:
             continue
         thunks[(cls, uf)] = (f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{r:08X} (end 0x{end:08X})"

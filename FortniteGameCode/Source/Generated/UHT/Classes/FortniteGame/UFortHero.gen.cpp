@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01008EB0 (end 0x01008F2D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDisplayName) | Matching: see analysis/functions-uht-exec.json
+void UFortHero::execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetDisplayName();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortHero, 981996536u)
 // Original dynamic initializer: RVA 0x000F95D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHero> AutoInitializeUFortHero(TEXT("UFortHero"), sizeof(UFortHero), 981996536u);

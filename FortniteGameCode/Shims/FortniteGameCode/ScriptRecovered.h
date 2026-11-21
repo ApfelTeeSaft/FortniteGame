@@ -15,6 +15,7 @@
 #pragma warning(disable : 4267) // 'argument' : conversion from 'type1' to 'type2', possible loss of data
 
 #include "FortniteGameCode/ContainersRecovered.h"
+#include "FortniteGameCode/TextRecovered.h"
 
 typedef unsigned char uint8;
 typedef signed char int8;
@@ -117,6 +118,7 @@ public:
 #define P_GET_UBOOL_REF(ParamName) PARAM_PASSED_BY_REF_ZEROED(ParamName, UBoolProperty, bool)
 #define P_GET_OBJECT(ObjectType,ParamName) PARAM_PASSED_BY_VAL_ZEROED(ParamName, UObjectPropertyBase, ObjectType*)
 #define P_GET_OBJECT_REF(ObjectType,ParamName) PARAM_PASSED_BY_REF_ZEROED(ParamName, UObjectPropertyBase, ObjectType*)
+#define P_GET_OBJECT_REF_NO_PTR(ObjectType,ParamName) PARAM_PASSED_BY_REF_ZEROED(ParamName, UObjectPropertyBase, ObjectType)
 #define P_GET_TARRAY(ElementType,ParamName) PARAM_PASSED_BY_VAL(ParamName, UArrayProperty, TArray<ElementType>)
 #define P_GET_TARRAY_REF(ElementType,ParamName) PARAM_PASSED_BY_REF(ParamName, UArrayProperty, TArray<ElementType>)
 #define P_GET_STRUCT(StructType,ParamName) PARAM_PASSED_BY_VAL(ParamName, UStructProperty, StructType)
@@ -172,6 +174,7 @@ private:
 #define FNGC_EXTRA_MEMBERS_UDoubleProperty FNGC_PROPERTY_FUNDAMENTALS(double)
 #define FNGC_EXTRA_MEMBERS_UNameProperty FNGC_PROPERTY_FUNDAMENTALS(FName)
 #define FNGC_EXTRA_MEMBERS_UStrProperty FNGC_PROPERTY_FUNDAMENTALS(FString)
+#define FNGC_EXTRA_MEMBERS_UTextProperty FNGC_PROPERTY_FUNDAMENTALS(FText)
 
 // UObject/CoreNet.h
 void RPC_ValidateFailed(const TCHAR* Reason);

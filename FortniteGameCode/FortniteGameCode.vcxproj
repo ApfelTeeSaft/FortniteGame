@@ -85,6 +85,7 @@
     <ClInclude Include="Shims\FortniteGameCode\UHTRecovered.h" />
     <ClInclude Include="Shims\FortniteGameCode\ScriptRecovered.h" />
     <ClInclude Include="Shims\FortniteGameCode\ContainersRecovered.h" />
+    <ClInclude Include="Shims\FortniteGameCode\TextRecovered.h" />
     <ClInclude Include="Source\Generated\UHT\Classes.gen.h" />
     <ClInclude Include="Source\Runtime\Core\Public\Misc\RecoveredCString.h" />
     <ClInclude Include="Source\Runtime\Windows\D3D11RHI\Private\D3D11RHIRecoveredPrivate.h" />

@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066A90 (end 0x01066B70)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetInteractErrorText) | Matching: see analysis/functions-uht-exec.json
+void AFortPickup::execGetInteractErrorText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_InteractErrorText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetInteractErrorText(Z_Param_Out_InteractErrorText);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066B70 (end 0x01066C50)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetInteractText) | Matching: see analysis/functions-uht-exec.json
+void AFortPickup::execGetInteractText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_InteractText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetInteractText(Z_Param_Out_InteractText);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024233F0 (end 0x0242340F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PickupLocationData) | Matching: see analysis/functions-uht-exec.json
 void AFortPickup::execOnRep_PickupLocationData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

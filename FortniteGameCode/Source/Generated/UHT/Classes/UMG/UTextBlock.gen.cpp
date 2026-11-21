@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF73D0 (end 0x01BF7492)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetText) | Matching: see analysis/functions-uht-exec.json
+void UTextBlock::execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_InText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetText(Z_Param_InText);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UTextBlock, 221058762u)
 // Original dynamic initializer: RVA 0x001B37D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UTextBlock> AutoInitializeUTextBlock(TEXT("UTextBlock"), sizeof(UTextBlock), 221058762u);

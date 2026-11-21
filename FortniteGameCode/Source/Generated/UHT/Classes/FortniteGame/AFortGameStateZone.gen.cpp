@@ -87,6 +87,19 @@ void AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast(UObject* Conte
 	P_THIS->OnWaveBasedModifiersAppliedMulticast_Implementation(Z_Param_ModifiersApplied);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF66A0 (end 0x00FF685C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnWaveStart) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execOnWaveStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_LevelText);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Level);
+	P_GET_PROPERTY(UTextProperty,Z_Param_WaveText);
+	P_GET_PROPERTY(UIntProperty,Z_Param_WaveNum);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnWaveStart_Implementation(Z_Param_LevelText,Z_Param_Level,Z_Param_WaveText,Z_Param_WaveNum);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF6950 (end 0x00FF69D6)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execRunPerfMemCheatScript) | Matching: see analysis/functions-uht-exec.json
 void AFortGameStateZone::execRunPerfMemCheatScript(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

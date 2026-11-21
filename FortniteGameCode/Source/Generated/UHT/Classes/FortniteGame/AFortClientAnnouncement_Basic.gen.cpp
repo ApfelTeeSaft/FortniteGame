@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC19B0 (end 0x00FC1A72)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDetailText) | Matching: see analysis/functions-uht-exec.json
+void AFortClientAnnouncement_Basic::execSetDetailText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_DetailText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDetailText(Z_Param_DetailText);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1B40 (end 0x00FC1BBF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDisplayTime) | Matching: see analysis/functions-uht-exec.json
 void AFortClientAnnouncement_Basic::execSetDisplayTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -12,6 +22,16 @@ void AFortClientAnnouncement_Basic::execSetDisplayTime(UObject* Context, FFrame&
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->SetDisplayTime(Z_Param_DisplayTime);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC20B0 (end 0x00FC2172)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetTitleText) | Matching: see analysis/functions-uht-exec.json
+void AFortClientAnnouncement_Basic::execSetTitleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_TitleText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetTitleText(Z_Param_TitleText);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AFortClientAnnouncement_Basic, 154024389u)
