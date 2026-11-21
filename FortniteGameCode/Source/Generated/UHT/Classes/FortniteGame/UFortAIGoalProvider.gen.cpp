@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateGoals) | Matching: see analysis/functions-uht-exec.json
+void UFortAIGoalProvider::execUpdateGoals(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateGoals();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortAIGoalProvider, 1137782213u)
 // Original dynamic initializer: RVA 0x000E34F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAIGoalProvider> AutoInitializeUFortAIGoalProvider(TEXT("UFortAIGoalProvider"), sizeof(UFortAIGoalProvider), 1137782213u);

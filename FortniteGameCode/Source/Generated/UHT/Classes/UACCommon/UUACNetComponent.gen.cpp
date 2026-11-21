@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1390 (end 0x024F13AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSendClientHello) | Matching: see analysis/functions-uht-exec.json
+void UUACNetComponent::execSendClientHello(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SendClientHello_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UUACNetComponent, 118349215u)
 // Original dynamic initializer: RVA 0x000AD790 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UUACNetComponent> AutoInitializeUUACNetComponent(TEXT("UUACNetComponent"), sizeof(UUACNetComponent), 118349215u);

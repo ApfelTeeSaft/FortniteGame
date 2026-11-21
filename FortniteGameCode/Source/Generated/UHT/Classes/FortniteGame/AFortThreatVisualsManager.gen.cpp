@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_GoalActorLocations) | Matching: see analysis/functions-uht-exec.json
+void AFortThreatVisualsManager::execOnRep_GoalActorLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_GoalActorLocations();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HideClouds) | Matching: see analysis/functions-uht-exec.json
+void AFortThreatVisualsManager::execOnRep_HideClouds(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_HideClouds();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_StormWinds) | Matching: see analysis/functions-uht-exec.json
+void AFortThreatVisualsManager::execOnRep_StormWinds(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_StormWinds();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ThreatLocations) | Matching: see analysis/functions-uht-exec.json
+void AFortThreatVisualsManager::execOnRep_ThreatLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ThreatLocations();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortThreatVisualsManager, 498712444u)
 // Original dynamic initializer: RVA 0x001164E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortThreatVisualsManager> AutoInitializeAFortThreatVisualsManager(TEXT("AFortThreatVisualsManager"), sizeof(AFortThreatVisualsManager), 498712444u);

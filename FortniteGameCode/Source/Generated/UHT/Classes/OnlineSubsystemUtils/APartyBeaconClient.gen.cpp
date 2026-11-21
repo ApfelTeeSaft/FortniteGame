@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FC10 (end 0x0032FC2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSendReservationFull) | Matching: see analysis/functions-uht-exec.json
+void APartyBeaconClient::execClientSendReservationFull(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSendReservationFull_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(APartyBeaconClient, 378953535u)
 // Original dynamic initializer: RVA 0x00099220 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<APartyBeaconClient> AutoInitializeAPartyBeaconClient(TEXT("APartyBeaconClient"), sizeof(APartyBeaconClient), 378953535u);

@@ -4,6 +4,96 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFC70 (end 0x023EFC9F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanJumpInternal) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execCanJumpInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanJumpInternal_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0880 (end 0x023F089F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCheatFly) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execClientCheatFly(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCheatFly_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F08A0 (end 0x023F08BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCheatGhost) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execClientCheatGhost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCheatGhost_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F08C0 (end 0x023F08DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCheatWalk) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execClientCheatWalk(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCheatWalk_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F16F0 (end 0x023F171F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsJumpProvidingForce) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execIsJumpProvidingForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsJumpProvidingForce();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B4620 (end 0x024B463F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execJump) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Jump();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F3380 (end 0x023F339F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnJumped) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execOnJumped(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnJumped_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F33A0 (end 0x023F33BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_IsCrouched) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execOnRep_IsCrouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_IsCrouched();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E070 (end 0x0108E08F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedBasedMovement) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execOnRep_ReplicatedBasedMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedBasedMovement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F5330 (end 0x023F534F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopJumping) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execStopJumping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopJumping();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ACharacter, 161091864u)
 // Original dynamic initializer: RVA 0x001F63D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ACharacter> AutoInitializeACharacter(TEXT("ACharacter"), sizeof(ACharacter), 161091864u);

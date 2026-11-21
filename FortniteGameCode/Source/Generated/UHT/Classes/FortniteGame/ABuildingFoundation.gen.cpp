@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79CF0 (end 0x00F79D0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_LevelToStream) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFoundation::execOnRep_LevelToStream(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_LevelToStream();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingFoundation, 1172186554u)
 // Original dynamic initializer: RVA 0x000DAE70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingFoundation> AutoInitializeABuildingFoundation(TEXT("ABuildingFoundation"), sizeof(ABuildingFoundation), 1172186554u);

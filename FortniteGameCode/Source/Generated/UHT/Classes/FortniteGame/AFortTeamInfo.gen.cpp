@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4930 (end 0x010B495F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTeamExperience) | Matching: see analysis/functions-uht-exec.json
+void AFortTeamInfo::execGetTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetTeamExperience();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4B60 (end 0x010B4B8F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTeamLevel) | Matching: see analysis/functions-uht-exec.json
+void AFortTeamInfo::execGetTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetTeamLevel();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortTeamInfo, 1341076581u)
 // Original dynamic initializer: RVA 0x00114650 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTeamInfo> AutoInitializeAFortTeamInfo(TEXT("AFortTeamInfo"), sizeof(AFortTeamInfo), 1341076581u);

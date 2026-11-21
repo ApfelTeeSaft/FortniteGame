@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01060BF0 (end 0x01060C0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bActive) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execOnRep_bActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bActive();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6ED10 (end 0x00F6ED2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bTargetable) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execOnRep_bTargetable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bTargetable();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F749C0 (end 0x00F749DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bVulnerable) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execOnRep_bVulnerable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bVulnerable();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingFOBCoreActor, 2432188044u)
 // Original dynamic initializer: RVA 0x000DADD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingFOBCoreActor> AutoInitializeABuildingFOBCoreActor(TEXT("ABuildingFOBCoreActor"), sizeof(ABuildingFOBCoreActor), 2432188044u);

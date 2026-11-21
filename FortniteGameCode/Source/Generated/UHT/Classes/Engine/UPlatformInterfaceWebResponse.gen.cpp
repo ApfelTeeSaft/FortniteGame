@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B0CF0 (end 0x024B0D1F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumHeaders) | Matching: see analysis/functions-uht-exec.json
+void UPlatformInterfaceWebResponse::execGetNumHeaders(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetNumHeaders();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPlatformInterfaceWebResponse, 2140534516u)
 // Original dynamic initializer: RVA 0x00214A70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPlatformInterfaceWebResponse> AutoInitializeUPlatformInterfaceWebResponse(TEXT("UPlatformInterfaceWebResponse"), sizeof(UPlatformInterfaceWebResponse), 2140534516u);

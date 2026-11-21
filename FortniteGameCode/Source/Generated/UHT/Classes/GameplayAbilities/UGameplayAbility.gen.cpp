@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550610 (end 0x0055063F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_CheckAbilityCooldown) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_CheckAbilityCooldown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->K2_CheckAbilityCooldown();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79990 (end 0x00F799BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_CheckAbilityCost) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_CheckAbilityCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->K2_CheckAbilityCost();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550640 (end 0x0055066F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_CommitAbility) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_CommitAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->K2_CommitAbility();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005507F0 (end 0x0055080F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_EndAbility) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_EndAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_EndAbility();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UGameplayAbility, 3497727587u)
 // Original dynamic initializer: RVA 0x0009DFD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameplayAbility> AutoInitializeUGameplayAbility(TEXT("UGameplayAbility"), sizeof(UGameplayAbility), 3497727587u);

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079FE0 (end 0x01079FFF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientUnloadFoundations) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerKeep::execClientUnloadFoundations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientUnloadFoundations_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerKeep, 2996241666u)
 // Original dynamic initializer: RVA 0x0010B8A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerKeep> AutoInitializeAFortPlayerControllerKeep(TEXT("AFortPlayerControllerKeep"), sizeof(AFortPlayerControllerKeep), 2996241666u);

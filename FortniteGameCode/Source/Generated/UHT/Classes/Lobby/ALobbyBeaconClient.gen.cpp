@@ -4,6 +4,52 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233B0 (end 0x024233CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientAckJoiningServer) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execClientAckJoiningServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientAckJoiningServer_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFE90 (end 0x023EFEAF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientJoinGame) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execClientJoinGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientJoinGame_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2CB0 (end 0x005C2CFE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerDisconnectFromLobby) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execServerDisconnectFromLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerDisconnectFromLobby_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerDisconnectFromLobby_Validate"));
+		return;
+	}
+	P_THIS->ServerDisconnectFromLobby_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C3070 (end 0x005C30BE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerNotifyJoiningServer) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execServerNotifyJoiningServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerNotifyJoiningServer_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerNotifyJoiningServer_Validate"));
+		return;
+	}
+	P_THIS->ServerNotifyJoiningServer_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ALobbyBeaconClient, 387611509u)
 // Original dynamic initializer: RVA 0x000A8B20 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ALobbyBeaconClient> AutoInitializeALobbyBeaconClient(TEXT("ALobbyBeaconClient"), sizeof(ALobbyBeaconClient), 387611509u);

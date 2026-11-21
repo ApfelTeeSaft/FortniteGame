@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02913FC0 (end 0x02913FEF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReceiveIsFinished) | Matching: see analysis/functions-uht-exec.json
+void UCameraShake::execReceiveIsFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ReceiveIsFinished_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCameraShake, 1248482082u)
 // Original dynamic initializer: RVA 0x001F4D70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCameraShake> AutoInitializeUCameraShake(TEXT("UCameraShake"), sizeof(UCameraShake), 1248482082u);

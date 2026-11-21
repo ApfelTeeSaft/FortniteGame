@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68580 (end 0x00F6859F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStop) | Matching: see analysis/functions-uht-exec.json
+void UForceFeedbackComponent::execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Stop();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UForceFeedbackComponent, 3389289977u)
 // Original dynamic initializer: RVA 0x001FF420 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UForceFeedbackComponent> AutoInitializeUForceFeedbackComponent(TEXT("UForceFeedbackComponent"), sizeof(UForceFeedbackComponent), 3389289977u);

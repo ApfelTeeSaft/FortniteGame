@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HeightFogEnabled) | Matching: see analysis/functions-uht-exec.json
+void AFortTimeOfDayManager::execOnRep_HeightFogEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_HeightFogEnabled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_TimeOfDay) | Matching: see analysis/functions-uht-exec.json
+void AFortTimeOfDayManager::execOnRep_TimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_TimeOfDay();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_TimeOfDayInit) | Matching: see analysis/functions-uht-exec.json
+void AFortTimeOfDayManager::execOnRep_TimeOfDayInit(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_TimeOfDayInit();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortTimeOfDayManager, 4162399111u)
 // Original dynamic initializer: RVA 0x00116500 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTimeOfDayManager> AutoInitializeAFortTimeOfDayManager(TEXT("AFortTimeOfDayManager"), sizeof(AFortTimeOfDayManager), 4162399111u);

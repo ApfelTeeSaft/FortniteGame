@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9D30 (end 0x028A9D4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRefreshBuildSquadWidget) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionBuildSquadWidget::execOnRefreshBuildSquadWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRefreshBuildSquadWidget_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290D5C0 (end 0x0290D5DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnStartExpeditionCompleted) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionBuildSquadWidget::execOnStartExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnStartExpeditionCompleted_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortExpeditionBuildSquadWidget, 3314966883u)
 // Original dynamic initializer: RVA 0x00244A40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortExpeditionBuildSquadWidget> AutoInitializeUFortExpeditionBuildSquadWidget(TEXT("UFortExpeditionBuildSquadWidget"), sizeof(UFortExpeditionBuildSquadWidget), 3314966883u);

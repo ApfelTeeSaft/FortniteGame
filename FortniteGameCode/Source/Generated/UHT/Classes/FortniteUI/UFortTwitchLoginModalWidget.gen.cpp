@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290D5C0 (end 0x0290D5DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnNativeHostContentChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortTwitchLoginModalWidget::execOnNativeHostContentChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnNativeHostContentChanged_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTwitchLoginModalWidget, 4021523392u)
 // Original dynamic initializer: RVA 0x00260BF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTwitchLoginModalWidget> AutoInitializeUFortTwitchLoginModalWidget(TEXT("UFortTwitchLoginModalWidget"), sizeof(UFortTwitchLoginModalWidget), 4021523392u);

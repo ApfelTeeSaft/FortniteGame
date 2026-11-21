@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRefreshBannerEditor) | Matching: see analysis/functions-uht-exec.json
+void UFortPlayerProfileBannerEditor::execRefreshBannerEditor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RefreshBannerEditor_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortPlayerProfileBannerEditor, 3313958003u)
 // Original dynamic initializer: RVA 0x00255C60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPlayerProfileBannerEditor> AutoInitializeUFortPlayerProfileBannerEditor(TEXT("UFortPlayerProfileBannerEditor"), sizeof(UFortPlayerProfileBannerEditor), 3313958003u);

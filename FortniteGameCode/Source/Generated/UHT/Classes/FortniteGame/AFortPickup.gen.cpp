@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233F0 (end 0x0242340F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PickupLocationData) | Matching: see analysis/functions-uht-exec.json
+void AFortPickup::execOnRep_PickupLocationData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PickupLocationData();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233B0 (end 0x024233CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PickupOwnerData) | Matching: see analysis/functions-uht-exec.json
+void AFortPickup::execOnRep_PickupOwnerData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PickupOwnerData();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01067080 (end 0x0106709F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PrimaryPickupItemEntry) | Matching: see analysis/functions-uht-exec.json
+void AFortPickup::execOnRep_PrimaryPickupItemEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PrimaryPickupItemEntry();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DFB0 (end 0x0108DFCF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_TossedFromContainer) | Matching: see analysis/functions-uht-exec.json
+void AFortPickup::execOnRep_TossedFromContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_TossedFromContainer();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010670A0 (end 0x010670BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bPickedUp) | Matching: see analysis/functions-uht-exec.json
+void AFortPickup::execOnRep_bPickedUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bPickedUp();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPickup, 3577192923u)
 // Original dynamic initializer: RVA 0x00108D00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPickup> AutoInitializeAFortPickup(TEXT("AFortPickup"), sizeof(AFortPickup), 3577192923u);

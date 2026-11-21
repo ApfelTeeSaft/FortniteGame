@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFF20 (end 0x00FEFF3F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_CurrentWUID) | Matching: see analysis/functions-uht-exec.json
+void AFortGameState::execOnRep_CurrentWUID(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_CurrentWUID();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFFE0 (end 0x00FEFFFF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_GameSessionID) | Matching: see analysis/functions-uht-exec.json
+void AFortGameState::execOnRep_GameSessionID(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_GameSessionID();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF0000 (end 0x00FF001F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_GameplayState) | Matching: see analysis/functions-uht-exec.json
+void AFortGameState::execOnRep_GameplayState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_GameplayState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF00E0 (end 0x00FF00FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_TimeOfDayManager) | Matching: see analysis/functions-uht-exec.json
+void AFortGameState::execOnRep_TimeOfDayManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_TimeOfDayManager();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF0160 (end 0x00FF017F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_WorldManager) | Matching: see analysis/functions-uht-exec.json
+void AFortGameState::execOnRep_WorldManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_WorldManager();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameState, 2067047953u)
 // Original dynamic initializer: RVA 0x000F7570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameState> AutoInitializeAFortGameState(TEXT("AFortGameState"), sizeof(AFortGameState), 2067047953u);

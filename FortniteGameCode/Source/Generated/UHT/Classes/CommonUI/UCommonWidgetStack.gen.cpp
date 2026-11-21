@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D1000 (end 0x002D101F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execActivateWidget) | Matching: see analysis/functions-uht-exec.json
+void UCommonWidgetStack::execActivateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ActivateWidget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D1120 (end 0x002D113F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDeactivateWidget) | Matching: see analysis/functions-uht-exec.json
+void UCommonWidgetStack::execDeactivateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DeactivateWidget();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonWidgetStack, 1250554686u)
 // Original dynamic initializer: RVA 0x00096BF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonWidgetStack> AutoInitializeUCommonWidgetStack(TEXT("UCommonWidgetStack"), sizeof(UCommonWidgetStack), 1250554686u);

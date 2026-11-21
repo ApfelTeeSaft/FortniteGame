@@ -4,6 +4,29 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB090 (end 0x00FEB0AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientPing) | Matching: see analysis/functions-uht-exec.json
+void ATestBeaconClient::execClientPing(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientPing_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00332060 (end 0x003320AE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPong) | Matching: see analysis/functions-uht-exec.json
+void ATestBeaconClient::execServerPong(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPong_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerPong_Validate"));
+		return;
+	}
+	P_THIS->ServerPong_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ATestBeaconClient, 1243238942u)
 // Original dynamic initializer: RVA 0x00099260 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ATestBeaconClient> AutoInitializeATestBeaconClient(TEXT("ATestBeaconClient"), sizeof(ATestBeaconClient), 1243238942u);

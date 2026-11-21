@@ -4,6 +4,240 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF6220 (end 0x00FF623F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCancelPendingMapChange) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientCancelPendingMapChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCancelPendingMapChange_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ACB40 (end 0x024ACB5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientClearCameraLensEffects) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientClearCameraLensEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientClearCameraLensEffects_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ACB60 (end 0x024ACB7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCommitMapChange) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientCommitMapChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCommitMapChange_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ACC10 (end 0x024ACC2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientEndOnlineSession) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientEndOnlineSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientEndOnlineSession_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F682F0 (end 0x00F6830F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientForceGarbageCollection) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientForceGarbageCollection(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientForceGarbageCollection_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ADD40 (end 0x024ADD5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReset) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReset_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ADFE0 (end 0x024ADFFF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetBlockOnAsyncLoading) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientSetBlockOnAsyncLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSetBlockOnAsyncLoading_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AE760 (end 0x024AE77F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientStartOnlineSession) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientStartOnlineSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientStartOnlineSession_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF170 (end 0x024AF18F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientVoiceHandshakeComplete) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientVoiceHandshakeComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientVoiceHandshakeComplete_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF5B0 (end 0x024AF5CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEnableCheats) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execEnableCheats(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EnableCheats();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B1670 (end 0x024B168F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPause) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Pause();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2200 (end 0x024B221F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRestartLevel) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execRestartLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RestartLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2500 (end 0x024B254E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCheckClientPossession) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerCheckClientPossession(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCheckClientPossession_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerCheckClientPossession_Validate"));
+		return;
+	}
+	P_THIS->ServerCheckClientPossession_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2550 (end 0x024B259E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCheckClientPossessionReliable) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerCheckClientPossessionReliable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCheckClientPossessionReliable_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerCheckClientPossessionReliable_Validate"));
+		return;
+	}
+	P_THIS->ServerCheckClientPossessionReliable_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B27C0 (end 0x024B280E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPause) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPause_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerPause_Validate"));
+		return;
+	}
+	P_THIS->ServerPause_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2810 (end 0x024B285E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRestartPlayer) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerRestartPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRestartPlayer_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerRestartPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerRestartPlayer_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2A50 (end 0x024B2A9E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerShortTimeout) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerShortTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerShortTimeout_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerShortTimeout_Validate"));
+		return;
+	}
+	P_THIS->ServerShortTimeout_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2AA0 (end 0x024B2AEE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerToggleAILogging) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerToggleAILogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerToggleAILogging_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerToggleAILogging_Validate"));
+		return;
+	}
+	P_THIS->ServerToggleAILogging_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2F30 (end 0x024B2F7E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerVerifyViewTarget) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerVerifyViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerVerifyViewTarget_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerVerifyViewTarget_Validate"));
+		return;
+	}
+	P_THIS->ServerVerifyViewTarget_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2F80 (end 0x024B2FCE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerViewNextPlayer) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerViewNextPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerViewNextPlayer_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerViewNextPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerViewNextPlayer_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2FD0 (end 0x024B301E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerViewPrevPlayer) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerViewPrevPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerViewPrevPlayer_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerViewPrevPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerViewPrevPlayer_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(APlayerController, 2849395747u)
 // Original dynamic initializer: RVA 0x00214910 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<APlayerController> AutoInitializeAPlayerController(TEXT("APlayerController"), sizeof(APlayerController), 2849395747u);

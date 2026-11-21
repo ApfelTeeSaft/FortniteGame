@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D25090 (end 0x01D250BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPaused) | Matching: see analysis/functions-uht-exec.json
+void UBrainComponent::execIsPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPaused();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D250C0 (end 0x01D250EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsRunning) | Matching: see analysis/functions-uht-exec.json
+void UBrainComponent::execIsRunning(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsRunning();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D25190 (end 0x01D251AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRestartLogic) | Matching: see analysis/functions-uht-exec.json
+void UBrainComponent::execRestartLogic(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RestartLogic();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBrainComponent, 2415957345u)
 // Original dynamic initializer: RVA 0x001BA970 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBrainComponent> AutoInitializeUBrainComponent(TEXT("UBrainComponent"), sizeof(UBrainComponent), 2415957345u);

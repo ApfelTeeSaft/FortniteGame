@@ -4,6 +4,87 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010605C0 (end 0x010605F1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealthPercent) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execGetHealthPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetHealthPercent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010606C0 (end 0x010606F1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxHealth) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execGetMaxHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxHealth();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01060BF0 (end 0x01060C0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleIsDying) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execHandleIsDying(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleIsDying();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6ED10 (end 0x00F6ED2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleIsHiddenForDeath) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execHandleIsHiddenForDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleIsHiddenForDeath();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01060C50 (end 0x01060C6F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHideBodyOnDeath) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execHideBodyOnDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HideBodyOnDeath();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01060D50 (end 0x01060D7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsActionInputIgnored) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execIsActionInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsActionInputIgnored();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084190 (end 0x010841AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_IsDBNO) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execOnRep_IsDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_IsDBNO();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010612F0 (end 0x0106130F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_TeleportCounter) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execOnRep_TeleportCounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_TeleportCounter();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F749C0 (end 0x00F749DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_VocalChords) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execOnRep_VocalChords(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_VocalChords();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPawn, 3043488547u)
 // Original dynamic initializer: RVA 0x00108030 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPawn> AutoInitializeAFortPawn(TEXT("AFortPawn"), sizeof(AFortPawn), 3043488547u);

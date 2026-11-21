@@ -4,6 +4,105 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D1120 (end 0x002D113F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execApplyHardwareBenchmarkResults) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execApplyHardwareBenchmarkResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ApplyHardwareBenchmarkResults();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execApplyNonResolutionSettings) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execApplyNonResolutionSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ApplyNonResolutionSettings();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02422730 (end 0x02422761)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDefaultResolutionScale) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execGetDefaultResolutionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDefaultResolutionScale();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009760 (end 0x0100978F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetOverallScalabilityLevel) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execGetOverallScalabilityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetOverallScalabilityLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02422B20 (end 0x02422B51)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRecommendedResolutionScale) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execGetRecommendedResolutionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetRecommendedResolutionScale();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F180 (end 0x01D5F1AF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsDirty) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execIsDirty(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsDirty();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00549E00 (end 0x00549E1F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execResetToCurrentSettings) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execResetToCurrentSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetToCurrentSettings();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5B1D0 (end 0x00F5B1EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSaveSettings) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execSaveSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SaveSettings();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9950 (end 0x023F996F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetToDefaults) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execSetToDefaults(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetToDefaults();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009D80 (end 0x01009DAF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSupportsHDRDisplayOutput) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execSupportsHDRDisplayOutput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->SupportsHDRDisplayOutput();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024241F0 (end 0x0242420F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execValidateSettings) | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execValidateSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ValidateSettings();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UGameUserSettings, 474070331u)
 // Original dynamic initializer: RVA 0x00200110 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameUserSettings> AutoInitializeUGameUserSettings(TEXT("UGameUserSettings"), sizeof(UGameUserSettings), 474070331u);

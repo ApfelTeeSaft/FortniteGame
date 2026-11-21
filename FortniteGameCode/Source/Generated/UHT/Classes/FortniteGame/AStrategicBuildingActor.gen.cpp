@@ -4,6 +4,69 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2830 (end 0x010F284F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execApplyProximityPulseEffects) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execApplyProximityPulseEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ApplyProximityPulseEffects();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2DE0 (end 0x010F2E0F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsActive) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsActive();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F33E0 (end 0x010F33FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ConstructionProgress) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execOnRep_ConstructionProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ConstructionProgress();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF6220 (end 0x00FF623F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bIsActive) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execOnRep_bIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bIsActive();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F3400 (end 0x010F341F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execProcessDeferredTouchActors) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execProcessDeferredTouchActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ProcessDeferredTouchActors();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F34C0 (end 0x010F34DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetupIndicators) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execSetupIndicators(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetupIndicators();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F34E0 (end 0x010F34FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetupVisibilityComponent) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execSetupVisibilityComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetupVisibilityComponent();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AStrategicBuildingActor, 2539029025u)
 // Original dynamic initializer: RVA 0x001223B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AStrategicBuildingActor> AutoInitializeAStrategicBuildingActor(TEXT("AStrategicBuildingActor"), sizeof(AStrategicBuildingActor), 2539029025u);

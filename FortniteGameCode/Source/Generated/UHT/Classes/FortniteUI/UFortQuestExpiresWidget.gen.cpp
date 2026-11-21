@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnQuestExpirationUpdated) | Matching: see analysis/functions-uht-exec.json
+void UFortQuestExpiresWidget::execOnQuestExpirationUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnQuestExpirationUpdated_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortQuestExpiresWidget, 754071881u)
 // Original dynamic initializer: RVA 0x00258380 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestExpiresWidget> AutoInitializeUFortQuestExpiresWidget(TEXT("UFortQuestExpiresWidget"), sizeof(UFortQuestExpiresWidget), 754071881u);

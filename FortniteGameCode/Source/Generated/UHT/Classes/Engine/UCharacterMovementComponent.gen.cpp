@@ -4,6 +4,78 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFE90 (end 0x023EFEAF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearAccumulatedForces) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execClearAccumulatedForces(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearAccumulatedForces();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0CC0 (end 0x023F0CDF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDisableMovement) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execDisableMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DisableMovement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0E90 (end 0x023F0EC1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxAcceleration) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetMaxAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxAcceleration();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF770 (end 0x024AF7A1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxBrakingDeceleration) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetMaxBrakingDeceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxBrakingDeceleration();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0ED0 (end 0x023F0F01)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxJumpHeight) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetMaxJumpHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxJumpHeight();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0F10 (end 0x023F0F41)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxJumpHeightWithJumpTime) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetMaxJumpHeightWithJumpTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxJumpHeightWithJumpTime();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0F50 (end 0x023F0F81)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMinAnalogSpeed) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetMinAnalogSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMinAnalogSpeed();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F2F00 (end 0x023F2F31)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_GetModifiedMaxAcceleration) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execK2_GetModifiedMaxAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->K2_GetModifiedMaxAcceleration();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCharacterMovementComponent, 3300660237u)
 // Original dynamic initializer: RVA 0x001F6470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCharacterMovementComponent> AutoInitializeUCharacterMovementComponent(TEXT("UCharacterMovementComponent"), sizeof(UCharacterMovementComponent), 3300660237u);

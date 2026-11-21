@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CA30 (end 0x0104CA4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_RefreshActiveGameplayEffectCueEvents) | Matching: see analysis/functions-uht-exec.json
+void UFortAbilitySystemComponent::execNetMulticast_RefreshActiveGameplayEffectCueEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_RefreshActiveGameplayEffectCueEvents_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortAbilitySystemComponent, 3522710089u)
 // Original dynamic initializer: RVA 0x000DE880 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAbilitySystemComponent> AutoInitializeUFortAbilitySystemComponent(TEXT("UFortAbilitySystemComponent"), sizeof(UFortAbilitySystemComponent), 3522710089u);

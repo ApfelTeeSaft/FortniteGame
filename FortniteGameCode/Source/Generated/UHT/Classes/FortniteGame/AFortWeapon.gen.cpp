@@ -4,6 +4,160 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6950 (end 0x010D697F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLocalMagazineAmmoCount) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetLocalMagazineAmmoCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLocalMagazineAmmoCount();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6980 (end 0x010D69AF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLocalRemainingAmmo) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetLocalRemainingAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLocalRemainingAmmo();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D69B0 (end 0x010D69DF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMagazineAmmoCount) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetMagazineAmmoCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMagazineAmmoCount();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6AB0 (end 0x010D6AE1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRange) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetRange();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6AF0 (end 0x010D6B21)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetReloadProgress) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetReloadProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetReloadProgress();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6B30 (end 0x010D6B61)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetReloadTime) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetReloadTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetReloadTime();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6B70 (end 0x010D6B9F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRemainingAmmo) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetRemainingAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetRemainingAmmo();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6ED0 (end 0x010D6EFF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsProjectileWeapon) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execIsProjectileWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsProjectileWeapon();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6F00 (end 0x010D6F2F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsReloading) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execIsReloading(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsReloading();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7210 (end 0x010D722F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_AmmoCount) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execOnRep_AmmoCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_AmmoCount();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D72F0 (end 0x010D730F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedAppliedAlterations) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execOnRep_ReplicatedAppliedAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedAppliedAlterations();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7310 (end 0x010D732F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedWeaponData) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execOnRep_ReplicatedWeaponData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedWeaponData();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7770 (end 0x010D778F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReload) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Reload();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D77B0 (end 0x010D77FE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReleaseWeaponPrimaryAbility) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execServerReleaseWeaponPrimaryAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReleaseWeaponPrimaryAbility_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerReleaseWeaponPrimaryAbility_Validate"));
+		return;
+	}
+	P_THIS->ServerReleaseWeaponPrimaryAbility_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7800 (end 0x010D784E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerResetShotReport) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execServerResetShotReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerResetShotReport_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerResetShotReport_Validate"));
+		return;
+	}
+	P_THIS->ServerResetShotReport_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FC10 (end 0x0032FC2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopWeaponFireFX) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execStopWeaponFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopWeaponFireFX();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortWeapon, 236114432u)
 // Original dynamic initializer: RVA 0x0011BF70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortWeapon> AutoInitializeAFortWeapon(TEXT("AFortWeapon"), sizeof(AFortWeapon), 236114432u);

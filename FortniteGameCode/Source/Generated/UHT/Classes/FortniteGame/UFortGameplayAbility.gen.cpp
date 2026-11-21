@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_AbilityCompleted) | Matching: see analysis/functions-uht-exec.json
+void UFortGameplayAbility::execK2_AbilityCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_AbilityCompleted();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEBC50 (end 0x00FEBC7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetupPreviewImageOverride) | Matching: see analysis/functions-uht-exec.json
+void UFortGameplayAbility::execSetupPreviewImageOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->SetupPreviewImageOverride_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortGameplayAbility, 3244765361u)
 // Original dynamic initializer: RVA 0x000F65A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGameplayAbility> AutoInitializeUFortGameplayAbility(TEXT("UFortGameplayAbility"), sizeof(UFortGameplayAbility), 3244765361u);

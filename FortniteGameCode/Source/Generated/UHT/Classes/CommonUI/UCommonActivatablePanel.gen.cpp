@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289CFD0 (end 0x0289CFEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBeginIntro) | Matching: see analysis/functions-uht-exec.json
+void UCommonActivatablePanel::execOnBeginIntro(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBeginIntro_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBeginOutro) | Matching: see analysis/functions-uht-exec.json
+void UCommonActivatablePanel::execOnBeginOutro(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBeginOutro_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonActivatablePanel, 3350225185u)
 // Original dynamic initializer: RVA 0x000955D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonActivatablePanel> AutoInitializeUCommonActivatablePanel(TEXT("UCommonActivatablePanel"), sizeof(UCommonActivatablePanel), 3350225185u);

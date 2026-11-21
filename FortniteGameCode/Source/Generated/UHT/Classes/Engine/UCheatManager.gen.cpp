@@ -4,6 +4,245 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9620 (end 0x023F963F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugCapsuleSweep) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDebugCapsuleSweep(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugCapsuleSweep();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9640 (end 0x023F965F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugCapsuleSweepCapture) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDebugCapsuleSweepCapture(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugCapsuleSweepCapture();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F96E0 (end 0x023F96FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugCapsuleSweepClear) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDebugCapsuleSweepClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugCapsuleSweepClear();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9790 (end 0x023F97AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugCapsuleSweepPawn) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDebugCapsuleSweepPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugCapsuleSweepPawn();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9910 (end 0x023F992F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDestroyAllPawnsExceptTarget) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDestroyAllPawnsExceptTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyAllPawnsExceptTarget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9950 (end 0x023F996F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDestroyTarget) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDestroyTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyTarget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9970 (end 0x023F998F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDisableDebugCamera) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDisableDebugCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DisableDebugCamera();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9990 (end 0x023F99AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDumpChatState) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDumpChatState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DumpChatState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F99B0 (end 0x023F99CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDumpOnlineSessionState) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDumpOnlineSessionState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DumpOnlineSessionState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F99D0 (end 0x023F99EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDumpPartyState) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDumpPartyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DumpPartyState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F99F0 (end 0x023F9A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDumpVoiceMutingState) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execDumpVoiceMutingState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DumpVoiceMutingState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9A10 (end 0x023F9A2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEnableDebugCamera) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execEnableDebugCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EnableDebugCamera();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9A30 (end 0x023F9A4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFlushLog) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execFlushLog(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FlushLog();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024241F0 (end 0x0242420F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFly) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execFly(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Fly();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5B1D0 (end 0x00F5B1EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGhost) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execGhost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Ghost();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00549E00 (end 0x00549E1F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGod) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execGod(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->God();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9E00 (end 0x023F9E1F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execLogLoc) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execLogLoc(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->LogLoc();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9E40 (end 0x023F9E5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayersOnly) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execPlayersOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PlayersOnly();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9EF0 (end 0x023F9F0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRebuildNavigation) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execRebuildNavigation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RebuildNavigation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9F70 (end 0x023F9FBE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerToggleAILogging) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execServerToggleAILogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerToggleAILogging_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerToggleAILogging_Validate"));
+		return;
+	}
+	P_THIS->ServerToggleAILogging_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTeleport) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execTeleport(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Teleport();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA5B0 (end 0x023FA5CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTestCollisionDistance) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execTestCollisionDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TestCollisionDistance();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA5D0 (end 0x023FA5EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleAILogging) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execToggleAILogging(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleAILogging();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA5F0 (end 0x023FA60F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleDebugCamera) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execToggleDebugCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleDebugCamera();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA7A0 (end 0x023FA7BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execViewSelf) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execViewSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ViewSelf();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F130 (end 0x01D5F14F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execWalk) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execWalk(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Walk();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCheatManager, 298652189u)
 // Original dynamic initializer: RVA 0x001F6F40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCheatManager> AutoInitializeUCheatManager(TEXT("UCheatManager"), sizeof(UCheatManager), 298652189u);

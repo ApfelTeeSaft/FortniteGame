@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00549E00 (end 0x00549E1F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleIgnoreAbilitySystemCooldowns) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemGlobals::execToggleIgnoreAbilitySystemCooldowns(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleIgnoreAbilitySystemCooldowns();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00549E20 (end 0x00549E3F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleIgnoreAbilitySystemCosts) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemGlobals::execToggleIgnoreAbilitySystemCosts(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleIgnoreAbilitySystemCosts();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAbilitySystemGlobals, 377977568u)
 // Original dynamic initializer: RVA 0x0009D320 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilitySystemGlobals> AutoInitializeUAbilitySystemGlobals(TEXT("UAbilitySystemGlobals"), sizeof(UAbilitySystemGlobals), 377977568u);

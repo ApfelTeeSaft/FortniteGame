@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateMorphTargets) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerMannequin::execUpdateMorphTargets(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateMorphTargets();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerMannequin, 3520992507u)
 // Original dynamic initializer: RVA 0x0010C480 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerMannequin> AutoInitializeAFortPlayerMannequin(TEXT("AFortPlayerMannequin"), sizeof(AFortPlayerMannequin), 3520992507u);

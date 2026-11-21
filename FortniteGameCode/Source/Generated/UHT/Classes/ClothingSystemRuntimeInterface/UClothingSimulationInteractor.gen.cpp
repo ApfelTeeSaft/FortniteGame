@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClothConfigUpdated) | Matching: see analysis/functions-uht-exec.json
+void UClothingSimulationInteractor::execClothConfigUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClothConfigUpdated();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F1B0 (end 0x01D5F1CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPhysicsAssetUpdated) | Matching: see analysis/functions-uht-exec.json
+void UClothingSimulationInteractor::execPhysicsAssetUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PhysicsAssetUpdated();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UClothingSimulationInteractor, 3365754277u)
 // Original dynamic initializer: RVA 0x001C0050 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UClothingSimulationInteractor> AutoInitializeUClothingSimulationInteractor(TEXT("UClothingSimulationInteractor"), sizeof(UClothingSimulationInteractor), 3365754277u);

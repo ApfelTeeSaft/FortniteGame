@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DA90 (end 0x0108DAAF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execKillAfterNoPawnHit) | Matching: see analysis/functions-uht-exec.json
+void AFortProjectileAthena::execKillAfterNoPawnHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->KillAfterNoPawnHit();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DFB0 (end 0x0108DFCF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_FireStart) | Matching: see analysis/functions-uht-exec.json
+void AFortProjectileAthena::execOnRep_FireStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_FireStart();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E090 (end 0x0108E0AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PawnHitResult) | Matching: see analysis/functions-uht-exec.json
+void AFortProjectileAthena::execOnRep_PawnHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PawnHitResult();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortProjectileAthena, 436058295u)
 // Original dynamic initializer: RVA 0x0010D4F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortProjectileAthena> AutoInitializeAFortProjectileAthena(TEXT("AFortProjectileAthena"), sizeof(AFortProjectileAthena), 436058295u);

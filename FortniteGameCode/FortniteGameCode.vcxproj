@@ -55,7 +55,10 @@
       <ExceptionHandling>false</ExceptionHandling>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <!-- UBT passes /Z7. With the vtable model every object would carry the LF_VFTABLE type
+           records of all 3,333 classes (~19 MB each, beyond the 4 GB .lib limit). /Zi writes them
+           once to the PDB; code and data sections are identical (docs/BUILDING.md). -->
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>CompileAsCpp</CompileAs>
       <WarningLevel>Level4</WarningLevel>
       <DisableSpecificWarnings>4819;4456;4458;4459;4463;4838;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -80,6 +83,7 @@
     <ClInclude Include="Shims\FortniteGameCode\UE4CodeGenRecovered.h" />
     <ClInclude Include="Shims\FortniteGameCode\UObjectRegistrationRecovered.h" />
     <ClInclude Include="Shims\FortniteGameCode\UHTRecovered.h" />
+    <ClInclude Include="Shims\FortniteGameCode\ScriptRecovered.h" />
     <ClInclude Include="Source\Generated\UHT\Classes.gen.h" />
     <ClInclude Include="Source\Runtime\Core\Public\Misc\RecoveredCString.h" />
     <ClInclude Include="Source\Runtime\Windows\D3D11RHI\Private\D3D11RHIRecoveredPrivate.h" />

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00668E60 (end 0x00668E7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearInstances) | Matching: see analysis/functions-uht-exec.json
+void UPaperGroupedSpriteComponent::execClearInstances(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearInstances();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPaperGroupedSpriteComponent, 2653628167u)
 // Original dynamic initializer: RVA 0x000AB570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperGroupedSpriteComponent> AutoInitializeUPaperGroupedSpriteComponent(TEXT("UPaperGroupedSpriteComponent"), sizeof(UPaperGroupedSpriteComponent), 2653628167u);

@@ -4,6 +4,150 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB57C0 (end 0x00FB57DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCycleCurrentEncounterToDebug) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execCycleCurrentEncounterToDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CycleCurrentEncounterToDebug();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB5820 (end 0x00FB583F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDBNO) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DBNO();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugAbilityTags) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDebugAbilityTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugAbilityTags();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907370 (end 0x0290738F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugAttributeClear) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDebugAttributeClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugAttributeClear();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289CFD0 (end 0x0289CFEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugAttributeModifiers) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDebugAttributeModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugAttributeModifiers();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB59F0 (end 0x00FB5A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugStructuralSupport) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDebugStructuralSupport(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugStructuralSupport();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB5A10 (end 0x00FB5A2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugThisAI) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDebugThisAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugThisAI();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907390 (end 0x029073AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDumpAppliedHomebaseEffectsWithCoreAttributes) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDumpAppliedHomebaseEffectsWithCoreAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DumpAppliedHomebaseEffectsWithCoreAttributes();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB93A0 (end 0x00FB93BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReviveFromDBNO) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ReviveFromDBNO();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9D30 (end 0x028A9D4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleCombatGraph) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execToggleCombatGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleCombatGraph();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBC6E0 (end 0x00FBC6FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleFactorGraph) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execToggleFactorGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleFactorGraph();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBC840 (end 0x00FBC85F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleIntensityGraph) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execToggleIntensityGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleIntensityGraph();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBC920 (end 0x00FBC93F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTogglePIDContributionsGraph) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execTogglePIDContributionsGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TogglePIDContributionsGraph();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBC940 (end 0x00FBC95F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTogglePIDValuesGraph) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execTogglePIDValuesGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TogglePIDValuesGraph();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290D5C0 (end 0x0290D5DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTogglePlayerNames) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execTogglePlayerNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TogglePlayerNames();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBCA60 (end 0x00FBCA7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleUtilitiesGraph) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execToggleUtilitiesGraph(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleUtilitiesGraph();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCheatManager, 1437645853u)
 // Original dynamic initializer: RVA 0x000EA8E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCheatManager> AutoInitializeUFortCheatManager(TEXT("UFortCheatManager"), sizeof(UFortCheatManager), 1437645853u);

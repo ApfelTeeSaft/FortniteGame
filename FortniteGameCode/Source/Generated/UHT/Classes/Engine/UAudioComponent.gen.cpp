@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DCF40 (end 0x023DCF6F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlaying) | Matching: see analysis/functions-uht-exec.json
+void UAudioComponent::execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPlaying();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68620 (end 0x00F6863F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStop) | Matching: see analysis/functions-uht-exec.json
+void UAudioComponent::execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Stop();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAudioComponent, 3016457903u)
 // Original dynamic initializer: RVA 0x001F1B70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAudioComponent> AutoInitializeUAudioComponent(TEXT("UAudioComponent"), sizeof(UAudioComponent), 3016457903u);

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFF40 (end 0x00FEFF5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_DeployableBaseManager) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateDeployableBase::execOnRep_DeployableBaseManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_DeployableBaseManager();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameStateDeployableBase, 3922668074u)
 // Original dynamic initializer: RVA 0x000F75B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStateDeployableBase> AutoInitializeAFortGameStateDeployableBase(TEXT("AFortGameStateDeployableBase"), sizeof(AFortGameStateDeployableBase), 3922668074u);

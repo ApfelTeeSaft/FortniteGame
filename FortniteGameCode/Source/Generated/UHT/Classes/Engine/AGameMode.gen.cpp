@@ -4,6 +4,78 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0880 (end 0x023F089F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAbortMatch) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execAbortMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AbortMatch();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02415AD0 (end 0x02415AEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEndMatch) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execEndMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EndMatch();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024178D0 (end 0x024178FF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasMatchEnded) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execHasMatchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasMatchEnded();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02417C50 (end 0x02417C7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMatchInProgress) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execIsMatchInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsMatchInProgress();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6F00 (end 0x010D6F2F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReadyToEndMatch) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execReadyToEndMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ReadyToEndMatch_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02419790 (end 0x024197BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReadyToStartMatch) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execReadyToStartMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ReadyToStartMatch_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F08C0 (end 0x023F08DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRestartGame) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execRestartGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RestartGame();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241D590 (end 0x0241D5AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStartMatch) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execStartMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartMatch();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AGameMode, 617590091u)
 // Original dynamic initializer: RVA 0x001FF2E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameMode> AutoInitializeAGameMode(TEXT("AGameMode"), sizeof(AGameMode), 617590091u);

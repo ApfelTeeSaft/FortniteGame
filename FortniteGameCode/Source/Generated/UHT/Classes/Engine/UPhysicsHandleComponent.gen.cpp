@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D25190 (end 0x01D251AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReleaseComponent) | Matching: see analysis/functions-uht-exec.json
+void UPhysicsHandleComponent::execReleaseComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ReleaseComponent();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPhysicsHandleComponent, 132082784u)
 // Original dynamic initializer: RVA 0x00214950 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPhysicsHandleComponent> AutoInitializeUPhysicsHandleComponent(TEXT("UPhysicsHandleComponent"), sizeof(UPhysicsHandleComponent), 132082784u);

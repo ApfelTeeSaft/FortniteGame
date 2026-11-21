@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01018E50 (end 0x01018E7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldShowPreviewOnCurrentHero) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execShouldShowPreviewOnCurrentHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldShowPreviewOnCurrentHero();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortItemDefinition, 1064336966u)
 // Original dynamic initializer: RVA 0x000FC470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemDefinition> AutoInitializeUFortItemDefinition(TEXT("UFortItemDefinition"), sizeof(UFortItemDefinition), 1064336966u);

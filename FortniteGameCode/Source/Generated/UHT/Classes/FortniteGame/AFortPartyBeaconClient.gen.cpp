@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC970 (end 0x024AC98F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientAllowedToProceedFromReservation) | Matching: see analysis/functions-uht-exec.json
+void AFortPartyBeaconClient::execClientAllowedToProceedFromReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientAllowedToProceedFromReservation_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01057F60 (end 0x01057F7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientAllowedToProceedFromReservationTimeout) | Matching: see analysis/functions-uht-exec.json
+void AFortPartyBeaconClient::execClientAllowedToProceedFromReservationTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientAllowedToProceedFromReservationTimeout_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPartyBeaconClient, 4065731529u)
 // Original dynamic initializer: RVA 0x001072F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPartyBeaconClient> AutoInitializeAFortPartyBeaconClient(TEXT("AFortPartyBeaconClient"), sizeof(AFortPartyBeaconClient), 4065731529u);

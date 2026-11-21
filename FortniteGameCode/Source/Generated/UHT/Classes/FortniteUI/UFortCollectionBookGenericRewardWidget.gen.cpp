@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BECD0 (end 0x028BECEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearRewards) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookGenericRewardWidget::execClearRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearRewards();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028969C0 (end 0x028969EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasRewards) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookGenericRewardWidget::execHasRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasRewards();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookGenericRewardWidget, 3287597829u)
 // Original dynamic initializer: RVA 0x002403A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookGenericRewardWidget> AutoInitializeUFortCollectionBookGenericRewardWidget(TEXT("UFortCollectionBookGenericRewardWidget"), sizeof(UFortCollectionBookGenericRewardWidget), 3287597829u);

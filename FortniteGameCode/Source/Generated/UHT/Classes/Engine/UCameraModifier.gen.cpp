@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F130 (end 0x01D5F14F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEnableModifier) | Matching: see analysis/functions-uht-exec.json
+void UCameraModifier::execEnableModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EnableModifier();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB920 (end 0x023EB94F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsDisabled) | Matching: see analysis/functions-uht-exec.json
+void UCameraModifier::execIsDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsDisabled();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCameraModifier, 4198297412u)
 // Original dynamic initializer: RVA 0x001F4D30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCameraModifier> AutoInitializeUCameraModifier(TEXT("UCameraModifier"), sizeof(UCameraModifier), 4198297412u);

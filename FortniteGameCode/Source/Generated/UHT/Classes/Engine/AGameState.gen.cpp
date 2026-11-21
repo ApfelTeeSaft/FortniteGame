@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233D0 (end 0x024233EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ElapsedTime) | Matching: see analysis/functions-uht-exec.json
+void AGameState::execOnRep_ElapsedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ElapsedTime();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CA30 (end 0x0104CA4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_MatchState) | Matching: see analysis/functions-uht-exec.json
+void AGameState::execOnRep_MatchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_MatchState();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AGameState, 3230792950u)
 // Original dynamic initializer: RVA 0x00200090 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameState> AutoInitializeAGameState(TEXT("AGameState"), sizeof(AGameState), 3230792950u);

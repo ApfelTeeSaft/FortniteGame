@@ -4,6 +4,195 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010087F0 (end 0x0100881F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanBeDropped) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execCanBeDropped(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanBeDropped();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01008820 (end 0x0100884F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanBeUnslotted) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execCanBeUnslotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanBeUnslotted();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02422B20 (end 0x02422B51)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDurability) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDurability();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010093C0 (end 0x010093EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLevel) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010093F0 (end 0x0100941F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLevelRelativeCostForRarityUpgrade) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetLevelRelativeCostForRarityUpgrade(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLevelRelativeCostForRarityUpgrade();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009420 (end 0x0100944F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLoadedAmmo) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetLoadedAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLoadedAmmo();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009450 (end 0x0100947F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxLevel) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaxLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010094B0 (end 0x010094E1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNormalizedDurability) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetNormalizedDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetNormalizedDurability();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010094F0 (end 0x0100951F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumInStack) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetNumInStack(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetNumInStack();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009790 (end 0x010097BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRecycleValue) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetRecycleValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetRecycleValue();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010097C0 (end 0x010097EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRemainingAmmo) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetRemainingAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetRemainingAmmo();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009990 (end 0x010099BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetUpgradeCost) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetUpgradeCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetUpgradeCost();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009AA0 (end 0x01009ACF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasDurability) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execHasDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasDurability();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDD00 (end 0x024EDD2F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasEvolutions) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execHasEvolutions(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasEvolutions();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009AD0 (end 0x01009AFF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasRarityUpgrade) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execHasRarityUpgrade(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasRarityUpgrade();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009CC0 (end 0x01009CEF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsEquipped) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execIsEquipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsEquipped();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550640 (end 0x0055066F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsInStorageVault) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execIsInStorageVault(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsInStorageVault();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009CF0 (end 0x01009D1F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsInventoryOverflowItem) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execIsInventoryOverflowItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsInventoryOverflowItem();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009D20 (end 0x01009D4F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsSchematic) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execIsSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsSchematic();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009D80 (end 0x01009DAF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsSlotted) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execIsSlotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsSlotted();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009DB0 (end 0x01009DDF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsTemporaryItem) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execIsTemporaryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsTemporaryItem();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortItem, 2675330950u)
 // Original dynamic initializer: RVA 0x000FB2A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItem> AutoInitializeUFortItem(TEXT("UFortItem"), sizeof(UFortItem), 2675330950u);

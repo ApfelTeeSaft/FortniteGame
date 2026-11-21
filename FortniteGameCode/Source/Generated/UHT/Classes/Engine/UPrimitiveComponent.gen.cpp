@@ -4,6 +4,78 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BB5C0 (end 0x024BB5F1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAngularDamping) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetAngularDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetAngularDamping();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F628D0 (end 0x00F62901)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLinearDamping) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetLinearDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetLinearDamping();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBD60 (end 0x024BBD91)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMass) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetMass(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMass();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBFC0 (end 0x024BBFEF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumMaterials) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetNumMaterials(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetNumMaterials();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BC950 (end 0x024BC97F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAnyRigidBodyAwake) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execIsAnyRigidBodyAwake(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsAnyRigidBodyAwake();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BC980 (end 0x024BC9AF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsGravityEnabled) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execIsGravityEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsGravityEnabled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCB60 (end 0x024BCBA2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_IsQueryCollisionEnabled) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execK2_IsQueryCollisionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->K2_IsQueryCollisionEnabled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BF8F0 (end 0x024BF90F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execWakeAllRigidBodies) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execWakeAllRigidBodies(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->WakeAllRigidBodies();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPrimitiveComponent, 4111089980u)
 // Original dynamic initializer: RVA 0x00216420 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPrimitiveComponent> AutoInitializeUPrimitiveComponent(TEXT("UPrimitiveComponent"), sizeof(UPrimitiveComponent), 4111089980u);

@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4EA0 (end 0x00FE4EBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnEveningReached) | Matching: see analysis/functions-uht-exec.json
+void AFortGameModeZone::execOnEveningReached(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnEveningReached();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4EC0 (end 0x00FE4EDF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnMorningReached) | Matching: see analysis/functions-uht-exec.json
+void AFortGameModeZone::execOnMorningReached(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnMorningReached();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4EE0 (end 0x00FE4EFF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReplicateHealthAndShield) | Matching: see analysis/functions-uht-exec.json
+void AFortGameModeZone::execReplicateHealthAndShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ReplicateHealthAndShield();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameModeZone, 628538269u)
 // Original dynamic initializer: RVA 0x000F5940 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameModeZone> AutoInitializeAFortGameModeZone(TEXT("AFortGameModeZone"), sizeof(AFortGameModeZone), 628538269u);

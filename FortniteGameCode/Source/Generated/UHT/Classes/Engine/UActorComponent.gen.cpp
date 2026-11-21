@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDeactivate) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execDeactivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Deactivate();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F180 (end 0x01D5F1AF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsActive) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsActive();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleActive) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execToggleActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleActive();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UActorComponent, 3249282995u)
 // Original dynamic initializer: RVA 0x001EBFA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UActorComponent> AutoInitializeUActorComponent(TEXT("UActorComponent"), sizeof(UActorComponent), 3249282995u);

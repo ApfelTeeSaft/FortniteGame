@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D242C0 (end 0x01D242DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAccept) | Matching: see analysis/functions-uht-exec.json
+void UFortDialogNotificationHandler::execAccept(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Accept_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDecline) | Matching: see analysis/functions-uht-exec.json
+void UFortDialogNotificationHandler::execDecline(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Decline_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDF60 (end 0x024EDF7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTimeout) | Matching: see analysis/functions-uht-exec.json
+void UFortDialogNotificationHandler::execTimeout(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Timeout_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortDialogNotificationHandler, 457040080u)
 // Original dynamic initializer: RVA 0x000F09E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDialogNotificationHandler> AutoInitializeUFortDialogNotificationHandler(TEXT("UFortDialogNotificationHandler"), sizeof(UFortDialogNotificationHandler), 457040080u);

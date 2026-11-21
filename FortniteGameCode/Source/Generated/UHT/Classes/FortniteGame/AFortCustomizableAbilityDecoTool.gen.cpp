@@ -4,6 +4,62 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCD7D0 (end 0x00FCD81E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPressSecondaryFire) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execServerPressSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPressSecondaryFire_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerPressSecondaryFire_Validate"));
+		return;
+	}
+	P_THIS->ServerPressSecondaryFire_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCD820 (end 0x00FCD86E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPressTrigger) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execServerPressTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPressTrigger_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerPressTrigger_Validate"));
+		return;
+	}
+	P_THIS->ServerPressTrigger_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCD870 (end 0x00FCD8BE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReleaseSecondaryFire) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execServerReleaseSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReleaseSecondaryFire_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerReleaseSecondaryFire_Validate"));
+		return;
+	}
+	P_THIS->ServerReleaseSecondaryFire_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCD8C0 (end 0x00FCD90E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReleaseTrigger) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execServerReleaseTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReleaseTrigger_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerReleaseTrigger_Validate"));
+		return;
+	}
+	P_THIS->ServerReleaseTrigger_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortCustomizableAbilityDecoTool, 2159739817u)
 // Original dynamic initializer: RVA 0x000EE350 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortCustomizableAbilityDecoTool> AutoInitializeAFortCustomizableAbilityDecoTool(TEXT("AFortCustomizableAbilityDecoTool"), sizeof(AFortCustomizableAbilityDecoTool), 2159739817u);

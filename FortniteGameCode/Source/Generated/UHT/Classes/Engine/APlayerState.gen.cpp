@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerId) | Matching: see analysis/functions-uht-exec.json
+void APlayerState::execOnRep_PlayerId(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerId();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerName) | Matching: see analysis/functions-uht-exec.json
+void APlayerState::execOnRep_PlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerName();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Score) | Matching: see analysis/functions-uht-exec.json
+void APlayerState::execOnRep_Score(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Score();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_UniqueId) | Matching: see analysis/functions-uht-exec.json
+void APlayerState::execOnRep_UniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_UniqueId();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bIsInactive) | Matching: see analysis/functions-uht-exec.json
+void APlayerState::execOnRep_bIsInactive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bIsInactive();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(APlayerState, 1158904476u)
 // Original dynamic initializer: RVA 0x00216220 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<APlayerState> AutoInitializeAPlayerState(TEXT("APlayerState"), sizeof(APlayerState), 1158904476u);

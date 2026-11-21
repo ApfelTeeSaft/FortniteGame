@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053410 (end 0x0105343F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStartPlayingObjective) | Matching: see analysis/functions-uht-exec.json
+void AFortObjectiveBase::execStartPlayingObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->StartPlayingObjective();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortObjectiveBase, 4125122753u)
 // Original dynamic initializer: RVA 0x00105A10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortObjectiveBase> AutoInitializeAFortObjectiveBase(TEXT("AFortObjectiveBase"), sizeof(AFortObjectiveBase), 4125122753u);

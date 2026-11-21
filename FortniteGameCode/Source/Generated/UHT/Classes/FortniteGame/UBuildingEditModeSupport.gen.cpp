@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSuccessfulMatchInteractComplete) | Matching: see analysis/functions-uht-exec.json
+void UBuildingEditModeSupport::execOnSuccessfulMatchInteractComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSuccessfulMatchInteractComplete();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBuildingEditModeSupport, 8314497u)
 // Original dynamic initializer: RVA 0x000D9AD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingEditModeSupport> AutoInitializeUBuildingEditModeSupport(TEXT("UBuildingEditModeSupport"), sizeof(UBuildingEditModeSupport), 8314497u);

@@ -4,6 +4,96 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9BD0 (end 0x023F9C17)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLocalPlayerController) | Matching: see analysis/functions-uht-exec.json
+void AController::execIsLocalPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsLocalPlayerController();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9C20 (end 0x023F9C4F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLookInputIgnored) | Matching: see analysis/functions-uht-exec.json
+void AController::execIsLookInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsLookInputIgnored();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9C50 (end 0x023F9C7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMoveInputIgnored) | Matching: see analysis/functions-uht-exec.json
+void AController::execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsMoveInputIgnored();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3D60 (end 0x024A3D7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Pawn) | Matching: see analysis/functions-uht-exec.json
+void AController::execOnRep_Pawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Pawn();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9E20 (end 0x023F9E3F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerState) | Matching: see analysis/functions-uht-exec.json
+void AController::execOnRep_PlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9F10 (end 0x023F9F2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execResetIgnoreInputFlags) | Matching: see analysis/functions-uht-exec.json
+void AController::execResetIgnoreInputFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetIgnoreInputFlags();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9F30 (end 0x023F9F4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execResetIgnoreLookInput) | Matching: see analysis/functions-uht-exec.json
+void AController::execResetIgnoreLookInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetIgnoreLookInput();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9F50 (end 0x023F9F6F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execResetIgnoreMoveInput) | Matching: see analysis/functions-uht-exec.json
+void AController::execResetIgnoreMoveInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetIgnoreMoveInput();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA440 (end 0x023FA45F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopMovement) | Matching: see analysis/functions-uht-exec.json
+void AController::execStopMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopMovement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DA90 (end 0x0108DAAF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUnPossess) | Matching: see analysis/functions-uht-exec.json
+void AController::execUnPossess(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UnPossess();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AController, 3637208102u)
 // Original dynamic initializer: RVA 0x001F6F20 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AController> AutoInitializeAController(TEXT("AController"), sizeof(AController), 3637208102u);

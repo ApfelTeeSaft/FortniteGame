@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F1B0 (end 0x01D5F1CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateResource) | Matching: see analysis/functions-uht-exec.json
+void UCanvasRenderTarget2D::execUpdateResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateResource();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCanvasRenderTarget2D, 731889106u)
 // Original dynamic initializer: RVA 0x001F6410 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCanvasRenderTarget2D> AutoInitializeUCanvasRenderTarget2D(TEXT("UCanvasRenderTarget2D"), sizeof(UCanvasRenderTarget2D), 731889106u);

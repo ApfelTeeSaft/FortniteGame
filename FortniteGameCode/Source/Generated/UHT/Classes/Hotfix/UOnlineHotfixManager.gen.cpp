@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9E40 (end 0x023F9E5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStartHotfixProcess) | Matching: see analysis/functions-uht-exec.json
+void UOnlineHotfixManager::execStartHotfixProcess(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartHotfixProcess();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UOnlineHotfixManager, 2737238916u)
 // Original dynamic initializer: RVA 0x000A94A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UOnlineHotfixManager> AutoInitializeUOnlineHotfixManager(TEXT("UOnlineHotfixManager"), sizeof(UOnlineHotfixManager), 2737238916u);

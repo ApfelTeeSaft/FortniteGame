@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79960 (end 0x00F7998F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasStartingPosition) | Matching: see analysis/functions-uht-exec.json
+void AFortCrackEffect::execHasStartingPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasStartingPosition();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HitNormal) | Matching: see analysis/functions-uht-exec.json
+void AFortCrackEffect::execOnRep_HitNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_HitNormal();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PhysicalSurfaceType) | Matching: see analysis/functions-uht-exec.json
+void AFortCrackEffect::execOnRep_PhysicalSurfaceType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PhysicalSurfaceType();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortCrackEffect, 631551421u)
 // Original dynamic initializer: RVA 0x000EE330 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortCrackEffect> AutoInitializeAFortCrackEffect(TEXT("AFortCrackEffect"), sizeof(AFortCrackEffect), 631551421u);

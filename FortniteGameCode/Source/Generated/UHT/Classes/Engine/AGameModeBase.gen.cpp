@@ -4,6 +4,60 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02416D10 (end 0x02416D3F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumPlayers) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execGetNumPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetNumPlayers();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02416D40 (end 0x02416D6F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumSpectators) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execGetNumSpectators(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetNumSpectators();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02417900 (end 0x0241792F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasMatchStarted) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execHasMatchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasMatchStarted();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CA30 (end 0x0104CA4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execResetLevel) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execResetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233D0 (end 0x024233EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReturnToMainMenuHost) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execReturnToMainMenuHost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ReturnToMainMenuHost();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010670A0 (end 0x010670BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStartPlay) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execStartPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartPlay();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AGameModeBase, 1576260625u)
 // Original dynamic initializer: RVA 0x001FF300 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameModeBase> AutoInitializeAGameModeBase(TEXT("AGameModeBase"), sizeof(AGameModeBase), 1576260625u);

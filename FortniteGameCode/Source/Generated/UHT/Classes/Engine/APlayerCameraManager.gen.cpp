@@ -4,6 +4,69 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC970 (end 0x024AC98F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearCameraLensEffects) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execClearCameraLensEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearCameraLensEffects();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF770 (end 0x024AF7A1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFOVAngle) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execGetFOVAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetFOVAngle();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPhotographyMultiPartCaptureEnd) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execOnPhotographyMultiPartCaptureEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPhotographyMultiPartCaptureEnd_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPhotographyMultiPartCaptureStart) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execOnPhotographyMultiPartCaptureStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPhotographyMultiPartCaptureStart_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPhotographySessionEnd) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execOnPhotographySessionEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPhotographySessionEnd_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPhotographySessionStart) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execOnPhotographySessionStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPhotographySessionStart_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B4620 (end 0x024B463F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopCameraFade) | Matching: see analysis/functions-uht-exec.json
+void APlayerCameraManager::execStopCameraFade(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopCameraFade();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(APlayerCameraManager, 4103175984u)
 // Original dynamic initializer: RVA 0x002148F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<APlayerCameraManager> AutoInitializeAPlayerCameraManager(TEXT("APlayerCameraManager"), sizeof(APlayerCameraManager), 4103175984u);

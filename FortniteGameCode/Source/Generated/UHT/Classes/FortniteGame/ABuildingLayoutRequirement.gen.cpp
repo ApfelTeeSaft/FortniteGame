@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6EC90 (end 0x00F6ECAF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_RequirementStatus) | Matching: see analysis/functions-uht-exec.json
+void ABuildingLayoutRequirement::execOnRep_RequirementStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_RequirementStatus();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingLayoutRequirement, 891639280u)
 // Original dynamic initializer: RVA 0x000DAEF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingLayoutRequirement> AutoInitializeABuildingLayoutRequirement(TEXT("ABuildingLayoutRequirement"), sizeof(ABuildingLayoutRequirement), 891639280u);

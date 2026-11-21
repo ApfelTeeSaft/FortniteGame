@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020220 (end 0x0102023F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PvPLobbyTimeRemaining) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconStatePvP::execOnRep_PvPLobbyTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PvPLobbyTimeRemaining();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortLobbyBeaconStatePvP, 3164728843u)
 // Original dynamic initializer: RVA 0x000FD010 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLobbyBeaconStatePvP> AutoInitializeAFortLobbyBeaconStatePvP(TEXT("AFortLobbyBeaconStatePvP"), sizeof(AFortLobbyBeaconStatePvP), 3164728843u);

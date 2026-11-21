@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CA50 (end 0x0104CA6F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCapturePointSetterHackTimer) | Matching: see analysis/functions-uht-exec.json
+void AFortPvPMission_3PtDomination::execCapturePointSetterHackTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CapturePointSetterHackTimer();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPvPMission_3PtDomination, 3001989432u)
 // Original dynamic initializer: RVA 0x0010E710 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPvPMission_3PtDomination> AutoInitializeAFortPvPMission_3PtDomination(TEXT("AFortPvPMission_3PtDomination"), sizeof(AFortPvPMission_3PtDomination), 3001989432u);

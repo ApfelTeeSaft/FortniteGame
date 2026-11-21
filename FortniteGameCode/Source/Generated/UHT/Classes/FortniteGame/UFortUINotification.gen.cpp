@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDF60 (end 0x024EDF7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearNotification) | Matching: see analysis/functions-uht-exec.json
+void UFortUINotification::execClearNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearNotification_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNotificationShown) | Matching: see analysis/functions-uht-exec.json
+void UFortUINotification::execNotificationShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NotificationShown_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTakeAction) | Matching: see analysis/functions-uht-exec.json
+void UFortUINotification::execTakeAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TakeAction_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortUINotification, 151259218u)
 // Original dynamic initializer: RVA 0x0011C010 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUINotification> AutoInitializeUFortUINotification(TEXT("UFortUINotification"), sizeof(UFortUINotification), 151259218u);

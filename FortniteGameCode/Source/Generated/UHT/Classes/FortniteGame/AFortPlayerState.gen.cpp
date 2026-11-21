@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DFF0 (end 0x0108E00F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HeroType) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execOnRep_HeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_HeroType();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E070 (end 0x0108E08F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PartyOwner) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execOnRep_PartyOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PartyOwner();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF0160 (end 0x00FF017F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlatformUniqueNetIdString) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execOnRep_PlatformUniqueNetIdString(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlatformUniqueNetIdString();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E0D0 (end 0x0108E0EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerTeam) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execOnRep_PlayerTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerTeam();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F33A0 (end 0x023F33BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateScoreStatChanged) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execUpdateScoreStatChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateScoreStatChanged();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerState, 2669630505u)
 // Original dynamic initializer: RVA 0x0010D3D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerState> AutoInitializeAFortPlayerState(TEXT("AFortPlayerState"), sizeof(AFortPlayerState), 2669630505u);

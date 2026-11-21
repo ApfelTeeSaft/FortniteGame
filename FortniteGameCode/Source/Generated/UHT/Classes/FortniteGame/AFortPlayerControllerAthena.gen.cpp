@@ -4,6 +4,103 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010796A0 (end 0x010796BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientBotStopDogpile) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientBotStopDogpile(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientBotStopDogpile_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010796C0 (end 0x010796DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientNotifyTeamWon) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientNotifyTeamWon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientNotifyTeamWon_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010796E0 (end 0x010796FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientNotifyWon) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientNotifyWon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientNotifyWon_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B9E0 (end 0x0107BA2E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAttemptExitVehicle) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerAttemptExitVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerAttemptExitVehicle_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerAttemptExitVehicle_Validate"));
+		return;
+	}
+	P_THIS->ServerAttemptExitVehicle_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C0C0 (end 0x0107C10E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerGenerateMockMatchReport) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerGenerateMockMatchReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerGenerateMockMatchReport_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerGenerateMockMatchReport_Validate"));
+		return;
+	}
+	P_THIS->ServerGenerateMockMatchReport_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CB90 (end 0x0107CBDE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRemoveMapCursor) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerRemoveMapCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRemoveMapCursor_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerRemoveMapCursor_Validate"));
+		return;
+	}
+	P_THIS->ServerRemoveMapCursor_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CF30 (end 0x0107CF7E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerVoiceChatReconnected) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerVoiceChatReconnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerVoiceChatReconnected_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerVoiceChatReconnected_Validate"));
+		return;
+	}
+	P_THIS->ServerVoiceChatReconnected_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CF80 (end 0x0107CFCE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerVoiceChatRejoinChannel) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerVoiceChatRejoinChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerVoiceChatRejoinChannel_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerVoiceChatRejoinChannel_Validate"));
+		return;
+	}
+	P_THIS->ServerVoiceChatRejoinChannel_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerAthena, 2481322669u)
 // Original dynamic initializer: RVA 0x0010B800 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerAthena> AutoInitializeAFortPlayerControllerAthena(TEXT("AFortPlayerControllerAthena"), sizeof(AFortPlayerControllerAthena), 2481322669u);

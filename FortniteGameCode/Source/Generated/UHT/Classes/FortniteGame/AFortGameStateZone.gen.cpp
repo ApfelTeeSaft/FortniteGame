@@ -4,6 +4,60 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F08C0 (end 0x023F08DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNotifyBeginGameplayVote) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execNotifyBeginGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NotifyBeginGameplayVote_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF6220 (end 0x00FF623F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_GameDifficulty) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execOnRep_GameDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_GameDifficulty();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73710 (end 0x00F7372F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerBuildingSkillLevel) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execOnRep_PlayerBuildingSkillLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerBuildingSkillLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F682F0 (end 0x00F6830F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerSharedTrapAttributes) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execOnRep_PlayerSharedTrapAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerSharedTrapAttributes();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF62C0 (end 0x00FF62DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerStructuresChanged) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execOnRep_PlayerStructuresChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerStructuresChanged();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233F0 (end 0x0242340F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedWorldTimeSeconds) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execOnRep_ReplicatedWorldTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedWorldTimeSeconds();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameStateZone, 1421512874u)
 // Original dynamic initializer: RVA 0x000F8770 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStateZone> AutoInitializeAFortGameStateZone(TEXT("AFortGameStateZone"), sizeof(AFortGameStateZone), 1421512874u);

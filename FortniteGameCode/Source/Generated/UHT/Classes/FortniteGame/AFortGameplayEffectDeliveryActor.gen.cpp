@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDoExplosion) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execDoExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DoExplosion();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB030 (end 0x00FEB05F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsBeingKilled) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execIsBeingKilled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsBeingKilled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execKill) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execKill(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Kill();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB090 (end 0x00FEB0AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execKillTimerExpired) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execKillTimerExpired(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->KillTimerExpired();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB6A0 (end 0x00FEB6BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_IsBeingKilled) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execOnRep_IsBeingKilled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_IsBeingKilled();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameplayEffectDeliveryActor, 4235147503u)
 // Original dynamic initializer: RVA 0x000F6580 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameplayEffectDeliveryActor> AutoInitializeAFortGameplayEffectDeliveryActor(TEXT("AFortGameplayEffectDeliveryActor"), sizeof(AFortGameplayEffectDeliveryActor), 4235147503u);

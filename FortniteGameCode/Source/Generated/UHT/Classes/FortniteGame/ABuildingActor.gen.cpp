@@ -4,6 +4,87 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62760 (end 0x00F6278F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentBuildingLevel) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGetCurrentBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetCurrentBuildingLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F628D0 (end 0x00F62901)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealth) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGetHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetHealth();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62940 (end 0x00F62971)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxHealth) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGetMaxHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxHealth();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62B40 (end 0x00F62B5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleDestroyed) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execHandleDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleDestroyed();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63100 (end 0x00F6311F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_CurrentBuildingLevel) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execOnRep_CurrentBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_CurrentBuildingLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63120 (end 0x00F6313F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_CustomState) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execOnRep_CustomState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_CustomState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlacedByPlacementTool) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execPlacedByPlacementTool(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PlacedByPlacementTool_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63530 (end 0x00F6354F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSilentDie) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execSilentDie(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SilentDie();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F636C0 (end 0x00F636EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUseDefaultHealthBar) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execUseDefaultHealthBar(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->UseDefaultHealthBar_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingActor, 1659360332u)
 // Original dynamic initializer: RVA 0x000D8710 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingActor> AutoInitializeABuildingActor(TEXT("ABuildingActor"), sizeof(ABuildingActor), 1659360332u);

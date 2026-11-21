@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D450 (end 0x0248D46F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnFiringTimer) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execOnFiringTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnFiringTimer();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79C40 (end 0x00F79C5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPerformTargetValidation) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execOnPerformTargetValidation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPerformTargetValidation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBuildingTurretComponent, 742700684u)
 // Original dynamic initializer: RVA 0x000DCD60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingTurretComponent> AutoInitializeUBuildingTurretComponent(TEXT("UBuildingTurretComponent"), sizeof(UBuildingTurretComponent), 742700684u);

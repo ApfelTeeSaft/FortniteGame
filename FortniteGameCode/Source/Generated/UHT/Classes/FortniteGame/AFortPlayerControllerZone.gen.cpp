@@ -4,6 +4,52 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01081D10 (end 0x01081D2F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnPawnSpawned) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execClientOnPawnSpawned(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientOnPawnSpawned_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010843F0 (end 0x0108440F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPushDeathInputComponent) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execPushDeathInputComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PushDeathInputComponent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010852F0 (end 0x0108533E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetShouldDisablePlayerTeleportingDuringMissionResults) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execServerSetShouldDisablePlayerTeleportingDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Validate"));
+		return;
+	}
+	P_THIS->ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010854A0 (end 0x010854EE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerTriggerSetupTeleportCameraEvent) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execServerTriggerSetupTeleportCameraEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerTriggerSetupTeleportCameraEvent_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerTriggerSetupTeleportCameraEvent_Validate"));
+		return;
+	}
+	P_THIS->ServerTriggerSetupTeleportCameraEvent_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerZone, 3700597210u)
 // Original dynamic initializer: RVA 0x0010C460 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerZone> AutoInitializeAFortPlayerControllerZone(TEXT("AFortPlayerControllerZone"), sizeof(AFortPlayerControllerZone), 3700597210u);

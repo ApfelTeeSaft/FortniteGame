@@ -26,10 +26,12 @@ After it, the native call is:
   * an indirect call through Context's vtable (a virtual native): only its vtable offset is
     recorded, since the vtable's address is not identified here.
 A thunk is named only when exactly the calls its flags predict are found (one, or two for
-a validated RPC, in that order). The validated RPC's RPC_ValidateFailed literal, when
-present, must spell the predicted _Validate name. Thunks shared by several UFunctions
-(identical code folded by the linker), thunks without flags (FFunctionParams record not
-identified) and natives inlined into the thunk stay unresolved, with the reason counted.
+a validated RPC, in that order). A thunk shared by several UFunctions (identical code folded by
+the linker) is resolved per UFunction when it calls only virtual slots: the slot is each
+owner's. Counts in "unresolved" are per UFunction. The validated RPC's RPC_ValidateFailed literal, when
+present, must spell the predicted _Validate name. Shared thunks with a direct target,
+thunks without flags (FFunctionParams record not identified) and natives inlined into the
+thunk stay unresolved, with the reason counted.
 A target already recorded as a generated function in a manifest is a conflict and is not
 named. A member native must be called with Context in rcx (P_THIS); otherwise it was
 inlined and the call is to one of its callees. A static native has no such check: one
@@ -337,58 +339,62 @@ def main() -> int:
     natives, virtuals, unresolved = [], [], Counter()
     named_at: dict[int, str] = {}
     for r, t in thunks.items():
-        if len(owners[r]) > 1:
-            unresolved["thunk shared by several UFunctions (linker-folded)"] += 1
-            continue
-        cls, name = owners[r][0]
-        flags = flags_of(cls, name)
-        if flags is None:
-            unresolved["FFunctionParams record not identified (flags unknown)"] += 1
-            continue
-        if t.finish is None:
-            unresolved["no P_FINISH store found (hand-written CustomThunk?)"] += 1
-            continue
-        impl, validate = impl_names(name, flags)
-        cands = [c for c in t.calls if c["post"] and (
-            c["kind"] == "virtual" or (c["kind"] == "direct" and callers[c["target"]] == 1))]
-        want = [validate, impl] if validate else [impl]
-        if len(cands) != len(want):
-            reason = ("no native call after P_FINISH (inlined, or calls a shared function)" if not cands
-                      else f"{len(cands)} candidate calls, {len(want)} expected")
-            unresolved[reason] += 1
-            continue
-        if validate:
-            lits = [wide_at(img, dimg, tgt) for _, tgt in t.literals]
-            if validate not in lits and any(x and x.endswith("_Validate") for x in lits):
-                unresolved["RPC_ValidateFailed literal differs from the predicted _Validate name"] += 1
+        folded = len(owners[r]) > 1
+        for cls, name in owners[r]:
+            flags = flags_of(cls, name)
+            if flags is None:
+                unresolved["FFunctionParams record not identified (flags unknown)"] += 1
                 continue
-        conflict = [c for c in cands if c["kind"] == "direct" and c["target"] in known]
-        if conflict:
-            unresolved["target already recorded as a generated function"] += 1
-            continue
-        if not flags & FUNC_STATIC and any(c["kind"] == "direct" and not c["this"] for c in cands):
-            # P_THIS->Native() passes Context in rcx. A member native called otherwise was
-            # inlined into the thunk (the call is to its callee) or is reached through
-            # another object.
-            unresolved["member call without Context in rcx (inlined native?)"] += 1
-            continue
-        for c, cpp in zip(cands, want):
-            ev = {"class": cls, "ufunction": name, "exec_rva": f"0x{r:08X}", "flags": f"0x{flags:08X}"}
-            if c["kind"] == "direct":
-                tgt = c["target"]
-                if tgt in named_at and named_at[tgt] != f"{cls}::{cpp}":
-                    unresolved["target named by two thunks"] += 1
+            if t.finish is None:
+                unresolved["no P_FINISH store found (hand-written CustomThunk?)"] += 1
+                continue
+            impl, validate = impl_names(name, flags)
+            cands = [c for c in t.calls if c["post"] and (
+                c["kind"] == "virtual" or (c["kind"] == "direct" and callers[c["target"]] == 1))]
+            want = [validate, impl] if validate else [impl]
+            if len(cands) != len(want):
+                reason = ("no native call after P_FINISH (inlined, or calls a shared function)" if not cands
+                          else f"{len(cands)} candidate calls, {len(want)} expected")
+                unresolved[reason] += 1
+                continue
+            if validate:
+                lits = [wide_at(img, dimg, tgt) for _, tgt in t.literals]
+                if validate not in lits and any(x and x.endswith("_Validate") for x in lits):
+                    unresolved["RPC_ValidateFailed literal differs from the predicted _Validate name"] += 1
                     continue
-                named_at[tgt] = f"{cls}::{cpp}"
-                mod = in_module(cls, tgt)
-                natives.append({"rva": f"0x{tgt:08X}", "name": f"{cls}::{cpp}", **ev,
-                                "call": "tail jump" if c["tail"] else "call",
-                                "pdata": tgt in rfs, "module_range": mod,
-                                "confidence": "high-confidence inferred" if mod else "low-confidence inferred"})
-            else:
-                virtuals.append({"name": f"{cls}::{cpp}", "vtable_offset": f"0x{c['offset']:X}", **ev,
-                                 "call": "tail jump" if c["tail"] else "call",
-                                 "confidence": "high-confidence inferred"})
+            conflict = [c for c in cands if c["kind"] == "direct" and c["target"] in known]
+            if conflict:
+                unresolved["target already recorded as a generated function"] += 1
+                continue
+            if folded and any(c["kind"] == "direct" for c in cands):
+                # One body for several UFunctions: a direct target cannot be named per owner.
+                unresolved["linker-folded thunk calling a direct target"] += 1
+                continue
+            if not flags & FUNC_STATIC and any(c["kind"] == "direct" and not c["this"] for c in cands):
+                # P_THIS->Native() passes Context in rcx. A member native called otherwise was
+                # inlined into the thunk (the call is to its callee) or is reached through
+                # another object.
+                unresolved["member call without Context in rcx (inlined native?)"] += 1
+                continue
+            for c, cpp in zip(cands, want):
+                ev = {"class": cls, "ufunction": name, "exec_rva": f"0x{r:08X}", "flags": f"0x{flags:08X}"}
+                if folded:
+                    ev["thunk_shared_by"] = len(owners[r])
+                if c["kind"] == "direct":
+                    tgt = c["target"]
+                    if tgt in named_at and named_at[tgt] != f"{cls}::{cpp}":
+                        unresolved["target named by two thunks"] += 1
+                        continue
+                    named_at[tgt] = f"{cls}::{cpp}"
+                    mod = in_module(cls, tgt)
+                    natives.append({"rva": f"0x{tgt:08X}", "name": f"{cls}::{cpp}", **ev,
+                                    "call": "tail jump" if c["tail"] else "call",
+                                    "pdata": tgt in rfs, "module_range": mod,
+                                    "confidence": "high-confidence inferred" if mod else "low-confidence inferred"})
+                else:
+                    virtuals.append({"name": f"{cls}::{cpp}", "vtable_offset": f"0x{c['offset']:X}", **ev,
+                                     "call": "tail jump" if c["tail"] else "call",
+                                     "confidence": "high-confidence inferred"})
 
     natives.sort(key=lambda e: int(e["rva"], 16))
     virtuals.sort(key=lambda e: (e["class"], int(e["vtable_offset"], 16), e["name"]))

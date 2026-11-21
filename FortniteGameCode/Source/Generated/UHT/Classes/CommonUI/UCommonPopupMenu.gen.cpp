@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290D5C0 (end 0x0290D5DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandlePostDifferentContextProviderSet) | Matching: see analysis/functions-uht-exec.json
+void UCommonPopupMenu::execHandlePostDifferentContextProviderSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandlePostDifferentContextProviderSet_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9D30 (end 0x028A9D4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandlePreDifferentContextProviderSet) | Matching: see analysis/functions-uht-exec.json
+void UCommonPopupMenu::execHandlePreDifferentContextProviderSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandlePreDifferentContextProviderSet_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonPopupMenu, 1932755492u)
 // Original dynamic initializer: RVA 0x000960A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonPopupMenu> AutoInitializeUCommonPopupMenu(TEXT("UCommonPopupMenu"), sizeof(UCommonPopupMenu), 1932755492u);

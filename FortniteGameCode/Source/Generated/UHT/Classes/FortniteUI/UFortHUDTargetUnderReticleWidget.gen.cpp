@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907370 (end 0x0290738F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTargetChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortHUDTargetUnderReticleWidget::execOnTargetChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTargetChanged_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTargetDestroyed) | Matching: see analysis/functions-uht-exec.json
+void UFortHUDTargetUnderReticleWidget::execOnTargetDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTargetDestroyed_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289CFD0 (end 0x0289CFEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTargetDied) | Matching: see analysis/functions-uht-exec.json
+void UFortHUDTargetUnderReticleWidget::execOnTargetDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTargetDied_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BECD0 (end 0x028BECEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTargetHealthChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortHUDTargetUnderReticleWidget::execOnTargetHealthChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTargetHealthChanged_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortHUDTargetUnderReticleWidget, 2192250194u)
 // Original dynamic initializer: RVA 0x002482E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHUDTargetUnderReticleWidget> AutoInitializeUFortHUDTargetUnderReticleWidget(TEXT("UFortHUDTargetUnderReticleWidget"), sizeof(UFortHUDTargetUnderReticleWidget), 2192250194u);

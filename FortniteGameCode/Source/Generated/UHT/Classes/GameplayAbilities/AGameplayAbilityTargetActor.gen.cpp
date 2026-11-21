@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCancelTargeting) | Matching: see analysis/functions-uht-exec.json
+void AGameplayAbilityTargetActor::execCancelTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CancelTargeting();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConfirmTargeting) | Matching: see analysis/functions-uht-exec.json
+void AGameplayAbilityTargetActor::execConfirmTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ConfirmTargeting();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AGameplayAbilityTargetActor, 273863196u)
 // Original dynamic initializer: RVA 0x0009EB00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameplayAbilityTargetActor> AutoInitializeAGameplayAbilityTargetActor(TEXT("AGameplayAbilityTargetActor"), sizeof(AGameplayAbilityTargetActor), 273863196u);

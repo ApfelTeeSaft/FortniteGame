@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013B10 (end 0x01013B3F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInitialize) | Matching: see analysis/functions-uht-exec.json
+void UFortGameOptions::execInitialize(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->Initialize();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortGameOptions, 1143981059u)
 // Original dynamic initializer: RVA 0x00245B50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGameOptions> AutoInitializeUFortGameOptions(TEXT("UFortGameOptions"), sizeof(UFortGameOptions), 1143981059u);

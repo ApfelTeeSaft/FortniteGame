@@ -4,6 +4,60 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F130 (end 0x01D5F14F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDisconnectMRMesh) | Matching: see analysis/functions-uht-exec.json
+void UMeshReconstructorBase::execDisconnectMRMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DisconnectMRMesh();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F180 (end 0x01D5F1AF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsReconstructionPaused) | Matching: see analysis/functions-uht-exec.json
+void UMeshReconstructorBase::execIsReconstructionPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsReconstructionPaused();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB920 (end 0x023EB94F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsReconstructionStarted) | Matching: see analysis/functions-uht-exec.json
+void UMeshReconstructorBase::execIsReconstructionStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsReconstructionStarted();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDF60 (end 0x024EDF7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPauseReconstruction) | Matching: see analysis/functions-uht-exec.json
+void UMeshReconstructorBase::execPauseReconstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PauseReconstruction();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F1B0 (end 0x01D5F1CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStartReconstruction) | Matching: see analysis/functions-uht-exec.json
+void UMeshReconstructorBase::execStartReconstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartReconstruction();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopReconstruction) | Matching: see analysis/functions-uht-exec.json
+void UMeshReconstructorBase::execStopReconstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopReconstruction();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UMeshReconstructorBase, 2435645244u)
 // Original dynamic initializer: RVA 0x001C1E10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMeshReconstructorBase> AutoInitializeUMeshReconstructorBase(TEXT("UMeshReconstructorBase"), sizeof(UMeshReconstructorBase), 2435645244u);

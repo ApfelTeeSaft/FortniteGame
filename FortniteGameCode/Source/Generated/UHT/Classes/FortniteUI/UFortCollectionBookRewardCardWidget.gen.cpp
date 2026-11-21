@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289CFD0 (end 0x0289CFEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearRewards) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookRewardCardWidget::execClearRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearRewards();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289E6A0 (end 0x0289E6CF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasRewards) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookRewardCardWidget::execHasRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasRewards();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookRewardCardWidget, 510317059u)
 // Original dynamic initializer: RVA 0x00242550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookRewardCardWidget> AutoInitializeUFortCollectionBookRewardCardWidget(TEXT("UFortCollectionBookRewardCardWidget"), sizeof(UFortCollectionBookRewardCardWidget), 510317059u);

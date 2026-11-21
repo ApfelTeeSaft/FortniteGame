@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233B0 (end 0x024233CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNextDebugTarget) | Matching: see analysis/functions-uht-exec.json
+void AHUD::execNextDebugTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NextDebugTarget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233F0 (end 0x0242340F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPreviousDebugTarget) | Matching: see analysis/functions-uht-exec.json
+void AHUD::execPreviousDebugTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PreviousDebugTarget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShowHUD) | Matching: see analysis/functions-uht-exec.json
+void AHUD::execShowHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowHUD();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AHUD, 1175314171u)
 // Original dynamic initializer: RVA 0x002000F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AHUD> AutoInitializeAHUD(TEXT("AHUD"), sizeof(AHUD), 1175314171u);

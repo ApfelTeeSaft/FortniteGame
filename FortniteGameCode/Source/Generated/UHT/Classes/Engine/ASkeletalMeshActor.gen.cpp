@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedMaterial0) | Matching: see analysis/functions-uht-exec.json
+void ASkeletalMeshActor::execOnRep_ReplicatedMaterial0(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedMaterial0();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedMaterial1) | Matching: see analysis/functions-uht-exec.json
+void ASkeletalMeshActor::execOnRep_ReplicatedMaterial1(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedMaterial1();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedMesh) | Matching: see analysis/functions-uht-exec.json
+void ASkeletalMeshActor::execOnRep_ReplicatedMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedMesh();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedPhysAsset) | Matching: see analysis/functions-uht-exec.json
+void ASkeletalMeshActor::execOnRep_ReplicatedPhysAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedPhysAsset();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ASkeletalMeshActor, 683747865u)
 // Original dynamic initializer: RVA 0x00219FB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ASkeletalMeshActor> AutoInitializeASkeletalMeshActor(TEXT("ASkeletalMeshActor"), sizeof(ASkeletalMeshActor), 683747865u);

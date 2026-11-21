@@ -4,6 +4,99 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010799D0 (end 0x010799EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnOutpostRefundOccurred) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execClientOnOutpostRefundOccurred(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientOnOutpostRefundOccurred_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B870 (end 0x0107B8BE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAbortDisintegration) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerAbortDisintegration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerAbortDisintegration_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerAbortDisintegration_Validate"));
+		return;
+	}
+	P_THIS->ServerAbortDisintegration_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B8C0 (end 0x0107B90E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerActivateCraftingTable) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerActivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerActivateCraftingTable_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerActivateCraftingTable_Validate"));
+		return;
+	}
+	P_THIS->ServerActivateCraftingTable_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BCB0 (end 0x0107BCFE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerDeactivateCraftingTable) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerDeactivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerDeactivateCraftingTable_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerDeactivateCraftingTable_Validate"));
+		return;
+	}
+	P_THIS->ServerDeactivateCraftingTable_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C110 (end 0x0107C15E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerLeaveOutpostAsParty) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerLeaveOutpostAsParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerLeaveOutpostAsParty_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerLeaveOutpostAsParty_Validate"));
+		return;
+	}
+	P_THIS->ServerLeaveOutpostAsParty_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C700 (end 0x0107C74E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerNotifyPendingFabricationCompleted) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerNotifyPendingFabricationCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerNotifyPendingFabricationCompleted_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerNotifyPendingFabricationCompleted_Validate"));
+		return;
+	}
+	P_THIS->ServerNotifyPendingFabricationCompleted_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CEE0 (end 0x0107CF2E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpgradePOST) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerUpgradePOST(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpgradePOST_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerUpgradePOST_Validate"));
+		return;
+	}
+	P_THIS->ServerUpgradePOST_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerOutpost, 1772152448u)
 // Original dynamic initializer: RVA 0x0010B8E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerOutpost> AutoInitializeAFortPlayerControllerOutpost(TEXT("AFortPlayerControllerOutpost"), sizeof(AFortPlayerControllerOutpost), 1772152448u);

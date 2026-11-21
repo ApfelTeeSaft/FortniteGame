@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopClientAnnouncement) | Matching: see analysis/functions-uht-exec.json
+void AFortClientAnnouncement::execStopClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopClientAnnouncement();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortClientAnnouncement, 3241454069u)
 // Original dynamic initializer: RVA 0x000EB090 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortClientAnnouncement> AutoInitializeAFortClientAnnouncement(TEXT("AFortClientAnnouncement"), sizeof(AFortClientAnnouncement), 3241454069u);

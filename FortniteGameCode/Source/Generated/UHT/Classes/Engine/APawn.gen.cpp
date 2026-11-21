@@ -4,6 +4,69 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFE90 (end 0x023EFEAF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDetachFromControllerPendingDestroy) | Matching: see analysis/functions-uht-exec.json
+void APawn::execDetachFromControllerPendingDestroy(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DetachFromControllerPendingDestroy();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3A10 (end 0x024A3A3F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLocallyControlled) | Matching: see analysis/functions-uht-exec.json
+void APawn::execIsLocallyControlled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsLocallyControlled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3A40 (end 0x024A3A6F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMoveInputIgnored) | Matching: see analysis/functions-uht-exec.json
+void APawn::execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsMoveInputIgnored();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02417900 (end 0x0241792F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlayerControlled) | Matching: see analysis/functions-uht-exec.json
+void APawn::execIsPlayerControlled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPlayerControlled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB6A0 (end 0x00FEB6BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Controller) | Matching: see analysis/functions-uht-exec.json
+void APawn::execOnRep_Controller(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Controller();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3D60 (end 0x024A3D7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_PlayerState) | Matching: see analysis/functions-uht-exec.json
+void APawn::execOnRep_PlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_PlayerState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A66E0 (end 0x024A66FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSpawnDefaultController) | Matching: see analysis/functions-uht-exec.json
+void APawn::execSpawnDefaultController(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SpawnDefaultController();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(APawn, 916832613u)
 // Original dynamic initializer: RVA 0x00213C10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<APawn> AutoInitializeAPawn(TEXT("APawn"), sizeof(APawn), 916832613u);

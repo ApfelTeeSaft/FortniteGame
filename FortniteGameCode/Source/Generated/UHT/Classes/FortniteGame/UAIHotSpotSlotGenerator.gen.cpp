@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F1B0 (end 0x01D5F1CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGenerateSlots) | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlotGenerator::execGenerateSlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GenerateSlots_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAIHotSpotSlotGenerator, 3563104132u)
 // Original dynamic initializer: RVA 0x000D7350 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAIHotSpotSlotGenerator> AutoInitializeUAIHotSpotSlotGenerator(TEXT("UAIHotSpotSlotGenerator"), sizeof(UAIHotSpotSlotGenerator), 3563104132u);

@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D242C0 (end 0x01D242DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAIIgnorePlayers) | Matching: see analysis/functions-uht-exec.json
+void UAISystem::execAIIgnorePlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AIIgnorePlayers();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024241F0 (end 0x0242420F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAILoggingVerbose) | Matching: see analysis/functions-uht-exec.json
+void UAISystem::execAILoggingVerbose(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AILoggingVerbose();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAISystem, 2156387114u)
 // Original dynamic initializer: RVA 0x001BA570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAISystem> AutoInitializeUAISystem(TEXT("UAISystem"), sizeof(UAISystem), 2156387114u);

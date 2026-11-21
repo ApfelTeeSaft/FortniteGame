@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3A70 (end 0x024A3A9F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMoveInputIgnored) | Matching: see analysis/functions-uht-exec.json
+void UPawnMovementComponent::execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsMoveInputIgnored();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPawnMovementComponent, 4144709735u)
 // Original dynamic initializer: RVA 0x00213CB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPawnMovementComponent> AutoInitializeUPawnMovementComponent(TEXT("UPawnMovementComponent"), sizeof(UPawnMovementComponent), 4144709735u);

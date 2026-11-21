@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02491290 (end 0x024912BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsCrouching) | Matching: see analysis/functions-uht-exec.json
+void UNavMovementComponent::execIsCrouching(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsCrouching();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024912C0 (end 0x024912EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsFalling) | Matching: see analysis/functions-uht-exec.json
+void UNavMovementComponent::execIsFalling(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsFalling();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024912F0 (end 0x0249131F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsFlying) | Matching: see analysis/functions-uht-exec.json
+void UNavMovementComponent::execIsFlying(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsFlying();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02491450 (end 0x0249147F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsSwimming) | Matching: see analysis/functions-uht-exec.json
+void UNavMovementComponent::execIsSwimming(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsSwimming();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024924C0 (end 0x024924DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopActiveMovement) | Matching: see analysis/functions-uht-exec.json
+void UNavMovementComponent::execStopActiveMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopActiveMovement();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UNavMovementComponent, 2355272650u)
 // Original dynamic initializer: RVA 0x0020DC90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UNavMovementComponent> AutoInitializeUNavMovementComponent(TEXT("UNavMovementComponent"), sizeof(UNavMovementComponent), 2355272650u);

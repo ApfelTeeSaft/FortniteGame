@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnConnected) | Matching: see analysis/functions-uht-exec.json
+void AOnlineBeaconClient::execClientOnConnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientOnConnected_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AOnlineBeaconClient, 332569625u)
 // Original dynamic initializer: RVA 0x000991C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AOnlineBeaconClient> AutoInitializeAOnlineBeaconClient(TEXT("AOnlineBeaconClient"), sizeof(AOnlineBeaconClient), 332569625u);

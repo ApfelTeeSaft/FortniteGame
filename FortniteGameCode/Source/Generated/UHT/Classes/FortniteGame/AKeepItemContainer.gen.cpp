@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F745C0 (end 0x00F745EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLootTierOverride) | Matching: see analysis/functions-uht-exec.json
+void AKeepItemContainer::execGetLootTierOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLootTierOverride_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010ECAF0 (end 0x010ECB0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRestoreLoot) | Matching: see analysis/functions-uht-exec.json
+void AKeepItemContainer::execRestoreLoot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RestoreLoot();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AKeepItemContainer, 3808149916u)
 // Original dynamic initializer: RVA 0x0011FF00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AKeepItemContainer> AutoInitializeAKeepItemContainer(TEXT("AKeepItemContainer"), sizeof(AKeepItemContainer), 3808149916u);

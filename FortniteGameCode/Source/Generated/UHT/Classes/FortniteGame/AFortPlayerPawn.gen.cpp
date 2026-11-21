@@ -4,6 +4,62 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084C20 (end 0x01084C6E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPlayUnableToPerformActionMontage) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerPlayUnableToPerformActionMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPlayUnableToPerformActionMontage_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerPlayUnableToPerformActionMontage_Validate"));
+		return;
+	}
+	P_THIS->ServerPlayUnableToPerformActionMontage_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084C70 (end 0x01084CBE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRespawnFromDBNO) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerRespawnFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRespawnFromDBNO_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerRespawnFromDBNO_Validate"));
+		return;
+	}
+	P_THIS->ServerRespawnFromDBNO_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01085400 (end 0x0108544E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerToggleBodyType) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerToggleBodyType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerToggleBodyType_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerToggleBodyType_Validate"));
+		return;
+	}
+	P_THIS->ServerToggleBodyType_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01085450 (end 0x0108549E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerToggleGender) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerToggleGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerToggleGender_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerToggleGender_Validate"));
+		return;
+	}
+	P_THIS->ServerToggleGender_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerPawn, 1353206455u)
 // Original dynamic initializer: RVA 0x0010C4C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerPawn> AutoInitializeAFortPlayerPawn(TEXT("AFortPlayerPawn"), sizeof(AFortPlayerPawn), 1353206455u);

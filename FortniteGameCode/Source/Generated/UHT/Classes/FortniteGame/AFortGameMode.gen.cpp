@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F3400 (end 0x010F341F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDumpReservations) | Matching: see analysis/functions-uht-exec.json
+void AFortGameMode::execDumpReservations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DumpReservations();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4E80 (end 0x00FE4E9F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnEndOfDay) | Matching: see analysis/functions-uht-exec.json
+void AFortGameMode::execOnEndOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnEndOfDay();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameMode, 77329920u)
 // Original dynamic initializer: RVA 0x000F5800 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameMode> AutoInitializeAFortGameMode(TEXT("AFortGameMode"), sizeof(AFortGameMode), 77329920u);

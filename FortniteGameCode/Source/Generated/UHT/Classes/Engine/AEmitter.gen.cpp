@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bCurrentlyActive) | Matching: see analysis/functions-uht-exec.json
+void AEmitter::execOnRep_bCurrentlyActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bCurrentlyActive();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AEmitter, 1782085140u)
 // Original dynamic initializer: RVA 0x001F9CA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AEmitter> AutoInitializeAEmitter(TEXT("AEmitter"), sizeof(AEmitter), 1782085140u);

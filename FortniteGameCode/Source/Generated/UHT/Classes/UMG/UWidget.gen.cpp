@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveFromParent) | Matching: see analysis/functions-uht-exec.json
+void UWidget::execRemoveFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveFromParent();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UWidget, 4287492281u)
 // Original dynamic initializer: RVA 0x001B4310 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UWidget> AutoInitializeUWidget(TEXT("UWidget"), sizeof(UWidget), 4287492281u);

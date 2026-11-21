@@ -208,6 +208,11 @@ A thunk is named only when exactly the predicted calls are found, in order: one,
 `_Validate` / `_Implementation` pair. For a validated RPC, the `RPC_ValidateFailed` literal
 must agree with the predicted name.
 
+The linker folds identical thunks. One `P_FINISH; jmp [vtbl+0x410]` body serves 11
+UFunctions in unrelated classes. A folded thunk that calls only vtable slots is resolved
+for each of its UFunctions, since the slot belongs to each owner's vtable. A folded thunk
+with a direct target stays unresolved, because one address cannot carry each owner's name.
+
 A direct native that is not static must receive Context in rcx. Of the 5,189 member
 natives, 10 did not; those natives were inlined into the thunk, so the call belongs to one
 of their callees. They stay unresolved.
@@ -221,8 +226,8 @@ are kept as `low-confidence inferred`.
 | --- | --- |
 | exec thunks attributed to a class | 9,193 (1,374 leaf) |
 | direct natives named | 6,758, 6,654 high-confidence (5,104 in the denominator, 1,654 leaf) |
-| virtual natives, located by vtable offset | 1,451 |
-| unresolved | 1,005: inlined or shared natives 559, linker-folded thunks 328, flags unknown 219, other call counts 76, no P_FINISH store 25, member call without Context 10, target already a generated function 1 |
+| virtual natives, located by vtable offset | 1,880 (429 of them through folded thunks) |
+| unresolved (per UFunction) | 1,492: inlined or shared natives 821, flags unknown 396, folded thunk with a direct target 171, other call counts 68, no P_FINISH store 25, member call without Context 10, target already a generated function 1 |
 
 Engine headers corroborate the results where the local UE4.20.0 source declares the
 function:
@@ -238,14 +243,108 @@ function:
   - `UCheatManager::InvertMouse`, `UCheatManager::SetMouseSensitivityToDefault`;
   - `UCharacterMovementComponent::K2_ComputeFloorDist`, `UCharacterMovementComponent::K2_FindFloor`;
   - `ADefaultPawn::LookUpAtRate`, `ADefaultPawn::TurnAtRate`.
-- 345 of the 355 virtual natives are declared `virtual` (97.2 %). The 10 others are
-  header-inline natives whose inlined body calls a different virtual function (for example
-  `AController::IsLocalPlayerController`). This error mode cannot be told apart in the
-  binary alone, so virtual offsets are evidence for vtable modelling, not names of
-  addresses.
+- Of the first 1,451 virtual natives (unshared thunks), 345 of the 355 with a declaration
+  are declared `virtual` (97.2 %). The 10 others are header-inline natives whose inlined
+  body calls a different virtual function (for example
+  `AController::IsLocalPlayerController`). The binary alone does not show this. Where it
+  matters, the vtable model exposes it: two names for one slot (2 cases, both withheld) or
+  a generated thunk that does not match (2 cases, `partial`).
 
-Exec thunks stay unmatched. Each depends on its native's address, which nothing else
-corroborates, and on decoded parameter properties.
+A thunk with a direct native depends on the native's address, which nothing else
+corroborates, and on decoded parameter properties. Thunks that only call vtable slots can
+match: see "Class vtables" below.
+
+## Class vtables (`tools/analysis/vtables.py`, `tools/codegen/uht_exec.py`)
+
+The build has no RTTI (`/GR-`), so vtables are found through code.
+`InternalVTableHelperCtorCaller<C>` returns nullptr without hot reload, a single folded
+`xor eax, eax; ret` for every class. `InternalConstructor<C>`, also passed to
+`GetPrivateStaticClassBody`, runs `C::C(const FObjectInitializer&)` on `X.GetObj()`.
+It does so by a (conditional) tail jump or with the constructor inlined. The constructor
+calls the superclass's constructor and then stores C's vtable at `[this]`. The last store
+of a `.rdata` address to `[this+0]` on that path is C's primary vtable. Stores at other
+offsets are recorded as secondary vtables (1,253 classes, interface subobjects).
+
+| Result | Count |
+| --- | --- |
+| classes with a primary vtable | 3,299 of 3,333; 27 without a store found, 7 not decoded |
+| distinct vtables | 2,653; 152 are shared by 798 classes (identical vtables folded by `/OPT:ICF`) |
+| UObject-derived vtable starts in `.rdata` | 2,684 |
+
+**Slot counts.** Vtables are packed without separators, so a run of code pointers continues
+into the next vtable. `UObject`'s vtable has 71 slots: slots 1-70 are inherited by 85-100 %
+of its 420 direct children, and slot 71 by 5 %. Every UObject-derived vtable repeats most
+of that prefix (slot 0, the destructor, differs). So a position where at least 35 of slots
+1-70 match is a vtable start. A run ends at the next start.
+
+A run followed by a non-UObject vtable still overruns: by run, `UObject` would have 136
+slots. Each class therefore gets two bounds:
+- an upper count: its own run, capped by every descendant's;
+- a lower count from evidence: the superclass's count, its own virtual natives, and slots a
+  descendant with a different vtable inherits unchanged. A function that occurs at more than
+  one slot index anywhere (a folded stub) is not evidence.
+
+No class has a lower count above its upper count. Examples (lower-upper):
+- `AActor` 189-189, `UActorComponent` 116-119, `APawn` 226-229;
+- `ACharacter` 265-271, `APlayerController` 421-437.
+
+The cap matters: equal-length vtables followed by similar Slate vtables otherwise share
+overrun entries (`UCommonListView` would get 119 slots where a descendant's vtable has 89).
+
+**Names.** A virtual native names slot *i* of its class and of every descendant. The slot is
+introduced by the topmost ancestor whose lower count exceeds *i*. Interface UFunctions
+(`CLASS_Interface`) call through the I-class's own vtable. Their 83 slots are listed
+separately; at first they produced 54 conflicts on `UObject` slots 0-8.
+
+Each descendant's entry at slot *i* implements the function. It is named after the topmost
+class on the path whose entry is that pointer. An address is reported as folded, not named,
+when it:
+- receives two names;
+- occurs at several slot indexes; or
+- carries a different high-confidence direct-native name.
+
+| Result | Count |
+| --- | --- |
+| named slots | 1,771 (2 slots named differently by two UFunctions, withheld: the inlined-native error above) |
+| implementations named | 1,746 (1,365 in the denominator, 1,364 not named before); 58 folded or ambiguous |
+
+743 of the 746 names whose class the local UE4.20.0 headers declare are declared there:
+the function itself, or its base name for UHT-generated `_Implementation`s. The other 3
+come from the inlined-native error. This brings the named denominator functions to 27,699
+(17.56 %).
+
+**Generated declarations and thunks.** `Classes.gen.h` declares each class's new slots in
+order. An introduced slot is declared by name when its UFunction's signature is known:
+- no properties, or one `CPF_ReturnParm` returned in a register (bool, uint8, int32,
+  float, double, or a known class's pointer);
+- `_Validate` returns bool.
+
+Other slots are placeholders (`virtual void FNGC_VSlot_0x<offset>()`; 4,053 gaps and 1,155
+named slots without a signature). MSVC lays out single-inheritance vtables in declaration
+order. The root becomes polymorphic, its destructor in slot 0 as in `UObjectBase`, and its
+opaque member shrinks by the vptr, so every `sizeof` is unchanged.
+
+A thunk that only calls slots declared by name is written as UHT 4.20's `DECLARE_FUNCTION`:
+`P_FINISH`, the optional `_Validate` check with `RPC_ValidateFailed`, and the call. UHT
+defines thunks inline in the class body. Here they are defined out of line in the class's
+`IMPLEMENT_CLASS` fragment: inline definitions of only some of a unit's thunks changed
+MSVC's emission order of other functions' static locals, breaking 57 `StaticEnum` layout
+predictions.
+
+Out of line, the effect is small but not zero. Even one definition in `Paper2D.1` moves one
+`StaticEnum` singleton to the front of the unit's `.bss`. Net, 6 `StaticEnum` and 4
+`FCompiledInDeferEnum` matches are lost and 4 + 4 gained in other units. The reference has
+all thunks, so this may settle as more are reconstructed; not verified.
+
+| Exec thunks generated | Count |
+| --- | --- |
+| UFunction thunks defined | 564, at 379 addresses (86 bodies shared by folded UFunctions; one manifest entry each) |
+| exact | 377: 175 in the denominator, 202 leaf (no `.pdata`) |
+| `partial` | 2: `AController::IsLocalPlayerController` and `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, whose real thunks inline their natives |
+
+The thunks call no address but `RPC_ValidateFailed` (corroborated by the other thunks) and
+`TEXT("<F>_Validate")` (literal content). So the bytes alone, with the vtable offsets, carry
+the evidence.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 

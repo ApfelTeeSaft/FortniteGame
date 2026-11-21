@@ -4,6 +4,38 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00542400 (end 0x0054241F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ClientDebugString) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execOnRep_ClientDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ClientDebugString();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00542460 (end 0x0054247F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ServerDebugString) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execOnRep_ServerDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ServerDebugString();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543300 (end 0x0054334E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPrintDebug_Request) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerPrintDebug_Request(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPrintDebug_Request_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerPrintDebug_Request_Validate"));
+		return;
+	}
+	P_THIS->ServerPrintDebug_Request_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAbilitySystemComponent, 219976785u)
 // Original dynamic initializer: RVA 0x0009CD80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilitySystemComponent> AutoInitializeUAbilitySystemComponent(TEXT("UAbilitySystemComponent"), sizeof(UAbilitySystemComponent), 219976785u);

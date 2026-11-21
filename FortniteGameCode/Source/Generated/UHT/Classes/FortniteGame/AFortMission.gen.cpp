@@ -4,6 +4,60 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103B3D0 (end 0x0103B3FF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentBluGloRewards) | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execGetCurrentBluGloRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetCurrentBluGloRewards_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103B4E0 (end 0x0103B511)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetExpectedCompletionTime) | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execGetExpectedCompletionTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetExpectedCompletionTime_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01067080 (end 0x0106709F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_MissionStatus) | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execOnRep_MissionStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_MissionStatus();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010670A0 (end 0x010670BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_QuestOwnerAccount) | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execOnRep_QuestOwnerAccount(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_QuestOwnerAccount();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233F0 (end 0x0242340F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_UIIndex) | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execOnRep_UIIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_UIIndex();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233B0 (end 0x024233CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bIsMissionVisible) | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execOnRep_bIsMissionVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bIsMissionVisible();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortMission, 1237438510u)
 // Original dynamic initializer: RVA 0x00100EF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortMission> AutoInitializeAFortMission(TEXT("AFortMission"), sizeof(AFortMission), 1237438510u);

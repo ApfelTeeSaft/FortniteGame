@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289CFD0 (end 0x0289CFEF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnActivated) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookOverviewWidget::execOnActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnActivated_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnDeactivated) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookOverviewWidget::execOnDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDeactivated_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookOverviewWidget, 3128511534u)
 // Original dynamic initializer: RVA 0x002403C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookOverviewWidget> AutoInitializeUFortCollectionBookOverviewWidget(TEXT("UFortCollectionBookOverviewWidget"), sizeof(UFortCollectionBookOverviewWidget), 3128511534u);

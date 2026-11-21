@@ -4,6 +4,20 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01021090 (end 0x010210DE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateNewlyJoinedPlayerInternal) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClientRM::execServerUpdateNewlyJoinedPlayerInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpdateNewlyJoinedPlayerInternal_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerUpdateNewlyJoinedPlayerInternal_Validate"));
+		return;
+	}
+	P_THIS->ServerUpdateNewlyJoinedPlayerInternal_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortLobbyBeaconClientRM, 3572604396u)
 // Original dynamic initializer: RVA 0x000FCE70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLobbyBeaconClientRM> AutoInitializeAFortLobbyBeaconClientRM(TEXT("AFortLobbyBeaconClientRM"), sizeof(AFortLobbyBeaconClientRM), 3572604396u);

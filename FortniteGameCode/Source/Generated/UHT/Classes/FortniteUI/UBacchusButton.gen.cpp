@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907370 (end 0x0290738F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnClicked) | Matching: see analysis/functions-uht-exec.json
+void UBacchusButton::execOnClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnClicked_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBacchusButton, 4191731126u)
 // Original dynamic initializer: RVA 0x0023B680 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBacchusButton> AutoInitializeUBacchusButton(TEXT("UBacchusButton"), sizeof(UBacchusButton), 4191731126u);

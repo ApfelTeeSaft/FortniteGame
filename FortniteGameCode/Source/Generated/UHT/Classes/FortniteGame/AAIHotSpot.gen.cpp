@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnHotSpotDisabled) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnHotSpotDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnHotSpotDisabled_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnHotSpotEnabled) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnHotSpotEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnHotSpotEnabled_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AAIHotSpot, 2649241222u)
 // Original dynamic initializer: RVA 0x000D72B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AAIHotSpot> AutoInitializeAAIHotSpot(TEXT("AAIHotSpot"), sizeof(AAIHotSpot), 2649241222u);

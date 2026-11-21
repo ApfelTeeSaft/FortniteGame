@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C3870 (end 0x024C388F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFireImpulse) | Matching: see analysis/functions-uht-exec.json
+void URadialForceComponent::execFireImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FireImpulse();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(URadialForceComponent, 2948086422u)
 // Original dynamic initializer: RVA 0x00217450 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<URadialForceComponent> AutoInitializeURadialForceComponent(TEXT("URadialForceComponent"), sizeof(URadialForceComponent), 2948086422u);

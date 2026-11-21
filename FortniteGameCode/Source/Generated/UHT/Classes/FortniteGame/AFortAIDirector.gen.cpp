@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execActivate) | Matching: see analysis/functions-uht-exec.json
+void AFortAIDirector::execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Activate();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDeactivate) | Matching: see analysis/functions-uht-exec.json
+void AFortAIDirector::execDeactivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Deactivate();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103B3D0 (end 0x0103B3FF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumPlayers) | Matching: see analysis/functions-uht-exec.json
+void AFortAIDirector::execGetNumPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetNumPlayers();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortAIDirector, 1288393449u)
 // Original dynamic initializer: RVA 0x000E0DC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAIDirector> AutoInitializeAFortAIDirector(TEXT("AFortAIDirector"), sizeof(AFortAIDirector), 1288393449u);

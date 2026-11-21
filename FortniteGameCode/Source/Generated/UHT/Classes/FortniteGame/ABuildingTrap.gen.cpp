@@ -4,6 +4,105 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73A60 (end 0x00F73A7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFinishTrigger) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execFinishTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FinishTrigger();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F740F0 (end 0x00F74121)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDamageDelay) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetDamageDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDamageDelay();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74130 (end 0x00F74161)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDurabilityPercent) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetDurabilityPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDurabilityPercent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74170 (end 0x00F741A1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFireDelay) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetFireDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetFireDelay();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74380 (end 0x00F743B1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxDurability) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetMaxDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxDurability();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F745C0 (end 0x00F745EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTrapLevel) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetTrapLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetTrapLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F745F0 (end 0x00F7461F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTrapRating) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetTrapRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetTrapRating();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74680 (end 0x00F746AF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasDurability) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execHasDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasDurability();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74960 (end 0x00F7497F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_AttachedTo) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execOnRep_AttachedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_AttachedTo();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74A00 (end 0x00F74A1F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedAppliedAlterations) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execOnRep_ReplicatedAppliedAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedAppliedAlterations();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74FA0 (end 0x00F74FBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTriggerIfAppropriate) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execTriggerIfAppropriate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TriggerIfAppropriate();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingTrap, 883784336u)
 // Original dynamic initializer: RVA 0x000DBEC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingTrap> AutoInitializeABuildingTrap(TEXT("ABuildingTrap"), sizeof(ABuildingTrap), 883784336u);

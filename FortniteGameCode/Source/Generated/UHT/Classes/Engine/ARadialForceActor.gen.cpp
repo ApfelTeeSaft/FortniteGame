@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDisableForce) | Matching: see analysis/functions-uht-exec.json
+void ARadialForceActor::execDisableForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DisableForce();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEnableForce) | Matching: see analysis/functions-uht-exec.json
+void ARadialForceActor::execEnableForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EnableForce();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFireImpulse) | Matching: see analysis/functions-uht-exec.json
+void ARadialForceActor::execFireImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FireImpulse();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleForce) | Matching: see analysis/functions-uht-exec.json
+void ARadialForceActor::execToggleForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleForce();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ARadialForceActor, 3418971873u)
 // Original dynamic initializer: RVA 0x00217390 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ARadialForceActor> AutoInitializeARadialForceActor(TEXT("ARadialForceActor"), sizeof(ARadialForceActor), 3418971873u);

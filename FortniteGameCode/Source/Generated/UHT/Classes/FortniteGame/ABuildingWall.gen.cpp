@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6EC90 (end 0x00F6ECAF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bDoorCollisionDisabled) | Matching: see analysis/functions-uht-exec.json
+void ABuildingWall::execOnRep_bDoorCollisionDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bDoorCollisionDisabled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79CF0 (end 0x00F79D0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bDoorOpen) | Matching: see analysis/functions-uht-exec.json
+void ABuildingWall::execOnRep_bDoorOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bDoorOpen();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingWall, 1263124386u)
 // Original dynamic initializer: RVA 0x000DCCE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingWall> AutoInitializeABuildingWall(TEXT("ABuildingWall"), sizeof(ABuildingWall), 1263124386u);

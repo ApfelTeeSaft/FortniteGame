@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8AE0 (end 0x024C8B0F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAnySimulatingPhysics) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execIsAnySimulatingPhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsAnySimulatingPhysics();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8BB0 (end 0x024C8BDF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsVisible) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsVisible();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(USceneComponent, 3383923364u)
 // Original dynamic initializer: RVA 0x00219810 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USceneComponent> AutoInitializeUSceneComponent(TEXT("USceneComponent"), sizeof(USceneComponent), 3383923364u);

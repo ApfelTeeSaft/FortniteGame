@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1470 (end 0x00FD148F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientDestroyDecoPreview) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoTool::execClientDestroyDecoPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientDestroyDecoPreview_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortDecoTool, 3453171697u)
 // Original dynamic initializer: RVA 0x000EFAA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortDecoTool> AutoInitializeAFortDecoTool(TEXT("AFortDecoTool"), sizeof(AFortDecoTool), 3453171697u);

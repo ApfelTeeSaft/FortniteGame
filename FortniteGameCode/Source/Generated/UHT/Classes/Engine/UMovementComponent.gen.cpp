@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C7C0 (end 0x0248C7F1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetGravityZ) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execGetGravityZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetGravityZ();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C800 (end 0x0248C831)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxSpeed) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execGetMaxSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxSpeed();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248CA60 (end 0x0248CA91)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_GetMaxSpeedModifier) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execK2_GetMaxSpeedModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->K2_GetMaxSpeedModifier();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248CAA0 (end 0x0248CAD1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_GetModifiedMaxSpeed) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execK2_GetModifiedMaxSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->K2_GetModifiedMaxSpeed();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D430 (end 0x0248D44F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSnapUpdatedComponentToPlane) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execSnapUpdatedComponentToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SnapUpdatedComponentToPlane();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UMovementComponent, 373163136u)
 // Original dynamic initializer: RVA 0x0020C630 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMovementComponent> AutoInitializeUMovementComponent(TEXT("UMovementComponent"), sizeof(UMovementComponent), 373163136u);

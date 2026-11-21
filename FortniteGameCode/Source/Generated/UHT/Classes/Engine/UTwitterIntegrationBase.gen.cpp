@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDD00 (end 0x024EDD2F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAuthorizeAccounts) | Matching: see analysis/functions-uht-exec.json
+void UTwitterIntegrationBase::execAuthorizeAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->AuthorizeAccounts();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB920 (end 0x023EB94F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanShowTweetUI) | Matching: see analysis/functions-uht-exec.json
+void UTwitterIntegrationBase::execCanShowTweetUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanShowTweetUI();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDEA0 (end 0x024EDECF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumAccounts) | Matching: see analysis/functions-uht-exec.json
+void UTwitterIntegrationBase::execGetNumAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetNumAccounts();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDF60 (end 0x024EDF7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInit) | Matching: see analysis/functions-uht-exec.json
+void UTwitterIntegrationBase::execInit(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Init();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UTwitterIntegrationBase, 566021815u)
 // Original dynamic initializer: RVA 0x00220140 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UTwitterIntegrationBase> AutoInitializeUTwitterIntegrationBase(TEXT("UTwitterIntegrationBase"), sizeof(UTwitterIntegrationBase), 566021815u);

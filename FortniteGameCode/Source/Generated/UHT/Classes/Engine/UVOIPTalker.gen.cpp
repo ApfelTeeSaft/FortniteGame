@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1390 (end 0x024F13AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBPOnTalkingEnd) | Matching: see analysis/functions-uht-exec.json
+void UVOIPTalker::execBPOnTalkingEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BPOnTalkingEnd_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UVOIPTalker, 3369332169u)
 // Original dynamic initializer: RVA 0x002219A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UVOIPTalker> AutoInitializeUVOIPTalker(TEXT("UVOIPTalker"), sizeof(UVOIPTalker), 3369332169u);

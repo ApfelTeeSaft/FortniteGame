@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025E27D0 (end 0x025E27FF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execValidate) | Matching: see analysis/functions-uht-exec.json
+void UMediaSource::execValidate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->Validate();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UMediaSource, 461768156u)
 // Original dynamic initializer: RVA 0x00225F70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMediaSource> AutoInitializeUMediaSource(TEXT("UMediaSource"), sizeof(UMediaSource), 461768156u);

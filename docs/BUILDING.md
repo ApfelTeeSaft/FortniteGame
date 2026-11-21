@@ -28,6 +28,13 @@ built with VS2015, optimized, without LTCG, exceptions or RTTI:
 `/c /Zc:inline /Oi /Gy /Zm850 /wd4819 /source-charset:utf-8 /execution-charset:utf-8 /Ox /Ot /Ob2 /D_HAS_EXCEPTIONS=0 /Z7 /MD /bigobj /fp:fast /Zo /Zp8 /W4 /wd4456 /wd4458 /wd4459 /wd4463 /wd4838 /TP /GS /GR-`
 plus `_WIN32_WINNT=WINVER=0x0601`, `_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1` and `UE_BUILD_SHIPPING=1`.
 
+One deviation: the project builds with `/Zi` instead of `/Z7`. With the vtable model, every
+class in `Classes.gen.h` is polymorphic. `/Z7` then writes an `LF_VFTABLE` type record per
+class into every object, about 19 MB per unity unit. 804 such objects exceed the 4 GB limit
+of the `.lib` format. `/Zi` writes the types once to the project PDB. Debug information is
+not matched. Compiled with each format, a unity unit's 269 non-debug sections (contents,
+characteristics, relocations by symbol) were identical.
+
 The evidence for `/GS` is that 10,095 unwind records share one handler, which fits
 `__GSHandlerCheck`. Recovered modules are compiled as unity translation units
 (`Module.<Name>.cpp`) only where cross-file inlining evidence requires it. The
@@ -57,12 +64,13 @@ tools in this order:
 
 ```
 python tools/analysis/reflection.py      # analysis/reflection-natives.json
-python tools/analysis/natives.py         # analysis/native-implementations.json (names only; not used by codegen)
 python tools/analysis/unity_order.py     # analysis/unity-order.json (unity source order, units)
 python tools/codegen/uht_creators.py     # class fragments: StaticRegisterNatives, creators, constructor
+python tools/analysis/natives.py         # analysis/native-implementations.json (needs uht-creator-symbols.json)
+python tools/analysis/vtables.py         # analysis/vtables.json: class vtables, named slots
 python tools/codegen/uht_structs.py      # USTRUCT fragments
 python tools/codegen/uht_enums.py        # UENUM fragments (constructor; StaticEnum in .static)
-python tools/codegen/uht_classes.py      # Classes.gen.h, IMPLEMENT_CLASS fragments
+python tools/codegen/uht_classes.py      # Classes.gen.h (with vtable slots and exec thunks), IMPLEMENT_CLASS fragments
 python tools/codegen/uht_packages.py     # package-scope delegates, package constructors (init.gen.cpp)
 python tools/codegen/unity.py            # Unity/*.gen.cpp: fragments in recovered order
 ```

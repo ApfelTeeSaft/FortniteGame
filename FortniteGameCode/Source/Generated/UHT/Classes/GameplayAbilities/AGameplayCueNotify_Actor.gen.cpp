@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3D60 (end 0x024A3D7F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_EndGameplayCue) | Matching: see analysis/functions-uht-exec.json
+void AGameplayCueNotify_Actor::execK2_EndGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_EndGameplayCue();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AGameplayCueNotify_Actor, 3672328890u)
 // Original dynamic initializer: RVA 0x0009EC00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameplayCueNotify_Actor> AutoInitializeAGameplayCueNotify_Actor(TEXT("AGameplayCueNotify_Actor"), sizeof(AGameplayCueNotify_Actor), 3672328890u);

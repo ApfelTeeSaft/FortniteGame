@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DCF70 (end 0x023DCF8F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChangePlaybackDirection) | Matching: see analysis/functions-uht-exec.json
+void AMatineeActor::execChangePlaybackDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ChangePlaybackDirection();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPause) | Matching: see analysis/functions-uht-exec.json
+void AMatineeActor::execPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Pause();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlay) | Matching: see analysis/functions-uht-exec.json
+void AMatineeActor::execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Play();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReverse) | Matching: see analysis/functions-uht-exec.json
+void AMatineeActor::execReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Reverse();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStop) | Matching: see analysis/functions-uht-exec.json
+void AMatineeActor::execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Stop();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AMatineeActor, 514527181u)
 // Original dynamic initializer: RVA 0x0020AC90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AMatineeActor> AutoInitializeAMatineeActor(TEXT("AMatineeActor"), sizeof(AMatineeActor), 514527181u);

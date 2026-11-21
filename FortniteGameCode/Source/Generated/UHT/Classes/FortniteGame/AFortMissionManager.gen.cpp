@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024233F0 (end 0x0242340F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_CurrentUIFocusedMission) | Matching: see analysis/functions-uht-exec.json
+void AFortMissionManager::execOnRep_CurrentUIFocusedMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_CurrentUIFocusedMission();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CA30 (end 0x0104CA4F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_MissionUIActors) | Matching: see analysis/functions-uht-exec.json
+void AFortMissionManager::execOnRep_MissionUIActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_MissionUIActors();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CA50 (end 0x0104CA6F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Missions) | Matching: see analysis/functions-uht-exec.json
+void AFortMissionManager::execOnRep_Missions(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Missions();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortMissionManager, 1173817512u)
 // Original dynamic initializer: RVA 0x00103F80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortMissionManager> AutoInitializeAFortMissionManager(TEXT("AFortMissionManager"), sizeof(AFortMissionManager), 1173817512u);

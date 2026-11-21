@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FFEB0 (end 0x028FFECF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSquadSlotWidgetUpdated) | Matching: see analysis/functions-uht-exec.json
+void UFortSquadSlotSelectorButton::execSquadSlotWidgetUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SquadSlotWidgetUpdated_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortSquadSlotSelectorButton, 1886962062u)
 // Original dynamic initializer: RVA 0x0025C160 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadSlotSelectorButton> AutoInitializeUFortSquadSlotSelectorButton(TEXT("UFortSquadSlotSelectorButton"), sizeof(UFortSquadSlotSelectorButton), 1886962062u);

@@ -4,6 +4,96 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67AF0 (end 0x00F67B1F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanPerformIOOperation) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execCanPerformIOOperation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanPerformIOOperation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67B20 (end 0x00F67B4F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanReloadFOB) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execCanReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanReloadFOB();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67B50 (end 0x00F67B7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanSaveFOB) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execCanSaveFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanSaveFOB();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67E20 (end 0x00F67E4F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsFinalized) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execIsFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsFinalized();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01060D50 (end 0x01060D7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsInitialized) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execIsInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsInitialized();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F682F0 (end 0x00F6830F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnFinalizationFXMulticast) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execOnFinalizationFXMulticast(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnFinalizationFXMulticast_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1470 (end 0x00FD148F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnFinalized) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execOnFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnFinalized_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF5B0 (end 0x024AF5CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_FOBMode) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execOnRep_FOBMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_FOBMode();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F685E0 (end 0x00F685FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bFinalized) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execOnRep_bFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bFinalized();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68700 (end 0x00F6872F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReloadFOB) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ReloadFOB();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingFOBConfigActor, 3198883842u)
 // Original dynamic initializer: RVA 0x000D98F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingFOBConfigActor> AutoInitializeABuildingFOBConfigActor(TEXT("ABuildingFOBConfigActor"), sizeof(ABuildingFOBConfigActor), 3198883842u);

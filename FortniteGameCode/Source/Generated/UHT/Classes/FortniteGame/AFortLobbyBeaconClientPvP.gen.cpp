@@ -4,6 +4,20 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010203A0 (end 0x010203EE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReadyUp) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClientPvP::execServerReadyUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReadyUp_Validate())
+	{
+		RPC_ValidateFailed(TEXT("ServerReadyUp_Validate"));
+		return;
+	}
+	P_THIS->ServerReadyUp_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortLobbyBeaconClientPvP, 139101647u)
 // Original dynamic initializer: RVA 0x000FCE50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLobbyBeaconClientPvP> AutoInitializeAFortLobbyBeaconClientPvP(TEXT("AFortLobbyBeaconClientPvP"), sizeof(AFortLobbyBeaconClientPvP), 139101647u);

@@ -3,7 +3,9 @@
 // Every reflected class, superclasses first, with the DECLARE_CLASS members IMPLEMENT_CLASS uses.
 // Superclass, flags, cast flags, package, config name and sizeof are decoded from each class's
 // GetPrivateStaticClass. Opaque members only give sizeof(Class) its recovered value; the
-// layout is not reconstructed.
+// layout is not reconstructed. Virtual slots are declared where analysis/vtables.json names
+// them, with placeholders for the gaps, so calls through them use the reference's offsets;
+// exec thunks calling only such slots are defined in the class fragments (tools/codegen/uht_exec.py).
 #pragma once
 
 class UObject;
@@ -3353,9 +3355,80 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual ~UObject();  // slot 0 (+0x0): the destructor, as UObjectBase's
+	virtual void FNGC_VSlot_0x8();
+	virtual void FNGC_VSlot_0x10();
+	virtual void FNGC_VSlot_0x18();
+	virtual void FNGC_VSlot_0x20();
+	virtual void FNGC_VSlot_0x28();
+	virtual void FNGC_VSlot_0x30();
+	virtual void FNGC_VSlot_0x38();
+	virtual void FNGC_VSlot_0x40();
+	virtual void FNGC_VSlot_0x48();
+	virtual void FNGC_VSlot_0x50();
+	virtual void FNGC_VSlot_0x58();
+	virtual void FNGC_VSlot_0x60();
+	virtual void FNGC_VSlot_0x68();
+	virtual void FNGC_VSlot_0x70();
+	virtual void FNGC_VSlot_0x78();
+	virtual void FNGC_VSlot_0x80();
+	virtual void FNGC_VSlot_0x88();
+	virtual void FNGC_VSlot_0x90();
+	virtual void FNGC_VSlot_0x98();
+	virtual void FNGC_VSlot_0xA0();
+	virtual void FNGC_VSlot_0xA8();
+	virtual void FNGC_VSlot_0xB0();
+	virtual void FNGC_VSlot_0xB8();
+	virtual void FNGC_VSlot_0xC0();
+	virtual void FNGC_VSlot_0xC8();
+	virtual void FNGC_VSlot_0xD0();
+	virtual void FNGC_VSlot_0xD8();
+	virtual void FNGC_VSlot_0xE0();
+	virtual void FNGC_VSlot_0xE8();
+	virtual void FNGC_VSlot_0xF0();
+	virtual void FNGC_VSlot_0xF8();
+	virtual void FNGC_VSlot_0x100();
+	virtual void FNGC_VSlot_0x108();
+	virtual void FNGC_VSlot_0x110();
+	virtual void FNGC_VSlot_0x118();
+	virtual void FNGC_VSlot_0x120();
+	virtual void FNGC_VSlot_0x128();
+	virtual void FNGC_VSlot_0x130();
+	virtual void FNGC_VSlot_0x138();
+	virtual void FNGC_VSlot_0x140();
+	virtual void FNGC_VSlot_0x148();
+	virtual void FNGC_VSlot_0x150();
+	virtual void FNGC_VSlot_0x158();
+	virtual void FNGC_VSlot_0x160();
+	virtual void FNGC_VSlot_0x168();
+	virtual void FNGC_VSlot_0x170();
+	virtual void FNGC_VSlot_0x178();
+	virtual void FNGC_VSlot_0x180();
+	virtual void FNGC_VSlot_0x188();
+	virtual void FNGC_VSlot_0x190();
+	virtual void FNGC_VSlot_0x198();
+	virtual void FNGC_VSlot_0x1A0();
+	virtual void FNGC_VSlot_0x1A8();
+	virtual void FNGC_VSlot_0x1B0();
+	virtual void FNGC_VSlot_0x1B8();
+	virtual void FNGC_VSlot_0x1C0();
+	virtual void FNGC_VSlot_0x1C8();
+	virtual void FNGC_VSlot_0x1D0();
+	virtual void FNGC_VSlot_0x1D8();
+	virtual void FNGC_VSlot_0x1E0();
+	virtual void FNGC_VSlot_0x1E8();
+	virtual void FNGC_VSlot_0x1F0();
+	virtual void FNGC_VSlot_0x1F8();
+	virtual void FNGC_VSlot_0x200();
+	virtual void FNGC_VSlot_0x208();
+	virtual void FNGC_VSlot_0x210();
+	virtual void FNGC_VSlot_0x218();
+	virtual void FNGC_VSlot_0x220();
+	virtual void FNGC_VSlot_0x228();
+	virtual void FNGC_VSlot_0x230();
 	static void StaticRegisterNativesUObject();
 private:
-	unsigned char Opaque[0x28];  // sizeof(UObject) = 0x28
+	unsigned char Opaque[0x20];  // sizeof(UObject) = 0x28
 };
 
 class AActor : public UObject
@@ -3371,6 +3444,119 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000001000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void OnRep_ReplicateMovement();  // slot 71 (+0x238), UFunction AActor::OnRep_ReplicateMovement
+	virtual void TearOff();  // slot 72 (+0x240), UFunction AActor::TearOff
+	virtual void FNGC_VSlot_0x248();
+	virtual void OnRep_Owner();  // slot 74 (+0x250), UFunction AActor::OnRep_Owner
+	virtual void FNGC_VSlot_0x258();  // slot 75: AActor::SetReplicateMovement (signature not recovered)
+	virtual void OnRep_AttachmentReplication();  // slot 76 (+0x260), UFunction AActor::OnRep_AttachmentReplication
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void OnRep_Instigator();  // slot 84 (+0x2A0), UFunction AActor::OnRep_Instigator
+	virtual void FNGC_VSlot_0x2A8();  // slot 85: AActor::EnableInput (signature not recovered)
+	virtual void FNGC_VSlot_0x2B0();  // slot 86: AActor::DisableInput (signature not recovered)
+	virtual void FNGC_VSlot_0x2B8();  // slot 87: AActor::GetVelocity (signature not recovered)
+	virtual void FNGC_VSlot_0x2C0();  // slot 88: AActor::SetActorHiddenInGame (signature not recovered)
+	virtual void K2_DestroyActor();  // slot 89 (+0x2C8), UFunction AActor::K2_DestroyActor
+	virtual void FNGC_VSlot_0x2D0();  // slot 90: AActor::AddTickPrerequisiteActor (signature not recovered)
+	virtual void FNGC_VSlot_0x2D8();  // slot 91: AActor::AddTickPrerequisiteComponent (signature not recovered)
+	virtual void FNGC_VSlot_0x2E0();  // slot 92: AActor::RemoveTickPrerequisiteActor (signature not recovered)
+	virtual void FNGC_VSlot_0x2E8();  // slot 93: AActor::RemoveTickPrerequisiteComponent (signature not recovered)
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();  // slot 106: AActor::SetLifeSpan (signature not recovered)
+	virtual float GetLifeSpan() const;  // slot 107 (+0x358), UFunction AActor::GetLifeSpan
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void OnRep_ReplicatedMovement();  // slot 123 (+0x3D8), UFunction AActor::OnRep_ReplicatedMovement
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();  // slot 127: AActor::SetOwner (signature not recovered)
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();
+	virtual void FNGC_VSlot_0x488();
+	virtual void FNGC_VSlot_0x490();
+	virtual void FNGC_VSlot_0x498();
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();
+	virtual void FNGC_VSlot_0x4E8();
+	virtual void FNGC_VSlot_0x4F0();
+	virtual void FNGC_VSlot_0x4F8();
+	virtual void FNGC_VSlot_0x500();
+	virtual void FNGC_VSlot_0x508();
+	virtual void FNGC_VSlot_0x510();
+	virtual void FNGC_VSlot_0x518();
+	virtual void FNGC_VSlot_0x520();
+	virtual void FNGC_VSlot_0x528();
+	virtual void FNGC_VSlot_0x530();
+	virtual void FNGC_VSlot_0x538();
+	virtual void FNGC_VSlot_0x540();
+	virtual void FNGC_VSlot_0x548();
+	virtual void FNGC_VSlot_0x550();
+	virtual void FNGC_VSlot_0x558();
+	virtual void FNGC_VSlot_0x560();
+	virtual void FNGC_VSlot_0x568();
+	virtual void FNGC_VSlot_0x570();
+	virtual void FNGC_VSlot_0x578();
+	virtual void FNGC_VSlot_0x580();
+	virtual void FNGC_VSlot_0x588();
+	virtual void FNGC_VSlot_0x590();
+	virtual void FNGC_VSlot_0x598();
+	virtual void FNGC_VSlot_0x5A0();
+	virtual void ForceNetUpdate();  // slot 181 (+0x5A8), UFunction AActor::ForceNetUpdate
+	virtual void FNGC_VSlot_0x5B0();  // slot 182: AActor::PrestreamTextures (signature not recovered)
+	virtual void FNGC_VSlot_0x5B8();  // slot 183: AActor::GetActorEyesViewPoint (signature not recovered)
 	static void StaticRegisterNativesAActor();
 	static void execActorHasTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3491,6 +3677,47 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AController::ClientSetRotation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AController::ClientSetLocation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();  // slot 196: AController::GetControlRotation (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: AController::SetControlRotation (signature not recovered)
+	virtual void FNGC_VSlot_0x630();  // slot 198: AController::SetInitialLocationAndRotation (signature not recovered)
+	virtual void FNGC_VSlot_0x638();  // slot 199: AController::LineOfSightTo (signature not recovered)
+	virtual void OnRep_Pawn();  // slot 200 (+0x640), UFunction AController::OnRep_Pawn
+	virtual void OnRep_PlayerState();  // slot 201 (+0x648), UFunction AController::OnRep_PlayerState
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();  // slot 203: AController::GetViewTarget (signature not recovered)
+	virtual void FNGC_VSlot_0x660();  // slot 204: AController::GetDesiredRotation (signature not recovered)
+	virtual bool IsLocalPlayerController() const;  // slot 205 (+0x668), UFunction AController::IsLocalPlayerController
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();  // slot 207: AController::Possess (signature not recovered)
+	virtual void UnPossess();  // slot 208 (+0x680), UFunction AController::UnPossess
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void StopMovement();  // slot 217 (+0x6C8), UFunction AController::StopMovement
+	virtual void FNGC_VSlot_0x6D0();  // slot 218: AController::SetIgnoreMoveInput (signature not recovered)
+	virtual void ResetIgnoreMoveInput();  // slot 219 (+0x6D8), UFunction AController::ResetIgnoreMoveInput
+	virtual bool IsMoveInputIgnored() const;  // slot 220 (+0x6E0), UFunction AController::IsMoveInputIgnored
+	virtual void FNGC_VSlot_0x6E8();  // slot 221: AController::SetIgnoreLookInput (signature not recovered)
+	virtual void ResetIgnoreLookInput();  // slot 222 (+0x6F0), UFunction AController::ResetIgnoreLookInput
+	virtual bool IsLookInputIgnored() const;  // slot 223 (+0x6F8), UFunction AController::IsLookInputIgnored
+	virtual void ResetIgnoreInputFlags();  // slot 224 (+0x700), UFunction AController::ResetIgnoreInputFlags
 	static void StaticRegisterNativesAController();
 	static void execCastToPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientSetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3533,6 +3760,26 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();
+	virtual void FNGC_VSlot_0x738();
+	virtual void FNGC_VSlot_0x740();
+	virtual void FNGC_VSlot_0x748();
+	virtual void FNGC_VSlot_0x750();
+	virtual void FNGC_VSlot_0x758();  // slot 235: AAIController::RunBehaviorTree (signature not recovered)
+	virtual void FNGC_VSlot_0x760();
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();  // slot 238: AAIController::GetFocalPointOnActor (signature not recovered)
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();
+	virtual void FNGC_VSlot_0x798();
+	virtual void FNGC_VSlot_0x7A0();  // slot 244: AAIController::OnGameplayTaskResourcesClaimed (signature not recovered)
 	static void StaticRegisterNativesAAIController();
 	static void execClaimTaskResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAIPerceptionComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3569,6 +3816,37 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AAIHotSpot::OnMoveToSlotFinished_Implementation (signature not recovered)
+	virtual void OnHotSpotEnabled_Implementation();  // slot 190 (+0x5F0), UFunction AAIHotSpot::OnHotSpotEnabled
+	virtual void OnHotSpotDisabled_Implementation();  // slot 191 (+0x5F8), UFunction AAIHotSpot::OnHotSpotDisabled
+	virtual void FNGC_VSlot_0x600();  // slot 192: AAIHotSpot::OnSlotEnabled_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x608();  // slot 193: AAIHotSpot::OnSlotDisabled_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AAIHotSpot::OnSlotBlocked_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x618();  // slot 195: AAIHotSpot::OnSlotFreed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x620();  // slot 196: AAIHotSpot::OnSlotOccupied_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: AAIHotSpot::OnSlotClaimed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x630();  // slot 198: AAIHotSpot::OnRemovedBehavior_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x638();  // slot 199: AAIHotSpot::OnRemovedSlotlessBehavior_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x640();  // slot 200: AAIHotSpot::OnAssignedSlotlessBehavior_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x648();  // slot 201: AAIHotSpot::OnAssignedOccupiedBehavior_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x650();  // slot 202: AAIHotSpot::OnAssignedClaimedBehavior_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x658();  // slot 203: AAIHotSpot::IsAIAllowed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();  // slot 205: AAIHotSpot::SetEnabled (signature not recovered)
+	virtual void FNGC_VSlot_0x670();  // slot 206: AAIHotSpot::AssignToHotspot (signature not recovered)
+	virtual void FNGC_VSlot_0x678();  // slot 207: AAIHotSpot::AssignGroupToHotspot (signature not recovered)
+	virtual void FNGC_VSlot_0x680();  // slot 208: AAIHotSpot::AssignToSlotByIndex (signature not recovered)
+	virtual void FNGC_VSlot_0x688();  // slot 209: AAIHotSpot::RemoveFromHotspot (signature not recovered)
+	virtual void FNGC_VSlot_0x690();  // slot 210: AAIHotSpot::RemoveGroupFromHotspot (signature not recovered)
+	virtual void FNGC_VSlot_0x698();  // slot 211: AAIHotSpot::FindBestSlotIndex (signature not recovered)
+	virtual void FNGC_VSlot_0x6A0();  // slot 212: AAIHotSpot::FindBestSlotIndices (signature not recovered)
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();  // slot 214: AAIHotSpot::OccupySlotByIndex (signature not recovered)
 	static void StaticRegisterNativesAAIHotSpot();
 	static void execAssignFromWaitingList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAssignGroupToHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3628,6 +3906,28 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void ShowHUD();  // slot 189 (+0x5E8), UFunction AHUD::ShowHUD
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AHUD::ShowDebug (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void NextDebugTarget();  // slot 204 (+0x660), UFunction AHUD::NextDebugTarget
+	virtual void PreviousDebugTarget();  // slot 205 (+0x668), UFunction AHUD::PreviousDebugTarget
 	static void StaticRegisterNativesAHUD();
 	static void execAddDebugText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddHitBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3684,6 +3984,48 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000004000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: APawn::GetMovementComponent (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortPawn::PawnStartFire (signature not recovered)
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void OnRep_Controller();  // slot 199 (+0x638), UFunction APawn::OnRep_Controller
+	virtual void OnRep_PlayerState();  // slot 200 (+0x640), UFunction APawn::OnRep_PlayerState
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual bool IsLocallyControlled() const;  // slot 206 (+0x670), UFunction APawn::IsLocallyControlled
+	virtual bool IsPlayerControlled() const;  // slot 207 (+0x678), UFunction APawn::IsPlayerControlled
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();  // slot 210: APawn::GetBaseAimRotation (signature not recovered)
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void DetachFromControllerPendingDestroy();  // slot 214 (+0x6B0), UFunction APawn::DetachFromControllerPendingDestroy
+	virtual void SpawnDefaultController();  // slot 215 (+0x6B8), UFunction APawn::SpawnDefaultController
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();  // slot 220: APawn::AddMovementInput (signature not recovered)
+	virtual void FNGC_VSlot_0x6E8();  // slot 221: APawn::ConsumeMovementInputVector (signature not recovered)
+	virtual void FNGC_VSlot_0x6F0();  // slot 222: APawn::AddControllerPitchInput (signature not recovered)
+	virtual void FNGC_VSlot_0x6F8();  // slot 223: APawn::AddControllerYawInput (signature not recovered)
+	virtual void FNGC_VSlot_0x700();  // slot 224: APawn::AddControllerRollInput (signature not recovered)
+	virtual bool IsMoveInputIgnored() const;  // slot 225 (+0x708), UFunction APawn::IsMoveInputIgnored
 	static void StaticRegisterNativesAPawn();
 	static void execAddControllerPitchInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddControllerRollInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3726,6 +4068,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x710();  // slot 226: ADefaultPawn::MoveForward (signature not recovered)
+	virtual void FNGC_VSlot_0x718();  // slot 227: ADefaultPawn::MoveRight (signature not recovered)
+	virtual void FNGC_VSlot_0x720();  // slot 228: ADefaultPawn::MoveUp_World (signature not recovered)
 	static void StaticRegisterNativesADefaultPawn();
 	static void execLookUpAtRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execMoveForward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3883,6 +4228,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void OnRep_bEnabled();  // slot 194 (+0x610), UFunction AAudioVolume::OnRep_bEnabled
 	static void StaticRegisterNativesAAudioVolume();
 	static void execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3905,6 +4261,95 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void PlacedByPlacementTool_Implementation();  // slot 189 (+0x5E8), UFunction ABuildingActor::PlacedByPlacementTool
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: ABuildingActor::OnBuildingActorInitialized_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: ABuildingActor::IsAcceptablePositionForPlacement_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x600();  // slot 192: ABuildingActor::ShouldDie_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x608();  // slot 193: ABuildingActor::OnDayPhaseChanged_Implementation (signature not recovered)
+	virtual bool UseDefaultHealthBar_Implementation() const;  // slot 194 (+0x610), UFunction ABuildingActor::UseDefaultHealthBar
+	virtual int32 GetCurrentBuildingLevel() const;  // slot 195 (+0x618), UFunction ABuildingActor::GetCurrentBuildingLevel
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual float GetHealth() const;  // slot 229 (+0x728), UFunction ABuildingActor::GetHealth
+	virtual float GetMaxHealth() const;  // slot 230 (+0x730), UFunction ABuildingActor::GetMaxHealth
+	virtual void FNGC_VSlot_0x738();
+	virtual void FNGC_VSlot_0x740();
+	virtual void FNGC_VSlot_0x748();
+	virtual void FNGC_VSlot_0x750();  // slot 234: ABuildingActor::InitializeKismetSpawnedBuildingActor (signature not recovered)
+	virtual void FNGC_VSlot_0x758();  // slot 235: ABuildingActor::SetCustomState (signature not recovered)
+	virtual void FNGC_VSlot_0x760();  // slot 236: ABuildingActor::GetCustomState (signature not recovered)
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();
+	virtual void FNGC_VSlot_0x798();
+	virtual void FNGC_VSlot_0x7A0();
+	virtual void SilentDie();  // slot 245 (+0x7A8), UFunction ABuildingActor::SilentDie
+	virtual void FNGC_VSlot_0x7B0();
+	virtual void FNGC_VSlot_0x7B8();
+	virtual void FNGC_VSlot_0x7C0();
+	virtual void FNGC_VSlot_0x7C8();
+	virtual void FNGC_VSlot_0x7D0();
+	virtual void FNGC_VSlot_0x7D8();
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();
+	virtual void FNGC_VSlot_0x7F8();  // slot 255: ABuildingActor::GetCentroid (signature not recovered)
+	virtual void FNGC_VSlot_0x800();
+	virtual void FNGC_VSlot_0x808();
+	virtual void FNGC_VSlot_0x810();
+	virtual void FNGC_VSlot_0x818();
+	virtual void FNGC_VSlot_0x820();
+	virtual void FNGC_VSlot_0x828();
+	virtual void FNGC_VSlot_0x830();
+	virtual void FNGC_VSlot_0x838();
+	virtual void OnRep_CurrentBuildingLevel();  // slot 264 (+0x840), UFunction ABuildingActor::OnRep_CurrentBuildingLevel
+	virtual void OnRep_CustomState();  // slot 265 (+0x848), UFunction ABuildingActor::OnRep_CustomState
+	virtual void HandleDestroyed();  // slot 266 (+0x850), UFunction ABuildingActor::HandleDestroyed
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();
+	virtual void FNGC_VSlot_0x870();  // slot 270: ABuildingActor::GameplayCue_Damage (signature not recovered)
+	virtual void FNGC_VSlot_0x878();  // slot 271: ABuildingActor::GameplayCue_Healing (signature not recovered)
+	virtual void FNGC_VSlot_0x880();  // slot 272: ABuildingActor::GameplayCue_InstantDeath (signature not recovered)
 	static void StaticRegisterNativesABuildingActor();
 	static void execAddEditorOnlyInstanceGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execForceBuildingHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4055,6 +4500,117 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();
+	virtual void FNGC_VSlot_0x8C0();
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void ForceIntoStructuralGridDuringRuntime_Implementation();  // slot 283 (+0x8D8), UFunction ABuildingSMActor::ForceIntoStructuralGridDuringRuntime
+	virtual void FNGC_VSlot_0x8E0();  // slot 284: ABuildingSMActor::MulticastRequestBuildingAnimation_Implementation (signature not recovered)
+	virtual void MulticastPlayFullHealthEffects_Implementation();  // slot 285 (+0x8E8), UFunction ABuildingSMActor::MulticastPlayFullHealthEffects
+	virtual void BlueprintOnStructurallyStable_Implementation();  // slot 286 (+0x8F0), UFunction ABuildingSMActor::BlueprintOnStructurallyStable
+	virtual void BlueprintOnStructurallyUnstable_Implementation();  // slot 287 (+0x8F8), UFunction ABuildingSMActor::BlueprintOnStructurallyUnstable
+	virtual void FNGC_VSlot_0x900();  // slot 288: ABuildingSMActor::SetMirrored (signature not recovered)
+	virtual void FNGC_VSlot_0x908();
+	virtual void FNGC_VSlot_0x910();
+	virtual bool IsSupportedByWorld() const;  // slot 291 (+0x918), UFunction ABuildingSMActor::IsSupportedByWorld
+	virtual void FNGC_VSlot_0x920();
+	virtual void FNGC_VSlot_0x928();
+	virtual void FNGC_VSlot_0x930();
+	virtual void FNGC_VSlot_0x938();
+	virtual void FNGC_VSlot_0x940();
+	virtual void FNGC_VSlot_0x948();
+	virtual void FNGC_VSlot_0x950();
+	virtual void FNGC_VSlot_0x958();
+	virtual void FNGC_VSlot_0x960();
+	virtual void FNGC_VSlot_0x968();
+	virtual void OnRep_MetaData();  // slot 302 (+0x970), UFunction ABuildingSMActor::OnRep_MetaData
+	virtual void FNGC_VSlot_0x978();  // slot 303: ABuildingSMActor::OnRep_ResourceType (signature not recovered)
+	virtual void OnRep_ReplicatedMIC();  // slot 304 (+0x980), UFunction ABuildingSMActor::OnRep_ReplicatedMIC
+	virtual void OnRep_ReplicatedDrawScale3D();  // slot 305 (+0x988), UFunction ABuildingSMActor::OnRep_ReplicatedDrawScale3D
+	virtual void OnRep_WeakSpotPositions();  // slot 306 (+0x990), UFunction ABuildingSMActor::OnRep_WeakSpotPositions
+	virtual void FNGC_VSlot_0x998();
+	virtual void FNGC_VSlot_0x9A0();
+	virtual void FNGC_VSlot_0x9A8();  // slot 309: ABuildingSMActor::GetAnimatingMID (signature not recovered)
+	virtual void FNGC_VSlot_0x9B0();
+	virtual void FNGC_VSlot_0x9B8();
+	virtual void FNGC_VSlot_0x9C0();
+	virtual void FNGC_VSlot_0x9C8();
+	virtual void FNGC_VSlot_0x9D0();
+	virtual void FNGC_VSlot_0x9D8();
+	virtual void FNGC_VSlot_0x9E0();
+	virtual void FNGC_VSlot_0x9E8();
+	virtual void FNGC_VSlot_0x9F0();
+	virtual void FNGC_VSlot_0x9F8();
+	virtual void FNGC_VSlot_0xA00();
+	virtual void FNGC_VSlot_0xA08();
+	virtual void FNGC_VSlot_0xA10();
+	virtual void FNGC_VSlot_0xA18();
+	virtual int32 GetLogicalBuildingIndex() const;  // slot 324 (+0xA20), UFunction ABuildingSMActor::GetLogicalBuildingIndex
+	virtual void FNGC_VSlot_0xA28();
+	virtual void FNGC_VSlot_0xA30();
+	virtual void FNGC_VSlot_0xA38();
+	virtual void FNGC_VSlot_0xA40();
+	virtual void FNGC_VSlot_0xA48();
+	virtual void FNGC_VSlot_0xA50();
+	virtual void FNGC_VSlot_0xA58();
+	virtual void FNGC_VSlot_0xA60();
+	virtual void FNGC_VSlot_0xA68();
+	virtual void FNGC_VSlot_0xA70();
+	virtual void FNGC_VSlot_0xA78();
+	virtual void FNGC_VSlot_0xA80();
+	virtual void FNGC_VSlot_0xA88();
+	virtual void FNGC_VSlot_0xA90();
+	virtual void FNGC_VSlot_0xA98();
+	virtual void FNGC_VSlot_0xAA0();
+	virtual void FNGC_VSlot_0xAA8();
+	virtual void FNGC_VSlot_0xAB0();
+	virtual void FNGC_VSlot_0xAB8();
+	virtual void FNGC_VSlot_0xAC0();
+	virtual void FNGC_VSlot_0xAC8();
+	virtual void FNGC_VSlot_0xAD0();
+	virtual void FNGC_VSlot_0xAD8();
+	virtual void FNGC_VSlot_0xAE0();
+	virtual void FNGC_VSlot_0xAE8();  // slot 349: ABuildingSMActor::RepairBuilding (signature not recovered)
+	virtual void FNGC_VSlot_0xAF0();
+	virtual void FNGC_VSlot_0xAF8();
+	virtual void FNGC_VSlot_0xB00();  // slot 352: ABuildingSMActor::GetReplacementDestructionReason (signature not recovered)
+	virtual void FNGC_VSlot_0xB08();
+	virtual void FNGC_VSlot_0xB10();  // slot 354: ABuildingSMActor::AttachBuildingActorToMe (signature not recovered)
+	virtual void FNGC_VSlot_0xB18();  // slot 355: ABuildingSMActor::DetachBuildingActorFromMe (signature not recovered)
+	virtual void FNGC_VSlot_0xB20();
+	virtual void FNGC_VSlot_0xB28();
+	virtual void FNGC_VSlot_0xB30();
+	virtual void FNGC_VSlot_0xB38();
+	virtual void FNGC_VSlot_0xB40();
+	virtual void FNGC_VSlot_0xB48();
+	virtual void FNGC_VSlot_0xB50();
+	virtual void FNGC_VSlot_0xB58();
+	virtual bool IsStructurallySupported() const;  // slot 364 (+0xB60), UFunction ABuildingSMActor::IsStructurallySupported
+	virtual void FNGC_VSlot_0xB68();
+	virtual void FNGC_VSlot_0xB70();
+	virtual void FNGC_VSlot_0xB78();
+	virtual void FNGC_VSlot_0xB80();
+	virtual void FNGC_VSlot_0xB88();
+	virtual void FNGC_VSlot_0xB90();
+	virtual void OnRep_bUnderConstruction();  // slot 371 (+0xB98), UFunction ABuildingSMActor::OnRep_bUnderConstruction
+	virtual void OnRep_bUnderRepair();  // slot 372 (+0xBA0), UFunction ABuildingSMActor::OnRep_bUnderRepair
+	virtual void OnRep_BuildingReplacementType();  // slot 373 (+0xBA8), UFunction ABuildingSMActor::OnRep_BuildingReplacementType
+	virtual void OnRep_EditingPlayer();  // slot 374 (+0xBB0), UFunction ABuildingSMActor::OnRep_EditingPlayer
+	virtual void OnRep_bCollisionBlockedByPawns();  // slot 375 (+0xBB8), UFunction ABuildingSMActor::OnRep_bCollisionBlockedByPawns
+	virtual void OnRep_RelevantBASE();  // slot 376 (+0xBC0), UFunction ABuildingSMActor::OnRep_RelevantBASE
+	virtual void FNGC_VSlot_0xBC8();  // slot 377: ABuildingSMActor::UpdateRepairMaterialAnim (signature not recovered)
+	virtual void FNGC_VSlot_0xBD0();  // slot 378: ABuildingSMActor::UpdateLODOverrideEffect (signature not recovered)
+	virtual void OnLODOverrideEffectFinished();  // slot 379 (+0xBD8), UFunction ABuildingSMActor::OnLODOverrideEffectFinished
+	virtual void FNGC_VSlot_0xBE0();  // slot 380: ABuildingSMActor::UpdateDynamicShrinkAndDestroyEffect (signature not recovered)
+	virtual void OnDynamicShrinkAndDestroyEffectFinished();  // slot 381 (+0xBE8), UFunction ABuildingSMActor::OnDynamicShrinkAndDestroyEffectFinished
+	virtual void FNGC_VSlot_0xBF0();  // slot 382: ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff1 (signature not recovered)
+	virtual void FNGC_VSlot_0xBF8();  // slot 383: ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff2 (signature not recovered)
 	static void StaticRegisterNativesABuildingSMActor();
 	static void execAttachBuildingActorToMe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBlueprintOnStructurallyStable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4137,6 +4693,25 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();
+	virtual void FNGC_VSlot_0x8C0();
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void FNGC_VSlot_0x8D8();  // slot 283: ABuildingGameplayActor::GetTargetingSourceTransform_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8E0();  // slot 284: ABuildingGameplayActor::K2_ExecuteGameplayCue (signature not recovered)
+	virtual void FNGC_VSlot_0x8E8();  // slot 285: ABuildingGameplayActor::K2_ExecuteGameplayCueWithParams (signature not recovered)
+	virtual void FNGC_VSlot_0x8F0();  // slot 286: ABuildingGameplayActor::K2_AddGameplayCue (signature not recovered)
+	virtual void FNGC_VSlot_0x8F8();  // slot 287: ABuildingGameplayActor::K2_RemoveGameplayCue (signature not recovered)
+	virtual void FNGC_VSlot_0x900();
+	virtual void FNGC_VSlot_0x908();
+	virtual void FNGC_VSlot_0x910();  // slot 290: ABuildingGameplayActor::OnRegisteredTouchComponentBeginOverlap (signature not recovered)
+	virtual void FNGC_VSlot_0x918();  // slot 291: ABuildingGameplayActor::OnRegisteredTouchComponentEndOverlap (signature not recovered)
 	static void StaticRegisterNativesABuildingGameplayActor();
 	static void execDisableAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEnableAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4167,6 +4742,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingCapturePointActor::OnCapturePointLockStateChange_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x928();  // slot 293: ABuildingCapturePointActor::OnCapturePointActiveStateChange_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x930();  // slot 294: ABuildingCapturePointActor::OnCapturePointStateChange_Implementation (signature not recovered)
 	static void StaticRegisterNativesABuildingCapturePointActor();
 	static void execGetCaptureState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnCapturePointActiveStateChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4229,6 +4807,42 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xC00();
+	virtual void FNGC_VSlot_0xC08();
+	virtual void FNGC_VSlot_0xC10();
+	virtual void FNGC_VSlot_0xC18();
+	virtual void FNGC_VSlot_0xC20();
+	virtual void FNGC_VSlot_0xC28();
+	virtual void FNGC_VSlot_0xC30();
+	virtual void FNGC_VSlot_0xC38();
+	virtual void FNGC_VSlot_0xC40();
+	virtual void FNGC_VSlot_0xC48();
+	virtual void FNGC_VSlot_0xC50();
+	virtual void FNGC_VSlot_0xC58();
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void FNGC_VSlot_0xD18();  // slot 419: ABuildingTimeOfDayLights::GetTimeOfDayBlueprintDefaultVariables_Implementation (signature not recovered)
 	static void StaticRegisterNativesABuildingTimeOfDayLights();
 	static void execGetTimeOfDayBlueprintDefaultVariables(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -4247,6 +4861,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xD20();
+	virtual void OnRep_bAlreadySearched();  // slot 421 (+0xD28), UFunction ABuildingContainer::OnRep_bAlreadySearched
+	virtual void BounceContainer();  // slot 422 (+0xD30), UFunction ABuildingContainer::BounceContainer
 	static void StaticRegisterNativesABuildingContainer();
 	static void execBounceContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLootTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4300,6 +4917,29 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingFOBConfigActor::OnCoreInitialized_Implementation (signature not recovered)
+	virtual void OnFinalized_Implementation();  // slot 293 (+0x928), UFunction ABuildingFOBConfigActor::OnFinalized
+	virtual void OnFinalizationFXMulticast_Implementation();  // slot 294 (+0x930), UFunction ABuildingFOBConfigActor::OnFinalizationFXMulticast
+	virtual void FNGC_VSlot_0x938();  // slot 295: ABuildingFOBConfigActor::OnFOBModeSet_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x940();  // slot 296: ABuildingFOBConfigActor::OnIOOperationCompleteMulticast_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x948();
+	virtual void FNGC_VSlot_0x950();
+	virtual void FNGC_VSlot_0x958();
+	virtual void FNGC_VSlot_0x960();
+	virtual void FNGC_VSlot_0x968();
+	virtual void FNGC_VSlot_0x970();
+	virtual bool ReloadFOB();  // slot 303 (+0x978), UFunction ABuildingFOBConfigActor::ReloadFOB
+	virtual bool CanSaveFOB() const;  // slot 304 (+0x980), UFunction ABuildingFOBConfigActor::CanSaveFOB
+	virtual bool CanReloadFOB() const;  // slot 305 (+0x988), UFunction ABuildingFOBConfigActor::CanReloadFOB
+	virtual bool IsInitialized() const;  // slot 306 (+0x990), UFunction ABuildingFOBConfigActor::IsInitialized
+	virtual bool IsFinalized() const;  // slot 307 (+0x998), UFunction ABuildingFOBConfigActor::IsFinalized
+	virtual void FNGC_VSlot_0x9A0();  // slot 308: ABuildingFOBConfigActor::GetFOBMode (signature not recovered)
+	virtual void FNGC_VSlot_0x9A8();  // slot 309: ABuildingFOBConfigActor::AttemptSelectFOBCore (signature not recovered)
+	virtual bool CanPerformIOOperation() const;  // slot 310 (+0x9B0), UFunction ABuildingFOBConfigActor::CanPerformIOOperation
+	virtual void FNGC_VSlot_0x9B8();
+	virtual void OnRep_FOBMode();  // slot 312 (+0x9C0), UFunction ABuildingFOBConfigActor::OnRep_FOBMode
+	virtual void FNGC_VSlot_0x9C8();
+	virtual void OnRep_bFinalized();  // slot 314 (+0x9D0), UFunction ABuildingFOBConfigActor::OnRep_bFinalized
 	static void StaticRegisterNativesABuildingFOBConfigActor();
 	static void execAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanPerformIOOperation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4336,6 +4976,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingFOBCoreActor::GetSimpleDeathFXTransform_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x928();  // slot 293: ABuildingFOBCoreActor::OnVulnerableStatusChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x930();  // slot 294: ABuildingFOBCoreActor::OnTargetableStatusChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x938();  // slot 295: ABuildingFOBCoreActor::OnActiveStatusChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x940();
+	virtual void FNGC_VSlot_0x948();
+	virtual void FNGC_VSlot_0x950();
+	virtual void FNGC_VSlot_0x958();
+	virtual void OnRep_bActive();  // slot 300 (+0x960), UFunction ABuildingFOBCoreActor::OnRep_bActive
+	virtual void OnRep_bTargetable();  // slot 301 (+0x968), UFunction ABuildingFOBCoreActor::OnRep_bTargetable
+	virtual void OnRep_bVulnerable();  // slot 302 (+0x970), UFunction ABuildingFOBCoreActor::OnRep_bVulnerable
 	static void StaticRegisterNativesABuildingFOBCoreActor();
 	static void execGetFOBBoundsBoxOverlappedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFOBBoundsCenterAndExtents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4366,6 +5017,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingFOBCoreSpawnPad::GetCoreSpawnTransform_Implementation (signature not recovered)
 	static void StaticRegisterNativesABuildingFOBCoreSpawnPad();
 	static void execGetCoreSpawnTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -4382,6 +5034,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void OnCarriedObjectDetachedEvent_Implementation();  // slot 292 (+0x920), UFunction ABuildingFlagSpawn::OnCarriedObjectDetachedEvent
+	virtual void OnCarriedObjectAttachedEvent_Implementation();  // slot 293 (+0x928), UFunction ABuildingFlagSpawn::OnCarriedObjectAttachedEvent
 	static void StaticRegisterNativesABuildingFlagSpawn();
 	static void execIsSpawnedObjectAwayFromBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnCarriedObjectAttachedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4421,6 +5075,42 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xC00();
+	virtual void FNGC_VSlot_0xC08();
+	virtual void FNGC_VSlot_0xC10();
+	virtual void FNGC_VSlot_0xC18();
+	virtual void FNGC_VSlot_0xC20();
+	virtual void FNGC_VSlot_0xC28();
+	virtual void FNGC_VSlot_0xC30();
+	virtual void FNGC_VSlot_0xC38();
+	virtual void FNGC_VSlot_0xC40();
+	virtual void FNGC_VSlot_0xC48();
+	virtual void FNGC_VSlot_0xC50();
+	virtual void FNGC_VSlot_0xC58();
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void OnRep_LevelToStream();  // slot 419 (+0xD18), UFunction ABuildingFoundation::OnRep_LevelToStream
 	static void StaticRegisterNativesABuildingFoundation();
 	static void execEditorOnlyAddAdditionalWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEditorOnlyClearAdditionalWorlds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4489,6 +5179,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingGameplayActorConsumable::PrepareOnConsumeGameplayEffectSpec_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x928();  // slot 293: ABuildingGameplayActorConsumable::GetDeathFXTransform_Implementation (signature not recovered)
 	static void StaticRegisterNativesABuildingGameplayActorConsumable();
 	static void execGetDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOnConsumeGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4511,6 +5203,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingItemCollectorActor::OnTeamReachedDepositGoal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x928();  // slot 293: ABuildingItemCollectorActor::UpdateTeamDepositValues_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x930();  // slot 294: ABuildingItemCollectorActor::OnItemCollectorStateChanged_Implementation (signature not recovered)
 	static void StaticRegisterNativesABuildingItemCollectorActor();
 	static void execGetNumberOfTeamCaptures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTeamDepositAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4555,6 +5250,43 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xC00();
+	virtual void FNGC_VSlot_0xC08();
+	virtual void FNGC_VSlot_0xC10();
+	virtual void FNGC_VSlot_0xC18();
+	virtual void FNGC_VSlot_0xC20();
+	virtual void FNGC_VSlot_0xC28();
+	virtual void FNGC_VSlot_0xC30();
+	virtual void FNGC_VSlot_0xC38();
+	virtual void FNGC_VSlot_0xC40();
+	virtual void FNGC_VSlot_0xC48();
+	virtual void FNGC_VSlot_0xC50();
+	virtual void FNGC_VSlot_0xC58();
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void FNGC_VSlot_0xD18();  // slot 419: ABuildingLayoutRequirement::OnRequirementSatisfyingActorDied (signature not recovered)
+	virtual void OnRep_RequirementStatus();  // slot 420 (+0xD20), UFunction ABuildingLayoutRequirement::OnRep_RequirementStatus
 	static void StaticRegisterNativesABuildingLayoutRequirement();
 	static void execActivateRequirement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_RequirementStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4758,6 +5490,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();
+	virtual void FNGC_VSlot_0x8C0();
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void BroadcastRiftSpawningAI_Implementation();  // slot 283 (+0x8D8), UFunction ABuildingRift::BroadcastRiftSpawningAI
 	static void StaticRegisterNativesABuildingRift();
 	static void execBroadcastRiftSpawningAI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_RiftIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4810,6 +5553,62 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xC00();
+	virtual void FNGC_VSlot_0xC08();
+	virtual void FNGC_VSlot_0xC10();
+	virtual void FNGC_VSlot_0xC18();
+	virtual void FNGC_VSlot_0xC20();
+	virtual void FNGC_VSlot_0xC28();
+	virtual void FNGC_VSlot_0xC30();
+	virtual void FNGC_VSlot_0xC38();
+	virtual void FNGC_VSlot_0xC40();
+	virtual void FNGC_VSlot_0xC48();
+	virtual void FNGC_VSlot_0xC50();
+	virtual void FNGC_VSlot_0xC58();
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void FNGC_VSlot_0xD18();  // slot 419: ABuildingTrap::BP_ShouldTrigger_Implementation (signature not recovered)
+	virtual float GetDurabilityPercent() const;  // slot 420 (+0xD20), UFunction ABuildingTrap::GetDurabilityPercent
+	virtual void FNGC_VSlot_0xD28();  // slot 421: ABuildingTrap::GetCenter (signature not recovered)
+	virtual void FNGC_VSlot_0xD30();  // slot 422: ABuildingTrap::AddTriggerComponent (signature not recovered)
+	virtual float GetMaxDurability() const;  // slot 423 (+0xD38), UFunction ABuildingTrap::GetMaxDurability
+	virtual bool HasDurability() const;  // slot 424 (+0xD40), UFunction ABuildingTrap::HasDurability
+	virtual void FNGC_VSlot_0xD48();  // slot 425: ABuildingTrap::GetTouchingDamageTargets (signature not recovered)
+	virtual float GetFireDelay() const;  // slot 426 (+0xD50), UFunction ABuildingTrap::GetFireDelay
+	virtual float GetDamageDelay() const;  // slot 427 (+0xD58), UFunction ABuildingTrap::GetDamageDelay
+	virtual void FinishTrigger();  // slot 428 (+0xD60), UFunction ABuildingTrap::FinishTrigger
+	virtual void FNGC_VSlot_0xD68();  // slot 429: ABuildingTrap::AttemptRetrigger (signature not recovered)
+	virtual int32 GetTrapLevel() const;  // slot 430 (+0xD70), UFunction ABuildingTrap::GetTrapLevel
+	virtual int32 GetTrapRating() const;  // slot 431 (+0xD78), UFunction ABuildingTrap::GetTrapRating
+	virtual void FNGC_VSlot_0xD80();
+	virtual void FNGC_VSlot_0xD88();
+	virtual void FNGC_VSlot_0xD90();
+	virtual void OnRep_ReplicatedAppliedAlterations();  // slot 435 (+0xD98), UFunction ABuildingTrap::OnRep_ReplicatedAppliedAlterations
+	virtual void FNGC_VSlot_0xDA0();  // slot 436: ABuildingTrap::GetAlterations (signature not recovered)
+	virtual void OnRep_AttachedTo();  // slot 437 (+0xDA8), UFunction ABuildingTrap::OnRep_AttachedTo
+	virtual void TriggerIfAppropriate();  // slot 438 (+0xDB0), UFunction ABuildingTrap::TriggerIfAppropriate
+	virtual void FNGC_VSlot_0xDB8();  // slot 439: ABuildingTrap::OnTriggerTouch (signature not recovered)
 	static void StaticRegisterNativesABuildingTrap();
 	static void execAddDamageComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddTriggerComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4932,6 +5731,43 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xC00();
+	virtual void FNGC_VSlot_0xC08();
+	virtual void FNGC_VSlot_0xC10();
+	virtual void FNGC_VSlot_0xC18();
+	virtual void FNGC_VSlot_0xC20();
+	virtual void FNGC_VSlot_0xC28();
+	virtual void FNGC_VSlot_0xC30();
+	virtual void FNGC_VSlot_0xC38();
+	virtual void FNGC_VSlot_0xC40();
+	virtual void FNGC_VSlot_0xC48();
+	virtual void FNGC_VSlot_0xC50();
+	virtual void FNGC_VSlot_0xC58();
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void OnRep_bDoorOpen();  // slot 419 (+0xD18), UFunction ABuildingWall::OnRep_bDoorOpen
+	virtual void OnRep_bDoorCollisionDisabled();  // slot 420 (+0xD20), UFunction ABuildingWall::OnRep_bDoorCollisionDisabled
 	static void StaticRegisterNativesABuildingWall();
 	static void execIsDoorOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_bDoorCollisionDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5019,6 +5855,45 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();  // slot 227: ACharacter::CacheInitialMeshOffset (signature not recovered)
+	virtual void OnRep_ReplicatedBasedMovement();  // slot 228 (+0x720), UFunction ACharacter::OnRep_ReplicatedBasedMovement
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();  // slot 230: ACharacter::GetBaseRotationOffsetRotator (signature not recovered)
+	virtual void OnRep_IsCrouched();  // slot 231 (+0x738), UFunction ACharacter::OnRep_IsCrouched
+	virtual void FNGC_VSlot_0x740();
+	virtual void Jump();  // slot 233 (+0x748), UFunction ACharacter::Jump
+	virtual void StopJumping();  // slot 234 (+0x750), UFunction ACharacter::StopJumping
+	virtual bool CanJumpInternal_Implementation() const;  // slot 235 (+0x758), UFunction ACharacter::CanJumpInternal
+	virtual bool IsJumpProvidingForce() const;  // slot 236 (+0x760), UFunction ACharacter::IsJumpProvidingForce
+	virtual void FNGC_VSlot_0x768();  // slot 237: ACharacter::PlayAnimMontage (signature not recovered)
+	virtual void FNGC_VSlot_0x770();  // slot 238: ACharacter::StopAnimMontage (signature not recovered)
+	virtual void FNGC_VSlot_0x778();  // slot 239: ACharacter::LaunchCharacter (signature not recovered)
+	virtual void OnJumped_Implementation();  // slot 240 (+0x780), UFunction ACharacter::OnJumped
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();
+	virtual void FNGC_VSlot_0x798();
+	virtual void FNGC_VSlot_0x7A0();  // slot 244: ACharacter::OnWalkingOffLedge_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x7A8();
+	virtual void FNGC_VSlot_0x7B0();  // slot 246: ACharacter::Crouch (signature not recovered)
+	virtual void FNGC_VSlot_0x7B8();  // slot 247: ACharacter::UnCrouch (signature not recovered)
+	virtual void FNGC_VSlot_0x7C0();
+	virtual void FNGC_VSlot_0x7C8();
+	virtual void FNGC_VSlot_0x7D0();
+	virtual void FNGC_VSlot_0x7D8();
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void ClientCheatWalk_Implementation();  // slot 256 (+0x800), UFunction ACharacter::ClientCheatWalk
+	virtual void ClientCheatFly_Implementation();  // slot 257 (+0x808), UFunction ACharacter::ClientCheatFly
+	virtual void ClientCheatGhost_Implementation();  // slot 258 (+0x810), UFunction ACharacter::ClientCheatGhost
+	virtual void FNGC_VSlot_0x818();  // slot 259: ACharacter::RootMotionDebugClientPrintOnScreen_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x820();
+	virtual void FNGC_VSlot_0x828();  // slot 261: AFortPawn::ServerTeleportNearLocation_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x830();  // slot 262: AFortPawn::ServerTeleportNearLocation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x838();  // slot 263: AFortPawn::ServerInternalEquipWeapon_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x840();  // slot 264: AFortPawn::ServerInternalEquipWeapon_Implementation (signature not recovered)
 	static void StaticRegisterNativesACharacter();
 	static void execCacheInitialMeshOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5145,6 +6020,189 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000002000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();  // slot 228: APlayerController::OnServerStartedVisualLogger_Implementation (signature not recovered)
+	virtual bool ServerToggleAILogging_Validate();  // slot 229 (+0x728), UFunction APlayerController::ServerToggleAILogging
+	virtual void ServerToggleAILogging_Implementation();  // slot 230 (+0x730), UFunction APlayerController::ServerToggleAILogging
+	virtual void FNGC_VSlot_0x738();  // slot 231: APlayerController::ClientTeamMessage_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x740();  // slot 232: APlayerController::ServerViewSelf_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x748();  // slot 233: APlayerController::ServerViewSelf_Implementation (signature not recovered)
+	virtual bool ServerViewPrevPlayer_Validate();  // slot 234 (+0x750), UFunction APlayerController::ServerViewPrevPlayer
+	virtual void ServerViewPrevPlayer_Implementation();  // slot 235 (+0x758), UFunction APlayerController::ServerViewPrevPlayer
+	virtual bool ServerViewNextPlayer_Validate();  // slot 236 (+0x760), UFunction APlayerController::ServerViewNextPlayer
+	virtual void ServerViewNextPlayer_Implementation();  // slot 237 (+0x768), UFunction APlayerController::ServerViewNextPlayer
+	virtual bool ServerVerifyViewTarget_Validate();  // slot 238 (+0x770), UFunction APlayerController::ServerVerifyViewTarget
+	virtual void ServerVerifyViewTarget_Implementation();  // slot 239 (+0x778), UFunction APlayerController::ServerVerifyViewTarget
+	virtual void FNGC_VSlot_0x780();  // slot 240: APlayerController::ServerUpdateCamera_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x788();  // slot 241: APlayerController::ServerUpdateCamera_Implementation (signature not recovered)
+	virtual bool ServerShortTimeout_Validate();  // slot 242 (+0x790), UFunction APlayerController::ServerShortTimeout
+	virtual void ServerShortTimeout_Implementation();  // slot 243 (+0x798), UFunction APlayerController::ServerShortTimeout
+	virtual bool ServerCheckClientPossessionReliable_Validate();  // slot 244 (+0x7A0), UFunction APlayerController::ServerCheckClientPossessionReliable
+	virtual void ServerCheckClientPossessionReliable_Implementation();  // slot 245 (+0x7A8), UFunction APlayerController::ServerCheckClientPossessionReliable
+	virtual bool ServerCheckClientPossession_Validate();  // slot 246 (+0x7B0), UFunction APlayerController::ServerCheckClientPossession
+	virtual void ServerCheckClientPossession_Implementation();  // slot 247 (+0x7B8), UFunction APlayerController::ServerCheckClientPossession
+	virtual void FNGC_VSlot_0x7C0();  // slot 248: APlayerController::ServerSetSpectatorLocation_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x7C8();  // slot 249: APlayerController::ServerSetSpectatorLocation_Implementation (signature not recovered)
+	virtual bool ServerRestartPlayer_Validate();  // slot 250 (+0x7D0), UFunction APlayerController::ServerRestartPlayer
+	virtual void ServerRestartPlayer_Implementation();  // slot 251 (+0x7D8), UFunction APlayerController::ServerRestartPlayer
+	virtual bool ServerPause_Validate();  // slot 252 (+0x7E0), UFunction APlayerController::ServerPause
+	virtual void ServerPause_Implementation();  // slot 253 (+0x7E8), UFunction APlayerController::ServerPause
+	virtual void FNGC_VSlot_0x7F0();  // slot 254: APlayerController::ServerChangeName_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x7F8();  // slot 255: APlayerController::ServerChangeName_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x800();  // slot 256: APlayerController::ServerCamera_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x808();  // slot 257: APlayerController::ServerCamera_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x810();  // slot 258: APlayerController::ServerAcknowledgePossession_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x818();  // slot 259: APlayerController::ServerAcknowledgePossession_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x820();  // slot 260: APlayerController::ClientReceiveLocalizedMessage_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x828();  // slot 261: APlayerController::ClientRetryClientRestart_Implementation (signature not recovered)
+	virtual void ClientEndOnlineSession_Implementation();  // slot 262 (+0x830), UFunction APlayerController::ClientEndOnlineSession
+	virtual void ClientStartOnlineSession_Implementation();  // slot 263 (+0x838), UFunction APlayerController::ClientStartOnlineSession
+	virtual void FNGC_VSlot_0x840();  // slot 264: APlayerController::ClientWasKicked_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x848();  // slot 265: APlayerController::ClientUpdateMultipleLevelsStreamingStatus_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x850();  // slot 266: APlayerController::ClientUpdateLevelStreamingStatus_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x858();  // slot 267: APlayerController::ClientTravelInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x860();  // slot 268: APlayerController::ClientStopForceFeedback_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x868();  // slot 269: APlayerController::ClientPlayForceFeedback_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x870();  // slot 270: APlayerController::ClientStopCameraShake_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x878();  // slot 271: APlayerController::ClientStopCameraAnim_Implementation (signature not recovered)
+	virtual void ClientClearCameraLensEffects_Implementation();  // slot 272 (+0x880), UFunction APlayerController::ClientClearCameraLensEffects
+	virtual void FNGC_VSlot_0x888();  // slot 273: APlayerController::ClientSpawnCameraLensEffect_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x890();  // slot 274: APlayerController::ClientSetViewTarget_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x898();  // slot 275: APlayerController::ClientSetHUD_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8A0();  // slot 276: APlayerController::ClientSetForceMipLevelsToBeResident_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8A8();  // slot 277: APlayerController::ClientSetCinematicMode_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8B0();  // slot 278: APlayerController::ClientSetCameraMode_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8B8();  // slot 279: APlayerController::ClientSetCameraFade_Implementation (signature not recovered)
+	virtual void ClientSetBlockOnAsyncLoading_Implementation();  // slot 280 (+0x8C0), UFunction APlayerController::ClientSetBlockOnAsyncLoading
+	virtual void FNGC_VSlot_0x8C8();  // slot 281: APlayerController::ClientRestart_Implementation (signature not recovered)
+	virtual void ClientReset_Implementation();  // slot 282 (+0x8D0), UFunction APlayerController::ClientReset
+	virtual void FNGC_VSlot_0x8D8();  // slot 283: APlayerController::ClientPrestreamTextures_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8E0();  // slot 284: APlayerController::ClientPrepareMapChange_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8E8();  // slot 285: APlayerController::ClientPlaySoundAtLocation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8F0();  // slot 286: APlayerController::ClientPlaySound_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x8F8();  // slot 287: APlayerController::ClientPlayCameraShake_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x900();  // slot 288: APlayerController::ClientPlayCameraAnim_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x908();  // slot 289: APlayerController::ClientMessage_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x910();  // slot 290: APlayerController::ClientIgnoreMoveInput_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x918();  // slot 291: APlayerController::ClientIgnoreLookInput_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x920();  // slot 292: APlayerController::ClientGotoState_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x928();  // slot 293: APlayerController::ClientGameEnded_Implementation (signature not recovered)
+	virtual void ClientForceGarbageCollection_Implementation();  // slot 294 (+0x930), UFunction APlayerController::ClientForceGarbageCollection
+	virtual void ClientCommitMapChange_Implementation();  // slot 295 (+0x938), UFunction APlayerController::ClientCommitMapChange
+	virtual void FNGC_VSlot_0x940();  // slot 296: APlayerController::ClientCapBandwidth_Implementation (signature not recovered)
+	virtual void ClientCancelPendingMapChange_Implementation();  // slot 297 (+0x948), UFunction APlayerController::ClientCancelPendingMapChange
+	virtual void FNGC_VSlot_0x950();  // slot 298: APlayerController::ClientUnmutePlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x958();  // slot 299: APlayerController::ClientMutePlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x960();  // slot 300: APlayerController::ServerUnmutePlayer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x968();  // slot 301: APlayerController::ServerUnmutePlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x970();  // slot 302: APlayerController::ServerMutePlayer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x978();  // slot 303: APlayerController::ServerMutePlayer_Implementation (signature not recovered)
+	virtual void ClientVoiceHandshakeComplete_Implementation();  // slot 304 (+0x980), UFunction APlayerController::ClientVoiceHandshakeComplete
+	virtual void FNGC_VSlot_0x988();  // slot 305: APlayerController::ClientEnableNetworkVoice_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x990();  // slot 306: APlayerController::ClientRepObjRef_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x998();  // slot 307: APlayerController::ClientReturnToMainMenuWithTextReason_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x9A0();  // slot 308: APlayerController::ClientReturnToMainMenu_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x9A8();  // slot 309: APlayerController::ClientSetSpectatorWaiting_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x9B0();  // slot 310: APlayerController::ServerSetSpectatorWaiting_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x9B8();  // slot 311: APlayerController::ServerSetSpectatorWaiting_Implementation (signature not recovered)
+	virtual void EnableCheats();  // slot 312 (+0x9C0), UFunction APlayerController::EnableCheats
+	virtual void FNGC_VSlot_0x9C8();
+	virtual void FNGC_VSlot_0x9D0();
+	virtual void FNGC_VSlot_0x9D8();  // slot 315: APlayerController::FOV (signature not recovered)
+	virtual void RestartLevel();  // slot 316 (+0x9E0), UFunction APlayerController::RestartLevel
+	virtual void FNGC_VSlot_0x9E8();  // slot 317: APlayerController::LocalTravel (signature not recovered)
+	virtual void FNGC_VSlot_0x9F0();
+	virtual void FNGC_VSlot_0x9F8();
+	virtual void FNGC_VSlot_0xA00();
+	virtual void FNGC_VSlot_0xA08();
+	virtual void Pause();  // slot 322 (+0xA10), UFunction APlayerController::Pause
+	virtual void FNGC_VSlot_0xA18();  // slot 323: APlayerController::SetName (signature not recovered)
+	virtual void FNGC_VSlot_0xA20();  // slot 324: APlayerController::SwitchLevel (signature not recovered)
+	virtual void FNGC_VSlot_0xA28();
+	virtual void FNGC_VSlot_0xA30();
+	virtual void FNGC_VSlot_0xA38();
+	virtual void FNGC_VSlot_0xA40();
+	virtual void FNGC_VSlot_0xA48();  // slot 329: APlayerController::SetCinematicMode (signature not recovered)
+	virtual void FNGC_VSlot_0xA50();
+	virtual void FNGC_VSlot_0xA58();
+	virtual void FNGC_VSlot_0xA60();
+	virtual void FNGC_VSlot_0xA68();
+	virtual void FNGC_VSlot_0xA70();
+	virtual void FNGC_VSlot_0xA78();  // slot 335: APlayerController::StartFire (signature not recovered)
+	virtual void FNGC_VSlot_0xA80();
+	virtual void FNGC_VSlot_0xA88();
+	virtual void FNGC_VSlot_0xA90();
+	virtual void FNGC_VSlot_0xA98();
+	virtual void FNGC_VSlot_0xAA0();
+	virtual void FNGC_VSlot_0xAA8();
+	virtual void FNGC_VSlot_0xAB0();  // slot 342: APlayerController::ToggleSpeaking (signature not recovered)
+	virtual void FNGC_VSlot_0xAB8();
+	virtual void FNGC_VSlot_0xAC0();
+	virtual void FNGC_VSlot_0xAC8();
+	virtual void FNGC_VSlot_0xAD0();
+	virtual void FNGC_VSlot_0xAD8();
+	virtual void FNGC_VSlot_0xAE0();
+	virtual void FNGC_VSlot_0xAE8();
+	virtual void FNGC_VSlot_0xAF0();
+	virtual void FNGC_VSlot_0xAF8();  // slot 351: APlayerController::ConsoleKey (signature not recovered)
+	virtual void FNGC_VSlot_0xB00();  // slot 352: APlayerController::SendToConsole (signature not recovered)
+	virtual void FNGC_VSlot_0xB08();
+	virtual void FNGC_VSlot_0xB10();
+	virtual void FNGC_VSlot_0xB18();
+	virtual void FNGC_VSlot_0xB20();  // slot 356: APlayerController::AddPitchInput (signature not recovered)
+	virtual void FNGC_VSlot_0xB28();  // slot 357: APlayerController::AddYawInput (signature not recovered)
+	virtual void FNGC_VSlot_0xB30();  // slot 358: APlayerController::AddRollInput (signature not recovered)
+	virtual void FNGC_VSlot_0xB38();  // slot 359: APlayerController::ActivateTouchInterface (signature not recovered)
+	virtual void FNGC_VSlot_0xB40();  // slot 360: APlayerController::SetVirtualJoystickVisibility (signature not recovered)
+	virtual void FNGC_VSlot_0xB48();
+	virtual void FNGC_VSlot_0xB50();  // slot 362: APlayerController::Camera (signature not recovered)
+	virtual void FNGC_VSlot_0xB58();  // slot 363: APlayerController::SetViewTargetWithBlend (signature not recovered)
+	virtual void FNGC_VSlot_0xB60();
+	virtual void FNGC_VSlot_0xB68();
+	virtual void FNGC_VSlot_0xB70();
+	virtual void FNGC_VSlot_0xB78();
+	virtual void FNGC_VSlot_0xB80();
+	virtual void FNGC_VSlot_0xB88();
+	virtual void FNGC_VSlot_0xB90();
+	virtual void FNGC_VSlot_0xB98();
+	virtual void FNGC_VSlot_0xBA0();
+	virtual void FNGC_VSlot_0xBA8();
+	virtual void FNGC_VSlot_0xBB0();
+	virtual void FNGC_VSlot_0xBB8();
+	virtual void FNGC_VSlot_0xBC0();
+	virtual void FNGC_VSlot_0xBC8();
+	virtual void FNGC_VSlot_0xBD0();
+	virtual void FNGC_VSlot_0xBD8();
+	virtual void FNGC_VSlot_0xBE0();
+	virtual void FNGC_VSlot_0xBE8();
+	virtual void FNGC_VSlot_0xBF0();
+	virtual void FNGC_VSlot_0xBF8();
+	virtual void FNGC_VSlot_0xC00();
+	virtual void FNGC_VSlot_0xC08();
+	virtual void FNGC_VSlot_0xC10();
+	virtual void FNGC_VSlot_0xC18();
+	virtual void FNGC_VSlot_0xC20();
+	virtual void FNGC_VSlot_0xC28();
+	virtual void FNGC_VSlot_0xC30();
+	virtual void FNGC_VSlot_0xC38();
+	virtual void FNGC_VSlot_0xC40();
+	virtual void FNGC_VSlot_0xC48();
+	virtual void FNGC_VSlot_0xC50();
+	virtual void FNGC_VSlot_0xC58();
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();  // slot 407: APlayerController::GetFocalLocation (signature not recovered)
 	static void StaticRegisterNativesAPlayerController();
 	static void execActivateTouchInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddPitchInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5288,6 +6346,20 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void FNGC_VSlot_0xD18();
+	virtual void FNGC_VSlot_0xD20();
+	virtual void ShowDebugSelectedInfo();  // slot 421 (+0xD28), UFunction ADebugCameraController::ShowDebugSelectedInfo
 	static void StaticRegisterNativesADebugCameraController();
 	static void execGetSelectedActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetPawnMovementSpeedScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5411,6 +6483,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x920();  // slot 292: ADeployableBasePlot::HandleBuildingStateTransition_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x928();  // slot 293: ADeployableBasePlot::OnCurrentBuildingStateSet_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x930();  // slot 294: ADeployableBasePlot::OnBuildingStateTransition_Implementation (signature not recovered)
 	static void StaticRegisterNativesADeployableBasePlot();
 	static void execGetNumOfItemsInPlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOccupantNetID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5455,6 +6530,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_bEnabled();  // slot 189 (+0x5E8), UFunction ALight::OnRep_bEnabled
 	static void StaticRegisterNativesALight();
 	static void execGetBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5534,6 +6615,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AEmitter::OnParticleSystemFinished (signature not recovered)
+	virtual void OnRep_bCurrentlyActive();  // slot 190 (+0x5F0), UFunction AEmitter::OnRep_bCurrentlyActive
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AEmitter::SetTemplate (signature not recovered)
 	static void StaticRegisterNativesAEmitter();
 	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDeactivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5634,6 +6723,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x7A8();
+	virtual void FNGC_VSlot_0x7B0();
+	virtual void FNGC_VSlot_0x7B8();  // slot 247: AFortAIController::IgnoreProximityForDuration (signature not recovered)
 	static void StaticRegisterNativesAFortAIController();
 	static void execCreateBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5671,6 +6763,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void Activate();  // slot 189 (+0x5E8), UFunction AFortAIDirector::Activate
+	virtual void Deactivate();  // slot 190 (+0x5F0), UFunction AFortAIDirector::Deactivate
+	virtual int32 GetNumPlayers();  // slot 191 (+0x5F8), UFunction AFortAIDirector::GetNumPlayers
+	virtual void FNGC_VSlot_0x600();  // slot 192: AFortAIDirector::OnDayPhaseChanged (signature not recovered)
 	static void StaticRegisterNativesAFortAIDirector();
 	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execConvertInvalidDirectionsToValidDirections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5705,6 +6806,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AFortAIDirectorDataManager::TriggerEvent (signature not recovered)
 	static void StaticRegisterNativesAFortAIDirectorDataManager();
 	static void execGetAIDirectorFactorValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execTriggerEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5869,6 +6977,98 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x848();  // slot 265: AFortPawn::PlaySound_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x850();
+	virtual void OnRep_TeleportCounter();  // slot 267 (+0x858), UFunction AFortPawn::OnRep_TeleportCounter
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();
+	virtual void FNGC_VSlot_0x870();
+	virtual void FNGC_VSlot_0x878();
+	virtual void FNGC_VSlot_0x880();
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();  // slot 279: AFortPawn::SetSpawnSpot (signature not recovered)
+	virtual void FNGC_VSlot_0x8C0();
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void FNGC_VSlot_0x8D8();
+	virtual void HideBodyOnDeath();  // slot 284 (+0x8E0), UFunction AFortPawn::HideBodyOnDeath
+	virtual void FNGC_VSlot_0x8E8();
+	virtual void FNGC_VSlot_0x8F0();
+	virtual void FNGC_VSlot_0x8F8();
+	virtual void OnRep_IsDBNO();  // slot 288 (+0x900), UFunction AFortPawn::OnRep_IsDBNO
+	virtual void FNGC_VSlot_0x908();
+	virtual void FNGC_VSlot_0x910();
+	virtual void FNGC_VSlot_0x918();
+	virtual void FNGC_VSlot_0x920();
+	virtual void FNGC_VSlot_0x928();
+	virtual void FNGC_VSlot_0x930();
+	virtual void FNGC_VSlot_0x938();
+	virtual void FNGC_VSlot_0x940();
+	virtual void FNGC_VSlot_0x948();
+	virtual void FNGC_VSlot_0x950();
+	virtual void FNGC_VSlot_0x958();  // slot 299: AFortAIPawn::OnRep_CurrentWeapon (signature not recovered)
+	virtual void HandleIsDying();  // slot 300 (+0x960), UFunction AFortPawn::HandleIsDying
+	virtual void HandleIsHiddenForDeath();  // slot 301 (+0x968), UFunction AFortPawn::HandleIsHiddenForDeath
+	virtual void OnRep_VocalChords();  // slot 302 (+0x970), UFunction AFortPawn::OnRep_VocalChords
+	virtual float GetMaxHealth() const;  // slot 303 (+0x978), UFunction AFortPawn::GetMaxHealth
+	virtual void FNGC_VSlot_0x980();
+	virtual void FNGC_VSlot_0x988();
+	virtual bool IsActionInputIgnored() const;  // slot 306 (+0x990), UFunction AFortPawn::IsActionInputIgnored
+	virtual void FNGC_VSlot_0x998();  // slot 307: AFortPawn::PawnStopFire (signature not recovered)
+	virtual void FNGC_VSlot_0x9A0();  // slot 308: AFortPawn::PlayFootStepSound (signature not recovered)
+	virtual void FNGC_VSlot_0x9A8();
+	virtual void FNGC_VSlot_0x9B0();
+	virtual void FNGC_VSlot_0x9B8();
+	virtual void FNGC_VSlot_0x9C0();
+	virtual void FNGC_VSlot_0x9C8();
+	virtual void FNGC_VSlot_0x9D0();  // slot 314: AFortPawn::PickUpActor (signature not recovered)
+	virtual void FNGC_VSlot_0x9D8();
+	virtual void FNGC_VSlot_0x9E0();
+	virtual void FNGC_VSlot_0x9E8();
+	virtual void FNGC_VSlot_0x9F0();
+	virtual void FNGC_VSlot_0x9F8();
+	virtual void FNGC_VSlot_0xA00();
+	virtual void FNGC_VSlot_0xA08();
+	virtual void FNGC_VSlot_0xA10();
+	virtual void FNGC_VSlot_0xA18();  // slot 323: AFortPawn::GameplayCue_Damage (signature not recovered)
+	virtual void FNGC_VSlot_0xA20();  // slot 324: AFortPawn::GameplayCue_InstantDeath (signature not recovered)
+	virtual void FNGC_VSlot_0xA28();  // slot 325: AFortPawn::GameplayCue (signature not recovered)
+	virtual void FNGC_VSlot_0xA30();
+	virtual void FNGC_VSlot_0xA38();
+	virtual void FNGC_VSlot_0xA40();
+	virtual void FNGC_VSlot_0xA48();
+	virtual void FNGC_VSlot_0xA50();
+	virtual void FNGC_VSlot_0xA58();
+	virtual void FNGC_VSlot_0xA60();
+	virtual void FNGC_VSlot_0xA68();
+	virtual void FNGC_VSlot_0xA70();
+	virtual void FNGC_VSlot_0xA78();
+	virtual void FNGC_VSlot_0xA80();
+	virtual void FNGC_VSlot_0xA88();
+	virtual void FNGC_VSlot_0xA90();
+	virtual void FNGC_VSlot_0xA98();
+	virtual void FNGC_VSlot_0xAA0();
+	virtual void FNGC_VSlot_0xAA8();  // slot 341: AFortPawn::GetDefaultTargetingOrigin (signature not recovered)
+	virtual void FNGC_VSlot_0xAB0();  // slot 342: AFortPawn::GetDefaultTargetingRotation (signature not recovered)
+	virtual void FNGC_VSlot_0xAB8();
+	virtual void FNGC_VSlot_0xAC0();
+	virtual void FNGC_VSlot_0xAC8();
+	virtual void FNGC_VSlot_0xAD0();
+	virtual void FNGC_VSlot_0xAD8();
+	virtual void FNGC_VSlot_0xAE0();
+	virtual void FNGC_VSlot_0xAE8();
+	virtual void FNGC_VSlot_0xAF0();
+	virtual void FNGC_VSlot_0xAF8();
+	virtual void FNGC_VSlot_0xB00();
+	virtual void FNGC_VSlot_0xB08();
+	virtual void FNGC_VSlot_0xB10();
+	virtual void FNGC_VSlot_0xB18();
+	virtual float GetHealthPercent() const;  // slot 356 (+0xB20), UFunction AFortPawn::GetHealthPercent
 	static void StaticRegisterNativesAFortPawn();
 	static void execAlignRotationToHitDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAnimMontage_LocalJumpToSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5981,6 +7181,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0xB28();
+	virtual void FNGC_VSlot_0xB30();
+	virtual void FNGC_VSlot_0xB38();
+	virtual void FNGC_VSlot_0xB40();
+	virtual void FNGC_VSlot_0xB48();
+	virtual void FNGC_VSlot_0xB50();
+	virtual void FNGC_VSlot_0xB58();
+	virtual void FNGC_VSlot_0xB60();  // slot 364: AFortAIPawn::SetCollisionProfileName (signature not recovered)
+	virtual void FNGC_VSlot_0xB68();  // slot 365: AFortAIPawn::SetIsCharging (signature not recovered)
+	virtual void FNGC_VSlot_0xB70();  // slot 366: AFortAIPawn::SetEyeColor (signature not recovered)
+	virtual void FNGC_VSlot_0xB78();  // slot 367: AFortAIPawn::SetSkinColor (signature not recovered)
+	virtual void FNGC_VSlot_0xB80();
+	virtual void FNGC_VSlot_0xB88();  // slot 369: AFortAIPawn::SetMovementUrgency (signature not recovered)
 	static void StaticRegisterNativesAFortAIPawn();
 	static void execAddFortAbilitySet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddUnreachablePickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6056,6 +7269,114 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual bool ServerReleaseWeaponPrimaryAbility_Validate();  // slot 189 (+0x5E8), UFunction AFortWeapon::ServerReleaseWeaponPrimaryAbility
+	virtual void ServerReleaseWeaponPrimaryAbility_Implementation();  // slot 190 (+0x5F0), UFunction AFortWeapon::ServerReleaseWeaponPrimaryAbility
+	virtual bool ServerResetShotReport_Validate();  // slot 191 (+0x5F8), UFunction AFortWeapon::ServerResetShotReport
+	virtual void ServerResetShotReport_Implementation();  // slot 192 (+0x600), UFunction AFortWeapon::ServerResetShotReport
+	virtual void FNGC_VSlot_0x608();  // slot 193: AFortWeapon::ClientReportShotFlags_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortWeapon::ServerSetChargeState_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x618();  // slot 195: AFortWeapon::ServerSetChargeState_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x620();  // slot 196: AFortWeapon::ClientGivenTo_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: AFortWeapon::GetMuzzleLocation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();  // slot 201: AFortWeapon::PlayWeaponFireFX (signature not recovered)
+	virtual void StopWeaponFireFX();  // slot 202 (+0x650), UFunction AFortWeapon::StopWeaponFireFX
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();  // slot 207: AFortWeapon::GetDamageStartLocation (signature not recovered)
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();
+	virtual void FNGC_VSlot_0x738();
+	virtual void FNGC_VSlot_0x740();
+	virtual void FNGC_VSlot_0x748();
+	virtual void FNGC_VSlot_0x750();
+	virtual void FNGC_VSlot_0x758();
+	virtual void FNGC_VSlot_0x760();
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();
+	virtual int32 GetMagazineAmmoCount() const;  // slot 243 (+0x798), UFunction AFortWeapon::GetMagazineAmmoCount
+	virtual int32 GetLocalMagazineAmmoCount() const;  // slot 244 (+0x7A0), UFunction AFortWeapon::GetLocalMagazineAmmoCount
+	virtual int32 GetRemainingAmmo() const;  // slot 245 (+0x7A8), UFunction AFortWeapon::GetRemainingAmmo
+	virtual int32 GetLocalRemainingAmmo() const;  // slot 246 (+0x7B0), UFunction AFortWeapon::GetLocalRemainingAmmo
+	virtual void FNGC_VSlot_0x7B8();
+	virtual void FNGC_VSlot_0x7C0();
+	virtual void FNGC_VSlot_0x7C8();
+	virtual bool IsReloading() const;  // slot 250 (+0x7D0), UFunction AFortWeapon::IsReloading
+	virtual void Reload();  // slot 251 (+0x7D8), UFunction AFortWeapon::Reload
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();
+	virtual float GetReloadTime() const;  // slot 255 (+0x7F8), UFunction AFortWeapon::GetReloadTime
+	virtual float GetReloadProgress() const;  // slot 256 (+0x800), UFunction AFortWeapon::GetReloadProgress
+	virtual void FNGC_VSlot_0x808();
+	virtual void FNGC_VSlot_0x810();  // slot 258: AFortWeapon::PlayReloadFX (signature not recovered)
+	virtual float GetRange() const;  // slot 259 (+0x818), UFunction AFortWeapon::GetRange
+	virtual bool IsProjectileWeapon() const;  // slot 260 (+0x820), UFunction AFortWeapon::IsProjectileWeapon
+	virtual void FNGC_VSlot_0x828();
+	virtual void FNGC_VSlot_0x830();
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();
+	virtual void FNGC_VSlot_0x848();  // slot 265: AFortWeapon::GetReticleColor (signature not recovered)
+	virtual void FNGC_VSlot_0x850();
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();
+	virtual void FNGC_VSlot_0x870();  // slot 270: AFortWeapon::DetermineReticleColor (signature not recovered)
+	virtual void FNGC_VSlot_0x878();
+	virtual void FNGC_VSlot_0x880();
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void OnRep_ReplicatedWeaponData();  // slot 275 (+0x898), UFunction AFortWeapon::OnRep_ReplicatedWeaponData
+	virtual void OnRep_ReplicatedAppliedAlterations();  // slot 276 (+0x8A0), UFunction AFortWeapon::OnRep_ReplicatedAppliedAlterations
+	virtual void OnRep_AmmoCount();  // slot 277 (+0x8A8), UFunction AFortWeapon::OnRep_AmmoCount
+	virtual void FNGC_VSlot_0x8B0();  // slot 278: AFortWeapon::GameplayCue_Weapons_Activation (signature not recovered)
+	virtual void FNGC_VSlot_0x8B8();  // slot 279: AFortWeapon::GameplayCue_Impact (signature not recovered)
+	virtual void FNGC_VSlot_0x8C0();  // slot 280: AFortWeapon::PlayNativeImpactFX (signature not recovered)
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void FNGC_VSlot_0x8D8();
+	virtual void FNGC_VSlot_0x8E0();
+	virtual void FNGC_VSlot_0x8E8();
+	virtual void FNGC_VSlot_0x8F0();
+	virtual void FNGC_VSlot_0x8F8();
+	virtual void FNGC_VSlot_0x900();
+	virtual void FNGC_VSlot_0x908();
+	virtual void FNGC_VSlot_0x910();
+	virtual void FNGC_VSlot_0x918();  // slot 291: AFortWeapon::GetAlterations (signature not recovered)
 	static void StaticRegisterNativesAFortWeapon();
 	static void execClientGivenTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientReportShotFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6121,6 +7442,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x920();
+	virtual void ClientDestroyDecoPreview_Implementation();  // slot 293 (+0x928), UFunction AFortDecoTool::ClientDestroyDecoPreview
+	virtual void FNGC_VSlot_0x930();  // slot 294: AFortDecoTool::ServerSpawnDeco_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x938();  // slot 295: AFortDecoTool::ServerSpawnDeco_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortDecoTool();
 	static void execClientDestroyDecoPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnCarriedActorDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6185,6 +7510,22 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AFortGameplayEffectDeliveryActor::BroadcastExplosion_Implementation (signature not recovered)
+	virtual void DoExplosion();  // slot 190 (+0x5F0), UFunction AFortGameplayEffectDeliveryActor::DoExplosion
+	virtual void Kill();  // slot 191 (+0x5F8), UFunction AFortGameplayEffectDeliveryActor::Kill
+	virtual bool IsBeingKilled() const;  // slot 192 (+0x600), UFunction AFortGameplayEffectDeliveryActor::IsBeingKilled
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();  // slot 195: AFortGameplayEffectDeliveryActor::OnComponentTouch (signature not recovered)
+	virtual void FNGC_VSlot_0x620();  // slot 196: AFortGameplayEffectDeliveryActor::OnComponentOverlap (signature not recovered)
+	virtual void FNGC_VSlot_0x628();
+	virtual void KillTimerExpired();  // slot 198 (+0x630), UFunction AFortGameplayEffectDeliveryActor::KillTimerExpired
+	virtual void OnRep_IsBeingKilled();  // slot 199 (+0x638), UFunction AFortGameplayEffectDeliveryActor::OnRep_IsBeingKilled
 	static void StaticRegisterNativesAFortGameplayEffectDeliveryActor();
 	static void execBroadcastExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDoExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6301,6 +7642,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();  // slot 230: AFortAthenaSMVehicle::ServerUpdateMoveParams_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x738();  // slot 231: AFortAthenaSMVehicle::ServerUpdateMoveParams_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortAthenaSMVehicle();
 	static void execOnRep_MovementParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerUpdateMoveParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6480,6 +7827,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortCarriedObject::OnRep_HolderInfo (signature not recovered)
 	static void StaticRegisterNativesAFortCarriedObject();
 	static void execGetHoldingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_HolderInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6500,6 +7858,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void StopClientAnnouncement();  // slot 190 (+0x5F0), UFunction AFortClientAnnouncement::StopClientAnnouncement
 	static void StaticRegisterNativesAFortClientAnnouncement();
 	static void execCancelClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6539,6 +7904,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();  // slot 193: AFortClientAnnouncement_Basic::SetIcon (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortClientAnnouncement_Basic::SetTitleText (signature not recovered)
+	virtual void FNGC_VSlot_0x618();  // slot 195: AFortClientAnnouncement_Basic::SetDetailText (signature not recovered)
+	virtual void FNGC_VSlot_0x620();  // slot 196: AFortClientAnnouncement_Basic::SetDisplayTime (signature not recovered)
 	static void StaticRegisterNativesAFortClientAnnouncement_Basic();
 	static void execOnRep_BasicData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetDetailText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6696,6 +8067,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AFortCombatManager::GetEventHeatPercent (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AFortCombatManager::GetEventHeatPercentTotal (signature not recovered)
 	static void StaticRegisterNativesAFortCombatManager();
 	static void execGetEventHeatPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetEventHeatPercentTotal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6739,6 +8118,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual bool HasStartingPosition() const;  // slot 189 (+0x5E8), UFunction AFortCrackEffect::HasStartingPosition
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void OnRep_HitNormal();  // slot 192 (+0x600), UFunction AFortCrackEffect::OnRep_HitNormal
+	virtual void OnRep_PhysicalSurfaceType();  // slot 193 (+0x608), UFunction AFortCrackEffect::OnRep_PhysicalSurfaceType
 	static void StaticRegisterNativesAFortCrackEffect();
 	static void execHasStartingPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_HitNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6759,6 +8148,29 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x940();
+	virtual void FNGC_VSlot_0x948();
+	virtual void FNGC_VSlot_0x950();
+	virtual void FNGC_VSlot_0x958();
+	virtual void FNGC_VSlot_0x960();
+	virtual void FNGC_VSlot_0x968();
+	virtual void FNGC_VSlot_0x970();
+	virtual void FNGC_VSlot_0x978();
+	virtual void FNGC_VSlot_0x980();
+	virtual void FNGC_VSlot_0x988();
+	virtual void FNGC_VSlot_0x990();
+	virtual bool ServerReleaseSecondaryFire_Validate();  // slot 307 (+0x998), UFunction AFortCustomizableAbilityDecoTool::ServerReleaseSecondaryFire
+	virtual void ServerReleaseSecondaryFire_Implementation();  // slot 308 (+0x9A0), UFunction AFortCustomizableAbilityDecoTool::ServerReleaseSecondaryFire
+	virtual void FNGC_VSlot_0x9A8();  // slot 309: AFortCustomizableAbilityDecoTool::BPReleaseSecondaryFire_Implementation (signature not recovered)
+	virtual bool ServerPressSecondaryFire_Validate();  // slot 310 (+0x9B0), UFunction AFortCustomizableAbilityDecoTool::ServerPressSecondaryFire
+	virtual void ServerPressSecondaryFire_Implementation();  // slot 311 (+0x9B8), UFunction AFortCustomizableAbilityDecoTool::ServerPressSecondaryFire
+	virtual void FNGC_VSlot_0x9C0();  // slot 312: AFortCustomizableAbilityDecoTool::BPPressSecondaryFire_Implementation (signature not recovered)
+	virtual bool ServerReleaseTrigger_Validate();  // slot 313 (+0x9C8), UFunction AFortCustomizableAbilityDecoTool::ServerReleaseTrigger
+	virtual void ServerReleaseTrigger_Implementation();  // slot 314 (+0x9D0), UFunction AFortCustomizableAbilityDecoTool::ServerReleaseTrigger
+	virtual void FNGC_VSlot_0x9D8();  // slot 315: AFortCustomizableAbilityDecoTool::BPReleaseTrigger_Implementation (signature not recovered)
+	virtual bool ServerPressTrigger_Validate();  // slot 316 (+0x9E0), UFunction AFortCustomizableAbilityDecoTool::ServerPressTrigger
+	virtual void ServerPressTrigger_Implementation();  // slot 317 (+0x9E8), UFunction AFortCustomizableAbilityDecoTool::ServerPressTrigger
+	virtual void FNGC_VSlot_0x9F0();  // slot 318: AFortCustomizableAbilityDecoTool::BPPressTrigger_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortCustomizableAbilityDecoTool();
 	static void execBPPressSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBPPressTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6819,6 +8231,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AFortDecoPreview::OnBounceMotionUpdate_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AFortDecoPreview::OnInitializeDecoPreview_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AFortDecoPreview::OnUpdateVisuals_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x600();  // slot 192: AFortDecoPreview::OnUpdateScale_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x608();  // slot 193: AFortDecoPreview::SetVectorParameterValueOnAllPreviewMIDs_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortDecoPreview::SetScalarParameterValueOnAllPreviewMIDs_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortDecoPreview();
 	static void execCreatePreviewMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTextureParameterValueFromMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6965,6 +8388,30 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortPickup::GetInteractText (signature not recovered)
+	virtual void FNGC_VSlot_0x618();  // slot 195: AFortPickup::GetInteractErrorText (signature not recovered)
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void OnRep_PrimaryPickupItemEntry();  // slot 203 (+0x658), UFunction AFortPickup::OnRep_PrimaryPickupItemEntry
+	virtual void OnRep_PickupOwnerData();  // slot 204 (+0x660), UFunction AFortPickup::OnRep_PickupOwnerData
+	virtual void OnRep_PickupLocationData();  // slot 205 (+0x668), UFunction AFortPickup::OnRep_PickupLocationData
+	virtual void OnRep_bPickedUp();  // slot 206 (+0x670), UFunction AFortPickup::OnRep_bPickedUp
+	virtual void OnRep_TossedFromContainer();  // slot 207 (+0x678), UFunction AFortPickup::OnRep_TossedFromContainer
 	static void StaticRegisterNativesAFortPickup();
 	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetInteractErrorText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7179,6 +8626,61 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnPhotographyMultiPartCaptureEnd_Implementation();  // slot 189 (+0x5E8), UFunction APlayerCameraManager::OnPhotographyMultiPartCaptureEnd
+	virtual void OnPhotographyMultiPartCaptureStart_Implementation();  // slot 190 (+0x5F0), UFunction APlayerCameraManager::OnPhotographyMultiPartCaptureStart
+	virtual void OnPhotographySessionEnd_Implementation();  // slot 191 (+0x5F8), UFunction APlayerCameraManager::OnPhotographySessionEnd
+	virtual void OnPhotographySessionStart_Implementation();  // slot 192 (+0x600), UFunction APlayerCameraManager::OnPhotographySessionStart
+	virtual void FNGC_VSlot_0x608();  // slot 193: APlayerCameraManager::PhotographyCameraModify_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();  // slot 198: APlayerCameraManager::GetOwningPlayerController (signature not recovered)
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();  // slot 201: APlayerCameraManager::AddNewCameraModifier (signature not recovered)
+	virtual void FNGC_VSlot_0x650();  // slot 202: APlayerCameraManager::FindCameraModifierByClass (signature not recovered)
+	virtual void FNGC_VSlot_0x658();  // slot 203: APlayerCameraManager::RemoveCameraModifier (signature not recovered)
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual void FNGC_VSlot_0x670();
+	virtual float GetFOVAngle() const;  // slot 207 (+0x678), UFunction APlayerCameraManager::GetFOVAngle
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();  // slot 225: APlayerCameraManager::AddCameraLensEffect (signature not recovered)
+	virtual void FNGC_VSlot_0x710();  // slot 226: APlayerCameraManager::RemoveCameraLensEffect (signature not recovered)
+	virtual void ClearCameraLensEffects();  // slot 227 (+0x718), UFunction APlayerCameraManager::ClearCameraLensEffects
+	virtual void FNGC_VSlot_0x720();  // slot 228: APlayerCameraManager::PlayCameraShake (signature not recovered)
+	virtual void FNGC_VSlot_0x728();  // slot 229: APlayerCameraManager::StopCameraShake (signature not recovered)
+	virtual void FNGC_VSlot_0x730();  // slot 230: APlayerCameraManager::StopAllInstancesOfCameraShake (signature not recovered)
+	virtual void FNGC_VSlot_0x738();  // slot 231: APlayerCameraManager::StopAllCameraShakes (signature not recovered)
+	virtual void FNGC_VSlot_0x740();  // slot 232: APlayerCameraManager::StartCameraFade (signature not recovered)
+	virtual void StopCameraFade();  // slot 233 (+0x748), UFunction APlayerCameraManager::StopCameraFade
+	virtual void FNGC_VSlot_0x750();  // slot 234: APlayerCameraManager::SetManualCameraFade (signature not recovered)
+	virtual void FNGC_VSlot_0x758();  // slot 235: APlayerCameraManager::PlayCameraAnim (signature not recovered)
+	virtual void FNGC_VSlot_0x760();  // slot 236: APlayerCameraManager::StopAllInstancesOfCameraAnim (signature not recovered)
+	virtual void FNGC_VSlot_0x768();  // slot 237: APlayerCameraManager::StopCameraAnimInst (signature not recovered)
+	virtual void FNGC_VSlot_0x770();  // slot 238: APlayerCameraManager::StopAllCameraAnims (signature not recovered)
 	static void StaticRegisterNativesAPlayerCameraManager();
 	static void execAddCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddNewCameraModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7260,6 +8762,57 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AGameModeBase::InitializeHUDForPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AGameModeBase::InitStartSpot_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AGameModeBase::SpawnDefaultPawnAtTransform_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x600();  // slot 192: AGameModeBase::SpawnDefaultPawnFor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x608();  // slot 193: AGameModeBase::PlayerCanRestart_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AGameModeBase::FindPlayerStart_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x618();  // slot 195: AGameModeBase::ChoosePlayerStart_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x620();  // slot 196: AGameModeBase::CanSpectate_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: AGameModeBase::MustSpectate_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x630();  // slot 198: AGameModeBase::HandleStartingNewPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x638();  // slot 199: AGameModeBase::ShouldReset_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x640();  // slot 200: AGameModeBase::GetDefaultPawnClassForController_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual int32 GetNumPlayers();  // slot 204 (+0x660), UFunction AGameModeBase::GetNumPlayers
+	virtual int32 GetNumSpectators();  // slot 205 (+0x668), UFunction AGameModeBase::GetNumSpectators
+	virtual void StartPlay();  // slot 206 (+0x670), UFunction AGameModeBase::StartPlay
+	virtual bool HasMatchStarted() const;  // slot 207 (+0x678), UFunction AGameModeBase::HasMatchStarted
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void ResetLevel();  // slot 212 (+0x6A0), UFunction AGameModeBase::ResetLevel
+	virtual void ReturnToMainMenuHost();  // slot 213 (+0x6A8), UFunction AGameModeBase::ReturnToMainMenuHost
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();
+	virtual void FNGC_VSlot_0x738();  // slot 231: AGameModeBase::ChangeName (signature not recovered)
+	virtual void FNGC_VSlot_0x740();  // slot 232: AGameModeBase::RestartPlayer (signature not recovered)
+	virtual void FNGC_VSlot_0x748();  // slot 233: AGameModeBase::RestartPlayerAtPlayerStart (signature not recovered)
+	virtual void FNGC_VSlot_0x750();  // slot 234: AGameModeBase::RestartPlayerAtTransform (signature not recovered)
 	static void StaticRegisterNativesAGameModeBase();
 	static void execCanSpectate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execChangeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7300,6 +8853,44 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x758();
+	virtual void FNGC_VSlot_0x760();
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();
+	virtual void FNGC_VSlot_0x798();
+	virtual void FNGC_VSlot_0x7A0();
+	virtual void FNGC_VSlot_0x7A8();
+	virtual void FNGC_VSlot_0x7B0();
+	virtual void FNGC_VSlot_0x7B8();
+	virtual void FNGC_VSlot_0x7C0();
+	virtual void FNGC_VSlot_0x7C8();
+	virtual bool ReadyToEndMatch_Implementation();  // slot 250 (+0x7D0), UFunction AGameMode::ReadyToEndMatch
+	virtual bool ReadyToStartMatch_Implementation();  // slot 251 (+0x7D8), UFunction AGameMode::ReadyToStartMatch
+	virtual bool IsMatchInProgress() const;  // slot 252 (+0x7E0), UFunction AGameMode::IsMatchInProgress
+	virtual bool HasMatchEnded() const;  // slot 253 (+0x7E8), UFunction AGameMode::HasMatchEnded
+	virtual void StartMatch();  // slot 254 (+0x7F0), UFunction AGameMode::StartMatch
+	virtual void EndMatch();  // slot 255 (+0x7F8), UFunction AGameMode::EndMatch
+	virtual void RestartGame();  // slot 256 (+0x800), UFunction AGameMode::RestartGame
+	virtual void AbortMatch();  // slot 257 (+0x808), UFunction AGameMode::AbortMatch
+	virtual void FNGC_VSlot_0x810();
+	virtual void FNGC_VSlot_0x818();
+	virtual void FNGC_VSlot_0x820();
+	virtual void FNGC_VSlot_0x828();
+	virtual void FNGC_VSlot_0x830();
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();
+	virtual void FNGC_VSlot_0x848();
+	virtual void FNGC_VSlot_0x850();
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();
+	virtual void FNGC_VSlot_0x870();
+	virtual void FNGC_VSlot_0x878();  // slot 271: AGameMode::Say (signature not recovered)
+	virtual void FNGC_VSlot_0x880();  // slot 272: AGameMode::SetBandwidthLimit (signature not recovered)
 	static void StaticRegisterNativesAGameMode();
 	static void execAbortMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEndMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7328,6 +8919,54 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();
+	virtual void FNGC_VSlot_0x8C0();
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void FNGC_VSlot_0x8D8();
+	virtual void FNGC_VSlot_0x8E0();
+	virtual void FNGC_VSlot_0x8E8();
+	virtual void FNGC_VSlot_0x8F0();
+	virtual void FNGC_VSlot_0x8F8();
+	virtual void FNGC_VSlot_0x900();
+	virtual void FNGC_VSlot_0x908();
+	virtual void FNGC_VSlot_0x910();
+	virtual void FNGC_VSlot_0x918();
+	virtual void FNGC_VSlot_0x920();
+	virtual void FNGC_VSlot_0x928();
+	virtual void FNGC_VSlot_0x930();
+	virtual void FNGC_VSlot_0x938();
+	virtual void FNGC_VSlot_0x940();
+	virtual void FNGC_VSlot_0x948();
+	virtual void FNGC_VSlot_0x950();
+	virtual void FNGC_VSlot_0x958();
+	virtual void FNGC_VSlot_0x960();
+	virtual void FNGC_VSlot_0x968();
+	virtual void FNGC_VSlot_0x970();
+	virtual void FNGC_VSlot_0x978();
+	virtual void FNGC_VSlot_0x980();
+	virtual void FNGC_VSlot_0x988();
+	virtual void FNGC_VSlot_0x990();
+	virtual void FNGC_VSlot_0x998();
+	virtual void FNGC_VSlot_0x9A0();
+	virtual void FNGC_VSlot_0x9A8();
+	virtual void FNGC_VSlot_0x9B0();
+	virtual void FNGC_VSlot_0x9B8();
+	virtual void FNGC_VSlot_0x9C0();
+	virtual void FNGC_VSlot_0x9C8();
+	virtual void FNGC_VSlot_0x9D0();
+	virtual void OnEndOfDay();  // slot 315 (+0x9D8), UFunction AFortGameMode::OnEndOfDay
+	virtual void FNGC_VSlot_0x9E0();
+	virtual void FNGC_VSlot_0x9E8();
+	virtual void FNGC_VSlot_0x9F0();
+	virtual void FNGC_VSlot_0x9F8();
+	virtual void DumpReservations() const;  // slot 320 (+0xA00), UFunction AFortGameMode::DumpReservations
 	static void StaticRegisterNativesAFortGameMode();
 	static void execDumpReservations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnEndOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7347,6 +8986,35 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xA08();
+	virtual void FNGC_VSlot_0xA10();
+	virtual void FNGC_VSlot_0xA18();
+	virtual void FNGC_VSlot_0xA20();
+	virtual void FNGC_VSlot_0xA28();
+	virtual void FNGC_VSlot_0xA30();
+	virtual void FNGC_VSlot_0xA38();
+	virtual void FNGC_VSlot_0xA40();
+	virtual void FNGC_VSlot_0xA48();
+	virtual void FNGC_VSlot_0xA50();
+	virtual void FNGC_VSlot_0xA58();
+	virtual void FNGC_VSlot_0xA60();
+	virtual void FNGC_VSlot_0xA68();
+	virtual void FNGC_VSlot_0xA70();
+	virtual void FNGC_VSlot_0xA78();
+	virtual void FNGC_VSlot_0xA80();
+	virtual void FNGC_VSlot_0xA88();
+	virtual void FNGC_VSlot_0xA90();
+	virtual void FNGC_VSlot_0xA98();
+	virtual void FNGC_VSlot_0xAA0();
+	virtual void FNGC_VSlot_0xAA8();
+	virtual void FNGC_VSlot_0xAB0();
+	virtual void FNGC_VSlot_0xAB8();
+	virtual void FNGC_VSlot_0xAC0();
+	virtual void FNGC_VSlot_0xAC8();
+	virtual void FNGC_VSlot_0xAD0();
+	virtual void OnEveningReached();  // slot 347 (+0xAD8), UFunction AFortGameModeZone::OnEveningReached
+	virtual void OnMorningReached();  // slot 348 (+0xAE0), UFunction AFortGameModeZone::OnMorningReached
+	virtual void ReplicateHealthAndShield();  // slot 349 (+0xAE8), UFunction AFortGameModeZone::ReplicateHealthAndShield
 	static void StaticRegisterNativesAFortGameModeZone();
 	static void execOnEveningReached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnMorningReached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7608,6 +9276,28 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual float GetServerWorldTimeSeconds() const;  // slot 190 (+0x5F0), UFunction AGameStateBase::GetServerWorldTimeSeconds
+	virtual bool HasBegunPlay() const;  // slot 191 (+0x5F8), UFunction AGameStateBase::HasBegunPlay
+	virtual bool HasMatchStarted() const;  // slot 192 (+0x600), UFunction AGameStateBase::HasMatchStarted
+	virtual void FNGC_VSlot_0x608();  // slot 193: AGameStateBase::GetPlayerStartTime (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AGameStateBase::GetPlayerRespawnDelay (signature not recovered)
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void OnRep_GameModeClass();  // slot 201 (+0x648), UFunction AGameStateBase::OnRep_GameModeClass
+	virtual void OnRep_SpectatorClass();  // slot 202 (+0x650), UFunction AGameStateBase::OnRep_SpectatorClass
+	virtual void OnRep_ReplicatedHasBegunPlay();  // slot 203 (+0x658), UFunction AGameStateBase::OnRep_ReplicatedHasBegunPlay
+	virtual void FNGC_VSlot_0x660();
+	virtual void OnRep_ReplicatedWorldTimeSeconds();  // slot 205 (+0x668), UFunction AFortGameStateZone::OnRep_ReplicatedWorldTimeSeconds
 	static void StaticRegisterNativesAGameStateBase();
 	static void execGetPlayerRespawnDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPlayerStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7634,6 +9324,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void OnRep_MatchState();  // slot 212 (+0x6A0), UFunction AGameState::OnRep_MatchState
+	virtual void OnRep_ElapsedTime();  // slot 213 (+0x6A8), UFunction AGameState::OnRep_ElapsedTime
 	static void StaticRegisterNativesAGameState();
 	static void execOnRep_ElapsedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_MatchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7653,6 +9351,32 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();  // slot 216: AFortGameState::Client_InitiateEndOfDayRecap_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();
+	virtual void FNGC_VSlot_0x738();
+	virtual void FNGC_VSlot_0x740();
+	virtual void FNGC_VSlot_0x748();
+	virtual void FNGC_VSlot_0x750();
+	virtual void OnRep_CurrentWUID();  // slot 235 (+0x758), UFunction AFortGameState::OnRep_CurrentWUID
+	virtual void OnRep_WorldManager();  // slot 236 (+0x760), UFunction AFortGameState::OnRep_WorldManager
+	virtual void OnRep_TimeOfDayManager();  // slot 237 (+0x768), UFunction AFortGameState::OnRep_TimeOfDayManager
+	virtual void OnRep_GameplayState();  // slot 238 (+0x770), UFunction AFortGameState::OnRep_GameplayState
+	virtual void OnRep_GameSessionID();  // slot 239 (+0x778), UFunction AFortGameState::OnRep_GameSessionID
 	static void StaticRegisterNativesAFortGameState();
 	static void execClient_InitiateEndOfDayRecap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDemoEndOfDayRecap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7687,6 +9411,67 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0x780();
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();
+	virtual void FNGC_VSlot_0x798();
+	virtual void FNGC_VSlot_0x7A0();
+	virtual void FNGC_VSlot_0x7A8();
+	virtual void FNGC_VSlot_0x7B0();
+	virtual void FNGC_VSlot_0x7B8();
+	virtual void FNGC_VSlot_0x7C0();
+	virtual void FNGC_VSlot_0x7C8();
+	virtual void FNGC_VSlot_0x7D0();
+	virtual void FNGC_VSlot_0x7D8();
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();
+	virtual void FNGC_VSlot_0x7F8();  // slot 255: AFortGameStateZone::NotifyEndGameplayVote_Implementation (signature not recovered)
+	virtual void NotifyBeginGameplayVote_Implementation();  // slot 256 (+0x800), UFunction AFortGameStateZone::NotifyBeginGameplayVote
+	virtual void FNGC_VSlot_0x808();  // slot 257: AFortGameStateZone::RunPerfMemCheatScript_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x810();  // slot 258: AFortGameStateZone::ServerFireAIDirectorEventBatch_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x818();  // slot 259: AFortGameStateZone::ServerFireAIDirectorEventBatch_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x820();  // slot 260: AFortGameStateZone::ServerFireAIDirectorEvent_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x828();  // slot 261: AFortGameStateZone::ServerFireAIDirectorEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x830();  // slot 262: AFortGameStateZone::OnWaveStart_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x838();  // slot 263: AFortGameStateZone::OnWaveBasedModifiersAppliedMulticast_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x840();
+	virtual void FNGC_VSlot_0x848();
+	virtual void FNGC_VSlot_0x850();
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();
+	virtual void FNGC_VSlot_0x870();
+	virtual void FNGC_VSlot_0x878();
+	virtual void FNGC_VSlot_0x880();
+	virtual void FNGC_VSlot_0x888();
+	virtual void OnRep_PlayerStructuresChanged();  // slot 274 (+0x890), UFunction AFortGameStateZone::OnRep_PlayerStructuresChanged
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();
+	virtual void FNGC_VSlot_0x8C0();
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void FNGC_VSlot_0x8D8();
+	virtual void FNGC_VSlot_0x8E0();
+	virtual void FNGC_VSlot_0x8E8();
+	virtual void FNGC_VSlot_0x8F0();
+	virtual void OnRep_PlayerBuildingSkillLevel();  // slot 287 (+0x8F8), UFunction AFortGameStateZone::OnRep_PlayerBuildingSkillLevel
+	virtual void FNGC_VSlot_0x900();
+	virtual void FNGC_VSlot_0x908();
+	virtual void FNGC_VSlot_0x910();
+	virtual void FNGC_VSlot_0x918();
+	virtual void FNGC_VSlot_0x920();
+	virtual void FNGC_VSlot_0x928();
+	virtual void OnRep_PlayerSharedTrapAttributes();  // slot 294 (+0x930), UFunction AFortGameStateZone::OnRep_PlayerSharedTrapAttributes
+	virtual void FNGC_VSlot_0x938();
+	virtual void FNGC_VSlot_0x940();
+	virtual void OnRep_GameDifficulty();  // slot 297 (+0x948), UFunction AFortGameStateZone::OnRep_GameDifficulty
+	virtual void FNGC_VSlot_0x950();
+	virtual void FNGC_VSlot_0x958();
+	virtual void FNGC_VSlot_0x960();  // slot 300: AFortGameStateZone::GetUIMapManager (signature not recovered)
 	static void StaticRegisterNativesAFortGameStateZone();
 	static void execApplyPlayerAbilityRestriction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBeginGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7759,6 +9544,28 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x968();
+	virtual void FNGC_VSlot_0x970();
+	virtual void FNGC_VSlot_0x978();
+	virtual void OnRep_RoundTimeRemaining();  // slot 304 (+0x980), UFunction AFortGameStatePvP::OnRep_RoundTimeRemaining
+	virtual void OnRep_StalemateTimeRemaining();  // slot 305 (+0x988), UFunction AFortGameStatePvP::OnRep_StalemateTimeRemaining
+	virtual void FNGC_VSlot_0x990();
+	virtual void FNGC_VSlot_0x998();
+	virtual void FNGC_VSlot_0x9A0();
+	virtual void FNGC_VSlot_0x9A8();
+	virtual void FNGC_VSlot_0x9B0();
+	virtual void FNGC_VSlot_0x9B8();
+	virtual void FNGC_VSlot_0x9C0();
+	virtual void FNGC_VSlot_0x9C8();
+	virtual int32 GetRoundTimeAccumulated() const;  // slot 314 (+0x9D0), UFunction AFortGameStatePvP::GetRoundTimeAccumulated
+	virtual void FNGC_VSlot_0x9D8();
+	virtual void FNGC_VSlot_0x9E0();
+	virtual void FNGC_VSlot_0x9E8();
+	virtual void FNGC_VSlot_0x9F0();
+	virtual void FNGC_VSlot_0x9F8();
+	virtual void FNGC_VSlot_0xA00();
+	virtual void FNGC_VSlot_0xA08();
+	virtual int32 GetFOBFinalizationTimeRemaining() const;  // slot 322 (+0xA10), UFunction AFortGameStatePvP::GetFOBFinalizationTimeRemaining
 	static void StaticRegisterNativesAFortGameStatePvP();
 	static void execGetAverageHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFOBFinalizationTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7816,6 +9623,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x968();
+	virtual void FNGC_VSlot_0x970();
+	virtual void FNGC_VSlot_0x978();
+	virtual void FNGC_VSlot_0x980();
+	virtual void OnRep_DeployableBaseManager();  // slot 305 (+0x988), UFunction AFortGameStateDeployableBase::OnRep_DeployableBaseManager
 	static void StaticRegisterNativesAFortGameStateDeployableBase();
 	static void execGetDeployableBaseUseType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_DeployableBaseManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7959,6 +9771,23 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AGameplayCueNotify_Actor::OnRemove_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AGameplayCueNotify_Actor::WhileActive_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AGameplayCueNotify_Actor::OnActive_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x600();  // slot 192: AGameplayCueNotify_Actor::OnExecute_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();  // slot 194: AGameplayCueNotify_Actor::OnOwnerDestroyed (signature not recovered)
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void K2_EndGameplayCue();  // slot 200 (+0x640), UFunction AGameplayCueNotify_Actor::K2_EndGameplayCue
 	static void StaticRegisterNativesAGameplayCueNotify_Actor();
 	static void execK2_EndGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8204,6 +10033,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AFortInGameMapManager::BroadcastExplorationEvents_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortInGameMapManager();
 	static void execBroadcastExplorationEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCurrent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8388,6 +10223,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: ALevelScriptActor::RemoteEvent (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: ALevelScriptActor::SetCinematicMode (signature not recovered)
 	static void StaticRegisterNativesALevelScriptActor();
 	static void execRemoteEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetCinematicMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8461,6 +10303,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/OnlineSubsystemUtils"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void ClientOnConnected_Implementation();  // slot 193 (+0x608), UFunction AOnlineBeaconClient::ClientOnConnected
 	static void StaticRegisterNativesAOnlineBeaconClient();
 	static void execClientOnConnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -8479,6 +10331,27 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Lobby"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();  // slot 196: ALobbyBeaconClient::ClientPlayerLeft_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: ALobbyBeaconClient::ClientPlayerJoined_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x630();  // slot 198: ALobbyBeaconClient::ClientWasKicked_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x638();  // slot 199: ALobbyBeaconClient::ClientLoginComplete_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x640();  // slot 200: ALobbyBeaconClient::ServerSetPartyOwner_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x648();  // slot 201: ALobbyBeaconClient::ServerSetPartyOwner_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x650();  // slot 202: ALobbyBeaconClient::ServerKickPlayer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x658();  // slot 203: ALobbyBeaconClient::ServerKickPlayer_Implementation (signature not recovered)
+	virtual void ClientAckJoiningServer_Implementation();  // slot 204 (+0x660), UFunction ALobbyBeaconClient::ClientAckJoiningServer
+	virtual bool ServerNotifyJoiningServer_Validate();  // slot 205 (+0x668), UFunction ALobbyBeaconClient::ServerNotifyJoiningServer
+	virtual void ServerNotifyJoiningServer_Implementation();  // slot 206 (+0x670), UFunction ALobbyBeaconClient::ServerNotifyJoiningServer
+	virtual bool ServerDisconnectFromLobby_Validate();  // slot 207 (+0x678), UFunction ALobbyBeaconClient::ServerDisconnectFromLobby
+	virtual void ServerDisconnectFromLobby_Implementation();  // slot 208 (+0x680), UFunction ALobbyBeaconClient::ServerDisconnectFromLobby
+	virtual void FNGC_VSlot_0x688();  // slot 209: ALobbyBeaconClient::ServerLoginPlayer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x690();  // slot 210: ALobbyBeaconClient::ServerLoginPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x698();  // slot 211: ALobbyBeaconClient::ServerCheat_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x6A0();  // slot 212: ALobbyBeaconClient::ServerCheat_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x6A8();  // slot 213: ALobbyBeaconClient::ClientSetInviteFlags_Implementation (signature not recovered)
+	virtual void ClientJoinGame_Implementation();  // slot 214 (+0x6B0), UFunction ALobbyBeaconClient::ClientJoinGame
 	static void StaticRegisterNativesALobbyBeaconClient();
 	static void execClientAckJoiningServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientJoinGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8509,6 +10382,41 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();  // slot 229: AFortLobbyBeaconClient::ServerSetGadget_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x730();  // slot 230: AFortLobbyBeaconClient::ServerSetGadget_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x738();  // slot 231: AFortLobbyBeaconClient::ServerIncrementHomeBaseVersion_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x740();  // slot 232: AFortLobbyBeaconClient::ServerIncrementHomeBaseVersion_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x748();  // slot 233: AFortLobbyBeaconClient::ServerSetConsoleUniqueNetId_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x750();  // slot 234: AFortLobbyBeaconClient::ServerSetConsoleUniqueNetId_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x758();  // slot 235: AFortLobbyBeaconClient::ServerSetMatchmakingLevel_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x760();  // slot 236: AFortLobbyBeaconClient::ServerSetMatchmakingLevel_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x768();  // slot 237: AFortLobbyBeaconClient::ServerSetCurrentCharacterXp_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x770();  // slot 238: AFortLobbyBeaconClient::ServerSetCurrentCharacterXp_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x778();  // slot 239: AFortLobbyBeaconClient::ServerSetCharacterGender_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x780();  // slot 240: AFortLobbyBeaconClient::ServerSetCharacterGender_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x788();  // slot 241: AFortLobbyBeaconClient::ServerSetHeroSquadId_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x790();  // slot 242: AFortLobbyBeaconClient::ServerSetHeroSquadId_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x798();  // slot 243: AFortLobbyBeaconClient::ServerSetHeroType_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x7A0();  // slot 244: AFortLobbyBeaconClient::ServerSetHeroType_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x7A8();  // slot 245: AFortLobbyBeaconClient::ServerSetHeroId_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x7B0();  // slot 246: AFortLobbyBeaconClient::ServerSetHeroId_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x7B8();  // slot 247: AFortLobbyBeaconClient::ClientCreateOrJoinChatRoom_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x7C0();  // slot 248: AFortLobbyBeaconClient::ServerTeamChatRoomReady_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x7C8();  // slot 249: AFortLobbyBeaconClient::ServerTeamChatRoomReady_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortLobbyBeaconClient();
 	static void execClientCreateOrJoinChatRoom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerIncrementHomeBaseVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8550,6 +10458,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x7D0();
+	virtual void FNGC_VSlot_0x7D8();
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void FNGC_VSlot_0x800();
+	virtual void FNGC_VSlot_0x808();
+	virtual void FNGC_VSlot_0x810();
+	virtual void FNGC_VSlot_0x818();
+	virtual void FNGC_VSlot_0x820();
+	virtual bool ServerReadyUp_Validate();  // slot 261 (+0x828), UFunction AFortLobbyBeaconClientPvP::ServerReadyUp
+	virtual void ServerReadyUp_Implementation();  // slot 262 (+0x830), UFunction AFortLobbyBeaconClientPvP::ServerReadyUp
 	static void StaticRegisterNativesAFortLobbyBeaconClientPvP();
 	static void execServerReadyUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -8568,6 +10489,22 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x7D0();
+	virtual void FNGC_VSlot_0x7D8();
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void FNGC_VSlot_0x800();
+	virtual void FNGC_VSlot_0x808();
+	virtual void FNGC_VSlot_0x810();
+	virtual void FNGC_VSlot_0x818();
+	virtual void FNGC_VSlot_0x820();
+	virtual void FNGC_VSlot_0x828();  // slot 261: AFortLobbyBeaconClientRM::ClientBroadcastLobbyPlayerPadTop_Implementation (signature not recovered)
+	virtual bool ServerUpdateNewlyJoinedPlayerInternal_Validate();  // slot 262 (+0x830), UFunction AFortLobbyBeaconClientRM::ServerUpdateNewlyJoinedPlayerInternal
+	virtual void ServerUpdateNewlyJoinedPlayerInternal_Implementation();  // slot 263 (+0x838), UFunction AFortLobbyBeaconClientRM::ServerUpdateNewlyJoinedPlayerInternal
+	virtual void FNGC_VSlot_0x840();  // slot 264: AFortLobbyBeaconClientRM::ServerUpdateReadyStatus_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x848();  // slot 265: AFortLobbyBeaconClientRM::ServerUpdateReadyStatus_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortLobbyBeaconClientRM();
 	static void execClientBroadcastLobbyPlayerPadTop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerUpdateNewlyJoinedPlayerInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8720,6 +10657,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_LobbyTimeRemaining();  // slot 189 (+0x5E8), UFunction AFortLobbyBeaconPlayerState::OnRep_LobbyTimeRemaining
 	static void StaticRegisterNativesAFortLobbyBeaconPlayerState();
 	static void execOnRep_CharacterGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_CharXP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8865,6 +10808,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void OnRep_PvPLobbyTimeRemaining();  // slot 196 (+0x620), UFunction AFortLobbyBeaconStatePvP::OnRep_PvPLobbyTimeRemaining
 	static void StaticRegisterNativesAFortLobbyBeaconStatePvP();
 	static void execOnRep_PvPLobbyTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -8919,6 +10875,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void UpdateUI();  // slot 189 (+0x5E8), UFunction AFortMissionState::UpdateUI
 	static void StaticRegisterNativesAFortMissionState();
 	static void execOnAllPlayersLoadedInWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSendMissionUIEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8940,6 +10902,23 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AFortMission::BlueprintCanPlayerParticipate_Implementation (signature not recovered)
+	virtual int32 GetCurrentBluGloRewards_Implementation() const;  // slot 191 (+0x5F8), UFunction AFortMission::GetCurrentBluGloRewards
+	virtual float GetExpectedCompletionTime_Implementation() const;  // slot 192 (+0x600), UFunction AFortMission::GetExpectedCompletionTime
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();  // slot 195: AFortMission::GetMissionName (signature not recovered)
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void OnRep_MissionStatus();  // slot 203 (+0x658), UFunction AFortMission::OnRep_MissionStatus
+	virtual void OnRep_bIsMissionVisible();  // slot 204 (+0x660), UFunction AFortMission::OnRep_bIsMissionVisible
+	virtual void OnRep_UIIndex();  // slot 205 (+0x668), UFunction AFortMission::OnRep_UIIndex
+	virtual void OnRep_QuestOwnerAccount();  // slot 206 (+0x670), UFunction AFortMission::OnRep_QuestOwnerAccount
 	static void StaticRegisterNativesAFortMission();
 	static void execAddCompletionTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddCompletionTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9034,6 +11013,35 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void OnRep_CurrentUIFocusedMission();  // slot 205 (+0x668), UFunction AFortMissionManager::OnRep_CurrentUIFocusedMission
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void OnRep_Missions();  // slot 211 (+0x698), UFunction AFortMissionManager::OnRep_Missions
+	virtual void OnRep_MissionUIActors();  // slot 212 (+0x6A0), UFunction AFortMissionManager::OnRep_MissionUIActors
 	static void StaticRegisterNativesAFortMissionManager();
 	static void execGetSpawnLocationActorsMatchingEntryItemQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetSpawnLocationActorsThatHaveAddedTagsMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9058,6 +11066,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AFortMusicManager::GetEventHeatPercent (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AFortMusicManager::GetEventHeatPercentTotal (signature not recovered)
 	static void StaticRegisterNativesAFortMusicManager();
 	static void execChangeMusic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetEventHeatPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9159,6 +11175,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual bool StartPlayingObjective();  // slot 193 (+0x608), UFunction AFortObjectiveBase::StartPlayingObjective
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();  // slot 199: AFortObjectiveBase::GetObjectiveDisplayString (signature not recovered)
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();  // slot 202: AFortObjectiveBase::StopObjective (signature not recovered)
 	static void StaticRegisterNativesAFortObjectiveBase();
 	static void execAttemptMissionSave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClearObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9246,6 +11275,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/OnlineSubsystemUtils"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();  // slot 196: APartyBeaconClient::ServerCancelReservationRequest_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: APartyBeaconClient::ServerCancelReservationRequest_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x630();  // slot 198: APartyBeaconClient::ServerUpdateReservationRequest_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x638();  // slot 199: APartyBeaconClient::ServerUpdateReservationRequest_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x640();  // slot 200: APartyBeaconClient::ServerReservationRequest_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x648();  // slot 201: APartyBeaconClient::ServerReservationRequest_Implementation (signature not recovered)
+	virtual void ClientSendReservationFull_Implementation();  // slot 202 (+0x650), UFunction APartyBeaconClient::ClientSendReservationFull
+	virtual void FNGC_VSlot_0x658();  // slot 203: APartyBeaconClient::ClientSendReservationUpdates_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x660();  // slot 204: APartyBeaconClient::ClientCancelReservationResponse_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x668();  // slot 205: APartyBeaconClient::ClientReservationResponse_Implementation (signature not recovered)
 	static void StaticRegisterNativesAPartyBeaconClient();
 	static void execClientCancelReservationResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientReservationResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9270,6 +11311,29 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();  // slot 219: AFortPartyBeaconClient::ServerAbandonExistingReservation_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x6E0();  // slot 220: AFortPartyBeaconClient::ServerAbandonExistingReservation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x6E8();  // slot 221: AFortPartyBeaconClient::ServerReconnectExistingReservation_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x6F0();  // slot 222: AFortPartyBeaconClient::ServerReconnectExistingReservation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();  // slot 225: AFortPartyBeaconClient::ClientAbandonResponse_Implementation (signature not recovered)
+	virtual void ClientAllowedToProceedFromReservationTimeout_Implementation();  // slot 226 (+0x710), UFunction AFortPartyBeaconClient::ClientAllowedToProceedFromReservationTimeout
+	virtual void ClientAllowedToProceedFromReservation_Implementation();  // slot 227 (+0x718), UFunction AFortPartyBeaconClient::ClientAllowedToProceedFromReservation
+	virtual void FNGC_VSlot_0x720();  // slot 228: AFortPartyBeaconClient::ClientReconnectResponse_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPartyBeaconClient();
 	static void execClientAbandonResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientAllowedToProceedFromReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9524,6 +11588,352 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void FNGC_VSlot_0xD18();
+	virtual void FNGC_VSlot_0xD20();
+	virtual void FNGC_VSlot_0xD28();  // slot 421: AFortPlayerController::ServerTeleportToReticle_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xD30();  // slot 422: AFortPlayerController::ServerTeleportToReticle_Implementation (signature not recovered)
+	virtual bool ServerKillAllAIPawnsAroundPlayer_Validate();  // slot 423 (+0xD38), UFunction AFortPlayerController::ServerKillAllAIPawnsAroundPlayer
+	virtual void ServerKillAllAIPawnsAroundPlayer_Implementation();  // slot 424 (+0xD40), UFunction AFortPlayerController::ServerKillAllAIPawnsAroundPlayer
+	virtual void FNGC_VSlot_0xD48();  // slot 425: AFortPlayerController::ServerCheatAll_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xD50();  // slot 426: AFortPlayerController::ServerCheatAll_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xD58();  // slot 427: AFortPlayerController::ServerCheat_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xD60();  // slot 428: AFortPlayerController::ServerCheat_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xD68();  // slot 429: AFortPlayerController::ServerPlayEmoteItem_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xD70();  // slot 430: AFortPlayerController::ServerPlayEmoteItem_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xD78();  // slot 431: AFortPlayerController::ServerEmote_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xD80();  // slot 432: AFortPlayerController::ServerEmote_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xD88();  // slot 433: AFortPlayerController::ServerTriggerGenericObjectiveEvent_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xD90();  // slot 434: AFortPlayerController::ServerTriggerGenericObjectiveEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xD98();  // slot 435: AFortPlayerController::ServerSendClientProgressUpdate_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xDA0();  // slot 436: AFortPlayerController::ServerSendClientProgressUpdate_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDA8();  // slot 437: AFortPlayerController::ClientSendConfirmationMessage_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDB0();  // slot 438: AFortPlayerController::ServerSendProfilerData_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xDB8();  // slot 439: AFortPlayerController::ServerSendProfilerData_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDC0();  // slot 440: AFortPlayerController::ClientSetActionMappingEnabled_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDC8();  // slot 441: AFortPlayerController::ServerHandleMissionEvent_StartLeavingZone_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xDD0();  // slot 442: AFortPlayerController::ServerHandleMissionEvent_StartLeavingZone_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDD8();  // slot 443: AFortPlayerController::ServerHandleMissionEvent_ToggledCursorMode_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xDE0();  // slot 444: AFortPlayerController::ServerHandleMissionEvent_ToggledCursorMode_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDE8();  // slot 445: AFortPlayerController::ServerHandleMissionEvent_ToggledEditMode_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xDF0();  // slot 446: AFortPlayerController::ServerHandleMissionEvent_ToggledEditMode_Implementation (signature not recovered)
+	virtual void ClientFinishedInteractionInZone_Implementation();  // slot 447 (+0xDF8), UFunction AFortPlayerController::ClientFinishedInteractionInZone
+	virtual void FNGC_VSlot_0xE00();  // slot 448: AFortPlayerController::ServerModifyStat_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xE08();  // slot 449: AFortPlayerController::ServerModifyStat_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE10();  // slot 450: AFortPlayerController::ServerKickPlayer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xE18();  // slot 451: AFortPlayerController::ServerKickPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE20();  // slot 452: AFortPlayerController::ServerSetPartyOwner_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xE28();  // slot 453: AFortPlayerController::ServerSetPartyOwner_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE30();  // slot 454: AFortPlayerController::ClientStayWithParty_Implementation (signature not recovered)
+	virtual void ClientRegisterWithParty_Implementation();  // slot 455 (+0xE38), UFunction AFortPlayerController::ClientRegisterWithParty
+	virtual void FNGC_VSlot_0xE40();  // slot 456: AFortPlayerController::ClientSetInviteFlags_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE48();  // slot 457: AFortPlayerController::ServerSetHero_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xE50();  // slot 458: AFortPlayerController::ServerSetHero_Implementation (signature not recovered)
+	virtual void ClientForceProfileQuery_Implementation();  // slot 459 (+0xE58), UFunction AFortPlayerController::ClientForceProfileQuery
+	virtual void FNGC_VSlot_0xE60();  // slot 460: AFortPlayerController::ClientAddHeroSpecialization_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xE68();  // slot 461: AFortPlayerController::ClientAddHeroSpecialization_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE70();  // slot 462: AFortPlayerController::ClientUpdateRichPresence_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE78();  // slot 463: AFortPlayerController::ServerAddPawnMovementInput_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xE80();  // slot 464: AFortPlayerController::ServerAddPawnMovementInput_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE88();  // slot 465: AFortPlayerController::ServerRemoveInventoryStateValue_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xE90();  // slot 466: AFortPlayerController::ServerRemoveInventoryStateValue_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xE98();  // slot 467: AFortPlayerController::ServerSetInventoryStateValue_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xEA0();  // slot 468: AFortPlayerController::ServerSetInventoryStateValue_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xEA8();  // slot 469: AFortPlayerController::ServerModDurability_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xEB0();  // slot 470: AFortPlayerController::ServerModDurability_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xEB8();  // slot 471: AFortPlayerController::ServerDisassembleInventoryItems_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xEC0();  // slot 472: AFortPlayerController::ServerDisassembleInventoryItems_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xEC8();  // slot 473: AFortPlayerController::ServerRemoveInventoryItem_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xED0();  // slot 474: AFortPlayerController::ServerRemoveInventoryItem_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xED8();  // slot 475: AFortPlayerController::ServerReleaseInventoryItemKey_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xEE0();  // slot 476: AFortPlayerController::ServerReleaseInventoryItemKey_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xEE8();  // slot 477: AFortPlayerController::ServerExecuteInventoryItem_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xEF0();  // slot 478: AFortPlayerController::ServerExecuteInventoryItem_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xEF8();  // slot 479: AFortPlayerController::ClientExecuteInventoryItem_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF00();  // slot 480: AFortPlayerController::ClientReportDamagedResourceBuilding_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF08();  // slot 481: AFortPlayerController::ServerSetAutoEquipBetterItems_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF10();  // slot 482: AFortPlayerController::ServerSetAutoEquipBetterItems_Implementation (signature not recovered)
+	virtual void ClientCancelCrafting_Implementation();  // slot 483 (+0xF18), UFunction AFortPlayerController::ClientCancelCrafting
+	virtual void FNGC_VSlot_0xF20();  // slot 484: AFortPlayerController::ServerCraftSchematic_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF28();  // slot 485: AFortPlayerController::ServerCraftSchematic_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF30();  // slot 486: AFortPlayerController::ServerAttemptUnpinSchematic_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF38();  // slot 487: AFortPlayerController::ServerAttemptUnpinSchematic_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF40();  // slot 488: AFortPlayerController::ServerAttemptPinSchematic_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF48();  // slot 489: AFortPlayerController::ServerAttemptPinSchematic_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF50();  // slot 490: AFortPlayerController::ServerItemWillBeDestroyed_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF58();  // slot 491: AFortPlayerController::ServerItemWillBeDestroyed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF60();  // slot 492: AFortPlayerController::ClientGivePlayerLocalAccountItem_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF68();  // slot 493: AFortPlayerController::ServerGiftInventoryItemToOtherPlayer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF70();  // slot 494: AFortPlayerController::ServerGiftInventoryItemToOtherPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF78();  // slot 495: AFortPlayerController::ServerSpawnInventoryDrop_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF80();  // slot 496: AFortPlayerController::ServerSpawnInventoryDrop_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF88();  // slot 497: AFortPlayerController::ServerRemoveDefender_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xF90();  // slot 498: AFortPlayerController::ServerRemoveDefender_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xF98();  // slot 499: AFortPlayerController::ServerDeployDefender_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xFA0();  // slot 500: AFortPlayerController::ServerDeployDefender_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xFA8();  // slot 501: AFortPlayerController::ServerRepairBuildingActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xFB0();  // slot 502: AFortPlayerController::ServerRepairBuildingActor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xFB8();  // slot 503: AFortPlayerController::ServerUpgradeBuildingActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xFC0();  // slot 504: AFortPlayerController::ServerUpgradeBuildingActor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xFC8();  // slot 505: AFortPlayerController::ServerCreateBuildingActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xFD0();  // slot 506: AFortPlayerController::ServerCreateBuildingActor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xFD8();  // slot 507: AFortPlayerController::ServerEditBuildingActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xFE0();  // slot 508: AFortPlayerController::ServerEditBuildingActor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xFE8();  // slot 509: AFortPlayerController::ServerEndEditingBuildingActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xFF0();  // slot 510: AFortPlayerController::ServerEndEditingBuildingActor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xFF8();  // slot 511: AFortPlayerController::ServerBeginEditingBuildingActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1000();  // slot 512: AFortPlayerController::ServerBeginEditingBuildingActor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1008();  // slot 513: AFortPlayerController::ServerSetupWeakSpotsOnBuildingActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1010();  // slot 514: AFortPlayerController::ServerSetupWeakSpotsOnBuildingActor_Implementation (signature not recovered)
+	virtual void ClientForceCancelBuildingTool_Implementation();  // slot 515 (+0x1018), UFunction AFortPlayerController::ClientForceCancelBuildingTool
+	virtual bool ServerCreateAIDirectorDataManager_Validate();  // slot 516 (+0x1020), UFunction AFortPlayerController::ServerCreateAIDirectorDataManager
+	virtual void ServerCreateAIDirectorDataManager_Implementation();  // slot 517 (+0x1028), UFunction AFortPlayerController::ServerCreateAIDirectorDataManager
+	virtual bool ServerCreateCombatManager_Validate();  // slot 518 (+0x1030), UFunction AFortPlayerController::ServerCreateCombatManager
+	virtual void ServerCreateCombatManager_Implementation();  // slot 519 (+0x1038), UFunction AFortPlayerController::ServerCreateCombatManager
+	virtual bool ServerStartPIDContributionsGraphing_Validate();  // slot 520 (+0x1040), UFunction AFortPlayerController::ServerStartPIDContributionsGraphing
+	virtual void ServerStartPIDContributionsGraphing_Implementation();  // slot 521 (+0x1048), UFunction AFortPlayerController::ServerStartPIDContributionsGraphing
+	virtual bool ServerStartPIDValueGraphing_Validate();  // slot 522 (+0x1050), UFunction AFortPlayerController::ServerStartPIDValueGraphing
+	virtual void ServerStartPIDValueGraphing_Implementation();  // slot 523 (+0x1058), UFunction AFortPlayerController::ServerStartPIDValueGraphing
+	virtual bool ServerStartIntensityGraphing_Validate();  // slot 524 (+0x1060), UFunction AFortPlayerController::ServerStartIntensityGraphing
+	virtual void ServerStartIntensityGraphing_Implementation();  // slot 525 (+0x1068), UFunction AFortPlayerController::ServerStartIntensityGraphing
+	virtual void FNGC_VSlot_0x1070();  // slot 526: AFortPlayerController::ServerTriggerCombatEventBatch_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1078();  // slot 527: AFortPlayerController::ServerTriggerCombatEventBatch_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1080();  // slot 528: AFortPlayerController::ServerTriggerCombatEvent_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1088();  // slot 529: AFortPlayerController::ServerTriggerCombatEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1090();  // slot 530: AFortPlayerController::ServerBroadcastUIFeedbackEvent_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1098();  // slot 531: AFortPlayerController::ServerBroadcastUIFeedbackEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x10A0();  // slot 532: AFortPlayerController::ServerSpawnMark_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x10A8();  // slot 533: AFortPlayerController::ServerSpawnMark_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x10B0();  // slot 534: AFortPlayerController::ServerSpotActor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x10B8();  // slot 535: AFortPlayerController::ServerSpotActor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x10C0();  // slot 536: AFortPlayerController::ClientStopUIFeedbackEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x10C8();  // slot 537: AFortPlayerController::ClientTriggerUIFeedbackEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x10D0();  // slot 538: AFortPlayerController::ServerUIChoiceCompleted_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x10D8();  // slot 539: AFortPlayerController::ServerUIChoiceCompleted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x10E0();  // slot 540: AFortPlayerController::ClientOpenChoiceUI_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x10E8();
+	virtual void FNGC_VSlot_0x10F0();  // slot 542: AFortPlayerController::ServerRequestAttributeSources_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x10F8();  // slot 543: AFortPlayerController::ServerRequestAttributeSources_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1100();  // slot 544: AFortPlayerController::ServerAnnouncementStoppedOnClient_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1108();  // slot 545: AFortPlayerController::ServerAnnouncementStoppedOnClient_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1110();  // slot 546: AFortPlayerController::ServerSetMarkText_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1118();  // slot 547: AFortPlayerController::ServerSetMarkText_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1120();  // slot 548: AFortPlayerController::ServerPingMinimap_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1128();  // slot 549: AFortPlayerController::ServerPingMinimap_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1130();  // slot 550: AFortPlayerController::ClientPingMinimap_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1138();  // slot 551: AFortPlayerController::ClientAddScoreNumber_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1140();  // slot 552: AFortPlayerController::ClientSendMessage_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1148();  // slot 553: AFortPlayerController::ServerAttemptInteract_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1150();  // slot 554: AFortPlayerController::ServerAttemptInteract_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1158();  // slot 555: AFortPlayerController::ServerReportClientFPS_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1160();  // slot 556: AFortPlayerController::ServerReportClientFPS_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1168();  // slot 557: AFortPlayerController::FortClientPlaySoundAtLocation_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1170();  // slot 558: AFortPlayerController::FortClientPlaySound_Implementation (signature not recovered)
+	virtual bool ServerDropCarriedObject_Validate();  // slot 559 (+0x1178), UFunction AFortPlayerController::ServerDropCarriedObject
+	virtual void ServerDropCarriedObject_Implementation();  // slot 560 (+0x1180), UFunction AFortPlayerController::ServerDropCarriedObject
+	virtual bool ServerTouchActiveTime_Validate();  // slot 561 (+0x1188), UFunction AFortPlayerController::ServerTouchActiveTime
+	virtual void ServerTouchActiveTime_Implementation();  // slot 562 (+0x1190), UFunction AFortPlayerController::ServerTouchActiveTime
+	virtual bool ServerReturnToMainMenu_Validate();  // slot 563 (+0x1198), UFunction AFortPlayerController::ServerReturnToMainMenu
+	virtual void ServerReturnToMainMenu_Implementation();  // slot 564 (+0x11A0), UFunction AFortPlayerController::ServerReturnToMainMenu
+	virtual void FNGC_VSlot_0x11A8();  // slot 565: AFortPlayerController::ServerClientPawnLoaded_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x11B0();  // slot 566: AFortPlayerController::ServerClientPawnLoaded_Implementation (signature not recovered)
+	virtual bool ServerReadyToStartMatch_Validate();  // slot 567 (+0x11B8), UFunction AFortPlayerController::ServerReadyToStartMatch
+	virtual void ServerReadyToStartMatch_Implementation();  // slot 568 (+0x11C0), UFunction AFortPlayerController::ServerReadyToStartMatch
+	virtual bool ServerLoadingScreenDropped_Validate();  // slot 569 (+0x11C8), UFunction AFortPlayerController::ServerLoadingScreenDropped
+	virtual void ServerLoadingScreenDropped_Implementation();  // slot 570 (+0x11D0), UFunction AFortPlayerController::ServerLoadingScreenDropped
+	virtual void FNGC_VSlot_0x11D8();  // slot 571: AFortPlayerController::ServerSetClientHasFinishedLoading_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x11E0();  // slot 572: AFortPlayerController::ServerSetClientHasFinishedLoading_Implementation (signature not recovered)
+	virtual bool ServerRequestAIDebug_Validate();  // slot 573 (+0x11E8), UFunction AFortPlayerController::ServerRequestAIDebug
+	virtual void ServerRequestAIDebug_Implementation();  // slot 574 (+0x11F0), UFunction AFortPlayerController::ServerRequestAIDebug
+	virtual void ClientOnGenericPlayerInitialization_Implementation();  // slot 575 (+0x11F8), UFunction AFortPlayerController::ClientOnGenericPlayerInitialization
+	virtual void FNGC_VSlot_0x1200();  // slot 576: AFortPlayerController::ClientSetSpectatorCamera_Implementation (signature not recovered)
+	virtual bool ServerSuicide_Validate();  // slot 577 (+0x1208), UFunction AFortPlayerController::ServerSuicide
+	virtual void ServerSuicide_Implementation();  // slot 578 (+0x1210), UFunction AFortPlayerController::ServerSuicide
+	virtual void FNGC_VSlot_0x1218();  // slot 579: AFortPlayerController::ClientJoinConsoleSession_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1220();  // slot 580: AFortPlayerController::ClientJoinConsoleSession_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1228();  // slot 581: AFortPlayerController::ClientReceivePresetTeamChat_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1230();  // slot 582: AFortPlayerController::ServerExecutePresetTeamChat_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1238();  // slot 583: AFortPlayerController::ServerExecutePresetTeamChat_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1240();  // slot 584: AFortPlayerController::ClientCreateOrJoinChatRoom_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1248();  // slot 585: AFortPlayerController::ServerTeamChatRoomReady_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1250();  // slot 586: AFortPlayerController::ServerTeamChatRoomReady_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1258();  // slot 587: AFortPlayerController::ClientReadyCheckComplete_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1260();  // slot 588: AFortPlayerController::ClientReadyCheckComplete_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1268();  // slot 589: AFortPlayerController::ServerReplyToReadyCheck_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1270();  // slot 590: AFortPlayerController::ServerReplyToReadyCheck_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1278();  // slot 591: AFortPlayerController::ClientRequestReadyCheck_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1280();  // slot 592: AFortPlayerController::ClientRequestReadyCheck_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1288();  // slot 593: AFortPlayerController::ServerSetReadyToContinue_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1290();  // slot 594: AFortPlayerController::ServerSetReadyToContinue_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1298();  // slot 595: AFortPlayerController::ServerRequestGameplayAction_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x12A0();  // slot 596: AFortPlayerController::ServerRequestGameplayAction_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x12A8();
+	virtual void FNGC_VSlot_0x12B0();
+	virtual void FNGC_VSlot_0x12B8();
+	virtual void FNGC_VSlot_0x12C0();
+	virtual void FNGC_VSlot_0x12C8();
+	virtual void FNGC_VSlot_0x12D0();
+	virtual void FNGC_VSlot_0x12D8();
+	virtual void Suicide();  // slot 604 (+0x12E0), UFunction AFortPlayerController::Suicide
+	virtual void FNGC_VSlot_0x12E8();
+	virtual void FNGC_VSlot_0x12F0();
+	virtual void FNGC_VSlot_0x12F8();
+	virtual void FNGC_VSlot_0x1300();
+	virtual void ReturnToMainMenu();  // slot 609 (+0x1308), UFunction AFortPlayerController::ReturnToMainMenu
+	virtual void FNGC_VSlot_0x1310();
+	virtual void FNGC_VSlot_0x1318();
+	virtual void FNGC_VSlot_0x1320();
+	virtual void FNGC_VSlot_0x1328();
+	virtual void FNGC_VSlot_0x1330();
+	virtual void FNGC_VSlot_0x1338();
+	virtual void FNGC_VSlot_0x1340();
+	virtual void FNGC_VSlot_0x1348();
+	virtual void FNGC_VSlot_0x1350();
+	virtual void FNGC_VSlot_0x1358();
+	virtual void FNGC_VSlot_0x1360();
+	virtual void FNGC_VSlot_0x1368();
+	virtual void FNGC_VSlot_0x1370();
+	virtual void FNGC_VSlot_0x1378();
+	virtual void FNGC_VSlot_0x1380();
+	virtual void FNGC_VSlot_0x1388();
+	virtual void FNGC_VSlot_0x1390();
+	virtual void FNGC_VSlot_0x1398();
+	virtual void FNGC_VSlot_0x13A0();
+	virtual void FNGC_VSlot_0x13A8();
+	virtual void FNGC_VSlot_0x13B0();
+	virtual void FNGC_VSlot_0x13B8();
+	virtual void FNGC_VSlot_0x13C0();
+	virtual void FNGC_VSlot_0x13C8();
+	virtual void FNGC_VSlot_0x13D0();
+	virtual void FNGC_VSlot_0x13D8();
+	virtual void FNGC_VSlot_0x13E0();
+	virtual void FNGC_VSlot_0x13E8();  // slot 637: AFortPlayerController::SetRotatePawnToCamera (signature not recovered)
+	virtual bool GetRotatePawnToCamera() const;  // slot 638 (+0x13F0), UFunction AFortPlayerController::GetRotatePawnToCamera
+	virtual void FNGC_VSlot_0x13F8();  // slot 639: AFortPlayerController::SetFirstPersonCamera (signature not recovered)
+	virtual void FNGC_VSlot_0x1400();
+	virtual void FNGC_VSlot_0x1408();
+	virtual void FNGC_VSlot_0x1410();
+	virtual void FNGC_VSlot_0x1418();
+	virtual void FNGC_VSlot_0x1420();
+	virtual void FNGC_VSlot_0x1428();
+	virtual void FNGC_VSlot_0x1430();
+	virtual void FNGC_VSlot_0x1438();
+	virtual void FNGC_VSlot_0x1440();
+	virtual void FNGC_VSlot_0x1448();
+	virtual void FNGC_VSlot_0x1450();
+	virtual void FNGC_VSlot_0x1458();
+	virtual void FNGC_VSlot_0x1460();
+	virtual void FNGC_VSlot_0x1468();
+	virtual void FNGC_VSlot_0x1470();
+	virtual void FNGC_VSlot_0x1478();
+	virtual void FNGC_VSlot_0x1480();
+	virtual void FNGC_VSlot_0x1488();
+	virtual void FNGC_VSlot_0x1490();
+	virtual void FNGC_VSlot_0x1498();
+	virtual void FNGC_VSlot_0x14A0();
+	virtual void FNGC_VSlot_0x14A8();
+	virtual void FNGC_VSlot_0x14B0();
+	virtual void FNGC_VSlot_0x14B8();
+	virtual void FNGC_VSlot_0x14C0();
+	virtual void FNGC_VSlot_0x14C8();
+	virtual void FNGC_VSlot_0x14D0();
+	virtual void ToggleInventory();  // slot 667 (+0x14D8), UFunction AFortPlayerController::ToggleInventory
+	virtual void FNGC_VSlot_0x14E0();
+	virtual void FNGC_VSlot_0x14E8();
+	virtual void FNGC_VSlot_0x14F0();
+	virtual void FNGC_VSlot_0x14F8();  // slot 671: AFortPlayerController::LocalOnUiChoiceCompleted (signature not recovered)
+	virtual void ToggleFullScreenMap();  // slot 672 (+0x1500), UFunction AFortPlayerController::ToggleFullScreenMap
+	virtual void FNGC_VSlot_0x1508();
+	virtual void FNGC_VSlot_0x1510();
+	virtual void FNGC_VSlot_0x1518();
+	virtual void FNGC_VSlot_0x1520();
+	virtual void FNGC_VSlot_0x1528();
+	virtual void FNGC_VSlot_0x1530();
+	virtual void FNGC_VSlot_0x1538();
+	virtual void FNGC_VSlot_0x1540();
+	virtual void FNGC_VSlot_0x1548();
+	virtual void FNGC_VSlot_0x1550();
+	virtual void FNGC_VSlot_0x1558();
+	virtual void FNGC_VSlot_0x1560();
+	virtual void FNGC_VSlot_0x1568();
+	virtual void FNGC_VSlot_0x1570();
+	virtual void FNGC_VSlot_0x1578();
+	virtual void FNGC_VSlot_0x1580();
+	virtual void FNGC_VSlot_0x1588();
+	virtual void FNGC_VSlot_0x1590();
+	virtual void FNGC_VSlot_0x1598();
+	virtual void FNGC_VSlot_0x15A0();
+	virtual void FNGC_VSlot_0x15A8();
+	virtual void FNGC_VSlot_0x15B0();
+	virtual void FNGC_VSlot_0x15B8();
+	virtual void FNGC_VSlot_0x15C0();
+	virtual void FNGC_VSlot_0x15C8();
+	virtual void FNGC_VSlot_0x15D0();
+	virtual void FNGC_VSlot_0x15D8();
+	virtual void FNGC_VSlot_0x15E0();
+	virtual void FNGC_VSlot_0x15E8();
+	virtual void FNGC_VSlot_0x15F0();
+	virtual void FNGC_VSlot_0x15F8();
+	virtual void FNGC_VSlot_0x1600();
+	virtual void FNGC_VSlot_0x1608();
+	virtual void FNGC_VSlot_0x1610();
+	virtual void FNGC_VSlot_0x1618();
+	virtual void FNGC_VSlot_0x1620();
+	virtual void FNGC_VSlot_0x1628();
+	virtual void FNGC_VSlot_0x1630();
+	virtual void FNGC_VSlot_0x1638();
+	virtual void FNGC_VSlot_0x1640();
+	virtual void FNGC_VSlot_0x1648();
+	virtual void FNGC_VSlot_0x1650();
+	virtual void FNGC_VSlot_0x1658();
+	virtual void FNGC_VSlot_0x1660();
+	virtual void FNGC_VSlot_0x1668();
+	virtual void FNGC_VSlot_0x1670();
+	virtual void FNGC_VSlot_0x1678();
+	virtual void FNGC_VSlot_0x1680();
+	virtual void FNGC_VSlot_0x1688();
+	virtual void OnRep_QuickBar();  // slot 722 (+0x1690), UFunction AFortPlayerController::OnRep_QuickBar
+	virtual void OnRep_PinnedSchematics();  // slot 723 (+0x1698), UFunction AFortPlayerController::OnRep_PinnedSchematics
+	virtual void FNGC_VSlot_0x16A0();
+	virtual void FNGC_VSlot_0x16A8();
+	virtual void FNGC_VSlot_0x16B0();
+	virtual void FNGC_VSlot_0x16B8();
+	virtual void FNGC_VSlot_0x16C0();
+	virtual void FNGC_VSlot_0x16C8();
+	virtual void FNGC_VSlot_0x16D0();  // slot 730: AFortPlayerController::GetQuestManager (signature not recovered)
+	virtual void FNGC_VSlot_0x16D8();  // slot 731: AFortPlayerController::GetAwardManager (signature not recovered)
+	virtual void FNGC_VSlot_0x16E0();  // slot 732: AFortPlayerController::IsRequirementsMet (signature not recovered)
+	virtual void FNGC_VSlot_0x16E8();
+	virtual void FNGC_VSlot_0x16F0();
+	virtual void FNGC_VSlot_0x16F8();
+	virtual void FNGC_VSlot_0x1700();
+	virtual void FNGC_VSlot_0x1708();
+	virtual void FNGC_VSlot_0x1710();
+	virtual void FNGC_VSlot_0x1718();
+	virtual void FNGC_VSlot_0x1720();
+	virtual void FNGC_VSlot_0x1728();
+	virtual void FNGC_VSlot_0x1730();
+	virtual void FNGC_VSlot_0x1738();
+	virtual void FNGC_VSlot_0x1740();
+	virtual void FNGC_VSlot_0x1748();
+	virtual void FNGC_VSlot_0x1750();
+	virtual void FNGC_VSlot_0x1758();
+	virtual void FNGC_VSlot_0x1760();
+	virtual void FNGC_VSlot_0x1768();
+	virtual void FNGC_VSlot_0x1770();  // slot 750: AFortPlayerController::PlayEmoteItem (signature not recovered)
+	virtual void FNGC_VSlot_0x1778();  // slot 751: AFortPlayerController::Emote (signature not recovered)
+	virtual bool IsPlayingEmote() const;  // slot 752 (+0x1780), UFunction AFortPlayerController::IsPlayingEmote
+	virtual void PrintDebugInfo();  // slot 753 (+0x1788), UFunction AFortPlayerController::PrintDebugInfo
 	static void StaticRegisterNativesAFortPlayerController();
 	static void execActivateSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddItemToQuickBars(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9723,6 +12133,24 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x1790();
+	virtual void FNGC_VSlot_0x1798();
+	virtual void FNGC_VSlot_0x17A0();
+	virtual void FNGC_VSlot_0x17A8();
+	virtual void FNGC_VSlot_0x17B0();
+	virtual void FNGC_VSlot_0x17B8();
+	virtual void FNGC_VSlot_0x17C0();
+	virtual void FNGC_VSlot_0x17C8();
+	virtual void FNGC_VSlot_0x17D0();
+	virtual void FNGC_VSlot_0x17D8();
+	virtual void FNGC_VSlot_0x17E0();
+	virtual void FNGC_VSlot_0x17E8();
+	virtual void FNGC_VSlot_0x17F0();
+	virtual void FNGC_VSlot_0x17F8();
+	virtual void FNGC_VSlot_0x1800();
+	virtual void FNGC_VSlot_0x1808();
+	virtual void FNGC_VSlot_0x1810();
+	virtual void FNGC_VSlot_0x1818();  // slot 771: AFortPlayerControllerGameplay::SetHUDElementVisibility (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerControllerGameplay();
 	static void execAreHUDElementsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execRefreshHUDElementVisibilitiesToSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9744,6 +12172,25 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x1820();  // slot 772: AFortPlayerControllerZone::ClientOnZoneEndScoreReports_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1828();  // slot 773: AFortPlayerControllerZone::ServerSendLoadoutConfig_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1830();  // slot 774: AFortPlayerControllerZone::ServerSendLoadoutConfig_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1838();  // slot 775: AFortPlayerControllerZone::ClientSendPartyJoinInfoToPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1840();  // slot 776: AFortPlayerControllerZone::ServerSubmitGameplayVote_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1848();  // slot 777: AFortPlayerControllerZone::ServerSubmitGameplayVote_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1850();  // slot 778: AFortPlayerControllerZone::ServerSendPartyJoinInfoToPlayer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1858();  // slot 779: AFortPlayerControllerZone::ServerSendPartyJoinInfoToPlayer_Implementation (signature not recovered)
+	virtual bool ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Validate();  // slot 780 (+0x1860), UFunction AFortPlayerControllerZone::ServerSetShouldDisablePlayerTeleportingDuringMissionResults
+	virtual void ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Implementation();  // slot 781 (+0x1868), UFunction AFortPlayerControllerZone::ServerSetShouldDisablePlayerTeleportingDuringMissionResults
+	virtual bool ServerTriggerSetupTeleportCameraEvent_Validate();  // slot 782 (+0x1870), UFunction AFortPlayerControllerZone::ServerTriggerSetupTeleportCameraEvent
+	virtual void ServerTriggerSetupTeleportCameraEvent_Implementation();  // slot 783 (+0x1878), UFunction AFortPlayerControllerZone::ServerTriggerSetupTeleportCameraEvent
+	virtual void FNGC_VSlot_0x1880();  // slot 784: AFortPlayerControllerZone::ClientOnPawnRevived_Implementation (signature not recovered)
+	virtual void ClientOnPawnSpawned_Implementation();  // slot 785 (+0x1888), UFunction AFortPlayerControllerZone::ClientOnPawnSpawned
+	virtual void FNGC_VSlot_0x1890();  // slot 786: AFortPlayerControllerZone::ClientOnPawnDied_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1898();
+	virtual void FNGC_VSlot_0x18A0();
+	virtual void FNGC_VSlot_0x18A8();
+	virtual void PushDeathInputComponent();  // slot 790 (+0x18B0), UFunction AFortPlayerControllerZone::PushDeathInputComponent
 	static void StaticRegisterNativesAFortPlayerControllerZone();
 	static void execClientOnPawnDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientOnPawnRevived(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9773,6 +12220,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x18B8();
+	virtual void FNGC_VSlot_0x18C0();
+	virtual void FNGC_VSlot_0x18C8();
+	virtual void FNGC_VSlot_0x18D0();
+	virtual void FNGC_VSlot_0x18D8();
+	virtual void FNGC_VSlot_0x18E0();
+	virtual void FNGC_VSlot_0x18E8();  // slot 797: AFortPlayerControllerPvP::ServerAttemptSelectFOBCore_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x18F0();  // slot 798: AFortPlayerControllerPvP::ServerAttemptSelectFOBCore_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x18F8();  // slot 799: AFortPlayerControllerPvP::ClientReceiveKillNotification_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1900();  // slot 800: AFortPlayerControllerPvP::ClientShowGameOverWidget_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerControllerPvP();
 	static void execClientReceiveKillNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientShowGameOverWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9791,6 +12248,43 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x1908();
+	virtual void FNGC_VSlot_0x1910();  // slot 802: AFortPlayerControllerAthena::ServerSendSquadFriend_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1918();  // slot 803: AFortPlayerControllerAthena::ServerSendSquadFriend_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1920();  // slot 804: AFortPlayerControllerAthena::ClientSendTeamStatsForPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1928();  // slot 805: AFortPlayerControllerAthena::ClientSendMatchStatsForPlayer_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1930();
+	virtual void FNGC_VSlot_0x1938();  // slot 807: AFortPlayerControllerAthena::ServerFollowTeammate_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1940();  // slot 808: AFortPlayerControllerAthena::ServerFollowTeammate_Implementation (signature not recovered)
+	virtual bool ServerRemoveMapCursor_Validate();  // slot 809 (+0x1948), UFunction AFortPlayerControllerAthena::ServerRemoveMapCursor
+	virtual void ServerRemoveMapCursor_Implementation();  // slot 810 (+0x1950), UFunction AFortPlayerControllerAthena::ServerRemoveMapCursor
+	virtual void FNGC_VSlot_0x1958();  // slot 811: AFortPlayerControllerAthena::ServerPlaceMapCursor_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1960();  // slot 812: AFortPlayerControllerAthena::ServerPlaceMapCursor_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1968();  // slot 813: AFortPlayerControllerAthena::ServerAttemptAircraftJump_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1970();  // slot 814: AFortPlayerControllerAthena::ServerAttemptAircraftJump_Implementation (signature not recovered)
+	virtual bool ServerAttemptExitVehicle_Validate();  // slot 815 (+0x1978), UFunction AFortPlayerControllerAthena::ServerAttemptExitVehicle
+	virtual void ServerAttemptExitVehicle_Implementation();  // slot 816 (+0x1980), UFunction AFortPlayerControllerAthena::ServerAttemptExitVehicle
+	virtual bool ServerGenerateMockMatchReport_Validate();  // slot 817 (+0x1988), UFunction AFortPlayerControllerAthena::ServerGenerateMockMatchReport
+	virtual void ServerGenerateMockMatchReport_Implementation();  // slot 818 (+0x1990), UFunction AFortPlayerControllerAthena::ServerGenerateMockMatchReport
+	virtual void FNGC_VSlot_0x1998();  // slot 819: AFortPlayerControllerAthena::ServerDBNOReviveInterrupted_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x19A0();  // slot 820: AFortPlayerControllerAthena::ServerDBNOReviveInterrupted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x19A8();  // slot 821: AFortPlayerControllerAthena::ServerDBNOReviveStarted_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x19B0();  // slot 822: AFortPlayerControllerAthena::ServerDBNOReviveStarted_Implementation (signature not recovered)
+	virtual void ClientBotStopDogpile_Implementation();  // slot 823 (+0x19B8), UFunction AFortPlayerControllerAthena::ClientBotStopDogpile
+	virtual void FNGC_VSlot_0x19C0();  // slot 824: AFortPlayerControllerAthena::ClientBotStartDogpile_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x19C8();  // slot 825: AFortPlayerControllerAthena::ClientReceiveSquadQuickChatMessage_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x19D0();  // slot 826: AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x19D8();  // slot 827: AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x19E0();  // slot 828: AFortPlayerControllerAthena::ClientVoiceChatChannelJoin_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x19E8();  // slot 829: AFortPlayerControllerAthena::ClientVoiceChat3DChannelJoin_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x19F0();  // slot 830: AFortPlayerControllerAthena::ClientVoiceChatLogin_Implementation (signature not recovered)
+	virtual bool ServerVoiceChatReconnected_Validate();  // slot 831 (+0x19F8), UFunction AFortPlayerControllerAthena::ServerVoiceChatReconnected
+	virtual void ServerVoiceChatReconnected_Implementation();  // slot 832 (+0x1A00), UFunction AFortPlayerControllerAthena::ServerVoiceChatReconnected
+	virtual bool ServerVoiceChatRejoinChannel_Validate();  // slot 833 (+0x1A08), UFunction AFortPlayerControllerAthena::ServerVoiceChatRejoinChannel
+	virtual void ServerVoiceChatRejoinChannel_Implementation();  // slot 834 (+0x1A10), UFunction AFortPlayerControllerAthena::ServerVoiceChatRejoinChannel
+	virtual void ClientNotifyTeamWon_Implementation();  // slot 835 (+0x1A18), UFunction AFortPlayerControllerAthena::ClientNotifyTeamWon
+	virtual void ClientNotifyWon_Implementation();  // slot 836 (+0x1A20), UFunction AFortPlayerControllerAthena::ClientNotifyWon
+	virtual void FNGC_VSlot_0x1A28();  // slot 837: AFortPlayerControllerAthena::ClientUnreliableSendMessage_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerControllerAthena();
 	static void execCancelSoloMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanFollowTeammate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9866,6 +12360,23 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x18B8();
+	virtual void FNGC_VSlot_0x18C0();
+	virtual void FNGC_VSlot_0x18C8();
+	virtual void FNGC_VSlot_0x18D0();
+	virtual void FNGC_VSlot_0x18D8();
+	virtual void FNGC_VSlot_0x18E0();
+	virtual void FNGC_VSlot_0x18E8();  // slot 797: AFortPlayerControllerDeployableBase::ServerMoveAllItemsFromDeployableBase_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x18F0();  // slot 798: AFortPlayerControllerDeployableBase::ServerMoveAllItemsFromDeployableBase_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x18F8();  // slot 799: AFortPlayerControllerDeployableBase::ServerMoveAllItemsToDeployableBase_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1900();  // slot 800: AFortPlayerControllerDeployableBase::ServerMoveAllItemsToDeployableBase_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1908();  // slot 801: AFortPlayerControllerDeployableBase::ServerMoveItemFromDeployableBase_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1910();  // slot 802: AFortPlayerControllerDeployableBase::ServerMoveItemFromDeployableBase_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1918();  // slot 803: AFortPlayerControllerDeployableBase::ServerMoveItemToDeployableBase_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1920();  // slot 804: AFortPlayerControllerDeployableBase::ServerMoveItemToDeployableBase_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1928();  // slot 805: AFortPlayerControllerDeployableBase::ClientOnHordeWaveComplete_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1930();  // slot 806: AFortPlayerControllerDeployableBase::ClientOnHordeTierComplete_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1938();  // slot 807: AFortPlayerControllerDeployableBase::ClientOnHordeTierInitialized_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerControllerDeployableBase();
 	static void execClientOnHordeTierComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientOnHordeTierInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9894,6 +12405,20 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x18B8();
+	virtual void FNGC_VSlot_0x18C0();
+	virtual void FNGC_VSlot_0x18C8();
+	virtual void FNGC_VSlot_0x18D0();
+	virtual void FNGC_VSlot_0x18D8();
+	virtual void FNGC_VSlot_0x18E0();
+	virtual void FNGC_VSlot_0x18E8();  // slot 797: AFortPlayerControllerFOB::ServerAttemptSelectFOBCore_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x18F0();  // slot 798: AFortPlayerControllerFOB::ServerAttemptSelectFOBCore_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x18F8();  // slot 799: AFortPlayerControllerFOB::ServerResetFOB_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1900();  // slot 800: AFortPlayerControllerFOB::ServerResetFOB_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1908();  // slot 801: AFortPlayerControllerFOB::ServerReloadFOB_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1910();  // slot 802: AFortPlayerControllerFOB::ServerReloadFOB_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1918();  // slot 803: AFortPlayerControllerFOB::ServerSaveFOB_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1920();  // slot 804: AFortPlayerControllerFOB::ServerSaveFOB_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerControllerFOB();
 	static void execServerAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9935,6 +12460,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x18B8();
+	virtual void FNGC_VSlot_0x18C0();
+	virtual void FNGC_VSlot_0x18C8();
+	virtual void FNGC_VSlot_0x18D0();
+	virtual void FNGC_VSlot_0x18D8();
+	virtual void FNGC_VSlot_0x18E0();
+	virtual void FNGC_VSlot_0x18E8();  // slot 797: AFortPlayerControllerKeep::ClientSetPermaniteAvailability_Implementation (signature not recovered)
+	virtual void ClientUnloadFoundations_Implementation();  // slot 798 (+0x18F0), UFunction AFortPlayerControllerKeep::ClientUnloadFoundations
 	static void StaticRegisterNativesAFortPlayerControllerKeep();
 	static void execClientSetPermaniteAvailability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientUnloadFoundations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9960,6 +12493,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x18B8();
+	virtual void FNGC_VSlot_0x18C0();
+	virtual void FNGC_VSlot_0x18C8();
+	virtual void FNGC_VSlot_0x18D0();
+	virtual void FNGC_VSlot_0x18D8();
+	virtual void FNGC_VSlot_0x18E0();
+	virtual void FNGC_VSlot_0x18E8();  // slot 797: AFortPlayerControllerManor::ServerOnUnlockPortalComplete_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x18F0();  // slot 798: AFortPlayerControllerManor::ServerOnUnlockPortalComplete_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x18F8();  // slot 799: AFortPlayerControllerManor::ClientOpenManorPortalUnlockMenu_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerControllerManor();
 	static void execClientOpenManorPortalUnlockMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerOnUnlockPortalComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9979,6 +12521,38 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x18B8();
+	virtual void FNGC_VSlot_0x18C0();
+	virtual void FNGC_VSlot_0x18C8();
+	virtual void FNGC_VSlot_0x18D0();
+	virtual void FNGC_VSlot_0x18D8();
+	virtual void FNGC_VSlot_0x18E0();
+	virtual bool ServerNotifyPendingFabricationCompleted_Validate();  // slot 797 (+0x18E8), UFunction AFortPlayerControllerOutpost::ServerNotifyPendingFabricationCompleted
+	virtual void ServerNotifyPendingFabricationCompleted_Implementation();  // slot 798 (+0x18F0), UFunction AFortPlayerControllerOutpost::ServerNotifyPendingFabricationCompleted
+	virtual void FNGC_VSlot_0x18F8();  // slot 799: AFortPlayerControllerOutpost::ClientOnBuildingLevelChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1900();  // slot 800: AFortPlayerControllerOutpost::ServerUpgradeBuilding_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1908();  // slot 801: AFortPlayerControllerOutpost::ServerUpgradeBuilding_Implementation (signature not recovered)
+	virtual bool ServerDeactivateCraftingTable_Validate();  // slot 802 (+0x1910), UFunction AFortPlayerControllerOutpost::ServerDeactivateCraftingTable
+	virtual void ServerDeactivateCraftingTable_Implementation();  // slot 803 (+0x1918), UFunction AFortPlayerControllerOutpost::ServerDeactivateCraftingTable
+	virtual bool ServerActivateCraftingTable_Validate();  // slot 804 (+0x1920), UFunction AFortPlayerControllerOutpost::ServerActivateCraftingTable
+	virtual void ServerActivateCraftingTable_Implementation();  // slot 805 (+0x1928), UFunction AFortPlayerControllerOutpost::ServerActivateCraftingTable
+	virtual void ClientOnOutpostRefundOccurred_Implementation();  // slot 806 (+0x1930), UFunction AFortPlayerControllerOutpost::ClientOnOutpostRefundOccurred
+	virtual void FNGC_VSlot_0x1938();  // slot 807: AFortPlayerControllerOutpost::ServerDepositPOSTResource_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1940();  // slot 808: AFortPlayerControllerOutpost::ServerDepositPOSTResource_Implementation (signature not recovered)
+	virtual bool ServerUpgradePOST_Validate();  // slot 809 (+0x1948), UFunction AFortPlayerControllerOutpost::ServerUpgradePOST
+	virtual void ServerUpgradePOST_Implementation();  // slot 810 (+0x1950), UFunction AFortPlayerControllerOutpost::ServerUpgradePOST
+	virtual bool ServerLeaveOutpostAsParty_Validate();  // slot 811 (+0x1958), UFunction AFortPlayerControllerOutpost::ServerLeaveOutpostAsParty
+	virtual void ServerLeaveOutpostAsParty_Implementation();  // slot 812 (+0x1960), UFunction AFortPlayerControllerOutpost::ServerLeaveOutpostAsParty
+	virtual bool ServerAbortDisintegration_Validate();  // slot 813 (+0x1968), UFunction AFortPlayerControllerOutpost::ServerAbortDisintegration
+	virtual void ServerAbortDisintegration_Implementation();  // slot 814 (+0x1970), UFunction AFortPlayerControllerOutpost::ServerAbortDisintegration
+	virtual void FNGC_VSlot_0x1978();  // slot 815: AFortPlayerControllerOutpost::ServerFabricateItem_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1980();  // slot 816: AFortPlayerControllerOutpost::ServerFabricateItem_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1988();  // slot 817: AFortPlayerControllerOutpost::ServerDisintegrateItem_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x1990();  // slot 818: AFortPlayerControllerOutpost::ServerDisintegrateItem_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x1998();  // slot 819: AFortPlayerControllerOutpost::ServerMoveItemFromStorageVault_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x19A0();  // slot 820: AFortPlayerControllerOutpost::ServerMoveItemFromStorageVault_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x19A8();  // slot 821: AFortPlayerControllerOutpost::ServerMoveItemToStorageVault_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x19B0();  // slot 822: AFortPlayerControllerOutpost::ServerMoveItemToStorageVault_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerControllerOutpost();
 	static void execCanUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanUpgradeBuildingFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10066,6 +12640,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_ReplicatedMesh();  // slot 189 (+0x5E8), UFunction ASkeletalMeshActor::OnRep_ReplicatedMesh
+	virtual void OnRep_ReplicatedPhysAsset();  // slot 190 (+0x5F0), UFunction ASkeletalMeshActor::OnRep_ReplicatedPhysAsset
+	virtual void OnRep_ReplicatedMaterial0();  // slot 191 (+0x5F8), UFunction ASkeletalMeshActor::OnRep_ReplicatedMaterial0
+	virtual void OnRep_ReplicatedMaterial1();  // slot 192 (+0x600), UFunction ASkeletalMeshActor::OnRep_ReplicatedMaterial1
 	static void StaticRegisterNativesASkeletalMeshActor();
 	static void execOnRep_ReplicatedMaterial0(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_ReplicatedMaterial1(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10087,6 +12670,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void UpdateMorphTargets();  // slot 193 (+0x608), UFunction AFortPlayerMannequin::UpdateMorphTargets
 	static void StaticRegisterNativesAFortPlayerMannequin();
 	static void execCyclePartBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAllPartSkeletalMeshComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10137,6 +12721,61 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0xB28();
+	virtual void FNGC_VSlot_0xB30();
+	virtual void FNGC_VSlot_0xB38();
+	virtual void FNGC_VSlot_0xB40();
+	virtual void FNGC_VSlot_0xB48();
+	virtual void FNGC_VSlot_0xB50();
+	virtual void FNGC_VSlot_0xB58();  // slot 363: AFortPlayerPawn::ServerSetAttachment_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xB60();  // slot 364: AFortPlayerPawn::ServerSetAttachment_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xB68();  // slot 365: AFortPlayerPawn::ServerRootMotionInterruptNotifyStopMontage_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xB70();  // slot 366: AFortPlayerPawn::ServerRootMotionInterruptNotifyStopMontage_Implementation (signature not recovered)
+	virtual bool ServerRespawnFromDBNO_Validate();  // slot 367 (+0xB78), UFunction AFortPlayerPawn::ServerRespawnFromDBNO
+	virtual void ServerRespawnFromDBNO_Implementation();  // slot 368 (+0xB80), UFunction AFortPlayerPawn::ServerRespawnFromDBNO
+	virtual void FNGC_VSlot_0xB88();  // slot 369: AFortPlayerPawn::ServerReviveFromDBNO_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xB90();  // slot 370: AFortPlayerPawn::ServerReviveFromDBNO_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xB98();  // slot 371: AFortPlayerPawn::ServerChoosePart_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xBA0();  // slot 372: AFortPlayerPawn::ServerChoosePart_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xBA8();  // slot 373: AFortPlayerPawn::ServerChooseGender_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xBB0();  // slot 374: AFortPlayerPawn::ServerChooseGender_Implementation (signature not recovered)
+	virtual bool ServerToggleBodyType_Validate();  // slot 375 (+0xBB8), UFunction AFortPlayerPawn::ServerToggleBodyType
+	virtual void ServerToggleBodyType_Implementation();  // slot 376 (+0xBC0), UFunction AFortPlayerPawn::ServerToggleBodyType
+	virtual bool ServerToggleGender_Validate();  // slot 377 (+0xBC8), UFunction AFortPlayerPawn::ServerToggleGender
+	virtual void ServerToggleGender_Implementation();  // slot 378 (+0xBD0), UFunction AFortPlayerPawn::ServerToggleGender
+	virtual void FNGC_VSlot_0xBD8();  // slot 379: AFortPlayerPawn::ServerCycleAccessoryColorSwatch_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xBE0();  // slot 380: AFortPlayerPawn::ServerCycleAccessoryColorSwatch_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xBE8();  // slot 381: AFortPlayerPawn::ServerCycleColorSwatch_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xBF0();  // slot 382: AFortPlayerPawn::ServerCycleColorSwatch_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xBF8();  // slot 383: AFortPlayerPawn::ServerCyclePart_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xC00();  // slot 384: AFortPlayerPawn::ServerCyclePart_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xC08();  // slot 385: AFortPlayerPawn::ServerHandlePickup_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xC10();  // slot 386: AFortPlayerPawn::ServerHandlePickup_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xC18();  // slot 387: AFortPlayerPawn::ServerSendAimbotDetectionStatus_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xC20();  // slot 388: AFortPlayerPawn::ServerSendAimbotDetectionStatus_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xC28();  // slot 389: AFortPlayerPawn::ServerSetAimbotDetection_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xC30();  // slot 390: AFortPlayerPawn::ServerSetAimbotDetection_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xC38();  // slot 391: AFortPlayerPawn::InternalServerSetTargeting_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0xC40();  // slot 392: AFortPlayerPawn::InternalServerSetTargeting_Implementation (signature not recovered)
+	virtual bool ServerPlayUnableToPerformActionMontage_Validate();  // slot 393 (+0xC48), UFunction AFortPlayerPawn::ServerPlayUnableToPerformActionMontage
+	virtual void ServerPlayUnableToPerformActionMontage_Implementation();  // slot 394 (+0xC50), UFunction AFortPlayerPawn::ServerPlayUnableToPerformActionMontage
+	virtual void FNGC_VSlot_0xC58();  // slot 395: AFortPlayerPawn::ClientNotifyAbilityFailed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();  // slot 411: AFortPlayerPawn::GetSkeletalMeshForPartType (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerPawn();
 	static void execAddAttachment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanPredictJumpApex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10204,6 +12843,41 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void FNGC_VSlot_0xD18();
+	virtual void FNGC_VSlot_0xD20();
+	virtual void FNGC_VSlot_0xD28();
+	virtual void FNGC_VSlot_0xD30();
+	virtual void FNGC_VSlot_0xD38();
+	virtual void FNGC_VSlot_0xD40();
+	virtual void FNGC_VSlot_0xD48();
+	virtual void FNGC_VSlot_0xD50();
+	virtual void FNGC_VSlot_0xD58();
+	virtual void FNGC_VSlot_0xD60();
+	virtual void FNGC_VSlot_0xD68();
+	virtual void FNGC_VSlot_0xD70();
+	virtual void FNGC_VSlot_0xD78();
+	virtual void FNGC_VSlot_0xD80();
+	virtual void FNGC_VSlot_0xD88();
+	virtual void FNGC_VSlot_0xD90();
+	virtual void FNGC_VSlot_0xD98();
+	virtual void FNGC_VSlot_0xDA0();  // slot 436: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDA8();  // slot 437: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDB0();  // slot 438: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDB8();  // slot 439: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDC0();  // slot 440: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAdded_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDC8();  // slot 441: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDD0();  // slot 442: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDD8();  // slot 443: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDE0();  // slot 444: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDE8();  // slot 445: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0xDF0();  // slot 446: AFortPlayerPawnAthena::NetMulticast_Athena_BatchedDamageCues_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerPawnAthena();
 	static void execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetContrailParticleSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10335,6 +13009,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_Score();  // slot 189 (+0x5E8), UFunction APlayerState::OnRep_Score
+	virtual void OnRep_PlayerName();  // slot 190 (+0x5F0), UFunction APlayerState::OnRep_PlayerName
+	virtual void OnRep_bIsInactive();  // slot 191 (+0x5F8), UFunction APlayerState::OnRep_bIsInactive
+	virtual void OnRep_PlayerId();  // slot 192 (+0x600), UFunction APlayerState::OnRep_PlayerId
+	virtual void OnRep_UniqueId();  // slot 193 (+0x608), UFunction APlayerState::OnRep_UniqueId
 	static void StaticRegisterNativesAPlayerState();
 	static void execGetPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_bIsInactive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10358,6 +13042,49 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();  // slot 214: AFortPlayerState::ClientNotifyAwardGranted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x6B8();  // slot 215: AFortPlayerState::ServerSetShowHeroBackpack_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x6C0();  // slot 216: AFortPlayerState::ServerSetShowHeroBackpack_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x6C8();  // slot 217: AFortPlayerState::ServerSetShowHeroHeadAccessories_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x6D0();  // slot 218: AFortPlayerState::ServerSetShowHeroHeadAccessories_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x6D8();  // slot 219: AFortPlayerState::GetCurrentPawn (signature not recovered)
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void OnRep_PartyOwner();  // slot 228 (+0x720), UFunction AFortPlayerState::OnRep_PartyOwner
+	virtual void OnRep_HeroType();  // slot 229 (+0x728), UFunction AFortPlayerState::OnRep_HeroType
+	virtual void OnRep_PlayerTeam();  // slot 230 (+0x730), UFunction AFortPlayerState::OnRep_PlayerTeam
+	virtual void UpdateScoreStatChanged();  // slot 231 (+0x738), UFunction AFortPlayerState::UpdateScoreStatChanged
+	virtual void FNGC_VSlot_0x740();  // slot 232: AFortPlayerState::OnRep_HomeActor (signature not recovered)
+	virtual void FNGC_VSlot_0x748();
+	virtual void FNGC_VSlot_0x750();
+	virtual void FNGC_VSlot_0x758();
+	virtual void OnRep_PlatformUniqueNetIdString();  // slot 236 (+0x760), UFunction AFortPlayerState::OnRep_PlatformUniqueNetIdString
 	static void StaticRegisterNativesAFortPlayerState();
 	static void execAreUniqueIDsIdentical(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientNotifyAwardGranted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10438,6 +13165,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();  // slot 242: AFortPlayerStateAthena::ClientReportDBNO_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x798();  // slot 243: AFortPlayerStateAthena::ClientReportKill_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerStateAthena();
 	static void execClientReportDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientReportKill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10527,6 +13261,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();  // slot 242: AFortPlayerStateOutpost::ServerSetCanEditOutpost_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x798();  // slot 243: AFortPlayerStateOutpost::ServerSetCanEditOutpost_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerStateOutpost();
 	static void execCanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsOutpostOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10548,6 +13289,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();  // slot 203: AFortProjectileBase::OnBounceCallback (signature not recovered)
+	virtual void FNGC_VSlot_0x660();  // slot 204: AFortProjectileBase::OnStopCallback (signature not recovered)
 	static void StaticRegisterNativesAFortProjectileBase();
 	static void execGetGravityScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOwnerPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10572,6 +13318,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x668();  // slot 205: AFortProjectileAthena::ServerNotifyPawnHit_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x670();  // slot 206: AFortProjectileAthena::ServerNotifyPawnHit_Implementation (signature not recovered)
+	virtual void OnRep_FireStart();  // slot 207 (+0x678), UFunction AFortProjectileAthena::OnRep_FireStart
+	virtual void KillAfterNoPawnHit();  // slot 208 (+0x680), UFunction AFortProjectileAthena::KillAfterNoPawnHit
+	virtual void OnRep_PawnHitResult();  // slot 209 (+0x688), UFunction AFortProjectileAthena::OnRep_PawnHitResult
 	static void StaticRegisterNativesAFortProjectileAthena();
 	static void execKillAfterNoPawnHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_FireStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10608,6 +13359,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x668();  // slot 205: AFortProjectile_MOBATurret::OnHomingTargetDied (signature not recovered)
 	static void StaticRegisterNativesAFortProjectile_MOBATurret();
 	static void execOnHomingTargetDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -10627,6 +13379,41 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual bool IsActive() const;  // slot 292 (+0x920), UFunction AStrategicBuildingActor::IsActive
+	virtual void FNGC_VSlot_0x928();  // slot 293: AStrategicBuildingActor::AttemptIncrementLevelUnlockProgress (signature not recovered)
+	virtual void FNGC_VSlot_0x930();  // slot 294: AStrategicBuildingActor::GetCurrentLevelUnlockProgress (signature not recovered)
+	virtual void FNGC_VSlot_0x938();  // slot 295: AStrategicBuildingActor::GetMaxLevelUnlockProgress (signature not recovered)
+	virtual void FNGC_VSlot_0x940();  // slot 296: AStrategicBuildingActor::GiveItemFromStrategicBuildingToPlayer (signature not recovered)
+	virtual void OnRep_bIsActive();  // slot 297 (+0x948), UFunction AStrategicBuildingActor::OnRep_bIsActive
+	virtual void OnRep_ConstructionProgress();  // slot 298 (+0x950), UFunction AStrategicBuildingActor::OnRep_ConstructionProgress
+	virtual void FNGC_VSlot_0x958();  // slot 299: AStrategicBuildingActor::OnActiveStatusChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x960();  // slot 300: AStrategicBuildingActor::OnConstructionStartedPlayEffects_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x968();  // slot 301: AStrategicBuildingActor::OnConstructionTickPlayEffects_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x970();  // slot 302: AStrategicBuildingActor::OnConstructionEndedPlayEffects_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x978();
+	virtual void FNGC_VSlot_0x980();
+	virtual void FNGC_VSlot_0x988();
+	virtual void FNGC_VSlot_0x990();
+	virtual void FNGC_VSlot_0x998();
+	virtual void FNGC_VSlot_0x9A0();
+	virtual void FNGC_VSlot_0x9A8();
+	virtual void FNGC_VSlot_0x9B0();
+	virtual void FNGC_VSlot_0x9B8();
+	virtual void FNGC_VSlot_0x9C0();
+	virtual void FNGC_VSlot_0x9C8();
+	virtual void FNGC_VSlot_0x9D0();
+	virtual void FNGC_VSlot_0x9D8();
+	virtual void FNGC_VSlot_0x9E0();
+	virtual void FNGC_VSlot_0x9E8();
+	virtual void ApplyProximityPulseEffects();  // slot 318 (+0x9F0), UFunction AStrategicBuildingActor::ApplyProximityPulseEffects
+	virtual void FNGC_VSlot_0x9F8();
+	virtual void ProcessDeferredTouchActors();  // slot 320 (+0xA00), UFunction AStrategicBuildingActor::ProcessDeferredTouchActors
+	virtual void FNGC_VSlot_0xA08();
+	virtual void FNGC_VSlot_0xA10();
+	virtual void FNGC_VSlot_0xA18();
+	virtual void FNGC_VSlot_0xA20();
+	virtual void SetupIndicators();  // slot 325 (+0xA28), UFunction AStrategicBuildingActor::SetupIndicators
+	virtual void SetupVisibilityComponent();  // slot 326 (+0xA30), UFunction AStrategicBuildingActor::SetupVisibilityComponent
 	static void StaticRegisterNativesAStrategicBuildingActor();
 	static void execApplyProximityPulseEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAttemptIncrementLevelUnlockProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10662,6 +13449,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xA38();  // slot 327: AFortPvPBaseCornerstone::OnInvincibilityChanged_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPvPBaseCornerstone();
 	static void execOnInvincibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_bInvincible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10714,6 +13502,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void CapturePointSetterHackTimer();  // slot 211 (+0x698), UFunction AFortPvPMission_3PtDomination::CapturePointSetterHackTimer
 	static void StaticRegisterNativesAFortPvPMission_3PtDomination();
 	static void execCapturePointSetterHackTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -10844,6 +13637,27 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AFortQuickBars::ServerActivateSlotInternal_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AFortQuickBars::ServerActivateSlotInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AFortQuickBars::ServerSwapItemsInternal_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x600();  // slot 192: AFortQuickBars::ServerSwapItemsInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x608();  // slot 193: AFortQuickBars::ServerRemoveItemInternal_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortQuickBars::ServerRemoveItemInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x618();  // slot 195: AFortQuickBars::ServerAddItemInternal_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x620();  // slot 196: AFortQuickBars::ServerAddItemInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: AFortQuickBars::EnableSlot_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x630();  // slot 198: AFortQuickBars::EnableSlot_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x638();  // slot 199: AFortQuickBars::DisableSlot_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x640();  // slot 200: AFortQuickBars::DisableSlot_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x648();  // slot 201: AFortQuickBars::EmptySlot_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x650();  // slot 202: AFortQuickBars::EmptySlot_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x658();  // slot 203: AFortQuickBars::Empty_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x660();  // slot 204: AFortQuickBars::Empty_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortQuickBars();
 	static void execDisableSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -10959,6 +13773,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AFortScriptedAction::CanExecute_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: AFortScriptedAction::Execute_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortScriptedAction();
 	static void execCancelAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11033,6 +13854,20 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual int32 GetTeamLevel() const;  // slot 196 (+0x620), UFunction AFortTeamInfo::GetTeamLevel
+	virtual int32 GetTeamExperience() const;  // slot 197 (+0x628), UFunction AFortTeamInfo::GetTeamExperience
 	static void StaticRegisterNativesAFortTeamInfo();
 	static void execGetTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11126,6 +13961,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();  // slot 193: AFortTheaterMapTile::OnSelectWrapper (signature not recovered)
+	virtual void FNGC_VSlot_0x610();  // slot 194: AFortTheaterMapTile::OnDeselectWrapper (signature not recovered)
 	static void StaticRegisterNativesAFortTheaterMapTile();
 	static void execDoesTileAllowQuickplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMissionAlertCategoryName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11196,6 +14042,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: AFortThreatVisualsManager::BeginThreatVisualsPrecursor_Implementation (signature not recovered)
+	virtual void OnRep_HideClouds();  // slot 190 (+0x5F0), UFunction AFortThreatVisualsManager::OnRep_HideClouds
+	virtual void OnRep_ThreatLocations();  // slot 191 (+0x5F8), UFunction AFortThreatVisualsManager::OnRep_ThreatLocations
+	virtual void OnRep_StormWinds();  // slot 192 (+0x600), UFunction AFortThreatVisualsManager::OnRep_StormWinds
+	virtual void OnRep_GoalActorLocations();  // slot 193 (+0x608), UFunction AFortThreatVisualsManager::OnRep_GoalActorLocations
 	static void StaticRegisterNativesAFortThreatVisualsManager();
 	static void execBeginThreatVisualsPrecursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCloudsAreHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11225,6 +14081,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_TimeOfDay();  // slot 189 (+0x5E8), UFunction AFortTimeOfDayManager::OnRep_TimeOfDay
+	virtual void OnRep_TimeOfDayInit();  // slot 190 (+0x5F0), UFunction AFortTimeOfDayManager::OnRep_TimeOfDayInit
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: AFortTimeOfDayManager::GetPreviousDayPhase (signature not recovered)
+	virtual void OnRep_HeightFogEnabled();  // slot 192 (+0x600), UFunction AFortTimeOfDayManager::OnRep_HeightFogEnabled
 	static void StaticRegisterNativesAFortTimeOfDayManager();
 	static void execBreakExponentialHeightFogValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFFToTimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11285,6 +14150,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xD20();  // slot 420: AFortTrack::GetSplineFromPositionAndOrientation (signature not recovered)
+	virtual void FNGC_VSlot_0xD28();  // slot 421: AFortTrack::GetSplineFromIncomingNeighbor (signature not recovered)
+	virtual void FNGC_VSlot_0xD30();  // slot 422: AFortTrack::GetOutgoingNeighborFromSpline (signature not recovered)
+	virtual void FNGC_VSlot_0xD38();
+	virtual void FNGC_VSlot_0xD40();
+	virtual void OnRep_NeighborsByDirection();  // slot 425 (+0xD48), UFunction AFortTrack::OnRep_NeighborsByDirection
+	virtual void OnRep_SwitchState();  // slot 426 (+0xD50), UFunction AFortTrack::OnRep_SwitchState
+	virtual void OnRep_ConfigurationIdx();  // slot 427 (+0xD58), UFunction AFortTrack::OnRep_ConfigurationIdx
 	static void StaticRegisterNativesAFortTrack();
 	static void execGetOutgoingNeighborFromSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPathDistanceToTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11619,6 +14492,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_WorldGravityZ();  // slot 189 (+0x5E8), UFunction AWorldSettings::OnRep_WorldGravityZ
 	static void StaticRegisterNativesAWorldSettings();
 	static void execOnRep_WorldGravityZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -11688,6 +14567,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void ConfirmTargeting();  // slot 192 (+0x600), UFunction AGameplayAbilityTargetActor::ConfirmTargeting
+	virtual void CancelTargeting();  // slot 193 (+0x608), UFunction AGameplayAbilityTargetActor::CancelTargeting
 	static void StaticRegisterNativesAGameplayAbilityTargetActor();
 	static void execCancelTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execConfirmTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11945,6 +14834,42 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xC00();
+	virtual void FNGC_VSlot_0xC08();
+	virtual void FNGC_VSlot_0xC10();
+	virtual void FNGC_VSlot_0xC18();
+	virtual void FNGC_VSlot_0xC20();
+	virtual void FNGC_VSlot_0xC28();
+	virtual void FNGC_VSlot_0xC30();
+	virtual void FNGC_VSlot_0xC38();
+	virtual void FNGC_VSlot_0xC40();
+	virtual void FNGC_VSlot_0xC48();
+	virtual void FNGC_VSlot_0xC50();
+	virtual void FNGC_VSlot_0xC58();
+	virtual void FNGC_VSlot_0xC60();
+	virtual void FNGC_VSlot_0xC68();
+	virtual void FNGC_VSlot_0xC70();
+	virtual void FNGC_VSlot_0xC78();
+	virtual void FNGC_VSlot_0xC80();
+	virtual void FNGC_VSlot_0xC88();
+	virtual void FNGC_VSlot_0xC90();
+	virtual void FNGC_VSlot_0xC98();
+	virtual void FNGC_VSlot_0xCA0();
+	virtual void FNGC_VSlot_0xCA8();
+	virtual void FNGC_VSlot_0xCB0();
+	virtual void FNGC_VSlot_0xCB8();
+	virtual void FNGC_VSlot_0xCC0();
+	virtual void FNGC_VSlot_0xCC8();
+	virtual void FNGC_VSlot_0xCD0();
+	virtual void FNGC_VSlot_0xCD8();
+	virtual void FNGC_VSlot_0xCE0();
+	virtual void FNGC_VSlot_0xCE8();
+	virtual void FNGC_VSlot_0xCF0();
+	virtual void FNGC_VSlot_0xCF8();
+	virtual void FNGC_VSlot_0xD00();
+	virtual void FNGC_VSlot_0xD08();
+	virtual void FNGC_VSlot_0xD10();
+	virtual void FNGC_VSlot_0xD18();  // slot 419: AKeepHeartBase::SetAllowLooting (signature not recovered)
 	static void StaticRegisterNativesAKeepHeartBase();
 	static void execIsKeepLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsKeepOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12004,6 +14929,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xD38();
+	virtual void FNGC_VSlot_0xD40();
+	virtual void FNGC_VSlot_0xD48();
+	virtual void FNGC_VSlot_0xD50();
+	virtual void FNGC_VSlot_0xD58();
+	virtual void FNGC_VSlot_0xD60();
+	virtual void FNGC_VSlot_0xD68();
+	virtual int32 GetLootTierOverride_Implementation() const;  // slot 430 (+0xD70), UFunction AKeepItemContainer::GetLootTierOverride
+	virtual void RestoreLoot();  // slot 431 (+0xD78), UFunction AKeepItemContainer::RestoreLoot
 	static void StaticRegisterNativesAKeepItemContainer();
 	static void execGetContainerNameAndLevelKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLootTierOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12076,6 +15010,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: ALandscapeProxy::ChangeLODDistanceFactor (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();  // slot 190: ALandscapeProxy::ChangeTessellationComponentScreenSize (signature not recovered)
+	virtual void FNGC_VSlot_0x5F8();  // slot 191: ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections (signature not recovered)
+	virtual void FNGC_VSlot_0x600();  // slot 192: ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff (signature not recovered)
+	virtual void FNGC_VSlot_0x608();  // slot 193: ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff (signature not recovered)
 	static void StaticRegisterNativesALandscapeProxy();
 	static void execChangeComponentScreenSizeToUseSubSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execChangeLODDistanceFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12365,6 +15309,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void Play();  // slot 190 (+0x5F0), UFunction AMatineeActor::Play
+	virtual void Stop();  // slot 191 (+0x5F8), UFunction AMatineeActor::Stop
+	virtual void Reverse();  // slot 192 (+0x600), UFunction AMatineeActor::Reverse
+	virtual void Pause();  // slot 193 (+0x608), UFunction AMatineeActor::Pause
+	virtual void ChangePlaybackDirection();  // slot 194 (+0x610), UFunction AMatineeActor::ChangePlaybackDirection
+	virtual void FNGC_VSlot_0x618();  // slot 195: AMatineeActor::SetLoopingState (signature not recovered)
 	static void StaticRegisterNativesAMatineeActor();
 	static void execChangePlaybackDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEnableGroupByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12907,6 +15863,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Qos"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();  // slot 196: AQosBeaconClient::ClientQosResponse_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x628();  // slot 197: AQosBeaconClient::ServerQosRequest_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x630();  // slot 198: AQosBeaconClient::ServerQosRequest_Implementation (signature not recovered)
 	static void StaticRegisterNativesAQosBeaconClient();
 	static void execClientQosResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerQosRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12943,6 +15904,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FireImpulse();  // slot 189 (+0x5E8), UFunction ARadialForceActor::FireImpulse
+	virtual void EnableForce();  // slot 190 (+0x5F0), UFunction ARadialForceActor::EnableForce
+	virtual void DisableForce();  // slot 191 (+0x5F8), UFunction ARadialForceActor::DisableForce
+	virtual void ToggleForce();  // slot 192 (+0x600), UFunction ARadialForceActor::ToggleForce
 	static void StaticRegisterNativesARadialForceActor();
 	static void execDisableForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEnableForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13102,6 +16072,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/OnlineSubsystemUtils"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual bool ServerPong_Validate();  // slot 196 (+0x620), UFunction ATestBeaconClient::ServerPong
+	virtual void ServerPong_Implementation();  // slot 197 (+0x628), UFunction ATestBeaconClient::ServerPong
+	virtual void ClientPing_Implementation();  // slot 198 (+0x630), UFunction ATestBeaconClient::ClientPing
 	static void StaticRegisterNativesATestBeaconClient();
 	static void execClientPing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerPong(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13606,6 +16581,51 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UActorComponent::Activate (signature not recovered)
+	virtual void Deactivate();  // slot 72 (+0x240), UFunction UActorComponent::Deactivate
+	virtual void FNGC_VSlot_0x248();  // slot 73: UActorComponent::SetActive (signature not recovered)
+	virtual void ToggleActive();  // slot 74 (+0x250), UFunction UActorComponent::ToggleActive
+	virtual bool IsActive() const;  // slot 75 (+0x258), UFunction UActorComponent::IsActive
+	virtual void FNGC_VSlot_0x260();  // slot 76: UActorComponent::SetAutoActivate (signature not recovered)
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();  // slot 98: UActorComponent::SetComponentTickEnabled (signature not recovered)
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();  // slot 112: UActorComponent::AddTickPrerequisiteActor (signature not recovered)
+	virtual void FNGC_VSlot_0x388();  // slot 113: UActorComponent::AddTickPrerequisiteComponent (signature not recovered)
+	virtual void FNGC_VSlot_0x390();  // slot 114: UActorComponent::RemoveTickPrerequisiteActor (signature not recovered)
+	virtual void FNGC_VSlot_0x398();  // slot 115: UActorComponent::RemoveTickPrerequisiteComponent (signature not recovered)
 	static void StaticRegisterNativesUActorComponent();
 	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13645,6 +16665,38 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000008000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();  // slot 118: USceneComponent::SetRelativeScale3D (signature not recovered)
+	virtual void FNGC_VSlot_0x3B8();  // slot 119: USceneComponent::IsSimulatingPhysics (signature not recovered)
+	virtual bool IsAnySimulatingPhysics() const;  // slot 120 (+0x3C0), UFunction USceneComponent::IsAnySimulatingPhysics
+	virtual void FNGC_VSlot_0x3C8();  // slot 121: USceneComponent::DetachFromParent (signature not recovered)
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();  // slot 123: USceneComponent::GetSocketTransform (signature not recovered)
+	virtual void FNGC_VSlot_0x3E0();  // slot 124: USceneComponent::GetSocketLocation (signature not recovered)
+	virtual void FNGC_VSlot_0x3E8();  // slot 125: USceneComponent::GetSocketRotation (signature not recovered)
+	virtual void FNGC_VSlot_0x3F0();  // slot 126: USceneComponent::GetSocketQuaternion (signature not recovered)
+	virtual void FNGC_VSlot_0x3F8();  // slot 127: USceneComponent::DoesSocketExist (signature not recovered)
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: USceneComponent::GetComponentVelocity (signature not recovered)
+	virtual bool IsVisible() const;  // slot 131 (+0x418), UFunction USceneComponent::IsVisible
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();
+	virtual bool K2_IsQueryCollisionEnabled() const;  // slot 145 (+0x488), UFunction UPrimitiveComponent::K2_IsQueryCollisionEnabled
+	virtual void FNGC_VSlot_0x490();  // slot 146: UPrimitiveComponent::GetCollisionResponseToChannel (signature not recovered)
+	virtual void FNGC_VSlot_0x498();  // slot 147: UPrimitiveComponent::GetCollisionObjectType (signature not recovered)
 	static void StaticRegisterNativesUSceneComponent();
 	static void execDetachFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDoesSocketExist(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13722,6 +16774,113 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000010000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();
+	virtual void FNGC_VSlot_0x4E8();
+	virtual void FNGC_VSlot_0x4F0();  // slot 158: UPrimitiveComponent::GetMaterial (signature not recovered)
+	virtual void FNGC_VSlot_0x4F8();  // slot 159: UPrimitiveComponent::SetMaterial (signature not recovered)
+	virtual void FNGC_VSlot_0x500();  // slot 160: UPrimitiveComponent::SetMaterialByName (signature not recovered)
+	virtual void FNGC_VSlot_0x508();  // slot 161: UPrimitiveComponent::CreateAndSetMaterialInstanceDynamic (signature not recovered)
+	virtual void FNGC_VSlot_0x510();  // slot 162: UPrimitiveComponent::CreateAndSetMaterialInstanceDynamicFromMaterial (signature not recovered)
+	virtual void FNGC_VSlot_0x518();  // slot 163: UPrimitiveComponent::CreateDynamicMaterialInstance (signature not recovered)
+	virtual void FNGC_VSlot_0x520();  // slot 164: UPrimitiveComponent::GetMaterialFromCollisionFaceIndex (signature not recovered)
+	virtual void FNGC_VSlot_0x528();  // slot 165: UPrimitiveComponent::SetSimulatePhysics (signature not recovered)
+	virtual void FNGC_VSlot_0x530();
+	virtual void FNGC_VSlot_0x538();  // slot 167: UPrimitiveComponent::SetLockedAxis (signature not recovered)
+	virtual void FNGC_VSlot_0x540();  // slot 168: UPrimitiveComponent::SetConstraintMode (signature not recovered)
+	virtual void FNGC_VSlot_0x548();  // slot 169: UPrimitiveComponent::AddImpulse (signature not recovered)
+	virtual void FNGC_VSlot_0x550();  // slot 170: UPrimitiveComponent::AddAngularImpulse (signature not recovered)
+	virtual void FNGC_VSlot_0x558();  // slot 171: UPrimitiveComponent::AddAngularImpulseInRadians (signature not recovered)
+	virtual void FNGC_VSlot_0x560();  // slot 172: UPrimitiveComponent::AddImpulseAtLocation (signature not recovered)
+	virtual void FNGC_VSlot_0x568();  // slot 173: UPrimitiveComponent::AddRadialImpulse (signature not recovered)
+	virtual void FNGC_VSlot_0x570();  // slot 174: UPrimitiveComponent::AddForce (signature not recovered)
+	virtual void FNGC_VSlot_0x578();  // slot 175: UPrimitiveComponent::AddForceAtLocation (signature not recovered)
+	virtual void FNGC_VSlot_0x580();  // slot 176: UPrimitiveComponent::AddForceAtLocationLocal (signature not recovered)
+	virtual void FNGC_VSlot_0x588();  // slot 177: UPrimitiveComponent::AddRadialForce (signature not recovered)
+	virtual void FNGC_VSlot_0x590();  // slot 178: UPrimitiveComponent::SetAllPhysicsLinearVelocity (signature not recovered)
+	virtual void FNGC_VSlot_0x598();  // slot 179: UPrimitiveComponent::WakeRigidBody (signature not recovered)
+	virtual void FNGC_VSlot_0x5A0();  // slot 180: UPrimitiveComponent::SetNotifyRigidBodyCollision (signature not recovered)
+	virtual void FNGC_VSlot_0x5A8();  // slot 181: UPrimitiveComponent::SetCollisionEnabled (signature not recovered)
+	virtual void FNGC_VSlot_0x5B0();  // slot 182: UPrimitiveComponent::SetCollisionProfileName (signature not recovered)
+	virtual void FNGC_VSlot_0x5B8();  // slot 183: UPrimitiveComponent::SetCollisionObjectType (signature not recovered)
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual int32 GetNumMaterials() const;  // slot 199 (+0x638), UFunction UPrimitiveComponent::GetNumMaterials
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();  // slot 220: UPrimitiveComponent::SetAllPhysicsAngularVelocity (signature not recovered)
+	virtual void FNGC_VSlot_0x6E8();  // slot 221: UPrimitiveComponent::SetAllPhysicsAngularVelocityInRadians (signature not recovered)
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void WakeAllRigidBodies();  // slot 225 (+0x708), UFunction UPrimitiveComponent::WakeAllRigidBodies
+	virtual void FNGC_VSlot_0x710();  // slot 226: UPrimitiveComponent::SetEnableGravity (signature not recovered)
+	virtual bool IsGravityEnabled() const;  // slot 227 (+0x718), UFunction UPrimitiveComponent::IsGravityEnabled
+	virtual void FNGC_VSlot_0x720();  // slot 228: UPrimitiveComponent::SetLinearDamping (signature not recovered)
+	virtual float GetLinearDamping() const;  // slot 229 (+0x728), UFunction UPrimitiveComponent::GetLinearDamping
+	virtual void FNGC_VSlot_0x730();  // slot 230: UPrimitiveComponent::SetAngularDamping (signature not recovered)
+	virtual float GetAngularDamping() const;  // slot 231 (+0x738), UFunction UPrimitiveComponent::GetAngularDamping
+	virtual void FNGC_VSlot_0x740();  // slot 232: UPrimitiveComponent::SetMassScale (signature not recovered)
+	virtual void FNGC_VSlot_0x748();  // slot 233: UPrimitiveComponent::GetMassScale (signature not recovered)
+	virtual void FNGC_VSlot_0x750();  // slot 234: UPrimitiveComponent::SetAllMassScale (signature not recovered)
+	virtual void FNGC_VSlot_0x758();  // slot 235: UPrimitiveComponent::SetMassOverrideInKg (signature not recovered)
+	virtual float GetMass() const;  // slot 236 (+0x760), UFunction UPrimitiveComponent::GetMass
+	virtual void FNGC_VSlot_0x768();  // slot 237: UPrimitiveComponent::GetInertiaTensor (signature not recovered)
+	virtual void FNGC_VSlot_0x770();  // slot 238: UPrimitiveComponent::ScaleByMomentOfInertia (signature not recovered)
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();  // slot 240: UPrimitiveComponent::SetUseCCD (signature not recovered)
+	virtual void FNGC_VSlot_0x788();  // slot 241: UPrimitiveComponent::SetAllUseCCD (signature not recovered)
+	virtual void FNGC_VSlot_0x790();
+	virtual bool IsAnyRigidBodyAwake();  // slot 243 (+0x798), UFunction UPrimitiveComponent::IsAnyRigidBodyAwake
+	virtual void FNGC_VSlot_0x7A0();  // slot 244: UPrimitiveComponent::SetCollisionResponseToChannel (signature not recovered)
+	virtual void FNGC_VSlot_0x7A8();  // slot 245: UPrimitiveComponent::SetCollisionResponseToAllChannels (signature not recovered)
+	virtual void FNGC_VSlot_0x7B0();
+	virtual void FNGC_VSlot_0x7B8();
+	virtual void FNGC_VSlot_0x7C0();  // slot 248: UPrimitiveComponent::SetPhysMaterialOverride (signature not recovered)
+	virtual void FNGC_VSlot_0x7C8();
+	virtual void FNGC_VSlot_0x7D0();
+	virtual void FNGC_VSlot_0x7D8();
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();  // slot 254: UPrimitiveComponent::CanCharacterStepUp (signature not recovered)
 	static void StaticRegisterNativesUPrimitiveComponent();
 	static void execAddAngularImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddAngularImpulseInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13859,6 +17018,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UAIHotSpotSlot::IsAIAllowed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();  // slot 75: UAIHotSpotSlot::SetSlotOwnerAndState (signature not recovered)
+	virtual void FNGC_VSlot_0x260();  // slot 76: UAIHotSpotSlot::SetSlotState (signature not recovered)
+	virtual void FNGC_VSlot_0x268();  // slot 77: UAIHotSpotSlot::SetSlotEnabled (signature not recovered)
+	virtual void ClearSlot();  // slot 78 (+0x270), UFunction UAIHotSpotSlot::ClearSlot
 	static void StaticRegisterNativesUAIHotSpotSlot();
 	static void execClearSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHotSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13893,6 +17060,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void GenerateSlots_Implementation();  // slot 71 (+0x238), UFunction UAIHotSpotSlotGenerator::GenerateSlots
 	static void StaticRegisterNativesUAIHotSpotSlotGenerator();
 	static void execAddSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGenerateSlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -14488,6 +17656,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void AIIgnorePlayers();  // slot 75 (+0x258), UFunction UAISystem::AIIgnorePlayers
+	virtual void AILoggingVerbose();  // slot 76 (+0x260), UFunction UAISystem::AILoggingVerbose
 	static void StaticRegisterNativesUAISystem();
 	static void execAIIgnorePlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAILoggingVerbose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -14784,6 +17958,77 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();  // slot 119: UAbilitySystemComponent::ServerSetInputReleased_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x3C0();  // slot 120: UAbilitySystemComponent::ServerSetInputReleased_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x3C8();  // slot 121: UAbilitySystemComponent::ServerSetInputPressed_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x3D0();  // slot 122: UAbilitySystemComponent::ServerSetInputPressed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x3D8();  // slot 123: UAbilitySystemComponent::ServerSetReplicatedTargetDataCancelled_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x3E0();  // slot 124: UAbilitySystemComponent::ServerSetReplicatedTargetDataCancelled_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x3E8();  // slot 125: UAbilitySystemComponent::ServerSetReplicatedTargetData_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x3F0();  // slot 126: UAbilitySystemComponent::ServerSetReplicatedTargetData_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x3F8();  // slot 127: UAbilitySystemComponent::ClientSetReplicatedEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x400();  // slot 128: UAbilitySystemComponent::ServerSetReplicatedEventWithPayload_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x408();  // slot 129: UAbilitySystemComponent::ServerSetReplicatedEventWithPayload_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x410();  // slot 130: UAbilitySystemComponent::ServerSetReplicatedEvent_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UAbilitySystemComponent::ServerSetReplicatedEvent_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x420();  // slot 132: UAbilitySystemComponent::ServerCurrentMontageSetPlayRate_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x428();  // slot 133: UAbilitySystemComponent::ServerCurrentMontageSetPlayRate_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x430();  // slot 134: UAbilitySystemComponent::ServerCurrentMontageJumpToSectionName_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x438();  // slot 135: UAbilitySystemComponent::ServerCurrentMontageJumpToSectionName_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x440();  // slot 136: UAbilitySystemComponent::ServerCurrentMontageSetNextSectionName_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x448();  // slot 137: UAbilitySystemComponent::ServerCurrentMontageSetNextSectionName_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x450();  // slot 138: UAbilitySystemComponent::ServerAbilityRPCBatch_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x458();  // slot 139: UAbilitySystemComponent::ServerAbilityRPCBatch_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x460();  // slot 140: UAbilitySystemComponent::ClientActivateAbilitySucceedWithEventData_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x468();  // slot 141: UAbilitySystemComponent::ClientActivateAbilitySucceed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x470();  // slot 142: UAbilitySystemComponent::ClientActivateAbilityFailed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x478();  // slot 143: UAbilitySystemComponent::ClientCancelAbility_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x480();  // slot 144: UAbilitySystemComponent::ServerCancelAbility_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x488();  // slot 145: UAbilitySystemComponent::ServerCancelAbility_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x490();  // slot 146: UAbilitySystemComponent::ClientEndAbility_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x498();  // slot 147: UAbilitySystemComponent::ServerEndAbility_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x4A0();  // slot 148: UAbilitySystemComponent::ServerEndAbility_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x4A8();  // slot 149: UAbilitySystemComponent::ClientTryActivateAbility_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x4B0();  // slot 150: UAbilitySystemComponent::ServerTryActivateAbilityWithEventData_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x4B8();  // slot 151: UAbilitySystemComponent::ServerTryActivateAbilityWithEventData_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x4C0();  // slot 152: UAbilitySystemComponent::ServerTryActivateAbility_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x4C8();  // slot 153: UAbilitySystemComponent::ServerTryActivateAbility_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x4D0();  // slot 154: UAbilitySystemComponent::ClientPrintDebug_Response_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x4D8();  // slot 155: UAbilitySystemComponent::ServerPrintDebug_RequestWithStrings_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x4E0();  // slot 156: UAbilitySystemComponent::ServerPrintDebug_RequestWithStrings_Implementation (signature not recovered)
+	virtual bool ServerPrintDebug_Request_Validate();  // slot 157 (+0x4E8), UFunction UAbilitySystemComponent::ServerPrintDebug_Request
+	virtual void ServerPrintDebug_Request_Implementation();  // slot 158 (+0x4F0), UFunction UAbilitySystemComponent::ServerPrintDebug_Request
+	virtual void FNGC_VSlot_0x4F8();  // slot 159: UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x500();  // slot 160: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x508();  // slot 161: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x510();  // slot 162: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x518();  // slot 163: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x520();  // slot 164: UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x528();  // slot 165: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x530();  // slot 166: UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x538();  // slot 167: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x540();  // slot 168: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x548();
+	virtual void FNGC_VSlot_0x550();
+	virtual void FNGC_VSlot_0x558();
+	virtual void FNGC_VSlot_0x560();
+	virtual void FNGC_VSlot_0x568();
+	virtual void FNGC_VSlot_0x570();
+	virtual void FNGC_VSlot_0x578();
+	virtual void FNGC_VSlot_0x580();
+	virtual void FNGC_VSlot_0x588();
+	virtual void FNGC_VSlot_0x590();
+	virtual void FNGC_VSlot_0x598();
+	virtual void FNGC_VSlot_0x5A0();
+	virtual void FNGC_VSlot_0x5A8();
+	virtual void FNGC_VSlot_0x5B0();
+	virtual void FNGC_VSlot_0x5B8();
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void OnRep_ClientDebugString();  // slot 185 (+0x5C8), UFunction UAbilitySystemComponent::OnRep_ClientDebugString
+	virtual void OnRep_ServerDebugString();  // slot 186 (+0x5D0), UFunction UAbilitySystemComponent::OnRep_ServerDebugString
 	static void StaticRegisterNativesUAbilitySystemComponent();
 	static void execBP_ApplyGameplayEffectSpecToSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBP_ApplyGameplayEffectSpecToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -14865,6 +18110,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void ToggleIgnoreAbilitySystemCooldowns();  // slot 79 (+0x278), UFunction UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCooldowns
+	virtual void ToggleIgnoreAbilitySystemCosts();  // slot 80 (+0x280), UFunction UAbilitySystemGlobals::ToggleIgnoreAbilitySystemCosts
 	static void StaticRegisterNativesUAbilitySystemGlobals();
 	static void execToggleIgnoreAbilitySystemCooldowns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execToggleIgnoreAbilitySystemCosts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -15517,6 +18772,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();  // slot 82: UAbilityTask_WaitGameplayTag::GameplayTagCallback (signature not recovered)
 	static void StaticRegisterNativesUAbilityTask_WaitGameplayTag();
 	static void execGameplayTagCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -15923,6 +19190,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();  // slot 72: UWidget::SetIsEnabled (signature not recovered)
+	virtual void FNGC_VSlot_0x248();  // slot 73: UWidget::SetVisibility (signature not recovered)
+	virtual void RemoveFromParent();  // slot 74 (+0x250), UFunction UWidget::RemoveFromParent
+	virtual void FNGC_VSlot_0x258();  // slot 75: UWidget::GetOwningPlayer (signature not recovered)
 	static void StaticRegisterNativesUWidget();
 	static void execForceLayoutPrepass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execForceVolatile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -16229,6 +19501,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual float GetPlayLength();  // slot 75 (+0x258), UFunction UAnimSequenceBase::GetPlayLength
 	static void StaticRegisterNativesUAnimSequenceBase();
 	static void execGetPlayLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -16412,6 +19689,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0x238();  // slot 71: UAnimInstance::TryGetPawnOwner (signature not recovered)
+	virtual void FNGC_VSlot_0x240();  // slot 72: UAnimInstance::SavePoseSnapshot (signature not recovered)
+	virtual void FNGC_VSlot_0x248();  // slot 73: UAnimInstance::SnapshotPose (signature not recovered)
 	static void StaticRegisterNativesUAnimInstance();
 	static void execCalculateDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClearMorphTargets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -16531,6 +19811,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UAnimNotify::GetNotifyName_Implementation (signature not recovered)
 	static void StaticRegisterNativesUAnimNotify();
 	static void execGetNotifyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -16549,6 +19830,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UAnimNotifyState::GetNotifyName_Implementation (signature not recovered)
 	static void StaticRegisterNativesUAnimNotifyState();
 	static void execGetNotifyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -16748,6 +20030,23 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();  // slot 89: UAnimSingleNodeInstance::SetAnimationAsset (signature not recovered)
+	virtual void FNGC_VSlot_0x2D0();  // slot 90: UAnimSingleNodeInstance::GetAnimationAsset (signature not recovered)
 	static void StaticRegisterNativesUAnimSingleNodeInstance();
 	static void execGetAnimationAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -16943,6 +20242,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void FNGC_VSlot_0x800();  // slot 256: UArrowComponent::SetArrowColor (signature not recovered)
 	static void StaticRegisterNativesUArrowComponent();
 	static void execSetArrowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -17289,6 +20590,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual bool Initialize();  // slot 80 (+0x280), UFunction UFortGameOptions::Initialize
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();  // slot 83: UUserWidget::OnAnimationStarted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x2A0();  // slot 84: UUserWidget::OnAnimationFinished_Implementation (signature not recovered)
 	static void StaticRegisterNativesUUserWidget();
 	static void execAddToPlayerScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -17398,6 +20708,55 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();  // slot 80: UFortItemDefinition::GetRarity (signature not recovered)
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();  // slot 86: UFortItemDefinition::GetDisplayName (signature not recovered)
+	virtual void FNGC_VSlot_0x2B8();  // slot 87: UFortItemDefinition::GetShortDescription (signature not recovered)
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();  // slot 89: UFortItemDefinition::GetSingleLineDescription (signature not recovered)
+	virtual void FNGC_VSlot_0x2D0();  // slot 90: UFortItemDefinition::GetSmallPreviewImage (signature not recovered)
+	virtual void FNGC_VSlot_0x2D8();  // slot 91: UFortItemDefinition::GetSmallPreviewImageBrush (signature not recovered)
+	virtual void FNGC_VSlot_0x2E0();  // slot 92: UFortItemDefinition::GetLargePreviewImage (signature not recovered)
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();  // slot 108: UFortItemDefinition::GetPersistentName (signature not recovered)
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual bool ShouldShowPreviewOnCurrentHero() const;  // slot 113 (+0x388), UFunction UFortItemDefinition::ShouldShowPreviewOnCurrentHero
+	virtual void FNGC_VSlot_0x390();  // slot 114: UFortItemDefinition::GetPreviewSkeletalMeshAsset (signature not recovered)
+	virtual void FNGC_VSlot_0x398();  // slot 115: UFortItemDefinition::GetPreviewStaticMeshAsset (signature not recovered)
+	virtual void FNGC_VSlot_0x3A0();  // slot 116: UFortItemDefinition::GetPreviewPrefabAsset (signature not recovered)
+	virtual void FNGC_VSlot_0x3A8();  // slot 117: UFortItemDefinition::GetPreviewAssets (signature not recovered)
+	virtual void FNGC_VSlot_0x3B0();  // slot 118: UFortItemDefinition::CustomizePreviewMesh (signature not recovered)
+	virtual void FNGC_VSlot_0x3B8();  // slot 119: UFortItemDefinition::CustomizePreviewPrefab (signature not recovered)
 	static void StaticRegisterNativesUFortItemDefinition();
 	static void execCreateTemporaryInstanceFromExistingItemBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCreateTemporaryItemInstanceBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -17545,6 +20904,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnBeginOutro_Implementation();  // slot 130 (+0x410), UFunction UCommonActivatablePanel::OnBeginOutro
+	virtual void OnBeginIntro_Implementation();  // slot 131 (+0x418), UFunction UCommonActivatablePanel::OnBeginIntro
 	static void StaticRegisterNativesUCommonActivatablePanel();
 	static void execAddInputActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddInputActionHandlerWithProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -17796,6 +21202,56 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();  // slot 132: UCommonButton::OnInputMethodChanged (signature not recovered)
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();  // slot 134: UCommonButton::HandleTriggeringActionCommited (signature not recovered)
 	static void StaticRegisterNativesUCommonButton();
 	static void execClearSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDisableButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -18003,6 +21459,74 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual int32 GetLevel() const;  // slot 72 (+0x240), UFunction UFortItem::GetLevel
+	virtual int32 GetMaxLevel() const;  // slot 73 (+0x248), UFunction UFortItem::GetMaxLevel
+	virtual int32 GetRating() const;  // slot 74 (+0x250), UFunction UFortAlterableItem::GetRating
+	virtual void FNGC_VSlot_0x258();  // slot 75: UFortItem::CanBeUpgraded (signature not recovered)
+	virtual bool HasEvolutions() const;  // slot 76 (+0x260), UFunction UFortItem::HasEvolutions
+	virtual bool HasRarityUpgrade() const;  // slot 77 (+0x268), UFunction UFortItem::HasRarityUpgrade
+	virtual int32 GetLevelRelativeCostForRarityUpgrade() const;  // slot 78 (+0x270), UFunction UFortItem::GetLevelRelativeCostForRarityUpgrade
+	virtual void FNGC_VSlot_0x278();  // slot 79: UFortItem::CanEvolve (signature not recovered)
+	virtual void FNGC_VSlot_0x280();  // slot 80: UFortItem::CanUpgradeItemRarity (signature not recovered)
+	virtual int32 GetUpgradeCost() const;  // slot 81 (+0x288), UFunction UFortItem::GetUpgradeCost
+	virtual int32 GetRecycleValue() const;  // slot 82 (+0x290), UFunction UFortItem::GetRecycleValue
+	virtual bool HasDurability() const;  // slot 83 (+0x298), UFunction UFortItem::HasDurability
+	virtual float GetDurability() const;  // slot 84 (+0x2A0), UFunction UFortItem::GetDurability
+	virtual float GetNormalizedDurability() const;  // slot 85 (+0x2A8), UFunction UFortItem::GetNormalizedDurability
+	virtual bool IsEquipped() const;  // slot 86 (+0x2B0), UFunction UFortItem::IsEquipped
+	virtual bool IsSlotted() const;  // slot 87 (+0x2B8), UFunction UFortItem::IsSlotted
+	virtual bool IsInventoryOverflowItem() const;  // slot 88 (+0x2C0), UFunction UFortItem::IsInventoryOverflowItem
+	virtual bool IsInStorageVault() const;  // slot 89 (+0x2C8), UFunction UFortItem::IsInStorageVault
+	virtual bool IsSchematic() const;  // slot 90 (+0x2D0), UFunction UFortItem::IsSchematic
+	virtual void FNGC_VSlot_0x2D8();  // slot 91: UFortItem::GetSchematicResultType (signature not recovered)
+	virtual void FNGC_VSlot_0x2E0();  // slot 92: UFortItem::GetSchematicCraftingResultBP (signature not recovered)
+	virtual void FNGC_VSlot_0x2E8();  // slot 93: UFortItem::GetType (signature not recovered)
+	virtual void FNGC_VSlot_0x2F0();  // slot 94: UFortItem::GetUpgradeResourceItemDefinition (signature not recovered)
+	virtual void FNGC_VSlot_0x2F8();  // slot 95: UFortItem::TryGetCategory (signature not recovered)
+	virtual void FNGC_VSlot_0x300();  // slot 96: UFortItem::GetPrimaryCategory (signature not recovered)
+	virtual void FNGC_VSlot_0x308();  // slot 97: UFortItem::GetSecondaryCategory (signature not recovered)
+	virtual void FNGC_VSlot_0x310();  // slot 98: UFortItem::GetTertiaryCategory (signature not recovered)
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();  // slot 100: UFortItem::IsEquipable (signature not recovered)
+	virtual int32 GetNumInStack() const;  // slot 101 (+0x328), UFunction UFortItem::GetNumInStack
+	virtual int32 GetLoadedAmmo() const;  // slot 102 (+0x330), UFunction UFortItem::GetLoadedAmmo
+	virtual int32 GetRemainingAmmo() const;  // slot 103 (+0x338), UFunction UFortItem::GetRemainingAmmo
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();  // slot 105: UFortItem::GetFilterCategory (signature not recovered)
+	virtual void FNGC_VSlot_0x350();  // slot 106: UFortItem::GetRarityColor (signature not recovered)
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();  // slot 108: UFortHero::GetDisplayName (signature not recovered)
+	virtual void FNGC_VSlot_0x368();  // slot 109: UFortItem::GetDescription (signature not recovered)
+	virtual void FNGC_VSlot_0x370();  // slot 110: UFortItem::GetSearchTags (signature not recovered)
+	virtual void FNGC_VSlot_0x378();  // slot 111: UFortItem::GetSmallPreviewImage (signature not recovered)
+	virtual void FNGC_VSlot_0x380();  // slot 112: UFortItem::GetLargePreviewImage (signature not recovered)
+	virtual void FNGC_VSlot_0x388();  // slot 113: UFortItem::GetPreviewAssets (signature not recovered)
+	virtual void FNGC_VSlot_0x390();  // slot 114: UFortItem::GetItemDefinitionBP (signature not recovered)
+	virtual bool CanBeDropped() const;  // slot 115 (+0x398), UFunction UFortItem::CanBeDropped
+	virtual bool CanBeUnslotted() const;  // slot 116 (+0x3A0), UFunction UFortItem::CanBeUnslotted
+	virtual void FNGC_VSlot_0x3A8();  // slot 117: UFortItem::IsActivatable (signature not recovered)
+	virtual void FNGC_VSlot_0x3B0();  // slot 118: UFortItem::GetCoolDownTimeRemaining (signature not recovered)
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();  // slot 128: UFortItem::GetItemGuid (signature not recovered)
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();  // slot 133: UFortItem::GetAlterationSlots (signature not recovered)
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();  // slot 135: UFortItem::GetOwningController (signature not recovered)
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual bool IsTemporaryItem() const;  // slot 138 (+0x450), UFunction UFortItem::IsTemporaryItem
 	static void StaticRegisterNativesUFortItem();
 	static void execCanBeDropped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanBeUnslotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -18080,6 +21604,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual bool HasBeenSeenLocally() const;  // slot 142 (+0x470), UFunction UFortAccountItem::HasBeenSeenLocally
+	virtual bool IsFavorite() const;  // slot 143 (+0x478), UFunction UFortAccountItem::IsFavorite
 	static void StaticRegisterNativesUFortAccountItem();
 	static void execHasBeenSeenLocally(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsFavorite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -18202,6 +21731,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();  // slot 138: UFortUIStateWidget_NUI::PopContentWidgetInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x458();  // slot 139: UFortUIStateWidget_NUI::PushContentWidgetInternal_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortUIStateWidget_NUI();
 	static void execPopAllContentWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execPopContentWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -19059,6 +22596,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();  // slot 156: UAudioComponent::FadeIn (signature not recovered)
+	virtual void FNGC_VSlot_0x4E8();  // slot 157: UAudioComponent::FadeOut (signature not recovered)
+	virtual void FNGC_VSlot_0x4F0();  // slot 158: UAudioComponent::Play (signature not recovered)
+	virtual void Stop();  // slot 159 (+0x4F8), UFunction UAudioComponent::Stop
+	virtual bool IsPlaying() const;  // slot 160 (+0x500), UFunction UAudioComponent::IsPlaying
 	static void StaticRegisterNativesUAudioComponent();
 	static void execAdjustAttenuation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAdjustVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -20114,6 +23664,55 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();  // slot 131: UBacchusButton::OnHUDStateUpdate_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x420();  // slot 132: UBacchusButton::SetButtonSprite_Implementation (signature not recovered)
+	virtual void OnClicked_Implementation();  // slot 133 (+0x428), UFunction UBacchusButton::OnClicked
 	static void StaticRegisterNativesUBacchusButton();
 	static void execOnClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnHUDStateUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -20208,6 +23807,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();  // slot 83: UBackgroundBlur::SetBlurStrength (signature not recovered)
 	static void StaticRegisterNativesUBackgroundBlur();
 	static void execSetApplyAlphaToBlur(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetBlurRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -20269,6 +23876,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/MediaAssets"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UMediaSource::GetUrl (signature not recovered)
+	virtual bool Validate() const;  // slot 72 (+0x240), UFunction UMediaSource::Validate
 	static void StaticRegisterNativesUMediaSource();
 	static void execGetUrl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execValidate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -20354,6 +23963,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void RestartLogic();  // slot 119 (+0x3B8), UFunction UBrainComponent::RestartLogic
+	virtual void FNGC_VSlot_0x3C0();  // slot 120: UBrainComponent::StopLogic (signature not recovered)
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual bool IsRunning() const;  // slot 124 (+0x3E0), UFunction UBrainComponent::IsRunning
+	virtual bool IsPaused() const;  // slot 125 (+0x3E8), UFunction UBrainComponent::IsPaused
 	static void StaticRegisterNativesUBrainComponent();
 	static void execIsPaused(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsRunning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -20375,6 +23994,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();  // slot 129: UBehaviorTreeComponent::SetDynamicSubtree (signature not recovered)
 	static void StaticRegisterNativesUBehaviorTreeComponent();
 	static void execAddCooldownTagDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTagCooldownEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -20427,6 +24050,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void FNGC_VSlot_0x800();  // slot 256: UBillboardComponent::SetSprite (signature not recovered)
+	virtual void FNGC_VSlot_0x808();  // slot 257: UBillboardComponent::SetUV (signature not recovered)
+	virtual void FNGC_VSlot_0x810();  // slot 258: UBillboardComponent::SetSpriteAndUV (signature not recovered)
 	static void StaticRegisterNativesUBillboardComponent();
 	static void execSetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetSpriteAndUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21232,6 +24859,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void FNGC_VSlot_0x800();  // slot 256: UMeshComponent::GetMaterials (signature not recovered)
+	virtual void FNGC_VSlot_0x808();  // slot 257: UMeshComponent::GetMaterialIndex (signature not recovered)
+	virtual void FNGC_VSlot_0x810();  // slot 258: UMeshComponent::GetMaterialSlotNames (signature not recovered)
+	virtual void FNGC_VSlot_0x818();  // slot 259: UMeshComponent::IsMaterialSlotNameValid (signature not recovered)
+	virtual void FNGC_VSlot_0x820();
+	virtual void FNGC_VSlot_0x828();
+	virtual void FNGC_VSlot_0x830();  // slot 262: UMeshComponent::PrestreamTextures (signature not recovered)
 	static void StaticRegisterNativesUMeshComponent();
 	static void execGetMaterialIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMaterials(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21257,6 +24892,24 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000200000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();  // slot 264: UStaticMeshComponent::SetStaticMesh (signature not recovered)
+	virtual void FNGC_VSlot_0x848();
+	virtual void FNGC_VSlot_0x850();
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();
+	virtual void FNGC_VSlot_0x870();
+	virtual void FNGC_VSlot_0x878();
+	virtual void FNGC_VSlot_0x880();
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();  // slot 275: UInstancedStaticMeshComponent::AddInstance (signature not recovered)
+	virtual void FNGC_VSlot_0x8A0();  // slot 276: UInstancedStaticMeshComponent::UpdateInstanceTransform (signature not recovered)
+	virtual void FNGC_VSlot_0x8A8();  // slot 277: UInstancedStaticMeshComponent::RemoveInstance (signature not recovered)
+	virtual void ClearInstances();  // slot 278 (+0x8B0), UFunction UInstancedStaticMeshComponent::ClearInstances
+	virtual void FNGC_VSlot_0x8B8();  // slot 279: UInstancedStaticMeshComponent::GetInstancesOverlappingSphere (signature not recovered)
+	virtual void FNGC_VSlot_0x8C0();  // slot 280: UInstancedStaticMeshComponent::GetInstancesOverlappingBox (signature not recovered)
 	static void StaticRegisterNativesUStaticMeshComponent();
 	static void execGetLocalBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_StaticMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21329,6 +24982,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void OnPlaced();  // slot 156 (+0x4E0), UFunction UBuildingConnectivityComponent::OnPlaced
+	virtual void OnRep_Connections();  // slot 157 (+0x4E8), UFunction UBuildingConnectivityComponent::OnRep_Connections
+	virtual void OnRep_bIsPowered();  // slot 158 (+0x4F0), UFunction UBuildingConnectivityComponent::OnRep_bIsPowered
+	virtual void OnRep_bIsProvidingPower();  // slot 159 (+0x4F8), UFunction UBuildingConnectivityComponent::OnRep_bIsProvidingPower
 	static void StaticRegisterNativesUBuildingConnectivityComponent();
 	static void execCanConnectTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDisconnectAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21485,6 +25150,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UBuildingEditModeSupport::OnSuccessfulMatchInteractParamUpdate (signature not recovered)
+	virtual void OnSuccessfulMatchInteractComplete();  // slot 72 (+0x240), UFunction UBuildingEditModeSupport::OnSuccessfulMatchInteractComplete
 	static void StaticRegisterNativesUBuildingEditModeSupport();
 	static void execOnSuccessfulMatchInteractComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnSuccessfulMatchInteractParamUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21639,6 +25306,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();  // slot 118: UBuildingTurretComponent::SetTargetingOverlapComponent (signature not recovered)
+	virtual void FNGC_VSlot_0x3B8();  // slot 119: UBuildingTurretComponent::AttemptSetCurrentTarget (signature not recovered)
+	virtual void FNGC_VSlot_0x3C0();  // slot 120: UBuildingTurretComponent::IsValidTarget_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x3C8();  // slot 121: UBuildingTurretComponent::OnTargetingBeginOverlap (signature not recovered)
+	virtual void FNGC_VSlot_0x3D0();  // slot 122: UBuildingTurretComponent::OnTargetingEndOverlap (signature not recovered)
+	virtual void FNGC_VSlot_0x3D8();  // slot 123: UBuildingTurretComponent::OnRep_CurrentTarget (signature not recovered)
+	virtual void OnPerformTargetValidation();  // slot 124 (+0x3E0), UFunction UBuildingTurretComponent::OnPerformTargetValidation
+	virtual void OnFiringTimer();  // slot 125 (+0x3E8), UFunction UBuildingTurretComponent::OnFiringTimer
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();  // slot 127: UBuildingTurretComponent::ChooseBestTarget_Implementation (signature not recovered)
 	static void StaticRegisterNativesUBuildingTurretComponent();
 	static void execAttemptSetCurrentTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execChooseBestTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21665,6 +25344,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x400();  // slot 128: UBuildingTurretComponent_MOBA::OnAllyHarmed (signature not recovered)
 	static void StaticRegisterNativesUBuildingTurretComponent_MOBA();
 	static void execOnAllyHarmed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -21868,6 +25548,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();  // slot 156: UCameraComponent::GetCameraView (signature not recovered)
 	static void StaticRegisterNativesUCameraComponent();
 	static void execAddOrUpdateBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCameraView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21897,6 +25586,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual bool IsDisabled() const;  // slot 74 (+0x250), UFunction UCameraModifier::IsDisabled
+	virtual void FNGC_VSlot_0x258();  // slot 75: UCameraModifier::GetViewTarget (signature not recovered)
+	virtual void FNGC_VSlot_0x260();  // slot 76: UCameraModifier::DisableModifier (signature not recovered)
+	virtual void EnableModifier();  // slot 77 (+0x268), UFunction UCameraModifier::EnableModifier
 	static void StaticRegisterNativesUCameraModifier();
 	static void execDisableModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEnableModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21935,6 +25631,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual bool ReceiveIsFinished_Implementation() const;  // slot 71 (+0x238), UFunction UCameraShake::ReceiveIsFinished
 	static void StaticRegisterNativesUCameraShake();
 	static void execReceiveIsFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -22036,6 +25733,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void UpdateResource();  // slot 71 (+0x238), UFunction UCanvasRenderTarget2D::UpdateResource
 	static void StaticRegisterNativesUTexture();
 private:
 	unsigned char Opaque[0x90];  // sizeof(UTexture) = 0xB8
@@ -22138,6 +25836,43 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual float GetGravityZ() const;  // slot 118 (+0x3B0), UFunction UMovementComponent::GetGravityZ
+	virtual float GetMaxSpeed() const;  // slot 119 (+0x3B8), UFunction UMovementComponent::GetMaxSpeed
+	virtual void FNGC_VSlot_0x3C0();
+	virtual float K2_GetMaxSpeedModifier() const;  // slot 121 (+0x3C8), UFunction UMovementComponent::K2_GetMaxSpeedModifier
+	virtual void FNGC_VSlot_0x3D0();
+	virtual float K2_GetModifiedMaxSpeed() const;  // slot 123 (+0x3D8), UFunction UMovementComponent::K2_GetModifiedMaxSpeed
+	virtual void FNGC_VSlot_0x3E0();  // slot 124: UMovementComponent::IsExceedingMaxSpeed (signature not recovered)
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();  // slot 127: UMovementComponent::GetPhysicsVolume (signature not recovered)
+	virtual void FNGC_VSlot_0x400();  // slot 128: UMovementComponent::PhysicsVolumeChanged (signature not recovered)
+	virtual void FNGC_VSlot_0x408();  // slot 129: UMovementComponent::SetUpdatedComponent (signature not recovered)
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();  // slot 144: UMovementComponent::SetPlaneConstraintAxisSetting (signature not recovered)
+	virtual void FNGC_VSlot_0x488();  // slot 145: UMovementComponent::SetPlaneConstraintNormal (signature not recovered)
+	virtual void FNGC_VSlot_0x490();  // slot 146: UMovementComponent::SetPlaneConstraintFromVectors (signature not recovered)
+	virtual void FNGC_VSlot_0x498();  // slot 147: UMovementComponent::SetPlaneConstraintOrigin (signature not recovered)
+	virtual void FNGC_VSlot_0x4A0();  // slot 148: UMovementComponent::SetPlaneConstraintEnabled (signature not recovered)
+	virtual void FNGC_VSlot_0x4A8();  // slot 149: UMovementComponent::ConstrainDirectionToPlane (signature not recovered)
+	virtual void FNGC_VSlot_0x4B0();  // slot 150: UMovementComponent::ConstrainLocationToPlane (signature not recovered)
+	virtual void FNGC_VSlot_0x4B8();  // slot 151: UMovementComponent::ConstrainNormalToPlane (signature not recovered)
+	virtual void SnapUpdatedComponentToPlane();  // slot 152 (+0x4C0), UFunction UMovementComponent::SnapUpdatedComponentToPlane
 	static void StaticRegisterNativesUMovementComponent();
 	static void execConstrainDirectionToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execConstrainLocationToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -22177,6 +25912,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void StopActiveMovement();  // slot 154 (+0x4D0), UFunction UNavMovementComponent::StopActiveMovement
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();
+	virtual void FNGC_VSlot_0x4E8();
+	virtual void FNGC_VSlot_0x4F0();
+	virtual void FNGC_VSlot_0x4F8();
+	virtual void FNGC_VSlot_0x500();
+	virtual bool IsCrouching() const;  // slot 161 (+0x508), UFunction UNavMovementComponent::IsCrouching
+	virtual bool IsFalling() const;  // slot 162 (+0x510), UFunction UNavMovementComponent::IsFalling
+	virtual void FNGC_VSlot_0x518();
+	virtual bool IsSwimming() const;  // slot 164 (+0x520), UFunction UNavMovementComponent::IsSwimming
+	virtual bool IsFlying() const;  // slot 165 (+0x528), UFunction UNavMovementComponent::IsFlying
 	static void StaticRegisterNativesUNavMovementComponent();
 	static void execIsCrouching(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsFalling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -22201,6 +25949,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x530();  // slot 166: UPawnMovementComponent::AddInputVector (signature not recovered)
+	virtual void FNGC_VSlot_0x538();  // slot 167: UPawnMovementComponent::ConsumeInputVector (signature not recovered)
+	virtual bool IsMoveInputIgnored() const;  // slot 168 (+0x540), UFunction UPawnMovementComponent::IsMoveInputIgnored
 	static void StaticRegisterNativesUPawnMovementComponent();
 	static void execAddInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execConsumeInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -22225,6 +25976,106 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x548();
+	virtual void FNGC_VSlot_0x550();
+	virtual void FNGC_VSlot_0x558();  // slot 171: UCharacterMovementComponent::SetMovementMode (signature not recovered)
+	virtual void FNGC_VSlot_0x560();
+	virtual void FNGC_VSlot_0x568();
+	virtual void DisableMovement();  // slot 174 (+0x570), UFunction UCharacterMovementComponent::DisableMovement
+	virtual void FNGC_VSlot_0x578();
+	virtual void FNGC_VSlot_0x580();
+	virtual void FNGC_VSlot_0x588();
+	virtual void FNGC_VSlot_0x590();
+	virtual void FNGC_VSlot_0x598();
+	virtual void FNGC_VSlot_0x5A0();
+	virtual void FNGC_VSlot_0x5A8();
+	virtual void FNGC_VSlot_0x5B0();
+	virtual void FNGC_VSlot_0x5B8();
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();  // slot 189: UCharacterMovementComponent::GetImpartedMovementBaseVelocity (signature not recovered)
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();  // slot 200: UCharacterMovementComponent::CalcVelocity (signature not recovered)
+	virtual float GetMaxJumpHeight() const;  // slot 201 (+0x648), UFunction UCharacterMovementComponent::GetMaxJumpHeight
+	virtual float GetMaxJumpHeightWithJumpTime() const;  // slot 202 (+0x650), UFunction UCharacterMovementComponent::GetMaxJumpHeightWithJumpTime
+	virtual float GetMinAnalogSpeed() const;  // slot 203 (+0x658), UFunction UCharacterMovementComponent::GetMinAnalogSpeed
+	virtual void FNGC_VSlot_0x660();
+	virtual float K2_GetModifiedMaxAcceleration() const;  // slot 205 (+0x668), UFunction UCharacterMovementComponent::K2_GetModifiedMaxAcceleration
+	virtual float GetMaxAcceleration() const;  // slot 206 (+0x670), UFunction UCharacterMovementComponent::GetMaxAcceleration
+	virtual float GetMaxBrakingDeceleration() const;  // slot 207 (+0x678), UFunction UCharacterMovementComponent::GetMaxBrakingDeceleration
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void ClearAccumulatedForces();  // slot 214 (+0x6B0), UFunction UCharacterMovementComponent::ClearAccumulatedForces
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();
+	virtual void FNGC_VSlot_0x738();
+	virtual void FNGC_VSlot_0x740();
+	virtual void FNGC_VSlot_0x748();
+	virtual void FNGC_VSlot_0x750();
+	virtual void FNGC_VSlot_0x758();
+	virtual void FNGC_VSlot_0x760();
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();
+	virtual void FNGC_VSlot_0x778();  // slot 239: UCharacterMovementComponent::AddImpulse (signature not recovered)
+	virtual void FNGC_VSlot_0x780();  // slot 240: UCharacterMovementComponent::AddForce (signature not recovered)
+	virtual void FNGC_VSlot_0x788();
+	virtual void FNGC_VSlot_0x790();
+	virtual void FNGC_VSlot_0x798();
+	virtual void FNGC_VSlot_0x7A0();
+	virtual void FNGC_VSlot_0x7A8();  // slot 245: UCharacterMovementComponent::IsWalkable (signature not recovered)
+	virtual void FNGC_VSlot_0x7B0();
+	virtual void FNGC_VSlot_0x7B8();
+	virtual void FNGC_VSlot_0x7C0();
+	virtual void FNGC_VSlot_0x7C8();
+	virtual void FNGC_VSlot_0x7D0();
+	virtual void FNGC_VSlot_0x7D8();
+	virtual void FNGC_VSlot_0x7E0();
+	virtual void FNGC_VSlot_0x7E8();
+	virtual void FNGC_VSlot_0x7F0();
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void FNGC_VSlot_0x800();
+	virtual void FNGC_VSlot_0x808();
+	virtual void FNGC_VSlot_0x810();
+	virtual void FNGC_VSlot_0x818();
+	virtual void FNGC_VSlot_0x820();
+	virtual void FNGC_VSlot_0x828();
+	virtual void FNGC_VSlot_0x830();
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();
+	virtual void FNGC_VSlot_0x848();
+	virtual void FNGC_VSlot_0x850();
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();  // slot 268: UCharacterMovementComponent::CapsuleTouched (signature not recovered)
 	static void StaticRegisterNativesUCharacterMovementComponent();
 	static void execAddForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -22311,6 +26162,59 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual bool ServerToggleAILogging_Validate();  // slot 71 (+0x238), UFunction UCheatManager::ServerToggleAILogging
+	virtual void ServerToggleAILogging_Implementation();  // slot 72 (+0x240), UFunction UCheatManager::ServerToggleAILogging
+	virtual void FNGC_VSlot_0x248();  // slot 73: UCheatManager::FreezeFrame (signature not recovered)
+	virtual void Teleport();  // slot 74 (+0x250), UFunction UCheatManager::Teleport
+	virtual void FNGC_VSlot_0x258();  // slot 75: UCheatManager::ChangeSize (signature not recovered)
+	virtual void Fly();  // slot 76 (+0x260), UFunction UCheatManager::Fly
+	virtual void Walk();  // slot 77 (+0x268), UFunction UCheatManager::Walk
+	virtual void Ghost();  // slot 78 (+0x270), UFunction UCheatManager::Ghost
+	virtual void God();  // slot 79 (+0x278), UFunction UCheatManager::God
+	virtual void FNGC_VSlot_0x280();  // slot 80: UCheatManager::Slomo (signature not recovered)
+	virtual void FNGC_VSlot_0x288();  // slot 81: UCheatManager::DamageTarget (signature not recovered)
+	virtual void DestroyTarget();  // slot 82 (+0x290), UFunction UCheatManager::DestroyTarget
+	virtual void FNGC_VSlot_0x298();  // slot 83: UCheatManager::DestroyAll (signature not recovered)
+	virtual void DestroyAllPawnsExceptTarget();  // slot 84 (+0x2A0), UFunction UCheatManager::DestroyAllPawnsExceptTarget
+	virtual void FNGC_VSlot_0x2A8();  // slot 85: UCheatManager::DestroyPawns (signature not recovered)
+	virtual void FNGC_VSlot_0x2B0();  // slot 86: UCheatManager::Summon (signature not recovered)
+	virtual void PlayersOnly();  // slot 87 (+0x2B8), UFunction UCheatManager::PlayersOnly
+	virtual void ViewSelf();  // slot 88 (+0x2C0), UFunction UCheatManager::ViewSelf
+	virtual void FNGC_VSlot_0x2C8();  // slot 89: UCheatManager::ViewPlayer (signature not recovered)
+	virtual void FNGC_VSlot_0x2D0();  // slot 90: UCheatManager::ViewActor (signature not recovered)
+	virtual void FNGC_VSlot_0x2D8();  // slot 91: UCheatManager::ViewClass (signature not recovered)
+	virtual void FNGC_VSlot_0x2E0();  // slot 92: UCheatManager::StreamLevelIn (signature not recovered)
+	virtual void FNGC_VSlot_0x2E8();  // slot 93: UCheatManager::OnlyLoadLevel (signature not recovered)
+	virtual void FNGC_VSlot_0x2F0();  // slot 94: UCheatManager::StreamLevelOut (signature not recovered)
+	virtual void ToggleDebugCamera();  // slot 95 (+0x2F8), UFunction UCheatManager::ToggleDebugCamera
+	virtual void ToggleAILogging();  // slot 96 (+0x300), UFunction UCheatManager::ToggleAILogging
+	virtual void FNGC_VSlot_0x308();
+	virtual void DebugCapsuleSweep();  // slot 98 (+0x310), UFunction UCheatManager::DebugCapsuleSweep
+	virtual void FNGC_VSlot_0x318();  // slot 99: UCheatManager::DebugCapsuleSweepSize (signature not recovered)
+	virtual void FNGC_VSlot_0x320();  // slot 100: UCheatManager::DebugCapsuleSweepChannel (signature not recovered)
+	virtual void FNGC_VSlot_0x328();  // slot 101: UCheatManager::DebugCapsuleSweepComplex (signature not recovered)
+	virtual void DebugCapsuleSweepCapture();  // slot 102 (+0x330), UFunction UCheatManager::DebugCapsuleSweepCapture
+	virtual void DebugCapsuleSweepPawn();  // slot 103 (+0x338), UFunction UCheatManager::DebugCapsuleSweepPawn
+	virtual void DebugCapsuleSweepClear();  // slot 104 (+0x340), UFunction UCheatManager::DebugCapsuleSweepClear
+	virtual void TestCollisionDistance();  // slot 105 (+0x348), UFunction UCheatManager::TestCollisionDistance
+	virtual void RebuildNavigation();  // slot 106 (+0x350), UFunction UCheatManager::RebuildNavigation
+	virtual void DumpOnlineSessionState();  // slot 107 (+0x358), UFunction UCheatManager::DumpOnlineSessionState
+	virtual void DumpPartyState();  // slot 108 (+0x360), UFunction UCheatManager::DumpPartyState
+	virtual void DumpChatState();  // slot 109 (+0x368), UFunction UCheatManager::DumpChatState
+	virtual void DumpVoiceMutingState();  // slot 110 (+0x370), UFunction UCheatManager::DumpVoiceMutingState
+	virtual void FNGC_VSlot_0x378();  // slot 111: UCheatManager::BugItGo (signature not recovered)
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();  // slot 113: UCheatManager::BugIt (signature not recovered)
+	virtual void FNGC_VSlot_0x390();  // slot 114: UCheatManager::BugItStringCreator (signature not recovered)
+	virtual void FlushLog();  // slot 115 (+0x398), UFunction UCheatManager::FlushLog
+	virtual void LogLoc();  // slot 116 (+0x3A0), UFunction UCheatManager::LogLoc
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void EnableDebugCamera();  // slot 122 (+0x3D0), UFunction UCheatManager::EnableDebugCamera
+	virtual void DisableDebugCamera();  // slot 123 (+0x3D8), UFunction UCheatManager::DisableDebugCamera
 	static void StaticRegisterNativesUCheatManager();
 	static void execBugIt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBugItGo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -22701,6 +26605,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/ClothingSystemRuntimeInterface"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void PhysicsAssetUpdated();  // slot 71 (+0x238), UFunction UClothingSimulationInteractor::PhysicsAssetUpdated
+	virtual void ClothConfigUpdated();  // slot 72 (+0x240), UFunction UClothingSimulationInteractor::ClothConfigUpdated
 	static void StaticRegisterNativesUClothingSimulationInteractor();
 	static void execClothConfigUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execPhysicsAssetUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -22996,6 +26902,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();  // slot 75: UCommonButtonGroup::OnSelectionStateChanged (signature not recovered)
+	virtual void FNGC_VSlot_0x260();  // slot 76: UCommonButtonGroup::OnHandleButtonClicked (signature not recovered)
+	virtual void FNGC_VSlot_0x268();  // slot 77: UCommonButtonGroup::OnHandleButtonDoubleClicked (signature not recovered)
+	virtual void FNGC_VSlot_0x270();  // slot 78: UCommonButtonGroup::OnButtonHovered (signature not recovered)
+	virtual void FNGC_VSlot_0x278();  // slot 79: UCommonButtonGroup::OnButtonUnhovered (signature not recovered)
 	static void StaticRegisterNativesUCommonButtonGroup();
 	static void execDeselectAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFindButtonIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23110,6 +27025,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();  // slot 80: UTextBlock::SetText (signature not recovered)
 	static void StaticRegisterNativesUTextBlock();
 	static void execGetDynamicFontMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetDynamicOutlineMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23291,6 +27211,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void ShowDefaultImage_Implementation();  // slot 80 (+0x280), UFunction UCommonLazyImage::ShowDefaultImage
 	static void StaticRegisterNativesUCommonLazyImage();
 	static void execForwardLoadingStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23355,6 +27280,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();  // slot 80: UCommonListView::SetDataProvider (signature not recovered)
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();  // slot 83: UCommonListView::DynamicHandleItemClickedCommonButton (signature not recovered)
+	virtual void FNGC_VSlot_0x2A0();  // slot 84: UCommonListView::DynamicHandleItemDoubleClickedCommonButton (signature not recovered)
+	virtual void FNGC_VSlot_0x2A8();  // slot 85: UCommonListView::DynamicHandleItemHoveredCommonButton (signature not recovered)
+	virtual void FNGC_VSlot_0x2B0();  // slot 86: UCommonListView::DynamicHandleItemUnhoveredCommonButton (signature not recovered)
 	static void StaticRegisterNativesUCommonListView();
 	static void execAddItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCancelScrollIntoView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23474,6 +27410,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void HandlePostDifferentContextProviderSet_Implementation();  // slot 138 (+0x450), UFunction UCommonPopupMenu::HandlePostDifferentContextProviderSet
+	virtual void HandlePreDifferentContextProviderSet_Implementation();  // slot 139 (+0x458), UFunction UCommonPopupMenu::HandlePreDifferentContextProviderSet
 	static void StaticRegisterNativesUCommonPopupMenu();
 	static void execHandlePostDifferentContextProviderSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandlePreDifferentContextProviderSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23520,6 +27464,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UCommonTabListWidget::HandleTabRemoved_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UCommonTabListWidget::HandleTabCreated_Implementation (signature not recovered)
 	static void StaticRegisterNativesUCommonTabListWidget();
 	static void execDisableTabWithReason(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetActiveTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23730,6 +27721,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();  // slot 83: UCommonWidgetCarousel::SetActiveWidgetIndex (signature not recovered)
+	virtual void FNGC_VSlot_0x2A0();  // slot 84: UCommonWidgetCarousel::SetActiveWidget (signature not recovered)
 	static void StaticRegisterNativesUCommonWidgetCarousel();
 	static void execBeginAutoScrolling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execEndAutoScrolling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23755,6 +27755,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();  // slot 83: UWidgetSwitcher::SetActiveWidgetIndex (signature not recovered)
+	virtual void FNGC_VSlot_0x2A0();  // slot 84: UWidgetSwitcher::SetActiveWidget (signature not recovered)
 	static void StaticRegisterNativesUWidgetSwitcher();
 	static void execGetActiveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -23778,6 +27787,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void ActivateWidget();  // slot 85 (+0x2A8), UFunction UCommonWidgetStack::ActivateWidget
+	virtual void DeactivateWidget();  // slot 86 (+0x2B0), UFunction UCommonWidgetStack::DeactivateWidget
 	static void StaticRegisterNativesUCommonWidgetSwitcher();
 	static void execActivateNextWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execActivatePreviousWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -24027,6 +28038,29 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();  // slot 138: UPathFollowingComponent::OnActorBump (signature not recovered)
 	static void StaticRegisterNativesUPathFollowingComponent();
 	static void execGetPathActionType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPathDestination(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -24048,6 +28082,33 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();
+	virtual void FNGC_VSlot_0x488();
+	virtual void FNGC_VSlot_0x490();
+	virtual void FNGC_VSlot_0x498();
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();
+	virtual void FNGC_VSlot_0x4E8();
+	virtual void FNGC_VSlot_0x4F0();
+	virtual void FNGC_VSlot_0x4F8();
+	virtual void FNGC_VSlot_0x500();
+	virtual void FNGC_VSlot_0x508();
+	virtual void FNGC_VSlot_0x510();
+	virtual void FNGC_VSlot_0x518();
+	virtual void FNGC_VSlot_0x520();
+	virtual void FNGC_VSlot_0x528();  // slot 165: UCrowdFollowingComponent::SuspendCrowdSteering (signature not recovered)
 	static void StaticRegisterNativesUCrowdFollowingComponent();
 	static void execSuspendCrowdSteering(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -24391,6 +28452,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();  // slot 128: UFortWorldItemDefinition::GetMaxDurability (signature not recovered)
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortWorldItemDefinition::GetDPSAtLevel (signature not recovered)
 	static void StaticRegisterNativesUFortWorldItemDefinition();
 	static void execCanBeDisassembled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAmmoWorldItemDefinition_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -24451,6 +28523,27 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();  // slot 93: UCustomCharacterPartAnimInstance::GetCharacterPartType (signature not recovered)
+	virtual void FNGC_VSlot_0x2F0();  // slot 94: UCustomCharacterPartAnimInstance::GetAssociatedPlayerPawn (signature not recovered)
 	static void StaticRegisterNativesUCustomCharacterPartAnimInstance();
 	static void execGetAssociatedPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCharacterPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -24669,6 +28762,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();  // slot 156: UDecalComponent::CreateDynamicMaterialInstance (signature not recovered)
 	static void StaticRegisterNativesUDecalComponent();
 	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -25323,6 +29425,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UDragDropOperation::Dragged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x240();  // slot 72: UDragDropOperation::DragCancelled_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x248();  // slot 73: UDragDropOperation::Drop_Implementation (signature not recovered)
 	static void StaticRegisterNativesUDragDropOperation();
 	static void execDragCancelled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDragged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -26676,6 +30781,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/EpicCMSUIFramework"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();
+	virtual void FNGC_VSlot_0x488();
+	virtual void FNGC_VSlot_0x490();
+	virtual void FNGC_VSlot_0x498();  // slot 147: UEpicCMSTileBase::DynamicHandleIconLoadingStateChanged (signature not recovered)
 	static void StaticRegisterNativesUEpicCMSTileBase();
 	static void execDynamicHandleIconLoadingStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execLaunch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -26695,6 +30813,52 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/EpicCMSUIFramework"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UEpicCMSTileCarousel::HandleTilePageAdded_Implementation (signature not recovered)
 	static void StaticRegisterNativesUEpicCMSTileCarousel();
 	static void execGetCurrentPageIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleTilePageAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27142,6 +31306,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();  // slot 156: UForceFeedbackComponent::Play (signature not recovered)
+	virtual void Stop();  // slot 157 (+0x4E8), UFunction UForceFeedbackComponent::Stop
 	static void StaticRegisterNativesUForceFeedbackComponent();
 	static void execAdjustAttenuation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBP_GetAttenuationSettingsToApply(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27575,6 +31749,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UFortAIGoalProvider::InitializeGoalProvider (signature not recovered)
+	virtual void UpdateGoals();  // slot 72 (+0x240), UFunction UFortAIGoalProvider::UpdateGoals
 	static void StaticRegisterNativesUFortAIGoalProvider();
 	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execInitializeGoalProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -28070,6 +32246,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UFortTooltip::BP_GetValueData_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x240();  // slot 72: UFortTooltip::BP_GetNumericValue_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x248();  // slot 73: UFortTooltip::BP_GetTokenizedDescriptionText_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x250();  // slot 74: UFortTooltip::BP_GetTextForToken_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x258();  // slot 75: UFortGameplayAbilityTooltip::GetTokenizedDescriptionText (signature not recovered)
+	virtual void FNGC_VSlot_0x260();  // slot 76: UFortGameplayAbilityTooltip::GetTextForToken (signature not recovered)
+	virtual void FNGC_VSlot_0x268();  // slot 77: UFortGameplayAbilityTooltip::GetNumericValue (signature not recovered)
+	virtual void FNGC_VSlot_0x270();  // slot 78: UFortTooltip::GetValueData (signature not recovered)
 	static void StaticRegisterNativesUFortTooltip();
 	static void execBP_GetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBP_GetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -28133,6 +32317,32 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void NetMulticast_RefreshActiveGameplayEffectCueEvents_Implementation();  // slot 212 (+0x6A0), UFunction UFortAbilitySystemComponent::NetMulticast_RefreshActiveGameplayEffectCueEvents
 	static void StaticRegisterNativesUFortAbilitySystemComponent();
 	static void execCanActivateAbilityWithMatchingTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFindAttributeInformation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -28715,6 +32925,52 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortActionHandlerPanel::OnHandleAction_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortActionHandlerPanel();
 	static void execActivateActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDeactivateActionHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -29860,6 +34116,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/PhysXVehicles"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x548();
+	virtual void FNGC_VSlot_0x550();  // slot 170: UWheeledVehicleMovementComponent::ServerUpdateState_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x558();  // slot 171: UWheeledVehicleMovementComponent::ServerUpdateState_Implementation (signature not recovered)
 	static void StaticRegisterNativesUWheeledVehicleMovementComponent();
 	static void execGetCurrentGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetEngineMaxRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -29917,6 +34176,36 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x560();
+	virtual void FNGC_VSlot_0x568();
+	virtual void FNGC_VSlot_0x570();
+	virtual void FNGC_VSlot_0x578();
+	virtual void FNGC_VSlot_0x580();
+	virtual void FNGC_VSlot_0x588();
+	virtual void FNGC_VSlot_0x590();
+	virtual void FNGC_VSlot_0x598();
+	virtual void FNGC_VSlot_0x5A0();
+	virtual void FNGC_VSlot_0x5A8();
+	virtual void FNGC_VSlot_0x5B0();
+	virtual void FNGC_VSlot_0x5B8();
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();  // slot 200: UFortAthenaHoverCarMovementComponent::ServerUpdateAthenaState_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x648();  // slot 201: UFortAthenaHoverCarMovementComponent::ServerUpdateAthenaState_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortAthenaHoverCarMovementComponent();
 	static void execServerUpdateAthenaState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -30977,6 +35266,52 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortBluGloCounter::OnBluGloQuantityChanged_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortBluGloCounter();
 	static void execOnBluGloQuantityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -31416,6 +35751,52 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortCapturePointWidget::OnCapturePointDataChanged_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortCapturePointWidget();
 	static void execOnCapturePointDataChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -31743,6 +36124,30 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();  // slot 125: UFortCheatManager::ForceServerShutdown (signature not recovered)
+	virtual void FNGC_VSlot_0x3F0();  // slot 126: UFortCheatManager::SpawnPawn (signature not recovered)
+	virtual void FNGC_VSlot_0x3F8();  // slot 127: UFortCheatManager::SpawnScriptedPawn (signature not recovered)
+	virtual void DebugThisAI();  // slot 128 (+0x400), UFunction UFortCheatManager::DebugThisAI
+	virtual void DebugStructuralSupport();  // slot 129 (+0x408), UFunction UFortCheatManager::DebugStructuralSupport
+	virtual void DebugAbilityTags();  // slot 130 (+0x410), UFunction UFortCheatManager::DebugAbilityTags
+	virtual void DebugAttributeModifiers();  // slot 131 (+0x418), UFunction UFortCheatManager::DebugAttributeModifiers
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortCheatManager::DebugAttribute (signature not recovered)
+	virtual void DebugAttributeClear();  // slot 133 (+0x428), UFunction UFortCheatManager::DebugAttributeClear
+	virtual void DumpAppliedHomebaseEffectsWithCoreAttributes();  // slot 134 (+0x430), UFunction UFortCheatManager::DumpAppliedHomebaseEffectsWithCoreAttributes
+	virtual void DBNO();  // slot 135 (+0x438), UFunction UFortCheatManager::DBNO
+	virtual void ReviveFromDBNO();  // slot 136 (+0x440), UFunction UFortCheatManager::ReviveFromDBNO
+	virtual void FNGC_VSlot_0x448();  // slot 137: UFortCheatManager::KillPawns (signature not recovered)
+	virtual void TogglePlayerNames();  // slot 138 (+0x450), UFunction UFortCheatManager::TogglePlayerNames
+	virtual void ToggleCombatGraph();  // slot 139 (+0x458), UFunction UFortCheatManager::ToggleCombatGraph
+	virtual void ToggleFactorGraph();  // slot 140 (+0x460), UFunction UFortCheatManager::ToggleFactorGraph
+	virtual void ToggleIntensityGraph();  // slot 141 (+0x468), UFunction UFortCheatManager::ToggleIntensityGraph
+	virtual void TogglePIDValuesGraph();  // slot 142 (+0x470), UFunction UFortCheatManager::TogglePIDValuesGraph
+	virtual void TogglePIDContributionsGraph();  // slot 143 (+0x478), UFunction UFortCheatManager::TogglePIDContributionsGraph
+	virtual void ToggleUtilitiesGraph();  // slot 144 (+0x480), UFunction UFortCheatManager::ToggleUtilitiesGraph
+	virtual void CycleCurrentEncounterToDebug();  // slot 145 (+0x488), UFunction UFortCheatManager::CycleCurrentEncounterToDebug
+	virtual void FNGC_VSlot_0x490();  // slot 146: UFortCheatManager::SetCombatGraphHistoryLength (signature not recovered)
+	virtual void FNGC_VSlot_0x498();  // slot 147: UFortCheatManager::SetEncounterGraphsHistoryLength (signature not recovered)
 	static void StaticRegisterNativesUFortCheatManager();
 	static void execAddAllScores(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddBuildingScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32588,6 +36993,59 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortCollectionBookGenericRewardWidget::OnRewardStatusChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortCollectionBookGenericRewardWidget::SetRewards (signature not recovered)
+	virtual void ClearRewards();  // slot 132 (+0x420), UFunction UFortCollectionBookGenericRewardWidget::ClearRewards
+	virtual bool HasRewards() const;  // slot 133 (+0x428), UFunction UFortCollectionBookGenericRewardWidget::HasRewards
+	virtual void FNGC_VSlot_0x430();  // slot 134: UFortCollectionBookGenericRewardWidget::SetRewardStatus (signature not recovered)
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();  // slot 136: UFortCollectionBookGenericRewardWidget::GetRewardStatus (signature not recovered)
+	virtual void FNGC_VSlot_0x448();  // slot 137: UFortCollectionBookGenericRewardWidget::SetCurrentItemToDisplay (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookGenericRewardWidget();
 	static void execClearRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetRewardStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32638,6 +37096,56 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnDeactivated_Implementation();  // slot 130 (+0x410), UFunction UFortCollectionBookOverviewWidget::OnDeactivated
+	virtual void OnActivated_Implementation();  // slot 131 (+0x418), UFunction UFortCollectionBookOverviewWidget::OnActivated
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortCollectionBookOverviewWidget::OnGetChildrenForPageCategory (signature not recovered)
+	virtual void FNGC_VSlot_0x428();  // slot 133: UFortCollectionBookOverviewWidget::OnPageItemSelected (signature not recovered)
+	virtual void FNGC_VSlot_0x430();  // slot 134: UFortCollectionBookOverviewWidget::OnPageItemClicked (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookOverviewWidget();
 	static void execOnActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32694,6 +37202,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortCollectionBookPageDetailsWidget::OnPageProgressionUpdated_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortCollectionBookPageDetailsWidget::OnDetailsPageChanged_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookPageDetailsWidget();
 	static void execHandleRewardDetailsModalWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnDetailsPageChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32754,6 +37309,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();  // slot 138: UFortCollectionBookPrimaryPanel::OnSummonInfoPanelExecuted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x458();  // slot 139: UFortCollectionBookPrimaryPanel::OnCollectionBookSectionClicked_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x460();  // slot 140: UFortCollectionBookPrimaryPanel::OnCollectionBookPageClicked_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x468();  // slot 141: UFortCollectionBookPrimaryPanel::OnCollectionBookPageSelected_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookPrimaryPanel();
 	static void execHandleSectionTileClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnBackActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32778,6 +37343,55 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortCollectionBookProgressWidget::OnCollectionBookPreviewXPChange_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortCollectionBookProgressWidget::OnCollectionBookLevelProgressionChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortCollectionBookProgressWidget::OnCollectionBookLevelChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x428();  // slot 133: UFortCollectionBookProgressWidget::OnCollectionBookPageSelected_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookProgressWidget();
 	static void execHandleDetailsModalWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnCollectionBookLevelChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32839,6 +37453,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();  // slot 138: UFortCollectionBookProgressionRewardsModalWidget::OnLevelProgressionSet_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookProgressionRewardsModalWidget();
 	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnLevelProgressionSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32894,6 +37515,54 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortCollectionBookRewardCardWidget::SetRewards (signature not recovered)
+	virtual void ClearRewards();  // slot 131 (+0x418), UFunction UFortCollectionBookRewardCardWidget::ClearRewards
+	virtual bool HasRewards() const;  // slot 132 (+0x420), UFunction UFortCollectionBookRewardCardWidget::HasRewards
 	static void StaticRegisterNativesUFortCollectionBookRewardCardWidget();
 	static void execClearRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHasRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32967,6 +37636,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();  // slot 138: UFortCollectionBookSectionPanel::OnSectionChanged_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookSectionPanel();
 	static void execOnBackActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32998,6 +37674,23 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();
+	virtual void FNGC_VSlot_0x488();
+	virtual void FNGC_VSlot_0x490();
+	virtual void FNGC_VSlot_0x498();  // slot 147: UFortCollectionBookSectionTileWidget::OnSectionSlotUpdate_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();  // slot 151: UFortCollectionBookSectionTileWidget::OnItemSlotted (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookSectionTileWidget();
 	static void execOnItemSlotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnSectionSlotUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -33050,6 +37743,56 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortCollectionBookSlotView::OnSlotButtonClicked (signature not recovered)
+	virtual void FNGC_VSlot_0x428();  // slot 133: UFortCollectionBookSlotView::OnSelectedSlotButtonChanged (signature not recovered)
+	virtual void FNGC_VSlot_0x430();  // slot 134: UFortCollectionBookSlotView::OnSlotButtonCommitted (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookSlotView();
 	static void execOnSelectedSlotButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnSlotButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -33093,6 +37836,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();  // slot 138: UFortCollectionBookWidget::OnCollectionBookSectionClicked_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x458();  // slot 139: UFortCollectionBookWidget::OnCollectionBookPageClicked_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x460();  // slot 140: UFortCollectionBookWidget::OnCollectionBookPageSelected_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortCollectionBookWidget();
 	static void execOnCollectionBookPageClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -33230,6 +37982,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortConsumableItemDefinition::GetUseAnimation (signature not recovered)
+	virtual float GetAnimPlayRate() const;  // slot 133 (+0x428), UFunction UFortConsumableItemDefinition::GetAnimPlayRate
+	virtual void FNGC_VSlot_0x430();  // slot 134: UFortConsumableItemDefinition::ConsumeItem (signature not recovered)
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();  // slot 136: UFortConsumableItemDefinition::GetHealthRestored (signature not recovered)
 	static void StaticRegisterNativesUFortConsumableItemDefinition();
 	static void execConsumeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAnimPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -33450,6 +38208,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();  // slot 124: UFortConversionControlItemDefinition::GetRewardName (signature not recovered)
 	static void StaticRegisterNativesUFortConversionControlItemDefinition();
 	static void execGetFirstConversionTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMaxConversionTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -33938,6 +38701,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2B8();  // slot 87: UFortItemTileView::HandleItemWidgetCreated (signature not recovered)
 	static void StaticRegisterNativesUFortItemTileView();
 	static void execCenterSelectedItemTileWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execContainsItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -34235,6 +38999,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void Timeout_Implementation();  // slot 73 (+0x248), UFunction UFortDialogNotificationHandler::Timeout
+	virtual void Decline_Implementation();  // slot 74 (+0x250), UFunction UFortDialogNotificationHandler::Decline
+	virtual void Accept_Implementation();  // slot 75 (+0x258), UFunction UFortDialogNotificationHandler::Accept
 	static void StaticRegisterNativesUFortDialogNotificationHandler();
 	static void execAccept(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDecline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35461,6 +40230,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void OnStartExpeditionCompleted_Implementation();  // slot 138 (+0x450), UFunction UFortExpeditionBuildSquadWidget::OnStartExpeditionCompleted
+	virtual void OnRefreshBuildSquadWidget_Implementation();  // slot 139 (+0x458), UFunction UFortExpeditionBuildSquadWidget::OnRefreshBuildSquadWidget
+	virtual void FNGC_VSlot_0x460();  // slot 140: UFortExpeditionBuildSquadWidget::SetData_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x468();  // slot 141: UFortExpeditionBuildSquadWidget::HandleDifferentSquadSlotSelected (signature not recovered)
 	static void StaticRegisterNativesUFortExpeditionBuildSquadWidget();
 	static void execClearTemporaryExpeditionSquadState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleDifferentSquadSlotSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35488,6 +40267,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnAbandonExpeditionCompleted_Implementation();  // slot 130 (+0x410), UFunction UFortExpeditionDetailsWidget::OnAbandonExpeditionCompleted
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortExpeditionDetailsWidget::SetData_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortExpeditionDetailsWidget();
 	static void execAbandonExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleAbandonExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35510,6 +40336,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnExpeditionExpirationUpdated_Implementation();  // slot 130 (+0x410), UFunction UFortExpeditionExpiresWidget::OnExpeditionExpirationUpdated
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortExpeditionExpiresWidget::SetData_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortExpeditionExpiresWidget();
 	static void execOnExpeditionExpirationUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35649,6 +40522,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortExpeditionOverviewWidget::OnExpeditionTabSelected_Implementation (signature not recovered)
+	virtual void OnExpeditionOverviewRefresh_Implementation();  // slot 131 (+0x418), UFunction UFortExpeditionOverviewWidget::OnExpeditionOverviewRefresh
 	static void StaticRegisterNativesUFortExpeditionOverviewWidget();
 	static void execHandleExpeditionTabButtonCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleExpeditionTabSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35689,6 +40609,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnExpeditionInProgressUpdated_Implementation();  // slot 130 (+0x410), UFunction UFortExpeditionReturnsWidget::OnExpeditionInProgressUpdated
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortExpeditionReturnsWidget::SetData_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortExpeditionReturnsWidget();
 	static void execOnExpeditionInProgressUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35708,6 +40675,52 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortExpeditionRewardsWidget::RefreshRewardsUI_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortExpeditionRewardsWidget();
 	static void execHandleCollectionExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execProcessNextReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35728,6 +40741,52 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnRefreshSummaryWidget_Implementation();  // slot 130 (+0x410), UFunction UFortExpeditionSummaryWidget::OnRefreshSummaryWidget
 	static void StaticRegisterNativesUFortExpeditionSummaryWidget();
 	static void execBindInventoryDelegates(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRefreshSummaryWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36128,6 +41187,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();  // slot 78: UGameInstance::DebugCreatePlayer (signature not recovered)
+	virtual void FNGC_VSlot_0x278();  // slot 79: UGameInstance::DebugRemovePlayer (signature not recovered)
 	static void StaticRegisterNativesUGameInstance();
 	static void execDebugCreatePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDebugRemovePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36193,6 +41261,23 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("GameUserSettings"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UGameUserSettings::ApplySettings (signature not recovered)
+	virtual void ApplyNonResolutionSettings();  // slot 72 (+0x240), UFunction UGameUserSettings::ApplyNonResolutionSettings
+	virtual void FNGC_VSlot_0x248();  // slot 73: UGameUserSettings::SetOverallScalabilityLevel (signature not recovered)
+	virtual int32 GetOverallScalabilityLevel() const;  // slot 74 (+0x250), UFunction UGameUserSettings::GetOverallScalabilityLevel
+	virtual bool IsDirty() const;  // slot 75 (+0x258), UFunction UGameUserSettings::IsDirty
+	virtual void ValidateSettings();  // slot 76 (+0x260), UFunction UGameUserSettings::ValidateSettings
+	virtual void FNGC_VSlot_0x268();  // slot 77: UGameUserSettings::LoadSettings (signature not recovered)
+	virtual void SaveSettings();  // slot 78 (+0x270), UFunction UGameUserSettings::SaveSettings
+	virtual void ResetToCurrentSettings();  // slot 79 (+0x278), UFunction UGameUserSettings::ResetToCurrentSettings
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void SetToDefaults();  // slot 82 (+0x290), UFunction UGameUserSettings::SetToDefaults
+	virtual float GetDefaultResolutionScale();  // slot 83 (+0x298), UFunction UGameUserSettings::GetDefaultResolutionScale
+	virtual float GetRecommendedResolutionScale();  // slot 84 (+0x2A0), UFunction UGameUserSettings::GetRecommendedResolutionScale
+	virtual void FNGC_VSlot_0x2A8();  // slot 85: UGameUserSettings::RunHardwareBenchmark (signature not recovered)
+	virtual void ApplyHardwareBenchmarkResults();  // slot 86 (+0x2B0), UFunction UGameUserSettings::ApplyHardwareBenchmarkResults
+	virtual bool SupportsHDRDisplayOutput() const;  // slot 87 (+0x2B8), UFunction UGameUserSettings::SupportsHDRDisplayOutput
 	static void StaticRegisterNativesUGameUserSettings();
 	static void execApplyHardwareBenchmarkResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execApplyNonResolutionSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36309,6 +41394,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void SSSwapControllers();  // slot 71 (+0x238), UFunction UGameViewportClient::SSSwapControllers
+	virtual void ShowTitleSafeArea();  // slot 72 (+0x240), UFunction UGameViewportClient::ShowTitleSafeArea
+	virtual void FNGC_VSlot_0x248();  // slot 73: UGameViewportClient::SetConsoleTarget (signature not recovered)
 	static void StaticRegisterNativesUGameViewportClient();
 	static void execSetConsoleTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShowTitleSafeArea(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36363,6 +41451,51 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();  // slot 88: UGameplayAbility::SendGameplayEvent (signature not recovered)
+	virtual bool K2_CommitAbility();  // slot 89 (+0x2C8), UFunction UGameplayAbility::K2_CommitAbility
+	virtual void FNGC_VSlot_0x2D0();  // slot 90: UGameplayAbility::K2_CommitAbilityCooldown (signature not recovered)
+	virtual void FNGC_VSlot_0x2D8();  // slot 91: UGameplayAbility::K2_CommitAbilityCost (signature not recovered)
+	virtual bool K2_CheckAbilityCooldown();  // slot 92 (+0x2E0), UFunction UGameplayAbility::K2_CheckAbilityCooldown
+	virtual bool K2_CheckAbilityCost();  // slot 93 (+0x2E8), UFunction UGameplayAbility::K2_CheckAbilityCost
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void K2_EndAbility();  // slot 100 (+0x320), UFunction UGameplayAbility::K2_EndAbility
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();  // slot 102: UGameplayAbility::K2_ExecuteGameplayCue (signature not recovered)
+	virtual void FNGC_VSlot_0x338();  // slot 103: UGameplayAbility::K2_ExecuteGameplayCueWithParams (signature not recovered)
+	virtual void FNGC_VSlot_0x340();  // slot 104: UGameplayAbility::K2_AddGameplayCue (signature not recovered)
+	virtual void FNGC_VSlot_0x348();  // slot 105: UGameplayAbility::K2_AddGameplayCueWithParams (signature not recovered)
+	virtual void FNGC_VSlot_0x350();  // slot 106: UGameplayAbility::K2_RemoveGameplayCue (signature not recovered)
+	virtual void FNGC_VSlot_0x358();  // slot 107: UGameplayAbility::GetContextFromOwner (signature not recovered)
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();  // slot 113: UGameplayAbility::SetCanBeCanceled (signature not recovered)
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();  // slot 115: UGameplayAbility::SetShouldBlockOtherAbilities (signature not recovered)
 	static void StaticRegisterNativesUGameplayAbility();
 	static void execBP_ApplyGameplayEffectToOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBP_ApplyGameplayEffectToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36424,6 +41557,21 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();  // slot 122: UFortGameplayAbility::OnGenericNotifyFromAnimation_Implementation (signature not recovered)
+	virtual bool SetupPreviewImageOverride_Implementation();  // slot 123 (+0x3D8), UFunction UFortGameplayAbility::SetupPreviewImageOverride
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();  // slot 127: UFortGameplayAbility::MakeGameplayEffectContainerSpec (signature not recovered)
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void K2_AbilityCompleted();  // slot 130 (+0x410), UFunction UFortGameplayAbility::K2_AbilityCompleted
 	static void StaticRegisterNativesUFortGameplayAbility();
 	static void execApplyAccuracyToTargetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execApplyGameplayEffectContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36468,6 +41616,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x278();  // slot 79: UFortGameplayAbilityTooltip::GetApplicationTag_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x280();  // slot 80: UFortGameplayAbilityTooltip::InitializeAbilityInstanceInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x288();  // slot 81: UFortGameplayAbilityTooltip::GetTextForTokenFromAbilityInstanceInternal_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x290();  // slot 82: UFortGameplayAbilityTooltip::GetTextForTokenFromAbilitySpecInternal_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortGameplayAbilityTooltip();
 	static void execGetApplicationTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36784,6 +41936,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();  // slot 72: UGameplayModMagnitudeCalculation::CalculateBaseMagnitude_Implementation (signature not recovered)
 	static void StaticRegisterNativesUGameplayModMagnitudeCalculation();
 	static void execCalculateBaseMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -37060,6 +42214,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();  // slot 84: UFortGridWidgetBase::GetTiles (signature not recovered)
+	virtual void FNGC_VSlot_0x2A8();  // slot 85: UFortGridWidgetBase::GetTileForObject (signature not recovered)
 	static void StaticRegisterNativesUFortGridWidgetBase();
 	static void execGetTileForObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -37290,6 +42454,55 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnTargetDestroyed_Implementation();  // slot 130 (+0x410), UFunction UFortHUDTargetUnderReticleWidget::OnTargetDestroyed
+	virtual void OnTargetDied_Implementation();  // slot 131 (+0x418), UFunction UFortHUDTargetUnderReticleWidget::OnTargetDied
+	virtual void OnTargetHealthChanged_Implementation();  // slot 132 (+0x420), UFunction UFortHUDTargetUnderReticleWidget::OnTargetHealthChanged
+	virtual void OnTargetChanged_Implementation();  // slot 133 (+0x428), UFunction UFortHUDTargetUnderReticleWidget::OnTargetChanged
 	static void StaticRegisterNativesUFortHUDTargetUnderReticleWidget();
 	static void execClearTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleOnHUDTargetUnderReticle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -37596,6 +42809,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();  // slot 139: UFortSquadManagementScreenBase::HandleDifferentSquadSlotSelected (signature not recovered)
 	static void StaticRegisterNativesUFortSquadManagementScreenBase();
 	static void execGetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleBackInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -38086,6 +43307,23 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Hotfix"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void StartHotfixProcess();  // slot 87 (+0x2B8), UFunction UOnlineHotfixManager::StartHotfixProcess
 	static void StaticRegisterNativesUOnlineHotfixManager();
 	static void execStartHotfixProcess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -38685,6 +43923,54 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortItemCollectorWidget::OnItemCollectorChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortItemCollectorWidget::OnItemCollectorValuesChanged_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortItemCollectorWidget::OnItemCollectorStateChanged_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortItemCollectorWidget();
 	static void execOnItemCollectorChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnItemCollectorStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -43359,6 +48645,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UFortPlacementActorTagTest::ShouldApplyTagsToPlacementActor_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortPlacementActorTagTest();
 	static void execLineTraceByChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShouldApplyTagsToPlacementActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -43657,6 +48944,52 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void RefreshBannerEditor_Implementation();  // slot 130 (+0x410), UFunction UFortPlayerProfileBannerEditor::RefreshBannerEditor
 	static void StaticRegisterNativesUFortPlayerProfileBannerEditor();
 	static void execCommitChosenIconAndColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleEditorActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -43777,6 +49110,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000020000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();  // slot 264: USkinnedMeshComponent::SetPhysicsAsset (signature not recovered)
+	virtual void FNGC_VSlot_0x848();  // slot 265: USkinnedMeshComponent::SetSkeletalMesh (signature not recovered)
 	static void StaticRegisterNativesUSkinnedMeshComponent();
 	static void execBoneIsChildOf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClearSkinWeightOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -43824,6 +49160,37 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000040000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x850();
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();
+	virtual void FNGC_VSlot_0x870();
+	virtual void FNGC_VSlot_0x878();
+	virtual void FNGC_VSlot_0x880();
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();
+	virtual void FNGC_VSlot_0x8C0();
+	virtual void FNGC_VSlot_0x8C8();
+	virtual void FNGC_VSlot_0x8D0();
+	virtual void FNGC_VSlot_0x8D8();
+	virtual void FNGC_VSlot_0x8E0();
+	virtual void FNGC_VSlot_0x8E8();
+	virtual void FNGC_VSlot_0x8F0();
+	virtual void FNGC_VSlot_0x8F8();
+	virtual void FNGC_VSlot_0x900();
+	virtual void FNGC_VSlot_0x908();
+	virtual void FNGC_VSlot_0x910();
+	virtual void FNGC_VSlot_0x918();
+	virtual void FNGC_VSlot_0x920();
+	virtual void FNGC_VSlot_0x928();  // slot 293: USkeletalMeshComponent::SetBodyNotifyRigidBodyCollision (signature not recovered)
+	virtual void FNGC_VSlot_0x930();  // slot 294: USkeletalMeshComponent::SetNotifyRigidBodyCollisionBelow (signature not recovered)
+	virtual void FNGC_VSlot_0x938();  // slot 295: USkeletalMeshComponent::AddForceToAllBodiesBelow (signature not recovered)
+	virtual void FNGC_VSlot_0x940();  // slot 296: USkeletalMeshComponent::AddImpulseToAllBodiesBelow (signature not recovered)
 	static void StaticRegisterNativesUSkeletalMeshComponent();
 	static void execAccumulateAllBodiesBelowPhysicsBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddForceToAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -45306,6 +50673,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void OnQuestExpirationUpdated_Implementation();  // slot 130 (+0x410), UFunction UFortQuestExpiresWidget::OnQuestExpirationUpdated
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortQuestExpiresWidget::SetData_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortQuestExpiresWidget();
 	static void execOnQuestExpirationUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -47318,6 +52732,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();
+	virtual void FNGC_VSlot_0x488();
+	virtual void FNGC_VSlot_0x490();
+	virtual void SquadSlotWidgetUpdated_Implementation();  // slot 147 (+0x498), UFunction UFortSquadSlotSelectorButton::SquadSlotWidgetUpdated
 	static void StaticRegisterNativesUFortSquadSlotSelectorButton();
 	static void execGetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetInPreviewMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -48507,6 +53934,58 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortTouchControlRegion::OnRotatePlayerRegionTouchEnded_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortTouchControlRegion::OnRotatePlayerRegionTouchMoved_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortTouchControlRegion::OnRotatePlayerRegionTouchStarted_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x428();  // slot 133: UFortTouchControlRegion::MovePlayerRegionTick_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x430();  // slot 134: UFortTouchControlRegion::OnMovePlayerRegionTouchEnded_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x438();  // slot 135: UFortTouchControlRegion::OnMovePlayerRegionTouchMoved_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x440();  // slot 136: UFortTouchControlRegion::OnMovePlayerRegionTouchStarted_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortTouchControlRegion();
 	static void execCalculateMoveStickPos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsMovePlayerRegionTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -48540,6 +54019,54 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortTouchLookStick::IsFireButtonUnderTouch_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortTouchLookStick::SetFiringState_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortTouchLookStick();
 	static void execIsFireButtonUnderTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetFiringState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -48557,6 +54084,56 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortTouchMoveStick::SetMovementLockStatus_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x420();  // slot 132: UFortTouchMoveStick::SetStickPosition_Implementation (signature not recovered)
+	virtual void HandleTouchEnded_Implementation();  // slot 133 (+0x428), UFunction UFortTouchMoveStick::HandleTouchEnded
+	virtual void HandleTouchStarted_Implementation();  // slot 134 (+0x430), UFunction UFortTouchMoveStick::HandleTouchStarted
 	static void StaticRegisterNativesUFortTouchMoveStick();
 	static void execGetHalfHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHandleTouchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -48817,6 +54394,53 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();  // slot 130: UFortTwitchLogin::OnLoginFlowModalDismissed_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x418();  // slot 131: UFortTwitchLogin::OnLoginFlowModalCreated_Implementation (signature not recovered)
 	static void StaticRegisterNativesUFortTwitchLogin();
 	static void execCancelLoginFlow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAccountName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -48842,6 +54466,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void OnNativeHostContentChanged_Implementation();  // slot 138 (+0x450), UFunction UFortTwitchLoginModalWidget::OnNativeHostContentChanged
 	static void StaticRegisterNativesUFortTwitchLoginModalWidget();
 	static void execOnNativeHostContentChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -48930,6 +54561,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UFortUINotification::GetImageOverride_Implementation (signature not recovered)
+	virtual void TakeAction_Implementation();  // slot 72 (+0x240), UFunction UFortUINotification::TakeAction
+	virtual void ClearNotification_Implementation();  // slot 73 (+0x248), UFunction UFortUINotification::ClearNotification
+	virtual void NotificationShown_Implementation();  // slot 74 (+0x250), UFunction UFortUINotification::NotificationShown
 	static void StaticRegisterNativesUFortUINotification();
 	static void execClearNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetImageOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -49249,6 +54884,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual bool EvalBP_Implementation() const;  // slot 71 (+0x238), UFunction UFortUIStateTrigger::EvalBP
 	static void StaticRegisterNativesUFortUIStateTrigger();
 	static void execEvalBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsLoggedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -50272,6 +55908,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UGameplayEffectCustomApplicationRequirement::CanApplyGameplayEffect_Implementation (signature not recovered)
 	static void StaticRegisterNativesUGameplayEffectCustomApplicationRequirement();
 	static void execCanApplyGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -50746,6 +56383,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GeometryCache"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();  // slot 264: UGeometryCacheComponent::SetGeometryCache (signature not recovered)
 	static void StaticRegisterNativesUGeometryCacheComponent();
 	static void execGetPlaybackSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetStartTimeOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -53991,6 +59630,71 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();  // slot 76: UMaterialInterface::GetPhysicalMaterial (signature not recovered)
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual void FNGC_VSlot_0x290();
+	virtual void FNGC_VSlot_0x298();
+	virtual void FNGC_VSlot_0x2A0();
+	virtual void FNGC_VSlot_0x2A8();
+	virtual void FNGC_VSlot_0x2B0();
+	virtual void FNGC_VSlot_0x2B8();
+	virtual void FNGC_VSlot_0x2C0();
+	virtual void FNGC_VSlot_0x2C8();
+	virtual void FNGC_VSlot_0x2D0();
+	virtual void FNGC_VSlot_0x2D8();
+	virtual void FNGC_VSlot_0x2E0();
+	virtual void FNGC_VSlot_0x2E8();
+	virtual void FNGC_VSlot_0x2F0();
+	virtual void FNGC_VSlot_0x2F8();
+	virtual void FNGC_VSlot_0x300();
+	virtual void FNGC_VSlot_0x308();
+	virtual void FNGC_VSlot_0x310();
+	virtual void FNGC_VSlot_0x318();
+	virtual void FNGC_VSlot_0x320();
+	virtual void FNGC_VSlot_0x328();
+	virtual void FNGC_VSlot_0x330();
+	virtual void FNGC_VSlot_0x338();
+	virtual void FNGC_VSlot_0x340();
+	virtual void FNGC_VSlot_0x348();
+	virtual void FNGC_VSlot_0x350();
+	virtual void FNGC_VSlot_0x358();
+	virtual void FNGC_VSlot_0x360();
+	virtual void FNGC_VSlot_0x368();
+	virtual void FNGC_VSlot_0x370();
+	virtual void FNGC_VSlot_0x378();
+	virtual void FNGC_VSlot_0x380();
+	virtual void FNGC_VSlot_0x388();
+	virtual void FNGC_VSlot_0x390();
+	virtual void FNGC_VSlot_0x398();
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();
+	virtual void FNGC_VSlot_0x3B8();
+	virtual void FNGC_VSlot_0x3C0();
+	virtual void FNGC_VSlot_0x3C8();
+	virtual void FNGC_VSlot_0x3D0();
+	virtual void FNGC_VSlot_0x3D8();
+	virtual void FNGC_VSlot_0x3E0();
+	virtual void FNGC_VSlot_0x3E8();
+	virtual void FNGC_VSlot_0x3F0();
+	virtual void FNGC_VSlot_0x3F8();
+	virtual void FNGC_VSlot_0x400();
+	virtual void FNGC_VSlot_0x408();
+	virtual void FNGC_VSlot_0x410();
+	virtual void FNGC_VSlot_0x418();
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();  // slot 135: UMaterialInterface::SetForceMipLevelsToBeResident (signature not recovered)
 	static void StaticRegisterNativesUMaterialInterface();
 	static void execGetBaseMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPhysicalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -54459,6 +60163,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: ULevelStreamingKismet::SetShouldBeLoaded (signature not recovered)
 	static void StaticRegisterNativesULevelStreaming();
 	static void execCreateInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLevelScriptActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -58081,6 +63786,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/MediaAssets"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();  // slot 71: UMediaPlayer::GetMediaName (signature not recovered)
 	static void StaticRegisterNativesUMediaPlayer();
 	static void execCanPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanPlaySource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -58275,6 +63981,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/MRMesh"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void StartReconstruction();  // slot 71 (+0x238), UFunction UMeshReconstructorBase::StartReconstruction
+	virtual void StopReconstruction();  // slot 72 (+0x240), UFunction UMeshReconstructorBase::StopReconstruction
+	virtual void PauseReconstruction();  // slot 73 (+0x248), UFunction UMeshReconstructorBase::PauseReconstruction
+	virtual bool IsReconstructionStarted() const;  // slot 74 (+0x250), UFunction UMeshReconstructorBase::IsReconstructionStarted
+	virtual bool IsReconstructionPaused() const;  // slot 75 (+0x258), UFunction UMeshReconstructorBase::IsReconstructionPaused
+	virtual void FNGC_VSlot_0x260();  // slot 76: UMeshReconstructorBase::ConnectMRMesh (signature not recovered)
+	virtual void DisconnectMRMesh();  // slot 77 (+0x268), UFunction UMeshReconstructorBase::DisconnectMRMesh
 	static void StaticRegisterNativesUMeshReconstructorBase();
 	static void execConnectMRMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDisconnectMRMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -60770,6 +66483,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Paper2D"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();  // slot 264: UPaperFlipbookComponent::SetFlipbook (signature not recovered)
+	virtual void FNGC_VSlot_0x848();  // slot 265: UPaperFlipbookComponent::GetFlipbook (signature not recovered)
 	static void StaticRegisterNativesUPaperFlipbookComponent();
 	static void execGetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFlipbookFramerate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -60810,6 +66526,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Paper2D"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();
+	virtual void FNGC_VSlot_0x848();  // slot 265: UPaperGroupedSpriteComponent::UpdateInstanceTransform (signature not recovered)
+	virtual void FNGC_VSlot_0x850();  // slot 266: UPaperGroupedSpriteComponent::UpdateInstanceColor (signature not recovered)
+	virtual void FNGC_VSlot_0x858();  // slot 267: UPaperGroupedSpriteComponent::RemoveInstance (signature not recovered)
+	virtual void ClearInstances();  // slot 268 (+0x860), UFunction UPaperGroupedSpriteComponent::ClearInstances
 	static void StaticRegisterNativesUPaperGroupedSpriteComponent();
 	static void execAddInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClearInstances(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -60900,6 +66622,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Paper2D"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();  // slot 264: UPaperSpriteComponent::SetSprite (signature not recovered)
+	virtual void FNGC_VSlot_0x848();  // slot 265: UPaperSpriteComponent::GetSprite (signature not recovered)
 	static void StaticRegisterNativesUPaperSpriteComponent();
 	static void execGetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -61103,6 +66828,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Paper2D"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();  // slot 264: UPaperTileMapComponent::SetTileMap (signature not recovered)
 	static void StaticRegisterNativesUPaperTileMapComponent();
 	static void execAddNewLayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCreateNewTileMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -63168,6 +68895,32 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void FNGC_VSlot_0x800();  // slot 256: UParticleSystemComponent::SetBeamEndPoint (signature not recovered)
+	virtual void FNGC_VSlot_0x808();  // slot 257: UParticleSystemComponent::SetBeamSourcePoint (signature not recovered)
+	virtual void FNGC_VSlot_0x810();  // slot 258: UParticleSystemComponent::SetBeamSourceTangent (signature not recovered)
+	virtual void FNGC_VSlot_0x818();  // slot 259: UParticleSystemComponent::SetBeamSourceStrength (signature not recovered)
+	virtual void FNGC_VSlot_0x820();  // slot 260: UParticleSystemComponent::SetBeamTargetPoint (signature not recovered)
+	virtual void FNGC_VSlot_0x828();  // slot 261: UParticleSystemComponent::SetBeamTargetTangent (signature not recovered)
+	virtual void FNGC_VSlot_0x830();  // slot 262: UParticleSystemComponent::SetBeamTargetStrength (signature not recovered)
+	virtual void FNGC_VSlot_0x838();  // slot 263: UParticleSystemComponent::GetBeamEndPoint (signature not recovered)
+	virtual void FNGC_VSlot_0x840();  // slot 264: UParticleSystemComponent::GetBeamSourcePoint (signature not recovered)
+	virtual void FNGC_VSlot_0x848();  // slot 265: UParticleSystemComponent::GetBeamSourceTangent (signature not recovered)
+	virtual void FNGC_VSlot_0x850();  // slot 266: UParticleSystemComponent::GetBeamSourceStrength (signature not recovered)
+	virtual void FNGC_VSlot_0x858();  // slot 267: UParticleSystemComponent::GetBeamTargetPoint (signature not recovered)
+	virtual void FNGC_VSlot_0x860();  // slot 268: UParticleSystemComponent::GetBeamTargetTangent (signature not recovered)
+	virtual void FNGC_VSlot_0x868();  // slot 269: UParticleSystemComponent::GetBeamTargetStrength (signature not recovered)
+	virtual void FNGC_VSlot_0x870();  // slot 270: UParticleSystemComponent::SetEmitterEnable (signature not recovered)
+	virtual void FNGC_VSlot_0x878();
+	virtual void FNGC_VSlot_0x880();
+	virtual void FNGC_VSlot_0x888();
+	virtual void FNGC_VSlot_0x890();
+	virtual void FNGC_VSlot_0x898();
+	virtual void FNGC_VSlot_0x8A0();
+	virtual void FNGC_VSlot_0x8A8();
+	virtual void FNGC_VSlot_0x8B0();
+	virtual void FNGC_VSlot_0x8B8();  // slot 279: UParticleSystemComponent::CreateNamedDynamicMaterialInstance (signature not recovered)
+	virtual void FNGC_VSlot_0x8C0();  // slot 280: UParticleSystemComponent::GetNamedMaterial (signature not recovered)
 	static void StaticRegisterNativesUParticleSystemComponent();
 	static void execBeginTrails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCreateNamedDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -63232,6 +68985,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();  // slot 73: UPawnAction::Finish (signature not recovered)
 	static void StaticRegisterNativesUPawnAction();
 	static void execCreateActionInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFinish(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -63374,6 +69130,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/AIModule"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();  // slot 118: UPawnSensingComponent::SetSensingInterval (signature not recovered)
+	virtual void FNGC_VSlot_0x3B8();  // slot 119: UPawnSensingComponent::SetSensingUpdatesEnabled (signature not recovered)
+	virtual void FNGC_VSlot_0x3C0();  // slot 120: UPawnSensingComponent::SetPeripheralVisionAngle (signature not recovered)
 	static void StaticRegisterNativesUPawnSensingComponent();
 	static void execGetPeripheralVisionAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPeripheralVisionCosine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -63538,6 +69299,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void FNGC_VSlot_0x3B0();  // slot 118: UPhysicsHandleComponent::GrabComponent (signature not recovered)
+	virtual void ReleaseComponent();  // slot 119 (+0x3B8), UFunction UPhysicsHandleComponent::ReleaseComponent
 	static void StaticRegisterNativesUPhysicsHandleComponent();
 	static void execGetGrabbedComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTargetLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -63739,6 +69504,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual int32 GetNumHeaders();  // slot 71 (+0x238), UFunction UPlatformInterfaceWebResponse::GetNumHeaders
+	virtual void FNGC_VSlot_0x240();  // slot 72: UPlatformInterfaceWebResponse::GetHeader (signature not recovered)
+	virtual void FNGC_VSlot_0x248();  // slot 73: UPlatformInterfaceWebResponse::GetHeaderValue (signature not recovered)
 	static void StaticRegisterNativesUPlatformInterfaceWebResponse();
 	static void execGetHeader(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHeaderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -64101,6 +69869,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();  // slot 154: UProjectileMovementComponent::SetVelocityInLocalSpace (signature not recovered)
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();
+	virtual void FNGC_VSlot_0x4E8();  // slot 157: UProjectileMovementComponent::StopSimulating (signature not recovered)
 	static void StaticRegisterNativesUProjectileMovementComponent();
 	static void execLimitVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetVelocityInLocalSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -64224,6 +69997,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FireImpulse();  // slot 156 (+0x4E0), UFunction URadialForceComponent::FireImpulse
+	virtual void FNGC_VSlot_0x4E8();  // slot 157: URadialForceComponent::AddObjectTypeToAffect (signature not recovered)
+	virtual void FNGC_VSlot_0x4F0();  // slot 158: URadialForceComponent::RemoveObjectTypeToAffect (signature not recovered)
 	static void StaticRegisterNativesURadialForceComponent();
 	static void execAddObjectTypeToAffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFireImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67199,6 +72983,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void Init();  // slot 73 (+0x248), UFunction UTwitterIntegrationBase::Init
+	virtual bool CanShowTweetUI();  // slot 74 (+0x250), UFunction UTwitterIntegrationBase::CanShowTweetUI
+	virtual void FNGC_VSlot_0x258();  // slot 75: UTwitterIntegrationBase::ShowTweetUI (signature not recovered)
+	virtual bool AuthorizeAccounts();  // slot 76 (+0x260), UFunction UTwitterIntegrationBase::AuthorizeAccounts
+	virtual int32 GetNumAccounts();  // slot 77 (+0x268), UFunction UTwitterIntegrationBase::GetNumAccounts
+	virtual void FNGC_VSlot_0x270();  // slot 78: UTwitterIntegrationBase::GetAccountName (signature not recovered)
+	virtual void FNGC_VSlot_0x278();  // slot 79: UTwitterIntegrationBase::TwitterRequest (signature not recovered)
 	static void StaticRegisterNativesUTwitterIntegrationBase();
 	static void execAuthorizeAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanShowTweetUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67221,6 +73014,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UACCommon"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void SendClientHello_Implementation();  // slot 118 (+0x3B0), UFunction UUACNetComponent::SendClientHello
+	virtual void FNGC_VSlot_0x3B8();  // slot 119: UUACNetComponent::SendPacketToClient_Implementation (signature not recovered)
+	virtual void FNGC_VSlot_0x3C0();  // slot 120: UUACNetComponent::SendPacketToServer_Validate (signature not recovered)
+	virtual void FNGC_VSlot_0x3C8();  // slot 121: UUACNetComponent::SendPacketToServer_Implementation (signature not recovered)
 	static void StaticRegisterNativesUUACNetComponent();
 	static void execSendClientHello(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSendPacketToClient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67395,6 +73194,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void BPOnTalkingEnd_Implementation();  // slot 118 (+0x3B0), UFunction UVOIPTalker::BPOnTalkingEnd
+	virtual void FNGC_VSlot_0x3B8();  // slot 119: UVOIPTalker::BPOnTalkingBegin_Implementation (signature not recovered)
 	static void StaticRegisterNativesUVOIPTalker();
 	static void execBPOnTalkingBegin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBPOnTalkingEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67888,6 +73691,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x838();
+	virtual void FNGC_VSlot_0x840();
+	virtual void FNGC_VSlot_0x848();
+	virtual void FNGC_VSlot_0x850();
+	virtual void FNGC_VSlot_0x858();
+	virtual void FNGC_VSlot_0x860();
+	virtual void FNGC_VSlot_0x868();  // slot 269: UWidgetComponent::SetWidget (signature not recovered)
+	virtual void FNGC_VSlot_0x870();
+	virtual void RequestRedraw();  // slot 271 (+0x878), UFunction UWidgetComponent::RequestRedraw
 	static void StaticRegisterNativesUWidgetComponent();
 	static void execGetDrawSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67916,6 +73728,21 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x4A0();
+	virtual void FNGC_VSlot_0x4A8();
+	virtual void FNGC_VSlot_0x4B0();
+	virtual void FNGC_VSlot_0x4B8();
+	virtual void FNGC_VSlot_0x4C0();
+	virtual void FNGC_VSlot_0x4C8();
+	virtual void FNGC_VSlot_0x4D0();
+	virtual void FNGC_VSlot_0x4D8();
+	virtual void FNGC_VSlot_0x4E0();  // slot 156: UWidgetInteractionComponent::PressPointerKey (signature not recovered)
+	virtual void FNGC_VSlot_0x4E8();  // slot 157: UWidgetInteractionComponent::ReleasePointerKey (signature not recovered)
+	virtual void FNGC_VSlot_0x4F0();  // slot 158: UWidgetInteractionComponent::PressKey (signature not recovered)
+	virtual void FNGC_VSlot_0x4F8();  // slot 159: UWidgetInteractionComponent::ReleaseKey (signature not recovered)
+	virtual void FNGC_VSlot_0x500();  // slot 160: UWidgetInteractionComponent::PressAndReleaseKey (signature not recovered)
+	virtual void FNGC_VSlot_0x508();  // slot 161: UWidgetInteractionComponent::SendKeyChar (signature not recovered)
+	virtual void FNGC_VSlot_0x510();  // slot 162: UWidgetInteractionComponent::ScrollWheel (signature not recovered)
 	static void StaticRegisterNativesUWidgetInteractionComponent();
 	static void execGet2DHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHoveredWidgetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);

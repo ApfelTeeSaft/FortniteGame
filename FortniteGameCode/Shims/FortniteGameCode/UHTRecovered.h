@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 #include "FortniteGameCode/UObjectRegistrationRecovered.h"
+#include "FortniteGameCode/ScriptRecovered.h"
 
 typedef unsigned long long uint64;
 

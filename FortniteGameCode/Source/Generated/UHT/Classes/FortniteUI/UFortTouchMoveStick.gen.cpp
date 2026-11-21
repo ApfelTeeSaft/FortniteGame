@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907370 (end 0x0290738F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleTouchEnded) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchMoveStick::execHandleTouchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleTouchEnded_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907390 (end 0x029073AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleTouchStarted) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchMoveStick::execHandleTouchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleTouchStarted_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTouchMoveStick, 848341596u)
 // Original dynamic initializer: RVA 0x0025E550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTouchMoveStick> AutoInitializeUFortTouchMoveStick(TEXT("UFortTouchMoveStick"), sizeof(UFortTouchMoveStick), 848341596u);

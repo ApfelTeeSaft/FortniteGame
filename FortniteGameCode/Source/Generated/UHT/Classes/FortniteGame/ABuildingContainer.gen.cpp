@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67A40 (end 0x00F67A5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBounceContainer) | Matching: see analysis/functions-uht-exec.json
+void ABuildingContainer::execBounceContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BounceContainer();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02400DC0 (end 0x02400DDF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bAlreadySearched) | Matching: see analysis/functions-uht-exec.json
+void ABuildingContainer::execOnRep_bAlreadySearched(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bAlreadySearched();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingContainer, 2365160928u)
 // Original dynamic initializer: RVA 0x000D9890 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingContainer> AutoInitializeABuildingContainer(TEXT("ABuildingContainer"), sizeof(ABuildingContainer), 2365160928u);

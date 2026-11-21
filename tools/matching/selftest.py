@@ -144,6 +144,25 @@ def test_exec_thunks() -> None:
     print("exec thunks: ok")
 
 
+def test_vtable_store() -> None:
+    """InternalConstructor<C> -> (conditional tail jump) C::C -> super ctor, then [this] = vtable."""
+    from types import SimpleNamespace as NS
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "analysis"))
+    import capstone
+    import vtables as V
+    ic = bytes.fromhex("488b09" "4885c9" "0f85f40f0000" "c3")         # obj = X.GetObj(); if (obj) jmp 0x2000
+    ctor = bytes.fromhex("4053" "4883ec20" "488bd9" "e8f20f0000"         # push rbx; ...; call Super::Super
+                         "488d05eb2f0000" "488903"                       # lea rax, [0x5000]; mov [rbx], rax
+                         "4883c420" "5b" "c3")
+    img = FakeImage({0x1000: ic + b"\xcc" * 0x40, 0x2000: ctor + b"\xcc" * 0x40})
+    md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
+    md.detail = True
+    rdata = NS(contains_rva=lambda r: 0x5000 <= r < 0x6000)
+    assert V.constructor_vtable(md, img, {}, rdata, 0x1000) == (0x5000, 0x2000, []), \
+        V.constructor_vtable(md, img, {}, rdata, 0x1000)
+    print("vtable store: ok")
+
+
 def test_local_prediction() -> None:
     from compare import local_prediction
     # Layout [a=0][b=8][s=16][c=24][d=32]; a layout gap in the reference between b and s.
@@ -190,6 +209,7 @@ def main() -> int:
     test_leave_one_out()
     test_literal_elimination()
     test_exec_thunks()
+    test_vtable_store()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

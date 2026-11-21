@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02913FC0 (end 0x02913FEF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEvalBP) | Matching: see analysis/functions-uht-exec.json
+void UFortUIStateTrigger::execEvalBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->EvalBP_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortUIStateTrigger, 61700566u)
 // Original dynamic initializer: RVA 0x00262980 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUIStateTrigger> AutoInitializeUFortUIStateTrigger(TEXT("UFortUIStateTrigger"), sizeof(UFortUIStateTrigger), 61700566u);

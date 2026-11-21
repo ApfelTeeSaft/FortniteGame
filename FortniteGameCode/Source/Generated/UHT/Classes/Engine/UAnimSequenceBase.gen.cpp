@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D7460 (end 0x023D7491)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlayLength) | Matching: see analysis/functions-uht-exec.json
+void UAnimSequenceBase::execGetPlayLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetPlayLength();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAnimSequenceBase, 3508993448u)
 // Original dynamic initializer: RVA 0x001EFA00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAnimSequenceBase> AutoInitializeUAnimSequenceBase(TEXT("UAnimSequenceBase"), sizeof(UAnimSequenceBase), 3508993448u);

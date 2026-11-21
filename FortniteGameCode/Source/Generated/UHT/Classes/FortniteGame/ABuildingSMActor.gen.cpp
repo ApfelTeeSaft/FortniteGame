@@ -4,6 +4,177 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F736F0 (end 0x00F7370F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintOnStructurallyStable) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execBlueprintOnStructurallyStable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BlueprintOnStructurallyStable_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73710 (end 0x00F7372F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintOnStructurallyUnstable) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execBlueprintOnStructurallyUnstable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BlueprintOnStructurallyUnstable_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6D870 (end 0x00F6D88F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execForceIntoStructuralGridDuringRuntime) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execForceIntoStructuralGridDuringRuntime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ForceIntoStructuralGridDuringRuntime_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74350 (end 0x00F7437F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLogicalBuildingIndex) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execGetLogicalBuildingIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLogicalBuildingIndex();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74740 (end 0x00F7476F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsStructurallySupported) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execIsStructurallySupported(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsStructurallySupported();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74770 (end 0x00F7479F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsSupportedByWorld) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execIsSupportedByWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsSupportedByWorld();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F748A0 (end 0x00F748BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMulticastPlayFullHealthEffects) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execMulticastPlayFullHealthEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MulticastPlayFullHealthEffects_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066890 (end 0x010668AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnDynamicShrinkAndDestroyEffectFinished) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnDynamicShrinkAndDestroyEffectFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDynamicShrinkAndDestroyEffectFinished();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74940 (end 0x00F7495F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnLODOverrideEffectFinished) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnLODOverrideEffectFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnLODOverrideEffectFinished();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74980 (end 0x00F7499F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_BuildingReplacementType) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_BuildingReplacementType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_BuildingReplacementType();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F749A0 (end 0x00F749BF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_EditingPlayer) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_EditingPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_EditingPlayer();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F749C0 (end 0x00F749DF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_MetaData) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_MetaData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_MetaData();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F749E0 (end 0x00F749FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_RelevantBASE) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_RelevantBASE(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_RelevantBASE();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFF40 (end 0x00FEFF5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedDrawScale3D) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_ReplicatedDrawScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedDrawScale3D();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF170 (end 0x024AF18F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedMIC) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_ReplicatedMIC(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedMIC();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74AA0 (end 0x00F74ABF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_WeakSpotPositions) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_WeakSpotPositions(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_WeakSpotPositions();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74AC0 (end 0x00F74ADF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bCollisionBlockedByPawns) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_bCollisionBlockedByPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bCollisionBlockedByPawns();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74AE0 (end 0x00F74AFF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bUnderConstruction) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_bUnderConstruction(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bUnderConstruction();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74B00 (end 0x00F74B1F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bUnderRepair) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_bUnderRepair(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bUnderRepair();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingSMActor, 4124908678u)
 // Original dynamic initializer: RVA 0x000DBE60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingSMActor> AutoInitializeABuildingSMActor(TEXT("ABuildingSMActor"), sizeof(ABuildingSMActor), 4124908678u);

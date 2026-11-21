@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00549E20 (end 0x00549E3F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShowDefaultImage) | Matching: see analysis/functions-uht-exec.json
+void UCommonLazyImage::execShowDefaultImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowDefaultImage_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonLazyImage, 3021258143u)
 // Original dynamic initializer: RVA 0x00095FA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonLazyImage> AutoInitializeUCommonLazyImage(TEXT("UCommonLazyImage"), sizeof(UCommonLazyImage), 3021258143u);

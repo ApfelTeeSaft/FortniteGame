@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5B1D0 (end 0x00F5B1EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearSlot) | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execClearSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearSlot();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAIHotSpotSlot, 4233074455u)
 // Original dynamic initializer: RVA 0x000D7330 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAIHotSpotSlot> AutoInitializeUAIHotSpotSlot(TEXT("UAIHotSpotSlot"), sizeof(UAIHotSpotSlot), 4233074455u);

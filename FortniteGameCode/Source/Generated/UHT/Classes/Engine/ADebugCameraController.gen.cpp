@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02400DC0 (end 0x02400DDF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShowDebugSelectedInfo) | Matching: see analysis/functions-uht-exec.json
+void ADebugCameraController::execShowDebugSelectedInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowDebugSelectedInfo();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ADebugCameraController, 1043388985u)
 // Original dynamic initializer: RVA 0x001F8200 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ADebugCameraController> AutoInitializeADebugCameraController(TEXT("ADebugCameraController"), sizeof(ADebugCameraController), 1043388985u);

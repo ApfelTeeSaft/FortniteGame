@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_WorldGravityZ) | Matching: see analysis/functions-uht-exec.json
+void AWorldSettings::execOnRep_WorldGravityZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_WorldGravityZ();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AWorldSettings, 1315617746u)
 // Original dynamic initializer: RVA 0x00221940 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AWorldSettings> AutoInitializeAWorldSettings(TEXT("AWorldSettings"), sizeof(AWorldSettings), 1315617746u);

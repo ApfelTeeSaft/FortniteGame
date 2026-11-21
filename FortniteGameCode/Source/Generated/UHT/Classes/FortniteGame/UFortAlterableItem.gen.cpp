@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009760 (end 0x0100978F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRating) | Matching: see analysis/functions-uht-exec.json
+void UFortAlterableItem::execGetRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetRating();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortAlterableItem, 2541198144u)
 // Original dynamic initializer: RVA 0x000E4A60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAlterableItem> AutoInitializeUFortAlterableItem(TEXT("UFortAlterableItem"), sizeof(UFortAlterableItem), 2541198144u);

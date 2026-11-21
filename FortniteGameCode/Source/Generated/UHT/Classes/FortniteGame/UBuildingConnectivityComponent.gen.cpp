@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C3870 (end 0x024C388F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPlaced) | Matching: see analysis/functions-uht-exec.json
+void UBuildingConnectivityComponent::execOnPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPlaced();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68580 (end 0x00F6859F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Connections) | Matching: see analysis/functions-uht-exec.json
+void UBuildingConnectivityComponent::execOnRep_Connections(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Connections();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68600 (end 0x00F6861F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bIsPowered) | Matching: see analysis/functions-uht-exec.json
+void UBuildingConnectivityComponent::execOnRep_bIsPowered(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bIsPowered();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68620 (end 0x00F6863F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bIsProvidingPower) | Matching: see analysis/functions-uht-exec.json
+void UBuildingConnectivityComponent::execOnRep_bIsProvidingPower(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bIsProvidingPower();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBuildingConnectivityComponent, 1671748314u)
 // Original dynamic initializer: RVA 0x000D99B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingConnectivityComponent> AutoInitializeUBuildingConnectivityComponent(TEXT("UBuildingConnectivityComponent"), sizeof(UBuildingConnectivityComponent), 1671748314u);

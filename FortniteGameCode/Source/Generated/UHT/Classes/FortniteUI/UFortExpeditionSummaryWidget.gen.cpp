@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRefreshSummaryWidget) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionSummaryWidget::execOnRefreshSummaryWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRefreshSummaryWidget_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortExpeditionSummaryWidget, 1365182850u)
 // Original dynamic initializer: RVA 0x00244B80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortExpeditionSummaryWidget> AutoInitializeUFortExpeditionSummaryWidget(TEXT("UFortExpeditionSummaryWidget"), sizeof(UFortExpeditionSummaryWidget), 1365182850u);

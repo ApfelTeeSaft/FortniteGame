@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCF70 (end 0x00FCCFA1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimPlayRate) | Matching: see analysis/functions-uht-exec.json
+void UFortConsumableItemDefinition::execGetAnimPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetAnimPlayRate();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortConsumableItemDefinition, 3352232537u)
 // Original dynamic initializer: RVA 0x000EE3F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortConsumableItemDefinition> AutoInitializeUFortConsumableItemDefinition(TEXT("UFortConsumableItemDefinition"), sizeof(UFortConsumableItemDefinition), 3352232537u);

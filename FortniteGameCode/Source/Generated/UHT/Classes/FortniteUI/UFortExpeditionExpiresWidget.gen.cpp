@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6810 (end 0x002C682F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnExpeditionExpirationUpdated) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionExpiresWidget::execOnExpeditionExpirationUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnExpeditionExpirationUpdated_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortExpeditionExpiresWidget, 2016599900u)
 // Original dynamic initializer: RVA 0x00244A80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortExpeditionExpiresWidget> AutoInitializeUFortExpeditionExpiresWidget(TEXT("UFortExpeditionExpiresWidget"), sizeof(UFortExpeditionExpiresWidget), 2016599900u);

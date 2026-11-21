@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1470 (end 0x00FD148F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCarriedObjectAttachedEvent) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFlagSpawn::execOnCarriedObjectAttachedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCarriedObjectAttachedEvent_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68060 (end 0x00F6807F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCarriedObjectDetachedEvent) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFlagSpawn::execOnCarriedObjectDetachedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCarriedObjectDetachedEvent_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingFlagSpawn, 619976150u)
 // Original dynamic initializer: RVA 0x000D9910 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingFlagSpawn> AutoInitializeABuildingFlagSpawn(TEXT("ABuildingFlagSpawn"), sizeof(ABuildingFlagSpawn), 619976150u);

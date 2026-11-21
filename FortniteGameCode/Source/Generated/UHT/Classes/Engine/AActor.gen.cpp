@@ -4,6 +4,87 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023BFAF0 (end 0x023BFB0F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execForceNetUpdate) | Matching: see analysis/functions-uht-exec.json
+void AActor::execForceNetUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ForceNetUpdate();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C09C0 (end 0x023C09F1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLifeSpan) | Matching: see analysis/functions-uht-exec.json
+void AActor::execGetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetLifeSpan();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C2030 (end 0x023C204F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_DestroyActor) | Matching: see analysis/functions-uht-exec.json
+void AActor::execK2_DestroyActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_DestroyActor();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024241F0 (end 0x0242420F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_AttachmentReplication) | Matching: see analysis/functions-uht-exec.json
+void AActor::execOnRep_AttachmentReplication(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_AttachmentReplication();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9910 (end 0x023F992F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Instigator) | Matching: see analysis/functions-uht-exec.json
+void AActor::execOnRep_Instigator(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Instigator();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Owner) | Matching: see analysis/functions-uht-exec.json
+void AActor::execOnRep_Owner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Owner();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F1B0 (end 0x01D5F1CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicateMovement) | Matching: see analysis/functions-uht-exec.json
+void AActor::execOnRep_ReplicateMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicateMovement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9970 (end 0x023F998F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ReplicatedMovement) | Matching: see analysis/functions-uht-exec.json
+void AActor::execOnRep_ReplicatedMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ReplicatedMovement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTearOff) | Matching: see analysis/functions-uht-exec.json
+void AActor::execTearOff(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TearOff();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AActor, 1269707568u)
 // Original dynamic initializer: RVA 0x001EBBB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AActor> AutoInitializeAActor(TEXT("AActor"), sizeof(AActor), 1269707568u);

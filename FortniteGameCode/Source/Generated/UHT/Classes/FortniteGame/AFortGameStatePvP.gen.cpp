@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFC30 (end 0x00FEFC5F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFOBFinalizationTimeRemaining) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStatePvP::execGetFOBFinalizationTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetFOBFinalizationTimeRemaining();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFD30 (end 0x00FEFD5F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRoundTimeAccumulated) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStatePvP::execGetRoundTimeAccumulated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetRoundTimeAccumulated();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF170 (end 0x024AF18F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_RoundTimeRemaining) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStatePvP::execOnRep_RoundTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_RoundTimeRemaining();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFF40 (end 0x00FEFF5F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_StalemateTimeRemaining) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStatePvP::execOnRep_StalemateTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_StalemateTimeRemaining();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameStatePvP, 2870238171u)
 // Original dynamic initializer: RVA 0x000F7670 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStatePvP> AutoInitializeAFortGameStatePvP(TEXT("AFortGameStatePvP"), sizeof(AFortGameStatePvP), 2870238171u);

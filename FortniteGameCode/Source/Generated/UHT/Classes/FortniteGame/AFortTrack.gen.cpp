@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CE1D0 (end 0x010CE1EF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ConfigurationIdx) | Matching: see analysis/functions-uht-exec.json
+void AFortTrack::execOnRep_ConfigurationIdx(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ConfigurationIdx();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CE1F0 (end 0x010CE20F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_NeighborsByDirection) | Matching: see analysis/functions-uht-exec.json
+void AFortTrack::execOnRep_NeighborsByDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_NeighborsByDirection();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CE230 (end 0x010CE24F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_SwitchState) | Matching: see analysis/functions-uht-exec.json
+void AFortTrack::execOnRep_SwitchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_SwitchState();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortTrack, 3304805572u)
 // Original dynamic initializer: RVA 0x00117DC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTrack> AutoInitializeAFortTrack(TEXT("AFortTrack"), sizeof(AFortTrack), 3304805572u);
