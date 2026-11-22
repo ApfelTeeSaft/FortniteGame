@@ -17,6 +17,14 @@ entry of each unit; K is the constant most initializers copy. Some small plugin 
 units lack that header. Because a unity file never spans two modules, a change of package
 also starts a new unit.
 
+The constant is GlobalVectorConstants::FloatOne (UnrealMathVectorConstants.h). A unit's other
+such constants follow it, one leaf initializer each; the reference keeps only those a unit
+uses. Each unit that opens at a marker records them ("vector_constants") by value, named in
+header definition order (the order of .CRT$XCU). Two values are ambiguous: FloatOne is also
+RotationSignificantThreshold (1 - DELTA*DELTA rounds to 1.0f), and SignMask's bits are also
+IntSignMask's. Header order settles the first (a later constant cannot precede XYZMask), and
+the first-defined name is taken for the second.
+
 Nothing here reads a .bss address. The order recovered is evidence of source order, and the
 generators use it to lay out translation units like the original unity files
 (docs/REVERSE_ENGINEERING.md, "Module layout model").
@@ -51,6 +59,65 @@ CLASS_CID_FIELDS = {"package": (0x09, "rel"), "name": (0x15, "rel"), "static_cla
 AUTO_TEMPLATE = bytes.fromhex("41b900000000488d150000000041b800000000488d0d00000000e900000000")
 AUTO_FIELDS = {"crc": (0x02, "imm"), "name": (0x09, "rel"), "size": (0x0F, "imm"), "object": (0x16, "rel"),
                "ctor": (0x1B, "rel")}
+
+
+# GlobalVectorConstants in header definition order (Math/UnrealMathVectorConstants.h, then
+# VectorRegister.h): name -> the 16 bytes its MakeVectorRegister* initializer stores.
+def _f(*v):
+    return struct.pack("<4f", *v)
+
+
+def _u(*v):
+    return struct.pack("<4I", *[x & 0xFFFFFFFF for x in v])
+
+
+_PI, _SB = 3.1415926535897932, 1 << 31
+VECTOR_CONSTANTS = [
+    ("FloatOne", _f(1, 1, 1, 1)), ("FloatZero", _f(0, 0, 0, 0)), ("FloatMinusOne", _f(-1, -1, -1, -1)),
+    ("Float0001", _f(0, 0, 0, 1)), ("SmallLengthThreshold", _f(*[1.e-8] * 4)),
+    ("FloatOneHundredth", _f(*[0.01] * 4)), ("Float111_Minus1", _f(1, 1, 1, -1)),
+    ("FloatMinus1_111", _f(-1, 1, 1, 1)), ("FloatOneHalf", _f(*[0.5] * 4)), ("FloatMinusOneHalf", _f(*[-0.5] * 4)),
+    ("KindaSmallNumber", _f(*[1.e-4] * 4)), ("SmallNumber", _f(*[1.e-8] * 4)),
+    ("ThreshQuatNormalized", _f(*[0.01] * 4)), ("BigNumber", _f(*[3.4e+38] * 4)),
+    ("IntOne", _u(1, 1, 1, 1)), ("IntZero", _u(0, 0, 0, 0)), ("IntMinusOne", _u(-1, -1, -1, -1)),
+    ("QINV_SIGN_MASK", _f(-1, -1, -1, 1)), ("QMULTI_SIGN_MASK0", _f(1, -1, 1, -1)),
+    ("QMULTI_SIGN_MASK1", _f(1, 1, -1, -1)), ("QMULTI_SIGN_MASK2", _f(-1, 1, 1, -1)),
+    ("DEG_TO_RAD", _f(*[_PI / 180.0] * 4)), ("DEG_TO_RAD_HALF", _f(*[(_PI / 180.0) * 0.5] * 4)),
+    ("RAD_TO_DEG", _f(*[180.0 / _PI] * 4)), ("XYZMask", _u(0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0)),
+    ("SignBit", _u(_SB, _SB, _SB, _SB)), ("SignMask", _u(~_SB, ~_SB, ~_SB, ~_SB)),
+    ("IntSignBit", _u(_SB, _SB, _SB, _SB)), ("IntSignMask", _u(~_SB, ~_SB, ~_SB, ~_SB)),
+    ("AllMask", _u(*[0xFFFFFFFF] * 4)), ("IntAllMask", _u(*[0xFFFFFFFF] * 4)),
+    ("FloatInfinity", _u(*[0x7F800000] * 4)), ("Pi", _f(*[_PI] * 4)), ("TwoPi", _f(*[2 * _PI] * 4)),
+    ("PiByTwo", _f(*[0.5 * _PI] * 4)), ("PiByFour", _f(*[0.25 * _PI] * 4)), ("OneOverPi", _f(*[1 / _PI] * 4)),
+    ("OneOverTwoPi", _f(*[1 / (2 * _PI)] * 4)), ("Float255", _f(*[255.0] * 4)), ("Float127", _f(*[127.0] * 4)),
+    ("FloatNeg127", _f(*[-127.0] * 4)), ("Float360", _f(*[360.0] * 4)), ("Float180", _f(*[180.0] * 4)),
+    ("FloatTwo", _f(*[2.0] * 4)), ("FloatAlmostTwo", _u(*[0x3FFFFFFF] * 4)),
+    ("AnimWeightThreshold", _f(*[0.00001] * 4)), ("RotationSignificantThreshold", _f(*[1.0 - 0.00001 * 0.00001] * 4)),
+]
+
+
+def name_vector_constants(values: list[bytes]) -> list[str] | None:
+    """Names for a unit's constant values in .CRT$XCU order: each the first header constant,
+    after the previous one's, with that value. None if a value has no such constant."""
+    names, pos = [], -1
+    for v in values:
+        hit = next((h for h in range(pos + 1, len(VECTOR_CONSTANTS)) if VECTOR_CONSTANTS[h][1] == v), None)
+        if hit is None:
+            return None
+        names.append(VECTOR_CONSTANTS[hit][0])
+        pos = hit
+    return names
+
+
+def constant_initializer(code: bytes | None, rva: int) -> int | None:
+    """K of a leaf 'movaps|movdqa xmm0, [K]; movaps|movdqa [slot], xmm0; ret' initializer."""
+    if not code:
+        return None
+    if code[:3] == b"\x0f\x28\x05" and code[7:10] == b"\x0f\x29\x05" and code[14] == 0xC3:
+        return rva + 7 + struct.unpack_from("<i", code, 3)[0]
+    if code[:4] == b"\x66\x0f\x6f\x05" and code[8:12] == b"\x66\x0f\x7f\x05" and code[16] == 0xC3:
+        return rva + 8 + struct.unpack_from("<i", code, 4)[0]
+    return None
 
 
 def place_package_delegates(img, dimg, allrf, base, units: list[dict]) -> Counter:
@@ -467,6 +534,28 @@ def main() -> int:
                 piece.append(it)
     stats.update(place_package_delegates(img, dimg, allrf, base, out_tus))
     stats.update(place_package_init(img, dimg, allrf, base, out_tus))
+
+    # GlobalVectorConstants of each unit that opens at its marker (the first piece of the
+    # marker's unit): the leaf constant initializers from the marker on, read by value.
+    opened = set()
+    for t in out_tus:
+        k = t["marker_unit"]
+        if k is None or k in opened:
+            continue
+        opened.add(k)
+        values, i = [], markers[k]
+        while i < t["table_range"][0]:
+            K = constant_initializer(read(table[i], 20), table[i])
+            if K is None:
+                break
+            values.append(read(K, 16))
+            i += 1
+        names = name_vector_constants(values)
+        if names is None:
+            stats["units with an unidentified vector constant"] += 1
+        elif names:
+            t["vector_constants"] = names
+            stats["units with vector constants"] += 1
 
     head = {
         "schema_version": 1,

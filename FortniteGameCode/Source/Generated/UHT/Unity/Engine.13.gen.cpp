@@ -2,6 +2,14 @@
 // Unity translation unit Engine.13 of /Script/Engine: the fragments of 14 UHT items in the
 // source order recovered from .CRT$XCU entries 20512..20535 (analysis/unity-order.json).
 
+// The engine headers' GlobalVectorConstants of this unit: the constants whose initializers
+// open its .CRT$XCU entries in the reference (analysis/unity-order.json), in header order.
+#include "FortniteGameCode/VectorRecovered.h"
+namespace GlobalVectorConstants
+{
+	static const VectorRegister FloatOne = MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f);
+}
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 

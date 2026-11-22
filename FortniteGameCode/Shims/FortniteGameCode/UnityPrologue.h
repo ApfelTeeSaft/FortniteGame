@@ -7,10 +7,10 @@
 // FName globals) joins that section ahead of the COMDAT function-local statics, which stay
 // contiguous in source order. This object plays that role here. It only fixes the section's
 // place in the object file; its storage and initializer are not part of the reconstruction.
+//
+// Of those header objects, the GlobalVectorConstants are reconstructed: tools/codegen/unity.py
+// defines each unit's own, from its .CRT$XCU initializers, just before this prologue.
 #pragma once
-
-// The engine headers' GlobalVectorConstants that FTransform's default constructor reads.
-#include "FortniteGameCode/TransformRecovered.h"
 
 static struct FNGCUnityPrologue
 {

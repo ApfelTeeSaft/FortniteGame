@@ -16,5 +16,5 @@
 <text x="32" y="256" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">1,675,874 bytes · compared with on-disk bytes 2 · with the validated decrypted image 28,284</text>
 <text x="32" y="284" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text (4724 recovered functions without .pdata outside it, 2606 exact).</text>
 <text x="32" y="299" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">Encrypted bodies are compared with a validated decrypted image. Exact = identical bytes; relocations from independent evidence.</text>
-<text x="728" y="40" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681">manifest fdea5d5e8014 · ref 9731a6b5e1fa</text>
+<text x="728" y="40" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681">manifest bccd095fae47 · ref 9731a6b5e1fa</text>
 </svg>

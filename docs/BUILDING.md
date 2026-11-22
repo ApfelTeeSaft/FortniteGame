@@ -64,7 +64,7 @@ tools in this order:
 
 ```
 python tools/analysis/reflection.py      # analysis/reflection-natives.json
-python tools/analysis/unity_order.py     # analysis/unity-order.json (unity source order, units)
+python tools/analysis/unity_order.py     # analysis/unity-order.json (unity source order, units, vector constants)
 python tools/codegen/uht_creators.py     # class fragments: StaticRegisterNatives, creators, constructor
 python tools/analysis/natives.py         # analysis/native-implementations.json (needs uht-creator-symbols.json)
 python tools/analysis/vtables.py         # analysis/vtables.json: class vtables, named slots

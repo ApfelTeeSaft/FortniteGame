@@ -2,6 +2,18 @@
 // Unity translation unit Engine.10 of /Script/Engine: the fragments of 25 UHT items in the
 // source order recovered from .CRT$XCU entries 20129..20196 (analysis/unity-order.json).
 
+// The engine headers' GlobalVectorConstants of this unit: the constants whose initializers
+// open its .CRT$XCU entries in the reference (analysis/unity-order.json), in header order.
+#include "FortniteGameCode/VectorRecovered.h"
+namespace GlobalVectorConstants
+{
+	static const VectorRegister FloatOne = MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f);
+	static const VectorRegister XYZMask = MakeVectorRegister((uint32)0xffffffff, (uint32)0xffffffff, (uint32)0xffffffff, (uint32)0x00000000);
+	static const VectorRegister Float360 = MakeVectorRegister(360.f, 360.f, 360.f, 360.f);
+	static const VectorRegister Float180 = MakeVectorRegister(180.f, 180.f, 180.f, 180.f);
+}
+#include "FortniteGameCode/TransformRecovered.h"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 

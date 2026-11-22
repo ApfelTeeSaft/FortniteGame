@@ -2,6 +2,24 @@
 // Unity translation unit GameplayTags.1 of /Script/GameplayTags: the fragments of 2 UHT items in the
 // source order recovered from .CRT$XCU entries 16275..16277 (analysis/unity-order.json).
 
+// The engine headers' GlobalVectorConstants of this unit: the constants whose initializers
+// open its .CRT$XCU entries in the reference (analysis/unity-order.json), in header order.
+#include "FortniteGameCode/VectorRecovered.h"
+namespace GlobalVectorConstants
+{
+#define SIGN_BIT ((1 << 31))
+	static const VectorRegister FloatOne = MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f);
+	static const VectorRegister FloatMinusOne = MakeVectorRegister(-1.0f, -1.0f, -1.0f, -1.0f);
+	static const VectorRegister DEG_TO_RAD = MakeVectorRegister(PI/(180.f), PI/(180.f), PI/(180.f), PI/(180.f));
+	static const VectorRegister SignBit = MakeVectorRegister((uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT);
+	static const VectorRegister SignMask = MakeVectorRegister((uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT));
+	static const VectorRegister Pi = MakeVectorRegister(PI, PI, PI, PI);
+	static const VectorRegister TwoPi = MakeVectorRegister(2.0f*PI, 2.0f*PI, 2.0f*PI, 2.0f*PI);
+	static const VectorRegister PiByTwo = MakeVectorRegister(0.5f*PI, 0.5f*PI, 0.5f*PI, 0.5f*PI);
+	static const VectorRegister OneOverTwoPi = MakeVectorRegister(1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI));
+#undef SIGN_BIT
+}
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 

@@ -2,6 +2,19 @@
 // Unity translation unit SocialDefaults.1 of /Script/SocialDefaults: the fragments of 16 UHT items in the
 // source order recovered from .CRT$XCU entries 22801..22831 (analysis/unity-order.json).
 
+// The engine headers' GlobalVectorConstants of this unit: the constants whose initializers
+// open its .CRT$XCU entries in the reference (analysis/unity-order.json), in header order.
+#include "FortniteGameCode/VectorRecovered.h"
+namespace GlobalVectorConstants
+{
+#define SIGN_BIT ((1 << 31))
+	static const VectorRegister FloatOne = MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f);
+	static const VectorRegister XYZMask = MakeVectorRegister((uint32)0xffffffff, (uint32)0xffffffff, (uint32)0xffffffff, (uint32)0x00000000);
+	static const VectorRegister SignMask = MakeVectorRegister((uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT));
+#undef SIGN_BIT
+}
+#include "FortniteGameCode/TransformRecovered.h"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 

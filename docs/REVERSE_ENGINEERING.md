@@ -349,6 +349,7 @@ The count then moved with each batch:
 | 1,158, external `StaticEnum` | 373 | 242 |
 | 1,191, external `StaticEnum` | 373 (level) | 242 (level) |
 | 1,200, with the prologue's vector constants | 374 | 243 |
+| 1,200, per-unit vector constants | 374 (level) | 243 (level) |
 
 Bisecting one unit (`NVIDIAGfeSDK.1`, which has no thunk of its own) showed something more.
 The order changes once enough unrelated declarations in `Classes.gen.h` change, here 31 slot
@@ -501,15 +502,16 @@ Limits:
     - The reference unit of `AGameModeBase` holds only four: `FloatOne`, `XYZMask`, `Float360`
       and `Float180` (the last two are read by the rotator normalisation).
     - The local compiler keeps every constant a unit defines, used or not: a probe with four
-      keeps all four, with or without `/Gw`. So only the two the constructor reads are
-      defined.
-    - `UnityPrologue.h` includes them, so every unit has them, as most reference units have
-      `FloatOne`. In 13 of 14 reference units checked, the `StaticEnum` singletons come before
-      them. Defined in a header that the top-of-unit `StaticEnum` fragments include, they
-      came first instead. That moved two boundary predictions (one `ReturnEnum` lost, one
-      `Singleton` gained). After the `StaticEnum` functions, nothing is lost, and
-      `ETwoPlayerSplitScreenType`'s singleton (with its registration) resolves.
-    - `Classes.gen.h` needs only the incomplete type, so `EngineStructsRecovered.h` declares
+      keeps all four, with or without `/Gw`. So each unit defines exactly the ones the
+      reference unit has: "Per-unit vector constants" under "Module layout model".
+    - In 13 of 14 reference units checked, the `StaticEnum` singletons come before the
+      constants, so they are defined after the `StaticEnum` functions. A first version
+      defined them in a header the top-of-unit `StaticEnum` fragments include, and they came
+      first. That moved two boundary predictions (one `ReturnEnum` lost, one `Singleton`
+      gained).
+    - `TransformRecovered.h` is included after a unit's constants, where `FloatOne` and
+      `XYZMask` are among them. That covers all five units with `FTransform` thunks.
+      `Classes.gen.h` needs only the incomplete type, so `EngineStructsRecovered.h` declares
       it.
     - Of the 6 thunks that take `const FTransform&`, the constants resolve where another thunk
       of the unit reads them (corroboration: `AGameModeBase`'s and
@@ -869,7 +871,7 @@ exclude those.
 
 **Units (`tools/codegen/unity.py`).** One file per recovered unit `#include`s the items'
 fragments in table order. Only these files are compiled, and manifest objects are the unity
-objects. Two modelling points:
+objects. Three modelling points:
 - **Prologue.** The original units begin with engine headers whose namespace-scope objects
   create the plain `.bss` section ahead of all COMDAT statics. `UnityPrologue.h` stands in for
   them. Without it, the first struct's registration objects would put that section in the
@@ -879,6 +881,24 @@ objects. Two modelling points:
   functions is therefore compiled as a unit of its own (`<unit>.s<k>`). Every unit defines
   its `StaticEnum`s first, before the prologue, in source order, with external linkage.
   UHT makes them file-static, and MSVC's order for those is unstable.
+- **Per-unit vector constants.** The engine headers define `GlobalVectorConstants`
+  (`UnrealMathVectorConstants.h`) in every original unity file. The reference keeps only those
+  a unit uses, and their leaf initializers open the unit's `.CRT$XCU` entries: `FloatOne`
+  (the unit marker), then the rest in header order. `unity_order.py` records them, by value,
+  for each of the 131 units that open at a marker. `unity.py` defines exactly those, with the
+  header's definitions, after the `StaticEnum` functions (`VectorRecovered.h` for the
+  helpers).
+  - Most common sets: `FloatOne, XYZMask` (67 units), plus `SignMask, Float360, Float180`
+    (22), plus `Float360, Float180` (14).
+  - Units that continue an original unity file, `<unit>.s<k>` units and package units define
+    none.
+  - Two values are ambiguous. `{1,1,1,1}` is also `RotationSignificantThreshold` (defined
+    last), but header order fixes it as `FloatOne` wherever something follows. `SignMask`'s
+    bits are also `IntSignMask`'s (same form, `movdqa`), and the first-defined name is taken.
+  - Against the same two constants in every unit, the count is level: `EConstraintType`'s
+    `StaticEnum` (with its registration) resolves and `ETwoPlayerSplitScreenType`'s no
+    longer does. `EngineSettings.1` has no constants in the reference, and its match had
+    depended on the 32 bytes every unit used to get.
 
 **Package-scope delegates (`tools/codegen/uht_packages.py`).** UHT emits a header's
 package-scope delegates first, before its enums, structs and classes. They have no

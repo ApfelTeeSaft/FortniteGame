@@ -270,14 +270,31 @@ def test_staticenum_layout() -> None:
     assert units, "no unit defines a StaticEnum"
     for f in (unity.parent / "Enums").rglob("*.staticenum.gen.cpp"):
         assert not re.search(r"static UEnum\* \w+_StaticEnum\(", f.read_text(encoding="utf-8")), f.name
-    # The prologue's GlobalVectorConstants must follow the StaticEnum functions: only
-    # UnityPrologue.h may include TransformRecovered.h, not the headers the fragments include.
+    # A unit's GlobalVectorConstants must follow its StaticEnum functions: no shim header may
+    # define them or include TransformRecovered.h (the fragments include the shims); each unit
+    # defines its own after the StaticEnum includes and includes FTransform only after both
+    # constants its default constructor reads.
     shims = REPO_ROOT / "FortniteGameCode" / "Shims" / "FortniteGameCode"
-    include = '#include "FortniteGameCode/TransformRecovered.h"'
+    transform = '#include "FortniteGameCode/TransformRecovered.h"'
     for h in sorted(shims.glob("*.h")):
-        if h.name != "UnityPrologue.h":
-            assert include not in h.read_text(encoding="utf-8"), h.name
-    assert include in (shims / "UnityPrologue.h").read_text(encoding="utf-8")
+        text = h.read_text(encoding="utf-8")
+        assert transform not in text and "static const VectorRegister" not in text, h.name
+    with_constants = 0
+    for f in sorted(unity.glob("*.gen.cpp")):
+        src = f.read_text(encoding="utf-8")
+        block = src.find("namespace GlobalVectorConstants")
+        if block < 0:
+            assert transform not in src, f.name
+            continue
+        with_constants += 1
+        prologue = src.find('#include "FortniteGameCode/UnityPrologue.h"')
+        assert all(m.start() < block for m in inc.finditer(src) if m.group(2) == "staticenum"), f.name
+        assert block < prologue, f.name
+        if transform in src:
+            t = src.find(transform)
+            assert src.find(" FloatOne = ") < t and src.find(" XYZMask = ") < t and -1 not in (
+                src.find(" FloatOne = "), src.find(" XYZMask = ")), f.name
+    assert with_constants, "no unit defines its vector constants"
     import msvc
     if not msvc.VS140_VCVARS.exists():
         print(f"staticenum layout: ok ({units} units; MSVC v140 not present, compile probe skipped)")
@@ -294,6 +311,21 @@ def test_staticenum_layout() -> None:
            for s in bss]
     assert got[:4] == ["EZeta", "EAlpha", "EMid", "?GNGCUnityPrologue@@3UFNGCUnityPrologue@@A"], got
     print(f"staticenum layout: ok ({units} units; definition-order probe)")
+
+
+def test_vector_constants() -> None:
+    """Naming a unit's .CRT$XCU constant values in header definition order."""
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "analysis"))
+    import struct
+    import unity_order as U
+    one, xyz = struct.pack("<4f", 1, 1, 1, 1), struct.pack("<4I", 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0)
+    sign_mask = struct.pack("<4I", *[0x7FFFFFFF] * 4)
+    assert U.name_vector_constants([one, xyz, sign_mask]) == ["FloatOne", "XYZMask", "SignMask"]
+    # {1,1,1,1} after XYZMask can only be RotationSignificantThreshold (defined last).
+    assert U.name_vector_constants([xyz, one]) == ["XYZMask", "RotationSignificantThreshold"]
+    assert U.name_vector_constants([xyz, xyz]) is None              # one definition per name
+    assert U.name_vector_constants([b"\x01" * 16]) is None           # not a header constant
+    print("vector constants: ok")
 
 
 def test_local_prediction() -> None:
@@ -345,6 +377,7 @@ def main() -> int:
     test_vtable_store()
     test_uht_parameters()
     test_staticenum_layout()
+    test_vector_constants()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

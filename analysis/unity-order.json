@@ -11,11 +11,11 @@
   "enum_registrar": "0x013A5720"
  },
  "units": [
-{"index":0,"marker_unit":5,"table_range":[124,127],"package":"/Script/BlueprintContext","items":[
+{"index":0,"marker_unit":5,"table_range":[124,127],"package":"/Script/BlueprintContext","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UBlueprintContextBase","package":"/Script/BlueprintContext","constructor":"0x0027B660","static_class":"0x0027B690","compiled_in_defer":"0x00095300","table_index":124,"auto_initialize":"0x00095290","sizeof":40,"crc":379210136},
   {"kind":"class","name":"UBlueprintContextLibrary","package":"/Script/BlueprintContext","constructor":"0x0027B6A0","static_class":"0x0027B490","compiled_in_defer":"0x00095340","table_index":126,"auto_initialize":"0x000952B0","sizeof":40,"crc":467822893}
  ]},
-{"index":1,"marker_unit":7,"table_range":[141,194],"package":"/Script/CommonUI","items":[
+{"index":1,"marker_unit":7,"table_range":[141,194],"package":"/Script/CommonUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"CommonActionProgress__DelegateSignature","package":"/Script/CommonUI","constructor":"0x002C2F40"},
   {"kind":"delegate","name":"CommonActionProgressSingle__DelegateSignature","package":"/Script/CommonUI","constructor":"0x002C2F10"},
   {"kind":"delegate","name":"CommonActionCommited__DelegateSignature","package":"/Script/CommonUI","constructor":"0x002C2E80"},
@@ -46,7 +46,7 @@
   {"kind":"struct","name":"Operation","package":"/Script/CommonUI","static_struct":"0x002C2B00","compiled_in_defer":"0x00095B70","table_index":190,"register_natives":"0x00095A00","static_inlined":false},
   {"kind":"class","name":"UCommonInputManager","package":"/Script/CommonUI","constructor":"0x002C2E40","static_class":"0x002C2E70","compiled_in_defer":"0x00095F40","table_index":193,"auto_initialize":"0x00095730","sizeof":704,"crc":1349000277}
  ]},
-{"index":2,"marker_unit":8,"table_range":[200,221],"package":"/Script/CommonUI","items":[
+{"index":2,"marker_unit":8,"table_range":[200,221],"package":"/Script/CommonUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UCommonInputReflector","package":"/Script/CommonUI","constructor":"0x002CA380","static_class":"0x002C9F60","compiled_in_defer":"0x000966D0","table_index":200,"auto_initialize":"0x00095F80","sizeof":576,"crc":139822752},
   {"kind":"class","name":"UCommonLazyImage","package":"/Script/CommonUI","constructor":"0x002CA3B0","static_class":"0x002CA3E0","compiled_in_defer":"0x00096710","table_index":203,"auto_initialize":"0x00095FA0","sizeof":528,"crc":3021258143},
   {"kind":"class","name":"UCommonListItem","package":"/Script/CommonUI","constructor":"0x002CA3F0","static_class":"0x002C86E0","compiled_in_defer":"0x00096750","table_index":205,"auto_initialize":"0x00095FC0","sizeof":40,"crc":4066878758},
@@ -79,7 +79,7 @@
   {"kind":"delegate","name":"OnGetChildrenForCategory__DelegateSignature","package":"/Script/CommonUI","constructor":"0x002CA6E0"},
   {"kind":"class","name":"UCommonTreeView","package":"/Script/CommonUI","constructor":"0x002CA6B0","static_class":"0x002C9FD0","compiled_in_defer":"0x00096AD0","table_index":259,"auto_initialize":"0x00096180","sizeof":752,"crc":95310353}
  ]},
-{"index":4,"marker_unit":9,"table_range":[263,292],"package":"/Script/CommonUI","items":[
+{"index":4,"marker_unit":9,"table_range":[263,292],"package":"/Script/CommonUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UCommonUIContext","package":"/Script/CommonUI","constructor":"0x002D0450","static_class":"0x002CEF00","compiled_in_defer":"0x00097020","table_index":263,"auto_initialize":"0x00096B10","sizeof":224,"crc":644341821},
   {"kind":"class","name":"UCommonUILibrary","package":"/Script/CommonUI","constructor":"0x002D0480","static_class":"0x002CEEC0","compiled_in_defer":"0x00097060","table_index":265,"auto_initialize":"0x00096B30","sizeof":40,"crc":4155989360},
   {"kind":"struct","name":"CommonInputKeyDisplayConfiguration","package":"/Script/CommonUI","static_struct":"0x002D0390","compiled_in_defer":"0x00096F80","table_index":267,"register_natives":"0x00096CC0","static_inlined":false},
@@ -106,7 +106,7 @@
 {"index":5,"marker_unit":9,"table_range":[296,297],"package":"/Script/Crashlytics","items":[
   {"kind":"class","name":"UCrashlyticsBlueprintLibrary","package":"/Script/Crashlytics","constructor":"0x002D1DD0","static_class":"0x002D1CD0","compiled_in_defer":"0x00097300","table_index":296,"auto_initialize":"0x000972B0","sizeof":40,"crc":1499759550}
  ]},
-{"index":6,"marker_unit":11,"table_range":[327,328],"package":"/Script/EpicCMSUIFramework","items":[
+{"index":6,"marker_unit":11,"table_range":[327,328],"package":"/Script/EpicCMSUIFramework","vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"UEpicCMSImage","package":"/Script/EpicCMSUIFramework","constructor":"0x002E3BA0","static_class":"0x002E3BD0","compiled_in_defer":"0x00097C80","table_index":327,"auto_initialize":"0x00097800","sizeof":552,"crc":3979056417}
  ]},
 {"index":7,"marker_unit":11,"table_range":[328,349],"package":"/Script/EpicCMSUIFramework","split":"init.gen.cpp opens a unity file","package_init_before":0,"items":[
@@ -122,7 +122,7 @@
   {"kind":"class","name":"UEpicCMSTileBase","package":"/Script/EpicCMSUIFramework","constructor":"0x002E3C70","static_class":"0x002E3930","compiled_in_defer":"0x00097D80","table_index":344,"auto_initialize":"0x00097880","sizeof":2200,"crc":957572841},
   {"kind":"class","name":"UEpicCMSTileCarousel","package":"/Script/EpicCMSUIFramework","constructor":"0x002E3CA0","static_class":"0x002E3CD0","compiled_in_defer":"0x00097DC0","table_index":348,"auto_initialize":"0x000978A0","sizeof":600,"crc":3767257918}
  ]},
-{"index":8,"marker_unit":13,"table_range":[419,435],"package":"/Script/OnlineSubsystem","package_init_before":0,"items":[
+{"index":8,"marker_unit":13,"table_range":[419,435],"package":"/Script/OnlineSubsystem","package_init_before":0,"vector_constants":["FloatOne"],"items":[
   {"kind":"struct","name":"NamedInterfaceDef","package":"/Script/OnlineSubsystem","static_struct":"0x002FC5A0","compiled_in_defer":"0x00098B20","table_index":419,"register_natives":"0x000988E0","static_inlined":true},
   {"kind":"struct","name":"NamedInterface","package":"/Script/OnlineSubsystem","static_struct":"0x002FC520","compiled_in_defer":"0x00098AD0","table_index":421,"register_natives":"0x00098880","static_inlined":true},
   {"kind":"class","name":"UNamedInterfaces","package":"/Script/OnlineSubsystem","constructor":"0x002FC620","static_class":"0x002FBCA0","compiled_in_defer":"0x00098B70","table_index":424,"auto_initialize":"0x000986E0","sizeof":192,"crc":3050284449},
@@ -133,7 +133,7 @@
   {"kind":"enum","name":"EMPMatchOutcome","package":"/Script/OnlineSubsystem","static_enum":"0x002FC120","compiled_in_defer":"0x00098990","table_index":432,"static_inlined":true},
   {"kind":"class","name":"UTurnBasedMatchInterface","package":"/Script/OnlineSubsystem","constructor":"0x002FC650","static_class":"0x002FC680","compiled_in_defer":"0x00098BB0","table_index":434,"auto_initialize":"0x00098700","sizeof":40,"crc":32513302}
  ]},
-{"index":9,"marker_unit":15,"table_range":[470,485],"package":"/Script/OnlineSubsystemUtils","items":[
+{"index":9,"marker_unit":15,"table_range":[470,485],"package":"/Script/OnlineSubsystemUtils","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UAchievementBlueprintLibrary","package":"/Script/OnlineSubsystemUtils","constructor":"0x0032E8C0","static_class":"0x0032B490","compiled_in_defer":"0x00099D60","table_index":470,"auto_initialize":"0x000992A0","sizeof":40,"crc":3277068053},
   {"kind":"class","name":"UAchievementQueryCallbackProxy","package":"/Script/OnlineSubsystemUtils","constructor":"0x0032E8F0","static_class":"0x0032E920","compiled_in_defer":"0x00099DA0","table_index":472,"auto_initialize":"0x000992C0","sizeof":96,"crc":872411166},
   {"kind":"delegate","name":"AchievementWriteDelegate__DelegateSignature","package":"/Script/OnlineSubsystemUtils","constructor":"0x0032EE50"},
@@ -191,12 +191,12 @@
   {"kind":"class","name":"UTurnBasedBlueprintLibrary","package":"/Script/OnlineSubsystemUtils","constructor":"0x0032EDF0","static_class":"0x0032B440","compiled_in_defer":"0x0009A3E0","table_index":559,"auto_initialize":"0x000995E0","sizeof":40,"crc":572984977},
   {"kind":"class","name":"UVoipListenerSynthComponent","package":"/Script/OnlineSubsystemUtils","constructor":"0x0032EE20","static_class":"0x0032E060","compiled_in_defer":"0x0009A420","table_index":561,"auto_initialize":"0x00099600","sizeof":1696,"crc":581797107}
  ]},
-{"index":11,"marker_unit":20,"table_range":[690,728],"package":"/Script/GameplayAbilities","items":[
+{"index":11,"marker_unit":20,"table_range":[690,728],"package":"/Script/GameplayAbilities","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UAbilitySystemBlueprintLibrary","package":"/Script/GameplayAbilities","constructor":"0x005383E0","static_class":"0x00536A90","compiled_in_defer":"0x0009D260","table_index":690,"auto_initialize":"0x0009CD60","sizeof":40,"crc":3981558558},
   {"kind":"enum","name":"EReplicationMode","package":"/Script/GameplayAbilities","static_enum":"0x00536FA0","compiled_in_defer":"0x0009D210","table_index":691,"static_inlined":false},
   {"kind":"class","name":"UAbilitySystemComponent","package":"/Script/GameplayAbilities","constructor":"0x00538410","static_class":"0x00538370","compiled_in_defer":"0x0009D2A0","table_index":727,"auto_initialize":"0x0009CD80","sizeof":6000,"crc":219976785}
  ]},
-{"index":12,"marker_unit":21,"table_range":[731,780],"package":"/Script/GameplayAbilities","items":[
+{"index":12,"marker_unit":21,"table_range":[731,780],"package":"/Script/GameplayAbilities","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"AAbilitySystemDebugHUD","package":"/Script/GameplayAbilities","constructor":"0x00546640","static_class":"0x00546290","compiled_in_defer":"0x0009D730","table_index":731,"auto_initialize":"0x0009D2E0","sizeof":1032,"crc":3958640909},
   {"kind":"class","name":"UAbilitySystemGlobals","package":"/Script/GameplayAbilities","constructor":"0x005466A0","static_class":"0x005462B0","compiled_in_defer":"0x0009D7B0","table_index":733,"auto_initialize":"0x0009D320","sizeof":848,"crc":377977568},
   {"kind":"class","name":"UAbilitySystemInterface","package":"/Script/GameplayAbilities","constructor":"0x005466D0","static_class":"0x00546700","compiled_in_defer":"0x0009D7F0","table_index":735,"auto_initialize":"0x0009D340","sizeof":40,"crc":1463032743},
@@ -240,7 +240,7 @@
   {"kind":"enum","name":"EWaitAttributeChangeComparison","package":"/Script/GameplayAbilities","static_enum":"0x005451F0","compiled_in_defer":"0x0009D6E0","table_index":777,"static_inlined":false},
   {"kind":"class","name":"UAbilityTask_WaitAttributeChange","package":"/Script/GameplayAbilities","constructor":"0x00546AB0","static_class":"0x00546AE0","compiled_in_defer":"0x0009DCB0","table_index":779,"auto_initialize":"0x0009D5A0","sizeof":224,"crc":1052538456}
  ]},
-{"index":13,"marker_unit":22,"table_range":[783,826],"package":"/Script/GameplayAbilities","items":[
+{"index":13,"marker_unit":22,"table_range":[783,826],"package":"/Script/GameplayAbilities","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"WaitAttributeChangeRatioThresholdDelegate__DelegateSignature","package":"/Script/GameplayAbilities","constructor":"0x0054DA40"},
   {"kind":"class","name":"UAbilityTask_WaitAttributeChangeRatioThreshold","package":"/Script/GameplayAbilities","constructor":"0x0054D440","static_class":"0x0054AE60","compiled_in_defer":"0x0009E500","table_index":783,"auto_initialize":"0x0009DCF0","sizeof":272,"crc":1692120868},
   {"kind":"delegate","name":"WaitAttributeChangeThresholdDelegate__DelegateSignature","package":"/Script/GameplayAbilities","constructor":"0x0054DA70"},
@@ -292,7 +292,7 @@
   {"kind":"struct","name":"AbilityTriggerData","package":"/Script/GameplayAbilities","static_struct":"0x0054D140","compiled_in_defer":"0x0009E320","table_index":838,"register_natives":"0x0009E0C0","static_inlined":true},
   {"kind":"class","name":"UGameplayAbility","package":"/Script/GameplayAbilities","constructor":"0x0054D8F0","static_class":"0x0054CCE0","compiled_in_defer":"0x0009EAC0","table_index":847,"auto_initialize":"0x0009DFD0","sizeof":1536,"crc":3497727587}
  ]},
-{"index":15,"marker_unit":23,"table_range":[851,1102],"package":"/Script/GameplayAbilities","items":[
+{"index":15,"marker_unit":23,"table_range":[851,1102],"package":"/Script/GameplayAbilities","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UGameplayAbility_CharacterJump","package":"/Script/GameplayAbilities","constructor":"0x0055BF50","static_class":"0x0055AFE0","compiled_in_defer":"0x000A0AC0","table_index":851,"auto_initialize":"0x0009EC60","sizeof":1536,"crc":1807404299},
   {"kind":"class","name":"UGameplayAbility_Montage","package":"/Script/GameplayAbilities","constructor":"0x0055BF80","static_class":"0x00553EF0","compiled_in_defer":"0x000A0B00","table_index":853,"auto_initialize":"0x0009EC80","sizeof":1584,"crc":3626234341},
   {"kind":"class","name":"UGameplayAbilityBlueprint","package":"/Script/GameplayAbilities","constructor":"0x0055BEF0","static_class":"0x0055AFC0","compiled_in_defer":"0x000A0A40","table_index":855,"auto_initialize":"0x0009EC20","sizeof":416,"crc":4199066966},
@@ -424,14 +424,14 @@
   {"kind":"class","name":"UGameplayTagReponseTable","package":"/Script/GameplayAbilities","constructor":"0x00565FC0","static_class":"0x00565560","compiled_in_defer":"0x000A3300","table_index":1099,"auto_initialize":"0x000A2F50","sizeof":528,"crc":797302834},
   {"kind":"class","name":"UTickableAttributeSetInterface","package":"/Script/GameplayAbilities","constructor":"0x00565FF0","static_class":"0x00566020","compiled_in_defer":"0x000A3340","table_index":1101,"auto_initialize":"0x000A2F70","sizeof":40,"crc":2490108008}
  ]},
-{"index":16,"marker_unit":25,"table_range":[1120,1122],"package":"/Script/ImmediatePhysics","package_init_before":0,"items":[
+{"index":16,"marker_unit":25,"table_range":[1120,1122],"package":"/Script/ImmediatePhysics","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"ESimulationSpace","package":"/Script/ImmediatePhysics","static_enum":"0x00579740","compiled_in_defer":"0x000A35B0","table_index":1120,"static_inlined":true},
   {"kind":"struct","name":"AnimNode_RigidBody","package":"/Script/ImmediatePhysics","static_struct":"0x00579940","compiled_in_defer":"0x000A3600","table_index":1121,"register_natives":"0x000A3530","static_inlined":true}
  ]},
-{"index":17,"marker_unit":29,"table_range":[1300,1301],"package":"/Script/NetUI","items":[
+{"index":17,"marker_unit":29,"table_range":[1300,1301],"package":"/Script/NetUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UNetDebugWidget","package":"/Script/NetUI","constructor":"0x00589630","static_class":"0x005895F0","compiled_in_defer":"0x000A6320","table_index":1300,"auto_initialize":"0x000A6300","sizeof":784,"crc":2283032612}
  ]},
-{"index":18,"marker_unit":31,"table_range":[1317,1345],"package":"/Script/NVIDIAGfeSDK","package_init_before":0,"items":[
+{"index":18,"marker_unit":31,"table_range":[1317,1345],"package":"/Script/NVIDIAGfeSDK","package_init_before":0,"vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"enum","name":"EGfeSDKHighlightSignificance","package":"/Script/NVIDIAGfeSDK","static_enum":"0x00596D80","compiled_in_defer":"0x000A6D50","table_index":1317,"static_inlined":true},
   {"kind":"enum","name":"EGfeSDKHighlightType","package":"/Script/NVIDIAGfeSDK","static_enum":"0x00596DE0","compiled_in_defer":"0x000A6DA0","table_index":1318,"static_inlined":true},
   {"kind":"enum","name":"EGfeSDKPermission","package":"/Script/NVIDIAGfeSDK","static_enum":"0x00596E40","compiled_in_defer":"0x000A6DF0","table_index":1319,"static_inlined":true},
@@ -450,7 +450,7 @@
   {"kind":"struct","name":"GfeSDKCreateResponse","package":"/Script/NVIDIAGfeSDK","static_struct":"0x00597390","compiled_in_defer":"0x000A6F30","table_index":1342,"register_natives":"0x000A68F0","static_inlined":true},
   {"kind":"struct","name":"GfeSDKCreateInputParams","package":"/Script/NVIDIAGfeSDK","static_struct":"0x00597310","compiled_in_defer":"0x000A6EE0","table_index":1344,"register_natives":"0x000A6890","static_inlined":true}
  ]},
-{"index":19,"marker_unit":32,"table_range":[1376,1397],"package":"/Script/Qos","package_init_before":0,"items":[
+{"index":19,"marker_unit":32,"table_range":[1376,1397],"package":"/Script/Qos","package_init_before":0,"vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EQosResponseType","package":"/Script/Qos","static_enum":"0x005A19D0","compiled_in_defer":"0x000A7C20","table_index":1376,"static_inlined":true},
   {"kind":"class","name":"AQosBeaconClient","package":"/Script/Qos","constructor":"0x005A20C0","static_class":"0x005A12B0","compiled_in_defer":"0x000A7DB0","table_index":1380,"auto_initialize":"0x000A7940","sizeof":1072,"crc":2022778159},
   {"kind":"class","name":"AQosBeaconHost","package":"/Script/Qos","constructor":"0x005A20F0","static_class":"0x005A1290","compiled_in_defer":"0x000A7DF0","table_index":1382,"auto_initialize":"0x000A7960","sizeof":848,"crc":897354149},
@@ -463,7 +463,7 @@
   {"kind":"struct","name":"QosPingServerInfo","package":"/Script/Qos","static_struct":"0x005A1F40","compiled_in_defer":"0x000A7CC0","table_index":1393,"register_natives":"0x000A7A60","static_inlined":true},
   {"kind":"class","name":"UQosRegionManager","package":"/Script/Qos","constructor":"0x005A2150","static_class":"0x005A1E80","compiled_in_defer":"0x000A7E70","table_index":1396,"auto_initialize":"0x000A79A0","sizeof":168,"crc":1142496164}
  ]},
-{"index":20,"marker_unit":33,"table_range":[1419,1422],"package":"/Script/Party","items":[
+{"index":20,"marker_unit":33,"table_range":[1419,1422],"package":"/Script/Party","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UChatroom","package":"/Script/Party","constructor":"0x005B8E90","static_class":"0x005B8D40","compiled_in_defer":"0x000A8610","table_index":1419,"auto_initialize":"0x000A8390","sizeof":88,"crc":928604410},
   {"kind":"class","name":"UParty","package":"/Script/Party","constructor":"0x005B8EC0","static_class":"0x005B8D50","compiled_in_defer":"0x000A8650","table_index":1421,"auto_initialize":"0x000A83B0","sizeof":1184,"crc":2218770753}
  ]},
@@ -475,7 +475,7 @@
   {"kind":"struct","name":"PartyMemberRepState","package":"/Script/Party","static_struct":"0x005B8D90","compiled_in_defer":"0x000A8570","table_index":1428,"register_natives":"0x000A8410","static_inlined":true},
   {"kind":"class","name":"UPartyMemberState","package":"/Script/Party","constructor":"0x005B8F20","static_class":"0x005B8F50","compiled_in_defer":"0x000A86D0","table_index":1431,"auto_initialize":"0x000A83F0","sizeof":136,"crc":456635119}
  ]},
-{"index":22,"marker_unit":34,"table_range":[1452,1478],"package":"/Script/Lobby","package_init_before":0,"items":[
+{"index":22,"marker_unit":34,"table_range":[1452,1478],"package":"/Script/Lobby","package_init_before":0,"vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"ELobbyBeaconJoinState","package":"/Script/Lobby","static_enum":"0x005C16D0","compiled_in_defer":"0x000A8E00","table_index":1452,"static_inlined":true},
   {"kind":"class","name":"ALobbyBeaconClient","package":"/Script/Lobby","constructor":"0x005C21C0","static_class":"0x005C2000","compiled_in_defer":"0x000A8EF0","table_index":1467,"auto_initialize":"0x000A8B20","sizeof":1392,"crc":387611509},
   {"kind":"class","name":"ALobbyBeaconHost","package":"/Script/Lobby","constructor":"0x005C21F0","static_class":"0x005C2010","compiled_in_defer":"0x000A8F30","table_index":1469,"auto_initialize":"0x000A8B40","sizeof":888,"crc":2273398909},
@@ -484,7 +484,7 @@
   {"kind":"struct","name":"LobbyPlayerStateActorInfo","package":"/Script/Lobby","static_struct":"0x005C20C0","compiled_in_defer":"0x000A8E50","table_index":1474,"register_natives":"0x000A8D40","static_inlined":true},
   {"kind":"class","name":"ALobbyBeaconState","package":"/Script/Lobby","constructor":"0x005C2250","static_class":"0x005C2280","compiled_in_defer":"0x000A8FB0","table_index":1477,"auto_initialize":"0x000A8B80","sizeof":1488,"crc":3416179859}
  ]},
-{"index":23,"marker_unit":35,"table_range":[1500,1508],"package":"/Script/Hotfix","package_init_before":0,"items":[
+{"index":23,"marker_unit":35,"table_range":[1500,1508],"package":"/Script/Hotfix","package_init_before":0,"vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EHotfixResult","package":"/Script/Hotfix","static_enum":"0x005D30D0","compiled_in_defer":"0x000A94E0","table_index":1500,"static_inlined":true},
   {"kind":"class","name":"UOnlineHotfixManager","package":"/Script/Hotfix","constructor":"0x005D33F0","static_class":"0x005D3080","compiled_in_defer":"0x000A9620","table_index":1502,"auto_initialize":"0x000A94A0","sizeof":976,"crc":2737238916},
   {"kind":"enum","name":"EPatchCheckResult","package":"/Script/Hotfix","static_enum":"0x005D3130","compiled_in_defer":"0x000A9530","table_index":1503,"static_inlined":true},
@@ -492,14 +492,14 @@
   {"kind":"enum","name":"EUpdateState","package":"/Script/Hotfix","static_enum":"0x005D31F0","compiled_in_defer":"0x000A95D0","table_index":1505,"static_inlined":true},
   {"kind":"class","name":"UUpdateManager","package":"/Script/Hotfix","constructor":"0x005D3420","static_class":"0x005D3090","compiled_in_defer":"0x000A9660","table_index":1507,"auto_initialize":"0x000A94C0","sizeof":624,"crc":3790324964}
  ]},
-{"index":24,"marker_unit":36,"table_range":[1527,1530],"package":"/Script/Rejoin","package_init_before":0,"items":[
+{"index":24,"marker_unit":36,"table_range":[1527,1530],"package":"/Script/Rejoin","package_init_before":0,"vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"ERejoinStatus","package":"/Script/Rejoin","static_enum":"0x005D5480","compiled_in_defer":"0x000A9AF0","table_index":1527,"static_inlined":true},
   {"kind":"class","name":"URejoinCheck","package":"/Script/Rejoin","constructor":"0x005D5580","static_class":"0x005D5450","compiled_in_defer":"0x000A9B40","table_index":1529,"auto_initialize":"0x000A9AD0","sizeof":432,"crc":1495724779}
  ]},
-{"index":25,"marker_unit":40,"table_range":[1637,1638],"package":"/Script/OodleHandlerComponent","items":[
+{"index":25,"marker_unit":40,"table_range":[1637,1638],"package":"/Script/OodleHandlerComponent","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UOodleTrainerCommandlet","package":"/Script/OodleHandlerComponent","constructor":"0x00645FD0","static_class":"0x00645ED0","compiled_in_defer":"0x000AAB20","table_index":1637,"auto_initialize":"0x000AAB00","sizeof":128,"crc":3402909461}
  ]},
-{"index":26,"marker_unit":42,"table_range":[1668,1747],"package":"/Script/Paper2D","package_init_before":0,"items":[
+{"index":26,"marker_unit":42,"table_range":[1668,1747],"package":"/Script/Paper2D","package_init_before":0,"vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"IntMargin","package":"/Script/Paper2D","static_struct":"0x00666EE0","compiled_in_defer":"0x000ABEB0","table_index":1668,"register_natives":"0x000AB760","static_inlined":true},
   {"kind":"class","name":"UMaterialExpressionSpriteTextureSampler","package":"/Script/Paper2D","constructor":"0x00667680","static_class":"0x006649F0","compiled_in_defer":"0x000AC440","table_index":1671,"auto_initialize":"0x000AB510","sizeof":408,"crc":3493534272},
   {"kind":"class","name":"APaperCharacter","package":"/Script/Paper2D","constructor":"0x00667560","static_class":"0x00664A00","compiled_in_defer":"0x000AC2C0","table_index":1673,"auto_initialize":"0x000AB450","sizeof":1840,"crc":3025711234},
@@ -545,7 +545,7 @@
   {"kind":"struct","name":"SpriteGeometryShape","package":"/Script/Paper2D","static_struct":"0x00667460","compiled_in_defer":"0x000AC220","table_index":1743,"register_natives":"0x000ABB80","static_inlined":true},
   {"kind":"class","name":"UTileMapBlueprintLibrary","package":"/Script/Paper2D","constructor":"0x006679A0","static_class":"0x00666D50","compiled_in_defer":"0x000AC840","table_index":1746,"auto_initialize":"0x000AB710","sizeof":40,"crc":3205523974}
  ]},
-{"index":27,"marker_unit":44,"table_range":[1767,1804],"package":"/Script/PhysXVehicles","package_init_before":0,"items":[
+{"index":27,"marker_unit":44,"table_range":[1767,1804],"package":"/Script/PhysXVehicles","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"struct","name":"AnimNode_WheelHandler","package":"/Script/PhysXVehicles","static_struct":"0x0067B870","compiled_in_defer":"0x000ACFA0","table_index":1767,"register_natives":"0x000ACB20","static_inlined":true},
   {"kind":"class","name":"USimpleWheeledVehicleMovementComponent","package":"/Script/PhysXVehicles","constructor":"0x0067BDB0","static_class":"0x0067B780","compiled_in_defer":"0x000AD300","table_index":1770,"auto_initialize":"0x000ACA30","sizeof":736,"crc":1244785395},
   {"kind":"struct","name":"TireConfigMaterialFriction","package":"/Script/PhysXVehicles","static_struct":"0x0067B970","compiled_in_defer":"0x000AD040","table_index":1771,"register_natives":"0x000ACBE0","static_inlined":true},
@@ -566,10 +566,10 @@
   {"kind":"struct","name":"VehicleDifferential4WData","package":"/Script/PhysXVehicles","static_struct":"0x0067BA70","compiled_in_defer":"0x000AD0E0","table_index":1800,"register_natives":"0x000ACCA0","static_inlined":true},
   {"kind":"class","name":"UWheeledVehicleMovementComponent4W","package":"/Script/PhysXVehicles","constructor":"0x0067BE90","static_class":"0x00678270","compiled_in_defer":"0x000AD400","table_index":1803,"auto_initialize":"0x000ACAB0","sizeof":1088,"crc":1852402520}
  ]},
-{"index":28,"marker_unit":50,"table_range":[1838,1839],"package":"/Script/UACCommon","items":[
+{"index":28,"marker_unit":50,"table_range":[1838,1839],"package":"/Script/UACCommon","vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"UUACNetComponent","package":"/Script/UACCommon","constructor":"0x0068ECC0","static_class":"0x0068EAF0","compiled_in_defer":"0x000AD860","table_index":1838,"auto_initialize":"0x000AD790","sizeof":416,"crc":118349215}
  ]},
-{"index":29,"marker_unit":52,"table_range":[1854,1865],"package":"/Script/ProceduralMeshComponent","package_init_before":0,"items":[
+{"index":29,"marker_unit":52,"table_range":[1854,1865],"package":"/Script/ProceduralMeshComponent","package_init_before":0,"vector_constants":["FloatOne","FloatOneHundredth","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EProcMeshSliceCapOption","package":"/Script/ProceduralMeshComponent","static_enum":"0x0069B810","compiled_in_defer":"0x000ADB40","table_index":1854,"static_inlined":true},
   {"kind":"class","name":"UKismetProceduralMeshLibrary","package":"/Script/ProceduralMeshComponent","constructor":"0x0069BCB0","static_class":"0x0069BAC0","compiled_in_defer":"0x000ADC80","table_index":1856,"auto_initialize":"0x000AD960","sizeof":40,"crc":718867227},
   {"kind":"struct","name":"ProcMeshSection","package":"/Script/ProceduralMeshComponent","static_struct":"0x0069BB30","compiled_in_defer":"0x000ADB90","table_index":1857,"register_natives":"0x000AD9D0","static_inlined":true},
@@ -586,10 +586,10 @@
 {"index":31,"marker_unit":52,"table_range":[1880,1881],"package":"/Script/SignificanceManager","items":[
   {"kind":"class","name":"USignificanceManager","package":"/Script/SignificanceManager","constructor":"0x006AC780","static_class":"0x006AC770","compiled_in_defer":"0x000AE110","table_index":1880,"auto_initialize":"0x000AE0F0","sizeof":248,"crc":995293634}
  ]},
-{"index":32,"marker_unit":53,"table_range":[1892,1893],"package":"/Script/SlateRemote","items":[
+{"index":32,"marker_unit":53,"table_range":[1892,1893],"package":"/Script/SlateRemote","vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"USlateRemoteSettings","package":"/Script/SlateRemote","constructor":"0x006B17D0","static_class":"0x006B17C0","compiled_in_defer":"0x000AE2D0","table_index":1892,"auto_initialize":"0x000AE2B0","sizeof":80,"crc":802551502}
  ]},
-{"index":33,"marker_unit":54,"table_range":[1945,1968],"package":"/Script/SocialTypes","package_init_before":0,"items":[
+{"index":33,"marker_unit":54,"table_range":[1945,1968],"package":"/Script/SocialTypes","package_init_before":0,"vector_constants":["FloatOne"],"items":[
   {"kind":"struct","name":"ChatChromeColorScheme","package":"/Script/SocialTypes","static_struct":"0x0077F740","compiled_in_defer":"0x000AF190","table_index":1945,"register_natives":"0x000AED10","static_inlined":true},
   {"kind":"struct","name":"ChatChromeMargins","package":"/Script/SocialTypes","static_struct":"0x0077F7C0","compiled_in_defer":"0x000AF1E0","table_index":1947,"register_natives":"0x000AED70","static_inlined":true},
   {"kind":"struct","name":"ChatChromeStyle","package":"/Script/SocialTypes","static_struct":"0x0077F840","compiled_in_defer":"0x000AF230","table_index":1949,"register_natives":"0x000AEDD0","static_inlined":true},
@@ -603,11 +603,11 @@
   {"kind":"struct","name":"SocialSoundSchema","package":"/Script/SocialTypes","static_struct":"0x0077FC40","compiled_in_defer":"0x000AF4B0","table_index":1965,"register_natives":"0x000AF0D0","static_inlined":true},
   {"kind":"struct","name":"SocialStyle","package":"/Script/SocialTypes","static_struct":"0x0077FCC0","compiled_in_defer":"0x000AF500","table_index":1967,"register_natives":"0x000AF130","static_inlined":true}
  ]},
-{"index":34,"marker_unit":55,"table_range":[1973,1976],"package":"/Script/SubtitlesWidgets","items":[
+{"index":34,"marker_unit":55,"table_range":[1973,1976],"package":"/Script/SubtitlesWidgets","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortMediaSubtitlesPlayer","package":"/Script/SubtitlesWidgets","constructor":"0x00781710","static_class":"0x007816A0","compiled_in_defer":"0x000AF5E0","table_index":1973,"auto_initialize":"0x000AF5A0","sizeof":88,"crc":2356009744},
   {"kind":"class","name":"USubtitleDisplay","package":"/Script/SubtitlesWidgets","constructor":"0x00781740","static_class":"0x00781500","compiled_in_defer":"0x000AF620","table_index":1975,"auto_initialize":"0x000AF5C0","sizeof":864,"crc":24925773}
  ]},
-{"index":35,"marker_unit":57,"table_range":[1999,2000],"package":"/Script/EpicGameplayStatsRuntime","items":[
+{"index":35,"marker_unit":57,"table_range":[1999,2000],"package":"/Script/EpicGameplayStatsRuntime","vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"UBlueprintGameplayStatsLibrary","package":"/Script/EpicGameplayStatsRuntime","constructor":"0x007927B0","static_class":"0x00792570","compiled_in_defer":"0x000B02D0","table_index":1999,"auto_initialize":"0x000AFEE0","sizeof":40,"crc":2236176401}
  ]},
 {"index":36,"marker_unit":57,"table_range":[2000,2012],"package":"/Script/EpicGameplayStatsRuntime","split":"init.gen.cpp opens a unity file","package_init_before":0,"items":[
@@ -620,7 +620,7 @@
   {"kind":"class","name":"UGameplayTagTableManager","package":"/Script/EpicGameplayStatsRuntime","constructor":"0x007927E0","static_class":"0x00792810","compiled_in_defer":"0x000B0310","table_index":2010,"auto_initialize":"0x000AFF00","sizeof":152,"crc":834194167},
   {"kind":"struct","name":"TagTableManagerHelper","package":"/Script/EpicGameplayStatsRuntime","static_struct":"0x00792730","compiled_in_defer":"0x000B0280","table_index":2011,"register_natives":"0x000B0040","static_inlined":true}
  ]},
-{"index":37,"marker_unit":59,"table_range":[2061,2064],"package":"/Script/McpProfileSys","items":[
+{"index":37,"marker_unit":59,"table_range":[2061,2064],"package":"/Script/McpProfileSys","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UMcpItemAware","package":"/Script/McpProfileSys","constructor":"0x007AF7F0","static_class":"0x007ABF00","compiled_in_defer":"0x000B2110","table_index":2061,"auto_initialize":"0x000B0E10","sizeof":40,"crc":3304566100},
   {"kind":"class","name":"UMcpItemDefinitionBase","package":"/Script/McpProfileSys","constructor":"0x007AF820","static_class":"0x007ABF10","compiled_in_defer":"0x000B2150","table_index":2063,"auto_initialize":"0x000B0E30","sizeof":48,"crc":2588223284}
  ]},
@@ -673,7 +673,7 @@
   {"kind":"struct","name":"CatalogPurchaseInfo","package":"/Script/GameSubCatalog","static_struct":"0x007C2830","compiled_in_defer":"0x000B3000","table_index":2162,"register_natives":"0x000B2910","static_inlined":true},
   {"kind":"struct","name":"CatalogReceiptInfo","package":"/Script/GameSubCatalog","static_struct":"0x007C29B0","compiled_in_defer":"0x000B30F0","table_index":2164,"register_natives":"0x000B2A30","static_inlined":true}
  ]},
-{"index":40,"marker_unit":61,"table_range":[2208,2209],"package":"/Script/Vivox","package_init_before":0,"items":[
+{"index":40,"marker_unit":61,"table_range":[2208,2209],"package":"/Script/Vivox","package_init_before":0,"vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"VivoxMuteList","package":"/Script/Vivox","static_struct":"0x007DD470","compiled_in_defer":"0x000B3A80","table_index":2208,"register_natives":"0x000B3A20","static_inlined":true}
  ]},
 {"index":41,"marker_unit":61,"table_range":[2211,2214],"package":"/Script/DatasmithContent","package_init_before":0,"items":[
@@ -700,7 +700,7 @@
   {"kind":"class","name":"UAndroidPermissionCallbackProxy","package":"/Script/AndroidPermission","constructor":"0x00803ED0","static_class":"0x00803C70","compiled_in_defer":"0x000B40A0","table_index":2246,"auto_initialize":"0x000B4060","sizeof":128,"crc":2855295675},
   {"kind":"class","name":"UAndroidPermissionFunctionLibrary","package":"/Script/AndroidPermission","constructor":"0x00803F00","static_class":"0x00803C80","compiled_in_defer":"0x000B40E0","table_index":2248,"auto_initialize":"0x000B4080","sizeof":40,"crc":873029748}
  ]},
-{"index":47,"marker_unit":63,"table_range":[2266,2285],"package":"/Script/AppleARKit","package_init_before":0,"items":[
+{"index":47,"marker_unit":63,"table_range":[2266,2285],"package":"/Script/AppleARKit","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UAppleARKitAnchor","package":"/Script/AppleARKit","constructor":"0x008063C0","static_class":"0x008063F0","compiled_in_defer":"0x000B47D0","table_index":2266,"auto_initialize":"0x000B4380","sizeof":144,"crc":2045437985},
   {"kind":"class","name":"UAppleARKitBlueprintLibrary","package":"/Script/AppleARKit","constructor":"0x00806400","static_class":"0x00805600","compiled_in_defer":"0x000B4810","table_index":2268,"auto_initialize":"0x000B43A0","sizeof":40,"crc":1274351299},
   {"kind":"struct","name":"AppleARKitCamera","package":"/Script/AppleARKit","static_struct":"0x00806190","compiled_in_defer":"0x000B4650","table_index":2269,"register_natives":"0x000B4410","static_inlined":true},
@@ -713,7 +713,7 @@
   {"kind":"enum","name":"EARKitTextureType","package":"/Script/AppleARKit","static_enum":"0x00805BA0","compiled_in_defer":"0x000B45B0","table_index":2282,"static_inlined":true},
   {"kind":"class","name":"UMaterialExpressionARKitPassthroughCamera","package":"/Script/AppleARKit","constructor":"0x00806460","static_class":"0x00805610","compiled_in_defer":"0x000B4890","table_index":2284,"auto_initialize":"0x000B43E0","sizeof":120,"crc":3750004464}
  ]},
-{"index":48,"marker_unit":102,"table_range":[4965,5133],"package":"/Script/FortniteGame","items":[
+{"index":48,"marker_unit":102,"table_range":[4965,5133],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EAIHotSpotAssignmentFilter","package":"/Script/FortniteGame","static_enum":"0x00F57640","compiled_in_defer":"0x000D7BE0","table_index":4965,"static_inlined":false},
   {"kind":"enum","name":"EAIHotSpotSlotFilter","package":"/Script/FortniteGame","static_enum":"0x00F57680","compiled_in_defer":"0x000D7C80","table_index":4966,"static_inlined":false},
   {"kind":"class","name":"AAIHotSpot","package":"/Script/FortniteGame","constructor":"0x00F59690","static_class":"0x00F59130","compiled_in_defer":"0x000D8090","table_index":4983,"auto_initialize":"0x000D72B0","sizeof":1184,"crc":2649241222},
@@ -789,7 +789,7 @@
   {"kind":"struct","name":"BuildingClassData","package":"/Script/FortniteGame","static_struct":"0x00F60F60","compiled_in_defer":"0x000D9480","table_index":5110,"register_natives":"0x000D8ED0","static_inlined":false},
   {"kind":"class","name":"ABuildingActor","package":"/Script/FortniteGame","constructor":"0x00F61030","static_class":"0x00F5D520","compiled_in_defer":"0x000D9550","table_index":5132,"auto_initialize":"0x000D8710","sizeof":1648,"crc":1659360332}
  ]},
-{"index":49,"marker_unit":103,"table_range":[5139,5239],"package":"/Script/FortniteGame","items":[
+{"index":49,"marker_unit":103,"table_range":[5139,5239],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UBuildingActorEditorComponent","package":"/Script/FortniteGame","constructor":"0x00F665F0","static_class":"0x00F65F60","compiled_in_defer":"0x000DA950","table_index":5139,"auto_initialize":"0x000D9950","sizeof":1856,"crc":1720237540},
   {"kind":"struct","name":"BuildingActorHotSpotDirection","package":"/Script/FortniteGame","static_struct":"0x00F66170","compiled_in_defer":"0x000DA4A0","table_index":5140,"register_natives":"0x000D9EA0","static_inlined":false},
   {"kind":"class","name":"UBuildingActorHotSpotConfig","package":"/Script/FortniteGame","constructor":"0x00F66620","static_class":"0x00F65F70","compiled_in_defer":"0x000DA990","table_index":5143,"auto_initialize":"0x000D9970","sizeof":288,"crc":1360510791},
@@ -845,7 +845,7 @@
   {"kind":"struct","name":"FOBCoreChoice","package":"/Script/FortniteGame","static_struct":"0x00F66290","compiled_in_defer":"0x000DA590","table_index":5229,"register_natives":"0x000D9FC0","static_inlined":false},
   {"kind":"class","name":"ABuildingFOBConfigActor","package":"/Script/FortniteGame","constructor":"0x00F66560","static_class":"0x00F65F30","compiled_in_defer":"0x000DA890","table_index":5238,"auto_initialize":"0x000D98F0","sizeof":2688,"crc":3198883842}
  ]},
-{"index":50,"marker_unit":104,"table_range":[5246,5323],"package":"/Script/FortniteGame","items":[
+{"index":50,"marker_unit":104,"table_range":[5246,5323],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OnFOBCoreVulnerableChanged__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F6C6D0"},
   {"kind":"delegate","name":"OnFOBCoreTargetableChanged__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F6C6A0"},
   {"kind":"delegate","name":"OnFOBCoreOutOfHealth__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F6C670"},
@@ -885,7 +885,7 @@
   {"kind":"struct","name":"FortSpawnSlotData","package":"/Script/FortniteGame","static_struct":"0x00F6C020","compiled_in_defer":"0x000DB830","table_index":5311,"register_natives":"0x000DB4E0","static_inlined":false},
   {"kind":"class","name":"ABuildingRift","package":"/Script/FortniteGame","constructor":"0x00F6C5D0","static_class":"0x00F6BCE0","compiled_in_defer":"0x000DBDC0","table_index":5322,"auto_initialize":"0x000DB070","sizeof":1808,"crc":1147470807}
  ]},
-{"index":51,"marker_unit":105,"table_range":[5326,5385],"package":"/Script/FortniteGame","items":[
+{"index":51,"marker_unit":105,"table_range":[5326,5385],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"ABuildingRoof","package":"/Script/FortniteGame","constructor":"0x00F71E50","static_class":"0x00F6FD30","compiled_in_defer":"0x000DCA80","table_index":5326,"auto_initialize":"0x000DBE40","sizeof":3520,"crc":1296215050},
   {"kind":"delegate","name":"RepairFinishedDelegate__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F71FC0"},
   {"kind":"delegate","name":"TrapAttachedDelegate__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F72020"},
@@ -914,7 +914,7 @@
   {"kind":"class","name":"ABuildingTimeOfDayLights","package":"/Script/FortniteGame","constructor":"0x00F71EE0","static_class":"0x00F6FD10","compiled_in_defer":"0x000DCB40","table_index":5372,"auto_initialize":"0x000DBEA0","sizeof":3584,"crc":229670973},
   {"kind":"class","name":"ABuildingTrap","package":"/Script/FortniteGame","constructor":"0x00F71F10","static_class":"0x00F71F40","compiled_in_defer":"0x000DCB80","table_index":5384,"auto_initialize":"0x000DBEC0","sizeof":3792,"crc":883784336}
  ]},
-{"index":52,"marker_unit":106,"table_range":[5390,5506],"package":"/Script/FortniteGame","items":[
+{"index":52,"marker_unit":106,"table_range":[5390,5506],"package":"/Script/FortniteGame","vector_constants":["FloatOne","FloatOneHundredth","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"ABuildingTrapCeiling","package":"/Script/FortniteGame","constructor":"0x00F78530","static_class":"0x00F751D0","compiled_in_defer":"0x000DDFC0","table_index":5390,"auto_initialize":"0x000DCC40","sizeof":3792,"crc":2561827458},
   {"kind":"class","name":"ABuildingTrapCeiling_Falling","package":"/Script/FortniteGame","constructor":"0x00F78560","static_class":"0x00F75210","compiled_in_defer":"0x000DE000","table_index":5393,"auto_initialize":"0x000DCC60","sizeof":3808,"crc":3563623611},
   {"kind":"delegate","name":"DefenderPawnOrItemSet__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F78B20"},
@@ -979,7 +979,7 @@
   {"kind":"class","name":"ADecoyActor","package":"/Script/FortniteGame","constructor":"0x00F78680","static_class":"0x00F77EF0","compiled_in_defer":"0x000DE180","table_index":5502,"auto_initialize":"0x000DCD20","sizeof":1920,"crc":3030561017},
   {"kind":"class","name":"ADeployableBaseCore","package":"/Script/FortniteGame","constructor":"0x00F786B0","static_class":"0x00F751B0","compiled_in_defer":"0x000DE1C0","table_index":5505,"auto_initialize":"0x000DCD40","sizeof":2000,"crc":3710726156}
  ]},
-{"index":53,"marker_unit":107,"table_range":[5508,5590],"package":"/Script/FortniteGame","items":[
+{"index":53,"marker_unit":107,"table_range":[5508,5590],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OnDeployableBasePlotSpacesChanged__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F7D640"},
   {"kind":"delegate","name":"OnDeployableBaseCoreDestroyed__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F7D610"},
   {"kind":"delegate","name":"OnDeployableBaseCoreCreated__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F7D5E0"},
@@ -1027,7 +1027,7 @@
   {"kind":"struct","name":"FortTargetFilter","package":"/Script/FortniteGame","static_struct":"0x00F7CF80","compiled_in_defer":"0x000DF610","table_index":5587,"register_natives":"0x000DEE50","static_inlined":false},
   {"kind":"struct","name":"FortAbilityCanHitParameters","package":"/Script/FortniteGame","static_struct":"0x00F7CD40","compiled_in_defer":"0x000DF430","table_index":5589,"register_natives":"0x000DEC10","static_inlined":false}
  ]},
-{"index":54,"marker_unit":108,"table_range":[5594,5795],"package":"/Script/FortniteGame","items":[
+{"index":54,"marker_unit":108,"table_range":[5594,5795],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"CommitAccountCostsDelegate__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F82200"},
   {"kind":"class","name":"UFortAbilityTask_CommitAccountCosts","package":"/Script/FortniteGame","constructor":"0x00F81E00","static_class":"0x00F7F3D0","compiled_in_defer":"0x000E08E0","table_index":5594,"auto_initialize":"0x000DFD80","sizeof":200,"crc":261652933},
   {"kind":"delegate","name":"DirectedMovementDelegate__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x00F82230"},
@@ -1147,7 +1147,7 @@
   {"kind":"enum","name":"EFortEncounterSequenceResult","package":"/Script/FortniteGame","static_enum":"0x00F8B190","compiled_in_defer":"0x000E2BA0","table_index":5792,"static_inlined":false},
   {"kind":"class","name":"UFortAIEncounterSequence","package":"/Script/FortniteGame","constructor":"0x00F8C580","static_class":"0x00F8C5B0","compiled_in_defer":"0x000E3370","table_index":5794,"auto_initialize":"0x000E2340","sizeof":120,"crc":3805857445}
  ]},
-{"index":55,"marker_unit":109,"table_range":[5799,6010],"package":"/Script/FortniteGame","items":[
+{"index":55,"marker_unit":109,"table_range":[5799,6010],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortAIEncounterTargetInterface","package":"/Script/FortniteGame","constructor":"0x00F91400","static_class":"0x00F8E490","compiled_in_defer":"0x000E4560","table_index":5799,"auto_initialize":"0x000E34B0","sizeof":40,"crc":2878824198},
   {"kind":"class","name":"UFortAIFunctionLibrary","package":"/Script/FortniteGame","constructor":"0x00F91430","static_class":"0x00F8E4D0","compiled_in_defer":"0x000E45A0","table_index":5803,"auto_initialize":"0x000E34D0","sizeof":40,"crc":3197972357},
   {"kind":"struct","name":"FortAIGoal","package":"/Script/FortniteGame","static_struct":"0x00F90F00","compiled_in_defer":"0x000E4090","table_index":5804,"register_natives":"0x000E39A0","static_inlined":false},
@@ -1251,7 +1251,7 @@
   {"kind":"class","name":"UFortAnimInputBlueprintLibrary","package":"/Script/FortniteGame","constructor":"0x00F994F0","static_class":"0x00F98740","compiled_in_defer":"0x000E65B0","table_index":6007,"auto_initialize":"0x000E4B40","sizeof":40,"crc":1972756555},
   {"kind":"class","name":"UFortAnimInstance","package":"/Script/FortniteGame","constructor":"0x00F99520","static_class":"0x00F77FA0","compiled_in_defer":"0x000E65F0","table_index":6009,"auto_initialize":"0x000E4B60","sizeof":1024,"crc":583116600}
  ]},
-{"index":56,"marker_unit":110,"table_range":[6014,6189],"package":"/Script/FortniteGame","items":[
+{"index":56,"marker_unit":110,"table_range":[6014,6189],"package":"/Script/FortniteGame","vector_constants":["FloatOne","FloatOneHundredth","XYZMask","SignMask"],"items":[
   {"kind":"struct","name":"FortAnimNode_ScaleHuskBones","package":"/Script/FortniteGame","static_struct":"0x00F9E720","compiled_in_defer":"0x000E71E0","table_index":6014,"register_natives":"0x000E6B00","static_inlined":false},
   {"kind":"struct","name":"FortAnimNode_SlopeWarping","package":"/Script/FortniteGame","static_struct":"0x00F9E780","compiled_in_defer":"0x000E7230","table_index":6016,"register_natives":"0x000E6B60","static_inlined":false},
   {"kind":"struct","name":"SlopeWarpingFootData","package":"/Script/FortniteGame","static_struct":"0x00F9EB40","compiled_in_defer":"0x000E7550","table_index":6018,"register_natives":"0x000E6F20","static_inlined":false},
@@ -1350,7 +1350,7 @@
   {"kind":"class","name":"UFortTwitchAnalytics","package":"/Script/FortniteGame","constructor":"0x00FA3E00","static_class":"0x00FA3310","compiled_in_defer":"0x000E8F10","table_index":6186,"auto_initialize":"0x000E81D0","sizeof":40,"crc":483233271},
   {"kind":"class","name":"AFortBluGloManager","package":"/Script/FortniteGame","constructor":"0x00FA3930","static_class":"0x00FA0A40","compiled_in_defer":"0x000E8910","table_index":6188,"auto_initialize":"0x000E7ED0","sizeof":920,"crc":2765573790}
  ]},
-{"index":57,"marker_unit":111,"table_range":[6193,6551],"package":"/Script/FortniteGame","items":[
+{"index":57,"marker_unit":111,"table_range":[6193,6551],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"AFortBodyPartOverridePreviewActor","package":"/Script/FortniteGame","constructor":"0x00FAD020","static_class":"0x00FAD050","compiled_in_defer":"0x000E9B80","table_index":6193,"auto_initialize":"0x000E8F50","sizeof":800,"crc":708598910},
   {"kind":"class","name":"AFortBotController","package":"/Script/FortniteGame","constructor":"0x00FAD060","static_class":"0x00FAD090","compiled_in_defer":"0x000E9BC0","table_index":6195,"auto_initialize":"0x000E8F70","sizeof":1392,"crc":391661811},
   {"kind":"class","name":"UFortBotMissionLogic","package":"/Script/FortniteGame","constructor":"0x00FAD6E0","static_class":"0x00FA9630","compiled_in_defer":"0x000EA440","table_index":6203,"auto_initialize":"0x000E93B0","sizeof":120,"crc":4056058346},
@@ -1532,7 +1532,7 @@
   {"kind":"struct","name":"BASEGameplayEffect","package":"/Script/FortniteGame","static_struct":"0x00FC55D0","compiled_in_defer":"0x000ED8A0","table_index":6542,"register_natives":"0x000EC860","static_inlined":false},
   {"kind":"class","name":"AFortConstructorBASE","package":"/Script/FortniteGame","constructor":"0x00FC5FB0","static_class":"0x00FC5480","compiled_in_defer":"0x000EE0B0","table_index":6550,"auto_initialize":"0x000EC660","sizeof":4496,"crc":2270505872}
  ]},
-{"index":58,"marker_unit":112,"table_range":[6554,6714],"package":"/Script/FortniteGame","items":[
+{"index":58,"marker_unit":112,"table_range":[6554,6714],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortConsumableAccountItem","package":"/Script/FortniteGame","constructor":"0x00FCB870","static_class":"0x00FC8060","compiled_in_defer":"0x000EF4C0","table_index":6554,"auto_initialize":"0x000EE3B0","sizeof":320,"crc":1190041768},
   {"kind":"class","name":"UFortConsumableAccountItemDefinition","package":"/Script/FortniteGame","constructor":"0x00FCB8A0","static_class":"0x00FC80C0","compiled_in_defer":"0x000EF500","table_index":6556,"auto_initialize":"0x000EE3D0","sizeof":800,"crc":3517190492},
   {"kind":"struct","name":"ConsumeEffectData","package":"/Script/FortniteGame","static_struct":"0x00FCB200","compiled_in_defer":"0x000EEF10","table_index":6557,"register_natives":"0x000EE860","static_inlined":false},
@@ -1610,7 +1610,7 @@
   {"kind":"struct","name":"DeployableBaseInstance","package":"/Script/FortniteGame","static_struct":"0x00FCFC90","compiled_in_defer":"0x000F0320","table_index":6710,"register_natives":"0x000EFE60","static_inlined":false},
   {"kind":"class","name":"AFortDeployableBaseManager","package":"/Script/FortniteGame","constructor":"0x00FD0020","static_class":"0x00FCDB20","compiled_in_defer":"0x000F06C0","table_index":6713,"auto_initialize":"0x000EFAE0","sizeof":1504,"crc":1936522375}
  ]},
-{"index":59,"marker_unit":113,"table_range":[6717,6856],"package":"/Script/FortniteGame","items":[
+{"index":59,"marker_unit":113,"table_range":[6717,6856],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"AFortDeployableBasePickup","package":"/Script/FortniteGame","constructor":"0x00FD6E10","static_class":"0x00FD6930","compiled_in_defer":"0x000F15D0","table_index":6717,"auto_initialize":"0x000F08C0","sizeof":1368,"crc":2428749784},
   {"kind":"class","name":"UFortDeployableBaseRecord","package":"/Script/FortniteGame","constructor":"0x00FD6F40","static_class":"0x00FD6F70","compiled_in_defer":"0x000F1750","table_index":6719,"auto_initialize":"0x000F0980","sizeof":232,"crc":3384237272},
   {"kind":"struct","name":"FortTaggedDeployableBaseLootUnlock","package":"/Script/FortniteGame","static_struct":"0x00FD6CB0","compiled_in_defer":"0x000F14E0","table_index":6720,"register_natives":"0x000F1210","static_inlined":false},
@@ -1682,7 +1682,7 @@
   {"kind":"class","name":"AFortEnemySpawn","package":"/Script/FortniteGame","constructor":"0x00FD6F10","static_class":"0x00FD3350","compiled_in_defer":"0x000F1710","table_index":6853,"auto_initialize":"0x000F0960","sizeof":1648,"crc":3314702173},
   {"kind":"class","name":"UFortEngine","package":"/Script/FortniteGame","constructor":"0x00FD7A60","static_class":"0x00FD32E0","compiled_in_defer":"0x000F24D0","table_index":6855,"auto_initialize":"0x000F1040","sizeof":3648,"crc":298580975}
  ]},
-{"index":60,"marker_unit":114,"table_range":[6859,7100],"package":"/Script/FortniteGame","items":[
+{"index":60,"marker_unit":114,"table_range":[6859,7100],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortEventItemDefinitionBase","package":"/Script/FortniteGame","constructor":"0x00FDB5E0","static_class":"0x00FD8020","compiled_in_defer":"0x000F4350","table_index":6859,"auto_initialize":"0x000F25D0","sizeof":816,"crc":2252290677},
   {"kind":"class","name":"UFortEventPurchaseTrackerItem","package":"/Script/FortniteGame","constructor":"0x00FDB610","static_class":"0x00FD8060","compiled_in_defer":"0x000F4390","table_index":6861,"auto_initialize":"0x000F25F0","sizeof":416,"crc":1928719964},
   {"kind":"class","name":"UFortEventPurchaseTrackerItemDefinition","package":"/Script/FortniteGame","constructor":"0x00FDB640","static_class":"0x00FD8070","compiled_in_defer":"0x000F43D0","table_index":6863,"auto_initialize":"0x000F2610","sizeof":784,"crc":379359350},
@@ -1790,7 +1790,7 @@
   {"kind":"struct","name":"FortAthenaGamepadAimAssistSettings","package":"/Script/FortniteGame","static_struct":"0x00FE41D0","compiled_in_defer":"0x000F6000","table_index":7096,"register_natives":"0x000F5BE0","static_inlined":false},
   {"kind":"class","name":"UFortGamepadSettings","package":"/Script/FortniteGame","constructor":"0x00FE4680","static_class":"0x00FE46B0","compiled_in_defer":"0x000F6520","table_index":7099,"auto_initialize":"0x000F59A0","sizeof":704,"crc":1413606623}
  ]},
-{"index":61,"marker_unit":115,"table_range":[7102,7174],"package":"/Script/FortniteGame","items":[
+{"index":61,"marker_unit":115,"table_range":[7102,7174],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"EFortAbilityCostSource","package":"/Script/FortniteGame","static_enum":"0x00FE5AD0","compiled_in_defer":"0x000F6D40","table_index":7102,"static_inlined":false},
   {"kind":"enum","name":"EFortGameplayAbilityActivation","package":"/Script/FortniteGame","static_enum":"0x00FE5B10","compiled_in_defer":"0x000F6D90","table_index":7103,"static_inlined":false},
   {"kind":"enum","name":"EFortAIWeaponUsage","package":"/Script/FortniteGame","static_enum":"0x00FE5A90","compiled_in_defer":"0x000F6CF0","table_index":7104,"static_inlined":false},
@@ -1821,7 +1821,7 @@
   {"kind":"class","name":"UFortGameplayCueNotify_Simple","package":"/Script/FortniteGame","constructor":"0x00FE7DA0","static_class":"0x00FE7660","compiled_in_defer":"0x000F74B0","table_index":7168,"auto_initialize":"0x000F6760","sizeof":176,"crc":914897637},
   {"kind":"class","name":"AFortGameplayEffectDeliveryActor","package":"/Script/FortniteGame","constructor":"0x00FE7AC0","static_class":"0x00FE4F60","compiled_in_defer":"0x000F70F0","table_index":7173,"auto_initialize":"0x000F6580","sizeof":1552,"crc":4235147503}
  ]},
-{"index":62,"marker_unit":116,"table_range":[7177,7496],"package":"/Script/FortniteGame","items":[
+{"index":62,"marker_unit":116,"table_range":[7177,7496],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortGameplayEffectExecutionCalculation","package":"/Script/FortniteGame","constructor":"0x00FEE910","static_class":"0x00F816D0","compiled_in_defer":"0x000F8610","table_index":7177,"auto_initialize":"0x000F7750","sizeof":64,"crc":968632723},
   {"kind":"class","name":"UFortGameplayEffectUIData","package":"/Script/FortniteGame","constructor":"0x00FEE940","static_class":"0x00FEBD40","compiled_in_defer":"0x000F8650","table_index":7179,"auto_initialize":"0x000F7770","sizeof":104,"crc":2542748984},
   {"kind":"class","name":"UFortGameplayModifierItemDefinition","package":"/Script/FortniteGame","constructor":"0x00FEE9A0","static_class":"0x00FEBC80","compiled_in_defer":"0x000F86D0","table_index":7181,"auto_initialize":"0x000F77B0","sizeof":832,"crc":2162932181},
@@ -2012,7 +2012,7 @@
   {"kind":"class","name":"UFortItemIconDefinition","package":"/Script/FortniteGame","constructor":"0x01006DC0","static_class":"0x01006DF0","compiled_in_defer":"0x000FC3B0","table_index":7493,"auto_initialize":"0x000FB2C0","sizeof":288,"crc":1308837710},
   {"kind":"class","name":"UFortItem","package":"/Script/FortniteGame","constructor":"0x01006D90","static_class":"0x01006E00","compiled_in_defer":"0x000FC370","table_index":7495,"auto_initialize":"0x000FB2A0","sizeof":208,"crc":2675330950}
  ]},
-{"index":63,"marker_unit":117,"table_range":[7498,7942],"package":"/Script/FortniteGame","items":[
+{"index":63,"marker_unit":117,"table_range":[7498,7942],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"struct","name":"ItemCategoryMappingData","package":"/Script/FortniteGame","static_struct":"0x0100BE70","compiled_in_defer":"0x000FCA00","table_index":7498,"register_natives":"0x000FC6E0","static_inlined":false},
   {"kind":"class","name":"UFortItemCategory","package":"/Script/FortniteGame","constructor":"0x0100C020","static_class":"0x0100BB70","compiled_in_defer":"0x000FCBB0","table_index":7501,"auto_initialize":"0x000FC450","sizeof":96,"crc":1178659630},
   {"kind":"delegate","name":"FortOnItemDefinitionCountChangedDelegate__DelegateSignature","package":"/Script/FortniteGame","constructor":"0x0100C1B0"},
@@ -2249,7 +2249,7 @@
   {"kind":"struct","name":"FortBadgeCount","package":"/Script/FortniteGame","static_struct":"0x01037750","compiled_in_defer":"0x001020B0","table_index":7928,"register_natives":"0x00101570","static_inlined":false},
   {"kind":"class","name":"AFortMission","package":"/Script/FortniteGame","constructor":"0x01038520","static_class":"0x01038550","compiled_in_defer":"0x00102880","table_index":7941,"auto_initialize":"0x00100EF0","sizeof":1680,"crc":1237438510}
  ]},
-{"index":64,"marker_unit":118,"table_range":[7944,8344],"package":"/Script/FortniteGame","items":[
+{"index":64,"marker_unit":118,"table_range":[7944,8344],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"struct","name":"FortMissionAlertData","package":"/Script/FortniteGame","static_struct":"0x01040E30","compiled_in_defer":"0x00103840","table_index":7944,"register_natives":"0x00102F50","static_inlined":false},
   {"kind":"struct","name":"FortMissionAlertSpreadData","package":"/Script/FortniteGame","static_struct":"0x01040E90","compiled_in_defer":"0x00103890","table_index":7946,"register_natives":"0x00102FB0","static_inlined":false},
   {"kind":"struct","name":"FortMissionAlertCategoryData","package":"/Script/FortniteGame","static_struct":"0x01040DD0","compiled_in_defer":"0x001037F0","table_index":7948,"register_natives":"0x00102EF0","static_inlined":false},
@@ -2448,7 +2448,7 @@
   {"kind":"struct","name":"DamagerInfo","package":"/Script/FortniteGame","static_struct":"0x0105DBB0","compiled_in_defer":"0x00108920","table_index":8323,"register_natives":"0x00108410","static_inlined":false},
   {"kind":"class","name":"AFortPawn","package":"/Script/FortniteGame","constructor":"0x0105DDF0","static_class":"0x0105DE20","compiled_in_defer":"0x00108B00","table_index":8343,"auto_initialize":"0x00108030","sizeof":3952,"crc":3043488547}
  ]},
-{"index":65,"marker_unit":119,"table_range":[8346,8648],"package":"/Script/FortniteGame","items":[
+{"index":65,"marker_unit":119,"table_range":[8346,8648],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"EFortAnnouncerTeamVocalChords","package":"/Script/FortniteGame","static_enum":"0x01063730","compiled_in_defer":"0x00109690","table_index":8346,"static_inlined":false},
   {"kind":"class","name":"AFortPawn_FeedbackAnnouncer","package":"/Script/FortniteGame","constructor":"0x01065680","static_class":"0x01064E70","compiled_in_defer":"0x00109F00","table_index":8348,"auto_initialize":"0x00108C80","sizeof":3952,"crc":2868746499},
   {"kind":"class","name":"AFortPawn_Flinger","package":"/Script/FortniteGame","constructor":"0x010656B0","static_class":"0x010627F0","compiled_in_defer":"0x00109F40","table_index":8350,"auto_initialize":"0x00108CA0","sizeof":6992,"crc":3279896554},
@@ -2537,7 +2537,7 @@
   {"kind":"struct","name":"SpectatorOwnedCameraComponentRecord","package":"/Script/FortniteGame","static_struct":"0x010775D0","compiled_in_defer":"0x0010C150","table_index":8644,"register_natives":"0x0010C0A0","static_inlined":false},
   {"kind":"class","name":"AFortPlayerControllerSpectating","package":"/Script/FortniteGame","constructor":"0x01077830","static_class":"0x010757D0","compiled_in_defer":"0x0010C420","table_index":8647,"auto_initialize":"0x0010B940","sizeof":9600,"crc":308864523}
  ]},
-{"index":66,"marker_unit":120,"table_range":[8661,8731],"package":"/Script/FortniteGame","items":[
+{"index":66,"marker_unit":120,"table_range":[8661,8731],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"AFortPlayerControllerZone","package":"/Script/FortniteGame","constructor":"0x0107FD70","static_class":"0x0107D5C0","compiled_in_defer":"0x0010D150","table_index":8661,"auto_initialize":"0x0010C460","sizeof":10656,"crc":3700597210},
   {"kind":"enum","name":"EFortInputActionGroup","package":"/Script/FortniteGame","static_enum":"0x0107DDF0","compiled_in_defer":"0x0010CE30","table_index":8662,"static_inlined":false},
   {"kind":"enum","name":"EFortInputActionType","package":"/Script/FortniteGame","static_enum":"0x0107DE30","compiled_in_defer":"0x0010CE80","table_index":8663,"static_inlined":false},
@@ -2562,7 +2562,7 @@
   {"kind":"struct","name":"AthenaBatchedDamageGameplayCues","package":"/Script/FortniteGame","static_struct":"0x0107FAD0","compiled_in_defer":"0x0010CF20","table_index":8711,"register_natives":"0x0010CB70","static_inlined":false},
   {"kind":"class","name":"AFortPlayerPawnAthena","package":"/Script/FortniteGame","constructor":"0x0107FE30","static_class":"0x0107F990","compiled_in_defer":"0x0010D250","table_index":8730,"auto_initialize":"0x0010C4E0","sizeof":7392,"crc":85586729}
  ]},
-{"index":67,"marker_unit":121,"table_range":[8740,9132],"package":"/Script/FortniteGame","items":[
+{"index":67,"marker_unit":121,"table_range":[8740,9132],"package":"/Script/FortniteGame","vector_constants":["FloatOne","QMULTI_SIGN_MASK0","QMULTI_SIGN_MASK1","QMULTI_SIGN_MASK2","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"AFortPlayerSpawnPad","package":"/Script/FortniteGame","constructor":"0x0108B2B0","static_class":"0x01085A60","compiled_in_defer":"0x0010E0D0","table_index":8740,"auto_initialize":"0x0010D370","sizeof":3536,"crc":2189359071},
   {"kind":"class","name":"AFortPlayerStart","package":"/Script/FortniteGame","constructor":"0x0108B2E0","static_class":"0x0108B340","compiled_in_defer":"0x0010E110","table_index":8742,"auto_initialize":"0x0010D390","sizeof":848,"crc":2911556247},
   {"kind":"class","name":"AFortPlayerStartWarmup","package":"/Script/FortniteGame","constructor":"0x0108B310","static_class":"0x01085A30","compiled_in_defer":"0x0010E150","table_index":8744,"auto_initialize":"0x0010D3B0","sizeof":848,"crc":3881407385},
@@ -2774,7 +2774,7 @@
   {"kind":"struct","name":"FortSafeZoneDefinition","package":"/Script/FortniteGame","static_struct":"0x0109D630","compiled_in_defer":"0x00112280","table_index":9127,"register_natives":"0x001119E0","static_inlined":false},
   {"kind":"class","name":"AFortSafeZoneIndicator","package":"/Script/FortniteGame","constructor":"0x0109DB10","static_class":"0x0109D0B0","compiled_in_defer":"0x001126F0","table_index":9131,"auto_initialize":"0x001113C0","sizeof":1176,"crc":2324706876}
  ]},
-{"index":68,"marker_unit":122,"table_range":[9136,9239],"package":"/Script/FortniteGame","items":[
+{"index":68,"marker_unit":122,"table_range":[9136,9239],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"FortBuildingActorArray","package":"/Script/FortniteGame","static_struct":"0x010A5100","compiled_in_defer":"0x00113B10","table_index":9136,"register_natives":"0x00113160","static_inlined":false},
   {"kind":"struct","name":"FortDestroyedActorRecord","package":"/Script/FortniteGame","static_struct":"0x010A5280","compiled_in_defer":"0x00113C50","table_index":9138,"register_natives":"0x001132E0","static_inlined":false},
   {"kind":"class","name":"AFortSaveFileBuildingInstructionsHandler","package":"/Script/FortniteGame","constructor":"0x010A57C0","static_class":"0x010A57F0","compiled_in_defer":"0x001140B0","table_index":9141,"auto_initialize":"0x00112AB0","sizeof":1584,"crc":3222933262},
@@ -2827,7 +2827,7 @@
   {"kind":"struct","name":"FortSplineBase","package":"/Script/FortniteGame","static_struct":"0x010A5700","compiled_in_defer":"0x00114010","table_index":9235,"register_natives":"0x00113760","static_inlined":false},
   {"kind":"class","name":"UFortSpline","package":"/Script/FortniteGame","constructor":"0x010A5BC0","static_class":"0x010A5BF0","compiled_in_defer":"0x001145B0","table_index":9238,"auto_initialize":"0x00112D30","sizeof":104,"crc":1068650940}
  ]},
-{"index":69,"marker_unit":123,"table_range":[9242,9796],"package":"/Script/FortniteGame","items":[
+{"index":69,"marker_unit":123,"table_range":[9242,9796],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"AFortSplineAudioActor","package":"/Script/FortniteGame","constructor":"0x010B3820","static_class":"0x010B2C70","compiled_in_defer":"0x00115D80","table_index":9242,"auto_initialize":"0x001145F0","sizeof":952,"crc":3787543706},
   {"kind":"class","name":"UFortSpottableActorInterface","package":"/Script/FortniteGame","constructor":"0x010B39B0","static_class":"0x010B2CB0","compiled_in_defer":"0x00115F80","table_index":9244,"auto_initialize":"0x001146F0","sizeof":40,"crc":2576213355},
   {"kind":"class","name":"UFortSpottedActorIndicator","package":"/Script/FortniteGame","constructor":"0x010B39E0","static_class":"0x010B2CC0","compiled_in_defer":"0x00115FC0","table_index":9246,"auto_initialize":"0x00114710","sizeof":144,"crc":1969277971},
@@ -3127,7 +3127,7 @@
   {"kind":"class","name":"UFortWeaponRangedItemDefinition","package":"/Script/FortniteGame","constructor":"0x010D8C40","static_class":"0x010D8820","compiled_in_defer":"0x0011D8B0","table_index":9793,"auto_initialize":"0x0011D3E0","sizeof":1968,"crc":4180645654},
   {"kind":"class","name":"UFortWeaponRangedItemDefinitionTooltip","package":"/Script/FortniteGame","constructor":"0x010D8C70","static_class":"0x010D7C40","compiled_in_defer":"0x0011D8F0","table_index":9795,"auto_initialize":"0x0011D400","sizeof":144,"crc":2448183609}
  ]},
-{"index":70,"marker_unit":124,"table_range":[9799,9856],"package":"/Script/FortniteGame","items":[
+{"index":70,"marker_unit":124,"table_range":[9799,9856],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortWeaponRangedTooltip","package":"/Script/FortniteGame","constructor":"0x010DC8B0","static_class":"0x010DC110","compiled_in_defer":"0x0011E5E0","table_index":9799,"auto_initialize":"0x0011D970","sizeof":280,"crc":96322984},
   {"kind":"class","name":"UFortWeaponTooltip","package":"/Script/FortniteGame","constructor":"0x010DC8E0","static_class":"0x010DA4A0","compiled_in_defer":"0x0011E620","table_index":9801,"auto_initialize":"0x0011D990","sizeof":280,"crc":66516034},
   {"kind":"class","name":"AFortWeatherAugment","package":"/Script/FortniteGame","constructor":"0x010DC850","static_class":"0x010DA500","compiled_in_defer":"0x0011E560","table_index":9803,"auto_initialize":"0x0011D930","sizeof":1168,"crc":40254058},
@@ -3154,7 +3154,7 @@
   {"kind":"class","name":"UFortWorldItemDefinitionTooltip","package":"/Script/FortniteGame","constructor":"0x010DCA10","static_class":"0x010DA4D0","compiled_in_defer":"0x0011E7A0","table_index":9853,"auto_initialize":"0x0011DA50","sizeof":144,"crc":1639832137},
   {"kind":"class","name":"UFortWorldItemTooltip","package":"/Script/FortniteGame","constructor":"0x010DCA40","static_class":"0x00FCAFE0","compiled_in_defer":"0x0011E7E0","table_index":9855,"auto_initialize":"0x0011DA70","sizeof":144,"crc":1363376725}
  ]},
-{"index":71,"marker_unit":125,"table_range":[9858,10191],"package":"/Script/FortniteGame","items":[
+{"index":71,"marker_unit":125,"table_range":[9858,10191],"package":"/Script/FortniteGame","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"EFortWorldManagerState","package":"/Script/FortniteGame","static_enum":"0x010E0F10","compiled_in_defer":"0x0011F2E0","table_index":9858,"static_inlined":false},
   {"kind":"enum","name":"EFortLevelStreamingState","package":"/Script/FortniteGame","static_enum":"0x010E0E90","compiled_in_defer":"0x0011F240","table_index":9859,"static_inlined":false},
   {"kind":"enum","name":"EFortQueuedActionUserStatus","package":"/Script/FortniteGame","static_enum":"0x010E0ED0","compiled_in_defer":"0x0011F290","table_index":9860,"static_inlined":false},
@@ -3320,7 +3320,7 @@
   {"kind":"class","name":"UWorldTileManager","package":"/Script/FortniteGame","constructor":"0x010F1BF0","static_class":"0x010F1C20","compiled_in_defer":"0x00123920","table_index":10188,"auto_initialize":"0x001225B0","sizeof":128,"crc":1223341140},
   {"kind":"class","name":"UWorldTileType","package":"/Script/FortniteGame","constructor":"0x010F1C30","static_class":"0x010EDC50","compiled_in_defer":"0x00123960","table_index":10190,"auto_initialize":"0x001225D0","sizeof":104,"crc":1714428270}
  ]},
-{"index":72,"marker_unit":139,"table_range":[11076,11160],"package":"/Script/CoreUObject","items":[
+{"index":72,"marker_unit":139,"table_range":[11076,11160],"package":"/Script/CoreUObject","vector_constants":["FloatOne"],"items":[
   {"kind":"class","name":"UGCObjectReferencer","package":"/Script/CoreUObject","constructor":"0x01260CF0","static_class":"0x0122CA70","compiled_in_defer":"0x0012ECE0","table_index":11076},
   {"kind":"class","name":"UTextBuffer","package":"/Script/CoreUObject","constructor":"0x01260D50","static_class":"0x0122CA80","compiled_in_defer":"0x0012ED20","table_index":11085},
   {"kind":"class","name":"UField","package":"/Script/CoreUObject","constructor":"0x0131A890","static_class":"0x01319F10","compiled_in_defer":"0x0012F0E0","table_index":11114},
@@ -3338,7 +3338,7 @@
   {"kind":"class","name":"ULinkerPlaceholderExportObject","package":"/Script/CoreUObject","constructor":"0x013423C0","static_class":"0x0131B110","compiled_in_defer":"0x0012F880","table_index":11157},
   {"kind":"class","name":"ULinkerPlaceholderFunction","package":"/Script/CoreUObject","constructor":"0x01342410","static_class":"0x01340A20","compiled_in_defer":"0x0012F8C0","table_index":11159}
  ]},
-{"index":73,"marker_unit":140,"table_range":[11166,11498],"package":"/Script/CoreUObject","package_init_before":0,"items":[
+{"index":73,"marker_unit":140,"table_range":[11166,11498],"package":"/Script/CoreUObject","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UMetaData","package":"/Script/CoreUObject","constructor":"0x0136E890","static_class":"0x01343170","compiled_in_defer":"0x00130BB0","table_index":11166},
   {"kind":"class","name":"UObjectRedirector","package":"/Script/CoreUObject","constructor":"0x0136EA40","static_class":"0x0136BE90","compiled_in_defer":"0x00130C70","table_index":11174},
   {"kind":"class","name":"UPackage","package":"/Script/CoreUObject","constructor":"0x0136EAC0","static_class":"0x01319F30","compiled_in_defer":"0x00130CB0","table_index":11180},
@@ -3478,7 +3478,7 @@
   {"kind":"class","name":"USlateWidgetStyleContainerBase","package":"/Script/SlateCore","constructor":"0x0145C500","static_class":"0x0145C530","compiled_in_defer":"0x0013D160","table_index":11938,"auto_initialize":"0x0013A680","sizeof":48,"crc":1474458370},
   {"kind":"class","name":"USlateWidgetStyleContainerInterface","package":"/Script/SlateCore","constructor":"0x0145C540","static_class":"0x01453DF0","compiled_in_defer":"0x0013D1A0","table_index":11940,"auto_initialize":"0x0013A6A0","sizeof":40,"crc":2654621773}
  ]},
-{"index":76,"marker_unit":142,"table_range":[12031,12071],"package":"/Script/Slate","package_init_before":0,"items":[
+{"index":76,"marker_unit":142,"table_range":[12031,12071],"package":"/Script/Slate","package_init_before":0,"vector_constants":["FloatOne"],"items":[
   {"kind":"struct","name":"Anchors","package":"/Script/Slate","static_struct":"0x015A25C0","compiled_in_defer":"0x0013E750","table_index":12031,"register_natives":"0x0013E2D0","static_inlined":true},
   {"kind":"class","name":"UButtonWidgetStyle","package":"/Script/Slate","constructor":"0x015A26C0","static_class":"0x015A2570","compiled_in_defer":"0x0013E7F0","table_index":12034,"auto_initialize":"0x0013E150","sizeof":616,"crc":1139783200},
   {"kind":"class","name":"UCheckBoxWidgetStyle","package":"/Script/Slate","constructor":"0x015A26F0","static_class":"0x015A0EE0","compiled_in_defer":"0x0013E830","table_index":12036,"auto_initialize":"0x0013E170","sizeof":1312,"crc":4066431940},
@@ -3514,10 +3514,10 @@
   {"kind":"struct","name":"MaterialQualityOverrides","package":"/Script/MaterialShaderQualitySettings","static_struct":"0x01664220","compiled_in_defer":"0x00145080","table_index":12245,"register_natives":"0x00144FD0","static_inlined":true},
   {"kind":"class","name":"UShaderPlatformQualitySettings","package":"/Script/MaterialShaderQualitySettings","constructor":"0x016642D0","static_class":"0x01664210","compiled_in_defer":"0x00145110","table_index":12248,"auto_initialize":"0x00144FB0","sizeof":64,"crc":1671106105}
  ]},
-{"index":79,"marker_unit":153,"table_range":[14564,14565],"package":"/Script/Renderer","package_init_before":0,"items":[
+{"index":79,"marker_unit":153,"table_range":[14564,14565],"package":"/Script/Renderer","package_init_before":0,"vector_constants":["FloatOne","FloatMinusOne","DEG_TO_RAD","SignBit","SignMask","Pi","TwoPi","PiByTwo","OneOverTwoPi"],"items":[
   {"kind":"struct","name":"LightPropagationVolumeSettings","package":"/Script/Renderer","static_struct":"0x01993030","compiled_in_defer":"0x00199D00","table_index":14564,"register_natives":"0x00199CA0","static_inlined":true}
  ]},
-{"index":80,"marker_unit":155,"table_range":[14628,14644],"package":"/Script/HeadMountedDisplay","package_init_before":0,"items":[
+{"index":80,"marker_unit":155,"table_range":[14628,14644],"package":"/Script/HeadMountedDisplay","package_init_before":0,"vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UHeadMountedDisplayFunctionLibrary","package":"/Script/HeadMountedDisplay","constructor":"0x0199D320","static_class":"0x0199CBC0","compiled_in_defer":"0x0019BFF0","table_index":14628,"auto_initialize":"0x0019BC50","sizeof":40,"crc":2837835737},
   {"kind":"enum","name":"EXRTrackedDeviceType","package":"/Script/HeadMountedDisplay","static_enum":"0x0199CE20","compiled_in_defer":"0x0019BF50","table_index":14629,"static_inlined":true},
   {"kind":"enum","name":"ESpectatorScreenMode","package":"/Script/HeadMountedDisplay","static_enum":"0x0199CD60","compiled_in_defer":"0x0019BEB0","table_index":14630,"static_inlined":true},
@@ -3530,7 +3530,7 @@
   {"kind":"class","name":"UMotionTrackedDeviceFunctionLibrary","package":"/Script/HeadMountedDisplay","constructor":"0x0199D380","static_class":"0x0199D200","compiled_in_defer":"0x0019C070","table_index":14641,"auto_initialize":"0x0019BC90","sizeof":40,"crc":1843160161},
   {"kind":"class","name":"UVRNotificationsComponent","package":"/Script/HeadMountedDisplay","constructor":"0x0199D3B0","static_class":"0x0199CBD0","compiled_in_defer":"0x0019C0B0","table_index":14643,"auto_initialize":"0x0019BCB0","sizeof":384,"crc":3032520210}
  ]},
-{"index":81,"marker_unit":158,"table_range":[14899,14899],"package":"/Script/Foliage","items":[
+{"index":81,"marker_unit":158,"table_range":[14899,14899],"package":"/Script/Foliage","vector_constants":["FloatOne","QMULTI_SIGN_MASK0","QMULTI_SIGN_MASK1","QMULTI_SIGN_MASK2","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"delegate","name":"InstanceRadialDamageSignature__DelegateSignature","package":"/Script/Foliage","constructor":"0x01A48C10"},
   {"kind":"delegate","name":"InstancePointDamageSignature__DelegateSignature","package":"/Script/Foliage","constructor":"0x01A48BE0"}
  ]},
@@ -3556,7 +3556,7 @@
   {"kind":"class","name":"UProceduralFoliageTile","package":"/Script/Foliage","constructor":"0x01A48BB0","static_class":"0x01A47870","compiled_in_defer":"0x001A10A0","table_index":14930,"auto_initialize":"0x001A0980","sizeof":344,"crc":1768150753},
   {"kind":"class","name":"AProceduralFoliageVolume","package":"/Script/Foliage","constructor":"0x01A48A20","static_class":"0x01A48A50","compiled_in_defer":"0x001A0EA0","table_index":14932,"auto_initialize":"0x001A0880","sizeof":856,"crc":3193611987}
  ]},
-{"index":83,"marker_unit":161,"table_range":[15005,15006],"package":"/Script/Landscape","items":[
+{"index":83,"marker_unit":161,"table_range":[15005,15006],"package":"/Script/Landscape","vector_constants":["FloatOne","FloatOneHundredth","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UControlPointMeshComponent","package":"/Script/Landscape","constructor":"0x01A75B40","static_class":"0x01A75B70","compiled_in_defer":"0x001A3F60","table_index":15005,"auto_initialize":"0x001A2B30","sizeof":1776,"crc":2064914959}
  ]},
 {"index":84,"marker_unit":161,"table_range":[15006,15105],"package":"/Script/Landscape","split":"init.gen.cpp opens a unity file","package_init_before":0,"items":[
@@ -3616,7 +3616,7 @@
   {"kind":"class","name":"UMaterialExpressionLandscapeLayerWeight","package":"/Script/Landscape","constructor":"0x01A75F30","static_class":"0x01A75080","compiled_in_defer":"0x001A4420","table_index":15102,"auto_initialize":"0x001A2D90","sizeof":200,"crc":1226733922},
   {"kind":"class","name":"UMaterialExpressionLandscapeVisibilityMask","package":"/Script/Landscape","constructor":"0x01A75F60","static_class":"0x01A72550","compiled_in_defer":"0x001A4460","table_index":15104,"auto_initialize":"0x001A2DB0","sizeof":80,"crc":866591030}
  ]},
-{"index":85,"marker_unit":164,"table_range":[15135,15284],"package":"/Script/MovieScene","package_init_before":0,"items":[
+{"index":85,"marker_unit":164,"table_range":[15135,15284],"package":"/Script/MovieScene","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"EMovieSceneKeyInterpolation","package":"/Script/MovieScene","static_enum":"0x01AC0390","compiled_in_defer":"0x001A6000","table_index":15135,"static_inlined":true},
   {"kind":"struct","name":"MovieSceneTrackLabels","package":"/Script/MovieScene","static_struct":"0x01AC4FE0","compiled_in_defer":"0x001A7040","table_index":15136,"register_natives":"0x001A5CC0","static_inlined":true},
   {"kind":"struct","name":"MovieSceneEditorData","package":"/Script/MovieScene","static_struct":"0x01AC39E0","compiled_in_defer":"0x001A6280","table_index":15138,"register_natives":"0x001A4C40","static_inlined":true},
@@ -3698,7 +3698,7 @@
   {"kind":"struct","name":"MovieSceneTrackImplementationPtr","package":"/Script/MovieScene","static_struct":"0x01AC4F60","compiled_in_defer":"0x001A6FF0","table_index":15281,"register_natives":"0x001A5C60","static_inlined":true},
   {"kind":"struct","name":"MovieSceneTrackImplementation","package":"/Script/MovieScene","static_struct":"0x01AC4EE0","compiled_in_defer":"0x001A6FA0","table_index":15283,"register_natives":"0x001A5C00","static_inlined":true}
  ]},
-{"index":86,"marker_unit":166,"table_range":[15303,15332],"package":"/Script/AnimationCore","package_init_before":0,"items":[
+{"index":86,"marker_unit":166,"table_range":[15303,15332],"package":"/Script/AnimationCore","package_init_before":0,"vector_constants":["FloatOne","Float0001","SmallLengthThreshold","FloatOneHalf","XYZMask"],"items":[
   {"kind":"struct","name":"Axis","package":"/Script/AnimationCore","static_struct":"0x01ACFBC0","compiled_in_defer":"0x001A7DF0","table_index":15303,"register_natives":"0x001A77F0","static_inlined":true},
   {"kind":"enum","name":"ETransformConstraintType","package":"/Script/AnimationCore","static_enum":"0x01ACF0B0","compiled_in_defer":"0x001A7D50","table_index":15305,"static_inlined":true},
   {"kind":"enum","name":"EConstraintType","package":"/Script/AnimationCore","static_enum":"0x01ACF050","compiled_in_defer":"0x001A7D00","table_index":15306,"static_inlined":true},
@@ -3716,7 +3716,7 @@
   {"kind":"struct","name":"NodeHierarchyData","package":"/Script/AnimationCore","static_struct":"0x01ACFFC0","compiled_in_defer":"0x001A8070","table_index":15329,"register_natives":"0x001A7AF0","static_inlined":true},
   {"kind":"struct","name":"NodeObject","package":"/Script/AnimationCore","static_struct":"0x01AD00C0","compiled_in_defer":"0x001A8110","table_index":15331,"register_natives":"0x001A7BB0","static_inlined":true}
  ]},
-{"index":87,"marker_unit":168,"table_range":[15371,15372],"package":"/Script/AnimGraphRuntime","items":[
+{"index":87,"marker_unit":168,"table_range":[15371,15372],"package":"/Script/AnimGraphRuntime","vector_constants":["FloatOne","Float0001","FloatOneHalf","QMULTI_SIGN_MASK0","QMULTI_SIGN_MASK1","QMULTI_SIGN_MASK2","XYZMask"],"items":[
   {"kind":"class","name":"UAnimCustomInstance","package":"/Script/AnimGraphRuntime","constructor":"0x01B0E2C0","static_class":"0x01B01F60","compiled_in_defer":"0x001AC060","table_index":15371,"auto_initialize":"0x001A8980","sizeof":896,"crc":3835139861}
  ]},
 {"index":88,"marker_unit":168,"table_range":[15372,15539],"package":"/Script/AnimGraphRuntime","split":"init.gen.cpp opens a unity file","package_init_before":0,"items":[
@@ -3817,7 +3817,7 @@
   {"kind":"struct","name":"RBFTarget","package":"/Script/AnimGraphRuntime","static_struct":"0x01B0E040","compiled_in_defer":"0x001ABED0","table_index":15536,"register_natives":"0x001AA240","static_inlined":true},
   {"kind":"struct","name":"RBFEntry","package":"/Script/AnimGraphRuntime","static_struct":"0x01B0DF40","compiled_in_defer":"0x001ABE30","table_index":15538,"register_natives":"0x001AA180","static_inlined":true}
  ]},
-{"index":89,"marker_unit":170,"table_range":[15565,15791],"package":"/Script/MovieSceneTracks","package_init_before":0,"items":[
+{"index":89,"marker_unit":170,"table_range":[15565,15791],"package":"/Script/MovieSceneTracks","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UMovieSceneTransformOrigin","package":"/Script/MovieSceneTracks","constructor":"0x01B528F0","static_class":"0x01B52920","compiled_in_defer":"0x001AFE00","table_index":15565,"auto_initialize":"0x001ACA90","sizeof":40,"crc":1218141251},
   {"kind":"class","name":"UMovieScene3DAttachSection","package":"/Script/MovieSceneTracks","constructor":"0x01B51ED0","static_class":"0x01B479E0","compiled_in_defer":"0x001AF080","table_index":15568,"auto_initialize":"0x001AC3D0","sizeof":336,"crc":1280128356},
   {"kind":"struct","name":"MovieScene3DAttachSectionTemplate","package":"/Script/MovieSceneTracks","static_struct":"0x01B505D0","compiled_in_defer":"0x001AE0E0","table_index":15569,"register_natives":"0x001ACC20","static_inlined":true},
@@ -3934,7 +3934,7 @@
   {"kind":"struct","name":"MovieSceneVisibilitySectionTemplate","package":"/Script/MovieSceneTracks","static_struct":"0x01B51D50","compiled_in_defer":"0x001AEF90","table_index":15787,"register_natives":"0x001ADDC0","static_inlined":true},
   {"kind":"class","name":"UMovieSceneVisibilityTrack","package":"/Script/MovieSceneTracks","constructor":"0x01B529C0","static_class":"0x01B504C0","compiled_in_defer":"0x001AFF00","table_index":15790,"auto_initialize":"0x001ACB10","sizeof":224,"crc":2698802065}
  ]},
-{"index":90,"marker_unit":171,"table_range":[15867,15918],"package":"/Script/UMG","items":[
+{"index":90,"marker_unit":171,"table_range":[15867,15918],"package":"/Script/UMG","vector_constants":["FloatOne"],"items":[
   {"kind":"delegate","name":"DownloadImageDelegate__DelegateSignature","package":"/Script/UMG","constructor":"0x01BE6430"},
   {"kind":"class","name":"UAsyncTaskDownloadImage","package":"/Script/UMG","constructor":"0x01BE5EE0","static_class":"0x01BE5F10","compiled_in_defer":"0x001B2160","table_index":15867,"auto_initialize":"0x001B1C00","sizeof":72,"crc":2513780610},
   {"kind":"class","name":"UBackgroundBlur","package":"/Script/UMG","constructor":"0x01BE5F20","static_class":"0x01BE41E0","compiled_in_defer":"0x001B21A0","table_index":15869,"auto_initialize":"0x001B1C20","sizeof":448,"crc":1273417273},
@@ -3968,7 +3968,7 @@
   {"kind":"class","name":"UEditableText","package":"/Script/UMG","constructor":"0x01BE62B0","static_class":"0x01BE41C0","compiled_in_defer":"0x001B2620","table_index":15915,"auto_initialize":"0x001B1E60","sizeof":1072,"crc":3746662237},
   {"kind":"class","name":"UEditableTextBox","package":"/Script/UMG","constructor":"0x01BE62E0","static_class":"0x01BE41B0","compiled_in_defer":"0x001B2660","table_index":15917,"auto_initialize":"0x001B1E80","sizeof":2408,"crc":3168398233}
  ]},
-{"index":91,"marker_unit":172,"table_range":[15921,16047],"package":"/Script/UMG","items":[
+{"index":91,"marker_unit":172,"table_range":[15921,16047],"package":"/Script/UMG","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OnExpandableAreaExpansionChanged__DelegateSignature","package":"/Script/UMG","constructor":"0x01BEDA50"},
   {"kind":"class","name":"UExpandableArea","package":"/Script/UMG","constructor":"0x01BED360","static_class":"0x01BECD30","compiled_in_defer":"0x001B2D90","table_index":15921,"auto_initialize":"0x001B26A0","sizeof":768,"crc":480141811},
   {"kind":"class","name":"UFloatBinding","package":"/Script/UMG","constructor":"0x01BED390","static_class":"0x01BECD40","compiled_in_defer":"0x001B2DD0","table_index":15923,"auto_initialize":"0x001B26C0","sizeof":72,"crc":1611907968},
@@ -4043,7 +4043,7 @@
   {"kind":"class","name":"UTextLayoutWidget","package":"/Script/UMG","constructor":"0x01BF3230","static_class":"0x01BF1140","compiled_in_defer":"0x001B4150","table_index":16044,"auto_initialize":"0x001B37F0","sizeof":296,"crc":3190741538},
   {"kind":"class","name":"UThrobber","package":"/Script/UMG","constructor":"0x01BF3260","static_class":"0x01BF1180","compiled_in_defer":"0x001B4190","table_index":16046,"auto_initialize":"0x001B3810","sizeof":408,"crc":4138950233}
  ]},
-{"index":92,"marker_unit":173,"table_range":[16050,16052],"package":"/Script/UMG","items":[
+{"index":92,"marker_unit":173,"table_range":[16050,16052],"package":"/Script/UMG","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UTileView","package":"/Script/UMG","constructor":"0x01BFB100","static_class":"0x01BF7720","compiled_in_defer":"0x001B4A00","table_index":16050,"auto_initialize":"0x001B41D0","sizeof":320,"crc":3298561936}
  ]},
 {"index":93,"marker_unit":173,"table_range":[16052,16114],"package":"/Script/UMG","split":"init.gen.cpp opens a unity file","package_init_before":0,"items":[
@@ -4064,7 +4064,7 @@
   {"kind":"enum","name":"EWidgetDesignFlags","package":"/Script/UMG","static_enum":"0x01BF7A10","compiled_in_defer":"0x001B4910","table_index":16111,"static_inlined":true},
   {"kind":"class","name":"UWidget","package":"/Script/UMG","constructor":"0x01BFB310","static_class":"0x01BF7730","compiled_in_defer":"0x001B4C80","table_index":16113,"auto_initialize":"0x001B4310","sizeof":256,"crc":4287492281}
  ]},
-{"index":94,"marker_unit":174,"table_range":[16120,16163],"package":"/Script/UMG","items":[
+{"index":94,"marker_unit":174,"table_range":[16120,16163],"package":"/Script/UMG","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"delegate","name":"OnWidgetAnimationPlaybackStatusChanged__DelegateSignature","package":"/Script/UMG","constructor":"0x01C00EE0"},
   {"kind":"class","name":"UWidgetAnimation","package":"/Script/UMG","constructor":"0x01C00D00","static_class":"0x01C00A70","compiled_in_defer":"0x001B5220","table_index":16120,"auto_initialize":"0x001B4CC0","sizeof":992,"crc":1563225803},
   {"kind":"struct","name":"WidgetAnimationBinding","package":"/Script/UMG","static_struct":"0x01C00C40","compiled_in_defer":"0x001B5180","table_index":16121,"register_natives":"0x001B4E50","static_inlined":false},
@@ -4094,7 +4094,7 @@
   {"kind":"class","name":"UWrapBox","package":"/Script/UMG","constructor":"0x01C07DB0","static_class":"0x01C074E0","compiled_in_defer":"0x001B56F0","table_index":16160,"auto_initialize":"0x001B54C0","sizeof":312,"crc":3201636160},
   {"kind":"class","name":"UWrapBoxSlot","package":"/Script/UMG","constructor":"0x01C07DE0","static_class":"0x01C07E10","compiled_in_defer":"0x001B5730","table_index":16162,"auto_initialize":"0x001B54E0","sizeof":96,"crc":1644682243}
  ]},
-{"index":95,"marker_unit":175,"table_range":[16173,16176],"package":"/Script/CinematicCamera","items":[
+{"index":95,"marker_unit":175,"table_range":[16173,16176],"package":"/Script/CinematicCamera","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"class","name":"ACameraRig_Crane","package":"/Script/CinematicCamera","constructor":"0x01C0AFD0","static_class":"0x01C0A460","compiled_in_defer":"0x001B5DC0","table_index":16173,"auto_initialize":"0x001B5800","sizeof":840,"crc":4055710939},
   {"kind":"class","name":"ACameraRig_Rail","package":"/Script/CinematicCamera","constructor":"0x01C0B000","static_class":"0x01C0ABD0","compiled_in_defer":"0x001B5E00","table_index":16175,"auto_initialize":"0x001B5820","sizeof":824,"crc":966641710}
  ]},
@@ -4142,7 +4142,7 @@
   {"kind":"class","name":"UGeneralProjectSettings","package":"/Script/EngineSettings","constructor":"0x01C848D0","static_class":"0x01C846C0","compiled_in_defer":"0x001B6E30","table_index":16254,"auto_initialize":"0x001B6AB0","sizeof":272,"crc":96442606},
   {"kind":"class","name":"UHudSettings","package":"/Script/EngineSettings","constructor":"0x01C84900","static_class":"0x01C846D0","compiled_in_defer":"0x001B6E70","table_index":16256,"auto_initialize":"0x001B6AD0","sizeof":64,"crc":2885798714}
  ]},
-{"index":100,"marker_unit":176,"table_range":[16275,16278],"package":"/Script/GameplayTags","items":[
+{"index":100,"marker_unit":176,"table_range":[16275,16278],"package":"/Script/GameplayTags","vector_constants":["FloatOne","FloatMinusOne","DEG_TO_RAD","SignBit","SignMask","Pi","TwoPi","PiByTwo","OneOverTwoPi"],"items":[
   {"kind":"class","name":"UBlueprintGameplayTagLibrary","package":"/Script/GameplayTags","constructor":"0x01C936F0","static_class":"0x01C91C80","compiled_in_defer":"0x001B7A60","table_index":16275,"auto_initialize":"0x001B7080","sizeof":40,"crc":361980890},
   {"kind":"class","name":"UGameplayTagAssetInterface","package":"/Script/GameplayTags","constructor":"0x01C938A0","static_class":"0x01C938D0","compiled_in_defer":"0x001B7CA0","table_index":16277,"auto_initialize":"0x001B71A0","sizeof":40,"crc":2370529641}
  ]},
@@ -4190,7 +4190,7 @@
   {"kind":"enum","name":"EGameplayTaskRunResult","package":"/Script/GameplayTasks","static_enum":"0x01C9A290","compiled_in_defer":"0x001B7F90","table_index":16346,"static_inlined":true},
   {"kind":"class","name":"UGameplayTasksComponent","package":"/Script/GameplayTasks","constructor":"0x01C9AC70","static_class":"0x01C9A0E0","compiled_in_defer":"0x001B8290","table_index":16348,"auto_initialize":"0x001B7F10","sizeof":368,"crc":3369528300}
  ]},
-{"index":103,"marker_unit":179,"table_range":[16416,16744],"package":"/Script/AIModule","items":[
+{"index":103,"marker_unit":179,"table_range":[16416,16744],"package":"/Script/AIModule","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OAISimpleDelegate__DelegateSignature","package":"/Script/AIModule","constructor":"0x01D1C010"},
   {"kind":"class","name":"UAIAsyncTaskBlueprintProxy","package":"/Script/AIModule","constructor":"0x01D1BAA0","static_class":"0x01D1BAD0","compiled_in_defer":"0x001B9DF0","table_index":16416,"auto_initialize":"0x001B8EB0","sizeof":104,"crc":4031108827},
   {"kind":"class","name":"UAIBlueprintHelperLibrary","package":"/Script/AIModule","constructor":"0x01D1BAE0","static_class":"0x01D1B050","compiled_in_defer":"0x001B9E30","table_index":16418,"auto_initialize":"0x001B8ED0","sizeof":40,"crc":3546732508},
@@ -4353,7 +4353,7 @@
   {"kind":"struct","name":"CrowdAvoidanceConfig","package":"/Script/AIModule","static_struct":"0x01D28850","compiled_in_defer":"0x001BC8C0","table_index":16740,"register_natives":"0x001BC760","static_inlined":false},
   {"kind":"class","name":"UCrowdManager","package":"/Script/AIModule","constructor":"0x01D29100","static_class":"0x00FCAF70","compiled_in_defer":"0x001BD3E0","table_index":16743,"auto_initialize":"0x001BC540","sizeof":240,"crc":2934629959}
  ]},
-{"index":104,"marker_unit":180,"table_range":[16751,16931],"package":"/Script/AIModule","items":[
+{"index":104,"marker_unit":180,"table_range":[16751,16931],"package":"/Script/AIModule","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"ADetourCrowdAIController","package":"/Script/AIModule","constructor":"0x01D2F4B0","static_class":"0x01D2EF60","compiled_in_defer":"0x001BE8E0","table_index":16751,"auto_initialize":"0x001BD420","sizeof":1040,"crc":1454644031},
   {"kind":"class","name":"UEnvQuery","package":"/Script/AIModule","constructor":"0x01D2F580","static_class":"0x01D2EF80","compiled_in_defer":"0x001BE9E0","table_index":16754,"auto_initialize":"0x001BD4A0","sizeof":72,"crc":2139593194},
   {"kind":"class","name":"UEnvQueryContext","package":"/Script/AIModule","constructor":"0x01D2F5B0","static_class":"0x01092C10","compiled_in_defer":"0x001BEA20","table_index":16756,"auto_initialize":"0x001BD4C0","sizeof":40,"crc":4175768267},
@@ -4490,7 +4490,7 @@
   {"kind":"struct","name":"JsonObjectWrapper","package":"/Script/JsonUtilities","static_struct":"0x01D45CC0","compiled_in_defer":"0x001C0A90","table_index":16991,"register_natives":"0x001C0A30","static_inlined":true},
   {"kind":"class","name":"UJsonUtilitiesDummyObject","package":"/Script/JsonUtilities","constructor":"0x01D45D40","static_class":"0x01D459E0","compiled_in_defer":"0x001C0AE0","table_index":16994,"auto_initialize":"0x001C0A10","sizeof":40,"crc":2844260287}
  ]},
-{"index":112,"marker_unit":182,"table_range":[17004,17007],"package":"/Script/LevelSequence","items":[
+{"index":112,"marker_unit":182,"table_range":[17004,17007],"package":"/Script/LevelSequence","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UDefaultLevelSequenceInstanceData","package":"/Script/LevelSequence","constructor":"0x01D4ED80","static_class":"0x01D4C930","compiled_in_defer":"0x001C13F0","table_index":17004,"auto_initialize":"0x001C0C50","sizeof":112,"crc":3565782509},
   {"kind":"class","name":"ULevelSequence","package":"/Script/LevelSequence","constructor":"0x01D4EDB0","static_class":"0x01D4E810","compiled_in_defer":"0x001C1430","table_index":17006,"auto_initialize":"0x001C0C70","sizeof":1184,"crc":3650259938}
  ]},
@@ -4511,7 +4511,7 @@
   {"kind":"struct","name":"LevelSequenceSnapshotSettings","package":"/Script/LevelSequence","static_struct":"0x01D4ECC0","compiled_in_defer":"0x001C1360","table_index":17033,"register_natives":"0x001C1060","static_inlined":true},
   {"kind":"class","name":"ULevelSequencePlayer","package":"/Script/LevelSequence","constructor":"0x01D4EE70","static_class":"0x01D4C960","compiled_in_defer":"0x001C1530","table_index":17036,"auto_initialize":"0x001C0CF0","sizeof":2208,"crc":1571229513}
  ]},
-{"index":114,"marker_unit":184,"table_range":[17045,17046],"package":"/Script/MovieSceneCapture","items":[
+{"index":114,"marker_unit":184,"table_range":[17045,17046],"package":"/Script/MovieSceneCapture","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UAutomatedLevelSequenceCapture","package":"/Script/MovieSceneCapture","constructor":"0x01D5A2A0","static_class":"0x01D59FF0","compiled_in_defer":"0x001C1A90","table_index":17045,"auto_initialize":"0x001C15F0","sizeof":576,"crc":3972233076}
  ]},
 {"index":115,"marker_unit":184,"table_range":[17046,17075],"package":"/Script/MovieSceneCapture","split":"init.gen.cpp opens a unity file","package_init_before":0,"items":[
@@ -4531,19 +4531,19 @@
   {"kind":"struct","name":"CaptureResolution","package":"/Script/MovieSceneCapture","static_struct":"0x01D5A120","compiled_in_defer":"0x001C19A0","table_index":17071,"register_natives":"0x001C17C0","static_inlined":true},
   {"kind":"class","name":"UVideoCaptureSettings","package":"/Script/MovieSceneCapture","constructor":"0x01D5A490","static_class":"0x01D5A060","compiled_in_defer":"0x001C1D10","table_index":17074,"auto_initialize":"0x001C1730","sizeof":72,"crc":1756865115}
  ]},
-{"index":116,"marker_unit":185,"table_range":[17085,17091],"package":"/Script/MRMesh","package_init_before":0,"items":[
+{"index":116,"marker_unit":185,"table_range":[17085,17091],"package":"/Script/MRMesh","package_init_before":0,"vector_constants":["FloatOne","FloatOneHundredth","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"MRMeshConfiguration","package":"/Script/MRMesh","static_struct":"0x01D5ED20","compiled_in_defer":"0x001C1ED0","table_index":17085,"register_natives":"0x001C1E50","static_inlined":true},
   {"kind":"class","name":"UMeshReconstructorBase","package":"/Script/MRMesh","constructor":"0x01D5EDE0","static_class":"0x01D5ECB0","compiled_in_defer":"0x001C1F60","table_index":17088,"auto_initialize":"0x001C1E10","sizeof":40,"crc":2435645244},
   {"kind":"class","name":"UMRMeshComponent","package":"/Script/MRMesh","constructor":"0x01D5EDA0","static_class":"0x01D5EDD0","compiled_in_defer":"0x001C1F20","table_index":17090,"auto_initialize":"0x001C1DF0","sizeof":1712,"crc":1139476300}
  ]},
-{"index":117,"marker_unit":186,"table_range":[17097,17100],"package":"/Script/MoviePlayer","package_init_before":0,"items":[
+{"index":117,"marker_unit":186,"table_range":[17097,17100],"package":"/Script/MoviePlayer","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"EMoviePlaybackType","package":"/Script/MoviePlayer","static_enum":"0x01D658E0","compiled_in_defer":"0x001C2060","table_index":17097,"static_inlined":true},
   {"kind":"class","name":"UMoviePlayerSettings","package":"/Script/MoviePlayer","constructor":"0x01D659F0","static_class":"0x01D659E0","compiled_in_defer":"0x001C20B0","table_index":17099,"auto_initialize":"0x001C2040","sizeof":64,"crc":2896668429}
  ]},
-{"index":118,"marker_unit":211,"table_range":[18148,18149],"package":"/Script/Engine","items":[
+{"index":118,"marker_unit":211,"table_range":[18148,18149],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"UModel","package":"/Script/Engine","constructor":"0x0211BBF0","static_class":"0x020FC2F0","compiled_in_defer":"0x001D38A0","table_index":18148}
  ]},
-{"index":119,"marker_unit":227,"table_range":[18960,18985],"package":"/Script/Engine","items":[
+{"index":119,"marker_unit":227,"table_range":[18960,18985],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"ActorEndPlaySignature__DelegateSignature","package":"/Script/Engine","constructor":"0x023BDE40"},
   {"kind":"delegate","name":"ActorDestroyedSignature__DelegateSignature","package":"/Script/Engine","constructor":"0x023BDDB0"},
   {"kind":"delegate","name":"ActorEndTouchOverSignature__DelegateSignature","package":"/Script/Engine","constructor":"0x023BDE70"},
@@ -4562,7 +4562,7 @@
   {"kind":"class","name":"AAbstractNavData","package":"/Script/Engine","constructor":"0x023BDCC0","static_class":"0x023BCD90","compiled_in_defer":"0x001EBEC0","table_index":18960,"auto_initialize":"0x001EBB90","sizeof":1216,"crc":342933951},
   {"kind":"class","name":"AActor","package":"/Script/Engine","constructor":"0x023BDCF0","static_class":"0x0032DF30","compiled_in_defer":"0x001EBF00","table_index":18984,"auto_initialize":"0x001EBBB0","sizeof":792,"crc":1269707568}
  ]},
-{"index":120,"marker_unit":228,"table_range":[18988,19098],"package":"/Script/Engine","items":[
+{"index":120,"marker_unit":228,"table_range":[18988,19098],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UActorChannel","package":"/Script/Engine","constructor":"0x023C8580","static_class":"0x023C3C50","compiled_in_defer":"0x001ED940","table_index":18988,"auto_initialize":"0x001EBF80","sizeof":560,"crc":960170193},
   {"kind":"delegate","name":"ActorComponentDeactivateSignature__DelegateSignature","package":"/Script/Engine","constructor":"0x023C89A0"},
   {"kind":"delegate","name":"ActorComponentActivatedSignature__DelegateSignature","package":"/Script/Engine","constructor":"0x023C8970"},
@@ -4623,7 +4623,7 @@
   {"kind":"struct","name":"AnimCurveBase","package":"/Script/Engine","static_struct":"0x023C7AA0","compiled_in_defer":"0x001ED000","table_index":19095,"register_natives":"0x001EC330","static_inlined":false},
   {"kind":"struct","name":"AnimCurveParam","package":"/Script/Engine","static_struct":"0x023C7B00","compiled_in_defer":"0x001ED050","table_index":19097,"register_natives":"0x001EC390","static_inlined":false}
  ]},
-{"index":121,"marker_unit":229,"table_range":[19103,19185],"package":"/Script/Engine","items":[
+{"index":121,"marker_unit":229,"table_range":[19103,19185],"package":"/Script/Engine","vector_constants":["FloatOne","FloatOneHundredth","XYZMask","SignMask"],"items":[
   {"kind":"delegate","name":"PlayMontageAnimNotifyDelegate__DelegateSignature","package":"/Script/Engine","constructor":"0x023CE630"},
   {"kind":"delegate","name":"OnMontageBlendingOutStartedMCDelegate__DelegateSignature","package":"/Script/Engine","constructor":"0x023CE5A0"},
   {"kind":"delegate","name":"OnAllMontageInstancesEndedMCDelegate__DelegateSignature","package":"/Script/Engine","constructor":"0x023CE570"},
@@ -4677,7 +4677,7 @@
   {"kind":"struct","name":"PoseLink","package":"/Script/Engine","static_struct":"0x023CE300","compiled_in_defer":"0x001EF690","table_index":19182,"register_natives":"0x001EE830","static_inlined":false},
   {"kind":"struct","name":"PoseLinkBase","package":"/Script/Engine","static_struct":"0x023CE360","compiled_in_defer":"0x001EF6E0","table_index":19184,"register_natives":"0x001EE890","static_inlined":false}
  ]},
-{"index":122,"marker_unit":230,"table_range":[19195,19488],"package":"/Script/Engine","items":[
+{"index":122,"marker_unit":230,"table_range":[19195,19488],"package":"/Script/Engine","vector_constants":["FloatOne","FloatOneHundredth","QMULTI_SIGN_MASK0","QMULTI_SIGN_MASK1","QMULTI_SIGN_MASK2","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"AnimNode_ConvertLocalToComponentSpace","package":"/Script/Engine","static_struct":"0x023D58E0","compiled_in_defer":"0x001F0CE0","table_index":19195,"register_natives":"0x001EFC60","static_inlined":false},
   {"kind":"struct","name":"AnimNode_ConvertComponentToLocalSpace","package":"/Script/Engine","static_struct":"0x023D5880","compiled_in_defer":"0x001F0C90","table_index":19197,"register_natives":"0x001EFC00","static_inlined":false},
   {"kind":"struct","name":"BranchingPointNotifyPayload","package":"/Script/Engine","static_struct":"0x023D5FA0","compiled_in_defer":"0x001F1280","table_index":19199,"register_natives":"0x001F0320","static_inlined":false},
@@ -4845,7 +4845,7 @@
   {"kind":"class","name":"UBlueprintPlatformLibrary","package":"/Script/Engine","constructor":"0x023E3800","static_class":"0x023E2C10","compiled_in_defer":"0x001F4A30","table_index":19485,"auto_initialize":"0x001F34D0","sizeof":40,"crc":122748162},
   {"kind":"class","name":"UBlueprintSetLibrary","package":"/Script/Engine","constructor":"0x023E3830","static_class":"0x023E2C20","compiled_in_defer":"0x001F4A70","table_index":19487,"auto_initialize":"0x001F34F0","sizeof":40,"crc":3804973361}
  ]},
-{"index":123,"marker_unit":231,"table_range":[19493,19587],"package":"/Script/Engine","items":[
+{"index":123,"marker_unit":231,"table_range":[19493,19587],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EDynamicActorScene","package":"/Script/Engine","static_enum":"0x023E86B0","compiled_in_defer":"0x001F5800","table_index":19493,"static_inlined":false},
   {"kind":"enum","name":"EDOFMode","package":"/Script/Engine","static_enum":"0x023E8670","compiled_in_defer":"0x001F57B0","table_index":19494,"static_inlined":false},
   {"kind":"struct","name":"BodyInstance","package":"/Script/Engine","static_struct":"0x023E9FD0","compiled_in_defer":"0x001F58F0","table_index":19495,"register_natives":"0x001F4E80","static_inlined":false},
@@ -4897,7 +4897,7 @@
   {"kind":"enum","name":"ECameraProjectionMode","package":"/Script/Engine","static_enum":"0x023E85B0","compiled_in_defer":"0x001F56C0","table_index":19585,"static_inlined":false},
   {"kind":"struct","name":"MinimalViewInfo","package":"/Script/Engine","static_struct":"0x023EA570","compiled_in_defer":"0x001F5DA0","table_index":19586,"register_natives":"0x001F5420","static_inlined":false}
  ]},
-{"index":124,"marker_unit":232,"table_range":[19593,19835],"package":"/Script/Engine","items":[
+{"index":124,"marker_unit":232,"table_range":[19593,19835],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"CanvasIcon","package":"/Script/Engine","static_struct":"0x023EDD90","compiled_in_defer":"0x001F6B70","table_index":19593,"register_natives":"0x001F6840","static_inlined":false},
   {"kind":"class","name":"UCanvas","package":"/Script/Engine","constructor":"0x023EE070","static_class":"0x023EE0D0","compiled_in_defer":"0x001F6DE0","table_index":19596,"auto_initialize":"0x001F63F0","sizeof":720,"crc":562754117},
   {"kind":"delegate","name":"OnCanvasRenderTargetUpdate__DelegateSignature","package":"/Script/Engine","constructor":"0x023EE240"},
@@ -5009,7 +5009,7 @@
   {"kind":"class","name":"UDistributionFloat","package":"/Script/Engine","constructor":"0x023FE9A0","static_class":"0x023FA880","compiled_in_defer":"0x001F9BC0","table_index":19832,"auto_initialize":"0x001F8600","sizeof":56,"crc":553916352},
   {"kind":"class","name":"UDistributionFloatConstant","package":"/Script/Engine","constructor":"0x023FE9D0","static_class":"0x023FA8C0","compiled_in_defer":"0x001F9C00","table_index":19834,"auto_initialize":"0x001F8620","sizeof":64,"crc":1564049696}
  ]},
-{"index":125,"marker_unit":233,"table_range":[19841,19947],"package":"/Script/Engine","items":[
+{"index":125,"marker_unit":233,"table_range":[19841,19947],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UDistributionFloatConstantCurve","package":"/Script/Engine","constructor":"0x02404DE0","static_class":"0x02400EF0","compiled_in_defer":"0x001FB3B0","table_index":19841,"auto_initialize":"0x001F9D00","sizeof":80,"crc":2067989009},
   {"kind":"class","name":"UDistributionFloatParameterBase","package":"/Script/Engine","constructor":"0x02404E10","static_class":"0x02404390","compiled_in_defer":"0x001FB3F0","table_index":19843,"auto_initialize":"0x001F9D20","sizeof":96,"crc":3334715683},
   {"kind":"class","name":"UDistributionFloatParticleParameter","package":"/Script/Engine","constructor":"0x02404E40","static_class":"0x02400EB0","compiled_in_defer":"0x001FB430","table_index":19845,"auto_initialize":"0x001F9D40","sizeof":96,"crc":3387592599},
@@ -5200,7 +5200,7 @@
   {"kind":"struct","name":"LightingChannels","package":"/Script/Engine","static_struct":"0x0240B160","compiled_in_defer":"0x001FE810","table_index":20120,"register_natives":"0x001FC190","static_inlined":true},
   {"kind":"class","name":"UEngineTypes","package":"/Script/Engine","constructor":"0x0240C170","static_class":"0x0240A6D0","compiled_in_defer":"0x001FF280","table_index":20123,"auto_initialize":"0x001FB990","sizeof":40,"crc":2480876412}
  ]},
-{"index":127,"marker_unit":234,"table_range":[20129,20197],"package":"/Script/Engine","items":[
+{"index":127,"marker_unit":234,"table_range":[20129,20197],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"class","name":"AExponentialHeightFog","package":"/Script/Engine","constructor":"0x0240FC40","static_class":"0x0240D820","compiled_in_defer":"0x001FFC70","table_index":20129,"auto_initialize":"0x001FF2C0","sizeof":808,"crc":1734555960},
   {"kind":"class","name":"UExponentialHeightFogComponent","package":"/Script/Engine","constructor":"0x0240FD00","static_class":"0x0240F8B0","compiled_in_defer":"0x001FFD70","table_index":20131,"auto_initialize":"0x001FF340","sizeof":800,"crc":1152405385},
   {"kind":"class","name":"UExporter","package":"/Script/Engine","constructor":"0x0240FD30","static_class":"0x0240F8C0","compiled_in_defer":"0x001FFDB0","table_index":20133,"auto_initialize":"0x001FF360","sizeof":104,"crc":51380675},
@@ -5227,7 +5227,7 @@
   {"kind":"class","name":"AGameNetworkManager","package":"/Script/Engine","constructor":"0x0240FCD0","static_class":"0x0240D870","compiled_in_defer":"0x001FFD30","table_index":20194,"auto_initialize":"0x001FF320","sizeof":928,"crc":103365607},
   {"kind":"class","name":"UGameplayStatics","package":"/Script/Engine","constructor":"0x0240FF10","static_class":"0x0240F900","compiled_in_defer":"0x00200030","table_index":20196,"auto_initialize":"0x001FF4A0","sizeof":40,"crc":215077746}
  ]},
-{"index":128,"marker_unit":235,"table_range":[20202,20248],"package":"/Script/Engine","items":[
+{"index":128,"marker_unit":235,"table_range":[20202,20248],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"ESuggestProjVelocityTraceOption","package":"/Script/Engine","static_enum":"0x0241DF80","compiled_in_defer":"0x002005A0","table_index":20202,"static_inlined":false},
   {"kind":"struct","name":"PredictProjectilePathResult","package":"/Script/Engine","static_struct":"0x0241EF80","compiled_in_defer":"0x002007D0","table_index":20203,"register_natives":"0x00200500","static_inlined":false},
   {"kind":"struct","name":"PredictProjectilePathPointData","package":"/Script/Engine","static_struct":"0x0241EF20","compiled_in_defer":"0x00200780","table_index":20205,"register_natives":"0x002004A0","static_inlined":false},
@@ -5250,7 +5250,7 @@
   {"kind":"class","name":"UHierarchicalInstancedStaticMeshComponent","package":"/Script/Engine","constructor":"0x0241F200","static_class":"0x0241D8D0","compiled_in_defer":"0x00200AE0","table_index":20237,"auto_initialize":"0x002001D0","sizeof":2256,"crc":2201272985},
   {"kind":"class","name":"AHUD","package":"/Script/Engine","constructor":"0x0241F0A0","static_class":"0x0241D8C0","compiled_in_defer":"0x00200920","table_index":20247,"auto_initialize":"0x002000F0","sizeof":1032,"crc":1175314171}
  ]},
-{"index":129,"marker_unit":236,"table_range":[20254,20497],"package":"/Script/Engine","items":[
+{"index":129,"marker_unit":236,"table_range":[20254,20497],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UAmbisonicsSubmixSettingsBase","package":"/Script/Engine","constructor":"0x02427D70","static_class":"0x02424290","compiled_in_defer":"0x00201E00","table_index":20254,"auto_initialize":"0x00200B40","sizeof":40,"crc":2956864976},
   {"kind":"class","name":"USpatializationPluginSourceSettingsBase","package":"/Script/Engine","constructor":"0x024282A0","static_class":"0x024282D0","compiled_in_defer":"0x00202480","table_index":20256,"auto_initialize":"0x00200E80","sizeof":40,"crc":365369325},
   {"kind":"class","name":"UOcclusionPluginSourceSettingsBase","package":"/Script/Engine","constructor":"0x02428230","static_class":"0x02428260","compiled_in_defer":"0x00202400","table_index":20258,"auto_initialize":"0x00200E40","sizeof":40,"crc":802301967},
@@ -5386,7 +5386,7 @@
   {"kind":"struct","name":"VisibilityTrackKey","package":"/Script/Engine","static_struct":"0x0242F3E0","compiled_in_defer":"0x00203720","table_index":20493,"register_natives":"0x00203080","static_inlined":false},
   {"kind":"class","name":"UInterpTrackVisibility","package":"/Script/Engine","constructor":"0x0242FE90","static_class":"0x0242EEC0","compiled_in_defer":"0x002044F0","table_index":20496,"auto_initialize":"0x00202B80","sizeof":136,"crc":479602046}
  ]},
-{"index":130,"marker_unit":237,"table_range":[20512,20536],"package":"/Script/Engine","items":[
+{"index":130,"marker_unit":237,"table_range":[20512,20536],"package":"/Script/Engine","vector_constants":["FloatOne"],"items":[
   {"kind":"class","name":"UIntSerialization","package":"/Script/Engine","constructor":"0x024319A0","static_class":"0x024305C0","compiled_in_defer":"0x00204A70","table_index":20512,"auto_initialize":"0x00204550","sizeof":80,"crc":3015599297},
   {"kind":"struct","name":"KeyHandleMap","package":"/Script/Engine","static_struct":"0x024318B0","compiled_in_defer":"0x00204990","table_index":20513,"register_natives":"0x00204740","static_inlined":false},
   {"kind":"class","name":"AKillZVolume","package":"/Script/Engine","constructor":"0x02431970","static_class":"0x024316F0","compiled_in_defer":"0x00204A30","table_index":20516,"auto_initialize":"0x00204530","sizeof":864,"crc":2023036325},
@@ -5402,7 +5402,7 @@
   {"kind":"struct","name":"FloatSpringState","package":"/Script/Engine","static_struct":"0x02431850","compiled_in_defer":"0x00204940","table_index":20532,"register_natives":"0x002046E0","static_inlined":false},
   {"kind":"class","name":"UKismetMathLibrary","package":"/Script/Engine","constructor":"0x02431AC0","static_class":"0x02431720","compiled_in_defer":"0x00204BF0","table_index":20535,"auto_initialize":"0x00204610","sizeof":40,"crc":2084783982}
  ]},
-{"index":131,"marker_unit":238,"table_range":[20539,20555],"package":"/Script/Engine","items":[
+{"index":131,"marker_unit":238,"table_range":[20539,20555],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UKismetNodeHelperLibrary","package":"/Script/Engine","constructor":"0x02452C50","static_class":"0x02452A60","compiled_in_defer":"0x00204F50","table_index":20539,"auto_initialize":"0x00204C30","sizeof":40,"crc":1417984408},
   {"kind":"struct","name":"DrawToRenderTargetContext","package":"/Script/Engine","static_struct":"0x02452B90","compiled_in_defer":"0x00204EB0","table_index":20540,"register_natives":"0x00204CE0","static_inlined":false},
   {"kind":"class","name":"UKismetRenderingLibrary","package":"/Script/Engine","constructor":"0x02452C80","static_class":"0x02452A70","compiled_in_defer":"0x00204F90","table_index":20543,"auto_initialize":"0x00204C50","sizeof":40,"crc":3004934341},
@@ -5414,7 +5414,7 @@
   {"kind":"struct","name":"GenericStruct","package":"/Script/Engine","static_struct":"0x02452BF0","compiled_in_defer":"0x00204F00","table_index":20551,"register_natives":"0x00204D40","static_inlined":false},
   {"kind":"class","name":"UKismetSystemLibrary","package":"/Script/Engine","constructor":"0x02452D10","static_class":"0x02452590","compiled_in_defer":"0x00205050","table_index":20554,"auto_initialize":"0x00204CB0","sizeof":40,"crc":3670864701}
  ]},
-{"index":132,"marker_unit":239,"table_range":[20559,21191],"package":"/Script/Engine","items":[
+{"index":132,"marker_unit":239,"table_range":[20559,21191],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EFormatArgumentType","package":"/Script/Engine","static_enum":"0x0246EE90","compiled_in_defer":"0x00205580","table_index":20559,"static_inlined":false},
   {"kind":"enum","name":"ETextGender","package":"/Script/Engine","static_enum":"0x0246EF50","compiled_in_defer":"0x00205670","table_index":20560,"static_inlined":false},
   {"kind":"enum","name":"ERoundingMode","package":"/Script/Engine","static_enum":"0x0246EED0","compiled_in_defer":"0x002055D0","table_index":20561,"static_inlined":false},
@@ -5753,7 +5753,7 @@
   {"kind":"class","name":"ANavigationObjectBase","package":"/Script/Engine","constructor":"0x0248B4C0","static_class":"0x0248B4F0","compiled_in_defer":"0x0020D5B0","table_index":21188,"auto_initialize":"0x0020C570","sizeof":832,"crc":3410679335},
   {"kind":"class","name":"UNavigationPath","package":"/Script/Engine","constructor":"0x0248B8C0","static_class":"0x02488680","compiled_in_defer":"0x0020DAB0","table_index":21190,"auto_initialize":"0x0020C7F0","sizeof":192,"crc":2448220386}
  ]},
-{"index":133,"marker_unit":240,"table_range":[21197,21513],"package":"/Script/Engine","items":[
+{"index":133,"marker_unit":240,"table_range":[21197,21513],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UNavigationPathGenerator","package":"/Script/Engine","constructor":"0x0248FB20","static_class":"0x0248F2D0","compiled_in_defer":"0x0020EBD0","table_index":21197,"auto_initialize":"0x0020DD50","sizeof":40,"crc":4266280676},
   {"kind":"struct","name":"NavigationFilterFlags","package":"/Script/Engine","static_struct":"0x0248F5F0","compiled_in_defer":"0x0020E5D0","table_index":21198,"register_natives":"0x0020E000","static_inlined":false},
   {"kind":"struct","name":"NavigationFilterArea","package":"/Script/Engine","static_struct":"0x0248F590","compiled_in_defer":"0x0020E580","table_index":21200,"register_natives":"0x0020DFA0","static_inlined":false},
@@ -5933,7 +5933,7 @@
   {"kind":"enum","name":"EParticleUVFlipMode","package":"/Script/Engine","static_enum":"0x024972C0","compiled_in_defer":"0x002113D0","table_index":21510,"static_inlined":false},
   {"kind":"class","name":"UParticleModuleRequired","package":"/Script/Engine","constructor":"0x0249A7F0","static_class":"0x02499C30","compiled_in_defer":"0x002122E0","table_index":21512,"auto_initialize":"0x00210E70","sizeof":368,"crc":92596561}
  ]},
-{"index":134,"marker_unit":241,"table_range":[21516,21628],"package":"/Script/Engine","items":[
+{"index":134,"marker_unit":241,"table_range":[21516,21628],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UParticleModuleRotation","package":"/Script/Engine","constructor":"0x0249E380","static_class":"0x0249DF20","compiled_in_defer":"0x00213110","table_index":21516,"auto_initialize":"0x00212320","sizeof":104,"crc":4257489810},
   {"kind":"class","name":"UParticleModuleRotation_Seeded","package":"/Script/Engine","constructor":"0x0249E4D0","static_class":"0x0249DF50","compiled_in_defer":"0x002132D0","table_index":21518,"auto_initialize":"0x00212400","sizeof":136,"crc":1473029051},
   {"kind":"class","name":"UParticleModuleRotationBase","package":"/Script/Engine","constructor":"0x0249E3B0","static_class":"0x02499C40","compiled_in_defer":"0x00213150","table_index":21520,"auto_initialize":"0x00212340","sizeof":48,"crc":1425842850},
@@ -5997,7 +5997,7 @@
   {"kind":"struct","name":"ParticleSystemLOD","package":"/Script/Engine","static_struct":"0x0249E320","compiled_in_defer":"0x002130C0","table_index":21624,"register_natives":"0x00212AF0","static_inlined":false},
   {"kind":"class","name":"UParticleSystem","package":"/Script/Engine","constructor":"0x0249EBA0","static_class":"0x0249E0A0","compiled_in_defer":"0x00213BD0","table_index":21627,"auto_initialize":"0x00212880","sizeof":312,"crc":3323595516}
  ]},
-{"index":135,"marker_unit":242,"table_range":[21633,21682],"package":"/Script/Engine","items":[
+{"index":135,"marker_unit":242,"table_range":[21633,21682],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"delegate","name":"OnSystemFinished__DelegateSignature","package":"/Script/Engine","constructor":"0x024A0BA0"},
   {"kind":"enum","name":"EParticleEventType","package":"/Script/Engine","static_enum":"0x0249F4F0","compiled_in_defer":"0x00214180","table_index":21633,"static_inlined":false},
   {"kind":"enum","name":"ParticleReplayState","package":"/Script/Engine","static_enum":"0x024A00F0","compiled_in_defer":"0x00214220","table_index":21634,"static_inlined":false},
@@ -6025,7 +6025,7 @@
   {"kind":"class","name":"APhysicsConstraintActor","package":"/Script/Engine","constructor":"0x024A08D0","static_class":"0x024A0420","compiled_in_defer":"0x00214530","table_index":21679,"auto_initialize":"0x00213C30","sizeof":824,"crc":3045855660},
   {"kind":"class","name":"UPhysicsConstraintComponent","package":"/Script/Engine","constructor":"0x024A0B30","static_class":"0x024A0B60","compiled_in_defer":"0x002147F0","table_index":21681,"auto_initialize":"0x00213D90","sizeof":1232,"crc":1397978175}
  ]},
-{"index":136,"marker_unit":243,"table_range":[21686,21825],"package":"/Script/Engine","items":[
+{"index":136,"marker_unit":243,"table_range":[21686,21825],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"PhysicsConstraintProfileHandle","package":"/Script/Engine","static_struct":"0x024A9A50","compiled_in_defer":"0x00215B30","table_index":21686,"register_natives":"0x002155A0","static_inlined":false},
   {"kind":"class","name":"UPhysicsConstraintTemplate","package":"/Script/Engine","constructor":"0x024A9E30","static_class":"0x024A97A0","compiled_in_defer":"0x00215EE0","table_index":21689,"auto_initialize":"0x00214930","sizeof":832,"crc":2879027120},
   {"kind":"class","name":"UPhysicsHandleComponent","package":"/Script/Engine","constructor":"0x024A9E60","static_class":"0x024A6750","compiled_in_defer":"0x00215F20","table_index":21691,"auto_initialize":"0x00214950","sizeof":416,"crc":132082784},
@@ -6062,7 +6062,7 @@
   {"kind":"struct","name":"UpdateLevelStreamingLevelStatus","package":"/Script/Engine","static_struct":"0x024A9BD0","compiled_in_defer":"0x00215C70","table_index":21750,"register_natives":"0x00215720","static_inlined":false},
   {"kind":"class","name":"APlayerController","package":"/Script/Engine","constructor":"0x024A9E00","static_class":"0x0106A920","compiled_in_defer":"0x00215EA0","table_index":21824,"auto_initialize":"0x00214910","sizeof":1664,"crc":2849395747}
  ]},
-{"index":137,"marker_unit":244,"table_range":[21830,21899],"package":"/Script/Engine","items":[
+{"index":137,"marker_unit":244,"table_range":[21830,21899],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"InputAxisKeyMapping","package":"/Script/Engine","static_struct":"0x024B78D0","compiled_in_defer":"0x00216B60","table_index":21830,"register_natives":"0x00216570","static_inlined":false},
   {"kind":"struct","name":"InputActionKeyMapping","package":"/Script/Engine","static_struct":"0x024B7810","compiled_in_defer":"0x00216AC0","table_index":21832,"register_natives":"0x002164B0","static_inlined":false},
   {"kind":"struct","name":"InputAxisConfigEntry","package":"/Script/Engine","static_struct":"0x024B7870","compiled_in_defer":"0x00216B10","table_index":21834,"register_natives":"0x00216510","static_inlined":false},
@@ -6113,7 +6113,7 @@
   {"kind":"struct","name":"SpriteCategoryInfo","package":"/Script/Engine","static_struct":"0x024B7C90","compiled_in_defer":"0x00216E80","table_index":21895,"register_natives":"0x00216930","static_inlined":false},
   {"kind":"class","name":"UPrimitiveComponent","package":"/Script/Engine","constructor":"0x024B8060","static_class":"0x024B8090","compiled_in_defer":"0x00217350","table_index":21898,"auto_initialize":"0x00216420","sizeof":1632,"crc":4111089980}
  ]},
-{"index":138,"marker_unit":245,"table_range":[21904,22026],"package":"/Script/Engine","items":[
+{"index":138,"marker_unit":245,"table_range":[21904,22026],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UProjectileMovementComponent","package":"/Script/Engine","constructor":"0x024C2C10","static_class":"0x024C2430","compiled_in_defer":"0x002188C0","table_index":21904,"auto_initialize":"0x00217410","sizeof":416,"crc":3937442299},
   {"kind":"class","name":"UProxyLODMeshSimplificationSettings","package":"/Script/Engine","constructor":"0x024C2C40","static_class":"0x024C2440","compiled_in_defer":"0x00218900","table_index":21906,"auto_initialize":"0x00217430","sizeof":64,"crc":1963752469},
   {"kind":"class","name":"ARadialForceActor","package":"/Script/Engine","constructor":"0x024C2B40","static_class":"0x024C2420","compiled_in_defer":"0x002187C0","table_index":21908,"auto_initialize":"0x00217390","sizeof":800,"crc":3418971873},
@@ -6190,7 +6190,7 @@
   {"kind":"struct","name":"ColorGradePerRangeSettings","package":"/Script/Engine","static_struct":"0x024C5340","compiled_in_defer":"0x002192A0","table_index":22022,"register_natives":"0x00218CA0","static_inlined":false},
   {"kind":"class","name":"UScene","package":"/Script/Engine","constructor":"0x024C57F0","static_class":"0x024C52D0","compiled_in_defer":"0x002196D0","table_index":22025,"auto_initialize":"0x00218C20","sizeof":40,"crc":2764750885}
  ]},
-{"index":139,"marker_unit":246,"table_range":[22032,22068],"package":"/Script/Engine","items":[
+{"index":139,"marker_unit":246,"table_range":[22032,22068],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"ASceneCapture","package":"/Script/Engine","constructor":"0x024C6CC0","static_class":"0x024C5BD0","compiled_in_defer":"0x00219C70","table_index":22032,"auto_initialize":"0x00219730","sizeof":800,"crc":1880158707},
   {"kind":"class","name":"ASceneCapture2D","package":"/Script/Engine","constructor":"0x024C6C90","static_class":"0x024C5B70","compiled_in_defer":"0x00219C30","table_index":22034,"auto_initialize":"0x00219710","sizeof":816,"crc":2014002011},
   {"kind":"enum","name":"ESceneCapturePrimitiveRenderMode","package":"/Script/Engine","static_enum":"0x024C5EC0","compiled_in_defer":"0x00219AF0","table_index":22035,"static_inlined":false},
@@ -6214,7 +6214,7 @@
   {"kind":"struct","name":"KShapeElem","package":"/Script/Engine","static_struct":"0x024C6C30","compiled_in_defer":"0x00219BE0","table_index":22064,"register_natives":"0x00219960","static_inlined":false},
   {"kind":"class","name":"USimpleConstructionScript","package":"/Script/Engine","constructor":"0x024C6F20","static_class":"0x024C5B50","compiled_in_defer":"0x00219F70","table_index":22067,"auto_initialize":"0x002198B0","sizeof":184,"crc":3035208253}
  ]},
-{"index":140,"marker_unit":247,"table_range":[22073,22192],"package":"/Script/Engine","items":[
+{"index":140,"marker_unit":247,"table_range":[22073,22192],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"struct","name":"SingleAnimationPlayData","package":"/Script/Engine","static_struct":"0x024CC770","compiled_in_defer":"0x0021A670","table_index":22073,"register_natives":"0x0021A1C0","static_inlined":false},
   {"kind":"struct","name":"SkeletalMaterial","package":"/Script/Engine","static_struct":"0x024CC7D0","compiled_in_defer":"0x0021A6C0","table_index":22075,"register_natives":"0x0021A220","static_inlined":false},
   {"kind":"struct","name":"ClothingAssetData_Legacy","package":"/Script/Engine","static_struct":"0x024CC710","compiled_in_defer":"0x0021A620","table_index":22077,"register_natives":"0x0021A160","static_inlined":false},
@@ -6283,7 +6283,7 @@
   {"kind":"struct","name":"SoundAttenuationPluginSettings","package":"/Script/Engine","static_struct":"0x024D4F50","compiled_in_defer":"0x0021C040","table_index":22188,"register_natives":"0x0021B370","static_inlined":false},
   {"kind":"class","name":"USoundAttenuation","package":"/Script/Engine","constructor":"0x024D5240","static_class":"0x024D5270","compiled_in_defer":"0x0021C370","table_index":22191,"auto_initialize":"0x0021AA30","sizeof":792,"crc":20819408}
  ]},
-{"index":141,"marker_unit":248,"table_range":[22198,22346],"package":"/Script/Engine","items":[
+{"index":141,"marker_unit":248,"table_range":[22198,22346],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"USoundBase","package":"/Script/Engine","constructor":"0x024DBC00","static_class":"0x024DBC30","compiled_in_defer":"0x0021D730","table_index":22198,"auto_initialize":"0x0021C3F0","sizeof":192,"crc":1569737518},
   {"kind":"enum","name":"EAudioOutputTarget","package":"/Script/Engine","static_enum":"0x024D8FD0","compiled_in_defer":"0x0021CF80","table_index":22199,"static_inlined":false},
   {"kind":"struct","name":"PassiveSoundMixModifier","package":"/Script/Engine","static_struct":"0x024DB770","compiled_in_defer":"0x0021D340","table_index":22200,"register_natives":"0x0021CB20","static_inlined":false},
@@ -6363,7 +6363,7 @@
   {"kind":"class","name":"USpotLightComponent","package":"/Script/Engine","constructor":"0x024DD7C0","static_class":"0x024DCAC0","compiled_in_defer":"0x0021E670","table_index":22343,"auto_initialize":"0x0021E1F0","sizeof":1024,"crc":1940278547},
   {"kind":"class","name":"USpringArmComponent","package":"/Script/Engine","constructor":"0x024DD7F0","static_class":"0x024DCAD0","compiled_in_defer":"0x0021E6B0","table_index":22345,"auto_initialize":"0x0021E210","sizeof":800,"crc":1768204620}
  ]},
-{"index":142,"marker_unit":249,"table_range":[22351,22532],"package":"/Script/Engine","items":[
+{"index":142,"marker_unit":249,"table_range":[22351,22532],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EOptimizationType","package":"/Script/Engine","static_enum":"0x024E59A0","compiled_in_defer":"0x0021F1D0","table_index":22351,"static_inlined":false},
   {"kind":"enum","name":"EImportanceLevel","package":"/Script/Engine","static_enum":"0x024E58E0","compiled_in_defer":"0x0021F0E0","table_index":22352,"static_inlined":false},
   {"kind":"enum","name":"ENormalMode","package":"/Script/Engine","static_enum":"0x024E5920","compiled_in_defer":"0x0021F130","table_index":22353,"static_inlined":false},
@@ -6475,7 +6475,7 @@
   {"kind":"enum","name":"EVectorFieldConstructionOp","package":"/Script/Engine","static_enum":"0x024EAD30","compiled_in_defer":"0x00220C30","table_index":22529,"static_inlined":false},
   {"kind":"class","name":"UVectorFieldAnimated","package":"/Script/Engine","constructor":"0x024ED010","static_class":"0x024EC3A0","compiled_in_defer":"0x00221880","table_index":22531,"auto_initialize":"0x002201E0","sizeof":136,"crc":1887913173}
  ]},
-{"index":143,"marker_unit":250,"table_range":[22538,22594],"package":"/Script/Engine","items":[
+{"index":143,"marker_unit":250,"table_range":[22538,22594],"package":"/Script/Engine","vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UVectorFieldComponent","package":"/Script/Engine","constructor":"0x024F0BD0","static_class":"0x024EEA40","compiled_in_defer":"0x002224B0","table_index":22538,"auto_initialize":"0x002219C0","sizeof":1680,"crc":2653400682},
   {"kind":"class","name":"UVectorFieldStatic","package":"/Script/Engine","constructor":"0x024F0C00","static_class":"0x024EEA70","compiled_in_defer":"0x002224F0","table_index":22540,"auto_initialize":"0x002219E0","sizeof":208,"crc":3303203334},
   {"kind":"class","name":"AVectorFieldVolume","package":"/Script/Engine","constructor":"0x024F0A50","static_class":"0x024F0580","compiled_in_defer":"0x002222B0","table_index":22542,"auto_initialize":"0x002218C0","sizeof":800,"crc":4077910208},
@@ -6523,7 +6523,7 @@
   {"kind":"struct","name":"OverlayItem","package":"/Script/Overlay","static_struct":"0x02516B10","compiled_in_defer":"0x002232F0","table_index":22626,"register_natives":"0x00223290","static_inlined":true},
   {"kind":"class","name":"UOverlays","package":"/Script/Overlay","constructor":"0x02516BF0","static_class":"0x02516B00","compiled_in_defer":"0x002233C0","table_index":22629,"auto_initialize":"0x00223270","sizeof":40,"crc":2759987477}
  ]},
-{"index":147,"marker_unit":252,"table_range":[22652,22674],"package":"/Script/ClothingSystemRuntime","package_init_before":0,"items":[
+{"index":147,"marker_unit":252,"table_range":[22652,22674],"package":"/Script/ClothingSystemRuntime","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"EClothingWindMethod","package":"/Script/ClothingSystemRuntime","static_enum":"0x02523F00","compiled_in_defer":"0x00223900","table_index":22652,"static_inlined":true},
   {"kind":"enum","name":"MaskTarget_PhysMesh","package":"/Script/ClothingSystemRuntime","static_enum":"0x02524270","compiled_in_defer":"0x00223950","table_index":22653,"static_inlined":true},
   {"kind":"struct","name":"ClothConfig","package":"/Script/ClothingSystemRuntime","static_struct":"0x025245A0","compiled_in_defer":"0x002239A0","table_index":22654,"register_natives":"0x002236A0","static_inlined":true},
@@ -6544,7 +6544,7 @@
   {"kind":"struct","name":"SessionServicePong","package":"/Script/SessionMessages","static_struct":"0x02525310","compiled_in_defer":"0x00223FC0","table_index":22681,"register_natives":"0x00223E20","static_inlined":true},
   {"kind":"struct","name":"SessionServicePing","package":"/Script/SessionMessages","static_struct":"0x02525290","compiled_in_defer":"0x00223F70","table_index":22683,"register_natives":"0x00223DC0","static_inlined":true}
  ]},
-{"index":149,"marker_unit":255,"table_range":[22717,22738],"package":"/Script/AudioMixer","package_init_before":0,"items":[
+{"index":149,"marker_unit":255,"table_range":[22717,22738],"package":"/Script/AudioMixer","package_init_before":0,"vector_constants":["FloatOne","XYZMask","Float360","Float180"],"items":[
   {"kind":"class","name":"UAudioMixerBlueprintLibrary","package":"/Script/AudioMixer","constructor":"0x0255A140","static_class":"0x02558D80","compiled_in_defer":"0x00224AD0","table_index":22717,"auto_initialize":"0x00224660","sizeof":40,"crc":551851121},
   {"kind":"enum","name":"ESubmixEffectDynamicsPeakMode","package":"/Script/AudioMixer","static_enum":"0x02559550","compiled_in_defer":"0x002248F0","table_index":22718,"static_inlined":true},
   {"kind":"enum","name":"ESubmixEffectDynamicsProcessorType","package":"/Script/AudioMixer","static_enum":"0x025595B0","compiled_in_defer":"0x00224940","table_index":22719,"static_inlined":true},
@@ -6559,11 +6559,11 @@
   {"kind":"class","name":"USynthSound","package":"/Script/AudioMixer","constructor":"0x0255A230","static_class":"0x02558D60","compiled_in_defer":"0x00224C10","table_index":22735,"auto_initialize":"0x00224700","sizeof":800,"crc":4130363411},
   {"kind":"class","name":"USynthComponent","package":"/Script/AudioMixer","constructor":"0x0255A200","static_class":"0x02558D40","compiled_in_defer":"0x00224BD0","table_index":22737,"auto_initialize":"0x002246E0","sizeof":1680,"crc":1112999218}
  ]},
-{"index":150,"marker_unit":256,"table_range":[22747,22750],"package":"/Script/WidgetCarousel","package_init_before":0,"items":[
+{"index":150,"marker_unit":256,"table_range":[22747,22750],"package":"/Script/WidgetCarousel","package_init_before":0,"vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"struct","name":"WidgetCarouselNavigationBarStyle","package":"/Script/WidgetCarousel","static_struct":"0x02562FF0","compiled_in_defer":"0x00224E00","table_index":22747,"register_natives":"0x00224D40","static_inlined":true},
   {"kind":"struct","name":"WidgetCarouselNavigationButtonStyle","package":"/Script/WidgetCarousel","static_struct":"0x02563070","compiled_in_defer":"0x00224E50","table_index":22749,"register_natives":"0x00224DA0","static_inlined":true}
  ]},
-{"index":151,"marker_unit":260,"table_range":[22801,22832],"package":"/Script/SocialDefaults","items":[
+{"index":151,"marker_unit":260,"table_range":[22801,22832],"package":"/Script/SocialDefaults","vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"UChatColorSchemeDataAsset","package":"/Script/SocialDefaults","constructor":"0x025A2990","static_class":"0x025A0B50","compiled_in_defer":"0x002256A0","table_index":22801,"auto_initialize":"0x00225450","sizeof":336,"crc":3718811279},
   {"kind":"class","name":"USocialActionButtonStyleDataAsset","package":"/Script/SocialDefaults","constructor":"0x025A29C0","static_class":"0x025A0B70","compiled_in_defer":"0x002256E0","table_index":22803,"auto_initialize":"0x00225470","sizeof":616,"crc":3204960015},
   {"kind":"class","name":"USocialChatChromeColorSchemeDataAsset","package":"/Script/SocialDefaults","constructor":"0x025A29F0","static_class":"0x025A0B80","compiled_in_defer":"0x00225720","table_index":22805,"auto_initialize":"0x00225490","sizeof":128,"crc":1672052640},
@@ -6618,12 +6618,12 @@
   {"kind":"struct","name":"CustomFieldData","package":"/Script/BuildPatchServices","static_struct":"0x0264B880","compiled_in_defer":"0x00226D10","table_index":22924,"register_natives":"0x00226B00","static_inlined":true},
   {"kind":"class","name":"UBuildPatchManifest","package":"/Script/BuildPatchServices","constructor":"0x0264BA00","static_class":"0x0264B770","compiled_in_defer":"0x00226E00","table_index":22927,"auto_initialize":"0x00226A20","sizeof":288,"crc":1572306266}
  ]},
-{"index":156,"marker_unit":261,"table_range":[22934,22939],"package":"/Script/Gauntlet","items":[
+{"index":156,"marker_unit":261,"table_range":[22934,22939],"package":"/Script/Gauntlet","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UGauntletTestController","package":"/Script/Gauntlet","constructor":"0x0264DDE0","static_class":"0x0264DAD0","compiled_in_defer":"0x00226F40","table_index":22934,"auto_initialize":"0x00226EE0","sizeof":48,"crc":90678024},
   {"kind":"class","name":"UGauntletTestControllerBootTest","package":"/Script/Gauntlet","constructor":"0x0264DE10","static_class":"0x010B2D60","compiled_in_defer":"0x00226F80","table_index":22936,"auto_initialize":"0x00226F00","sizeof":48,"crc":1082768907},
   {"kind":"class","name":"UGauntletTestControllerErrorTest","package":"/Script/Gauntlet","constructor":"0x0264DE40","static_class":"0x0264DDD0","compiled_in_defer":"0x00226FC0","table_index":22938,"auto_initialize":"0x00226F20","sizeof":80,"crc":2694030306}
  ]},
-{"index":157,"marker_unit":264,"table_range":[23029,23048],"package":"/Script/Account","package_init_before":0,"items":[
+{"index":157,"marker_unit":264,"table_range":[23029,23048],"package":"/Script/Account","package_init_before":0,"vector_constants":["FloatOne","XYZMask","SignMask","Float360","Float180"],"items":[
   {"kind":"enum","name":"EExternalAccountType","package":"/Script/Account","static_enum":"0x0267B470","compiled_in_defer":"0x002282E0","table_index":23029,"static_inlined":true},
   {"kind":"struct","name":"ExternalAccountServiceConfig","package":"/Script/Account","static_struct":"0x0267B810","compiled_in_defer":"0x002283D0","table_index":23030,"register_natives":"0x00228020","static_inlined":true},
   {"kind":"class","name":"UExternalAccountProvider","package":"/Script/Account","constructor":"0x0267BA90","static_class":"0x0267B040","compiled_in_defer":"0x00228560","table_index":23033,"auto_initialize":"0x00227C10","sizeof":56,"crc":2182016597},
@@ -6647,7 +6647,7 @@
   {"kind":"struct","name":"AnalyticsEventAttr","package":"/Script/AnalyticsBlueprintLibrary","static_struct":"0x02681730","compiled_in_defer":"0x002289C0","table_index":23061,"register_natives":"0x00228960","static_inlined":true},
   {"kind":"class","name":"UAnalyticsBlueprintLibrary","package":"/Script/AnalyticsBlueprintLibrary","constructor":"0x026817B0","static_class":"0x026816F0","compiled_in_defer":"0x00228A10","table_index":23064,"auto_initialize":"0x00228940","sizeof":40,"crc":2954254372}
  ]},
-{"index":160,"marker_unit":275,"table_range":[24516,24593],"package":"/Script/FortniteUI","items":[
+{"index":160,"marker_unit":275,"table_range":[24516,24593],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UAthenaAccountContext","package":"/Script/FortniteUI","constructor":"0x0287F200","static_class":"0x0287C760","compiled_in_defer":"0x0023AD00","table_index":24516,"auto_initialize":"0x00238FE0","sizeof":40,"crc":695749211},
   {"kind":"class","name":"UAthenaAwardAlertBase","package":"/Script/FortniteUI","constructor":"0x0287F230","static_class":"0x0287C730","compiled_in_defer":"0x0023AD40","table_index":24519,"auto_initialize":"0x00239000","sizeof":528,"crc":4283626449},
   {"kind":"delegate","name":"ChallengeBundleChangedDelegate__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x0287F620"},
@@ -6703,7 +6703,7 @@
   {"kind":"struct","name":"AthenaPlaylistLeaderboardData","package":"/Script/FortniteUI","static_struct":"0x0287EED0","compiled_in_defer":"0x0023AC10","table_index":24584,"register_natives":"0x0023A840","static_inlined":false},
   {"kind":"class","name":"UAthenaLeaderboardScreenBase","package":"/Script/FortniteUI","constructor":"0x0287F5F0","static_class":"0x0287EB70","compiled_in_defer":"0x0023B240","table_index":24592,"auto_initialize":"0x00239280","sizeof":1264,"crc":4164068704}
  ]},
-{"index":161,"marker_unit":276,"table_range":[24711,24838],"package":"/Script/FortniteUI","items":[
+{"index":161,"marker_unit":276,"table_range":[24711,24838],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UAthenaLevelBarBase","package":"/Script/FortniteUI","constructor":"0x02887180","static_class":"0x028869A0","compiled_in_defer":"0x0023D5A0","table_index":24711,"auto_initialize":"0x0023B420","sizeof":624,"crc":2178245538},
   {"kind":"class","name":"UAthenaLobbyBase","package":"/Script/FortniteUI","constructor":"0x028871B0","static_class":"0x028869B0","compiled_in_defer":"0x0023D5E0","table_index":24722,"auto_initialize":"0x0023B440","sizeof":1120,"crc":2756535847},
   {"kind":"class","name":"UAthenaLocalPlayerViewModel","package":"/Script/FortniteUI","constructor":"0x028871E0","static_class":"0x028869C0","compiled_in_defer":"0x0023D620","table_index":24724,"auto_initialize":"0x0023B460","sizeof":992,"crc":838644648},
@@ -6764,7 +6764,7 @@
   {"kind":"enum","name":"EFortAlterationWidgetState","package":"/Script/FortniteUI","static_enum":"0x02884240","compiled_in_defer":"0x0023D370","table_index":24836,"static_inlined":false},
   {"kind":"struct","name":"FortUIAlteration","package":"/Script/FortniteUI","static_struct":"0x02887020","compiled_in_defer":"0x0023D550","table_index":24837,"register_natives":"0x0023D100","static_inlined":false}
  ]},
-{"index":162,"marker_unit":277,"table_range":[24843,25027],"package":"/Script/FortniteUI","items":[
+{"index":162,"marker_unit":277,"table_range":[24843,25027],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortAlterationsWidget","package":"/Script/FortniteUI","constructor":"0x0288C8C0","static_class":"0x0288C390","compiled_in_defer":"0x0023FBA0","table_index":24843,"auto_initialize":"0x0023E140","sizeof":560,"crc":2487892850},
   {"kind":"class","name":"UFortAlterationsWidget_NUI","package":"/Script/FortniteUI","constructor":"0x0288C8F0","static_class":"0x0288AA80","compiled_in_defer":"0x0023FBE0","table_index":24849,"auto_initialize":"0x0023E160","sizeof":576,"crc":2767228138},
   {"kind":"class","name":"UFortAlterationWidget","package":"/Script/FortniteUI","constructor":"0x0288C860","static_class":"0x0288AB00","compiled_in_defer":"0x0023FB20","table_index":24851,"auto_initialize":"0x0023E100","sizeof":560,"crc":1850803452},
@@ -6793,7 +6793,7 @@
   {"kind":"class","name":"UFortBangWrapper","package":"/Script/FortniteUI","constructor":"0x0288CC60","static_class":"0x0288C3D0","compiled_in_defer":"0x00240020","table_index":25021,"auto_initialize":"0x0023E380","sizeof":344,"crc":2291471942},
   {"kind":"class","name":"UFortBangWrapper_NUI","package":"/Script/FortniteUI","constructor":"0x0288CC90","static_class":"0x0288AAA0","compiled_in_defer":"0x00240060","table_index":25026,"auto_initialize":"0x0023E3A0","sizeof":552,"crc":3111058323}
  ]},
-{"index":163,"marker_unit":278,"table_range":[25033,25221],"package":"/Script/FortniteUI","items":[
+{"index":163,"marker_unit":278,"table_range":[25033,25221],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortBannerSelectorBase","package":"/Script/FortniteUI","constructor":"0x02894400","static_class":"0x02893F50","compiled_in_defer":"0x00241DD0","table_index":25033,"auto_initialize":"0x00240240","sizeof":1024,"crc":372999868},
   {"kind":"delegate","name":"FortBaseButtonClicked__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x02894890"},
   {"kind":"delegate","name":"FortSelectedStateChanged__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028948F0"},
@@ -6831,7 +6831,7 @@
   {"kind":"class","name":"UFortCollectionBookProgressionRewardWidget","package":"/Script/FortniteUI","constructor":"0x028947E0","static_class":"0x02893FD0","compiled_in_defer":"0x002422D0","table_index":25214,"auto_initialize":"0x002404C0","sizeof":568,"crc":1580303087},
   {"kind":"class","name":"UFortCollectionBookProgressWidget","package":"/Script/FortniteUI","constructor":"0x02894770","static_class":"0x028947A0","compiled_in_defer":"0x00242250","table_index":25220,"auto_initialize":"0x00240480","sizeof":624,"crc":3150150896}
  ]},
-{"index":164,"marker_unit":279,"table_range":[25339,25497],"package":"/Script/FortniteUI","items":[
+{"index":164,"marker_unit":279,"table_range":[25339,25497],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortCollectionBookRecycleSlotResultsWidget","package":"/Script/FortniteUI","constructor":"0x0289B150","static_class":"0x0289AC10","compiled_in_defer":"0x00244160","table_index":25339,"auto_initialize":"0x00242530","sizeof":552,"crc":3653908195},
   {"kind":"class","name":"UFortCollectionBookRewardCardWidget","package":"/Script/FortniteUI","constructor":"0x0289B180","static_class":"0x028987B0","compiled_in_defer":"0x002441A0","table_index":25341,"auto_initialize":"0x00242550","sizeof":656,"crc":510317059},
   {"kind":"class","name":"UFortCollectionBookRewardModalWidget","package":"/Script/FortniteUI","constructor":"0x0289B1B0","static_class":"0x0289B1E0","compiled_in_defer":"0x002441E0","table_index":25343,"auto_initialize":"0x00242570","sizeof":1040,"crc":2386458906},
@@ -6931,7 +6931,7 @@
   {"kind":"struct","name":"AttributeRequirement","package":"/Script/FortniteUI","static_struct":"0x028A3190","compiled_in_defer":"0x002453A0","table_index":25493,"register_natives":"0x00244FC0","static_inlined":false},
   {"kind":"class","name":"UFortFrontEndContext","package":"/Script/FortniteUI","constructor":"0x028A37D0","static_class":"0x028A2E70","compiled_in_defer":"0x00245A90","table_index":25496,"auto_initialize":"0x00244C00","sizeof":736,"crc":4181437961}
  ]},
-{"index":165,"marker_unit":280,"table_range":[25499,25685],"package":"/Script/FortniteUI","items":[
+{"index":165,"marker_unit":280,"table_range":[25499,25685],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"enum","name":"EFrontEndRewardType","package":"/Script/FortniteUI","static_enum":"0x028ABC50","compiled_in_defer":"0x00247360","table_index":25499,"static_inlined":false},
   {"kind":"enum","name":"EFortUIGameFeedbackType","package":"/Script/FortniteUI","static_enum":"0x028ABBD0","compiled_in_defer":"0x002472C0","table_index":25500,"static_inlined":false},
   {"kind":"class","name":"UFortGameFeedbackBase","package":"/Script/FortniteUI","constructor":"0x028AC3B0","static_class":"0x028AB000","compiled_in_defer":"0x002474A0","table_index":25503,"auto_initialize":"0x00245B30","sizeof":1152,"crc":3545280654},
@@ -6979,7 +6979,7 @@
   {"kind":"class","name":"UFortHomebaseNodeItemUtilities","package":"/Script/FortniteUI","constructor":"0x028B3D80","static_class":"0x028B2000","compiled_in_defer":"0x00248160","table_index":25682,"auto_initialize":"0x00247820","sizeof":40,"crc":1851856359},
   {"kind":"class","name":"UFortHomebaseUIContext","package":"/Script/FortniteUI","constructor":"0x028B3DB0","static_class":"0x028B3840","compiled_in_defer":"0x002481A0","table_index":25684,"auto_initialize":"0x00247840","sizeof":152,"crc":2980470611}
  ]},
-{"index":166,"marker_unit":281,"table_range":[25689,25845],"package":"/Script/FortniteUI","items":[
+{"index":166,"marker_unit":281,"table_range":[25689,25845],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OnEarlyGameFinished__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028B3E70"},
   {"kind":"delegate","name":"SlottingPreviewChangedDelegate__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028B3ED0"},
   {"kind":"class","name":"UFortHomeCMSScreenBase","package":"/Script/FortniteUI","constructor":"0x028BBE90","static_class":"0x028BBA10","compiled_in_defer":"0x00249E50","table_index":25689,"auto_initialize":"0x00248320","sizeof":1120,"crc":2752299243},
@@ -7049,7 +7049,7 @@
   {"kind":"class","name":"UFortInfoWindow","package":"/Script/FortniteUI","constructor":"0x028BBEF0","static_class":"0x028B9200","compiled_in_defer":"0x00249ED0","table_index":25840,"auto_initialize":"0x00248360","sizeof":1008,"crc":1913258043},
   {"kind":"class","name":"UFortInputOptions","package":"/Script/FortniteUI","constructor":"0x028BBF20","static_class":"0x028BBA20","compiled_in_defer":"0x00249F10","table_index":25844,"auto_initialize":"0x00248380","sizeof":600,"crc":3150393963}
  ]},
-{"index":167,"marker_unit":282,"table_range":[25849,26028],"package":"/Script/FortniteUI","items":[
+{"index":167,"marker_unit":282,"table_range":[25849,26028],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OnVaultItemLimitStateChanged__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028C1BD0"},
   {"kind":"delegate","name":"ItemDefinitionChangedListener__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028C19F0"},
   {"kind":"delegate","name":"ItemDefinitionChangedDelegate__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028C19C0"},
@@ -7100,7 +7100,7 @@
   {"kind":"struct","name":"FortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration","package":"/Script/FortniteUI","static_struct":"0x028C1390","compiled_in_defer":"0x0024C570","table_index":26025,"register_natives":"0x0024B870","static_inlined":false},
   {"kind":"struct","name":"FortItemCard_PowerRatingBlock_Configuration","package":"/Script/FortniteUI","static_struct":"0x028C12D0","compiled_in_defer":"0x0024C4D0","table_index":26027,"register_natives":"0x0024B7B0","static_inlined":false}
  ]},
-{"index":168,"marker_unit":283,"table_range":[26034,26242],"package":"/Script/FortniteUI","items":[
+{"index":168,"marker_unit":283,"table_range":[26034,26242],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortItemCardMaterialPooler","package":"/Script/FortniteUI","constructor":"0x028C9C30","static_class":"0x028C9790","compiled_in_defer":"0x0024EB10","table_index":26034,"auto_initialize":"0x0024CC80","sizeof":288,"crc":1858433610},
   {"kind":"class","name":"UFortItemCardUtilities","package":"/Script/FortniteUI","constructor":"0x028C9C60","static_class":"0x028C97A0","compiled_in_defer":"0x0024EB50","table_index":26149,"auto_initialize":"0x0024CCA0","sizeof":40,"crc":826844072},
   {"kind":"class","name":"UFortItemCategoryIndicator","package":"/Script/FortniteUI","constructor":"0x028C9C90","static_class":"0x028C6F30","compiled_in_defer":"0x0024EB90","table_index":26151,"auto_initialize":"0x0024CCC0","sizeof":304,"crc":3177564788},
@@ -7132,7 +7132,7 @@
   {"kind":"class","name":"UFortItemManagementMulchDetailsPanel","package":"/Script/FortniteUI","constructor":"0x028CA060","static_class":"0x028C6F20","compiled_in_defer":"0x0024F050","table_index":26237,"auto_initialize":"0x0024CF20","sizeof":552,"crc":2643596508},
   {"kind":"class","name":"UFortItemManagementModeDetailsPanel","package":"/Script/FortniteUI","constructor":"0x028CA030","static_class":"0x028C9820","compiled_in_defer":"0x0024F010","table_index":26241,"auto_initialize":"0x0024CF00","sizeof":576,"crc":1163424845}
  ]},
-{"index":169,"marker_unit":284,"table_range":[26244,26421],"package":"/Script/FortniteUI","items":[
+{"index":169,"marker_unit":284,"table_range":[26244,26421],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OnItemViewRefreshed__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028CF7B0"},
   {"kind":"enum","name":"EFortItemManagementMode","package":"/Script/FortniteUI","static_enum":"0x028CDF20","compiled_in_defer":"0x00250C10","table_index":26244,"static_inlined":false},
   {"kind":"class","name":"UFortFrontendInventoryFilterFunctionLibrary","package":"/Script/FortniteUI","constructor":"0x028CF460","static_class":"0x028CD8B0","compiled_in_defer":"0x00250D50","table_index":26246,"auto_initialize":"0x0024F270","sizeof":40,"crc":2866066344},
@@ -7156,7 +7156,7 @@
   {"kind":"enum","name":"EFortKeybindForcedHoldStatus","package":"/Script/FortniteUI","static_enum":"0x028CDF60","compiled_in_defer":"0x00250C60","table_index":26417,"static_inlined":false},
   {"kind":"class","name":"UFortKeybindWidget","package":"/Script/FortniteUI","constructor":"0x028CF780","static_class":"0x028CF0B0","compiled_in_defer":"0x00251150","table_index":26420,"auto_initialize":"0x0024F470","sizeof":616,"crc":3866733346}
  ]},
-{"index":170,"marker_unit":285,"table_range":[26424,26628],"package":"/Script/FortniteUI","items":[
+{"index":170,"marker_unit":285,"table_range":[26424,26628],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortLeaderboardContext","package":"/Script/FortniteUI","constructor":"0x028D71B0","static_class":"0x028D6BD0","compiled_in_defer":"0x00253270","table_index":26424,"auto_initialize":"0x00251330","sizeof":40,"crc":994731628},
   {"kind":"class","name":"UFortLeaderboardEntryWidget","package":"/Script/FortniteUI","constructor":"0x028D71E0","static_class":"0x028D4AE0","compiled_in_defer":"0x002532B0","table_index":26427,"auto_initialize":"0x00251350","sizeof":1936,"crc":3489146653},
   {"kind":"delegate","name":"OnCloseLegacyWidget__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028D7710"},
@@ -7200,7 +7200,7 @@
   {"kind":"class","name":"UFortMtxOfferData","package":"/Script/FortniteUI","constructor":"0x028D7640","static_class":"0x028D7670","compiled_in_defer":"0x00253830","table_index":26625,"auto_initialize":"0x00251610","sizeof":352,"crc":1432509925},
   {"kind":"class","name":"UFortMtxOfferDetailsBase","package":"/Script/FortniteUI","constructor":"0x028D7680","static_class":"0x028D4AF0","compiled_in_defer":"0x00253870","table_index":26627,"auto_initialize":"0x00251630","sizeof":1168,"crc":748745330}
  ]},
-{"index":171,"marker_unit":286,"table_range":[26632,26639],"package":"/Script/FortniteUI","items":[
+{"index":171,"marker_unit":286,"table_range":[26632,26639],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortMtxStoreOfferBase","package":"/Script/FortniteUI","constructor":"0x028DE380","static_class":"0x028DA9D0","compiled_in_defer":"0x00255600","table_index":26632,"auto_initialize":"0x00253A90","sizeof":2088,"crc":432187438},
   {"kind":"class","name":"UFortMtxStoreRootBase","package":"/Script/FortniteUI","constructor":"0x028DE3B0","static_class":"0x028DA9B0","compiled_in_defer":"0x00255640","table_index":26638,"auto_initialize":"0x00253AB0","sizeof":1040,"crc":645471015}
  ]},
@@ -7229,7 +7229,7 @@
   {"kind":"class","name":"UFortOptionsMenuInputData","package":"/Script/FortniteUI","constructor":"0x028DE5C0","static_class":"0x028DDEF0","compiled_in_defer":"0x002558C0","table_index":26682,"auto_initialize":"0x00253BF0","sizeof":136,"crc":1357231201},
   {"kind":"class","name":"UFortOptionsMenuSetting","package":"/Script/FortniteUI","constructor":"0x028DE5F0","static_class":"0x028DDF00","compiled_in_defer":"0x00255900","table_index":26798,"auto_initialize":"0x00253C10","sizeof":544,"crc":2889503921}
  ]},
-{"index":173,"marker_unit":287,"table_range":[26918,27000],"package":"/Script/FortniteUI","items":[
+{"index":173,"marker_unit":287,"table_range":[26918,27000],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortSettingInfo","package":"/Script/FortniteUI","constructor":"0x028E6E20","static_class":"0x028E6390","compiled_in_defer":"0x00258180","table_index":26918,"auto_initialize":"0x00255D20","sizeof":96,"crc":1639790146},
   {"kind":"delegate","name":"OnTabSettingChanged__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028E6F40"},
   {"kind":"class","name":"UFortOptionsTab","package":"/Script/FortniteUI","constructor":"0x028E6AA0","static_class":"0x028E31C0","compiled_in_defer":"0x00257D00","table_index":26922,"auto_initialize":"0x00255AE0","sizeof":544,"crc":2156468186},
@@ -7272,7 +7272,7 @@
   {"kind":"class","name":"UFortPlayerViewModel","package":"/Script/FortniteUI","constructor":"0x028E6DC0","static_class":"0x02886AC0","compiled_in_defer":"0x00258100","table_index":26997,"auto_initialize":"0x00255CE0","sizeof":752,"crc":4245024847},
   {"kind":"class","name":"UFortPrivacyBase","package":"/Script/FortniteUI","constructor":"0x028E6DF0","static_class":"0x028E6380","compiled_in_defer":"0x00258140","table_index":26999,"auto_initialize":"0x00255D00","sizeof":1136,"crc":1703911946}
  ]},
-{"index":174,"marker_unit":288,"table_range":[27004,27331],"package":"/Script/FortniteUI","items":[
+{"index":174,"marker_unit":288,"table_range":[27004,27331],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortPvPMinimapWidget","package":"/Script/FortniteUI","constructor":"0x028ED2C0","static_class":"0x028ECBD0","compiled_in_defer":"0x0025A1E0","table_index":27004,"auto_initialize":"0x00258360","sizeof":568,"crc":787387769},
   {"kind":"class","name":"UFortQuestExpiresWidget","package":"/Script/FortniteUI","constructor":"0x028ED2F0","static_class":"0x028ECBE0","compiled_in_defer":"0x0025A220","table_index":27008,"auto_initialize":"0x00258380","sizeof":544,"crc":754071881},
   {"kind":"delegate","name":"OnHUDQuestFinalObjectiveHidden__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x028ED8B0"},
@@ -7354,7 +7354,7 @@
   {"kind":"class","name":"UFortItemViewContext_ExpeditionSquadSlotsView","package":"/Script/FortniteUI","constructor":"0x028F5380","static_class":"0x028F53B0","compiled_in_defer":"0x0025B860","table_index":27328,"auto_initialize":"0x0025AAC0","sizeof":264,"crc":4120107123},
   {"kind":"class","name":"UFortItemViewContext_ExpeditionSquadSlotItemPicker","package":"/Script/FortniteUI","constructor":"0x028F5350","static_class":"0x028F11E0","compiled_in_defer":"0x0025B820","table_index":27330,"auto_initialize":"0x0025AAA0","sizeof":272,"crc":3103047650}
  ]},
-{"index":175,"marker_unit":289,"table_range":[27339,27515],"package":"/Script/FortniteUI","items":[
+{"index":175,"marker_unit":289,"table_range":[27339,27515],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortSquadManagementScreenBase","package":"/Script/FortniteUI","constructor":"0x028FB4D0","static_class":"0x028B3850","compiled_in_defer":"0x0025DCB0","table_index":27339,"auto_initialize":"0x0025C080","sizeof":1216,"crc":2359611398},
   {"kind":"class","name":"UFortSquadSlotDetailsPanel","package":"/Script/FortniteUI","constructor":"0x028FB530","static_class":"0x028F91F0","compiled_in_defer":"0x0025DD30","table_index":27344,"auto_initialize":"0x0025C0C0","sizeof":624,"crc":577048738},
   {"kind":"class","name":"UFortSquadSlotItemDetailElementWidget","package":"/Script/FortniteUI","constructor":"0x028FB560","static_class":"0x028F91E0","compiled_in_defer":"0x0025DD70","table_index":27347,"auto_initialize":"0x0025C0E0","sizeof":640,"crc":1886939247},
@@ -7384,7 +7384,7 @@
   {"kind":"struct","name":"CardPackOffer","package":"/Script/FortniteUI","static_struct":"0x028FB410","compiled_in_defer":"0x0025DC10","table_index":27511,"register_natives":"0x0025D800","static_inlined":false},
   {"kind":"class","name":"UFortStoreContext","package":"/Script/FortniteUI","constructor":"0x028FB850","static_class":"0x028FB0D0","compiled_in_defer":"0x0025E0F0","table_index":27514,"auto_initialize":"0x0025C2A0","sizeof":216,"crc":647646086}
  ]},
-{"index":176,"marker_unit":290,"table_range":[27518,27727],"package":"/Script/FortniteUI","items":[
+{"index":176,"marker_unit":290,"table_range":[27518,27727],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortStorefront","package":"/Script/FortniteUI","constructor":"0x02904A10","static_class":"0x02900510","compiled_in_defer":"0x00260410","table_index":27518,"auto_initialize":"0x0025E330","sizeof":536,"crc":3312437109},
   {"kind":"class","name":"UFortStoreRootBase","package":"/Script/FortniteUI","constructor":"0x029049B0","static_class":"0x02904270","compiled_in_defer":"0x00260390","table_index":27520,"auto_initialize":"0x0025E2F0","sizeof":976,"crc":3465344550},
   {"kind":"class","name":"UStoreCardObject","package":"/Script/FortniteUI","constructor":"0x02904E50","static_class":"0x02900560","compiled_in_defer":"0x00260990","table_index":27523,"auto_initialize":"0x0025E5F0","sizeof":64,"crc":3896067226},
@@ -7422,7 +7422,7 @@
   {"kind":"struct","name":"FortItemTransformFilterTabLabelInfo","package":"/Script/FortniteUI","static_struct":"0x02904640","compiled_in_defer":"0x002600D0","table_index":27723,"register_natives":"0x0025FB70","static_inlined":false},
   {"kind":"class","name":"UFortTransformSlotItemPicker","package":"/Script/FortniteUI","constructor":"0x02904E20","static_class":"0x02904330","compiled_in_defer":"0x00260950","table_index":27726,"auto_initialize":"0x0025E5D0","sizeof":640,"crc":496534321}
  ]},
-{"index":177,"marker_unit":291,"table_range":[27845,27893],"package":"/Script/FortniteUI","items":[
+{"index":177,"marker_unit":291,"table_range":[27845,27893],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortTransformSlotItemPickerTileButton","package":"/Script/FortniteUI","constructor":"0x0290A880","static_class":"0x029093B0","compiled_in_defer":"0x00262480","table_index":27845,"auto_initialize":"0x00260B70","sizeof":1968,"crc":3948438929},
   {"kind":"class","name":"UFortTrapDefenderItemPicker","package":"/Script/FortniteUI","constructor":"0x0290A8B0","static_class":"0x029093A0","compiled_in_defer":"0x002624C0","table_index":27848,"auto_initialize":"0x00260B90","sizeof":752,"crc":1126763043},
   {"kind":"delegate","name":"UpdateTutorialAnnouncementDelegate__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x0290AAA0"},
@@ -7437,7 +7437,7 @@
   {"kind":"class","name":"UFortUIManagerWidget","package":"/Script/FortniteUI","constructor":"0x0290AA00","static_class":"0x0290A670","compiled_in_defer":"0x00262680","table_index":27877,"auto_initialize":"0x00260C70","sizeof":1280,"crc":3058586110},
   {"kind":"class","name":"UFortUIManagerWidget_NUI","package":"/Script/FortniteUI","constructor":"0x0290AA30","static_class":"0x0290AA60","compiled_in_defer":"0x002626C0","table_index":27892,"auto_initialize":"0x00260C90","sizeof":976,"crc":240148617}
  ]},
-{"index":178,"marker_unit":292,"table_range":[27899,28109],"package":"/Script/FortniteUI","items":[
+{"index":178,"marker_unit":292,"table_range":[27899,28109],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"delegate","name":"OnMessageItemDisplayStateChange__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x02912330"},
   {"kind":"class","name":"UFortUIMessageItemWidget","package":"/Script/FortniteUI","constructor":"0x02911CA0","static_class":"0x02911CD0","compiled_in_defer":"0x00264F80","table_index":27899,"auto_initialize":"0x002628A0","sizeof":600,"crc":4087042801},
   {"kind":"delegate","name":"OnMessageAvailable__DelegateSignature","package":"/Script/FortniteUI","constructor":"0x02912300"},
@@ -7506,7 +7506,7 @@
   {"kind":"struct","name":"FortDisplayModifier","package":"/Script/FortniteUI","static_struct":"0x02911940","compiled_in_defer":"0x00264CB0","table_index":28106,"register_natives":"0x00264100","static_inlined":false},
   {"kind":"struct","name":"FortErrorInfo","package":"/Script/FortniteUI","static_struct":"0x029119A0","compiled_in_defer":"0x00264D00","table_index":28108,"register_natives":"0x00264160","static_inlined":false}
  ]},
-{"index":179,"marker_unit":293,"table_range":[28113,28295],"package":"/Script/FortniteUI","items":[
+{"index":179,"marker_unit":293,"table_range":[28113,28295],"package":"/Script/FortniteUI","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UFortUpgradeIndicator","package":"/Script/FortniteUI","constructor":"0x02918B00","static_class":"0x029186D0","compiled_in_defer":"0x00267190","table_index":28113,"auto_initialize":"0x00265660","sizeof":1024,"crc":2213994729},
   {"kind":"class","name":"UFortUserChoiceWidget","package":"/Script/FortniteUI","constructor":"0x02918B30","static_class":"0x029186E0","compiled_in_defer":"0x002671D0","table_index":28116,"auto_initialize":"0x00265680","sizeof":536,"crc":1204583810},
   {"kind":"class","name":"UFortUserWidget","package":"/Script/FortniteUI","constructor":"0x02918B60","static_class":"0x02886AD0","compiled_in_defer":"0x00267210","table_index":28118,"auto_initialize":"0x002656A0","sizeof":536,"crc":1832626278},
@@ -7527,10 +7527,10 @@
   {"kind":"class","name":"USeasonPassScreenBase","package":"/Script/FortniteUI","constructor":"0x02918D10","static_class":"0x02918730","compiled_in_defer":"0x00267450","table_index":28292,"auto_initialize":"0x002657C0","sizeof":1504,"crc":3770768432},
   {"kind":"class","name":"UFortSquadPanelWidget","package":"/Script/FortniteUI","constructor":"0x02918AD0","static_class":"0x029186C0","compiled_in_defer":"0x00267150","table_index":28294,"auto_initialize":"0x00265640","sizeof":576,"crc":887427247}
  ]},
-{"index":180,"marker_unit":295,"table_range":[28303,28304],"package":"/Script/TencentTSS","items":[
+{"index":180,"marker_unit":295,"table_range":[28303,28304],"package":"/Script/TencentTSS","vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"class","name":"UTencentHandlerComponentFactory","package":"/Script/TencentTSS","constructor":"0x0291DC30","static_class":"0x0291DC20","compiled_in_defer":"0x002676B0","table_index":28303,"auto_initialize":"0x00267640","sizeof":40,"crc":3025712770}
  ]},
-{"index":181,"marker_unit":296,"table_range":[28312,28321],"package":"/Script/IOSRuntimeSettings","package_init_before":0,"items":[
+{"index":181,"marker_unit":296,"table_range":[28312,28321],"package":"/Script/IOSRuntimeSettings","package_init_before":0,"vector_constants":["FloatOne","XYZMask","SignMask"],"items":[
   {"kind":"enum","name":"EIOSMetalShaderStandard","package":"/Script/IOSRuntimeSettings","static_enum":"0x0291F460","compiled_in_defer":"0x00267930","table_index":28312,"static_inlined":true},
   {"kind":"enum","name":"EIOSVersion","package":"/Script/IOSRuntimeSettings","static_enum":"0x0291F4C0","compiled_in_defer":"0x00267980","table_index":28313,"static_inlined":true},
   {"kind":"enum","name":"EPowerUsageFrameRateLock","package":"/Script/IOSRuntimeSettings","static_enum":"0x0291F520","compiled_in_defer":"0x002679D0","table_index":28314,"static_inlined":true},
@@ -7538,7 +7538,7 @@
   {"kind":"struct","name":"IOSBuildResourceFilePath","package":"/Script/IOSRuntimeSettings","static_struct":"0x0291F9D0","compiled_in_defer":"0x00267A70","table_index":28317,"register_natives":"0x002678D0","static_inlined":true},
   {"kind":"class","name":"UIOSRuntimeSettings","package":"/Script/IOSRuntimeSettings","constructor":"0x0291FA50","static_class":"0x0291F420","compiled_in_defer":"0x00267AC0","table_index":28320,"auto_initialize":"0x00267850","sizeof":464,"crc":765853907}
  ]},
-{"index":182,"marker_unit":298,"table_range":[28335,28336],"package":"/Script/AugmentedReality","items":[
+{"index":182,"marker_unit":298,"table_range":[28335,28336],"package":"/Script/AugmentedReality","vector_constants":["FloatOne","XYZMask"],"items":[
   {"kind":"class","name":"UARBlueprintLibrary","package":"/Script/AugmentedReality","constructor":"0x02921790","static_class":"0x02921620","compiled_in_defer":"0x00267E10","table_index":28335,"auto_initialize":"0x00267BD0","sizeof":40,"crc":565927587}
  ]},
 {"index":183,"marker_unit":298,"table_range":[28336,28345],"package":"/Script/AugmentedReality","split":"init.gen.cpp opens a unity file","package_init_before":0,"items":[

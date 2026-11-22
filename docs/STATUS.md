@@ -102,13 +102,13 @@ Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Class vt
        of trivially copyable elements (`ContainersRecovered.h`), `FText` and `TSubclassOf`
        (`TextRecovered.h`) and 17 structs from the 4.20 headers
        (`EngineStructsRecovered.h`), including `FGameplayTagContainer` and
-       `FGameplayCueParameters`, and `FTransform` with the two vector constants its
-       constructor reads (`TransformRecovered.h`, via the prologue). 1,448 of the 1,661
+       `FGameplayCueParameters`, and `FTransform` (`TransformRecovered.h`). 1,448 of the 1,661
        virtual-native UFunctions have thunks, and 1,190 of their 1,200 addresses match.
      - Next: `FSlateBrush`, `FGameplayAbilityActivationInfo`, `FGameplayEventData`, soft
        object pointers, arrays of strings and of non-trivial elements.
-     - Possible: define each unit's own `GlobalVectorConstants` from its `.CRT$XCU`
-       initializers, so each unit holds what the reference's does.
+     - Each unit defines its own `GlobalVectorConstants`, those its `.CRT$XCU`
+       initializers name in the reference (131 units; `docs/REVERSE_ENGINEERING.md`,
+       "Per-unit vector constants"). The count is level with defining two in every unit.
      - `StaticEnum` layout is stable. It is defined with external linkage, first in its
        unit, in source order. The block's position and order no longer change with
        unrelated code. That cost 19 exact functions, matches the earlier, unstable order

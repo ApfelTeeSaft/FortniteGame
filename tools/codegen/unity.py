@@ -24,6 +24,15 @@ order, so this reproduces the block's position, and its order no longer changes 
 of the unit. An enum whose StaticEnum inlines the package singleton (static_in_unity) has both
 fragments in its unity unit instead.
 
+Next come the unit's GlobalVectorConstants (UnrealMathVectorConstants.h). The engine headers
+define them in every original unity file. Their dynamic initializers open its .CRT$XCU entries,
+and the reference keeps only those the unit uses. This MSVC keeps every one a unit defines, so
+each unit defines just those recorded for it ("vector_constants" in analysis/unity-order.json),
+with the header's definitions, in header order. They follow the StaticEnum functions, as the
+plain .bss they open follows the Singleton block in the reference. FTransform
+(TransformRecovered.h), whose default constructor reads FloatOne and XYZMask, is included where
+both are defined.
+
 Only the unity files are compiled. The generators name each manifest entry's unit (unit_of)
 so its object is the unity object, like the original build's.
 
@@ -136,6 +145,80 @@ def staticenum_fragment(it: dict) -> Path:
     return GEN / "Enums" / it["package"].rsplit("/", 1)[1] / f"{it['name']}.staticenum.gen.cpp"
 
 
+# Math/UnrealMathVectorConstants.h and VectorRegister.h (UE4.20): the definitions, by name.
+VECTOR_CONSTANT_SOURCE = {
+    "FloatOne": "MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f)",
+    "FloatZero": "MakeVectorRegister(0.0f, 0.0f, 0.0f, 0.0f)",
+    "FloatMinusOne": "MakeVectorRegister(-1.0f, -1.0f, -1.0f, -1.0f)",
+    "Float0001": "MakeVectorRegister( 0.0f, 0.0f, 0.0f, 1.0f )",
+    "SmallLengthThreshold": "MakeVectorRegister(1.e-8f, 1.e-8f, 1.e-8f, 1.e-8f)",
+    "FloatOneHundredth": "MakeVectorRegister(0.01f, 0.01f, 0.01f, 0.01f)",
+    "Float111_Minus1": "MakeVectorRegister( 1.f, 1.f, 1.f, -1.f )",
+    "FloatMinus1_111": "MakeVectorRegister( -1.f, 1.f, 1.f, 1.f )",
+    "FloatOneHalf": "MakeVectorRegister( 0.5f, 0.5f, 0.5f, 0.5f )",
+    "FloatMinusOneHalf": "MakeVectorRegister( -0.5f, -0.5f, -0.5f, -0.5f )",
+    "KindaSmallNumber": "MakeVectorRegister( KINDA_SMALL_NUMBER, KINDA_SMALL_NUMBER, KINDA_SMALL_NUMBER, KINDA_SMALL_NUMBER )",
+    "SmallNumber": "MakeVectorRegister( SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER )",
+    "ThreshQuatNormalized": "MakeVectorRegister( THRESH_QUAT_NORMALIZED, THRESH_QUAT_NORMALIZED, THRESH_QUAT_NORMALIZED, THRESH_QUAT_NORMALIZED )",
+    "BigNumber": "MakeVectorRegister(BIG_NUMBER, BIG_NUMBER, BIG_NUMBER, BIG_NUMBER)",
+    "IntOne": "MakeVectorRegisterInt(1, 1, 1, 1)",
+    "IntZero": "MakeVectorRegisterInt(0, 0, 0, 0)",
+    "IntMinusOne": "MakeVectorRegisterInt(-1, -1, -1, -1)",
+    "QINV_SIGN_MASK": "MakeVectorRegister( -1.f, -1.f, -1.f, 1.f )",
+    "QMULTI_SIGN_MASK0": "MakeVectorRegister( 1.f, -1.f, 1.f, -1.f )",
+    "QMULTI_SIGN_MASK1": "MakeVectorRegister( 1.f, 1.f, -1.f, -1.f )",
+    "QMULTI_SIGN_MASK2": "MakeVectorRegister( -1.f, 1.f, 1.f, -1.f )",
+    "DEG_TO_RAD": "MakeVectorRegister(PI/(180.f), PI/(180.f), PI/(180.f), PI/(180.f))",
+    "DEG_TO_RAD_HALF": "MakeVectorRegister((PI/180.f)*0.5f, (PI/180.f)*0.5f, (PI/180.f)*0.5f, (PI/180.f)*0.5f)",
+    "RAD_TO_DEG": "MakeVectorRegister((180.f)/PI, (180.f)/PI, (180.f)/PI, (180.f)/PI)",
+    "XYZMask": "MakeVectorRegister((uint32)0xffffffff, (uint32)0xffffffff, (uint32)0xffffffff, (uint32)0x00000000)",
+    "SignBit": "MakeVectorRegister((uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT)",
+    "SignMask": "MakeVectorRegister((uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT))",
+    "IntSignBit": "MakeVectorRegisterInt(SIGN_BIT, SIGN_BIT, SIGN_BIT, SIGN_BIT)",
+    "IntSignMask": "MakeVectorRegisterInt((~SIGN_BIT), (~SIGN_BIT), (~SIGN_BIT), (~SIGN_BIT))",
+    "AllMask": "MakeVectorRegister(0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF)",
+    "IntAllMask": "MakeVectorRegisterInt(0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF)",
+    "FloatInfinity": "MakeVectorRegister((uint32)0x7F800000, (uint32)0x7F800000, (uint32)0x7F800000, (uint32)0x7F800000)",
+    "Pi": "MakeVectorRegister(PI, PI, PI, PI)",
+    "TwoPi": "MakeVectorRegister(2.0f*PI, 2.0f*PI, 2.0f*PI, 2.0f*PI)",
+    "PiByTwo": "MakeVectorRegister(0.5f*PI, 0.5f*PI, 0.5f*PI, 0.5f*PI)",
+    "PiByFour": "MakeVectorRegister(0.25f*PI, 0.25f*PI, 0.25f*PI, 0.25f*PI)",
+    "OneOverPi": "MakeVectorRegister(1.0f / PI, 1.0f / PI, 1.0f / PI, 1.0f / PI)",
+    "OneOverTwoPi": "MakeVectorRegister(1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI))",
+    "Float255": "MakeVectorRegister(255.0f, 255.0f, 255.0f, 255.0f)",
+    "Float127": "MakeVectorRegister(127.0f, 127.0f, 127.0f, 127.0f)",
+    "FloatNeg127": "MakeVectorRegister(-127.0f, -127.0f, -127.0f, -127.0f)",
+    "Float360": "MakeVectorRegister(360.f, 360.f, 360.f, 360.f)",
+    "Float180": "MakeVectorRegister(180.f, 180.f, 180.f, 180.f)",
+    "FloatTwo": "MakeVectorRegister(2.0f, 2.0f, 2.0f, 2.0f)",
+    "AnimWeightThreshold": "MakeVectorRegister(ZERO_ANIMWEIGHT_THRESH, ZERO_ANIMWEIGHT_THRESH, ZERO_ANIMWEIGHT_THRESH, ZERO_ANIMWEIGHT_THRESH)",
+    "RotationSignificantThreshold": "MakeVectorRegister(1.0f - DELTA*DELTA, 1.0f - DELTA*DELTA, 1.0f - DELTA*DELTA, 1.0f - DELTA*DELTA)",
+}
+VECTOR_REGISTER_INT = {"IntOne", "IntZero", "IntMinusOne", "IntSignBit", "IntSignMask", "IntAllMask"}
+
+
+def vector_constants(names: list[str]) -> str:
+    """The unit's GlobalVectorConstants definitions, then FTransform where its constants exist."""
+    if not names:
+        return ""
+    lines = []
+    for n in names:
+        if n not in VECTOR_CONSTANT_SOURCE:   # FloatAlmostTwo needs AlmostTwoBits; not modelled
+            raise SystemExit(f"vector constant {n} has no definition in tools/codegen/unity.py")
+        t = "VectorRegisterInt" if n in VECTOR_REGISTER_INT else "VectorRegister"
+        lines.append(f"\tstatic const {t} {n} = {VECTOR_CONSTANT_SOURCE[n]};\n")
+    sign = any("SIGN_BIT" in VECTOR_CONSTANT_SOURCE[n] for n in names)
+    out = ("// The engine headers' GlobalVectorConstants of this unit: the constants whose initializers\n"
+           "// open its .CRT$XCU entries in the reference (analysis/unity-order.json), in header order.\n"
+           '#include "FortniteGameCode/VectorRecovered.h"\n'
+           "namespace GlobalVectorConstants\n{\n"
+           + ("#define SIGN_BIT ((1 << 31))\n" if sign else "") + "".join(lines)
+           + ("#undef SIGN_BIT\n" if sign else "") + "}\n")
+    if "FloatOne" in names and "XYZMask" in names:
+        out += '#include "FortniteGameCode/TransformRecovered.h"\n'
+    return out + "\n"
+
+
 def head_includes(frags: list[Path], used: set[Path]) -> str:
     """The StaticEnum functions, defined before the prologue in source order (see the module docstring)."""
     frags = [f for f in frags if f.exists()]
@@ -169,7 +252,7 @@ def main() -> int:
             f"// Unity translation unit {name} of {u['package']}: the fragments of {len(u['items'])} UHT items in the\n"
             f"// source order recovered from .CRT$XCU entries {u['table_range'][0]}..{u['table_range'][1] - 1}"
             " (analysis/unity-order.json).\n\n"
-            + head_includes(top, used) +
+            + head_includes(top, used) + vector_constants(u.get("vector_constants", [])) +
             "// Stand-in for the engine headers every unity file starts with (creates the plain .bss first).\n"
             '#include "FortniteGameCode/UnityPrologue.h"\n\n' + "\n".join(incs) + "\n")
         stats["units"] += 1

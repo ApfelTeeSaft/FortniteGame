@@ -98,9 +98,9 @@ public:
 	{ }
 };
 
-// Core: Math/TransformVectorized.h. Defined in TransformRecovered.h, which UnityPrologue.h
-// includes: its default constructor reads the unit's GlobalVectorConstants, which belong after
-// the StaticEnum functions. Declarations here need only the incomplete type.
+// Core: Math/TransformVectorized.h. Defined in TransformRecovered.h, which each unity unit
+// includes after its own GlobalVectorConstants (tools/codegen/unity.py): its default
+// constructor reads them. Declarations here need only the incomplete type.
 struct FTransform;
 
 // Engine/NetSerialization.h
