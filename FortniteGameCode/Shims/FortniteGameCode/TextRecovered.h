@@ -6,6 +6,7 @@
 #pragma once
 
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/ContainersRecovered.h"   // MoveTemp, Swap
 
 // The one intrinsic used, declared as MSVC documents instead of including <intrin.h>:
 // including that header changed the order in which MSVC emitted other functions' static
@@ -143,6 +144,13 @@ namespace SharedPointerInternals
 			}
 		}
 
+		/** Move constructor creates no new references */
+		__forceinline FSharedReferencer( FSharedReferencer&& InSharedReference )
+			: ReferenceController( InSharedReference.ReferenceController )
+		{
+			InSharedReference.ReferenceController = nullptr;
+		}
+
 		__forceinline ~FSharedReferencer()
 		{
 			if( ReferenceController != nullptr )
@@ -151,6 +159,56 @@ namespace SharedPointerInternals
 				// this shared pointer
 				TOps::ReleaseSharedReference(ReferenceController);
 			}
+		}
+
+		/** Assignment operator adds a reference to the assigned object.  If this counter was previously
+		    referencing an object, that reference will be released. */
+		inline FSharedReferencer& operator=( FSharedReferencer const& InSharedReference )
+		{
+			// Make sure we're not be reassigned to ourself!
+			auto NewReferenceController = InSharedReference.ReferenceController;
+			if( NewReferenceController != ReferenceController )
+			{
+				// First, add a shared reference to the new object
+				if( NewReferenceController != nullptr )
+				{
+					TOps::AddSharedReference(NewReferenceController);
+				}
+
+				// Release shared reference to the old object
+				if( ReferenceController != nullptr )
+				{
+					TOps::ReleaseSharedReference(ReferenceController);
+				}
+
+				// Assume ownership of the assigned reference counter
+				ReferenceController = NewReferenceController;
+			}
+
+			return *this;
+		}
+
+		/** Move assignment operator adds no references to the assigned object.  If this counter was previously
+		    referencing an object, that reference will be released. */
+		inline FSharedReferencer& operator=( FSharedReferencer&& InSharedReference )
+		{
+			// Make sure we're not be reassigned to ourself!
+			auto NewReferenceController = InSharedReference.ReferenceController;
+			auto OldReferenceController = ReferenceController;
+			if( NewReferenceController != OldReferenceController )
+			{
+				// Assume ownership of the assigned reference counter
+				InSharedReference.ReferenceController = nullptr;
+				ReferenceController                   = NewReferenceController;
+
+				// Release shared reference to the old object
+				if( OldReferenceController != nullptr )
+				{
+					TOps::ReleaseSharedReference(OldReferenceController);
+				}
+			}
+
+			return *this;
 		}
 
 	private:
@@ -167,7 +225,7 @@ private:
 	SharedPointerInternals::FSharedReferencer< Mode > SharedReferenceCount;
 };
 
-// Templates/SharedPointer.h: empty construction, copy and destruction only.
+// Templates/SharedPointer.h: empty construction, copy, move, assignment and destruction.
 template< class ObjectType, ESPMode Mode = ESPMode::Fast >
 class TSharedPtr
 {
@@ -181,6 +239,36 @@ public:
 		: Object( InSharedPtr.Object )
 		, SharedReferenceCount( InSharedPtr.SharedReferenceCount )
 	{ }
+
+	__forceinline TSharedPtr( TSharedPtr&& InSharedPtr )
+		: Object( InSharedPtr.Object )
+		, SharedReferenceCount( MoveTemp(InSharedPtr.SharedReferenceCount) )
+	{
+		InSharedPtr.Object = nullptr;
+	}
+
+	/**
+	 * Assignment operator replaces this shared pointer with the specified shared pointer.  The object
+	 * currently referenced by this shared pointer will no longer be referenced and will be deleted if
+	 * there are no other referencers.
+	 */
+	__forceinline TSharedPtr& operator=( TSharedPtr const& InSharedPtr )
+	{
+		TSharedPtr Temp = InSharedPtr;
+		Swap(Temp, *this);
+		return *this;
+	}
+
+	__forceinline TSharedPtr& operator=( TSharedPtr&& InSharedPtr )
+	{
+		if (this != &InSharedPtr)
+		{
+			Object = InSharedPtr.Object;
+			InSharedPtr.Object = nullptr;
+			SharedReferenceCount = MoveTemp(InSharedPtr.SharedReferenceCount);
+		}
+		return *this;
+	}
 
 private:
 	ObjectType* Object;

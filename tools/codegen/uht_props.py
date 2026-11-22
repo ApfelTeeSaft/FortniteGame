@@ -57,7 +57,8 @@ MODELLED_STRUCTS = {"Vector": (12, 4), "Rotator": (12, 4), "Vector2D": (8, 4), "
                     "HitResult": (136, 8), "PredictionKey": (24, 8), "Color": (4, 4), "Margin": (16, 4),
                     "Key": (24, 8), "UniqueNetIdRepl": (40, 8), "GameplayEffectContextHandle": (24, 8),
                     "GameplayTagContainer": (32, 8), "GameplayCueParameters": (184, 8), "Transform": (48, 16),
-                    "ViewTargetTransitionParams": (16, 4), "GameplayAbilityActivationInfo": (32, 8)}
+                    "ViewTargetTransitionParams": (16, 4), "GameplayAbilityActivationInfo": (32, 8),
+                    "GameplayAbilityTargetDataHandle": (32, 8), "GameplayEventData": (168, 8)}
 # Enums EngineStructsRecovered.h defines, with the reference's enumerator values, for the
 # structs' constructors; enum_declarations does not redeclare them.
 MODELLED_ENUMS = {"EViewTargetBlendFunction", "EGameplayAbilityActivationMode::Type"}

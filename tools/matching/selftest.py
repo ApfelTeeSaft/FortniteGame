@@ -215,6 +215,10 @@ def test_uht_parameters() -> None:
                                       "P_GET_SOFTOBJECT_REF(TSoftObjectPtr<UTexture2D>,Z_Param_Out_Asset);"), t
     t = P.parameter(arr("Assets", 0x180, {"type": "SoftObject", "flags": 0, "func": base + 0xB00}), names, base)
     assert t["line"] == "P_GET_TARRAY_REF(TSoftObjectPtr<UTexture2D>,Z_Param_Out_Assets);", t
+    names.structs[0xC00] = ("GameplayEventData", 168, 8)             # by value, as the RPCs take it
+    t = P.parameter(rec("Struct", "Payload", 0, 0xC00), names, base)
+    assert (t["decl"], t["line"]) == ("FGameplayEventData Payload",
+                                      "P_GET_STRUCT(FGameplayEventData,Z_Param_Payload);"), t
     names.structs[0xA00] = ("SlateBrush", 120, 8)                    # not modelled: 4.20's is 136 bytes
     assert P.parameter(rec("Struct", "Brush", 0x180, 0xA00), names, base) is None
     assert "EViewTargetBlendFunction" in P.MODELLED_ENUMS                # defined by the shims, not redeclared

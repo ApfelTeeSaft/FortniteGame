@@ -370,9 +370,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,468, at 1,220 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 827 read parameters |
-| exact | 1,209: 1,007 in the denominator, 202 leaf (no `.pdata`) |
-| relocation-equivalent | 2: `UPaperGroupedSpriteComponent::UpdateInstanceTransform` and `UFortItem::GetPreviewAssets` (below) |
+| UFunction thunks defined | 1,474, at 1,226 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 833 read parameters |
+| exact | 1,214: 1,012 in the denominator, 202 leaf (no `.pdata`) |
+| relocation-equivalent | 3: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets` and `UGameplayAbility::GetContextFromOwner` (below) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
@@ -426,6 +426,8 @@ Supported types:
     `EGameplayAbilityActivationMode`). These are defined with the enumerator values of the
     reference's `FEnumParams`, which agree with 4.20, and are not redeclared in
     `Classes.gen.h` (`uht_props.MODELLED_ENUMS`);
+- `FGameplayAbilityTargetDataHandle` (`TArray<TSharedPtr<FGameplayAbilityTargetData>,
+  TInlineAllocator<1>>`) and `FGameplayEventData`;
 - `FTransform` (`TransformRecovered.h`, below);
 - soft object pointers, `TSoftObjectPtr<C>` (`EngineStructsRecovered.h`): `FSoftObjectPath`,
   `TPersistentObjectPtr`, `FSoftObjectPtr` and `TSoftObjectPtr`, read with
@@ -518,6 +520,24 @@ Limits:
       corroborates its address.
     - `FKey`'s struct registration initializer, lost in the previous change, is exact
       again: `InputCore.1`'s `.rdata` order moved back with these headers.
+  - `FGameplayEventData` needs more of the containers and shared pointers:
+    - `FGameplayAbilityTargetDataHandle`'s array uses `TInlineAllocator<1>`. Ported:
+      `TInlineAllocator`, `FHeapAllocator::ForElementType`, `IfAThenAElseB`,
+      `TTypeCompatibleBytes` and `RelocateConstructItems`. `TArray` picks
+      `ForElementType` only for allocators with `NeedsElementType`, so heap arrays compile
+      as before.
+    - `TSharedPtr` had no assignment operators in the shim, so an implicit copy assignment
+      copied its two pointers without touching the reference count. That stayed hidden
+      until `GetContextFromOwner` came out 3 bytes short: the reference calls
+      `FGameplayEffectContextHandle`'s assignment out of line. Ported from 4.20: the move
+      constructor, the copy assignment (a temporary and a bitwise `Swap`) and the move
+      assignment of `TSharedPtr`, `FSharedReferencer`'s, `MoveTemp` and `Swap`.
+    - 6 thunk addresses. 5 are exact. `UGameplayAbility::GetContextFromOwner` is
+      relocation-equivalent: it alone calls the target data handle's copy constructor and
+      the context handle's copy assignment, so nothing corroborates their addresses.
+      Those of `FGameplayEventData` are shared by several thunks and resolve.
+    - `FFoliageTypeObject::StaticStruct` lost its literal again: `Foliage.2`'s `.rdata`
+      order moved with the headers, as above.
   - Adding these changed the `.rdata` order of `InputCore.1`, which gained no code. Its
     literal sections came out in another order with the previous `ContainersRecovered.h`
     and in a third without `<new>`. So literal section order, like file-static order,
@@ -566,12 +586,12 @@ Limits:
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,558 have a supported signature and 1,468 have
+- Of the 1,661 virtual-native UFunctions, 1,564 have a supported signature and 1,474 have
   thunks (folded bodies counted per UFunction). For the other 90, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FSlateBrush` (6), `FGameplayEventData` (5), `FFortItemEntry`,
-    `FGameplayEffectSpecForRPC` and `FPartyReservation` (4 each);
+  - `FSlateBrush` (6), `FFortItemEntry`, `FGameplayEffectSpecForRPC` and
+    `FPartyReservation` (4 each);
   - `TArray<FAssetData>` (4) and `FAthenaQuickChatActiveEntry` (3);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 

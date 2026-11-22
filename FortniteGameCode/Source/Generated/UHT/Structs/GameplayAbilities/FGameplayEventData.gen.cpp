@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FGameplayEventData();
 	UPackage* Z_Construct_UPackage__Script_GameplayAbilities();  // RVA 0x0054EE20
-struct alignas(8) FGameplayEventData
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FGameplayEventData is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B9E0 (end 0x0055BA32, chained .pdata fragments)
 // Original VA: 0x000000014055B9E0 | File offset: 0x0055AFE0
 // Recovery: confirmed (TEXT("GameplayEventData") and Z_Construct_UScriptStruct_FGameplayEventData) | Matching: see analysis/functions-uht-staticstruct.json

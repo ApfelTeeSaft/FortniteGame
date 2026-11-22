@@ -5,7 +5,9 @@
 // Engine/NetSerialization.h (FVector_NetQuantize*), Engine/EngineTypes.h (FHitResult),
 // Camera/PlayerCameraManager.h (FViewTargetTransitionParams) and
 // GameplayAbilities' GameplayPrediction.h (FPredictionKey), GameplayAbilitySpec.h
-// (FGameplayAbilityActivationInfo) and GameplayEffectTypes.h
+// (FGameplayAbilityActivationInfo), Abilities/GameplayAbilityTargetTypes.h and
+// GameplayAbilityTypes.h (FGameplayAbilityTargetDataHandle, FGameplayEventData) and
+// GameplayEffectTypes.h
 // (FGameplayEffectContextHandle, FGameplayCueParameters), GameplayTags' GameplayTagContainer.h
 // (FGameplayTagContainer), InputCore's InputCoreTypes.h (FKey), CoreUObject's
 // UObject/CoreOnline.h and Engine's GameFramework/OnlineReplStructs.h (FUniqueNetIdRepl).
@@ -421,8 +423,8 @@ struct FGameplayTagContainer
 	}
 
 	FGameplayTagContainer(FGameplayTagContainer&& Other)
-		: GameplayTags(static_cast<TArray<FGameplayTag>&&>(Other.GameplayTags))   // MoveTemp
-		, ParentTags(static_cast<TArray<FGameplayTag>&&>(Other.ParentTags))
+		: GameplayTags(MoveTemp(Other.GameplayTags))
+		, ParentTags(MoveTemp(Other.ParentTags))
 	{
 
 	}
@@ -552,4 +554,63 @@ private:
 
 	/** This was the prediction key used to activate this ability. It does not get updated if a new prediction key is generated over the course of the ability. */
 	FPredictionKey PredictionKeyWhenActivated;
+};
+
+// GameplayAbilities: Abilities/GameplayAbilityTargetTypes.h. Copies and the destructor are
+// implicit, as there.
+struct FGameplayAbilityTargetData;
+
+struct FGameplayAbilityTargetDataHandle
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FGameplayAbilityTargetDataHandle() { }
+
+	/** Raw storage of target data, do not modify this directly */
+	TArray<TSharedPtr<FGameplayAbilityTargetData>, TInlineAllocator<1> >	Data;
+};
+
+// GameplayAbilities: Abilities/GameplayAbilityTypes.h. Copies and the destructor are implicit.
+struct FGameplayEventData
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FGameplayEventData()
+		: Instigator(nullptr)
+		, Target(nullptr)
+		, OptionalObject(nullptr)
+		, OptionalObject2(nullptr)
+		, EventMagnitude(0.f)
+	{
+	}
+
+	/** Tag of the event that triggered this */
+	FGameplayTag EventTag;
+
+	/** The instigator of the event */
+	const AActor* Instigator;
+
+	/** The target of the event */
+	const AActor* Target;
+
+	/** An optional ability-specific object to be passed though the event */
+	const UObject* OptionalObject;
+
+	/** A second optional ability-specific object to be passed though the event */
+	const UObject* OptionalObject2;
+
+	/** Polymorphic context information */
+	FGameplayEffectContextHandle ContextHandle;
+
+	/** Tags that the instigator has */
+	FGameplayTagContainer InstigatorTags;
+
+	/** Tags that the target has */
+	FGameplayTagContainer TargetTags;
+
+	/** The magnitude of the triggering event */
+	float EventMagnitude;
+
+	/** The polymorphic target information for the event */
+	FGameplayAbilityTargetDataHandle TargetData;
 };

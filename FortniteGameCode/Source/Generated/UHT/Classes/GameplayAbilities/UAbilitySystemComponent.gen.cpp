@@ -26,6 +26,18 @@ void UAbilitySystemComponent::execClientActivateAbilitySucceed(UObject* Context,
 	P_THIS->ClientActivateAbilitySucceed_Implementation(Z_Param_AbilityToActivate,Z_Param_PredictionKey);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053B840 (end 0x0053BA6F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientActivateAbilitySucceedWithEventData) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToActivate);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayEventData,Z_Param_TriggerEventData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientActivateAbilitySucceedWithEventData_Implementation(Z_Param_AbilityToActivate,Z_Param_PredictionKey,Z_Param_TriggerEventData);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BA70 (end 0x0053BB75)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCancelAbility) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execClientCancelAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -374,6 +386,25 @@ void UAbilitySystemComponent::execServerSetReplicatedEventWithPayload(UObject* C
 	P_THIS->ServerSetReplicatedEventWithPayload_Implementation(EAbilityGenericReplicatedEvent::Type(Z_Param_EventType),Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_CurrentPredictionKey,Z_Param_VectorPayload);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005439B0 (end 0x00543BEB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetReplicatedTargetData) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerSetReplicatedTargetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityHandle);
+	P_GET_STRUCT(FPredictionKey,Z_Param_AbilityOriginalPredictionKey);
+	P_GET_STRUCT(FGameplayAbilityTargetDataHandle,Z_Param_ReplicatedTargetDataHandle);
+	P_GET_STRUCT(FGameplayTag,Z_Param_ApplicationTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_CurrentPredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetReplicatedTargetData_Validate(Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_ReplicatedTargetDataHandle,Z_Param_ApplicationTag,Z_Param_CurrentPredictionKey))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetReplicatedTargetData_Validate"));
+		return;
+	}
+	P_THIS->ServerSetReplicatedTargetData_Implementation(Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_ReplicatedTargetDataHandle,Z_Param_ApplicationTag,Z_Param_CurrentPredictionKey);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00543BF0 (end 0x00543D7E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetReplicatedTargetDataCancelled) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execServerSetReplicatedTargetDataCancelled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -406,6 +437,24 @@ void UAbilitySystemComponent::execServerTryActivateAbility(UObject* Context, FFr
 		return;
 	}
 	P_THIS->ServerTryActivateAbility_Implementation(Z_Param_AbilityToActivate,Z_Param_InputPressed,Z_Param_PredictionKey);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543EE0 (end 0x005441B0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerTryActivateAbilityWithEventData) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerTryActivateAbilityWithEventData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToActivate);
+	P_GET_UBOOL(Z_Param_InputPressed);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayEventData,Z_Param_TriggerEventData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerTryActivateAbilityWithEventData_Validate(Z_Param_AbilityToActivate,Z_Param_InputPressed,Z_Param_PredictionKey,Z_Param_TriggerEventData))
+	{
+		RPC_ValidateFailed(TEXT("ServerTryActivateAbilityWithEventData_Validate"));
+		return;
+	}
+	P_THIS->ServerTryActivateAbilityWithEventData_Implementation(Z_Param_AbilityToActivate,Z_Param_InputPressed,Z_Param_PredictionKey,Z_Param_TriggerEventData);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UAbilitySystemComponent, 219976785u)

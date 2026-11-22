@@ -18027,8 +18027,8 @@ public:
 	virtual void ServerSetInputPressed_Implementation(FGameplayAbilitySpecHandle AbilityHandle);  // slot 122 (+0x3D0), UFunction UAbilitySystemComponent::ServerSetInputPressed
 	virtual bool ServerSetReplicatedTargetDataCancelled_Validate(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey);  // slot 123 (+0x3D8), UFunction UAbilitySystemComponent::ServerSetReplicatedTargetDataCancelled
 	virtual void ServerSetReplicatedTargetDataCancelled_Implementation(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey);  // slot 124 (+0x3E0), UFunction UAbilitySystemComponent::ServerSetReplicatedTargetDataCancelled
-	virtual void FNGC_VSlot_0x3E8();  // slot 125: UAbilitySystemComponent::ServerSetReplicatedTargetData_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x3F0();  // slot 126: UAbilitySystemComponent::ServerSetReplicatedTargetData_Implementation (signature not recovered)
+	virtual bool ServerSetReplicatedTargetData_Validate(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FGameplayAbilityTargetDataHandle const& ReplicatedTargetDataHandle, FGameplayTag ApplicationTag, FPredictionKey CurrentPredictionKey);  // slot 125 (+0x3E8), UFunction UAbilitySystemComponent::ServerSetReplicatedTargetData
+	virtual void ServerSetReplicatedTargetData_Implementation(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FGameplayAbilityTargetDataHandle const& ReplicatedTargetDataHandle, FGameplayTag ApplicationTag, FPredictionKey CurrentPredictionKey);  // slot 126 (+0x3F0), UFunction UAbilitySystemComponent::ServerSetReplicatedTargetData
 	virtual void ClientSetReplicatedEvent_Implementation(EAbilityGenericReplicatedEvent::Type EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey);  // slot 127 (+0x3F8), UFunction UAbilitySystemComponent::ClientSetReplicatedEvent
 	virtual bool ServerSetReplicatedEventWithPayload_Validate(EAbilityGenericReplicatedEvent::Type EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey, FVector_NetQuantize100 VectorPayload);  // slot 128 (+0x400), UFunction UAbilitySystemComponent::ServerSetReplicatedEventWithPayload
 	virtual void ServerSetReplicatedEventWithPayload_Implementation(EAbilityGenericReplicatedEvent::Type EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey, FVector_NetQuantize100 VectorPayload);  // slot 129 (+0x408), UFunction UAbilitySystemComponent::ServerSetReplicatedEventWithPayload
@@ -18042,7 +18042,7 @@ public:
 	virtual void ServerCurrentMontageSetNextSectionName_Implementation(UAnimMontage* ClientAnimMontage, float ClientPosition, FName SectionName, FName NextSectionName);  // slot 137 (+0x448), UFunction UAbilitySystemComponent::ServerCurrentMontageSetNextSectionName
 	virtual void FNGC_VSlot_0x450();  // slot 138: UAbilitySystemComponent::ServerAbilityRPCBatch_Validate (signature not recovered)
 	virtual void FNGC_VSlot_0x458();  // slot 139: UAbilitySystemComponent::ServerAbilityRPCBatch_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x460();  // slot 140: UAbilitySystemComponent::ClientActivateAbilitySucceedWithEventData_Implementation (signature not recovered)
+	virtual void ClientActivateAbilitySucceedWithEventData_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, FPredictionKey PredictionKey, FGameplayEventData TriggerEventData);  // slot 140 (+0x460), UFunction UAbilitySystemComponent::ClientActivateAbilitySucceedWithEventData
 	virtual void ClientActivateAbilitySucceed_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, FPredictionKey PredictionKey);  // slot 141 (+0x468), UFunction UAbilitySystemComponent::ClientActivateAbilitySucceed
 	virtual void ClientActivateAbilityFailed_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, int16 PredictionKey);  // slot 142 (+0x470), UFunction UAbilitySystemComponent::ClientActivateAbilityFailed
 	virtual void ClientCancelAbility_Implementation(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);  // slot 143 (+0x478), UFunction UAbilitySystemComponent::ClientCancelAbility
@@ -18052,8 +18052,8 @@ public:
 	virtual bool ServerEndAbility_Validate(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo, FPredictionKey PredictionKey);  // slot 147 (+0x498), UFunction UAbilitySystemComponent::ServerEndAbility
 	virtual void ServerEndAbility_Implementation(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo, FPredictionKey PredictionKey);  // slot 148 (+0x4A0), UFunction UAbilitySystemComponent::ServerEndAbility
 	virtual void ClientTryActivateAbility_Implementation(FGameplayAbilitySpecHandle AbilityToActivate);  // slot 149 (+0x4A8), UFunction UAbilitySystemComponent::ClientTryActivateAbility
-	virtual void FNGC_VSlot_0x4B0();  // slot 150: UAbilitySystemComponent::ServerTryActivateAbilityWithEventData_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x4B8();  // slot 151: UAbilitySystemComponent::ServerTryActivateAbilityWithEventData_Implementation (signature not recovered)
+	virtual bool ServerTryActivateAbilityWithEventData_Validate(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey, FGameplayEventData TriggerEventData);  // slot 150 (+0x4B0), UFunction UAbilitySystemComponent::ServerTryActivateAbilityWithEventData
+	virtual void ServerTryActivateAbilityWithEventData_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey, FGameplayEventData TriggerEventData);  // slot 151 (+0x4B8), UFunction UAbilitySystemComponent::ServerTryActivateAbilityWithEventData
 	virtual bool ServerTryActivateAbility_Validate(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey);  // slot 152 (+0x4C0), UFunction UAbilitySystemComponent::ServerTryActivateAbility
 	virtual void ServerTryActivateAbility_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey);  // slot 153 (+0x4C8), UFunction UAbilitySystemComponent::ServerTryActivateAbility
 	virtual void ClientPrintDebug_Response_Implementation(TArray<FString> const& Strings, int32 GameFlags);  // slot 154 (+0x4D0), UFunction UAbilitySystemComponent::ClientPrintDebug_Response
@@ -38053,7 +38053,7 @@ public:
 	virtual void FNGC_VSlot_0x418();
 	virtual UAnimMontage* GetUseAnimation() const;  // slot 132 (+0x420), UFunction UFortConsumableItemDefinition::GetUseAnimation
 	virtual float GetAnimPlayRate() const;  // slot 133 (+0x428), UFunction UFortConsumableItemDefinition::GetAnimPlayRate
-	virtual void FNGC_VSlot_0x430();  // slot 134: UFortConsumableItemDefinition::ConsumeItem (signature not recovered)
+	virtual void ConsumeItem(FGameplayEventData const& EventData);  // slot 134 (+0x430), UFunction UFortConsumableItemDefinition::ConsumeItem
 	virtual void FNGC_VSlot_0x438();
 	virtual float GetHealthRestored(int32 ItemLevel) const;  // slot 136 (+0x440), UFunction UFortConsumableItemDefinition::GetHealthRestored
 	static void StaticRegisterNativesUFortConsumableItemDefinition();
@@ -41536,7 +41536,7 @@ public:
 	virtual void FNGC_VSlot_0x2A8();
 	virtual void FNGC_VSlot_0x2B0();
 	virtual void FNGC_VSlot_0x2B8();
-	virtual void FNGC_VSlot_0x2C0();  // slot 88: UGameplayAbility::SendGameplayEvent (signature not recovered)
+	virtual void SendGameplayEvent(FGameplayTag EventTag, FGameplayEventData Payload);  // slot 88 (+0x2C0), UFunction UGameplayAbility::SendGameplayEvent
 	virtual bool K2_CommitAbility();  // slot 89 (+0x2C8), UFunction UGameplayAbility::K2_CommitAbility
 	virtual bool K2_CommitAbilityCooldown(bool BroadcastCommitEvent, bool ForceCooldown);  // slot 90 (+0x2D0), UFunction UGameplayAbility::K2_CommitAbilityCooldown
 	virtual bool K2_CommitAbilityCost(bool BroadcastCommitEvent);  // slot 91 (+0x2D8), UFunction UGameplayAbility::K2_CommitAbilityCost
@@ -41555,7 +41555,7 @@ public:
 	virtual void K2_AddGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context, bool bRemoveOnAbilityEnd);  // slot 104 (+0x340), UFunction UGameplayAbility::K2_AddGameplayCue
 	virtual void K2_AddGameplayCueWithParams(FGameplayTag GameplayCueTag, FGameplayCueParameters const& GameplayCueParameter, bool bRemoveOnAbilityEnd);  // slot 105 (+0x348), UFunction UGameplayAbility::K2_AddGameplayCueWithParams
 	virtual void K2_RemoveGameplayCue(FGameplayTag GameplayCueTag);  // slot 106 (+0x350), UFunction UGameplayAbility::K2_RemoveGameplayCue
-	virtual void FNGC_VSlot_0x358();  // slot 107: UGameplayAbility::GetContextFromOwner (signature not recovered)
+	virtual FGameplayEffectContextHandle GetContextFromOwner(FGameplayAbilityTargetDataHandle OptionalTargetData) const;  // slot 107 (+0x358), UFunction UGameplayAbility::GetContextFromOwner
 	virtual void FNGC_VSlot_0x360();
 	virtual void FNGC_VSlot_0x368();
 	virtual void FNGC_VSlot_0x370();

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCDF0 (end 0x00FCCF68)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConsumeItem) | Matching: see analysis/functions-uht-exec.json
+void UFortConsumableItemDefinition::execConsumeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGameplayEventData,Z_Param_Out_EventData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ConsumeItem(Z_Param_Out_EventData);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCF70 (end 0x00FCCFA1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimPlayRate) | Matching: see analysis/functions-uht-exec.json
 void UFortConsumableItemDefinition::execGetAnimPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

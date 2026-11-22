@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054FD20 (end 0x0054FE30)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetContextFromOwner) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execGetContextFromOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilityTargetDataHandle,Z_Param_OptionalTargetData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FGameplayEffectContextHandle*)Z_Param__Result=P_THIS->GetContextFromOwner(Z_Param_OptionalTargetData);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054FFC0 (end 0x00550131)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_AddGameplayCue) | Matching: see analysis/functions-uht-exec.json
 void UGameplayAbility::execK2_AddGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -115,6 +125,17 @@ void UGameplayAbility::execK2_RemoveGameplayCue(UObject* Context, FFrame& Stack,
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->K2_RemoveGameplayCue(Z_Param_GameplayCueTag);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00551A20 (end 0x00551BDE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSendGameplayEvent) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execSendGameplayEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_EventTag);
+	P_GET_STRUCT(FGameplayEventData,Z_Param_Payload);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SendGameplayEvent(Z_Param_EventTag,Z_Param_Payload);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00551BE0 (end 0x00551C66)
