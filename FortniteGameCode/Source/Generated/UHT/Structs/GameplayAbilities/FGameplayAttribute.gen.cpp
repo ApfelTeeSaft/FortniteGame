@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FGameplayAttribute();
 	UPackage* Z_Construct_UPackage__Script_GameplayAbilities();  // RVA 0x0054EE20
-struct alignas(8) FGameplayAttribute
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FGameplayAttribute is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D240 (end 0x0054D2B1, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014054D240 | File offset: 0x0054C840
 // Recovery: confirmed (TEXT("GameplayAttribute") and Z_Construct_UScriptStruct_FGameplayAttribute) | Matching: see analysis/functions-uht-staticstruct.json

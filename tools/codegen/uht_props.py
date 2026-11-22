@@ -60,7 +60,8 @@ MODELLED_STRUCTS = {"Vector": (12, 4), "Rotator": (12, 4), "Vector2D": (8, 4), "
                     "ViewTargetTransitionParams": (16, 4), "GameplayAbilityActivationInfo": (32, 8),
                     "GameplayAbilityTargetDataHandle": (32, 8), "GameplayEventData": (168, 8),
                     "PlayerReservation": (64, 8), "PartyReservation": (64, 8),
-                    "AthenaQuickChatActiveEntry": (24, 8)}
+                    "AthenaQuickChatActiveEntry": (24, 8), "AssetData": (80, 8), "GameplayAttribute": (32, 8),
+                    "GameplayEffectModifiedAttribute": (40, 8), "GameplayEffectSpecForRPC": (120, 8)}
 # Enums EngineStructsRecovered.h defines, with the reference's enumerator values, for the
 # structs' constructors; enum_declarations does not redeclare them.
 MODELLED_ENUMS = {"EViewTargetBlendFunction", "EGameplayAbilityActivationMode::Type"}

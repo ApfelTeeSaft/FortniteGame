@@ -16,6 +16,17 @@ void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAdded(UObject* Con
 	P_THIS->NetMulticast_InvokeGameplayCueAdded_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01082E00 (end 0x01082EFA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayEffectSpecForRPC,Z_Param_Spec);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation(Z_Param_Spec,Z_Param_PredictionKey);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01082F00 (end 0x01083129)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -50,6 +61,17 @@ void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted(UObject* 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->NetMulticast_InvokeGameplayCueExecuted_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010834F0 (end 0x010835FA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueExecuted_FromSpec) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted_FromSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayEffectSpecForRPC,Z_Param_Spec);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation(Z_Param_Spec,Z_Param_PredictionKey);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01083600 (end 0x01083829)

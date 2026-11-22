@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FAssetData();
 	UPackage* Z_Construct_UPackage__Script_AssetRegistry();  // RVA 0x01C804E0
-struct alignas(8) FAssetData
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FAssetData is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C7FED0 (end 0x01C7FF41, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x0000000141C7FED0 | File offset: 0x01C7F4D0
 // Recovery: confirmed (TEXT("AssetData") and Z_Construct_UScriptStruct_FAssetData) | Matching: see analysis/functions-uht-staticstruct.json

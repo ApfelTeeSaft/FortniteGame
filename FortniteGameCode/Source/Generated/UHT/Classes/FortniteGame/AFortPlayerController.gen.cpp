@@ -1077,6 +1077,22 @@ void AFortPlayerController::execServerRequestAIDebug(UObject* Context, FFrame& S
 	P_THIS->ServerRequestAIDebug_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010735E0 (end 0x0107377B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRequestAttributeSources) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerRequestAttributeSources(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAttribute,Z_Param_Attribute);
+	P_GET_OBJECT(UFortAbilitySystemComponent,Z_Param_AbilitySystemComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRequestAttributeSources_Validate(Z_Param_Attribute,Z_Param_AbilitySystemComponent))
+	{
+		RPC_ValidateFailed(TEXT("ServerRequestAttributeSources_Validate"));
+		return;
+	}
+	P_THIS->ServerRequestAttributeSources_Implementation(Z_Param_Attribute,Z_Param_AbilitySystemComponent);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01073780 (end 0x01073826)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRequestGameplayAction) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerController::execServerRequestGameplayAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

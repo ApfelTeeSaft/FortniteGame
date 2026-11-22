@@ -11782,8 +11782,8 @@ public:
 	virtual void ServerUIChoiceCompleted_Implementation(int32 ChosenItem, int32 MenuIdentifier);  // slot 539 (+0x10D8), UFunction AFortPlayerController::ServerUIChoiceCompleted
 	virtual void FNGC_VSlot_0x10E0();  // slot 540: AFortPlayerController::ClientOpenChoiceUI_Implementation (signature not recovered)
 	virtual void FNGC_VSlot_0x10E8();
-	virtual void FNGC_VSlot_0x10F0();  // slot 542: AFortPlayerController::ServerRequestAttributeSources_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x10F8();  // slot 543: AFortPlayerController::ServerRequestAttributeSources_Implementation (signature not recovered)
+	virtual bool ServerRequestAttributeSources_Validate(FGameplayAttribute Attribute, UFortAbilitySystemComponent* AbilitySystemComponent);  // slot 542 (+0x10F0), UFunction AFortPlayerController::ServerRequestAttributeSources
+	virtual void ServerRequestAttributeSources_Implementation(FGameplayAttribute Attribute, UFortAbilitySystemComponent* AbilitySystemComponent);  // slot 543 (+0x10F8), UFunction AFortPlayerController::ServerRequestAttributeSources
 	virtual bool ServerAnnouncementStoppedOnClient_Validate(FGuid AnnouncementID);  // slot 544 (+0x1100), UFunction AFortPlayerController::ServerAnnouncementStoppedOnClient
 	virtual void ServerAnnouncementStoppedOnClient_Implementation(FGuid AnnouncementID);  // slot 545 (+0x1108), UFunction AFortPlayerController::ServerAnnouncementStoppedOnClient
 	virtual bool ServerSetMarkText_Validate(AFortMarkActor* MarkActor, const FString& MarkText);  // slot 546 (+0x1110), UFunction AFortPlayerController::ServerSetMarkText
@@ -12929,14 +12929,14 @@ public:
 	virtual void FNGC_VSlot_0xD98();
 	virtual void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 436 (+0xDA0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams
 	virtual void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 437 (+0xDA8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams
-	virtual void FNGC_VSlot_0xDB0();  // slot 438: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation(FGameplayEffectSpecForRPC const& Spec, FPredictionKey PredictionKey);  // slot 438 (+0xDB0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec
 	virtual void NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters Parameters);  // slot 439 (+0xDB8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAdded_WithParams
 	virtual void NetMulticast_InvokeGameplayCueAdded_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 440 (+0xDC0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAdded
 	virtual void NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 441 (+0xDC8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted_WithParams
 	virtual void NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 442 (+0xDD0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_WithParams
 	virtual void NetMulticast_InvokeGameplayCuesExecuted_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 443 (+0xDD8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted
 	virtual void NetMulticast_InvokeGameplayCueExecuted_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 444 (+0xDE0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted
-	virtual void FNGC_VSlot_0xDE8();  // slot 445: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation(const FGameplayEffectSpecForRPC Spec, FPredictionKey PredictionKey);  // slot 445 (+0xDE8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_FromSpec
 	virtual void FNGC_VSlot_0xDF0();  // slot 446: AFortPlayerPawnAthena::NetMulticast_Athena_BatchedDamageCues_Implementation (signature not recovered)
 	static void StaticRegisterNativesAFortPlayerPawnAthena();
 	static void execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -18063,14 +18063,14 @@ public:
 	virtual void ServerPrintDebug_Request_Implementation();  // slot 158 (+0x4F0), UFunction UAbilitySystemComponent::ServerPrintDebug_Request
 	virtual void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 159 (+0x4F8), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams
 	virtual void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 160 (+0x500), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams
-	virtual void FNGC_VSlot_0x508();  // slot 161: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation(FGameplayEffectSpecForRPC const& Spec, FPredictionKey PredictionKey);  // slot 161 (+0x508), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec
 	virtual void NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters Parameters);  // slot 162 (+0x510), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded_WithParams
 	virtual void NetMulticast_InvokeGameplayCueAdded_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 163 (+0x518), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded
 	virtual void NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 164 (+0x520), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted_WithParams
 	virtual void NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 165 (+0x528), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_WithParams
 	virtual void NetMulticast_InvokeGameplayCuesExecuted_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 166 (+0x530), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted
 	virtual void NetMulticast_InvokeGameplayCueExecuted_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 167 (+0x538), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted
-	virtual void FNGC_VSlot_0x540();  // slot 168: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation(const FGameplayEffectSpecForRPC Spec, FPredictionKey PredictionKey);  // slot 168 (+0x540), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_FromSpec
 	virtual void FNGC_VSlot_0x548();
 	virtual void FNGC_VSlot_0x550();
 	virtual void FNGC_VSlot_0x558();

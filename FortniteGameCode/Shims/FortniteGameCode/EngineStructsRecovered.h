@@ -678,3 +678,109 @@ struct FAthenaQuickChatActiveEntry
 	int16 ContextValue;
 	int8 Index;
 };
+
+// AssetRegistry: AssetDataTagMap.h and AssetData.h. Copies, moves and destructors are implicit,
+// as there; FAssetData's default constructor leaves PackageFlags uninitialised, as there.
+class FAssetDataTagMap;
+
+class FAssetDataTagMapSharedView
+{
+
+public:
+	/** Default constructor - empty map */
+	FAssetDataTagMapSharedView()
+	{
+	}
+
+private:
+	/** Pointer to map being wrapped, it is created on demand */
+	TSharedPtr<FAssetDataTagMap> Map;
+};
+
+struct FAssetData
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+public:
+	/** The object path for the asset in the form PackageName.AssetName. Only top level objects in a package can have AssetData */
+	FName ObjectPath;
+	/** The name of the package in which the asset is found, this is the full long package name such as /Game/Path/Package */
+	FName PackageName;
+	/** The path to the package in which the asset is found, this is /Game/Path with the Package stripped off */
+	FName PackagePath;
+	/** The name of the asset without the package */
+	FName AssetName;
+	/** The name of the asset's class */
+	FName AssetClass;
+	/** The map of values for properties that were marked AssetRegistrySearchable or added by GetAssetRegistryTags */
+	FAssetDataTagMapSharedView TagsAndValues;
+	/** The IDs of the pakchunks this asset is located in for streaming install.  Empty if not assigned to a chunk */
+	TArray<int32> ChunkIDs;
+	/** Asset package flags */
+	uint32 PackageFlags;
+
+public:
+	/** Default constructor */
+	FAssetData()
+	{}
+};
+
+// GameplayAbilities: AttributeSet.h (FGameplayAttribute) and GameplayEffect.h. Copies and
+// destructors are implicit; FGameplayEffectSpecForRPC's default constructor is out of line, in
+// GameplayEffect.cpp, as the reference's thunks call it.
+class UProperty;
+class UStruct;
+class UGameplayEffect;
+
+struct FGameplayAttribute
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FGameplayAttribute()
+		: Attribute(nullptr)
+		, AttributeOwner(nullptr)
+	{
+	}
+
+	/** Name of the attribute, usually the same as property name */
+	FString AttributeName;
+
+private:
+	UProperty*	Attribute;
+	UStruct* AttributeOwner;
+};
+
+struct FGameplayEffectModifiedAttribute
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	/** The attribute that has been modified */
+	FGameplayAttribute Attribute;
+
+	/** Total magnitude applied to that attribute */
+	float TotalMagnitude;
+
+	FGameplayEffectModifiedAttribute() : TotalMagnitude(0.0f) {}
+};
+
+struct FGameplayEffectSpecForRPC
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FGameplayEffectSpecForRPC();
+
+	/** GameplayEfect definition. The static data that this spec points to. */
+	const UGameplayEffect* Def;
+
+	TArray<FGameplayEffectModifiedAttribute> ModifiedAttributes;
+
+	FGameplayEffectContextHandle EffectContext; // This tells us how we got here (who / what applied us)
+
+	FGameplayTagContainer AggregatedSourceTags;
+
+	FGameplayTagContainer AggregatedTargetTags;
+
+	float Level;
+
+	float AbilityLevel;
+};

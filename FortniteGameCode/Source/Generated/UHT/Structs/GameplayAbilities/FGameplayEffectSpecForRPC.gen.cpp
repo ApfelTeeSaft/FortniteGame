@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecForRPC();
 	UPackage* Z_Construct_UPackage__Script_GameplayAbilities();  // RVA 0x0054EE20
-struct alignas(8) FGameplayEffectSpecForRPC
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x78];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FGameplayEffectSpecForRPC is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005640B0 (end 0x00564102, chained .pdata fragments)
 // Original VA: 0x00000001405640B0 | File offset: 0x005636B0
 // Recovery: confirmed (TEXT("GameplayEffectSpecForRPC") and Z_Construct_UScriptStruct_FGameplayEffectSpecForRPC) | Matching: see analysis/functions-uht-staticstruct.json
