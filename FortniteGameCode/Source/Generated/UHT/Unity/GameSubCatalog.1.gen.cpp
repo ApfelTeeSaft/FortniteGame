@@ -2,19 +2,27 @@
 // Unity translation unit GameSubCatalog.1 of /Script/GameSubCatalog: the fragments of 21 UHT items in the
 // source order recovered from .CRT$XCU entries 2129..2164 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/GameSubCatalog/ECatalogRequirementType.staticenum.gen.cpp"
+#include "../Enums/GameSubCatalog/ECatalogOfferType.staticenum.gen.cpp"
+#include "../Enums/GameSubCatalog/ECatalogSaleType.staticenum.gen.cpp"
+#include "../Enums/GameSubCatalog/EAppStore.staticenum.gen.cpp"
+#include "../Enums/GameSubCatalog/EStoreCurrencyType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/GameSubCatalog.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/GameSubCatalog/ECatalogRequirementType.static.gen.cpp"
+#include "../Enums/GameSubCatalog/ECatalogRequirementType.defer.gen.cpp"
 #include "../Enums/GameSubCatalog/ECatalogRequirementType.gen.cpp"
-#include "../Enums/GameSubCatalog/ECatalogOfferType.static.gen.cpp"
+#include "../Enums/GameSubCatalog/ECatalogOfferType.defer.gen.cpp"
 #include "../Enums/GameSubCatalog/ECatalogOfferType.gen.cpp"
-#include "../Enums/GameSubCatalog/ECatalogSaleType.static.gen.cpp"
+#include "../Enums/GameSubCatalog/ECatalogSaleType.defer.gen.cpp"
 #include "../Enums/GameSubCatalog/ECatalogSaleType.gen.cpp"
-#include "../Enums/GameSubCatalog/EAppStore.static.gen.cpp"
+#include "../Enums/GameSubCatalog/EAppStore.defer.gen.cpp"
 #include "../Enums/GameSubCatalog/EAppStore.gen.cpp"
-#include "../Enums/GameSubCatalog/EStoreCurrencyType.static.gen.cpp"
+#include "../Enums/GameSubCatalog/EStoreCurrencyType.defer.gen.cpp"
 #include "../Enums/GameSubCatalog/EStoreCurrencyType.gen.cpp"
 #include "../Structs/GameSubCatalog/FCatalogPurchaseNotification.gen.cpp"
 #include "../Structs/GameSubCatalog/FCatalogDownload.gen.cpp"

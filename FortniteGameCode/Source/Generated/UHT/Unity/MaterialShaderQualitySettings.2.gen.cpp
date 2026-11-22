@@ -2,11 +2,15 @@
 // Unity translation unit MaterialShaderQualitySettings.2 of /Script/MaterialShaderQualitySettings: the fragments of 3 UHT items in the
 // source order recovered from .CRT$XCU entries 12244..12248 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/MaterialShaderQualitySettings/EMobileCSMQuality.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/MaterialShaderQualitySettings.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/MaterialShaderQualitySettings/EMobileCSMQuality.static.gen.cpp"
+#include "../Enums/MaterialShaderQualitySettings/EMobileCSMQuality.defer.gen.cpp"
 #include "../Enums/MaterialShaderQualitySettings/EMobileCSMQuality.gen.cpp"
 #include "../Structs/MaterialShaderQualitySettings/FMaterialQualityOverrides.gen.cpp"
 #include "../Classes/MaterialShaderQualitySettings/UShaderPlatformQualitySettings.gen.cpp"

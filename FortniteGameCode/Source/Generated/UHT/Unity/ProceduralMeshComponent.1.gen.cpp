@@ -2,11 +2,15 @@
 // Unity translation unit ProceduralMeshComponent.1 of /Script/ProceduralMeshComponent: the fragments of 6 UHT items in the
 // source order recovered from .CRT$XCU entries 1854..1864 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/ProceduralMeshComponent/EProcMeshSliceCapOption.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/ProceduralMeshComponent.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/ProceduralMeshComponent/EProcMeshSliceCapOption.static.gen.cpp"
+#include "../Enums/ProceduralMeshComponent/EProcMeshSliceCapOption.defer.gen.cpp"
 #include "../Enums/ProceduralMeshComponent/EProcMeshSliceCapOption.gen.cpp"
 #include "../UKismetProceduralMeshLibrary.gen.cpp"
 #include "../Classes/ProceduralMeshComponent/UKismetProceduralMeshLibrary.gen.cpp"

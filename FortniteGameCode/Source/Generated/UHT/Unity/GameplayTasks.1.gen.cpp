@@ -2,13 +2,19 @@
 // Unity translation unit GameplayTasks.1 of /Script/GameplayTasks: the fragments of 14 UHT items in the
 // source order recovered from .CRT$XCU entries 16328..16348 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/GameplayTasks/ETaskResourceOverlapPolicy.staticenum.gen.cpp"
+#include "../Enums/GameplayTasks/EGameplayTaskState.staticenum.gen.cpp"
+#include "../Enums/GameplayTasks/EGameplayTaskRunResult.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/GameplayTasks.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/GameplayTasks/ETaskResourceOverlapPolicy.static.gen.cpp"
+#include "../Enums/GameplayTasks/ETaskResourceOverlapPolicy.defer.gen.cpp"
 #include "../Enums/GameplayTasks/ETaskResourceOverlapPolicy.gen.cpp"
-#include "../Enums/GameplayTasks/EGameplayTaskState.static.gen.cpp"
+#include "../Enums/GameplayTasks/EGameplayTaskState.defer.gen.cpp"
 #include "../Enums/GameplayTasks/EGameplayTaskState.gen.cpp"
 #include "../Structs/GameplayTasks/FGameplayResourceSet.gen.cpp"
 #include "../UGameplayTask.gen.cpp"
@@ -24,7 +30,7 @@
 #include "../Classes/GameplayTasks/UGameplayTaskOwnerInterface.gen.cpp"
 #include "../Classes/GameplayTasks/UGameplayTaskResource.gen.cpp"
 #include "../Delegates/GameplayTasks/OnClaimedResourcesChangeSignature__DelegateSignature.gen.cpp"
-#include "../Enums/GameplayTasks/EGameplayTaskRunResult.static.gen.cpp"
+#include "../Enums/GameplayTasks/EGameplayTaskRunResult.defer.gen.cpp"
 #include "../Enums/GameplayTasks/EGameplayTaskRunResult.gen.cpp"
 #include "../UGameplayTasksComponent.gen.cpp"
 #include "../Classes/GameplayTasks/UGameplayTasksComponent.gen.cpp"

@@ -2,10 +2,14 @@
 // Unity translation unit MoviePlayer.1 of /Script/MoviePlayer: the fragments of 2 UHT items in the
 // source order recovered from .CRT$XCU entries 17097..17099 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/MoviePlayer/EMoviePlaybackType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/MoviePlayer.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/MoviePlayer/EMoviePlaybackType.static.gen.cpp"
+#include "../Enums/MoviePlayer/EMoviePlaybackType.defer.gen.cpp"
 #include "../Enums/MoviePlayer/EMoviePlaybackType.gen.cpp"
 #include "../Classes/MoviePlayer/UMoviePlayerSettings.gen.cpp"

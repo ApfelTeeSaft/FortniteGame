@@ -10,11 +10,19 @@ from the CRT initializer table. This writes one FortniteGameCode/Source/Generate
   struct  Structs/<Pkg>/F<Struct>.gen.cpp
   enum    Enums/<Pkg>/<Enum>.gen.cpp           (constructor)
 
-The enums' file-static StaticEnum functions (with their FCompiledInDeferEnum objects) are the
-exception. MSVC compiles file-static functions first and places their statics in a block of
-its own, ordered in a way the recovered source order does not reproduce. Consecutive enums are
-adjacent in that block, though. Each run of consecutive enum items is therefore compiled as a
-unit of its own, <unit>.s<k>.gen.cpp, from Enums/<Pkg>/<Enum>.static.gen.cpp.
+The enums' StaticEnum functions and FCompiledInDeferEnum objects are the exception. UHT makes
+StaticEnum file-static, and MSVC compiles file-static functions first, placing their statics in
+a block of its own at the start of the unit's .bss. Consecutive enums are adjacent in that
+block. Each run of consecutive enum items is therefore compiled as a unit of its own,
+<unit>.s<k>.gen.cpp, from Enums/<Pkg>/<Enum>.defer.gen.cpp (the FCompiledInDeferEnum object).
+
+Within the block, MSVC orders file-static functions in a way that depends on the whole unit;
+unrelated declarations elsewhere reorder it. So StaticEnum is generated with external linkage
+(Enums/<Pkg>/<Enum>.staticenum.gen.cpp). Each unit includes those fragments first, in source
+order, before the prologue. External functions and their statics are emitted in definition
+order, so this reproduces the block's position, and its order no longer changes with the rest
+of the unit. An enum whose StaticEnum inlines the package singleton (static_in_unity) has both
+fragments in its unity unit instead.
 
 Only the unity files are compiled. The generators name each manifest entry's unit (unit_of)
 so its object is the unity object, like the original build's.
@@ -120,14 +128,29 @@ def fragments(it: dict) -> list[Path]:
     if it["kind"] == "delegate":
         return [GEN / "Delegates" / short / f"{it['name']}.gen.cpp"]
     if static_in_unity(it):
-        return [GEN / "Enums" / short / f"{it['name']}.static.gen.cpp", GEN / "Enums" / short / f"{it['name']}.gen.cpp"]
+        return [GEN / "Enums" / short / f"{it['name']}.defer.gen.cpp", GEN / "Enums" / short / f"{it['name']}.gen.cpp"]
     return [GEN / "Enums" / short / f"{it['name']}.gen.cpp"]
+
+
+def staticenum_fragment(it: dict) -> Path:
+    return GEN / "Enums" / it["package"].rsplit("/", 1)[1] / f"{it['name']}.staticenum.gen.cpp"
+
+
+def head_includes(frags: list[Path], used: set[Path]) -> str:
+    """The StaticEnum functions, defined before the prologue in source order (see the module docstring)."""
+    frags = [f for f in frags if f.exists()]
+    used.update(f.resolve() for f in frags)
+    if not frags:
+        return ""
+    return ("// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's\n"
+            "// file-static ones first (see tools/codegen/unity.py).\n"
+            + "".join(f'#include "../{f.relative_to(GEN).as_posix()}"\n' for f in frags) + "\n")
 
 
 def main() -> int:
     outputs, used, stats = {}, set(), Counter()
     for name, u in units():
-        incs = []
+        incs, top = [], []
         init = GEN / "Packages" / f"{u['package'].rsplit('/', 1)[1]}.init.gen.cpp"
         for k, it in enumerate(u["items"]):
             if u.get("package_init_before") == k and init.exists():
@@ -137,6 +160,8 @@ def main() -> int:
                 if frag.exists():
                     incs.append(f'#include "../{frag.relative_to(GEN).as_posix()}"')
                     used.add(frag.resolve())
+            if it["kind"] == "enum" and static_in_unity(it):
+                top.append(staticenum_fragment(it))
         if not incs:
             continue
         outputs[UNITY_DIR / f"{name}.gen.cpp"] = (
@@ -144,6 +169,7 @@ def main() -> int:
             f"// Unity translation unit {name} of {u['package']}: the fragments of {len(u['items'])} UHT items in the\n"
             f"// source order recovered from .CRT$XCU entries {u['table_range'][0]}..{u['table_range'][1] - 1}"
             " (analysis/unity-order.json).\n\n"
+            + head_includes(top, used) +
             "// Stand-in for the engine headers every unity file starts with (creates the plain .bss first).\n"
             '#include "FortniteGameCode/UnityPrologue.h"\n\n' + "\n".join(incs) + "\n")
         stats["units"] += 1
@@ -151,15 +177,16 @@ def main() -> int:
     for name, run in static_runs():
         incs = []
         for it in run:
-            frag = GEN / "Enums" / it["package"].rsplit("/", 1)[1] / f"{it['name']}.static.gen.cpp"
+            frag = GEN / "Enums" / it["package"].rsplit("/", 1)[1] / f"{it['name']}.defer.gen.cpp"
             if frag.exists():
                 incs.append(f'#include "../{frag.relative_to(GEN).as_posix()}"')
                 used.add(frag.resolve())
         if incs:
             outputs[UNITY_DIR / f"{name}.gen.cpp"] = (
                 "// Generated by tools/codegen/unity.py. Do not edit by hand.\n"
-                f"// StaticEnum unit {name}: the file-static StaticEnum functions of {len(run)} consecutive enum(s),\n"
-                "// compiled apart from their unity unit (see tools/codegen/unity.py).\n\n"
+                f"// StaticEnum unit {name}: the StaticEnum functions and registration objects of {len(run)}\n"
+                "// consecutive enum(s), compiled apart from their unity unit (see tools/codegen/unity.py).\n\n"
+                + head_includes([staticenum_fragment(it) for it in run], used) +
                 '#include "FortniteGameCode/UnityPrologue.h"\n\n' + "\n".join(incs) + "\n")
             stats["static_units"] += 1
     # Package singletons whose init.gen.cpp position is not modelled: a unit each.

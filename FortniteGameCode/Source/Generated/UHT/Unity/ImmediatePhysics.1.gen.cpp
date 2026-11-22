@@ -2,10 +2,14 @@
 // Unity translation unit ImmediatePhysics.1 of /Script/ImmediatePhysics: the fragments of 2 UHT items in the
 // source order recovered from .CRT$XCU entries 1120..1121 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/ImmediatePhysics/ESimulationSpace.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/ImmediatePhysics.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/ImmediatePhysics/ESimulationSpace.static.gen.cpp"
+#include "../Enums/ImmediatePhysics/ESimulationSpace.defer.gen.cpp"
 #include "../Enums/ImmediatePhysics/ESimulationSpace.gen.cpp"
 #include "../Structs/ImmediatePhysics/FAnimNode_RigidBody.gen.cpp"

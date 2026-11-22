@@ -2,11 +2,15 @@
 // Unity translation unit McpProfileSys.2 of /Script/McpProfileSys: the fragments of 24 UHT items in the
 // source order recovered from .CRT$XCU entries 2064..2114 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/McpProfileSys/EServerClientFlag.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/McpProfileSys.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/McpProfileSys/EServerClientFlag.static.gen.cpp"
+#include "../Enums/McpProfileSys/EServerClientFlag.defer.gen.cpp"
 #include "../Enums/McpProfileSys/EServerClientFlag.gen.cpp"
 #include "../UMcpProfile.gen.cpp"
 #include "../Classes/McpProfileSys/UMcpProfile.gen.cpp"

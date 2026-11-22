@@ -2,6 +2,12 @@
 // Unity translation unit OnlineSubsystemUtils.2 of /Script/OnlineSubsystemUtils: the fragments of 43 UHT items in the
 // source order recovered from .CRT$XCU entries 485..561 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/OnlineSubsystemUtils/EBeaconConnectionState.staticenum.gen.cpp"
+#include "../Enums/OnlineSubsystemUtils/EClientRequestType.staticenum.gen.cpp"
+#include "../Enums/OnlineSubsystemUtils/EPartyReservationResult.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -37,7 +43,7 @@
 #include "../ULogoutCallbackProxy.gen.cpp"
 #include "../Classes/OnlineSubsystemUtils/ULogoutCallbackProxy.gen.cpp"
 #include "../Classes/OnlineSubsystemUtils/AOnlineBeacon.gen.cpp"
-#include "../Enums/OnlineSubsystemUtils/EBeaconConnectionState.static.gen.cpp"
+#include "../Enums/OnlineSubsystemUtils/EBeaconConnectionState.defer.gen.cpp"
 #include "../Enums/OnlineSubsystemUtils/EBeaconConnectionState.gen.cpp"
 #include "../AOnlineBeaconClient.gen.cpp"
 #include "../Classes/OnlineSubsystemUtils/AOnlineBeaconClient.gen.cpp"
@@ -47,12 +53,12 @@
 #include "../Structs/OnlineSubsystemUtils/FPIELoginSettingsInternal.gen.cpp"
 #include "../Classes/OnlineSubsystemUtils/UOnlinePIESettings.gen.cpp"
 #include "../Classes/OnlineSubsystemUtils/UOnlineSessionClient.gen.cpp"
-#include "../Enums/OnlineSubsystemUtils/EClientRequestType.static.gen.cpp"
+#include "../Enums/OnlineSubsystemUtils/EClientRequestType.defer.gen.cpp"
 #include "../Enums/OnlineSubsystemUtils/EClientRequestType.gen.cpp"
 #include "../APartyBeaconClient.gen.cpp"
 #include "../Classes/OnlineSubsystemUtils/APartyBeaconClient.gen.cpp"
 #include "../Classes/OnlineSubsystemUtils/APartyBeaconHost.gen.cpp"
-#include "../Enums/OnlineSubsystemUtils/EPartyReservationResult.static.gen.cpp"
+#include "../Enums/OnlineSubsystemUtils/EPartyReservationResult.defer.gen.cpp"
 #include "../Enums/OnlineSubsystemUtils/EPartyReservationResult.gen.cpp"
 #include "../Structs/OnlineSubsystemUtils/FPartyReservation.gen.cpp"
 #include "../Structs/OnlineSubsystemUtils/FPlayerReservation.gen.cpp"

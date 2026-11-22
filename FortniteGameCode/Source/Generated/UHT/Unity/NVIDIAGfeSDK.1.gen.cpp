@@ -2,19 +2,27 @@
 // Unity translation unit NVIDIAGfeSDK.1 of /Script/NVIDIAGfeSDK: the fragments of 17 UHT items in the
 // source order recovered from .CRT$XCU entries 1317..1344 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightSignificance.staticenum.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightType.staticenum.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKPermission.staticenum.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKScope.staticenum.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKReturnCode.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/NVIDIAGfeSDK.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightSignificance.static.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightSignificance.defer.gen.cpp"
 #include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightSignificance.gen.cpp"
-#include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightType.static.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightType.defer.gen.cpp"
 #include "../Enums/NVIDIAGfeSDK/EGfeSDKHighlightType.gen.cpp"
-#include "../Enums/NVIDIAGfeSDK/EGfeSDKPermission.static.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKPermission.defer.gen.cpp"
 #include "../Enums/NVIDIAGfeSDK/EGfeSDKPermission.gen.cpp"
-#include "../Enums/NVIDIAGfeSDK/EGfeSDKScope.static.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKScope.defer.gen.cpp"
 #include "../Enums/NVIDIAGfeSDK/EGfeSDKScope.gen.cpp"
-#include "../Enums/NVIDIAGfeSDK/EGfeSDKReturnCode.static.gen.cpp"
+#include "../Enums/NVIDIAGfeSDK/EGfeSDKReturnCode.defer.gen.cpp"
 #include "../Enums/NVIDIAGfeSDK/EGfeSDKReturnCode.gen.cpp"
 #include "../Structs/NVIDIAGfeSDK/FGfeSDKHighlightSummaryParams.gen.cpp"
 #include "../Structs/NVIDIAGfeSDK/FGfeSDKHighlightGroupView.gen.cpp"

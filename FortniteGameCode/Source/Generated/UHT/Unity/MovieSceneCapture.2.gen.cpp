@@ -2,11 +2,15 @@
 // Unity translation unit MovieSceneCapture.2 of /Script/MovieSceneCapture: the fragments of 15 UHT items in the
 // source order recovered from .CRT$XCU entries 17046..17074 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/MovieSceneCapture/EHDRCaptureGamut.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/MovieSceneCapture.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/MovieSceneCapture/EHDRCaptureGamut.static.gen.cpp"
+#include "../Enums/MovieSceneCapture/EHDRCaptureGamut.defer.gen.cpp"
 #include "../Enums/MovieSceneCapture/EHDRCaptureGamut.gen.cpp"
 #include "../Structs/MovieSceneCapture/FCompositionGraphCapturePasses.gen.cpp"
 #include "../Classes/MovieSceneCapture/UCompositionGraphCaptureSettings.gen.cpp"

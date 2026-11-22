@@ -2,6 +2,11 @@
 // Unity translation unit OnlineSubsystem.1 of /Script/OnlineSubsystem: the fragments of 9 UHT items in the
 // source order recovered from .CRT$XCU entries 419..434 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/OnlineSubsystem/EInAppPurchaseState.staticenum.gen.cpp"
+#include "../Enums/OnlineSubsystem/EMPMatchOutcome.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -9,12 +14,12 @@
 #include "../Structs/OnlineSubsystem/FNamedInterfaceDef.gen.cpp"
 #include "../Structs/OnlineSubsystem/FNamedInterface.gen.cpp"
 #include "../Classes/OnlineSubsystem/UNamedInterfaces.gen.cpp"
-#include "../Enums/OnlineSubsystem/EInAppPurchaseState.static.gen.cpp"
+#include "../Enums/OnlineSubsystem/EInAppPurchaseState.defer.gen.cpp"
 #include "../Enums/OnlineSubsystem/EInAppPurchaseState.gen.cpp"
 #include "../Structs/OnlineSubsystem/FInAppPurchaseRestoreInfo.gen.cpp"
 #include "../Structs/OnlineSubsystem/FInAppPurchaseProductInfo.gen.cpp"
 #include "../Structs/OnlineSubsystem/FInAppPurchaseProductRequest.gen.cpp"
-#include "../Enums/OnlineSubsystem/EMPMatchOutcome.static.gen.cpp"
+#include "../Enums/OnlineSubsystem/EMPMatchOutcome.defer.gen.cpp"
 #include "../Enums/OnlineSubsystem/EMPMatchOutcome.gen.cpp"
 #include "../UTurnBasedMatchInterface.gen.cpp"
 #include "../Classes/OnlineSubsystem/UTurnBasedMatchInterface.gen.cpp"

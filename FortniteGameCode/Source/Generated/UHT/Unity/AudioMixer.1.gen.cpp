@@ -2,15 +2,20 @@
 // Unity translation unit AudioMixer.1 of /Script/AudioMixer: the fragments of 13 UHT items in the
 // source order recovered from .CRT$XCU entries 22717..22737 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/AudioMixer/ESubmixEffectDynamicsPeakMode.staticenum.gen.cpp"
+#include "../Enums/AudioMixer/ESubmixEffectDynamicsProcessorType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/AudioMixer.init.gen.cpp"  // init.gen.cpp position recovered
 #include "../UAudioMixerBlueprintLibrary.gen.cpp"
 #include "../Classes/AudioMixer/UAudioMixerBlueprintLibrary.gen.cpp"
-#include "../Enums/AudioMixer/ESubmixEffectDynamicsPeakMode.static.gen.cpp"
+#include "../Enums/AudioMixer/ESubmixEffectDynamicsPeakMode.defer.gen.cpp"
 #include "../Enums/AudioMixer/ESubmixEffectDynamicsPeakMode.gen.cpp"
-#include "../Enums/AudioMixer/ESubmixEffectDynamicsProcessorType.static.gen.cpp"
+#include "../Enums/AudioMixer/ESubmixEffectDynamicsProcessorType.defer.gen.cpp"
 #include "../Enums/AudioMixer/ESubmixEffectDynamicsProcessorType.gen.cpp"
 #include "../Structs/AudioMixer/FSubmixEffectDynamicsProcessorSettings.gen.cpp"
 #include "../USubmixEffectDynamicsProcessorPreset.gen.cpp"

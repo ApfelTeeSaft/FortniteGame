@@ -229,6 +229,55 @@ def test_vtable_store() -> None:
     print("vtable store: ok")
 
 
+STATICENUM_PROBE = """struct UEnum;
+UEnum* FNGC_Make(int);
+UEnum* EZeta_StaticEnum() { static UEnum* Singleton = nullptr; if (!Singleton) Singleton = FNGC_Make(3); return Singleton; }
+UEnum* EAlpha_StaticEnum() { static UEnum* Singleton = nullptr; if (!Singleton) Singleton = FNGC_Make(1); return Singleton; }
+UEnum* EMid_StaticEnum() { static UEnum* Singleton = nullptr; if (!Singleton) Singleton = FNGC_Make(2); return Singleton; }
+static struct FNGCUnityPrologue { FNGCUnityPrologue(); } GNGCUnityPrologue;
+struct FDefer { FDefer(UEnum* (*)()); };
+static FDefer DZeta(EZeta_StaticEnum), DAlpha(EAlpha_StaticEnum), DMid(EMid_StaticEnum);
+"""
+
+
+def test_staticenum_layout() -> None:
+    """Every unity unit defines its external StaticEnum functions before the prologue, in the
+    order of its FCompiledInDeferEnum fragments (source order). With MSVC v140 present, also
+    check the compiler property this relies on: external functions' static locals are laid out
+    in definition order, ahead of the plain .bss."""
+    import re
+    unity = REPO_ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT" / "Unity"
+    inc = re.compile(r'#include "\.\./Enums/[^/]+/(\w+)\.(staticenum|defer)\.gen\.cpp"')
+    units = 0
+    for f in sorted(unity.glob("*.gen.cpp")):
+        src = f.read_text(encoding="utf-8")
+        prologue = src.find('#include "FortniteGameCode/UnityPrologue.h"')
+        found = list(inc.finditer(src))
+        se = [m for m in found if m.group(2) == "staticenum"]
+        assert all(0 <= m.start() < prologue for m in se), f.name
+        assert [m.group(1) for m in se] == [m.group(1) for m in found if m.group(2) == "defer"], f.name
+        units += bool(se)
+    assert units, "no unit defines a StaticEnum"
+    for f in (unity.parent / "Enums").rglob("*.staticenum.gen.cpp"):
+        assert not re.search(r"static UEnum\* \w+_StaticEnum\(", f.read_text(encoding="utf-8")), f.name
+    import msvc
+    if not msvc.VS140_VCVARS.exists():
+        print(f"staticenum layout: ok ({units} units; MSVC v140 not present, compile probe skipped)")
+        return
+    import tempfile
+    from coff import CoffObject
+    with tempfile.TemporaryDirectory() as tmp:
+        src, obj = Path(tmp) / "probe.cpp", Path(tmp) / "probe.obj"
+        src.write_text(STATICENUM_PROBE, encoding="utf-8")
+        r = msvc.compile_cpp(src, obj)
+        assert obj.exists(), r.stdout[-800:]
+        bss = [s for s, _, _ in CoffObject(obj).data_layout().get(".bss", [])]
+    got = [re.match(r"\?Singleton@\?1\?\?(\w+)_StaticEnum@@", s).group(1) if s.startswith("?Singleton@") else s
+           for s in bss]
+    assert got[:4] == ["EZeta", "EAlpha", "EMid", "?GNGCUnityPrologue@@3UFNGCUnityPrologue@@A"], got
+    print(f"staticenum layout: ok ({units} units; definition-order probe)")
+
+
 def test_local_prediction() -> None:
     from compare import local_prediction
     # Layout [a=0][b=8][s=16][c=24][d=32]; a layout gap in the reference between b and s.
@@ -277,6 +326,7 @@ def main() -> int:
     test_exec_thunks()
     test_vtable_store()
     test_uht_parameters()
+    test_staticenum_layout()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

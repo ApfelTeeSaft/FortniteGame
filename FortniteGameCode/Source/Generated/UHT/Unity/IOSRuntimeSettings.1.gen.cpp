@@ -2,15 +2,21 @@
 // Unity translation unit IOSRuntimeSettings.1 of /Script/IOSRuntimeSettings: the fragments of 6 UHT items in the
 // source order recovered from .CRT$XCU entries 28312..28320 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/IOSRuntimeSettings/EIOSMetalShaderStandard.staticenum.gen.cpp"
+#include "../Enums/IOSRuntimeSettings/EIOSVersion.staticenum.gen.cpp"
+#include "../Enums/IOSRuntimeSettings/EPowerUsageFrameRateLock.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/IOSRuntimeSettings.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/IOSRuntimeSettings/EIOSMetalShaderStandard.static.gen.cpp"
+#include "../Enums/IOSRuntimeSettings/EIOSMetalShaderStandard.defer.gen.cpp"
 #include "../Enums/IOSRuntimeSettings/EIOSMetalShaderStandard.gen.cpp"
-#include "../Enums/IOSRuntimeSettings/EIOSVersion.static.gen.cpp"
+#include "../Enums/IOSRuntimeSettings/EIOSVersion.defer.gen.cpp"
 #include "../Enums/IOSRuntimeSettings/EIOSVersion.gen.cpp"
-#include "../Enums/IOSRuntimeSettings/EPowerUsageFrameRateLock.static.gen.cpp"
+#include "../Enums/IOSRuntimeSettings/EPowerUsageFrameRateLock.defer.gen.cpp"
 #include "../Enums/IOSRuntimeSettings/EPowerUsageFrameRateLock.gen.cpp"
 #include "../Structs/IOSRuntimeSettings/FIOSBuildResourceDirectory.gen.cpp"
 #include "../Structs/IOSRuntimeSettings/FIOSBuildResourceFilePath.gen.cpp"

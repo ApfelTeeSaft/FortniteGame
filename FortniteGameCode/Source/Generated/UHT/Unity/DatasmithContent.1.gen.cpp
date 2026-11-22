@@ -2,10 +2,14 @@
 // Unity translation unit DatasmithContent.1 of /Script/DatasmithContent: the fragments of 2 UHT items in the
 // source order recovered from .CRT$XCU entries 2211..2213 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/DatasmithContent/EDatasmithAreaLightActorShape.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/DatasmithContent.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/DatasmithContent/EDatasmithAreaLightActorShape.static.gen.cpp"
+#include "../Enums/DatasmithContent/EDatasmithAreaLightActorShape.defer.gen.cpp"
 #include "../Enums/DatasmithContent/EDatasmithAreaLightActorShape.gen.cpp"
 #include "../Classes/DatasmithContent/ADatasmithAreaLightActor.gen.cpp"

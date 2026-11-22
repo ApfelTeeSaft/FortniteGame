@@ -72,8 +72,8 @@
     </ClCompile>
     <Lib>
       <TargetMachine>MachineX64</TargetMachine>
-      <!-- LNK4221: a generated .static unit may define only file-static symbols (StaticEnum, registration
-           objects). This library exists for object-level matching and is never linked, so that is expected. -->
+      <!-- LNK4221: a generated unit may define only internal-linkage symbols (e.g. a package singleton's
+           statics). This library exists for object-level matching and is never linked, so that is expected. -->
       <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>

@@ -2,6 +2,11 @@
 // Unity translation unit UMG.4 of /Script/UMG: the fragments of 16 UHT items in the
 // source order recovered from .CRT$XCU entries 16052..16113 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/UMG/EUMGSequencePlayMode.staticenum.gen.cpp"
+#include "../Enums/UMG/EWidgetDesignFlags.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -13,7 +18,7 @@
 #include "../Classes/UMG/UUniformGridSlot.gen.cpp"
 #include "../Delegates/UMG/OnInputAction__DelegateSignature.gen.cpp"
 #include "../Delegates/UMG/OnConstructEvent__DelegateSignature.gen.cpp"
-#include "../Enums/UMG/EUMGSequencePlayMode.static.gen.cpp"
+#include "../Enums/UMG/EUMGSequencePlayMode.defer.gen.cpp"
 #include "../Enums/UMG/EUMGSequencePlayMode.gen.cpp"
 #include "../Structs/UMG/FNamedSlotBinding.gen.cpp"
 #include "../Structs/UMG/FPaintContext.gen.cpp"
@@ -28,7 +33,7 @@
 #include "../UVisibilityBinding.gen.cpp"
 #include "../Classes/UMG/UVisibilityBinding.gen.cpp"
 #include "../Classes/UMG/UVisual.gen.cpp"
-#include "../Enums/UMG/EWidgetDesignFlags.static.gen.cpp"
+#include "../Enums/UMG/EWidgetDesignFlags.defer.gen.cpp"
 #include "../Enums/UMG/EWidgetDesignFlags.gen.cpp"
 #include "../UWidget.gen.cpp"
 #include "../Classes/UMG/UWidget.gen.cpp"

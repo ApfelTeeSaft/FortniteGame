@@ -2,6 +2,10 @@
 // Unity translation unit CinematicCamera.2 of /Script/CinematicCamera: the fragments of 10 UHT items in the
 // source order recovered from .CRT$XCU entries 16176..16194 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/CinematicCamera/ECameraFocusMethod.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -9,7 +13,7 @@
 #include "../Structs/CinematicCamera/FCameraLookatTrackingSettings.gen.cpp"
 #include "../ACineCameraActor.gen.cpp"
 #include "../Classes/CinematicCamera/ACineCameraActor.gen.cpp"
-#include "../Enums/CinematicCamera/ECameraFocusMethod.static.gen.cpp"
+#include "../Enums/CinematicCamera/ECameraFocusMethod.defer.gen.cpp"
 #include "../Enums/CinematicCamera/ECameraFocusMethod.gen.cpp"
 #include "../Structs/CinematicCamera/FCameraFocusSettings.gen.cpp"
 #include "../Structs/CinematicCamera/FCameraTrackingFocusSettings.gen.cpp"

@@ -2,11 +2,17 @@
 // Unity translation unit FortniteUI.13 of /Script/FortniteUI: the fragments of 23 UHT items in the
 // source order recovered from .CRT$XCU entries 26639..26798 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/FortniteUI/EFortMtxStoreOfferType.staticenum.gen.cpp"
+#include "../Enums/FortniteUI/EFortHomebaseNodePurchaseRestrictionReason.staticenum.gen.cpp"
+#include "../Enums/FortniteUI/EFortNodePrerequisiteConnector.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/FortniteUI.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/FortniteUI/EFortMtxStoreOfferType.static.gen.cpp"
+#include "../Enums/FortniteUI/EFortMtxStoreOfferType.defer.gen.cpp"
 #include "../Enums/FortniteUI/EFortMtxStoreOfferType.gen.cpp"
 #include "../UFortMultiSizeImage.gen.cpp"
 #include "../Classes/FortniteUI/UFortMultiSizeImage.gen.cpp"
@@ -14,7 +20,7 @@
 #include "../Classes/FortniteUI/UFortMultiSizeItemCard.gen.cpp"
 #include "../UFortNewAccountWarning.gen.cpp"
 #include "../Classes/FortniteUI/UFortNewAccountWarning.gen.cpp"
-#include "../Enums/FortniteUI/EFortHomebaseNodePurchaseRestrictionReason.static.gen.cpp"
+#include "../Enums/FortniteUI/EFortHomebaseNodePurchaseRestrictionReason.defer.gen.cpp"
 #include "../Enums/FortniteUI/EFortHomebaseNodePurchaseRestrictionReason.gen.cpp"
 #include "../Delegates/FortniteUI/OnGraphNodeSelected__DelegateSignature.gen.cpp"
 #include "../Delegates/FortniteUI/OnGraphNodeDrillDown__DelegateSignature.gen.cpp"
@@ -29,7 +35,7 @@
 #include "../Classes/FortniteUI/UFortNodeCanvas.gen.cpp"
 #include "../Classes/FortniteUI/UFortNodeCanvasEntityInterface.gen.cpp"
 #include "../Classes/FortniteUI/UFortNodeCanvasInterface.gen.cpp"
-#include "../Enums/FortniteUI/EFortNodePrerequisiteConnector.static.gen.cpp"
+#include "../Enums/FortniteUI/EFortNodePrerequisiteConnector.defer.gen.cpp"
 #include "../Enums/FortniteUI/EFortNodePrerequisiteConnector.gen.cpp"
 #include "../Structs/FortniteUI/FFortUINodePrerequisite.gen.cpp"
 #include "../UFortNodePrerequisitesWidget.gen.cpp"

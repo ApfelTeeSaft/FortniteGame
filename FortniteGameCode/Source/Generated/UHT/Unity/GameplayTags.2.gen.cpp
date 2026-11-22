@@ -2,15 +2,22 @@
 // Unity translation unit GameplayTags.2 of /Script/GameplayTags: the fragments of 26 UHT items in the
 // source order recovered from .CRT$XCU entries 16278..16325 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/GameplayTags/EGameplayTagQueryExprType.staticenum.gen.cpp"
+#include "../Enums/GameplayTags/EGameplayContainerMatchType.staticenum.gen.cpp"
+#include "../Enums/GameplayTags/EGameplayTagMatchType.staticenum.gen.cpp"
+#include "../Enums/GameplayTags/EGameplayTagSourceType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/GameplayTags.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/GameplayTags/EGameplayTagQueryExprType.static.gen.cpp"
+#include "../Enums/GameplayTags/EGameplayTagQueryExprType.defer.gen.cpp"
 #include "../Enums/GameplayTags/EGameplayTagQueryExprType.gen.cpp"
-#include "../Enums/GameplayTags/EGameplayContainerMatchType.static.gen.cpp"
+#include "../Enums/GameplayTags/EGameplayContainerMatchType.defer.gen.cpp"
 #include "../Enums/GameplayTags/EGameplayContainerMatchType.gen.cpp"
-#include "../Enums/GameplayTags/EGameplayTagMatchType.static.gen.cpp"
+#include "../Enums/GameplayTags/EGameplayTagMatchType.defer.gen.cpp"
 #include "../Enums/GameplayTags/EGameplayTagMatchType.gen.cpp"
 #include "../Structs/GameplayTags/FGameplayTagQuery.gen.cpp"
 #include "../Structs/GameplayTags/FGameplayTagCreationWidgetHelper.gen.cpp"
@@ -25,7 +32,7 @@
 #include "../Classes/GameplayTags/UEditableGameplayTagQueryExpression_AnyExprMatch.gen.cpp"
 #include "../Classes/GameplayTags/UEditableGameplayTagQueryExpression_AllExprMatch.gen.cpp"
 #include "../Classes/GameplayTags/UEditableGameplayTagQueryExpression_NoExprMatch.gen.cpp"
-#include "../Enums/GameplayTags/EGameplayTagSourceType.static.gen.cpp"
+#include "../Enums/GameplayTags/EGameplayTagSourceType.defer.gen.cpp"
 #include "../Enums/GameplayTags/EGameplayTagSourceType.gen.cpp"
 #include "../Structs/GameplayTags/FGameplayTagNode.gen.cpp"
 #include "../Structs/GameplayTags/FGameplayTagSource.gen.cpp"

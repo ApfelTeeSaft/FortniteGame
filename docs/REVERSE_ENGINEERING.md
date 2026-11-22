@@ -346,17 +346,24 @@ The count then moved with each batch:
 | 1,091 | 378 | 251 |
 | 1,115 | 367 | 239 |
 | 1,158 | 381 | 251 |
+| 1,158, external `StaticEnum` | 373 | 242 |
 
 Bisecting one unit (`NVIDIAGfeSDK.1`, which has no thunk of its own) showed something more.
 The order changes once enough unrelated declarations in `Classes.gen.h` change, here 31 slot
 declarations gaining their signatures; no single line does it. So these layout predictions
-depend on the whole unit, not only on the thunks.
+depended on the whole unit, not only on the thunks.
 
-A plausible mechanism, not verified: UHT makes `<Enum>_StaticEnum` file-static. MSVC emits
-such internal functions, with their static locals, in an order that depends on the whole
-unit. The reference, with its full engine headers, had an order of its own. The predictions
-that hold are byte-checked as usual; the ones that come and go are reported as
-relocation-equivalent.
+The cause: UHT makes `<Enum>_StaticEnum` file-static, and MSVC emits such internal
+functions' statics in an order that depends on everything parsed before them. With external
+linkage they are emitted in definition order. `StaticEnum` is now generated that way (last
+row; see "Enum constructors and `StaticEnum`"). Compiled against this `Classes.gen.h` and
+against the one before the parameters were decoded (9301f5e92), these units give the same
+order, the source order:
+- `NVIDIAGfeSDK.1`, `Paper2D.1`, `CoreUObject.2` and `InputCore.1`;
+- `Engine.9` (65 enums), `FortniteGame.22.s7` (54) and `AIModule.2.s6` (16);
+- `Engine.4.s1`, `Foliage.2`, `FortniteGame.24.s1` and `CommonUI.4.s1`.
+
+Main units whose thunks need the decoded parameters don't compile against the older header.
 
 | Exec thunks generated | Count |
 | --- | --- |
@@ -676,11 +683,64 @@ singletons are LEA-loaded by exactly one `StaticEnum`:
 `Get_..._CRC` is unreferenced in a shipping build. `/OPT:REF` removed it, so its constant is
 not in the image and it is not emitted.
 
-**Two blocks.** MSVC compiles file-static functions first. Their code starts each unity
-translation unit's `.text`, and their statics form a block at the start of its `.bss`, where
-all `StaticEnum` singletons sit. Each `ReturnEnum` sits elsewhere, in its header's COMDAT
-sequence, e.g. `[ReturnEnum][creators…][OuterClass][PrivateStaticClass]`. The two slots are
-never neighbours, unlike `Singleton`/`ReturnStruct` for structs.
+**Two blocks.** MSVC emits the statics of file-static functions first, as a block at the
+start of each unity translation unit's `.bss`, where all `StaticEnum` singletons sit. Each
+`ReturnEnum` sits elsewhere, in its header's COMDAT sequence, e.g.
+`[ReturnEnum][creators…][OuterClass][PrivateStaticClass]`. The two slots are never
+neighbours, unlike `Singleton`/`ReturnStruct` for structs.
+
+**Order within the block.** 179 units hold two or more `StaticEnum`s:
+- In the reference, the singletons of 139 of them follow the recovered source order.
+- In the other 40 they are mostly rotated: the last ones first, or the first ones last.
+- The block spans the whole original unity file, so runs can interleave. In `AIModule.1`,
+  the singleton of `EAIOptionFlag`, the last enum of one run, sits between the first two of
+  the next run. That is also what fills the 8- and 16-byte gaps in 42 units whose order is
+  the source order.
+- The `StaticEnum` code follows neither order: in all 179 units it is sorted by decorated
+  name.
+
+The order MSVC gives file-static functions here looks like a symbol index taken modulo a
+table size:
+- a rotation of the source order where the indices wrap once;
+- several interleaved ascending runs where they wrap more than once (`Engine.9` in the
+  reference).
+
+This is a hypothesis about MSVC's internals, not verified. What was observed: in
+`Paper2D.1`, file-static `StaticEnum`s come out as `[4,5,6,0,1,2,3]`. With 8 unused
+declarations before them, they come out as `[3,4,5,6,0,1,2]`. Declaring them first in source
+order doesn't change that. `inline` functions are deferred the same way.
+
+**Layout used.** `StaticEnum` is generated with external linkage. Each unit defines its
+`StaticEnum` functions first, in source order, before the prologue:
+- `Enums/<Pkg>/<E>.staticenum.gen.cpp`: the function. The code is the same; only its
+  linkage deviates from UHT.
+- `Enums/<Pkg>/<E>.defer.gen.cpp`: the `FCompiledInDeferEnum` object, at the enum's place.
+
+External functions and their statics are emitted in definition order. So the block keeps its
+place before the plain `.bss`, and its order is the source order whatever else the unit
+contains; `tools/matching/selftest.py` checks both on a small probe. The order comes only from
+`.CRT$XCU` (the unity order). The reference's `Singleton` addresses are never used to
+arrange it: they are the fields being checked.
+
+The cost is in `.rdata`. String literals are emitted in parse order. In the reference, each
+`StaticEnum`'s `TEXT("<E>")` directly precedes the registration object's copy, as UHT's
+in-place, file-static definition gives. Defined at the top, the `StaticEnum` literals form
+a block of their own. Literal elimination still resolves most of them, so 5 fewer
+`StaticEnum` literals resolve than before (128 unresolved, against 123).
+
+Against the earlier layout this is 19 exact functions fewer (28,262 to 28,243):
+- in the `<unit>.s<k>` units the source order breaks even (315 to 314). There, the earlier
+  compiler order matched some rotated reference blocks by chance and missed others;
+- the main units lose 7 `StaticEnum`s, and one `StaticStruct` and one struct registration
+  initializer each lose a literal neighbour;
+- 9 registration initializers follow their `StaticEnum`.
+
+Every alternative tried gives up one of the two:
+- external functions defined in place: their singletons follow the plain `.bss`, between
+  the registration objects;
+- function and registration object kept together at the top: the first registration
+  object opens the plain `.bss` between the singletons;
+- `inline` functions: the same rotations, and literals no longer in parse order.
 
 **Source order from `.data`.** UHT parameter records (`FEnumParams`, `FStructParams`,
 `FFunctionParams`) are emitted to `.data` in definition order. For 967 of 1,094 enums, the
@@ -690,9 +750,9 @@ enums whose records are consecutive, with no other UHT record between, into runs
 reads a `.bss` address to do so.
 
 Each run gets two translation units that reproduce the two blocks:
-- `<First>.gen.cpp`: the constructors, whose `ReturnEnum`s anchor each other;
-- `<First>.static.gen.cpp`: the `StaticEnum` functions and registration objects, whose
-  `Singleton`s anchor each other.
+- the constructors (`<E>.gen.cpp`), whose `ReturnEnum`s anchor each other;
+- the `StaticEnum` functions and registration objects (`<E>.staticenum.gen.cpp`,
+  `<E>.defer.gen.cpp`), whose `Singleton`s anchor each other.
 
 A single translation unit would let the `Singleton` block outvote the `ReturnEnum`
 neighbours. The split doesn't change code generation.
@@ -709,8 +769,8 @@ neighbours. The split doesn't change code generation.
 **Results.**
 - 695 constructors are exact. The other 399 have no neighbour: 284 runs hold a single enum,
   and some runs are broken in the reference.
-- 252 `StaticEnum`s are exact. Others lack a `Singleton` neighbour (the static-function order
-  departs from record order), an exact constructor, or a unique literal.
+- 373 `StaticEnum`s are exact. Others lack a `Singleton` neighbour (a single enum, or the
+  reference block departs from source order), an exact constructor, or a unique literal.
 - The 824 registration initializers are relocation-equivalent, because of the package-name
   literal.
 
@@ -780,9 +840,11 @@ objects. Two modelling points:
   create the plain `.bss` section ahead of all COMDAT statics. `UnityPrologue.h` stands in for
   them. Without it, the first struct's registration objects would put that section in the
   middle of the COMDAT sequence.
-- **`StaticEnum`.** MSVC compiles file-static functions first, into a block whose order the
-  source order does not reproduce. Consecutive enums are adjacent in it, though. Each run of
-  consecutive enums' `StaticEnum` functions is therefore compiled as a unit of its own.
+- **`StaticEnum`.** MSVC places file-static functions' statics in a block of their own.
+  Consecutive enums are adjacent in it. Each run of consecutive enums' `StaticEnum`
+  functions is therefore compiled as a unit of its own (`<unit>.s<k>`). Every unit defines
+  its `StaticEnum`s first, before the prologue, in source order, with external linkage.
+  UHT makes them file-static, and MSVC's order for those is unstable.
 
 **Package-scope delegates (`tools/codegen/uht_packages.py`).** UHT emits a header's
 package-scope delegates first, before its enums, structs and classes. They have no

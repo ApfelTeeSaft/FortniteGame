@@ -2,11 +2,15 @@
 // Unity translation unit AugmentedReality.2 of /Script/AugmentedReality: the fragments of 5 UHT items in the
 // source order recovered from .CRT$XCU entries 28336..28344 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/AugmentedReality/EARTrackingQuality.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/AugmentedReality.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/AugmentedReality/EARTrackingQuality.static.gen.cpp"
+#include "../Enums/AugmentedReality/EARTrackingQuality.defer.gen.cpp"
 #include "../Enums/AugmentedReality/EARTrackingQuality.gen.cpp"
 #include "../Structs/AugmentedReality/FARTraceResult.gen.cpp"
 #include "../Structs/AugmentedReality/FARPin.gen.cpp"

@@ -2,6 +2,16 @@
 // Unity translation unit Paper2D.1 of /Script/Paper2D: the fragments of 44 UHT items in the
 // source order recovered from .CRT$XCU entries 1668..1746 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Paper2D/EFlipbookCollisionMode.staticenum.gen.cpp"
+#include "../Enums/Paper2D/EPaperSpriteAtlasPadding.staticenum.gen.cpp"
+#include "../Enums/Paper2D/ETileMapProjectionMode.staticenum.gen.cpp"
+#include "../Enums/Paper2D/ESpritePivotMode.staticenum.gen.cpp"
+#include "../Enums/Paper2D/ESpritePolygonMode.staticenum.gen.cpp"
+#include "../Enums/Paper2D/ESpriteShapeType.staticenum.gen.cpp"
+#include "../Enums/Paper2D/ESpriteCollisionMode.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -9,7 +19,7 @@
 #include "../Structs/Paper2D/FIntMargin.gen.cpp"
 #include "../Classes/Paper2D/UMaterialExpressionSpriteTextureSampler.gen.cpp"
 #include "../Classes/Paper2D/APaperCharacter.gen.cpp"
-#include "../Enums/Paper2D/EFlipbookCollisionMode.static.gen.cpp"
+#include "../Enums/Paper2D/EFlipbookCollisionMode.defer.gen.cpp"
 #include "../Enums/Paper2D/EFlipbookCollisionMode.gen.cpp"
 #include "../Structs/Paper2D/FPaperFlipbookKeyFrame.gen.cpp"
 #include "../UPaperFlipbook.gen.cpp"
@@ -26,7 +36,7 @@
 #include "../Structs/Paper2D/FPaperSpriteSocket.gen.cpp"
 #include "../Classes/Paper2D/UPaperSprite.gen.cpp"
 #include "../Classes/Paper2D/APaperSpriteActor.gen.cpp"
-#include "../Enums/Paper2D/EPaperSpriteAtlasPadding.static.gen.cpp"
+#include "../Enums/Paper2D/EPaperSpriteAtlasPadding.defer.gen.cpp"
 #include "../Enums/Paper2D/EPaperSpriteAtlasPadding.gen.cpp"
 #include "../Structs/Paper2D/FPaperSpriteAtlasSlot.gen.cpp"
 #include "../Classes/Paper2D/UPaperSpriteAtlas.gen.cpp"
@@ -42,7 +52,7 @@
 #include "../Classes/Paper2D/UPaperTerrainSplineComponent.gen.cpp"
 #include "../Structs/Paper2D/FPaperTileInfo.gen.cpp"
 #include "../Classes/Paper2D/UPaperTileLayer.gen.cpp"
-#include "../Enums/Paper2D/ETileMapProjectionMode.static.gen.cpp"
+#include "../Enums/Paper2D/ETileMapProjectionMode.defer.gen.cpp"
 #include "../Enums/Paper2D/ETileMapProjectionMode.gen.cpp"
 #include "../Classes/Paper2D/UPaperTileMap.gen.cpp"
 #include "../Classes/Paper2D/APaperTileMapActor.gen.cpp"
@@ -52,13 +62,13 @@
 #include "../Structs/Paper2D/FPaperTileMetadata.gen.cpp"
 #include "../Classes/Paper2D/UPaperTileSet.gen.cpp"
 #include "../Structs/Paper2D/FSpriteDrawCallRecord.gen.cpp"
-#include "../Enums/Paper2D/ESpritePivotMode.static.gen.cpp"
+#include "../Enums/Paper2D/ESpritePivotMode.defer.gen.cpp"
 #include "../Enums/Paper2D/ESpritePivotMode.gen.cpp"
-#include "../Enums/Paper2D/ESpritePolygonMode.static.gen.cpp"
+#include "../Enums/Paper2D/ESpritePolygonMode.defer.gen.cpp"
 #include "../Enums/Paper2D/ESpritePolygonMode.gen.cpp"
-#include "../Enums/Paper2D/ESpriteShapeType.static.gen.cpp"
+#include "../Enums/Paper2D/ESpriteShapeType.defer.gen.cpp"
 #include "../Enums/Paper2D/ESpriteShapeType.gen.cpp"
-#include "../Enums/Paper2D/ESpriteCollisionMode.static.gen.cpp"
+#include "../Enums/Paper2D/ESpriteCollisionMode.defer.gen.cpp"
 #include "../Enums/Paper2D/ESpriteCollisionMode.gen.cpp"
 #include "../Structs/Paper2D/FSpriteAssetInitParameters.gen.cpp"
 #include "../Structs/Paper2D/FSpriteGeometryCollection.gen.cpp"

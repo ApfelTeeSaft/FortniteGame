@@ -2,6 +2,10 @@
 // Unity translation unit EpicCMSUIFramework.2 of /Script/EpicCMSUIFramework: the fragments of 11 UHT items in the
 // source order recovered from .CRT$XCU entries 328..348 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/EpicCMSUIFramework/EDateType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -13,7 +17,7 @@
 #include "../Structs/EpicCMSUIFramework/FEpicCMSLayoutTypeMapping.gen.cpp"
 #include "../Classes/EpicCMSUIFramework/UEpicCMSScreenBase.gen.cpp"
 #include "../Delegates/EpicCMSUIFramework/OnCMSTileConfirmed__DelegateSignature.gen.cpp"
-#include "../Enums/EpicCMSUIFramework/EDateType.static.gen.cpp"
+#include "../Enums/EpicCMSUIFramework/EDateType.defer.gen.cpp"
 #include "../Enums/EpicCMSUIFramework/EDateType.gen.cpp"
 #include "../Structs/EpicCMSUIFramework/FTileDefinition.gen.cpp"
 #include "../UEpicCMSTileBase.gen.cpp"

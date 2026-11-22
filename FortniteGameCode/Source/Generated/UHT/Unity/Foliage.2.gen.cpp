@@ -2,6 +2,14 @@
 // Unity translation unit Foliage.2 of /Script/Foliage: the fragments of 20 UHT items in the
 // source order recovered from .CRT$XCU entries 14899..14932 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Foliage/EFoliageScaling.staticenum.gen.cpp"
+#include "../Enums/Foliage/EVertexColorMaskChannel.staticenum.gen.cpp"
+#include "../Enums/Foliage/FoliageVertexColorMask.staticenum.gen.cpp"
+#include "../Enums/Foliage/ESimulationQuery.staticenum.gen.cpp"
+#include "../Enums/Foliage/ESimulationOverlap.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -9,11 +17,11 @@
 #include "../Classes/Foliage/UFoliageInstancedStaticMeshComponent.gen.cpp"
 #include "../UFoliageStatistics.gen.cpp"
 #include "../Classes/Foliage/UFoliageStatistics.gen.cpp"
-#include "../Enums/Foliage/EFoliageScaling.static.gen.cpp"
+#include "../Enums/Foliage/EFoliageScaling.defer.gen.cpp"
 #include "../Enums/Foliage/EFoliageScaling.gen.cpp"
-#include "../Enums/Foliage/EVertexColorMaskChannel.static.gen.cpp"
+#include "../Enums/Foliage/EVertexColorMaskChannel.defer.gen.cpp"
 #include "../Enums/Foliage/EVertexColorMaskChannel.gen.cpp"
-#include "../Enums/Foliage/FoliageVertexColorMask.static.gen.cpp"
+#include "../Enums/Foliage/FoliageVertexColorMask.defer.gen.cpp"
 #include "../Enums/Foliage/FoliageVertexColorMask.gen.cpp"
 #include "../Structs/Foliage/FFoliageVertexColorChannelMask.gen.cpp"
 #include "../Classes/Foliage/UFoliageType.gen.cpp"
@@ -25,9 +33,9 @@
 #include "../Classes/Foliage/UInteractiveFoliageComponent.gen.cpp"
 #include "../Classes/Foliage/AProceduralFoliageBlockingVolume.gen.cpp"
 #include "../Classes/Foliage/UProceduralFoliageComponent.gen.cpp"
-#include "../Enums/Foliage/ESimulationQuery.static.gen.cpp"
+#include "../Enums/Foliage/ESimulationQuery.defer.gen.cpp"
 #include "../Enums/Foliage/ESimulationQuery.gen.cpp"
-#include "../Enums/Foliage/ESimulationOverlap.static.gen.cpp"
+#include "../Enums/Foliage/ESimulationOverlap.defer.gen.cpp"
 #include "../Enums/Foliage/ESimulationOverlap.gen.cpp"
 #include "../Structs/Foliage/FProceduralFoliageInstance.gen.cpp"
 #include "../UProceduralFoliageSpawner.gen.cpp"

@@ -2,20 +2,26 @@
 // Unity translation unit Qos.1 of /Script/Qos: the fragments of 11 UHT items in the
 // source order recovered from .CRT$XCU entries 1376..1396 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Qos/EQosResponseType.staticenum.gen.cpp"
+#include "../Enums/Qos/EQosCompletionResult.staticenum.gen.cpp"
+#include "../Enums/Qos/EQosRegionResult.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/Qos.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/Qos/EQosResponseType.static.gen.cpp"
+#include "../Enums/Qos/EQosResponseType.defer.gen.cpp"
 #include "../Enums/Qos/EQosResponseType.gen.cpp"
 #include "../AQosBeaconClient.gen.cpp"
 #include "../Classes/Qos/AQosBeaconClient.gen.cpp"
 #include "../Classes/Qos/AQosBeaconHost.gen.cpp"
 #include "../Structs/Qos/FQosSearchPass.gen.cpp"
 #include "../Classes/Qos/UQosEvaluator.gen.cpp"
-#include "../Enums/Qos/EQosCompletionResult.static.gen.cpp"
+#include "../Enums/Qos/EQosCompletionResult.defer.gen.cpp"
 #include "../Enums/Qos/EQosCompletionResult.gen.cpp"
-#include "../Enums/Qos/EQosRegionResult.static.gen.cpp"
+#include "../Enums/Qos/EQosRegionResult.defer.gen.cpp"
 #include "../Enums/Qos/EQosRegionResult.gen.cpp"
 #include "../Structs/Qos/FQosRegionInfo.gen.cpp"
 #include "../Structs/Qos/FQosDatacenterInfo.gen.cpp"

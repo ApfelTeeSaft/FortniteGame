@@ -2,10 +2,14 @@
 // Unity translation unit AudioPlatformConfiguration.1 of /Script/AudioPlatformConfiguration: the fragments of 2 UHT items in the
 // source order recovered from .CRT$XCU entries 16940..16941 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/AudioPlatformConfiguration/ESoundwaveSampleRateSettings.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/AudioPlatformConfiguration.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/AudioPlatformConfiguration/ESoundwaveSampleRateSettings.static.gen.cpp"
+#include "../Enums/AudioPlatformConfiguration/ESoundwaveSampleRateSettings.defer.gen.cpp"
 #include "../Enums/AudioPlatformConfiguration/ESoundwaveSampleRateSettings.gen.cpp"
 #include "../Structs/AudioPlatformConfiguration/FPlatformRuntimeAudioCompressionOverrides.gen.cpp"

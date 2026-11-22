@@ -2,10 +2,14 @@
 // Unity translation unit Rejoin.1 of /Script/Rejoin: the fragments of 2 UHT items in the
 // source order recovered from .CRT$XCU entries 1527..1529 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Rejoin/ERejoinStatus.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/Rejoin.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/Rejoin/ERejoinStatus.static.gen.cpp"
+#include "../Enums/Rejoin/ERejoinStatus.defer.gen.cpp"
 #include "../Enums/Rejoin/ERejoinStatus.gen.cpp"
 #include "../Classes/Rejoin/URejoinCheck.gen.cpp"

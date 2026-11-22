@@ -2,11 +2,15 @@
 // Unity translation unit BuildPatchServices.1 of /Script/BuildPatchServices: the fragments of 7 UHT items in the
 // source order recovered from .CRT$XCU entries 22915..22927 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/BuildPatchServices/EManifestFileHeader.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/BuildPatchServices.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/BuildPatchServices/EManifestFileHeader.static.gen.cpp"
+#include "../Enums/BuildPatchServices/EManifestFileHeader.defer.gen.cpp"
 #include "../Enums/BuildPatchServices/EManifestFileHeader.gen.cpp"
 #include "../Structs/BuildPatchServices/FFileManifestData.gen.cpp"
 #include "../Structs/BuildPatchServices/FChunkPartData.gen.cpp"

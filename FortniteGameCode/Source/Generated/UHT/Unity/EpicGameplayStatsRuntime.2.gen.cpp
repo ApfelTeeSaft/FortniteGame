@@ -2,15 +2,21 @@
 // Unity translation unit EpicGameplayStatsRuntime.2 of /Script/EpicGameplayStatsRuntime: the fragments of 8 UHT items in the
 // source order recovered from .CRT$XCU entries 2000..2011 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardUpdateFunction.staticenum.gen.cpp"
+#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardTimeWindow.staticenum.gen.cpp"
+#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardDataType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/EpicGameplayStatsRuntime.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardUpdateFunction.static.gen.cpp"
+#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardUpdateFunction.defer.gen.cpp"
 #include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardUpdateFunction.gen.cpp"
-#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardTimeWindow.static.gen.cpp"
+#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardTimeWindow.defer.gen.cpp"
 #include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardTimeWindow.gen.cpp"
-#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardDataType.static.gen.cpp"
+#include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardDataType.defer.gen.cpp"
 #include "../Enums/EpicGameplayStatsRuntime/EEpicLeaderboardDataType.gen.cpp"
 #include "../Structs/EpicGameplayStatsRuntime/FGameplayStatMetadataTableRow.gen.cpp"
 #include "../Structs/EpicGameplayStatsRuntime/FGameplayStatTag.gen.cpp"

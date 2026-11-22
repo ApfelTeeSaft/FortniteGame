@@ -2,24 +2,33 @@
 // Unity translation unit HeadMountedDisplay.1 of /Script/HeadMountedDisplay: the fragments of 11 UHT items in the
 // source order recovered from .CRT$XCU entries 14628..14643 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/HeadMountedDisplay/EXRTrackedDeviceType.staticenum.gen.cpp"
+#include "../Enums/HeadMountedDisplay/ESpectatorScreenMode.staticenum.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EHMDWornState.staticenum.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EHMDTrackingOrigin.staticenum.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EOrientPositionSelector.staticenum.gen.cpp"
+#include "../Enums/HeadMountedDisplay/ETrackingStatus.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/HeadMountedDisplay.init.gen.cpp"  // init.gen.cpp position recovered
 #include "../UHeadMountedDisplayFunctionLibrary.gen.cpp"
 #include "../Classes/HeadMountedDisplay/UHeadMountedDisplayFunctionLibrary.gen.cpp"
-#include "../Enums/HeadMountedDisplay/EXRTrackedDeviceType.static.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EXRTrackedDeviceType.defer.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EXRTrackedDeviceType.gen.cpp"
-#include "../Enums/HeadMountedDisplay/ESpectatorScreenMode.static.gen.cpp"
+#include "../Enums/HeadMountedDisplay/ESpectatorScreenMode.defer.gen.cpp"
 #include "../Enums/HeadMountedDisplay/ESpectatorScreenMode.gen.cpp"
-#include "../Enums/HeadMountedDisplay/EHMDWornState.static.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EHMDWornState.defer.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EHMDWornState.gen.cpp"
-#include "../Enums/HeadMountedDisplay/EHMDTrackingOrigin.static.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EHMDTrackingOrigin.defer.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EHMDTrackingOrigin.gen.cpp"
-#include "../Enums/HeadMountedDisplay/EOrientPositionSelector.static.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EOrientPositionSelector.defer.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EOrientPositionSelector.gen.cpp"
 #include "../Structs/HeadMountedDisplay/FXRDeviceId.gen.cpp"
-#include "../Enums/HeadMountedDisplay/ETrackingStatus.static.gen.cpp"
+#include "../Enums/HeadMountedDisplay/ETrackingStatus.defer.gen.cpp"
 #include "../Enums/HeadMountedDisplay/ETrackingStatus.gen.cpp"
 #include "../UMotionControllerComponent.gen.cpp"
 #include "../Classes/HeadMountedDisplay/UMotionControllerComponent.gen.cpp"

@@ -2,18 +2,25 @@
 // Unity translation unit Hotfix.1 of /Script/Hotfix: the fragments of 6 UHT items in the
 // source order recovered from .CRT$XCU entries 1500..1507 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Hotfix/EHotfixResult.staticenum.gen.cpp"
+#include "../Enums/Hotfix/EPatchCheckResult.staticenum.gen.cpp"
+#include "../Enums/Hotfix/EUpdateCompletionStatus.staticenum.gen.cpp"
+#include "../Enums/Hotfix/EUpdateState.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/Hotfix.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/Hotfix/EHotfixResult.static.gen.cpp"
+#include "../Enums/Hotfix/EHotfixResult.defer.gen.cpp"
 #include "../Enums/Hotfix/EHotfixResult.gen.cpp"
 #include "../UOnlineHotfixManager.gen.cpp"
 #include "../Classes/Hotfix/UOnlineHotfixManager.gen.cpp"
-#include "../Enums/Hotfix/EPatchCheckResult.static.gen.cpp"
+#include "../Enums/Hotfix/EPatchCheckResult.defer.gen.cpp"
 #include "../Enums/Hotfix/EPatchCheckResult.gen.cpp"
-#include "../Enums/Hotfix/EUpdateCompletionStatus.static.gen.cpp"
+#include "../Enums/Hotfix/EUpdateCompletionStatus.defer.gen.cpp"
 #include "../Enums/Hotfix/EUpdateCompletionStatus.gen.cpp"
-#include "../Enums/Hotfix/EUpdateState.static.gen.cpp"
+#include "../Enums/Hotfix/EUpdateState.defer.gen.cpp"
 #include "../Enums/Hotfix/EUpdateState.gen.cpp"
 #include "../Classes/Hotfix/UUpdateManager.gen.cpp"

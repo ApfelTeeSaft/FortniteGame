@@ -2,6 +2,11 @@
 // Unity translation unit PhysXVehicles.1 of /Script/PhysXVehicles: the fragments of 19 UHT items in the
 // source order recovered from .CRT$XCU entries 1767..1803 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/PhysXVehicles/EWheelSweepType.staticenum.gen.cpp"
+#include "../Enums/PhysXVehicles/EVehicleDifferential4W.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -14,7 +19,7 @@
 #include "../Structs/PhysXVehicles/FVehicleAnimInstanceProxy.gen.cpp"
 #include "../UVehicleAnimInstance.gen.cpp"
 #include "../Classes/PhysXVehicles/UVehicleAnimInstance.gen.cpp"
-#include "../Enums/PhysXVehicles/EWheelSweepType.static.gen.cpp"
+#include "../Enums/PhysXVehicles/EWheelSweepType.defer.gen.cpp"
 #include "../Enums/PhysXVehicles/EWheelSweepType.gen.cpp"
 #include "../UVehicleWheel.gen.cpp"
 #include "../Classes/PhysXVehicles/UVehicleWheel.gen.cpp"
@@ -24,7 +29,7 @@
 #include "../Structs/PhysXVehicles/FWheelSetup.gen.cpp"
 #include "../UWheeledVehicleMovementComponent.gen.cpp"
 #include "../Classes/PhysXVehicles/UWheeledVehicleMovementComponent.gen.cpp"
-#include "../Enums/PhysXVehicles/EVehicleDifferential4W.static.gen.cpp"
+#include "../Enums/PhysXVehicles/EVehicleDifferential4W.defer.gen.cpp"
 #include "../Enums/PhysXVehicles/EVehicleDifferential4W.gen.cpp"
 #include "../Structs/PhysXVehicles/FVehicleTransmissionData.gen.cpp"
 #include "../Structs/PhysXVehicles/FVehicleGearData.gen.cpp"

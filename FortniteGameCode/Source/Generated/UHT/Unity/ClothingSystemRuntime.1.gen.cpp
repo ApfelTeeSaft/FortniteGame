@@ -2,13 +2,18 @@
 // Unity translation unit ClothingSystemRuntime.1 of /Script/ClothingSystemRuntime: the fragments of 12 UHT items in the
 // source order recovered from .CRT$XCU entries 22652..22673 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/ClothingSystemRuntime/EClothingWindMethod.staticenum.gen.cpp"
+#include "../Enums/ClothingSystemRuntime/MaskTarget_PhysMesh.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/ClothingSystemRuntime.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/ClothingSystemRuntime/EClothingWindMethod.static.gen.cpp"
+#include "../Enums/ClothingSystemRuntime/EClothingWindMethod.defer.gen.cpp"
 #include "../Enums/ClothingSystemRuntime/EClothingWindMethod.gen.cpp"
-#include "../Enums/ClothingSystemRuntime/MaskTarget_PhysMesh.static.gen.cpp"
+#include "../Enums/ClothingSystemRuntime/MaskTarget_PhysMesh.defer.gen.cpp"
 #include "../Enums/ClothingSystemRuntime/MaskTarget_PhysMesh.gen.cpp"
 #include "../Structs/ClothingSystemRuntime/FClothConfig.gen.cpp"
 #include "../Structs/ClothingSystemRuntime/FClothConstraintSetup.gen.cpp"

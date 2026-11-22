@@ -69,7 +69,7 @@ python tools/codegen/uht_creators.py     # class fragments: StaticRegisterNative
 python tools/analysis/natives.py         # analysis/native-implementations.json (needs uht-creator-symbols.json)
 python tools/analysis/vtables.py         # analysis/vtables.json: class vtables, named slots
 python tools/codegen/uht_structs.py      # USTRUCT fragments
-python tools/codegen/uht_enums.py        # UENUM fragments (constructor; StaticEnum in .static)
+python tools/codegen/uht_enums.py        # UENUM fragments (constructor, .staticenum, .defer)
 python tools/codegen/uht_classes.py      # Classes.gen.h (with vtable slots and exec thunks), IMPLEMENT_CLASS fragments
 python tools/codegen/uht_packages.py     # package-scope delegates, package constructors (init.gen.cpp)
 python tools/codegen/unity.py            # Unity/*.gen.cpp: fragments in recovered order

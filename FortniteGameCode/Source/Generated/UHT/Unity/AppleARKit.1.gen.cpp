@@ -2,6 +2,11 @@
 // Unity translation unit AppleARKit.1 of /Script/AppleARKit: the fragments of 11 UHT items in the
 // source order recovered from .CRT$XCU entries 2266..2284 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/AppleARKit/EAppleARKitHitTestResultType.staticenum.gen.cpp"
+#include "../Enums/AppleARKit/EARKitTextureType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -12,13 +17,13 @@
 #include "../Classes/AppleARKit/UAppleARKitBlueprintLibrary.gen.cpp"
 #include "../Structs/AppleARKit/FAppleARKitCamera.gen.cpp"
 #include "../Structs/AppleARKit/FAppleARKitFrame.gen.cpp"
-#include "../Enums/AppleARKit/EAppleARKitHitTestResultType.static.gen.cpp"
+#include "../Enums/AppleARKit/EAppleARKitHitTestResultType.defer.gen.cpp"
 #include "../Enums/AppleARKit/EAppleARKitHitTestResultType.gen.cpp"
 #include "../Structs/AppleARKit/FAppleARKitHitTestResult.gen.cpp"
 #include "../Structs/AppleARKit/FAppleARKitLightEstimate.gen.cpp"
 #include "../UAppleARKitPlaneAnchor.gen.cpp"
 #include "../Classes/AppleARKit/UAppleARKitPlaneAnchor.gen.cpp"
 #include "../Classes/AppleARKit/UARKitCameraOverlayMaterialLoader.gen.cpp"
-#include "../Enums/AppleARKit/EARKitTextureType.static.gen.cpp"
+#include "../Enums/AppleARKit/EARKitTextureType.defer.gen.cpp"
 #include "../Enums/AppleARKit/EARKitTextureType.gen.cpp"
 #include "../Classes/AppleARKit/UMaterialExpressionARKitPassthroughCamera.gen.cpp"

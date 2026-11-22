@@ -2,14 +2,19 @@
 // Unity translation unit AnimationCore.1 of /Script/AnimationCore: the fragments of 16 UHT items in the
 // source order recovered from .CRT$XCU entries 15303..15331 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/AnimationCore/ETransformConstraintType.staticenum.gen.cpp"
+#include "../Enums/AnimationCore/EConstraintType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/AnimationCore.init.gen.cpp"  // init.gen.cpp position recovered
 #include "../Structs/AnimationCore/FAxis.gen.cpp"
-#include "../Enums/AnimationCore/ETransformConstraintType.static.gen.cpp"
+#include "../Enums/AnimationCore/ETransformConstraintType.defer.gen.cpp"
 #include "../Enums/AnimationCore/ETransformConstraintType.gen.cpp"
-#include "../Enums/AnimationCore/EConstraintType.static.gen.cpp"
+#include "../Enums/AnimationCore/EConstraintType.defer.gen.cpp"
 #include "../Enums/AnimationCore/EConstraintType.gen.cpp"
 #include "../Structs/AnimationCore/FConstraintData.gen.cpp"
 #include "../Structs/AnimationCore/FConstraintDescriptor.gen.cpp"

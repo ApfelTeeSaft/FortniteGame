@@ -2,11 +2,16 @@
 // Unity translation unit CommonUI.3 of /Script/CommonUI: the fragments of 17 UHT items in the
 // source order recovered from .CRT$XCU entries 221..259 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/CommonUI/ECommonNumericType.staticenum.gen.cpp"
+#include "../Enums/CommonUI/EItemAlignment.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/CommonUI.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/CommonUI/ECommonNumericType.static.gen.cpp"
+#include "../Enums/CommonUI/ECommonNumericType.defer.gen.cpp"
 #include "../Enums/CommonUI/ECommonNumericType.gen.cpp"
 #include "../Structs/CommonUI/FCommonNumberFormattingOptions.gen.cpp"
 #include "../UCommonNumericTextBlock.gen.cpp"
@@ -28,7 +33,7 @@
 #include "../Classes/CommonUI/UCommonTextScrollStyle.gen.cpp"
 #include "../UCommonTextBlock.gen.cpp"
 #include "../Classes/CommonUI/UCommonTextBlock.gen.cpp"
-#include "../Enums/CommonUI/EItemAlignment.static.gen.cpp"
+#include "../Enums/CommonUI/EItemAlignment.defer.gen.cpp"
 #include "../Enums/CommonUI/EItemAlignment.gen.cpp"
 #include "../UCommonTileView.gen.cpp"
 #include "../Classes/CommonUI/UCommonTileView.gen.cpp"

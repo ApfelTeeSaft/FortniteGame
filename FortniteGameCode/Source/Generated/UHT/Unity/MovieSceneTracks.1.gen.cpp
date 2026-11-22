@@ -2,6 +2,13 @@
 // Unity translation unit MovieSceneTracks.1 of /Script/MovieSceneTracks: the fragments of 115 UHT items in the
 // source order recovered from .CRT$XCU entries 15565..15790 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/MovieSceneTracks/MovieScene3DPathSection_Axis.staticenum.gen.cpp"
+#include "../Enums/MovieSceneTracks/EFireEventsAtPosition.staticenum.gen.cpp"
+#include "../Enums/MovieSceneTracks/ELevelVisibility.staticenum.gen.cpp"
+#include "../Enums/MovieSceneTracks/EParticleKey.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
@@ -13,7 +20,7 @@
 #include "../Classes/MovieSceneTracks/UMovieScene3DAttachTrack.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieScene3DConstraintSection.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieScene3DConstraintTrack.gen.cpp"
-#include "../Enums/MovieSceneTracks/MovieScene3DPathSection_Axis.static.gen.cpp"
+#include "../Enums/MovieSceneTracks/MovieScene3DPathSection_Axis.defer.gen.cpp"
 #include "../Enums/MovieSceneTracks/MovieScene3DPathSection_Axis.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieScene3DPathSection.gen.cpp"
 #include "../Structs/MovieSceneTracks/FMovieScene3DPathSectionTemplate.gen.cpp"
@@ -63,7 +70,7 @@
 #include "../Structs/MovieSceneTracks/FMovieSceneEventParameters.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneEventSection.gen.cpp"
 #include "../Structs/MovieSceneTracks/FMovieSceneEventSectionTemplate.gen.cpp"
-#include "../Enums/MovieSceneTracks/EFireEventsAtPosition.static.gen.cpp"
+#include "../Enums/MovieSceneTracks/EFireEventsAtPosition.defer.gen.cpp"
 #include "../Enums/MovieSceneTracks/EFireEventsAtPosition.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneEventTrack.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneFadeSection.gen.cpp"
@@ -73,7 +80,7 @@
 #include "../Classes/MovieSceneTracks/UMovieSceneFloatTrack.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneIntegerSection.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneIntegerTrack.gen.cpp"
-#include "../Enums/MovieSceneTracks/ELevelVisibility.static.gen.cpp"
+#include "../Enums/MovieSceneTracks/ELevelVisibility.defer.gen.cpp"
 #include "../Enums/MovieSceneTracks/ELevelVisibility.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneLevelVisibilitySection.gen.cpp"
 #include "../Structs/MovieSceneTracks/FMovieSceneLevelVisibilitySectionTemplate.gen.cpp"
@@ -90,7 +97,7 @@
 #include "../Structs/MovieSceneTracks/FMovieSceneParameterSectionTemplate.gen.cpp"
 #include "../Structs/MovieSceneTracks/FMovieSceneParticleParameterSectionTemplate.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneParticleParameterTrack.gen.cpp"
-#include "../Enums/MovieSceneTracks/EParticleKey.static.gen.cpp"
+#include "../Enums/MovieSceneTracks/EParticleKey.defer.gen.cpp"
 #include "../Enums/MovieSceneTracks/EParticleKey.gen.cpp"
 #include "../Classes/MovieSceneTracks/UMovieSceneParticleSection.gen.cpp"
 #include "../Structs/MovieSceneTracks/FMovieSceneParticleSectionTemplate.gen.cpp"

@@ -2,13 +2,18 @@
 // Unity translation unit Party.2 of /Script/Party: the fragments of 6 UHT items in the
 // source order recovered from .CRT$XCU entries 1422..1431 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Party/EJoinPartyDenialReason.staticenum.gen.cpp"
+#include "../Enums/Party/EPartyType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/Party.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/Party/EJoinPartyDenialReason.static.gen.cpp"
+#include "../Enums/Party/EJoinPartyDenialReason.defer.gen.cpp"
 #include "../Enums/Party/EJoinPartyDenialReason.gen.cpp"
-#include "../Enums/Party/EPartyType.static.gen.cpp"
+#include "../Enums/Party/EPartyType.defer.gen.cpp"
 #include "../Enums/Party/EPartyType.gen.cpp"
 #include "../Structs/Party/FPartyState.gen.cpp"
 #include "../Classes/Party/UPartyGameState.gen.cpp"

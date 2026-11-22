@@ -2,19 +2,26 @@
 // Unity translation unit Account.1 of /Script/Account: the fragments of 12 UHT items in the
 // source order recovered from .CRT$XCU entries 23029..23047 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Account/EExternalAccountType.staticenum.gen.cpp"
+#include "../Enums/Account/ECreateAccountResult.staticenum.gen.cpp"
+#include "../Enums/Account/ELoginResult.staticenum.gen.cpp"
+#include "../Enums/Account/EConsoleAuthLinkState.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/Account.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/Account/EExternalAccountType.static.gen.cpp"
+#include "../Enums/Account/EExternalAccountType.defer.gen.cpp"
 #include "../Enums/Account/EExternalAccountType.gen.cpp"
 #include "../Structs/Account/FExternalAccountServiceConfig.gen.cpp"
 #include "../Classes/Account/UExternalAccountProvider.gen.cpp"
-#include "../Enums/Account/ECreateAccountResult.static.gen.cpp"
+#include "../Enums/Account/ECreateAccountResult.defer.gen.cpp"
 #include "../Enums/Account/ECreateAccountResult.gen.cpp"
-#include "../Enums/Account/ELoginResult.static.gen.cpp"
+#include "../Enums/Account/ELoginResult.defer.gen.cpp"
 #include "../Enums/Account/ELoginResult.gen.cpp"
-#include "../Enums/Account/EConsoleAuthLinkState.static.gen.cpp"
+#include "../Enums/Account/EConsoleAuthLinkState.defer.gen.cpp"
 #include "../Enums/Account/EConsoleAuthLinkState.gen.cpp"
 #include "../Structs/Account/FWebEnvUrl.gen.cpp"
 #include "../Structs/Account/FGiftMessage.gen.cpp"

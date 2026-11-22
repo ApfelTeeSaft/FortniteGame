@@ -2,11 +2,15 @@
 // Unity translation unit Lobby.1 of /Script/Lobby: the fragments of 7 UHT items in the
 // source order recovered from .CRT$XCU entries 1452..1477 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/Lobby/ELobbyBeaconJoinState.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/Lobby.init.gen.cpp"  // init.gen.cpp position recovered
-#include "../Enums/Lobby/ELobbyBeaconJoinState.static.gen.cpp"
+#include "../Enums/Lobby/ELobbyBeaconJoinState.defer.gen.cpp"
 #include "../Enums/Lobby/ELobbyBeaconJoinState.gen.cpp"
 #include "../ALobbyBeaconClient.gen.cpp"
 #include "../Classes/Lobby/ALobbyBeaconClient.gen.cpp"

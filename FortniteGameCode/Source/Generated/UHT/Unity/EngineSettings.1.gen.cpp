@@ -2,15 +2,20 @@
 // Unity translation unit EngineSettings.1 of /Script/EngineSettings: the fragments of 11 UHT items in the
 // source order recovered from .CRT$XCU entries 16237..16256 (analysis/unity-order.json).
 
+// StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
+// file-static ones first (see tools/codegen/unity.py).
+#include "../Enums/EngineSettings/EThreePlayerSplitScreenType.staticenum.gen.cpp"
+#include "../Enums/EngineSettings/ETwoPlayerSplitScreenType.staticenum.gen.cpp"
+
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/EngineSettings.init.gen.cpp"  // init.gen.cpp position recovered
 #include "../Structs/EngineSettings/FAutoCompleteCommand.gen.cpp"
 #include "../Classes/EngineSettings/UConsoleSettings.gen.cpp"
-#include "../Enums/EngineSettings/EThreePlayerSplitScreenType.static.gen.cpp"
+#include "../Enums/EngineSettings/EThreePlayerSplitScreenType.defer.gen.cpp"
 #include "../Enums/EngineSettings/EThreePlayerSplitScreenType.gen.cpp"
-#include "../Enums/EngineSettings/ETwoPlayerSplitScreenType.static.gen.cpp"
+#include "../Enums/EngineSettings/ETwoPlayerSplitScreenType.defer.gen.cpp"
 #include "../Enums/EngineSettings/ETwoPlayerSplitScreenType.gen.cpp"
 #include "../Structs/EngineSettings/FGameModeName.gen.cpp"
 #include "../Classes/EngineSettings/UGameMapsSettings.gen.cpp"
