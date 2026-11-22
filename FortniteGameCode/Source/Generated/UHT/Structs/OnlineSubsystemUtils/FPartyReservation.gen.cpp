@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FPartyReservation();
 	UPackage* Z_Construct_UPackage__Script_OnlineSubsystemUtils();  // RVA 0x0032F8A0
-struct alignas(8) FPartyReservation
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FPartyReservation is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E620 (end 0x0032E691, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014032E620 | File offset: 0x0032DC20
 // Recovery: confirmed (TEXT("PartyReservation") and Z_Construct_UScriptStruct_FPartyReservation) | Matching: see analysis/functions-uht-staticstruct.json

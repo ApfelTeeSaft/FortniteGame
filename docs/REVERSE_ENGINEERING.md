@@ -370,9 +370,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,474, at 1,226 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 833 read parameters |
-| exact | 1,214: 1,012 in the denominator, 202 leaf (no `.pdata`) |
-| relocation-equivalent | 3: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets` and `UGameplayAbility::GetContextFromOwner` (below) |
+| UFunction thunks defined | 1,478, at 1,230 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 837 read parameters |
+| exact | 1,217: 1,015 in the denominator, 202 leaf (no `.pdata`) |
+| relocation-equivalent | 4: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner` and `APartyBeaconClient::ServerReservationRequest` (below) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
@@ -428,6 +428,9 @@ Supported types:
     `Classes.gen.h` (`uht_props.MODELLED_ENUMS`);
 - `FGameplayAbilityTargetDataHandle` (`TArray<TSharedPtr<FGameplayAbilityTargetData>,
   TInlineAllocator<1>>`) and `FGameplayEventData`;
+- `FPartyReservation` and `FPlayerReservation`, the latter with the reference's members (no
+  crossplay fields; `docs/ENGINE_DIFFERENCES.md` #7);
+- `FAthenaQuickChatActiveEntry`, Fortnite-only (below);
 - `FTransform` (`TransformRecovered.h`, below);
 - soft object pointers, `TSoftObjectPtr<C>` (`EngineStructsRecovered.h`): `FSoftObjectPath`,
   `TPersistentObjectPtr`, `FSoftObjectPtr` and `TSoftObjectPtr`, read with
@@ -538,6 +541,18 @@ Limits:
       Those of `FGameplayEventData` are shared by several thunks and resolve.
     - `FFoliageTypeObject::StaticStruct` lost its literal again: `Foliage.2`'s `.rdata`
       order moved with the headers, as above.
+  - `FAthenaQuickChatActiveEntry` has no source. Its members come from the reference's
+    reflected properties: `Bank` (`UAthenaQuickChatBank*`, from its `ClassFunc`) at 0,
+    `ContextObject` (`UObject*`) at 8, `int16 ContextValue` at 16, `int8 Index` at 18;
+    SizeOf 24.
+    - The default constructor is inferred from its inlined code in the thunks: one 16-byte
+      zero store for the pointers, then the `int16` and the `int8`, leaving the padding. Copies
+      are trivial (the thunks copy 24 bytes).
+    - Its 2 thunk addresses are exact, and so is one of the 2 `FPartyReservation` thunks.
+      The other, `APartyBeaconClient::ServerReservationRequest`, is relocation-equivalent: its
+      `TEXT("ServerReservationRequest_Validate")` has a second copy in the image that nothing
+      modelled uses, so literal elimination cannot decide.
+    - `FFoliageTypeObject::StaticStruct` is exact again (the same `.rdata` ripple).
   - Adding these changed the `.rdata` order of `InputCore.1`, which gained no code. Its
     literal sections came out in another order with the previous `ContainersRecovered.h`
     and in a third without `<new>`. So literal section order, like file-static order,
@@ -586,13 +601,12 @@ Limits:
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,564 have a supported signature and 1,474 have
+- Of the 1,661 virtual-native UFunctions, 1,568 have a supported signature and 1,478 have
   thunks (folded bodies counted per UFunction). For the other 90, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FSlateBrush` (6), `FFortItemEntry`, `FGameplayEffectSpecForRPC` and
-    `FPartyReservation` (4 each);
-  - `TArray<FAssetData>` (4) and `FAthenaQuickChatActiveEntry` (3);
+  - `FSlateBrush` (6), `FFortItemEntry` and `FGameplayEffectSpecForRPC` (4 each);
+  - `TArray<FAssetData>` (4), `FPointerEvent` and `FFortConversationSentence` (3 each);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)

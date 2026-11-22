@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry();
 	UPackage* Z_Construct_UPackage__Script_FortniteGame();  // RVA 0x01051BE0
-struct alignas(8) FAthenaQuickChatActiveEntry
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FAthenaQuickChatActiveEntry is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60BA0 (end 0x00F60BF2, chained .pdata fragments)
 // Original VA: 0x0000000140F60BA0 | File offset: 0x00F601A0
 // Recovery: confirmed (TEXT("AthenaQuickChatActiveEntry") and Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry) | Matching: see analysis/functions-uht-staticstruct.json

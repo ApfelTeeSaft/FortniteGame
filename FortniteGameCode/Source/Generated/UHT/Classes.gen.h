@@ -11339,10 +11339,10 @@ public:
 	virtual void FNGC_VSlot_0x618();
 	virtual bool ServerCancelReservationRequest_Validate(FUniqueNetIdRepl const& PartyLeader);  // slot 196 (+0x620), UFunction APartyBeaconClient::ServerCancelReservationRequest
 	virtual void ServerCancelReservationRequest_Implementation(FUniqueNetIdRepl const& PartyLeader);  // slot 197 (+0x628), UFunction APartyBeaconClient::ServerCancelReservationRequest
-	virtual void FNGC_VSlot_0x630();  // slot 198: APartyBeaconClient::ServerUpdateReservationRequest_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x638();  // slot 199: APartyBeaconClient::ServerUpdateReservationRequest_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x640();  // slot 200: APartyBeaconClient::ServerReservationRequest_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x648();  // slot 201: APartyBeaconClient::ServerReservationRequest_Implementation (signature not recovered)
+	virtual bool ServerUpdateReservationRequest_Validate(const FString& SessionId, FPartyReservation const& ReservationUpdate);  // slot 198 (+0x630), UFunction APartyBeaconClient::ServerUpdateReservationRequest
+	virtual void ServerUpdateReservationRequest_Implementation(const FString& SessionId, FPartyReservation const& ReservationUpdate);  // slot 199 (+0x638), UFunction APartyBeaconClient::ServerUpdateReservationRequest
+	virtual bool ServerReservationRequest_Validate(const FString& SessionId, FPartyReservation const& Reservation);  // slot 200 (+0x640), UFunction APartyBeaconClient::ServerReservationRequest
+	virtual void ServerReservationRequest_Implementation(const FString& SessionId, FPartyReservation const& Reservation);  // slot 201 (+0x648), UFunction APartyBeaconClient::ServerReservationRequest
 	virtual void ClientSendReservationFull_Implementation();  // slot 202 (+0x650), UFunction APartyBeaconClient::ClientSendReservationFull
 	virtual void ClientSendReservationUpdates_Implementation(int32 NumRemainingReservations);  // slot 203 (+0x658), UFunction APartyBeaconClient::ClientSendReservationUpdates
 	virtual void ClientCancelReservationResponse_Implementation(EPartyReservationResult::Type ReservationResponse);  // slot 204 (+0x660), UFunction APartyBeaconClient::ClientCancelReservationResponse
@@ -12332,9 +12332,9 @@ public:
 	virtual void ServerDBNOReviveStarted_Implementation(AFortPlayerPawnAthena* DBNOPawn);  // slot 822 (+0x19B0), UFunction AFortPlayerControllerAthena::ServerDBNOReviveStarted
 	virtual void ClientBotStopDogpile_Implementation();  // slot 823 (+0x19B8), UFunction AFortPlayerControllerAthena::ClientBotStopDogpile
 	virtual void ClientBotStartDogpile_Implementation(FVector DogpilePosition);  // slot 824 (+0x19C0), UFunction AFortPlayerControllerAthena::ClientBotStartDogpile
-	virtual void FNGC_VSlot_0x19C8();  // slot 825: AFortPlayerControllerAthena::ClientReceiveSquadQuickChatMessage_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x19D0();  // slot 826: AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x19D8();  // slot 827: AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage_Implementation (signature not recovered)
+	virtual void ClientReceiveSquadQuickChatMessage_Implementation(FAthenaQuickChatActiveEntry ChatEntry, AFortPlayerController* SenderPC);  // slot 825 (+0x19C8), UFunction AFortPlayerControllerAthena::ClientReceiveSquadQuickChatMessage
+	virtual bool ServerPlaySquadQuickChatMessage_Validate(FAthenaQuickChatActiveEntry ChatEntry, FUniqueNetIdRepl SenderID);  // slot 826 (+0x19D0), UFunction AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage
+	virtual void ServerPlaySquadQuickChatMessage_Implementation(FAthenaQuickChatActiveEntry ChatEntry, FUniqueNetIdRepl SenderID);  // slot 827 (+0x19D8), UFunction AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage
 	virtual void ClientVoiceChatChannelJoin_Implementation(const FString& InVoiceChatPlayerName, const FString& InVoiceChatChannel, const FString& JoinToken);  // slot 828 (+0x19E0), UFunction AFortPlayerControllerAthena::ClientVoiceChatChannelJoin
 	virtual void ClientVoiceChat3DChannelJoin_Implementation(const FString& InVoiceChatPlayerName, const FString& InVoiceChatChannel, const FString& JoinToken);  // slot 829 (+0x19E8), UFunction AFortPlayerControllerAthena::ClientVoiceChat3DChannelJoin
 	virtual void ClientVoiceChatLogin_Implementation(const FString& InVoiceChatPlayerName, const FString& LoginToken);  // slot 830 (+0x19F0), UFunction AFortPlayerControllerAthena::ClientVoiceChatLogin

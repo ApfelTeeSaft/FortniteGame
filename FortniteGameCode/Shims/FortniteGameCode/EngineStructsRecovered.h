@@ -614,3 +614,67 @@ struct FGameplayEventData
 	/** The polymorphic target information for the event */
 	FGameplayAbilityTargetDataHandle TargetData;
 };
+
+// OnlineSubsystemUtils: PartyBeaconState.h. The reference's FPlayerReservation is older than
+// 4.20's: no Platform or bAllowCrossplay; ElapsedTime directly follows ValidationStr (its
+// FStructParams: SizeOf 64, members at 0/40/56; docs/ENGINE_DIFFERENCES.md #7). Its default
+// constructor is 4.20's without the crossplay flag. Copies and destructors are implicit.
+struct FPlayerReservation
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FPlayerReservation()
+		: ElapsedTime(0.0f)
+	{}
+
+	/** Unique id for this reservation */
+	FUniqueNetIdRepl UniqueId;
+
+	/** Info needed to validate user credentials when joining a server */
+	FString ValidationStr;
+
+	/** Elapsed time since player made reservation and was last seen */
+	float ElapsedTime;
+};
+
+struct FPartyReservation
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FPartyReservation()
+		: TeamNum(INDEX_NONE)
+	{}
+
+	/** Team assigned to this reservation */
+	int32 TeamNum;
+
+	/** Player initiating the request for the entire party */
+	FUniqueNetIdRepl PartyLeader;
+
+	/** All party members (including party leader) in the reservation */
+	TArray<FPlayerReservation> PartyMembers;
+};
+
+// FortniteGame (no source): FAthenaQuickChatActiveEntry. Members, types and offsets are the
+// reference's reflected properties (FStructParams: SizeOf 24; Bank's ClassFunc is
+// UAthenaQuickChatBank::StaticClass). The default constructor is inferred from its inlined
+// code in the reference's thunks, which zero every member and leave the padding. Copies are
+// implicit (the thunks copy 24 bytes).
+class UAthenaQuickChatBank;
+
+struct FAthenaQuickChatActiveEntry
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FAthenaQuickChatActiveEntry()
+		: Bank(nullptr)
+		, ContextObject(nullptr)
+		, ContextValue(0)
+		, Index(0)
+	{}
+
+	UAthenaQuickChatBank* Bank;
+	UObject* ContextObject;
+	int16 ContextValue;
+	int8 Index;
+};

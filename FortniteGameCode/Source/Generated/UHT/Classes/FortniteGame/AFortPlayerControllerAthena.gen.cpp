@@ -41,6 +41,17 @@ void AFortPlayerControllerAthena::execClientNotifyWon(UObject* Context, FFrame& 
 	P_THIS->ClientNotifyWon_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079B50 (end 0x01079C3A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReceiveSquadQuickChatMessage) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientReceiveSquadQuickChatMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FAthenaQuickChatActiveEntry,Z_Param_ChatEntry);
+	P_GET_OBJECT(AFortPlayerController,Z_Param_SenderPC);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReceiveSquadQuickChatMessage_Implementation(Z_Param_ChatEntry,Z_Param_SenderPC);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107A000 (end 0x0107A0B5)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientUnreliableSendMessage) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerAthena::execClientUnreliableSendMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -187,6 +198,22 @@ void AFortPlayerControllerAthena::execServerPlaceMapCursor(UObject* Context, FFr
 		return;
 	}
 	P_THIS->ServerPlaceMapCursor_Implementation(Z_Param_CursorPos);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C8E0 (end 0x0107CAC1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPlaySquadQuickChatMessage) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerPlaySquadQuickChatMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FAthenaQuickChatActiveEntry,Z_Param_ChatEntry);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_SenderID);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPlaySquadQuickChatMessage_Validate(Z_Param_ChatEntry,Z_Param_SenderID))
+	{
+		RPC_ValidateFailed(TEXT("ServerPlaySquadQuickChatMessage_Validate"));
+		return;
+	}
+	P_THIS->ServerPlaySquadQuickChatMessage_Implementation(Z_Param_ChatEntry,Z_Param_SenderID);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CB90 (end 0x0107CBDE)

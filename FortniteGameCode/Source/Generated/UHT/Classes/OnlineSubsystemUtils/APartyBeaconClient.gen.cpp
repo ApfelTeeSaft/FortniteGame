@@ -58,6 +58,38 @@ void APartyBeaconClient::execServerCancelReservationRequest(UObject* Context, FF
 	P_THIS->ServerCancelReservationRequest_Implementation(Z_Param_PartyLeader);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x003320B0 (end 0x0033223B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReservationRequest) | Matching: see analysis/functions-uht-exec.json
+void APartyBeaconClient::execServerReservationRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_SessionId);
+	P_GET_STRUCT(FPartyReservation,Z_Param_Reservation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReservationRequest_Validate(Z_Param_SessionId,Z_Param_Reservation))
+	{
+		RPC_ValidateFailed(TEXT("ServerReservationRequest_Validate"));
+		return;
+	}
+	P_THIS->ServerReservationRequest_Implementation(Z_Param_SessionId,Z_Param_Reservation);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00332240 (end 0x003323CB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateReservationRequest) | Matching: see analysis/functions-uht-exec.json
+void APartyBeaconClient::execServerUpdateReservationRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_SessionId);
+	P_GET_STRUCT(FPartyReservation,Z_Param_ReservationUpdate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpdateReservationRequest_Validate(Z_Param_SessionId,Z_Param_ReservationUpdate))
+	{
+		RPC_ValidateFailed(TEXT("ServerUpdateReservationRequest_Validate"));
+		return;
+	}
+	P_THIS->ServerUpdateReservationRequest_Implementation(Z_Param_SessionId,Z_Param_ReservationUpdate);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(APartyBeaconClient, 378953535u)
 // Original dynamic initializer: RVA 0x00099220 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<APartyBeaconClient> AutoInitializeAPartyBeaconClient(TEXT("APartyBeaconClient"), sizeof(APartyBeaconClient), 378953535u);
