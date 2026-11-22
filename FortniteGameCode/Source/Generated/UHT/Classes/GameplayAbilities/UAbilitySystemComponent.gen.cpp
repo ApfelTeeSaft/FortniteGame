@@ -26,6 +26,39 @@ void UAbilitySystemComponent::execClientActivateAbilitySucceed(UObject* Context,
 	P_THIS->ClientActivateAbilitySucceed_Implementation(Z_Param_AbilityToActivate,Z_Param_PredictionKey);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BA70 (end 0x0053BB75)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCancelAbility) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientCancelAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToCancel);
+	P_GET_STRUCT(FGameplayAbilityActivationInfo,Z_Param_ActivationInfo);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCancelAbility_Implementation(Z_Param_AbilityToCancel,Z_Param_ActivationInfo);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BB80 (end 0x0053BC85)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientEndAbility) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientEndAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToEnd);
+	P_GET_STRUCT(FGameplayAbilityActivationInfo,Z_Param_ActivationInfo);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientEndAbility_Implementation(Z_Param_AbilityToEnd,Z_Param_ActivationInfo);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BC90 (end 0x0053BD8C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientPrintDebug_Response) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientPrintDebug_Response(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY(FString,Z_Param_Strings);
+	P_GET_PROPERTY(UIntProperty,Z_Param_GameFlags);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientPrintDebug_Response_Implementation(Z_Param_Strings,Z_Param_GameFlags);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BD90 (end 0x0053BEB8)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetReplicatedEvent) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execClientSetReplicatedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -162,6 +195,22 @@ void UAbilitySystemComponent::execOnRep_ServerDebugString(UObject* Context, FFra
 	P_THIS->OnRep_ServerDebugString();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00542C50 (end 0x00542DA4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCancelAbility) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerCancelAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToCancel);
+	P_GET_STRUCT(FGameplayAbilityActivationInfo,Z_Param_ActivationInfo);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCancelAbility_Validate(Z_Param_AbilityToCancel,Z_Param_ActivationInfo))
+	{
+		RPC_ValidateFailed(TEXT("ServerCancelAbility_Validate"));
+		return;
+	}
+	P_THIS->ServerCancelAbility_Implementation(Z_Param_AbilityToCancel,Z_Param_ActivationInfo);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00542DB0 (end 0x00542EA9)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCurrentMontageJumpToSectionName) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execServerCurrentMontageJumpToSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -212,6 +261,23 @@ void UAbilitySystemComponent::execServerCurrentMontageSetPlayRate(UObject* Conte
 	P_THIS->ServerCurrentMontageSetPlayRate_Implementation(Z_Param_ClientAnimMontage,Z_Param_InPlayRate);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543130 (end 0x005432F6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerEndAbility) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerEndAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToEnd);
+	P_GET_STRUCT(FGameplayAbilityActivationInfo,Z_Param_ActivationInfo);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerEndAbility_Validate(Z_Param_AbilityToEnd,Z_Param_ActivationInfo,Z_Param_PredictionKey))
+	{
+		RPC_ValidateFailed(TEXT("ServerEndAbility_Validate"));
+		return;
+	}
+	P_THIS->ServerEndAbility_Implementation(Z_Param_AbilityToEnd,Z_Param_ActivationInfo,Z_Param_PredictionKey);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00543300 (end 0x0054334E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPrintDebug_Request) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execServerPrintDebug_Request(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -224,6 +290,21 @@ void UAbilitySystemComponent::execServerPrintDebug_Request(UObject* Context, FFr
 		return;
 	}
 	P_THIS->ServerPrintDebug_Request_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543350 (end 0x00543438)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPrintDebug_RequestWithStrings) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerPrintDebug_RequestWithStrings(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY(FString,Z_Param_Strings);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPrintDebug_RequestWithStrings_Validate(Z_Param_Strings))
+	{
+		RPC_ValidateFailed(TEXT("ServerPrintDebug_RequestWithStrings_Validate"));
+		return;
+	}
+	P_THIS->ServerPrintDebug_RequestWithStrings_Implementation(Z_Param_Strings);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00543440 (end 0x005434E7)

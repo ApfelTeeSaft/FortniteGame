@@ -6,6 +6,7 @@
 #pragma once
 
 #include <string.h>
+#include <new>   // placement new, as Core's headers include it
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 enum { DEFAULT_ALIGNMENT = 0 };
@@ -29,19 +30,83 @@ struct FMemory
 	static SIZE_T QuantizeSize(SIZE_T Count, uint32 Alignment = DEFAULT_ALIGNMENT);
 };
 
-// Templates/MemoryOps.h, for the element types tools/codegen/uht_props.py allows: trivially
-// copyable and destructible ones (TIsBitwiseConstructible, TIsTriviallyDestructible).
-template <typename DestinationElementType, typename SourceElementType>
-__forceinline void ConstructItems(void* Dest, const SourceElementType* Source, int32 Count)
+// Templates/EnableIf.h, IsTriviallyDestructible.h, UnrealTypeTraits.h (TIsBitwiseConstructible
+// for one element type, the only form TArray's copies use here).
+template <bool Predicate, typename Result = void>
+class TEnableIf;
+
+template <typename Result>
+class TEnableIf<true, Result>
 {
-	static_assert(__has_trivial_copy(SourceElementType), "only bitwise-constructible elements are modelled");
-	FMemory::Memcpy(Dest, Source, sizeof(SourceElementType) * Count);
+public:
+	typedef Result Type;
+};
+
+template <typename Result>
+class TEnableIf<false, Result>
+{ };
+
+template <typename T>
+struct TIsTriviallyDestructible
+{
+	enum { Value = __has_trivial_destructor(T) };
+};
+
+template <typename T>
+struct TIsTriviallyCopyConstructible
+{
+	enum { Value = __has_trivial_copy(T) };
+};
+
+template <typename T, typename Arg>
+struct TIsBitwiseConstructible
+{
+	enum { Value = false };
+};
+
+template <typename T>
+struct TIsBitwiseConstructible<T, T>
+{
+	// Ts can always be bitwise constructed from itself if it is trivially copyable.
+	enum { Value = TIsTriviallyCopyConstructible<T>::Value };
+};
+
+// Templates/MemoryOps.h
+template <typename ElementType>
+__forceinline typename TEnableIf<!TIsTriviallyDestructible<ElementType>::Value>::Type DestructItems(ElementType* Element, int32 Count)
+{
+	while (Count)
+	{
+		// We need a typedef here because VC won't compile the destructor call below if ElementType itself has a member called ElementType
+		typedef ElementType DestructItemsElementTypeTypedef;
+
+		Element->DestructItemsElementTypeTypedef::~DestructItemsElementTypeTypedef();
+		++Element;
+		--Count;
+	}
 }
 
 template <typename ElementType>
-__forceinline void DestructItems(ElementType* Elements, int32 Count)
+__forceinline typename TEnableIf<TIsTriviallyDestructible<ElementType>::Value>::Type DestructItems(ElementType* Elements, int32 Count)
 {
-	static_assert(__has_trivial_destructor(ElementType), "only trivially destructible elements are modelled");
+}
+
+template <typename DestinationElementType, typename SourceElementType>
+__forceinline typename TEnableIf<!TIsBitwiseConstructible<DestinationElementType, SourceElementType>::Value>::Type ConstructItems(void* Dest, const SourceElementType* Source, int32 Count)
+{
+	while (Count)
+	{
+		new (Dest) DestinationElementType(*Source);
+		++(DestinationElementType*&)Dest;
+		++Source;
+		--Count;
+	}
+}
+
+template <typename DestinationElementType, typename SourceElementType>
+__forceinline typename TEnableIf<TIsBitwiseConstructible<DestinationElementType, SourceElementType>::Value>::Type ConstructItems(void* Dest, const SourceElementType* Source, int32 Count)
+{
+	FMemory::Memcpy(Dest, Source, sizeof(SourceElementType) * Count);
 }
 
 // Containers/ContainerAllocationPolicies.h

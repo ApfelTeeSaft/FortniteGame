@@ -57,6 +57,19 @@ void UFortGameplayAbilityTooltip::execGetTextForTokenFromAbilityInstanceInternal
 	*(bool*)Z_Param__Result=P_THIS->GetTextForTokenFromAbilityInstanceInternal_Implementation(Z_Param_AbilityInstance,Z_Param_Out_Tag,Z_Param_Context,Z_Param_Out_Token,Z_Param_Out_OutText);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01014670 (end 0x0101484D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTokenizedDescriptionText) | Matching: see analysis/functions-uht-exec.json
+void UFortGameplayAbilityTooltip::execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_ObjectToDescribe);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_Tag);
+	P_GET_OBJECT(UFortTooltipContext,Z_Param_Context);
+	P_GET_TARRAY_REF(FText,Z_Param_Out_OutDescription);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetTokenizedDescriptionText(Z_Param_ObjectToDescribe,Z_Param_Out_Tag,Z_Param_Context,Z_Param_Out_OutDescription);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEAF60 (end 0x00FEB023)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execInitializeAbilityInstanceInternal) | Matching: see analysis/functions-uht-exec.json
 void UFortGameplayAbilityTooltip::execInitializeAbilityInstanceInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

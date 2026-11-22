@@ -56,11 +56,11 @@ MODELLED_STRUCTS = {"Vector": (12, 4), "Rotator": (12, 4), "Vector2D": (8, 4), "
                     "Vector_NetQuantize100": (12, 4), "Vector_NetQuantizeNormal": (12, 4),
                     "HitResult": (136, 8), "PredictionKey": (24, 8), "Color": (4, 4), "Margin": (16, 4),
                     "Key": (24, 8), "UniqueNetIdRepl": (40, 8), "GameplayEffectContextHandle": (24, 8),
-                    "GameplayTagContainer": (32, 8), "GameplayCueParameters": (184, 8), "Transform": (48, 16)}
-# Of those, the ones TArray may hold (ConstructItems / DestructItems model trivial copies only):
-# FHitResult's FWeakObjectPtr members have a user-defined copy constructor.
-TRIVIAL_STRUCTS = set(MODELLED_STRUCTS) - {"HitResult", "Key", "UniqueNetIdRepl", "GameplayEffectContextHandle",
-                                           "GameplayTagContainer", "GameplayCueParameters", "Transform"}
+                    "GameplayTagContainer": (32, 8), "GameplayCueParameters": (184, 8), "Transform": (48, 16),
+                    "ViewTargetTransitionParams": (16, 4), "GameplayAbilityActivationInfo": (32, 8)}
+# Enums EngineStructsRecovered.h defines, with the reference's enumerator values, for the
+# structs' constructors; enum_declarations does not redeclare them.
+MODELLED_ENUMS = {"EViewTargetBlendFunction", "EGameplayAbilityActivationMode::Type"}
 REGISTER_RETURN = {"bool", "uint8", "int8", "int16", "int32", "int64", "uint16", "uint32", "uint64", "float", "double"}
 
 
@@ -206,8 +206,9 @@ def parameter(p: dict, names: Names, base: int, strings_by_ref: bool = False) ->
 
 
 def element_type(inner: dict, names: Names, base: int) -> str | None:
-    """C++ type of a TArray element (UArrayProperty::GetCPPMacroType: Inner->GetCPPType()), for
-    the trivially copyable and destructible types ContainersRecovered.h's TArray supports."""
+    """C++ type of a TArray element (UArrayProperty::GetCPPMacroType: Inner->GetCPPType()).
+    ContainersRecovered.h's ConstructItems/DestructItems copy and destroy any element type
+    as 4.20's MemoryOps.h does."""
     if inner["dim"] != 1:
         return None
     t = inner["type"]
@@ -220,10 +221,13 @@ def element_type(inner: dict, names: Names, base: int) -> str | None:
         return f"{c}*" if c else None
     if t == "Class" and not inner["flags"] & CPF_UOBJECTWRAPPER:
         return "UClass*"
+    if t == "Str":
+        return "FString"
+    if t == "Text":
+        return "FText"
     if t == "Struct":
         info = names.structs.get(inner["func"] - base) if inner["func"] else None
-        return (f"F{info[0]}" if info and MODELLED_STRUCTS.get(info[0]) == info[1:]
-                and info[0] in TRIVIAL_STRUCTS else None)
+        return f"F{info[0]}" if info and MODELLED_STRUCTS.get(info[0]) == info[1:] else None
     return None
 
 
@@ -268,6 +272,8 @@ def enum_declarations(names: Names) -> list[str]:
     Only the form and underlying type are recovered; the enumerators are not declared."""
     out = []
     for cpp, e in sorted(names.used_enums.items()):
+        if cpp in MODELLED_ENUMS:
+            continue
         if e["form"] == ENUM_CLASS:
             out.append(f"enum class {cpp} : {e['underlying']} {{}};")
         elif e["form"] == ENUM_NAMESPACED:

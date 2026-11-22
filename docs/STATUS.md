@@ -9,19 +9,19 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **28,286 / 157,719** primary `.pdata` functions (17.93 %, 1,675,874 bytes):
+| Exact functions | **28,297 / 157,719** primary `.pdata` functions (17.94 %, 1,679,777 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 28,279 generated UHT functions:
+- 28,290 generated UHT functions:
   - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
-    1,189 `FCompiledInDefer` initializers and 988 exec thunks of virtual natives;
+    1,189 `FCompiledInDefer` initializers and 1,000 exec thunks of virtual natives;
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,860 `StaticStruct`, 1,782 `NewStructOps`,
-    1,888 `StaticRegisterNatives` and 1,252 `FCompiledInDeferStruct` initializers;
+    1,888 `StaticRegisterNatives` and 1,251 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,071 `Z_Construct_UEnum_*`, 374 `<Enum>_StaticEnum` and 243 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers, 202 leaf exec thunks and `FCommandLine::IsInitialized` |
-| Relocation-equivalent | 8,993 in the denominator, mostly:
+| Relocation-equivalent | 8,994 in the denominator, mostly:
 - the 3,283 `GetPrivateStaticClass` bodies (template-instance and literal fields);
 - registration initializers blocked by `&C::StaticClass`, or by package-name literals that
   hand-written code also uses;
@@ -99,13 +99,16 @@ Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Class vt
      has no evidence independent of the thunk. Thunks of virtual natives can match: 377 do.
      Next:
      - Parameters are decoded (`tools/codegen/uht_props.py`), including `FString`, `TArray`
-       of trivially copyable elements (`ContainersRecovered.h`), `FText` and `TSubclassOf`
+       of any modelled element type (`ContainersRecovered.h`), `FText` and `TSubclassOf`
        (`TextRecovered.h`) and 17 structs from the 4.20 headers
        (`EngineStructsRecovered.h`), including `FGameplayTagContainer` and
-       `FGameplayCueParameters`, and `FTransform` (`TransformRecovered.h`). 1,448 of the 1,661
-       virtual-native UFunctions have thunks, and 1,190 of their 1,200 addresses match.
-     - Next: `FSlateBrush`, `FGameplayAbilityActivationInfo`, `FGameplayEventData`, soft
-       object pointers, arrays of strings and of non-trivial elements.
+       `FGameplayCueParameters`, `FViewTargetTransitionParams`,
+       `FGameplayAbilityActivationInfo`, and `FTransform` (`TransformRecovered.h`). 1,460 of
+       the 1,661 virtual-native UFunctions have thunks, and 1,202 of their 1,212 addresses
+       match.
+     - Next: soft object pointers, `FGameplayEventData` (needs
+       `FGameplayAbilityTargetDataHandle`), `FAthenaQuickChatActiveEntry`, and `FSlateBrush`
+       (the reference's layout differs from 4.20's).
      - Each unit defines its own `GlobalVectorConstants`, those its `.CRT$XCU`
        initializers name in the reference (131 units; `docs/REVERSE_ENGINEERING.md`,
        "Per-unit vector constants"). The count is level with defining two in every unit.

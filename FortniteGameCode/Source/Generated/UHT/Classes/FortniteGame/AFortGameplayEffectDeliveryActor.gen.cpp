@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9010 (end 0x00FE90FB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBroadcastExplosion) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execBroadcastExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY(AActor*,Z_Param_HitActors);
+	P_GET_TARRAY(FHitResult,Z_Param_HitResults);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BroadcastExplosion_Implementation(Z_Param_HitActors,Z_Param_HitResults);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execDoExplosion) | Matching: see analysis/functions-uht-exec.json
 void AFortGameplayEffectDeliveryActor::execDoExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

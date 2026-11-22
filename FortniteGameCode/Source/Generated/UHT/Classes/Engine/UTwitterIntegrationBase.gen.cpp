@@ -62,6 +62,19 @@ void UTwitterIntegrationBase::execShowTweetUI(UObject* Context, FFrame& Stack, v
 	*(bool*)Z_Param__Result=P_THIS->ShowTweetUI(Z_Param_InitialMessage,Z_Param_URL,Z_Param_Picture);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EE890 (end 0x024EEA2F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTwitterRequest) | Matching: see analysis/functions-uht-exec.json
+void UTwitterIntegrationBase::execTwitterRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_URL);
+	P_GET_TARRAY_REF(FString,Z_Param_Out_ParamKeysAndValues);
+	P_GET_PROPERTY(UByteProperty,Z_Param_RequestMethod);
+	P_GET_PROPERTY(UIntProperty,Z_Param_AccountIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->TwitterRequest(Z_Param_URL,Z_Param_Out_ParamKeysAndValues,ETwitterRequestMethod(Z_Param_RequestMethod),Z_Param_AccountIndex);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UTwitterIntegrationBase, 566021815u)
 // Original dynamic initializer: RVA 0x00220140 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UTwitterIntegrationBase> AutoInitializeUTwitterIntegrationBase(TEXT("UTwitterIntegrationBase"), sizeof(UTwitterIntegrationBase), 566021815u);

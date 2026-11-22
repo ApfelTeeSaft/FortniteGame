@@ -187,9 +187,11 @@ def test_uht_parameters() -> None:
     assert (t["decl"], t["line"]) == ("TArray<AActor*>& Actors", "P_GET_TARRAY_REF(AActor*,Z_Param_Out_Actors);"), t
     t = P.parameter(arr("Locs", const | out | ref, {"type": "Struct", "flags": 0, "func": base + 0x400}), names, base)
     assert t["decl"] == "TArray<FVector> const& Locs", t
-    assert P.parameter(arr("Names", 0, {"type": "Str", "flags": 0, "func": 0}), names, base) is None  # FString elements: not modelled
+    t = P.parameter(arr("Names", 0, {"type": "Str", "flags": 0, "func": 0}), names, base)
+    assert t["line"] == "P_GET_TARRAY(FString,Z_Param_Names);", t           # non-trivial elements (MemoryOps.h)
     names.structs[0x500] = ("HitResult", 136, 8)                     # user-defined copy (FWeakObjectPtr)
-    assert P.parameter(arr("Hits", 0, {"type": "Struct", "flags": 0, "func": base + 0x500}), names, base) is None
+    t = P.parameter(arr("Hits", 0, {"type": "Struct", "flags": 0, "func": base + 0x500}), names, base)
+    assert t["decl"] == "TArray<FHitResult> Hits", t
     t = P.parameter(rec("Struct", "Hit", const | out | ref, 0x500), names, base)
     assert t["decl"] == "FHitResult const& Hit", t
     names.structs[0x600] = ("HitResult", 136, 4)                     # FStructParams disagree: not used
@@ -203,7 +205,11 @@ def test_uht_parameters() -> None:
     assert (t["decl"], t["line"]) == ("FTransform const& SpawnTransform",
                                       "P_GET_STRUCT_REF(FTransform,Z_Param_Out_SpawnTransform);"), t
     names.structs[0x800] = ("GameplayTagContainer", 32, 8)           # TArray members: no TArray element
-    assert P.parameter(arr("Tags", 0, {"type": "Struct", "flags": 0, "func": base + 0x800}), names, base) is None
+    assert P.parameter(arr("Tags", 0, {"type": "Struct", "flags": 0, "func": base + 0x800}), names, base)["decl"] == \
+        "TArray<FGameplayTagContainer> Tags"
+    names.structs[0xA00] = ("SlateBrush", 120, 8)                    # not modelled: 4.20's is 136 bytes
+    assert P.parameter(rec("Struct", "Brush", 0x180, 0xA00), names, base) is None
+    assert "EViewTargetBlendFunction" in P.MODELLED_ENUMS                # defined by the shims, not redeclared
     t = P.parameter(rec("Text", "Label", 0), names, base)
     assert (t["decl"], t["line"]) == ("FText Label", "P_GET_PROPERTY(UTextProperty,Z_Param_Label);"), t
     t = P.parameter(rec("Text", "Label", const | out | ref), names, base)

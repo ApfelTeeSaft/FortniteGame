@@ -427,6 +427,17 @@ void APlayerController::execClientSetSpectatorWaiting(UObject* Context, FFrame& 
 	P_THIS->ClientSetSpectatorWaiting_Implementation(Z_Param_bWaiting);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AE5B0 (end 0x024AE6C3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetViewTarget) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientSetViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_A);
+	P_GET_STRUCT(FViewTargetTransitionParams,Z_Param_TransitionParams);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSetViewTarget_Implementation(Z_Param_A,Z_Param_TransitionParams);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AE6D0 (end 0x024AE754)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSpawnCameraLensEffect) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execClientSpawnCameraLensEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -879,6 +890,21 @@ void APlayerController::execServerViewPrevPlayer(UObject* Context, FFrame& Stack
 		return;
 	}
 	P_THIS->ServerViewPrevPlayer_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B3020 (end 0x024B3142)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerViewSelf) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerViewSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FViewTargetTransitionParams,Z_Param_TransitionParams);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerViewSelf_Validate(Z_Param_TransitionParams))
+	{
+		RPC_ValidateFailed(TEXT("ServerViewSelf_Validate"));
+		return;
+	}
+	P_THIS->ServerViewSelf_Implementation(Z_Param_TransitionParams);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B3440 (end 0x024B35FE)

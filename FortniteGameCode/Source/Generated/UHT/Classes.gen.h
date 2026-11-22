@@ -3399,7 +3399,7 @@ enum class EStatCategory : uint8 {};
 enum class EStatMod : uint8 {};
 enum class ESubGame : uint8 {};
 enum ETravelType {};
-enum EViewTargetBlendFunction {};
+enum ETwitterRequestMethod {};
 enum TInteractionType {};
 
 class UObject
@@ -6087,8 +6087,8 @@ public:
 	virtual bool ServerToggleAILogging_Validate();  // slot 229 (+0x728), UFunction APlayerController::ServerToggleAILogging
 	virtual void ServerToggleAILogging_Implementation();  // slot 230 (+0x730), UFunction APlayerController::ServerToggleAILogging
 	virtual void ClientTeamMessage_Implementation(APlayerState* SenderPlayerState, const FString& S, FName Type, float MsgLifeTime);  // slot 231 (+0x738), UFunction APlayerController::ClientTeamMessage
-	virtual void FNGC_VSlot_0x740();  // slot 232: APlayerController::ServerViewSelf_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x748();  // slot 233: APlayerController::ServerViewSelf_Implementation (signature not recovered)
+	virtual bool ServerViewSelf_Validate(FViewTargetTransitionParams TransitionParams);  // slot 232 (+0x740), UFunction APlayerController::ServerViewSelf
+	virtual void ServerViewSelf_Implementation(FViewTargetTransitionParams TransitionParams);  // slot 233 (+0x748), UFunction APlayerController::ServerViewSelf
 	virtual bool ServerViewPrevPlayer_Validate();  // slot 234 (+0x750), UFunction APlayerController::ServerViewPrevPlayer
 	virtual void ServerViewPrevPlayer_Implementation();  // slot 235 (+0x758), UFunction APlayerController::ServerViewPrevPlayer
 	virtual bool ServerViewNextPlayer_Validate();  // slot 236 (+0x760), UFunction APlayerController::ServerViewNextPlayer
@@ -6129,7 +6129,7 @@ public:
 	virtual void ClientStopCameraAnim_Implementation(UCameraAnim* AnimToStop);  // slot 271 (+0x878), UFunction APlayerController::ClientStopCameraAnim
 	virtual void ClientClearCameraLensEffects_Implementation();  // slot 272 (+0x880), UFunction APlayerController::ClientClearCameraLensEffects
 	virtual void ClientSpawnCameraLensEffect_Implementation(TSubclassOf<AEmitterCameraLensEffectBase> LensEffectEmitterClass);  // slot 273 (+0x888), UFunction APlayerController::ClientSpawnCameraLensEffect
-	virtual void FNGC_VSlot_0x890();  // slot 274: APlayerController::ClientSetViewTarget_Implementation (signature not recovered)
+	virtual void ClientSetViewTarget_Implementation(AActor* A, FViewTargetTransitionParams TransitionParams);  // slot 274 (+0x890), UFunction APlayerController::ClientSetViewTarget
 	virtual void ClientSetHUD_Implementation(TSubclassOf<AHUD> NewHUDClass);  // slot 275 (+0x898), UFunction APlayerController::ClientSetHUD
 	virtual void ClientSetForceMipLevelsToBeResident_Implementation(UMaterialInterface* Material, float ForceDuration, int32 CinematicTextureGroups);  // slot 276 (+0x8A0), UFunction APlayerController::ClientSetForceMipLevelsToBeResident
 	virtual void ClientSetCinematicMode_Implementation(bool bInCinematicMode, bool bAffectsMovement, bool bAffectsTurning, bool bAffectsHUD);  // slot 277 (+0x8A8), UFunction APlayerController::ClientSetCinematicMode
@@ -7575,7 +7575,7 @@ public:
 	virtual void FNGC_VSlot_0x5D0();
 	virtual void FNGC_VSlot_0x5D8();
 	virtual void FNGC_VSlot_0x5E0();
-	virtual void FNGC_VSlot_0x5E8();  // slot 189: AFortGameplayEffectDeliveryActor::BroadcastExplosion_Implementation (signature not recovered)
+	virtual void BroadcastExplosion_Implementation(TArray<AActor*> const& HitActors, TArray<FHitResult> const& HitResults);  // slot 189 (+0x5E8), UFunction AFortGameplayEffectDeliveryActor::BroadcastExplosion
 	virtual void DoExplosion();  // slot 190 (+0x5F0), UFunction AFortGameplayEffectDeliveryActor::DoExplosion
 	virtual void Kill();  // slot 191 (+0x5F8), UFunction AFortGameplayEffectDeliveryActor::Kill
 	virtual bool IsBeingKilled() const;  // slot 192 (+0x600), UFunction AFortGameplayEffectDeliveryActor::IsBeingKilled
@@ -18045,20 +18045,20 @@ public:
 	virtual void FNGC_VSlot_0x460();  // slot 140: UAbilitySystemComponent::ClientActivateAbilitySucceedWithEventData_Implementation (signature not recovered)
 	virtual void ClientActivateAbilitySucceed_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, FPredictionKey PredictionKey);  // slot 141 (+0x468), UFunction UAbilitySystemComponent::ClientActivateAbilitySucceed
 	virtual void ClientActivateAbilityFailed_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, int16 PredictionKey);  // slot 142 (+0x470), UFunction UAbilitySystemComponent::ClientActivateAbilityFailed
-	virtual void FNGC_VSlot_0x478();  // slot 143: UAbilitySystemComponent::ClientCancelAbility_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x480();  // slot 144: UAbilitySystemComponent::ServerCancelAbility_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x488();  // slot 145: UAbilitySystemComponent::ServerCancelAbility_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x490();  // slot 146: UAbilitySystemComponent::ClientEndAbility_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x498();  // slot 147: UAbilitySystemComponent::ServerEndAbility_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x4A0();  // slot 148: UAbilitySystemComponent::ServerEndAbility_Implementation (signature not recovered)
+	virtual void ClientCancelAbility_Implementation(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);  // slot 143 (+0x478), UFunction UAbilitySystemComponent::ClientCancelAbility
+	virtual bool ServerCancelAbility_Validate(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);  // slot 144 (+0x480), UFunction UAbilitySystemComponent::ServerCancelAbility
+	virtual void ServerCancelAbility_Implementation(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);  // slot 145 (+0x488), UFunction UAbilitySystemComponent::ServerCancelAbility
+	virtual void ClientEndAbility_Implementation(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo);  // slot 146 (+0x490), UFunction UAbilitySystemComponent::ClientEndAbility
+	virtual bool ServerEndAbility_Validate(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo, FPredictionKey PredictionKey);  // slot 147 (+0x498), UFunction UAbilitySystemComponent::ServerEndAbility
+	virtual void ServerEndAbility_Implementation(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo, FPredictionKey PredictionKey);  // slot 148 (+0x4A0), UFunction UAbilitySystemComponent::ServerEndAbility
 	virtual void ClientTryActivateAbility_Implementation(FGameplayAbilitySpecHandle AbilityToActivate);  // slot 149 (+0x4A8), UFunction UAbilitySystemComponent::ClientTryActivateAbility
 	virtual void FNGC_VSlot_0x4B0();  // slot 150: UAbilitySystemComponent::ServerTryActivateAbilityWithEventData_Validate (signature not recovered)
 	virtual void FNGC_VSlot_0x4B8();  // slot 151: UAbilitySystemComponent::ServerTryActivateAbilityWithEventData_Implementation (signature not recovered)
 	virtual bool ServerTryActivateAbility_Validate(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey);  // slot 152 (+0x4C0), UFunction UAbilitySystemComponent::ServerTryActivateAbility
 	virtual void ServerTryActivateAbility_Implementation(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey);  // slot 153 (+0x4C8), UFunction UAbilitySystemComponent::ServerTryActivateAbility
-	virtual void FNGC_VSlot_0x4D0();  // slot 154: UAbilitySystemComponent::ClientPrintDebug_Response_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x4D8();  // slot 155: UAbilitySystemComponent::ServerPrintDebug_RequestWithStrings_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x4E0();  // slot 156: UAbilitySystemComponent::ServerPrintDebug_RequestWithStrings_Implementation (signature not recovered)
+	virtual void ClientPrintDebug_Response_Implementation(TArray<FString> const& Strings, int32 GameFlags);  // slot 154 (+0x4D0), UFunction UAbilitySystemComponent::ClientPrintDebug_Response
+	virtual bool ServerPrintDebug_RequestWithStrings_Validate(TArray<FString> const& Strings);  // slot 155 (+0x4D8), UFunction UAbilitySystemComponent::ServerPrintDebug_RequestWithStrings
+	virtual void ServerPrintDebug_RequestWithStrings_Implementation(TArray<FString> const& Strings);  // slot 156 (+0x4E0), UFunction UAbilitySystemComponent::ServerPrintDebug_RequestWithStrings
 	virtual bool ServerPrintDebug_Request_Validate();  // slot 157 (+0x4E8), UFunction UAbilitySystemComponent::ServerPrintDebug_Request
 	virtual void ServerPrintDebug_Request_Implementation();  // slot 158 (+0x4F0), UFunction UAbilitySystemComponent::ServerPrintDebug_Request
 	virtual void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 159 (+0x4F8), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams
@@ -32316,9 +32316,9 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual void FNGC_VSlot_0x238();  // slot 71: UFortTooltip::BP_GetValueData_Implementation (signature not recovered)
 	virtual bool BP_GetNumericValue_Implementation(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, float& OutVal) const;  // slot 72 (+0x240), UFunction UFortTooltip::BP_GetNumericValue
-	virtual void FNGC_VSlot_0x248();  // slot 73: UFortTooltip::BP_GetTokenizedDescriptionText_Implementation (signature not recovered)
+	virtual bool BP_GetTokenizedDescriptionText_Implementation(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, TArray<FText>& OutDescription) const;  // slot 73 (+0x248), UFunction UFortTooltip::BP_GetTokenizedDescriptionText
 	virtual bool BP_GetTextForToken_Implementation(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, FText& OutText) const;  // slot 74 (+0x250), UFunction UFortTooltip::BP_GetTextForToken
-	virtual void FNGC_VSlot_0x258();  // slot 75: UFortGameplayAbilityTooltip::GetTokenizedDescriptionText (signature not recovered)
+	virtual bool GetTokenizedDescriptionText(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, TArray<FText>& OutDescription) const;  // slot 75 (+0x258), UFunction UFortGameplayAbilityTooltip::GetTokenizedDescriptionText
 	virtual bool GetTextForToken(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, FText& OutText) const;  // slot 76 (+0x260), UFunction UFortGameplayAbilityTooltip::GetTextForToken
 	virtual bool GetNumericValue(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, float& OutVal) const;  // slot 77 (+0x268), UFunction UFortGameplayAbilityTooltip::GetNumericValue
 	virtual void FNGC_VSlot_0x270();  // slot 78: UFortTooltip::GetValueData (signature not recovered)
@@ -73080,7 +73080,7 @@ public:
 	virtual bool AuthorizeAccounts();  // slot 76 (+0x260), UFunction UTwitterIntegrationBase::AuthorizeAccounts
 	virtual int32 GetNumAccounts();  // slot 77 (+0x268), UFunction UTwitterIntegrationBase::GetNumAccounts
 	virtual FString GetAccountName(int32 AccountIndex);  // slot 78 (+0x270), UFunction UTwitterIntegrationBase::GetAccountName
-	virtual void FNGC_VSlot_0x278();  // slot 79: UTwitterIntegrationBase::TwitterRequest (signature not recovered)
+	virtual bool TwitterRequest(const FString& URL, TArray<FString> const& ParamKeysAndValues, ETwitterRequestMethod RequestMethod, int32 AccountIndex);  // slot 79 (+0x278), UFunction UTwitterIntegrationBase::TwitterRequest
 	static void StaticRegisterNativesUTwitterIntegrationBase();
 	static void execAuthorizeAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanShowTweetUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);

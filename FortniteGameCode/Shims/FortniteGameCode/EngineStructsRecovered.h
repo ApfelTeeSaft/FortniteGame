@@ -2,8 +2,10 @@
 // default constructors and copies as the 4.20 headers declare them (FTransform: TransformRecovered.h):
 // UObject/WeakObjectPtr.h and
 // WeakObjectPtrTemplates.h, Math/Color.h (FColor), SlateCore's Layout/Margin.h,
-// Engine/NetSerialization.h (FVector_NetQuantize*), Engine/EngineTypes.h (FHitResult) and
-// GameplayAbilities' GameplayPrediction.h (FPredictionKey) and GameplayEffectTypes.h
+// Engine/NetSerialization.h (FVector_NetQuantize*), Engine/EngineTypes.h (FHitResult),
+// Camera/PlayerCameraManager.h (FViewTargetTransitionParams) and
+// GameplayAbilities' GameplayPrediction.h (FPredictionKey), GameplayAbilitySpec.h
+// (FGameplayAbilityActivationInfo) and GameplayEffectTypes.h
 // (FGameplayEffectContextHandle, FGameplayCueParameters), GameplayTags' GameplayTagContainer.h
 // (FGameplayTagContainer), InputCore's InputCoreTypes.h (FKey), CoreUObject's
 // UObject/CoreOnline.h and Engine's GameFramework/OnlineReplStructs.h (FUniqueNetIdRepl).
@@ -359,4 +361,87 @@ struct FGameplayCueParameters
 	int32 GameplayEffectLevel;
 	int32 AbilityLevel;
 	TWeakObjectPtr<USceneComponent> TargetAttachComponent;
+};
+
+// Engine: Camera/PlayerCameraManager.h. The enumerators and their values agree with the
+// reference's FEnumParams for EViewTargetBlendFunction.
+enum EViewTargetBlendFunction
+{
+	/** Camera does a simple linear interpolation. */
+	VTBlend_Linear,
+	/** Camera has a slight ease in and ease out, but amount of ease cannot be tweaked. */
+	VTBlend_Cubic,
+	/** Camera immediately accelerates, but smoothly decelerates into the target.  Ease amount controlled by BlendExp. */
+	VTBlend_EaseIn,
+	/** Camera smoothly accelerates, but does not decelerate into the target.  Ease amount controlled by BlendExp. */
+	VTBlend_EaseOut,
+	/** Camera smoothly accelerates and decelerates.  Ease amount controlled by BlendExp. */
+	VTBlend_EaseInOut,
+	VTBlend_MAX,
+};
+
+struct FViewTargetTransitionParams
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+public:
+
+	float BlendTime;
+
+	TEnumAsByte<enum EViewTargetBlendFunction> BlendFunction;
+
+	float BlendExp;
+
+	uint32 bLockOutgoing:1;
+
+	FViewTargetTransitionParams()
+		: BlendTime(0.f)
+		, BlendFunction(VTBlend_Cubic)
+		, BlendExp(2.f)
+		, bLockOutgoing(false)
+	{}
+};
+
+// GameplayAbilities: GameplayAbilitySpec.h. The enumerators and their values agree with the
+// reference's FEnumParams for EGameplayAbilityActivationMode.
+namespace EGameplayAbilityActivationMode
+{
+	enum Type
+	{
+		/** We are the authority activating this ability */
+		Authority,
+
+		/** We are not the authority but aren't predicting yet. This is a mostly invalid state to be in */
+		NonAuthority,
+
+		/** We are predicting the activation of this ability */
+		Predicting,
+
+		/** We are not the authority, but the authority has confirmed this activation */
+		Confirmed,
+
+		/** We tried to activate it, and server told us we couldn't (even though we thought we could) */
+		Rejected,
+	};
+}
+
+struct FGameplayAbilityActivationInfo
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FGameplayAbilityActivationInfo()
+		: ActivationMode(EGameplayAbilityActivationMode::Authority)
+		, bCanBeEndedByOtherInstance(false)
+	{
+	}
+
+	/** Activation status of this ability */
+	mutable TEnumAsByte<EGameplayAbilityActivationMode::Type>	ActivationMode;
+
+	/** An ability that runs on multiple game instances can be canceled by a remote instance, but only if that remote instance has already confirmed starting it. */
+	uint8 bCanBeEndedByOtherInstance:1;
+
+private:
+
+	/** This was the prediction key used to activate this ability. It does not get updated if a new prediction key is generated over the course of the ability. */
+	FPredictionKey PredictionKeyWhenActivated;
 };

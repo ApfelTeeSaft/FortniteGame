@@ -370,8 +370,8 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,448, at 1,200 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 812 read parameters |
-| exact | 1,190: 988 in the denominator, 202 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,460, at 1,212 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 824 read parameters |
+| exact | 1,202: 1,000 in the denominator, 202 leaf (no `.pdata`) |
 | relocation-equivalent | 1: `UPaperGroupedSpriteComponent::UpdateInstanceTransform` (below) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
@@ -408,8 +408,10 @@ Supported types:
 - enums in their `UEnum::ECppForm` from `FEnumParams`;
 - seven structs defined from the UE4.20 headers: `FVector`, `FRotator`, `FVector2D`,
   `FLinearColor`, `FGuid`, `FGameplayTag` and `FGameplayAbilitySpecHandle`;
-- `FString`, and `TArray` of trivially copyable and destructible elements (the types above
-  except enums);
+- `FString`, and `TArray` of any of these element types except enums. `ConstructItems` and
+  `DestructItems` are 4.20's `MemoryOps.h` pairs, chosen by `TIsBitwiseConstructible` and
+  `TIsTriviallyDestructible`: placement-new copies and destructor loops for `FString`,
+  `FText` and the non-trivial structs, `Memcpy` and nothing for the others;
 - `FText` and `TSubclassOf<C>` (`TextRecovered.h`);
 - from `EngineStructsRecovered.h`:
   - `FVector_NetQuantize` and its 10/100/Normal forms, `FHitResult`, `FPredictionKey`,
@@ -419,6 +421,11 @@ Supported types:
     `ReplicationBytes`);
   - `FGameplayEffectContextHandle` (vptr and `TSharedPtr`);
   - `FGameplayTagContainer` (two `TArray<FGameplayTag>`) and `FGameplayCueParameters`;
+  - `FViewTargetTransitionParams` and `FGameplayAbilityActivationInfo`, with the two enums
+    their constructors name (`EViewTargetBlendFunction`,
+    `EGameplayAbilityActivationMode`). These are defined with the enumerator values of the
+    reference's `FEnumParams`, which agree with 4.20, and are not redeclared in
+    `Classes.gen.h` (`uht_props.MODELLED_ENUMS`);
 - `FTransform` (`TransformRecovered.h`, below).
 
 A struct is used only when the reference's `FStructParams` give the same `SizeOf` and
@@ -488,9 +495,17 @@ Limits:
     tags at 32/40, the tag containers at 48/80, `Location`/`Normal` at 112/124, the weak
     pointers at 136-160 and 176. Its copies and destructor are implicit. Its constructor
     zeroes `Location` and `Normal` through `FVector(EForceInit)`, added with `EForceInit`.
-  - Only trivially copyable structs may be `TArray` elements; `FHitResult`, `FKey`,
-    `FUniqueNetIdRepl`, `FGameplayEffectContextHandle`, `FGameplayTagContainer`,
-    `FGameplayCueParameters` and `FTransform` may not.
+  - `TArray` elements may be any modelled type (see the list above). That added 7 thunks,
+    including `TArray<FString>`, `TArray<FText>` and `TArray<FHitResult>` by value, all
+    exact.
+  - `FSlateBrush` is not modelled: the reference's is 120 bytes, 4.20's 136
+    (`docs/ENGINE_DIFFERENCES.md`).
+  - Adding these changed the `.rdata` order of `InputCore.1`, which gained no code. Its
+    literal sections came out in another order with the previous `ContainersRecovered.h`
+    and in a third without `<new>`. So literal section order, like file-static order,
+    depends on everything parsed before it. `FKey`'s struct registration initializer lost
+    its package-name literal, whose neighbours moved. The other 1,251 struct registrars
+    and all literal-dependent functions elsewhere are unchanged.
   - Adding the last two left the `StaticEnum` and registration counts level (table above):
     the layout no longer moves with `Classes.gen.h`.
   - `FTransform` (`TransformRecovered.h`) is three `VectorRegister`s, as in
@@ -533,12 +548,13 @@ Limits:
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,535 have a supported signature and 1,448 have
-  thunks (folded bodies counted per UFunction). For the other 87, a slot is not declared
+- Of the 1,661 virtual-native UFunctions, 1,550 have a supported signature and 1,460 have
+  thunks (folded bodies counted per UFunction). For the other 90, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FSlateBrush` (6), `FGameplayAbilityActivationInfo` (6), `FGameplayEventData` (5);
-  - soft object pointers (6) and arrays of strings (6);
+  - `FSlateBrush` (6), `FGameplayEventData` (5), `FFortItemEntry`,
+    `FGameplayEffectSpecForRPC` and `FPartyReservation` (4 each);
+  - soft object pointers (6) and `TArray<FAssetData>` (4);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
