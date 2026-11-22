@@ -77,8 +77,9 @@ python tools/codegen/unity.py            # Unity/*.gen.cpp: fragments in recover
 
 Only `Source/Generated/UHT/Unity/*.gen.cpp` is compiled. Each unity unit `#include`s per-item
 fragments in the order of the original unity file, after `UnityPrologue.h`, a stand-in for
-the engine headers' namespace-scope objects. `StaticEnum` fragments are compiled in per-run
-units (`<unit>.s<k>`).
+the engine headers' namespace-scope objects. Each unit first defines its `StaticEnum`
+functions (`.staticenum` fragments), before the prologue. The `StaticEnum`s and registration
+objects of each run of consecutive enums are compiled in a unit of their own (`<unit>.s<k>`).
 
 The generators rewrite only files whose content changed, so MSBuild recompiles only those.
 The generated sources are committed, so a checkout builds without the decrypted image.

@@ -194,6 +194,12 @@ def test_uht_parameters() -> None:
     assert t["decl"] == "FHitResult const& Hit", t
     names.structs[0x600] = ("HitResult", 136, 4)                     # FStructParams disagree: not used
     assert P.parameter(rec("Struct", "Hit", const | out | ref, 0x600), names, base) is None
+    names.structs[0x700] = ("GameplayCueParameters", 184, 8)
+    t = P.parameter(rec("Struct", "Parameters", const | out | ref, 0x700), names, base)
+    assert (t["decl"], t["line"]) == ("FGameplayCueParameters const& Parameters",
+                                      "P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_Parameters);"), t
+    names.structs[0x800] = ("GameplayTagContainer", 32, 8)           # TArray members: no TArray element
+    assert P.parameter(arr("Tags", 0, {"type": "Struct", "flags": 0, "func": base + 0x800}), names, base) is None
     t = P.parameter(rec("Text", "Label", 0), names, base)
     assert (t["decl"], t["line"]) == ("FText Label", "P_GET_PROPERTY(UTextProperty,Z_Param_Label);"), t
     t = P.parameter(rec("Text", "Label", const | out | ref), names, base)

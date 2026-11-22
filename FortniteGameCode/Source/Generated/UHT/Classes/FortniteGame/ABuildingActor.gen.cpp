@@ -4,6 +4,39 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62180 (end 0x00F62358)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_Damage) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_Damage(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62360 (end 0x00F62538)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_Healing) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGameplayCue_Healing(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_Healing(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62540 (end 0x00F62718)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_InstantDeath) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGameplayCue_InstantDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_InstantDeath(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62720 (end 0x00F62760)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCentroid) | Matching: see analysis/functions-uht-exec.json
 void ABuildingActor::execGetCentroid(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

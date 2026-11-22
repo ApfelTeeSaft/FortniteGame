@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FGameplayCueParameters();
 	UPackage* Z_Construct_UPackage__Script_GameplayAbilities();  // RVA 0x0054EE20
-struct alignas(8) FGameplayCueParameters
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0xB8];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FGameplayCueParameters is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00563930 (end 0x00563982, chained .pdata fragments)
 // Original VA: 0x0000000140563930 | File offset: 0x00562F30
 // Recovery: confirmed (TEXT("GameplayCueParameters") and Z_Construct_UScriptStruct_FGameplayCueParameters) | Matching: see analysis/functions-uht-staticstruct.json

@@ -34,6 +34,28 @@ void AFortWeapon::execDetermineReticleColor(UObject* Context, FFrame& Stack, voi
 	*(FColor*)Z_Param__Result=P_THIS->DetermineReticleColor();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6360 (end 0x010D6538)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_Impact) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGameplayCue_Impact(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_Impact(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6540 (end 0x010D6718)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_Weapons_Activation) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGameplayCue_Weapons_Activation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_Weapons_Activation(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6720 (end 0x010D679E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAlterations) | Matching: see analysis/functions-uht-exec.json
 void AFortWeapon::execGetAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -177,6 +199,17 @@ void AFortWeapon::execOnRep_ReplicatedWeaponData(UObject* Context, FFrame& Stack
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_ReplicatedWeaponData();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7450 (end 0x010D764F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayNativeImpactFX) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execPlayNativeImpactFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_HitResult);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_GameplayCueParameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PlayNativeImpactFX(Z_Param_Out_HitResult,Z_Param_Out_GameplayCueParameters);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7650 (end 0x010D76D3)

@@ -184,12 +184,15 @@ void RPC_ValidateFailed(const TCHAR* Reason);
 // GameplayTagContainer.h; GameplayAbilities' GameplayAbilitySpec.h). Copies are implicit, as
 // there. Other members and methods are not modelled. tools/codegen/uht_props.py uses them
 // only where the reference's FStructParams give the same SizeOf and AlignOf.
+enum EForceInit { ForceInit, ForceInitToZero };   // Misc/CoreMiscDefines.h
+
 struct FVector
 {
 	float X;
 	float Y;
 	float Z;
 	__forceinline FVector() {}
+	explicit __forceinline FVector(EForceInit) : X(0.0f), Y(0.0f), Z(0.0f) {}   // DiagnosticCheckNaN() is empty in shipping
 };
 
 struct FRotator

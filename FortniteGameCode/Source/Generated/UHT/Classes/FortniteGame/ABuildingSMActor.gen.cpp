@@ -53,6 +53,28 @@ void ABuildingSMActor::execForceIntoStructuralGridDuringRuntime(UObject* Context
 	P_THIS->ForceIntoStructuralGridDuringRuntime_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73A80 (end 0x00F73C58)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_Abilities_Activation_Generic_BannerWallBuff1) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execGameplayCue_Abilities_Activation_Generic_BannerWallBuff1(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_Abilities_Activation_Generic_BannerWallBuff1(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73C60 (end 0x00F73E38)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_Abilities_Activation_Generic_BannerWallBuff2) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execGameplayCue_Abilities_Activation_Generic_BannerWallBuff2(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_Abilities_Activation_Generic_BannerWallBuff2(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73EC0 (end 0x00F73F54)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimatingMID) | Matching: see analysis/functions-uht-exec.json
 void ABuildingSMActor::execGetAnimatingMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

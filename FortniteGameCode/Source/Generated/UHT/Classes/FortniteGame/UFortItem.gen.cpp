@@ -259,6 +259,17 @@ void UFortItem::execHasRarityUpgrade(UObject* Context, FFrame& Stack, void* cons
 	*(bool*)Z_Param__Result=P_THIS->HasRarityUpgrade();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009B00 (end 0x01009C11)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsActivatable) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execIsActivatable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerController,Z_Param_FortPC);
+	P_GET_STRUCT_REF(FGameplayTagContainer,Z_Param_Out_FailureReason);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsActivatable(Z_Param_FortPC,Z_Param_Out_FailureReason);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01009C20 (end 0x01009CB6)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsEquipable) | Matching: see analysis/functions-uht-exec.json
 void UFortItem::execIsEquipable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

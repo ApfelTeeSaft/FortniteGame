@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FGameplayTagContainer();
 	UPackage* Z_Construct_UPackage__Script_GameplayTags();  // RVA 0x01C94090
-struct alignas(8) FGameplayTagContainer
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FGameplayTagContainer is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C932F0 (end 0x01C93361, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x0000000141C932F0 | File offset: 0x01C928F0
 // Recovery: confirmed (TEXT("GameplayTagContainer") and Z_Construct_UScriptStruct_FGameplayTagContainer) | Matching: see analysis/functions-uht-staticstruct.json

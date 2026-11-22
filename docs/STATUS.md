@@ -9,12 +9,12 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **28,243 / 157,719** primary `.pdata` functions (17.91 %, 1,657,829 bytes):
+| Exact functions | **28,276 / 157,719** primary `.pdata` functions (17.93 %, 1,673,813 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 28,236 generated UHT functions:
+- 28,269 generated UHT functions:
   - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
-    1,189 `FCompiledInDefer` initializers and 947 exec thunks of virtual natives;
+    1,189 `FCompiledInDefer` initializers and 980 exec thunks of virtual natives;
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,860 `StaticStruct`, 1,782 `NewStructOps`,
     1,888 `StaticRegisterNatives` and 1,252 `FCompiledInDeferStruct` initializers;
@@ -100,11 +100,13 @@ Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Class vt
      Next:
      - Parameters are decoded (`tools/codegen/uht_props.py`), including `FString`, `TArray`
        of trivially copyable elements (`ContainersRecovered.h`), `FText` and `TSubclassOf`
-       (`TextRecovered.h`) and 15 structs from the 4.20 headers
-       (`EngineStructsRecovered.h`). 1,405 of the 1,661 virtual-native UFunctions have
-       thunks, and 1,149 of their 1,158 addresses match.
-     - Next: `FGameplayCueParameters` (25 UFunctions), `FGameplayTagContainer`, and arrays
-       of non-trivial elements.
+       (`TextRecovered.h`) and 17 structs from the 4.20 headers
+       (`EngineStructsRecovered.h`), the last two `FGameplayTagContainer` and
+       `FGameplayCueParameters`. 1,438 of the 1,661 virtual-native UFunctions have thunks,
+       and 1,182 of their 1,191 addresses match.
+     - Next: `FTransform` (10 UFunctions; its constructor reads per-unit vector constants),
+       `FSlateBrush`, `FGameplayAbilityActivationInfo`, soft object pointers, arrays of
+       strings and of non-trivial elements.
      - `StaticEnum` layout is stable. It is defined with external linkage, first in its
        unit, in source order. The block's position and order no longer change with
        unrelated code. That cost 19 exact functions, matches the earlier, unstable order

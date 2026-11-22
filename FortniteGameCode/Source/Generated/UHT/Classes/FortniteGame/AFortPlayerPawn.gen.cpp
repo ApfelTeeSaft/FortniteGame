@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01081A70 (end 0x01081B60)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientNotifyAbilityFailed) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execClientNotifyAbilityFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UGameplayAbility,Z_Param_FailedAbility);
+	P_GET_STRUCT(FGameplayTagContainer,Z_Param_FailedReason);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientNotifyAbilityFailed_Implementation(Z_Param_FailedAbility,Z_Param_FailedReason);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01082530 (end 0x010825BA)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSkeletalMeshForPartType) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerPawn::execGetSkeletalMeshForPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

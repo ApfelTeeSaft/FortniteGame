@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CFD0 (end 0x0107D0DC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetHUDElementVisibility) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerGameplay::execSetHUDElementVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGameplayTagContainer,Z_Param_Out_HUDElementTags);
+	P_GET_UBOOL(Z_Param_bHideElements);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetHUDElementVisibility(Z_Param_Out_HUDElementTags,Z_Param_bHideElements);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerGameplay, 3892094907u)
 // Original dynamic initializer: RVA 0x0010B880 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerGameplay> AutoInitializeAFortPlayerControllerGameplay(TEXT("AFortPlayerControllerGameplay"), sizeof(AFortPlayerControllerGameplay), 3892094907u);

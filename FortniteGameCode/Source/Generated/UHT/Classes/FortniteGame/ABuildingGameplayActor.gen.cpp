@@ -26,6 +26,17 @@ void ABuildingGameplayActor::execK2_ExecuteGameplayCue(UObject* Context, FFrame&
 	P_THIS->K2_ExecuteGameplayCue(Z_Param_GameplayCueTag,Z_Param_Context);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E4D0 (end 0x00F6E690)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_ExecuteGameplayCueWithParams) | Matching: see analysis/functions-uht-exec.json
+void ABuildingGameplayActor::execK2_ExecuteGameplayCueWithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_GameplayCueParameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_ExecuteGameplayCueWithParams(Z_Param_GameplayCueTag,Z_Param_Out_GameplayCueParameters);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E690 (end 0x00F6E714)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_RemoveGameplayCue) | Matching: see analysis/functions-uht-exec.json
 void ABuildingGameplayActor::execK2_RemoveGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

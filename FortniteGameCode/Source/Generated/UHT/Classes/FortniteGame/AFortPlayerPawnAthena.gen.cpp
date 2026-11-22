@@ -16,6 +16,30 @@ void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAdded(UObject* Con
 	P_THIS->NetMulticast_InvokeGameplayCueAdded_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01082F00 (end 0x01083129)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_GameplayCueParameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_GameplayCueParameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01083130 (end 0x01083359)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueAdded_WithParams) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAdded_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_Parameters);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01083360 (end 0x010834E8)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueExecuted) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -26,6 +50,54 @@ void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted(UObject* 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->NetMulticast_InvokeGameplayCueExecuted_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01083600 (end 0x01083829)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueExecuted_WithParams) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_GameplayCueParameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_GameplayCueParameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01083830 (end 0x01083AA2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTagContainer,Z_Param_GameplayCueTags);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_GameplayCueParameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation(Z_Param_GameplayCueTags,Z_Param_PredictionKey,Z_Param_GameplayCueParameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01083AB0 (end 0x01083C7F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCuesExecuted) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCuesExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTagContainer,Z_Param_GameplayCueTags);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayEffectContextHandle,Z_Param_EffectContext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCuesExecuted_Implementation(Z_Param_GameplayCueTags,Z_Param_PredictionKey,Z_Param_EffectContext);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01083C80 (end 0x01083EF2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCuesExecuted_WithParams) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCuesExecuted_WithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTagContainer,Z_Param_GameplayCueTags);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_GameplayCueParameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation(Z_Param_GameplayCueTags,Z_Param_PredictionKey,Z_Param_GameplayCueParameters);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AFortPlayerPawnAthena, 85586729u)

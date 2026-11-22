@@ -4,6 +4,39 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105FEC0 (end 0x01060098)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01081F40 (end 0x01082118)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_Damage) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_Damage(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010600A0 (end 0x01060278)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayCue_InstantDeath) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execGameplayCue_InstantDeath(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayCueParameters,Z_Param_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayCue_InstantDeath(EGameplayCueEvent::Type(Z_Param_EventType),Z_Param_Parameters);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010604D0 (end 0x01060510)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDefaultTargetingOrigin) | Matching: see analysis/functions-uht-exec.json
 void AFortPawn::execGetDefaultTargetingOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

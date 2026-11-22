@@ -3,7 +3,8 @@
 // WeakObjectPtrTemplates.h, Math/Color.h (FColor), SlateCore's Layout/Margin.h,
 // Engine/NetSerialization.h (FVector_NetQuantize*), Engine/EngineTypes.h (FHitResult) and
 // GameplayAbilities' GameplayPrediction.h (FPredictionKey) and GameplayEffectTypes.h
-// (FGameplayEffectContextHandle), InputCore's InputCoreTypes.h (FKey), CoreUObject's
+// (FGameplayEffectContextHandle, FGameplayCueParameters), GameplayTags' GameplayTagContainer.h
+// (FGameplayTagContainer), InputCore's InputCoreTypes.h (FKey), CoreUObject's
 // UObject/CoreOnline.h and Engine's GameFramework/OnlineReplStructs.h (FUniqueNetIdRepl).
 // Virtual functions the thunks never call are declared without their bodies; only the vtables'
 // addresses are referenced. Other members are not modelled.
@@ -21,6 +22,7 @@ class UPackageMap;
 class UPhysicalMaterial;
 class AActor;
 class UPrimitiveComponent;
+class USceneComponent;
 
 // UObject/WeakObjectPtr.h
 struct FWeakObjectPtr
@@ -108,6 +110,10 @@ struct FVector_NetQuantize10 : public FVector
 	static class UScriptStruct* StaticStruct();
 	__forceinline FVector_NetQuantize10()
 	{}
+
+	explicit __forceinline FVector_NetQuantize10(EForceInit E)
+	: FVector(E)
+	{}
 };
 
 struct FVector_NetQuantize100 : public FVector
@@ -121,6 +127,10 @@ struct FVector_NetQuantizeNormal : public FVector
 {
 	static class UScriptStruct* StaticStruct();
 	__forceinline FVector_NetQuantizeNormal()
+	{}
+
+	explicit __forceinline FVector_NetQuantizeNormal(EForceInit E)
+	: FVector(E)
 	{}
 };
 
@@ -277,4 +287,70 @@ struct FGameplayEffectContextHandle
 
 private:
 	TSharedPtr<FGameplayEffectContext> Data;
+};
+
+// GameplayTags: GameplayTagContainer.h. operator= is defined out of line, in
+// GameplayTagContainer.cpp; the copy constructor calls it.
+struct FGameplayTagContainer
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FGameplayTagContainer()
+	{
+	}
+
+	FGameplayTagContainer(FGameplayTagContainer const& Other)
+	{
+		*this = Other;
+	}
+
+	FGameplayTagContainer(FGameplayTagContainer&& Other)
+		: GameplayTags(static_cast<TArray<FGameplayTag>&&>(Other.GameplayTags))   // MoveTemp
+		, ParentTags(static_cast<TArray<FGameplayTag>&&>(Other.ParentTags))
+	{
+
+	}
+
+	~FGameplayTagContainer()
+	{
+	}
+
+	FGameplayTagContainer& operator=(FGameplayTagContainer const& Other);
+	FGameplayTagContainer& operator=(FGameplayTagContainer&& Other);
+
+protected:
+	TArray<FGameplayTag> GameplayTags;
+	TArray<FGameplayTag> ParentTags;
+};
+
+// GameplayAbilities: GameplayEffectTypes.h. Copies and the destructor are implicit, as there.
+struct FGameplayCueParameters
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FGameplayCueParameters()
+	: NormalizedMagnitude(0.0f)
+	, RawMagnitude(0.0f)
+	, Location(ForceInitToZero)
+	, Normal(ForceInitToZero)
+	, GameplayEffectLevel(1)
+	, AbilityLevel(1)
+	{}
+
+	float NormalizedMagnitude;
+	float RawMagnitude;
+	FGameplayEffectContextHandle EffectContext;
+	FGameplayTag MatchedTagName;
+	FGameplayTag OriginalTag;
+	FGameplayTagContainer AggregatedSourceTags;
+	FGameplayTagContainer AggregatedTargetTags;
+	FVector_NetQuantize10 Location;
+	FVector_NetQuantizeNormal Normal;
+	TWeakObjectPtr<AActor> Instigator;
+	TWeakObjectPtr<AActor> EffectCauser;
+	TWeakObjectPtr<const UObject> SourceObject;
+	TWeakObjectPtr<const UPhysicalMaterial> PhysicalMaterial;
+	int32 GameplayEffectLevel;
+	int32 AbilityLevel;
+	TWeakObjectPtr<USceneComponent> TargetAttachComponent;
 };

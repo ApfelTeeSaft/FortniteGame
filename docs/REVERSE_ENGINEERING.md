@@ -347,6 +347,7 @@ The count then moved with each batch:
 | 1,115 | 367 | 239 |
 | 1,158 | 381 | 251 |
 | 1,158, external `StaticEnum` | 373 | 242 |
+| 1,191, external `StaticEnum` | 373 (level) | 242 (level) |
 
 Bisecting one unit (`NVIDIAGfeSDK.1`, which has no thunk of its own) showed something more.
 The order changes once enough unrelated declarations in `Classes.gen.h` change, here 31 slot
@@ -367,8 +368,8 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,405, at 1,158 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 772 read parameters |
-| exact | 1,149: 947 in the denominator, 202 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,438, at 1,191 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 805 read parameters |
+| exact | 1,182: 980 in the denominator, 202 leaf (no `.pdata`) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
@@ -413,7 +414,8 @@ Supported types:
   - `FKey` (`FName` and a non-thread-safe `TSharedPtr`);
   - `FUniqueNetIdRepl` (`FUniqueNetIdWrapper`'s vptr and `TSharedPtr`, then
     `ReplicationBytes`);
-  - `FGameplayEffectContextHandle` (vptr and `TSharedPtr`).
+  - `FGameplayEffectContextHandle` (vptr and `TSharedPtr`);
+  - `FGameplayTagContainer` (two `TArray<FGameplayTag>`) and `FGameplayCueParameters`.
 
 A struct is used only when the reference's `FStructParams` give the same `SizeOf` and
 `AlignOf`. Enums are declared with their form and underlying type only, no enumerators.
@@ -476,8 +478,17 @@ Limits:
     constructor stores its own vtable. Its destructor stores the struct's vtable, then the
     base's, then releases the `TSharedPtr` (non-atomic: `ESPMode::Fast` is not thread-safe
     on Windows). The other thunks corroborate the vtables' addresses.
+  - `FGameplayTagContainer` (GameplayTags) is two `TArray<FGameplayTag>`, at 0 and 16.
+    Its copy constructor calls the out-of-line `operator=` of `GameplayTagContainer.cpp`.
+  - `FGameplayCueParameters` matches its 16 reflected properties: `EffectContext` at 8, the
+    tags at 32/40, the tag containers at 48/80, `Location`/`Normal` at 112/124, the weak
+    pointers at 136-160 and 176. Its copies and destructor are implicit. Its constructor
+    zeroes `Location` and `Normal` through `FVector(EForceInit)`, added with `EForceInit`.
   - Only trivially copyable structs may be `TArray` elements; `FHitResult`, `FKey`,
-    `FUniqueNetIdRepl` and `FGameplayEffectContextHandle` may not.
+    `FUniqueNetIdRepl`, `FGameplayEffectContextHandle`, `FGameplayTagContainer` and
+    `FGameplayCueParameters` may not.
+  - Adding the last two left the `StaticEnum` and registration counts level (table above):
+    the layout no longer moves with `Classes.gen.h`.
   - `FTransform` is not modelled. Its default constructor reads `GlobalVectorConstants`,
     per-unit dynamically initialised statics, the same 16-byte constants that delimit units
     in the layout model. Modelling them would move the units' `.bss` layout.
@@ -496,14 +507,14 @@ Limits:
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,488 have a supported signature and 1,405 have
-  thunks (folded bodies counted per UFunction). For the other 83, a slot is not declared
+- Of the 1,661 virtual-native UFunctions, 1,525 have a supported signature and 1,438 have
+  thunks (folded bodies counted per UFunction). For the other 87, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FGameplayCueParameters` (25), `FTransform` (10), `FGameplayTagContainer` (8),
-    `FSlateBrush` (6);
-  - soft object pointers (6) and arrays of strings (5);
-  - 12 use several such types.
+  - `FTransform` (10), `FSlateBrush` (6), `FGameplayAbilityActivationInfo` (6),
+    `FGameplayEventData` (5);
+  - soft object pointers (6) and arrays of strings (6);
+  - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 

@@ -4407,9 +4407,9 @@ public:
 	virtual void FNGC_VSlot_0x858();
 	virtual void FNGC_VSlot_0x860();
 	virtual void FNGC_VSlot_0x868();
-	virtual void FNGC_VSlot_0x870();  // slot 270: ABuildingActor::GameplayCue_Damage (signature not recovered)
-	virtual void FNGC_VSlot_0x878();  // slot 271: ABuildingActor::GameplayCue_Healing (signature not recovered)
-	virtual void FNGC_VSlot_0x880();  // slot 272: ABuildingActor::GameplayCue_InstantDeath (signature not recovered)
+	virtual void GameplayCue_Damage(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 270 (+0x870), UFunction ABuildingActor::GameplayCue_Damage
+	virtual void GameplayCue_Healing(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 271 (+0x878), UFunction ABuildingActor::GameplayCue_Healing
+	virtual void GameplayCue_InstantDeath(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 272 (+0x880), UFunction ABuildingActor::GameplayCue_InstantDeath
 	static void StaticRegisterNativesABuildingActor();
 	static void execAddEditorOnlyInstanceGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execForceBuildingHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4669,8 +4669,8 @@ public:
 	virtual void OnLODOverrideEffectFinished();  // slot 379 (+0xBD8), UFunction ABuildingSMActor::OnLODOverrideEffectFinished
 	virtual void UpdateDynamicShrinkAndDestroyEffect(float CurveValue);  // slot 380 (+0xBE0), UFunction ABuildingSMActor::UpdateDynamicShrinkAndDestroyEffect
 	virtual void OnDynamicShrinkAndDestroyEffectFinished();  // slot 381 (+0xBE8), UFunction ABuildingSMActor::OnDynamicShrinkAndDestroyEffectFinished
-	virtual void FNGC_VSlot_0xBF0();  // slot 382: ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff1 (signature not recovered)
-	virtual void FNGC_VSlot_0xBF8();  // slot 383: ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff2 (signature not recovered)
+	virtual void GameplayCue_Abilities_Activation_Generic_BannerWallBuff1(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 382 (+0xBF0), UFunction ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff1
+	virtual void GameplayCue_Abilities_Activation_Generic_BannerWallBuff2(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 383 (+0xBF8), UFunction ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff2
 	static void StaticRegisterNativesABuildingSMActor();
 	static void execAttachBuildingActorToMe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBlueprintOnStructurallyStable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4765,7 +4765,7 @@ public:
 	virtual void FNGC_VSlot_0x8D0();
 	virtual void FNGC_VSlot_0x8D8();  // slot 283: ABuildingGameplayActor::GetTargetingSourceTransform_Implementation (signature not recovered)
 	virtual void K2_ExecuteGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context);  // slot 284 (+0x8E0), UFunction ABuildingGameplayActor::K2_ExecuteGameplayCue
-	virtual void FNGC_VSlot_0x8E8();  // slot 285: ABuildingGameplayActor::K2_ExecuteGameplayCueWithParams (signature not recovered)
+	virtual void K2_ExecuteGameplayCueWithParams(FGameplayTag GameplayCueTag, FGameplayCueParameters const& GameplayCueParameters);  // slot 285 (+0x8E8), UFunction ABuildingGameplayActor::K2_ExecuteGameplayCueWithParams
 	virtual void K2_AddGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context);  // slot 286 (+0x8F0), UFunction ABuildingGameplayActor::K2_AddGameplayCue
 	virtual void K2_RemoveGameplayCue(FGameplayTag GameplayCueTag);  // slot 287 (+0x8F8), UFunction ABuildingGameplayActor::K2_RemoveGameplayCue
 	virtual void FNGC_VSlot_0x900();
@@ -7095,9 +7095,9 @@ public:
 	virtual void FNGC_VSlot_0xA00();
 	virtual void FNGC_VSlot_0xA08();
 	virtual void FNGC_VSlot_0xA10();
-	virtual void FNGC_VSlot_0xA18();  // slot 323: AFortPawn::GameplayCue_Damage (signature not recovered)
-	virtual void FNGC_VSlot_0xA20();  // slot 324: AFortPawn::GameplayCue_InstantDeath (signature not recovered)
-	virtual void FNGC_VSlot_0xA28();  // slot 325: AFortPawn::GameplayCue (signature not recovered)
+	virtual void GameplayCue_Damage(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 323 (+0xA18), UFunction AFortPawn::GameplayCue_Damage
+	virtual void GameplayCue_InstantDeath(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 324 (+0xA20), UFunction AFortPawn::GameplayCue_InstantDeath
+	virtual void GameplayCue(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 325 (+0xA28), UFunction AFortPawn::GameplayCue
 	virtual void FNGC_VSlot_0xA30();
 	virtual void FNGC_VSlot_0xA38();
 	virtual void FNGC_VSlot_0xA40();
@@ -7423,9 +7423,9 @@ public:
 	virtual void OnRep_ReplicatedWeaponData();  // slot 275 (+0x898), UFunction AFortWeapon::OnRep_ReplicatedWeaponData
 	virtual void OnRep_ReplicatedAppliedAlterations();  // slot 276 (+0x8A0), UFunction AFortWeapon::OnRep_ReplicatedAppliedAlterations
 	virtual void OnRep_AmmoCount();  // slot 277 (+0x8A8), UFunction AFortWeapon::OnRep_AmmoCount
-	virtual void FNGC_VSlot_0x8B0();  // slot 278: AFortWeapon::GameplayCue_Weapons_Activation (signature not recovered)
-	virtual void FNGC_VSlot_0x8B8();  // slot 279: AFortWeapon::GameplayCue_Impact (signature not recovered)
-	virtual void FNGC_VSlot_0x8C0();  // slot 280: AFortWeapon::PlayNativeImpactFX (signature not recovered)
+	virtual void GameplayCue_Weapons_Activation(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 278 (+0x8B0), UFunction AFortWeapon::GameplayCue_Weapons_Activation
+	virtual void GameplayCue_Impact(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 279 (+0x8B8), UFunction AFortWeapon::GameplayCue_Impact
+	virtual void PlayNativeImpactFX(FHitResult const& HitResult, FGameplayCueParameters const& GameplayCueParameters);  // slot 280 (+0x8C0), UFunction AFortWeapon::PlayNativeImpactFX
 	virtual void FNGC_VSlot_0x8C8();
 	virtual void FNGC_VSlot_0x8D0();
 	virtual void FNGC_VSlot_0x8D8();
@@ -9836,10 +9836,10 @@ public:
 	virtual void FNGC_VSlot_0x5D0();
 	virtual void FNGC_VSlot_0x5D8();
 	virtual void FNGC_VSlot_0x5E0();
-	virtual void FNGC_VSlot_0x5E8();  // slot 189: AGameplayCueNotify_Actor::OnRemove_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x5F0();  // slot 190: AGameplayCueNotify_Actor::WhileActive_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x5F8();  // slot 191: AGameplayCueNotify_Actor::OnActive_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x600();  // slot 192: AGameplayCueNotify_Actor::OnExecute_Implementation (signature not recovered)
+	virtual bool OnRemove_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters);  // slot 189 (+0x5E8), UFunction AGameplayCueNotify_Actor::OnRemove
+	virtual bool WhileActive_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters);  // slot 190 (+0x5F0), UFunction AGameplayCueNotify_Actor::WhileActive
+	virtual bool OnActive_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters);  // slot 191 (+0x5F8), UFunction AGameplayCueNotify_Actor::OnActive
+	virtual bool OnExecute_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters);  // slot 192 (+0x600), UFunction AGameplayCueNotify_Actor::OnExecute
 	virtual void FNGC_VSlot_0x608();
 	virtual void OnOwnerDestroyed(AActor* DestroyedActor);  // slot 194 (+0x610), UFunction AGameplayCueNotify_Actor::OnOwnerDestroyed
 	virtual void FNGC_VSlot_0x618();
@@ -12210,7 +12210,7 @@ public:
 	virtual void FNGC_VSlot_0x1800();
 	virtual void FNGC_VSlot_0x1808();
 	virtual void FNGC_VSlot_0x1810();
-	virtual void FNGC_VSlot_0x1818();  // slot 771: AFortPlayerControllerGameplay::SetHUDElementVisibility (signature not recovered)
+	virtual void SetHUDElementVisibility(FGameplayTagContainer const& HUDElementTags, bool bHideElements);  // slot 771 (+0x1818), UFunction AFortPlayerControllerGameplay::SetHUDElementVisibility
 	static void StaticRegisterNativesAFortPlayerControllerGameplay();
 	static void execAreHUDElementsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execRefreshHUDElementVisibilitiesToSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12819,7 +12819,7 @@ public:
 	virtual void InternalServerSetTargeting_Implementation(bool bNewTargeting);  // slot 392 (+0xC40), UFunction AFortPlayerPawn::InternalServerSetTargeting
 	virtual bool ServerPlayUnableToPerformActionMontage_Validate();  // slot 393 (+0xC48), UFunction AFortPlayerPawn::ServerPlayUnableToPerformActionMontage
 	virtual void ServerPlayUnableToPerformActionMontage_Implementation();  // slot 394 (+0xC50), UFunction AFortPlayerPawn::ServerPlayUnableToPerformActionMontage
-	virtual void FNGC_VSlot_0xC58();  // slot 395: AFortPlayerPawn::ClientNotifyAbilityFailed_Implementation (signature not recovered)
+	virtual void ClientNotifyAbilityFailed_Implementation(const UGameplayAbility* FailedAbility, FGameplayTagContainer const& FailedReason);  // slot 395 (+0xC58), UFunction AFortPlayerPawn::ClientNotifyAbilityFailed
 	virtual void FNGC_VSlot_0xC60();
 	virtual void FNGC_VSlot_0xC68();
 	virtual void FNGC_VSlot_0xC70();
@@ -12927,14 +12927,14 @@ public:
 	virtual void FNGC_VSlot_0xD88();
 	virtual void FNGC_VSlot_0xD90();
 	virtual void FNGC_VSlot_0xD98();
-	virtual void FNGC_VSlot_0xDA0();  // slot 436: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xDA8();  // slot 437: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 436 (+0xDA0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams
+	virtual void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 437 (+0xDA8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams
 	virtual void FNGC_VSlot_0xDB0();  // slot 438: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xDB8();  // slot 439: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters Parameters);  // slot 439 (+0xDB8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAdded_WithParams
 	virtual void NetMulticast_InvokeGameplayCueAdded_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 440 (+0xDC0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueAdded
-	virtual void FNGC_VSlot_0xDC8();  // slot 441: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xDD0();  // slot 442: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xDD8();  // slot 443: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 441 (+0xDC8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted_WithParams
+	virtual void NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 442 (+0xDD0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_WithParams
+	virtual void NetMulticast_InvokeGameplayCuesExecuted_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 443 (+0xDD8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCuesExecuted
 	virtual void NetMulticast_InvokeGameplayCueExecuted_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 444 (+0xDE0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted
 	virtual void FNGC_VSlot_0xDE8();  // slot 445: AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation (signature not recovered)
 	virtual void FNGC_VSlot_0xDF0();  // slot 446: AFortPlayerPawnAthena::NetMulticast_Athena_BatchedDamageCues_Implementation (signature not recovered)
@@ -18061,14 +18061,14 @@ public:
 	virtual void FNGC_VSlot_0x4E0();  // slot 156: UAbilitySystemComponent::ServerPrintDebug_RequestWithStrings_Implementation (signature not recovered)
 	virtual bool ServerPrintDebug_Request_Validate();  // slot 157 (+0x4E8), UFunction UAbilitySystemComponent::ServerPrintDebug_Request
 	virtual void ServerPrintDebug_Request_Implementation();  // slot 158 (+0x4F0), UFunction UAbilitySystemComponent::ServerPrintDebug_Request
-	virtual void FNGC_VSlot_0x4F8();  // slot 159: UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x500();  // slot 160: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 159 (+0x4F8), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams
+	virtual void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 160 (+0x500), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams
 	virtual void FNGC_VSlot_0x508();  // slot 161: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x510();  // slot 162: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCueAdded_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters Parameters);  // slot 162 (+0x510), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded_WithParams
 	virtual void NetMulticast_InvokeGameplayCueAdded_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 163 (+0x518), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueAdded
-	virtual void FNGC_VSlot_0x520();  // slot 164: UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x528();  // slot 165: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x530();  // slot 166: UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted_Implementation (signature not recovered)
+	virtual void NetMulticast_InvokeGameplayCuesExecuted_WithParams_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 164 (+0x520), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted_WithParams
+	virtual void NetMulticast_InvokeGameplayCueExecuted_WithParams_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);  // slot 165 (+0x528), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_WithParams
+	virtual void NetMulticast_InvokeGameplayCuesExecuted_Implementation(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 166 (+0x530), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCuesExecuted
 	virtual void NetMulticast_InvokeGameplayCueExecuted_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 167 (+0x538), UFunction UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted
 	virtual void FNGC_VSlot_0x540();  // slot 168: UAbilitySystemComponent::NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation (signature not recovered)
 	virtual void FNGC_VSlot_0x548();
@@ -21564,7 +21564,7 @@ public:
 	virtual UFortItemDefinition* GetItemDefinitionBP() const;  // slot 114 (+0x390), UFunction UFortItem::GetItemDefinitionBP
 	virtual bool CanBeDropped() const;  // slot 115 (+0x398), UFunction UFortItem::CanBeDropped
 	virtual bool CanBeUnslotted() const;  // slot 116 (+0x3A0), UFunction UFortItem::CanBeUnslotted
-	virtual void FNGC_VSlot_0x3A8();  // slot 117: UFortItem::IsActivatable (signature not recovered)
+	virtual bool IsActivatable(AFortPlayerController* FortPC, FGameplayTagContainer& FailureReason) const;  // slot 117 (+0x3A8), UFunction UFortItem::IsActivatable
 	virtual float GetCoolDownTimeRemaining(AFortPlayerController* FortPC, float& CooldownDuration) const;  // slot 118 (+0x3B0), UFunction UFortItem::GetCoolDownTimeRemaining
 	virtual void FNGC_VSlot_0x3B8();
 	virtual void FNGC_VSlot_0x3C0();
@@ -41551,9 +41551,9 @@ public:
 	virtual void K2_EndAbility();  // slot 100 (+0x320), UFunction UGameplayAbility::K2_EndAbility
 	virtual void FNGC_VSlot_0x328();
 	virtual void K2_ExecuteGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context);  // slot 102 (+0x330), UFunction UGameplayAbility::K2_ExecuteGameplayCue
-	virtual void FNGC_VSlot_0x338();  // slot 103: UGameplayAbility::K2_ExecuteGameplayCueWithParams (signature not recovered)
+	virtual void K2_ExecuteGameplayCueWithParams(FGameplayTag GameplayCueTag, FGameplayCueParameters const& GameplayCueParameters);  // slot 103 (+0x338), UFunction UGameplayAbility::K2_ExecuteGameplayCueWithParams
 	virtual void K2_AddGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context, bool bRemoveOnAbilityEnd);  // slot 104 (+0x340), UFunction UGameplayAbility::K2_AddGameplayCue
-	virtual void FNGC_VSlot_0x348();  // slot 105: UGameplayAbility::K2_AddGameplayCueWithParams (signature not recovered)
+	virtual void K2_AddGameplayCueWithParams(FGameplayTag GameplayCueTag, FGameplayCueParameters const& GameplayCueParameter, bool bRemoveOnAbilityEnd);  // slot 105 (+0x348), UFunction UGameplayAbility::K2_AddGameplayCueWithParams
 	virtual void K2_RemoveGameplayCue(FGameplayTag GameplayCueTag);  // slot 106 (+0x350), UFunction UGameplayAbility::K2_RemoveGameplayCue
 	virtual void FNGC_VSlot_0x358();  // slot 107: UGameplayAbility::GetContextFromOwner (signature not recovered)
 	virtual void FNGC_VSlot_0x360();

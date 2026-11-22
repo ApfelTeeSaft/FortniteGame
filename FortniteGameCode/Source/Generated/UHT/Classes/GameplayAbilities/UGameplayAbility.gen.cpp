@@ -16,6 +16,18 @@ void UGameplayAbility::execK2_AddGameplayCue(UObject* Context, FFrame& Stack, vo
 	P_THIS->K2_AddGameplayCue(Z_Param_GameplayCueTag,Z_Param_Context,Z_Param_bRemoveOnAbilityEnd);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550140 (end 0x00550344)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_AddGameplayCueWithParams) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_AddGameplayCueWithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_GameplayCueParameter);
+	P_GET_UBOOL(Z_Param_bRemoveOnAbilityEnd);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_AddGameplayCueWithParams(Z_Param_GameplayCueTag,Z_Param_Out_GameplayCueParameter,Z_Param_bRemoveOnAbilityEnd);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00550610 (end 0x0055063F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_CheckAbilityCooldown) | Matching: see analysis/functions-uht-exec.json
 void UGameplayAbility::execK2_CheckAbilityCooldown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -82,6 +94,17 @@ void UGameplayAbility::execK2_ExecuteGameplayCue(UObject* Context, FFrame& Stack
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->K2_ExecuteGameplayCue(Z_Param_GameplayCueTag,Z_Param_Context);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550950 (end 0x00550B10)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_ExecuteGameplayCueWithParams) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_ExecuteGameplayCueWithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_GameplayCueParameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_ExecuteGameplayCueWithParams(Z_Param_GameplayCueTag,Z_Param_Out_GameplayCueParameters);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00550B10 (end 0x00550B94)
