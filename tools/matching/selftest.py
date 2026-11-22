@@ -207,6 +207,14 @@ def test_uht_parameters() -> None:
     names.structs[0x800] = ("GameplayTagContainer", 32, 8)           # TArray members: no TArray element
     assert P.parameter(arr("Tags", 0, {"type": "Struct", "flags": 0, "func": base + 0x800}), names, base)["decl"] == \
         "TArray<FGameplayTagContainer> Tags"
+    names.classes[0xB00] = "UTexture2D"
+    t = P.parameter(rec("SoftObject", "Image", 0x0004000000000580, 0xB00), names, base)   # a return value
+    assert (t["ret"], t["store"]) == ("TSoftObjectPtr<UTexture2D>", "TSoftObjectPtr<UTexture2D>"), t
+    t = P.parameter(rec("SoftObject", "Asset", 0x0004000000000180, 0xB00), names, base)
+    assert (t["decl"], t["line"]) == ("TSoftObjectPtr<UTexture2D>& Asset",
+                                      "P_GET_SOFTOBJECT_REF(TSoftObjectPtr<UTexture2D>,Z_Param_Out_Asset);"), t
+    t = P.parameter(arr("Assets", 0x180, {"type": "SoftObject", "flags": 0, "func": base + 0xB00}), names, base)
+    assert t["line"] == "P_GET_TARRAY_REF(TSoftObjectPtr<UTexture2D>,Z_Param_Out_Assets);", t
     names.structs[0xA00] = ("SlateBrush", 120, 8)                    # not modelled: 4.20's is 136 bytes
     assert P.parameter(rec("Struct", "Brush", 0x180, 0xA00), names, base) is None
     assert "EViewTargetBlendFunction" in P.MODELLED_ENUMS                # defined by the shims, not redeclared

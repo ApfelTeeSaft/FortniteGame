@@ -78,6 +78,15 @@ void UFortItem::execGetItemGuid(UObject* Context, FFrame& Stack, void* const Z_P
 	*(FGuid*)Z_Param__Result=P_THIS->GetItemGuid();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009360 (end 0x010093BE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLargePreviewImage) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetLargePreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSoftObjectPtr<UTexture2D>*)Z_Param__Result=P_THIS->GetLargePreviewImage();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010093C0 (end 0x010093EF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLevel) | Matching: see analysis/functions-uht-exec.json
 void UFortItem::execGetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -139,6 +148,15 @@ void UFortItem::execGetOwningController(UObject* Context, FFrame& Stack, void* c
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(AFortPlayerController**)Z_Param__Result=P_THIS->GetOwningController();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009550 (end 0x010095D0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPreviewAssets) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetPreviewAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<TSoftObjectPtr<UObject>>*)Z_Param__Result=P_THIS->GetPreviewAssets();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010095D0 (end 0x010096B0)
@@ -203,6 +221,15 @@ void UFortItem::execGetSearchTags(UObject* Context, FFrame& Stack, void* const Z
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(FText*)Z_Param__Result=P_THIS->GetSearchTags();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009900 (end 0x0100995E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSmallPreviewImage) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetSmallPreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSoftObjectPtr<UTexture2D>*)Z_Param__Result=P_THIS->GetSmallPreviewImage();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79990 (end 0x00F799BF)

@@ -34,6 +34,15 @@ void UFortItemDefinition::execGetDisplayName(UObject* Context, FFrame& Stack, vo
 	*(FText*)Z_Param__Result=P_THIS->GetDisplayName(Z_Param_bBaseName);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01012740 (end 0x0101279E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLargePreviewImage) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetLargePreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSoftObjectPtr<UTexture2D>*)Z_Param__Result=P_THIS->GetLargePreviewImage();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01013080 (end 0x010130FE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPersistentName) | Matching: see analysis/functions-uht-exec.json
 void UFortItemDefinition::execGetPersistentName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -41,6 +50,36 @@ void UFortItemDefinition::execGetPersistentName(UObject* Context, FFrame& Stack,
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(FString*)Z_Param__Result=P_THIS->GetPersistentName();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013240 (end 0x01013315)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPreviewAssets) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetPreviewAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY_REF(TSoftObjectPtr<UObject>,Z_Param_Out_Assets);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetPreviewAssets(Z_Param_Out_Assets);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013450 (end 0x0101351B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPreviewSkeletalMeshAsset) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetPreviewSkeletalMeshAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_SOFTOBJECT_REF(TSoftObjectPtr<USkeletalMesh>,Z_Param_Out_Asset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetPreviewSkeletalMeshAsset(Z_Param_Out_Asset);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013520 (end 0x010135EB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPreviewStaticMeshAsset) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetPreviewStaticMeshAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_SOFTOBJECT_REF(TSoftObjectPtr<UStaticMesh>,Z_Param_Out_Asset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetPreviewStaticMeshAsset(Z_Param_Out_Asset);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01013B10 (end 0x01013B3F)
@@ -68,6 +107,15 @@ void UFortItemDefinition::execGetSingleLineDescription(UObject* Context, FFrame&
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(FText*)Z_Param__Result=P_THIS->GetSingleLineDescription();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013E60 (end 0x01013EBE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSmallPreviewImage) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetSmallPreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSoftObjectPtr<UTexture2D>*)Z_Param__Result=P_THIS->GetSmallPreviewImage();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01018E50 (end 0x01018E7F)

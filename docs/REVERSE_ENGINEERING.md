@@ -370,9 +370,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,460, at 1,212 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 824 read parameters |
-| exact | 1,202: 1,000 in the denominator, 202 leaf (no `.pdata`) |
-| relocation-equivalent | 1: `UPaperGroupedSpriteComponent::UpdateInstanceTransform` (below) |
+| UFunction thunks defined | 1,468, at 1,220 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 827 read parameters |
+| exact | 1,209: 1,007 in the denominator, 202 leaf (no `.pdata`) |
+| relocation-equivalent | 2: `UPaperGroupedSpriteComponent::UpdateInstanceTransform` and `UFortItem::GetPreviewAssets` (below) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
@@ -426,7 +426,11 @@ Supported types:
     `EGameplayAbilityActivationMode`). These are defined with the enumerator values of the
     reference's `FEnumParams`, which agree with 4.20, and are not redeclared in
     `Classes.gen.h` (`uht_props.MODELLED_ENUMS`);
-- `FTransform` (`TransformRecovered.h`, below).
+- `FTransform` (`TransformRecovered.h`, below);
+- soft object pointers, `TSoftObjectPtr<C>` (`EngineStructsRecovered.h`): `FSoftObjectPath`,
+  `TPersistentObjectPtr`, `FSoftObjectPtr` and `TSoftObjectPtr`, read with
+  `P_GET_SOFTOBJECT(_REF)` (`USoftObjectProperty::GetCPPMacroType`). The class comes from
+  the property's `ClassFunc`.
 
 A struct is used only when the reference's `FStructParams` give the same `SizeOf` and
 `AlignOf`. Enums are declared with their form and underlying type only, no enumerators.
@@ -500,6 +504,20 @@ Limits:
     exact.
   - `FSlateBrush` is not modelled: the reference's is 120 bytes, 4.20's 136
     (`docs/ENGINE_DIFFERENCES.md`).
+  - Soft object pointers follow the 4.20 headers, with one difference.
+    - The default constructor is `TPersistentObjectPtr::Reset()`: an `INDEX_NONE` weak
+      index, `NAME_None`, an emptied string and a zero tag. That needs `FName(EName)`,
+      `TArray::Reset`, `Empty`, `ResizeTo` and `FString::Reset`, all ported.
+    - A returned pointer is assigned through `TPersistentObjectPtr::operator=`: the weak
+      pointer, the tag, then `FSoftObjectPath::operator=`. The reference passes that the
+      source path's address and copies it. 4.20 takes the path by value, so this is
+      modelled as an out-of-line `const&` assignment (`docs/ENGINE_DIFFERENCES.md` #6).
+    - 8 thunk addresses (returns, an out parameter, two `TArray<TSoftObjectPtr<C>>` out
+      parameters). 7 are exact. `UFortItem::GetPreviewAssets` is relocation-equivalent: its
+      `TArray<TSoftObjectPtr<UObject>>::operator=` is called out of line and nothing else
+      corroborates its address.
+    - `FKey`'s struct registration initializer, lost in the previous change, is exact
+      again: `InputCore.1`'s `.rdata` order moved back with these headers.
   - Adding these changed the `.rdata` order of `InputCore.1`, which gained no code. Its
     literal sections came out in another order with the previous `ContainersRecovered.h`
     and in a third without `<new>`. So literal section order, like file-static order,
@@ -548,13 +566,13 @@ Limits:
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,550 have a supported signature and 1,460 have
+- Of the 1,661 virtual-native UFunctions, 1,558 have a supported signature and 1,468 have
   thunks (folded bodies counted per UFunction). For the other 90, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
   - `FSlateBrush` (6), `FGameplayEventData` (5), `FFortItemEntry`,
     `FGameplayEffectSpecForRPC` and `FPartyReservation` (4 each);
-  - soft object pointers (6) and `TArray<FAssetData>` (4);
+  - `TArray<FAssetData>` (4) and `FAthenaQuickChatActiveEntry` (3);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)

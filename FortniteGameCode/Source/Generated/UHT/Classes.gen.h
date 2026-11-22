@@ -20786,9 +20786,9 @@ public:
 	virtual FText GetShortDescription() const;  // slot 87 (+0x2B8), UFunction UFortItemDefinition::GetShortDescription
 	virtual void FNGC_VSlot_0x2C0();
 	virtual FText GetSingleLineDescription() const;  // slot 89 (+0x2C8), UFunction UFortItemDefinition::GetSingleLineDescription
-	virtual void FNGC_VSlot_0x2D0();  // slot 90: UFortItemDefinition::GetSmallPreviewImage (signature not recovered)
+	virtual TSoftObjectPtr<UTexture2D> GetSmallPreviewImage() const;  // slot 90 (+0x2D0), UFunction UFortItemDefinition::GetSmallPreviewImage
 	virtual void FNGC_VSlot_0x2D8();  // slot 91: UFortItemDefinition::GetSmallPreviewImageBrush (signature not recovered)
-	virtual void FNGC_VSlot_0x2E0();  // slot 92: UFortItemDefinition::GetLargePreviewImage (signature not recovered)
+	virtual TSoftObjectPtr<UTexture2D> GetLargePreviewImage() const;  // slot 92 (+0x2E0), UFunction UFortItemDefinition::GetLargePreviewImage
 	virtual void FNGC_VSlot_0x2E8();
 	virtual void FNGC_VSlot_0x2F0();
 	virtual void FNGC_VSlot_0x2F8();
@@ -20810,10 +20810,10 @@ public:
 	virtual void FNGC_VSlot_0x378();
 	virtual void FNGC_VSlot_0x380();
 	virtual bool ShouldShowPreviewOnCurrentHero() const;  // slot 113 (+0x388), UFunction UFortItemDefinition::ShouldShowPreviewOnCurrentHero
-	virtual void FNGC_VSlot_0x390();  // slot 114: UFortItemDefinition::GetPreviewSkeletalMeshAsset (signature not recovered)
-	virtual void FNGC_VSlot_0x398();  // slot 115: UFortItemDefinition::GetPreviewStaticMeshAsset (signature not recovered)
+	virtual bool GetPreviewSkeletalMeshAsset(TSoftObjectPtr<USkeletalMesh>& Asset) const;  // slot 114 (+0x390), UFunction UFortItemDefinition::GetPreviewSkeletalMeshAsset
+	virtual bool GetPreviewStaticMeshAsset(TSoftObjectPtr<UStaticMesh>& Asset) const;  // slot 115 (+0x398), UFunction UFortItemDefinition::GetPreviewStaticMeshAsset
 	virtual void FNGC_VSlot_0x3A0();  // slot 116: UFortItemDefinition::GetPreviewPrefabAsset (signature not recovered)
-	virtual void FNGC_VSlot_0x3A8();  // slot 117: UFortItemDefinition::GetPreviewAssets (signature not recovered)
+	virtual void GetPreviewAssets(TArray<TSoftObjectPtr<UObject>>& Assets) const;  // slot 117 (+0x3A8), UFunction UFortItemDefinition::GetPreviewAssets
 	virtual void CustomizePreviewMesh(UMeshComponent* Mesh);  // slot 118 (+0x3B0), UFunction UFortItemDefinition::CustomizePreviewMesh
 	virtual void CustomizePreviewPrefab(AActor* PrefabInstance);  // slot 119 (+0x3B8), UFunction UFortItemDefinition::CustomizePreviewPrefab
 	static void StaticRegisterNativesUFortItemDefinition();
@@ -21558,9 +21558,9 @@ public:
 	virtual FText GetDisplayName() const;  // slot 108 (+0x360), UFunction UFortHero::GetDisplayName
 	virtual FText GetDescription() const;  // slot 109 (+0x368), UFunction UFortItem::GetDescription
 	virtual FText GetSearchTags() const;  // slot 110 (+0x370), UFunction UFortItem::GetSearchTags
-	virtual void FNGC_VSlot_0x378();  // slot 111: UFortItem::GetSmallPreviewImage (signature not recovered)
-	virtual void FNGC_VSlot_0x380();  // slot 112: UFortItem::GetLargePreviewImage (signature not recovered)
-	virtual void FNGC_VSlot_0x388();  // slot 113: UFortItem::GetPreviewAssets (signature not recovered)
+	virtual TSoftObjectPtr<UTexture2D> GetSmallPreviewImage() const;  // slot 111 (+0x378), UFunction UFortItem::GetSmallPreviewImage
+	virtual TSoftObjectPtr<UTexture2D> GetLargePreviewImage() const;  // slot 112 (+0x380), UFunction UFortItem::GetLargePreviewImage
+	virtual TArray<TSoftObjectPtr<UObject>> GetPreviewAssets() const;  // slot 113 (+0x388), UFunction UFortItem::GetPreviewAssets
 	virtual UFortItemDefinition* GetItemDefinitionBP() const;  // slot 114 (+0x390), UFunction UFortItem::GetItemDefinitionBP
 	virtual bool CanBeDropped() const;  // slot 115 (+0x398), UFunction UFortItem::CanBeDropped
 	virtual bool CanBeUnslotted() const;  // slot 116 (+0x3A0), UFunction UFortItem::CanBeUnslotted

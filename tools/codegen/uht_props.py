@@ -199,6 +199,13 @@ def parameter(p: dict, names: Names, base: int, strings_by_ref: bool = False) ->
                 else f"P_GET_OBJECT(UClass,{pname});")
     elif t == "Text":
         ctype, line = "FText", f"P_GET_PROPERTY{ref}(UTextProperty,{pname});"
+    elif t == "SoftObject":
+        # USoftObjectProperty::GetCPPMacroType: SOFTOBJECT, TSoftObjectPtr<PropertyClass>.
+        c = names.classes.get(p["func"] - base) if p["func"] else None
+        if c is None:
+            return None
+        ctype = f"TSoftObjectPtr<{c}>"
+        line = f"P_GET_SOFTOBJECT{ref}({ctype},{pname});"
     else:
         return None
     return {"decl": _with_qualifiers(p, ctype, p["name"]), "line": line, "arg": arg or pname,
@@ -225,6 +232,9 @@ def element_type(inner: dict, names: Names, base: int) -> str | None:
         return "FString"
     if t == "Text":
         return "FText"
+    if t == "SoftObject":
+        c = names.classes.get(inner["func"] - base) if inner["func"] else None
+        return f"TSoftObjectPtr<{c}>" if c else None
     if t == "Struct":
         info = names.structs.get(inner["func"] - base) if inner["func"] else None
         return f"F{info[0]}" if info and MODELLED_STRUCTS.get(info[0]) == info[1:] else None
@@ -259,7 +269,7 @@ def function_signature(dimg, base: int, rec: int, names: Names, strings_by_ref: 
             r = t["ret"]
             if ret is not None or not (r in REGISTER_RETURN or r.endswith("*") or r == "FName"
                                        or r in names.used_enums or r[1:] in MODELLED_STRUCTS
-                                       or r in ("FString", "FText") or r.startswith(("TArray<", "TSubclassOf<"))):
+                                       or r in ("FString", "FText") or r.startswith(("TArray<", "TSubclassOf<", "TSoftObjectPtr<"))):
                 return None
             ret, store = r, t["store"]
             continue

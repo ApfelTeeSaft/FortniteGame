@@ -9,6 +9,12 @@
 
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
+// UObject/UnrealNames.inl: only the first hardcoded name is used here.
+enum EName
+{
+	NAME_None = 0,
+};
+
 enum EFindName
 {
 	FNAME_Find,
@@ -21,6 +27,7 @@ class FName
 public:
 	// UnrealNames.h, shipping (no WITH_CASE_PRESERVING_NAME): both indexes zero, NAME_NO_NUMBER_INTERNAL.
 	__forceinline FName() : ComparisonIndex(0), Number(0) {}
+	__forceinline FName( EName N ) : ComparisonIndex( N ), Number( 0 ) {}  // NAME_NO_NUMBER_INTERNAL; check() is compiled out
 	FName(const TCHAR* Name, EFindName FindType = FNAME_Add);
 
 private:

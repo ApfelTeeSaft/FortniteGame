@@ -272,10 +272,49 @@ public:
 		return ArrayNum;
 	}
 
+	void Reset(int32 NewSize = 0)
+	{
+		// If we have space to hold the excepted size, then don't reallocate
+		if (NewSize <= ArrayMax)
+		{
+			DestructItems(GetData(), ArrayNum);
+			ArrayNum = 0;
+		}
+		else
+		{
+			Empty(NewSize);
+		}
+	}
+
+	void Empty(int32 Slack = 0)
+	{
+		DestructItems(GetData(), ArrayNum);
+
+		ArrayNum = 0;
+
+		if (ArrayMax != Slack)
+		{
+			ResizeTo(Slack);
+		}
+	}
+
 private:
 	__declspec(noinline) const ElementType& DebugGet(int32 Index) const
 	{
 		return GetData()[Index];
+	}
+
+	__declspec(noinline) void ResizeTo(int32 NewMax)
+	{
+		if (NewMax)
+		{
+			NewMax = AllocatorInstance.CalculateSlackReserve(NewMax, sizeof(ElementType));
+		}
+		if (NewMax != ArrayMax)
+		{
+			ArrayMax = NewMax;
+			AllocatorInstance.ResizeAllocation(ArrayNum, ArrayMax, sizeof(ElementType));
+		}
 	}
 
 	__declspec(noinline) void ResizeForCopy(int32 NewMax, int32 PrevMax)
@@ -328,4 +367,14 @@ public:
 	FString(const FString&) = default;
 	FString& operator=(FString&&) = default;
 	FString& operator=(const FString&) = default;
+
+	__forceinline void Reset(int32 NewReservedSize = 0)
+	{
+		const int32 NewSizeIncludingTerminator = (NewReservedSize > 0) ? (NewReservedSize + 1) : 0;
+		Data.Reset(NewSizeIncludingTerminator);
+		if (TCHAR* DataPtr = Data.GetData())
+		{
+			*DataPtr = TEXT('\0');
+		}
+	}
 };

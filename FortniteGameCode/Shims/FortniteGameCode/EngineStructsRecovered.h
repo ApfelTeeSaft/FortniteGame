@@ -69,6 +69,114 @@ public:
 	~TWeakObjectPtr() = default;
 };
 
+// CoreUObject: UObject/SoftObjectPath.h, PersistentObjectPtr.h and SoftObjectPtr.h, the members
+// and special members the thunks use. Deviation from public 4.20: the reference's assignment
+// takes a const reference and copies (docs/ENGINE_DIFFERENCES.md #6); 4.20 takes the path by
+// value and moves its string.
+struct FSoftObjectPath
+{
+	FSoftObjectPath() {}
+
+	/** Construct from another soft object path */
+	FSoftObjectPath(const FSoftObjectPath& Other)
+		: AssetPathName(Other.AssetPathName)
+		, SubPathString(Other.SubPathString)
+	{
+	}
+
+	~FSoftObjectPath() {}
+
+	FSoftObjectPath& operator=(const FSoftObjectPath& Other);
+
+	/** Resets reference to point to null */
+	void Reset()
+	{
+		AssetPathName = NAME_None;
+		SubPathString.Reset();
+	}
+
+private:
+	/** Asset path, patch to a top level object in a package */
+	FName AssetPathName;
+
+	/** Optional FString for subobject within an asset */
+	FString SubPathString;
+};
+
+template<class TObjectID>
+struct TPersistentObjectPtr
+{
+public:
+	/** Default constructor, will be null */
+	__forceinline TPersistentObjectPtr()
+	{
+		Reset();
+	}
+
+	/** Reset the lazy pointer back to the null state */
+	__forceinline void Reset()
+	{
+		WeakPtr.Reset();
+		ObjectID.Reset();
+		TagAtLastTest = 0;
+	}
+
+	/** Copy a TPersistentObjectPtr */
+	__forceinline TPersistentObjectPtr(const TPersistentObjectPtr& Other)
+	{
+		(*this)=Other;
+	}
+
+	/** Copy from another TPersistentObjectPtr */
+	__forceinline void operator=(const TPersistentObjectPtr<TObjectID>& Other)
+	{
+		WeakPtr = Other.WeakPtr;
+		TagAtLastTest = Other.TagAtLastTest;
+		ObjectID = Other.ObjectID;
+	}
+
+private:
+	/** Once the object has been noticed to be loaded, this is set to the object weak pointer **/
+	mutable FWeakObjectPtr	WeakPtr;
+	/** Compared to CurrentAnnotationTag and if they are not equal, a guid search will be performed **/
+	mutable int32			TagAtLastTest;
+	/** Guid for the object this pointer points to or will point to. **/
+	TObjectID				ObjectID;
+};
+
+struct FSoftObjectPtr : public TPersistentObjectPtr<FSoftObjectPath>
+{
+public:
+	/** Default constructor, will be null */
+	__forceinline FSoftObjectPtr()
+	{
+	}
+
+	/** Construct from another soft pointer */
+	__forceinline FSoftObjectPtr(const FSoftObjectPtr& Other)
+	{
+		(*this)=Other;
+	}
+
+	using TPersistentObjectPtr<FSoftObjectPath>::operator=;
+};
+
+template<class T=UObject>
+struct TSoftObjectPtr
+{
+	template <class U>
+	friend struct TSoftObjectPtr;
+
+public:
+	/** Default constructor, will be null */
+	__forceinline TSoftObjectPtr()
+	{
+	}
+
+private:
+	FSoftObjectPtr SoftObjectPtr;
+};
+
 // Math/Color.h (PLATFORM_LITTLE_ENDIAN, _MSC_VER)
 struct FColor
 {
