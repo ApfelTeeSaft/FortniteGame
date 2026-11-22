@@ -348,6 +348,7 @@ The count then moved with each batch:
 | 1,158 | 381 | 251 |
 | 1,158, external `StaticEnum` | 373 | 242 |
 | 1,191, external `StaticEnum` | 373 (level) | 242 (level) |
+| 1,200, with the prologue's vector constants | 374 | 243 |
 
 Bisecting one unit (`NVIDIAGfeSDK.1`, which has no thunk of its own) showed something more.
 The order changes once enough unrelated declarations in `Classes.gen.h` change, here 31 slot
@@ -368,8 +369,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,438, at 1,191 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 805 read parameters |
-| exact | 1,182: 980 in the denominator, 202 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,448, at 1,200 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 812 read parameters |
+| exact | 1,190: 988 in the denominator, 202 leaf (no `.pdata`) |
+| relocation-equivalent | 1: `UPaperGroupedSpriteComponent::UpdateInstanceTransform` (below) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
@@ -415,7 +417,8 @@ Supported types:
   - `FUniqueNetIdRepl` (`FUniqueNetIdWrapper`'s vptr and `TSharedPtr`, then
     `ReplicationBytes`);
   - `FGameplayEffectContextHandle` (vptr and `TSharedPtr`);
-  - `FGameplayTagContainer` (two `TArray<FGameplayTag>`) and `FGameplayCueParameters`.
+  - `FGameplayTagContainer` (two `TArray<FGameplayTag>`) and `FGameplayCueParameters`;
+- `FTransform` (`TransformRecovered.h`, below).
 
 A struct is used only when the reference's `FStructParams` give the same `SizeOf` and
 `AlignOf`. Enums are declared with their form and underlying type only, no enumerators.
@@ -485,13 +488,34 @@ Limits:
     pointers at 136-160 and 176. Its copies and destructor are implicit. Its constructor
     zeroes `Location` and `Normal` through `FVector(EForceInit)`, added with `EForceInit`.
   - Only trivially copyable structs may be `TArray` elements; `FHitResult`, `FKey`,
-    `FUniqueNetIdRepl`, `FGameplayEffectContextHandle`, `FGameplayTagContainer` and
-    `FGameplayCueParameters` may not.
+    `FUniqueNetIdRepl`, `FGameplayEffectContextHandle`, `FGameplayTagContainer`,
+    `FGameplayCueParameters` and `FTransform` may not.
   - Adding the last two left the `StaticEnum` and registration counts level (table above):
     the layout no longer moves with `Classes.gen.h`.
-  - `FTransform` is not modelled. Its default constructor reads `GlobalVectorConstants`,
-    per-unit dynamically initialised statics, the same 16-byte constants that delimit units
-    in the layout model. Modelling them would move the units' `.bss` layout.
+  - `FTransform` (`TransformRecovered.h`) is three `VectorRegister`s, as in
+    `TransformVectorized.h`. Its default constructor reads `GlobalVectorConstants::FloatOne`
+    and `XYZMask`.
+    - These are per-unit, dynamically initialised statics from `UnrealMathVectorConstants.h`.
+      Their initializers (`movaps xmm0, [K]; movaps [slot], xmm0; ret`) open each unit's
+      `.CRT$XCU` entries; `FloatOne`'s is the unit marker of the layout model.
+    - The reference unit of `AGameModeBase` holds only four: `FloatOne`, `XYZMask`, `Float360`
+      and `Float180` (the last two are read by the rotator normalisation).
+    - The local compiler keeps every constant a unit defines, used or not: a probe with four
+      keeps all four, with or without `/Gw`. So only the two the constructor reads are
+      defined.
+    - `UnityPrologue.h` includes them, so every unit has them, as most reference units have
+      `FloatOne`. In 13 of 14 reference units checked, the `StaticEnum` singletons come before
+      them. Defined in a header that the top-of-unit `StaticEnum` fragments include, they
+      came first instead. That moved two boundary predictions (one `ReturnEnum` lost, one
+      `Singleton` gained). After the `StaticEnum` functions, nothing is lost, and
+      `ETwoPlayerSplitScreenType`'s singleton (with its registration) resolves.
+    - `Classes.gen.h` needs only the incomplete type, so `EngineStructsRecovered.h` declares
+      it.
+    - Of the 6 thunks that take `const FTransform&`, the constants resolve where another thunk
+      of the unit reads them (corroboration: `AGameModeBase`'s and
+      `UInstancedStaticMeshComponent`'s pairs). `UPaperGroupedSpriteComponent`'s is the only
+      reader in its unit and has no observed neighbour there, so it stays
+      relocation-equivalent. The 4 that return an `FTransform` read no constants.
 - **`<intrin.h>`.** Including it for `_InterlockedDecrement` changed the order in which MSVC
   emitted other functions' static locals in every unit. That cost 36 `StaticEnum` and 27
   `FCompiledInDeferEnum` layout predictions, even in units without new thunks. Declaring the
@@ -507,12 +531,11 @@ Limits:
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,525 have a supported signature and 1,438 have
+- Of the 1,661 virtual-native UFunctions, 1,535 have a supported signature and 1,448 have
   thunks (folded bodies counted per UFunction). For the other 87, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FTransform` (10), `FSlateBrush` (6), `FGameplayAbilityActivationInfo` (6),
-    `FGameplayEventData` (5);
+  - `FSlateBrush` (6), `FGameplayAbilityActivationInfo` (6), `FGameplayEventData` (5);
   - soft object pointers (6) and arrays of strings (6);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 

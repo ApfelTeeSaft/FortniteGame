@@ -1,5 +1,6 @@
 // UE4.20 structs exec thunks pass by value, by reference or as returns, with their members,
-// default constructors and copies as the 4.20 headers declare them: UObject/WeakObjectPtr.h and
+// default constructors and copies as the 4.20 headers declare them (FTransform: TransformRecovered.h):
+// UObject/WeakObjectPtr.h and
 // WeakObjectPtrTemplates.h, Math/Color.h (FColor), SlateCore's Layout/Margin.h,
 // Engine/NetSerialization.h (FVector_NetQuantize*), Engine/EngineTypes.h (FHitResult) and
 // GameplayAbilities' GameplayPrediction.h (FPredictionKey) and GameplayEffectTypes.h
@@ -96,6 +97,11 @@ public:
 		, Bottom(0.0f)
 	{ }
 };
+
+// Core: Math/TransformVectorized.h. Defined in TransformRecovered.h, which UnityPrologue.h
+// includes: its default constructor reads the unit's GlobalVectorConstants, which belong after
+// the StaticEnum functions. Declarations here need only the incomplete type.
+struct FTransform;
 
 // Engine/NetSerialization.h
 struct FVector_NetQuantize : public FVector

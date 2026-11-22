@@ -198,6 +198,10 @@ def test_uht_parameters() -> None:
     t = P.parameter(rec("Struct", "Parameters", const | out | ref, 0x700), names, base)
     assert (t["decl"], t["line"]) == ("FGameplayCueParameters const& Parameters",
                                       "P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_Parameters);"), t
+    names.structs[0x900] = ("Transform", 48, 16)
+    t = P.parameter(rec("Struct", "SpawnTransform", const | out | ref, 0x900), names, base)
+    assert (t["decl"], t["line"]) == ("FTransform const& SpawnTransform",
+                                      "P_GET_STRUCT_REF(FTransform,Z_Param_Out_SpawnTransform);"), t
     names.structs[0x800] = ("GameplayTagContainer", 32, 8)           # TArray members: no TArray element
     assert P.parameter(arr("Tags", 0, {"type": "Struct", "flags": 0, "func": base + 0x800}), names, base) is None
     t = P.parameter(rec("Text", "Label", 0), names, base)
@@ -266,6 +270,14 @@ def test_staticenum_layout() -> None:
     assert units, "no unit defines a StaticEnum"
     for f in (unity.parent / "Enums").rglob("*.staticenum.gen.cpp"):
         assert not re.search(r"static UEnum\* \w+_StaticEnum\(", f.read_text(encoding="utf-8")), f.name
+    # The prologue's GlobalVectorConstants must follow the StaticEnum functions: only
+    # UnityPrologue.h may include TransformRecovered.h, not the headers the fragments include.
+    shims = REPO_ROOT / "FortniteGameCode" / "Shims" / "FortniteGameCode"
+    include = '#include "FortniteGameCode/TransformRecovered.h"'
+    for h in sorted(shims.glob("*.h")):
+        if h.name != "UnityPrologue.h":
+            assert include not in h.read_text(encoding="utf-8"), h.name
+    assert include in (shims / "UnityPrologue.h").read_text(encoding="utf-8")
     import msvc
     if not msvc.VS140_VCVARS.exists():
         print(f"staticenum layout: ok ({units} units; MSVC v140 not present, compile probe skipped)")

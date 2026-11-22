@@ -166,6 +166,17 @@ void AGameModeBase::execRestartPlayerAtPlayerStart(UObject* Context, FFrame& Sta
 	P_THIS->RestartPlayerAtPlayerStart(Z_Param_NewPlayer,Z_Param_StartSpot);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02419BA0 (end 0x02419CB8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRestartPlayerAtTransform) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execRestartPlayerAtTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_NewPlayer);
+	P_GET_STRUCT_REF(FTransform,Z_Param_Out_SpawnTransform);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RestartPlayerAtTransform(Z_Param_NewPlayer,Z_Param_Out_SpawnTransform);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024233D0 (end 0x024233EF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execReturnToMainMenuHost) | Matching: see analysis/functions-uht-exec.json
 void AGameModeBase::execReturnToMainMenuHost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -183,6 +194,17 @@ void AGameModeBase::execShouldReset(UObject* Context, FFrame& Stack, void* const
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->ShouldReset_Implementation(Z_Param_ActorToReset);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241B760 (end 0x0241B87B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSpawnDefaultPawnAtTransform) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execSpawnDefaultPawnAtTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_NewPlayer);
+	P_GET_STRUCT_REF(FTransform,Z_Param_Out_SpawnTransform);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APawn**)Z_Param__Result=P_THIS->SpawnDefaultPawnAtTransform_Implementation(Z_Param_NewPlayer,Z_Param_Out_SpawnTransform);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0241B880 (end 0x0241B945)

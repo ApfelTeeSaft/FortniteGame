@@ -9,6 +9,9 @@
 // place in the object file; its storage and initializer are not part of the reconstruction.
 #pragma once
 
+// The engine headers' GlobalVectorConstants that FTransform's default constructor reads.
+#include "FortniteGameCode/TransformRecovered.h"
+
 static struct FNGCUnityPrologue
 {
 	FNGCUnityPrologue();

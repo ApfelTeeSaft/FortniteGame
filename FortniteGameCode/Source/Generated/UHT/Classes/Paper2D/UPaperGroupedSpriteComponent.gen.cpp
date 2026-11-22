@@ -35,6 +35,20 @@ void UPaperGroupedSpriteComponent::execUpdateInstanceColor(UObject* Context, FFr
 	*(bool*)Z_Param__Result=P_THIS->UpdateInstanceColor(Z_Param_InstanceIndex,Z_Param_NewInstanceColor,Z_Param_bMarkRenderStateDirty);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066B290 (end 0x0066B482)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateInstanceTransform) | Matching: see analysis/functions-uht-exec.json
+void UPaperGroupedSpriteComponent::execUpdateInstanceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InstanceIndex);
+	P_GET_STRUCT_REF(FTransform,Z_Param_Out_NewInstanceTransform);
+	P_GET_UBOOL(Z_Param_bWorldSpace);
+	P_GET_UBOOL(Z_Param_bMarkRenderStateDirty);
+	P_GET_UBOOL(Z_Param_bTeleport);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->UpdateInstanceTransform(Z_Param_InstanceIndex,Z_Param_Out_NewInstanceTransform,Z_Param_bWorldSpace,Z_Param_bMarkRenderStateDirty,Z_Param_bTeleport);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPaperGroupedSpriteComponent, 2653628167u)
 // Original dynamic initializer: RVA 0x000AB570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperGroupedSpriteComponent> AutoInitializeUPaperGroupedSpriteComponent(TEXT("UPaperGroupedSpriteComponent"), sizeof(UPaperGroupedSpriteComponent), 2653628167u);

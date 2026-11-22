@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6DA20 (end 0x00F6DA84)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDeathFXTransform) | Matching: see analysis/functions-uht-exec.json
+void ABuildingGameplayActorConsumable::execGetDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FTransform*)Z_Param__Result=P_THIS->GetDeathFXTransform_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingGameplayActorConsumable, 588693375u)
 // Original dynamic initializer: RVA 0x000DAEB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingGameplayActorConsumable> AutoInitializeABuildingGameplayActorConsumable(TEXT("ABuildingGameplayActorConsumable"), sizeof(ABuildingGameplayActorConsumable), 588693375u);

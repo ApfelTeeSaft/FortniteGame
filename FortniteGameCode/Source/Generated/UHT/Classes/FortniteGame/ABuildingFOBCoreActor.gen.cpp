@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6DDD0 (end 0x00F6DE34)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSimpleDeathFXTransform) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execGetSimpleDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FTransform*)Z_Param__Result=P_THIS->GetSimpleDeathFXTransform_Implementation();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E7D0 (end 0x00F6E856)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnActiveStatusChanged) | Matching: see analysis/functions-uht-exec.json
 void ABuildingFOBCoreActor::execOnActiveStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

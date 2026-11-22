@@ -54,6 +54,17 @@ void USceneComponent::execGetSocketRotation(UObject* Context, FFrame& Stack, voi
 	*(FRotator*)Z_Param__Result=P_THIS->GetSocketRotation(Z_Param_InSocketName);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C88A0 (end 0x024C899D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSocketTransform) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execGetSocketTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InSocketName);
+	P_GET_PROPERTY(UByteProperty,Z_Param_TransformSpace);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FTransform*)Z_Param__Result=P_THIS->GetSocketTransform(Z_Param_InSocketName,ERelativeTransformSpace(Z_Param_TransformSpace));
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8AE0 (end 0x024C8B0F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAnySimulatingPhysics) | Matching: see analysis/functions-uht-exec.json
 void USceneComponent::execIsAnySimulatingPhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

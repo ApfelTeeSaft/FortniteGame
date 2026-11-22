@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6DDD0 (end 0x00F6DE34)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCoreSpawnTransform) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreSpawnPad::execGetCoreSpawnTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FTransform*)Z_Param__Result=P_THIS->GetCoreSpawnTransform_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingFOBCoreSpawnPad, 2323478586u)
 // Original dynamic initializer: RVA 0x000DADF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingFOBCoreSpawnPad> AutoInitializeABuildingFOBCoreSpawnPad(TEXT("ABuildingFOBCoreSpawnPad"), sizeof(ABuildingFOBCoreSpawnPad), 2323478586u);

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024292C0 (end 0x0242939C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddInstance) | Matching: see analysis/functions-uht-exec.json
+void UInstancedStaticMeshComponent::execAddInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FTransform,Z_Param_Out_InstanceTransform);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->AddInstance(Z_Param_Out_InstanceTransform);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02429600 (end 0x0242961F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClearInstances) | Matching: see analysis/functions-uht-exec.json
 void UInstancedStaticMeshComponent::execClearInstances(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -33,6 +43,20 @@ void UInstancedStaticMeshComponent::execRemoveInstance(UObject* Context, FFrame&
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->RemoveInstance(Z_Param_InstanceIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242B300 (end 0x0242B4F2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateInstanceTransform) | Matching: see analysis/functions-uht-exec.json
+void UInstancedStaticMeshComponent::execUpdateInstanceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InstanceIndex);
+	P_GET_STRUCT_REF(FTransform,Z_Param_Out_NewInstanceTransform);
+	P_GET_UBOOL(Z_Param_bWorldSpace);
+	P_GET_UBOOL(Z_Param_bMarkRenderStateDirty);
+	P_GET_UBOOL(Z_Param_bTeleport);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->UpdateInstanceTransform(Z_Param_InstanceIndex,Z_Param_Out_NewInstanceTransform,Z_Param_bWorldSpace,Z_Param_bMarkRenderStateDirty,Z_Param_bTeleport);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UInstancedStaticMeshComponent, 65592595u)

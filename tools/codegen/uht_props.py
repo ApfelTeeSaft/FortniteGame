@@ -56,11 +56,11 @@ MODELLED_STRUCTS = {"Vector": (12, 4), "Rotator": (12, 4), "Vector2D": (8, 4), "
                     "Vector_NetQuantize100": (12, 4), "Vector_NetQuantizeNormal": (12, 4),
                     "HitResult": (136, 8), "PredictionKey": (24, 8), "Color": (4, 4), "Margin": (16, 4),
                     "Key": (24, 8), "UniqueNetIdRepl": (40, 8), "GameplayEffectContextHandle": (24, 8),
-                    "GameplayTagContainer": (32, 8), "GameplayCueParameters": (184, 8)}
+                    "GameplayTagContainer": (32, 8), "GameplayCueParameters": (184, 8), "Transform": (48, 16)}
 # Of those, the ones TArray may hold (ConstructItems / DestructItems model trivial copies only):
 # FHitResult's FWeakObjectPtr members have a user-defined copy constructor.
 TRIVIAL_STRUCTS = set(MODELLED_STRUCTS) - {"HitResult", "Key", "UniqueNetIdRepl", "GameplayEffectContextHandle",
-                                           "GameplayTagContainer", "GameplayCueParameters"}
+                                           "GameplayTagContainer", "GameplayCueParameters", "Transform"}
 REGISTER_RETURN = {"bool", "uint8", "int8", "int16", "int32", "int64", "uint16", "uint32", "uint64", "float", "double"}
 
 

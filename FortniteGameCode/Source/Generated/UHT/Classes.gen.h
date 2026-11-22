@@ -4763,7 +4763,7 @@ public:
 	virtual void FNGC_VSlot_0x8C0();
 	virtual void FNGC_VSlot_0x8C8();
 	virtual void FNGC_VSlot_0x8D0();
-	virtual void FNGC_VSlot_0x8D8();  // slot 283: ABuildingGameplayActor::GetTargetingSourceTransform_Implementation (signature not recovered)
+	virtual FTransform GetTargetingSourceTransform_Implementation(EFortAbilityTargetingSource Source) const;  // slot 283 (+0x8D8), UFunction ABuildingGameplayActor::GetTargetingSourceTransform
 	virtual void K2_ExecuteGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context);  // slot 284 (+0x8E0), UFunction ABuildingGameplayActor::K2_ExecuteGameplayCue
 	virtual void K2_ExecuteGameplayCueWithParams(FGameplayTag GameplayCueTag, FGameplayCueParameters const& GameplayCueParameters);  // slot 285 (+0x8E8), UFunction ABuildingGameplayActor::K2_ExecuteGameplayCueWithParams
 	virtual void K2_AddGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context);  // slot 286 (+0x8F0), UFunction ABuildingGameplayActor::K2_AddGameplayCue
@@ -5036,7 +5036,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
-	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingFOBCoreActor::GetSimpleDeathFXTransform_Implementation (signature not recovered)
+	virtual FTransform GetSimpleDeathFXTransform_Implementation() const;  // slot 292 (+0x920), UFunction ABuildingFOBCoreActor::GetSimpleDeathFXTransform
 	virtual void OnVulnerableStatusChanged_Implementation(bool bNewTargetableStatus);  // slot 293 (+0x928), UFunction ABuildingFOBCoreActor::OnVulnerableStatusChanged
 	virtual void OnTargetableStatusChanged_Implementation(bool bNewTargetableStatus);  // slot 294 (+0x930), UFunction ABuildingFOBCoreActor::OnTargetableStatusChanged
 	virtual void OnActiveStatusChanged_Implementation(bool bNewActiveStatus);  // slot 295 (+0x938), UFunction ABuildingFOBCoreActor::OnActiveStatusChanged
@@ -5077,7 +5077,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
-	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingFOBCoreSpawnPad::GetCoreSpawnTransform_Implementation (signature not recovered)
+	virtual FTransform GetCoreSpawnTransform_Implementation() const;  // slot 292 (+0x920), UFunction ABuildingFOBCoreSpawnPad::GetCoreSpawnTransform
 	static void StaticRegisterNativesABuildingFOBCoreSpawnPad();
 	static void execGetCoreSpawnTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -5240,7 +5240,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingGameplayActorConsumable::PrepareOnConsumeGameplayEffectSpec_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x928();  // slot 293: ABuildingGameplayActorConsumable::GetDeathFXTransform_Implementation (signature not recovered)
+	virtual FTransform GetDeathFXTransform_Implementation() const;  // slot 293 (+0x928), UFunction ABuildingGameplayActorConsumable::GetDeathFXTransform
 	static void StaticRegisterNativesABuildingGameplayActorConsumable();
 	static void execGetDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOnConsumeGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8829,7 +8829,7 @@ public:
 	virtual void FNGC_VSlot_0x5E0();
 	virtual void InitializeHUDForPlayer_Implementation(APlayerController* NewPlayer);  // slot 189 (+0x5E8), UFunction AGameModeBase::InitializeHUDForPlayer
 	virtual void InitStartSpot_Implementation(AActor* StartSpot, AController* NewPlayer);  // slot 190 (+0x5F0), UFunction AGameModeBase::InitStartSpot
-	virtual void FNGC_VSlot_0x5F8();  // slot 191: AGameModeBase::SpawnDefaultPawnAtTransform_Implementation (signature not recovered)
+	virtual APawn* SpawnDefaultPawnAtTransform_Implementation(AController* NewPlayer, FTransform const& SpawnTransform);  // slot 191 (+0x5F8), UFunction AGameModeBase::SpawnDefaultPawnAtTransform
 	virtual APawn* SpawnDefaultPawnFor_Implementation(AController* NewPlayer, AActor* StartSpot);  // slot 192 (+0x600), UFunction AGameModeBase::SpawnDefaultPawnFor
 	virtual bool PlayerCanRestart_Implementation(APlayerController* Player);  // slot 193 (+0x608), UFunction AGameModeBase::PlayerCanRestart
 	virtual AActor* FindPlayerStart_Implementation(AController* Player, const FString& IncomingName);  // slot 194 (+0x610), UFunction AGameModeBase::FindPlayerStart
@@ -8872,7 +8872,7 @@ public:
 	virtual void ChangeName(AController* Controller, const FString& NewName, bool bNameChange);  // slot 231 (+0x738), UFunction AGameModeBase::ChangeName
 	virtual void RestartPlayer(AController* NewPlayer);  // slot 232 (+0x740), UFunction AGameModeBase::RestartPlayer
 	virtual void RestartPlayerAtPlayerStart(AController* NewPlayer, AActor* StartSpot);  // slot 233 (+0x748), UFunction AGameModeBase::RestartPlayerAtPlayerStart
-	virtual void FNGC_VSlot_0x750();  // slot 234: AGameModeBase::RestartPlayerAtTransform (signature not recovered)
+	virtual void RestartPlayerAtTransform(AController* NewPlayer, FTransform const& SpawnTransform);  // slot 234 (+0x750), UFunction AGameModeBase::RestartPlayerAtTransform
 	static void StaticRegisterNativesAGameModeBase();
 	static void execCanSpectate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execChangeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -16732,7 +16732,7 @@ public:
 	virtual bool IsAnySimulatingPhysics() const;  // slot 120 (+0x3C0), UFunction USceneComponent::IsAnySimulatingPhysics
 	virtual void DetachFromParent(bool bMaintainWorldPosition, bool bCallModify);  // slot 121 (+0x3C8), UFunction USceneComponent::DetachFromParent
 	virtual void FNGC_VSlot_0x3D0();
-	virtual void FNGC_VSlot_0x3D8();  // slot 123: USceneComponent::GetSocketTransform (signature not recovered)
+	virtual FTransform GetSocketTransform(FName InSocketName, ERelativeTransformSpace TransformSpace) const;  // slot 123 (+0x3D8), UFunction USceneComponent::GetSocketTransform
 	virtual FVector GetSocketLocation(FName InSocketName) const;  // slot 124 (+0x3E0), UFunction USceneComponent::GetSocketLocation
 	virtual FRotator GetSocketRotation(FName InSocketName) const;  // slot 125 (+0x3E8), UFunction USceneComponent::GetSocketRotation
 	virtual void FNGC_VSlot_0x3F0();  // slot 126: USceneComponent::GetSocketQuaternion (signature not recovered)
@@ -24963,8 +24963,8 @@ public:
 	virtual void FNGC_VSlot_0x880();
 	virtual void FNGC_VSlot_0x888();
 	virtual void FNGC_VSlot_0x890();
-	virtual void FNGC_VSlot_0x898();  // slot 275: UInstancedStaticMeshComponent::AddInstance (signature not recovered)
-	virtual void FNGC_VSlot_0x8A0();  // slot 276: UInstancedStaticMeshComponent::UpdateInstanceTransform (signature not recovered)
+	virtual int32 AddInstance(FTransform const& InstanceTransform);  // slot 275 (+0x898), UFunction UInstancedStaticMeshComponent::AddInstance
+	virtual bool UpdateInstanceTransform(int32 InstanceIndex, FTransform const& NewInstanceTransform, bool bWorldSpace, bool bMarkRenderStateDirty, bool bTeleport);  // slot 276 (+0x8A0), UFunction UInstancedStaticMeshComponent::UpdateInstanceTransform
 	virtual bool RemoveInstance(int32 InstanceIndex);  // slot 277 (+0x8A8), UFunction UInstancedStaticMeshComponent::RemoveInstance
 	virtual void ClearInstances();  // slot 278 (+0x8B0), UFunction UInstancedStaticMeshComponent::ClearInstances
 	virtual TArray<int32> GetInstancesOverlappingSphere(FVector const& Center, float Radius, bool bSphereInWorldSpace) const;  // slot 279 (+0x8B8), UFunction UInstancedStaticMeshComponent::GetInstancesOverlappingSphere
@@ -66611,7 +66611,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual void FNGC_VSlot_0x838();
 	virtual void FNGC_VSlot_0x840();
-	virtual void FNGC_VSlot_0x848();  // slot 265: UPaperGroupedSpriteComponent::UpdateInstanceTransform (signature not recovered)
+	virtual bool UpdateInstanceTransform(int32 InstanceIndex, FTransform const& NewInstanceTransform, bool bWorldSpace, bool bMarkRenderStateDirty, bool bTeleport);  // slot 265 (+0x848), UFunction UPaperGroupedSpriteComponent::UpdateInstanceTransform
 	virtual bool UpdateInstanceColor(int32 InstanceIndex, FLinearColor NewInstanceColor, bool bMarkRenderStateDirty);  // slot 266 (+0x850), UFunction UPaperGroupedSpriteComponent::UpdateInstanceColor
 	virtual bool RemoveInstance(int32 InstanceIndex);  // slot 267 (+0x858), UFunction UPaperGroupedSpriteComponent::RemoveInstance
 	virtual void ClearInstances();  // slot 268 (+0x860), UFunction UPaperGroupedSpriteComponent::ClearInstances
