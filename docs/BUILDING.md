@@ -102,6 +102,9 @@ Re-running a generator that only changes evidence (`analysis/uht-*-symbols.json`
 rebuild: `python tools/matching/compare.py --quiet` recomputes every result from the existing
 objects. Reconstruction, compilation and byte matching are tracked as separate stages:
 `generate.py` prints them under `pipeline` (reconstructed, compiled, exact, needs investigation).
+`compare.py --dump-observations <file>` also writes the final leave-one-out observations as
+JSON, for studying layout rules offline without a full run per idea. The file holds reference
+addresses, so keep it outside the repository.
 
 ## IDA (optional)
 

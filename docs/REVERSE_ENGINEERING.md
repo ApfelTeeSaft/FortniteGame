@@ -1133,6 +1133,24 @@ the 137 units with two or more `StaticEnum`s; the other 9 have wide gaps.
 
 This made 279 `StaticEnum`s exact, 653 of 1,089 in all, with no regressions.
 
+**Lower end after another unit's `.bss`.** When the other members are contiguous and both end
+slots are free, the block's start decides. A unit's block opens its object's `.bss`. In 97 of
+137 units the slot just below it holds another unit's `PrivateStaticClass`, the last static of
+that object. `compare.py` takes the lower end when, by other entries' observations:
+- the slot below the lower candidate holds exactly one symbol;
+- that symbol is a `PrivateStaticClass`;
+- it is the last `.bss` static of its own object (the object of its `GetPrivateStaticClass`
+  entry, in our layout);
+- that object belongs to another unit.
+
+An offline simulation gave 44 right and none wrong. Two weaker variants were rejected:
+- any static of another object below the block: 2 wrong;
+- the last static of its object of any kind: 1 wrong. After a `ReturnStruct` the reference
+  can leave an 8-byte hole.
+
+Two structural guesses failed outright: the block start is not 16-byte aligned (62 of 128
+contiguous blocks are), and the unit's plain `.bss` alignment does not predict it either.
+
 **Vector-constant initializers.** Each unit's `GlobalVectorConstants` are written by leaf
 initializers that open its `.CRT$XCU` range. `unity_order.py` records their addresses next
 to the constants' names, and `unity.py` lists them in
@@ -1495,6 +1513,59 @@ jump to them, with no regressions. Of the 662 bodies left:
   member, sides that disagree), or one side's shape or free-slot check fails;
 - 63 wait only on `PrivateStaticClass`, 23 on `AddReferencedObjects`, and the rest on
   several fields or a `StaticRegisterNatives` with natives.
+
+### `.bss` statics: creator order and rigid pairs
+
+The remaining `.bss` statics were studied offline from `compare.py --dump-observations`: the
+final leave-one-out observations, written as JSON. Usually one side of the section-relative
+prediction was right and the other side wrong. The rule that compares runs of agreeing
+neighbours then tied or chose the wrong side.
+
+**Creator order.** A creator's `FFunctionParams` record (`.data`) and its `ReturnFunction`
+static (`.bss`) are both function-local statics, emitted in definition order. In the reference
+the records' order equals the statics' order in all 168 units with creators. The name order
+matches in only 50 of them.
+- The old order took class-scope delegate signatures by code address, then functions by name.
+  The delegates are not in code-address order.
+- `uht_creators.py` now emits each class's creators in record order. It reads only the
+  `.data` record addresses, located by name; no `.bss` address. 19 classes changed order.
+
+**Rigid pairs.** Over all consecutive layout items both observed, by kind:
+
+| Pair (in our layout) | Same distance in the reference |
+| --- | --- |
+| `OuterClass<C>` then `PrivateStaticClass<C>` | 3,283 of 3,283 |
+| last creator of C then `OuterClass<C>` | 1,238 of 1,238 |
+| creator then creator, same class | 9,765 of 9,859 |
+| `Singleton<S>` then `ReturnStruct<S>` | 2,064 of 2,089 |
+| `StaticEnum` singleton then singleton | 352 of 629 |
+
+The first two have a structural reason. `Z_Construct_UClass_C` directly precedes C's
+`IMPLEMENT_CLASS`, and the class's creators directly precede its class constructor. When the
+two sides disagree, a side whose neighbour is the symbol's rigid partner, directly next to it,
+decides (`rigid_successor`). In simulation this was 126 right and none wrong.
+
+The weaker pairs were rejected:
+- Same-class creators as a tie-break: 90 wrong against 24 right on the unresolved fields. Those
+  are exactly the creators whose order differs.
+- The struct pair before the run rule: 22 right predictions lost against 20 gained.
+
+**Results.** 253 functions became exact:
+- 74 creators;
+- 63 `GetPrivateStaticClass` bodies;
+- 39 class constructors (all 2,045 function-less ones are exact now);
+- 39 `StaticEnum`s;
+- 38 class registration initializers.
+
+**Known regressions (4).** `FInterpControlPoint` and `FFortPartySuggestion` lose their
+constructor and, through it, their `StaticStruct`.
+- In the reference, their classes' delegate signatures come before the header's enum and
+  struct statics. Our class fragment places them after.
+- Reordered, the delegates now form a 5-slot run that outvotes the struct's 2-slot run, so the
+  `ReturnStruct` prediction fails (and is reported unresolved).
+- The delegates precede the header's items in 17 such classes and follow them in 18. The fix
+  is to place a class's delegate creators by their records' position among the unit's other
+  records. That needs a fragment of their own in `unity.py`.
 
 ## Naming confidence
 

@@ -27,6 +27,7 @@ import argparse
 from collections import Counter, defaultdict
 import hashlib
 import json
+import re
 import struct
 import sys
 from pathlib import Path
@@ -249,13 +250,14 @@ class Resolver:
                 return off, next(iter(ovals)) + mine - off, f"{name} (seen in {owho})"
             return None
 
-        nearest = []
+        nearest, nearest_at = [], []
         for step in (-1, 1):
             j = i + step
             while 0 <= j < len(items):
                 n = observed_pred(j)
                 if n is not None:
                     nearest.append(n)
+                    nearest_at.append(j)
                     break
                 j += step
         local = local_prediction(mine, nearest)
@@ -265,6 +267,13 @@ class Resolver:
             return [(pred, "section-relative (local) to " + basis[0] + extra)]
         if len(nearest) < 2:
             return self._slot_elimination(symbol, exclude)
+        # The sides disagree. A side whose neighbour is the symbol's rigid partner, directly
+        # next to it in the layout, decides (rigid_successor).
+        (_, lpred, ldesc), (_, rpred, rdesc) = nearest
+        if nearest_at[0] == i - 1 and rigid_successor(items[i - 1][1], symbol):
+            return [(lpred, "section-relative (rigid pair) to " + ldesc + " (the other side disagrees)")]
+        if nearest_at[1] == i + 1 and rigid_successor(symbol, items[i + 1][1]):
+            return [(rpred, "section-relative (rigid pair) to " + rdesc + " (the other side disagrees)")]
         # The sides disagree: a gap next to the symbol. Each side's run is the observed
         # neighbours that agree with its nearest one, up to the first that does not. The
         # strictly longer run's prediction is used; that side holds more of the symbol's own
@@ -524,10 +533,39 @@ class Resolver:
         else:
             cand = [c for c in (a[0] - step, a[-1] + step) if not self._held_by_other(c, block, exclude)]
             how = "the free end of"
+            if len(cand) == 2 and self._closes_other_unit(a[0] - 2 * step, block, exclude):
+                cand, how = [a[0] - step], "the lower end (another unit's .bss closes just below it) of"
         if len(cand) != 1:
             return []
         return [(cand[0], f"slot elimination: {how} the {len(a)} other slots of {block['unit']}'s "
                           f"{len(block['symbols'])}-slot block")]
+
+    def _closes_other_unit(self, addr: int, block: dict, exclude: int | None) -> bool:
+        """Whether other entries observe, at `addr`, the PrivateStaticClass that is the last .bss
+        static of another unit's object. A unit's singleton block opens its .bss, so the block
+        then starts directly above it. Measured on the reference: no 8-byte hole follows such a
+        static (44 of 44 blocks); after other kinds of statics one can (2 cases)."""
+        held = {k if isinstance(k, str) else k[1] for k, ents in self.by_addr.get(addr, {}).items() if ents - {exclude}}
+        if len(held) != 1:
+            return False
+        psc = next(iter(held))
+        m = re.match(r"\?PrivateStaticClass@\?1\?\?(GetPrivateStaticClass@\w+@@CAPEAVUClass@@XZ)@", psc)
+        objpath = getattr(self, "symbol_objects", {}).get("?" + m.group(1)) if m else None
+        if objpath is None:
+            return False
+        unit = objpath.replace("\\", "/").rsplit("/", 1)[-1].split(".gen.obj")[0]
+        if unit.split(".s")[0] == block["unit"]:
+            return False
+        last = getattr(self, "_last_bss", None)
+        if last is None:
+            last = self._last_bss = {}
+        if objpath not in last:
+            try:
+                items = (_OBJ_CACHE.get(objpath) or CoffObject(OBJ_ROOT / objpath)).data_layout().get(".bss", [])
+            except FileNotFoundError:
+                items = []
+            last[objpath] = max(items, key=lambda t: t[1])[0] if items else None
+        return last[objpath] == psc
 
     def _observed_by_name(self, name: str, exclude: int | None) -> set[int]:
         if getattr(self, "_name_index", None) is None:
@@ -584,6 +622,26 @@ class Resolver:
                 self.folded_obs.setdefault(fb, {}).setdefault(target, set()).add(idx)
             self.by_addr.setdefault(target, {}).setdefault(key, set()).add(idx)
             self.entry_addrs.setdefault(idx, set()).add(target)
+
+
+_OUTER_CLASS = re.compile(r"\?OuterClass@\?1\?\?Z_Construct_UClass_(\w+)@@YAPEAVUClass@@XZ@")
+
+
+def rigid_successor(prev: str, nxt: str) -> bool:
+    """Whether static `nxt` directly follows static `prev` in every reference unit's .bss:
+    - a class's OuterClass, then its PrivateStaticClass (Z_Construct_UClass_C precedes C's
+      IMPLEMENT_CLASS): 3,283 of 3,283 observed pairs;
+    - a class's last creator's ReturnFunction, then its OuterClass (the creators precede the
+      class constructor): 1,238 of 1,238.
+    Used only to break a disagreement between the two sides of a section-relative prediction."""
+    m = _OUTER_CLASS.match(prev)
+    if m:
+        return nxt.startswith(f"?PrivateStaticClass@?1??GetPrivateStaticClass@{m.group(1)}@@")
+    m = _OUTER_CLASS.match(nxt)
+    if m:
+        c = re.escape(m.group(1))
+        return re.match(rf"\?ReturnFunction@\?1\?\?Z_Construct_U(?:Delegate)?Function_{c}_", prev) is not None
+    return False
 
 
 def local_prediction(mine: int, neighbours: list[tuple[int, int, str]]) -> tuple[int, list[str]] | None:
@@ -913,6 +971,9 @@ def main() -> int:
     ap.add_argument("--build", action="store_true")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--quiet", action="store_true", help="print a summary instead of every entry")
+    ap.add_argument("--dump-observations", metavar="PATH",
+                    help="also write the final leave-one-out observations (symbol -> addresses -> entries) "
+                         "as JSON, for offline layout studies")
     args = ap.parse_args()
     if args.build:
         import msvc
@@ -961,6 +1022,7 @@ def main() -> int:
     # Evaluate to a fixpoint. An exact function's symbol may resolve its callers' relocations,
     # and relocation-equivalent-or-better functions contribute observations that resolve
     # *other* entries' fields (leave-one-out). Observations are gathered between passes only.
+    resolver.symbol_objects = {e["symbol"]: e["object"] for e in entries if e.get("symbol") and e.get("object")}
     for i, e in enumerate(entries):
         resolver.entry_names[i] = e["name"]
         if e.get("start_rva") and e.get("end_rva"):
@@ -1004,6 +1066,14 @@ def main() -> int:
                         added = True
         if not added:
             break
+
+    if args.dump_observations:
+        obs = []
+        for k, d in sorted(resolver.observations.items(), key=lambda kv: repr(kv[0])):
+            objpath, sym = (k[0], k[1]) if isinstance(k, tuple) else ("", k)
+            obs.append({"object": objpath, "symbol": sym,
+                        "at": {f"0x{a:08X}": sorted(entries[i]["name"] for i in ents) for a, ents in sorted(d.items())}})
+        Path(args.dump_observations).write_text(json.dumps({"observations": obs}, indent=0), encoding="utf-8")
 
     stale = []
     for i, res in results.items():

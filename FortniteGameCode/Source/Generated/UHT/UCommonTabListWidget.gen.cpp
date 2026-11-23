@@ -37,25 +37,6 @@ void UCommonTabListWidget::StaticRegisterNativesUCommonTabListWidget()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA8F0 (end 0x002CA91F)
-// Original VA: 0x00000001402CA8F0 | File offset: 0x002C9EF0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x0417E870; StructureSize 0x10 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTabListWidget, "OnTabButtonCreated__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
 struct Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonRemoved__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -70,6 +51,25 @@ UFunction* Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonRemoved
 	{
 		// FuncParams: original RVA 0x0417E7B0; StructureSize 0x10 is sizeof the event parms struct.
 		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTabListWidget, "OnTabButtonRemoved__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonRemoved__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature_Statics
+{
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA8F0 (end 0x002CA91F)
+// Original VA: 0x00000001402CA8F0 | File offset: 0x002C9EF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		// FuncParams: original RVA 0x0417E870; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTabListWidget, "OnTabButtonCreated__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;

@@ -21,25 +21,6 @@ void UMultiLineEditableTextBox::StaticRegisterNativesUMultiLineEditableTextBox()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDAB0 (end 0x01BEDADF)
-// Original VA: 0x0000000141BEDAB0 | File offset: 0x01BED0B0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x043C2EB0; StructureSize 0x18 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMultiLineEditableTextBox, "OnMultiLineEditableTextBoxChangedEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00530000, 0x18, Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
 struct Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -54,6 +35,25 @@ UFunction* Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEd
 	{
 		// FuncParams: original RVA 0x043C2E30; StructureSize 0x20 is sizeof the event parms struct.
 		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMultiLineEditableTextBox, "OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00530000, 0x20, Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Statics
+{
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDAB0 (end 0x01BEDADF)
+// Original VA: 0x0000000141BEDAB0 | File offset: 0x01BED0B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		// FuncParams: original RVA 0x043C2EB0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMultiLineEditableTextBox, "OnMultiLineEditableTextBoxChangedEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00530000, 0x18, Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;

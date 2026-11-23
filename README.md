@@ -7,7 +7,7 @@ target, UE4.20 integration, and recovery of the Unreal project.
 
 ![Fortnite 2.5 — Exact Function Matches](docs/images/byte-match-progress.svg)
 
-*Text alternative: 36,099 of 157,719 identified functions (primary `.pdata` entries, 22.89 %) match the
+*Text alternative: 36,348 of 157,719 identified functions (primary `.pdata` entries, 23.05 %) match the
 original bytes exactly. Function bodies in the shipping executable are encrypted on disk, so
 bodies are compared with a locally validated decrypted image of the same build. A relocation
 counts only when resolved from independent evidence or corroborated by a different matched

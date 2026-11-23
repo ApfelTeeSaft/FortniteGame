@@ -81,6 +81,21 @@ void UAbilitySystemComponent::StaticRegisterNativesUAbilitySystemComponent()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00538470 (end 0x0053849F)
+// Original VA: 0x0000000140538470 | File offset: 0x00537A70
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityConfirmOrCancel__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		// FuncParams: original RVA 0x0418F890; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilitySystemComponent, "AbilityConfirmOrCancel__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+	}
+	return ReturnFunction;
+}
+
 struct Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityAbilityKey__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -95,21 +110,6 @@ UFunction* Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityAbilityK
 	{
 		// FuncParams: original RVA 0x0418F910; StructureSize 0x4 is sizeof the event parms struct.
 		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilitySystemComponent, "AbilityAbilityKey__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x4, Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityAbilityKey__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00538470 (end 0x0053849F)
-// Original VA: 0x0000000140538470 | File offset: 0x00537A70
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityConfirmOrCancel__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x0418F890; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilitySystemComponent, "AbilityConfirmOrCancel__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;

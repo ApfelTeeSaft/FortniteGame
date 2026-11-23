@@ -41,20 +41,20 @@ void UFortUIManagerWidget_NUI::StaticRegisterNativesUFortUIManagerWidget_NUI()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature_Statics
+struct Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnShouldBlockSubtitlePortraitChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AAD0 (end 0x0290AAFF)
-// Original VA: 0x000000014290AAD0 | File offset: 0x0290A0D0
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AB30 (end 0x0290AB5F)
+// Original VA: 0x000000014290AB30 | File offset: 0x0290A130
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature()
+UFunction* Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnShouldBlockSubtitlePortraitChanged__DelegateSignature()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		// FuncParams: original RVA 0x045C9C30; StructureSize 0x40 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIManagerWidget_NUI, "OnBeginSpokenDialog__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x40, Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature_Statics::PropPointers, 5, 0, 0 };
+		// FuncParams: original RVA 0x045C9A80; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIManagerWidget_NUI, "OnShouldBlockSubtitlePortraitChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x1, Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnShouldBlockSubtitlePortraitChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
@@ -75,20 +75,20 @@ UFunction* Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnEndSpokenDia
 	return ReturnFunction;
 }
 
-struct Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnShouldBlockSubtitlePortraitChanged__DelegateSignature_Statics
+struct Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AB30 (end 0x0290AB5F)
-// Original VA: 0x000000014290AB30 | File offset: 0x0290A130
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AAD0 (end 0x0290AAFF)
+// Original VA: 0x000000014290AAD0 | File offset: 0x0290A0D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnShouldBlockSubtitlePortraitChanged__DelegateSignature()
+UFunction* Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		// FuncParams: original RVA 0x045C9A80; StructureSize 0x1 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIManagerWidget_NUI, "OnShouldBlockSubtitlePortraitChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x1, Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnShouldBlockSubtitlePortraitChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+		// FuncParams: original RVA 0x045C9C30; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIManagerWidget_NUI, "OnBeginSpokenDialog__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x40, Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature_Statics::PropPointers, 5, 0, 0 };
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;

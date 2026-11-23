@@ -632,6 +632,20 @@ def test_folded_and_code_run() -> None:
     print("folded bodies and code runs: ok")
 
 
+def test_rigid_successor() -> None:
+    from compare import rigid_successor
+    oc = lambda c: f"?OuterClass@?1??Z_Construct_UClass_{c}@@YAPEAVUClass@@XZ@4PEAV2@EA"
+    psc = lambda c: f"?PrivateStaticClass@?1??GetPrivateStaticClass@{c}@@CAPEAVUClass@@XZ@4PEAV3@EA"
+    rf = lambda f: f"?ReturnFunction@?1??{f}@@YAPEAVUFunction@@XZ@4PEAV2@EA"
+    assert rigid_successor(oc("AActor"), psc("AActor"))
+    assert not rigid_successor(oc("AActor"), psc("AActorB")) and not rigid_successor(psc("AActor"), oc("AActor"))
+    assert rigid_successor(rf("Z_Construct_UFunction_AActor_Tick"), oc("AActor"))
+    assert rigid_successor(rf("Z_Construct_UDelegateFunction_AActor_OnX__DelegateSignature"), oc("AActor"))
+    assert not rigid_successor(rf("Z_Construct_UFunction_APawn_Tick"), oc("AActor"))
+    assert not rigid_successor(rf("Z_Construct_UFunction_AActor_Tick"), rf("Z_Construct_UFunction_AActor_Walk"))
+    print("rigid successors: ok")
+
+
 def test_slot_elimination() -> None:
     from compare import Resolver
     r = Resolver.__new__(Resolver)
@@ -653,11 +667,25 @@ def test_slot_elimination() -> None:
     assert r._slot_elimination("A", None) == []
     setup({"A": 0x100, "B": 0x108, "D": 0x140})                           # not one block: declined
     assert r._slot_elimination("C", None) == []
+    # Both ends free, but just below the block another unit's .bss closes with a class's
+    # PrivateStaticClass: the block starts directly above it, so A takes the lower end.
+    psc = "?PrivateStaticClass@?1??GetPrivateStaticClass@AOther@@CAPEAVUClass@@XZ@4PEAV3@EA"
+    other_obj = "Source/Generated/UHT/Unity/V.1.gen.obj"
+    r.symbol_objects = {"?GetPrivateStaticClass@AOther@@CAPEAVUClass@@XZ": other_obj}
+    r._last_bss = {other_obj: psc}
+    setup({"B": 0x108, "C": 0x110, "D": 0x118}, {psc: 0xF8})
+    assert [p for p, _ in r._slot_elimination("A", None)] == [0x100]
+    r._last_bss = {other_obj: "?Something@@3PEAXEA"}                    # not its object's last static
+    assert r._slot_elimination("A", None) == []
+    r._last_bss = {"Source/Generated/UHT/Unity/U.1.s2.gen.obj": psc}     # the block's own unit
+    r.symbol_objects = {"?GetPrivateStaticClass@AOther@@CAPEAVUClass@@XZ": "Source/Generated/UHT/Unity/U.1.s2.gen.obj"}
+    assert r._slot_elimination("A", None) == []
     print("slot elimination: ok")
 
 
 def main() -> int:
     test_slot_elimination()
+    test_rigid_successor()
     test_split_objects()
     test_accessor_mangling()
     test_accessor_shapes()

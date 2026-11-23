@@ -85,39 +85,20 @@ void UFortMcpContext::StaticRegisterNativesUFortMcpContext()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature_Statics
+struct Z_Construct_UDelegateFunction_UFortMcpContext_OnSendFriendCodePlatformMessageComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01024220 (end 0x0102424F)
-// Original VA: 0x0000000141024220 | File offset: 0x01023820
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010242B0 (end 0x010242DF)
+// Original VA: 0x00000001410242B0 | File offset: 0x010238B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature()
+UFunction* Z_Construct_UDelegateFunction_UFortMcpContext_OnSendFriendCodePlatformMessageComplete__DelegateSignature()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		// FuncParams: original RVA 0x042B6F50; StructureSize 0x20 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMcpContext, "OnDownloadEULAComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x20, Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UFortMcpContext_OnIssueFriendCodeComplete__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01024250 (end 0x0102427F)
-// Original VA: 0x0000000141024250 | File offset: 0x01023850
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortMcpContext_OnIssueFriendCodeComplete__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x042B6E80; StructureSize 0x28 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMcpContext, "OnIssueFriendCodeComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00520000, 0x28, Z_Construct_UDelegateFunction_UFortMcpContext_OnIssueFriendCodeComplete__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+		// FuncParams: original RVA 0x042B6CA0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMcpContext, "OnSendFriendCodePlatformMessageComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x1, Z_Construct_UDelegateFunction_UFortMcpContext_OnSendFriendCodePlatformMessageComplete__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
@@ -142,20 +123,39 @@ UFunction* Z_Construct_UDelegateFunction_UFortMcpContext_OnQueryUnredeemedFriend
 	return ReturnFunction;
 }
 
-struct Z_Construct_UDelegateFunction_UFortMcpContext_OnSendFriendCodePlatformMessageComplete__DelegateSignature_Statics
+struct Z_Construct_UDelegateFunction_UFortMcpContext_OnIssueFriendCodeComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010242B0 (end 0x010242DF)
-// Original VA: 0x00000001410242B0 | File offset: 0x010238B0
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01024250 (end 0x0102427F)
+// Original VA: 0x0000000141024250 | File offset: 0x01023850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortMcpContext_OnSendFriendCodePlatformMessageComplete__DelegateSignature()
+UFunction* Z_Construct_UDelegateFunction_UFortMcpContext_OnIssueFriendCodeComplete__DelegateSignature()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		// FuncParams: original RVA 0x042B6CA0; StructureSize 0x1 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMcpContext, "OnSendFriendCodePlatformMessageComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x1, Z_Construct_UDelegateFunction_UFortMcpContext_OnSendFriendCodePlatformMessageComplete__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+		// FuncParams: original RVA 0x042B6E80; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMcpContext, "OnIssueFriendCodeComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00520000, 0x28, Z_Construct_UDelegateFunction_UFortMcpContext_OnIssueFriendCodeComplete__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature_Statics
+{
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01024220 (end 0x0102424F)
+// Original VA: 0x0000000141024220 | File offset: 0x01023820
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		// FuncParams: original RVA 0x042B6F50; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMcpContext, "OnDownloadEULAComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x20, Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;

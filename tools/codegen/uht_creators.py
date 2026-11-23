@@ -166,9 +166,9 @@ def main() -> int:
         fns = [(f["name"], int(f["construct_rva"], 16)) for f in arr["functions"]]
         if not arr["class"] or not all(is_creator(c) for _, c in fns):
             continue
-        # Definition order: UHT emits a class's delegate signatures first, in header order
-        # (their creators' code addresses preserve it), then its functions sorted by name,
-        # which is the FClassFunctionLinkInfo order.
+        # Provisional order: delegate signatures by code address, then functions by name (the
+        # FClassFunctionLinkInfo order). The bodies are emitted in FFunctionParams record order
+        # below, which is the reference's definition order.
         delegates = sorted((x for x in fns if x[0].endswith("__DelegateSignature")), key=lambda x: x[1])
         functions = [x for x in fns if not x[0].endswith("__DelegateSignature")]
         classes.append((arr["class"], arr, delegates + functions))
@@ -206,6 +206,7 @@ def main() -> int:
             "",
         ]
         externs, bodies, emitted_fns = set(), [], set()
+        creator_bodies = []   # (FFunctionParams record RVA or None, text)
         nat = natives_by_class.get(cls)
         if nat is not None and not is_srn(int(nat["static_register_natives_rva"], 16)):
             nat = None
@@ -256,7 +257,7 @@ def main() -> int:
                 end = rfs[crva].end
                 note = f"record not identified: {len(cands)} candidate(s) by name"
                 stats["funcparams_unresolved"] += 1
-                bodies.append(
+                creator_bodies.append((None,
                     f"struct {statics}\n{{\n"
                     f"\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;  // {note}\n}};\n"
                     f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
@@ -264,7 +265,7 @@ def main() -> int:
                     f"// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json\n"
                     f"UFunction* {cname}()\n{{\n\tstatic UFunction* ReturnFunction = nullptr;\n\tif (!ReturnFunction)\n\t{{\n"
                     f"\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, {statics}::FuncParams);\n\t}}\n"
-                    f"\treturn ReturnFunction;\n}}\n")
+                    f"\treturn ReturnFunction;\n}}\n"))
                 entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}", "name": cname, "class": cls})
                 emitted_fns.add(fname)
                 continue
@@ -307,7 +308,7 @@ def main() -> int:
             # TClassCompiledInDefer objects in one block of the object's .data, with every
             # parameter record after it in its own section (docs/REVERSE_ENGINEERING.md, "Data
             # layout"). Only PropPointers stays a declared member until properties are recovered.
-            bodies.append(
+            creator_bodies.append((rec,
                 (f"struct {statics}\n{{\n{prop_decl}}};\n" if prop_decl else "")
                 + f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
                 f"// Original VA: 0x{base + crva:016X} | File offset: 0x{img.rva_to_off(crva):08X}\n"
@@ -318,11 +319,23 @@ def main() -> int:
                 f"\"{name_lit}\", {flags_expr}, {super_expr}, (EFunctionFlags)0x{fflags:08X}, 0x{size:X}, "
                 f"{prop_expr}, {rpc}, {rpcr} }};\n"
                 f"\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);\n\t}}\n"
-                f"\treturn ReturnFunction;\n}}\n")
+                f"\treturn ReturnFunction;\n}}\n"))
             symbols[local_funcparams(cname)] = [f"0x{rec:08X}", "name" if len(cands) == 1 else outer_code]
             entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}",
                             "name": cname, "class": cls})
             emitted_fns.add(fname)
+        # Definition order. A creator's FFunctionParams record and its ReturnFunction static are
+        # both function-local statics, emitted in the order the creators are defined. The records'
+        # order in the reference's .data equals the statics' order in its .bss in all 168 units
+        # (docs/REVERSE_ENGINEERING.md, "Creator order"). Delegate signatures in particular are
+        # not in code-address order. A creator without an identified record keeps its place
+        # after its predecessor. Only .data addresses are read; no .bss address.
+        key, ordered = None, []
+        for n, (rec, text) in enumerate(creator_bodies):
+            key = rec if rec is not None else key
+            ordered.append(((key if key is not None else -1), n, text))
+        stats["classes reordered by record order"] += [n for _, n, _ in sorted(ordered)] != list(range(len(ordered)))
+        bodies += [text for _, _, text in sorted(ordered)]
         zrva = consensus.get(cls)
         if zrva is None and cls in unity_ctor:
             zrva = unity_ctor[cls]
