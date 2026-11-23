@@ -65,11 +65,13 @@ MODELLED_STRUCTS = {"Vector": (12, 4), "Rotator": (12, 4), "Vector2D": (8, 4), "
                     "FastArraySerializerItem": (12, 4), "FortItemEntryStateValue": (24, 8),
                     "FortGiftingInfo": (40, 8), "FortItemEntry": (192, 8),
                     "InputEvent": (24, 8), "PointerEvent": (104, 8), "FortFeedbackHandle": (24, 8),
-                    "FortSentenceAudio": (64, 8), "FortConversationSentence": (200, 8), "Geometry": (56, 4)}
+                    "FortSentenceAudio": (64, 8), "FortConversationSentence": (200, 8), "Geometry": (56, 4),
+                    "SlateColor": (40, 8), "SlateBrush": (120, 8)}
 # Enums EngineStructsRecovered.h defines, with the reference's enumerator values, for the
 # structs' constructors; enum_declarations does not redeclare them.
 MODELLED_ENUMS = {"EViewTargetBlendFunction", "EGameplayAbilityActivationMode::Type", "EFortItemEntryState::Type",
-                  "EFortFeedbackBroadcastFilter"}
+                  "EFortFeedbackBroadcastFilter", "ESlateColorStylingMode::Type", "ESlateBrushDrawType::Type",
+                  "ESlateBrushTileType::Type", "ESlateBrushMirrorType::Type", "ESlateBrushImageType::Type"}
 REGISTER_RETURN = {"bool", "uint8", "int8", "int16", "int32", "int64", "uint16", "uint32", "uint64", "float", "double"}
 
 

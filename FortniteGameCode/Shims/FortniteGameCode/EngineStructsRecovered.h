@@ -208,6 +208,13 @@ public:
 		, Right(0.0f)
 		, Bottom(0.0f)
 	{ }
+
+	FMargin( float UniformMargin )
+		: Left(UniformMargin)
+		, Top(UniformMargin)
+		, Right(UniformMargin)
+		, Bottom(UniformMargin)
+	{ }
 };
 
 // Core: Math/TransformVectorized.h. Defined in TransformRecovered.h, which each unity unit
@@ -1139,4 +1146,162 @@ public:
 private:
 	FSlateRenderTransform AccumulatedRenderTransform;
 	const uint8 bHasRenderTransform : 1;
+};
+
+// Core: Math/Box2D.h
+struct FBox2D
+{
+	FVector2D Min;
+	FVector2D Max;
+	bool bIsValid;
+
+	FBox2D() { }
+
+	explicit FBox2D( EForceInit )
+	{
+		Init();
+	}
+
+	void Init()
+	{
+		Min = Max = FVector2D::ZeroVector;
+		bIsValid = false;
+	}
+};
+
+// SlateCore: Styling/SlateColor.h. The enumerators are the reference's (FEnumParams), as 4.20.
+namespace ESlateColorStylingMode
+{
+	enum Type
+	{
+		UseColor_Specified,
+		UseColor_Specified_Link,
+		UseColor_Foreground,
+		UseColor_Foreground_Subdued
+	};
+}
+
+struct FSlateColor
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+public:
+	FSlateColor()
+		: SpecifiedColor(FLinearColor(1.0f, 0.0f, 1.0f))
+		, ColorUseRule(ESlateColorStylingMode::UseColor_Specified)
+	{ }
+
+	FSlateColor( const FLinearColor& InColor )
+		: SpecifiedColor(InColor)
+		, ColorUseRule(ESlateColorStylingMode::UseColor_Specified)
+	{ }
+
+	~FSlateColor()
+	{ }
+
+protected:
+	FLinearColor SpecifiedColor;
+	TEnumAsByte<ESlateColorStylingMode::Type> ColorUseRule;
+
+private:
+	TSharedPtr<FLinearColor> LinkedSpecifiedColor;
+};
+
+// SlateCore: Styling/SlateBrush.h. The reference's FSlateBrush is 120 bytes, 4.20's 136: it has
+// no ResourceHandle (docs/ENGINE_DIFFERENCES.md #5). The reflected bitfields' SetBit functions
+// write offset 112, straight after ImageType; the out-of-line copy assignment (0x0028AB50) and
+// the destructor inlined in the exec thunks touch no shared pointer but TintColor's. The second
+// bitfield is reflected as bHasUObject (4.20: bHasUObject_DEPRECATED). Otherwise as 4.20; the
+// enumerators are the reference's.
+namespace ESlateBrushDrawType
+{
+	enum Type
+	{
+		NoDrawType,
+		Box,
+		Border,
+		Image
+	};
+}
+
+namespace ESlateBrushTileType
+{
+	enum Type
+	{
+		NoTile,
+		Horizontal,
+		Vertical,
+		Both
+	};
+}
+
+namespace ESlateBrushMirrorType
+{
+	enum Type
+	{
+		NoMirror,
+		Horizontal,
+		Vertical,
+		Both
+	};
+}
+
+namespace ESlateBrushImageType
+{
+	enum Type
+	{
+		NoImage,
+		FullColor,
+		Linear,
+	};
+}
+
+namespace SlateBrushDefs
+{
+	static const float DefaultImageSize = 32.0f;
+}
+
+struct FSlateBrush
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+public:
+	FVector2D ImageSize;
+	FMargin Margin;
+	FSlateColor TintColor;
+
+public:
+	FSlateBrush()
+		: ImageSize(SlateBrushDefs::DefaultImageSize, SlateBrushDefs::DefaultImageSize)
+		, Margin(0.0f)
+		, TintColor(FLinearColor::White)
+		, ResourceObject(nullptr)
+		, ResourceName(NAME_None)
+		, UVRegion(ForceInit)
+		, DrawAs(ESlateBrushDrawType::Image)
+		, Tiling(ESlateBrushTileType::NoTile)
+		, Mirroring(ESlateBrushMirrorType::NoMirror)
+		, ImageType(ESlateBrushImageType::NoImage)
+		, bIsDynamicallyLoaded(false)
+		, bHasUObject(false)
+	{ }
+
+	virtual ~FSlateBrush(){}
+
+private:
+	UObject* ResourceObject;
+
+protected:
+	FName ResourceName;
+	FBox2D UVRegion;
+
+public:
+	TEnumAsByte<enum ESlateBrushDrawType::Type > DrawAs;
+	TEnumAsByte<enum ESlateBrushTileType::Type> Tiling;
+	TEnumAsByte<enum ESlateBrushMirrorType::Type> Mirroring;
+	TEnumAsByte<enum ESlateBrushImageType::Type> ImageType;
+
+protected:
+	uint8 bIsDynamicallyLoaded:1;
+	uint8 bHasUObject:1;
 };

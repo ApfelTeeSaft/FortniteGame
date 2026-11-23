@@ -24,6 +24,16 @@ void AFortClientAnnouncement_Basic::execSetDisplayTime(UObject* Context, FFrame&
 	P_THIS->SetDisplayTime(Z_Param_DisplayTime);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1C40 (end 0x00FC1D78)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIcon) | Matching: see analysis/functions-uht-exec.json
+void AFortClientAnnouncement_Basic::execSetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FSlateBrush,Z_Param_Out_Icon);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIcon(Z_Param_Out_Icon);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC20B0 (end 0x00FC2172)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetTitleText) | Matching: see analysis/functions-uht-exec.json
 void AFortClientAnnouncement_Basic::execSetTitleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

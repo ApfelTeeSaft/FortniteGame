@@ -211,12 +211,17 @@ struct FVector2D
 	float Y;
 	__forceinline FVector2D() { }
 	__forceinline FVector2D(float InX, float InY) : X(InX), Y(InY) { }
+
+	static const FVector2D ZeroVector;   // Core: Math/Vector2D.h (CORE_API; monolithic)
 };
 
 struct FLinearColor
 {
 	float R, G, B, A;
 	__forceinline FLinearColor() {}
+	__forceinline FLinearColor(float InR,float InG,float InB,float InA = 1.0f): R(InR), G(InG), B(InB), A(InA) {}
+
+	static const FLinearColor White;     // Core: Math/Color.h (CORE_API; monolithic)
 };
 
 struct FGuid

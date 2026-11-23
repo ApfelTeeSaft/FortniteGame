@@ -223,6 +223,18 @@ void UFortItem::execGetSearchTags(UObject* Context, FFrame& Stack, void* const Z
 	*(FText*)Z_Param__Result=P_THIS->GetSearchTags();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DED80 (end 0x010DEF8C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSecondaryCategory) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetSecondaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_ItemCategoryText);
+	P_GET_STRUCT_REF(FSlateBrush,Z_Param_Out_ItemCategoryBrush);
+	P_GET_PROPERTY(UByteProperty,Z_Param_BrushSize);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetSecondaryCategory(Z_Param_Out_ItemCategoryText,Z_Param_Out_ItemCategoryBrush,EFortBrushSize::Type(Z_Param_BrushSize));
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01009900 (end 0x0100995E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSmallPreviewImage) | Matching: see analysis/functions-uht-exec.json
 void UFortItem::execGetSmallPreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -230,6 +242,18 @@ void UFortItem::execGetSmallPreviewImage(UObject* Context, FFrame& Stack, void* 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(TSoftObjectPtr<UTexture2D>*)Z_Param__Result=P_THIS->GetSmallPreviewImage();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DEF90 (end 0x010DF19C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTertiaryCategory) | Matching: see analysis/functions-uht-exec.json
+void UFortItem::execGetTertiaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY_REF(UTextProperty,Z_Param_Out_ItemCategoryText);
+	P_GET_STRUCT_REF(FSlateBrush,Z_Param_Out_ItemCategoryBrush);
+	P_GET_PROPERTY(UByteProperty,Z_Param_BrushSize);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetTertiaryCategory(Z_Param_Out_ItemCategoryText,Z_Param_Out_ItemCategoryBrush,EFortBrushSize::Type(Z_Param_BrushSize));
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79990 (end 0x00F799BF)

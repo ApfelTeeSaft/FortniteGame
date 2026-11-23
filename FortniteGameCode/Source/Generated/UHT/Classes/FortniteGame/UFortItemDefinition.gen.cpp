@@ -118,6 +118,15 @@ void UFortItemDefinition::execGetSmallPreviewImage(UObject* Context, FFrame& Sta
 	*(TSoftObjectPtr<UTexture2D>*)Z_Param__Result=P_THIS->GetSmallPreviewImage();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013EC0 (end 0x01013F3B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSmallPreviewImageBrush) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetSmallPreviewImageBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FSlateBrush*)Z_Param__Result=P_THIS->GetSmallPreviewImageBrush();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01018E50 (end 0x01018E7F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldShowPreviewOnCurrentHero) | Matching: see analysis/functions-uht-exec.json
 void UFortItemDefinition::execShouldShowPreviewOnCurrentHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

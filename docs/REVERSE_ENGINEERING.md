@@ -370,8 +370,8 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,565, at 1,313 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 894 read parameters |
-| exact | 1,304: 1,094 in the denominator, 210 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,569, at 1,317 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 897 read parameters |
+| exact | 1,307: 1,097 in the denominator, 210 leaf (no `.pdata`) |
 | relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
@@ -439,6 +439,7 @@ Supported types:
   Fortnite-only `FFortConversationSentence`, `FFortSentenceAudio` and
   `FFortFeedbackHandle` (below);
 - `FGeometry`, with `FMatrix2x2` and `FTransform2D` (`FSlateRenderTransform`) (below);
+- `FSlateBrush` (without 4.20's `ResourceHandle`), `FSlateColor` and `FBox2D` (below);
 - `FTransform` (`TransformRecovered.h`, below);
 - soft object pointers, `TSoftObjectPtr<C>` (`EngineStructsRecovered.h`): `FSoftObjectPath`,
   `TPersistentObjectPtr`, `FSoftObjectPtr` and `TSoftObjectPtr`, read with
@@ -515,8 +516,6 @@ Limits:
   - `TArray` elements may be any modelled type (see the list above). That added 7 thunks,
     including `TArray<FString>`, `TArray<FText>` and `TArray<FHitResult>` by value, all
     exact.
-  - `FSlateBrush` is not modelled: the reference's is 120 bytes, 4.20's 136
-    (`docs/ENGINE_DIFFERENCES.md`).
   - Soft object pointers follow the 4.20 headers, with one difference.
     - The default constructor is `TPersistentObjectPtr::Reset()`: an `INDEX_NONE` weak
       index, `NAME_None`, an emptied string and a zero tag. That needs `FName(EName)`,
@@ -608,6 +607,23 @@ Limits:
     thunks that construct one have a security cookie, as in the reference.
   - The 7 `UFortTouchControlRegion` touch and tick events (`OnMovePlayerRegionTouchStarted`
     and so on) are exact. They corroborate each other's constructor call.
+- **`FSlateBrush`.** The reference's is 120 bytes, 4.20's 136: it has no `ResourceHandle`, and
+  its second bitfield is reflected as `bHasUObject` (`docs/ENGINE_DIFFERENCES.md` #5).
+  - The bitfields' `SetBit` functions write offset 112, straight after `ImageType`.
+  - The exec thunks inline its default constructor: the vtable, a 32.0f image size,
+    `FLinearColor::White`, `FVector2D::ZeroVector` for `UVRegion`, and `DrawAs` = `Image`.
+    They also inline its destructor, which releases only `TintColor`'s shared pointer.
+  - `FSlateColor` and `FBox2D` are as 4.20. `FLinearColor::White` and
+    `FVector2D::ZeroVector` are declared; their definitions are not recovered.
+  - `SetIcon` and both category getters (`GetSecondaryCategory`, `GetTertiaryCategory`,
+    folded with `UFortWorker`'s) are exact.
+  - `GetSmallPreviewImageBrush` is relocation-equivalent. It is the only caller of the
+    out-of-line copy assignment (`0x0028AB50`), so nothing corroborates that address.
+  - That copy assignment matches except for its call to `FSlateColor::operator=`
+    (`0x0028ABE0`). Ours differs from the reference's only in register choice: the
+    reference loads the vtable into `rdx`/`r8` and saves `rbx` at `[rsp+0x10]`.
+  - Both forms occur in the reference: after a shared-pointer swap, 18 releases use
+    `rdx` and 109 use `rax`. The cause is open, and neither function is a manifest entry yet.
 - **Interfaces.** UHT 4.20 declares an interface's native functions, and their exec thunks,
   in the native `I<Name>` class (`typedef I<Name> ThisClass`), and registers
   `&I<Name>::exec<Fn>`. `UFunction::Invoke` passes the thunk the object's interface address
@@ -687,11 +703,10 @@ Limits:
       `rdx` (`ABuildingSMActor::GetReplacementDestructionReason`,
       `AFortTimeOfDayManager::GetPreviousDayPhase`);
     - `IFortTeamActorInterface::GetTeam` has only the thunk's call to go on.
-- Of the 1,661 virtual-native UFunctions, 1,594 have a supported signature and 1,565 have
-  thunks (folded bodies counted per UFunction). For the other 29, a slot is not declared
+- Of the 1,661 virtual-native UFunctions, 1,600 have a supported signature and 1,569 have
+  thunks (folded bodies counted per UFunction). For the other 31, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FSlateBrush` (6);
   - `TArray` of enums (3), and 3 whose struct is not identified;
   - 27 other types, mostly Fortnite-only structs, each the only blocker of 1 or 2.
 

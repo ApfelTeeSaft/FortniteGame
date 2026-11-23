@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FSlateColor();
 	UPackage* Z_Construct_UPackage__Script_SlateCore();  // RVA 0x0145CAE0
-struct alignas(8) FSlateColor
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FSlateColor is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0145BCF0 (end 0x0145BD61, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014145BCF0 | File offset: 0x0145B2F0
 // Recovery: confirmed (TEXT("SlateColor") and Z_Construct_UScriptStruct_FSlateColor) | Matching: see analysis/functions-uht-staticstruct.json

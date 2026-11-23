@@ -3361,6 +3361,7 @@ enum class EFOBIOStatus : uint8 {};
 enum class EFOBMode : uint8 {};
 enum class EFortAIDirectorEvent : uint8 {};
 enum class EFortAbilityTargetingSource : uint8 {};
+namespace EFortBrushSize { enum Type {}; }
 namespace EFortBuildingInitializationReason { enum Type {}; }
 namespace EFortBuildingPersistentState { enum Type {}; }
 enum class EFortCollectionBookState : uint8 {};
@@ -7967,7 +7968,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual void FNGC_VSlot_0x5F8();
 	virtual void FNGC_VSlot_0x600();
-	virtual void FNGC_VSlot_0x608();  // slot 193: AFortClientAnnouncement_Basic::SetIcon (signature not recovered)
+	virtual void SetIcon(FSlateBrush& Icon);  // slot 193 (+0x608), UFunction AFortClientAnnouncement_Basic::SetIcon
 	virtual void SetTitleText(FText TitleText);  // slot 194 (+0x610), UFunction AFortClientAnnouncement_Basic::SetTitleText
 	virtual void SetDetailText(FText DetailText);  // slot 195 (+0x618), UFunction AFortClientAnnouncement_Basic::SetDetailText
 	virtual void SetDisplayTime(float DisplayTime);  // slot 196 (+0x620), UFunction AFortClientAnnouncement_Basic::SetDisplayTime
@@ -20844,7 +20845,7 @@ public:
 	virtual void FNGC_VSlot_0x2C0();
 	virtual FText GetSingleLineDescription() const;  // slot 89 (+0x2C8), UFunction UFortItemDefinition::GetSingleLineDescription
 	virtual TSoftObjectPtr<UTexture2D> GetSmallPreviewImage() const;  // slot 90 (+0x2D0), UFunction UFortItemDefinition::GetSmallPreviewImage
-	virtual void FNGC_VSlot_0x2D8();  // slot 91: UFortItemDefinition::GetSmallPreviewImageBrush (signature not recovered)
+	virtual FSlateBrush GetSmallPreviewImageBrush() const;  // slot 91 (+0x2D8), UFunction UFortItemDefinition::GetSmallPreviewImageBrush
 	virtual TSoftObjectPtr<UTexture2D> GetLargePreviewImage() const;  // slot 92 (+0x2E0), UFunction UFortItemDefinition::GetLargePreviewImage
 	virtual void FNGC_VSlot_0x2E8();
 	virtual void FNGC_VSlot_0x2F0();
@@ -21601,8 +21602,8 @@ public:
 	virtual UFortPersistentResourceItemDefinition* GetUpgradeResourceItemDefinition() const;  // slot 94 (+0x2F0), UFunction UFortItem::GetUpgradeResourceItemDefinition
 	virtual void FNGC_VSlot_0x2F8();  // slot 95: UFortItem::TryGetCategory (signature not recovered)
 	virtual bool GetPrimaryCategory(FText& ItemCategoryText) const;  // slot 96 (+0x300), UFunction UFortItem::GetPrimaryCategory
-	virtual void FNGC_VSlot_0x308();  // slot 97: UFortItem::GetSecondaryCategory (signature not recovered)
-	virtual void FNGC_VSlot_0x310();  // slot 98: UFortItem::GetTertiaryCategory (signature not recovered)
+	virtual bool GetSecondaryCategory(FText& ItemCategoryText, FSlateBrush& ItemCategoryBrush, EFortBrushSize::Type BrushSize) const;  // slot 97 (+0x308), UFunction UFortItem::GetSecondaryCategory
+	virtual bool GetTertiaryCategory(FText& ItemCategoryText, FSlateBrush& ItemCategoryBrush, EFortBrushSize::Type BrushSize) const;  // slot 98 (+0x310), UFunction UFortItem::GetTertiaryCategory
 	virtual void FNGC_VSlot_0x318();
 	virtual bool IsEquipable(const AFortPlayerController* EquippingPC) const;  // slot 100 (+0x320), UFunction UFortItem::IsEquipable
 	virtual int32 GetNumInStack() const;  // slot 101 (+0x328), UFunction UFortItem::GetNumInStack

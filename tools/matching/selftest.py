@@ -231,12 +231,17 @@ def test_uht_parameters() -> None:
     names.structs[0xE00] = ("AssetData", 80, 8)
     t = P.parameter(arr("OutAssetData", 0x180, {"type": "Struct", "flags": 0, "func": base + 0xE00}), names, base)
     assert t["line"] == "P_GET_TARRAY_REF(FAssetData,Z_Param_Out_OutAssetData);", t
-    names.structs[0xA00] = ("SlateBrush", 120, 8)                    # not modelled: 4.20's is 136 bytes
-    assert P.parameter(rec("Struct", "Brush", 0x180, 0xA00), names, base) is None
+    names.structs[0xA00] = ("SlateBrush", 120, 8)                    # the reference's, without ResourceHandle
+    t = P.parameter(rec("Struct", "Icon", 0x180, 0xA00), names, base)
+    assert t["line"] == "P_GET_STRUCT_REF(FSlateBrush,Z_Param_Out_Icon);", t
+    names.structs[0xA80] = ("SlateBrush", 136, 8)                    # 4.20's size
+    assert P.parameter(rec("Struct", "Icon", 0x180, 0xA80), names, base) is None
     assert "EViewTargetBlendFunction" in P.MODELLED_ENUMS                # defined by the shims, not redeclared
     assert "EFortItemEntryState::Type" in P.MODELLED_ENUMS and P.MODELLED_STRUCTS["FortItemEntry"] == (192, 8)
     assert P.MODELLED_STRUCTS["PointerEvent"] == (104, 8)                # the reference's, without Force
     assert P.MODELLED_STRUCTS["Geometry"] == (56, 4)                     # out-of-line constructor
+    assert P.MODELLED_STRUCTS["SlateBrush"] == (120, 8)                  # the reference's, without ResourceHandle
+    assert "ESlateBrushDrawType::Type" in P.MODELLED_ENUMS and P.MODELLED_STRUCTS["SlateColor"] == (40, 8)
     t = P.parameter(rec("Text", "Label", 0), names, base)
     assert (t["decl"], t["line"]) == ("FText Label", "P_GET_PROPERTY(UTextProperty,Z_Param_Label);"), t
     t = P.parameter(rec("Text", "Label", const | out | ref), names, base)

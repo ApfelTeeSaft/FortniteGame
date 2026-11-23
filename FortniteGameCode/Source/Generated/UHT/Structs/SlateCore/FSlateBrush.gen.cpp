@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FSlateBrush();
 	UPackage* Z_Construct_UPackage__Script_SlateCore();  // RVA 0x0145CAE0
-struct alignas(8) FSlateBrush
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x78];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FSlateBrush is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0145BC70 (end 0x0145BCE1, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014145BC70 | File offset: 0x0145B270
 // Recovery: confirmed (TEXT("SlateBrush") and Z_Construct_UScriptStruct_FSlateBrush) | Matching: see analysis/functions-uht-staticstruct.json
