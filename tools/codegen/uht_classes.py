@@ -67,6 +67,7 @@ DEFER_MANIFEST = ROOT / "analysis" / "functions-uht-class-defer.json"
 AUTO_MANIFEST = ROOT / "analysis" / "functions-uht-class-autoinit.json"
 EXEC_MANIFEST = ROOT / "analysis" / "functions-uht-exec.json"
 EXEC_SYMBOL = "?exec{ufunction}@{class}@@SAXPEAVUObject@@AEAUFFrame@@QEAX@Z"
+CLASS_INTERFACE = 0x00004000   # EClassFlags: the exec thunks belong to I<Name>
 # mov r9d, CRC; lea rdx, TEXT; mov r8d, sizeof; lea rcx, object; jmp UClassCompiledInDefer
 AUTO_INITIALIZER_SIZE = 31
 SYMBOLS = ROOT / "analysis" / "uht-class-symbols.json"
@@ -319,9 +320,11 @@ def main() -> int:
         body_lines += model["decls"].get(n, [])
         body_lines.append(f"\tstatic void StaticRegisterNatives{n}();")
         nat = natives.get(n)
-        if nat:
-            body_lines += [f"\tstatic void exec{f['name']}(UObject* Context, FFrame& Stack, void* const Z_Param__Result);"
-                           for f in nat["functions"]]
+        interface = bool(c.get("decoded") and c["flags"] & CLASS_INTERFACE)
+        exec_decls = [f"\tstatic void exec{f['name']}(UObject* Context, FFrame& Stack, void* const Z_Param__Result);"
+                      for f in nat["functions"]] if nat else []
+        if not interface:
+            body_lines += exec_decls
         if n in EXTRA_MEMBERS:
             body_lines += [f"#ifdef FNGC_EXTRA_MEMBERS_{n}", f"\tFNGC_EXTRA_MEMBERS_{n}", "#endif"]
         members = INTRINSIC.get(n, {}).get("members", []) if c.get("intrinsic") else []
@@ -334,6 +337,15 @@ def main() -> int:
         head = f"class {n}" + (f" : public {sup}" if has_base else "")
         lines.append(head + "\n{\n" + "\n".join(x for x in body_lines if x) + "\n};\n")
         stats["declared"] += 1
+        if interface and (exec_decls or n in model["interfaces"]):
+            # The native interface: UHT's GENERATED_IINTERFACE_BODY typedefs, the vtable slots the
+            # thunks call, and the thunks themselves (DECLARE_FUNCTION in I<Name>).
+            iname = "I" + n[1:]
+            ibody = [f"\ttypedef {n} UClassType;", f"\ttypedef {iname} ThisClass;"]
+            ibody += model["interfaces"].get(n, {}).get("decls", [])
+            ibody += exec_decls
+            lines.append(f"class {iname}\n{{\npublic:\n" + "\n".join(ibody) + "\n};\n")
+            stats["native interfaces declared"] += 1
     header = "\n".join(lines)
 
     # ClassParams of classes without UFunctions: the only FClassParams record whose

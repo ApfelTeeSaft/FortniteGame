@@ -13,7 +13,7 @@ void UFortInteractInterface::StaticRegisterNativesUFortInteractInterface()
 {
 	UClass* Class = UFortInteractInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "ServerOnAttemptInteract", &UFortInteractInterface::execServerOnAttemptInteract },
+		{ "ServerOnAttemptInteract", &IFortInteractInterface::execServerOnAttemptInteract },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

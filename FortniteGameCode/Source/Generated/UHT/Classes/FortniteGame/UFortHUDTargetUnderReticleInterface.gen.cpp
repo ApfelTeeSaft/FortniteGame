@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010090A0 (end 0x010090CE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHUDTargetDifficultyRating) | Matching: see analysis/functions-uht-exec.json
+void IFortHUDTargetUnderReticleInterface::execGetHUDTargetDifficultyRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetHUDTargetDifficultyRating();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009190 (end 0x0100920A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHUDTargetDisplayName) | Matching: see analysis/functions-uht-exec.json
+void IFortHUDTargetUnderReticleInterface::execGetHUDTargetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetHUDTargetDisplayName();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009210 (end 0x0100923E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHUDTargetHealthPercentage) | Matching: see analysis/functions-uht-exec.json
+void IFortHUDTargetUnderReticleInterface::execGetHUDTargetHealthPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetHUDTargetHealthPercentage();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01009240 (end 0x010092BA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHUDTargetUpgradeDisplayName) | Matching: see analysis/functions-uht-exec.json
+void IFortHUDTargetUnderReticleInterface::execGetHUDTargetUpgradeDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetHUDTargetUpgradeDisplayName();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortHUDTargetUnderReticleInterface, 2188592350u)
 // Original dynamic initializer: RVA 0x000FAFA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHUDTargetUnderReticleInterface> AutoInitializeUFortHUDTargetUnderReticleInterface(TEXT("UFortHUDTargetUnderReticleInterface"), sizeof(UFortHUDTargetUnderReticleInterface), 2188592350u);

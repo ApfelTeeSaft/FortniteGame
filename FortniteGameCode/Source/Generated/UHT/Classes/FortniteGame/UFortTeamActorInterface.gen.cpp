@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B48C0 (end 0x010B48F4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTeam) | Matching: see analysis/functions-uht-exec.json
+void IFortTeamActorInterface::execGetTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EFortTeam::Type>*)Z_Param__Result=P_THIS->GetTeam();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTeamActorInterface, 3423767790u)
 // Original dynamic initializer: RVA 0x00114810 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTeamActorInterface> AutoInitializeUFortTeamActorInterface(TEXT("UFortTeamActorInterface"), sizeof(UFortTeamActorInterface), 3423767790u);

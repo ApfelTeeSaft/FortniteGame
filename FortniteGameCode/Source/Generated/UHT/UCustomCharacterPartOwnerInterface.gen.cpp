@@ -13,8 +13,8 @@ void UCustomCharacterPartOwnerInterface::StaticRegisterNativesUCustomCharacterPa
 {
 	UClass* Class = UCustomCharacterPartOwnerInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetCustomizationRootSkeletalMeshComponent", &UCustomCharacterPartOwnerInterface::execGetCustomizationRootSkeletalMeshComponent },
-		{ "PlayAnimationsMatchingQuery", &UCustomCharacterPartOwnerInterface::execPlayAnimationsMatchingQuery },
+		{ "GetCustomizationRootSkeletalMeshComponent", &ICustomCharacterPartOwnerInterface::execGetCustomizationRootSkeletalMeshComponent },
+		{ "PlayAnimationsMatchingQuery", &ICustomCharacterPartOwnerInterface::execPlayAnimationsMatchingQuery },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

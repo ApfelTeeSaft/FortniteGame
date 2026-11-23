@@ -13,7 +13,7 @@ void UFortAttachToActorInterface::StaticRegisterNativesUFortAttachToActorInterfa
 {
 	UClass* Class = UFortAttachToActorInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetActorAttachedTo", &UFortAttachToActorInterface::execGetActorAttachedTo },
+		{ "GetActorAttachedTo", &IFortAttachToActorInterface::execGetActorAttachedTo },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

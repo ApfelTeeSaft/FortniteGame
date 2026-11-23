@@ -13,17 +13,17 @@ void UAssetRegistry::StaticRegisterNativesUAssetRegistry()
 {
 	UClass* Class = UAssetRegistry::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetAllAssets", &UAssetRegistry::execGetAllAssets },
-		{ "GetAllCachedPaths", &UAssetRegistry::execGetAllCachedPaths },
-		{ "GetAssetByObjectPath", &UAssetRegistry::execGetAssetByObjectPath },
-		{ "GetAssets", &UAssetRegistry::execGetAssets },
-		{ "GetAssetsByClass", &UAssetRegistry::execGetAssetsByClass },
-		{ "GetAssetsByPackageName", &UAssetRegistry::execGetAssetsByPackageName },
-		{ "GetAssetsByPath", &UAssetRegistry::execGetAssetsByPath },
-		{ "GetSubPaths", &UAssetRegistry::execGetSubPaths },
-		{ "HasAssets", &UAssetRegistry::execHasAssets },
-		{ "IsLoadingAssets", &UAssetRegistry::execIsLoadingAssets },
-		{ "RunAssetsThroughFilter", &UAssetRegistry::execRunAssetsThroughFilter },
+		{ "GetAllAssets", &IAssetRegistry::execGetAllAssets },
+		{ "GetAllCachedPaths", &IAssetRegistry::execGetAllCachedPaths },
+		{ "GetAssetByObjectPath", &IAssetRegistry::execGetAssetByObjectPath },
+		{ "GetAssets", &IAssetRegistry::execGetAssets },
+		{ "GetAssetsByClass", &IAssetRegistry::execGetAssetsByClass },
+		{ "GetAssetsByPackageName", &IAssetRegistry::execGetAssetsByPackageName },
+		{ "GetAssetsByPath", &IAssetRegistry::execGetAssetsByPath },
+		{ "GetSubPaths", &IAssetRegistry::execGetSubPaths },
+		{ "HasAssets", &IAssetRegistry::execHasAssets },
+		{ "IsLoadingAssets", &IAssetRegistry::execIsLoadingAssets },
+		{ "RunAssetsThroughFilter", &IAssetRegistry::execRunAssetsThroughFilter },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

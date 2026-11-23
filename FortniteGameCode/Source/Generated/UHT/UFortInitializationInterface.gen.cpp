@@ -13,9 +13,9 @@ void UFortInitializationInterface::StaticRegisterNativesUFortInitializationInter
 {
 	UClass* Class = UFortInitializationInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "MatchStarted", &UFortInitializationInterface::execMatchStarted },
-		{ "NeedsWorldReady", &UFortInitializationInterface::execNeedsWorldReady },
-		{ "WorldReady", &UFortInitializationInterface::execWorldReady },
+		{ "MatchStarted", &IFortInitializationInterface::execMatchStarted },
+		{ "NeedsWorldReady", &IFortInitializationInterface::execNeedsWorldReady },
+		{ "WorldReady", &IFortInitializationInterface::execWorldReady },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

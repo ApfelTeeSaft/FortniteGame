@@ -13,11 +13,11 @@ void UFortCarriedObjectHolderInterface::StaticRegisterNativesUFortCarriedObjectH
 {
 	UClass* Class = UFortCarriedObjectHolderInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "CanHoldObject", &UFortCarriedObjectHolderInterface::execCanHoldObject },
-		{ "GetAttachmentComponent", &UFortCarriedObjectHolderInterface::execGetAttachmentComponent },
-		{ "GetCarriedObjectAttachmentInfo", &UFortCarriedObjectHolderInterface::execGetCarriedObjectAttachmentInfo },
-		{ "OnCarriedObjectAttach", &UFortCarriedObjectHolderInterface::execOnCarriedObjectAttach },
-		{ "OnCarriedObjectDetach", &UFortCarriedObjectHolderInterface::execOnCarriedObjectDetach },
+		{ "CanHoldObject", &IFortCarriedObjectHolderInterface::execCanHoldObject },
+		{ "GetAttachmentComponent", &IFortCarriedObjectHolderInterface::execGetAttachmentComponent },
+		{ "GetCarriedObjectAttachmentInfo", &IFortCarriedObjectHolderInterface::execGetCarriedObjectAttachmentInfo },
+		{ "OnCarriedObjectAttach", &IFortCarriedObjectHolderInterface::execOnCarriedObjectAttach },
+		{ "OnCarriedObjectDetach", &IFortCarriedObjectHolderInterface::execOnCarriedObjectDetach },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

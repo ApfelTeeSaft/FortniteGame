@@ -4,6 +4,60 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F1F0 (end 0x0109F21D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealthRegenDelayGameplayEffect) | Matching: see analysis/functions-uht-exec.json
+void IFortHealthRegenInterface::execGetHealthRegenDelayGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UGameplayEffect**)Z_Param__Result=P_THIS->GetHealthRegenDelayGameplayEffect();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F220 (end 0x0109F24D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealthRegenGameplayEffect) | Matching: see analysis/functions-uht-exec.json
+void IFortHealthRegenInterface::execGetHealthRegenGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UGameplayEffect**)Z_Param__Result=P_THIS->GetHealthRegenGameplayEffect();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F250 (end 0x0109F285)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealthRegenGameplayEffectClass) | Matching: see analysis/functions-uht-exec.json
+void IFortHealthRegenInterface::execGetHealthRegenGameplayEffectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSubclassOf<UGameplayEffect>*)Z_Param__Result=P_THIS->GetHealthRegenGameplayEffectClass();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F6D0 (end 0x0109F6FD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetShieldRegenDelayGameplayEffect) | Matching: see analysis/functions-uht-exec.json
+void IFortHealthRegenInterface::execGetShieldRegenDelayGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UGameplayEffect**)Z_Param__Result=P_THIS->GetShieldRegenDelayGameplayEffect();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F700 (end 0x0109F72D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetShieldRegenGameplayEffect) | Matching: see analysis/functions-uht-exec.json
+void IFortHealthRegenInterface::execGetShieldRegenGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UGameplayEffect**)Z_Param__Result=P_THIS->GetShieldRegenGameplayEffect();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F730 (end 0x0109F765)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetShieldRegenGameplayEffectClass) | Matching: see analysis/functions-uht-exec.json
+void IFortHealthRegenInterface::execGetShieldRegenGameplayEffectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSubclassOf<UGameplayEffect>*)Z_Param__Result=P_THIS->GetShieldRegenGameplayEffectClass();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortHealthRegenInterface, 1140075569u)
 // Original dynamic initializer: RVA 0x001113E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortHealthRegenInterface> AutoInitializeUFortHealthRegenInterface(TEXT("UFortHealthRegenInterface"), sizeof(UFortHealthRegenInterface), 1140075569u);

@@ -13,7 +13,7 @@ void UFortAIEncounterInfoOwnerInterface::StaticRegisterNativesUFortAIEncounterIn
 {
 	UClass* Class = UFortAIEncounterInfoOwnerInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetEncounterInfo", &UFortAIEncounterInfoOwnerInterface::execGetEncounterInfo },
+		{ "GetEncounterInfo", &IFortAIEncounterInfoOwnerInterface::execGetEncounterInfo },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

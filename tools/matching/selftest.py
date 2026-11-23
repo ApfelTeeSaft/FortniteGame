@@ -336,6 +336,22 @@ def test_staticenum_layout() -> None:
     print(f"staticenum layout: ok ({units} units; definition-order probe)")
 
 
+def test_interface_classes() -> None:
+    """Every native interface in Classes.gen.h has UHT's GENERATED_IINTERFACE_BODY typedefs and
+    its two leading slots, and only interfaces' exec thunks are defined as I<Name> members."""
+    import re
+    header = REPO_ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT" / "Classes.gen.h"
+    text = header.read_text(encoding="utf-8")
+    found = re.findall(r"^class (I\w+)\n\{\npublic:\n\ttypedef (U\w+) UClassType;\n\ttypedef (I\w+) ThisClass;\n(.*?)\n\};",
+                       text, re.M | re.S)
+    assert found, "no native interface declared"
+    for iname, uname, this, body in found:
+        assert iname == this == "I" + uname[1:], iname
+        if "virtual" in body:
+            assert body.startswith(f"\tvirtual ~{iname}();  // slot 0") and "_getUObject() const;  // slot 1" in body, iname
+    print(f"interface classes: ok ({len(found)})")
+
+
 def test_vector_constants() -> None:
     """Naming a unit's .CRT$XCU constant values in header definition order."""
     sys.path.insert(0, str(REPO_ROOT / "tools" / "analysis"))
@@ -401,6 +417,7 @@ def main() -> int:
     test_uht_parameters()
     test_staticenum_layout()
     test_vector_constants()
+    test_interface_classes()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

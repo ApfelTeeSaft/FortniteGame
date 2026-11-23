@@ -4,6 +4,47 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104C0E0 (end 0x0104C16D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAvailabilityWeight) | Matching: see analysis/functions-uht-exec.json
+void IFortMissionPowerPointsInterface::execGetAvailabilityWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_DifficultyLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetAvailabilityWeight(Z_Param_DifficultyLevel);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104C2E0 (end 0x0104C36D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetInitialRangeLerpValue) | Matching: see analysis/functions-uht-exec.json
+void IFortMissionPowerPointsInterface::execGetInitialRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_PointsAvailable);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetInitialRangeLerpValue(Z_Param_PointsAvailable);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104C370 (end 0x0104C440)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxRangeLerpValue) | Matching: see analysis/functions-uht-exec.json
+void IFortMissionPowerPointsInterface::execGetMaxRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_PointsAvailable);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_PreviousLerpValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxRangeLerpValue(Z_Param_PointsAvailable,Z_Param_PreviousLerpValue);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104C4A0 (end 0x0104C52D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPowerPointsCost) | Matching: see analysis/functions-uht-exec.json
+void IFortMissionPowerPointsInterface::execGetPowerPointsCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_LerpValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetPowerPointsCost(Z_Param_LerpValue);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortMissionPowerPointsInterface, 2377959387u)
 // Original dynamic initializer: RVA 0x001040A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMissionPowerPointsInterface> AutoInitializeUFortMissionPowerPointsInterface(TEXT("UFortMissionPowerPointsInterface"), sizeof(UFortMissionPowerPointsInterface), 2377959387u);

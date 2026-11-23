@@ -13,8 +13,8 @@ void UCommonPoolableWidgetInterface::StaticRegisterNativesUCommonPoolableWidgetI
 {
 	UClass* Class = UCommonPoolableWidgetInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "OnAcquireFromPool", &UCommonPoolableWidgetInterface::execOnAcquireFromPool },
-		{ "OnReleaseToPool", &UCommonPoolableWidgetInterface::execOnReleaseToPool },
+		{ "OnAcquireFromPool", &ICommonPoolableWidgetInterface::execOnAcquireFromPool },
+		{ "OnReleaseToPool", &ICommonPoolableWidgetInterface::execOnReleaseToPool },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

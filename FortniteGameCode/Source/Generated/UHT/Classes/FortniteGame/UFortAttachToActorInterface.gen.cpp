@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F1F0 (end 0x0109F21D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetActorAttachedTo) | Matching: see analysis/functions-uht-exec.json
+void IFortAttachToActorInterface::execGetActorAttachedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AActor**)Z_Param__Result=P_THIS->GetActorAttachedTo();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortAttachToActorInterface, 1602265463u)
 // Original dynamic initializer: RVA 0x000E7F30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAttachToActorInterface> AutoInitializeUFortAttachToActorInterface(TEXT("UFortAttachToActorInterface"), sizeof(UFortAttachToActorInterface), 1602265463u);

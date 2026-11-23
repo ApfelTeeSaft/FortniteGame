@@ -3385,6 +3385,7 @@ namespace EFortRequestedGameplayAction { enum Type {}; }
 namespace EFortResourceType { enum Type {}; }
 namespace EFortTeam { enum Type {}; }
 namespace EGameplayCueEvent { enum Type {}; }
+enum EHorizontalAlignment {};
 enum EMovementMode {};
 enum EObjectTypeQuery {};
 namespace EPartyReservationResult { enum Type {}; }
@@ -3400,6 +3401,7 @@ enum class EStatMod : uint8 {};
 enum class ESubGame : uint8 {};
 enum ETravelType {};
 enum ETwitterRequestMethod {};
+enum EVerticalAlignment {};
 enum TInteractionType {};
 
 class UObject
@@ -20388,6 +20390,62 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAssetRegistry();
+};
+
+class IAssetRegistry
+{
+public:
+	typedef UAssetRegistry UClassType;
+	typedef IAssetRegistry ThisClass;
+	virtual ~IAssetRegistry();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual bool HasAssets(const FName PackagePath, bool bRecursive) const;  // slot 2 (+0x10), UFunction UAssetRegistry::HasAssets
+	virtual bool GetAssetsByPackageName(FName PackageName, TArray<FAssetData>& OutAssetData, bool bIncludeOnlyOnDiskAssets) const;  // slot 3 (+0x18), UFunction UAssetRegistry::GetAssetsByPackageName
+	virtual bool GetAssetsByPath(FName PackagePath, TArray<FAssetData>& OutAssetData, bool bRecursive, bool bIncludeOnlyOnDiskAssets) const;  // slot 4 (+0x20), UFunction UAssetRegistry::GetAssetsByPath
+	virtual bool GetAssetsByClass(FName ClassName, TArray<FAssetData>& OutAssetData, bool bSearchSubClasses) const;  // slot 5 (+0x28), UFunction UAssetRegistry::GetAssetsByClass
+	virtual void FNGC_VSlot_0x30();
+	virtual void FNGC_VSlot_0x38();  // slot 7: UAssetRegistry::GetAssets (signature not recovered)
+	virtual FAssetData GetAssetByObjectPath(const FName ObjectPath, bool bIncludeOnlyOnDiskAssets) const;  // slot 8 (+0x40), UFunction UAssetRegistry::GetAssetByObjectPath
+	virtual bool GetAllAssets(TArray<FAssetData>& OutAssetData, bool bIncludeOnlyOnDiskAssets) const;  // slot 9 (+0x48), UFunction UAssetRegistry::GetAllAssets
+	virtual void FNGC_VSlot_0x50();
+	virtual void FNGC_VSlot_0x58();
+	virtual void FNGC_VSlot_0x60();
+	virtual void FNGC_VSlot_0x68();
+	virtual void FNGC_VSlot_0x70();
+	virtual void FNGC_VSlot_0x78();
+	virtual void FNGC_VSlot_0x80();
+	virtual void FNGC_VSlot_0x88();
+	virtual void GetAllCachedPaths(TArray<FString>& OutPathList) const;  // slot 18 (+0x90), UFunction UAssetRegistry::GetAllCachedPaths
+	virtual void GetSubPaths(const FString& InBasePath, TArray<FString>& OutPathList, bool bInRecurse) const;  // slot 19 (+0x98), UFunction UAssetRegistry::GetSubPaths
+	virtual void FNGC_VSlot_0xA0();  // slot 20: UAssetRegistry::RunAssetsThroughFilter (signature not recovered)
+	virtual void FNGC_VSlot_0xA8();
+	virtual void FNGC_VSlot_0xB0();
+	virtual void FNGC_VSlot_0xB8();
+	virtual void FNGC_VSlot_0xC0();
+	virtual void FNGC_VSlot_0xC8();
+	virtual void FNGC_VSlot_0xD0();
+	virtual void FNGC_VSlot_0xD8();
+	virtual void FNGC_VSlot_0xE0();
+	virtual void FNGC_VSlot_0xE8();
+	virtual void FNGC_VSlot_0xF0();
+	virtual void FNGC_VSlot_0xF8();
+	virtual void FNGC_VSlot_0x100();
+	virtual void FNGC_VSlot_0x108();
+	virtual void FNGC_VSlot_0x110();
+	virtual void FNGC_VSlot_0x118();
+	virtual void FNGC_VSlot_0x120();
+	virtual void FNGC_VSlot_0x128();
+	virtual void FNGC_VSlot_0x130();
+	virtual void FNGC_VSlot_0x138();
+	virtual void FNGC_VSlot_0x140();
+	virtual void FNGC_VSlot_0x148();
+	virtual void FNGC_VSlot_0x150();
+	virtual void FNGC_VSlot_0x158();
+	virtual void FNGC_VSlot_0x160();
+	virtual void FNGC_VSlot_0x168();
+	virtual void FNGC_VSlot_0x170();
+	virtual void FNGC_VSlot_0x178();
+	virtual bool IsLoadingAssets() const;  // slot 48 (+0x180), UFunction UAssetRegistry::IsLoadingAssets
 	static void execGetAllAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAllCachedPaths(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAssetByObjectPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27302,6 +27360,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonPoolableWidgetInterface();
+};
+
+class ICommonPoolableWidgetInterface
+{
+public:
+	typedef UCommonPoolableWidgetInterface UClassType;
+	typedef ICommonPoolableWidgetInterface ThisClass;
+	virtual ~ICommonPoolableWidgetInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
 	static void execOnAcquireFromPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnReleaseToPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -27319,6 +27386,26 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonListItem();
+};
+
+class ICommonListItem
+{
+public:
+	typedef UCommonListItem UClassType;
+	typedef ICommonListItem ThisClass;
+	virtual ~ICommonListItem();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();
+	virtual void FNGC_VSlot_0x18();
+	virtual void FNGC_VSlot_0x20();  // slot 4: UCommonListItem::RegisterOnClicked_Implementation (signature not recovered)
+	virtual void Private_OnExpanderArrowShiftClicked_Implementation();  // slot 5 (+0x28), UFunction UCommonListItem::Private_OnExpanderArrowShiftClicked
+	virtual int32 DoesItemHaveChildren_Implementation() const;  // slot 6 (+0x30), UFunction UCommonListItem::DoesItemHaveChildren
+	virtual int32 GetIndentLevel_Implementation() const;  // slot 7 (+0x38), UFunction UCommonListItem::GetIndentLevel
+	virtual void ToggleExpansion_Implementation();  // slot 8 (+0x40), UFunction UCommonListItem::ToggleExpansion
+	virtual void SetExpanded_Implementation(bool bExpanded);  // slot 9 (+0x48), UFunction UCommonListItem::SetExpanded
+	virtual bool IsItemExpanded_Implementation() const;  // slot 10 (+0x50), UFunction UCommonListItem::IsItemExpanded
+	virtual void SetIndexInList_Implementation(int32 InIndexInList);  // slot 11 (+0x58), UFunction UCommonListItem::SetIndexInList
+	virtual void SetSelected_Implementation(bool bSelected);  // slot 12 (+0x60), UFunction UCommonListItem::SetSelected
 	static void execDoesItemHaveChildren(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetIndentLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsItemExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27455,6 +27542,29 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCommonObjectListItem();
+};
+
+class ICommonObjectListItem
+{
+public:
+	typedef UCommonObjectListItem UClassType;
+	typedef ICommonObjectListItem ThisClass;
+	virtual ~ICommonObjectListItem();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();
+	virtual void FNGC_VSlot_0x18();
+	virtual void FNGC_VSlot_0x20();
+	virtual void FNGC_VSlot_0x28();
+	virtual void FNGC_VSlot_0x30();
+	virtual void FNGC_VSlot_0x38();
+	virtual void FNGC_VSlot_0x40();
+	virtual void FNGC_VSlot_0x48();
+	virtual void FNGC_VSlot_0x50();
+	virtual void FNGC_VSlot_0x58();
+	virtual void FNGC_VSlot_0x60();
+	virtual void Reset_Implementation();  // slot 13 (+0x68), UFunction UCommonObjectListItem::Reset
+	virtual void SetData_Implementation(UObject* InData, UCommonListView* OwningList);  // slot 14 (+0x70), UFunction UCommonObjectListItem::SetData
+	virtual UObject* GetData_Implementation() const;  // slot 15 (+0x78), UFunction UCommonObjectListItem::GetData
 	static void execGetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -28277,6 +28387,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCurveSourceInterface();
+};
+
+class ICurveSourceInterface
+{
+public:
+	typedef UCurveSourceInterface UClassType;
+	typedef ICurveSourceInterface ThisClass;
+	virtual ~ICurveSourceInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual FName GetBindingName_Implementation() const;  // slot 2 (+0x10), UFunction UCurveSourceInterface::GetBindingName
 	static void execGetBindingName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCurves(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCurveValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -28628,6 +28748,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUCustomCharacterPartOwnerInterface();
+};
+
+class ICustomCharacterPartOwnerInterface
+{
+public:
+	typedef UCustomCharacterPartOwnerInterface UClassType;
+	typedef ICustomCharacterPartOwnerInterface ThisClass;
+	virtual ~ICustomCharacterPartOwnerInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();  // slot 2: UCustomCharacterPartOwnerInterface::PlayAnimationsMatchingQuery (signature not recovered)
+	virtual void FNGC_VSlot_0x18();
+	virtual USkeletalMeshComponent* GetCustomizationRootSkeletalMeshComponent() const;  // slot 4 (+0x20), UFunction UCustomCharacterPartOwnerInterface::GetCustomizationRootSkeletalMeshComponent
 	static void execGetCustomizationRootSkeletalMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execPlayAnimationsMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -31725,6 +31857,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAIEncounterInfoOwnerInterface();
+};
+
+class IFortAIEncounterInfoOwnerInterface
+{
+public:
+	typedef UFortAIEncounterInfoOwnerInterface UClassType;
+	typedef IFortAIEncounterInfoOwnerInterface ThisClass;
 	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -32006,6 +32145,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAIRootAssignmentProviderInterface();
+};
+
+class IFortAIRootAssignmentProviderInterface
+{
+public:
+	typedef UFortAIRootAssignmentProviderInterface UClassType;
+	typedef IFortAIRootAssignmentProviderInterface ThisClass;
+	virtual ~IFortAIRootAssignmentProviderInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();  // slot 2: UFortAIRootAssignmentProviderInterface::GetRootAssignmentIdentifier (signature not recovered)
 	static void execGetRootAssignmentIdentifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -34386,6 +34535,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAttachToActorInterface();
+};
+
+class IFortAttachToActorInterface
+{
+public:
+	typedef UFortAttachToActorInterface UClassType;
+	typedef IFortAttachToActorInterface ThisClass;
+	virtual ~IFortAttachToActorInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual AActor* GetActorAttachedTo() const;  // slot 2 (+0x10), UFunction UFortAttachToActorInterface::GetActorAttachedTo
 	static void execGetActorAttachedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -35926,6 +36085,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortCarriedObjectHolderInterface();
+};
+
+class IFortCarriedObjectHolderInterface
+{
+public:
+	typedef UFortCarriedObjectHolderInterface UClassType;
+	typedef IFortCarriedObjectHolderInterface ThisClass;
+	virtual ~IFortCarriedObjectHolderInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();  // slot 2: UFortCarriedObjectHolderInterface::GetCarriedObjectAttachmentInfo (signature not recovered)
+	virtual void OnCarriedObjectAttach(AActor* AttachedObject);  // slot 3 (+0x18), UFunction UFortCarriedObjectHolderInterface::OnCarriedObjectAttach
+	virtual void OnCarriedObjectDetach(AActor* DetachedObject);  // slot 4 (+0x20), UFunction UFortCarriedObjectHolderInterface::OnCarriedObjectDetach
+	virtual USceneComponent* GetAttachmentComponent(FName SocketName) const;  // slot 5 (+0x28), UFunction UFortCarriedObjectHolderInterface::GetAttachmentComponent
+	virtual bool CanHoldObject(AActor* CarriableObject) const;  // slot 6 (+0x30), UFunction UFortCarriedObjectHolderInterface::CanHoldObject
 	static void execCanHoldObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAttachmentComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCarriedObjectAttachmentInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36653,6 +36826,22 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortClientAnnouncement_ConversationCodeInterface();
+};
+
+class IFortClientAnnouncement_ConversationCodeInterface
+{
+public:
+	typedef UFortClientAnnouncement_ConversationCodeInterface UClassType;
+	typedef IFortClientAnnouncement_ConversationCodeInterface ThisClass;
+	virtual ~IFortClientAnnouncement_ConversationCodeInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual bool IsPlayingConversation(bool bCheckAudioComponent) const;  // slot 2 (+0x10), UFunction UFortClientAnnouncement_ConversationCodeInterface::IsPlayingConversation
+	virtual bool IsPlayingSentenceIndex(int32 SentenceIndex) const;  // slot 3 (+0x18), UFunction UFortClientAnnouncement_ConversationCodeInterface::IsPlayingSentenceIndex
+	virtual void FNGC_VSlot_0x20();  // slot 4: UFortClientAnnouncement_ConversationCodeInterface::IsPlayingSentence (signature not recovered)
+	virtual bool PlayConversation();  // slot 5 (+0x28), UFunction UFortClientAnnouncement_ConversationCodeInterface::PlayConversation
+	virtual void StopConversation();  // slot 6 (+0x30), UFunction UFortClientAnnouncement_ConversationCodeInterface::StopConversation
+	virtual bool PlayConversationFromSentenceIndex(int32 StartingSentenceIndex);  // slot 7 (+0x38), UFunction UFortClientAnnouncement_ConversationCodeInterface::PlayConversationFromSentenceIndex
+	virtual void FNGC_VSlot_0x40();  // slot 8: UFortClientAnnouncement_ConversationCodeInterface::PlayConversationFromSentence (signature not recovered)
 	static void execIsPlayingConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsPlayingSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsPlayingSentenceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36675,6 +36864,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortClientAnnouncement_ConversationInterface();
+};
+
+class IFortClientAnnouncement_ConversationInterface
+{
+public:
+	typedef UFortClientAnnouncement_ConversationInterface UClassType;
+	typedef IFortClientAnnouncement_ConversationInterface ThisClass;
+	virtual ~IFortClientAnnouncement_ConversationInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
 	static void execShouldPlaySentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -36691,6 +36889,27 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortClientAnnouncement_TutorialInterface();
+};
+
+class IFortClientAnnouncement_TutorialInterface
+{
+public:
+	typedef UFortClientAnnouncement_TutorialInterface UClassType;
+	typedef IFortClientAnnouncement_TutorialInterface ThisClass;
+	virtual ~IFortClientAnnouncement_TutorialInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();  // slot 2: UFortClientAnnouncement_TutorialInterface::WaitForContinue (signature not recovered)
+	virtual void SetTitleText(FText NameText);  // slot 3 (+0x18), UFunction UFortClientAnnouncement_TutorialInterface::SetTitleText
+	virtual void SetDetailText(FText NameText);  // slot 4 (+0x20), UFunction UFortClientAnnouncement_TutorialInterface::SetDetailText
+	virtual void SetNameText(FText NameText);  // slot 5 (+0x28), UFunction UFortClientAnnouncement_TutorialInterface::SetNameText
+	virtual void SetSystemText(FText SystemText);  // slot 6 (+0x30), UFunction UFortClientAnnouncement_TutorialInterface::SetSystemText
+	virtual void SetButtonEnabled(bool bButtonEnabled);  // slot 7 (+0x38), UFunction UFortClientAnnouncement_TutorialInterface::SetButtonEnabled
+	virtual void SetLightboxEnabled(bool bLightboxEnabled);  // slot 8 (+0x40), UFunction UFortClientAnnouncement_TutorialInterface::SetLightboxEnabled
+	virtual void SetLightboxDisableInputOnly(bool bLightboxDisableInputOnly);  // slot 9 (+0x48), UFunction UFortClientAnnouncement_TutorialInterface::SetLightboxDisableInputOnly
+	virtual void SetPadding(FMargin Padding);  // slot 10 (+0x50), UFunction UFortClientAnnouncement_TutorialInterface::SetPadding
+	virtual void SetVAlign(EVerticalAlignment VAlign);  // slot 11 (+0x58), UFunction UFortClientAnnouncement_TutorialInterface::SetVAlign
+	virtual void SetHAlign(EHorizontalAlignment HAlign);  // slot 12 (+0x60), UFunction UFortClientAnnouncement_TutorialInterface::SetHAlign
+	virtual void HideTutorialWidget();  // slot 13 (+0x68), UFunction UFortClientAnnouncement_TutorialInterface::HideTutorialWidget
 	static void execHideTutorialWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetButtonEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetDetailText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -42057,6 +42276,16 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortGameplayTagVolumeInterface();
+};
+
+class IFortGameplayTagVolumeInterface
+{
+public:
+	typedef UFortGameplayTagVolumeInterface UClassType;
+	typedef IFortGameplayTagVolumeInterface ThisClass;
+	virtual ~IFortGameplayTagVolumeInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void ApplyTags();  // slot 2 (+0x10), UFunction UFortGameplayTagVolumeInterface::ApplyTags
 	static void execApplyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -42487,6 +42716,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHUDObjectiveSizeInterface();
+};
+
+class IFortHUDObjectiveSizeInterface
+{
+public:
+	typedef UFortHUDObjectiveSizeInterface UClassType;
+	typedef IFortHUDObjectiveSizeInterface ThisClass;
+	virtual ~IFortHUDObjectiveSizeInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
 	static void execGetHeightEstimate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -42503,6 +42741,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHUDTargetUnderReticleInterface();
+};
+
+class IFortHUDTargetUnderReticleInterface
+{
+public:
+	typedef UFortHUDTargetUnderReticleInterface UClassType;
+	typedef IFortHUDTargetUnderReticleInterface ThisClass;
+	virtual ~IFortHUDTargetUnderReticleInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual float GetHUDTargetDifficultyRating();  // slot 2 (+0x10), UFunction UFortHUDTargetUnderReticleInterface::GetHUDTargetDifficultyRating
+	virtual float GetHUDTargetHealthPercentage();  // slot 3 (+0x18), UFunction UFortHUDTargetUnderReticleInterface::GetHUDTargetHealthPercentage
+	virtual FText GetHUDTargetDisplayName();  // slot 4 (+0x20), UFunction UFortHUDTargetUnderReticleInterface::GetHUDTargetDisplayName
+	virtual FText GetHUDTargetUpgradeDisplayName();  // slot 5 (+0x28), UFunction UFortHUDTargetUnderReticleInterface::GetHUDTargetUpgradeDisplayName
 	static void execGetHUDTargetDifficultyRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHUDTargetDisplayModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHUDTargetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -42685,6 +42936,21 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortHealthRegenInterface();
+};
+
+class IFortHealthRegenInterface
+{
+public:
+	typedef UFortHealthRegenInterface UClassType;
+	typedef IFortHealthRegenInterface ThisClass;
+	virtual ~IFortHealthRegenInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual UGameplayEffect* GetHealthRegenDelayGameplayEffect() const;  // slot 2 (+0x10), UFunction UFortHealthRegenInterface::GetHealthRegenDelayGameplayEffect
+	virtual UGameplayEffect* GetShieldRegenDelayGameplayEffect() const;  // slot 3 (+0x18), UFunction UFortHealthRegenInterface::GetShieldRegenDelayGameplayEffect
+	virtual UGameplayEffect* GetHealthRegenGameplayEffect() const;  // slot 4 (+0x20), UFunction UFortHealthRegenInterface::GetHealthRegenGameplayEffect
+	virtual UGameplayEffect* GetShieldRegenGameplayEffect() const;  // slot 5 (+0x28), UFunction UFortHealthRegenInterface::GetShieldRegenGameplayEffect
+	virtual TSubclassOf<UGameplayEffect> GetHealthRegenGameplayEffectClass() const;  // slot 6 (+0x30), UFunction UFortHealthRegenInterface::GetHealthRegenGameplayEffectClass
+	virtual TSubclassOf<UGameplayEffect> GetShieldRegenGameplayEffectClass() const;  // slot 7 (+0x38), UFunction UFortHealthRegenInterface::GetShieldRegenGameplayEffectClass
 	static void execGetHealthRegenDelayGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHealthRegenGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHealthRegenGameplayEffectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -43581,6 +43847,18 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortInitializationInterface();
+};
+
+class IFortInitializationInterface
+{
+public:
+	typedef UFortInitializationInterface UClassType;
+	typedef IFortInitializationInterface ThisClass;
+	virtual ~IFortInitializationInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual bool NeedsWorldReady() const;  // slot 2 (+0x10), UFunction UFortInitializationInterface::NeedsWorldReady
+	virtual void WorldReady();  // slot 3 (+0x18), UFunction UFortInitializationInterface::WorldReady
+	virtual void MatchStarted();  // slot 4 (+0x20), UFunction UFortInitializationInterface::MatchStarted
 	static void execMatchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execNeedsWorldReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execWorldReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -43686,6 +43964,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortInteractInterface();
+};
+
+class IFortInteractInterface
+{
+public:
+	typedef UFortInteractInterface UClassType;
+	typedef IFortInteractInterface ThisClass;
 	static void execServerOnAttemptInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -46507,6 +46792,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortMissionPowerPointsInterface();
+};
+
+class IFortMissionPowerPointsInterface
+{
+public:
+	typedef UFortMissionPowerPointsInterface UClassType;
+	typedef IFortMissionPowerPointsInterface ThisClass;
+	virtual ~IFortMissionPowerPointsInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual float GetPowerPointsCost(float LerpValue) const;  // slot 2 (+0x10), UFunction UFortMissionPowerPointsInterface::GetPowerPointsCost
+	virtual float GetAvailabilityWeight(float DifficultyLevel) const;  // slot 3 (+0x18), UFunction UFortMissionPowerPointsInterface::GetAvailabilityWeight
+	virtual float GetInitialRangeLerpValue(float PointsAvailable) const;  // slot 4 (+0x20), UFunction UFortMissionPowerPointsInterface::GetInitialRangeLerpValue
+	virtual float GetMaxRangeLerpValue(float PointsAvailable, float PreviousLerpValue) const;  // slot 5 (+0x28), UFunction UFortMissionPowerPointsInterface::GetMaxRangeLerpValue
 	static void execGetAvailabilityWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetInitialRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMaxRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -52476,6 +52774,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSpawnableByPlacementSystemInterface();
+};
+
+class IFortSpawnableByPlacementSystemInterface
+{
+public:
+	typedef UFortSpawnableByPlacementSystemInterface UClassType;
+	typedef IFortSpawnableByPlacementSystemInterface ThisClass;
 	static void execGetMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -53339,6 +53644,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTabButtonInterface();
+};
+
+class IFortTabButtonInterface
+{
+public:
+	typedef UFortTabButtonInterface UClassType;
+	typedef IFortTabButtonInterface ThisClass;
+	virtual ~IFortTabButtonInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
 	static void execSetTabLabelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -53414,6 +53728,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTargetSelectionInterface();
+};
+
+class IFortTargetSelectionInterface
+{
+public:
+	typedef UFortTargetSelectionInterface UClassType;
+	typedef IFortTargetSelectionInterface ThisClass;
 	static void execGetTargetingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -53445,6 +53766,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTeamActorInterface();
+};
+
+class IFortTeamActorInterface
+{
+public:
+	typedef UFortTeamActorInterface UClassType;
+	typedef IFortTeamActorInterface ThisClass;
+	virtual ~IFortTeamActorInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();
+	virtual void FNGC_VSlot_0x18();
+	virtual void FNGC_VSlot_0x20();
+	virtual EFortTeam::Type GetTeam() const;  // slot 5 (+0x28), UFunction UFortTeamActorInterface::GetTeam
 	static void execGetTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -53897,6 +54231,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortTooltipInterface();
+};
+
+class IFortTooltipInterface
+{
+public:
+	typedef UFortTooltipInterface UClassType;
+	typedef IFortTooltipInterface ThisClass;
 	static void execGetDisplayStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTooltip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -55880,6 +56221,21 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGameplayCueInterface();
+};
+
+class IGameplayCueInterface
+{
+public:
+	typedef UGameplayCueInterface UClassType;
+	typedef IGameplayCueInterface ThisClass;
+	virtual ~IGameplayCueInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();
+	virtual void FNGC_VSlot_0x18();
+	virtual void FNGC_VSlot_0x20();
+	virtual void FNGC_VSlot_0x28();
+	virtual void FNGC_VSlot_0x30();
+	virtual void ForwardGameplayCueToParent();  // slot 7 (+0x38), UFunction UGameplayCueInterface::ForwardGameplayCueToParent
 	static void execForwardGameplayCueToParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -56160,6 +56516,19 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUGameplayTagAssetInterface();
+};
+
+class IGameplayTagAssetInterface
+{
+public:
+	typedef UGameplayTagAssetInterface UClassType;
+	typedef IGameplayTagAssetInterface ThisClass;
+	virtual ~IGameplayTagAssetInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const;  // slot 2 (+0x10), UFunction UGameplayTagAssetInterface::GetOwnedGameplayTags
+	virtual bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const;  // slot 3 (+0x18), UFunction UGameplayTagAssetInterface::HasMatchingGameplayTag
+	virtual bool HasAllMatchingGameplayTags(FGameplayTagContainer const& TagContainer) const;  // slot 4 (+0x20), UFunction UGameplayTagAssetInterface::HasAllMatchingGameplayTags
+	virtual bool HasAnyMatchingGameplayTags(FGameplayTagContainer const& TagContainer) const;  // slot 5 (+0x28), UFunction UGameplayTagAssetInterface::HasAnyMatchingGameplayTags
 	static void execGetOwnedGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHasAllMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHasAnyMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);

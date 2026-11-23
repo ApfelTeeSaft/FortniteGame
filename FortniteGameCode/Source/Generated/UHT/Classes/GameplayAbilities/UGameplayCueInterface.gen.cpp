@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055CD40 (end 0x0055CD5C), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execForwardGameplayCueToParent) | Matching: see analysis/functions-uht-exec.json
+void IGameplayCueInterface::execForwardGameplayCueToParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ForwardGameplayCueToParent();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UGameplayCueInterface, 1242886516u)
 // Original dynamic initializer: RVA 0x0009ECA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameplayCueInterface> AutoInitializeUGameplayCueInterface(TEXT("UGameplayCueInterface"), sizeof(UGameplayCueInterface), 1242886516u);

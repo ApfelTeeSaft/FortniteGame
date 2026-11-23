@@ -13,18 +13,18 @@ void UFortClientAnnouncement_TutorialInterface::StaticRegisterNativesUFortClient
 {
 	UClass* Class = UFortClientAnnouncement_TutorialInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "HideTutorialWidget", &UFortClientAnnouncement_TutorialInterface::execHideTutorialWidget },
-		{ "SetButtonEnabled", &UFortClientAnnouncement_TutorialInterface::execSetButtonEnabled },
-		{ "SetDetailText", &UFortClientAnnouncement_TutorialInterface::execSetDetailText },
-		{ "SetHAlign", &UFortClientAnnouncement_TutorialInterface::execSetHAlign },
-		{ "SetLightboxDisableInputOnly", &UFortClientAnnouncement_TutorialInterface::execSetLightboxDisableInputOnly },
-		{ "SetLightboxEnabled", &UFortClientAnnouncement_TutorialInterface::execSetLightboxEnabled },
-		{ "SetNameText", &UFortClientAnnouncement_TutorialInterface::execSetNameText },
-		{ "SetPadding", &UFortClientAnnouncement_TutorialInterface::execSetPadding },
-		{ "SetSystemText", &UFortClientAnnouncement_TutorialInterface::execSetSystemText },
-		{ "SetTitleText", &UFortClientAnnouncement_TutorialInterface::execSetTitleText },
-		{ "SetVAlign", &UFortClientAnnouncement_TutorialInterface::execSetVAlign },
-		{ "WaitForContinue", &UFortClientAnnouncement_TutorialInterface::execWaitForContinue },
+		{ "HideTutorialWidget", &IFortClientAnnouncement_TutorialInterface::execHideTutorialWidget },
+		{ "SetButtonEnabled", &IFortClientAnnouncement_TutorialInterface::execSetButtonEnabled },
+		{ "SetDetailText", &IFortClientAnnouncement_TutorialInterface::execSetDetailText },
+		{ "SetHAlign", &IFortClientAnnouncement_TutorialInterface::execSetHAlign },
+		{ "SetLightboxDisableInputOnly", &IFortClientAnnouncement_TutorialInterface::execSetLightboxDisableInputOnly },
+		{ "SetLightboxEnabled", &IFortClientAnnouncement_TutorialInterface::execSetLightboxEnabled },
+		{ "SetNameText", &IFortClientAnnouncement_TutorialInterface::execSetNameText },
+		{ "SetPadding", &IFortClientAnnouncement_TutorialInterface::execSetPadding },
+		{ "SetSystemText", &IFortClientAnnouncement_TutorialInterface::execSetSystemText },
+		{ "SetTitleText", &IFortClientAnnouncement_TutorialInterface::execSetTitleText },
+		{ "SetVAlign", &IFortClientAnnouncement_TutorialInterface::execSetVAlign },
+		{ "WaitForContinue", &IFortClientAnnouncement_TutorialInterface::execWaitForContinue },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

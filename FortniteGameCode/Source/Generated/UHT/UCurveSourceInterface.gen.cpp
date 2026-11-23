@@ -13,9 +13,9 @@ void UCurveSourceInterface::StaticRegisterNativesUCurveSourceInterface()
 {
 	UClass* Class = UCurveSourceInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetBindingName", &UCurveSourceInterface::execGetBindingName },
-		{ "GetCurves", &UCurveSourceInterface::execGetCurves },
-		{ "GetCurveValue", &UCurveSourceInterface::execGetCurveValue },
+		{ "GetBindingName", &ICurveSourceInterface::execGetBindingName },
+		{ "GetCurves", &ICurveSourceInterface::execGetCurves },
+		{ "GetCurveValue", &ICurveSourceInterface::execGetCurveValue },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

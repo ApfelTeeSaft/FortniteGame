@@ -4,6 +4,81 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC220 (end 0x002CC24C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDoesItemHaveChildren) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execDoesItemHaveChildren(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->DoesItemHaveChildren_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC630 (end 0x002CC65C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetIndentLevel) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execGetIndentLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetIndentLevel_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CD290 (end 0x002CD2BC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsItemExpanded) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execIsItemExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsItemExpanded_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CD600 (end 0x002CD61C), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPrivate_OnExpanderArrowShiftClicked) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execPrivate_OnExpanderArrowShiftClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Private_OnExpanderArrowShiftClicked_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1D80 (end 0x00FC1E03)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetExpanded) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execSetExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bExpanded);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetExpanded_Implementation(Z_Param_bExpanded);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CE090 (end 0x002CE10F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIndexInList) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execSetIndexInList(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InIndexInList);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIndexInList_Implementation(Z_Param_InIndexInList);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CE7E0 (end 0x002CE863)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSelected) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execSetSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bSelected);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSelected_Implementation(Z_Param_bSelected);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CEEA0 (end 0x002CEEBC), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execToggleExpansion) | Matching: see analysis/functions-uht-exec.json
+void ICommonListItem::execToggleExpansion(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleExpansion_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonListItem, 4066878758u)
 // Original dynamic initializer: RVA 0x00095FC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonListItem> AutoInitializeUCommonListItem(TEXT("UCommonListItem"), sizeof(UCommonListItem), 4066878758u);

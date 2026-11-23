@@ -55,6 +55,7 @@ ENUM_MANIFEST = ROOT / "analysis" / "functions-uht-enums.json"
 ENUM_SYMBOLS = ROOT / "analysis" / "uht-enum-symbols.json"
 
 FUNC_NET, FUNC_NETVALIDATE, FUNC_CONST = 0x40, 0x80000000, 0x40000000
+CLASS_INTERFACE = 0x00004000            # EClassFlags
 CONSTRUCT_USCRIPTSTRUCT = 0x0138FA20    # UE4CodeGen_Private::ConstructUScriptStruct (see docs/STATUS.md)
 LEAF_LIMIT = 64
 
@@ -252,6 +253,44 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
             stats["placeholder slots"] += 1
         declared[n], visible[n], decls[n] = top, names, out
 
+    # Interfaces (CLASS_Interface). UHT declares an interface's native functions, and their exec
+    # thunks, in the native I<Name> class (ThisClass), and UFunction::Invoke passes the thunk the
+    # object's I<Name> address as Context. I<Name>'s vtable starts with GENERATED_IINTERFACE_BODY's
+    # destructor and _getUObject; the call offsets natives.json records give the other slots.
+    iface_slots: dict[str, dict[int, dict]] = defaultdict(dict)
+    for e in nat["virtual_natives"]:
+        c = classes.get(e["class"])
+        if c and c.get("decoded") and c["flags"] & CLASS_INTERFACE:
+            off = e["vtable_offset"]
+            iface_slots[e["class"]][(int(off, 16) if isinstance(off, str) else off) // 8] = e
+    interfaces = {}
+    for n, slots in sorted(iface_slots.items()):
+        iname = "I" + n[1:]
+        out = [f"\tvirtual ~{iname}();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY",
+               "\tvirtual UObject* _getUObject() const;  // slot 1 (+0x8)"]
+        seen = set()
+        for i in range(2, max(slots) + 1):
+            e = slots.get(i)
+            if e is None:
+                out.append(f"\tvirtual void FNGC_VSlot_0x{8 * i:X}();")
+                continue
+            name = e["name"].split("::", 1)[1]
+            sig = signature(dimg, base, syms, typenames, n, e["ufunction"], int(e["exec_rva"], 16), rfs)
+            if sig is not None and name.endswith("_Validate"):
+                sig = dict(sig, ret="bool")
+            if sig is None or name in seen:
+                out.append(f"\tvirtual void FNGC_VSlot_0x{8 * i:X}();  // slot {i}: {n}::{name} (signature not recovered)")
+                stats["interface slots declared as placeholders"] += 1
+                continue
+            decl = ", ".join(d for d, _, _ in sig["params"])
+            out.append(f"\tvirtual {sig['ret'] or 'void'} {name}({decl}){' const' if sig['const'] else ''};  "
+                       f"// slot {i} (+0x{8 * i:X}), UFunction {n}::{e['ufunction']}")
+            seen.add(name)
+            named_ok.add((n, name))
+            sigs[(n, name)] = sig
+            stats["interface slots declared by name"] += 1
+        interfaces[n] = {"name": iname, "decls": out}
+
     # Exec thunks whose every native call is a slot declared by name.
     by_owner = defaultdict(list)
     for e in nat["virtual_natives"]:
@@ -283,21 +322,26 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         end = function_end(dimg, rfs, r) if r in rfs else leaf_end(md, dimg, r)
         if end is None:
             continue
+        owner = interfaces[cls]["name"] if cls in interfaces else cls     # I<Name> for an interface
         thunks[(cls, uf)] = (f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{r:08X} (end 0x{end:08X})"
                              f"{'' if r in rfs else ', leaf (no .pdata)'}\n"
                              f"// Recovery: UHT 4.20 DECLARE_FUNCTION(exec{uf}) | Matching: see analysis/functions-uht-exec.json\n"
-                             f"void {cls}::exec{uf}(UObject* Context, FFrame& Stack, void* const Z_Param__Result)\n"
+                             f"void {owner}::exec{uf}(UObject* Context, FFrame& Stack, void* const Z_Param__Result)\n"
                              "{\n" + "\n".join(body) + "\n}\n")
         stats["exec thunks defined"] += 1
         if exec_rva in entry_at:
             # The same body for another UFunction (linker-folded): one manifest entry per address.
             entry_at[exec_rva]["thunk_shared_by"] = entry_at[exec_rva].get("thunk_shared_by", 1) + 1
             continue
-        entry_at[exec_rva] = {"start_rva": f"0x{r:08X}", "end_rva": f"0x{end:08X}", "name": f"{cls}::exec{uf}",
+        entry_at[exec_rva] = {"start_rva": f"0x{r:08X}", "end_rva": f"0x{end:08X}", "name": f"{owner}::exec{uf}",
                               "class": cls}
+        if owner != cls:
+            entry_at[exec_rva]["symbol"] = f"?exec{uf}@{owner}@@SAXPEAVUObject@@AEAUFFrame@@QEAX@Z"
+            stats["interface exec thunks"] += 1
         entries.append(entry_at[exec_rva])
         stats["exec thunk addresses"] += 1
         stats["exec thunk addresses, leaf"] += r not in rfs
     return {"decls": decls, "thunks": thunks, "roots_with_vptr": roots_with_vptr, "entries": entries,
+            "interfaces": interfaces,
             "enums": uht_props.enum_declarations(typenames),
             "stats": dict(stats)}

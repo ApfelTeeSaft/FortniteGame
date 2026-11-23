@@ -370,10 +370,10 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,483, at 1,235 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 842 read parameters |
-| exact | 1,222: 1,020 in the denominator, 202 leaf (no `.pdata`) |
-| relocation-equivalent | 4: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner` and `APartyBeaconClient::ServerReservationRequest` (below) |
-| `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
+| UFunction thunks defined | 1,550, at 1,298 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 879 read parameters |
+| exact | 1,283: 1,073 in the denominator, 210 leaf (no `.pdata`) |
+| relocation-equivalent | 5: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest` and `IAssetRegistry::GetAssetByObjectPath` (below) |
+| `partial` | 10: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and seven byte enums whose native is declared with `TEnumAsByte` (below; one is `IFortTeamActorInterface::GetTeam`) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
 and, for strings and arrays, `TArray<T>::ResizeForCopy`, `FMemory::Free` and `memcpy`
@@ -562,9 +562,25 @@ Limits:
     - The 4 spec thunks and `AFortPlayerController::ServerRequestAttributeSources`
       (`FGameplayAttribute` by value, copied inline) are exact.
     - `FKey`'s struct registration initializer lost its literal again (`.rdata` ripple).
-    - `FAssetData` is modelled, but the 6 `UAssetRegistry` UFunctions that use it get no
-      thunk. `UAssetRegistry` is a `UINTERFACE`: its thunks call through `IAssetRegistry`
-      (`GetNativeInterfaceAddress`), a form not generated yet.
+    - `FAssetData` is used by the `UAssetRegistry` UFunctions, which are interface
+      UFunctions (next point).
+- **Interfaces.** UHT 4.20 declares an interface's native functions, and their exec thunks,
+  in the native `I<Name>` class (`typedef I<Name> ThisClass`), and registers
+  `&I<Name>::exec<Fn>`. `UFunction::Invoke` passes the thunk the object's interface address
+  as `Context`, so `P_THIS->Fn()` calls through the interface's own vtable.
+  - Interfaces are the classes with `CLASS_Interface`: in `FClassParams::ClassFlags` (+0x14)
+    for `uht_creators.py`, and in `StaticClassFlags` for `uht_classes.py`.
+  - `I<Name>` is declared after `U<Name>`. GENERATED_IINTERFACE_BODY's destructor is slot 0
+    and `_getUObject` slot 1; the slots the thunks call come from their call offsets
+    (`analysis/native-implementations.json`). `IAssetRegistry::HasAssets` is at +0x10, the
+    first slot after those two.
+  - 27 interfaces, 67 slots declared by name, 63 thunk addresses. 61 are exact (8 leaf).
+    `IAssetRegistry::GetAssetByObjectPath` is relocation-equivalent: only it calls
+    `FAssetData`'s move assignment out of line. `IFortTeamActorInterface::GetTeam` is
+    `partial`: its native returns `TEnumAsByte<EFortTeam::Type>` (a return slot is passed),
+    not UHT's raw enum (the `TEnumAsByte` form below).
+  - `FKey`'s struct registrar is exact again and `FFoliageTypeObject::StaticStruct` lost its
+    literal, the `.rdata` ripple once more.
   - Adding these changed the `.rdata` order of `InputCore.1`, which gained no code. Its
     literal sections came out in another order with the previous `ContainersRecovered.h`
     and in a third without `<new>`. So literal section order, like file-static order,
@@ -609,15 +625,14 @@ Limits:
   on a partial range; none was followed by a chained fragment.
 - A byte enum (`TEnumAsByte` property) may be declared by the programmer as the raw enum
   or as `TEnumAsByte<E>`. The reflection data does not record which, and the thunk text is
-  the same. UHT's own form (raw for values and returns) is used. Six natives are declared
+  the same. UHT's own form (raw for values and returns) is used. Seven natives are declared
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,578 have a supported signature and 1,483 have
-  thunks (folded bodies counted per UFunction). For the other 95, a slot is not declared
-  by name: a name already declared higher in the hierarchy, an incomplete validate pair, or
-  an interface's UFunction (`UAssetRegistry`, 6). The unsupported ones mostly use structs
-  not modelled:
+- Of the 1,661 virtual-native UFunctions, 1,578 have a supported signature and 1,550 have
+  thunks (folded bodies counted per UFunction). For the other 28, a slot is not declared
+  by name (a name already declared higher in the hierarchy, or an incomplete validate
+  pair). The unsupported ones mostly use structs not modelled:
   - `FSlateBrush` (6) and `FFortItemEntry` (4);
   - `FPointerEvent`, `FFortConversationSentence` and `TArray` of enums (3 each);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).

@@ -13,11 +13,11 @@ void UFortHUDTargetUnderReticleInterface::StaticRegisterNativesUFortHUDTargetUnd
 {
 	UClass* Class = UFortHUDTargetUnderReticleInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetHUDTargetDifficultyRating", &UFortHUDTargetUnderReticleInterface::execGetHUDTargetDifficultyRating },
-		{ "GetHUDTargetDisplayModifiers", &UFortHUDTargetUnderReticleInterface::execGetHUDTargetDisplayModifiers },
-		{ "GetHUDTargetDisplayName", &UFortHUDTargetUnderReticleInterface::execGetHUDTargetDisplayName },
-		{ "GetHUDTargetHealthPercentage", &UFortHUDTargetUnderReticleInterface::execGetHUDTargetHealthPercentage },
-		{ "GetHUDTargetUpgradeDisplayName", &UFortHUDTargetUnderReticleInterface::execGetHUDTargetUpgradeDisplayName },
+		{ "GetHUDTargetDifficultyRating", &IFortHUDTargetUnderReticleInterface::execGetHUDTargetDifficultyRating },
+		{ "GetHUDTargetDisplayModifiers", &IFortHUDTargetUnderReticleInterface::execGetHUDTargetDisplayModifiers },
+		{ "GetHUDTargetDisplayName", &IFortHUDTargetUnderReticleInterface::execGetHUDTargetDisplayName },
+		{ "GetHUDTargetHealthPercentage", &IFortHUDTargetUnderReticleInterface::execGetHUDTargetHealthPercentage },
+		{ "GetHUDTargetUpgradeDisplayName", &IFortHUDTargetUnderReticleInterface::execGetHUDTargetUpgradeDisplayName },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

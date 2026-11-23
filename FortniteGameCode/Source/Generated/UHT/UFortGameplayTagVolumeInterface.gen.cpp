@@ -13,7 +13,7 @@ void UFortGameplayTagVolumeInterface::StaticRegisterNativesUFortGameplayTagVolum
 {
 	UClass* Class = UFortGameplayTagVolumeInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "ApplyTags", &UFortGameplayTagVolumeInterface::execApplyTags },
+		{ "ApplyTags", &IFortGameplayTagVolumeInterface::execApplyTags },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

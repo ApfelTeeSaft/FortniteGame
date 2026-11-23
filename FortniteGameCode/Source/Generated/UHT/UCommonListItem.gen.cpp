@@ -13,15 +13,15 @@ void UCommonListItem::StaticRegisterNativesUCommonListItem()
 {
 	UClass* Class = UCommonListItem::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "DoesItemHaveChildren", &UCommonListItem::execDoesItemHaveChildren },
-		{ "GetIndentLevel", &UCommonListItem::execGetIndentLevel },
-		{ "IsItemExpanded", &UCommonListItem::execIsItemExpanded },
-		{ "Private_OnExpanderArrowShiftClicked", &UCommonListItem::execPrivate_OnExpanderArrowShiftClicked },
-		{ "RegisterOnClicked", &UCommonListItem::execRegisterOnClicked },
-		{ "SetExpanded", &UCommonListItem::execSetExpanded },
-		{ "SetIndexInList", &UCommonListItem::execSetIndexInList },
-		{ "SetSelected", &UCommonListItem::execSetSelected },
-		{ "ToggleExpansion", &UCommonListItem::execToggleExpansion },
+		{ "DoesItemHaveChildren", &ICommonListItem::execDoesItemHaveChildren },
+		{ "GetIndentLevel", &ICommonListItem::execGetIndentLevel },
+		{ "IsItemExpanded", &ICommonListItem::execIsItemExpanded },
+		{ "Private_OnExpanderArrowShiftClicked", &ICommonListItem::execPrivate_OnExpanderArrowShiftClicked },
+		{ "RegisterOnClicked", &ICommonListItem::execRegisterOnClicked },
+		{ "SetExpanded", &ICommonListItem::execSetExpanded },
+		{ "SetIndexInList", &ICommonListItem::execSetIndexInList },
+		{ "SetSelected", &ICommonListItem::execSetSelected },
+		{ "ToggleExpansion", &ICommonListItem::execToggleExpansion },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

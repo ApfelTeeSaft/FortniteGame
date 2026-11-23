@@ -4,6 +4,54 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC10F0 (end 0x00FC1184)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlayingConversation) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bCheckAudioComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPlayingConversation(Z_Param_bCheckAudioComponent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1250 (end 0x00FC12E1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlayingSentenceIndex) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentenceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_SentenceIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPlayingSentenceIndex(Z_Param_SentenceIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1790 (end 0x00FC17BC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayConversation) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_ConversationCodeInterface::execPlayConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->PlayConversation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1880 (end 0x00FC1911)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayConversationFromSentenceIndex) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentenceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_StartingSentenceIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->PlayConversationFromSentenceIndex(Z_Param_StartingSentenceIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC2380 (end 0x00FC239C), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopConversation) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_ConversationCodeInterface::execStopConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopConversation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortClientAnnouncement_ConversationCodeInterface, 515559724u)
 // Original dynamic initializer: RVA 0x000EB210 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortClientAnnouncement_ConversationCodeInterface> AutoInitializeUFortClientAnnouncement_ConversationCodeInterface(TEXT("UFortClientAnnouncement_ConversationCodeInterface"), sizeof(UFortClientAnnouncement_ConversationCodeInterface), 515559724u);

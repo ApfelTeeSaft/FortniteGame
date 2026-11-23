@@ -13,7 +13,7 @@ void UFortAIRootAssignmentProviderInterface::StaticRegisterNativesUFortAIRootAss
 {
 	UClass* Class = UFortAIRootAssignmentProviderInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetRootAssignmentIdentifier", &UFortAIRootAssignmentProviderInterface::execGetRootAssignmentIdentifier },
+		{ "GetRootAssignmentIdentifier", &IFortAIRootAssignmentProviderInterface::execGetRootAssignmentIdentifier },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

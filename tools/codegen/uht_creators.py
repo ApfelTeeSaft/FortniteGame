@@ -205,7 +205,11 @@ def main() -> int:
         if nat is not None:
             srn = int(nat["static_register_natives_rva"], 16)
             arr_rva = int(nat["array_rva"], 16)
-            pairs = "\n".join(f'\t\t{{ "{f["name"]}", &{cls}::exec{f["name"]} }},' for f in nat["functions"])
+            # An interface's exec thunks are members of its native I<Name> class (CLASS_Interface in
+            # the FClassParams ClassFlags at +0x14).
+            iface = struct.unpack("<I", dimg.read(int(arr["class_params_rva"], 16) + 0x14, 4))[0] & 0x00004000
+            owner = "I" + cls[1:] if iface else cls
+            pairs = "\n".join(f'\t\t{{ "{f["name"]}", &{owner}::exec{f["name"]} }},' for f in nat["functions"])
             bodies.append(
                 f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{srn:08X} (end 0x{rfs[srn].end:08X})\n"
                 f"// Original VA: 0x{base + srn:016X} | File offset: 0x{img.rva_to_off(srn):08X}\n"

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEF900 (end 0x00FEF91C), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execApplyTags) | Matching: see analysis/functions-uht-exec.json
+void IFortGameplayTagVolumeInterface::execApplyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ApplyTags();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortGameplayTagVolumeInterface, 2316809786u)
 // Original dynamic initializer: RVA 0x000F77D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGameplayTagVolumeInterface> AutoInitializeUFortGameplayTagVolumeInterface(TEXT("UFortGameplayTagVolumeInterface"), sizeof(UFortGameplayTagVolumeInterface), 2316809786u);

@@ -4,6 +4,46 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C94DF0 (end 0x01C94EA8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetOwnedGameplayTags) | Matching: see analysis/functions-uht-exec.json
+void IGameplayTagAssetInterface::execGetOwnedGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGameplayTagContainer,Z_Param_Out_TagContainer);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetOwnedGameplayTags(Z_Param_Out_TagContainer);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C94F50 (end 0x01C95019)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasAllMatchingGameplayTags) | Matching: see analysis/functions-uht-exec.json
+void IGameplayTagAssetInterface::execHasAllMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGameplayTagContainer,Z_Param_Out_TagContainer);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasAllMatchingGameplayTags(Z_Param_Out_TagContainer);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C952C0 (end 0x01C95389)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasAnyMatchingGameplayTags) | Matching: see analysis/functions-uht-exec.json
+void IGameplayTagAssetInterface::execHasAnyMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGameplayTagContainer,Z_Param_Out_TagContainer);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasAnyMatchingGameplayTags(Z_Param_Out_TagContainer);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C95510 (end 0x01C955A3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasMatchingGameplayTag) | Matching: see analysis/functions-uht-exec.json
+void IGameplayTagAssetInterface::execHasMatchingGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_TagToCheck);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasMatchingGameplayTag(Z_Param_TagToCheck);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UGameplayTagAssetInterface, 2370529641u)
 // Original dynamic initializer: RVA 0x001B71A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameplayTagAssetInterface> AutoInitializeUGameplayTagAssetInterface(TEXT("UGameplayTagAssetInterface"), sizeof(UGameplayTagAssetInterface), 2370529641u);

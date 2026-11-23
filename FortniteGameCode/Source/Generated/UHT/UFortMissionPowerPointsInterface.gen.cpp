@@ -13,10 +13,10 @@ void UFortMissionPowerPointsInterface::StaticRegisterNativesUFortMissionPowerPoi
 {
 	UClass* Class = UFortMissionPowerPointsInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetAvailabilityWeight", &UFortMissionPowerPointsInterface::execGetAvailabilityWeight },
-		{ "GetInitialRangeLerpValue", &UFortMissionPowerPointsInterface::execGetInitialRangeLerpValue },
-		{ "GetMaxRangeLerpValue", &UFortMissionPowerPointsInterface::execGetMaxRangeLerpValue },
-		{ "GetPowerPointsCost", &UFortMissionPowerPointsInterface::execGetPowerPointsCost },
+		{ "GetAvailabilityWeight", &IFortMissionPowerPointsInterface::execGetAvailabilityWeight },
+		{ "GetInitialRangeLerpValue", &IFortMissionPowerPointsInterface::execGetInitialRangeLerpValue },
+		{ "GetMaxRangeLerpValue", &IFortMissionPowerPointsInterface::execGetMaxRangeLerpValue },
+		{ "GetPowerPointsCost", &IFortMissionPowerPointsInterface::execGetPowerPointsCost },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

@@ -13,7 +13,7 @@ void UGameplayCueInterface::StaticRegisterNativesUGameplayCueInterface()
 {
 	UClass* Class = UGameplayCueInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "ForwardGameplayCueToParent", &UGameplayCueInterface::execForwardGameplayCueToParent },
+		{ "ForwardGameplayCueToParent", &IGameplayCueInterface::execForwardGameplayCueToParent },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

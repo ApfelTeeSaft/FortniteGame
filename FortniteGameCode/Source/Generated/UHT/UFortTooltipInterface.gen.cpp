@@ -13,8 +13,8 @@ void UFortTooltipInterface::StaticRegisterNativesUFortTooltipInterface()
 {
 	UClass* Class = UFortTooltipInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetDisplayStats", &UFortTooltipInterface::execGetDisplayStats },
-		{ "GetTooltip", &UFortTooltipInterface::execGetTooltip },
+		{ "GetDisplayStats", &IFortTooltipInterface::execGetDisplayStats },
+		{ "GetTooltip", &IFortTooltipInterface::execGetTooltip },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

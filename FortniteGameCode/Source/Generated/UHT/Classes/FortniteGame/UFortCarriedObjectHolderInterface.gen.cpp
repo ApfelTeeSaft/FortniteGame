@@ -4,6 +4,46 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB5520 (end 0x00FB55B3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanHoldObject) | Matching: see analysis/functions-uht-exec.json
+void IFortCarriedObjectHolderInterface::execCanHoldObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_CarriableObject);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanHoldObject(Z_Param_CarriableObject);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB66B0 (end 0x00FB6743)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAttachmentComponent) | Matching: see analysis/functions-uht-exec.json
+void IFortCarriedObjectHolderInterface::execGetAttachmentComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_SocketName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(USceneComponent**)Z_Param__Result=P_THIS->GetAttachmentComponent(Z_Param_SocketName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB8CF0 (end 0x00FB8D71)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCarriedObjectAttach) | Matching: see analysis/functions-uht-exec.json
+void IFortCarriedObjectHolderInterface::execOnCarriedObjectAttach(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_AttachedObject);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCarriedObjectAttach(Z_Param_AttachedObject);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB8D80 (end 0x00FB8E01)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCarriedObjectDetach) | Matching: see analysis/functions-uht-exec.json
+void IFortCarriedObjectHolderInterface::execOnCarriedObjectDetach(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_DetachedObject);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCarriedObjectDetach(Z_Param_DetachedObject);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCarriedObjectHolderInterface, 3515379933u)
 // Original dynamic initializer: RVA 0x000EA740 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCarriedObjectHolderInterface> AutoInitializeUFortCarriedObjectHolderInterface(TEXT("UFortCarriedObjectHolderInterface"), sizeof(UFortCarriedObjectHolderInterface), 3515379933u);

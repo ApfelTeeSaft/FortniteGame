@@ -13,7 +13,7 @@ void UFortClientAnnouncement_ConversationInterface::StaticRegisterNativesUFortCl
 {
 	UClass* Class = UFortClientAnnouncement_ConversationInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "ShouldPlaySentence", &UFortClientAnnouncement_ConversationInterface::execShouldPlaySentence },
+		{ "ShouldPlaySentence", &IFortClientAnnouncement_ConversationInterface::execShouldPlaySentence },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

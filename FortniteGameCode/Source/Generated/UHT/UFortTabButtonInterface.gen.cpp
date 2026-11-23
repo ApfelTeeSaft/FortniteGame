@@ -13,7 +13,7 @@ void UFortTabButtonInterface::StaticRegisterNativesUFortTabButtonInterface()
 {
 	UClass* Class = UFortTabButtonInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "SetTabLabelInfo", &UFortTabButtonInterface::execSetTabLabelInfo },
+		{ "SetTabLabelInfo", &IFortTabButtonInterface::execSetTabLabelInfo },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

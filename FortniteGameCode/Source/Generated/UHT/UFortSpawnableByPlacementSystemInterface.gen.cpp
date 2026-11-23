@@ -13,8 +13,8 @@ void UFortSpawnableByPlacementSystemInterface::StaticRegisterNativesUFortSpawnab
 {
 	UClass* Class = UFortSpawnableByPlacementSystemInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetMission", &UFortSpawnableByPlacementSystemInterface::execGetMission },
-		{ "GetMissionGuid", &UFortSpawnableByPlacementSystemInterface::execGetMissionGuid },
+		{ "GetMission", &IFortSpawnableByPlacementSystemInterface::execGetMission },
+		{ "GetMissionGuid", &IFortSpawnableByPlacementSystemInterface::execGetMissionGuid },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

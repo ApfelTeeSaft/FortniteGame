@@ -13,7 +13,7 @@ void UFortHUDObjectiveSizeInterface::StaticRegisterNativesUFortHUDObjectiveSizeI
 {
 	UClass* Class = UFortHUDObjectiveSizeInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetHeightEstimate", &UFortHUDObjectiveSizeInterface::execGetHeightEstimate },
+		{ "GetHeightEstimate", &IFortHUDObjectiveSizeInterface::execGetHeightEstimate },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

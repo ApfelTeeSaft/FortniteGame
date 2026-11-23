@@ -13,10 +13,10 @@ void UGameplayTagAssetInterface::StaticRegisterNativesUGameplayTagAssetInterface
 {
 	UClass* Class = UGameplayTagAssetInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetOwnedGameplayTags", &UGameplayTagAssetInterface::execGetOwnedGameplayTags },
-		{ "HasAllMatchingGameplayTags", &UGameplayTagAssetInterface::execHasAllMatchingGameplayTags },
-		{ "HasAnyMatchingGameplayTags", &UGameplayTagAssetInterface::execHasAnyMatchingGameplayTags },
-		{ "HasMatchingGameplayTag", &UGameplayTagAssetInterface::execHasMatchingGameplayTag },
+		{ "GetOwnedGameplayTags", &IGameplayTagAssetInterface::execGetOwnedGameplayTags },
+		{ "HasAllMatchingGameplayTags", &IGameplayTagAssetInterface::execHasAllMatchingGameplayTags },
+		{ "HasAnyMatchingGameplayTags", &IGameplayTagAssetInterface::execHasAnyMatchingGameplayTags },
+		{ "HasMatchingGameplayTag", &IGameplayTagAssetInterface::execHasMatchingGameplayTag },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

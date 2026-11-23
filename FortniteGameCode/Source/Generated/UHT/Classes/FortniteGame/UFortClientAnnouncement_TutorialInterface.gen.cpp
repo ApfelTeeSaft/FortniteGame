@@ -4,6 +4,115 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CD8D0 (end 0x002CD8EC), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHideTutorialWidget) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execHideTutorialWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HideTutorialWidget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1920 (end 0x00FC19A3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetButtonEnabled) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetButtonEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bButtonEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetButtonEnabled(Z_Param_bButtonEnabled);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1A80 (end 0x00FC1B3F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDetailText) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetDetailText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_NameText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDetailText(Z_Param_NameText);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1BC0 (end 0x00FC1C37)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetHAlign) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetHAlign(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_HAlign);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetHAlign(EHorizontalAlignment(Z_Param_HAlign));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1D80 (end 0x00FC1E03)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLightboxDisableInputOnly) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetLightboxDisableInputOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bLightboxDisableInputOnly);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLightboxDisableInputOnly(Z_Param_bLightboxDisableInputOnly);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1E10 (end 0x00FC1E93)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLightboxEnabled) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetLightboxEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bLightboxEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLightboxEnabled(Z_Param_bLightboxEnabled);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1EA0 (end 0x00FC1F5F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetNameText) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetNameText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_NameText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetNameText(Z_Param_NameText);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1F60 (end 0x00FC1FE4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPadding) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FMargin,Z_Param_Padding);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPadding(Z_Param_Padding);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1FF0 (end 0x00FC20AF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSystemText) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetSystemText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_SystemText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSystemText(Z_Param_SystemText);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC2180 (end 0x00FC223F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetTitleText) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetTitleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_NameText);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetTitleText(Z_Param_NameText);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC2240 (end 0x00FC22B7)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetVAlign) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_TutorialInterface::execSetVAlign(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_VAlign);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetVAlign(EVerticalAlignment(Z_Param_VAlign));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortClientAnnouncement_TutorialInterface, 1468466977u)
 // Original dynamic initializer: RVA 0x000EB250 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortClientAnnouncement_TutorialInterface> AutoInitializeUFortClientAnnouncement_TutorialInterface(TEXT("UFortClientAnnouncement_TutorialInterface"), sizeof(UFortClientAnnouncement_TutorialInterface), 1468466977u);

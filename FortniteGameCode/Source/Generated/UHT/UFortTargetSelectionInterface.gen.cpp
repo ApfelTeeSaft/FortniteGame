@@ -13,7 +13,7 @@ void UFortTargetSelectionInterface::StaticRegisterNativesUFortTargetSelectionInt
 {
 	UClass* Class = UFortTargetSelectionInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetTargetingTransform", &UFortTargetSelectionInterface::execGetTargetingTransform },
+		{ "GetTargetingTransform", &IFortTargetSelectionInterface::execGetTargetingTransform },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

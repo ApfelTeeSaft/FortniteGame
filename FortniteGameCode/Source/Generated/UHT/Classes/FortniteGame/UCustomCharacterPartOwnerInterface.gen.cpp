@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F220 (end 0x0109F24D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCustomizationRootSkeletalMeshComponent) | Matching: see analysis/functions-uht-exec.json
+void ICustomCharacterPartOwnerInterface::execGetCustomizationRootSkeletalMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(USkeletalMeshComponent**)Z_Param__Result=P_THIS->GetCustomizationRootSkeletalMeshComponent();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCustomCharacterPartOwnerInterface, 3701593446u)
 // Original dynamic initializer: RVA 0x000DCF00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCustomCharacterPartOwnerInterface> AutoInitializeUCustomCharacterPartOwnerInterface(TEXT("UCustomCharacterPartOwnerInterface"), sizeof(UCustomCharacterPartOwnerInterface), 3701593446u);

@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100A020 (end 0x0100A03C), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMatchStarted) | Matching: see analysis/functions-uht-exec.json
+void IFortInitializationInterface::execMatchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MatchStarted();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100A040 (end 0x0100A06C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNeedsWorldReady) | Matching: see analysis/functions-uht-exec.json
+void IFortInitializationInterface::execNeedsWorldReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->NeedsWorldReady();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100A8E0 (end 0x0100A8FC), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execWorldReady) | Matching: see analysis/functions-uht-exec.json
+void IFortInitializationInterface::execWorldReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->WorldReady();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortInitializationInterface, 1350134307u)
 // Original dynamic initializer: RVA 0x000FB1A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortInitializationInterface> AutoInitializeUFortInitializationInterface(TEXT("UFortInitializationInterface"), sizeof(UFortInitializationInterface), 1350134307u);

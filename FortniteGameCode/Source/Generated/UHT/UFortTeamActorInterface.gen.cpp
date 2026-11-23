@@ -13,7 +13,7 @@ void UFortTeamActorInterface::StaticRegisterNativesUFortTeamActorInterface()
 {
 	UClass* Class = UFortTeamActorInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetTeam", &UFortTeamActorInterface::execGetTeam },
+		{ "GetTeam", &IFortTeamActorInterface::execGetTeam },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

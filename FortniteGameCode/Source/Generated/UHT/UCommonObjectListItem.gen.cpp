@@ -13,9 +13,9 @@ void UCommonObjectListItem::StaticRegisterNativesUCommonObjectListItem()
 {
 	UClass* Class = UCommonObjectListItem::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetData", &UCommonObjectListItem::execGetData },
-		{ "Reset", &UCommonObjectListItem::execReset },
-		{ "SetData", &UCommonObjectListItem::execSetData },
+		{ "GetData", &ICommonObjectListItem::execGetData },
+		{ "Reset", &ICommonObjectListItem::execReset },
+		{ "SetData", &ICommonObjectListItem::execSetData },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

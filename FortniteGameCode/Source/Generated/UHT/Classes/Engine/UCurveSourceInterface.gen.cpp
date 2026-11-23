@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CDD10 (end 0x010CDD45)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBindingName) | Matching: see analysis/functions-uht-exec.json
+void ICurveSourceInterface::execGetBindingName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FName*)Z_Param__Result=P_THIS->GetBindingName_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCurveSourceInterface, 3361000754u)
 // Original dynamic initializer: RVA 0x001F8340 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCurveSourceInterface> AutoInitializeUCurveSourceInterface(TEXT("UCurveSourceInterface"), sizeof(UCurveSourceInterface), 3361000754u);

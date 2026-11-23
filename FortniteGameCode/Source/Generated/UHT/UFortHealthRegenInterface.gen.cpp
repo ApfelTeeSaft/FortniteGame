@@ -13,12 +13,12 @@ void UFortHealthRegenInterface::StaticRegisterNativesUFortHealthRegenInterface()
 {
 	UClass* Class = UFortHealthRegenInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetHealthRegenDelayGameplayEffect", &UFortHealthRegenInterface::execGetHealthRegenDelayGameplayEffect },
-		{ "GetHealthRegenGameplayEffect", &UFortHealthRegenInterface::execGetHealthRegenGameplayEffect },
-		{ "GetHealthRegenGameplayEffectClass", &UFortHealthRegenInterface::execGetHealthRegenGameplayEffectClass },
-		{ "GetShieldRegenDelayGameplayEffect", &UFortHealthRegenInterface::execGetShieldRegenDelayGameplayEffect },
-		{ "GetShieldRegenGameplayEffect", &UFortHealthRegenInterface::execGetShieldRegenGameplayEffect },
-		{ "GetShieldRegenGameplayEffectClass", &UFortHealthRegenInterface::execGetShieldRegenGameplayEffectClass },
+		{ "GetHealthRegenDelayGameplayEffect", &IFortHealthRegenInterface::execGetHealthRegenDelayGameplayEffect },
+		{ "GetHealthRegenGameplayEffect", &IFortHealthRegenInterface::execGetHealthRegenGameplayEffect },
+		{ "GetHealthRegenGameplayEffectClass", &IFortHealthRegenInterface::execGetHealthRegenGameplayEffectClass },
+		{ "GetShieldRegenDelayGameplayEffect", &IFortHealthRegenInterface::execGetShieldRegenDelayGameplayEffect },
+		{ "GetShieldRegenGameplayEffect", &IFortHealthRegenInterface::execGetShieldRegenGameplayEffect },
+		{ "GetShieldRegenGameplayEffectClass", &IFortHealthRegenInterface::execGetShieldRegenGameplayEffectClass },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }

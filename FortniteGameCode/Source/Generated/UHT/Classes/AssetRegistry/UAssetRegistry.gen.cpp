@@ -4,6 +4,107 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C80720 (end 0x01C80868)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAllAssets) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execGetAllAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY_REF(FAssetData,Z_Param_Out_OutAssetData);
+	P_GET_UBOOL(Z_Param_bIncludeOnlyOnDiskAssets);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetAllAssets(Z_Param_Out_OutAssetData,Z_Param_bIncludeOnlyOnDiskAssets);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C80870 (end 0x01C8093D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAllCachedPaths) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execGetAllCachedPaths(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY_REF(FString,Z_Param_Out_OutPathList);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetAllCachedPaths(Z_Param_Out_OutPathList);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C80A30 (end 0x01C80B4F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAssetByObjectPath) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execGetAssetByObjectPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_ObjectPath);
+	P_GET_UBOOL(Z_Param_bIncludeOnlyOnDiskAssets);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FAssetData*)Z_Param__Result=P_THIS->GetAssetByObjectPath(Z_Param_ObjectPath,Z_Param_bIncludeOnlyOnDiskAssets);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C80D80 (end 0x01C80F07)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAssetsByClass) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execGetAssetsByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_ClassName);
+	P_GET_TARRAY_REF(FAssetData,Z_Param_Out_OutAssetData);
+	P_GET_UBOOL(Z_Param_bSearchSubClasses);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetAssetsByClass(Z_Param_ClassName,Z_Param_Out_OutAssetData,Z_Param_bSearchSubClasses);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C80F10 (end 0x01C81097)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAssetsByPackageName) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execGetAssetsByPackageName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_PackageName);
+	P_GET_TARRAY_REF(FAssetData,Z_Param_Out_OutAssetData);
+	P_GET_UBOOL(Z_Param_bIncludeOnlyOnDiskAssets);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetAssetsByPackageName(Z_Param_PackageName,Z_Param_Out_OutAssetData,Z_Param_bIncludeOnlyOnDiskAssets);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C810A0 (end 0x01C81274)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAssetsByPath) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execGetAssetsByPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_PackagePath);
+	P_GET_TARRAY_REF(FAssetData,Z_Param_Out_OutAssetData);
+	P_GET_UBOOL(Z_Param_bRecursive);
+	P_GET_UBOOL(Z_Param_bIncludeOnlyOnDiskAssets);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetAssetsByPath(Z_Param_PackagePath,Z_Param_Out_OutAssetData,Z_Param_bRecursive,Z_Param_bIncludeOnlyOnDiskAssets);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C815F0 (end 0x01C81763)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSubPaths) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execGetSubPaths(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InBasePath);
+	P_GET_TARRAY_REF(FString,Z_Param_Out_OutPathList);
+	P_GET_UBOOL(Z_Param_bInRecurse);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetSubPaths(Z_Param_InBasePath,Z_Param_Out_OutPathList,Z_Param_bInRecurse);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C81920 (end 0x01C819E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasAssets) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execHasAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_PackagePath);
+	P_GET_UBOOL(Z_Param_bRecursive);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasAssets(Z_Param_PackagePath,Z_Param_bRecursive);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C81AE0 (end 0x01C81B0F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLoadingAssets) | Matching: see analysis/functions-uht-exec.json
+void IAssetRegistry::execIsLoadingAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsLoadingAssets();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAssetRegistry, 1881570138u)
 // Original dynamic initializer: RVA 0x001B6070 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAssetRegistry> AutoInitializeUAssetRegistry(TEXT("UAssetRegistry"), sizeof(UAssetRegistry), 1881570138u);

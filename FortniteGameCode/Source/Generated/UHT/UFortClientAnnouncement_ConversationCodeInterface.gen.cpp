@@ -13,13 +13,13 @@ void UFortClientAnnouncement_ConversationCodeInterface::StaticRegisterNativesUFo
 {
 	UClass* Class = UFortClientAnnouncement_ConversationCodeInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "IsPlayingConversation", &UFortClientAnnouncement_ConversationCodeInterface::execIsPlayingConversation },
-		{ "IsPlayingSentence", &UFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentence },
-		{ "IsPlayingSentenceIndex", &UFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentenceIndex },
-		{ "PlayConversation", &UFortClientAnnouncement_ConversationCodeInterface::execPlayConversation },
-		{ "PlayConversationFromSentence", &UFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentence },
-		{ "PlayConversationFromSentenceIndex", &UFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentenceIndex },
-		{ "StopConversation", &UFortClientAnnouncement_ConversationCodeInterface::execStopConversation },
+		{ "IsPlayingConversation", &IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingConversation },
+		{ "IsPlayingSentence", &IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentence },
+		{ "IsPlayingSentenceIndex", &IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentenceIndex },
+		{ "PlayConversation", &IFortClientAnnouncement_ConversationCodeInterface::execPlayConversation },
+		{ "PlayConversationFromSentence", &IFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentence },
+		{ "PlayConversationFromSentenceIndex", &IFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentenceIndex },
+		{ "StopConversation", &IFortClientAnnouncement_ConversationCodeInterface::execStopConversation },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
