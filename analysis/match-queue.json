@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 1166,
+ "total": 1143,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -25,9 +25,9 @@
   },
   {
    "key": "uht-staticenum | singleton (.bss)",
-   "count": 282,
+   "count": 286,
    "states": {
-    "relocation-equivalent": 282
+    "relocation-equivalent": 286
    },
    "examples": [
     "0x002C17E0 EDynamicBoxType_StaticEnum",
@@ -108,20 +108,6 @@
    ]
   },
   {
-   "key": "uht-ufunction-creator | creator singleton (.bss)",
-   "count": 21,
-   "states": {
-    "relocation-equivalent": 21
-   },
-   "examples": [
-    "0x002CA800 Z_Construct_UDelegateFunction_CommonUI_OnLoadingStateChanged__DelegateSignature",
-    "0x00803F60 Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions",
-    "0x00F82290 Z_Construct_UDelegateFunction_FortniteGame_MoveToLocationDelegate__DelegateSignature",
-    "0x00F82320 Z_Construct_UDelegateFunction_FortniteGame_WaitTargetSelectionDelegate__DelegateSignature",
-    "0x00F8C5C0 Z_Construct_UDelegateFunction_FortniteGame_OnAIDirectorEventFired__DelegateSignature"
-   ]
-  },
-  {
    "key": "uht-package-constructor | creator singleton (.bss)",
    "count": 17,
    "states": {
@@ -136,59 +122,45 @@
    ]
   },
   {
-   "key": "uht-enum-constructor | creator singleton (.bss)",
-   "count": 16,
+   "key": "uht-ufunction-creator | creator singleton (.bss)",
+   "count": 14,
    "states": {
-    "relocation-equivalent": 16
+    "relocation-equivalent": 14
    },
    "examples": [
-    "0x002FC6C0 Z_Construct_UEnum_OnlineSubsystem_EMPMatchOutcome",
-    "0x0032F090 Z_Construct_UEnum_OnlineSubsystemUtils_EClientRequestType",
-    "0x01024430 Z_Construct_UEnum_FortniteGame_EOfferPurchaseError",
-    "0x013A7890 Z_Construct_UEnum_CoreUObject_ELifetimeCondition",
-    "0x01C93A30 Z_Construct_UEnum_GameplayTags_EGameplayTagSourceType"
-   ]
-  },
-  {
-   "key": "uht-staticenum | Z_Construct_* creator",
-   "count": 9,
-   "states": {
-    "relocation-equivalent": 9
-   },
-   "examples": [
-    "0x002FC120 EMPMatchOutcome_StaticEnum",
-    "0x010229D0 EOfferPurchaseError_StaticEnum",
-    "0x023CCD70 ERootMotionRootLock_StaticEnum",
-    "0x023D4200 ETemperatureSeverityType_StaticEnum",
-    "0x023E0A50 EApplicationState_StaticEnum"
+    "0x002CA800 Z_Construct_UDelegateFunction_CommonUI_OnLoadingStateChanged__DelegateSignature",
+    "0x00803F60 Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions",
+    "0x00F82290 Z_Construct_UDelegateFunction_FortniteGame_MoveToLocationDelegate__DelegateSignature",
+    "0x00F82320 Z_Construct_UDelegateFunction_FortniteGame_WaitTargetSelectionDelegate__DelegateSignature",
+    "0x00F8C5C0 Z_Construct_UDelegateFunction_FortniteGame_OnAIDirectorEventFired__DelegateSignature"
    ]
   },
   {
    "key": "uht-struct-constructor | creator singleton (.bss)",
-   "count": 9,
+   "count": 8,
    "states": {
-    "relocation-equivalent": 9
+    "relocation-equivalent": 8
    },
    "examples": [
     "0x00566120 Z_Construct_UScriptStruct_FReplicatedPredictionKeyMap",
     "0x0067C520 Z_Construct_UScriptStruct_FAnimNode_WheelHandler",
     "0x007DD520 Z_Construct_UScriptStruct_FVivoxMuteList",
     "0x007E03C0 Z_Construct_UScriptStruct_FDropTimecode",
-    "0x0145D140 Z_Construct_UScriptStruct_FSlateColor"
+    "0x019930E0 Z_Construct_UScriptStruct_FLightPropagationVolumeSettings"
    ]
   },
   {
-   "key": "uht-staticenum | Z_Construct_* creator + singleton (.bss)",
+   "key": "uht-enum-constructor | creator singleton (.bss)",
    "count": 7,
    "states": {
     "relocation-equivalent": 7
    },
    "examples": [
-    "0x0032C170 EClientRequestType_StaticEnum",
-    "0x013A7430 ELifetimeCondition_StaticEnum",
-    "0x01C92410 EGameplayTagSourceType_StaticEnum",
-    "0x01D658E0 EMoviePlaybackType_StaticEnum",
-    "0x023CB540 AnimationCompressionFormat_StaticEnum"
+    "0x013A7890 Z_Construct_UEnum_CoreUObject_ELifetimeCondition",
+    "0x01D65A20 Z_Construct_UEnum_MoviePlayer_EMoviePlaybackType",
+    "0x023CE660 Z_Construct_UEnum_Engine_AnimationCompressionFormat",
+    "0x023D6980 Z_Construct_UEnum_Engine_ETemperatureSeverityType",
+    "0x023E39E0 Z_Construct_UEnum_Engine_EApplicationState"
    ]
   },
   {
@@ -234,16 +206,16 @@
    ]
   },
   {
-   "key": "uht-staticstruct | Z_Construct_* creator",
+   "key": "uht-staticenum | Z_Construct_* creator",
    "count": 4,
    "states": {
     "relocation-equivalent": 4
    },
    "examples": [
-    "0x00565F60 FReplicatedPredictionKeyMap::StaticStruct",
-    "0x0145BCF0 FSlateColor::StaticStruct",
-    "0x023FE150 FRawDistributionFloat::StaticStruct",
-    "0x02404A80 FRawDistributionVector::StaticStruct"
+    "0x023D4200 ETemperatureSeverityType_StaticEnum",
+    "0x023E0A50 EApplicationState_StaticEnum",
+    "0x02402630 ECanCreateConnectionResponse_StaticEnum",
+    "0x0246EED0 ERoundingMode_StaticEnum"
    ]
   },
   {
@@ -292,6 +264,30 @@
     "0x023F0D40 ACharacter::execGetBaseRotationOffsetRotator",
     "0x023F9BD0 AController::execIsLocalPlayerController",
     "0x024BCB60 UPrimitiveComponent::execK2_IsQueryCollisionEnabled"
+   ]
+  },
+  {
+   "key": "uht-staticenum | Z_Construct_* creator + singleton (.bss)",
+   "count": 3,
+   "states": {
+    "relocation-equivalent": 3
+   },
+   "examples": [
+    "0x013A7430 ELifetimeCondition_StaticEnum",
+    "0x01D658E0 EMoviePlaybackType_StaticEnum",
+    "0x023CB540 AnimationCompressionFormat_StaticEnum"
+   ]
+  },
+  {
+   "key": "uht-staticstruct | Z_Construct_* creator",
+   "count": 3,
+   "states": {
+    "relocation-equivalent": 3
+   },
+   "examples": [
+    "0x00565F60 FReplicatedPredictionKeyMap::StaticStruct",
+    "0x023FE150 FRawDistributionFloat::StaticStruct",
+    "0x02404A80 FRawDistributionVector::StaticStruct"
    ]
   },
   {

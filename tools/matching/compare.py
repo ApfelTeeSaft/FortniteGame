@@ -543,50 +543,63 @@ class Resolver:
         return [(cand[0], f"slot elimination: {how} the {len(a)} other slots of {block['unit']}'s "
                           f"{len(block['symbols'])}-slot block")]
 
-    _RETURN_FUNCTION = re.compile(r"\?ReturnFunction@\?1\?\?(Z_Construct_U(?:Delegate)?Function_\w+)@@YAPEAVUFunction@@XZ@")
+    # Generated singletons with a parameter record in .data: (entry symbol suffix, record
+    # symbol, static symbol), each formatted with the function's name.
+    _RECORD_KINDS = (
+        ("@@YAPEAVUFunction@@XZ", "?FuncParams@?4??{}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B",
+         "?ReturnFunction@?1??{}@@YAPEAVUFunction@@XZ@4PEAV2@EA"),
+        ("@@YAPEAVUEnum@@XZ", "?EnumParams@?4??{}@@YAPEAVUEnum@@XZ@4UFEnumParams@UE4CodeGen_Private@@B",
+         "?ReturnEnum@?1??{}@@YAPEAVUEnum@@XZ@4PEAV2@EA"),
+        ("@@YAPEAVUScriptStruct@@XZ",
+         "?ReturnStructParams@?4??{}@@YAPEAVUScriptStruct@@XZ@4UFStructParams@UE4CodeGen_Private@@B",
+         "?ReturnStruct@?1??{}@@YAPEAVUScriptStruct@@XZ@4PEAV2@EA"),
+    )
 
     def _record_bracket(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
-        """A creator's ReturnFunction static between the statics of the creators whose
-        FFunctionParams records directly precede and follow its own in its object.
+        """A generated singleton's static (a creator's ReturnFunction, an enum's ReturnEnum, a
+        struct's ReturnStruct) between the statics of the singletons whose parameter records
+        (FFunctionParams, FEnumParams, FStructParams) directly precede and follow its own in its
+        object.
 
-        A creator's record (.data) and its static (.bss) are function-local statics emitted
-        together, so in the reference their orders agree (168 of 168 units). The static then
-        lies strictly between the two neighbours' statics, which other entries observe. When
-        exactly one 8-byte slot there is not observed holding a symbol by other entries, it is
-        this one. Records come from analysis/uht-creator-symbols.json and
-        uht-package-symbols.json (located by name); no .bss address of the creator is read."""
-        m = self._RETURN_FUNCTION.match(symbol)
-        if not m:
-            return []
-        runs = getattr(self, "_creator_runs", None)
+        A singleton's record (.data) and its static (.bss) are function-local statics emitted
+        together, so in the reference their orders agree, across all three kinds (203 of 203
+        units). The static then lies strictly between the two neighbours' statics, which other
+        entries observe. When exactly one 8-byte slot there is not observed holding a symbol by
+        other entries, it is this one. Records come from analysis/uht-creator-symbols.json,
+        uht-package-symbols.json, uht-enum-symbols.json and uht-struct-symbols.json (located
+        by name); no .bss address of the singleton is read."""
+        runs = getattr(self, "_record_runs", None)
         if runs is None:
             records = {}
-            for f in ("uht-creator-symbols.json", "uht-package-symbols.json"):
+            for f in ("uht-creator-symbols.json", "uht-package-symbols.json", "uht-enum-symbols.json",
+                      "uht-struct-symbols.json"):
                 p = REPO_ROOT / "analysis" / f
                 if p.exists():
                     for k, v in json.loads(p.read_text(encoding="utf-8"))["symbols"].items():
                         records[k] = int(v[0], 16)
             by_obj: dict = {}
             for sym, objpath in getattr(self, "symbol_objects", {}).items():
-                if not sym.endswith("@@YAPEAVUFunction@@XZ") or not sym.startswith(("?Z_Construct_UFunction_",
-                                                                                   "?Z_Construct_UDelegateFunction_")):
+                if not sym.startswith("?Z_Construct_U"):
                     continue
-                name = sym[1:-len("@@YAPEAVUFunction@@XZ")]
-                rec = records.get(f"?FuncParams@?4??{name}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B")
-                if rec is not None:
-                    by_obj.setdefault(objpath, []).append((rec, name))
+                for suffix, rec_t, static_t in self._RECORD_KINDS:
+                    if sym.endswith(suffix):
+                        name = sym[1:-len(suffix)]
+                        rec = records.get(rec_t.format(name))
+                        if rec is not None:
+                            by_obj.setdefault(objpath, []).append((rec, static_t.format(name)))
+                        break
             runs = {}
             for objpath, lst in by_obj.items():
                 lst.sort()
-                for i, (_, name) in enumerate(lst):
-                    runs[name] = (lst[i - 1][1] if i else None, lst[i + 1][1] if i + 1 < len(lst) else None)
-            self._creator_runs = runs
-        prev_next = runs.get(m.group(1))
+                for i, (_, static) in enumerate(lst):
+                    runs[static] = (lst[i - 1][1] if i else None, lst[i + 1][1] if i + 1 < len(lst) else None)
+            self._record_runs = runs
+        prev_next = runs.get(symbol)
         if not prev_next or None in prev_next:
             return []
         bounds = []
-        for name in prev_next:
-            vals = self._observed_by_name(f"?ReturnFunction@?1??{name}@@YAPEAVUFunction@@XZ@4PEAV2@EA", exclude)
+        for static in prev_next:
+            vals = self._observed_by_name(static, exclude)
             if len(vals) != 1:
                 return []
             bounds.append(next(iter(vals)))
@@ -595,8 +608,9 @@ class Resolver:
                 if not any(ents - {exclude} for ents in self.by_addr.get(s, {}).values())]
         if len(free) != 1:
             return []
-        return [(free[0], f"record-bracketed slot: the one free slot between the statics of {prev_next[0]} "
-                          f"and {prev_next[1]}, whose records bracket this creator's")]
+        short = lambda st: st.split("??", 1)[1].split("@@", 1)[0]
+        return [(free[0], f"record-bracketed slot: the one free slot between the statics of {short(prev_next[0])} "
+                          f"and {short(prev_next[1])}, whose records bracket this one's")]
 
     def _closes_other_unit(self, addr: int, block: dict, exclude: int | None) -> bool:
         """Whether other entries observe, at `addr`, the PrivateStaticClass that is the last .bss

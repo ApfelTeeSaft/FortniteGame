@@ -638,7 +638,7 @@ def test_record_bracket() -> None:
     r = Resolver.__new__(Resolver)
     rf = lambda c: f"?ReturnFunction@?1??{c}@@YAPEAVUFunction@@XZ@4PEAV2@EA"
     A, X, B = "Z_Construct_UFunction_C_A", "Z_Construct_UDelegateFunction_P_X__DelegateSignature", "Z_Construct_UFunction_C_B"
-    r._creator_runs = {X: (A, B), A: (None, X), B: (X, None)}
+    r._record_runs = {rf(X): (rf(A), rf(B)), rf(A): (None, rf(X)), rf(B): (rf(X), None)}
     r._name_index = None
 
     def setup(obs):
@@ -655,6 +655,28 @@ def test_record_bracket() -> None:
     assert [p for p, _ in r._record_bracket(rf(X), 9)] == [0x108]       # its own observation is no claim
     assert r._record_bracket(rf(A), 9) == []                             # an end of the run
     assert r._record_bracket("?OuterClass@?1??Z_Construct_UClass_C@@YAPEAVUClass@@XZ@4PEAV2@EA", 9) == []
+    # The runs are built from all three kinds of records, in one order per object.
+    r2 = Resolver.__new__(Resolver)
+    r2.symbol_objects = {"?Z_Construct_UEnum_P_E@@YAPEAVUEnum@@XZ": "u", "?Z_Construct_UFunction_C_F@@YAPEAVUFunction@@XZ": "u",
+                         "?Z_Construct_UScriptStruct_FS@@YAPEAVUScriptStruct@@XZ": "u"}
+    import compare as _c
+    real = _c.REPO_ROOT
+    try:
+        import tempfile, json as _j, pathlib
+        tmp = pathlib.Path(tempfile.mkdtemp())
+        (tmp / "analysis").mkdir()
+        recs = {Resolver._RECORD_KINDS[0][1].format("Z_Construct_UFunction_C_F"): ["0x00000200", "x"],
+                Resolver._RECORD_KINDS[1][1].format("Z_Construct_UEnum_P_E"): ["0x00000100", "x"],
+                Resolver._RECORD_KINDS[2][1].format("Z_Construct_UScriptStruct_FS"): ["0x00000300", "x"]}
+        (tmp / "analysis" / "uht-creator-symbols.json").write_text(_j.dumps({"symbols": recs}), encoding="utf-8")
+        _c.REPO_ROOT = tmp
+        r2.observations, r2.by_addr, r2._name_index = {}, {}, None
+        r2._record_bracket("none", None)
+    finally:
+        _c.REPO_ROOT = real
+    assert r2._record_runs[rf("Z_Construct_UFunction_C_F")] == (
+        "?ReturnEnum@?1??Z_Construct_UEnum_P_E@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+        "?ReturnStruct@?1??Z_Construct_UScriptStruct_FS@@YAPEAVUScriptStruct@@XZ@4PEAV2@EA")
     print("record-bracketed slots: ok")
 
 

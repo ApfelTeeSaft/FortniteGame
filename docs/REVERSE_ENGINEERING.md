@@ -1611,6 +1611,25 @@ creator's (`_record_bracket`).
 
 This made 79 functions exact (66 package delegates, 13 creators), with no regressions.
 
+**All three record kinds.** Enum constructors (`FEnumParams` and `ReturnEnum`) and struct
+constructors (`FStructParams` and `ReturnStruct`) pair a record with a static the same way. One
+order over all three kinds of record agrees with the `.bss` order of their statics in all 203
+units. So the bracket now uses that merged order: a static's neighbours can be of any kind,
+and the bracket is then tighter. In simulation this settled 20 more, none wrong:
+- 9 enum constructors;
+- 7 package delegates;
+- 3 creators;
+- 1 struct constructor.
+
+The comparer made 23 functions exact, with no regressions. The 3 beyond the simulation are
+`StaticEnum`s whose enum constructor became an exact call target.
+
+What it cannot settle:
+- a static at either end of its object's run of records;
+- a bracket holding statics the model has none of. Examples are 2 unknown slots between a
+  struct's `Singleton` and `ReturnStruct`, or a slot after a class's `PrivateStaticClass`.
+  The bracket then has two or more free slots.
+
 ## Naming confidence
 
 `confirmed` needs direct evidence such as an exported symbol, reflection string or
