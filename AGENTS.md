@@ -296,3 +296,79 @@ The long-term end state is a documented, reproducible and evidence-backed decomp
 6. Commit/push only when safe; then continue Stage 1 autonomously toward higher exact-match coverage. Advance into Stages 2, 3, and 4 in that order as their prerequisites are actually established.
 
 **Deliver verified work, not claims of progress.**
+
+
+### Adaptive Function Reconstruction and Verification
+
+Replace the previous small-batch reconstruction workflow with an adaptive, high-throughput system.
+
+The primary objective is to maximize the number of accurately reconstructed and verified functions per unit of time, without sacrificing correctness or losing traceability.
+
+**1. Adaptive batching**
+
+- Default to batches of 50–100 functions during initial reconstruction.
+- Increase to 100–200 for small, independent functions.
+- Reduce to 10–40 when functions have complex dependencies, shared class layouts, or require significant investigation.
+- Group related functions by class, translation unit, dependency graph, or subsystem.
+- Do not arbitrarily limit each Claude turn to 10 functions.
+- Do not force large functions into oversized batches merely to satisfy a numerical target.
+
+**2. Separate reconstruction and byte matching**
+
+Operate with independent reconstruction and verification queues.
+
+- Reconstruction: Recover accurate C++ implementations, types, symbols, and original RVAs.
+- Compilation: Ensure reconstructed source builds using the required toolchain.
+- Matching: Compare compiled functions against the original executable and iteratively resolve differences.
+
+Do not require full byte parity for every function before beginning another reconstruction batch.
+
+**3. Automated batch verification**
+
+- Compile changed translation units incrementally whenever possible.
+- Prefer object-level verification over full executable linking when technically valid.
+- Perform function-level comparisons automatically for every compiled function.
+- Generate machine-readable results for exact matches, partial matches, mismatches, and unresolved functions.
+- Preserve detailed compiler and comparison diagnostics.
+- If a batch fails compilation, isolate the failing dependency or function group rather than discarding the entire batch.
+- Do not report a function as byte-matched without actual verification against its reference machine code.
+
+**4. Intelligent scheduling**
+
+Prioritize functions based on dependency requirements, complexity, expected matching difficulty, and their relevance to recovering neighboring functions.
+
+Initially emphasize broad, accurate reconstruction to establish source coverage and shared type information.
+
+Regularly dedicate work to resolving byte mismatches, particularly those caused by common compiler settings, calling conventions, class layouts, and other systematic issues.
+
+Do not allow the byte-matching backlog to grow indefinitely. Adjust the proportion of reconstruction and verification work based on measured progress.
+
+**5. Optimization and parallelization**
+
+- Permit parallel read-only IDA analysis of independent function groups.
+- Permit parallel compilation and comparison where supported by the build environment.
+- Avoid concurrent modifications to the same source files.
+- Cache unchanged analysis and comparison results.
+- Rebuild only affected translation units unless a full rebuild is necessary.
+- Detect systemic compiler or build configuration problems before attempting extensive function-specific fixes.
+
+**6. Progress tracking**
+
+Track separately:
+
+- Total identified functions
+- Functions reconstructed
+- Functions compiling successfully
+- Functions with verified byte parity
+- Functions requiring further investigation
+- Regressions in previously verified matches
+
+Update the repository's progress image using only verified matching results.
+
+Never confuse source coverage, successful compilation, functional equivalence, and exact byte identity.
+
+**7. Continuous improvement**
+
+Measure reconstruction throughput, compilation time, matching rate, and failure rate.
+
+Automatically adjust batch sizes and scheduling strategies when doing so improves verified
