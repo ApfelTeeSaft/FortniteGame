@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F220 (end 0x0109F24D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMission) | Matching: see analysis/functions-uht-exec.json
+void IFortSpawnableByPlacementSystemInterface::execGetMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortMission**)Z_Param__Result=P_THIS->GetMission();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A7500 (end 0x010A7535)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMissionGuid) | Matching: see analysis/functions-uht-exec.json
+void IFortSpawnableByPlacementSystemInterface::execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FGuid*)Z_Param__Result=P_THIS->GetMissionGuid();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortSpawnableByPlacementSystemInterface, 3938877270u)
 // Original dynamic initializer: RVA 0x00112CD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSpawnableByPlacementSystemInterface> AutoInitializeUFortSpawnableByPlacementSystemInterface(TEXT("UFortSpawnableByPlacementSystemInterface"), sizeof(UFortSpawnableByPlacementSystemInterface), 3938877270u);

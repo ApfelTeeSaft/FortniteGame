@@ -20,7 +20,7 @@ void UFortPerkTierWidget::StaticRegisterNativesUFortPerkTierWidget()
 
 struct Z_Construct_UFunction_UFortPerkTierWidget_OnGeneratePerk_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8700 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7240 (end 0x028E726F)
 // Original VA: 0x00000001428E7240 | File offset: 0x028E6840
@@ -37,7 +37,7 @@ UFunction* Z_Construct_UFunction_UFortPerkTierWidget_OnGeneratePerk()
 
 struct Z_Construct_UFunction_UFortPerkTierWidget_ProcessPerks_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8740 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7270 (end 0x028E729F)
 // Original VA: 0x00000001428E7270 | File offset: 0x028E6870

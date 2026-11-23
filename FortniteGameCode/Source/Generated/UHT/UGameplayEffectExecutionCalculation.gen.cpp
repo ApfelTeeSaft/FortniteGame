@@ -20,7 +20,7 @@ void UGameplayEffectExecutionCalculation::StaticRegisterNativesUGameplayEffectEx
 
 struct Z_Construct_UFunction_UGameplayEffectExecutionCalculation_Execute_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x041A9E90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005649B0 (end 0x005649DF)
 // Original VA: 0x00000001405649B0 | File offset: 0x00563FB0

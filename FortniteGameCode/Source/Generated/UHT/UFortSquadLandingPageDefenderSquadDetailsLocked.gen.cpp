@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortSquadLandingPageDefenderSquadDetailsLocked_SetDefenderSquadInfo_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B7060 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6A30 (end 0x028F6A5F)
 // Original VA: 0x00000001428F6A30 | File offset: 0x028F6030

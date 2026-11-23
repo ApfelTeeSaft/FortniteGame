@@ -20,7 +20,7 @@ void UFortTargetSelectionInterface::StaticRegisterNativesUFortTargetSelectionInt
 
 struct Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0432D4A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B41D0 (end 0x010B41FF)
 // Original VA: 0x00000001410B41D0 | File offset: 0x010B37D0

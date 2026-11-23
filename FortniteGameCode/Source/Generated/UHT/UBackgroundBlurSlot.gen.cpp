@@ -22,7 +22,7 @@ void UBackgroundBlurSlot::StaticRegisterNativesUBackgroundBlurSlot()
 
 struct Z_Construct_UFunction_UBackgroundBlurSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043B9390 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE65E0 (end 0x01BE660F)
 // Original VA: 0x0000000141BE65E0 | File offset: 0x01BE5BE0
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UBackgroundBlurSlot_SetHorizontalAlignment()
 
 struct Z_Construct_UFunction_UBackgroundBlurSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043B9410 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6610 (end 0x01BE663F)
 // Original VA: 0x0000000141BE6610 | File offset: 0x01BE5C10
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UBackgroundBlurSlot_SetPadding()
 
 struct Z_Construct_UFunction_UBackgroundBlurSlot_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043B9490 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6640 (end 0x01BE666F)
 // Original VA: 0x0000000141BE6640 | File offset: 0x01BE5C40

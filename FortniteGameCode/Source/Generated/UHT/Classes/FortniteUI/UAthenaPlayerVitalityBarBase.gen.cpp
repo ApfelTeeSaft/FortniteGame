@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288A430 (end 0x0288A4B0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDataSource); calls the native accessor UAthenaPlayerVitalityBarBase::SetDataSource | Matching: see analysis/functions-uht-exec.json
+void UAthenaPlayerVitalityBarBase::execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAthenaPlayerViewModel,Z_Param_PlayerViewModel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDataSource(Z_Param_PlayerViewModel);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAthenaPlayerVitalityBarBase, 3906628445u)
 // Original dynamic initializer: RVA 0x0023B5A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaPlayerVitalityBarBase> AutoInitializeUAthenaPlayerVitalityBarBase(TEXT("UAthenaPlayerVitalityBarBase"), sizeof(UAthenaPlayerVitalityBarBase), 3906628445u);

@@ -20,7 +20,7 @@ void UFortExpeditionListItemWidget::StaticRegisterNativesUFortExpeditionListItem
 
 struct Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04568C40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A4520 (end 0x028A454F)
 // Original VA: 0x00000001428A4520 | File offset: 0x028A3B20

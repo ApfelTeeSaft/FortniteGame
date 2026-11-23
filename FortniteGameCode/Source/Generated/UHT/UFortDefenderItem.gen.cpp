@@ -20,7 +20,7 @@ void UFortDefenderItem::StaticRegisterNativesUFortDefenderItem()
 
 struct Z_Construct_UFunction_UFortDefenderItem_GetDefenderSubtype_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04264620 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD0C80 (end 0x00FD0CAF)
 // Original VA: 0x0000000140FD0C80 | File offset: 0x00FD0280

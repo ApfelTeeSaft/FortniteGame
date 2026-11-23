@@ -25,7 +25,7 @@ void UFortAttributeListItem::StaticRegisterNativesUFortAttributeListItem()
 
 struct Z_Construct_UFunction_UFortAttributeListItem_ClearPreview_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558530 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D620 (end 0x0288D64F)
 // Original VA: 0x000000014288D620 | File offset: 0x0288CC20
@@ -42,7 +42,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_ClearPreview()
 
 struct Z_Construct_UFunction_UFortAttributeListItem_DisplayAttributeChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558570 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D650 (end 0x0288D67F)
 // Original VA: 0x000000014288D650 | File offset: 0x0288CC50
@@ -59,7 +59,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_DisplayAttributeChanged(
 
 struct Z_Construct_UFunction_UFortAttributeListItem_GetCurrentAttributeCopy_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045585F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D680 (end 0x0288D6AF)
 // Original VA: 0x000000014288D680 | File offset: 0x0288CC80
@@ -76,7 +76,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_GetCurrentAttributeCopy(
 
 struct Z_Construct_UFunction_UFortAttributeListItem_GetDisplayAttributeCopy_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558670 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D6B0 (end 0x0288D6DF)
 // Original VA: 0x000000014288D6B0 | File offset: 0x0288CCB0
@@ -93,7 +93,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_GetDisplayAttributeCopy(
 
 struct Z_Construct_UFunction_UFortAttributeListItem_GetDisplayPreviewCopy_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045586F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D6E0 (end 0x0288D70F)
 // Original VA: 0x000000014288D6E0 | File offset: 0x0288CCE0
@@ -110,7 +110,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_GetDisplayPreviewCopy()
 
 struct Z_Construct_UFunction_UFortAttributeListItem_PreviewEnded_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558730 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D920 (end 0x0288D94F)
 // Original VA: 0x000000014288D920 | File offset: 0x0288CF20
@@ -127,7 +127,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_PreviewEnded()
 
 struct Z_Construct_UFunction_UFortAttributeListItem_PreviewStarted_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558770 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D950 (end 0x0288D97F)
 // Original VA: 0x000000014288D950 | File offset: 0x0288CF50
@@ -144,7 +144,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_PreviewStarted()
 
 struct Z_Construct_UFunction_UFortAttributeListItem_SetDisplayAttribute_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558880 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D980 (end 0x0288D9AF)
 // Original VA: 0x000000014288D980 | File offset: 0x0288CF80
@@ -161,7 +161,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_SetDisplayAttribute()
 
 struct Z_Construct_UFunction_UFortAttributeListItem_SetPreviewAttribute_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558900 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D9B0 (end 0x0288D9DF)
 // Original VA: 0x000000014288D9B0 | File offset: 0x0288CFB0
@@ -178,7 +178,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_SetPreviewAttribute()
 
 struct Z_Construct_UFunction_UFortAttributeListItem_ValueChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04558980 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D9E0 (end 0x0288DA0F)
 // Original VA: 0x000000014288D9E0 | File offset: 0x0288CFE0

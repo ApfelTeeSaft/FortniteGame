@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F1B0 (end 0x01D5F1CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execActivate) | Matching: see analysis/functions-uht-exec.json
+void UOnlineBlueprintCallProxyBase::execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Activate();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UOnlineBlueprintCallProxyBase, 1899118183u)
 // Original dynamic initializer: RVA 0x0020EE30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UOnlineBlueprintCallProxyBase> AutoInitializeUOnlineBlueprintCallProxyBase(TEXT("UOnlineBlueprintCallProxyBase"), sizeof(UOnlineBlueprintCallProxyBase), 1899118183u);

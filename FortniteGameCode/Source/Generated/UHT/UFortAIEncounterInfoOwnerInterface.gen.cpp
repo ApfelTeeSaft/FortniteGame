@@ -20,7 +20,7 @@ void UFortAIEncounterInfoOwnerInterface::StaticRegisterNativesUFortAIEncounterIn
 
 struct Z_Construct_UFunction_UFortAIEncounterInfoOwnerInterface_GetEncounterInfo_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04226D50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C8C0 (end 0x00F8C8EF)
 // Original VA: 0x0000000140F8C8C0 | File offset: 0x00F8BEC0

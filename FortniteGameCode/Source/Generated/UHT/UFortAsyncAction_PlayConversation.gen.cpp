@@ -20,7 +20,7 @@ void UFortAsyncAction_PlayConversation::StaticRegisterNativesUFortAsyncAction_Pl
 
 struct Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04238930 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F780 (end 0x00F9F7AF)
 // Original VA: 0x0000000140F9F780 | File offset: 0x00F9ED80

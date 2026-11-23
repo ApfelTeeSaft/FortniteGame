@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortUIStateWidget_OnEnterState_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045CFD80 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029137A0 (end 0x029137CF)
 // Original VA: 0x00000001429137A0 | File offset: 0x02912DA0
@@ -25,7 +25,7 @@ UFunction* Z_Construct_UFunction_UFortUIStateWidget_OnEnterState()
 
 struct Z_Construct_UFunction_UFortUIStateWidget_OnExitState_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045CFE40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029137D0 (end 0x029137FF)
 // Original VA: 0x00000001429137D0 | File offset: 0x02912DD0

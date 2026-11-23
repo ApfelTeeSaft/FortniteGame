@@ -24,7 +24,7 @@ void UFortSquadSlotWidget::StaticRegisterNativesUFortSquadSlotWidget()
 
 struct Z_Construct_UFunction_UFortSquadSlotWidget_GetIdOfSquadSlotToManageBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BB030 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC690 (end 0x028FC6BF)
 // Original VA: 0x00000001428FC690 | File offset: 0x028FBC90
@@ -41,7 +41,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotWidget_GetIdOfSquadSlotToManageBP
 
 struct Z_Construct_UFunction_UFortSquadSlotWidget_GetItemInSquadSlotBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BB0F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC6C0 (end 0x028FC6EF)
 // Original VA: 0x00000001428FC6C0 | File offset: 0x028FBCC0
@@ -58,7 +58,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotWidget_GetItemInSquadSlotBP()
 
 struct Z_Construct_UFunction_UFortSquadSlotWidget_IsSquadSlotLockedBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BB180 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC6F0 (end 0x028FC71F)
 // Original VA: 0x00000001428FC6F0 | File offset: 0x028FBCF0
@@ -75,7 +75,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotWidget_IsSquadSlotLockedBP()
 
 struct Z_Construct_UFunction_UFortSquadSlotWidget_SetCardSize_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BB240 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC720 (end 0x028FC74F)
 // Original VA: 0x00000001428FC720 | File offset: 0x028FBD20
@@ -92,7 +92,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotWidget_SetCardSize()
 
 struct Z_Construct_UFunction_UFortSquadSlotWidget_SetIdOfSquadSlotToManageBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BB2F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC750 (end 0x028FC77F)
 // Original VA: 0x00000001428FC750 | File offset: 0x028FBD50

@@ -20,7 +20,7 @@ void AInteractiveFoliageActor::StaticRegisterNativesAInteractiveFoliageActor()
 
 struct Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0439B1B0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48D30 (end 0x01A48D5F)
 // Original VA: 0x0000000141A48D30 | File offset: 0x01A48330

@@ -21,7 +21,7 @@ void USceneCaptureComponent2D::StaticRegisterNativesUSceneCaptureComponent2D()
 
 struct Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045094F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C70D0 (end 0x024C70FF)
 // Original VA: 0x00000001424C70D0 | File offset: 0x024C66D0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable()
 
 struct Z_Construct_UFunction_USceneCaptureComponent2D_CaptureScene_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04509530 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7100 (end 0x024C712F)
 // Original VA: 0x00000001424C7100 | File offset: 0x024C6700

@@ -20,7 +20,7 @@ void AFortAthenaVehicle::StaticRegisterNativesAFortAthenaVehicle()
 
 struct Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0423BB50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3EF0 (end 0x00FA3F1F)
 // Original VA: 0x0000000140FA3EF0 | File offset: 0x00FA34F0

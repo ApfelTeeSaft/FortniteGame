@@ -20,7 +20,7 @@ void UOnlineBlueprintCallProxyBase::StaticRegisterNativesUOnlineBlueprintCallPro
 
 struct Z_Construct_UFunction_UOnlineBlueprintCallProxyBase_Activate_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044D0140 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024962B0 (end 0x024962DF)
 // Original VA: 0x00000001424962B0 | File offset: 0x024958B0

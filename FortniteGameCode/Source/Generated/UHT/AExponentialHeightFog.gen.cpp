@@ -20,7 +20,7 @@ void AExponentialHeightFog::StaticRegisterNativesAExponentialHeightFog()
 
 struct Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04453C90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02410000 (end 0x0241002F)
 // Original VA: 0x0000000142410000 | File offset: 0x0240F600

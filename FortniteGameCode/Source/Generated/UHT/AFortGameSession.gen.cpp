@@ -20,7 +20,7 @@ void AFortGameSession::StaticRegisterNativesAFortGameSession()
 
 struct Z_Construct_UFunction_AFortGameSession_DumpReservations_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042865B0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEED00 (end 0x00FEED2F)
 // Original VA: 0x0000000140FEED00 | File offset: 0x00FEE300

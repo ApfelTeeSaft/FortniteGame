@@ -22,7 +22,7 @@ void UBorderSlot::StaticRegisterNativesUBorderSlot()
 
 struct Z_Construct_UFunction_UBorderSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043B9FB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE67F0 (end 0x01BE681F)
 // Original VA: 0x0000000141BE67F0 | File offset: 0x01BE5DF0
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UBorderSlot_SetHorizontalAlignment()
 
 struct Z_Construct_UFunction_UBorderSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BA030 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6820 (end 0x01BE684F)
 // Original VA: 0x0000000141BE6820 | File offset: 0x01BE5E20
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UBorderSlot_SetPadding()
 
 struct Z_Construct_UFunction_UBorderSlot_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BA0B0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6850 (end 0x01BE687F)
 // Original VA: 0x0000000141BE6850 | File offset: 0x01BE5E50

@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_AFortLevelScriptActor_OnMatchStarted_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B10C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EC00 (end 0x0101EC2F)
 // Original VA: 0x000000014101EC00 | File offset: 0x0101E200
@@ -25,7 +25,7 @@ UFunction* Z_Construct_UFunction_AFortLevelScriptActor_OnMatchStarted()
 
 struct Z_Construct_UFunction_AFortLevelScriptActor_OnWorldReady_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B1100 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EC30 (end 0x0101EC5F)
 // Original VA: 0x000000014101EC30 | File offset: 0x0101E230

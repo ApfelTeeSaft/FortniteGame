@@ -20,7 +20,7 @@ void UCheckedStateBinding::StaticRegisterNativesUCheckedStateBinding()
 
 struct Z_Construct_UFunction_UCheckedStateBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BC060 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE70F0 (end 0x01BE711F)
 // Original VA: 0x0000000141BE70F0 | File offset: 0x01BE66F0

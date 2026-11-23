@@ -20,7 +20,7 @@ void UBoolBinding::StaticRegisterNativesUBoolBinding()
 
 struct Z_Construct_UFunction_UBoolBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043B95E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE67C0 (end 0x01BE67EF)
 // Original VA: 0x0000000141BE67C0 | File offset: 0x01BE5DC0

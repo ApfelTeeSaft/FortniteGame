@@ -20,7 +20,7 @@ void APlanarReflection::StaticRegisterNativesAPlanarReflection()
 
 struct Z_Construct_UFunction_APlanarReflection_OnInterpToggle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044E6ED0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AA210 (end 0x024AA23F)
 // Original VA: 0x00000001424AA210 | File offset: 0x024A9810

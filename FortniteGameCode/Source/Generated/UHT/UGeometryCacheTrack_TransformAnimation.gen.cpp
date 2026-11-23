@@ -20,7 +20,7 @@ void UGeometryCacheTrack_TransformAnimation::StaticRegisterNativesUGeometryCache
 
 struct Z_Construct_UFunction_UGeometryCacheTrack_TransformAnimation_SetMesh_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043FD790 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40460 (end 0x01D4048F)
 // Original VA: 0x0000000141D40460 | File offset: 0x01D3FA60

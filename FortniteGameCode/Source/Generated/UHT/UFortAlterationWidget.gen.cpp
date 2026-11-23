@@ -23,7 +23,7 @@ void UFortAlterationWidget::StaticRegisterNativesUFortAlterationWidget()
 
 struct Z_Construct_UFunction_UFortAlterationWidget_GetAlterationDefintion_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045549A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CDB0 (end 0x0288CDDF)
 // Original VA: 0x000000014288CDB0 | File offset: 0x0288C3B0
@@ -40,7 +40,7 @@ UFunction* Z_Construct_UFunction_UFortAlterationWidget_GetAlterationDefintion()
 
 struct Z_Construct_UFunction_UFortAlterationWidget_GetRequiredLevel_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04554A20 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CDE0 (end 0x0288CE0F)
 // Original VA: 0x000000014288CDE0 | File offset: 0x0288C3E0
@@ -57,7 +57,7 @@ UFunction* Z_Construct_UFunction_UFortAlterationWidget_GetRequiredLevel()
 
 struct Z_Construct_UFunction_UFortAlterationWidget_IsAlterationHighlighted_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04554AB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CE10 (end 0x0288CE3F)
 // Original VA: 0x000000014288CE10 | File offset: 0x0288C410
@@ -74,7 +74,7 @@ UFunction* Z_Construct_UFunction_UFortAlterationWidget_IsAlterationHighlighted()
 
 struct Z_Construct_UFunction_UFortAlterationWidget_IsAlterationUnlocked_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04554B40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CE40 (end 0x0288CE6F)
 // Original VA: 0x000000014288CE40 | File offset: 0x0288C440

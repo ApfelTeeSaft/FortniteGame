@@ -20,7 +20,7 @@ void USpacer::StaticRegisterNativesUSpacer()
 
 struct Z_Construct_UFunction_USpacer_SetSize_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C8BF0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3F80 (end 0x01BF3FAF)
 // Original VA: 0x0000000141BF3F80 | File offset: 0x01BF3580

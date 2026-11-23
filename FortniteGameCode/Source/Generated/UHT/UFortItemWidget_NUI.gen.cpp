@@ -21,7 +21,7 @@ void UFortItemWidget_NUI::StaticRegisterNativesUFortItemWidget_NUI()
 
 struct Z_Construct_UFunction_UFortItemWidget_NUI_SetItemToRepresent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04599AB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0D70 (end 0x028D0D9F)
 // Original VA: 0x00000001428D0D70 | File offset: 0x028D0370
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortItemWidget_NUI_SetItemToRepresent()
 
 struct Z_Construct_UFunction_UFortItemWidget_NUI_SetItemViewContext_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04599B30 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0DA0 (end 0x028D0DCF)
 // Original VA: 0x00000001428D0DA0 | File offset: 0x028D03A0

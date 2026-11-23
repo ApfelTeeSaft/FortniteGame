@@ -20,7 +20,7 @@ void ASceneCapture2D::StaticRegisterNativesASceneCapture2D()
 
 struct Z_Construct_UFunction_ASceneCapture2D_OnInterpToggle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045089C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7070 (end 0x024C709F)
 // Original VA: 0x00000001424C7070 | File offset: 0x024C6670

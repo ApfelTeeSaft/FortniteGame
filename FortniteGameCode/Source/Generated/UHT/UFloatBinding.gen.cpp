@@ -20,7 +20,7 @@ void UFloatBinding::StaticRegisterNativesUFloatBinding()
 
 struct Z_Construct_UFunction_UFloatBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BF8F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDC00 (end 0x01BEDC2F)
 // Original VA: 0x0000000141BEDC00 | File offset: 0x01BED200

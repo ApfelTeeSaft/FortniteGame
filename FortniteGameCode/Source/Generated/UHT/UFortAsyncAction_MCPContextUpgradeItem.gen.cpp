@@ -20,7 +20,7 @@ void UFortAsyncAction_MCPContextUpgradeItem::StaticRegisterNativesUFortAsyncActi
 
 struct Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B7010 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010241F0 (end 0x0102421F)
 // Original VA: 0x00000001410241F0 | File offset: 0x010237F0
@@ -37,7 +37,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_
 
 struct Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B8AD0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010244C0 (end 0x010244EF)
 // Original VA: 0x00000001410244C0 | File offset: 0x01023AC0

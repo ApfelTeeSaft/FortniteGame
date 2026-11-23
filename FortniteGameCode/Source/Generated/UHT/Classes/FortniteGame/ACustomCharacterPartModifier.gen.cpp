@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79900 (end 0x00F79930)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAssociatedPlayerPawn) | Matching: see analysis/functions-uht-exec.json
+void ACustomCharacterPartModifier::execGetAssociatedPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortPlayerPawn**)Z_Param__Result=P_THIS->GetAssociatedPlayerPawn();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79960 (end 0x00F7998F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCharacterPartType) | Matching: see analysis/functions-uht-exec.json
+void ACustomCharacterPartModifier::execGetCharacterPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EFortCustomPartType::Type>*)Z_Param__Result=P_THIS->GetCharacterPartType();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ACustomCharacterPartModifier, 372077926u)
 // Original dynamic initializer: RVA 0x000DCD00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ACustomCharacterPartModifier> AutoInitializeACustomCharacterPartModifier(TEXT("ACustomCharacterPartModifier"), sizeof(ACustomCharacterPartModifier), 372077926u);

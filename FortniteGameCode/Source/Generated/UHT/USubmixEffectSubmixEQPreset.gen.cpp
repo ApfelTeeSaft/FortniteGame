@@ -20,7 +20,7 @@ void USubmixEffectSubmixEQPreset::StaticRegisterNativesUSubmixEffectSubmixEQPres
 
 struct Z_Construct_UFunction_USubmixEffectSubmixEQPreset_SetSettings_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0453AD80 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A4D0 (end 0x0255A4FF)
 // Original VA: 0x000000014255A4D0 | File offset: 0x02559AD0

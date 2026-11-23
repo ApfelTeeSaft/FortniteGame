@@ -21,7 +21,7 @@ void UFortQuestItemDefinitionTooltip::StaticRegisterNativesUFortQuestItemDefinit
 
 struct Z_Construct_UFunction_UFortQuestItemDefinitionTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0431CC00 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01096A20 (end 0x01096A4F)
 // Original VA: 0x0000000141096A20 | File offset: 0x01096020
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortQuestItemDefinitionTooltip_GetTextForToken
 
 struct Z_Construct_UFunction_UFortQuestItemDefinitionTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0431CDC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01096A50 (end 0x01096A7F)
 // Original VA: 0x0000000141096A50 | File offset: 0x01096050

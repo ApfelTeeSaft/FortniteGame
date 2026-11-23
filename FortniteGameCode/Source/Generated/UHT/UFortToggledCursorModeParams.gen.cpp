@@ -21,7 +21,7 @@ void UFortToggledCursorModeParams::StaticRegisterNativesUFortToggledCursorModePa
 
 struct Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04363FB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB280 (end 0x010EB2AF)
 // Original VA: 0x00000001410EB280 | File offset: 0x010EA880
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams()
 
 struct Z_Construct_UFunction_UFortToggledCursorModeParams_SetParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043640C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB2B0 (end 0x010EB2DF)
 // Original VA: 0x00000001410EB2B0 | File offset: 0x010EA8B0

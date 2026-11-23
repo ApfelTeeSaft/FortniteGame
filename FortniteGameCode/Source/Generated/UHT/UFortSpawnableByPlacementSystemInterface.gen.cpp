@@ -21,7 +21,7 @@ void UFortSpawnableByPlacementSystemInterface::StaticRegisterNativesUFortSpawnab
 
 struct Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMission_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0432A180 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A63E0 (end 0x010A640F)
 // Original VA: 0x00000001410A63E0 | File offset: 0x010A59E0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMis
 
 struct Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMissionGuid_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0432A200 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A6410 (end 0x010A643F)
 // Original VA: 0x00000001410A6410 | File offset: 0x010A5A10

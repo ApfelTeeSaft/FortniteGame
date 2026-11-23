@@ -20,7 +20,7 @@ void AFortLobbyBeaconStateRM::StaticRegisterNativesAFortLobbyBeaconStateRM()
 
 struct Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B2EF0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101F2C0 (end 0x0101F2EF)
 // Original VA: 0x000000014101F2C0 | File offset: 0x0101E8C0

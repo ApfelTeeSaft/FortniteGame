@@ -21,7 +21,7 @@ void UFortQuestCategory::StaticRegisterNativesUFortQuestCategory()
 
 struct Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0431D900 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010969C0 (end 0x010969EF)
 // Original VA: 0x00000001410969C0 | File offset: 0x01095FC0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount()
 
 struct Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0431D990 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010969F0 (end 0x01096A1F)
 // Original VA: 0x00000001410969F0 | File offset: 0x01095FF0

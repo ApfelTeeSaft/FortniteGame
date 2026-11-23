@@ -20,7 +20,7 @@ void AFortGameStateSurvival::StaticRegisterNativesAFortGameStateSurvival()
 
 struct Z_Construct_UFunction_AFortGameStateSurvival_SetGameDifficultyRow_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0428AB90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3820 (end 0x00FF384F)
 // Original VA: 0x0000000140FF3820 | File offset: 0x00FF2E20

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3830 (end 0x024A3860)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCreateDynamicMaterialInstance) | Matching: see analysis/functions-uht-exec.json
+void ADecalActor::execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->CreateDynamicMaterialInstance();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ADecalActor, 4259944895u)
 // Original dynamic initializer: RVA 0x001F8240 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ADecalActor> AutoInitializeADecalActor(TEXT("ADecalActor"), sizeof(ADecalActor), 4259944895u);

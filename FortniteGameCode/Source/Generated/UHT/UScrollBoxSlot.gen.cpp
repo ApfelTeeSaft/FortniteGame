@@ -21,7 +21,7 @@ void UScrollBoxSlot::StaticRegisterNativesUScrollBoxSlot()
 
 struct Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C6450 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF36B0 (end 0x01BF36DF)
 // Original VA: 0x0000000141BF36B0 | File offset: 0x01BF2CB0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment()
 
 struct Z_Construct_UFunction_UScrollBoxSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C64D0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF36E0 (end 0x01BF370F)
 // Original VA: 0x0000000141BF36E0 | File offset: 0x01BF2CE0

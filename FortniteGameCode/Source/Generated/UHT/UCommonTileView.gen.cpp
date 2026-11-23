@@ -20,7 +20,7 @@ void UCommonTileView::StaticRegisterNativesUCommonTileView()
 
 struct Z_Construct_UFunction_UCommonTileView_SetItemWidth_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04180500 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBD00 (end 0x002CBD2F)
 // Original VA: 0x00000001402CBD00 | File offset: 0x002CB300

@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BB630 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FCA50 (end 0x028FCA7F)
 // Original VA: 0x00000001428FCA50 | File offset: 0x028FC050

@@ -20,7 +20,7 @@ void UAthenaPlayerVitalityBarBase::StaticRegisterNativesUAthenaPlayerVitalityBar
 
 struct Z_Construct_UFunction_UAthenaPlayerVitalityBarBase_SetDataSource_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04550970 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888330 (end 0x0288835F)
 // Original VA: 0x0000000142888330 | File offset: 0x02887930

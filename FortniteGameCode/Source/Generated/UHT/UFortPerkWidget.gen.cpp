@@ -29,7 +29,7 @@ void UFortPerkWidget::StaticRegisterNativesUFortPerkWidget()
 
 struct Z_Construct_UFunction_UFortPerkWidget_GetIcon_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A89D0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E72A0 (end 0x028E72CF)
 // Original VA: 0x00000001428E72A0 | File offset: 0x028E68A0
@@ -46,7 +46,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_GetIcon()
 
 struct Z_Construct_UFunction_UFortPerkWidget_GetPerkTier_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8A50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E72D0 (end 0x028E72FF)
 // Original VA: 0x00000001428E72D0 | File offset: 0x028E68D0
@@ -63,7 +63,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_GetPerkTier()
 
 struct Z_Construct_UFunction_UFortPerkWidget_GetRequiredLevel_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8AD0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7300 (end 0x028E732F)
 // Original VA: 0x00000001428E7300 | File offset: 0x028E6900
@@ -80,7 +80,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_GetRequiredLevel()
 
 struct Z_Construct_UFunction_UFortPerkWidget_GetSupportBonusType_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8B90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7330 (end 0x028E735F)
 // Original VA: 0x00000001428E7330 | File offset: 0x028E6930
@@ -97,7 +97,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_GetSupportBonusType()
 
 struct Z_Construct_UFunction_UFortPerkWidget_GetTooltipDescription_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8C40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7360 (end 0x028E738F)
 // Original VA: 0x00000001428E7360 | File offset: 0x028E6960
@@ -114,7 +114,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_GetTooltipDescription()
 
 struct Z_Construct_UFunction_UFortPerkWidget_GetTooltipTitle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8CC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7390 (end 0x028E73BF)
 // Original VA: 0x00000001428E7390 | File offset: 0x028E6990
@@ -131,7 +131,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_GetTooltipTitle()
 
 struct Z_Construct_UFunction_UFortPerkWidget_HasAbility_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8D50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E73C0 (end 0x028E73EF)
 // Original VA: 0x00000001428E73C0 | File offset: 0x028E69C0
@@ -148,7 +148,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_HasAbility()
 
 struct Z_Construct_UFunction_UFortPerkWidget_IsPerkHighlighted_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8DE0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E73F0 (end 0x028E741F)
 // Original VA: 0x00000001428E73F0 | File offset: 0x028E69F0
@@ -165,7 +165,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_IsPerkHighlighted()
 
 struct Z_Construct_UFunction_UFortPerkWidget_IsPerkUnlocked_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8E70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7420 (end 0x028E744F)
 // Original VA: 0x00000001428E7420 | File offset: 0x028E6A20
@@ -182,7 +182,7 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_IsPerkUnlocked()
 
 struct Z_Construct_UFunction_UFortPerkWidget_IsTierPerk_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A8F00 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7450 (end 0x028E747F)
 // Original VA: 0x00000001428E7450 | File offset: 0x028E6A50

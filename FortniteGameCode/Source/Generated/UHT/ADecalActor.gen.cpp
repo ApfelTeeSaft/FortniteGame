@@ -22,7 +22,7 @@ void ADecalActor::StaticRegisterNativesADecalActor()
 
 struct Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044422F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEC40 (end 0x023FEC6F)
 // Original VA: 0x00000001423FEC40 | File offset: 0x023FE240
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance()
 
 struct Z_Construct_UFunction_ADecalActor_GetDecalMaterial_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04442370 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEC70 (end 0x023FEC9F)
 // Original VA: 0x00000001423FEC70 | File offset: 0x023FE270
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_ADecalActor_GetDecalMaterial()
 
 struct Z_Construct_UFunction_ADecalActor_SetDecalMaterial_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044423F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FECA0 (end 0x023FECCF)
 // Original VA: 0x00000001423FECA0 | File offset: 0x023FE2A0

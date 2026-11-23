@@ -22,7 +22,7 @@ void UFortWeaponMeleeItemDefinitionTooltip::StaticRegisterNativesUFortWeaponMele
 
 struct Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetNumericValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0434D290 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9630 (end 0x010D965F)
 // Original VA: 0x00000001410D9630 | File offset: 0x010D8C30
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetNumeri
 
 struct Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0434D450 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9660 (end 0x010D968F)
 // Original VA: 0x00000001410D9660 | File offset: 0x010D8C60
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTextFo
 
 struct Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0434D610 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9690 (end 0x010D96BF)
 // Original VA: 0x00000001410D9690 | File offset: 0x010D8C90

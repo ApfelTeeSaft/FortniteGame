@@ -37,6 +37,14 @@ UAthenaPlayerViewModel* UAthenaIndicatorLayerBase::GetPlayerViewModel() const
 	return PlayerVM;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x026AC0A0 (end 0x026AC0A8), leaf (no .pdata)
+// Original VA: 0x00000001426AC0A0 | File offset: 0x026AB6A0
+// Recovery: high-confidence inferred (called by execSetDataSource at RVA 0x0288A430; UAthenaPlayerVitalityBarBase::PlayerVM reflected at +0x208) | Matching: see analysis/functions-native-accessors.json
+void UAthenaPlayerVitalityBarBase::SetDataSource(UAthenaPlayerViewModel* PlayerViewModel)
+{
+	PlayerVM = PlayerViewModel;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x026D9270 (end 0x026D9278), leaf (no .pdata)
 // Original VA: 0x00000001426D9270 | File offset: 0x026D8870
 // Recovery: high-confidence inferred (called by execIsNewNewsAvailable at RVA 0x02889A70; UCMSContext::bNewNewsAvailable reflected at +0x111) | Matching: see analysis/functions-native-accessors.json

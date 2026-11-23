@@ -20,7 +20,7 @@ void UMouseCursorBinding::StaticRegisterNativesUMouseCursorBinding()
 
 struct Z_Construct_UFunction_UMouseCursorBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C1F90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEE470 (end 0x01BEE49F)
 // Original VA: 0x0000000141BEE470 | File offset: 0x01BEDA70

@@ -21,7 +21,7 @@ void UFortEnemyKilledParams::StaticRegisterNativesUFortEnemyKilledParams()
 
 struct Z_Construct_UFunction_UFortEnemyKilledParams_BreakParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043614E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAB90 (end 0x010EABBF)
 // Original VA: 0x00000001410EAB90 | File offset: 0x010EA190
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortEnemyKilledParams_BreakParams()
 
 struct Z_Construct_UFunction_UFortEnemyKilledParams_SetParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043615E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EABC0 (end 0x010EABEF)
 // Original VA: 0x00000001410EABC0 | File offset: 0x010EA1C0

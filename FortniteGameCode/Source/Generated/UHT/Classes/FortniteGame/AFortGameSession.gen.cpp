@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEF9E0 (end 0x00FEF9FF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDumpReservations) | Matching: see analysis/functions-uht-exec.json
+void AFortGameSession::execDumpReservations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DumpReservations();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameSession, 702837740u)
 // Original dynamic initializer: RVA 0x000F7530 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameSession> AutoInitializeAFortGameSession(TEXT("AFortGameSession"), sizeof(AFortGameSession), 702837740u);

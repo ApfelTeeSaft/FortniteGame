@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04312530 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B9E0 (end 0x0108BA0F)
 // Original VA: 0x000000014108B9E0 | File offset: 0x0108AFE0

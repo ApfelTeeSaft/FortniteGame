@@ -20,7 +20,7 @@ void UBlueprintAsyncActionBase::StaticRegisterNativesUBlueprintAsyncActionBase()
 
 struct Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04427320 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E3CE0 (end 0x023E3D0F)
 // Original VA: 0x00000001423E3CE0 | File offset: 0x023E32E0

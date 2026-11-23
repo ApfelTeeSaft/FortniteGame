@@ -24,7 +24,7 @@ void UFortItemIcon::StaticRegisterNativesUFortItemIcon()
 
 struct Z_Construct_UFunction_UFortItemIcon_SetBrushSize_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591470 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAA50 (end 0x028CAA7F)
 // Original VA: 0x00000001428CAA50 | File offset: 0x028CA050
@@ -41,7 +41,7 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetBrushSize()
 
 struct Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045914F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAA80 (end 0x028CAAAF)
 // Original VA: 0x00000001428CAA80 | File offset: 0x028CA080
@@ -58,7 +58,7 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity()
 
 struct Z_Construct_UFunction_UFortItemIcon_SetItemDefinition_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591570 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAAB0 (end 0x028CAADF)
 // Original VA: 0x00000001428CAAB0 | File offset: 0x028CA0B0
@@ -75,7 +75,7 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetItemDefinition()
 
 struct Z_Construct_UFunction_UFortItemIcon_SetOpacity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045915F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAAE0 (end 0x028CAB0F)
 // Original VA: 0x00000001428CAAE0 | File offset: 0x028CA0E0
@@ -92,7 +92,7 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetOpacity()
 
 struct Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591670 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAB10 (end 0x028CAB3F)
 // Original VA: 0x00000001428CAB10 | File offset: 0x028CA110

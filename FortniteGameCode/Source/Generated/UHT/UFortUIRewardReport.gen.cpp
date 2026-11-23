@@ -20,7 +20,7 @@ void UFortUIRewardReport::StaticRegisterNativesUFortUIRewardReport()
 
 struct Z_Construct_UFunction_UFortUIRewardReport_GetRewardedChestIndex_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045CEE60 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02912E40 (end 0x02912E6F)
 // Original VA: 0x0000000142912E40 | File offset: 0x02912440

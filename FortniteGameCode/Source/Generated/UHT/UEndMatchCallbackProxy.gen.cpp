@@ -20,7 +20,7 @@ void UEndMatchCallbackProxy::StaticRegisterNativesUEndMatchCallbackProxy()
 
 struct Z_Construct_UFunction_UEndMatchCallbackProxy_EndMatch_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04186AB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F450 (end 0x0032F47F)
 // Original VA: 0x000000014032F450 | File offset: 0x0032EA50

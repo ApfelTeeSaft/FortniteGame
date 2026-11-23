@@ -22,7 +22,7 @@ void UFortSchematicTooltip::StaticRegisterNativesUFortSchematicTooltip()
 
 struct Z_Construct_UFunction_UFortSchematicTooltip_GetNumericValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04326F90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A61A0 (end 0x010A61CF)
 // Original VA: 0x00000001410A61A0 | File offset: 0x010A57A0
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UFortSchematicTooltip_GetNumericValue()
 
 struct Z_Construct_UFunction_UFortSchematicTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04327150 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A61D0 (end 0x010A61FF)
 // Original VA: 0x00000001410A61D0 | File offset: 0x010A57D0
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UFortSchematicTooltip_GetTextForToken()
 
 struct Z_Construct_UFunction_UFortSchematicTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04327310 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A6200 (end 0x010A622F)
 // Original VA: 0x00000001410A6200 | File offset: 0x010A5800

@@ -23,7 +23,7 @@ void UFortSquadSlotItemDetailsHostPanel::StaticRegisterNativesUFortSquadSlotItem
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquadSlotToManageBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B9200 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC240 (end 0x028FC26F)
 // Original VA: 0x00000001428FC240 | File offset: 0x028FB840
@@ -40,7 +40,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquad
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSquadSlotBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B92C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC270 (end 0x028FC29F)
 // Original VA: 0x00000001428FC270 | File offset: 0x028FB870
@@ -57,7 +57,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSqu
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_IsSquadSlotLockedBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B9350 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC2A0 (end 0x028FC2CF)
 // Original VA: 0x00000001428FC2A0 | File offset: 0x028FB8A0
@@ -74,7 +74,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_IsSquadSlotL
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_SetIdOfSquadSlotToManageBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B9400 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC2D0 (end 0x028FC2FF)
 // Original VA: 0x00000001428FC2D0 | File offset: 0x028FB8D0

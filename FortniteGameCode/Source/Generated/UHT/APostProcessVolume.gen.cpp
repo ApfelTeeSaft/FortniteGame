@@ -20,7 +20,7 @@ void APostProcessVolume::StaticRegisterNativesAPostProcessVolume()
 
 struct Z_Construct_UFunction_APostProcessVolume_AddOrUpdateBlendable_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044F42F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B85B0 (end 0x024B85DF)
 // Original VA: 0x00000001424B85B0 | File offset: 0x024B7BB0

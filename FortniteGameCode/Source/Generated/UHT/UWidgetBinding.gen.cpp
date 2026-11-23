@@ -20,7 +20,7 @@ void UWidgetBinding::StaticRegisterNativesUWidgetBinding()
 
 struct Z_Construct_UFunction_UWidgetBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D2840 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C01090 (end 0x01C010BF)
 // Original VA: 0x0000000141C01090 | File offset: 0x01C00690

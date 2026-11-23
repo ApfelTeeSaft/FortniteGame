@@ -20,7 +20,7 @@ void AFortClientAnnouncement_TutorialConversation::StaticRegisterNativesAFortCli
 
 struct Z_Construct_UFunction_AFortClientAnnouncement_TutorialConversation_OnRep_TutorialData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04253930 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC08F0 (end 0x00FC091F)
 // Original VA: 0x0000000140FC08F0 | File offset: 0x00FBFEF0

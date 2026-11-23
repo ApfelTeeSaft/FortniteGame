@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6DDD0 (end 0x00F6DE34)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSimpleDeathFXTransform) | Matching: see analysis/functions-uht-exec.json
+void ADeployableBaseCore::execGetSimpleDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FTransform*)Z_Param__Result=P_THIS->GetSimpleDeathFXTransform_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ADeployableBaseCore, 3710726156u)
 // Original dynamic initializer: RVA 0x000DCD40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ADeployableBaseCore> AutoInitializeADeployableBaseCore(TEXT("ADeployableBaseCore"), sizeof(ADeployableBaseCore), 3710726156u);

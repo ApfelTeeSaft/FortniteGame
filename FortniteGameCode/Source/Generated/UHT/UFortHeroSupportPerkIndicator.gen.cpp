@@ -21,7 +21,7 @@ void UFortHeroSupportPerkIndicator::StaticRegisterNativesUFortHeroSupportPerkInd
 
 struct Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0457CA80 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B4B90 (end 0x028B4BBF)
 // Original VA: 0x00000001428B4B90 | File offset: 0x028B4190
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresen
 
 struct Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetSupportTypeToRepresent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0457CB40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B4BC0 (end 0x028B4BEF)
 // Original VA: 0x00000001428B4BC0 | File offset: 0x028B41C0

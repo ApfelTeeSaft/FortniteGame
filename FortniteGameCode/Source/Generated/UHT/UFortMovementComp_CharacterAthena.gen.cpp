@@ -22,7 +22,7 @@ void UFortMovementComp_CharacterAthena::StaticRegisterNativesUFortMovementComp_C
 
 struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D6300 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BAE0 (end 0x0104BB0F)
 // Original VA: 0x000000014104BAE0 | File offset: 0x0104B0E0
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySky
 
 struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D6390 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BB10 (end 0x0104BB3F)
 // Original VA: 0x000000014104BB10 | File offset: 0x0104B110
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStr
 
 struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D6420 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BB40 (end 0x0104BB6F)
 // Original VA: 0x000000014104BB40 | File offset: 0x0104B140

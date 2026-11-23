@@ -20,7 +20,7 @@ void UFortRichTextBlock::StaticRegisterNativesUFortRichTextBlock()
 
 struct Z_Construct_UFunction_UFortRichTextBlock_SetText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 8 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B21E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EEED0 (end 0x028EEEFF)
 // Original VA: 0x00000001428EEED0 | File offset: 0x028EE4D0

@@ -20,7 +20,7 @@ void ULogoutCallbackProxy::StaticRegisterNativesULogoutCallbackProxy()
 
 struct Z_Construct_UFunction_ULogoutCallbackProxy_Logout_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04188820 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F720 (end 0x0032F74F)
 // Original VA: 0x000000014032F720 | File offset: 0x0032ED20

@@ -21,7 +21,7 @@ void UFortRegisteredPlayerInfo::StaticRegisterNativesUFortRegisteredPlayerInfo()
 
 struct Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043234D0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E6E0 (end 0x0109E70F)
 // Original VA: 0x000000014109E6E0 | File offset: 0x0109DCE0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemCompo
 
 struct Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetPlayerName_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04323550 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E710 (end 0x0109E73F)
 // Original VA: 0x000000014109E710 | File offset: 0x0109DD10

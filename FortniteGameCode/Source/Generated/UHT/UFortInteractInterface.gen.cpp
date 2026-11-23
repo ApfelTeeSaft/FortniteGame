@@ -20,7 +20,7 @@ void UFortInteractInterface::StaticRegisterNativesUFortInteractInterface()
 
 struct Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0429E3B0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007980 (end 0x010079AF)
 // Original VA: 0x0000000141007980 | File offset: 0x01006F80

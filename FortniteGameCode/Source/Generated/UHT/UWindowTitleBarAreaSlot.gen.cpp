@@ -22,7 +22,7 @@ void UWindowTitleBarAreaSlot::StaticRegisterNativesUWindowTitleBarAreaSlot()
 
 struct Z_Construct_UFunction_UWindowTitleBarAreaSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9CC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07FD0 (end 0x01C07FFF)
 // Original VA: 0x0000000141C07FD0 | File offset: 0x01C075D0
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UWindowTitleBarAreaSlot_SetHorizontalAlignment(
 
 struct Z_Construct_UFunction_UWindowTitleBarAreaSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9D40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C08000 (end 0x01C0802F)
 // Original VA: 0x0000000141C08000 | File offset: 0x01C07600
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UWindowTitleBarAreaSlot_SetPadding()
 
 struct Z_Construct_UFunction_UWindowTitleBarAreaSlot_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9DC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C08030 (end 0x01C0805F)
 // Original VA: 0x0000000141C08030 | File offset: 0x01C07630

@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04564CC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C300 (end 0x0289C32F)
 // Original VA: 0x000000014289C300 | File offset: 0x0289B900

@@ -20,7 +20,7 @@ void UFortAwardManager::StaticRegisterNativesUFortAwardManager()
 
 struct Z_Construct_UFunction_UFortAwardManager_GetSourceAndContextTags_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0423C9A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3FB0 (end 0x00FA3FDF)
 // Original VA: 0x0000000140FA3FB0 | File offset: 0x00FA35B0

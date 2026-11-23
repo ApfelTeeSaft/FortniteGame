@@ -21,7 +21,7 @@ void UFortHUDElementWidget::StaticRegisterNativesUFortHUDElementWidget()
 
 struct Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04584D50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD240 (end 0x028BD26F)
 // Original VA: 0x00000001428BD240 | File offset: 0x028BC840
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibil
 
 struct Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04584D90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD270 (end 0x028BD29F)
 // Original VA: 0x00000001428BD270 | File offset: 0x028BC870
@@ -55,7 +55,7 @@ UFunction* Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefault
 
 struct Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04584E50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD2A0 (end 0x028BD2CF)
 // Original VA: 0x00000001428BD2A0 | File offset: 0x028BC8A0

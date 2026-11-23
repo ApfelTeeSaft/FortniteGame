@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028EF5B0 (end 0x028EF729)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetIconBrush) | Matching: see analysis/functions-uht-exec.json
+void UFortRewardCollectionBookData::execGetIconBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FSlateBrush,Z_Param_Out_IconBrush);
+	P_GET_PROPERTY(UByteProperty,Z_Param_BrushSize);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetIconBrush(Z_Param_Out_IconBrush,EFortBrushSize::Type(Z_Param_BrushSize));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortRewardCollectionBookData, 2123195178u)
 // Original dynamic initializer: RVA 0x00258520 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortRewardCollectionBookData> AutoInitializeUFortRewardCollectionBookData(TEXT("UFortRewardCollectionBookData"), sizeof(UFortRewardCollectionBookData), 2123195178u);

@@ -22,7 +22,7 @@ void UFortWeaponRangedTooltip::StaticRegisterNativesUFortWeaponRangedTooltip()
 
 struct Z_Construct_UFunction_UFortWeaponRangedTooltip_GetNumericValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043504A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCEF0 (end 0x010DCF1F)
 // Original VA: 0x00000001410DCEF0 | File offset: 0x010DC4F0
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponRangedTooltip_GetNumericValue()
 
 struct Z_Construct_UFunction_UFortWeaponRangedTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04350660 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCF20 (end 0x010DCF4F)
 // Original VA: 0x00000001410DCF20 | File offset: 0x010DC520
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponRangedTooltip_GetTextForToken()
 
 struct Z_Construct_UFunction_UFortWeaponRangedTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04350820 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCF50 (end 0x010DCF7F)
 // Original VA: 0x00000001410DCF50 | File offset: 0x010DC550

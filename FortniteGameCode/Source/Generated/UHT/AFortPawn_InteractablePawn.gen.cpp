@@ -23,7 +23,7 @@ void AFortPawn_InteractablePawn::StaticRegisterNativesAFortPawn_InteractablePawn
 
 struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042ED2E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C00 (end 0x01065C2F)
 // Original VA: 0x0000000141065C00 | File offset: 0x01065200
@@ -40,7 +40,7 @@ UFunction* Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract
 
 struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteractionString_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042ED3A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C30 (end 0x01065C5F)
 // Original VA: 0x0000000141065C30 | File offset: 0x01065230
@@ -57,7 +57,7 @@ UFunction* Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteract
 
 struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnBeginInteract_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042ED3E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C60 (end 0x01065C8F)
 // Original VA: 0x0000000141065C60 | File offset: 0x01065260
@@ -74,7 +74,7 @@ UFunction* Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnBeginInte
 
 struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnInteract_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042ED460 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C90 (end 0x01065CBF)
 // Original VA: 0x0000000141065C90 | File offset: 0x01065290

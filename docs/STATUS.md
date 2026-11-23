@@ -9,21 +9,21 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **30,010 / 157,719** primary `.pdata` functions (19.03 %, 1,797,883 bytes):
+| Exact functions | **30,466 / 157,719** primary `.pdata` functions (19.32 %, 1,822,390 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 30,003 generated UHT functions:
-  - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
-    2,212 `FCompiledInDefer` initializers and 1,303 exec thunks (1,097 of virtual natives, 206 of
+- 30,459 generated UHT functions:
+  - classes: 10,976 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
+    2,212 `FCompiledInDefer` initializers and 1,318 exec thunks (1,111 of virtual natives, 207 of
     native accessors);
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
-  - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,860 `StaticStruct`, 1,782 `NewStructOps`,
+  - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,859 `StaticStruct`, 1,782 `NewStructOps`,
     1,888 `StaticRegisterNatives` and 1,283 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,071 `Z_Construct_UEnum_*`, 374 `<Enum>_StaticEnum` and 598 `FCompiledInDeferEnum` initializers.
 
-Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers, 210 leaf exec thunks, 206 native accessors and `FCommandLine::IsInitialized` |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,604 reconstructed and compiled; 30,010 exact; 7,594 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 7,590 in the denominator, mostly:
+Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers, 212 leaf exec thunks, 207 native accessors and `FCommandLine::IsInitialized` |
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,619 reconstructed and compiled; 30,466 exact; 7,153 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 7,149 in the denominator, mostly:
 - the 3,283 `GetPrivateStaticClass` bodies (template-instance and literal fields);
 - 2,329 registration initializers blocked by package-name literals that hand-written code
   also uses;
@@ -32,15 +32,15 @@ Generated code is compiled in 182 unity units in the reference's recovered sourc
 Four are `partial`: one enum registration initializer (shared literal copy) and three exec thunks
 whose virtual natives were misidentified (inlined natives; see `docs/REVERSE_ENGINEERING.md`, "Exec
 thunk parameters"). The per-manifest counts are in `analysis/functions-uht-*.json` |
-| Named functions | 27,699 denominator functions (17.56 %):
+| Named functions | 27,855 denominator functions (17.66 %):
 - from UHT reflection tables: 7,819 exec thunks, 11,102 `Z_Construct_UFunction_*` creators, and
   registrar/`GetPrivateStaticClass` pairs for 1,155 attributed classes (`analysis/reflection-natives.json`);
-- 5,104 native implementations called by their exec thunks, 5,063 of them high-confidence
+- 5,217 native implementations called by their exec thunks, 5,176 of them high-confidence
   (`analysis/native-implementations.json`);
-- 1,364 more virtual-function implementations from class vtables (`analysis/vtables.json`).
+- 1,407 more virtual-function implementations from class vtables (`analysis/vtables.json`).
 
-Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Class vtables: 3,299 located,
-1,771 slots named from 1,880 virtual natives |
+Outside the denominator: 1,374 leaf exec thunks and 1,731 leaf natives. Class vtables: 3,299 located,
+1,797 slots named from 1,995 virtual natives |
 | Whole-file identity | Not achievable as things stand: encrypted bodies on disk, a protector section and rewritten import references, a patched entry stub, and an Authenticode signature |
 | IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA yet |
 
@@ -64,12 +64,17 @@ Work follows `CLAUDE.md`'s adaptive workflow:
 - `tools/matching/regressions.py` gates each commit.
 
 Largest queue groups (2026-11-23):
-- 3,130 `GetPrivateStaticClass` bodies: `InternalConstructor<C>` and
+- 3,283 `GetPrivateStaticClass` bodies: `InternalConstructor<C>` and
   `InternalVTableHelperCtorCaller<C>` are referenced only there.
-- 2,329 registrars waiting on per-occurrence `L"/Script/<Package>"` copies.
-- 633 `StaticEnum` singletons in `.bss`.
-- 442 creators waiting on `FFunctionParams` records.
+- 2,353 registrars waiting on per-occurrence `L"/Script/<Package>"` copies.
+- 650 `StaticEnum` singletons in `.bss`.
 - 222 struct-ops initializers waiting on pooled literals.
+- 202 creators whose `ReturnFunction` static in `.bss` is not predicted.
+- The `TClassCompiledInDefer` block at the start of each unit's `.data`. Modelling it would
+  let every `FFunctionParams` record be defined, and help the `AutoInitialize` initializers
+  outside the denominator.
+
+The 442 creators that waited on `FFunctionParams` records are exact (2026-11-23).
 
 The numbered tasks below predate this queue.
 

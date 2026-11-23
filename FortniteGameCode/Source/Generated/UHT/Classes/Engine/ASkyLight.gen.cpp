@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bEnabled) | Matching: see analysis/functions-uht-exec.json
+void ASkyLight::execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_bEnabled();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ASkyLight, 1249314479u)
 // Original dynamic initializer: RVA 0x0021A910 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ASkyLight> AutoInitializeASkyLight(TEXT("ASkyLight"), sizeof(ASkyLight), 1249314479u);

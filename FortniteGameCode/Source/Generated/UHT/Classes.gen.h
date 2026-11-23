@@ -6140,6 +6140,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual EFortCustomPartType::Type GetCharacterPartType() const;  // slot 189 (+0x5E8), UFunction ACustomCharacterPartModifier::GetCharacterPartType
+	virtual AFortPlayerPawn* GetAssociatedPlayerPawn() const;  // slot 190 (+0x5F0), UFunction ACustomCharacterPartModifier::GetAssociatedPlayerPawn
 	static void StaticRegisterNativesACustomCharacterPartModifier();
 	static void execGetAssociatedPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCharacterPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6557,6 +6564,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual UMaterialInstanceDynamic* CreateDynamicMaterialInstance();  // slot 189 (+0x5E8), UFunction ADecalActor::CreateDynamicMaterialInstance
 	static void StaticRegisterNativesADecalActor();
 	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6626,6 +6639,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual FTransform GetSimpleDeathFXTransform_Implementation() const;  // slot 292 (+0x920), UFunction ADeployableBaseCore::GetSimpleDeathFXTransform
 	static void StaticRegisterNativesADeployableBaseCore();
 	static void execGetSimpleDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -6833,6 +6847,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_bEnabled();  // slot 189 (+0x5E8), UFunction AExponentialHeightFog::OnRep_bEnabled
 	static void StaticRegisterNativesAExponentialHeightFog();
 	static void execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -9476,6 +9496,64 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void FNGC_VSlot_0x618();
+	virtual void FNGC_VSlot_0x620();
+	virtual void FNGC_VSlot_0x628();
+	virtual void FNGC_VSlot_0x630();
+	virtual void FNGC_VSlot_0x638();
+	virtual void FNGC_VSlot_0x640();
+	virtual void FNGC_VSlot_0x648();
+	virtual void FNGC_VSlot_0x650();
+	virtual void FNGC_VSlot_0x658();
+	virtual void FNGC_VSlot_0x660();
+	virtual void FNGC_VSlot_0x668();
+	virtual void FNGC_VSlot_0x670();
+	virtual void FNGC_VSlot_0x678();
+	virtual void FNGC_VSlot_0x680();
+	virtual void FNGC_VSlot_0x688();
+	virtual void FNGC_VSlot_0x690();
+	virtual void FNGC_VSlot_0x698();
+	virtual void FNGC_VSlot_0x6A0();
+	virtual void FNGC_VSlot_0x6A8();
+	virtual void FNGC_VSlot_0x6B0();
+	virtual void FNGC_VSlot_0x6B8();
+	virtual void FNGC_VSlot_0x6C0();
+	virtual void FNGC_VSlot_0x6C8();
+	virtual void FNGC_VSlot_0x6D0();
+	virtual void FNGC_VSlot_0x6D8();
+	virtual void FNGC_VSlot_0x6E0();
+	virtual void FNGC_VSlot_0x6E8();
+	virtual void FNGC_VSlot_0x6F0();
+	virtual void FNGC_VSlot_0x6F8();
+	virtual void FNGC_VSlot_0x700();
+	virtual void FNGC_VSlot_0x708();
+	virtual void FNGC_VSlot_0x710();
+	virtual void FNGC_VSlot_0x718();
+	virtual void FNGC_VSlot_0x720();
+	virtual void FNGC_VSlot_0x728();
+	virtual void FNGC_VSlot_0x730();
+	virtual void FNGC_VSlot_0x738();
+	virtual void FNGC_VSlot_0x740();
+	virtual void FNGC_VSlot_0x748();
+	virtual void FNGC_VSlot_0x750();
+	virtual void FNGC_VSlot_0x758();
+	virtual void FNGC_VSlot_0x760();
+	virtual void FNGC_VSlot_0x768();
+	virtual void FNGC_VSlot_0x770();
+	virtual void FNGC_VSlot_0x778();
+	virtual void FNGC_VSlot_0x780();
+	virtual void DumpReservations() const;  // slot 241 (+0x788), UFunction AFortGameSession::DumpReservations
 	static void StaticRegisterNativesAFortGameSession();
 	static void execDumpReservations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -11099,6 +11177,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void FNGC_VSlot_0x5E8();
+	virtual void FNGC_VSlot_0x5F0();
+	virtual void FNGC_VSlot_0x5F8();
+	virtual void FNGC_VSlot_0x600();
+	virtual void FNGC_VSlot_0x608();
+	virtual void FNGC_VSlot_0x610();
+	virtual void OnRep_LobbyTimeRemaining();  // slot 195 (+0x618), UFunction AFortLobbyBeaconStateRM::OnRep_LobbyTimeRemaining
 	static void StaticRegisterNativesAFortLobbyBeaconStateRM();
 	static void execOnRep_LobbyTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -11697,6 +11787,20 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0xB90();
+	virtual void FNGC_VSlot_0xB98();
+	virtual void FNGC_VSlot_0xBA0();
+	virtual void FNGC_VSlot_0xBA8();
+	virtual void FNGC_VSlot_0xBB0();
+	virtual void FNGC_VSlot_0xBB8();
+	virtual void FNGC_VSlot_0xBC0();
+	virtual void FNGC_VSlot_0xBC8();
+	virtual void FNGC_VSlot_0xBD0();
+	virtual void FNGC_VSlot_0xBD8();
+	virtual void BlueprintOnInteract_Implementation(const AFortPawn* InteractingPawn);  // slot 380 (+0xBE0), UFunction AFortPawn_InteractablePawn::BlueprintOnInteract
+	virtual void BlueprintOnBeginInteract_Implementation();  // slot 381 (+0xBE8), UFunction AFortPawn_InteractablePawn::BlueprintOnBeginInteract
+	virtual bool BlueprintCanInteract_Implementation(const AFortPawn* InteractingPawn) const;  // slot 382 (+0xBF0), UFunction AFortPawn_InteractablePawn::BlueprintCanInteract
+	virtual FText BlueprintGetInteractionString_Implementation(const AFortPawn* InteractingPawn) const;  // slot 383 (+0xBF8), UFunction AFortPawn_InteractablePawn::BlueprintGetInteractionString
 	static void StaticRegisterNativesAFortPawn_InteractablePawn();
 	static void execBlueprintCanInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBlueprintGetInteractionString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -16366,6 +16470,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x5C0();
+	virtual void FNGC_VSlot_0x5C8();
+	virtual void FNGC_VSlot_0x5D0();
+	virtual void FNGC_VSlot_0x5D8();
+	virtual void FNGC_VSlot_0x5E0();
+	virtual void OnRep_bEnabled();  // slot 189 (+0x5E8), UFunction ASkyLight::OnRep_bEnabled
 	static void StaticRegisterNativesASkyLight();
 	static void execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -19359,6 +19469,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void Activate();  // slot 71 (+0x238), UFunction UOnlineBlueprintCallProxyBase::Activate
 	static void StaticRegisterNativesUOnlineBlueprintCallProxyBase();
 	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -20857,6 +20968,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void Activate();  // slot 71 (+0x238), UFunction UBlueprintAsyncActionBase::Activate
 	static void StaticRegisterNativesUBlueprintAsyncActionBase();
 	static void execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -22799,10 +22911,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void SetDataSource(UAthenaPlayerViewModel* PlayerViewModel);  // native accessor of PlayerVM
 	static void StaticRegisterNativesUAthenaPlayerVitalityBarBase();
 	static void execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-private:
-	unsigned char Opaque[0x8];  // sizeof(UAthenaPlayerVitalityBarBase) = 0x210
+public:
+	UAthenaPlayerViewModel* PlayerVM;  // +0x208, reflected property
 };
 
 class UAthenaPlayersLeftBase : public UFortHUDElementWidget
@@ -32303,6 +32416,9 @@ class IFortAIEncounterInfoOwnerInterface
 public:
 	typedef UFortAIEncounterInfoOwnerInterface UClassType;
 	typedef IFortAIEncounterInfoOwnerInterface ThisClass;
+	virtual ~IFortAIEncounterInfoOwnerInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual UFortAIEncounterInfo* GetEncounterInfo() const;  // slot 2 (+0x10), UFunction UFortAIEncounterInfoOwnerInterface::GetEncounterInfo
 	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -32922,10 +33038,10 @@ public:
 	virtual bool BP_GetNumericValue_Implementation(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, float& OutVal) const;  // slot 72 (+0x240), UFunction UFortTooltip::BP_GetNumericValue
 	virtual bool BP_GetTokenizedDescriptionText_Implementation(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, TArray<FText>& OutDescription) const;  // slot 73 (+0x248), UFunction UFortTooltip::BP_GetTokenizedDescriptionText
 	virtual bool BP_GetTextForToken_Implementation(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, FText& OutText) const;  // slot 74 (+0x250), UFunction UFortTooltip::BP_GetTextForToken
-	virtual bool GetTokenizedDescriptionText(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, TArray<FText>& OutDescription) const;  // slot 75 (+0x258), UFunction UFortGameplayAbilityTooltip::GetTokenizedDescriptionText
-	virtual bool GetTextForToken(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, FText& OutText) const;  // slot 76 (+0x260), UFunction UFortGameplayAbilityTooltip::GetTextForToken
-	virtual bool GetNumericValue(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, float& OutVal) const;  // slot 77 (+0x268), UFunction UFortGameplayAbilityTooltip::GetNumericValue
-	virtual void FNGC_VSlot_0x270();  // slot 78: UFortTooltip::GetValueData (signature not recovered)
+	virtual bool GetTokenizedDescriptionText(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, TArray<FText>& OutDescription) const;  // slot 75 (+0x258), UFunction UFortAbilityKitTooltip::GetTokenizedDescriptionText
+	virtual bool GetTextForToken(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, FText& OutText) const;  // slot 76 (+0x260), UFunction UFortAbilityKitTooltip::GetTextForToken
+	virtual bool GetNumericValue(const UObject* ObjectToDescribe, FGameplayTag const& Tag, const UFortTooltipContext* Context, FGameplayTag const& Token, float& OutVal) const;  // slot 77 (+0x268), UFunction UFortAbilitySystemComponentTooltip::GetNumericValue
+	virtual void FNGC_VSlot_0x270();  // slot 78: UFortAbilitySystemComponentTooltip::GetValueData (signature not recovered)
 	static void StaticRegisterNativesUFortTooltip();
 	static void execBP_GetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBP_GetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -39834,6 +39950,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void ClearNotification_Implementation();  // slot 71 (+0x238), UFunction UFortNotificationHandler::ClearNotification
+	virtual void NotificationShown_Implementation();  // slot 72 (+0x240), UFunction UFortNotificationHandler::NotificationShown
 	static void StaticRegisterNativesUFortNotificationHandler();
 	static void execClearNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execNotificationShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -39853,8 +39971,6 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
-	virtual void FNGC_VSlot_0x238();
-	virtual void FNGC_VSlot_0x240();
 	virtual void Timeout_Implementation();  // slot 73 (+0x248), UFunction UFortDialogNotificationHandler::Timeout
 	virtual void Decline_Implementation();  // slot 74 (+0x250), UFunction UFortDialogNotificationHandler::Decline
 	virtual void Accept_Implementation();  // slot 75 (+0x258), UFunction UFortDialogNotificationHandler::Accept
@@ -41317,6 +41433,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void FNGC_VSlot_0x450();
+	virtual void FNGC_VSlot_0x458();
+	virtual void FNGC_VSlot_0x460();
+	virtual void FNGC_VSlot_0x468();
+	virtual void FNGC_VSlot_0x470();
+	virtual void FNGC_VSlot_0x478();
+	virtual void FNGC_VSlot_0x480();
+	virtual void FNGC_VSlot_0x488();
+	virtual void FNGC_VSlot_0x490();
+	virtual void OnItemChanged_Implementation();  // slot 147 (+0x498), UFunction UFortExpeditionListItemWidget::OnItemChanged
 	static void StaticRegisterNativesUFortExpeditionListItemWidget();
 	static void execOnItemChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -41458,6 +41587,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x420();
+	virtual void FNGC_VSlot_0x428();
+	virtual void FNGC_VSlot_0x430();
+	virtual void FNGC_VSlot_0x438();
+	virtual void FNGC_VSlot_0x440();
+	virtual void FNGC_VSlot_0x448();
+	virtual void SetData_Implementation(UFortExpeditionItem* InItem);  // slot 138 (+0x450), UFunction UFortExpeditionPickVehicleWidget::SetData
 	static void StaticRegisterNativesUFortExpeditionPickVehicleWidget();
 	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -42760,6 +42896,10 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayAbilities"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual bool OnRemove_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters) const;  // slot 71 (+0x238), UFunction UGameplayCueNotify_Static::OnRemove
+	virtual bool WhileActive_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters) const;  // slot 72 (+0x240), UFunction UGameplayCueNotify_Static::WhileActive
+	virtual bool OnActive_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters) const;  // slot 73 (+0x248), UFunction UGameplayCueNotify_Static::OnActive
+	virtual bool OnExecute_Implementation(AActor* MyTarget, FGameplayCueParameters const& Parameters) const;  // slot 74 (+0x250), UFunction UGameplayCueNotify_Static::OnExecute
 	static void StaticRegisterNativesUGameplayCueNotify_Static();
 	static void execOnActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -44584,6 +44724,12 @@ class IFortInteractInterface
 public:
 	typedef UFortInteractInterface UClassType;
 	typedef IFortInteractInterface ThisClass;
+	virtual ~IFortInteractInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();
+	virtual void FNGC_VSlot_0x18();
+	virtual void FNGC_VSlot_0x20();
+	virtual void FNGC_VSlot_0x28();  // slot 5: UFortInteractInterface::ServerOnAttemptInteract (signature not recovered)
 	static void execServerOnAttemptInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -52413,6 +52559,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual bool GetIconBrush(FSlateBrush& IconBrush, EFortBrushSize::Type BrushSize);  // slot 71 (+0x238), UFunction UFortRewardCollectionBookData::GetIconBrush
 	static void StaticRegisterNativesUFortRewardNotificationData();
 	static void execGetIconBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -53488,6 +53635,12 @@ class IFortSpawnableByPlacementSystemInterface
 public:
 	typedef UFortSpawnableByPlacementSystemInterface UClassType;
 	typedef IFortSpawnableByPlacementSystemInterface ThisClass;
+	virtual ~IFortSpawnableByPlacementSystemInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual void FNGC_VSlot_0x10();
+	virtual void FNGC_VSlot_0x18();
+	virtual AFortMission* GetMission() const;  // slot 4 (+0x20), UFunction UFortSpawnableByPlacementSystemInterface::GetMission
+	virtual FGuid GetMissionGuid() const;  // slot 5 (+0x28), UFunction UFortSpawnableByPlacementSystemInterface::GetMissionGuid
 	static void execGetMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -54447,6 +54600,9 @@ class IFortTargetSelectionInterface
 public:
 	typedef UFortTargetSelectionInterface UClassType;
 	typedef IFortTargetSelectionInterface ThisClass;
+	virtual ~IFortTargetSelectionInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual FTransform GetTargetingTransform(EFortAbilityTargetingSource Source, UFortGameplayAbility* SourceAbility) const;  // slot 2 (+0x10), UFunction UFortTargetSelectionInterface::GetTargetingTransform
 	static void execGetTargetingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -54950,6 +55106,10 @@ class IFortTooltipInterface
 public:
 	typedef UFortTooltipInterface UClassType;
 	typedef IFortTooltipInterface ThisClass;
+	virtual ~IFortTooltipInterface();  // slot 0 (+0x0), GENERATED_IINTERFACE_BODY
+	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
+	virtual TSubclassOf<UFortTooltip> GetTooltip() const;  // slot 2 (+0x10), UFunction UFortTooltipInterface::GetTooltip
+	virtual UFortTooltipDisplayStatsList* GetDisplayStats() const;  // slot 3 (+0x18), UFunction UFortTooltipInterface::GetDisplayStats
 	static void execGetDisplayStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTooltip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
@@ -57437,6 +57597,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/GameplayTasks"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	virtual void FNGC_VSlot_0x238();
+	virtual void FNGC_VSlot_0x240();
+	virtual void FNGC_VSlot_0x248();
+	virtual void FNGC_VSlot_0x250();
+	virtual void FNGC_VSlot_0x258();
+	virtual void FNGC_VSlot_0x260();
+	virtual void FNGC_VSlot_0x268();
+	virtual void FNGC_VSlot_0x270();
+	virtual void FNGC_VSlot_0x278();
+	virtual void FNGC_VSlot_0x280();
+	virtual void FNGC_VSlot_0x288();
+	virtual bool BeginSpawningActor(UObject* WorldContextObject, AActor*& SpawnedActor);  // slot 82 (+0x290), UFunction UGameplayTask_SpawnActor::BeginSpawningActor
+	virtual void FinishSpawningActor(UObject* WorldContextObject, AActor* SpawnedActor);  // slot 83 (+0x298), UFunction UGameplayTask_SpawnActor::FinishSpawningActor
 	static void StaticRegisterNativesUGameplayTask_SpawnActor();
 	static void execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -70363,6 +70536,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	virtual void FNGC_VSlot_0x3A0();
+	virtual void FNGC_VSlot_0x3A8();
+	virtual void MakeNoise(AActor* NoiseMaker, float Loudness, FVector const& NoiseLocation);  // slot 118 (+0x3B0), UFunction UPawnNoiseEmitterComponent::MakeNoise
 	static void StaticRegisterNativesUPawnNoiseEmitterComponent();
 	static void execMakeNoise(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:

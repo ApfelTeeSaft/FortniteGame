@@ -21,7 +21,7 @@ void AFortGameStateFOB::StaticRegisterNativesAFortGameStateFOB()
 
 struct Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042897F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEEFA0 (end 0x00FEEFCF)
 // Original VA: 0x0000000140FEEFA0 | File offset: 0x00FEE5A0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly()
 
 struct Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyRow_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04289870 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEEFD0 (end 0x00FEEFFF)
 // Original VA: 0x0000000140FEEFD0 | File offset: 0x00FEE5D0

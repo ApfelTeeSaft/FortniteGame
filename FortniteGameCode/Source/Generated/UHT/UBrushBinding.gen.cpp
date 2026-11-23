@@ -20,7 +20,7 @@ void UBrushBinding::StaticRegisterNativesUBrushBinding()
 
 struct Z_Construct_UFunction_UBrushBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BA1F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6A90 (end 0x01BE6ABF)
 // Original VA: 0x0000000141BE6A90 | File offset: 0x01BE6090

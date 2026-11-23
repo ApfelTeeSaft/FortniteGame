@@ -20,7 +20,7 @@ void UFortStartLeavingZoneParams::StaticRegisterNativesUFortStartLeavingZonePara
 
 struct Z_Construct_UFunction_UFortStartLeavingZoneParams_BreakParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043647B0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB250 (end 0x010EB27F)
 // Original VA: 0x00000001410EB250 | File offset: 0x010EA850

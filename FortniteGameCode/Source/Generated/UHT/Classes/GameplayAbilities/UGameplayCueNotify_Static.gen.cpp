@@ -4,6 +4,50 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055CF30 (end 0x0055D0F5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnActive) | Matching: see analysis/functions-uht-exec.json
+void UGameplayCueNotify_Static::execOnActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_MyTarget);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->OnActive_Implementation(Z_Param_MyTarget,Z_Param_Out_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055D2D0 (end 0x0055D495)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnExecute) | Matching: see analysis/functions-uht-exec.json
+void UGameplayCueNotify_Static::execOnExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_MyTarget);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->OnExecute_Implementation(Z_Param_MyTarget,Z_Param_Out_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055D700 (end 0x0055D8C5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRemove) | Matching: see analysis/functions-uht-exec.json
+void UGameplayCueNotify_Static::execOnRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_MyTarget);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->OnRemove_Implementation(Z_Param_MyTarget,Z_Param_Out_Parameters);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055DAA0 (end 0x0055DC65)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execWhileActive) | Matching: see analysis/functions-uht-exec.json
+void UGameplayCueNotify_Static::execWhileActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_MyTarget);
+	P_GET_STRUCT_REF(FGameplayCueParameters,Z_Param_Out_Parameters);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->WhileActive_Implementation(Z_Param_MyTarget,Z_Param_Out_Parameters);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UGameplayCueNotify_Static, 3860513165u)
 // Original dynamic initializer: RVA 0x0009ED00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameplayCueNotify_Static> AutoInitializeUGameplayCueNotify_Static(TEXT("UGameplayCueNotify_Static"), sizeof(UGameplayCueNotify_Static), 3860513165u);

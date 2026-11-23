@@ -20,7 +20,7 @@ void UFortCollectionBookProgressionRewardWidget::StaticRegisterNativesUFortColle
 
 struct Z_Construct_UFunction_UFortCollectionBookProgressionRewardWidget_SetAssociatedLevel_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0455FAD0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895B20 (end 0x02895B4F)
 // Original VA: 0x0000000142895B20 | File offset: 0x02895120

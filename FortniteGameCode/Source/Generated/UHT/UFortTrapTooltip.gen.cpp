@@ -22,7 +22,7 @@ void UFortTrapTooltip::StaticRegisterNativesUFortTrapTooltip()
 
 struct Z_Construct_UFunction_UFortTrapTooltip_GetNumericValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0433DCB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC230 (end 0x010CC25F)
 // Original VA: 0x00000001410CC230 | File offset: 0x010CB830
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UFortTrapTooltip_GetNumericValue()
 
 struct Z_Construct_UFunction_UFortTrapTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0433DE70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC260 (end 0x010CC28F)
 // Original VA: 0x00000001410CC260 | File offset: 0x010CB860
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UFortTrapTooltip_GetTextForToken()
 
 struct Z_Construct_UFunction_UFortTrapTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0433E030 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC290 (end 0x010CC2BF)
 // Original VA: 0x00000001410CC290 | File offset: 0x010CB890

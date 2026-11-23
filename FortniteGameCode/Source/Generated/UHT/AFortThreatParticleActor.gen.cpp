@@ -20,7 +20,7 @@ void AFortThreatParticleActor::StaticRegisterNativesAFortThreatParticleActor()
 
 struct Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04333120 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE8D0 (end 0x010BE8FF)
 // Original VA: 0x00000001410BE8D0 | File offset: 0x010BDED0
@@ -37,7 +37,7 @@ UFunction* Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds()
 
 struct Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043331E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE900 (end 0x010BE92F)
 // Original VA: 0x00000001410BE900 | File offset: 0x010BDF00
@@ -54,7 +54,7 @@ UFunction* Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged(
 
 struct Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04333220 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE930 (end 0x010BE95F)
 // Original VA: 0x00000001410BE930 | File offset: 0x010BDF30

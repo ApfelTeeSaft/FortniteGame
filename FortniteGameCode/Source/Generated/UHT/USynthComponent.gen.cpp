@@ -24,7 +24,7 @@ void USynthComponent::StaticRegisterNativesUSynthComponent()
 
 struct Z_Construct_UFunction_USynthComponent_IsPlaying_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 8 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0453B340 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A500 (end 0x0255A52F)
 // Original VA: 0x000000014255A500 | File offset: 0x02559B00
@@ -41,7 +41,7 @@ UFunction* Z_Construct_UFunction_USynthComponent_IsPlaying()
 
 struct Z_Construct_UFunction_USynthComponent_SetSubmixSend_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0453B400 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A530 (end 0x0255A55F)
 // Original VA: 0x000000014255A530 | File offset: 0x02559B30
@@ -58,7 +58,7 @@ UFunction* Z_Construct_UFunction_USynthComponent_SetSubmixSend()
 
 struct Z_Construct_UFunction_USynthComponent_SetVolumeMultiplier_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0453B480 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A560 (end 0x0255A58F)
 // Original VA: 0x000000014255A560 | File offset: 0x02559B60
@@ -75,7 +75,7 @@ UFunction* Z_Construct_UFunction_USynthComponent_SetVolumeMultiplier()
 
 struct Z_Construct_UFunction_USynthComponent_Start_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0453B4C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A590 (end 0x0255A5BF)
 // Original VA: 0x000000014255A590 | File offset: 0x02559B90
@@ -92,7 +92,7 @@ UFunction* Z_Construct_UFunction_USynthComponent_Start()
 
 struct Z_Construct_UFunction_USynthComponent_Stop_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 12 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0453B500 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A5C0 (end 0x0255A5EF)
 // Original VA: 0x000000014255A5C0 | File offset: 0x02559BC0

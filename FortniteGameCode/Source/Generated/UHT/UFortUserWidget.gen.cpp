@@ -21,7 +21,7 @@ void UFortUserWidget::StaticRegisterNativesUFortUserWidget()
 
 struct Z_Construct_UFunction_UFortUserWidget_AddGrantCheatMenu_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D2D40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029197C0 (end 0x029197EF)
 // Original VA: 0x00000001429197C0 | File offset: 0x02918DC0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortUserWidget_AddGrantCheatMenu()
 
 struct Z_Construct_UFunction_UFortUserWidget_AddStoreCheatMenu_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D2D80 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029197F0 (end 0x0291981F)
 // Original VA: 0x00000001429197F0 | File offset: 0x02918DF0

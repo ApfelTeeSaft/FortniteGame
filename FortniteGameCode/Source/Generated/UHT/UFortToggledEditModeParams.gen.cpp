@@ -21,7 +21,7 @@ void UFortToggledEditModeParams::StaticRegisterNativesUFortToggledEditModeParams
 
 struct Z_Construct_UFunction_UFortToggledEditModeParams_BreakParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043644D0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB2E0 (end 0x010EB30F)
 // Original VA: 0x00000001410EB2E0 | File offset: 0x010EA8E0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortToggledEditModeParams_BreakParams()
 
 struct Z_Construct_UFunction_UFortToggledEditModeParams_SetParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04364620 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB310 (end 0x010EB33F)
 // Original VA: 0x00000001410EB310 | File offset: 0x010EA910

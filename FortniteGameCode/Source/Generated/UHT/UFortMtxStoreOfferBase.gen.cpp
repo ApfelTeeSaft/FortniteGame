@@ -32,7 +32,7 @@ void UFortMtxStoreOfferBase::StaticRegisterNativesUFortMtxStoreOfferBase()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A0D80 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB00 (end 0x028DEB2F)
 // Original VA: 0x00000001428DEB00 | File offset: 0x028DE100
@@ -49,7 +49,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A0E00 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB30 (end 0x028DEB5F)
 // Original VA: 0x00000001428DEB30 | File offset: 0x028DE130
@@ -66,7 +66,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBonusQuantity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A0E80 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB60 (end 0x028DEB8F)
 // Original VA: 0x00000001428DEB60 | File offset: 0x028DE160
@@ -83,7 +83,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBonusQuantity()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDescription_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 8 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A0F00 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB90 (end 0x028DEBBF)
 // Original VA: 0x00000001428DEB90 | File offset: 0x028DE190
@@ -100,7 +100,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDescription()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsAttributes_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A0FC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEBC0 (end 0x028DEBEF)
 // Original VA: 0x00000001428DEBC0 | File offset: 0x028DE1C0
@@ -117,7 +117,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsAttributes()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsImage_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A1040 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEBF0 (end 0x028DEC1F)
 // Original VA: 0x00000001428DEBF0 | File offset: 0x028DE1F0
@@ -134,7 +134,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsImage()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetGradient_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A10C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEC20 (end 0x028DEC4F)
 // Original VA: 0x00000001428DEC20 | File offset: 0x028DE220
@@ -151,7 +151,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetGradient()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetName_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A1140 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEC50 (end 0x028DEC7F)
 // Original VA: 0x00000001428DEC50 | File offset: 0x028DE250
@@ -168,7 +168,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetName()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetNormalPrice_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A11C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEC80 (end 0x028DECAF)
 // Original VA: 0x00000001428DEC80 | File offset: 0x028DE280
@@ -185,7 +185,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetNormalPrice()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetOfferId_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A1240 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DECB0 (end 0x028DECDF)
 // Original VA: 0x00000001428DECB0 | File offset: 0x028DE2B0
@@ -202,7 +202,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetOfferId()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetSalePrice_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A1300 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DECE0 (end 0x028DED0F)
 // Original VA: 0x00000001428DECE0 | File offset: 0x028DE2E0
@@ -219,7 +219,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetSalePrice()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetStoreOfferType_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A13C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DED10 (end 0x028DED3F)
 // Original VA: 0x00000001428DED10 | File offset: 0x028DE310
@@ -236,7 +236,7 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetStoreOfferType()
 
 struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetTileImage_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A1440 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DED40 (end 0x028DED6F)
 // Original VA: 0x00000001428DED40 | File offset: 0x028DE340

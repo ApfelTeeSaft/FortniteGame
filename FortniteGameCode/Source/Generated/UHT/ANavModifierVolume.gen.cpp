@@ -20,7 +20,7 @@ void ANavModifierVolume::StaticRegisterNativesANavModifierVolume()
 
 struct Z_Construct_UFunction_ANavModifierVolume_SetAreaClass_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044CE140 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248FEB0 (end 0x0248FEDF)
 // Original VA: 0x000000014248FEB0 | File offset: 0x0248F4B0

@@ -23,7 +23,7 @@ void UFortAbilitySystemComponentTooltip::StaticRegisterNativesUFortAbilitySystem
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetNumericValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042139F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DC10 (end 0x00F7DC3F)
 // Original VA: 0x0000000140F7DC10 | File offset: 0x00F7D210
@@ -40,7 +40,7 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetNumericVa
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04213BB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DC40 (end 0x00F7DC6F)
 // Original VA: 0x0000000140F7DC40 | File offset: 0x00F7D240
@@ -57,7 +57,7 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTextForTo
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04213D70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DC70 (end 0x00F7DC9F)
 // Original VA: 0x0000000140F7DC70 | File offset: 0x00F7D270
@@ -74,7 +74,7 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTokenized
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetValueData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04213F00 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DCA0 (end 0x00F7DCCF)
 // Original VA: 0x0000000140F7DCA0 | File offset: 0x00F7D2A0

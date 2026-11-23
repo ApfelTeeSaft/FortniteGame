@@ -21,7 +21,7 @@ void UFortNotificationHandler::StaticRegisterNativesUFortNotificationHandler()
 
 struct Z_Construct_UFunction_UFortNotificationHandler_ClearNotification_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D8280 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010517F0 (end 0x0105181F)
 // Original VA: 0x00000001410517F0 | File offset: 0x01050DF0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortNotificationHandler_ClearNotification()
 
 struct Z_Construct_UFunction_UFortNotificationHandler_CreateWidget_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D8340 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01051820 (end 0x0105184F)
 // Original VA: 0x0000000141051820 | File offset: 0x01050E20
@@ -55,7 +55,7 @@ UFunction* Z_Construct_UFunction_UFortNotificationHandler_CreateWidget()
 
 struct Z_Construct_UFunction_UFortNotificationHandler_NotificationShown_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D8380 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01051850 (end 0x0105187F)
 // Original VA: 0x0000000141051850 | File offset: 0x01050E50

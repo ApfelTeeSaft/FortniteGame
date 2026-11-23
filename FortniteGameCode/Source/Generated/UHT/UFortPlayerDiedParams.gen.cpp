@@ -21,7 +21,7 @@ void UFortPlayerDiedParams::StaticRegisterNativesUFortPlayerDiedParams()
 
 struct Z_Construct_UFunction_UFortPlayerDiedParams_BreakParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04361EE0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB130 (end 0x010EB15F)
 // Original VA: 0x00000001410EB130 | File offset: 0x010EA730
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortPlayerDiedParams_BreakParams()
 
 struct Z_Construct_UFunction_UFortPlayerDiedParams_SetParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04361FE0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB160 (end 0x010EB18F)
 // Original VA: 0x00000001410EB160 | File offset: 0x010EA760

@@ -21,7 +21,7 @@ void UFortTooltipInterface::StaticRegisterNativesUFortTooltipInterface()
 
 struct Z_Construct_UFunction_UFortTooltipInterface_GetDisplayStats_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0433A760 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBDE0 (end 0x010CBE0F)
 // Original VA: 0x00000001410CBDE0 | File offset: 0x010CB3E0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortTooltipInterface_GetDisplayStats()
 
 struct Z_Construct_UFunction_UFortTooltipInterface_GetTooltip_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0433A7F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBE10 (end 0x010CBE3F)
 // Original VA: 0x00000001410CBE10 | File offset: 0x010CB410

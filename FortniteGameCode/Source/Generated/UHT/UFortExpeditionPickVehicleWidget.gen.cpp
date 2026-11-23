@@ -20,7 +20,7 @@ void UFortExpeditionPickVehicleWidget::StaticRegisterNativesUFortExpeditionPickV
 
 struct Z_Construct_UFunction_UFortExpeditionPickVehicleWidget_SetData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 11 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045695F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A46D0 (end 0x028A46FF)
 // Original VA: 0x00000001428A46D0 | File offset: 0x028A3CD0

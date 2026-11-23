@@ -268,6 +268,8 @@ def known_functions() -> tuple[set[int], dict[str, str], list[tuple[int, str]]]:
     generated function with a package, from the UHT manifests."""
     out, cls_pkg, points = set(), {}, []
     for p in sorted((ROOT / "analysis").glob("functions*.json")):
+        if p.name.startswith("functions-native-"):
+            continue      # natives reconstructed from this file's own output (uht_accessors.py)
         for e in json.loads(p.read_text(encoding="utf-8")).get("functions", []):
             v = e.get("start_rva") if isinstance(e, dict) else None
             if v is None:

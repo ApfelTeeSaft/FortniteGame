@@ -4,6 +4,28 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9B060 (end 0x01C9B134)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBeginSpawningActor) | Matching: see analysis/functions-uht-exec.json
+void UGameplayTask_SpawnActor::execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+	P_GET_OBJECT_REF(AActor,Z_Param_Out_SpawnedActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->BeginSpawningActor(Z_Param_WorldContextObject,Z_Param_Out_SpawnedActor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9B450 (end 0x01C9B513)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFinishSpawningActor) | Matching: see analysis/functions-uht-exec.json
+void UGameplayTask_SpawnActor::execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+	P_GET_OBJECT(AActor,Z_Param_SpawnedActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FinishSpawningActor(Z_Param_WorldContextObject,Z_Param_SpawnedActor);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UGameplayTask_SpawnActor, 3044457605u)
 // Original dynamic initializer: RVA 0x001B7EB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameplayTask_SpawnActor> AutoInitializeUGameplayTask_SpawnActor(TEXT("UGameplayTask_SpawnActor"), sizeof(UGameplayTask_SpawnActor), 3044457605u);

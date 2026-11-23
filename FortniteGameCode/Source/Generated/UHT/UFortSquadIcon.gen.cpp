@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortSquadIcon_HandleDifferentSquadSetBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B6C70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F69D0 (end 0x028F69FF)
 // Original VA: 0x00000001428F69D0 | File offset: 0x028F5FD0
@@ -25,7 +25,7 @@ UFunction* Z_Construct_UFunction_UFortSquadIcon_HandleDifferentSquadSetBP()
 
 struct Z_Construct_UFunction_UFortSquadIcon_SetSquad_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B6CF0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6A00 (end 0x028F6A2F)
 // Original VA: 0x00000001428F6A00 | File offset: 0x028F6000

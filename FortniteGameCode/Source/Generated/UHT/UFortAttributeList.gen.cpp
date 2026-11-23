@@ -23,7 +23,7 @@ void UFortAttributeList::StaticRegisterNativesUFortAttributeList()
 
 struct Z_Construct_UFunction_UFortAttributeList_Clear_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04557D70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DA10 (end 0x0288DA3F)
 // Original VA: 0x000000014288DA10 | File offset: 0x0288D010
@@ -40,7 +40,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeList_Clear()
 
 struct Z_Construct_UFunction_UFortAttributeList_ClearPreviewData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04557DB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DA40 (end 0x0288DA6F)
 // Original VA: 0x000000014288DA40 | File offset: 0x0288D040
@@ -57,7 +57,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeList_ClearPreviewData()
 
 struct Z_Construct_UFunction_UFortAttributeList_SetData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 11 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04557EF0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DB90 (end 0x0288DBBF)
 // Original VA: 0x000000014288DB90 | File offset: 0x0288D190
@@ -74,7 +74,7 @@ UFunction* Z_Construct_UFunction_UFortAttributeList_SetData()
 
 struct Z_Construct_UFunction_UFortAttributeList_SetPreviewData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04557FB0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DBC0 (end 0x0288DBEF)
 // Original VA: 0x000000014288DBC0 | File offset: 0x0288D1C0

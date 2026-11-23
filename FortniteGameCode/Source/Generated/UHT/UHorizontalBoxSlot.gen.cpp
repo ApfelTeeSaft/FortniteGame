@@ -23,7 +23,7 @@ void UHorizontalBoxSlot::StaticRegisterNativesUHorizontalBoxSlot()
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C0350 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDE40 (end 0x01BEDE6F)
 // Original VA: 0x0000000141BEDE40 | File offset: 0x01BED440
@@ -40,7 +40,7 @@ UFunction* Z_Construct_UFunction_UHorizontalBoxSlot_SetHorizontalAlignment()
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C03D0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDE70 (end 0x01BEDE9F)
 // Original VA: 0x0000000141BEDE70 | File offset: 0x01BED470
@@ -57,7 +57,7 @@ UFunction* Z_Construct_UFunction_UHorizontalBoxSlot_SetPadding()
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetSize_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C0450 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDEA0 (end 0x01BEDECF)
 // Original VA: 0x0000000141BEDEA0 | File offset: 0x01BED4A0
@@ -74,7 +74,7 @@ UFunction* Z_Construct_UFunction_UHorizontalBoxSlot_SetSize()
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C04D0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDED0 (end 0x01BEDEFF)
 // Original VA: 0x0000000141BEDED0 | File offset: 0x01BED4D0

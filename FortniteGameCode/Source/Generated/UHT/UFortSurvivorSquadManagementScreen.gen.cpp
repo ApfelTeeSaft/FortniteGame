@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortSurvivorSquadManagementScreen_PlayFeedbackForSlottingPerson_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BED70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905000 (end 0x0290502F)
 // Original VA: 0x0000000142905000 | File offset: 0x02904600

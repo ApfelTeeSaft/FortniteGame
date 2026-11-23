@@ -20,7 +20,7 @@ void UAbilityTask_MoveToLocation::StaticRegisterNativesUAbilityTask_MoveToLocati
 
 struct Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04197780 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005470C0 (end 0x005470EF)
 // Original VA: 0x00000001405470C0 | File offset: 0x005466C0

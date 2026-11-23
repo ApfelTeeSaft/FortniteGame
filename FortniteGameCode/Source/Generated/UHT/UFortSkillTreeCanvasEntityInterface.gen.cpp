@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTransitionBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B37A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5CE0 (end 0x028F5D0F)
 // Original VA: 0x00000001428F5CE0 | File offset: 0x028F52E0
@@ -25,7 +25,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTr
 
 struct Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayOutroTransitionBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B3860 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5D10 (end 0x028F5D3F)
 // Original VA: 0x00000001428F5D10 | File offset: 0x028F5310

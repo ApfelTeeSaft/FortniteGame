@@ -21,7 +21,7 @@ void UFortRewardConversationWidget::StaticRegisterNativesUFortRewardConversation
 
 struct Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSentence_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045AFB50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE330 (end 0x028EE35F)
 // Original VA: 0x00000001428EE330 | File offset: 0x028ED930
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSenten
 
 struct Z_Construct_UFunction_UFortRewardConversationWidget_IsValidConversation_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045AFC20 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE360 (end 0x028EE38F)
 // Original VA: 0x00000001428EE360 | File offset: 0x028ED960

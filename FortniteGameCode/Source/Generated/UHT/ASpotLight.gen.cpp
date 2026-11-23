@@ -21,7 +21,7 @@ void ASpotLight::StaticRegisterNativesASpotLight()
 
 struct Z_Construct_UFunction_ASpotLight_SetInnerConeAngle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04526E40 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD8B0 (end 0x024DD8DF)
 // Original VA: 0x00000001424DD8B0 | File offset: 0x024DCEB0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_ASpotLight_SetInnerConeAngle()
 
 struct Z_Construct_UFunction_ASpotLight_SetOuterConeAngle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04526EC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD8E0 (end 0x024DD90F)
 // Original VA: 0x00000001424DD8E0 | File offset: 0x024DCEE0

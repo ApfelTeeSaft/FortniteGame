@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F6D0 (end 0x0109F6FD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDisplayStats) | Matching: see analysis/functions-uht-exec.json
+void IFortTooltipInterface::execGetDisplayStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortTooltipDisplayStatsList**)Z_Param__Result=P_THIS->GetDisplayStats();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CDD10 (end 0x010CDD45)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTooltip) | Matching: see analysis/functions-uht-exec.json
+void IFortTooltipInterface::execGetTooltip(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSubclassOf<UFortTooltip>*)Z_Param__Result=P_THIS->GetTooltip();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTooltipInterface, 1016111552u)
 // Original dynamic initializer: RVA 0x00117F80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTooltipInterface> AutoInitializeUFortTooltipInterface(TEXT("UFortTooltipInterface"), sizeof(UFortTooltipInterface), 1016111552u);

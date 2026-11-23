@@ -20,7 +20,7 @@ void UFortAccountBuffItem::StaticRegisterNativesUFortAccountBuffItem()
 
 struct Z_Construct_UFunction_UFortAccountBuffItem_IsActive_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04219AC0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82890 (end 0x00F828BF)
 // Original VA: 0x0000000140F82890 | File offset: 0x00F81E90

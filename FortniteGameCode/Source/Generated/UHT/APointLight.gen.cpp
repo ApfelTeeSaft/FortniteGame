@@ -21,7 +21,7 @@ void APointLight::StaticRegisterNativesAPointLight()
 
 struct Z_Construct_UFunction_APointLight_SetLightFalloffExponent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044F27A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B8550 (end 0x024B857F)
 // Original VA: 0x00000001424B8550 | File offset: 0x024B7B50
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_APointLight_SetLightFalloffExponent()
 
 struct Z_Construct_UFunction_APointLight_SetRadius_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044F2820 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B8580 (end 0x024B85AF)
 // Original VA: 0x00000001424B8580 | File offset: 0x024B7B80

@@ -20,7 +20,7 @@ void UFortAlterationsWidget::StaticRegisterNativesUFortAlterationsWidget()
 
 struct Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04553F60 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D0B0 (end 0x0288D0DF)
 // Original VA: 0x000000014288D0B0 | File offset: 0x0288C6B0
@@ -37,7 +37,7 @@ UFunction* Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration()
 
 struct Z_Construct_UFunction_UFortAlterationsWidget_ProcessAlterations_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04553FA0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D0E0 (end 0x0288D10F)
 // Original VA: 0x000000014288D0E0 | File offset: 0x0288C6E0

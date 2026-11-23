@@ -20,7 +20,7 @@ void UFortSquadSlotSelectorPopupMenu::StaticRegisterNativesUFortSquadSlotSelecto
 
 struct Z_Construct_UFunction_UFortSquadSlotSelectorPopupMenu_GetHostButton_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B99E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC630 (end 0x028FC65F)
 // Original VA: 0x00000001428FC630 | File offset: 0x028FBC30

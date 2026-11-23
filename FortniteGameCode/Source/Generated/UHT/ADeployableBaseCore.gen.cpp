@@ -20,7 +20,7 @@ void ADeployableBaseCore::StaticRegisterNativesADeployableBaseCore()
 
 struct Z_Construct_UFunction_ADeployableBaseCore_GetSimpleDeathFXTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0420F710 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F792A0 (end 0x00F792CF)
 // Original VA: 0x0000000140F792A0 | File offset: 0x00F788A0

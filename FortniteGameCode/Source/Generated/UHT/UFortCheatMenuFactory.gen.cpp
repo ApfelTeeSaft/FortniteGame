@@ -21,7 +21,7 @@ void UFortCheatMenuFactory::StaticRegisterNativesUFortCheatMenuFactory()
 
 struct Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0455D0E0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028952E0 (end 0x0289530F)
 // Original VA: 0x00000001428952E0 | File offset: 0x028948E0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu()
 
 struct Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0455D160 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895310 (end 0x0289533F)
 // Original VA: 0x0000000142895310 | File offset: 0x02894910

@@ -20,7 +20,7 @@ void USceneCaptureComponentCube::StaticRegisterNativesUSceneCaptureComponentCube
 
 struct Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04509900 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7130 (end 0x024C715F)
 // Original VA: 0x00000001424C7130 | File offset: 0x024C6730

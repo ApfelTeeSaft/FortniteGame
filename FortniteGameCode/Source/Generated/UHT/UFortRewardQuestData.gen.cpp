@@ -20,7 +20,7 @@ void UFortRewardQuestData::StaticRegisterNativesUFortRewardQuestData()
 
 struct Z_Construct_UFunction_UFortRewardQuestData_GetIconBrush_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B2050 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EEEA0 (end 0x028EEECF)
 // Original VA: 0x00000001428EEEA0 | File offset: 0x028EE4A0

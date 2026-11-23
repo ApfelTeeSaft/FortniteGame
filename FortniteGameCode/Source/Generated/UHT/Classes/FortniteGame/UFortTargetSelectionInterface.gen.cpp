@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B47C0 (end 0x010B48BB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTargetingTransform) | Matching: see analysis/functions-uht-exec.json
+void IFortTargetSelectionInterface::execGetTargetingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortAbilityTargetingSource,Z_Param_Source);
+	P_GET_OBJECT(UFortGameplayAbility,Z_Param_SourceAbility);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FTransform*)Z_Param__Result=P_THIS->GetTargetingTransform(EFortAbilityTargetingSource(Z_Param_Source),Z_Param_SourceAbility);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTargetSelectionInterface, 4182403756u)
 // Original dynamic initializer: RVA 0x001147F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTargetSelectionInterface> AutoInitializeUFortTargetSelectionInterface(TEXT("UFortTargetSelectionInterface"), sizeof(UFortTargetSelectionInterface), 4182403756u);

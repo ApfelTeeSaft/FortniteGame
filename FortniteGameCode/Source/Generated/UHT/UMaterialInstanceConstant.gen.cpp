@@ -22,7 +22,7 @@ void UMaterialInstanceConstant::StaticRegisterNativesUMaterialInstanceConstant()
 
 struct Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameterValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044BEE10 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02486E70 (end 0x02486E9F)
 // Original VA: 0x0000000142486E70 | File offset: 0x02486470
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameter
 
 struct Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParameterValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044BEED0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02486EA0 (end 0x02486ECF)
 // Original VA: 0x0000000142486EA0 | File offset: 0x024864A0
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParamete
 
 struct Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetVectorParameterValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044BEF90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02486ED0 (end 0x02486EFF)
 // Original VA: 0x0000000142486ED0 | File offset: 0x024864D0

@@ -20,7 +20,7 @@ void ASkyLight::StaticRegisterNativesASkyLight()
 
 struct Z_Construct_UFunction_ASkyLight_OnRep_bEnabled_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045197F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D54F0 (end 0x024D551F)
 // Original VA: 0x00000001424D54F0 | File offset: 0x024D4AF0

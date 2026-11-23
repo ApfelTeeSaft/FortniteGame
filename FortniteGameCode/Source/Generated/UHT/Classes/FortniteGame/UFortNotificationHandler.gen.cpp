@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F1B0 (end 0x01D5F1CF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClearNotification) | Matching: see analysis/functions-uht-exec.json
+void UFortNotificationHandler::execClearNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearNotification_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNotificationShown) | Matching: see analysis/functions-uht-exec.json
+void UFortNotificationHandler::execNotificationShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NotificationShown_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortNotificationHandler, 3436822300u)
 // Original dynamic initializer: RVA 0x00105AD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortNotificationHandler> AutoInitializeUFortNotificationHandler(TEXT("UFortNotificationHandler"), sizeof(UFortNotificationHandler), 3436822300u);

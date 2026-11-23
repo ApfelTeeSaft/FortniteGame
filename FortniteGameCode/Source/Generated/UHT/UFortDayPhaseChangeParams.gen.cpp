@@ -21,7 +21,7 @@ void UFortDayPhaseChangeParams::StaticRegisterNativesUFortDayPhaseChangeParams()
 
 struct Z_Construct_UFunction_UFortDayPhaseChangeParams_BreakParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043625A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAAD0 (end 0x010EAAFF)
 // Original VA: 0x00000001410EAAD0 | File offset: 0x010EA0D0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortDayPhaseChangeParams_BreakParams()
 
 struct Z_Construct_UFunction_UFortDayPhaseChangeParams_SetParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043626A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAB00 (end 0x010EAB2F)
 // Original VA: 0x00000001410EAB00 | File offset: 0x010EA100

@@ -24,7 +24,7 @@ void AAmbientSound::StaticRegisterNativesAAmbientSound()
 
 struct Z_Construct_UFunction_AAmbientSound_AdjustVolume_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F140 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8AC0 (end 0x023C8AEF)
 // Original VA: 0x00000001423C8AC0 | File offset: 0x023C80C0
@@ -41,7 +41,7 @@ UFunction* Z_Construct_UFunction_AAmbientSound_AdjustVolume()
 
 struct Z_Construct_UFunction_AAmbientSound_FadeIn_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F1F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8AF0 (end 0x023C8B1F)
 // Original VA: 0x00000001423C8AF0 | File offset: 0x023C80F0
@@ -58,7 +58,7 @@ UFunction* Z_Construct_UFunction_AAmbientSound_FadeIn()
 
 struct Z_Construct_UFunction_AAmbientSound_FadeOut_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F2A0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B20 (end 0x023C8B4F)
 // Original VA: 0x00000001423C8B20 | File offset: 0x023C8120
@@ -75,7 +75,7 @@ UFunction* Z_Construct_UFunction_AAmbientSound_FadeOut()
 
 struct Z_Construct_UFunction_AAmbientSound_Play_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 11 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F320 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B50 (end 0x023C8B7F)
 // Original VA: 0x00000001423C8B50 | File offset: 0x023C8150
@@ -92,7 +92,7 @@ UFunction* Z_Construct_UFunction_AAmbientSound_Play()
 
 struct Z_Construct_UFunction_AAmbientSound_Stop_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 12 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F360 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B80 (end 0x023C8BAF)
 // Original VA: 0x00000001423C8B80 | File offset: 0x023C8180

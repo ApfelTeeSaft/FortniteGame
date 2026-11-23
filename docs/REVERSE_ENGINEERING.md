@@ -225,9 +225,18 @@ are kept as `low-confidence inferred`.
 | Result | Count |
 | --- | --- |
 | exec thunks attributed to a class | 9,193 (1,374 leaf) |
-| direct natives named | 6,758, 6,654 high-confidence (5,104 in the denominator, 1,654 leaf) |
-| virtual natives, located by vtable offset | 1,880 (429 of them through folded thunks) |
-| unresolved (per UFunction) | 1,492: inlined or shared natives 821, flags unknown 396, folded thunk with a direct target 171, other call counts 68, no P_FINISH store 25, member call without Context 10, target already a generated function 1 |
+| direct natives named | 6,948, 6,842 high-confidence (5,217 in the denominator, 1,731 leaf) |
+| virtual natives, located by vtable offset | 1,995 (962 of them through folded thunks) |
+| unresolved (per UFunction) | 1,187: inlined or shared natives 835, folded thunk with a direct target 246, other call counts 69, no P_FINISH store 26, member call without Context 10, target already a generated function 1 |
+
+Every UFunction's flags are known since all its `FFunctionParams` records are identified
+(see the creators below). Before that, 396 UFunctions were left with "flags unknown". They
+now yield 190 more direct natives and 115 more virtual natives, and 75 more folded thunks
+with a direct target.
+
+`natives.py` treats a call target that a manifest already records as a generated function as
+a conflict. The native accessors (`analysis/functions-native-accessors.json`) are excluded
+from that check: they are reconstructions of these natives, not other functions.
 
 Engine headers corroborate the results where the local UE4.20.0 source declares the
 function:
@@ -370,9 +379,13 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,775, at 1,523 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 935 read parameters |
-| of which call a native accessor (below) | 206, all exact |
-| exact | 1,513: 1,303 in the denominator, 210 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,808, at 1,540 addresses (folded bodies share one manifest entry each); 949 read parameters |
+| of which call a native accessor (below) | 207, all exact |
+| exact | 1,530: 1,318 in the denominator, 212 leaf (no `.pdata`) |
+
+The newly located virtual natives share some folded thunks that were already exact, such as
+`P_FINISH; jmp [vtbl+0x5E8]`. Their manifest entry, one per address, now carries another
+folded UFunction's name; `tools/matching/regressions.py` reports these as renames.
 | relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
@@ -753,7 +766,8 @@ The byte-enum form (`TEnumAsByte` or raw enum) is read from the thunk's call. Fo
 native, that is the first call after `P_FINISH`, when the thunk makes no virtual call.
 
 The natives come from `analysis/native-implementations.json` (high-confidence, called
-directly, by a thunk no other UFunction shares). Of 6,758, 208 qualify:
+directly, by a thunk no other UFunction shares). Of 6,758 (before the 190 natives added by
+the creator records below), 208 qualify:
 - 4,940 are not a short body ending in `ret`;
 - 1,076 are not high-confidence direct natives;
 - 357 have another shape;
@@ -822,7 +836,7 @@ Each creator has five relocation fields, all resolved without reading the creato
 
 | Field | Evidence |
 | --- | --- |
-| `Statics::FuncParams` | content: the only `FFunctionParams` record in `.data` whose `NameUTF8` names the function. For 2,034 shared names, the only one also matching the class's consensus `OuterFunc`. Where the name was unique (9,063 creators), the record agreed with each creator's `lea` in every case |
+| `Statics::FuncParams` | content: the only `FFunctionParams` record in `.data` whose `NameUTF8` names the function. Where the name is shared, the only one also matching the class's `OuterFunc`. That is the consensus outer of the class's uniquely named records (1,588 creators), or, for a class without one, the `Z_Construct_UClass_<Class>` its `FCompiledInDefer` initializer registers (446 creators). Where the name was unique (9,063 creators), the record agreed with each creator's `lea` in every case |
 | `ConstructUFunction` | corroborated by the other creators |
 | `ReturnFunction` (3 fields) | section-relative to sibling creators' observed slots. Each static local gets its own COMDAT `.bss` section, which the linker places in object order |
 
@@ -835,9 +849,19 @@ Results:
 
 | Count | State |
 | --- | --- |
-| 10,342 | exact against the decrypted image |
-| 309 | relocation-equivalent: 208 classes have a single creator, so no sibling can predict its `ReturnFunction`; the rest sit across layout gaps |
-| 446 | not emitted: no unique `FFunctionParams` record |
+| 10,976 | exact against the decrypted image, 442 of them with the record identified through the class constructor (see above) |
+| 121 | relocation-equivalent: only the `ReturnFunction` static in `.bss` is not predicted (a class with a single creator has no sibling to predict it from, or the slot sits across a layout gap) |
+
+**Declared-only records.** The 446 records found through the class constructor stay declared,
+not defined. Their creators need only the record's address, and record contents are not
+byte-compared. The reference keeps each unit's `TClassCompiledInDefer` objects
+(`AutoInitialize<Class>`) in one block at the start of its `.data`, 0x28 bytes apart, with
+the parameter records after them. This build emits them in source order, interleaved with
+the records.
+
+Defining these 446 records broke the adjacency that 95 `AutoInitialize` initializers'
+section-relative predictions relied on. Defining all records waits for a model of that
+block.
 
 ### Class constructors
 

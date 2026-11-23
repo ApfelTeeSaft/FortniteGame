@@ -8,7 +8,9 @@ appear in table order, which is also their order in the image.
 
 FFunctionParams values come from the binary's own record (.data, plaintext on disk). The
 record is located by content alone: its NameUTF8 must point at the function's name, and its
-OuterFunc must be the class's consensus outer. The creator's code is never read for this.
+OuterFunc must be the class's consensus outer, or, for a class none of whose functions has a
+uniquely named record, the Z_Construct_UClass_<Class> its FCompiledInDefer initializer registers.
+The creator's code is never read for this.
 These addresses go to analysis/uht-creator-symbols.json with that evidence. PropPointers are
 declared but not defined: property-parameter recovery is a separate, pending data task.
 
@@ -229,22 +231,40 @@ def main() -> int:
             cname = creator_name(cls, fname)
             statics = f"{cname}_Statics"
             cands = by_name.get(fname, [])
+            # The class's outer: the consensus of its uniquely named records, or, when none of
+            # its functions has one, the Z_Construct_UClass_<Class> its FCompiledInDefer
+            # initializer registers (a different function from this creator).
+            outer_ref, outer_code = consensus.get(cls), "name+outer"
+            if outer_ref is None and cls in unity_ctor:
+                outer_ref, outer_code = unity_ctor[cls], "name+class-ctor"
             if len(cands) == 1:
                 rec, why = cands[0][0], "unique FFunctionParams record whose NameUTF8 names this function"
             else:
-                hits = [c for c in cands if consensus.get(cls) is not None and c[1] == consensus[cls]]
+                hits = [c for c in cands if outer_ref is not None and c[1] == outer_ref]
                 rec = hits[0][0] if len(hits) == 1 else None
-                why = "only FFunctionParams record naming this function with the class's consensus OuterFunc"
-            if rec is None:
+                why = "only FFunctionParams record naming this function with the class's OuterFunc"
+                stats[f"funcparams_resolved_by_{outer_code}"] += rec is not None
+            by_class_ctor = rec is not None and len(cands) != 1 and outer_code == "name+class-ctor"
+            if rec is None or by_class_ctor:
                 # The creator's code is the standard shape; only its FFunctionParams record is not
                 # identified (no unique record by name). It is emitted with the record declared, so
                 # its ReturnFunction static keeps its place in the unity layout.
-                stats["funcparams_unresolved"] += 1
+                # A record identified through the class constructor is declared only, too, with
+                # its address as evidence: defining it moves the unit's TClassCompiledInDefer
+                # objects, which the reference keeps in one block ahead of its records, and
+                # that layout is not modelled yet (docs/REVERSE_ENGINEERING.md).
                 end = rfs[crva].end
+                if by_class_ctor:
+                    note = f"record 0x{rec:08X} (name and class constructor), declared only"
+                    symbols[f"?FuncParams@{statics}@@2UFFunctionParams@UE4CodeGen_Private@@B"] = [
+                        f"0x{rec:08X}", outer_code]
+                    stats["funcparams_declared_by_class_ctor"] += 1
+                else:
+                    note = f"record not identified: {len(cands)} candidate(s) by name"
+                    stats["funcparams_unresolved"] += 1
                 bodies.append(
                     f"struct {statics}\n{{\n"
-                    f"\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: "
-                    f"{len(cands)} candidate(s) by name\n}};\n"
+                    f"\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;  // {note}\n}};\n"
                     f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
                     f"// Original VA: 0x{base + crva:016X} | File offset: 0x{img.rva_to_off(crva):08X}\n"
                     f"// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json\n"
@@ -262,6 +282,9 @@ def main() -> int:
             if outer == consensus.get(cls):
                 outer_expr = f"Z_Construct_UClass_{cls}"
                 externs.add(f"UClass* Z_Construct_UClass_{cls}();  // RVA 0x{outer:08X} (consensus OuterFunc)")
+            elif consensus.get(cls) is None and outer == unity_ctor.get(cls):
+                outer_expr = f"Z_Construct_UClass_{cls}"
+                externs.add(f"UClass* Z_Construct_UClass_{cls}();  // RVA 0x{outer:08X} (registered by its FCompiledInDefer)")
             elif outer in outer_class:
                 outer_expr = f"Z_Construct_UClass_{outer_class[outer]}"
                 externs.add(f"UClass* Z_Construct_UClass_{outer_class[outer]}();  // RVA 0x{outer:08X}")
@@ -299,7 +322,7 @@ def main() -> int:
                 f"\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, {statics}::FuncParams);\n\t}}\n"
                 f"\treturn ReturnFunction;\n}}\n")
             symbols[f"?FuncParams@{statics}@@2UFFunctionParams@UE4CodeGen_Private@@B"] = [
-                f"0x{rec:08X}", "name" if len(cands) == 1 else "name+outer"]
+                f"0x{rec:08X}", "name" if len(cands) == 1 else outer_code]
             entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}",
                             "name": cname, "class": cls})
             emitted_fns.add(fname)
@@ -381,6 +404,7 @@ def main() -> int:
         "evidence_codes": {
             "name": "the only FFunctionParams record in .data whose NameUTF8 names this function",
             "name+outer": "the only FFunctionParams record naming this function whose OuterFunc is the class consensus",
+            "name+class-ctor": "the only FFunctionParams record naming this function whose OuterFunc is the Z_Construct_UClass_<Class> its FCompiledInDefer initializer registers (the class has no consensus)",
             "link-array": "the only FClassParams record whose FunctionLinkArray points at this class's FClassFunctionLinkInfo table",
             "native-array": "the FNameNativePtrPair array attributed to this class in analysis/reflection-natives.json",
             "gpsc-chain": "the only function that LEA-loads &StaticRegisterNatives<Class> (GetPrivateStaticClassBody argument), per analysis/reflection-natives.json",

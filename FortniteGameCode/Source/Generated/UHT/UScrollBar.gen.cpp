@@ -20,7 +20,7 @@ void UScrollBar::StaticRegisterNativesUScrollBar()
 
 struct Z_Construct_UFunction_UScrollBar_SetState_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C57F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3680 (end 0x01BF36AF)
 // Original VA: 0x0000000141BF3680 | File offset: 0x01BF2C80

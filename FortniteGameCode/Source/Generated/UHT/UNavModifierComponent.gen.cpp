@@ -20,7 +20,7 @@ void UNavModifierComponent::StaticRegisterNativesUNavModifierComponent()
 
 struct Z_Construct_UFunction_UNavModifierComponent_SetAreaClass_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044CE020 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248FEE0 (end 0x0248FF0F)
 // Original VA: 0x000000014248FEE0 | File offset: 0x0248F4E0

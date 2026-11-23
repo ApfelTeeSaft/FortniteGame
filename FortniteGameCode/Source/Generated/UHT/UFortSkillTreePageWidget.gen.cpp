@@ -20,7 +20,7 @@ void UFortSkillTreePageWidget::StaticRegisterNativesUFortSkillTreePageWidget()
 
 struct Z_Construct_UFunction_UFortSkillTreePageWidget_PlayIntroTransitionBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B4D60 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F62B0 (end 0x028F62DF)
 // Original VA: 0x00000001428F62B0 | File offset: 0x028F58B0
@@ -37,7 +37,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageWidget_PlayIntroTransitionBP(
 
 struct Z_Construct_UFunction_UFortSkillTreePageWidget_PlayOutroTransitionBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B4E20 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F62E0 (end 0x028F630F)
 // Original VA: 0x00000001428F62E0 | File offset: 0x028F58E0
@@ -54,7 +54,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageWidget_PlayOutroTransitionBP(
 
 struct Z_Construct_UFunction_UFortSkillTreePageWidget_TryGetStaticSkillTreePageData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B4EF0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6310 (end 0x028F633F)
 // Original VA: 0x00000001428F6310 | File offset: 0x028F5910

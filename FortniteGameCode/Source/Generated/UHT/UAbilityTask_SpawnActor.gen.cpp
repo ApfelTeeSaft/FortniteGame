@@ -22,7 +22,7 @@ void UAbilityTask_SpawnActor::StaticRegisterNativesUAbilityTask_SpawnActor()
 
 struct Z_Construct_UFunction_UAbilityTask_SpawnActor_BeginSpawningActor_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04198500 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00547240 (end 0x0054726F)
 // Original VA: 0x0000000140547240 | File offset: 0x00546840
@@ -39,7 +39,7 @@ UFunction* Z_Construct_UFunction_UAbilityTask_SpawnActor_BeginSpawningActor()
 
 struct Z_Construct_UFunction_UAbilityTask_SpawnActor_FinishSpawningActor_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04198600 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00547270 (end 0x0054729F)
 // Original VA: 0x0000000140547270 | File offset: 0x00546870
@@ -56,7 +56,7 @@ UFunction* Z_Construct_UFunction_UAbilityTask_SpawnActor_FinishSpawningActor()
 
 struct Z_Construct_UFunction_UAbilityTask_SpawnActor_SpawnActor_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04198750 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005472A0 (end 0x005472CF)
 // Original VA: 0x00000001405472A0 | File offset: 0x005468A0

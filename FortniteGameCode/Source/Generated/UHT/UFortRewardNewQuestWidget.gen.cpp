@@ -21,7 +21,7 @@ void UFortRewardNewQuestWidget::StaticRegisterNativesUFortRewardNewQuestWidget()
 
 struct Z_Construct_UFunction_UFortRewardNewQuestWidget_GetDataFromSentence_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B09C0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE5D0 (end 0x028EE5FF)
 // Original VA: 0x00000001428EE5D0 | File offset: 0x028EDBD0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortRewardNewQuestWidget_GetDataFromSentence()
 
 struct Z_Construct_UFunction_UFortRewardNewQuestWidget_IsValidConversation_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B0A90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE600 (end 0x028EE62F)
 // Original VA: 0x00000001428EE600 | File offset: 0x028EDC00

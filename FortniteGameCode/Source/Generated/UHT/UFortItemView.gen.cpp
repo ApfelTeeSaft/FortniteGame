@@ -21,7 +21,7 @@ void UFortItemView::StaticRegisterNativesUFortItemView()
 
 struct Z_Construct_UFunction_UFortItemView_SetInspectMode_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04598380 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D08C0 (end 0x028D08EF)
 // Original VA: 0x00000001428D08C0 | File offset: 0x028CFEC0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortItemView_SetInspectMode()
 
 struct Z_Construct_UFunction_UFortItemView_SetItemToRepresent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04598400 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D08F0 (end 0x028D091F)
 // Original VA: 0x00000001428D08F0 | File offset: 0x028CFEF0

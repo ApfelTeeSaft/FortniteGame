@@ -20,7 +20,7 @@ void UAppleARKitAnchor::StaticRegisterNativesUAppleARKitAnchor()
 
 struct Z_Construct_UFunction_UAppleARKitAnchor_GetTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x041C8000 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x008064F0 (end 0x0080651F)
 // Original VA: 0x00000001408064F0 | File offset: 0x00805AF0

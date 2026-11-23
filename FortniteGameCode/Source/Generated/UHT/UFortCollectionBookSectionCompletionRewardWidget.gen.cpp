@@ -21,7 +21,7 @@ void UFortCollectionBookSectionCompletionRewardWidget::StaticRegisterNativesUFor
 
 struct Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04560E10 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B8E0 (end 0x0289B90F)
 // Original VA: 0x000000014289B8E0 | File offset: 0x0289AEE0
@@ -38,7 +38,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidge
 
 struct Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04560E90 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B910 (end 0x0289B93F)
 // Original VA: 0x000000014289B910 | File offset: 0x0289AF10

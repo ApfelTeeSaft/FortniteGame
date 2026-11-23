@@ -4,6 +4,18 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3C40 (end 0x024A3D51)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMakeNoise) | Matching: see analysis/functions-uht-exec.json
+void UPawnNoiseEmitterComponent::execMakeNoise(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_NoiseMaker);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Loudness);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_NoiseLocation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MakeNoise(Z_Param_NoiseMaker,Z_Param_Loudness,Z_Param_Out_NoiseLocation);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPawnNoiseEmitterComponent, 1794828498u)
 // Original dynamic initializer: RVA 0x00213CD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPawnNoiseEmitterComponent> AutoInitializeUPawnNoiseEmitterComponent(TEXT("UPawnNoiseEmitterComponent"), sizeof(UPawnNoiseEmitterComponent), 1794828498u);

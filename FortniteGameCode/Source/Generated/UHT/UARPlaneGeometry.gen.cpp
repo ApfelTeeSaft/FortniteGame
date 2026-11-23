@@ -23,7 +23,7 @@ void UARPlaneGeometry::StaticRegisterNativesUARPlaneGeometry()
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetCenter_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9C70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A30 (end 0x02921A5F)
 // Original VA: 0x0000000142921A30 | File offset: 0x02921030
@@ -40,7 +40,7 @@ UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetCenter()
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetExtent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9CF0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A60 (end 0x02921A8F)
 // Original VA: 0x0000000142921A60 | File offset: 0x02921060
@@ -57,7 +57,7 @@ UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetExtent()
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9D70 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A90 (end 0x02921ABF)
 // Original VA: 0x0000000142921A90 | File offset: 0x02921090
@@ -74,7 +74,7 @@ UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform()
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9DF0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921AC0 (end 0x02921AEF)
 // Original VA: 0x0000000142921AC0 | File offset: 0x029210C0

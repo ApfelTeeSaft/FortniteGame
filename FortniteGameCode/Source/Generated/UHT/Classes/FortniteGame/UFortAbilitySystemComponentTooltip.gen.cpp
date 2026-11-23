@@ -4,6 +4,20 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F3B0 (end 0x0109F597)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumericValue) | Matching: see analysis/functions-uht-exec.json
+void UFortAbilitySystemComponentTooltip::execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_ObjectToDescribe);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_Tag);
+	P_GET_OBJECT(UFortTooltipContext,Z_Param_Context);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_Token);
+	P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_OutVal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetNumericValue(Z_Param_ObjectToDescribe,Z_Param_Out_Tag,Z_Param_Context,Z_Param_Out_Token,Z_Param_Out_OutVal);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortAbilitySystemComponentTooltip, 2548451793u)
 // Original dynamic initializer: RVA 0x000DE8E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAbilitySystemComponentTooltip> AutoInitializeUFortAbilitySystemComponentTooltip(TEXT("UFortAbilitySystemComponentTooltip"), sizeof(UFortAbilitySystemComponentTooltip), 2548451793u);

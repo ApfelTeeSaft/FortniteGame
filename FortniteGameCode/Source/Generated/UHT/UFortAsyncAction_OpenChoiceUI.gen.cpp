@@ -20,7 +20,7 @@ void UFortAsyncAction_OpenChoiceUI::StaticRegisterNativesUFortAsyncAction_OpenCh
 
 struct Z_Construct_UFunction_UFortAsyncAction_OpenChoiceUI_OpenChoiceUI_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042386F0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F750 (end 0x00F9F77F)
 // Original VA: 0x0000000140F9F750 | File offset: 0x00F9ED50

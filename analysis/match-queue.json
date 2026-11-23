@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 7594,
+ "total": 7153,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
@@ -94,20 +94,6 @@
    ]
   },
   {
-   "key": "uht-ufunction-creator | FFunctionParams record",
-   "count": 442,
-   "states": {
-    "relocation-equivalent": 442
-   },
-   "examples": [
-    "0x002C36C0 Z_Construct_UFunction_UCommonBorder_SetStyle",
-    "0x002CBD00 Z_Construct_UFunction_UCommonTileView_SetItemWidth",
-    "0x0032F450 Z_Construct_UFunction_UEndMatchCallbackProxy_EndMatch",
-    "0x0032F720 Z_Construct_UFunction_ULogoutCallbackProxy_Logout",
-    "0x005470C0 Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation"
-   ]
-  },
-  {
    "key": "uht-struct-registernatives | pooled string literal (??_C@)",
    "count": 222,
    "states": {
@@ -123,9 +109,9 @@
   },
   {
    "key": "uht-ufunction-creator | creator singleton (.bss)",
-   "count": 198,
+   "count": 202,
    "states": {
-    "relocation-equivalent": 198
+    "relocation-equivalent": 202
    },
    "examples": [
     "0x002C2E80 Z_Construct_UDelegateFunction_CommonUI_CommonActionCommited__DelegateSignature",
@@ -137,9 +123,9 @@
   },
   {
    "key": "uht-staticstruct | string literal ($SG, per-occurrence copy)",
-   "count": 173,
+   "count": 174,
    "states": {
-    "relocation-equivalent": 173
+    "relocation-equivalent": 174
    },
    "examples": [
     "0x002C2B00 FOperation::StaticStruct",
@@ -385,19 +371,6 @@
     "0x007DD470 FVivoxMuteList::StaticStruct",
     "0x007E01C0 FDropTimecode::StaticStruct",
     "0x010D4440 FFortTeamMemberInfo::StaticStruct"
-   ]
-  },
-  {
-   "key": "uht-ufunction-creator | FFunctionParams record + creator singleton (.bss)",
-   "count": 4,
-   "states": {
-    "relocation-equivalent": 4
-   },
-   "examples": [
-    "0x00FF3820 Z_Construct_UFunction_AFortGameStateSurvival_SetGameDifficultyRow",
-    "0x01024190 Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextConsumeItem_OnMCPRequestComplete__DelegateSignature",
-    "0x010241F0 Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature",
-    "0x01C07E20 Z_Construct_UFunction_UWidgetSwitcherSlot_SetHorizontalAlignment"
    ]
   },
   {

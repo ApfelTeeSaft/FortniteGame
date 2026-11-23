@@ -4,6 +4,45 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066710 (end 0x010667A6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintCanInteract) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn_InteractablePawn::execBlueprintCanInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPawn,Z_Param_InteractingPawn);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->BlueprintCanInteract_Implementation(Z_Param_InteractingPawn);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010667B0 (end 0x01066887)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintGetInteractionString) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn_InteractablePawn::execBlueprintGetInteractionString(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPawn,Z_Param_InteractingPawn);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->BlueprintGetInteractionString_Implementation(Z_Param_InteractingPawn);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066890 (end 0x010668AF), leaf (no .pdata)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintOnBeginInteract) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn_InteractablePawn::execBlueprintOnBeginInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BlueprintOnBeginInteract_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010668B0 (end 0x01066934)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintOnInteract) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn_InteractablePawn::execBlueprintOnInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPawn,Z_Param_InteractingPawn);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BlueprintOnInteract_Implementation(Z_Param_InteractingPawn);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPawn_InteractablePawn, 2783259710u)
 // Original dynamic initializer: RVA 0x00108CC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPawn_InteractablePawn> AutoInitializeAFortPawn_InteractablePawn(TEXT("AFortPawn_InteractablePawn"), sizeof(AFortPawn_InteractablePawn), 2783259710u);

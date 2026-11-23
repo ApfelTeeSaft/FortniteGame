@@ -8,7 +8,7 @@
 
 struct Z_Construct_UFunction_UFortLobby_OnBeginCursorOverPlayer_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0459CB50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7E60 (end 0x028D7E8F)
 // Original VA: 0x00000001428D7E60 | File offset: 0x028D7460
@@ -25,7 +25,7 @@ UFunction* Z_Construct_UFunction_UFortLobby_OnBeginCursorOverPlayer()
 
 struct Z_Construct_UFunction_UFortLobby_OnEndCursorOverPlayer_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0459CBD0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7E90 (end 0x028D7EBF)
 // Original VA: 0x00000001428D7E90 | File offset: 0x028D7490
@@ -42,7 +42,7 @@ UFunction* Z_Construct_UFunction_UFortLobby_OnEndCursorOverPlayer()
 
 struct Z_Construct_UFunction_UFortLobby_OnNavigationLeft_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0459CC10 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7EC0 (end 0x028D7EEF)
 // Original VA: 0x00000001428D7EC0 | File offset: 0x028D74C0
@@ -59,7 +59,7 @@ UFunction* Z_Construct_UFunction_UFortLobby_OnNavigationLeft()
 
 struct Z_Construct_UFunction_UFortLobby_OnNavigationRight_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0459CC50 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7EF0 (end 0x028D7F1F)
 // Original VA: 0x00000001428D7EF0 | File offset: 0x028D74F0
@@ -76,7 +76,7 @@ UFunction* Z_Construct_UFunction_UFortLobby_OnNavigationRight()
 
 struct Z_Construct_UFunction_UFortLobby_OnPlayerClicked_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0459CCD0 (name and class constructor), declared only
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7F20 (end 0x028D7F4F)
 // Original VA: 0x00000001428D7F20 | File offset: 0x028D7520
