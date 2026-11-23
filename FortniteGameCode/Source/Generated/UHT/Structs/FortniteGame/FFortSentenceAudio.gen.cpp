@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FFortSentenceAudio();
 	UPackage* Z_Construct_UPackage__Script_FortniteGame();  // RVA 0x01051BE0
-struct alignas(8) FFortSentenceAudio
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FFortSentenceAudio is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB680 (end 0x00FCB6D2, chained .pdata fragments)
 // Original VA: 0x0000000140FCB680 | File offset: 0x00FCAC80
 // Recovery: confirmed (TEXT("FortSentenceAudio") and Z_Construct_UScriptStruct_FFortSentenceAudio) | Matching: see analysis/functions-uht-staticstruct.json

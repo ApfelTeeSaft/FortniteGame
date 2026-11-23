@@ -906,3 +906,182 @@ struct FFortItemEntry : public FFastArraySerializerItem
 	FGameplayAbilitySpecHandle GameplayAbilitySpecHandle;
 	TArray<UFortAlterationItemDefinition*> AlterationInstances;
 };
+
+// ApplicationCore: GenericPlatform/GenericApplication.h and GenericApplicationMessageHandler.h
+class FModifierKeysState
+{
+public:
+	FModifierKeysState()
+		: bIsLeftShiftDown(false),
+		  bIsRightShiftDown(false),
+		  bIsLeftControlDown(false),
+		  bIsRightControlDown(false),
+		  bIsLeftAltDown(false),
+		  bIsRightAltDown(false),
+		  bIsLeftCommandDown(false),
+		  bIsRightCommandDown(false),
+		  bAreCapsLocked(false)
+	{
+	}
+
+private:
+	uint16 bIsLeftShiftDown:1;
+	uint16 bIsRightShiftDown:1;
+	uint16 bIsLeftControlDown:1;
+	uint16 bIsRightControlDown:1;
+	uint16 bIsLeftAltDown:1;
+	uint16 bIsRightAltDown:1;
+	uint16 bIsLeftCommandDown:1;
+	uint16 bIsRightCommandDown:1;
+	uint16 bAreCapsLocked:1;
+};
+
+enum class EGestureEvent : uint8
+{
+	None,
+	Scroll,
+	Magnify,
+	Swipe,
+	Rotate,
+	LongPress,
+	Count
+};
+
+// Containers/Set.h: only declared. FTouchKeySet derives from TSet<FKey>, and FPointerEvent binds
+// a reference to FTouchKeySet::EmptySet; neither touches the set's members, which are not
+// modelled, so TSet is an empty stand-in here.
+template<typename ElementType, bool bInAllowDuplicateKeys = false> struct DefaultKeyFuncs;
+class FDefaultSetAllocator;
+
+template<typename InElementType, typename KeyFuncs = DefaultKeyFuncs<InElementType>, typename Allocator = FDefaultSetAllocator>
+class TSet
+{
+};
+
+// SlateCore: Input/Events.h. The reference's FPointerEvent is older than 4.20's: no Force (its
+// SizeOf is 104, 4.20's 112; the inlined constructor in the thunks stores no 1.0f and puts
+// bIsTouchEvent at 0x58; docs/ENGINE_DIFFERENCES.md #8). Otherwise as 4.20.
+class FWidgetPath;
+
+struct FInputEvent
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+public:
+	FInputEvent()
+		: ModifierKeys(FModifierKeysState())
+		, bIsRepeat(false)
+		, UserIndex(0)
+		, EventPath(nullptr)
+	{ }
+
+	virtual ~FInputEvent() { }
+
+	virtual FText ToText() const;
+	virtual bool IsPointerEvent() const;
+
+protected:
+	FModifierKeysState ModifierKeys;
+	bool bIsRepeat;
+	uint32 UserIndex;
+	const FWidgetPath* EventPath;
+};
+
+class FTouchKeySet
+	: public TSet<FKey>
+{
+public:
+	static const FTouchKeySet StandardSet;
+	static const FTouchKeySet EmptySet;
+};
+
+struct FPointerEvent
+	: public FInputEvent
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+public:
+	FPointerEvent()
+		: ScreenSpacePosition(FVector2D(0, 0))
+		, LastScreenSpacePosition(FVector2D(0, 0))
+		, CursorDelta(FVector2D(0, 0))
+		, PressedButtons(FTouchKeySet::EmptySet)
+		, EffectingButton()
+		, PointerIndex(0)
+		, TouchpadIndex(0)
+		, bIsTouchEvent(false)
+		, GestureType(EGestureEvent::None)
+		, WheelOrGestureDelta(0.0f, 0)
+		, bIsDirectionInvertedFromDevice(false)
+	{ }
+
+	virtual FText ToText() const override;
+	virtual bool IsPointerEvent() const override;
+
+private:
+	FVector2D ScreenSpacePosition;
+	FVector2D LastScreenSpacePosition;
+	FVector2D CursorDelta;
+	const TSet<FKey>& PressedButtons;
+	FKey EffectingButton;
+	uint32 PointerIndex;
+	uint32 TouchpadIndex;
+	bool bIsTouchEvent;
+	EGestureEvent GestureType;
+	FVector2D WheelOrGestureDelta;
+	bool bIsDirectionInvertedFromDevice;
+};
+
+// FortniteGame (no source): the conversation sentence and its audio. Members, types and offsets
+// are the reflected properties; the sentence's constructor and destructor are out of line in the
+// reference (the thunks call them). EFortFeedbackBroadcastFilter is declared with the reference's
+// enumerators (FEnumParams).
+enum EFortFeedbackBroadcastFilter
+{
+	FFBF_Speaker = 0,
+	FFBF_SpeakerTeam = 1,
+	FFBF_SpeakerAdressee = 2,
+	FFBF_HumanPvP_Team1 = 3,
+	FFBF_HumanPvP_Team2 = 4,
+	FFBF_None_Max = 5,
+};
+
+class UFortFeedbackBank;
+class USoundBase;
+class UTexture2D;
+class UAnimMontage;
+
+struct FFortFeedbackHandle
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	UFortFeedbackBank* FeedbackBank;
+	FName EventName;
+	bool bReadOnly;
+	bool bBankDefined;
+	TEnumAsByte<EFortFeedbackBroadcastFilter> BroadcastFilterOverride;
+};
+
+struct FFortSentenceAudio
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	TSoftObjectPtr<USoundBase> Audio;
+	FFortFeedbackHandle Handle;
+};
+
+struct FFortConversationSentence
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FFortConversationSentence();
+	~FFortConversationSentence();
+
+	FFortSentenceAudio SpeechAudio;
+	FText SpeechText;
+	TSoftObjectPtr<UTexture2D> TalkingHeadTexture;
+	FText TalkingHeadTitle;
+	TSoftObjectPtr<UAnimMontage> AnimMontage;
+	float PostSentenceDelay;
+	float DisplayDuration;
+};

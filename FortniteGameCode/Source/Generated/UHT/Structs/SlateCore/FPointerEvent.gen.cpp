@@ -10,11 +10,7 @@
 	UScriptStruct* Z_Construct_UScriptStruct_FPointerEvent();
 	UPackage* Z_Construct_UPackage__Script_SlateCore();  // RVA 0x0145CAE0
 UScriptStruct* Z_Construct_UScriptStruct_FInputEvent();  // RVA 0x0145CF00
-struct alignas(8) FPointerEvent
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FPointerEvent is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0145B970 (end 0x0145B9E1, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014145B970 | File offset: 0x0145AF70
 // Recovery: confirmed (TEXT("PointerEvent") and Z_Construct_UScriptStruct_FPointerEvent) | Matching: see analysis/functions-uht-staticstruct.json

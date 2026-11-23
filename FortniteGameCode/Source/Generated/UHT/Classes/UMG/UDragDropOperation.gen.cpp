@@ -4,6 +4,36 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE7A60 (end 0x01BE7BC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDragCancelled) | Matching: see analysis/functions-uht-exec.json
+void UDragDropOperation::execDragCancelled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_PointerEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DragCancelled_Implementation(Z_Param_Out_PointerEvent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE7BD0 (end 0x01BE7D34)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDragged) | Matching: see analysis/functions-uht-exec.json
+void UDragDropOperation::execDragged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_PointerEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Dragged_Implementation(Z_Param_Out_PointerEvent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE7D40 (end 0x01BE7EA4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDrop) | Matching: see analysis/functions-uht-exec.json
+void UDragDropOperation::execDrop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_PointerEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Drop_Implementation(Z_Param_Out_PointerEvent);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UDragDropOperation, 1032841043u)
 // Original dynamic initializer: RVA 0x001B1E40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UDragDropOperation> AutoInitializeUDragDropOperation(TEXT("UDragDropOperation"), sizeof(UDragDropOperation), 1032841043u);

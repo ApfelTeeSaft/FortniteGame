@@ -210,6 +210,7 @@ struct FVector2D
 	float X;
 	float Y;
 	__forceinline FVector2D() { }
+	__forceinline FVector2D(float InX, float InY) : X(InX), Y(InY) { }
 };
 
 struct FLinearColor

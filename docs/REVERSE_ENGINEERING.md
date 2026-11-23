@@ -370,8 +370,8 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,553, at 1,301 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 882 read parameters |
-| exact | 1,292: 1,082 in the denominator, 210 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,558, at 1,306 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 887 read parameters |
+| exact | 1,297: 1,087 in the denominator, 210 leaf (no `.pdata`) |
 | relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
@@ -435,6 +435,9 @@ Supported types:
   `FGameplayEffectModifiedAttribute` and `FGameplayEffectSpecForRPC`;
 - `FFastArraySerializerItem`, and the Fortnite-only `FFortItemEntry`,
   `FFortItemEntryStateValue` and `FFortGiftingInfo` (below);
+- `FModifierKeysState`, `FInputEvent` and `FPointerEvent` (without 4.20's `Force`), and the
+  Fortnite-only `FFortConversationSentence`, `FFortSentenceAudio` and
+  `FFortFeedbackHandle` (below);
 - `FTransform` (`TransformRecovered.h`, below);
 - soft object pointers, `TSoftObjectPtr<C>` (`EngineStructsRecovered.h`): `FSoftObjectPath`,
   `TPersistentObjectPtr`, `FSoftObjectPtr` and `TSoftObjectPtr`, read with
@@ -584,6 +587,19 @@ Limits:
   - Both storage-vault RPC thunks are exact (they corroborate each other's constructor and
     destructor). `ServerSetInventoryStateValue` is relocation-equivalent: only it calls the
     state value's constructor.
+- **`FPointerEvent`.** The reference's is older than 4.20's: it has no `Force`
+  (`docs/ENGINE_DIFFERENCES.md` #8).
+  - The exec thunks inline its default constructor: the vtable, `FModifierKeysState`'s nine
+    bitfields cleared one by one, the zeroed members, and `PressedButtons` bound to
+    `FTouchKeySet::EmptySet`.
+  - `TSet` is an empty stand-in. The reference binding only takes `EmptySet`'s address, and
+    `FTouchKeySet` derives from `TSet<FKey>`.
+  - The 3 `UDragDropOperation` events are exact. They corroborate each other's vtable and
+    `EmptySet` addresses.
+  - `FFortConversationSentence`'s constructor and destructor are out of line, as for
+    `FFortItemEntry`. The 2 `IFortClientAnnouncement_ConversationCodeInterface` thunks that
+    take one are exact.
+  - `FKey`'s registrar is exact again (`.rdata` ripple).
 - **Interfaces.** UHT 4.20 declares an interface's native functions, and their exec thunks,
   in the native `I<Name>` class (`typedef I<Name> ThisClass`), and registers
   `&I<Name>::exec<Fn>`. `UFunction::Invoke` passes the thunk the object's interface address
@@ -663,12 +679,12 @@ Limits:
       `rdx` (`ABuildingSMActor::GetReplacementDestructionReason`,
       `AFortTimeOfDayManager::GetPreviousDayPhase`);
     - `IFortTeamActorInterface::GetTeam` has only the thunk's call to go on.
-- Of the 1,661 virtual-native UFunctions, 1,581 have a supported signature and 1,553 have
-  thunks (folded bodies counted per UFunction). For the other 28, a slot is not declared
+- Of the 1,661 virtual-native UFunctions, 1,587 have a supported signature and 1,558 have
+  thunks (folded bodies counted per UFunction). For the other 29, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FSlateBrush` (6);
-  - `FPointerEvent`, `FFortConversationSentence` and `TArray` of enums (3 each);
+  - `FGeometry` (7) and `FSlateBrush` (6);
+  - `TArray` of enums (3);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)

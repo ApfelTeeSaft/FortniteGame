@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FInputEvent();
 	UPackage* Z_Construct_UPackage__Script_SlateCore();  // RVA 0x0145CAE0
-struct alignas(8) FInputEvent
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FInputEvent is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0145B6F0 (end 0x0145B761, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014145B6F0 | File offset: 0x0145ACF0
 // Recovery: confirmed (TEXT("InputEvent") and Z_Construct_UScriptStruct_FInputEvent) | Matching: see analysis/functions-uht-staticstruct.json

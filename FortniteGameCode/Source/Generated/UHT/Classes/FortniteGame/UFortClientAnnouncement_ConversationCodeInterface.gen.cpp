@@ -14,6 +14,16 @@ void IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingConversatio
 	*(bool*)Z_Param__Result=P_THIS->IsPlayingConversation(Z_Param_bCheckAudioComponent);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1190 (end 0x00FC1248)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlayingSentence) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FFortConversationSentence,Z_Param_Out_Sentence);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPlayingSentence(Z_Param_Out_Sentence);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1250 (end 0x00FC12E1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlayingSentenceIndex) | Matching: see analysis/functions-uht-exec.json
 void IFortClientAnnouncement_ConversationCodeInterface::execIsPlayingSentenceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -31,6 +41,16 @@ void IFortClientAnnouncement_ConversationCodeInterface::execPlayConversation(UOb
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->PlayConversation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC17C0 (end 0x00FC1878)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayConversationFromSentence) | Matching: see analysis/functions-uht-exec.json
+void IFortClientAnnouncement_ConversationCodeInterface::execPlayConversationFromSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FFortConversationSentence,Z_Param_Out_StartingSentence);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->PlayConversationFromSentence(Z_Param_Out_StartingSentence);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1880 (end 0x00FC1911)

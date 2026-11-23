@@ -29621,9 +29621,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/UMG"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
-	virtual void FNGC_VSlot_0x238();  // slot 71: UDragDropOperation::Dragged_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x240();  // slot 72: UDragDropOperation::DragCancelled_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x248();  // slot 73: UDragDropOperation::Drop_Implementation (signature not recovered)
+	virtual void Dragged_Implementation(FPointerEvent const& PointerEvent);  // slot 71 (+0x238), UFunction UDragDropOperation::Dragged
+	virtual void DragCancelled_Implementation(FPointerEvent const& PointerEvent);  // slot 72 (+0x240), UFunction UDragDropOperation::DragCancelled
+	virtual void Drop_Implementation(FPointerEvent const& PointerEvent);  // slot 73 (+0x248), UFunction UDragDropOperation::Drop
 	static void StaticRegisterNativesUDragDropOperation();
 	static void execDragCancelled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDragged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36836,11 +36836,11 @@ public:
 	virtual UObject* _getUObject() const;  // slot 1 (+0x8)
 	virtual bool IsPlayingConversation(bool bCheckAudioComponent) const;  // slot 2 (+0x10), UFunction UFortClientAnnouncement_ConversationCodeInterface::IsPlayingConversation
 	virtual bool IsPlayingSentenceIndex(int32 SentenceIndex) const;  // slot 3 (+0x18), UFunction UFortClientAnnouncement_ConversationCodeInterface::IsPlayingSentenceIndex
-	virtual void FNGC_VSlot_0x20();  // slot 4: UFortClientAnnouncement_ConversationCodeInterface::IsPlayingSentence (signature not recovered)
+	virtual bool IsPlayingSentence(FFortConversationSentence const& Sentence) const;  // slot 4 (+0x20), UFunction UFortClientAnnouncement_ConversationCodeInterface::IsPlayingSentence
 	virtual bool PlayConversation();  // slot 5 (+0x28), UFunction UFortClientAnnouncement_ConversationCodeInterface::PlayConversation
 	virtual void StopConversation();  // slot 6 (+0x30), UFunction UFortClientAnnouncement_ConversationCodeInterface::StopConversation
 	virtual bool PlayConversationFromSentenceIndex(int32 StartingSentenceIndex);  // slot 7 (+0x38), UFunction UFortClientAnnouncement_ConversationCodeInterface::PlayConversationFromSentenceIndex
-	virtual void FNGC_VSlot_0x40();  // slot 8: UFortClientAnnouncement_ConversationCodeInterface::PlayConversationFromSentence (signature not recovered)
+	virtual bool PlayConversationFromSentence(FFortConversationSentence const& StartingSentence);  // slot 8 (+0x40), UFunction UFortClientAnnouncement_ConversationCodeInterface::PlayConversationFromSentence
 	static void execIsPlayingConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsPlayingSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsPlayingSentenceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
