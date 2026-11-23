@@ -632,6 +632,32 @@ def test_folded_and_code_run() -> None:
     print("folded bodies and code runs: ok")
 
 
+def test_record_bracket() -> None:
+    """A creator's static is the one free slot between its record-neighbours' statics."""
+    from compare import Resolver
+    r = Resolver.__new__(Resolver)
+    rf = lambda c: f"?ReturnFunction@?1??{c}@@YAPEAVUFunction@@XZ@4PEAV2@EA"
+    A, X, B = "Z_Construct_UFunction_C_A", "Z_Construct_UDelegateFunction_P_X__DelegateSignature", "Z_Construct_UFunction_C_B"
+    r._creator_runs = {X: (A, B), A: (None, X), B: (X, None)}
+    r._name_index = None
+
+    def setup(obs):
+        r.observations = {("o", k): {v: {e}} for k, (v, e) in obs.items()}
+        r.by_addr = {}
+        for k, (v, e) in obs.items():
+            r.by_addr.setdefault(v, {})[("o", k)] = {e}
+        r._name_index = None
+    setup({rf(A): (0x100, 1), rf(B): (0x118, 2), "?OuterClass@K": (0x108, 3)})
+    assert [p for p, _ in r._record_bracket(rf(X), 9)] == [0x110]       # 0x108 is held: 0x110
+    setup({rf(A): (0x100, 1), rf(B): (0x120, 2), "?OuterClass@K": (0x108, 3)})
+    assert r._record_bracket(rf(X), 9) == []                             # two free slots
+    setup({rf(A): (0x100, 1), rf(B): (0x110, 2), rf(X): (0x108, 9)})
+    assert [p for p, _ in r._record_bracket(rf(X), 9)] == [0x108]       # its own observation is no claim
+    assert r._record_bracket(rf(A), 9) == []                             # an end of the run
+    assert r._record_bracket("?OuterClass@?1??Z_Construct_UClass_C@@YAPEAVUClass@@XZ@4PEAV2@EA", 9) == []
+    print("record-bracketed slots: ok")
+
+
 def test_rigid_successor() -> None:
     from compare import rigid_successor
     oc = lambda c: f"?OuterClass@?1??Z_Construct_UClass_{c}@@YAPEAVUClass@@XZ@4PEAV2@EA"
@@ -686,6 +712,7 @@ def test_slot_elimination() -> None:
 def main() -> int:
     test_slot_elimination()
     test_rigid_successor()
+    test_record_bracket()
     test_split_objects()
     test_accessor_mangling()
     test_accessor_shapes()

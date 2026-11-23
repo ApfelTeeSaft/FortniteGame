@@ -9,21 +9,21 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **36,390 / 157,719** primary `.pdata` functions (23.07 %, 2,464,065 bytes):
+| Exact functions | **36,469 / 157,719** primary `.pdata` functions (23.12 %, 2,467,778 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 36,383 generated UHT functions:
-  - classes: 11,077 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,684 `GetPrivateStaticClass`,
+- 36,462 generated UHT functions:
+  - classes: 11,090 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,684 `GetPrivateStaticClass`,
     1,155 `StaticRegisterNatives*`, 3,277 `FCompiledInDefer` initializers and 1,320 exec thunks
     (1,113 of virtual natives, 207 of native accessors);
-  - packages: 552 package-scope delegate creators and 69 `Z_Construct_UPackage_*`;
+  - packages: 618 package-scope delegate creators and 69 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,101 `Z_Construct_UScriptStruct_*`, 2,009 `StaticStruct`, 1,782 `NewStructOps`,
     2,057 `StaticRegisterNatives` and 2,062 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,078 `Z_Construct_UEnum_*`, 790 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,188 `StaticClass` thunks, 3,173 `AutoInitialize` initializers, 212 leaf exec thunks, 207 native accessors, 136 vector-constant initializers and `FCommandLine::IsInitialized` |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,635 reconstructed and compiled; 36,390 exact; 1,245 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 1,241 in the denominator, mostly:
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,635 reconstructed and compiled; 36,469 exact; 1,166 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 1,162 in the denominator, mostly:
 - 599 `GetPrivateStaticClass` bodies, 540 of them waiting only on `InternalConstructor<C>`;
 - about 100 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
@@ -65,7 +65,8 @@ Work follows `CLAUDE.md`'s adaptive workflow:
 Largest queue groups (2026-11-23):
 - 540 `GetPrivateStaticClass` bodies waiting only on `InternalConstructor<C>`: the run walk
   is blocked or a one-sided prediction fails its checks.
-- 100 creators whose `ReturnFunction` static is not predicted.
+- 21 creators and package delegates whose `ReturnFunction` static is not predicted: at an end
+  of their object's record run, or with several free slots between their record neighbours.
 - 157 functions waiting on string literals: 53 struct `StaticRegisterNatives` on pooled
   `??_C@` literals, the rest on `$SG` copies.
 - 282 `StaticEnum` singletons. Most sit at an end of their `.bss` block, with the slot below
@@ -76,6 +77,8 @@ Largest queue groups (2026-11-23):
   are single objects whose data comes in batches; that is not modelled.
 
 Done (2026-11-23):
+- Record-bracketed slots for creator statics (the one free slot between the statics of
+  the record neighbours): 66 package delegates and 13 creators exact, no regressions.
 - Class delegate creators placed in definition order (`ClassDelegates/<Class>.gen.cpp`, by
   `.data` record order): 42 more exact, and the 4 regressions of the batch below recovered.
 - 249 more exact from `.bss` statics: creators in `FFunctionParams` record order, rigid

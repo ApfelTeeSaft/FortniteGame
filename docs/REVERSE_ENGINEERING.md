@@ -1584,6 +1584,33 @@ This made 42 more functions exact, with no regressions, and it recovered the 4 a
 - 3 `StaticEnum`s;
 - 1 package delegate.
 
+**Record-bracketed slots.** 79 package-scope delegates still missed their `ReturnFunction`.
+`unity_order.py` places them between their record-order anchors. Classes without UFunctions
+lie in the same stretches, and nothing in the image orders the two:
+- Their `FClassParams` is a function-local static. It comes after every delegate's
+  `PropPointers` in all 1,091 measured pairs, so it says nothing.
+- Name literals are emitted at code generation. Their order agrees with the `.bss` order no
+  better than chance (897 of 1,698 pairs).
+- Delegate properties and UFunction parameters of the classes do not link a delegate to its
+  header.
+- Putting such classes before the delegates would be right in 60 of 72 stretches, against 42
+  now. But it would break some of the 7 stretches whose delegates belong to a following
+  class's header.
+
+So `compare.py` no longer depends on that order for creators. A creator's record and its static
+are emitted together, so their orders agree (168 of 168 units). A creator's `ReturnFunction`
+therefore lies strictly between the statics of the creators whose records directly precede and
+follow its own in its object. Other entries observe those two statics and every other slot
+between them. When exactly one 8-byte slot there is held by no observed symbol, it is this
+creator's (`_record_bracket`).
+- It runs where the section-relative prediction declines, before the tie-breaks.
+- Records come from `uht-creator-symbols.json` and `uht-package-symbols.json`, located by
+  name. No `.bss` address of the creator is read.
+- In simulation it settled 82 of the 100 unresolved creator statics, none wrong. The rest sit
+  at an end of their object's run or have two or more free slots.
+
+This made 79 functions exact (66 package delegates, 13 creators), with no regressions.
+
 ## Naming confidence
 
 `confirmed` needs direct evidence such as an exported symbol, reflection string or

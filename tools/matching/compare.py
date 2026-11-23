@@ -265,6 +265,9 @@ class Resolver:
             pred, basis = local
             extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
             return [(pred, "section-relative (local) to " + basis[0] + extra)]
+        bracket = self._record_bracket(symbol, exclude)
+        if bracket:
+            return bracket
         if len(nearest) < 2:
             return self._slot_elimination(symbol, exclude)
         # The sides disagree. A side whose neighbour is the symbol's rigid partner, directly
@@ -539,6 +542,61 @@ class Resolver:
             return []
         return [(cand[0], f"slot elimination: {how} the {len(a)} other slots of {block['unit']}'s "
                           f"{len(block['symbols'])}-slot block")]
+
+    _RETURN_FUNCTION = re.compile(r"\?ReturnFunction@\?1\?\?(Z_Construct_U(?:Delegate)?Function_\w+)@@YAPEAVUFunction@@XZ@")
+
+    def _record_bracket(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
+        """A creator's ReturnFunction static between the statics of the creators whose
+        FFunctionParams records directly precede and follow its own in its object.
+
+        A creator's record (.data) and its static (.bss) are function-local statics emitted
+        together, so in the reference their orders agree (168 of 168 units). The static then
+        lies strictly between the two neighbours' statics, which other entries observe. When
+        exactly one 8-byte slot there is not observed holding a symbol by other entries, it is
+        this one. Records come from analysis/uht-creator-symbols.json and
+        uht-package-symbols.json (located by name); no .bss address of the creator is read."""
+        m = self._RETURN_FUNCTION.match(symbol)
+        if not m:
+            return []
+        runs = getattr(self, "_creator_runs", None)
+        if runs is None:
+            records = {}
+            for f in ("uht-creator-symbols.json", "uht-package-symbols.json"):
+                p = REPO_ROOT / "analysis" / f
+                if p.exists():
+                    for k, v in json.loads(p.read_text(encoding="utf-8"))["symbols"].items():
+                        records[k] = int(v[0], 16)
+            by_obj: dict = {}
+            for sym, objpath in getattr(self, "symbol_objects", {}).items():
+                if not sym.endswith("@@YAPEAVUFunction@@XZ") or not sym.startswith(("?Z_Construct_UFunction_",
+                                                                                   "?Z_Construct_UDelegateFunction_")):
+                    continue
+                name = sym[1:-len("@@YAPEAVUFunction@@XZ")]
+                rec = records.get(f"?FuncParams@?4??{name}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B")
+                if rec is not None:
+                    by_obj.setdefault(objpath, []).append((rec, name))
+            runs = {}
+            for objpath, lst in by_obj.items():
+                lst.sort()
+                for i, (_, name) in enumerate(lst):
+                    runs[name] = (lst[i - 1][1] if i else None, lst[i + 1][1] if i + 1 < len(lst) else None)
+            self._creator_runs = runs
+        prev_next = runs.get(m.group(1))
+        if not prev_next or None in prev_next:
+            return []
+        bounds = []
+        for name in prev_next:
+            vals = self._observed_by_name(f"?ReturnFunction@?1??{name}@@YAPEAVUFunction@@XZ@4PEAV2@EA", exclude)
+            if len(vals) != 1:
+                return []
+            bounds.append(next(iter(vals)))
+        lo, hi = bounds
+        free = [s for s in range(lo + 8, hi, 8)
+                if not any(ents - {exclude} for ents in self.by_addr.get(s, {}).values())]
+        if len(free) != 1:
+            return []
+        return [(free[0], f"record-bracketed slot: the one free slot between the statics of {prev_next[0]} "
+                          f"and {prev_next[1]}, whose records bracket this creator's")]
 
     def _closes_other_unit(self, addr: int, block: dict, exclude: int | None) -> bool:
         """Whether other entries observe, at `addr`, the PrivateStaticClass that is the last .bss

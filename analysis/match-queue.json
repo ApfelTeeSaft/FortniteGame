@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 1245,
+ "total": 1166,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -35,20 +35,6 @@
     "0x002C8A20 ECommonNumericType_StaticEnum",
     "0x002E32B0 EDateType_StaticEnum",
     "0x002FC0C0 EInAppPurchaseState_StaticEnum"
-   ]
-  },
-  {
-   "key": "uht-ufunction-creator | creator singleton (.bss)",
-   "count": 100,
-   "states": {
-    "relocation-equivalent": 100
-   },
-   "examples": [
-    "0x002C2E80 Z_Construct_UDelegateFunction_CommonUI_CommonActionCommited__DelegateSignature",
-    "0x002C2EB0 Z_Construct_UDelegateFunction_CommonUI_CommonActionCompleteSingle__DelegateSignature",
-    "0x002C2EE0 Z_Construct_UDelegateFunction_CommonUI_CommonActionComplete__DelegateSignature",
-    "0x002C2F10 Z_Construct_UDelegateFunction_CommonUI_CommonActionProgressSingle__DelegateSignature",
-    "0x002CA800 Z_Construct_UDelegateFunction_CommonUI_OnLoadingStateChanged__DelegateSignature"
    ]
   },
   {
@@ -119,6 +105,20 @@
     "0x00FC9990 UFortConsumableAccountItem::GetPrivateStaticClass",
     "0x0102CF40 UFortMcpProfileAccount::GetPrivateStaticClass",
     "0x0102D0A0 UFortMcpProfileCollectionBook::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-ufunction-creator | creator singleton (.bss)",
+   "count": 21,
+   "states": {
+    "relocation-equivalent": 21
+   },
+   "examples": [
+    "0x002CA800 Z_Construct_UDelegateFunction_CommonUI_OnLoadingStateChanged__DelegateSignature",
+    "0x00803F60 Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions",
+    "0x00F82290 Z_Construct_UDelegateFunction_FortniteGame_MoveToLocationDelegate__DelegateSignature",
+    "0x00F82320 Z_Construct_UDelegateFunction_FortniteGame_WaitTargetSelectionDelegate__DelegateSignature",
+    "0x00F8C5C0 Z_Construct_UDelegateFunction_FortniteGame_OnAIDirectorEventFired__DelegateSignature"
    ]
   },
   {
