@@ -23,6 +23,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteGame/UFortDeployableBaseSkillTreeUnlocks.gen.cpp"
 #include "../Enums/FortniteGame/EAthenaPIEStartupMode.gen.cpp"
 #include "../Classes/FortniteGame/UFortDeveloperSettings.gen.cpp"
+#include "../ClassDelegates/UFortDialogNotificationHandler.gen.cpp"
 #include "../UFortDialogNotificationHandler.gen.cpp"
 #include "../Classes/FortniteGame/UFortDialogNotificationHandler.gen.cpp"
 #include "../Delegates/FortniteGame/OnAccepted__DelegateSignature.gen.cpp"

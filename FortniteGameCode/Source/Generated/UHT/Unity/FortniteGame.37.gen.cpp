@@ -72,6 +72,7 @@ namespace GlobalVectorConstants
 #include "../AFortProjectileBase.gen.cpp"
 #include "../Classes/FortniteGame/AFortProjectileBase.gen.cpp"
 #include "../Classes/FortniteGame/AFortProjectileFallingTrap.gen.cpp"
+#include "../ClassDelegates/UFortPrototypingContext.gen.cpp"  // before its header's items (record order)
 #include "../Enums/FortniteGame/EFortPrototypingStatus.gen.cpp"
 #include "../UFortPrototypingContext.gen.cpp"
 #include "../Classes/FortniteGame/UFortPrototypingContext.gen.cpp"
@@ -258,6 +259,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteGame/AFortReplaySpectatorPawnBase.gen.cpp"
 #include "../Classes/FortniteGame/UFortResourceItemDefinition.gen.cpp"
 #include "../Classes/FortniteGame/UFortRiftBlockerComponent.gen.cpp"
+#include "../ClassDelegates/UFortRuntimeOptions.gen.cpp"
 #include "../UFortRuntimeOptions.gen.cpp"
 #include "../Classes/FortniteGame/UFortRuntimeOptions.gen.cpp"
 #include "../Enums/FortniteGame/EFortSafeZoneState.gen.cpp"

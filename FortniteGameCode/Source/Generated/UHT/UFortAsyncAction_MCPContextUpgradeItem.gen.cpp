@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem();  // RVA 0x01023A60 (registered by its FCompiledInDefer)
+UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature();  // ClassDelegates/UFortAsyncAction_MCPContextUpgradeItem.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01023580 (end 0x010235A2)
 // Original VA: 0x0000000141023580 | File offset: 0x01022B80
@@ -16,21 +17,6 @@ void UFortAsyncAction_MCPContextUpgradeItem::StaticRegisterNativesUFortAsyncActi
 		{ "UpgradeItem", &UFortAsyncAction_MCPContextUpgradeItem::execUpgradeItem },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010241F0 (end 0x0102421F)
-// Original VA: 0x00000001410241F0 | File offset: 0x010237F0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x042B7010; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem, "OnMCPRequestComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem_Statics

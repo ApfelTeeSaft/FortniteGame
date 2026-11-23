@@ -12,6 +12,7 @@
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/GameplayTasks.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../ClassDelegates/UGameplayTask.gen.cpp"  // before its header's items (record order)
 #include "../Enums/GameplayTasks/ETaskResourceOverlapPolicy.defer.gen.cpp"
 #include "../Enums/GameplayTasks/ETaskResourceOverlapPolicy.gen.cpp"
 #include "../Enums/GameplayTasks/EGameplayTaskState.defer.gen.cpp"
@@ -25,6 +26,7 @@
 #include "../UGameplayTask_SpawnActor.gen.cpp"
 #include "../Classes/GameplayTasks/UGameplayTask_SpawnActor.gen.cpp"
 #include "../Classes/GameplayTasks/UGameplayTask_TimeLimitedExecution.gen.cpp"
+#include "../ClassDelegates/UGameplayTask_WaitDelay.gen.cpp"
 #include "../UGameplayTask_WaitDelay.gen.cpp"
 #include "../Classes/GameplayTasks/UGameplayTask_WaitDelay.gen.cpp"
 #include "../Classes/GameplayTasks/UGameplayTaskOwnerInterface.gen.cpp"

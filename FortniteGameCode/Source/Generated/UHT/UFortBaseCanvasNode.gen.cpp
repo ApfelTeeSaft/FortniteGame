@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseCanvasNode();  // RVA 0x028DE350 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortBaseCanvasNode_OnNodeStateChanged__DelegateSignature();  // ClassDelegates/UFortBaseCanvasNode.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDF10 (end 0x028DDF32)
 // Original VA: 0x00000001428DDF10 | File offset: 0x028DD510
@@ -30,25 +31,6 @@ void UFortBaseCanvasNode::StaticRegisterNativesUFortBaseCanvasNode()
 		{ "SelectNode", &UFortBaseCanvasNode::execSelectNode },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UFortBaseCanvasNode_OnNodeStateChanged__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE6B0 (end 0x028DE6DF)
-// Original VA: 0x00000001428DE6B0 | File offset: 0x028DDCB0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortBaseCanvasNode_OnNodeStateChanged__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045A2510; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBaseCanvasNode, "OnNodeStateChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortBaseCanvasNode_OnNodeStateChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortBaseCanvasNode_DoesDrillDownToCurrentNodePage_Statics

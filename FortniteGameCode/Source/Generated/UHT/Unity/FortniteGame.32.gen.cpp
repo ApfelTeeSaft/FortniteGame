@@ -196,6 +196,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteGame/AFortPartyBeaconHost.gen.cpp"
 #include "../Structs/FortniteGame/FEmptyServerReservation.gen.cpp"
 #include "../Classes/FortniteGame/UFortPartyBeaconState.gen.cpp"
+#include "../ClassDelegates/UFortPartyContext.gen.cpp"  // before its header's items (record order)
 #include "../Enums/FortniteGame/EFortPartyMemberDisplayState.gen.cpp"
 #include "../Enums/FortniteGame/EFortFriendRequestStatus.gen.cpp"
 #include "../Enums/FortniteGame/EFortPartyTransition.gen.cpp"

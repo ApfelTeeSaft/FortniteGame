@@ -5,6 +5,8 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseUIContext();  // RVA 0x028B3DB0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature();  // ClassDelegates/UFortHomebaseUIContext.gen.cpp
+UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature();  // ClassDelegates/UFortHomebaseUIContext.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3980 (end 0x028B39A2)
 // Original VA: 0x00000001428B3980 | File offset: 0x028B2F80
@@ -39,44 +41,6 @@ void UFortHomebaseUIContext::StaticRegisterNativesUFortHomebaseUIContext()
 		{ "SetShowHeroHeadAccessoriesForLocalPlayer", &UFortHomebaseUIContext::execSetShowHeroHeadAccessoriesForLocalPlayer },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3F00 (end 0x028B3F2F)
-// Original VA: 0x00000001428B3F00 | File offset: 0x028B3500
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x0457E0C0; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "OnNodesPurchased__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3F30 (end 0x028B3F5F)
-// Original VA: 0x00000001428B3F30 | File offset: 0x028B3530
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x0457E170; StructureSize 0x10 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "OnSquadSlotChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId_Statics

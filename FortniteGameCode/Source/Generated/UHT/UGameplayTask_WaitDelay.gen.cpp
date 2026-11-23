@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTask_WaitDelay();  // RVA 0x01C9AC30 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature();  // ClassDelegates/UGameplayTask_WaitDelay.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AA00 (end 0x01C9AA22)
 // Original VA: 0x0000000141C9AA00 | File offset: 0x01C9A000
@@ -16,21 +17,6 @@ void UGameplayTask_WaitDelay::StaticRegisterNativesUGameplayTask_WaitDelay()
 		{ "TaskWaitDelay", &UGameplayTask_WaitDelay::execTaskWaitDelay },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AD60 (end 0x01C9AD8F)
-// Original VA: 0x0000000141C9AD60 | File offset: 0x01C9A360
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x043E3780; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UGameplayTask_WaitDelay, "TaskDelayDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UGameplayTask_WaitDelay_TaskWaitDelay_Statics

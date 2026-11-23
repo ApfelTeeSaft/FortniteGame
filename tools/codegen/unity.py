@@ -6,6 +6,7 @@ from the CRT initializer table. This writes one FortniteGameCode/Source/Generate
 <Package>.<n>.gen.cpp per recovered unit, including each item's fragments in order:
 
   class   <Class>.gen.cpp                 (StaticRegisterNatives, UFunction creators, constructor)
+          ClassDelegates/<Class>.gen.cpp  (its delegate signatures' creators; placed, see below)
           Classes/<Pkg>/<Class>.gen.cpp   (IMPLEMENT_CLASS; constructor of a class without UFunctions)
   struct  Structs/<Pkg>/F<Struct>.gen.cpp
   enum    Enums/<Pkg>/<Enum>.gen.cpp           (constructor)
@@ -33,6 +34,13 @@ plain .bss they open follows the Singleton block in the reference. FTransform
 (TransformRecovered.h), whose default constructor reads FloatOne and XYZMask, is included where
 both are defined.
 
+UHT emits a header's delegate signatures before its enums and structs, so a class's delegate
+creators may belong before items that precede the class. Their FFunctionParams records give the
+definition order: each class's ClassDelegates fragment is included before the first item since
+the previous class whose parameter record (FEnumParams, FStructParams, a function creator's or
+package delegate's FFunctionParams; analysis/uht-*-symbols.json) follows the delegates' first
+record, or else just before the class. Only these .data addresses are read.
+
 Only the unity files are compiled. The generators name each manifest entry's unit (unit_of)
 so its object is the unity object, like the original build's.
 
@@ -49,7 +57,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "codegen"))
 from genio import sync_tree  # noqa: E402
 sys.path.insert(0, str(ROOT / "tools" / "matching"))
-from manifest_io import dump_compact  # noqa: E402
+from manifest_io import dump_compact, expand  # noqa: E402
 
 GEN = ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT"
 UNITY_DIR = GEN / "Unity"
@@ -233,15 +241,80 @@ def head_includes(frags: list[Path], used: set[Path]) -> str:
             + "".join(f'#include "../{f.relative_to(GEN).as_posix()}"\n' for f in frags) + "\n")
 
 
+def record_order() -> tuple[dict, dict]:
+    """(parameter record symbol -> .data RVA, class -> its creators' names), for placing class
+    delegate fragments in definition order."""
+    sym = {}
+    for f in ("uht-creator-symbols", "uht-enum-symbols", "uht-struct-symbols", "uht-package-symbols"):
+        p = ROOT / "analysis" / f"{f}.json"
+        if p.exists():
+            for k, v in json.loads(p.read_text(encoding="utf-8"))["symbols"].items():
+                sym[k] = int(v[0], 16)
+    creators: dict[str, list[str]] = {}
+    p = ROOT / "analysis" / "functions-uht-creators.json"
+    if p.exists():
+        for e in expand(json.loads(p.read_text(encoding="utf-8"))):
+            creators.setdefault(e["class"], []).append(e["name"])
+    return sym, creators
+
+
+def delegate_positions(items: list[dict], sym: dict, creators: dict) -> dict[int, list[str]]:
+    """{item index: [classes whose ClassDelegates fragment is included before that item]}."""
+    fp = lambda c: sym.get(f"?FuncParams@?4??{c}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B")
+
+    def record(it):
+        short, n = it["package"].rsplit("/", 1)[1], it["name"]
+        if it["kind"] == "enum":
+            return sym.get(f"?EnumParams@?4??Z_Construct_UEnum_{short}_{n}@@YAPEAVUEnum@@XZ@4UFEnumParams@UE4CodeGen_Private@@B")
+        if it["kind"] == "struct":
+            return sym.get(f"?ReturnStructParams@?4??Z_Construct_UScriptStruct_F{n}@@YAPEAVUScriptStruct@@XZ"
+                           "@4UFStructParams@UE4CodeGen_Private@@B")
+        if it["kind"] == "delegate":
+            return fp(f"Z_Construct_UDelegateFunction_{short}_{n}")
+        if it["kind"] == "class":
+            recs = [fp(c) for c in creators.get(n, []) if not c.startswith("Z_Construct_UDelegateFunction_")]
+            recs = [r for r in recs if r is not None]
+            return min(recs) if recs else None
+        return None
+
+    out: dict[int, list[str]] = {}
+    prev_class = -1
+    for c, it in enumerate(items):
+        if it["kind"] != "class":
+            continue
+        dels = [fp(d) for d in creators.get(it["name"], []) if d.startswith("Z_Construct_UDelegateFunction_")]
+        where = c
+        if dels and None not in dels:
+            first = min(dels)
+            for k in range(prev_class + 1, c):
+                r = record(items[k])
+                if r is not None and r > first:
+                    where = k
+                    break
+        out.setdefault(where, []).append(it["name"])
+        prev_class = c
+    return out
+
+
 def main() -> int:
     outputs, used, stats = {}, set(), Counter()
+    sym, creators = record_order()
     for name, u in units():
         incs, top = [], []
         init = GEN / "Packages" / f"{u['package'].rsplit('/', 1)[1]}.init.gen.cpp"
+        placed = delegate_positions(u["items"], sym, creators)
         for k, it in enumerate(u["items"]):
             if u.get("package_init_before") == k and init.exists():
                 incs.append(f'#include "../{init.relative_to(GEN).as_posix()}"  // init.gen.cpp position recovered')
                 used.add(init.resolve())
+            for cls in placed.get(k, []):
+                frag = GEN / "ClassDelegates" / f"{cls}.gen.cpp"
+                if frag.exists():
+                    moved = it["kind"] != "class" or it["name"] != cls
+                    incs.append(f'#include "../{frag.relative_to(GEN).as_posix()}"'
+                                + ("  // before its header's items (record order)" if moved else ""))
+                    used.add(frag.resolve())
+                    stats["class delegate fragments placed before header items"] += moved
             for frag in fragments(it):
                 if frag.exists():
                     incs.append(f'#include "../{frag.relative_to(GEN).as_posix()}"')
@@ -289,7 +362,8 @@ def main() -> int:
         used.add(frag.resolve())
         stats["package_units"] += 1
     # Every generated fragment must belong to a unit; anything else would silently not compile.
-    loose = [p for d in (GEN, GEN / "Classes", GEN / "Structs", GEN / "Enums", GEN / "Delegates", GEN / "Packages")
+    loose = [p for d in (GEN, GEN / "Classes", GEN / "Structs", GEN / "Enums", GEN / "Delegates", GEN / "Packages",
+                         GEN / "ClassDelegates")
              if d.exists()
              for p in (d.glob("*.gen.cpp") if d == GEN else d.rglob("*.gen.cpp")) if p.resolve() not in used]
     stats["files_written"], stats["files_removed"] = sync_tree(UNITY_DIR, outputs)

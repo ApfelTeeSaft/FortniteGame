@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTask();  // RVA 0x01C9AAE0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature();  // ClassDelegates/UGameplayTask.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A970 (end 0x01C9A992)
 // Original VA: 0x0000000141C9A970 | File offset: 0x01C99F70
@@ -17,21 +18,6 @@ void UGameplayTask::StaticRegisterNativesUGameplayTask()
 		{ "ReadyForActivation", &UGameplayTask::execReadyForActivation },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AD00 (end 0x01C9AD2F)
-// Original VA: 0x0000000141C9AD00 | File offset: 0x01C9A300
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x043E2A70; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UGameplayTask, "GenericGameplayTaskDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AE80 (end 0x01C9AEAF)

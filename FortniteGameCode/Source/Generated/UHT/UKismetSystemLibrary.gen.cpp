@@ -5,6 +5,8 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetSystemLibrary();  // RVA 0x02452D10 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetClassLoaded__DelegateSignature();  // ClassDelegates/UKismetSystemLibrary.gen.cpp
+UFunction* Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetLoaded__DelegateSignature();  // ClassDelegates/UKismetSystemLibrary.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02452B60 (end 0x02452B82)
 // Original VA: 0x0000000142452B60 | File offset: 0x02452160
@@ -229,44 +231,6 @@ void UKismetSystemLibrary::StaticRegisterNativesUKismetSystemLibrary()
 		{ "UnregisterForRemoteNotifications", &UKismetSystemLibrary::execUnregisterForRemoteNotifications },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetClassLoaded__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452D40 (end 0x02452D6F)
-// Original VA: 0x0000000142452D40 | File offset: 0x02452340
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetClassLoaded__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x04497EB0; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetSystemLibrary, "OnAssetClassLoaded__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x8, Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetClassLoaded__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetLoaded__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452D70 (end 0x02452D9F)
-// Original VA: 0x0000000142452D70 | File offset: 0x02452370
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetLoaded__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x04497F30; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetSystemLibrary, "OnAssetLoaded__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x8, Z_Construct_UDelegateFunction_UKismetSystemLibrary_OnAssetLoaded__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UKismetSystemLibrary_AddFloatHistorySample_Statics

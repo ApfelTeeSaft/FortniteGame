@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems();  // RVA 0x01023A30 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextRecycleItems_OnMCPRequestComplete__DelegateSignature();  // ClassDelegates/UFortAsyncAction_MCPContextRecycleItems.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01023550 (end 0x01023572)
 // Original VA: 0x0000000141023550 | File offset: 0x01022B50
@@ -16,21 +17,6 @@ void UFortAsyncAction_MCPContextRecycleItems::StaticRegisterNativesUFortAsyncAct
 		{ "RecycleItems", &UFortAsyncAction_MCPContextRecycleItems::execRecycleItems },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010241C0 (end 0x010241EF)
-// Original VA: 0x00000001410241C0 | File offset: 0x010237C0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextRecycleItems_OnMCPRequestComplete__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x042B6FD0; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems, "OnMCPRequestComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortAsyncAction_MCPContextRecycleItems_RecycleItems_Statics

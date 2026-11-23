@@ -5,6 +5,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGlobalUIContext();  // RVA 0x028AC410 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLoadingScreenVisibilityChangedDelegate__DelegateSignature();  // ClassDelegates/UFortGlobalUIContext.gen.cpp
+UFunction* Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLocalPlayerControllerConnectionChangedDelegate__DelegateSignature();  // ClassDelegates/UFortGlobalUIContext.gen.cpp
+UFunction* Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnQueryFortBackendVersionDelegate__DelegateSignature();  // ClassDelegates/UFortGlobalUIContext.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC1F0 (end 0x028AC212)
 // Original VA: 0x00000001428AC1F0 | File offset: 0x028AB7F0
@@ -121,63 +124,6 @@ void UFortGlobalUIContext::StaticRegisterNativesUFortGlobalUIContext()
 		{ "UnregisterToReceiveNotifications", &UFortGlobalUIContext::execUnregisterToReceiveNotifications },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLocalPlayerControllerConnectionChangedDelegate__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC5F0 (end 0x028AC61F)
-// Original VA: 0x00000001428AC5F0 | File offset: 0x028ABBF0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLocalPlayerControllerConnectionChangedDelegate__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045721C0; StructureSize 0x1 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGlobalUIContext, "OnLocalPlayerControllerConnectionChangedDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x1, Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLocalPlayerControllerConnectionChangedDelegate__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLoadingScreenVisibilityChangedDelegate__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC5C0 (end 0x028AC5EF)
-// Original VA: 0x00000001428AC5C0 | File offset: 0x028ABBC0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLoadingScreenVisibilityChangedDelegate__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x04572250; StructureSize 0x1 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGlobalUIContext, "OnLoadingScreenVisibilityChangedDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x1, Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLoadingScreenVisibilityChangedDelegate__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnQueryFortBackendVersionDelegate__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC620 (end 0x028AC64F)
-// Original VA: 0x00000001428AC620 | File offset: 0x028ABC20
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnQueryFortBackendVersionDelegate__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045722D0; StructureSize 0x98 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGlobalUIContext, "OnQueryFortBackendVersionDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x98, Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnQueryFortBackendVersionDelegate__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortGlobalUIContext_AllowLogout_Statics

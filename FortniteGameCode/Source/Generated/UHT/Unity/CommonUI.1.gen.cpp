@@ -23,6 +23,7 @@ namespace GlobalVectorConstants
 #include "../Delegates/CommonUI/CommonActionCompleteSingle__DelegateSignature.gen.cpp"
 #include "../Structs/CommonUI/FCommonInputActionHandlerData.gen.cpp"
 #include "../Classes/CommonUI/UCommonActionHandlerInterface.gen.cpp"
+#include "../ClassDelegates/UCommonActionWidget.gen.cpp"
 #include "../UCommonActionWidget.gen.cpp"
 #include "../Classes/CommonUI/UCommonActionWidget.gen.cpp"
 #include "../Delegates/CommonUI/OnWidgetActivationChangedDynamic__DelegateSignature.gen.cpp"

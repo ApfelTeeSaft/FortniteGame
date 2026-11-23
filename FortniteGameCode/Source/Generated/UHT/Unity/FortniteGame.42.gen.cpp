@@ -21,6 +21,7 @@
 #include "../Classes/FortniteGame/AFortUIProxyActor.gen.cpp"
 #include "../Classes/FortniteGame/AFortUIPvP.gen.cpp"
 #include "../Classes/FortniteGame/AFortUIPvPBaseDestruction.gen.cpp"
+#include "../ClassDelegates/UFortUITeamInfo.gen.cpp"  // before its header's items (record order)
 #include "../Structs/FortniteGame/FFortTeamMemberInfo.gen.cpp"
 #include "../UFortUITeamInfo.gen.cpp"
 #include "../Classes/FortniteGame/UFortUITeamInfo.gen.cpp"

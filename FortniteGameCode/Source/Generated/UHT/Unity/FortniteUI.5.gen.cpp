@@ -17,11 +17,13 @@ namespace GlobalVectorConstants
 
 #include "../UFortCollectionBookRecycleSlotResultsWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookRecycleSlotResultsWidget.gen.cpp"
+#include "../ClassDelegates/UFortCollectionBookRewardCardWidget.gen.cpp"
 #include "../UFortCollectionBookRewardCardWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookRewardCardWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookRewardModalWidget.gen.cpp"
 #include "../UFortCollectionBookSectionCompletionRewardWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookSectionCompletionRewardWidget.gen.cpp"
+#include "../ClassDelegates/UFortCollectionBookSectionPanel.gen.cpp"  // before its header's items (record order)
 #include "../Enums/FortniteUI/ECollectionBookSectionNavTarget.gen.cpp"
 #include "../UFortCollectionBookSectionPanel.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookSectionPanel.gen.cpp"
@@ -34,6 +36,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteUI/UFortCollectionBookSlotDetailsWidget.gen.cpp"
 #include "../UFortCollectionBookSlotView.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookSlotView.gen.cpp"
+#include "../ClassDelegates/UFortCollectionBookSlotWidget.gen.cpp"
 #include "../UFortCollectionBookSlotWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookSlotWidget.gen.cpp"
 #include "../UFortCollectionBookWidget.gen.cpp"

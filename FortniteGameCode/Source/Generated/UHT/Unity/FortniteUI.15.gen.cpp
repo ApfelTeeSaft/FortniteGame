@@ -104,6 +104,7 @@ namespace GlobalVectorConstants
 #include "../UFortSkillTreePageWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortSkillTreePageWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortSkillTreePageWidgetRegistry.gen.cpp"
+#include "../ClassDelegates/UFortSkillTreeViewer.gen.cpp"
 #include "../UFortSkillTreeViewer.gen.cpp"
 #include "../Classes/FortniteUI/UFortSkillTreeViewer.gen.cpp"
 #include "../UFortSocialImportButton.gen.cpp"

@@ -1557,15 +1557,32 @@ The weaker pairs were rejected:
 - 39 `StaticEnum`s;
 - 38 class registration initializers.
 
-**Known regressions (4).** `FInterpControlPoint` and `FFortPartySuggestion` lose their
-constructor and, through it, their `StaticStruct`.
-- In the reference, their classes' delegate signatures come before the header's enum and
-  struct statics. Our class fragment places them after.
-- Reordered, the delegates now form a 5-slot run that outvotes the struct's 2-slot run, so the
-  `ReturnStruct` prediction fails (and is reported unresolved).
-- The delegates precede the header's items in 17 such classes and follow them in 18. The fix
-  is to place a class's delegate creators by their records' position among the unit's other
-  records. That needs a fragment of their own in `unity.py`.
+That change cost 4 functions at first. `FInterpControlPoint` and `FFortPartySuggestion` lost
+their constructor and, through it, their `StaticStruct`. In the reference, their classes'
+delegate signatures come before the header's enum and struct statics; our class fragment
+placed them after. Reordered, the delegates formed a 5-slot run that outvoted the struct's
+2-slot run.
+
+**Delegate placement.** UHT emits a header's delegate signatures before its enums and structs.
+A class's delegate creators therefore belong either before items that precede the class in
+the unit, or directly before the class.
+- `uht_creators.py` writes them to a fragment of their own, `ClassDelegates/<Class>.gen.cpp`
+  (54 classes). The class fragment keeps declarations.
+- `unity.py` includes that fragment before the first item since the previous class whose
+  parameter record follows the delegates' first record. Records are `FEnumParams`,
+  `FStructParams`, or a function creator's or package delegate's `FFunctionParams`, located by
+  name (`analysis/uht-*-symbols.json`). Otherwise the fragment goes directly before the class.
+  Only `.data` addresses are read.
+- Record order agrees with the reference's `.bss` in every classifiable case: 16 classes whose
+  delegates precede their header's items are moved, and the 2 whose delegates follow them stay.
+
+This made 42 more functions exact, with no regressions, and it recovered the 4 above:
+- 19 creators;
+- 7 enum constructors;
+- 7 `StaticStruct`s;
+- 5 struct constructors;
+- 3 `StaticEnum`s;
+- 1 package delegate.
 
 ## Naming confidence
 

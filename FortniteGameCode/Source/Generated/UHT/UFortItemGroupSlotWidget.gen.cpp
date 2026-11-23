@@ -5,6 +5,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemGroupSlotWidget();  // RVA 0x02918A00 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature();  // ClassDelegates/UFortItemGroupSlotWidget.gen.cpp
+UFunction* Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSet__DelegateSignature();  // ClassDelegates/UFortItemGroupSlotWidget.gen.cpp
+UFunction* Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSlotLockedStateChanged__DelegateSignature();  // ClassDelegates/UFortItemGroupSlotWidget.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02918770 (end 0x02918792)
 // Original VA: 0x0000000142918770 | File offset: 0x02917D70
@@ -26,63 +29,6 @@ void UFortItemGroupSlotWidget::StaticRegisterNativesUFortItemGroupSlotWidget()
 		{ "TryGetSquadSlot", &UFortItemGroupSlotWidget::execTryGetSquadSlot },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918D70 (end 0x02918D9F)
-// Original VA: 0x0000000142918D70 | File offset: 0x02918370
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045D4D10; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemGroupSlotWidget, "OnAttributeBonusValueChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSet__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918DA0 (end 0x02918DCF)
-// Original VA: 0x0000000142918DA0 | File offset: 0x029183A0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSet__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045D4D90; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemGroupSlotWidget, "OnItemSet__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSet__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSlotLockedStateChanged__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918DD0 (end 0x02918DFF)
-// Original VA: 0x0000000142918DD0 | File offset: 0x029183D0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSlotLockedStateChanged__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045D4E10; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemGroupSlotWidget, "OnItemSlotLockedStateChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSlotLockedStateChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919100 (end 0x0291912F)

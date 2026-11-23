@@ -5,6 +5,8 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonNumericTextBlock();  // RVA 0x002CA4B0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature();  // ClassDelegates/UCommonNumericTextBlock.gen.cpp
+UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature();  // ClassDelegates/UCommonNumericTextBlock.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA0A0 (end 0x002CA0C2)
 // Original VA: 0x00000001402CA0A0 | File offset: 0x002C96A0
@@ -19,44 +21,6 @@ void UCommonNumericTextBlock::StaticRegisterNativesUCommonNumericTextBlock()
 		{ "SetCurrentValue", &UCommonNumericTextBlock::execSetCurrentValue },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA890 (end 0x002CA8BF)
-// Original VA: 0x00000001402CA890 | File offset: 0x002C9E90
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x0417D680; StructureSize 0x10 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "OnInterpolationEnded__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
-}
-
-struct Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA8C0 (end 0x002CA8EF)
-// Original VA: 0x00000001402CA8C0 | File offset: 0x002C9EC0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x0417D700; StructureSize 0x8 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "OnOutro__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue_Statics

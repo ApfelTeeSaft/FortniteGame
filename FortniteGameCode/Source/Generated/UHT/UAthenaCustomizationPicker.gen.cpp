@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaCustomizationPicker();  // RVA 0x0287F2C0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticChangeSaveEvent__DelegateSignature();  // ClassDelegates/UAthenaCustomizationPicker.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EC60 (end 0x0287EC82)
 // Original VA: 0x000000014287EC60 | File offset: 0x0287E260
@@ -17,21 +18,6 @@ void UAthenaCustomizationPicker::StaticRegisterNativesUAthenaCustomizationPicker
 		{ "EndCustomizationCategory", &UAthenaCustomizationPicker::execEndCustomizationCategory },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FB00 (end 0x0287FB2F)
-// Original VA: 0x000000014287FB00 | File offset: 0x0287F100
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticChangeSaveEvent__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x04549230; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaCustomizationPicker, "OnCosmeticChangeSaveEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UAthenaCustomizationPicker_BeginCustomizationCategory_Statics

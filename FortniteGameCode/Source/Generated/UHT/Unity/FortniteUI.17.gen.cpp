@@ -45,6 +45,7 @@ namespace GlobalVectorConstants
 #include "../Structs/FortniteUI/FFortTabButtonLabelInfo.gen.cpp"
 #include "../UFortTabButtonInterface.gen.cpp"
 #include "../Classes/FortniteUI/UFortTabButtonInterface.gen.cpp"
+#include "../ClassDelegates/UFortTabListWidgetBase.gen.cpp"
 #include "../UFortTabListWidgetBase.gen.cpp"
 #include "../Classes/FortniteUI/UFortTabListWidgetBase.gen.cpp"
 #include "../UFortTextStyleList.gen.cpp"

@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTabListWidgetBase();  // RVA 0x02904BE0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortTabListWidgetBase_OnTabContentCreated__DelegateSignature();  // ClassDelegates/UFortTabListWidgetBase.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02904460 (end 0x02904482)
 // Original VA: 0x0000000142904460 | File offset: 0x02903A60
@@ -23,25 +24,6 @@ void UFortTabListWidgetBase::StaticRegisterNativesUFortTabListWidgetBase()
 		{ "SetTabHiddenState", &UFortTabListWidgetBase::execSetTabHiddenState },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UFortTabListWidgetBase_OnTabContentCreated__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904E80 (end 0x02904EAF)
-// Original VA: 0x0000000142904E80 | File offset: 0x02904480
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortTabListWidgetBase_OnTabContentCreated__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045C0060; StructureSize 0x10 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTabListWidgetBase, "OnTabContentCreated__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UFortTabListWidgetBase_OnTabContentCreated__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortTabListWidgetBase_GetPreregisteredTabInfo_Statics

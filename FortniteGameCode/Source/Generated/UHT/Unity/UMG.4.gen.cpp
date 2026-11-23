@@ -33,6 +33,7 @@
 #include "../UVisibilityBinding.gen.cpp"
 #include "../Classes/UMG/UVisibilityBinding.gen.cpp"
 #include "../Classes/UMG/UVisual.gen.cpp"
+#include "../ClassDelegates/UWidget.gen.cpp"  // before its header's items (record order)
 #include "../Enums/UMG/EWidgetDesignFlags.defer.gen.cpp"
 #include "../Enums/UMG/EWidgetDesignFlags.gen.cpp"
 #include "../UWidget.gen.cpp"

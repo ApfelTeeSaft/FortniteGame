@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPicker();  // RVA 0x02894700 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortCollectionBookPicker_OnSlotItemConfirmed__DelegateSignature();  // ClassDelegates/UFortCollectionBookPicker.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894280 (end 0x028942A2)
 // Original VA: 0x0000000142894280 | File offset: 0x02893880
@@ -17,25 +18,6 @@ void UFortCollectionBookPicker::StaticRegisterNativesUFortCollectionBookPicker()
 		{ "SlotItemConfirmationComplete", &UFortCollectionBookPicker::execSlotItemConfirmationComplete },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UFortCollectionBookPicker_OnSlotItemConfirmed__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894A70 (end 0x02894A9F)
-// Original VA: 0x0000000142894A70 | File offset: 0x02894070
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortCollectionBookPicker_OnSlotItemConfirmed__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x0455E990; StructureSize 0x18 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPicker, "OnSlotItemConfirmed__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x18, Z_Construct_UDelegateFunction_UFortCollectionBookPicker_OnSlotItemConfirmed__DelegateSignature_Statics::PropPointers, 3, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortCollectionBookPicker_GetCurrentSlottedItem_Statics

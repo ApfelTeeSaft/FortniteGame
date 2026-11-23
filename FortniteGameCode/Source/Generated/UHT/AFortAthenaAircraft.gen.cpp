@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAthenaAircraft();  // RVA 0x00F9ECF0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_AFortAthenaAircraft_FortAthenaAircraftDelegate__DelegateSignature();  // ClassDelegates/AFortAthenaAircraft.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E480 (end 0x00F9E4A2)
 // Original VA: 0x0000000140F9E480 | File offset: 0x00F9DA80
@@ -18,21 +19,6 @@ void AFortAthenaAircraft::StaticRegisterNativesAFortAthenaAircraft()
 		{ "OnRep_JumpFlashCount", &AFortAthenaAircraft::execOnRep_JumpFlashCount },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F300 (end 0x00F9F32F)
-// Original VA: 0x0000000140F9F300 | File offset: 0x00F9E900
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_AFortAthenaAircraft_FortAthenaAircraftDelegate__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x04239B00; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAthenaAircraft, "FortAthenaAircraftDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_AFortAthenaAircraft_GetDropEndTime_Statics

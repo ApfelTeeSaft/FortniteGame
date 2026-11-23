@@ -11,6 +11,7 @@
 #include "../Classes/Engine/UInterpGroupInst.gen.cpp"
 #include "../Classes/Engine/UInterpGroupInstCamera.gen.cpp"
 #include "../Classes/Engine/UInterpGroupInstDirector.gen.cpp"
+#include "../ClassDelegates/UInterpToMovementComponent.gen.cpp"  // before its header's items (record order)
 #include "../Enums/Engine/EInterpToBehaviourType.gen.cpp"
 #include "../Structs/Engine/FInterpControlPoint.gen.cpp"
 #include "../UInterpToMovementComponent.gen.cpp"

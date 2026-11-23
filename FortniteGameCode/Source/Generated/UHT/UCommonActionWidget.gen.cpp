@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonActionWidget();  // RVA 0x002C2BD0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UCommonActionWidget_OnInputMethodChanged__DelegateSignature();  // ClassDelegates/UCommonActionWidget.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C28C0 (end 0x002C28E2)
 // Original VA: 0x00000001402C28C0 | File offset: 0x002C1EC0
@@ -19,25 +20,6 @@ void UCommonActionWidget::StaticRegisterNativesUCommonActionWidget()
 		{ "SetInputAction", &UCommonActionWidget::execSetInputAction },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UCommonActionWidget_OnInputMethodChanged__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3060 (end 0x002C308F)
-// Original VA: 0x00000001402C3060 | File offset: 0x002C2660
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UCommonActionWidget_OnInputMethodChanged__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x041748A0; StructureSize 0x1 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonActionWidget, "OnInputMethodChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x1, Z_Construct_UDelegateFunction_UCommonActionWidget_OnInputMethodChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UCommonActionWidget_GetDisplayText_Statics

@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPlayerMatchReport();  // RVA 0x00F59B60 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UAthenaPlayerMatchReport_DataAvailableEvent__DelegateSignature();  // ClassDelegates/UAthenaPlayerMatchReport.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59300 (end 0x00F59322)
 // Original VA: 0x0000000140F59300 | File offset: 0x00F58900
@@ -20,21 +21,6 @@ void UAthenaPlayerMatchReport::StaticRegisterNativesUAthenaPlayerMatchReport()
 		{ "GetXpRewards", &UAthenaPlayerMatchReport::execGetXpRewards },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59B90 (end 0x00F59BBF)
-// Original VA: 0x0000000140F59B90 | File offset: 0x00F59190
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UAthenaPlayerMatchReport_DataAvailableEvent__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x041EFD60; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaPlayerMatchReport, "DataAvailableEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UAthenaPlayerMatchReport_GetLootRewards_Statics

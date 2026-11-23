@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDialogNotificationHandler();  // RVA 0x00FD6FE0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature();  // ClassDelegates/UFortDialogNotificationHandler.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6B00 (end 0x00FD6B22)
 // Original VA: 0x0000000140FD6B00 | File offset: 0x00FD6100
@@ -19,21 +20,6 @@ void UFortDialogNotificationHandler::StaticRegisterNativesUFortDialogNotificatio
 		{ "Timeout", &UFortDialogNotificationHandler::execTimeout },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7AC0 (end 0x00FD7AEF)
-// Original VA: 0x0000000140FD7AC0 | File offset: 0x00FD70C0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x042688C0; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "OnActionComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7BB0 (end 0x00FD7BDF)

@@ -61,6 +61,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteGame/UAthenaHatItemDefinition.gen.cpp"
 #include "../Classes/FortniteGame/UAthenaLoadingScreenItemDefinition.gen.cpp"
 #include "../Classes/FortniteGame/UAthenaPickaxeItemDefinition.gen.cpp"
+#include "../ClassDelegates/UAthenaPlayerMatchReport.gen.cpp"  // before its header's items (record order)
 #include "../Structs/FortniteGame/FAthenaMatchLootReward.gen.cpp"
 #include "../Structs/FortniteGame/FAthenaMatchXpReward.gen.cpp"
 #include "../Structs/FortniteGame/FAthenaMatchTeamStats.gen.cpp"

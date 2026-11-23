@@ -29,6 +29,7 @@
 #include "../Structs/FortniteUI/FFortCanvasProperties.gen.cpp"
 #include "../UFortBaseCanvasEntity.gen.cpp"
 #include "../Classes/FortniteUI/UFortBaseCanvasEntity.gen.cpp"
+#include "../ClassDelegates/UFortBaseCanvasNode.gen.cpp"
 #include "../UFortBaseCanvasNode.gen.cpp"
 #include "../Classes/FortniteUI/UFortBaseCanvasNode.gen.cpp"
 #include "../UFortNodeCanvas.gen.cpp"

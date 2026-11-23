@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPlatformEventsComponent();  // RVA 0x024A9FC0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature();  // ClassDelegates/UPlatformEventsComponent.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A98D0 (end 0x024A98F2)
 // Original VA: 0x00000001424A98D0 | File offset: 0x024A8ED0
@@ -18,21 +19,6 @@ void UPlatformEventsComponent::StaticRegisterNativesUPlatformEventsComponent()
 		{ "SupportsConvertibleLaptops", &UPlatformEventsComponent::execSupportsConvertibleLaptops },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AA0C0 (end 0x024AA0EF)
-// Original VA: 0x00000001424AA0C0 | File offset: 0x024A96C0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x044E7350; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlatformEventsComponent, "PlatformEventDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UPlatformEventsComponent_IsInLaptopMode_Statics

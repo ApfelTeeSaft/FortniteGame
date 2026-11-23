@@ -141,6 +141,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteGame/UFortHomebaseBannerColorMap.gen.cpp"
 #include "../Classes/FortniteGame/UFortHomebaseBannerIconItem.gen.cpp"
 #include "../Classes/FortniteGame/UFortHomebaseBannerIconItemDefinition.gen.cpp"
+#include "../ClassDelegates/UFortAsyncAction_HomebaseContextPurchaseNode.gen.cpp"  // before its header's items (record order)
 #include "../Delegates/FortniteGame/PlayerInfoChanged__DelegateSignature.gen.cpp"
 #include "../Delegates/FortniteGame/SquadSlotMarkedAsSeen__DelegateSignature.gen.cpp"
 #include "../Delegates/FortniteGame/ItemSlottingPreviewInfoChanged__DelegateSignature.gen.cpp"

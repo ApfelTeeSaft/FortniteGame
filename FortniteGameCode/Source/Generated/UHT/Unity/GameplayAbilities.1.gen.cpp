@@ -17,6 +17,7 @@ namespace GlobalVectorConstants
 
 #include "../UAbilitySystemBlueprintLibrary.gen.cpp"
 #include "../Classes/GameplayAbilities/UAbilitySystemBlueprintLibrary.gen.cpp"
+#include "../ClassDelegates/UAbilitySystemComponent.gen.cpp"  // before its header's items (record order)
 #include "../Enums/GameplayAbilities/EReplicationMode.gen.cpp"
 #include "../UAbilitySystemComponent.gen.cpp"
 #include "../Classes/GameplayAbilities/UAbilitySystemComponent.gen.cpp"

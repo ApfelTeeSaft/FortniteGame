@@ -15,6 +15,7 @@ namespace GlobalVectorConstants
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../ClassDelegates/UCommonUIContext.gen.cpp"
 #include "../UCommonUIContext.gen.cpp"
 #include "../Classes/CommonUI/UCommonUIContext.gen.cpp"
 #include "../UCommonUILibrary.gen.cpp"

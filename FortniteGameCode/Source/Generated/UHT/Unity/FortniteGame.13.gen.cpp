@@ -81,6 +81,7 @@ namespace GlobalVectorConstants
 #include "../Structs/FortniteGame/FFortAthenaAimAssistOwnerInfo.gen.cpp"
 #include "../Structs/FortniteGame/FFortAthenaAimAssistResults.gen.cpp"
 #include "../Structs/FortniteGame/FFortAthenaAimAssistParams.gen.cpp"
+#include "../ClassDelegates/AFortAthenaAircraft.gen.cpp"
 #include "../AFortAthenaAircraft.gen.cpp"
 #include "../Classes/FortniteGame/AFortAthenaAircraft.gen.cpp"
 #include "../Structs/FortniteGame/FFortAthenaLoadout.gen.cpp"

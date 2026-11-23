@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemTileView();  // RVA 0x028CF600 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortItemTileView_OnInventoryUpdated__DelegateSignature();  // ClassDelegates/UFortItemTileView.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF1E0 (end 0x028CF202)
 // Original VA: 0x00000001428CF1E0 | File offset: 0x028CE7E0
@@ -26,21 +27,6 @@ void UFortItemTileView::StaticRegisterNativesUFortItemTileView()
 		{ "ShowNullItemTile", &UFortItemTileView::execShowNullItemTile },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF810 (end 0x028CF83F)
-// Original VA: 0x00000001428CF810 | File offset: 0x028CEE10
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortItemTileView_OnInventoryUpdated__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x04597AD0; StructureSize 0x0 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemTileView, "OnInventoryUpdated__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0650 (end 0x028D067F)

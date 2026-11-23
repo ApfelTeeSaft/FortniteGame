@@ -24,6 +24,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteUI/UAthenaChallengeBundleScheduleScreenBase.gen.cpp"
 #include "../UAthenaCompassBase.gen.cpp"
 #include "../Classes/FortniteUI/UAthenaCompassBase.gen.cpp"
+#include "../ClassDelegates/UAthenaCustomizationPicker.gen.cpp"
 #include "../UAthenaCustomizationPicker.gen.cpp"
 #include "../Classes/FortniteUI/UAthenaCustomizationPicker.gen.cpp"
 #include "../Classes/FortniteUI/UAthenaCustomizationPickerTileButton.gen.cpp"

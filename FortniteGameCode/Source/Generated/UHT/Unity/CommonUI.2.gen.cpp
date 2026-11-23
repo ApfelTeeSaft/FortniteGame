@@ -29,6 +29,7 @@ namespace GlobalVectorConstants
 #include "../Classes/CommonUI/UCommonListViewNullItem.gen.cpp"
 #include "../UCommonListView.gen.cpp"
 #include "../Classes/CommonUI/UCommonListView.gen.cpp"
+#include "../ClassDelegates/UCommonLoadGuard.gen.cpp"
 #include "../UCommonLoadGuard.gen.cpp"
 #include "../Classes/CommonUI/UCommonLoadGuard.gen.cpp"
 #include "../Delegates/CommonUI/OnLoadingStateChanged__DelegateSignature.gen.cpp"

@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper();  // RVA 0x01D2F8B0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature();  // ClassDelegates/UEnvQueryInstanceBlueprintWrapper.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F090 (end 0x01D2F0B2)
 // Original VA: 0x0000000141D2F090 | File offset: 0x01D2E690
@@ -19,25 +20,6 @@ void UEnvQueryInstanceBlueprintWrapper::StaticRegisterNativesUEnvQueryInstanceBl
 		{ "SetNamedParam", &UEnvQueryInstanceBlueprintWrapper::execSetNamedParam },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2FCF0 (end 0x01D2FD1F)
-// Original VA: 0x0000000141D2FCF0 | File offset: 0x01D2F2F0
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x043F6300; StructureSize 0x10 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "EQSQueryDoneSignature__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore_Statics

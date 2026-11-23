@@ -5,6 +5,7 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotItemPicker();  // RVA 0x028FB5D0 (consensus OuterFunc)
+UFunction* Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature();  // ClassDelegates/UFortSquadSlotItemPicker.gen.cpp
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB1D0 (end 0x028FB1F2)
 // Original VA: 0x00000001428FB1D0 | File offset: 0x028FA7D0
@@ -19,25 +20,6 @@ void UFortSquadSlotItemPicker::StaticRegisterNativesUFortSquadSlotItemPicker()
 		{ "SetSortTypes", &UFortSquadSlotItemPicker::execSetSortTypes },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
-}
-
-struct Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-};
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB910 (end 0x028FB93F)
-// Original VA: 0x00000001428FB910 | File offset: 0x028FAF10
-// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
-UFunction* Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		// FuncParams: original RVA 0x045B9540; StructureSize 0x2 is sizeof the event parms struct.
-		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemPicker, "FortSquadSlotSortChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x2, Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature_Statics::PropPointers, 4, 0, 0 };
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-	}
-	return ReturnFunction;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC390 (end 0x028FC3BF)

@@ -17,6 +17,7 @@ namespace GlobalVectorConstants
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../ClassDelegates/UProjectileMovementComponent.gen.cpp"
 #include "../UProjectileMovementComponent.gen.cpp"
 #include "../Classes/Engine/UProjectileMovementComponent.gen.cpp"
 #include "../Classes/Engine/UProxyLODMeshSimplificationSettings.gen.cpp"

@@ -27,9 +27,11 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteUI/UFortWorkerSetBonusIcon.gen.cpp"
 #include "../Classes/FortniteUI/UFriendCodeEntryBase.gen.cpp"
 #include "../Classes/FortniteUI/UFriendCodeListBase.gen.cpp"
+#include "../ClassDelegates/UFortItemGroupSlotPicker.gen.cpp"  // before its header's items (record order)
 #include "../Enums/FortniteUI/ESquadSlotItemRestrictionReason.gen.cpp"
 #include "../UFortItemGroupSlotPicker.gen.cpp"
 #include "../Classes/FortniteUI/UFortItemGroupSlotPicker.gen.cpp"
+#include "../ClassDelegates/UFortItemGroupSlotWidget.gen.cpp"
 #include "../UFortItemGroupSlotWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortItemGroupSlotWidget.gen.cpp"
 #include "../UFortItemGroupWidget.gen.cpp"

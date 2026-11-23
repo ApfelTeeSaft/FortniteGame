@@ -37,6 +37,7 @@ namespace GlobalVectorConstants
 #include "../Classes/Engine/UPlanarReflectionComponent.gen.cpp"
 #include "../Classes/Engine/APlaneReflectionCapture.gen.cpp"
 #include "../Classes/Engine/UPlaneReflectionCaptureComponent.gen.cpp"
+#include "../ClassDelegates/UPlatformEventsComponent.gen.cpp"
 #include "../UPlatformEventsComponent.gen.cpp"
 #include "../Classes/Engine/UPlatformEventsComponent.gen.cpp"
 #include "../Delegates/Engine/PlatformInterfaceDelegate__DelegateSignature.gen.cpp"

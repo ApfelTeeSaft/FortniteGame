@@ -24,6 +24,7 @@ namespace GlobalVectorConstants
 #include "../Classes/Engine/UKismetStringLibrary.gen.cpp"
 #include "../UKismetStringTableLibrary.gen.cpp"
 #include "../Classes/Engine/UKismetStringTableLibrary.gen.cpp"
+#include "../ClassDelegates/UKismetSystemLibrary.gen.cpp"  // before its header's items (record order)
 #include "../Enums/Engine/EQuitPreference.gen.cpp"
 #include "../Enums/Engine/EMoveComponentAction.gen.cpp"
 #include "../Enums/Engine/EDrawDebugTrace.gen.cpp"

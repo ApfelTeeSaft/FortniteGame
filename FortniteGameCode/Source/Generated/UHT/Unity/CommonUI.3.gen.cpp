@@ -11,6 +11,7 @@
 #include "FortniteGameCode/UnityPrologue.h"
 
 #include "../Packages/CommonUI.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../ClassDelegates/UCommonNumericTextBlock.gen.cpp"  // before its header's items (record order)
 #include "../Enums/CommonUI/ECommonNumericType.defer.gen.cpp"
 #include "../Enums/CommonUI/ECommonNumericType.gen.cpp"
 #include "../Structs/CommonUI/FCommonNumberFormattingOptions.gen.cpp"
@@ -25,6 +26,7 @@
 #include "../Delegates/CommonUI/OnRotated__DelegateSignature.gen.cpp"
 #include "../UCommonRotator.gen.cpp"
 #include "../Classes/CommonUI/UCommonRotator.gen.cpp"
+#include "../ClassDelegates/UCommonTabListWidget.gen.cpp"  // before its header's items (record order)
 #include "../Structs/CommonUI/FCommonRegisteredTabInfo.gen.cpp"
 #include "../UCommonTabListWidget.gen.cpp"
 #include "../Classes/CommonUI/UCommonTabListWidget.gen.cpp"

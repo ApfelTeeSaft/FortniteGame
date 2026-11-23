@@ -54,6 +54,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteUI/UFortCollectionBookPageDetailsWidget.gen.cpp"
 #include "../UFortCollectionBookPageListWidget.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookPageListWidget.gen.cpp"
+#include "../ClassDelegates/UFortCollectionBookPicker.gen.cpp"
 #include "../UFortCollectionBookPicker.gen.cpp"
 #include "../Classes/FortniteUI/UFortCollectionBookPicker.gen.cpp"
 #include "../Delegates/FortniteUI/OnBookSectionClicked__DelegateSignature.gen.cpp"

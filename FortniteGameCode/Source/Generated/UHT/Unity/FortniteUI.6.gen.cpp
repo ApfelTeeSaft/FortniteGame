@@ -21,6 +21,7 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteUI/UFortGameFeedbackBase.gen.cpp"
 #include "../UFortGameOptions.gen.cpp"
 #include "../Classes/FortniteUI/UFortGameOptions.gen.cpp"
+#include "../ClassDelegates/UFortGlobalUIContext.gen.cpp"  // before its header's items (record order)
 #include "../Enums/FortniteUI/EFortUrlType.gen.cpp"
 #include "../Enums/FortniteUI/EFortInputMode.gen.cpp"
 #include "../Enums/FortniteUI/EFlagStatus.gen.cpp"
@@ -39,6 +40,7 @@ namespace GlobalVectorConstants
 #include "../Structs/FortniteUI/FFortUIFeatureStruct.gen.cpp"
 #include "../UFortGlobalUIContext.gen.cpp"
 #include "../Classes/FortniteUI/UFortGlobalUIContext.gen.cpp"
+#include "../ClassDelegates/UFortGridPickerButton.gen.cpp"
 #include "../UFortGridPickerButton.gen.cpp"
 #include "../Classes/FortniteUI/UFortGridPickerButton.gen.cpp"
 #include "../Delegates/FortniteUI/GridPickerTileEvent__DelegateSignature.gen.cpp"
@@ -71,5 +73,6 @@ namespace GlobalVectorConstants
 #include "../Classes/FortniteUI/UFortHeroSupportPerkWidget.gen.cpp"
 #include "../UFortHomebaseNodeItemUtilities.gen.cpp"
 #include "../Classes/FortniteUI/UFortHomebaseNodeItemUtilities.gen.cpp"
+#include "../ClassDelegates/UFortHomebaseUIContext.gen.cpp"
 #include "../UFortHomebaseUIContext.gen.cpp"
 #include "../Classes/FortniteUI/UFortHomebaseUIContext.gen.cpp"
