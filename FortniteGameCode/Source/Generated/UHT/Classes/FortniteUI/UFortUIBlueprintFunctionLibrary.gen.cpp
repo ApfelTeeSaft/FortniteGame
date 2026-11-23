@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortUIBlueprintFunctionLibrary::StaticRegisterNativesUFortUIBlueprintFunctionLibrary()
-{
-}
 // IMPLEMENT_CLASS(UFortUIBlueprintFunctionLibrary, 2243853632u)
 // Original dynamic initializer: RVA 0x00260C10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUIBlueprintFunctionLibrary> AutoInitializeUFortUIBlueprintFunctionLibrary(TEXT("UFortUIBlueprintFunctionLibrary"), sizeof(UFortUIBlueprintFunctionLibrary), 2243853632u);

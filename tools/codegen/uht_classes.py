@@ -85,6 +85,7 @@ EXTRA_MEMBERS = ("UClass", "UScriptStruct", "UEnum", "UByteProperty", "UInt8Prop
 INTRINSIC = {"UField": {"super": "UObject", "size": 0x30,
                         "members": [("\tUField* Next;  // +0x28", 8)]}}
 CLASS_DEPRECATED = 0x02000000
+FUNC_NATIVE = 0x00000400        # EFunctionFlags
 
 _G162 = ("4c8bdc4883ec78488b05000000004885c00f858600000088442468"
          "4c8d0d00000000488d05000000004989" "43e84c8d0500000000488d050000000049" "8943e0488d1500000000488d050000000049"
@@ -246,6 +247,22 @@ def main() -> int:
         stats["decoded"] += 1
         stats["name_literal_consistent"] += c["name_ok"]
         stats["size_matches_auto_initialize"] += c.get("sizeof") == f["size"]
+    # InternalConstructor<C> runs DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL's
+    # `new((EInternal*)X.GetObj())C(X)` or DEFINE_DEFAULT_CONSTRUCTOR_CALL's `...C`, which the
+    # reference compiles to a 20- or 13-byte conditional tail call of the constructor. Other
+    # forms (the constructor inlined) are declared only.
+    for name, c in classes.items():
+        f = c.get("decoded")
+        b = read(f["ctor"], 20) if f and f.get("ctor") else None
+        if b is None:
+            continue
+        if b[:8] == bytes.fromhex("488b014885c0740b") and b[8:15] == bytes.fromhex("488bd1488bc8e9") and b[19] == 0xC3:
+            c["ctor_form"] = "initializer"
+        elif b[:8] == bytes.fromhex("488b094885c90f85") and b[12] == 0xC3:
+            c["ctor_form"] = "default"
+        stats[f"InternalConstructor form: {c.get('ctor_form', 'other (declared only)')}"] += 1
+    vtc = Counter(c["decoded"]["vtable_ctor"] for c in classes.values() if c.get("decoded"))
+    vtc_shared = vtc.most_common(1)[0][0]
     for name, c in classes.items():
         f = c.get("decoded")
         if f:
@@ -317,6 +334,14 @@ def main() -> int:
             ]
             if c.get("owns_aro"):
                 body_lines.append("\tstatic void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);")
+            if c.get("ctor_form") == "initializer":
+                body_lines += [f"\t{n}(const FObjectInitializer& ObjectInitializer);",
+                               f"\tstatic void __DefaultConstructor(const FObjectInitializer& X) "
+                               f"{{ new((EInternal*)X.GetObj()){n}(X); }}"]
+            elif c.get("ctor_form") == "default":
+                body_lines += [f"\t{n}();",
+                               f"\tstatic void __DefaultConstructor(const FObjectInitializer& X) "
+                               f"{{ new((EInternal*)X.GetObj()){n}; }}"]
         else:
             body_lines += ["\tinline static UClass* StaticClass() { return GetPrivateStaticClass(); }",
                            "\t// GetPrivateStaticClass not decoded (intrinsic class or other shape): no further members"]
@@ -381,6 +406,20 @@ def main() -> int:
             ibody += exec_decls
             lines.append(f"class {iname}\n{{\npublic:\n" + "\n".join(ibody) + "\n};\n")
             stats["native interfaces declared"] += 1
+    # Explicit specializations, declared only: InternalConstructor<C> for constructor forms not
+    # modelled, and InternalVTableHelperCtorCaller<C> where the reference does not pass the
+    # shared `return nullptr` instance (UObject).
+    spec = []
+    for n in out_order:
+        c = classes[n]
+        if not c.get("decoded"):
+            continue
+        if not c.get("ctor_form"):
+            spec.append(f"template<> void InternalConstructor<{n}>(const FObjectInitializer& X);")
+        if c["decoded"]["vtable_ctor"] != vtc_shared:
+            spec.append(f"template<> UObject* InternalVTableHelperCtorCaller<{n}>(FVTableHelper& Helper);")
+            stats["InternalVTableHelperCtorCaller declared only"] += 1
+    lines += ["// Class.h template instances that are not the generic forms.", "\n".join(spec), ""]
     header = "\n".join(lines)
 
     # ClassParams of classes without UFunctions: the only FClassParams record whose
@@ -409,6 +448,16 @@ def main() -> int:
                 and is_ptr_or_null(ifaces) and 0 <= nifaces < 64):
             sc_slots[n].append(rd.rva + off)
 
+    # FUNC_Native in a class's FFunctionParams (FunctionFlags at +0x20) means its
+    # StaticRegisterNatives registers natives, whether or not their table is located.
+    creator_syms = json.loads((ROOT / "analysis" / "uht-creator-symbols.json").read_text(encoding="utf-8"))["symbols"]
+    registers_natives = set()
+    for e in json.loads((ROOT / "analysis" / "functions-uht-creators.json").read_text(encoding="utf-8"))["functions"]:
+        hit = creator_syms.get(f"?FuncParams@?4??{e['name']}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B")
+        flags = read(int(hit[0], 16) + 0x20, 4) if hit else None
+        if e.get("class") and flags and struct.unpack("<I", flags)[0] & FUNC_NATIVE:
+            registers_natives.add(e["class"])
+
     def singleton(rva):
         rf = allrf.get(rva)
         if rf is None or rf.end - rva != CREATOR_SIZE:
@@ -434,8 +483,17 @@ def main() -> int:
         mine = [t for (k, _), t in sorted(model["thunks"].items()) if k == n]
         parts += mine
         thunk_fragments.add(n) if mine else None
-        if n not in natives:
-            parts.append(f"void {n}::StaticRegisterNatives{n}()\n{{\n}}\n")
+        if n not in natives and n not in registers_natives:
+            # Empty only where reflection shows no native UFunction: none of the class's
+            # UFunctions is FUNC_Native, or it has no function table at all (its unique
+            # FClassParams has none). Otherwise the function stays declared only.
+            if n in link_classes or len(sc_slots.get(n, [])) == 1:
+                parts.append(f"void {n}::StaticRegisterNatives{n}()\n{{\n}}\n")
+                stats["StaticRegisterNatives empty"] += 1
+            else:
+                stats["StaticRegisterNatives declared only (no function table located)"] += 1
+        elif n not in natives:
+            stats["StaticRegisterNatives declared only (native UFunctions, table not located)"] += 1
         zrva = int(c["constructor"], 16)
         if n not in link_classes:
             recs = [r for r in sc_slots.get(n, []) if singleton(zrva) is not None]

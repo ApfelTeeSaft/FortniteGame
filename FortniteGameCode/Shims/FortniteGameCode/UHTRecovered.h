@@ -21,13 +21,27 @@ enum EClassCastFlags : uint64
 };
 
 class FReferenceCollector;
-class FObjectInitializer;
+class UObject;
 struct FVTableHelper;
 
-// Class.h: InternalConstructor<T> and InternalVTableHelperCtorCaller<T> call T's constructors,
-// which are not reconstructed; declared only, so their instantiations stay unresolved references.
-template<class T> void InternalConstructor(const FObjectInitializer& X);
-template<class T> UObject* InternalVTableHelperCtorCaller(FVTableHelper& Helper);
+// UObjectGlobals.h: FObjectInitializer's first member is the object under construction.
+class FObjectInitializer
+{
+	UObject* Obj;
+public:
+	UObject* GetObj() const { return Obj; }
+};
+
+// ObjectMacros.h: DECLARE_CLASS's placement allocation (a class member there).
+enum EInternal { EC_InternalUseOnlyConstructor };
+inline void* operator new(const size_t InSize, EInternal* InMem) { return (void*)InMem; }
+
+// Class.h. InternalConstructor<T> calls T's __DefaultConstructor, which Classes.gen.h declares
+// with the constructor form the reference uses; the constructors themselves are not
+// reconstructed. Without WITH_HOT_RELOAD, InternalVTableHelperCtorCaller<T> returns nullptr.
+// Classes.gen.h declares the instances that differ as explicit specializations.
+template<class T> void InternalConstructor(const FObjectInitializer& X) { T::__DefaultConstructor(X); }
+template<class T> UObject* InternalVTableHelperCtorCaller(FVTableHelper& Helper) { return nullptr; }
 
 // Class.h: UClass's function-pointer typedefs, added to its declaration in Classes.gen.h.
 #define FNGC_EXTRA_MEMBERS_UClass \

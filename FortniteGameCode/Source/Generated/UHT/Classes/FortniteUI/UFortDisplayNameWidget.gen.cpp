@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortDisplayNameWidget::StaticRegisterNativesUFortDisplayNameWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortDisplayNameWidget, 2173051810u)
 // Original dynamic initializer: RVA 0x002449C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDisplayNameWidget> AutoInitializeUFortDisplayNameWidget(TEXT("UFortDisplayNameWidget"), sizeof(UFortDisplayNameWidget), 2173051810u);

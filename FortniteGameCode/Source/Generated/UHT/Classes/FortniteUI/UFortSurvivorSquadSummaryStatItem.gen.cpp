@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSurvivorSquadSummaryStatItem::StaticRegisterNativesUFortSurvivorSquadSummaryStatItem()
-{
-}
 // IMPLEMENT_CLASS(UFortSurvivorSquadSummaryStatItem, 1992999396u)
 // Original dynamic initializer: RVA 0x0025E410 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSurvivorSquadSummaryStatItem> AutoInitializeUFortSurvivorSquadSummaryStatItem(TEXT("UFortSurvivorSquadSummaryStatItem"), sizeof(UFortSurvivorSquadSummaryStatItem), 1992999396u);

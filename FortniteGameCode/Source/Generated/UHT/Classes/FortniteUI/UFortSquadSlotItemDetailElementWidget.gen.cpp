@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadSlotItemDetailElementWidget::StaticRegisterNativesUFortSquadSlotItemDetailElementWidget()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadSlotItemDetailElementWidget, 1886939247u)
 // Original dynamic initializer: RVA 0x0025C0E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadSlotItemDetailElementWidget> AutoInitializeUFortSquadSlotItemDetailElementWidget(TEXT("UFortSquadSlotItemDetailElementWidget"), sizeof(UFortSquadSlotItemDetailElementWidget), 1886939247u);

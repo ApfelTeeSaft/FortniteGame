@@ -7,34 +7,20 @@
   "partial",
   "unmatched"
  ],
- "total": 4157,
+ "total": 2381,
  "groups": [
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
-   "count": 2047,
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
+   "count": 1364,
    "states": {
-    "relocation-equivalent": 2047
+    "relocation-equivalent": 1364
    },
    "examples": [
     "0x0027B4C0 UBlueprintContextBase::GetPrivateStaticClass",
-    "0x002C1910 UCommonActionHandlerInterface::GetPrivateStaticClass",
-    "0x002C1DD0 UCommonButtonInternal::GetPrivateStaticClass",
-    "0x002C1F20 UCommonCustomNavigation::GetPrivateStaticClass",
-    "0x002C2130 UCommonGlobalInputHandler::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class>",
-   "count": 1124,
-   "states": {
-    "relocation-equivalent": 1124
-   },
-   "examples": [
     "0x0027B570 UBlueprintContextLibrary::GetPrivateStaticClass",
+    "0x002C1910 UCommonActionHandlerInterface::GetPrivateStaticClass",
     "0x002C19C0 UCommonActionWidget::GetPrivateStaticClass",
-    "0x002C1A70 UCommonActivatablePanel::GetPrivateStaticClass",
-    "0x002C1B20 UCommonBorder::GetPrivateStaticClass",
-    "0x002C1BD0 UCommonBorderStyle::GetPrivateStaticClass"
+    "0x002C21D0 UCommonInputManager::GetPrivateStaticClass"
    ]
   },
   {
@@ -150,6 +136,20 @@
    ]
   },
   {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + StaticRegisterNatives<Class>",
+   "count": 24,
+   "states": {
+    "relocation-equivalent": 24
+   },
+   "examples": [
+    "0x005B8C30 UPartyMemberState::GetPrivateStaticClass",
+    "0x00805E50 UAppleARKitPlaneAnchor::GetPrivateStaticClass",
+    "0x0102D0A0 UFortMcpProfileCollectionBook::GetPrivateStaticClass",
+    "0x0102D150 UFortMcpProfileMetadata::GetPrivateStaticClass",
+    "0x01035CE0 UFortMcpProfileQuest::GetPrivateStaticClass"
+   ]
+  },
+  {
    "key": "uht-enum-constructor | creator singleton (.bss)",
    "count": 23,
    "states": {
@@ -217,6 +217,20 @@
     "0x01054DA0 EFortPartyMemberDisplayState_StaticEnum",
     "0x023CCD70 ERootMotionRootLock_StaticEnum",
     "0x023D4200 ETemperatureSeverityType_StaticEnum"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | StaticRegisterNatives<Class>",
+   "count": 6,
+   "states": {
+    "relocation-equivalent": 6
+   },
+   "examples": [
+    "0x00FC9990 UFortConsumableAccountItem::GetPrivateStaticClass",
+    "0x0102CF40 UFortMcpProfileAccount::GetPrivateStaticClass",
+    "0x024EFB90 UVectorFieldComponent::GetPrivateStaticClass",
+    "0x028A1A10 UFortDisplayNameWidget::GetPrivateStaticClass",
+    "0x028C86D0 UFortItemManagementItemPopupMenu::GetPrivateStaticClass"
    ]
   },
   {
@@ -312,18 +326,6 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMaterialExpre",
-   "count": 3,
-   "states": {
-    "relocation-equivalent": 3
-   },
-   "examples": [
-    "0x00665CB0 UMaterialExpressionSpriteTextureSampler::GetPrivateStaticClass",
-    "0x0247A500 UMaterialExpressionBlackBody::GetPrivateStaticClass",
-    "0x0247F100 UMaterialExpressionNormalize::GetPrivateStaticClass"
-   ]
-  },
-  {
    "key": "uht-class-compiledindefer | string literal ($SG, per-occurrence copy)",
    "count": 2,
    "states": {
@@ -335,7 +337,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | <Class>::StaticClass + InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
+   "key": "uht-getprivatestaticclass | <Class>::StaticClass",
    "count": 2,
    "states": {
     "relocation-equivalent": 2
@@ -346,7 +348,18 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortNotificat",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMaterialExpre",
+   "count": 2,
+   "states": {
+    "relocation-equivalent": 2
+   },
+   "examples": [
+    "0x0247A500 UMaterialExpressionBlackBody::GetPrivateStaticClass",
+    "0x0247F100 UMaterialExpressionNormalize::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortNotificat",
    "count": 2,
    "states": {
     "relocation-equivalent": 2
@@ -354,17 +367,6 @@
    "examples": [
     "0x0104F2B0 UFortNotificationMessage::GetPrivateStaticClass",
     "0x0104F360 UFortNotificationQueue::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortQueryTest",
-   "count": 2,
-   "states": {
-    "relocation-equivalent": 2
-   },
-   "examples": [
-    "0x010928C0 UFortQueryTest_InfluenceScore::GetPrivateStaticClass",
-    "0x010955B0 UFortQueryTest_Random::GetPrivateStaticClass"
    ]
   },
   {
@@ -409,7 +411,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | <Class>::StaticClass + InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UPackageMapClient@@SAXPEAVUObject@@AEA",
+   "key": "uht-getprivatestaticclass | <Class>::StaticClass + other: ?AddReferencedObjects@UPackageMapClient@@SAXPEAVUObject@@AEA",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -419,87 +421,17 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@AInstancedFoliageActor@@SAXPEAVUObject",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class>",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x01A47C80 AInstancedFoliageActor::GetPrivateStaticClass"
+    "0x013A7730 UObject::GetPrivateStaticClass"
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UActorChannel@@SAXPEAVUObject@@AEAVFRe",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023C5ED0 UActorChannel::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UEnum@@SAXPEAVUObject@@AEAVFReferenceC",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024EBA40 UUserDefinedEnum::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UFortItemCardMaterialPooler@@SAXPEAVUO",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028C7A80 UFortItemCardMaterialPooler::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@ULandscapeInfoMap@@SAXPEAVUObject@@AEA",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01A73F00 ULandscapeInfoMap::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@ULevel@@SAXPEAVUObject@@AEAVFReference",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0246F490 ULevel::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UMapBuildDataRegistry@@SAXPEAVUObject@",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024772C0 UMapBuildDataRegistry::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UMaterial@@SAXPEAVUObject@@AEAVFRefere",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x02477360 UMaterial::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UMcpProfile@@SAXPEAVUObject@@AEAVFRefe",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UMcpProfile@@SAXPEAVUObject@@AEAVFRefe",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -509,657 +441,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UModelComponent@@SAXPEAVUObject@@AEAVF",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x02489BA0 UModelComponent::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UPolys@@SAXPEAVUObject@@AEAVFReference",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024B6770 UPolys::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?AddReferencedObjects@UWorld@@SAXPEAVUObject@@AEAVFReference",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024F0050 UWorld::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AAbstractNavDa",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023BCDE0 AAbstractNavData::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@ABuildingTrapW",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F76710 ABuildingTrapWall::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortAIDirecto",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F8B210 AFortAIDirectorEventManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortGameModeE",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00FE2FF0 AFortGameModeEmptyDedicated::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortJumpDownL",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0100B190 AFortJumpDownLink::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortPlayerAtt",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01068670 AFortPlayerAttributesProxyActor::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortTeamInfoA",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010B12E0 AFortTeamInfoAthena::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortUIBaseCla",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010D2700 AFortUIBaseClass::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@ALandscape@@CA",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01A736E0 ALandscape::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@ANavigationObj",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024898E0 ANavigationObjectBase::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AOutpostStruct",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010EF870 AOutpostStructureBase::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAIHotSpotMana",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01D19A60 UAIHotSpotManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAITask_LockLo",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01D20D40 UAITask_LockLogic::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAbilityTask_A",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00545A60 UAbilityTask_ApplyRootMotion_Base::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAnalogSlider@",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x002C1860 UAnalogSlider::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAndroidPermis",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00803D50 UAndroidPermissionCallbackProxy::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAssetRegistry",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01C7FA70 UAssetRegistryImpl::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAsyncActionLo",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023D97C0 UAsyncActionLoadPrimaryAssetBase::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAttributeSet@",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0054C390 UAttributeSet::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UBasicOverlays",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x025168A0 UBasicOverlays::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UBuildingEditM",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F64D80 UBuildingEditModeMetadataContainer::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UChannel@@CAPE",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023ECCB0 UChannel::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UChatroom@@CAP",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x005B8A50 UChatroom::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UClothingAsset",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01D3B0D0 UClothingAssetBase::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UCommonVisibil",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x002CFCD0 UCommonVisibilityWidget::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UConsoleSettin",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01C84140 UConsoleSettings::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UControlChanne",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023F66B0 UControlChannel::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UEdGraphSchema",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024038E0 UEdGraphSchema::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UForceFeedback",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0240EB00 UForceFeedbackAttenuation::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAIAttribu",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F86530 UFortAIAttributesSet::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAIDirecto",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F8B2C0 UFortAIDirectorDataTrackingSettings::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAbilityTa",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F808A0 UFortAbilityTask_Sprint::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAssetMana",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F9D0D0 UFortAssetManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortChunkDown",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00FBE860 UFortChunkDownloadManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortCollected",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00FC4680 UFortCollectedResourceItem::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortGameDeath",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00FE3570 UFortGameDeathPenalty::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortGridPicke",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028B29D0 UFortGridPickerGrid::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortHUDEquipP",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028BB0B0 UFortHUDEquipProgressBase::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMatchmaki",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01022C20 UFortMatchmakingCriticalMission::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMcpProfil",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0102CE90 UFortMcpProfile::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMiniMapPi",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010365B0 UFortMiniMapPingIndicator::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortModalCont",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028D6220 UFortModalContainerWidget::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortNavObstac",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0104F000 UFortNavObstacleComponent::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortNeverPers",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0104F160 UFortNeverPersistItemDefinition::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPlayerVie",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028E5740 UFortPlayerViewModel::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPushNotif",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0108A0B0 UFortPushNotificationManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortQuestNoti",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028EAFF0 UFortQuestNotificationHandler::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortSearchPas",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010A36F0 UFortSearchPass::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortSettingIn",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028E58A0 UFortSettingInfo::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortTips@@CAP",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010C7620 UFortTips::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortUpdateMan",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010D3290 UFortUpdateManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UGauntletTestC",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0264DBD0 UGauntletTestController::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UListView@@CAP",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01BEBC30 UListView::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMovementComp_",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010F0000 UMovementComp_Tracer::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMovieScene@@C",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01AC0E20 UMovieScene::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UNavLinkHostIn",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0248E210 UNavLinkHostInterface::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UNetConnection",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x02493550 UNetConnection::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@URotatingMovem",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024C45B0 URotatingMovementComponent::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@USocialCheckBo",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x025A22E0 USocialCheckBoxStyleDataAsset::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@AFortAthenaAircraft@@SAXPEAVUObject@@A",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F9C260 AFortAthenaAircraft::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@AFortConstructorBASE@@SAXPEAVUObject@@",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00FC45D0 AFortConstructorBASE::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@AFortFXManager@@SAXPEAVUObject@@AEAVFR",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00FD9770 AFortFXManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@AFortFrontEndCameraManager@@SAXPEAVUOb",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@AFortFrontEndCameraManager@@SAXPEAVUOb",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1169,27 +451,27 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@UChildActorComponent@@SAXPEAVUObject@@",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@AInstancedFoliageActor@@SAXPEAVUObject",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x023F61F0 UChildActorComponent::GetPrivateStaticClass"
+    "0x01A47C80 AInstancedFoliageActor::GetPrivateStaticClass"
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@UFortCollectionBookPrimaryPanel@@SAXPE",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@UFortItemCardMaterialPooler@@SAXPEAVUO",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x02893390 UFortCollectionBookPrimaryPanel::GetPrivateStaticClass"
+    "0x028C7A80 UFortItemCardMaterialPooler::GetPrivateStaticClass"
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@UFortMiniMapComponent@@SAXPEAVUObject@",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@UFortMiniMapComponent@@SAXPEAVUObject@",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1199,27 +481,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@UFortMissionTrackerEntry@@SAXPEAVUObje",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028D5F60 UFortMissionTrackerEntry::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@UFortMissionTrackerList@@SAXPEAVUObjec",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028D6010 UFortMissionTrackerList::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@UFortUIManagerWidget_NUI@@SAXPEAVUObje",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@UFortUIManagerWidget_NUI@@SAXPEAVUObje",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1229,17 +491,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@UFortUIMessageManager@@SAXPEAVUObject@",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x02910130 UFortUIMessageManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@ULandscapeComponent@@SAXPEAVUObject@@A",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@ULandscapeComponent@@SAXPEAVUObject@@A",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1249,17 +501,47 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?AddReferencedObjects@USkeletalMesh@@SAXPEAVUObject@@AEAVFRe",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@ULevel@@SAXPEAVUObject@@AEAVFReference",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x024CBEE0 USkeletalMesh::GetPrivateStaticClass"
+    "0x0246F490 ULevel::GetPrivateStaticClass"
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortAthenaSup",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@UPolys@@SAXPEAVUObject@@AEAVFReference",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024B6770 UPolys::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AAbstractNavDa",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x023BCDE0 AAbstractNavData::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortAIDirecto",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F8B210 AFortAIDirectorEventManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortAthenaSup",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1269,7 +551,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortGameState",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortGameState",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1279,7 +561,107 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAsyncTaskDown",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortPlayerAtt",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01068670 AFortPlayerAttributesProxyActor::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortUIBaseCla",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010D2700 AFortUIBaseClass::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@ALandscape@@CA",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01A736E0 ALandscape::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@ANavigationObj",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024898E0 ANavigationObjectBase::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAIHotSpotMana",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01D19A60 UAIHotSpotManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAITask_LockLo",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01D20D40 UAITask_LockLogic::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAnalogSlider@",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x002C1860 UAnalogSlider::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAndroidPermis",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00803D50 UAndroidPermissionCallbackProxy::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAssetRegistry",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01C7FA70 UAssetRegistryImpl::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAsyncActionLo",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x023D97C0 UAsyncActionLoadPrimaryAssetBase::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAsyncTaskDown",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1289,17 +671,77 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortDecoItemD",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAttributeSet@",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x00FCEDF0 UFortDecoItemDefinition::GetPrivateStaticClass"
+    "0x0054C390 UAttributeSet::GetPrivateStaticClass"
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortDirectAcq",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UBasicOverlays",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x025168A0 UBasicOverlays::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UBuildingEditM",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F64D80 UBuildingEditModeMetadataContainer::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UChatroom@@CAP",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x005B8A50 UChatroom::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UClothingAsset",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01D3B0D0 UClothingAssetBase::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UConsoleSettin",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01C84140 UConsoleSettings::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UControlChanne",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x023F66B0 UControlChannel::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortDirectAcq",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1309,7 +751,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortGadgetIte",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortGadgetIte",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1319,17 +761,57 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortHomebaseN",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortGridPicke",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x01003560 UFortHomebaseNodeItemTooltip::GetPrivateStaticClass"
+    "0x028B29D0 UFortGridPickerGrid::GetPrivateStaticClass"
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMissionLi",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortHUDEquipP",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x028BB0B0 UFortHUDEquipProgressBase::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMatchmaki",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01022C20 UFortMatchmakingCriticalMission::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMcpProfil",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0102CE90 UFortMcpProfile::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMiniMapPi",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010365B0 UFortMiniMapPingIndicator::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortMissionLi",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1339,7 +821,37 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortOutpostFu",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortModalCont",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x028D6220 UFortModalContainerWidget::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortNavObstac",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0104F000 UFortNavObstacleComponent::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortNeverPers",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0104F160 UFortNeverPersistItemDefinition::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortOutpostFu",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1349,7 +861,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPartyCont",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPartyCont",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1359,7 +871,7 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPrototypi",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPrototypi",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1369,7 +881,17 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPvPFuncti",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPushNotif",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0108A0B0 UFortPushNotificationManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPvPFuncti",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1379,7 +901,17 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortQuestMana",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortQueryTest",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010928C0 UFortQueryTest_InfluenceScore::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortQuestMana",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1389,17 +921,47 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortWeaponAtt",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortSettingIn",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x010D8090 UFortWeaponAttrSet::GetPrivateStaticClass"
+    "0x028E58A0 UFortSettingInfo::GetPrivateStaticClass"
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMaterialBillb",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortTips@@CAP",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010C7620 UFortTips::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortUpdateMan",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010D3290 UFortUpdateManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UGauntletTestC",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0264DBD0 UGauntletTestController::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMaterialBillb",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1409,7 +971,497 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@USpinBox@@CAPE",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMovieScene@@C",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01AC0E20 UMovieScene::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UNavLinkHostIn",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0248E210 UNavLinkHostInterface::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@URotatingMovem",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024C45B0 URotatingMovementComponent::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@USocialCheckBo",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x025A22E0 USocialCheckBoxStyleDataAsset::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UWidgetSwitche",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01C07610 UWidgetSwitcher::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@AFortAthenaAircraft@@SAXPEAVUObject@@A",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F9C260 AFortAthenaAircraft::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@AFortConstructorBASE@@SAXPEAVUObject@@",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00FC45D0 AFortConstructorBASE::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@AFortFXManager@@SAXPEAVUObject@@AEAVFR",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00FD9770 AFortFXManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UActorChannel@@SAXPEAVUObject@@AEAVFRe",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x023C5ED0 UActorChannel::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UChildActorComponent@@SAXPEAVUObject@@",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x023F61F0 UChildActorComponent::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UEnum@@SAXPEAVUObject@@AEAVFReferenceC",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024EBA40 UUserDefinedEnum::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UFortCollectionBookPrimaryPanel@@SAXPE",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x02893390 UFortCollectionBookPrimaryPanel::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UFortMissionTrackerEntry@@SAXPEAVUObje",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x028D5F60 UFortMissionTrackerEntry::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UFortMissionTrackerList@@SAXPEAVUObjec",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x028D6010 UFortMissionTrackerList::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UFortUIMessageManager@@SAXPEAVUObject@",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x02910130 UFortUIMessageManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@ULandscapeInfoMap@@SAXPEAVUObject@@AEA",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01A73F00 ULandscapeInfoMap::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UMapBuildDataRegistry@@SAXPEAVUObject@",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024772C0 UMapBuildDataRegistry::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UMaterial@@SAXPEAVUObject@@AEAVFRefere",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x02477360 UMaterial::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UModelComponent@@SAXPEAVUObject@@AEAVF",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x02489BA0 UModelComponent::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@USkeletalMesh@@SAXPEAVUObject@@AEAVFRe",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024CBEE0 USkeletalMesh::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@UWorld@@SAXPEAVUObject@@AEAVFReference",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024F0050 UWorld::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@ABuildingTrapW",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F76710 ABuildingTrapWall::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortGameModeE",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00FE2FF0 AFortGameModeEmptyDedicated::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortJumpDownL",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0100B190 AFortJumpDownLink::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AFortTeamInfoA",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010B12E0 AFortTeamInfoAthena::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@AOutpostStruct",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010EF870 AOutpostStructureBase::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAbilityTask_A",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00545A60 UAbilityTask_ApplyRootMotion_Base::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UChannel@@CAPE",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x023ECCB0 UChannel::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UCommonVisibil",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x002CFCD0 UCommonVisibilityWidget::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UEdGraphSchema",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x024038E0 UEdGraphSchema::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UForceFeedback",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x0240EB00 UForceFeedbackAttenuation::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAIAttribu",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F86530 UFortAIAttributesSet::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAIDirecto",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F8B2C0 UFortAIDirectorDataTrackingSettings::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAbilityTa",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F808A0 UFortAbilityTask_Sprint::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortAssetMana",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00F9D0D0 UFortAssetManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortChunkDown",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00FBE860 UFortChunkDownloadManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortCollected",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00FC4680 UFortCollectedResourceItem::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortDecoItemD",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00FCEDF0 UFortDecoItemDefinition::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortGameDeath",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00FE3570 UFortGameDeathPenalty::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortHomebaseN",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01003560 UFortHomebaseNodeItemTooltip::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortPlayerVie",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x028E5740 UFortPlayerViewModel::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortQueryTest",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010955B0 UFortQueryTest_Random::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortQuestNoti",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x028EAFF0 UFortQuestNotificationHandler::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortSearchPas",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010A36F0 UFortSearchPass::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortWeaponAtt",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010D8090 UFortWeaponAttrSet::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UListView@@CAP",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01BEBC30 UListView::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMaterialExpre",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00665CB0 UMaterialExpressionSpriteTextureSampler::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UMovementComp_",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x010F0000 UMovementComp_Tracer::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UNetConnection",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x02493550 UNetConnection::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@USpinBox@@CAPE",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
@@ -1419,23 +1471,13 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UTexture2D@@CA",
+   "key": "uht-getprivatestaticclass | other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UTexture2D@@CA",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
     "0x024EB0E0 UTexture2D::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UWidgetSwitche",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01C07610 UWidgetSwitcher::GetPrivateStaticClass"
    ]
   },
   {

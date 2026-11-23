@@ -566,6 +566,56 @@ def test_split_objects() -> None:
     print("split objects: ok")
 
 
+def test_folded_and_code_run() -> None:
+    """ICF-folded bodies and InternalConstructor runs resolve only from other entries' observations."""
+    from types import SimpleNamespace as NS
+    from compare import Resolver
+    CODE = 0x60501020            # code | COMDAT | align 16
+    r = Resolver.__new__(Resolver)
+    r.observations, r.entry_names, r.folded_obs, r._code_groups, r.by_addr = {}, {}, {}, {}, {}
+
+    def obj_of(secs, names):
+        fi = {n: (0, len(sc.data), sc) for n, sc in zip(names, secs)}
+        return NS(sections=secs, function_index=lambda: fi,
+                  functions=lambda: [(NS(name=n), sc) for n, sc in zip(names, secs)])
+    leaf = NS(index=1, name=".text$mn", chars=CODE, data=bytes.fromhex("33c0c3"), relocs=[])
+    reloc = NS(index=2, name=".text$mn", chars=CODE, data=bytes.fromhex("e900000000"), relocs=[NS(offset=1)])
+    o = obj_of([leaf, reloc], ["F", "J"])
+    fb = Resolver._folded_body(o, "F")
+    assert fb == (".text$mn", bytes.fromhex("33c0c3")) and Resolver._folded_body(o, "J") is None
+    r.folded_obs = {fb: {0x5000: {1, 2}}}
+    assert r._observed_folded(fb, 3)[0] == {0x5000}
+    r.folded_obs = {fb: {0x5000: {3}}}
+    assert r._observed_folded(fb, 3)[0] == set()                  # the entry's own observation
+    r.folded_obs = {fb: {0x5000: {1}, 0x6000: {2}}}
+    assert r._observed_folded(fb, 3)[0] == {0x5000, 0x6000}       # conflicting: resolve() declines
+
+    # Instances A, B, C at layout offsets 0, 48, 80 (a 5-byte function between A and B).
+    ic = lambda c: f"??$InternalConstructor@V{c}@@@@YAXAEBVFObjectInitializer@@@Z"
+    body = bytes(20)
+    secs = [NS(index=1, name=".text$mn", chars=CODE, data=body, relocs=[]),
+            NS(index=2, name=".text$mn", chars=CODE, data=bytes(5), relocs=[]),
+            NS(index=3, name=".text$mn", chars=CODE, data=body, relocs=[]),
+            NS(index=4, name=".text$mn", chars=CODE, data=body, relocs=[])]
+    o = obj_of(secs, [ic("A"), "?StaticClass@X@@SAPEAVUClass@@XZ", ic("B"), ic("C")])
+    r.observations = {ic("A"): {0x1000: {1}}, ic("C"): {0x1050: {2}}}
+    r.by_addr = {0x1000: {ic("A"): {1}}, 0x1050: {ic("C"): {2}}}
+    got = r._internal_constructor_run(o, "u", ic("B"), 9)
+    assert got and got[0][0] == 0x1030, got
+    r.by_addr[0x1050][ic("D")] = {4}                               # C is folded with D: declines
+    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None
+    r.by_addr[0x1050] = {ic("C"): {2}, ic("B"): {9}}                # only the entry under test: kept
+    assert r._internal_constructor_run(o, "u", ic("B"), 9)[0][0] == 0x1030
+    r.observations[ic("C")] = {0x1060: {2}}                        # the sides disagree: a gap
+    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None
+    r.observations = {ic("A"): {0x1000: {1}}}                      # one side only
+    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None
+    r.observations = {ic("A"): {0x1000: {1}}, ic("C"): {0x1050: {9}}}
+    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None  # C seen only by the entry under test
+    assert r._internal_constructor_run(o, "u", "?StaticClass@X@@SAPEAVUClass@@XZ", 9) is None
+    print("folded bodies and code runs: ok")
+
+
 def test_slot_elimination() -> None:
     from compare import Resolver
     r = Resolver.__new__(Resolver)
@@ -602,6 +652,7 @@ def main() -> int:
     test_literals()
     test_leave_one_out()
     test_literal_elimination()
+    test_folded_and_code_run()
     test_exec_thunks()
     test_vtable_store()
     test_uht_parameters()

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UVectorFieldComponent::StaticRegisterNativesUVectorFieldComponent()
-{
-}
 // IMPLEMENT_CLASS(UVectorFieldComponent, 2653400682u)
 // Original dynamic initializer: RVA 0x002219C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UVectorFieldComponent> AutoInitializeUVectorFieldComponent(TEXT("UVectorFieldComponent"), sizeof(UVectorFieldComponent), 2653400682u);

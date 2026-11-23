@@ -46,6 +46,7 @@ SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
 # Literal elimination needs every copy enumerated; content with this many copies is skipped.
 ELIMINATION_LIMIT = 4096
+FOLD_LIMIT = 16   # longest relocation-free leaf body treated as ICF-folded (bytes)
 GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json",
                      "uht-class-symbols.json", "uht-package-symbols.json")
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
@@ -110,6 +111,9 @@ class Resolver:
         self.entry_ranges: dict[int, tuple[int, int]] = {}   # reference RVA range per entry
         self.blocks: dict[str, dict] = {}
         self._name_index = None
+        # ICF: (section name, body) of a relocation-free COMDAT function -> {address: entries}.
+        self.folded_obs: dict = {}
+        self._code_groups: dict = {}
         self._xrefs = None
         self._sg_ranges = None
         self.img, self.dimg = img, dimg
@@ -157,6 +161,19 @@ class Resolver:
             return [(next(iter(vals)), "corroborated: same symbol at this address in " + who)]
         if len(vals) > 1:
             return []
+        # ICF-folded body (leave-one-out). /OPT:ICF gives identical COMDAT functions one address,
+        # so a relocation-free leaf body identifies its function as well as a name does: other
+        # entries' observations of any function with the same body give its address.
+        fb = self._folded_body(obj, symbol)
+        if fb is not None:
+            fvals, fwho = self._observed_folded(fb, exclude)
+            if len(fvals) == 1:
+                return [(next(iter(fvals)), f"ICF-folded body ({fb[1].hex()}): observed at this address in {fwho}")]
+            if len(fvals) > 1:
+                return []
+        run = self._internal_constructor_run(obj, objpath, symbol, exclude)
+        if run is not None:
+            return run
         # Literal elimination (leave-one-out). Without /GF each use of a literal has its own
         # copy. If every copy but one is the observed target of a *different* symbol in other
         # relocation-equivalent-or-better functions, the remaining copy is this symbol's.
@@ -269,6 +286,89 @@ class Resolver:
         count, pred, desc = max(runs)
         extra = f" and {count - 1} more neighbours" if count > 1 else ""
         return [(pred, "section-relative (longer run) to " + desc + extra + f" ({min(lc, rc)} dissenting)")]
+
+    @staticmethod
+    def _folded_body(obj: CoffObject, symbol: str) -> tuple[str, bytes] | None:
+        """(section name, bytes) of a function that is a whole relocation-free COMDAT section of
+        at most FOLD_LIMIT bytes, such as `return nullptr` or an empty function; else None."""
+        index = getattr(obj, "function_index", None)
+        hit = index().get(symbol) if index is not None else None
+        if hit is None:
+            return None
+        start, end, sec = hit
+        if not sec.chars & 0x20 or not sec.chars & 0x1000 or start != 0 or end != len(sec.data):
+            return None
+        if sec.relocs or not 0 < end <= FOLD_LIMIT:
+            return None
+        return sec.name, bytes(sec.data)
+
+    def _observed_folded(self, fb, exclude: int | None) -> tuple[set[int], str]:
+        vals, who, n = set(), [], 0
+        for val, ents in getattr(self, "folded_obs", {}).get(fb, {}).items():
+            others = ents - {exclude}
+            if others:
+                vals.add(val)
+                n += len(others)
+                if len(who) < 2:
+                    who.extend(sorted(self.entry_names.get(i, str(i)) for i in list(others)[:2]))
+        desc = ", ".join(who[:2]) + (f" and {n - len(who[:2])} more" if n > len(who[:2]) else "")
+        return vals, desc
+
+    def _internal_constructor_run(self, obj: CoffObject, objpath: str, symbol: str,
+                                  exclude: int | None) -> list[tuple[int, str]] | None:
+        """InternalConstructor<C> from the instances next to it. A unit's instances are emitted in
+        first use, that is class, order in both builds, each in its own 16-byte-aligned COMDAT.
+        The nearest instance observed on each side (by other entries) predicts the address from
+        the object's .text$mn layout; both sides must exist and agree. A gap in the reference
+        (an inline constructor between them) then vetoes. So does a folded neighbour: when the
+        nearest observed instance shares its address with another instance (ICF folds
+        identical constructors' instances), its slot here may be empty, and that side declines."""
+        if not symbol.startswith("??$InternalConstructor@"):
+            return None
+        groups = getattr(self, "_code_groups", None)
+        if groups is None:
+            groups = self._code_groups = {}
+        g = groups.get(objpath)
+        if g is None:
+            first = {}
+            for sym, sec in obj.functions():
+                first.setdefault(sec.index, sym.name)
+            items, cur = [], 0
+            for sec in obj.sections:
+                if not sec.chars & 0x20 or sec.name != ".text$mn" or sec.index not in first:
+                    continue
+                bits = (sec.chars >> 20) & 0xF
+                align = 1 << (bits - 1) if bits else 16
+                cur = (cur + align - 1) & ~(align - 1)
+                if first[sec.index].startswith("??$InternalConstructor@"):
+                    items.append((cur, first[sec.index]))
+                cur += len(sec.data)
+            g = groups[objpath] = (items, {name: k for k, (_, name) in enumerate(items)})
+        items, index = g
+        i = index.get(symbol)
+        if i is None:
+            return None
+        mine = items[i][0]
+        preds = []
+        for step in (-1, 1):
+            j = i + step
+            while 0 <= j < len(items):
+                off, name = items[j]
+                vals, who = self._observed(name, exclude)
+                if len(vals) > 1:
+                    break
+                if len(vals) == 1:
+                    addr = next(iter(vals))
+                    folded = any(k != name and isinstance(k, str) and k.startswith("??$InternalConstructor@")
+                                 and ents - {exclude} for k, ents in self.by_addr.get(addr, {}).items())
+                    if not folded:
+                        preds.append((addr + mine - off, f"{name} (seen in {who})"))
+                    break
+                j += step
+        if len(preds) == 2 and preds[0][0] == preds[1][0]:
+            return [(preds[0][0], "code layout (InternalConstructor instances in class order) between "
+                     + preds[0][1] + " and " + preds[1][1])]
+        return None
 
     def _referenced_by_code(self, addr: int, exclude: int | None = None) -> bool:
         """Whether exactly one `lea reg, [rip+disp]` in the reference's .text, outside the entry
@@ -422,6 +522,9 @@ class Resolver:
                 continue
             key = self.key(obj, objpath, r.symbol)
             self.observations.setdefault(key, {}).setdefault(target, set()).add(idx)
+            fb = self._folded_body(obj, r.symbol)
+            if fb is not None:
+                self.folded_obs.setdefault(fb, {}).setdefault(target, set()).add(idx)
             self.by_addr.setdefault(target, {}).setdefault(key, set()).add(idx)
             self.entry_addrs.setdefault(idx, set()).add(target)
 
@@ -829,6 +932,7 @@ def main() -> int:
         resolver._name_index = None
         resolver._sg_ranges = None
         resolver._sg_sorted = None
+        resolver.folded_obs = {}
         for i, res in results.items():
             for obj, objpath, relocs, cand_raw, ref, start in res.pop("_observe", []):
                 resolver.observe(i, obj, objpath, relocs, cand_raw, ref, start, img.image_base)

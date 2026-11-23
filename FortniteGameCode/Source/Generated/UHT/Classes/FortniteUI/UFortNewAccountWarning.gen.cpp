@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortNewAccountWarning::StaticRegisterNativesUFortNewAccountWarning()
-{
-}
 // IMPLEMENT_CLASS(UFortNewAccountWarning, 3612727379u)
 // Original dynamic initializer: RVA 0x00253B10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortNewAccountWarning> AutoInitializeUFortNewAccountWarning(TEXT("UFortNewAccountWarning"), sizeof(UFortNewAccountWarning), 3612727379u);

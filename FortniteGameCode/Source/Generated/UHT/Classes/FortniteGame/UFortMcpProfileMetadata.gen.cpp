@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMcpProfileMetadata::StaticRegisterNativesUFortMcpProfileMetadata()
-{
-}
 // IMPLEMENT_CLASS(UFortMcpProfileMetadata, 1559895646u)
 // Original dynamic initializer: RVA 0x000FF150 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMcpProfileMetadata> AutoInitializeUFortMcpProfileMetadata(TEXT("UFortMcpProfileMetadata"), sizeof(UFortMcpProfileMetadata), 1559895646u);

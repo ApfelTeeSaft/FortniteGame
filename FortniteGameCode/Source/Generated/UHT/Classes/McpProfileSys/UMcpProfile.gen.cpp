@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UMcpProfile::StaticRegisterNativesUMcpProfile()
-{
-}
 // IMPLEMENT_CLASS(UMcpProfile, 2531946346u)
 // Original dynamic initializer: RVA 0x000B0E50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMcpProfile> AutoInitializeUMcpProfile(TEXT("UMcpProfile"), sizeof(UMcpProfile), 2531946346u);

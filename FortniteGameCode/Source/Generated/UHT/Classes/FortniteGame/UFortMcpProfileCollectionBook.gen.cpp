@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMcpProfileCollectionBook::StaticRegisterNativesUFortMcpProfileCollectionBook()
-{
-}
 // IMPLEMENT_CLASS(UFortMcpProfileCollectionBook, 1761097299u)
 // Original dynamic initializer: RVA 0x000FF130 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMcpProfileCollectionBook> AutoInitializeUFortMcpProfileCollectionBook(TEXT("UFortMcpProfileCollectionBook"), sizeof(UFortMcpProfileCollectionBook), 1761097299u);

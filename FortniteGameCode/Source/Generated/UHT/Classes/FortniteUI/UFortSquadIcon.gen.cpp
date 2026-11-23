@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortSquadIcon::StaticRegisterNativesUFortSquadIcon()
-{
-}
 // IMPLEMENT_CLASS(UFortSquadIcon, 1739312991u)
 // Original dynamic initializer: RVA 0x0025ADE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadIcon> AutoInitializeUFortSquadIcon(TEXT("UFortSquadIcon"), sizeof(UFortSquadIcon), 1739312991u);

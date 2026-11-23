@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortMcpProfileWorld::StaticRegisterNativesUFortMcpProfileWorld()
-{
-}
 // IMPLEMENT_CLASS(UFortMcpProfileWorld, 3033956899u)
 // Original dynamic initializer: RVA 0x00100F30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMcpProfileWorld> AutoInitializeUFortMcpProfileWorld(TEXT("UFortMcpProfileWorld"), sizeof(UFortMcpProfileWorld), 3033956899u);

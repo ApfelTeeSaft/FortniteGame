@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAthenaMatchReadyDesktopPopup::StaticRegisterNativesUAthenaMatchReadyDesktopPopup()
-{
-}
 // IMPLEMENT_CLASS(UAthenaMatchReadyDesktopPopup, 3723816202u)
 // Original dynamic initializer: RVA 0x0023B4A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaMatchReadyDesktopPopup> AutoInitializeUAthenaMatchReadyDesktopPopup(TEXT("UAthenaMatchReadyDesktopPopup"), sizeof(UAthenaMatchReadyDesktopPopup), 3723816202u);

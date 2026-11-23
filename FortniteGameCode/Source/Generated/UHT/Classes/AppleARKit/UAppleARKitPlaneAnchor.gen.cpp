@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UAppleARKitPlaneAnchor::StaticRegisterNativesUAppleARKitPlaneAnchor()
-{
-}
 // IMPLEMENT_CLASS(UAppleARKitPlaneAnchor, 2182264559u)
 // Original dynamic initializer: RVA 0x000B43C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAppleARKitPlaneAnchor> AutoInitializeUAppleARKitPlaneAnchor(TEXT("UAppleARKitPlaneAnchor"), sizeof(UAppleARKitPlaneAnchor), 2182264559u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UPartyMemberState::StaticRegisterNativesUPartyMemberState()
-{
-}
 // IMPLEMENT_CLASS(UPartyMemberState, 456635119u)
 // Original dynamic initializer: RVA 0x000A83F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPartyMemberState> AutoInitializeUPartyMemberState(TEXT("UPartyMemberState"), sizeof(UPartyMemberState), 456635119u);

@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortLoginStatus::StaticRegisterNativesUFortLoginStatus()
-{
-}
 // IMPLEMENT_CLASS(UFortLoginStatus, 1018427907u)
 // Original dynamic initializer: RVA 0x00251470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortLoginStatus> AutoInitializeUFortLoginStatus(TEXT("UFortLoginStatus"), sizeof(UFortLoginStatus), 1018427907u);

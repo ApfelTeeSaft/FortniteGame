@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortPlayedBeforeSelect::StaticRegisterNativesUFortPlayedBeforeSelect()
-{
-}
 // IMPLEMENT_CLASS(UFortPlayedBeforeSelect, 1544370267u)
 // Original dynamic initializer: RVA 0x00255C40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPlayedBeforeSelect> AutoInitializeUFortPlayedBeforeSelect(TEXT("UFortPlayedBeforeSelect"), sizeof(UFortPlayedBeforeSelect), 1544370267u);

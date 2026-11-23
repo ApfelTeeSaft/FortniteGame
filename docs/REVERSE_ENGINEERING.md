@@ -90,6 +90,13 @@ same import, and the manifest records which.
     reference. Internal-linkage symbols (literals, statics) count only within the same
     object file. Observations made in the function under test are never used for its own
     fields, and conflicting observations resolve nothing;
+  - **ICF-folded body (leave-one-out):** `/OPT:ICF` gives identical COMDAT functions one
+    address. A function that is a whole relocation-free COMDAT of at most 16 bytes (`return
+    nullptr`, an empty function) is identified by its section name and bytes as well as by its
+    name. Other entries' observations of *any* function with the same body give its address;
+    conflicting observations resolve nothing;
+  - **code layout, `InternalConstructor<C>` only (leave-one-out):** see "`GetPrivateStaticClass`
+    fields";
   - **section-relative (leave-one-out):** a data symbol is predicted from neighbours that
     *other* functions observed. Neighbours are taken from the object's data layout, i.e.
     same-named sections, COMDATs included, in object order with their alignment, as the
@@ -1411,10 +1418,63 @@ What remains:
 - 180 `AutoInitialize` objects are not predicted, mostly in units that span several of the
   reference's objects (see "Data layout").
 
-The 3,283 `GetPrivateStaticClass` bodies are relocation-equivalent. Fields not yet resolved
-include `InternalConstructor<C>`, `InternalVTableHelperCtorCaller<C>`, the package and
-config literals, and the empty `StaticRegisterNatives` that ICF folds for classes without
-natives.
+### `GetPrivateStaticClass` fields
+
+`GetPrivateStaticClassBody` receives three functions that nothing else references. Each needs
+its own evidence.
+
+**`InternalVTableHelperCtorCaller<C>`.** Without `WITH_HOT_RELOAD` it returns `nullptr`, so
+ICF folds every instance into one function (`33 C0 C3`, RVA 0x0032B970 for 3,282 classes).
+- `UHTRecovered.h` now defines the template, and every unit emits the 3-byte COMDAT.
+- The ICF-folded body evidence resolves each instance from the other classes' observations.
+- `UObject` passes a different function and is declared as an explicit specialization.
+
+**Empty `StaticRegisterNatives`.** v140 compiles an empty function to `ret 0` (`C2 00 00`),
+the bytes of the shared copy at RVA 0x01ABAAB0. The same evidence applies, but only where the
+empty body is right: an observation of a class whose real function registers natives would
+conflict.
+- `uht_classes.py` now emits the empty body only for classes whose unique `FClassParams`
+  has no function table, or whose UFunctions all lack `FUNC_Native`. It reads
+  `FunctionFlags` (`+0x20`) from each creator's `FFunctionParams` record
+  (`uht-creator-symbols.json`).
+- 31 classes have native UFunctions whose table is not located. Their function stays
+  declared only.
+
+**`InternalConstructor<C>`.** It runs `new((EInternal*)X.GetObj())C(X)`
+(DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL) or `...C` (the default-constructor
+form). The reference compiles these to a 20-byte and a 13-byte conditional tail call of the
+constructor:
+- 2,866 classes use the first form and 133 the second;
+- in 327 the constructor is inlined, so the instance is declared only.
+
+`Classes.gen.h` declares each class's constructor and `__DefaultConstructor`. `UHTRecovered.h`
+adds a minimal `FObjectInitializer` (its first member is `Obj`) and the placement `operator
+new`. All 2,994 compiled instances equal the reference outside the constructor relocation.
+
+The address comes from the code layout, as data does from the data layout. Two layouts were
+compared:
+- In general the two compilers emit a unit's functions in different orders. Only 8,004 of
+  22,970 consecutive exact pairs have the reference spacing.
+- Template instances are emitted in first use, that is class, order in both builds.
+  Consecutive instances have the reference spacing in 2,253 of 2,799 pairs.
+
+`compare.py` therefore predicts an instance from the nearest instance observed on each side,
+over the object's `.text$mn` layout. Both sides must exist and agree. A side declines when its
+neighbour is folded, that is, another instance is observed at the same address:
+- ICF folds identical constructors' instances into one copy, so a folded neighbour's slot may
+  be empty in the reference.
+- Without this rule, 4 of 1,899 predictions were wrong. Twice the sides agreed on a slot that
+  belonged to a folded instance, and once a vanished slot on one side cancelled an extra
+  function on the other. The byte comparison reported each as `partial`.
+- An offline simulation over all classes gave 1,833 correct predictions and none wrong with
+  the rule.
+
+This made 1,776 `GetPrivateStaticClass` bodies exact, and 15 more `StaticClass` thunks that
+jump to them, with no regressions. Of the 1,507 bodies left:
+- 1,364 wait only on `InternalConstructor<C>`: the run declines (a gap, a folded neighbour,
+  or an end of the run), or the constructor is inlined;
+- the rest also wait on `PrivateStaticClass`, `AddReferencedObjects` or a
+  `StaticRegisterNatives` with natives.
 
 ## Naming confidence
 

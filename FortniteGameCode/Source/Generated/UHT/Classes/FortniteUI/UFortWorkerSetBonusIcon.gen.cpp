@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortWorkerSetBonusIcon::StaticRegisterNativesUFortWorkerSetBonusIcon()
-{
-}
 // IMPLEMENT_CLASS(UFortWorkerSetBonusIcon, 3535150662u)
 // Original dynamic initializer: RVA 0x00265700 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortWorkerSetBonusIcon> AutoInitializeUFortWorkerSetBonusIcon(TEXT("UFortWorkerSetBonusIcon"), sizeof(UFortWorkerSetBonusIcon), 3535150662u);

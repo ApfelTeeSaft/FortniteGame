@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortAudioOptions::StaticRegisterNativesUFortAudioOptions()
-{
-}
 // IMPLEMENT_CLASS(UFortAudioOptions, 533954146u)
 // Original dynamic initializer: RVA 0x0023E360 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAudioOptions> AutoInitializeUFortAudioOptions(TEXT("UFortAudioOptions"), sizeof(UFortAudioOptions), 533954146u);

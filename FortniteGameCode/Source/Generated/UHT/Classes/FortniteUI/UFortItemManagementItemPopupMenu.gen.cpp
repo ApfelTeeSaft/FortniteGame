@@ -4,9 +4,6 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
-void UFortItemManagementItemPopupMenu::StaticRegisterNativesUFortItemManagementItemPopupMenu()
-{
-}
 // IMPLEMENT_CLASS(UFortItemManagementItemPopupMenu, 1626149668u)
 // Original dynamic initializer: RVA 0x0024CEC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemManagementItemPopupMenu> AutoInitializeUFortItemManagementItemPopupMenu(TEXT("UFortItemManagementItemPopupMenu"), sizeof(UFortItemManagementItemPopupMenu), 1626149668u);
