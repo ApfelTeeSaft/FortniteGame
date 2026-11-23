@@ -22,6 +22,15 @@ void USplineMeshComponent::execGetBoundaryMin(UObject* Context, FFrame& Stack, v
 	*(float*)Z_Param__Result=P_THIS->GetBoundaryMin();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E04F0 (end 0x024E051B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetForwardAxis); calls the native accessor USplineMeshComponent::GetForwardAxis | Matching: see analysis/functions-uht-exec.json
+void USplineMeshComponent::execGetForwardAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<ESplineMeshAxis::Type>*)Z_Param__Result=P_THIS->GetForwardAxis();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E1670 (end 0x024E16AC)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSplineUpDir); calls the native accessor USplineMeshComponent::GetSplineUpDir | Matching: see analysis/functions-uht-exec.json
 void USplineMeshComponent::execGetSplineUpDir(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

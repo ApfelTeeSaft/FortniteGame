@@ -109,6 +109,9 @@ def byte_enum_form(dimg, exec_rva: int, rfs: dict, n_params: int, has_ret: bool)
     t = natives.Thunk(_MD, dimg, exec_rva, end)
     call = next((c for c in t.calls if c["post"] and c["kind"] == "virtual"), None)
     if call is None:
+        # A direct native (no virtual call at all): its call is the first one after P_FINISH.
+        call = next((c for c in t.calls if c["post"] and c["kind"] == "direct"), None)
+    if call is None:
         return None
     ins = list(_MD_DETAIL.disasm(dimg.read(exec_rva, (end or exec_rva + LEAF_LIMIT) - exec_rva), exec_rva))
     params = False
@@ -431,35 +434,48 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         cls, uf = a["class"], a["ufunction"]
         # A name the class already declares (a slot) or a member name that is also a declared
         # function would not compile as the reference's source does; such accessors wait.
-        clash = {a["name"], a["member"]} & (set(visible.get(cls, {})) | set(visible.get(a["owner"], {})))
+        specs = a["mspecs"]
+        owners = {m["owner"] for m in specs}
+        clash = ({a["name"]} | {m["name"] for m in specs}) & set().union(
+            set(visible.get(cls, {})), *(set(visible.get(o, {})) for o in owners))
         start = f"0x{int(a['exec_rva'], 16):08X}"
-        if clash or start in taken or (cls, uf) in thunks or cls in interfaces or a["owner"] in interfaces:
+        if clash or start in taken or (cls, uf) in thunks or cls in interfaces or owners & set(interfaces):
             stats["accessor thunks skipped (name or thunk already declared)"] += 1
             continue
-        # The member lies in the owner's own bytes: past its superclass and inside its size.
-        o = classes.get(a["owner"], {})
-        lo = classes.get(sup(a["owner"]) or "", {}).get("size") if sup(a["owner"]) else 8
-        if not o.get("size") or lo is None or not lo <= a["offset"] < a["offset"] + a["size"] <= o["size"]:
+
+        def fits(m: dict) -> bool:
+            """The member lies in its owner's own bytes: past the superclass and inside its size."""
+            o = classes.get(m["owner"], {})
+            lo = classes.get(sup(m["owner"]) or "", {}).get("size") if sup(m["owner"]) else 8
+            return bool(o.get("size")) and lo is not None and lo <= m["offset"] < m["offset"] + m["size"] <= o["size"]
+
+        def conflicts(m: dict) -> bool:
+            """One declaration per byte range: a plain member, or a bitfield storage unit whose bits
+            several accessors may name. Anything overlapping differently waits."""
+            key = ("plain", m["ctype"], m["name"], m["size"]) if m["kind"] == "plain" else ("bits", m["width"])
+            lo_, hi_ = m["offset"], m["offset"] + m["size"]
+            have = members[m["owner"]]
+            cur = have.get(m["offset"])
+            overlap = any(o < hi_ and lo_ < o + (v[3] if v[0] == "plain" else v[1]) and (o, v[:2]) != (m["offset"], key[:2])
+                          for o, v in have.items())
+            return (overlap or (cur is not None and cur[0] == "plain" and cur != key)
+                    or (cur is not None and cur[0] == "bits"
+                        and (key[0] != "bits" or cur[2].get(m.get("bit"), m["name"]) != m["name"])))
+
+        if not all(fits(m) for m in specs):
             stats["accessor thunks skipped (member outside its class's own bytes)"] += 1
             continue
-        # One declaration per byte range: a plain member, or a bitfield storage unit whose bits
-        # several accessors may name. Anything overlapping differently waits.
-        m = a["mspec"]
-        key = ("plain", m["ctype"], m["name"], m["size"]) if m["kind"] == "plain" else ("bits", m["width"])
-        lo_, hi_ = a["offset"], a["offset"] + a["size"]
-        cur = members[a["owner"]].get(a["offset"])
-        overlap = any(o < hi_ and lo_ < o + (v[3] if v[0] == "plain" else v[1]) and (o, v[:2]) != (a["offset"], key[:2])
-                      for o, v in members[a["owner"]].items())
-        if (overlap or (cur is not None and cur[0] == "plain" and cur != key)
-                or (cur is not None and cur[0] == "bits" and (key[0] != "bits" or cur[2].get(m.get("bit"), m["name"]) != m["name"]))):
+        if any(conflicts(m) for m in specs):
             stats["accessor thunks skipped (member conflict)"] += 1
             continue
         sig = signature(dimg, base, syms, typenames, cls, uf, int(a["exec_rva"], 16), rfs)
         accessors.append(a)
-        if m["kind"] == "plain":
-            members[a["owner"]][a["offset"]] = key
-        else:
-            members[a["owner"]].setdefault(a["offset"], ("bits", m["width"], {}))[2][m["bit"]] = m["name"]
+        for m in specs:
+            if m["kind"] == "plain":
+                members[m["owner"]][m["offset"]] = ("plain", m["ctype"], m["name"], m["size"])
+            else:
+                members[m["owner"]].setdefault(m["offset"], ("bits", m["width"], {}))[2][m["bit"]] = m["name"]
+        m = specs[-1]
         decls.setdefault(cls, []).append(f"\t{a['decl']};  // native accessor of {a['member']}")
         args = ",".join(arg for _, _, arg in sig["params"])
         call = f"P_THIS->{a['name']}({args});"

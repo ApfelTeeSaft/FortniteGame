@@ -29,6 +29,14 @@ void UCommonButtonStyle::GetCustomPadding(FMargin& OutCustomPadding) const
 	OutCustomPadding = CustomPadding;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0029B3C0 (end 0x0029B3CD), leaf (no .pdata)
+// Original VA: 0x000000014029B3C0 | File offset: 0x0029A9C0
+// Recovery: high-confidence inferred (called by execGetSelectionModeBP at RVA 0x002CCAB0; UCommonListView::SelectionMode reflected at +0x190) | Matching: see analysis/functions-native-accessors.json
+TEnumAsByte<ESelectionMode::Type> UCommonListView::GetSelectionModeBP() const
+{
+	return SelectionMode;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002BA700 (end 0x002BA707), leaf (no .pdata)
 // Original VA: 0x00000001402BA700 | File offset: 0x002B9D00
 // Recovery: high-confidence inferred (called by execSetSimulateDoubleClickOnSelectedItemClick at RVA 0x002CEB40; UCommonListView::bSimulateDoubleClickOnSelectedItemClick reflected at +0x198) | Matching: see analysis/functions-native-accessors.json

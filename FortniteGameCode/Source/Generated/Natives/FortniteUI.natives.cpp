@@ -53,6 +53,14 @@ UFortDirectAcquisitionOfferInfo* UFortDirectAcquisitionOfferDetailsWidgetBase::G
 	return OfferData;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02705090 (end 0x02705099), leaf (no .pdata)
+// Original VA: 0x0000000142705090 | File offset: 0x02704690
+// Recovery: high-confidence inferred (called by execHasDisplayAsset at RVA 0x0289E560; UFortDirectAcquisitionOfferInfo::OfferDisplayAsset reflected at +0x40) | Matching: see analysis/functions-native-accessors.json
+bool UFortDirectAcquisitionOfferInfo::HasDisplayAsset() const
+{
+	return OfferDisplayAsset != nullptr;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x026FF8B0 (end 0x026FF8B8), leaf (no .pdata)
 // Original VA: 0x00000001426FF8B0 | File offset: 0x026FEEB0
 // Recovery: high-confidence inferred (called by execGetOfferInfo at RVA 0x0289DB90; UFortDirectAcquisitionOfferWidgetBase::OfferData reflected at +0x790) | Matching: see analysis/functions-native-accessors.json
@@ -171,6 +179,14 @@ UFortUIStateWidget_NUI* UFortUIManagerWidget_NUI::GetCurrentUIStateWidget() cons
 bool UFortUIManagerWidget_NUI::IsStateContentDisplayed() const
 {
 	return bIsStateContentDisplayed;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02873BF0 (end 0x02873BFB), leaf (no .pdata)
+// Original VA: 0x0000000142873BF0 | File offset: 0x028731F0
+// Recovery: high-confidence inferred (called by execShouldBlockSubtitlePortrait at RVA 0x0290DCE0; UFortUIManagerWidget_NUI::BlockSubtitlePortraitRefcount reflected at +0x3C8) | Matching: see analysis/functions-native-accessors.json
+bool UFortUIManagerWidget_NUI::ShouldBlockSubtitlePortrait() const
+{
+	return BlockSubtitlePortraitRefcount > 0;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0282A8C0 (end 0x0282A8C8), leaf (no .pdata)

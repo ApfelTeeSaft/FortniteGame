@@ -44,6 +44,15 @@ void UCommonListView::execDynamicHandleItemUnhoveredCommonButton(UObject* Contex
 	P_THIS->DynamicHandleItemUnhoveredCommonButton(Z_Param_Button);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CCAB0 (end 0x002CCAE3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSelectionModeBP); calls the native accessor UCommonListView::GetSelectionModeBP | Matching: see analysis/functions-uht-exec.json
+void UCommonListView::execGetSelectionModeBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<ESelectionMode::Type>*)Z_Param__Result=P_THIS->GetSelectionModeBP();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CDF40 (end 0x002CDFE7)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDataProvider) | Matching: see analysis/functions-uht-exec.json
 void UCommonListView::execSetDataProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

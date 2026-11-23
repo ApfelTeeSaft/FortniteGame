@@ -9,20 +9,20 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **29,994 / 157,719** primary `.pdata` functions (19.02 %, 1,797,158 bytes):
+| Exact functions | **30,010 / 157,719** primary `.pdata` functions (19.03 %, 1,797,883 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 29,987 generated UHT functions:
+- 30,003 generated UHT functions:
   - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
-    2,212 `FCompiledInDefer` initializers and 1,287 exec thunks (1,097 of virtual natives, 190 of
+    2,212 `FCompiledInDefer` initializers and 1,303 exec thunks (1,097 of virtual natives, 206 of
     native accessors);
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,860 `StaticStruct`, 1,782 `NewStructOps`,
     1,888 `StaticRegisterNatives` and 1,283 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,071 `Z_Construct_UEnum_*`, 374 `<Enum>_StaticEnum` and 598 `FCompiledInDeferEnum` initializers.
 
-Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers, 210 leaf exec thunks, 190 native accessors and `FCommandLine::IsInitialized` |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,588 reconstructed and compiled; 29,994 exact; 7,594 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers, 210 leaf exec thunks, 206 native accessors and `FCommandLine::IsInitialized` |
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,604 reconstructed and compiled; 30,010 exact; 7,594 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
 | Relocation-equivalent | 7,590 in the denominator, mostly:
 - the 3,283 `GetPrivateStaticClass` bodies (template-instance and literal fields);
 - 2,329 registration initializers blocked by package-name literals that hand-written code
@@ -131,13 +131,19 @@ The numbered tasks below predate this queue.
        without `ResourceHandle`). Byte enums declared as `TEnumAsByte` are recovered from
        the call. 1,569 of the 1,661 virtual-native UFunctions have thunks, and 1,307 of
        their 1,317 addresses match.
-     - Direct natives: 190 accessors are reconstructed out of line, with their members
-       declared at the reflected offsets (`tools/codegen/uht_accessors.py`). They are scalar,
-       struct (by value or out parameter) and bitfield getters and setters. All 190 and their
-       thunks are exact. Next:
-       - `TEnumAsByte` returns through the hidden pointer;
-       - getters of members that are not reflected (named from the 4.20 headers);
-       - comparisons (`cmp; setg`) and null-checked forwarding.
+     - Direct natives: 206 accessors are reconstructed out of line, with their members
+       declared at the reflected offsets (`tools/codegen/uht_accessors.py`). They are:
+       - scalar, struct (by value or out parameter), bitfield, `TEnumAsByte` and
+         `TSubclassOf` getters and setters;
+       - comparisons;
+       - null-guarded getters.
+
+       All 206 and their thunks are exact. Out of reach of this method:
+       - members that are not reflected (no evidence for their offsets apart from the getter);
+       - pointers to Slate (non-UObject) types;
+       - enum comparisons (enumerators not declared).
+
+       Larger natives need real reconstruction.
      - Next: `TArray` of enums (3 UFunctions), the 3 thunks whose natives are inlined from
        headers, and `FSlateColor::operator=` (`0x0028ABE0`; register choice differs), which
        would let `GetSmallPreviewImageBrush` and the brush's copy assignment match.

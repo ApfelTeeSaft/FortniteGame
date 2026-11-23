@@ -22,6 +22,15 @@ void UFortUIManagerWidget_NUI::execIsStateContentDisplayed(UObject* Context, FFr
 	*(bool*)Z_Param__Result=P_THIS->IsStateContentDisplayed();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290DCE0 (end 0x0290DD0B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldBlockSubtitlePortrait); calls the native accessor UFortUIManagerWidget_NUI::ShouldBlockSubtitlePortrait | Matching: see analysis/functions-uht-exec.json
+void UFortUIManagerWidget_NUI::execShouldBlockSubtitlePortrait(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldBlockSubtitlePortrait();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortUIManagerWidget_NUI, 240148617u)
 // Original dynamic initializer: RVA 0x00260C90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUIManagerWidget_NUI> AutoInitializeUFortUIManagerWidget_NUI(TEXT("UFortUIManagerWidget_NUI"), sizeof(UFortUIManagerWidget_NUI), 240148617u);

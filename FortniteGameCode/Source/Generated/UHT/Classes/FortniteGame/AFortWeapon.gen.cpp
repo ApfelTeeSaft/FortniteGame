@@ -65,6 +65,15 @@ void AFortWeapon::execGetAlterations(UObject* Context, FFrame& Stack, void* cons
 	*(TArray<UFortAlterationItemDefinition*>*)Z_Param__Result=P_THIS->GetAlterations();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6800 (end 0x010D6833)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCoreAnimation); calls the native accessor AFortWeapon::GetCoreAnimation | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetCoreAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EFortWeaponCoreAnimation::Type>*)Z_Param__Result=P_THIS->GetCoreAnimation();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6870 (end 0x010D6920)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDamageStartLocation) | Matching: see analysis/functions-uht-exec.json
 void AFortWeapon::execGetDamageStartLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -5,6 +5,14 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BA9930 (end 0x01BA993F), leaf (no .pdata)
+// Original VA: 0x0000000141BA9930 | File offset: 0x01BA8F30
+// Recovery: high-confidence inferred (called by execGetParent at RVA 0x01BFD700; UPanelSlot::Parent reflected at +0x28) | Matching: see analysis/functions-native-accessors.json
+UPanelWidget* UWidget::GetParent() const
+{
+	return Slot ? Slot->Parent : nullptr;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BA8FF0 (end 0x01BA8FF8), leaf (no .pdata)
 // Original VA: 0x0000000141BA8FF0 | File offset: 0x01BA85F0
 // Recovery: high-confidence inferred (called by execGetMaterialInstance at RVA 0x01C04600; UWidgetComponent::MaterialInstance reflected at +0x760) | Matching: see analysis/functions-native-accessors.json

@@ -452,6 +452,13 @@ def test_accessor_mangling() -> None:
     assert mangle("UFoo", "GetPoint", "FVector", [], True, {}) == "?GetPoint@UFoo@@QEBA?AUFVector@@XZ"
     assert mangle("UFoo", "SetPoint", None, ["const FVector&"], False, {}) == "?SetPoint@UFoo@@QEAAXAEBUFVector@@@Z"
     assert mangle("UFoo", "GetPad", None, ["FMargin&"], True, {}) == "?GetPad@UFoo@@QEBAXAEAUFMargin@@@Z"
+    # Template-ids: class templates (V), arguments with a fresh back-reference table (v140 probes).
+    assert mangle("UCommonListView", "GetSelectionModeBP", "TEnumAsByte<ESelectionMode::Type>", [], True,
+                  {"ESelectionMode::Type": 1}) == \
+        "?GetSelectionModeBP@UCommonListView@@QEBA?AV?$TEnumAsByte@W4Type@ESelectionMode@@@@XZ"
+    assert mangle("UFoo", "GetSelf", "TSubclassOf<UFoo>", [], True, {}) == "?GetSelf@UFoo@@QEBA?AV?$TSubclassOf@VUFoo@@@@XZ"
+    assert mangle("UFoo", "SetEffect", None, ["TSubclassOf<UGameplayEffect>"], False, {}) == \
+        "?SetEffect@UFoo@@QEAAXV?$TSubclassOf@VUGameplayEffect@@@@@Z"
     print("accessor mangling: ok")
 
 
@@ -474,6 +481,29 @@ def test_accessor_shapes() -> None:
                          "or dword ptr [rcx + 0x69c], eax")) == {"kind": "set", "offset": 0x69C, "width": 4, "bit": 0}
     assert bit_shape(ins("and dword ptr [rcx + 0x69c], 0xfffffffd", "movzx eax, dl", "and eax, 1",
                          "or dword ptr [rcx + 0x69c], eax")) is None          # clears bit 1, sets bit 0
+    from uht_accessors import cmp_shape, guard_shape
+    assert cmp_shape(ins("cmp dword ptr [rcx + 0x2f0], 0xffffffff", "setne al")) == \
+        {"offset": 0x2F0, "width": 4, "imm": 0xFFFFFFFF, "cc": "ne"}
+    assert cmp_shape(ins("cmp qword ptr [rcx + 0x8], 0", "sete cl")) is None              # not the return register
+    # Ptr ? Ptr->X : 0 with the null path straight after the ret: a bare ret (rax is zero) or a
+    # zeroing instruction.
+    import capstone
+
+    class Img:
+        def __init__(self, code: dict):
+            self.code = code
+
+        def read(self, rva, n):
+            return self.code[rva][:n]
+    md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
+    body = [I(mnemonic="mov", op_str="rax, qword ptr [rcx + 0x208]"), I(mnemonic="test", op_str="rax, rax"),
+            I(mnemonic="je", op_str="0x1014"), I(mnemonic="movzx", op_str="eax, byte ptr [rax + 0x180]")]
+    ret = I(mnemonic="ret", op_str="", address=0x1013)
+    g = guard_shape(body, ret, Img({0x1014: b"\xc3" + b"\xcc" * 15}), md)
+    assert g == {"ptr": 0x208, "offset": 0x180, "wc": "b1", "zero": "rax", "end": 0x1015}, g
+    g = guard_shape(body, ret, Img({0x1014: b"\x0f\x57\xc0\xc3" + b"\xcc" * 12}), md)      # xorps xmm0, xmm0; ret
+    assert g["zero"] == "xorps xmm0, xmm0" and g["end"] == 0x1018, g
+    assert guard_shape(body, I(mnemonic="ret", op_str="", address=0x1000), Img({0x1001: b"\xc3" * 16}), md) is None
     print("accessor shapes: ok")
 
 

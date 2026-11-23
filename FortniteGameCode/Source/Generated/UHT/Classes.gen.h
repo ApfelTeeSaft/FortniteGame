@@ -3383,24 +3383,31 @@ namespace EFortMovementUrgency { enum Type {}; }
 enum class EFortObjectiveStatus : uint8 {};
 namespace EFortPvPGameResult { enum Type {}; }
 enum class EFortQuestRewardType : uint8 {};
+enum class EFortQuestState : uint8 {};
 enum class EFortQuickBars : uint8 {};
 enum class EFortRarity : uint8 {};
 namespace EFortReloadFXState { enum Type {}; }
 namespace EFortRequestedGameplayAction { enum Type {}; }
 namespace EFortResourceType { enum Type {}; }
 namespace EFortTeam { enum Type {}; }
+namespace EFortWeaponCoreAnimation { enum Type {}; }
+namespace EFortWeaponTriggerType { enum Type {}; }
 enum class EFrontEndCamera : uint8 {};
 namespace EGameplayCueEvent { enum Type {}; }
 enum EHorizontalAlignment {};
 enum EMovementMode {};
+namespace EMovieScenePlayerStatus { enum Type {}; }
 enum EObjectTypeQuery {};
 namespace EPartyReservationResult { enum Type {}; }
+namespace EPathFollowingStatus { enum Type {}; }
 namespace EPawnActionResult { enum Type {}; }
+namespace EPlacementType { enum Type {}; }
 enum class EPlaneConstraintAxisSetting : uint8 {};
 enum class EQosResponseType : uint8 {};
 enum ERadialImpulseFalloff {};
 enum ERelativeTransformSpace {};
 enum class ERichPresenceStateChange : uint8 {};
+namespace ESelectionMode { enum Type {}; }
 enum class ESlateVisibility : uint8 {};
 namespace ESplineMeshAxis { enum Type {}; }
 enum class EStatCategory : uint8 {};
@@ -3627,6 +3634,7 @@ public:
 	virtual void PrestreamTextures(float Seconds, bool bEnableStreaming, int32 CinematicTextureGroups);  // slot 182 (+0x5B0), UFunction AActor::PrestreamTextures
 	virtual void GetActorEyesViewPoint(FVector& OutLocation, FRotator& OutRotation) const;  // slot 183 (+0x5B8), UFunction AActor::GetActorEyesViewPoint
 	APawn* GetInstigator() const;  // native accessor of Instigator
+	AController* GetInstigatorController() const;  // native accessor of Controller
 	static void StaticRegisterNativesAActor();
 	static void execActorHasTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3819,7 +3827,11 @@ public:
 	static void execStopMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnPossess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x68];  // sizeof(AController) = 0x380
+	unsigned char Opaque_318[0x30];
+public:
+	APawn* Pawn;  // +0x348, reflected property
+private:
+	unsigned char Opaque_350[0x30];  // sizeof(AController) = 0x380
 };
 
 class AAIController : public AController
@@ -4012,6 +4024,7 @@ public:
 	virtual void FNGC_VSlot_0x658();
 	virtual void NextDebugTarget();  // slot 204 (+0x660), UFunction AHUD::NextDebugTarget
 	virtual void PreviousDebugTarget();  // slot 205 (+0x668), UFunction AHUD::PreviousDebugTarget
+	APawn* GetOwningPawn() const;  // native accessor of Pawn
 	static void StaticRegisterNativesAHUD();
 	static void execAddDebugText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddHitBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4037,8 +4050,10 @@ public:
 	static void execShowDebugForReticleTargetToggle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShowDebugToggleSubCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShowHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	APlayerController* PlayerOwner;  // +0x318, reflected property
 private:
-	unsigned char Opaque[0xF0];  // sizeof(AHUD) = 0x408
+	unsigned char Opaque_320[0xE8];  // sizeof(AHUD) = 0x408
 };
 
 class AAbilitySystemDebugHUD : public AHUD
@@ -4138,7 +4153,11 @@ public:
 	static void execSetCanAffectNavigationGeneration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSpawnDefaultController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque_318[0x50];
+	unsigned char Opaque_318[0x38];
+public:
+	AController* Controller;  // +0x350, reflected property
+private:
+	unsigned char Opaque_358[0x10];
 public:
 	FVector LastControlInputVector;  // +0x368, reflected property
 private:
@@ -6678,6 +6697,7 @@ public:
 	virtual void FNGC_VSlot_0x5D8();
 	virtual void FNGC_VSlot_0x5E0();
 	virtual void OnRep_bEnabled();  // slot 189 (+0x5E8), UFunction ALight::OnRep_bEnabled
+	float GetBrightness() const;  // native accessor of Intensity
 	static void StaticRegisterNativesALight();
 	static void execGetBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6692,8 +6712,10 @@ public:
 	static void execSetLightFunctionMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetLightFunctionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execToggleEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	ULightComponent* LightComponent;  // +0x318, reflected property
 private:
-	unsigned char Opaque[0x10];  // sizeof(ALight) = 0x328
+	unsigned char Opaque_320[0x8];  // sizeof(ALight) = 0x328
 };
 
 class ADirectionalLight : public ALight
@@ -7549,6 +7571,7 @@ public:
 	virtual void FNGC_VSlot_0x908();
 	virtual void FNGC_VSlot_0x910();
 	virtual TArray<UFortAlterationItemDefinition*> GetAlterations() const;  // slot 291 (+0x918), UFunction AFortWeapon::GetAlterations
+	TEnumAsByte<EFortWeaponCoreAnimation::Type> GetCoreAnimation() const;  // native accessor of WeaponCoreAnimation
 	bool GetSupportsAutoFireAtReticleTargetMode() const;  // native accessor of bSupportsAutofireAtReticleTarget
 	void SetShouldDrawNativeReticle(bool bInShouldDrawReticle);  // native accessor of bShouldDrawNativeReticle
 	static void StaticRegisterNativesAFortWeapon();
@@ -7609,7 +7632,11 @@ private:
 public:
 	bool bSupportsAutofireAtReticleTarget;  // +0x3D8, reflected property
 private:
-	unsigned char Opaque_3D9[0x677];  // sizeof(AFortWeapon) = 0xA50
+	unsigned char Opaque_3D9[0x667];
+public:
+	TEnumAsByte<EFortWeaponCoreAnimation::Type> WeaponCoreAnimation;  // +0xA40, reflected property
+private:
+	unsigned char Opaque_A41[0xF];  // sizeof(AFortWeapon) = 0xA50
 };
 
 class AFortDecoTool : public AFortWeapon
@@ -12825,6 +12852,7 @@ public:
 	virtual bool ServerMoveItemToStorageVault_Validate(FFortItemEntry const& NewlyStoredItem);  // slot 821 (+0x19A8), UFunction AFortPlayerControllerOutpost::ServerMoveItemToStorageVault
 	virtual void ServerMoveItemToStorageVault_Implementation(FFortItemEntry const& NewlyStoredItem);  // slot 822 (+0x19B0), UFunction AFortPlayerControllerOutpost::ServerMoveItemToStorageVault
 	UFortWorldItemDefinition* GetPendingItemToFabricate() const;  // native accessor of ItemPendingToFabricate
+	bool IsFabricationPending() const;  // native accessor of ItemPendingToFabricate
 	static void StaticRegisterNativesAFortPlayerControllerOutpost();
 	static void execCanUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanUpgradeBuildingFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13157,6 +13185,7 @@ public:
 	virtual void NetMulticast_InvokeGameplayCueExecuted_Implementation(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);  // slot 444 (+0xDE0), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted
 	virtual void NetMulticast_InvokeGameplayCueExecuted_FromSpec_Implementation(const FGameplayEffectSpecForRPC Spec, FPredictionKey PredictionKey);  // slot 445 (+0xDE8), UFunction AFortPlayerPawnAthena::NetMulticast_InvokeGameplayCueExecuted_FromSpec
 	virtual void FNGC_VSlot_0xDF0();  // slot 446: AFortPlayerPawnAthena::NetMulticast_Athena_BatchedDamageCues_Implementation (signature not recovered)
+	bool IsInVehicle() const;  // native accessor of Vehicle
 	static void StaticRegisterNativesAFortPlayerPawnAthena();
 	static void execGameplayCue_Damage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetContrailParticleSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13200,7 +13229,11 @@ public:
 	static void execStartConsumableUseAudio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStopConsumableUseAudio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x5E0];  // sizeof(AFortPlayerPawnAthena) = 0x1CE0
+	unsigned char Opaque_1700[0x28];
+public:
+	AFortAthenaVehicle* Vehicle;  // +0x1728, reflected property
+private:
+	unsigned char Opaque_1730[0x5B0];  // sizeof(AFortPlayerPawnAthena) = 0x1CE0
 };
 
 class AFortPlayerSpawnPad : public ABuildingSMActor
@@ -17358,6 +17391,7 @@ public:
 	float GetSlotRadius() const;  // native accessor of Radius
 	EAIHotSpotSlot GetSlotState() const;  // native accessor of SlotState
 	int32 GetSlotUserId() const;  // native accessor of UserId
+	bool HasUserId() const;  // native accessor of UserId
 	bool IsEnabled() const;  // native accessor of bIsEnabled
 	static void StaticRegisterNativesUAIHotSpotSlot();
 	static void execClearSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -19546,6 +19580,7 @@ public:
 	virtual void SetVisibility(ESlateVisibility InVisibility);  // slot 73 (+0x248), UFunction UWidget::SetVisibility
 	virtual void RemoveFromParent();  // slot 74 (+0x250), UFunction UWidget::RemoveFromParent
 	virtual APlayerController* GetOwningPlayer() const;  // slot 75 (+0x258), UFunction UWidget::GetOwningPlayer
+	UPanelWidget* GetParent() const;  // native accessor of Parent
 	static void StaticRegisterNativesUWidget();
 	static void execForceLayoutPrepass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execForceVolatile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -19585,8 +19620,10 @@ public:
 	static void execSetToolTipText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetUserFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	UPanelSlot* Slot;  // +0x28, reflected property
 private:
-	unsigned char Opaque[0xD8];  // sizeof(UWidget) = 0x100
+	unsigned char Opaque_30[0xD0];  // sizeof(UWidget) = 0x100
 };
 
 class USlider : public UWidget
@@ -24272,8 +24309,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUPanelSlot();
+public:
+	UPanelWidget* Parent;  // +0x28, reflected property
 private:
-	unsigned char Opaque[0x10];  // sizeof(UPanelSlot) = 0x38
+	unsigned char Opaque_30[0x8];  // sizeof(UPanelSlot) = 0x38
 };
 
 class UBackgroundBlurSlot : public UPanelSlot
@@ -27791,6 +27830,7 @@ public:
 	virtual void DynamicHandleItemDoubleClickedCommonButton(UCommonButton* Button);  // slot 84 (+0x2A0), UFunction UCommonListView::DynamicHandleItemDoubleClickedCommonButton
 	virtual void DynamicHandleItemHoveredCommonButton(UCommonButton* Button);  // slot 85 (+0x2A8), UFunction UCommonListView::DynamicHandleItemHoveredCommonButton
 	virtual void DynamicHandleItemUnhoveredCommonButton(UCommonButton* Button);  // slot 86 (+0x2B0), UFunction UCommonListView::DynamicHandleItemUnhoveredCommonButton
+	TEnumAsByte<ESelectionMode::Type> GetSelectionModeBP() const;  // native accessor of SelectionMode
 	void SetSimulateDoubleClickOnSelectedItemClick(bool bInSimulateDoubleClick);  // native accessor of bSimulateDoubleClickOnSelectedItemClick
 	static void StaticRegisterNativesUCommonListView();
 	static void execAddItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27821,7 +27861,11 @@ public:
 	static void execSetSelectionMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetSimulateDoubleClickOnSelectedItemClick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque_100[0x98];
+	unsigned char Opaque_100[0x90];
+public:
+	TEnumAsByte<ESelectionMode::Type> SelectionMode;  // +0x190, reflected property
+private:
+	unsigned char Opaque_191[0x7];
 public:
 	bool bSimulateDoubleClickOnSelectedItemClick;  // +0x198, reflected property
 private:
@@ -29663,7 +29707,11 @@ public:
 	static void execSetCastShadows(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetCastVolumetricShadow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x30];  // sizeof(ULightComponentBase) = 0x2C0
+	unsigned char Opaque_290[0x14];
+public:
+	float Intensity;  // +0x2A4, reflected property
+private:
+	unsigned char Opaque_2A8[0x18];  // sizeof(ULightComponentBase) = 0x2C0
 };
 
 class ULightComponent : public ULightComponentBase
@@ -32288,6 +32336,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool HasEncounter() const;  // native accessor of CurrentEncounter
 	static void StaticRegisterNativesUFortAIEncounterSequence();
 	static void execEncounterBelongsToSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCurrentEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32300,7 +32349,11 @@ public:
 	static void execStartCurrentEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStopCurrentEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x50];  // sizeof(UFortAIEncounterSequence) = 0x78
+	unsigned char Opaque_28[0x38];
+public:
+	UFortAIEncounterInfo* CurrentEncounter;  // +0x60, reflected property
+private:
+	unsigned char Opaque_68[0x10];  // sizeof(UFortAIEncounterSequence) = 0x78
 };
 
 class UFortAIEncounterTargetInterface : public UInterface
@@ -36209,6 +36262,7 @@ public:
 	float GetHitNotifyDuration() const;  // native accessor of HitNotifyDuration
 	float GetLowAmmoPercentage() const;  // native accessor of LowAmmoPercentage
 	FVector2D GetReticleCenterImageOffset() const;  // native accessor of ReticleCenterImageOffset
+	TEnumAsByte<EFortWeaponTriggerType::Type> GetTriggerType() const;  // native accessor of TriggerType
 	bool ShouldAllowTargetingDuringReload() const;  // native accessor of bAllowTargetingDuringReload
 	bool TargetingPreventsReload() const;  // native accessor of bTargetingPreventsReload
 	static void StaticRegisterNativesUFortWeaponItemDefinition();
@@ -36245,8 +36299,8 @@ public:
 	float LowAmmoPercentage;  // +0x608, reflected property
 public:
 	float DegradedPercentage;  // +0x60C, reflected property
-private:
-	unsigned char Opaque_610[0x1];
+public:
+	TEnumAsByte<EFortWeaponTriggerType::Type> TriggerType;  // +0x610, reflected property
 public:
 	bool bAllowTargetingDuringReload;  // +0x611, reflected property
 public:
@@ -38844,6 +38898,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	float GetGridSnapSizeOverride() const;  // native accessor of GridSnapSizeOverride
 	int32 GetMaxPlacementDistance() const;  // native accessor of MaxPlacementDistance
+	TEnumAsByte<EPlacementType::Type> GetPlacementTypeOverride() const;  // native accessor of PlacementTypeOverride
 	float GetRotationAngleIncrement() const;  // native accessor of RotationAngleIncrement
 	bool RequiresPlayerPlaceableAttachmentActors() const;  // native accessor of bRequiresPlayerPlaceableAttachmentActors
 	bool ShouldAllowAnyFloorPlacement() const;  // native accessor of bAllowAnyFloorPlacement
@@ -38893,8 +38948,10 @@ public:
 	float GridSnapSizeOverride;  // +0x7A0, reflected property
 public:
 	float RotationAngleIncrement;  // +0x7A4, reflected property
+public:
+	TEnumAsByte<EPlacementType::Type> PlacementTypeOverride;  // +0x7A8, reflected property
 private:
-	unsigned char Opaque_7A8[0x4];
+	unsigned char Opaque_7A9[0x3];
 public:
 	uint32 bForceIgnoreOverlapTest : 1;  // +0x7AC bit 0, reflected property
 	uint32 bForceIgnoreBuildingOverlaps : 1;  // +0x7AC bit 1, reflected property
@@ -40625,6 +40682,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool HasDisplayAsset() const;  // native accessor of OfferDisplayAsset
 	static void StaticRegisterNativesUFortDirectAcquisitionOfferInfo();
 	static void execCreatePreviewItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetBackground(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -40667,7 +40725,11 @@ public:
 	static void execIsUnique(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOfferHasDenyRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x28];  // sizeof(UFortDirectAcquisitionOfferInfo) = 0x50
+	unsigned char Opaque_28[0x18];
+public:
+	UFortMtxOfferData* OfferDisplayAsset;  // +0x40, reflected property
+private:
+	unsigned char Opaque_48[0x8];  // sizeof(UFortDirectAcquisitionOfferInfo) = 0x50
 };
 
 class UFortDirectAcquisitionOfferWidgetBase : public UCommonButton
@@ -50133,6 +50195,7 @@ public:
 	virtual void AddForceToAllBodiesBelow(FVector Force, FName BoneName, bool bAccelChange, bool bIncludeSelf);  // slot 295 (+0x938), UFunction USkeletalMeshComponent::AddForceToAllBodiesBelow
 	virtual void AddImpulseToAllBodiesBelow(FVector Impulse, FName BoneName, bool bVelChange, bool bIncludeSelf);  // slot 296 (+0x940), UFunction USkeletalMeshComponent::AddImpulseToAllBodiesBelow
 	UAnimInstance* GetAnimInstance() const;  // native accessor of AnimScriptInstance
+	EAnimationMode::Type GetAnimationMode() const;  // native accessor of AnimationMode
 	UClothingSimulationInteractor* GetClothingSimulationInteractor() const;  // native accessor of ClothingInteractor
 	bool GetDisablePostProcessBlueprint() const;  // native accessor of bDisablePostProcessBlueprint
 	UAnimInstance* GetPostProcessInstance() const;  // native accessor of PostProcessAnimInstance
@@ -50222,7 +50285,11 @@ public:
 public:
 	bool bDisablePostProcessBlueprint;  // +0x840, reflected property
 private:
-	unsigned char Opaque_841[0xB1];
+	unsigned char Opaque_841[0xAF];
+public:
+	TEnumAsByte<EAnimationMode::Type> AnimationMode;  // +0x8F0, reflected property
+private:
+	unsigned char Opaque_8F1[0x1];
 public:
 	uint8 : 3;
 	uint8 bBlendPhysics : 1;  // +0x8F2 bit 3, reflected property
@@ -55721,6 +55788,7 @@ public:
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
 	UFortUIStateWidget_NUI* GetCurrentUIStateWidget() const;  // native accessor of CurrentStateWidget
 	bool IsStateContentDisplayed() const;  // native accessor of bIsStateContentDisplayed
+	bool ShouldBlockSubtitlePortrait() const;  // native accessor of BlockSubtitlePortraitRefcount
 	static void StaticRegisterNativesUFortUIManagerWidget_NUI();
 	static void exec_BPGetCurrentUIState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCreateNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -55755,7 +55823,11 @@ private:
 public:
 	bool bIsStateContentDisplayed;  // +0x290, reflected property
 private:
-	unsigned char Opaque_291[0x13F];  // sizeof(UFortUIManagerWidget_NUI) = 0x3D0
+	unsigned char Opaque_291[0x137];
+public:
+	int32 BlockSubtitlePortraitRefcount;  // +0x3C8, reflected property
+private:
+	unsigned char Opaque_3CC[0x4];  // sizeof(UFortUIManagerWidget_NUI) = 0x3D0
 };
 
 class UFortUIMessageItemWidget : public UCommonUserWidget
@@ -73296,6 +73368,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	float GetBoundaryMax() const;  // native accessor of SplineBoundaryMax
 	float GetBoundaryMin() const;  // native accessor of SplineBoundaryMin
+	ESplineMeshAxis::Type GetForwardAxis() const;  // native accessor of ForwardAxis
 	FVector GetSplineUpDir() const;  // native accessor of SplineUpDir
 	static void StaticRegisterNativesUSplineMeshComponent();
 	static void execGetBoundaryMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -73333,7 +73406,11 @@ private:
 public:
 	FVector SplineUpDir;  // +0x750, reflected property
 private:
-	unsigned char Opaque_75C[0x8];
+	unsigned char Opaque_75C[0x4];
+public:
+	TEnumAsByte<ESplineMeshAxis::Type> ForwardAxis;  // +0x760, reflected property
+private:
+	unsigned char Opaque_761[0x3];
 public:
 	float SplineBoundaryMin;  // +0x764, reflected property
 public:

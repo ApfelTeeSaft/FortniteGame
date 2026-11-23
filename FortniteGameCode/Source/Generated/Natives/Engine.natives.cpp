@@ -13,12 +13,36 @@ APawn* AActor::GetInstigator() const
 	return Instigator;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D93170 (end 0x01D93185), leaf (no .pdata)
+// Original VA: 0x0000000141D93170 | File offset: 0x01D92770
+// Recovery: high-confidence inferred (called by execGetInstigatorController at RVA 0x023C0990; APawn::Controller reflected at +0x350) | Matching: see analysis/functions-native-accessors.json
+AController* AActor::GetInstigatorController() const
+{
+	return Instigator ? Instigator->Controller : nullptr;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01E9E450 (end 0x01E9E459), leaf (no .pdata)
 // Original VA: 0x0000000141E9E450 | File offset: 0x01E9DA50
 // Recovery: high-confidence inferred (called by execGetAnimRootMotionTranslationScale at RVA 0x023F0D10; ACharacter::AnimRootMotionTranslationScale reflected at +0x3F0) | Matching: see analysis/functions-native-accessors.json
 float ACharacter::GetAnimRootMotionTranslationScale() const
 {
 	return AnimRootMotionTranslationScale;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0202EC60 (end 0x0202EC75), leaf (no .pdata)
+// Original VA: 0x000000014202EC60 | File offset: 0x0202E260
+// Recovery: high-confidence inferred (called by execGetOwningPawn at RVA 0x02422950; AController::Pawn reflected at +0x348) | Matching: see analysis/functions-native-accessors.json
+APawn* AHUD::GetOwningPawn() const
+{
+	return PlayerOwner ? PlayerOwner->Pawn : nullptr;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x020A3E10 (end 0x020A3E29), leaf (no .pdata)
+// Original VA: 0x00000001420A3E10 | File offset: 0x020A3410
+// Recovery: high-confidence inferred (called by execGetBrightness at RVA 0x02473D90; ULightComponentBase::Intensity reflected at +0x2A4) | Matching: see analysis/functions-native-accessors.json
+float ALight::GetBrightness() const
+{
+	return LightComponent ? LightComponent->Intensity : 0.f;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x021BEE30 (end 0x021BEE49), leaf (no .pdata)
@@ -165,6 +189,14 @@ UAnimInstance* USkeletalMeshComponent::GetAnimInstance() const
 	return AnimScriptInstance;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01F3ABD0 (end 0x01F3ABD8), leaf (no .pdata)
+// Original VA: 0x0000000141F3ABD0 | File offset: 0x01F3A1D0
+// Recovery: high-confidence inferred (called by execGetAnimationMode at RVA 0x024CE5D0; USkeletalMeshComponent::AnimationMode reflected at +0x8F0) | Matching: see analysis/functions-native-accessors.json
+EAnimationMode::Type USkeletalMeshComponent::GetAnimationMode() const
+{
+	return AnimationMode;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01F3C5E0 (end 0x01F3C5E8), leaf (no .pdata)
 // Original VA: 0x0000000141F3C5E0 | File offset: 0x01F3BBE0
 // Recovery: high-confidence inferred (called by execGetClothingSimulationInteractor at RVA 0x024CE750; USkeletalMeshComponent::ClothingInteractor reflected at +0xAA0) | Matching: see analysis/functions-native-accessors.json
@@ -219,6 +251,14 @@ float USplineMeshComponent::GetBoundaryMax() const
 float USplineMeshComponent::GetBoundaryMin() const
 {
 	return SplineBoundaryMin;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01F62FE0 (end 0x01F62FE8), leaf (no .pdata)
+// Original VA: 0x0000000141F62FE0 | File offset: 0x01F625E0
+// Recovery: high-confidence inferred (called by execGetForwardAxis at RVA 0x024E04F0; USplineMeshComponent::ForwardAxis reflected at +0x760) | Matching: see analysis/functions-native-accessors.json
+ESplineMeshAxis::Type USplineMeshComponent::GetForwardAxis() const
+{
+	return ForwardAxis;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01F67C70 (end 0x01F67C89), leaf (no .pdata)

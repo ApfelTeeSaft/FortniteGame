@@ -22,6 +22,15 @@ void UFortDecoItemDefinition::execGetMaxPlacementDistance(UObject* Context, FFra
 	*(int32*)Z_Param__Result=P_THIS->GetMaxPlacementDistance();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1D70 (end 0x00FD1DA3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlacementTypeOverride); calls the native accessor UFortDecoItemDefinition::GetPlacementTypeOverride | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execGetPlacementTypeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EPlacementType::Type>*)Z_Param__Result=P_THIS->GetPlacementTypeOverride();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1E30 (end 0x00FD1E5D)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRotationAngleIncrement); calls the native accessor UFortDecoItemDefinition::GetRotationAngleIncrement | Matching: see analysis/functions-uht-exec.json
 void UFortDecoItemDefinition::execGetRotationAngleIncrement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

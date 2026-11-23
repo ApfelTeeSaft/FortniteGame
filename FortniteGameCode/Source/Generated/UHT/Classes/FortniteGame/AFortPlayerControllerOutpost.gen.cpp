@@ -33,6 +33,15 @@ void AFortPlayerControllerOutpost::execGetPendingItemToFabricate(UObject* Contex
 	*(UFortWorldItemDefinition**)Z_Param__Result=P_THIS->GetPendingItemToFabricate();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B070 (end 0x0107B09B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsFabricationPending); calls the native accessor AFortPlayerControllerOutpost::IsFabricationPending | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execIsFabricationPending(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsFabricationPending();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B870 (end 0x0107B8BE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAbortDisintegration) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerOutpost::execServerAbortDisintegration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

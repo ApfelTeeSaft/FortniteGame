@@ -40,6 +40,15 @@ void UFortWeaponItemDefinition::execGetReticleCenterImageOffset(UObject* Context
 	*(FVector2D*)Z_Param__Result=P_THIS->GetReticleCenterImageOffset();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9FC0 (end 0x010D9FF3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTriggerType); calls the native accessor UFortWeaponItemDefinition::GetTriggerType | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponItemDefinition::execGetTriggerType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EFortWeaponTriggerType::Type>*)Z_Param__Result=P_THIS->GetTriggerType();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA2C0 (end 0x010DA2EB)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAllowTargetingDuringReload); calls the native accessor UFortWeaponItemDefinition::ShouldAllowTargetingDuringReload | Matching: see analysis/functions-uht-exec.json
 void UFortWeaponItemDefinition::execShouldAllowTargetingDuringReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

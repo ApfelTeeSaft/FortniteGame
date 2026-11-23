@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010828A0 (end 0x010828CB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsInVehicle); calls the native accessor AFortPlayerPawnAthena::IsInVehicle | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execIsInVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsInVehicle();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01082C70 (end 0x01082DF8)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueAdded) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

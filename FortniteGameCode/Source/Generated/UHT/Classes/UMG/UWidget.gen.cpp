@@ -13,6 +13,15 @@ void UWidget::execGetOwningPlayer(UObject* Context, FFrame& Stack, void* const Z
 	*(APlayerController**)Z_Param__Result=P_THIS->GetOwningPlayer();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFD700 (end 0x01BFD72C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetParent); calls the native accessor UWidget::GetParent | Matching: see analysis/functions-uht-exec.json
+void UWidget::execGetParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPanelWidget**)Z_Param__Result=P_THIS->GetParent();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveFromParent) | Matching: see analysis/functions-uht-exec.json
 void UWidget::execRemoveFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -370,9 +370,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,759, at 1,507 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 935 read parameters |
-| of which call a native accessor (below) | 190, all exact |
-| exact | 1,497: 1,287 in the denominator, 210 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,775, at 1,523 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 935 read parameters |
+| of which call a native accessor (below) | 206, all exact |
+| exact | 1,513: 1,303 in the denominator, 210 leaf (no `.pdata`) |
 | relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
@@ -725,7 +725,17 @@ reflected member. They take these forms:
   return value (`Out = Member;`);
 - struct setter: a copy from the reference in `rdx` to `[this+N]`;
 - bitfield getter or setter: the storage unit at `[this+N]` shifted and masked to one bit, or
-  that bit cleared and replaced by the argument's low bit.
+  that bit cleared and replaced by the argument's low bit;
+- `TEnumAsByte` or `TSubclassOf` getter: the struct copy (1 or 8 bytes), since both class
+  templates have user constructors and are returned through the hidden pointer;
+- comparison: `cmp <width> ptr [this+N], imm; set<cc> al`, as `return Member <op> imm;`. The
+  condition code decides the operator and its signedness. A pointer compares only with 0,
+  as `!= nullptr` / `== nullptr`. Enums are left out, because the generated headers don't
+  declare their enumerators.
+- null-guarded getter: `mov rax, [this+N]; test rax, rax; je`, a load from `[rax+M]` and `ret`.
+  The null path straight after is either a bare `ret` (rax is already zero) or one zeroing
+  instruction. This is `return Ptr ? Ptr->Member : <zero>;`. A v140 probe gives exactly these
+  bytes; it is also 4.20's `AActor::GetInstigatorController`.
 
 Each form is accepted only when all of these agree:
 - N is the offset of a reflected property of the native's class or a superclass.
@@ -736,25 +746,37 @@ Each form is accepted only when all of these agree:
   only out parameter's type.
 - The copy covers exactly the struct's reflected size (`FStructParams`), or the instruction
   width fits the scalar type, or the bitfield's storage width is the access width.
+- For a guarded getter, the pointer is a reflected object property, and the loaded member is
+  a reflected property of that class at M.
+
+The byte-enum form (`TEnumAsByte` or raw enum) is read from the thunk's call. For a direct
+native, that is the first call after `P_FINISH`, when the thunk makes no virtual call.
 
 The natives come from `analysis/native-implementations.json` (high-confidence, called
-directly, by a thunk no other UFunction shares). Of 6,758, 192 qualify:
+directly, by a thunk no other UFunction shares). Of 6,758, 208 qualify:
 - 4,940 are not a short body ending in `ret`;
 - 1,076 are not high-confidence direct natives;
-- 399 have another shape;
-- 71 have no reflected member at the offset;
+- 357 have another shape;
+- 80 have no reflected member at the offset;
 - 20 have no reflected struct member there, and 19 no reflected bitfield at the bit;
-- 20 have no recovered signature;
+- 18 guarded getters go through a pointer or to a member that is not reflected;
+- 14 have no recovered signature;
 - 18 share a folded thunk;
-- 3 disagree with the signature.
+- 8 disagree with the member's type or the signature.
 
 Two more are skipped because the member is not in the owner's own bytes.
 
-The 190 natives are:
-- 138 scalar getters and setters;
+The 206 natives are:
+- 140 scalar getters and setters;
 - 37 bitfield getters and setters;
 - 9 struct getters by value (`FVector`, `FVector2D`, `FLinearColor` and others);
-- 6 struct out-parameter getters (`FMargin` and others).
+- 6 struct out-parameter getters (`FMargin` and others);
+- 4 `TEnumAsByte` getters;
+- 6 comparisons;
+- 4 null-guarded getters.
+
+Getters of members that are not reflected are left out on purpose: only the getter's own
+instruction would place the member, so its match would prove nothing beyond itself.
 
 One bitfield getter compiles to `shr eax, 4; and al, 1` where the others mask `eax`. With
 v140, `return b;`, `!= 0`, `!!b` and `(bool)b` all mask `eax` for a uint32 unit. Only
@@ -762,7 +784,7 @@ v140, `return b;`, `!= 0`, `!!b` and `(bool)b` all mask `eax` for a uint32 unit.
 it (`AFortWeaponRanged::UseFirstPersonTargeting`).
 
 Reconstruction:
-- The 149 members and 35 bitfield members are declared at their reflected offsets in
+- The 166 members and 35 bitfield members are declared at their reflected offsets in
   `Classes.gen.h`. A bitfield unit names its reflected bits and leaves the others unnamed
   (`uint32 : 1;`). The rest of each class stays opaque.
 - The natives are defined out of line, one translation unit per package
@@ -772,11 +794,13 @@ Reconstruction:
 - The thunks are UHT 4.20's `DECLARE_FUNCTION` bodies, as for virtual natives.
 - The manifest symbol is the MSVC decoration of the native's signature: bool, the sized
   integers, float, double, class pointers, enums, and structs the shims define with `struct`
-  (by value `U`, by reference `AEAU`/`AEBU`). A returned enum or struct carries the `?A`
-  prefix. `TEnumAsByte` signatures are left out.
+  (by value `U`, by reference `AEAU`/`AEBU`), and the class templates `TEnumAsByte` and
+  `TSubclassOf`. A template-id `?$Name@<args>@` encodes its arguments with a fresh
+  back-reference table (v140 probe). A returned enum, struct or template carries the `?A`
+  prefix.
 
-All 190 natives are exact, outside the denominator (leaf). Each thunk's call then resolves
-through that exact match, and all 190 thunks are exact, in the denominator.
+All 206 natives are exact, outside the denominator (leaf). Each thunk's call then resolves
+through that exact match, and all 206 thunks are exact, in the denominator.
 
 The larger `Classes.gen.h` moves MSVC's `$SG` literal numbering. InputCore.1's literal order
 follows that numbering, so 2 of its registrars (`EControllerHand`, `FKey`) lose their

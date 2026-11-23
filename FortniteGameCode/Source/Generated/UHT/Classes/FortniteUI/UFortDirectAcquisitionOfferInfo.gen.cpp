@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289E560 (end 0x0289E58B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasDisplayAsset); calls the native accessor UFortDirectAcquisitionOfferInfo::HasDisplayAsset | Matching: see analysis/functions-uht-exec.json
+void UFortDirectAcquisitionOfferInfo::execHasDisplayAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasDisplayAsset();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortDirectAcquisitionOfferInfo, 2066992578u)
 // Original dynamic initializer: RVA 0x00242870 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDirectAcquisitionOfferInfo> AutoInitializeUFortDirectAcquisitionOfferInfo(TEXT("UFortDirectAcquisitionOfferInfo"), sizeof(UFortDirectAcquisitionOfferInfo), 2066992578u);

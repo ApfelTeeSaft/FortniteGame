@@ -49,6 +49,15 @@ void UAIHotSpotSlot::execGetSlotUserId(UObject* Context, FFrame& Stack, void* co
 	*(int32*)Z_Param__Result=P_THIS->GetSlotUserId();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C280 (end 0x00F5C2AB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasUserId); calls the native accessor UAIHotSpotSlot::HasUserId | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execHasUserId(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasUserId();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C350 (end 0x00F5C3E6)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAIAllowed) | Matching: see analysis/functions-uht-exec.json
 void UAIHotSpotSlot::execIsAIAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -301,12 +301,28 @@ UFortWorldItemDefinition* AFortPlayerControllerOutpost::GetPendingItemToFabricat
 	return ItemPendingToFabricate;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00E67790 (end 0x00E6779C), leaf (no .pdata)
+// Original VA: 0x0000000140E67790 | File offset: 0x00E66D90
+// Recovery: high-confidence inferred (called by execIsFabricationPending at RVA 0x0107B070; AFortPlayerControllerOutpost::ItemPendingToFabricate reflected at +0x29C0) | Matching: see analysis/functions-native-accessors.json
+bool AFortPlayerControllerOutpost::IsFabricationPending() const
+{
+	return ItemPendingToFabricate != nullptr;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x009E2A50 (end 0x009E2A58), leaf (no .pdata)
 // Original VA: 0x00000001409E2A50 | File offset: 0x009E2050
 // Recovery: high-confidence inferred (called by execGetParachuteRootMesh at RVA 0x01082450; AFortPlayerParachute::ParachuteMesh reflected at +0x338) | Matching: see analysis/functions-native-accessors.json
 USkeletalMeshComponent* AFortPlayerParachute::GetParachuteRootMesh() const
 {
 	return ParachuteMesh;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x009E7730 (end 0x009E773C), leaf (no .pdata)
+// Original VA: 0x00000001409E7730 | File offset: 0x009E6D30
+// Recovery: high-confidence inferred (called by execIsInVehicle at RVA 0x010828A0; AFortPlayerPawnAthena::Vehicle reflected at +0x1728) | Matching: see analysis/functions-native-accessors.json
+bool AFortPlayerPawnAthena::IsInVehicle() const
+{
+	return Vehicle != nullptr;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x009E7690 (end 0x009E7698), leaf (no .pdata)
@@ -381,6 +397,14 @@ void AFortTrackPreview::InitializeTrackPreview(UStaticMeshComponent* InTrackMesh
 	TrackMeshComp = InTrackMeshComp;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F36C30 (end 0x00F36C3D), leaf (no .pdata)
+// Original VA: 0x0000000140F36C30 | File offset: 0x00F36230
+// Recovery: high-confidence inferred (called by execGetCoreAnimation at RVA 0x010D6800; AFortWeapon::WeaponCoreAnimation reflected at +0xA40) | Matching: see analysis/functions-native-accessors.json
+TEnumAsByte<EFortWeaponCoreAnimation::Type> AFortWeapon::GetCoreAnimation() const
+{
+	return WeaponCoreAnimation;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F3B790 (end 0x00F3B798), leaf (no .pdata)
 // Original VA: 0x0000000140F3B790 | File offset: 0x00F3AD90
 // Recovery: high-confidence inferred (called by execGetSupportsAutoFireAtReticleTargetMode at RVA 0x010D6BE0; AFortWeapon::bSupportsAutofireAtReticleTarget reflected at +0x3D8) | Matching: see analysis/functions-native-accessors.json
@@ -445,6 +469,14 @@ int32 UAIHotSpotSlot::GetSlotUserId() const
 	return UserId;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x008551F0 (end 0x008551F8), leaf (no .pdata)
+// Original VA: 0x00000001408551F0 | File offset: 0x008547F0
+// Recovery: high-confidence inferred (called by execHasUserId at RVA 0x00F5C280; UAIHotSpotSlot::UserId reflected at +0x6C) | Matching: see analysis/functions-native-accessors.json
+bool UAIHotSpotSlot::HasUserId() const
+{
+	return UserId != -1;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00857AE0 (end 0x00857AEA), leaf (no .pdata)
 // Original VA: 0x0000000140857AE0 | File offset: 0x008570E0
 // Recovery: high-confidence inferred (called by execIsEnabled at RVA 0x00F5C420; UAIHotSpotSlot::bIsEnabled reflected at +0x70) | Matching: see analysis/functions-native-accessors.json
@@ -459,6 +491,14 @@ bool UAIHotSpotSlot::IsEnabled() const
 bool UBuildingConnectivityComponent::K2_IsPowered()
 {
 	return bIsPowered;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0088DD70 (end 0x0088DD79), leaf (no .pdata)
+// Original VA: 0x000000014088DD70 | File offset: 0x0088D370
+// Recovery: high-confidence inferred (called by execHasEncounter at RVA 0x00F8D710; UFortAIEncounterSequence::CurrentEncounter reflected at +0x60) | Matching: see analysis/functions-native-accessors.json
+bool UFortAIEncounterSequence::HasEncounter() const
+{
+	return CurrentEncounter != nullptr;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0088EE90 (end 0x0088EE98), leaf (no .pdata)
@@ -523,6 +563,14 @@ float UFortDecoItemDefinition::GetGridSnapSizeOverride() const
 int32 UFortDecoItemDefinition::GetMaxPlacementDistance() const
 {
 	return MaxPlacementDistance;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C27EC0 (end 0x00C27ECD), leaf (no .pdata)
+// Original VA: 0x0000000140C27EC0 | File offset: 0x00C274C0
+// Recovery: high-confidence inferred (called by execGetPlacementTypeOverride at RVA 0x00FD1D70; UFortDecoItemDefinition::PlacementTypeOverride reflected at +0x7A8) | Matching: see analysis/functions-native-accessors.json
+TEnumAsByte<EPlacementType::Type> UFortDecoItemDefinition::GetPlacementTypeOverride() const
+{
+	return PlacementTypeOverride;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00C29C60 (end 0x00C29C69), leaf (no .pdata)
@@ -779,6 +827,14 @@ float UFortWeaponItemDefinition::GetLowAmmoPercentage() const
 FVector2D UFortWeaponItemDefinition::GetReticleCenterImageOffset() const
 {
 	return ReticleCenterImageOffset;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F0D8C0 (end 0x00F0D8CD), leaf (no .pdata)
+// Original VA: 0x0000000140F0D8C0 | File offset: 0x00F0CEC0
+// Recovery: high-confidence inferred (called by execGetTriggerType at RVA 0x010D9FC0; UFortWeaponItemDefinition::TriggerType reflected at +0x610) | Matching: see analysis/functions-native-accessors.json
+TEnumAsByte<EFortWeaponTriggerType::Type> UFortWeaponItemDefinition::GetTriggerType() const
+{
+	return TriggerType;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F20F50 (end 0x00F20F58), leaf (no .pdata)

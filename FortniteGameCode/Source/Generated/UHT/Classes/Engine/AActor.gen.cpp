@@ -73,6 +73,15 @@ void AActor::execGetInstigator(UObject* Context, FFrame& Stack, void* const Z_Pa
 	*(APawn**)Z_Param__Result=P_THIS->GetInstigator();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C0990 (end 0x023C09BC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetInstigatorController); calls the native accessor AActor::GetInstigatorController | Matching: see analysis/functions-uht-exec.json
+void AActor::execGetInstigatorController(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AController**)Z_Param__Result=P_THIS->GetInstigatorController();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C09C0 (end 0x023C09F1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLifeSpan) | Matching: see analysis/functions-uht-exec.json
 void AActor::execGetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

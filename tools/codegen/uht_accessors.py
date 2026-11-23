@@ -107,41 +107,54 @@ def width_class(ctype: str, enums: dict[str, int]) -> str | None:
     return None
 
 
-def mangle(cls: str, name: str, ret: str | None, params: list[str], const: bool, enums: dict[str, int]) -> str:
-    """MSVC (x64) decorated name of a public non-virtual member function with the types above."""
-    table: list[str] = []
+TEMPLATES = ("TEnumAsByte", "TSubclassOf")    # class templates (V) the shims define
 
-    def qual(parts: list[str]) -> str:      # innermost first, each a name or a back-reference
+
+def mangle(cls: str, name: str, ret: str | None, params: list[str], const: bool, enums: dict[str, int]) -> str:
+    """MSVC (x64) decorated name of a public non-virtual member function with the types above.
+    A template-id (`?$Name@args@`) encodes its arguments with a fresh back-reference table and
+    counts as one name in the enclosing one (probed with v140)."""
+
+    def qual(parts: list[str], table: list[str]) -> str:   # innermost first: names or back-references
         out = ""
         for p in parts:
             if p in table:
                 out += str(table.index(p))
             else:
-                out += p + "@"
+                out += (p if p.startswith("?$") else p + "@")
                 if len(table) < 10:
                     table.append(p)
         return out + "@"
 
-    def typ(t: str) -> str:
+    def typ(t: str, table: list[str]) -> str:
         if t in SCALAR:
             return SCALAR[t][0]
+        m = re.fullmatch(r"(\w+)<(.+)>", t)
+        if m and m.group(1) in TEMPLATES:
+            tid = "?$" + m.group(1) + "@" + typ(m.group(2), []) + "@"
+            return "V" + qual([tid], table)
         m = re.fullmatch(r"(const )?(F\w+)&", t)
         if m and record_keyword(m.group(2)):
-            return ("AEB" if m.group(1) else "AEA") + record_keyword(m.group(2)) + qual([m.group(2)])
+            return ("AEB" if m.group(1) else "AEA") + record_keyword(m.group(2)) + qual([m.group(2)], table)
         if re.fullmatch(r"F\w+", t) and record_keyword(t):
-            return record_keyword(t) + qual([t])
+            return record_keyword(t) + qual([t], table)
         if t.endswith("*"):
-            return "PEAV" + qual([t[:-1]])
-        if t in enums:
-            return "W4" + qual(list(reversed(t.split("::"))))
+            return "PEAV" + qual([t[:-1]], table)
+        if re.fullmatch(r"[AUI]\w+", t):                 # a class used as a template argument
+            return "V" + qual([t], table)
+        if t in enums or re.fullmatch(r"E\w+(::Type)?", t):
+            return "W4" + qual(list(reversed(t.split("::"))), table)
         raise ValueError(t)
 
-    head = "?" + qual([name, cls])
-    # A returned enum or struct (a user-defined type, not a pointer) carries the ?A storage prefix.
-    udt = ret is not None and (ret in enums or (re.fullmatch(r"F\w+", ret) and record_keyword(ret)))
-    rcode = ("?A" if udt else "") + typ(ret) if ret else "X"
+    names: list[str] = []
+    head = "?" + qual([name, cls], names)
+    # A returned enum, struct or class template (a user-defined type, not a pointer) carries the
+    # ?A storage prefix.
+    udt = ret is not None and (ret in enums or (re.fullmatch(r"F\w+", ret) and record_keyword(ret))
+                               or re.fullmatch(r"(%s)<.+>" % "|".join(TEMPLATES), ret))
+    rcode = ("?A" if udt else "") + typ(ret, names) if ret else "X"
     return (head + "QE" + ("B" if const else "A") + "A" + rcode
-            + ("".join(typ(p) for p in params) + "@" if params else "X") + "Z")
+            + ("".join(typ(p, names) for p in params) + "@" if params else "X") + "Z")
 
 
 def bool_offset(dimg, base: int, p: dict) -> int | None:
@@ -264,6 +277,55 @@ def bit_shape(ins) -> dict | None:
     return None
 
 
+CC = {"g": (">", "s"), "ge": (">=", "s"), "l": ("<", "s"), "le": ("<=", "s"), "a": (">", "u"),
+      "ae": (">=", "u"), "b": ("<", "u"), "be": ("<=", "u"), "e": ("==", ""), "ne": ("!=", "")}
+SIGNED = {"int8", "int16", "int32", "int64"}
+INTS = SIGNED | {"uint8", "uint16", "uint32", "uint64"}
+GLOAD = [  # the pointee's member, loaded through rax into the return register
+    (r"movzx eax, byte ptr \[rax \+ (0x[0-9a-f]+|\d+)\]", "b1"),
+    (r"mov eax, dword ptr \[rax \+ (0x[0-9a-f]+|\d+)\]", "i4"),
+    (r"mov rax, qword ptr \[rax \+ (0x[0-9a-f]+|\d+)\]", "i8"),
+    (r"movss xmm0, dword ptr \[rax \+ (0x[0-9a-f]+|\d+)\]", "f4"),
+]
+
+
+def cmp_shape(ins) -> dict | None:
+    """`cmp <width> ptr [rcx+N], imm; set<cc> al` (before the ret): `return Member <op> imm;`."""
+    if len(ins) != 2 or ins[0].mnemonic != "cmp" or ins[1].op_str != "al" or not ins[1].mnemonic.startswith("set"):
+        return None
+    m = re.fullmatch(r"(byte|word|dword|qword) ptr \[rcx(?: \+ (0x[0-9a-f]+|\d+))?\], " + NUM, ins[0].op_str)
+    if not m:
+        return None
+    return {"offset": int(m.group(2) or "0", 0), "width": WIDTH[m.group(1)], "imm": int(m.group(3), 0),
+            "cc": ins[1].mnemonic[3:]}
+
+
+def guard_shape(ins, ret, dimg, md) -> dict | None:
+    """`mov rax, [rcx+N]; test rax, rax; je null; <load [rax+M]>; ret` with the null path straight
+    after: one zeroing instruction and ret. `return Ptr ? Ptr->Member : 0;` (probed with v140)."""
+    if len(ins) != 4 or ins[0].mnemonic != "mov" or (ins[1].mnemonic, ins[1].op_str) != ("test", "rax, rax") \
+            or ins[2].mnemonic != "je":
+        return None
+    m0 = re.fullmatch(r"rax, qword ptr \[rcx \+ (0x[0-9a-f]+|\d+)\]", ins[0].op_str)
+    if not m0 or not re.fullmatch(r"0x[0-9a-f]+", ins[2].op_str) or int(ins[2].op_str, 16) != ret.address + 1:
+        return None
+    load = f"{ins[3].mnemonic} {ins[3].op_str}"
+    hit = next(((int(m.group(1), 0), wc) for pat, wc in GLOAD for m in [re.fullmatch(pat, load)] if m), None)
+    if hit is None:
+        return None
+    try:
+        tail = list(md.disasm(dimg.read(ret.address + 1, 16), ret.address + 1))[:2]
+    except ValueError:
+        return None
+    if tail and tail[0].mnemonic == "ret" and not tail[0].op_str:
+        # The null path returns rax as it is: zero after `test rax, rax; je` (int, bool, pointer).
+        return {"ptr": int(m0.group(1), 0), "offset": hit[0], "wc": hit[1], "zero": "rax", "end": tail[0].address + 1}
+    if len(tail) != 2 or tail[1].mnemonic != "ret" or tail[1].op_str:
+        return None
+    return {"ptr": int(m0.group(1), 0), "offset": hit[0], "wc": hit[1],
+            "zero": f"{tail[0].mnemonic} {tail[0].op_str}", "end": tail[1].address + 1}
+
+
 def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_props, signature) -> dict:
     """Accessors among `natives` (native-implementations.json entries).
 
@@ -273,6 +335,7 @@ def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_
     "ctype", "name", "size"} or {"kind": "bit", "offset", "width", "bit", "name"}.
     """
     rejected = defaultdict(int)
+    examples = defaultdict(list)     # reason -> [(native, body)], for the survey only
     enum_sizes: dict[str, int] = {}
     out = []
     execs = defaultdict(int)
@@ -352,10 +415,12 @@ def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_
                     kind, off, wc = "set", int(m.group(1), 16), w
             if kind is None:
                 rejected["other shape"] += 1
+                examples["other shape"].append((n["name"], "; ".join(f"{i.mnemonic} {i.op_str}" for i in ins)))
                 continue
             hit = member_at(cls, off)
             if hit is None:
                 rejected["no reflected member at the offset"] += 1
+                examples["no reflected member at the offset"].append((n["name"], "; ".join(f"{i.mnemonic} {i.op_str}" for i in ins)))
                 continue
             owner, prop, mtype = hit
             sig = signature(cls, uf, int(n["exec_rva"], 16))
@@ -383,20 +448,79 @@ def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_
             else:
                 pdecl = sig["params"][0][0]
                 decl, body = f"void {name}({pdecl}){const_of(sig)}", f"\t{prop['name']} = {pdecl.rsplit(' ', 1)[1]};"
-            rec = (owner, member, sig, ptypes, decl, body, kind)
+            if any("TEnumAsByte" in t for t in ptypes + [sig["ret"] or ""]):
+                # A TEnumAsByte has a user copy constructor: it is returned through a hidden
+                # pointer and passed by reference, so a one-instruction body cannot have one.
+                rejected["TEnumAsByte signature"] += 1
+                continue
+            member["owner"] = owner
+            rec = ([member], sig, ptypes, decl, body, kind, ins[-1].address + 1)
         else:
             body_ins = ins[:-1]
-            shape = copy_shape(body_ins)
-            bits = None if shape else bit_shape(body_ins)
-            if shape is None and bits is None:
+            cmpd = cmp_shape(body_ins)
+            guard = None if cmpd else guard_shape(body_ins, ins[-1], dimg, md)
+            shape = None if (cmpd or guard) else copy_shape(body_ins)
+            bits = None if (cmpd or guard or shape) else bit_shape(body_ins)
+            if shape is None and bits is None and cmpd is None and guard is None:
                 rejected["other shape"] += 1
+                examples["other shape"].append((n["name"], "; ".join(f"{i.mnemonic} {i.op_str}" for i in ins)))
                 continue
             sig = signature(cls, uf, int(n["exec_rva"], 16))
             if sig is None:
                 rejected["signature not recovered"] += 1
                 continue
             ptypes = [d.rsplit(" ", 1)[0] for d, _, _ in sig["params"]]
-            if shape is not None:
+            end = ins[-1].address + 1
+            if cmpd is not None:
+                kind, off = "get", cmpd["offset"]
+                hit = member_at(cls, off) if off > 0 else None
+                if hit is None:
+                    rejected["no reflected member at the offset"] += 1
+                    continue
+                owner, prop, mtype = hit
+                op, sign = CC.get(cmpd["cc"], (None, None))
+                wc = width_class(mtype, enum_sizes)
+                is_ptr = mtype.endswith("*")
+                if (op is None or wc is None or SIZE[wc][0] != cmpd["width"] or mtype not in INTS and not is_ptr
+                        or (sign == "s" and mtype not in SIGNED) or (sign == "u" and mtype in SIGNED)
+                        or (is_ptr and (cmpd["imm"] != 0 or op not in ("==", "!="))) or sig["ret"] != "bool" or ptypes):
+                    rejected["comparison disagrees with the member"] += 1
+                    continue
+                imm = cmpd["imm"]
+                if mtype in SIGNED and imm >= 1 << (8 * cmpd["width"] - 1):
+                    imm -= 1 << (8 * cmpd["width"])
+                lit = "nullptr" if is_ptr else str(imm)
+                decl, body = f"bool {name}(){const_of(sig)}", f"\treturn {prop['name']} {op} {lit};"
+                members = [{"kind": "plain", "offset": off, "ctype": mtype, "name": prop["name"],
+                            "size": SIZE[wc][0], "align": SIZE[wc][1], "owner": owner}]
+            elif guard is not None:
+                kind, end = "get", guard["end"]
+                hp = member_at(cls, guard["ptr"])
+                if hp is None or not re.fullmatch(r"[AU]\w+\*", hp[2]):
+                    rejected["no reflected pointer member at the offset"] += 1
+                    continue
+                target = hp[2][:-1]
+                hm = member_at(target, guard["offset"])
+                if hm is None:
+                    rejected["no reflected member of the pointee at the offset"] += 1
+                    continue
+                powner, pprop, ptype = hp
+                mowner, mprop, mtype = hm
+                wc = width_class(mtype, enum_sizes)
+                zero = {"bool": "xor al, al", "float": "xorps xmm0, xmm0"}.get(mtype, "xor eax, eax")
+                default = {"bool": "false", "float": "0.f"}.get(mtype, "nullptr" if mtype.endswith("*") else "0")
+                if (wc != guard["wc"] or guard["zero"] not in (zero, "rax" if mtype != "float" else zero)
+                        or sig["ret"] != mtype or ptypes
+                        or not (mtype in SCALAR or mtype.endswith("*"))):
+                    rejected["guarded getter disagrees with the members"] += 1
+                    continue
+                decl = f"{mtype} {name}(){const_of(sig)}"
+                body = f"\treturn {pprop['name']} ? {pprop['name']}->{mprop['name']} : {default};"
+                members = [{"kind": "plain", "offset": guard["ptr"], "ctype": ptype, "name": pprop["name"],
+                            "size": 8, "align": 8, "owner": powner},
+                           {"kind": "plain", "offset": guard["offset"], "ctype": mtype, "name": mprop["name"],
+                            "size": SIZE[wc][0], "align": SIZE[wc][1], "owner": mowner}]
+            elif shape is not None:
                 if shape["src"] == "rcx" and shape["dst"] == "rdx":
                     kind = "get" if shape["ret_rdx"] else "out"
                     off = shape["delta"]
@@ -406,12 +530,19 @@ def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_
                     rejected["other copy"] += 1
                     continue
                 hit = member_at(cls, off) if off > 0 else None
-                if hit is None or hit[1]["type"] != "Struct":
+                # A struct, or a TEnumAsByte / TSubclassOf member: class types with user
+                # constructors, returned through the hidden pointer like a struct.
+                wrapped = hit is not None and (
+                    (hit[2].startswith("TEnumAsByte<") and shape["size"] == 1)
+                    or (hit[2].startswith("TSubclassOf<") and shape["size"] == 8))
+                if hit is None or (hit[1]["type"] != "Struct" and not wrapped):
                     rejected["no reflected struct member at the offset"] += 1
+                    examples["no reflected struct member at the offset"].append((n["name"], "; ".join(f"{i.mnemonic} {i.op_str}" for i in ins)))
                     continue
                 owner, prop, mtype = hit
-                info = names.structs.get(prop["func"] - base) if prop["func"] else None
-                if not info or info[1] != shape["size"] or not record_keyword(mtype):
+                info = ((mtype, shape["size"], shape["size"]) if wrapped
+                        else names.structs.get(prop["func"] - base) if prop["func"] else None)
+                if not info or info[1] != shape["size"] or not (wrapped or record_keyword(mtype)):
                     rejected["struct size or model disagrees"] += 1
                     continue
                 if kind == "get":
@@ -428,8 +559,8 @@ def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_
                 if not ok:
                     rejected["signature disagrees with the member"] += 1
                     continue
-                member = {"kind": "plain", "offset": off, "ctype": mtype, "name": prop["name"], "size": info[1],
-                          "align": info[2]}
+                members = [{"kind": "plain", "offset": off, "ctype": mtype, "name": prop["name"], "size": info[1],
+                            "align": info[2], "owner": owner}]
             else:
                 kind, off, width = bits["kind"], bits["offset"], bits["width"]
                 if off % width:
@@ -438,6 +569,7 @@ def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_
                 hit = bit_at(cls, off * 8 + bits["bit"], width)
                 if hit is None:
                     rejected["no reflected bitfield at the bit"] += 1
+                    examples["no reflected bitfield at the bit"].append((n["name"], "; ".join(f"{i.mnemonic} {i.op_str}" for i in ins)))
                     continue
                 owner, prop = hit
                 if kind == "get":
@@ -451,24 +583,22 @@ def find(dimg, base: int, md, natives: list[dict], class_props, sup, names, uht_
                 if not ok:
                     rejected["signature disagrees with the member"] += 1
                     continue
-                member = {"kind": "bit", "offset": off, "width": width, "bit": bits["bit"], "name": prop["name"],
-                          "size": width, "align": width}
-            rec = (owner, member, sig, ptypes, decl, body, kind)
-        owner, member, sig, ptypes, decl, body, kind = rec
-        if any("TEnumAsByte" in t for t in ptypes + [sig["ret"] or ""]):
-            rejected["TEnumAsByte signature"] += 1
-            continue
+                members = [{"kind": "bit", "offset": off, "width": width, "bit": bits["bit"], "name": prop["name"],
+                            "size": width, "align": width, "owner": owner}]
+            rec = (members, sig, ptypes, decl, body, kind, end)
+        members, sig, ptypes, decl, body, kind, end = rec
         try:
             symbol = mangle(cls, name, sig["ret"], ptypes, sig["const"], enum_sizes)
         except ValueError:
             rejected["type not mangled"] += 1
             continue
-        if member["offset"] % member["align"]:
+        if any(m["offset"] % m["align"] for m in members):
             rejected["misaligned"] += 1
             continue
-        out.append({"class": cls, "ufunction": uf, "name": name, "rva": r, "end": ins[-1].address + 1,
-                    "exec_rva": n["exec_rva"], "kind": kind, "member": member["name"], "owner": owner,
-                    "offset": member["offset"], "size": member["size"], "mspec": member,
+        first = members[-1]       # the member the accessor reads or writes (after its pointer, if any)
+        out.append({"class": cls, "ufunction": uf, "name": name, "rva": r, "end": end,
+                    "exec_rva": n["exec_rva"], "kind": kind, "member": first["name"], "owner": first["owner"],
+                    "offset": first["offset"], "size": first["size"], "mspecs": members,
                     "decl": decl, "head": decl.replace(f"{name}(", f"{cls}::{name}(", 1), "body": body,
                     "symbol": symbol, "pdata": bool(n.get("pdata"))})
-    return {"natives": out, "rejected": dict(rejected), "enum_sizes": enum_sizes}
+    return {"natives": out, "rejected": dict(rejected), "enum_sizes": enum_sizes, "examples": examples}

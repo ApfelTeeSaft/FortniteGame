@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02473D90 (end 0x02473DBD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBrightness); calls the native accessor ALight::GetBrightness | Matching: see analysis/functions-uht-exec.json
+void ALight::execGetBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetBrightness();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bEnabled) | Matching: see analysis/functions-uht-exec.json
 void ALight::execOnRep_bEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

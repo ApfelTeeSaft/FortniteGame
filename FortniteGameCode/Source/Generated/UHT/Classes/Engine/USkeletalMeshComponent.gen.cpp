@@ -39,6 +39,15 @@ void USkeletalMeshComponent::execGetAnimInstance(UObject* Context, FFrame& Stack
 	*(UAnimInstance**)Z_Param__Result=P_THIS->GetAnimInstance();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CE5D0 (end 0x024CE5FB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimationMode); calls the native accessor USkeletalMeshComponent::GetAnimationMode | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execGetAnimationMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EAnimationMode::Type>*)Z_Param__Result=P_THIS->GetAnimationMode();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024CE750 (end 0x024CE77C)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetClothingSimulationInteractor); calls the native accessor USkeletalMeshComponent::GetClothingSimulationInteractor | Matching: see analysis/functions-uht-exec.json
 void USkeletalMeshComponent::execGetClothingSimulationInteractor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

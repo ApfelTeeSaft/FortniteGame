@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02422950 (end 0x0242297C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetOwningPawn); calls the native accessor AHUD::GetOwningPawn | Matching: see analysis/functions-uht-exec.json
+void AHUD::execGetOwningPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APawn**)Z_Param__Result=P_THIS->GetOwningPawn();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024233B0 (end 0x024233CF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execNextDebugTarget) | Matching: see analysis/functions-uht-exec.json
 void AHUD::execNextDebugTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
