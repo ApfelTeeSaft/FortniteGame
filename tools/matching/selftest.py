@@ -536,7 +536,32 @@ def test_split_objects() -> None:
     print("split objects: ok")
 
 
+def test_slot_elimination() -> None:
+    from compare import Resolver
+    r = Resolver.__new__(Resolver)
+    block = {"unit": "U.1", "slot": 8, "symbols": ["A", "B", "C", "D"]}
+    r.blocks = {m: block for m in block["symbols"]}
+
+    def setup(obs: dict, other: dict | None = None):
+        r.observations = {("obj", k): {v: {i + 10}} for i, (k, v) in enumerate(obs.items())}
+        r.by_addr = {v: {("obj", k): {i + 10}} for i, (k, v) in enumerate(obs.items())}
+        for k, v in (other or {}).items():
+            r.observations[("obj", k)] = {v: {99}}
+            r.by_addr.setdefault(v, {})[("obj", k)] = {99}
+        r._name_index = None
+    setup({"A": 0x100, "B": 0x108, "D": 0x118})                       # C fills the gap
+    assert [p for p, _ in r._slot_elimination("C", None)] == [0x110]
+    setup({"B": 0x108, "C": 0x110, "D": 0x118}, {"X": 0x120})            # A: 0x120 is someone else's
+    assert [p for p, _ in r._slot_elimination("A", None)] == [0x100]
+    setup({"B": 0x108, "C": 0x110, "D": 0x118})                           # either end: declined
+    assert r._slot_elimination("A", None) == []
+    setup({"A": 0x100, "B": 0x108, "D": 0x140})                           # not one block: declined
+    assert r._slot_elimination("C", None) == []
+    print("slot elimination: ok")
+
+
 def main() -> int:
+    test_slot_elimination()
     test_split_objects()
     test_accessor_mangling()
     test_accessor_shapes()

@@ -1104,6 +1104,24 @@ This is a hypothesis about MSVC's internals, not verified. What was observed: in
 declarations before them, they come out as `[3,4,5,6,0,1,2]`. Declaring them first in source
 order doesn't change that. `inline` functions are deferred the same way.
 
+**Slot elimination.** The order within the block is MSVC's and is not reproduced. Its
+extent is: a unit's singletons fill one contiguous run of 8-byte slots. That holds in 128 of
+the 137 units with two or more `StaticEnum`s; the other 9 have wide gaps.
+- `uht_enums.py` writes each unit's singleton symbols, from the unity order, to
+  `analysis/uht-bss-blocks.json`.
+- When the section-relative prediction declines, `compare.py` resolves a singleton as the
+  one slot its block-mates leave. Each of the other singletons must be observed exactly
+  once, by entries other than the one under test.
+- The slot is the single gap between them. When they are contiguous, it is the end slot whose
+  outer neighbour is not already observed holding another symbol.
+- Anything else (a wider gap, two gaps, both ends free) resolves nothing. The byte comparison
+  checks every prediction.
+
+This made 279 `StaticEnum`s exact, 653 of 1,089 in all, with no regressions. Of the rest:
+- 268 are blocked only at an end of their block with both outer neighbours unobserved;
+- 125 wait on a literal copy;
+- 23 are a unit's only `StaticEnum`.
+
 **Layout used.** `StaticEnum` is generated with external linkage. Each unit defines its
 `StaticEnum` functions first, in source order, before the prologue:
 - `Enums/<Pkg>/<E>.staticenum.gen.cpp`: the function. The code is the same; only its

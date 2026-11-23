@@ -70,6 +70,7 @@ CTOR_MANIFEST = ROOT / "analysis" / "functions-uht-enums.json"
 SE_MANIFEST = ROOT / "analysis" / "functions-uht-staticenum.json"
 DEFER_MANIFEST = ROOT / "analysis" / "functions-uht-enum-defer.json"
 SYMBOLS = ROOT / "analysis" / "uht-enum-symbols.json"
+BLOCKS = ROOT / "analysis" / "uht-bss-blocks.json"
 SE_TEMPLATE = bytes.fromhex(
     "4883ec28488b05000000004885c07522e800000000488bd04c8d0500000000488d0d00000000e800000000"
     "488905000000004883c428c3")
@@ -206,6 +207,7 @@ def main() -> int:
 
     outputs: dict[Path, str] = {}
     ctor_entries, se_entries, defer_entries, symbols = [], [], [], {}
+    singleton_block = defaultdict(list)     # original unit -> its StaticEnum singletons
     for pkg_rva, pname in packages.items():
         symbols[f"?Z_Construct_UPackage_{pname.replace('/', '_')}@@YAPEAVUPackage@@XZ"] = [
             f"0x{pkg_rva:08X}", "package-params"]
@@ -283,6 +285,7 @@ def main() -> int:
             se_entries.append({"start_rva": f"0x{se['rva']:08X}", "end_rva": f"0x{se.get('end', se['rva'] + len(SE_TEMPLATE)):08X}",
                                "name": f"{name}_StaticEnum", **common,
                                "unit": unit if se.get("inlined") else static_units[name]})
+            singleton_block[unit].append(f"?Singleton@?1??{name}_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA")
             stats["staticenum_plain"] += 1
         if cid:
             defer_entries.append({"start_rva": f"0x{cid:08X}", "end_rva": f"0x{cid + len(CID_TEMPLATE):08X}",
@@ -304,6 +307,16 @@ def main() -> int:
         "entry_defaults": {"category": "uht-enum-constructor", "source": src_tpl, "object": obj_tpl,
                            "symbol": "?{name}@@YAPEAVUEnum@@XZ", "name_confidence": "confirmed", "compact": True},
         "functions": ctor_entries})
+    # The StaticEnum singletons of one original unit: MSVC puts file-static functions' statics in
+    # one block of 8-byte slots at the start of the unit's .bss, in an order of its own
+    # (docs/REVERSE_ENGINEERING.md). Membership comes from the unity order only; compare.py
+    # resolves a singleton as the one slot of the block its block-mates leave free.
+    BLOCKS.write_text(json.dumps({
+        "schema_version": 1, "generated_by": "tools/codegen/uht_enums.py",
+        "evidence": ("Each original unit's StaticEnum singletons fill one contiguous block of 8-byte .bss slots "
+                     "(file-static functions' statics). Members from the unity order (analysis/unity-order.json)."),
+        "blocks": [{"unit": u, "slot": 8, "symbols": sorted(m)} for u, m in sorted(singleton_block.items()) if len(m) > 1],
+    }, indent=1) + chr(10), encoding="utf-8")
     dump_compact(SE_MANIFEST, {**head,
         "evidence": ("<Enum>_StaticEnum: 55-byte UHT shape passing Z_Construct_UEnum_* and TEXT(\"<Enum>\") to "
                      "GetStaticEnum. UHT makes it file-static; it is defined with external linkage at the top of its unit, "

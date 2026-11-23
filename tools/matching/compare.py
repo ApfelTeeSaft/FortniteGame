@@ -24,7 +24,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
-from collections import Counter
+from collections import Counter, defaultdict
 import hashlib
 import json
 import struct
@@ -107,6 +107,8 @@ class Resolver:
         self._literal_copy_sets: dict = {}
         self.entry_addrs: dict = {}
         self.entry_names: dict[int, str] = {}
+        self.blocks: dict[str, dict] = {}
+        self._name_index = None
 
     @staticmethod
     def key(obj: CoffObject, objpath: str, symbol: str):
@@ -193,11 +195,11 @@ class Resolver:
         # a failed prediction is reported as unresolved.
         sym = obj.symbol(symbol)
         if sym is None or sym.section <= 0:
-            return []
+            return self._slot_elimination(symbol, exclude)
         items, index = self._layout_group(obj, objpath, obj.sections[sym.section - 1].name)
         i = index.get(symbol)
         if i is None:
-            return []
+            return self._slot_elimination(symbol, exclude)
         mine = items[i][0]
 
         def observed_pred(j: int):
@@ -222,7 +224,7 @@ class Resolver:
             extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
             return [(pred, "section-relative (local) to " + basis[0] + extra)]
         if len(nearest) < 2:
-            return []
+            return self._slot_elimination(symbol, exclude)
         # The sides disagree: a gap next to the symbol. Each side's run is the observed
         # neighbours that agree with its nearest one, up to the first that does not. The
         # strictly longer run's prediction is used; that side holds more of the symbol's own
@@ -240,10 +242,63 @@ class Resolver:
             runs.append((count, first, desc))
         (lc, lp, ld), (rc, rp, rd) = runs
         if lc == rc:
-            return []
+            return self._slot_elimination(symbol, exclude)
         count, pred, desc = max(runs)
         extra = f" and {count - 1} more neighbours" if count > 1 else ""
         return [(pred, "section-relative (longer run) to " + desc + extra + f" ({min(lc, rc)} dissenting)")]
+
+    def _slot_elimination(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
+        """A declared block of equal slots (analysis/uht-bss-blocks.json): its members fill one
+        contiguous run. With every other member observed once, by entries other than the one
+        under test, the symbol's slot is the only one left: the single gap between them, or, when
+        they are contiguous, the end slot the other end's neighbour does not already hold (an
+        observed slot of a symbol outside the block). The byte comparison checks the result."""
+        block = getattr(self, "blocks", {}).get(symbol)
+        if not block:
+            return []
+        step, addrs = block["slot"], []
+        for m in block["symbols"]:
+            if m == symbol:
+                continue
+            vals = self._observed_by_name(m, exclude)
+            if len(vals) != 1:
+                return []
+            addrs.append(next(iter(vals)))
+        a = sorted(addrs)
+        if not a or len(set(a)) != len(a) or any((y - x) % step for x, y in zip(a, a[1:])):
+            return []
+        gaps = [x + step for x, y in zip(a, a[1:]) if y - x == 2 * step]
+        if any(y - x > 2 * step for x, y in zip(a, a[1:])) or len(gaps) > 1:
+            return []
+        if gaps:
+            cand, how = gaps, "the gap between"
+        else:
+            cand = [c for c in (a[0] - step, a[-1] + step) if not self._held_by_other(c, block, exclude)]
+            how = "the free end of"
+        if len(cand) != 1:
+            return []
+        return [(cand[0], f"slot elimination: {how} the {len(a)} other slots of {block['unit']}'s "
+                          f"{len(block['symbols'])}-slot block")]
+
+    def _observed_by_name(self, name: str, exclude: int | None) -> set[int]:
+        if getattr(self, "_name_index", None) is None:
+            self._name_index = defaultdict(list)
+            for k in self.observations:
+                self._name_index[k if isinstance(k, str) else k[1]].append(k)
+        out = set()
+        for k in self._name_index.get(name, []):
+            for val, ents in self.observations[k].items():
+                if ents - {exclude}:
+                    out.add(val)
+        return out
+
+    def _held_by_other(self, addr: int, block: dict, exclude: int | None) -> bool:
+        members = set(block["symbols"])
+        for k, ents in self.by_addr.get(addr, {}).items():
+            name = k if isinstance(k, str) else k[1]
+            if name not in members and ents - {exclude}:
+                return True
+        return False
 
     def _layout_group(self, obj: CoffObject, objpath: str, secname: str):
         """([(offset, symbol)] sorted by offset, {symbol: index}) of one section group, cached."""
@@ -571,6 +626,17 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
     return res
 
 
+def load_blocks() -> dict[str, dict]:
+    """Declared slot blocks, by member symbol (analysis/uht-bss-blocks.json)."""
+    path = REPO_ROOT / "analysis" / "uht-bss-blocks.json"
+    out = {}
+    if path.exists():
+        for b in json.loads(path.read_text(encoding="utf-8")).get("blocks", []):
+            for m in b["symbols"]:
+                out[m] = b
+    return out
+
+
 def load_manual_symbols() -> dict[str, tuple[int, str]]:
     manual: dict[str, tuple[int, str]] = {}
     if SYMBOLS.exists():
@@ -613,6 +679,7 @@ def main() -> int:
         return 2
     dimg = load_decrypted(img)
     resolver = Resolver(img, dimg, load_manual_symbols())
+    resolver.blocks = load_blocks()
     rfs = img.runtime_functions()
     rfmap = {rf.begin: rf for rf in rfs}
     text = img.sections[0]
@@ -662,6 +729,7 @@ def main() -> int:
         resolver.by_addr = {}
         resolver.entry_addrs = {}
         resolver._unobserved = {}
+        resolver._name_index = None
         for i, res in results.items():
             for obj, objpath, relocs, cand_raw, ref, start in res.pop("_observe", []):
                 resolver.observe(i, obj, objpath, relocs, cand_raw, ref, start, img.image_base)

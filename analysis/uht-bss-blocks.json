@@ -1,0 +1,1895 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/codegen/uht_enums.py",
+ "evidence": "Each original unit's StaticEnum singletons fill one contiguous block of 8-byte .bss slots (file-static functions' statics). Members from the unity order (analysis/unity-order.json).",
+ "blocks": [
+  {
+   "unit": "AIModule.3",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAILockSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAIOptionFlag_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAIRequestPriority_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAITaskPriority_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EArithmeticKeyOperation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBTBlackboardRestart_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBTChildIndex_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBTDecoratorLogic_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBTFlowAbortMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBTNodeResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBTParallelMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBasicKeyOperation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGenericAICheck_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPawnActionAbortState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPawnActionEventType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPawnActionResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextKeyOperation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??FAIDistanceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "AIModule.4",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBlackBoardEntryComparison_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPathExistanceQueryType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "AIModule.5",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAIParamType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEQSNormalizationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvOverlapShape_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvQueryHightlightMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvQueryParam_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvQueryRunMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvQueryStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvQueryTestClamping_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvQueryTrace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestCost_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestDistance_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestDot_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestFilterOperator_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestFilterType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestPathfinding_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestPurpose_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestScoreEquation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestScoreOperator_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTestWeight_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEnvTraceShape_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPathFollowingAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPathFollowingRequestResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPathFollowingResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPathFollowingStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPawnActionFailHandling_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPawnActionMoveMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPawnSubActionTriggeringPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPointOnCircleSpacingMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETeamAttitude_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Account.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EConsoleAuthLinkState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECreateAccountResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EExternalAccountType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELoginResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "AnimGraphRuntime.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??AnimPhysAngularConstraintType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??AnimPhysLinearConstraintType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??AnimPhysSimSpaceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??CopyBoneDeltaMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneModificationMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EComponentType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EConstraintOffsetOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDrivenBoneModificationMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDrivenDestinationMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInterpolationBlend_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EModifyCurveApplyMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPoseDriverOutput_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPoseDriverSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPoseDriverType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERBFDistanceMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERBFFunctionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERefPoseType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EScaleChainInitialLength_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESequenceEvalReinit_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESnapshotSourceMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESphericalLimitType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESplineBoneAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "AnimationCore.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EConstraintType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETransformConstraintType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "AppleARKit.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EARKitTextureType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAppleARKitHitTestResultType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "AudioMixer.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ESubmixEffectDynamicsPeakMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESubmixEffectDynamicsProcessorType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "ClothingSystemRuntime.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EClothingWindMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??MaskTarget_PhysMesh_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "CommonUI.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDynamicBoxType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOperation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "CommonUI.3",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECommonNumericType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EItemAlignment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "CommonUI.4",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECommonInputType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECommonPlatformType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECommonSwitcherTransition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInputActionState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETransitionCurve_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "CoreUObject.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAutomationEventType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInterpCurveMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELifetimeCondition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELogTimes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMouseCursor_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPixelFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERangeBoundTypes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESearchCase_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESearchDir_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUnit_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.10",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAngularDriveMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECloudStorageDelegate_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELinearConstraintMotion_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.11",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??DistributionParamMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEvaluateCurveTableResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGrammaticalGender_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGrammaticalNumber_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.12",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBlueprintPinStyleType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECanCreateConnectionResponse_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EConsoleType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDistributionVectorLockFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDistributionVectorMirrorFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEdGraphPinDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFullyLoadPackageType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGraphType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENodeAdvancedPins_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENodeEnabledState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENodeTitleType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPinContainerType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETransitionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.13",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EActorMetricsType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAngularConstraintMotion_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAspectRatioAxisConstraint_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAttachLocation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAttachmentRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAutoPossessAI_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAutoReceiveInput_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBlendMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECollisionChannel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECollisionEnabled_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECollisionResponse_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EComponentMobility_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EComponentSocketType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EConstraintFrame_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDemoPlayFailure_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDetachmentRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEndPlayReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFilterInterpolationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGBufferFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EIndirectLightingCacheQuality_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInputConsumeOptions_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInputEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELightMapPaddingType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELightingBuildQuality_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELightmapType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialSamplerType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialShadingModel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialTessellationMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshBufferAccess_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMouseCaptureMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMouseLockMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMovementMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENetDormancy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENetRole_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENetworkFailure_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENetworkLagState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENetworkSmoothingMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EObjectTypeQuery_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOcclusionCombineMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOverlapFilterOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleCollisionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPhysicalSurface_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPhysicsSceneType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERadialImpulseFalloff_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERefractionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERotatorQuantization_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESamplerSourceMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESceneCaptureCompositeMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESceneCaptureSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESceneDepthPriorityGroup_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EShadowMapFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESleepFamily_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpawnActorCollisionHandlingMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETickingGroup_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETimelineSigType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETraceTypeQuery_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrailWidthMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETranslucencyLightingMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETranslucentSortPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETravelFailure_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETravelType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUpdateRateShiftBucket_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVectorQuantization_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EViewModeIndex_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWalkableSlopeBehavior_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.14",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFontCacheType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFontImportCharacterSet_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStandbyType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.15",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ESuggestProjVelocityTraceOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWindowMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.16",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAdManagerDelegate_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EControllerAnalogStick_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EImportanceWeight_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.17",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EInterpMoveAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInterpToBehaviourType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInterpTrackMoveRotMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrackActiveCondition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrackToggleAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVisibilityTrackAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVisibilityTrackCondition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.18",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EEasingFunc_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELerpInterpolationMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateGesture_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.19",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDrawDebugTrace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMoveComponentAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EQuitPreference_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.20",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFormatArgumentType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERoundingMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStreamingVolumeUsage_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextGender_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.21",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDecalBlendMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialDecalResponse_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureColorChannel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.22",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EChannelMaskParameterColor_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EClampMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECustomMaterialOutputType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDepthOfFieldFunctionValue_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFunctionInputType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialAttributeBlend_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENoiseFunction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.23",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EMaterialExposedTextureProperty_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialPositionTransformSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialSceneAttributeInputMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialVectorCoordTransformSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialVectorCoordTransform_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESceneTextureId_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpeedTreeGeometryType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpeedTreeLODType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpeedTreeWindType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureMipValueMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVectorNoiseFunction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.24",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EMaterialDomain_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialExposedViewProperty_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialFunctionUsage_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialMergeType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialParameterAssociation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialSharedInputType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialUsage_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureSizingType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWorldPositionIncludedOffsets_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.25",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ELandscapeCullingPrecision_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshFeatureImportance_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshInstancingReplacementMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshLODSelectionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshMergeType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMicroTransactionDelegate_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMicroTransactionResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPlaneConstraintAxisSetting_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERuntimeGenerationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUVOutput_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVertexPaintAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.26",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ENavCostDisplay_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavDataGatheringModeConfig_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavDataGatheringMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavLinkDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavPathEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavigationOptionFlag_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavigationQueryResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??FNavigationSystemRunMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.27",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??Beam2SourceTargetMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??Beam2SourceTargetTangentMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??BeamModifierType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAttractorParticleSelectionMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEmitterRenderMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EModuleType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleBurstMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleCameraOffsetUpdateMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleDetailMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSignificanceLevel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSourceSelectionMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSubUVInterpMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSystemInsignificanceReaction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.28",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??CylinderHeightAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEmitterDynamicParameterValue_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEmitterNormalsMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELocationBoneSocketSelectionMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELocationBoneSocketSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELocationEmitterSelectionMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELocationSkelVertSurfaceSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOrbitChainMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleAxisLock_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleCollisionComplete_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleCollisionResponse_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSortMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleUVFlipMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.29",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBeam2Method_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBeamTaperMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshCameraFacingOptions_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshCameraFacingUpAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshScreenAlignment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleScreenAlignment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSystemOcclusionBoundsMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSystemUpdateMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrail2SourceMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrailsRenderAxisOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ParticleSystemLODMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.3",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAlphaBlendOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAnimAssetCurveFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAnimGroupRole_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EComponentCreationMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERawCurveTrackTypes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.30",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EParticleEventType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleSysParamType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ParticleReplayState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.31",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDynamicForceFeedbackAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFrictionCombineMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPlatformInterfaceDataType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESettingsDOF_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESettingsLockedAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EViewTargetBlendFunction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.32",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECanBeCharacterBase_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHasCustomNavigableGeometry_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERendererStencilMask_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.33",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAntiAliasingMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAutoExposureMethodUI_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAutoExposureMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBloomMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EClearSceneOptions_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECompositingSampleCount_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EConstraintTransform_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EControlConstraint_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECustomDepthStencil_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDepthOfFieldMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEarlyZPass_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGraphAxisStyle_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGraphDataStyle_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELegendPosition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELightUnits_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMobileMSAASampleCount_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERecastPartitioning_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EReflectionSourceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EReporterLineStyle_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERichCurveExtrapolation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERichCurveInterpMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERichCurveTangentMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERichCurveTangentWeightMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERootMotionAccumulateMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERootMotionFinishVelocityMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERootMotionSourceSettingsFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERootMotionSourceStatusFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.34",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDetailMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaterialProperty_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERelativeTransformSpace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESceneCapturePrimitiveRenderMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWindowTitleBarMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.35",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAnimationMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EKinematicBonesUpdateToPhysics_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPhysicsTransformUpdateMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.36",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAirAbsorptionMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneFilterActionOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneSpaces_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneTranslationRetargetingMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneVisibilityStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMeshComponentUpdateFlag_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPhysBodyOp_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EReverbSendMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESkyLightSourceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESoundDistanceCalc_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESoundSpatializationAlgorithm_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??SkeletalMeshOptimizationImportance_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??SkeletalMeshOptimizationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.37",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAudioOutputTarget_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDecompressionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMaxConcurrentResolutionRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESoundGroup_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESourceBusChannels_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESubmixChannelFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ModulationParamMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.38",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ESplineCoordinateSpace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESplineMeshAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESplinePointType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.39",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECompositeTextureMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHorizTextAligment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EImportanceLevel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENormalMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOpacitySourceMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOptimizationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStereoLayerShape_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStereoLayerType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESubUVBoundingVertexCount_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureCompressionQuality_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureMipCount_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureSourceArtType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureSourceFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVerticalTextAligment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??TextureAddress_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??TextureCompressionSettings_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??TextureFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.4",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??AnimationCompressionFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAdditiveBasePoseType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAnimCurveType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAnimLinkMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAnimNotifyEventType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECopyType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDrawDebugItemType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEvaluatorDataSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEvaluatorMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMontagePlayReturnType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMontageSubStepResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPinHidingMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPostCopyOperation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERootMotionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERootMotionRootLock_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.40",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ERenderFocusRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETexturePowerOfTwoSetting_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureRenderTargetFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextureSamplerFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETimeStretchCurveMapping_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETimelineDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETimelineLengthMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETwitterIntegrationDelegate_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETwitterRequestMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUIScalingRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUserDefinedStructureStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVectorFieldConstructionOp_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??TextureGroup_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??TextureMipGenSettings_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.41",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EVisibilityAggressiveness_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVolumeLightingMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWindSourceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.5",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??AnimPhysCollisionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??AnimPhysTwistAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??AnimationKeyFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAdditiveAnimationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAnimInterpolationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAxisOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneControlSpace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoneRotationSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECurveBlendOption_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMontageNotifyTickType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENotifyFilterType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETemperatureSeverityType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETransitionBlendMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETransitionLogicType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETypeAdvanceAnim_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.6",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAttenuationDistanceModel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAttenuationShape_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPrimaryAssetCookRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVoiceSampleRate_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ReverbPreset_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.7",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EApplicationState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBlendSpaceAxis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBlendableLocation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBlueprintCompileMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBlueprintNativizationFlag_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBlueprintStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBlueprintType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENotifyTriggerMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EScreenOrientation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Engine.8",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBodyCollisionResponse_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBrushType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECameraAlphaBlendMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECameraAnimPlaySpace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECameraProjectionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECollisionTraceFlag_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECsgOper_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDOFMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDynamicActorScene_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInitialOscillatorOffset_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPhysicsType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "EngineSettings.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EThreePlayerSplitScreenType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETwoPlayerSplitScreenType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "EpicGameplayStatsRuntime.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EEpicLeaderboardDataType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEpicLeaderboardTimeWindow_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEpicLeaderboardUpdateFunction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Foliage.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFoliageScaling_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESimulationOverlap_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESimulationQuery_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVertexColorMaskChannel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??FoliageVertexColorMask_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAIHotSpotAssignmentFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAIHotSpotSlotFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAIHotSpotSlot_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaPlaylistFillType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBoundingBoxSlotDirectionCalculation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEventTokenType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.10",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortAIWaveProgressSection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterPacingState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterSequenceResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.11",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAssignmentCreationResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAILevelRatingDisplayType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAIPawnGender_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortressAIType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETagGoalScoringCategory_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.12",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAssignmentType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingFloorRailing_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingStairsRailing_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingWallArea_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECorePerceptionTypes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAILODLevel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHotSpotDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHotSpotPreview_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHotSpotSlot_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPartialPathUsage_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHotspotTypeConfigMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavigationObstacleOverride_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESkydivingDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.13",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EMontageInterrupt_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpeedWarpingAxisMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.15",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECameraOrigin_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETargetDistanceComparisonType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.16",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EChallengeScheduleUnlockType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCharacterCosmetic_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.17",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECodeTokenPlatform_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAnnouncementChannel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAnnouncementDelivery_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAnnouncementDisplayPreference_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.18",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECollectionBookRewardType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAIDirectorEventParticipant_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAIDirectorEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAIDirectorFactor_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAbilityTargetingSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAmmoType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBaseWeaponDamage_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCollectionBookState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCombatEvents_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCombatFactors_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCombatThresholds_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortContributionGraphElements_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDamageZone_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortElementalDamageType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFactorContributionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortIntensityGraphElements_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMontageInputType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPIDValueGraphElements_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortReloadFXState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWeaponCoreAnimation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWeaponSoundChannel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWeaponSoundState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.19",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortDamageNumberType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSentenceAudioPreference_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETimespanAsTextFormat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAbilitySystemComponentCreationPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaChallengeTabVisibility_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaQuickChatFilteringType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaSeasonRewardTrack_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaSeasonShopVisibility_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAttributeInitLevelSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDynamicBuildingPlacementType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.20",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortDefenderSubtype_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHordeTierStartStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHordeWaveStingerType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EQueueActionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.21",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAthenaPIEStartupMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??FDynamicBuildOrder_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.22",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortFeedbackAddressee_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFeedbackBroadcastFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFeedbackContext_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFeedbackSelectionMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFootstepAudioType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFootstepPosition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFootstepSurfaceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.23",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFriendFeedbackType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWaveRules_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.25",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortAIWeaponUsage_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAbilityCostSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortGameplayAbilityActivation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortGameplayAbilityMontageSectionToPlay_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.26",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAthenaAerialPhase_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaGamePhaseStep_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaGamePhase_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAccountLinkingUIConfig_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBanHammerNotificationAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHexTileAdjacency_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHomebaseNodeActionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHomebaseNodeDisplayType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHomebaseNodeMagnitude_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHomebaseSquadSlotType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHomebaseSquadType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortHuskAnimType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortIntensityCurveSequenceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortServerGameMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSupportBonusType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EItemEvolutionRestrictionReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EItemUpgradeRestrictionReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPrereqNodeType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPvPGameEndReasons_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESavedAccountType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpecializationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESquadSlotType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETeamChatRoomState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??TInteractionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.27",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortItemEntryState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTemplateAccess_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.28",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortMatchmakingType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELobbyMissionGeneratorDetailsRequirement_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELootQuotaLevel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.29",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortMatchmakingPool_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMatchmakingPrivacyConfiguration_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSessionHelperJoinResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMatchmakingCompleteResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMatchmakingErrorV2_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMatchmakingFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMatchmakingStartLocation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOfferPurchaseError_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.3",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAuxIndicatorStates_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBinaryToggleValues_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECaptureState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EContentionRules_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFOBFileHeaderStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFOBIOStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFOBInitStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFOBMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUnlockRules_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.30",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAthenaCustomizationCategory_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAthenaProgressiveCosmeticType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMtxPlatform_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.31",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortMiniMapContext_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMiniMapHeight_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMiniMapIconRotation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMcpLeaderboardTimeWindow_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETwitchViewerStatusType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.32",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortAreaFlag_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCheatMissionGenType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortControlRecoveryBehavior_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFriendRequestStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortNavLinkPattern_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortOptionGenerationResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPartyMemberDisplayState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPartyMemberLocation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPartyState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPartyTransition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPawnPushSize_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMissionReplyTypes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMusicChannel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMusicFadeStyles_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPathObstacleAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPathUndermineEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPollActorsInVolumeTypes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETimerOverrideSetting_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWardAffectType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.33",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortAnnouncerTeamVocalChords_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCardinalDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortIsFinalXpUpdate_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPickupTossState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortReplenishmentType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortReplicatedStat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortRewardActivityType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortRewardType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStatCategory_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.34",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortPickerToDisplay_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELockOnState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.36",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortInputActionGroup_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortInputActionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPawnStasisMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.37",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAthenaMatchXpMultiplierSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECountAIAssignedToType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDeathCause_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDistanceMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAthenaPlaylist_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPointsFromNavGraphGoalPathDistanceFilterOperator_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPrototypingStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQuestObjectiveItemEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQuestObjectiveStatEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQuestRewardType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQuestState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQuestType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQuickBars_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSafeZoneState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTestGoalActorDot_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EProfileGoState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERegisteredPlayerUnregistrationStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERewardSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrustedPlatformType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETwoPointSolverRotationA_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.38",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortPartyRestriction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortScriptedActionEnvironment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortScriptedActionSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSessionHelperJoinState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSocialItemHeaderType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSocialItemPresenceStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSocialItemType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUIScoreType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.39",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortAutoTestState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCompare_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEventConditionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEventRepeat_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTheaterMapTileType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTheaterType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.4",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBuildingFoundationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemCollectorBehavior_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemCollectorState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortRiftSlotStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELayoutRequirementStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.40",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECollectionSelectionMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMissionQuestValidityResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.41",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAthenaPickerType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAIUtility_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAlteration_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBangType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBrushSize_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortClientAnnouncementQueueType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCompletionResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCraftFailCause_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCustomBodyType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCustomGender_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCustomPartType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDayPhasePrio_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDayPhase_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDialogFeedbackType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDialogResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDisplayGender_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEventNameType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFrontendInventoryFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortGameplayState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortGliderType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortIndicatorState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortInventoryFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortInventoryType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemCategoryOrdinal_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemTier_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortJumpStaminaCost_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMovementStyle_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMovementUrgency_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortNotificationQueueType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPlayerRole_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPvPGameResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQuality_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortRarity_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortReportDayPhase_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortRequestedGameplayAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTargetSelectionFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTargetSelectionShape_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTargetSelectionTestType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTeamAffiliation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTeam_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTileEdgeType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWeaponReloadType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWeaponTriggerType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInventoryContentSortType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EItemTileViewDisplayType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EKeepContainerType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EKeepDefenseState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOutpostBuildings_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EReadyCheckState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERichPresenceStateChange_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESubGameAccessStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESubGameMatchmakingStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESubGame_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrackDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrackIncline_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrackPieceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrackVerticality_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.42",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortContextualReticleTypes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortNotificationPriority_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortNotificationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortReloadMontageSection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUIFriendNotificationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUserCloudRequestResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUserCloudRequestType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortVisibilityBehavior_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.45",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDeployableBaseUseType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortLevelStreamingState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortQueuedActionUserStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWorldManagerState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWorldRecordAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortWorldRecordState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortZoneType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFrontEndCamera_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.46",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortEncounterPacingMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterSpawnLimitType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterSpawnLocationPlacementMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterUtilitiesMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMissionAudibility_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMissionStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMissionType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMissionVisibilityOverride_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortObjectiveRequirement_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortObjectiveStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMissionGenerationCategory_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.47",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortStrategicBuildingCategory_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortStrategicBuildingLevelCriteriaDisplayRepresentation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortThreatDeactivationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStatMod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStatRecordingPeriod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.5",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBuildingAnim_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingAttachmentSide_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingAttachmentSlot_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingNavObstacleType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingReplacementType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDamageVisualsState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPlacementType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStructuralSupportCheck_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.6",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAccessoryColorName_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingAttachmentType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EBuildingHighlightType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECharacterColorSwatchType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EClothingColorName_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EColorSwatchType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECustomHatType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBounceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBuildingInitializationReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBuildingPersistentState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBuildingState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBuildingType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortConnectivityCubeFace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortCostInfoTypes_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDecoPlacementQueryResults_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDefenderInteractionError_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortResourceLevel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortResourceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortStructuralGridQueryResults_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTextureDataSlot_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTextureDataType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.7",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDeployableBaseBoxType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDeployableBaseBuildingState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EDeployableBaseConstructionStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAbilityTargetSelectionUsage_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortStatDisplayType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.8",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortDeliveryInfoBuildingActorSpecification_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDirectedMovementSpace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortProximityBasedGEApplicationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteGame.9",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortAIDirectorEventContribution_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAIDirectorFactorContribution_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortEncounterUtilityDesire_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAthenaPlayerActionAlert_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EEquippedWeaponDisplay_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.10",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortItemManagementMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortKeybindForcedHoldStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.11",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortLegacySlateWidget_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMaterialProgressBarSectionColorNumber_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMaterialProgressBarSectionOverflowBehavior_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMaterialProgressBarSection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EModalContainerSlot_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.13",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortHomebaseNodePurchaseRestrictionReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortMtxStoreOfferType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortNodePrerequisiteConnector_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.14",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortHitPointModificationReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPerksWidgetState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPickerMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESaveProfileForBanners_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.15",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortRewardItemType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERedeemCodeFailureReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESkillTreePageType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESocialImportPanelType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESquadSlotSortType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.16",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECardPackPurchaseError_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSquadSlottingRestrictionReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortStoreTransition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPauseType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.17",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortTouchControlRegion_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUISurvivorSquadMatchType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.19",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortAnimSpeed_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBangSize_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBuffState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortClampState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortComparisonType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortInventoryContext_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemCardSize_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortLoginAccountType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSocialPanelTab_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSocialPanelType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortStatValueDisplayType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortStoreState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortTutorialGlowType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUINavigationOp_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUIState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EModalContainerSize_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENotificationResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENotificationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBacchusHUDStateType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortAlterationWidgetState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortPlayerControllerProcessing_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHealthBarType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EInputPriority_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.4",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECollectionBookPrimaryNavTarget_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECollectionBookRewardStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.5",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECollectionBookSectionNavTarget_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortDefenderSlotType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortExpeditionListSort_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFrontEndFeatureStateReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFrontEndFeatureState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortFrontEndFeature_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.6",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFlagStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortInputMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortSupportPerkWidgetState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUIFeatureStateReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUIFeatureState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUIFeature_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUIGameFeedbackType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortUrlType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFrontEndRewardType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGridSortKind_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENameStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.7",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ECenterPopupMessageStateEnum_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBuildingHealthDisplayRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortBuildingInteraction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.8",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EConversionControlKeyRequest_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EItemDisassembleRestrictionReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EItemRecyclingRestrictionReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EItemRecyclingWarning_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVaultItemLimitStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "FortniteUI.9",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFortItemCooldownType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemCountStyle_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFortItemInspectionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "GameSubCatalog.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAppStore_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECatalogOfferType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECatalogRequirementType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECatalogSaleType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStoreCurrencyType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "GameplayAbilities.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAbilityTaskNetSyncType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAbilityTaskWaitState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ERootMotionMoveToActorTargetOffsetType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWaitAttributeChangeComparison_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "GameplayAbilities.5",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EAbilityGenericReplicatedEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EAttributeBasedFloatCalculationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayAbilityActivationMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayAbilityInputBinds_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayAbilityInstancingPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayAbilityNetExecutionPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayAbilityReplicationPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayAbilityTargetingLocationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayAbilityTriggerSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayCueEvent_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayCuePayloadType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectAttributeCaptureSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectDurationType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectGrantedAbilityRemovePolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectMagnitudeCalculation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectStackingDurationPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectStackingExpirationPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectStackingPeriodPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayEffectStackingType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayModEvaluationChannel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayModOp_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayTagEventType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayTargetingConfirmation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETargetAbilitySelfSelection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETargetDataFilterSelf_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "GameplayTags.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EGameplayContainerMatchType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayTagMatchType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayTagQueryExprType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayTagSourceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "GameplayTasks.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EGameplayTaskRunResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGameplayTaskState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETaskResourceOverlapPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "HeadMountedDisplay.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EHMDTrackingOrigin_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHMDWornState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOrientPositionSelector_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpectatorScreenMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETrackingStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EXRTrackedDeviceType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Hotfix.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EHotfixResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPatchCheckResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUpdateCompletionStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUpdateState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "IOSRuntimeSettings.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EIOSMetalShaderStandard_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EIOSVersion_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPowerUsageFrameRateLock_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "InputCore.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EConsoleForGamepadLabels_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EControllerHand_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETouchIndex_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETouchType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Landscape.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EGrassScaling_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeCustomizedCoordType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeGizmoType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeImportAlphamapType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeLODFalloff_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeLayerBlendType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeLayerDisplayMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeLayerPaintingRestriction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELandscapeSetupErrors_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETerrainCoordMappingType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??LandscapeSplineMeshOrientation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "MediaAssets.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EMediaAudioCaptureDeviceFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMediaPlayerTrack_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMediaSoundChannels_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMediaVideoCaptureDeviceFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMediaWebcamCaptureDeviceFilter_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "MovieScene.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EEvaluationMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMovieSceneBlendType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMovieSceneBuiltInEasing_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMovieSceneCompletionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMovieSceneKeyInterpolation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMovieSceneObjectBindingSpace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMovieScenePlayerStatus_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESectionEvaluationFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpawnOwnership_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "MovieSceneTracks.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFireEventsAtPosition_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ELevelVisibility_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EParticleKey_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??MovieScene3DPathSection_Axis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "NVIDIAGfeSDK.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EGfeSDKHighlightSignificance_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGfeSDKHighlightType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGfeSDKPermission_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGfeSDKReturnCode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EGfeSDKScope_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "OnlineSubsystem.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EInAppPurchaseState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMPMatchOutcome_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "OnlineSubsystemUtils.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBeaconConnectionState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EClientRequestType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPartyReservationResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Paper2D.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EFlipbookCollisionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPaperSpriteAtlasPadding_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpriteCollisionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpritePivotMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpritePolygonMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESpriteShapeType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETileMapProjectionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Party.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EJoinPartyDenialReason_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EPartyType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "PhysXVehicles.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EVehicleDifferential4W_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWheelSweepType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Qos.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EQosCompletionResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EQosRegionResult_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EQosResponseType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "Slate.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EDescendantScrollDestination_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EListItemAlignment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMultipleKeyBindingIndex_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EProgressBarFillType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESelectionMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStretchDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EStretch_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETableViewMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextFlowDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextJustify_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextWrappingPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVirtualKeyboardDismissAction_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "SlateCore.1",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EButtonClickMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EButtonPressMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EButtonTouchMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ECheckBoxState_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EConsumeMouseWheel_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFocusCause_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFontFallback_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFontHinting_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFontLayoutMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EFontLoadingPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EHorizontalAlignment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EMenuPlacement_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavigationGenesis_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ENavigationSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EOrientation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EScrollDirection_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESelectInfo_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateBrushDrawType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateBrushImageType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateBrushMirrorType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateBrushTileType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateCheckBoxType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateColorStylingMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextCommit_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ETextShapingMethod_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUINavigationRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EUINavigation_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVerticalAlignment_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWidgetClipping_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "UMG.2",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??ESlateSizeRule_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??ESlateVisibility_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EVirtualKeyboardType_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "UMG.4",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EUMGSequencePlayMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWidgetDesignFlags_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  },
+  {
+   "unit": "UMG.5",
+   "slot": 8,
+   "symbols": [
+    "?Singleton@?1??EBindingKind_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWidgetBlendMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWidgetGeometryMode_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWidgetInteractionSource_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWidgetSpace_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA",
+    "?Singleton@?1??EWidgetTimingPolicy_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+   ]
+  }
+ ]
+}

@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 7093,
+ "total": 6814,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
@@ -66,20 +66,6 @@
    ]
   },
   {
-   "key": "uht-staticenum | singleton (.bss)",
-   "count": 565,
-   "states": {
-    "relocation-equivalent": 565
-   },
-   "examples": [
-    "0x002C17E0 EDynamicBoxType_StaticEnum",
-    "0x002C1820 EOperation_StaticEnum",
-    "0x002C8A20 ECommonNumericType_StaticEnum",
-    "0x002C8A80 EItemAlignment_StaticEnum",
-    "0x002FC0C0 EInAppPurchaseState_StaticEnum"
-   ]
-  },
-  {
    "key": "uht-enum-compiledindefer | string literal ($SG, per-occurrence copy)",
    "count": 489,
    "states": {
@@ -91,6 +77,20 @@
     "0x00097AF0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EDateType",
     "0x000999D0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EPartyReservationResult",
     "0x0009FAE0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EGameplayAbilityActivationMode"
+   ]
+  },
+  {
+   "key": "uht-staticenum | singleton (.bss)",
+   "count": 286,
+   "states": {
+    "relocation-equivalent": 286
+   },
+   "examples": [
+    "0x002C17E0 EDynamicBoxType_StaticEnum",
+    "0x002C1820 EOperation_StaticEnum",
+    "0x002C8A20 ECommonNumericType_StaticEnum",
+    "0x002C8A80 EItemAlignment_StaticEnum",
+    "0x002FC0C0 EInAppPurchaseState_StaticEnum"
    ]
   },
   {
@@ -136,31 +136,17 @@
    ]
   },
   {
-   "key": "uht-staticenum | singleton (.bss) + string literal ($SG, per-occurrence copy)",
-   "count": 69,
-   "states": {
-    "relocation-equivalent": 69
-   },
-   "examples": [
-    "0x002E32B0 EDateType_StaticEnum",
-    "0x0032C1D0 EPartyReservationResult_StaticEnum",
-    "0x00561510 EGameplayCueEvent_StaticEnum",
-    "0x00561750 EGameplayModOp_StaticEnum",
-    "0x005B89F0 EPartyType_StaticEnum"
-   ]
-  },
-  {
    "key": "uht-staticenum | string literal ($SG, per-occurrence copy)",
-   "count": 58,
+   "count": 95,
    "states": {
-    "relocation-equivalent": 58
+    "relocation-equivalent": 95
    },
    "examples": [
     "0x002CF8E0 ECommonInputType_StaticEnum",
     "0x002CF9A0 EInputActionState_StaticEnum",
+    "0x0032C1D0 EPartyReservationResult_StaticEnum",
     "0x00558F70 EGameplayAbilityActivationMode_StaticEnum",
-    "0x00561710 EGameplayModEvaluationChannel_StaticEnum",
-    "0x005D3190 EUpdateCompletionStatus_StaticEnum"
+    "0x00561710 EGameplayModEvaluationChannel_StaticEnum"
    ]
   },
   {
@@ -175,6 +161,20 @@
     "0x002D0510 Z_Construct_UClass_UCommonVisibilityWidget",
     "0x005B8EC0 Z_Construct_UClass_UParty",
     "0x00806390 Z_Construct_UClass_UARKitCameraOverlayMaterialLoader"
+   ]
+  },
+  {
+   "key": "uht-staticenum | singleton (.bss) + string literal ($SG, per-occurrence copy)",
+   "count": 32,
+   "states": {
+    "relocation-equivalent": 32
+   },
+   "examples": [
+    "0x002E32B0 EDateType_StaticEnum",
+    "0x00561510 EGameplayCueEvent_StaticEnum",
+    "0x00561750 EGameplayModOp_StaticEnum",
+    "0x005B89F0 EPartyType_StaticEnum",
+    "0x00F8F5A0 EFortressAIType_StaticEnum"
    ]
   },
   {
@@ -248,20 +248,6 @@
    ]
   },
   {
-   "key": "uht-staticenum | Z_Construct_* creator + singleton (.bss)",
-   "count": 16,
-   "states": {
-    "relocation-equivalent": 16
-   },
-   "examples": [
-    "0x002FC120 EMPMatchOutcome_StaticEnum",
-    "0x0032C170 EClientRequestType_StaticEnum",
-    "0x00536FA0 EReplicationMode_StaticEnum",
-    "0x010229D0 EOfferPurchaseError_StaticEnum",
-    "0x01089030 EFortPrototypingStatus_StaticEnum"
-   ]
-  },
-  {
    "key": "uht-class-compiledindefer | Z_Construct_* creator + string literal ($SG, per-occurrence copy)",
    "count": 13,
    "states": {
@@ -305,16 +291,30 @@
   },
   {
    "key": "uht-staticenum | Z_Construct_* creator",
-   "count": 6,
+   "count": 11,
    "states": {
-    "relocation-equivalent": 6
+    "relocation-equivalent": 11
    },
    "examples": [
+    "0x002FC120 EMPMatchOutcome_StaticEnum",
+    "0x010229D0 EOfferPurchaseError_StaticEnum",
     "0x01054DA0 EFortPartyMemberDisplayState_StaticEnum",
-    "0x023E0A50 EApplicationState_StaticEnum",
-    "0x02402630 ECanCreateConnectionResponse_StaticEnum",
-    "0x02452640 EQuitPreference_StaticEnum",
-    "0x0246EED0 ERoundingMode_StaticEnum"
+    "0x023CCD70 ERootMotionRootLock_StaticEnum",
+    "0x023D4200 ETemperatureSeverityType_StaticEnum"
+   ]
+  },
+  {
+   "key": "uht-staticenum | Z_Construct_* creator + singleton (.bss)",
+   "count": 11,
+   "states": {
+    "relocation-equivalent": 11
+   },
+   "examples": [
+    "0x0032C170 EClientRequestType_StaticEnum",
+    "0x00536FA0 EReplicationMode_StaticEnum",
+    "0x01089030 EFortPrototypingStatus_StaticEnum",
+    "0x013A7430 ELifetimeCondition_StaticEnum",
+    "0x01BF7A10 EWidgetDesignFlags_StaticEnum"
    ]
   },
   {
