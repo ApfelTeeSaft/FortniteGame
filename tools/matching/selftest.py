@@ -420,7 +420,24 @@ def test_section_relative_runs() -> None:
     print("section-relative runs: ok")
 
 
+def test_match_queue() -> None:
+    import match_queue as Q
+    assert Q.kind("$SG175471") == "string literal ($SG, per-occurrence copy)"
+    assert Q.kind("?StaticClass@AFoo@@SAPEAVUClass@@XZ") == "<Class>::StaticClass"
+    assert Q.kind("?EFoo_StaticEnum@@YAPEAVUEnum@@XZ") == "<Enum>_StaticEnum"
+    assert Q.kind("?Singleton@?1??EFoo_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA") == "singleton (.bss)"
+    assert Q.kind("??4FSlateBrush@@QEAAAEAU0@AEBU0@@Z") == "constructor / assignment"
+    e = {"start_rva": "0x10", "name": "f", "category": "c", "in_denominator": True, "match": "partial",
+         "byte_diff": {"differing_bytes": 3, "unresolved_relocations": [{"offset": "0x1", "symbol": "$SG1"}]}}
+    assert Q.causes(e) == ["string literal ($SG, per-occurrence copy)", "differing bytes"]
+    x = dict(e, start_rva="0x20", match="exact")
+    doc, groups = Q.build([e, x, dict(e, start_rva="0x30", in_denominator=False)])
+    assert doc["total"] == 1 and doc["groups"][0]["examples"] == ["0x10 f"], doc  # exact and outside skipped
+    print("match queue: ok")
+
+
 def main() -> int:
+    test_match_queue()
     test_unwind()
     test_local_prediction()
     test_section_relative_runs()

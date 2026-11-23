@@ -59,8 +59,21 @@ def summarize(m: dict) -> dict:
                   and e["structure"].get("pdata_size_matches")
                   and e["structure"].get("unwind_codes_identical")
                   and e["structure"].get("scope_table", {}).get("identical", True)]
+    # Stages of the denominator, kept apart (CLAUDE.md, adaptive reconstruction): source exists for
+    # a function, a candidate was compiled and extracted, and its bytes were compared.
+    reconstructed = [e for e in counted if e.get("symbol")]
+    compiled = [e for e in reconstructed if e.get("candidate_sha256")]
+    pending = ("relocation-equivalent", "instruction-equivalent", "partial", "unmatched")
     return {
         "denominator": m["denominator"]["count"],
+        "pipeline": {
+            "identified": m["denominator"]["count"],
+            "reconstructed": len(reconstructed),
+            "compiled": len(compiled),
+            "exact": len(exact),
+            "needs_investigation": sum(states.get(s, 0) for s in pending),
+            "not_compiled": len(reconstructed) - len(compiled),
+        },
         "exact": len(exact),
         "exact_bytes": sum(int(e["end_rva"], 16) - int(e["start_rva"], 16) for e in exact),
         "states": {s: states.get(s, 0) for s in STATES},

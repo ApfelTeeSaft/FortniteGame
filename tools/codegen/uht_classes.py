@@ -38,6 +38,7 @@ Usage: python tools/codegen/uht_classes.py   (after tools/analysis/unity_order.p
 """
 from __future__ import annotations
 
+import bisect
 import json
 import re
 import struct
@@ -513,9 +514,44 @@ def main() -> int:
         "entry_defaults": {"category": "uht-class-constructor", "source": src_tpl, "object": obj_tpl,
                            "symbol": "?{name}@@YAPEAVUClass@@XZ", "name_confidence": "confirmed", "compact": True},
         "functions": nofunc_entries})
+    # <Class>::StaticClass, found without the FCompiledInDefer initializer that names it (whose
+    # relocation it resolves): the only 5-byte `jmp` to the class's GetPrivateStaticClass that
+    # starts a 16-byte slot outside every .pdata range. The body is identified by its own name
+    # literal (name_ok). /OPT:ICF folds identical jmp functions (Z_Construct_UClass_<C>_NoRegister),
+    # so the thunk is unique; a second candidate drops the class. The initializer's address must
+    # agree, as a check only.
+    text_sec = img.sections[0]
+    code = dimg.read(text_sec.rva, text_sec.vsize)
+    begins = sorted(allrf)
+    ends = [allrf[b].end for b in begins]
+
+    def in_pdata(rva: int) -> bool:
+        i = bisect.bisect_right(begins, rva) - 1
+        return i >= 0 and rva < ends[i]
+
+    jmps = defaultdict(list)
+    for off in range(0, len(code) - 5, 16):
+        if code[off] == 0xE9:
+            rva = text_sec.rva + off
+            if not in_pdata(rva):
+                jmps[rva + 5 + struct.unpack_from("<i", code, off + 1)[0]].append(rva)
+    for name, c in sorted(classes.items()):
+        if not c.get("decoded") or not c.get("name_ok") or not c.get("gpsc"):
+            stats["static_class_jmp: body not identified"] += 1
+            continue
+        found = jmps.get(c["gpsc"], [])
+        if len(found) != 1:
+            stats["static_class_jmp: not unique"] += 1
+            continue
+        if found[0] != int(c["static_class"], 16):
+            stats["static_class_jmp: disagrees with the initializer"] += 1
+            continue
+        symbols[f"?StaticClass@{name}@@SAPEAVUClass@@XZ"] = [f"0x{found[0]:08X}", "static-class-jmp"]
+        stats["static_class_jmp: resolved"] += 1
     SYMBOLS.write_text(json.dumps({
         "schema_version": 2, "generated_by": "tools/codegen/uht_classes.py",
-        "evidence_codes": {"static-class": "the only FClassParams record whose ClassNoRegisterFunc is the class's StaticClass (named by its FCompiledInDefer initializer)"},
+        "evidence_codes": {"static-class": "the only FClassParams record whose ClassNoRegisterFunc is the class's StaticClass (named by its FCompiledInDefer initializer)",
+                           "static-class-jmp": "the only 5-byte jmp, at a 16-byte slot outside .pdata, to the class's GetPrivateStaticClass (identified by its TEXT name literal)"},
         "symbols": symbols}, separators=(",", ":")).replace('],"', '],\n"') + "\n", encoding="utf-8")
     print(dict(stats))
     return 0

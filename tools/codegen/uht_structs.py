@@ -44,6 +44,7 @@ Usage: python tools/codegen/uht_structs.py
 """
 from __future__ import annotations
 
+import bisect
 import json
 import re
 import struct
@@ -528,10 +529,55 @@ def main() -> int:
                            "symbol": "??__EScriptStruct_{package}_StaticRegisterNatives{struct}@@YAXXZ",
                            "name_confidence": "confirmed", "compact": True},
         "functions": srn_entries})
+    # F<Struct>::StaticStruct, found without the FCompiledInDeferStruct initializer that names it
+    # (whose relocation it resolves): the only function that loads the struct's constructor
+    # (identified by its FStructParams) into rcx, with no call in between, before calling
+    # GetStaticStruct. A chained .pdata fragment counts as its primary function. The decoded
+    # StaticStruct must agree, as a check only.
+    from capstone import CS_ARCH_X86, CS_MODE_64, Cs
+    md = Cs(CS_ARCH_X86, CS_MODE_64)
+    starts = sorted(allrf)
+
+    def owner(rva: int) -> int | None:
+        k = bisect.bisect_right(starts, rva) - 1
+        if k < 0 or rva >= allrf[starts[k]].end:
+            return None
+        b = starts[k]
+        for _ in range(8):
+            u = parse_unwind(img, allrf[b].unwind)
+            if not u.flags & UNW_FLAG_CHAININFO:
+                return b
+            b = u.chained[0]
+        return None
+
+    wanted = {r["ctor"] for r in rows}
+    loaders = defaultdict(set)
+    i = tdata.find(b"\x48\x8d\x0d")
+    while i >= 0:
+        if text.rva + i + 7 + struct.unpack_from("<i", tdata, i + 3)[0] in wanted:
+            target = text.rva + i + 7 + struct.unpack_from("<i", tdata, i + 3)[0]
+            for ins in md.disasm(tdata[i + 7:i + 7 + 48], text.rva + i + 7):
+                if ins.mnemonic == "call":
+                    if ins.op_str.startswith("0x") and int(ins.op_str, 16) == gss:
+                        loaders[target].add(owner(text.rva + i))
+                    break
+        i = tdata.find(b"\x48\x8d\x0d", i + 1)
+    for r in rows:
+        hits = loaders.get(r["ctor"], set())
+        if len(hits) != 1 or None in hits:
+            stats["static_struct_call: not unique"] += 1
+            continue
+        if next(iter(hits)) != r["staticstruct"]:
+            stats["static_struct_call: disagrees"] += 1
+            continue
+        symbols[f"?StaticStruct@{r['cpp']}@@SAPEAVUScriptStruct@@XZ"] = [f"0x{r['staticstruct']:08X}",
+                                                                        "static-struct-call"]
+        stats["static_struct_call: resolved"] += 1
     SYMBOLS.write_text(json.dumps({
         "schema_version": 2,
         "generated_by": "tools/codegen/uht_structs.py",
         "evidence_codes": {
+            "static-struct-call": "the only function that loads the struct's constructor (named by its FStructParams) into rcx, with no call in between, before calling GetStaticStruct",
             "package-params": "the 47-byte UHT singleton calling ConstructUPackage whose FPackageParams NameUTF8 is this package",
             "name+package": "the only FStructParams record in .data whose NameUTF8 is the struct name and whose OuterFunc is its package singleton",
             "crc-content": "the only 16-byte-aligned 'mov eax, imm32; ret' in .text with this struct's CRC constant",

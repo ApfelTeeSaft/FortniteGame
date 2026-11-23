@@ -1132,16 +1132,35 @@ all 1,094 enums, whatever form their `StaticEnum` takes; a missing one blocked a
 package.
 
 Results:
-- class registrars: 923 of 3,283 exact;
-- struct registrars: 1,253 of 2,110;
-- enum registrars: 248 of 1,094;
+- class registrars: 2,211 of 3,283 exact;
+- struct registrars: 1,283 of 2,110;
+- enum registrars: 598 of 1,094;
 - class auto-initializers (outside the denominator): 1,248 of 3,283.
+
+**Registered function addresses.** A registrar passes `&C::StaticClass`,
+`<E>_StaticEnum` or `F<S>::StaticStruct`. Where nothing else refers to that function, the
+registrar itself was the only witness of its address. That is the case for a leaf class's
+`StaticClass`, or a `StaticEnum` that is not exact. The address is circular evidence for that
+same registrar, so the relocation stayed unresolved. Each is now located without the
+registrar, from a function identified by its own content:
+
+| Symbol | Evidence (`analysis/uht-*-symbols.json` code) | Located |
+| --- | --- | --- |
+| `C::StaticClass` | the only 5-byte `jmp`, at a 16-byte slot outside `.pdata`, to `C`'s `GetPrivateStaticClass`, which is identified by its `TEXT("C")` (`static-class-jmp`) | 3,303 of 3,333 (23 not unique, 7 bodies not decoded) |
+| `<E>_StaticEnum` | the only primary function that loads `Z_Construct_UEnum_<E>` (named by its `FEnumParams`) into `rcx` just before calling `GetStaticEnum` (`static-enum-call`) | 1,088 of 1,094 |
+| `F<S>::StaticStruct` | the only function (chained fragments count as their primary) that loads `Z_Construct_UScriptStruct_F<S>` (named by its `FStructParams`) into `rcx`, with no call in between, before calling `GetStaticStruct` (`static-struct-call`) | 2,102 of 2,110 |
+
+- `/OPT:ICF` folds identical functions, such as `Z_Construct_UClass_C_NoRegister` into the
+  `StaticClass` thunk, so a second candidate means a different function. The class is then
+  dropped, not guessed.
+- Every located address agrees with the one the registrar names. That comparison is a check
+  only, not the evidence.
+- This made 1,022 class, 355 enum and 31 struct registrars exact, with no other state change.
 
 What remains:
 - In Engine (7 extra copies), CoreUObject (4), MovieScene and others, hand-written code uses
-  the package-name literal too.
-- A class registrar also needs `&C::StaticClass`. That address resolves only where the thunk
-  matches or a subclass's `GetPrivateStaticClass` refers to it.
+  the package-name literal too. 2,329 registrars wait only on these copies
+  (`analysis/match-queue.json`).
 - `AutoInitialize` objects are not predicted: MSVC emits these vtable-bearing `.data` objects
   out of source order.
 

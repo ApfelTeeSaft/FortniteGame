@@ -3,28 +3,29 @@
 Stage 1 (exact-match client decompilation): **in progress**. A validated decrypted image of
 the reference build now supplies plaintext function bodies. Stages 2–4 have not started.
 
-| Item | State (verified 2026-11-21) |
+| Item | State (verified 2026-11-23) |
 | --- | --- |
 | Reference | `FortniteClient-Win64-Shipping.exe`, 82,298,304 bytes, SHA-256 `9731a6b5…eb449102`, linked 2018-02-14, `++Fortnite+Release-2.5-CL-3889387`, version resource `4.20.0-3889387` |
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **28,395 / 157,719** primary `.pdata` functions (18.00 %, 1,700,664 bytes):
+| Exact functions | **29,803 / 157,719** primary `.pdata` functions (18.90 %, 1,785,416 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 28,388 generated UHT functions:
+- 29,796 generated UHT functions:
   - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
-    1,189 `FCompiledInDefer` initializers and 1,097 exec thunks of virtual natives;
+    2,211 `FCompiledInDefer` initializers and 1,097 exec thunks of virtual natives;
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,860 `StaticStruct`, 1,782 `NewStructOps`,
-    1,888 `StaticRegisterNatives` and 1,252 `FCompiledInDeferStruct` initializers;
-  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 374 `<Enum>_StaticEnum` and 243 `FCompiledInDeferEnum` initializers.
+    1,888 `StaticRegisterNatives` and 1,283 `FCompiledInDeferStruct` initializers;
+  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 374 `<Enum>_StaticEnum` and 598 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers, 210 leaf exec thunks and `FCommandLine::IsInitialized` |
-| Relocation-equivalent | 8,999 in the denominator, mostly:
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,398 reconstructed and compiled; 29,803 exact; 7,595 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 7,591 in the denominator, mostly:
 - the 3,283 `GetPrivateStaticClass` bodies (template-instance and literal fields);
-- registration initializers blocked by `&C::StaticClass`, or by package-name literals that
-  hand-written code also uses;
+- 2,329 registration initializers blocked by package-name literals that hand-written code
+  also uses;
 - statics next to items not modelled yet.
 
 Four are `partial`: one enum registration initializer (shared literal copy) and three exec thunks
@@ -53,6 +54,23 @@ Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Class vt
   and all of `.gfids` hold protector code, not original data.
 
 ## Next verifiable tasks
+
+Work follows `CLAUDE.md`'s adaptive workflow:
+- Batches are sized by dependency: 50–200 functions where a systematic cause applies, fewer
+  where layouts must be investigated.
+- Reconstruction continues while non-exact functions wait in `analysis/match-queue.json`. The
+  largest groups get systematic fixes before function-specific ones.
+- `tools/matching/regressions.py` gates each commit.
+
+Largest queue groups (2026-11-23):
+- 3,130 `GetPrivateStaticClass` bodies: `InternalConstructor<C>` and
+  `InternalVTableHelperCtorCaller<C>` are referenced only there.
+- 2,329 registrars waiting on per-occurrence `L"/Script/<Package>"` copies.
+- 633 `StaticEnum` singletons in `.bss`.
+- 442 creators waiting on `FFunctionParams` records.
+- 222 struct-ops initializers waiting on pooled literals.
+
+The numbered tasks below predate this queue.
 
 1. Grow corroboration by reconstructing more callers of shared symbols. Candidates are
    `FCommandLine::Set`/`Append` (they reference the arrays and `bIsInitialized`) and other

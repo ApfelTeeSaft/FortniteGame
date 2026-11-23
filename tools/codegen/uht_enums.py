@@ -46,6 +46,7 @@ Usage: python tools/codegen/uht_enums.py
 """
 from __future__ import annotations
 
+import bisect
 import json
 import struct
 import sys
@@ -319,10 +320,39 @@ def main() -> int:
                            "symbol": "??__EZ_CompiledInDeferEnum_UEnum_{enum}@@YAXXZ", "name_confidence": "confirmed",
                            "compact": True},
         "functions": defer_entries})
+    # <Enum>_StaticEnum, found without the FCompiledInDeferEnum initializer that names it (whose
+    # relocation it resolves): the only primary .pdata function that loads the enum's constructor
+    # (identified by its FEnumParams name) into rcx just before calling GetStaticEnum. Holds for
+    # both forms; the located StaticEnum must agree, as a check only.
+    code = dimg.read(text.rva, text.vsize)
+    starts = sorted(allrf)
+    primary_set = set(primary)
+    loaders = defaultdict(set)
+    i = code.find(b"\x48\x8d\x0d")
+    while i >= 0:
+        target = text.rva + i + 7 + struct.unpack_from("<i", code, i + 3)[0]
+        for j in range(i + 7, min(i + 7 + 16, len(code) - 5)):
+            if code[j] == 0xE8 and text.rva + j + 5 + struct.unpack_from("<i", code, j + 1)[0] == gse:
+                k = bisect.bisect_right(starts, text.rva + i) - 1
+                f = starts[k] if k >= 0 and text.rva + i < allrf[starts[k]].end else None
+                loaders[target].add(f if f in primary_set else None)
+                break
+        i = code.find(b"\x48\x8d\x0d", i + 1)
+    for e in enums:
+        hits = loaders.get(e["ctor"], set())
+        if not e["se"] or len(hits) != 1 or None in hits:
+            stats["static_enum_call: not unique"] += 1
+            continue
+        if next(iter(hits)) != e["se"]["rva"]:
+            stats["static_enum_call: disagrees"] += 1
+            continue
+        symbols[f"?{e['name']}_StaticEnum@@YAPEAVUEnum@@XZ"] = [f"0x{e['se']['rva']:08X}", "static-enum-call"]
+        stats["static_enum_call: resolved"] += 1
     SYMBOLS.write_text(json.dumps({
         "schema_version": 2,
         "generated_by": "tools/codegen/uht_enums.py",
         "evidence_codes": {
+            "static-enum-call": "the only function that loads the enum's constructor (named by its FEnumParams) into rcx just before calling GetStaticEnum",
             "package-params": "the 47-byte UHT singleton calling ConstructUPackage whose FPackageParams NameUTF8 is this package",
             "name+package": "the only FEnumParams record in .data whose NameUTF8 is the enum name and whose OuterFunc is its package singleton",
         },

@@ -92,7 +92,14 @@ python tools/matching/compare.py --check    # fail if recorded results are stale
 python tools/progress/generate.py           # regenerate docs/images/byte-match-progress.svg
 python tools/progress/generate.py --verify  # fail if the SVG is stale or the manifest inconsistent
 python tools/matching/selftest.py           # all of the above plus synthetic unwind tests
+python tools/matching/regressions.py        # match-state changes against HEAD; exit 1 if an exact match was lost
+python tools/matching/match_queue.py        # analysis/match-queue.json: non-exact functions grouped by cause
 ```
+
+Re-running a generator that only changes evidence (`analysis/uht-*-symbols.json`) needs no
+rebuild: `python tools/matching/compare.py --quiet` recomputes every result from the existing
+objects. Reconstruction, compilation and byte matching are tracked as separate stages:
+`generate.py` prints them under `pipeline` (reconstructed, compiled, exact, needs investigation).
 
 ## IDA (optional)
 
