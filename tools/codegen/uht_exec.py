@@ -442,21 +442,31 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         if not o.get("size") or lo is None or not lo <= a["offset"] < a["offset"] + a["size"] <= o["size"]:
             stats["accessor thunks skipped (member outside its class's own bytes)"] += 1
             continue
+        # One declaration per byte range: a plain member, or a bitfield storage unit whose bits
+        # several accessors may name. Anything overlapping differently waits.
+        m = a["mspec"]
+        key = ("plain", m["ctype"], m["name"], m["size"]) if m["kind"] == "plain" else ("bits", m["width"])
+        lo_, hi_ = a["offset"], a["offset"] + a["size"]
+        cur = members[a["owner"]].get(a["offset"])
+        overlap = any(o < hi_ and lo_ < o + (v[3] if v[0] == "plain" else v[1]) and (o, v[:2]) != (a["offset"], key[:2])
+                      for o, v in members[a["owner"]].items())
+        if (overlap or (cur is not None and cur[0] == "plain" and cur != key)
+                or (cur is not None and cur[0] == "bits" and (key[0] != "bits" or cur[2].get(m.get("bit"), m["name"]) != m["name"]))):
+            stats["accessor thunks skipped (member conflict)"] += 1
+            continue
         sig = signature(dimg, base, syms, typenames, cls, uf, int(a["exec_rva"], 16), rfs)
         accessors.append(a)
-        members[a["owner"]][a["offset"]] = (a["mtype"], a["member"], a["size"])
-        if a["kind"] == "get":
-            decls.setdefault(cls, []).append(
-                f"\t{a['ret']} {a['name']}(){' const' if a['const'] else ''};  // native accessor of {a['member']}")
-            call = f"*({sig['store']}*)Z_Param__Result=P_THIS->{a['name']}();"
-            body = ["\tP_FINISH;", "\tP_NATIVE_BEGIN;", f"\t{call}", "\tP_NATIVE_END;"]
+        if m["kind"] == "plain":
+            members[a["owner"]][a["offset"]] = key
         else:
-            (pdecl, pline, parg), = sig["params"]
-            decls.setdefault(cls, []).append(
-                f"\tvoid {a['name']}({pdecl}){' const' if a['const'] else ''};  // native accessor of {a['member']}")
-            body = [f"\t{pline}", "\tP_FINISH;", "\tP_NATIVE_BEGIN;", f"\tP_THIS->{a['name']}({parg});",
-                    "\tP_NATIVE_END;"]
-            stats["exec thunks with parameters"] += 1
+            members[a["owner"]].setdefault(a["offset"], ("bits", m["width"], {}))[2][m["bit"]] = m["name"]
+        decls.setdefault(cls, []).append(f"\t{a['decl']};  // native accessor of {a['member']}")
+        args = ",".join(arg for _, _, arg in sig["params"])
+        call = f"P_THIS->{a['name']}({args});"
+        body = [f"\t{line}" for _, line, _ in sig["params"]] + ["\tP_FINISH;", "\tP_NATIVE_BEGIN;",
+                f"\t*({sig['store']}*)Z_Param__Result={call}" if sig["ret"] else f"\t{call}", "\tP_NATIVE_END;"]
+        stats["exec thunks with parameters"] += bool(sig["params"])
+        stats[f"accessors: {m['kind']} {a['kind']}"] += 1
         r = int(a["exec_rva"], 16)
         end = function_end(dimg, rfs, r) if r in rfs else leaf_end(md, dimg, r)
         if end is None:

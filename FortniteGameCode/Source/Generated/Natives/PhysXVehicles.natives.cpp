@@ -12,3 +12,19 @@ float UWheeledVehicleMovementComponent::GetEngineMaxRotationSpeed() const
 {
 	return MaxEngineRPM;
 }
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00675B60 (end 0x00675B77), leaf (no .pdata)
+// Original VA: 0x0000000140675B60 | File offset: 0x00675160
+// Recovery: high-confidence inferred (called by execSetGearDown at RVA 0x0067CEA0; UWheeledVehicleMovementComponent::bRawGearDownInput reflected at +0x26C) | Matching: see analysis/functions-native-accessors.json
+void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
+{
+	bRawGearDownInput = bNewGearDown;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00675BE0 (end 0x00675BF4), leaf (no .pdata)
+// Original VA: 0x0000000140675BE0 | File offset: 0x006751E0
+// Recovery: high-confidence inferred (called by execSetHandbrakeInput at RVA 0x0067D1E0; UWheeledVehicleMovementComponent::bRawHandbrakeInput reflected at +0x26C) | Matching: see analysis/functions-native-accessors.json
+void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
+{
+	bRawHandbrakeInput = bNewHandbrake;
+}

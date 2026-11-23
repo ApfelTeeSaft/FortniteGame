@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFEB0 (end 0x00FEFEDB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMutatorActive); calls the native accessor AFortGameplayMutator::IsMutatorActive | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayMutator::execIsMutatorActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsMutatorActive();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameplayMutator, 3890238553u)
 // Original dynamic initializer: RVA 0x000F76B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameplayMutator> AutoInitializeAFortGameplayMutator(TEXT("AFortGameplayMutator"), sizeof(AFortGameplayMutator), 3890238553u);

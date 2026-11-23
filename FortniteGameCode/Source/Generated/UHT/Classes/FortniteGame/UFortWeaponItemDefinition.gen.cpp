@@ -31,6 +31,15 @@ void UFortWeaponItemDefinition::execGetLowAmmoPercentage(UObject* Context, FFram
 	*(float*)Z_Param__Result=P_THIS->GetLowAmmoPercentage();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9DF0 (end 0x010D9E26)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetReticleCenterImageOffset); calls the native accessor UFortWeaponItemDefinition::GetReticleCenterImageOffset | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponItemDefinition::execGetReticleCenterImageOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector2D*)Z_Param__Result=P_THIS->GetReticleCenterImageOffset();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA2C0 (end 0x010DA2EB)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAllowTargetingDuringReload); calls the native accessor UFortWeaponItemDefinition::ShouldAllowTargetingDuringReload | Matching: see analysis/functions-uht-exec.json
 void UFortWeaponItemDefinition::execShouldAllowTargetingDuringReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

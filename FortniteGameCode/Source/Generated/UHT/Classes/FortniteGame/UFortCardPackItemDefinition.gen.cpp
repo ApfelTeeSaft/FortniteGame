@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAE440 (end 0x00FAE474)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPackColor); calls the native accessor UFortCardPackItemDefinition::GetPackColor | Matching: see analysis/functions-uht-exec.json
+void UFortCardPackItemDefinition::execGetPackColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FLinearColor*)Z_Param__Result=P_THIS->GetPackColor();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAE510 (end 0x00FAE53B)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsChoicePack); calls the native accessor UFortCardPackItemDefinition::IsChoicePack | Matching: see analysis/functions-uht-exec.json
 void UFortCardPackItemDefinition::execIsChoicePack(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

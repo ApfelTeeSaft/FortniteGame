@@ -21,10 +21,42 @@ float UPaperFlipbookComponent::GetPlaybackPosition() const
 	return AccumulatedTime;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00659C40 (end 0x00659C4A), leaf (no .pdata)
+// Original VA: 0x0000000140659C40 | File offset: 0x00659240
+// Recovery: high-confidence inferred (called by execIsLooping at RVA 0x00669ED0; UPaperFlipbookComponent::bLooping reflected at +0x69C) | Matching: see analysis/functions-native-accessors.json
+bool UPaperFlipbookComponent::IsLooping() const
+{
+	return bLooping;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00659C60 (end 0x00659C6D), leaf (no .pdata)
+// Original VA: 0x0000000140659C60 | File offset: 0x00659260
+// Recovery: high-confidence inferred (called by execIsPlaying at RVA 0x00669F00; UPaperFlipbookComponent::bPlaying reflected at +0x69C) | Matching: see analysis/functions-native-accessors.json
+bool UPaperFlipbookComponent::IsPlaying() const
+{
+	return bPlaying;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00661000 (end 0x00661014), leaf (no .pdata)
+// Original VA: 0x0000000140661000 | File offset: 0x00660600
+// Recovery: high-confidence inferred (called by execSetLooping at RVA 0x0066AA50; UPaperFlipbookComponent::bLooping reflected at +0x69C) | Matching: see analysis/functions-native-accessors.json
+void UPaperFlipbookComponent::SetLooping(bool bNewLooping)
+{
+	bLooping = bNewLooping;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00661040 (end 0x00661049), leaf (no .pdata)
 // Original VA: 0x0000000140661040 | File offset: 0x00660640
 // Recovery: high-confidence inferred (called by execSetPlayRate at RVA 0x0066AB60; UPaperFlipbookComponent::PlayRate reflected at +0x698) | Matching: see analysis/functions-native-accessors.json
 void UPaperFlipbookComponent::SetPlayRate(float NewRate)
 {
 	PlayRate = NewRate;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00656690 (end 0x0065669E), leaf (no .pdata)
+// Original VA: 0x0000000140656690 | File offset: 0x00655C90
+// Recovery: high-confidence inferred (called by execGetTileMapColor at RVA 0x00669B40; UPaperTileMapComponent::TileMapColor reflected at +0x6B8) | Matching: see analysis/functions-native-accessors.json
+FLinearColor UPaperTileMapComponent::GetTileMapColor() const
+{
+	return TileMapColor;
 }

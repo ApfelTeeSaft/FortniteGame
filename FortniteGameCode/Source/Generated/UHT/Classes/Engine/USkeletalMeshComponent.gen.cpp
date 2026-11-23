@@ -77,6 +77,16 @@ void USkeletalMeshComponent::execSetBodyNotifyRigidBodyCollision(UObject* Contex
 	P_THIS->SetBodyNotifyRigidBodyCollision(Z_Param_bNewNotifyRigidBodyCollision,Z_Param_BoneName);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D0600 (end 0x024D0682)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEnablePhysicsBlending); calls the native accessor USkeletalMeshComponent::SetEnablePhysicsBlending | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execSetEnablePhysicsBlending(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewBlendPhysics);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetEnablePhysicsBlending(Z_Param_bNewBlendPhysics);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D07A0 (end 0x024D08A7)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetNotifyRigidBodyCollisionBelow) | Matching: see analysis/functions-uht-exec.json
 void USkeletalMeshComponent::execSetNotifyRigidBodyCollisionBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

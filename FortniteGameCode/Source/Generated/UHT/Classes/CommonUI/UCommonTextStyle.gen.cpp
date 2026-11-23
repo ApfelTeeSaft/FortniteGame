@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC4A0 (end 0x002CC52A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetColor); calls the native accessor UCommonTextStyle::GetColor | Matching: see analysis/functions-uht-exec.json
+void UCommonTextStyle::execGetColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FLinearColor,Z_Param_Out_OutColor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetColor(Z_Param_Out_OutColor);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC780 (end 0x002CC7AD)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLineHeightPercentage); calls the native accessor UCommonTextStyle::GetLineHeightPercentage | Matching: see analysis/functions-uht-exec.json
 void UCommonTextStyle::execGetLineHeightPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +21,36 @@ void UCommonTextStyle::execGetLineHeightPercentage(UObject* Context, FFrame& Sta
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->GetLineHeightPercentage();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC7E0 (end 0x002CC872)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMargin); calls the native accessor UCommonTextStyle::GetMargin | Matching: see analysis/functions-uht-exec.json
+void UCommonTextStyle::execGetMargin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FMargin,Z_Param_Out_OutMargin);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetMargin(Z_Param_Out_OutMargin);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CCAF0 (end 0x002CCB7A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetShadowColor); calls the native accessor UCommonTextStyle::GetShadowColor | Matching: see analysis/functions-uht-exec.json
+void UCommonTextStyle::execGetShadowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FLinearColor,Z_Param_Out_OutColor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetShadowColor(Z_Param_Out_OutColor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CCB80 (end 0x002CCC0A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetShadowOffset); calls the native accessor UCommonTextStyle::GetShadowOffset | Matching: see analysis/functions-uht-exec.json
+void UCommonTextStyle::execGetShadowOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector2D,Z_Param_Out_OutShadowOffset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetShadowOffset(Z_Param_Out_OutShadowOffset);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UCommonTextStyle, 2371465046u)

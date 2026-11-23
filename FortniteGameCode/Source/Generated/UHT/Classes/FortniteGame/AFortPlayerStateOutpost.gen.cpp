@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DA60 (end 0x0108DA8B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsOutpostOwner); calls the native accessor AFortPlayerStateOutpost::IsOutpostOwner | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerStateOutpost::execIsOutpostOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsOutpostOwner();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E5F0 (end 0x0108E6E5)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetCanEditOutpost) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerStateOutpost::execServerSetCanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -21,6 +21,14 @@ float ACharacter::GetAnimRootMotionTranslationScale() const
 	return AnimRootMotionTranslationScale;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x021BEE30 (end 0x021BEE49), leaf (no .pdata)
+// Original VA: 0x00000001421BEE30 | File offset: 0x021BE430
+// Recovery: high-confidence inferred (called by execGetLastMovementInputVector at RVA 0x024A3770; APawn::LastControlInputVector reflected at +0x368) | Matching: see analysis/functions-native-accessors.json
+FVector APawn::GetLastMovementInputVector() const
+{
+	return LastControlInputVector;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02212110 (end 0x02212118), leaf (no .pdata)
 // Original VA: 0x0000000142212110 | File offset: 0x02211710
 // Recovery: high-confidence inferred (called by execGetHUD at RVA 0x024AF820; APlayerController::MyHUD reflected at +0x398) | Matching: see analysis/functions-native-accessors.json
@@ -35,6 +43,14 @@ AHUD* APlayerController::GetHUD() const
 float UCharacterMovementComponent::GetAnalogInputModifier() const
 {
 	return AnalogInputModifier;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01EE53D0 (end 0x01EE53E9), leaf (no .pdata)
+// Original VA: 0x0000000141EE53D0 | File offset: 0x01EE49D0
+// Recovery: high-confidence inferred (called by execGetCurrentAcceleration at RVA 0x023F0DE0; UCharacterMovementComponent::Acceleration reflected at +0x288) | Matching: see analysis/functions-native-accessors.json
+FVector UCharacterMovementComponent::GetCurrentAcceleration() const
+{
+	return Acceleration;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01EE83A0 (end 0x01EE83A9), leaf (no .pdata)
@@ -173,6 +189,14 @@ UAnimInstance* USkeletalMeshComponent::GetPostProcessInstance() const
 	return PostProcessAnimInstance;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0228D820 (end 0x0228D834), leaf (no .pdata)
+// Original VA: 0x000000014228D820 | File offset: 0x0228CE20
+// Recovery: high-confidence inferred (called by execSetEnablePhysicsBlending at RVA 0x024D0600; USkeletalMeshComponent::bBlendPhysics reflected at +0x8F2) | Matching: see analysis/functions-native-accessors.json
+void USkeletalMeshComponent::SetEnablePhysicsBlending(bool bNewBlendPhysics)
+{
+	bBlendPhysics = bNewBlendPhysics;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01F6CA80 (end 0x01F6CA88), leaf (no .pdata)
 // Original VA: 0x0000000141F6CA80 | File offset: 0x01F6C080
 // Recovery: high-confidence inferred (called by execIsClosedLoop at RVA 0x024E2860; USplineComponent::bClosedLoop reflected at +0x731) | Matching: see analysis/functions-native-accessors.json
@@ -195,4 +219,28 @@ float USplineMeshComponent::GetBoundaryMax() const
 float USplineMeshComponent::GetBoundaryMin() const
 {
 	return SplineBoundaryMin;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01F67C70 (end 0x01F67C89), leaf (no .pdata)
+// Original VA: 0x0000000141F67C70 | File offset: 0x01F67270
+// Recovery: high-confidence inferred (called by execGetSplineUpDir at RVA 0x024E1670; USplineMeshComponent::SplineUpDir reflected at +0x750) | Matching: see analysis/functions-native-accessors.json
+FVector USplineMeshComponent::GetSplineUpDir() const
+{
+	return SplineUpDir;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02345CF0 (end 0x02345CFA), leaf (no .pdata)
+// Original VA: 0x0000000142345CF0 | File offset: 0x023452F0
+// Recovery: high-confidence inferred (called by execGetIgnoreTimeDilation at RVA 0x024EDE70; UTimelineComponent::bIgnoreTimeDilation reflected at +0x1C0) | Matching: see analysis/functions-native-accessors.json
+bool UTimelineComponent::GetIgnoreTimeDilation() const
+{
+	return bIgnoreTimeDilation;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023506C0 (end 0x023506D4), leaf (no .pdata)
+// Original VA: 0x00000001423506C0 | File offset: 0x0234FCC0
+// Recovery: high-confidence inferred (called by execSetIgnoreTimeDilation at RVA 0x024EE170; UTimelineComponent::bIgnoreTimeDilation reflected at +0x1C0) | Matching: see analysis/functions-native-accessors.json
+void UTimelineComponent::SetIgnoreTimeDilation(bool bNewIgnoreTimeDilation)
+{
+	bIgnoreTimeDilation = bNewIgnoreTimeDilation;
 }

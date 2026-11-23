@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6310 (end 0x002C633B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetShouldSelectUponReceivingFocus); calls the native accessor UCommonButton::GetShouldSelectUponReceivingFocus | Matching: see analysis/functions-uht-exec.json
+void UCommonButton::execGetShouldSelectUponReceivingFocus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetShouldSelectUponReceivingFocus();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6440 (end 0x002C64D3)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleTriggeringActionCommited) | Matching: see analysis/functions-uht-exec.json
 void UCommonButton::execHandleTriggeringActionCommited(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

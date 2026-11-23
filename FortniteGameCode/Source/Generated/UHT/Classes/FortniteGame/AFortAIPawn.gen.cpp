@@ -14,6 +14,16 @@ void AFortAIPawn::execOnRep_CurrentWeapon(UObject* Context, FFrame& Stack, void*
 	P_THIS->OnRep_CurrentWeapon(Z_Param_OldWeapon);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95220 (end 0x00F952A2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCanInteract); calls the native accessor AFortAIPawn::SetCanInteract | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetCanInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_CanInteract);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCanInteract(Z_Param_CanInteract);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95340 (end 0x00F953C4)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCollisionProfileName) | Matching: see analysis/functions-uht-exec.json
 void AFortAIPawn::execSetCollisionProfileName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -73,6 +83,16 @@ void AFortAIPawn::execSetMovementUrgency(UObject* Context, FFrame& Stack, void* 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->SetMovementUrgency(EFortMovementUrgency::Type(Z_Param_Urgency));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F958E0 (end 0x00F95962)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetShouldStartSleeping); calls the native accessor AFortAIPawn::SetShouldStartSleeping | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetShouldStartSleeping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bHintStartSleeping);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetShouldStartSleeping(Z_Param_bHintStartSleeping);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95970 (end 0x00F95A35)

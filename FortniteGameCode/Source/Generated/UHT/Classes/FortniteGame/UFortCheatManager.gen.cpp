@@ -219,6 +219,16 @@ void UFortCheatManager::execToggleUtilitiesGraph(UObject* Context, FFrame& Stack
 	P_THIS->ToggleUtilitiesGraph();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBCE20 (end 0x00FBCEA2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUnlockAllDefenders); calls the native accessor UFortCheatManager::UnlockAllDefenders | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execUnlockAllDefenders(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_inUnlockAllDefenders);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UnlockAllDefenders(Z_Param_inUnlockAllDefenders);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCheatManager, 1437645853u)
 // Original dynamic initializer: RVA 0x000EA8E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCheatManager> AutoInitializeUFortCheatManager(TEXT("UFortCheatManager"), sizeof(UFortCheatManager), 1437645853u);

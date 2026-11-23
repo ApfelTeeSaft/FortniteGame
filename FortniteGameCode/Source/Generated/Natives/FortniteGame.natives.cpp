@@ -5,6 +5,22 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00857AD0 (end 0x00857ADD), leaf (no .pdata)
+// Original VA: 0x0000000140857AD0 | File offset: 0x008570D0
+// Recovery: high-confidence inferred (called by execIsEnabled at RVA 0x00F5C3F0; AAIHotSpot::bIsEnabled reflected at +0x364) | Matching: see analysis/functions-native-accessors.json
+bool AAIHotSpot::IsEnabled() const
+{
+	return bIsEnabled;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00858150 (end 0x0085815C), leaf (no .pdata)
+// Original VA: 0x0000000140858150 | File offset: 0x00857750
+// Recovery: high-confidence inferred (called by execIsSlotlessAssignmentAllowed at RVA 0x00F5C450; AAIHotSpot::bAllowSlotlessAssignment reflected at +0x364) | Matching: see analysis/functions-native-accessors.json
+bool AAIHotSpot::IsSlotlessAssignmentAllowed() const
+{
+	return bAllowSlotlessAssignment;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00A1DAF0 (end 0x00A1DAF7), leaf (no .pdata)
 // Original VA: 0x0000000140A1DAF0 | File offset: 0x00A1D0F0
 // Recovery: high-confidence inferred (called by execGetLootTier at RVA 0x00F67C70; ABuildingContainer::ReplicatedLootTier reflected at +0xE58) | Matching: see analysis/functions-native-accessors.json
@@ -19,6 +35,14 @@ int32 ABuildingContainer::GetLootTier()
 UFortFOBCoreDecoItemDefinition* ABuildingFOBConfigActor::GetSelectedFOBCoreItemDefinition() const
 {
 	return SelectedCoreItemDef;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00A23C00 (end 0x00A23C0D), leaf (no .pdata)
+// Original VA: 0x0000000140A23C00 | File offset: 0x00A23200
+// Recovery: high-confidence inferred (called by execIsActive at RVA 0x00F6E190; ABuildingFOBCoreActor::bActive reflected at +0x7DC) | Matching: see analysis/functions-native-accessors.json
+bool ABuildingFOBCoreActor::IsActive() const
+{
+	return bActive;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00A1E620 (end 0x00A1E628), leaf (no .pdata)
@@ -53,6 +77,22 @@ ABuildingSMActor* ABuildingTrap::GetBuildingAttachedTo() const
 	return AttachedTo;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00A5B060 (end 0x00A5B06A), leaf (no .pdata)
+// Original VA: 0x0000000140A5B060 | File offset: 0x00A5A660
+// Recovery: high-confidence inferred (called by execIsDoorOpen at RVA 0x00F79AA0; ABuildingWall::bDoorOpen reflected at +0xE99) | Matching: see analysis/functions-native-accessors.json
+bool ABuildingWall::IsDoorOpen() const
+{
+	return bDoorOpen;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00DA98E0 (end 0x00DA98FA), leaf (no .pdata)
+// Original VA: 0x0000000140DA98E0 | File offset: 0x00DA8EE0
+// Recovery: high-confidence inferred (called by execSetCanInteract at RVA 0x00F95220; AFortAIPawn::bCanInteract reflected at +0x12E8) | Matching: see analysis/functions-native-accessors.json
+void AFortAIPawn::SetCanInteract(bool CanInteract)
+{
+	bCanInteract = CanInteract;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00DA99E0 (end 0x00DA99E8), leaf (no .pdata)
 // Original VA: 0x0000000140DA99E0 | File offset: 0x00DA8FE0
 // Recovery: high-confidence inferred (called by execSetCurrentAimTarget at RVA 0x00F953D0; AFortAIPawn::CurrentAimTarget reflected at +0x19C0) | Matching: see analysis/functions-native-accessors.json
@@ -67,6 +107,14 @@ void AFortAIPawn::SetCurrentAimTarget(AActor* AimTarget)
 void AFortAIPawn::SetEncounterInfo(UFortAIEncounterInfo* InEncounterInfo)
 {
 	EncounterInfo = InEncounterInfo;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00DAA910 (end 0x00DAA92A), leaf (no .pdata)
+// Original VA: 0x0000000140DAA910 | File offset: 0x00DA9F10
+// Recovery: high-confidence inferred (called by execSetShouldStartSleeping at RVA 0x00F958E0; AFortAIPawn::bShouldStartSleeping reflected at +0x12E8) | Matching: see analysis/functions-native-accessors.json
+void AFortAIPawn::SetShouldStartSleeping(bool bHintStartSleeping)
+{
+	bShouldStartSleeping = bHintStartSleeping;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0096ECE0 (end 0x0096ECE9), leaf (no .pdata)
@@ -155,6 +203,22 @@ float AFortGameStateZone::GetGameDifficulty() const
 UPrimitiveComponent* AFortGameplayEffectDeliveryActor::GetCollisionComponent() const
 {
 	return CollisionComponent;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C94280 (end 0x00C9428A), leaf (no .pdata)
+// Original VA: 0x0000000140C94280 | File offset: 0x00C93880
+// Recovery: high-confidence inferred (called by execIsMutatorActive at RVA 0x00FEFEB0; AFortGameplayMutator::bMutatorActive reflected at +0x318) | Matching: see analysis/functions-native-accessors.json
+bool AFortGameplayMutator::IsMutatorActive() const
+{
+	return bMutatorActive;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C7C3E0 (end 0x00C7C3EE), leaf (no .pdata)
+// Original VA: 0x0000000140C7C3E0 | File offset: 0x00C7B9E0
+// Recovery: high-confidence inferred (called by execGetMissionGuid at RVA 0x0103B520; AFortMission::MissionGuid reflected at +0x494) | Matching: see analysis/functions-native-accessors.json
+FGuid AFortMission::GetMissionGuid() const
+{
+	return MissionGuid;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00C88650 (end 0x00C88658), leaf (no .pdata)
@@ -253,6 +317,14 @@ bool AFortPlayerStateAthena::IsDisconnected() const
 	return bIsDisconnected;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00E67950 (end 0x00E6795A), leaf (no .pdata)
+// Original VA: 0x0000000140E67950 | File offset: 0x00E66F50
+// Recovery: high-confidence inferred (called by execIsOutpostOwner at RVA 0x0108DA60; AFortPlayerState::bIsWorldDataOwner reflected at +0x3F8) | Matching: see analysis/functions-native-accessors.json
+bool AFortPlayerStateOutpost::IsOutpostOwner() const
+{
+	return bIsWorldDataOwner;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F372D0 (end 0x00F372D9), leaf (no .pdata)
 // Original VA: 0x0000000140F372D0 | File offset: 0x00F368D0
 // Recovery: high-confidence inferred (called by execGetGravityScale at RVA 0x0108D350; AFortProjectileBase::GravityScale reflected at +0x64C) | Matching: see analysis/functions-native-accessors.json
@@ -325,6 +397,22 @@ void AFortWeapon::SetShouldDrawNativeReticle(bool bInShouldDrawReticle)
 	bShouldDrawNativeReticle = bInShouldDrawReticle;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F4D8D0 (end 0x00F4D8DA), leaf (no .pdata)
+// Original VA: 0x0000000140F4D8D0 | File offset: 0x00F4CED0
+// Recovery: high-confidence inferred (called by execShouldDisplayAmmoCounter at RVA 0x010DA2F0; AFortWeaponRanged::bShouldDisplayAmmoCounter reflected at +0xA84) | Matching: see analysis/functions-native-accessors.json
+bool AFortWeaponRanged::ShouldDisplayAmmoCounter() const
+{
+	return bShouldDisplayAmmoCounter;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F56110 (end 0x00F5611C), leaf (no .pdata)
+// Original VA: 0x0000000140F56110 | File offset: 0x00F55710
+// Recovery: high-confidence inferred (called by execUseFirstPersonTargeting at RVA 0x010DA440; AFortWeaponRanged::bUseFirstPersonTargeting reflected at +0xA84) | Matching: see analysis/functions-native-accessors.json
+bool AFortWeaponRanged::UseFirstPersonTargeting() const
+{
+	return bUseFirstPersonTargeting ? true : false;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00853160 (end 0x00853167), leaf (no .pdata)
 // Original VA: 0x0000000140853160 | File offset: 0x00852760
 // Recovery: high-confidence inferred (called by execGetSlotIndex at RVA 0x00F5BA80; UAIHotSpotSlot::SlotIndex reflected at +0x80) | Matching: see analysis/functions-native-accessors.json
@@ -355,6 +443,14 @@ EAIHotSpotSlot UAIHotSpotSlot::GetSlotState() const
 int32 UAIHotSpotSlot::GetSlotUserId() const
 {
 	return UserId;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00857AE0 (end 0x00857AEA), leaf (no .pdata)
+// Original VA: 0x0000000140857AE0 | File offset: 0x008570E0
+// Recovery: high-confidence inferred (called by execIsEnabled at RVA 0x00F5C420; UAIHotSpotSlot::bIsEnabled reflected at +0x70) | Matching: see analysis/functions-native-accessors.json
+bool UAIHotSpotSlot::IsEnabled() const
+{
+	return bIsEnabled;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00A5BB10 (end 0x00A5BB18), leaf (no .pdata)
@@ -389,12 +485,28 @@ bool UFortAISpawnGroup::IsValidForEnemySpawners() const
 	return bIsValidForEnemySpawners;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C27DF0 (end 0x00C27DFE), leaf (no .pdata)
+// Original VA: 0x0000000140C27DF0 | File offset: 0x00C273F0
+// Recovery: high-confidence inferred (called by execGetPackColor at RVA 0x00FAE440; UFortCardPackItemDefinition::PackColor reflected at +0x360) | Matching: see analysis/functions-native-accessors.json
+FLinearColor UFortCardPackItemDefinition::GetPackColor() const
+{
+	return PackColor;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00C2E040 (end 0x00C2E048), leaf (no .pdata)
 // Original VA: 0x0000000140C2E040 | File offset: 0x00C2D640
 // Recovery: high-confidence inferred (called by execIsChoicePack at RVA 0x00FAE510; UFortCardPackItemDefinition::bIsChoicePack reflected at +0x32C) | Matching: see analysis/functions-native-accessors.json
 bool UFortCardPackItemDefinition::IsChoicePack() const
 {
 	return bIsChoicePack;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00DEFA80 (end 0x00DEFA9A), leaf (no .pdata)
+// Original VA: 0x0000000140DEFA80 | File offset: 0x00DEF080
+// Recovery: high-confidence inferred (called by execUnlockAllDefenders at RVA 0x00FBCE20; UFortCheatManager::bUnlockAllDefenders reflected at +0x88) | Matching: see analysis/functions-native-accessors.json
+void UFortCheatManager::UnlockAllDefenders(bool inUnlockAllDefenders)
+{
+	bUnlockAllDefenders = inUnlockAllDefenders;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00C23BE0 (end 0x00C23BE9), leaf (no .pdata)
@@ -419,6 +531,134 @@ int32 UFortDecoItemDefinition::GetMaxPlacementDistance() const
 float UFortDecoItemDefinition::GetRotationAngleIncrement() const
 {
 	return RotationAngleIncrement;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C335D0 (end 0x00C335DD), leaf (no .pdata)
+// Original VA: 0x0000000140C335D0 | File offset: 0x00C32BD0
+// Recovery: high-confidence inferred (called by execRequiresPlayerPlaceableAttachmentActors at RVA 0x00FD2920; UFortDecoItemDefinition::bRequiresPlayerPlaceableAttachmentActors reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::RequiresPlayerPlaceableAttachmentActors() const
+{
+	return bRequiresPlayerPlaceableAttachmentActors;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34B70 (end 0x00C34B7D), leaf (no .pdata)
+// Original VA: 0x0000000140C34B70 | File offset: 0x00C34170
+// Recovery: high-confidence inferred (called by execShouldAllowAnyFloorPlacement at RVA 0x00FD2E40; UFortDecoItemDefinition::bAllowAnyFloorPlacement reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldAllowAnyFloorPlacement() const
+{
+	return bAllowAnyFloorPlacement;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34B80 (end 0x00C34B8D), leaf (no .pdata)
+// Original VA: 0x0000000140C34B80 | File offset: 0x00C34180
+// Recovery: high-confidence inferred (called by execShouldAllowPlacementOnBuildings at RVA 0x00FD2E70; UFortDecoItemDefinition::bAllowPlacementOnBuildings reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldAllowPlacementOnBuildings() const
+{
+	return bAllowPlacementOnBuildings;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34B90 (end 0x00C34B9D), leaf (no .pdata)
+// Original VA: 0x0000000140C34B90 | File offset: 0x00C34190
+// Recovery: high-confidence inferred (called by execShouldAllowPlacementOnWorldGeometry at RVA 0x00FD2EA0; UFortDecoItemDefinition::bAllowPlacementOnWorldGeometry reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldAllowPlacementOnWorldGeometry() const
+{
+	return bAllowPlacementOnWorldGeometry;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34BA0 (end 0x00C34BAD), leaf (no .pdata)
+// Original VA: 0x0000000140C34BA0 | File offset: 0x00C341A0
+// Recovery: high-confidence inferred (called by execShouldAllowStairsWhenAttachingToFloors at RVA 0x00FD2ED0; UFortDecoItemDefinition::bAllowStairsWhenAttachingToFloors reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldAllowStairsWhenAttachingToFloors() const
+{
+	return bAllowStairsWhenAttachingToFloors;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34BB0 (end 0x00C34BBD), leaf (no .pdata)
+// Original VA: 0x0000000140C34BB0 | File offset: 0x00C341B0
+// Recovery: high-confidence inferred (called by execShouldAttachWhenPlacing at RVA 0x00FD2F00; UFortDecoItemDefinition::bAttachWhenPlacing reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldAttachWhenPlacing() const
+{
+	return bAttachWhenPlacing;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34CF0 (end 0x00C34CFD), leaf (no .pdata)
+// Original VA: 0x0000000140C34CF0 | File offset: 0x00C342F0
+// Recovery: high-confidence inferred (called by execShouldCancelAbilityOnUnequip at RVA 0x00FD2F30; UFortDecoItemDefinition::bCancelAbilityOnUnequip reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldCancelAbilityOnUnequip() const
+{
+	return bCancelAbilityOnUnequip;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D00 (end 0x00C34D0D), leaf (no .pdata)
+// Original VA: 0x0000000140C34D00 | File offset: 0x00C34300
+// Recovery: high-confidence inferred (called by execShouldCancelToolWhenPlaced at RVA 0x00FD2F60; UFortDecoItemDefinition::bCancelToolWhenPlaced reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldCancelToolWhenPlaced() const
+{
+	return bCancelToolWhenPlaced;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D10 (end 0x00C34D1D), leaf (no .pdata)
+// Original VA: 0x0000000140C34D10 | File offset: 0x00C34310
+// Recovery: high-confidence inferred (called by execShouldConsumeWhenPlaced at RVA 0x00FD2F90; UFortDecoItemDefinition::bConsumeWhenPlaced reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldConsumeWhenPlaced() const
+{
+	return bConsumeWhenPlaced;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D40 (end 0x00C34D4D), leaf (no .pdata)
+// Original VA: 0x0000000140C34D40 | File offset: 0x00C34340
+// Recovery: high-confidence inferred (called by execShouldDisableLocationLerpWhilePlacing at RVA 0x00FD2FF0; UFortDecoItemDefinition::bDisableLocationLerpWhilePlacing reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldDisableLocationLerpWhilePlacing() const
+{
+	return bDisableLocationLerpWhilePlacing;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D50 (end 0x00C34D5D), leaf (no .pdata)
+// Original VA: 0x0000000140C34D50 | File offset: 0x00C34350
+// Recovery: high-confidence inferred (called by execShouldDisableRotationLerpWhilePlacing at RVA 0x00FD3020; UFortDecoItemDefinition::bDisableRotationLerpWhilePlacing reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldDisableRotationLerpWhilePlacing() const
+{
+	return bDisableRotationLerpWhilePlacing;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D60 (end 0x00C34D6D), leaf (no .pdata)
+// Original VA: 0x0000000140C34D60 | File offset: 0x00C34360
+// Recovery: high-confidence inferred (called by execShouldDisableScaleLerpWhilePlacing at RVA 0x00FD3050; UFortDecoItemDefinition::bDisableScaleLerpWhilePlacing reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldDisableScaleLerpWhilePlacing() const
+{
+	return bDisableScaleLerpWhilePlacing;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D70 (end 0x00C34D7C), leaf (no .pdata)
+// Original VA: 0x0000000140C34D70 | File offset: 0x00C34370
+// Recovery: high-confidence inferred (called by execShouldForceIgnoreBuildingOverlaps at RVA 0x00FD3080; UFortDecoItemDefinition::bForceIgnoreBuildingOverlaps reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldForceIgnoreBuildingOverlaps() const
+{
+	return bForceIgnoreBuildingOverlaps;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D80 (end 0x00C34D8A), leaf (no .pdata)
+// Original VA: 0x0000000140C34D80 | File offset: 0x00C34380
+// Recovery: high-confidence inferred (called by execShouldForceIgnoreOverlapTest at RVA 0x00FD30B0; UFortDecoItemDefinition::bForceIgnoreOverlapTest reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldForceIgnoreOverlapTest() const
+{
+	return bForceIgnoreOverlapTest;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34D90 (end 0x00C34D9D), leaf (no .pdata)
+// Original VA: 0x0000000140C34D90 | File offset: 0x00C34390
+// Recovery: high-confidence inferred (called by execShouldIgnoreCollisionWithCriticalActors at RVA 0x00FD30E0; UFortDecoItemDefinition::bIgnoreCollisionWithCriticalActors reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldIgnoreCollisionWithCriticalActors() const
+{
+	return bIgnoreCollisionWithCriticalActors;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00C34EC0 (end 0x00C34ECD), leaf (no .pdata)
+// Original VA: 0x0000000140C34EC0 | File offset: 0x00C344C0
+// Recovery: high-confidence inferred (called by execShouldUseRelativeCameraRotation at RVA 0x00FD3140; UFortDecoItemDefinition::bUseRelativeCameraRotation reflected at +0x7AC) | Matching: see analysis/functions-native-accessors.json
+bool UFortDecoItemDefinition::ShouldUseRelativeCameraRotation() const
+{
+	return bUseRelativeCameraRotation;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00C2D300 (end 0x00C2D308), leaf (no .pdata)
@@ -531,6 +771,14 @@ float UFortWeaponItemDefinition::GetHitNotifyDuration() const
 float UFortWeaponItemDefinition::GetLowAmmoPercentage() const
 {
 	return LowAmmoPercentage;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F0B520 (end 0x00F0B530), leaf (no .pdata)
+// Original VA: 0x0000000140F0B520 | File offset: 0x00F0AB20
+// Recovery: high-confidence inferred (called by execGetReticleCenterImageOffset at RVA 0x010D9DF0; UFortWeaponItemDefinition::ReticleCenterImageOffset reflected at +0x6F0) | Matching: see analysis/functions-native-accessors.json
+FVector2D UFortWeaponItemDefinition::GetReticleCenterImageOffset() const
+{
+	return ReticleCenterImageOffset;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F20F50 (end 0x00F20F58), leaf (no .pdata)

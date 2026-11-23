@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C036D0 (end 0x01C03706)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGet2DHitLocation); calls the native accessor UWidgetInteractionComponent::Get2DHitLocation | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execGet2DHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector2D*)Z_Param__Result=P_THIS->Get2DHitLocation();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C03F70 (end 0x01C03F9C)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHoveredWidgetComponent); calls the native accessor UWidgetInteractionComponent::GetHoveredWidgetComponent | Matching: see analysis/functions-uht-exec.json
 void UWidgetInteractionComponent::execGetHoveredWidgetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

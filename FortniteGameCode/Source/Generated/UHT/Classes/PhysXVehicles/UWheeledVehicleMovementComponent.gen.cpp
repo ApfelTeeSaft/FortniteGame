@@ -32,6 +32,26 @@ void UWheeledVehicleMovementComponent::execServerUpdateState(UObject* Context, F
 	P_THIS->ServerUpdateState_Implementation(Z_Param_InSteeringInput,Z_Param_InThrottleInput,Z_Param_InBrakeInput,Z_Param_InHandbrakeInput,Z_Param_CurrentGear);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067CEA0 (end 0x0067CF22)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetGearDown); calls the native accessor UWheeledVehicleMovementComponent::SetGearDown | Matching: see analysis/functions-uht-exec.json
+void UWheeledVehicleMovementComponent::execSetGearDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewGearDown);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetGearDown(Z_Param_bNewGearDown);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067D1E0 (end 0x0067D262)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetHandbrakeInput); calls the native accessor UWheeledVehicleMovementComponent::SetHandbrakeInput | Matching: see analysis/functions-uht-exec.json
+void UWheeledVehicleMovementComponent::execSetHandbrakeInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewHandbrake);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetHandbrakeInput(Z_Param_bNewHandbrake);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UWheeledVehicleMovementComponent, 2625243964u)
 // Original dynamic initializer: RVA 0x000ACAD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UWheeledVehicleMovementComponent> AutoInitializeUWheeledVehicleMovementComponent(TEXT("UWheeledVehicleMovementComponent"), sizeof(UWheeledVehicleMovementComponent), 2625243964u);

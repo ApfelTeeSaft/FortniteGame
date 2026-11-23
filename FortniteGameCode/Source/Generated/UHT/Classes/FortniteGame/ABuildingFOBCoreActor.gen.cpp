@@ -13,6 +13,15 @@ void ABuildingFOBCoreActor::execGetSimpleDeathFXTransform(UObject* Context, FFra
 	*(FTransform*)Z_Param__Result=P_THIS->GetSimpleDeathFXTransform_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E190 (end 0x00F6E1BB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsActive); calls the native accessor ABuildingFOBCoreActor::IsActive | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsActive();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E7D0 (end 0x00F6E856)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnActiveStatusChanged) | Matching: see analysis/functions-uht-exec.json
 void ABuildingFOBCoreActor::execOnActiveStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -3921,6 +3921,8 @@ public:
 	virtual TArray<int32> FindBestSlotIndices(TArray<AAIController*> AI) const;  // slot 212 (+0x6A0), UFunction AAIHotSpot::FindBestSlotIndices
 	virtual void FNGC_VSlot_0x6A8();
 	virtual bool OccupySlotByIndex(int32 Index);  // slot 214 (+0x6B0), UFunction AAIHotSpot::OccupySlotByIndex
+	bool IsEnabled() const;  // native accessor of bIsEnabled
+	bool IsSlotlessAssignmentAllowed() const;  // native accessor of bAllowSlotlessAssignment
 	static void StaticRegisterNativesAAIHotSpot();
 	static void execAssignFromWaitingList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAssignGroupToHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3965,7 +3967,15 @@ public:
 	static void execRemoveGroupFromHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x188];  // sizeof(AAIHotSpot) = 0x4A0
+	unsigned char Opaque_318[0x4C];
+public:
+	uint32 : 1;
+	uint32 bAllowSlotlessAssignment : 1;  // +0x364 bit 1, reflected property
+	uint32 : 4;
+	uint32 bIsEnabled : 1;  // +0x364 bit 6, reflected property
+	uint32 : 25;
+private:
+	unsigned char Opaque_368[0x138];  // sizeof(AAIHotSpot) = 0x4A0
 };
 
 class AHUD : public AActor
@@ -4100,6 +4110,7 @@ public:
 	virtual void AddControllerYawInput(float Val);  // slot 223 (+0x6F8), UFunction APawn::AddControllerYawInput
 	virtual void AddControllerRollInput(float Val);  // slot 224 (+0x700), UFunction APawn::AddControllerRollInput
 	virtual bool IsMoveInputIgnored() const;  // slot 225 (+0x708), UFunction APawn::IsMoveInputIgnored
+	FVector GetLastMovementInputVector() const;  // native accessor of LastControlInputVector
 	static void StaticRegisterNativesAPawn();
 	static void execAddControllerPitchInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddControllerRollInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4127,7 +4138,11 @@ public:
 	static void execSetCanAffectNavigationGeneration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSpawnDefaultController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x60];  // sizeof(APawn) = 0x378
+	unsigned char Opaque_318[0x50];
+public:
+	FVector LastControlInputVector;  // +0x368, reflected property
+private:
+	unsigned char Opaque_374[0x4];  // sizeof(APawn) = 0x378
 };
 
 class ADefaultPawn : public APawn
@@ -5076,6 +5091,7 @@ public:
 	virtual void OnRep_bActive();  // slot 300 (+0x960), UFunction ABuildingFOBCoreActor::OnRep_bActive
 	virtual void OnRep_bTargetable();  // slot 301 (+0x968), UFunction ABuildingFOBCoreActor::OnRep_bTargetable
 	virtual void OnRep_bVulnerable();  // slot 302 (+0x970), UFunction ABuildingFOBCoreActor::OnRep_bVulnerable
+	bool IsActive() const;  // native accessor of bActive
 	static void StaticRegisterNativesABuildingFOBCoreActor();
 	static void execGetFOBBoundsBoxOverlappedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFOBBoundsCenterAndExtents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5091,7 +5107,13 @@ public:
 	static void execOnTargetableStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnVulnerableStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x130];  // sizeof(ABuildingFOBCoreActor) = 0x8A0
+	unsigned char Opaque_770[0x6C];
+public:
+	uint32 : 2;
+	uint32 bActive : 1;  // +0x7DC bit 2, reflected property
+	uint32 : 29;
+private:
+	unsigned char Opaque_7E0[0xC0];  // sizeof(ABuildingFOBCoreActor) = 0x8A0
 };
 
 class ABuildingFOBCoreSpawnPad : public ABuildingGameplayActor
@@ -5872,12 +5894,18 @@ public:
 	virtual void FNGC_VSlot_0xD10();
 	virtual void OnRep_bDoorOpen();  // slot 419 (+0xD18), UFunction ABuildingWall::OnRep_bDoorOpen
 	virtual void OnRep_bDoorCollisionDisabled();  // slot 420 (+0xD20), UFunction ABuildingWall::OnRep_bDoorCollisionDisabled
+	bool IsDoorOpen() const;  // native accessor of bDoorOpen
 	static void StaticRegisterNativesABuildingWall();
 	static void execIsDoorOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_bDoorCollisionDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_bDoorOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xF0];  // sizeof(ABuildingWall) = 0xEA0
+	unsigned char Opaque_DB0[0xE9];
+public:
+	uint8 bDoorOpen : 1;  // +0xE99 bit 0, reflected property
+	uint8 : 7;
+private:
+	unsigned char Opaque_E9A[0x6];  // sizeof(ABuildingWall) = 0xEA0
 };
 
 class ACameraActor : public AActor
@@ -7318,8 +7346,10 @@ public:
 	virtual void SetSkinColor(FLinearColor NewSkinColor, float NewSkinBrightness);  // slot 367 (+0xB78), UFunction AFortAIPawn::SetSkinColor
 	virtual void FNGC_VSlot_0xB80();
 	virtual void SetMovementUrgency(EFortMovementUrgency::Type Urgency);  // slot 369 (+0xB88), UFunction AFortAIPawn::SetMovementUrgency
+	void SetCanInteract(bool CanInteract);  // native accessor of bCanInteract
 	void SetCurrentAimTarget(AActor* AimTarget);  // native accessor of CurrentAimTarget
 	void SetEncounterInfo(UFortAIEncounterInfo* InEncounterInfo);  // native accessor of EncounterInfo
+	void SetShouldStartSleeping(bool bHintStartSleeping);  // native accessor of bShouldStartSleeping
 	static void StaticRegisterNativesAFortAIPawn();
 	static void execAddFortAbilitySet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddUnreachablePickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7384,7 +7414,15 @@ private:
 public:
 	UFortAIEncounterInfo* EncounterInfo;  // +0x1028, reflected property
 private:
-	unsigned char Opaque_1030[0x990];
+	unsigned char Opaque_1030[0x2B8];
+public:
+	uint32 : 12;
+	uint32 bShouldStartSleeping : 1;  // +0x12E8 bit 12, reflected property
+	uint32 : 13;
+	uint32 bCanInteract : 1;  // +0x12E8 bit 26, reflected property
+	uint32 : 5;
+private:
+	unsigned char Opaque_12EC[0x6D4];
 public:
 	AActor* CurrentAimTarget;  // +0x19C0, reflected property
 private:
@@ -10021,10 +10059,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsMutatorActive() const;  // native accessor of bMutatorActive
 	static void StaticRegisterNativesAFortGameplayMutator();
 	static void execIsMutatorActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	uint32 bMutatorActive : 1;  // +0x318 bit 0, reflected property
+	uint32 : 31;
 private:
-	unsigned char Opaque[0x8];  // sizeof(AFortGameplayMutator) = 0x320
+	unsigned char Opaque_31C[0x4];  // sizeof(AFortGameplayMutator) = 0x320
 };
 
 class AFortGameplayMutator_AIEncounterModifierTags : public AFortGameplayMutator
@@ -11110,6 +11152,7 @@ public:
 	virtual void OnRep_bIsMissionVisible();  // slot 204 (+0x660), UFunction AFortMission::OnRep_bIsMissionVisible
 	virtual void OnRep_UIIndex();  // slot 205 (+0x668), UFunction AFortMission::OnRep_UIIndex
 	virtual void OnRep_QuestOwnerAccount();  // slot 206 (+0x670), UFunction AFortMission::OnRep_QuestOwnerAccount
+	FGuid GetMissionGuid() const;  // native accessor of MissionGuid
 	static void StaticRegisterNativesAFortMission();
 	static void execAddCompletionTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddCompletionTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11172,7 +11215,11 @@ public:
 	static void execStopEncounterSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStopMissionAIEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x340];  // sizeof(AFortMission) = 0x690
+	unsigned char Opaque_350[0x144];
+public:
+	FGuid MissionGuid;  // +0x494, reflected property
+private:
+	unsigned char Opaque_4A4[0x1EC];  // sizeof(AFortMission) = 0x690
 };
 
 class AFortMissionGenerationManager : public AActor
@@ -13344,7 +13391,12 @@ public:
 	static void execServerSetShowHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUpdateScoreStatChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x790];  // sizeof(AFortPlayerState) = 0xB70
+	unsigned char Opaque_3E0[0x18];
+public:
+	uint32 bIsWorldDataOwner : 1;  // +0x3F8 bit 0, reflected property
+	uint32 : 31;
+private:
+	unsigned char Opaque_3FC[0x774];  // sizeof(AFortPlayerState) = 0xB70
 };
 
 class AFortPlayerStateZone : public AFortPlayerState
@@ -13505,6 +13557,7 @@ public:
 	virtual void FNGC_VSlot_0x788();
 	virtual bool ServerSetCanEditOutpost_Validate(AFortPlayerStateOutpost* InPlayer, bool bCanEdit);  // slot 242 (+0x790), UFunction AFortPlayerStateOutpost::ServerSetCanEditOutpost
 	virtual void ServerSetCanEditOutpost_Implementation(AFortPlayerStateOutpost* InPlayer, bool bCanEdit);  // slot 243 (+0x798), UFunction AFortPlayerStateOutpost::ServerSetCanEditOutpost
+	bool IsOutpostOwner() const;  // native accessor of bIsWorldDataOwner
 	static void StaticRegisterNativesAFortPlayerStateOutpost();
 	static void execCanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsOutpostOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -14643,6 +14696,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	bool ShouldDisplayAmmoCounter() const;  // native accessor of bShouldDisplayAmmoCounter
+	bool UseFirstPersonTargeting() const;  // native accessor of bUseFirstPersonTargeting
 	static void StaticRegisterNativesAFortWeaponRanged();
 	static void execDeactivateBeamFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetADSTransitionInTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -14657,7 +14712,14 @@ public:
 	static void execUseFirstPersonTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUseScopeTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x228];  // sizeof(AFortWeaponRanged) = 0xC78
+	unsigned char Opaque_A50[0x34];
+public:
+	uint32 bShouldDisplayAmmoCounter : 1;  // +0xA84 bit 0, reflected property
+	uint32 : 3;
+	uint32 bUseFirstPersonTargeting : 1;  // +0xA84 bit 4, reflected property
+	uint32 : 27;
+private:
+	unsigned char Opaque_A88[0x1F0];  // sizeof(AFortWeaponRanged) = 0xC78
 };
 
 class AFortWeap_WannaGun : public AFortWeaponRanged
@@ -17296,6 +17358,7 @@ public:
 	float GetSlotRadius() const;  // native accessor of Radius
 	EAIHotSpotSlot GetSlotState() const;  // native accessor of SlotState
 	int32 GetSlotUserId() const;  // native accessor of UserId
+	bool IsEnabled() const;  // native accessor of bIsEnabled
 	static void StaticRegisterNativesUAIHotSpotSlot();
 	static void execClearSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHotSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -17322,8 +17385,12 @@ private:
 	unsigned char Opaque_68[0x4];
 public:
 	int32 UserId;  // +0x6C, reflected property
+public:
+	uint32 : 5;
+	uint32 bIsEnabled : 1;  // +0x70 bit 5, reflected property
+	uint32 : 26;
 private:
-	unsigned char Opaque_70[0x10];
+	unsigned char Opaque_74[0xC];
 public:
 	int32 SlotIndex;  // +0x80, reflected property
 public:
@@ -21599,6 +21666,7 @@ public:
 	virtual void OnInputMethodChanged(bool bUsingGamepad);  // slot 132 (+0x420), UFunction UCommonButton::OnInputMethodChanged
 	virtual void FNGC_VSlot_0x428();
 	virtual void HandleTriggeringActionCommited(bool& bPassthrough);  // slot 134 (+0x430), UFunction UCommonButton::HandleTriggeringActionCommited
+	bool GetShouldSelectUponReceivingFocus() const;  // native accessor of bShouldSelectUponReceivingFocus
 	static void StaticRegisterNativesUCommonButton();
 	static void execClearSelection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDisableButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21636,7 +21704,13 @@ public:
 	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetTriggeredInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x570];  // sizeof(UCommonButton) = 0x780
+	unsigned char Opaque_210[0x90];
+public:
+	uint8 : 2;
+	uint8 bShouldSelectUponReceivingFocus : 1;  // +0x2A0 bit 2, reflected property
+	uint8 : 5;
+private:
+	unsigned char Opaque_2A1[0x4DF];  // sizeof(UCommonButton) = 0x780
 };
 
 class UFortItemTileButton : public UCommonButton
@@ -26448,6 +26522,7 @@ public:
 	virtual void FNGC_VSlot_0x858();
 	virtual void CapsuleTouched(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, FHitResult const& SweepResult);  // slot 268 (+0x860), UFunction UCharacterMovementComponent::CapsuleTouched
 	float GetAnalogInputModifier() const;  // native accessor of AnalogInputModifier
+	FVector GetCurrentAcceleration() const;  // native accessor of Acceleration
 	float K2_GetWalkableFloorAngle() const;  // native accessor of WalkableFloorAngle
 	float K2_GetWalkableFloorZ() const;  // native accessor of WalkableFloorZ
 	static void StaticRegisterNativesUCharacterMovementComponent();
@@ -26493,7 +26568,11 @@ public:
 public:
 	float WalkableFloorZ;  // +0x1A8, reflected property
 private:
-	unsigned char Opaque_1AC[0x134];
+	unsigned char Opaque_1AC[0xDC];
+public:
+	FVector Acceleration;  // +0x288, reflected property
+private:
+	unsigned char Opaque_294[0x4C];
 public:
 	float AnalogInputModifier;  // +0x2E0, reflected property
 private:
@@ -27343,6 +27422,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void GetButtonPadding(FMargin& OutButtonPadding) const;  // native accessor of ButtonPadding
+	void GetCustomPadding(FMargin& OutCustomPadding) const;  // native accessor of CustomPadding
 	static void StaticRegisterNativesUCommonButtonStyle();
 	static void execGetButtonPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCustomPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27360,7 +27441,13 @@ public:
 	static void execGetSelectedPressedBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetSelectedTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x448];  // sizeof(UCommonButtonStyle) = 0x470
+	unsigned char Opaque_28[0x3C8];
+public:
+	FMargin ButtonPadding;  // +0x3F0, reflected property
+public:
+	FMargin CustomPadding;  // +0x400, reflected property
+private:
+	unsigned char Opaque_410[0x60];  // sizeof(UCommonButtonStyle) = 0x470
 };
 
 class UCommonCustomNavigation : public UBorder
@@ -28031,7 +28118,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void GetColor(FLinearColor& OutColor) const;  // native accessor of Color
 	float GetLineHeightPercentage() const;  // native accessor of LineHeightPercentage
+	void GetMargin(FMargin& OutMargin) const;  // native accessor of Margin
+	void GetShadowColor(FLinearColor& OutColor) const;  // native accessor of ShadowColor
+	void GetShadowOffset(FVector2D& OutShadowOffset) const;  // native accessor of ShadowOffset
 	static void StaticRegisterNativesUCommonTextStyle();
 	static void execGetColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -28040,7 +28131,17 @@ public:
 	static void execGetShadowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetShadowOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque_28[0x94];
+	unsigned char Opaque_28[0x58];
+public:
+	FLinearColor Color;  // +0x80, reflected property
+private:
+	unsigned char Opaque_90[0x4];
+public:
+	FVector2D ShadowOffset;  // +0x94, reflected property
+public:
+	FLinearColor ShadowColor;  // +0x9C, reflected property
+public:
+	FMargin Margin;  // +0xAC, reflected property
 public:
 	float LineHeightPercentage;  // +0xBC, reflected property
 };
@@ -34638,6 +34739,8 @@ public:
 	virtual bool ServerUpdateState_Validate(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32 CurrentGear);  // slot 170 (+0x550), UFunction UWheeledVehicleMovementComponent::ServerUpdateState
 	virtual void ServerUpdateState_Implementation(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32 CurrentGear);  // slot 171 (+0x558), UFunction UWheeledVehicleMovementComponent::ServerUpdateState
 	float GetEngineMaxRotationSpeed() const;  // native accessor of MaxEngineRPM
+	void SetGearDown(bool bNewGearDown);  // native accessor of bRawGearDownInput
+	void SetHandbrakeInput(bool bNewHandbrake);  // native accessor of bRawHandbrakeInput
 	static void StaticRegisterNativesUWheeledVehicleMovementComponent();
 	static void execGetCurrentGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetEngineMaxRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -34666,7 +34769,14 @@ private:
 public:
 	float MaxEngineRPM;  // +0x1B4, reflected property
 private:
-	unsigned char Opaque_1B8[0x128];  // sizeof(UWheeledVehicleMovementComponent) = 0x2E0
+	unsigned char Opaque_1B8[0xB4];
+public:
+	uint32 bRawHandbrakeInput : 1;  // +0x26C bit 0, reflected property
+	uint32 : 1;
+	uint32 bRawGearDownInput : 1;  // +0x26C bit 2, reflected property
+	uint32 : 29;
+private:
+	unsigned char Opaque_270[0x70];  // sizeof(UWheeledVehicleMovementComponent) = 0x2E0
 };
 
 class USimpleWheeledVehicleMovementComponent : public UWheeledVehicleMovementComponent
@@ -36098,6 +36208,7 @@ public:
 	float GetDegradedPercentage() const;  // native accessor of DegradedPercentage
 	float GetHitNotifyDuration() const;  // native accessor of HitNotifyDuration
 	float GetLowAmmoPercentage() const;  // native accessor of LowAmmoPercentage
+	FVector2D GetReticleCenterImageOffset() const;  // native accessor of ReticleCenterImageOffset
 	bool ShouldAllowTargetingDuringReload() const;  // native accessor of bAllowTargetingDuringReload
 	bool TargetingPreventsReload() const;  // native accessor of bTargetingPreventsReload
 	static void StaticRegisterNativesUFortWeaponItemDefinition();
@@ -36141,7 +36252,11 @@ public:
 public:
 	bool bTargetingPreventsReload;  // +0x612, reflected property
 private:
-	unsigned char Opaque_613[0xE9];
+	unsigned char Opaque_613[0xDD];
+public:
+	FVector2D ReticleCenterImageOffset;  // +0x6F0, reflected property
+private:
+	unsigned char Opaque_6F8[0x4];
 public:
 	float HitNotifyDuration;  // +0x6FC, reflected property
 private:
@@ -36389,6 +36504,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	FLinearColor GetPackColor() const;  // native accessor of PackColor
 	bool IsChoicePack() const;  // native accessor of bIsChoicePack
 	static void StaticRegisterNativesUFortCardPackItemDefinition();
 	static void execGetPackColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36401,7 +36517,11 @@ private:
 public:
 	bool bIsChoicePack;  // +0x32C, reflected property
 private:
-	unsigned char Opaque_32D[0x73];  // sizeof(UFortCardPackItemDefinition) = 0x3A0
+	unsigned char Opaque_32D[0x33];
+public:
+	FLinearColor PackColor;  // +0x360, reflected property
+private:
+	unsigned char Opaque_370[0x30];  // sizeof(UFortCardPackItemDefinition) = 0x3A0
 };
 
 class UFortCarriedObjectHolderInterface : public UInterface
@@ -36721,6 +36841,7 @@ public:
 	virtual void CycleCurrentEncounterToDebug();  // slot 145 (+0x488), UFunction UFortCheatManager::CycleCurrentEncounterToDebug
 	virtual void SetCombatGraphHistoryLength(int32 Seconds);  // slot 146 (+0x490), UFunction UFortCheatManager::SetCombatGraphHistoryLength
 	virtual void SetEncounterGraphsHistoryLength(int32 Seconds);  // slot 147 (+0x498), UFunction UFortCheatManager::SetEncounterGraphsHistoryLength
+	void UnlockAllDefenders(bool inUnlockAllDefenders);  // native accessor of bUnlockAllDefenders
 	static void StaticRegisterNativesUFortCheatManager();
 	static void execAddAllScores(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddBuildingScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -37093,7 +37214,13 @@ public:
 	static void execWannaGun(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execWriteLootReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x50];  // sizeof(UFortCheatManager) = 0xC8
+	unsigned char Opaque_78[0x10];
+public:
+	uint32 : 20;
+	uint32 bUnlockAllDefenders : 1;  // +0x88 bit 20, reflected property
+	uint32 : 11;
+private:
+	unsigned char Opaque_8C[0x3C];  // sizeof(UFortCheatManager) = 0xC8
 };
 
 class UFortCheatMenuFactory : public UObject
@@ -38718,6 +38845,22 @@ public:
 	float GetGridSnapSizeOverride() const;  // native accessor of GridSnapSizeOverride
 	int32 GetMaxPlacementDistance() const;  // native accessor of MaxPlacementDistance
 	float GetRotationAngleIncrement() const;  // native accessor of RotationAngleIncrement
+	bool RequiresPlayerPlaceableAttachmentActors() const;  // native accessor of bRequiresPlayerPlaceableAttachmentActors
+	bool ShouldAllowAnyFloorPlacement() const;  // native accessor of bAllowAnyFloorPlacement
+	bool ShouldAllowPlacementOnBuildings() const;  // native accessor of bAllowPlacementOnBuildings
+	bool ShouldAllowPlacementOnWorldGeometry() const;  // native accessor of bAllowPlacementOnWorldGeometry
+	bool ShouldAllowStairsWhenAttachingToFloors() const;  // native accessor of bAllowStairsWhenAttachingToFloors
+	bool ShouldAttachWhenPlacing() const;  // native accessor of bAttachWhenPlacing
+	bool ShouldCancelAbilityOnUnequip() const;  // native accessor of bCancelAbilityOnUnequip
+	bool ShouldCancelToolWhenPlaced() const;  // native accessor of bCancelToolWhenPlaced
+	bool ShouldConsumeWhenPlaced() const;  // native accessor of bConsumeWhenPlaced
+	bool ShouldDisableLocationLerpWhilePlacing() const;  // native accessor of bDisableLocationLerpWhilePlacing
+	bool ShouldDisableRotationLerpWhilePlacing() const;  // native accessor of bDisableRotationLerpWhilePlacing
+	bool ShouldDisableScaleLerpWhilePlacing() const;  // native accessor of bDisableScaleLerpWhilePlacing
+	bool ShouldForceIgnoreBuildingOverlaps() const;  // native accessor of bForceIgnoreBuildingOverlaps
+	bool ShouldForceIgnoreOverlapTest() const;  // native accessor of bForceIgnoreOverlapTest
+	bool ShouldIgnoreCollisionWithCriticalActors() const;  // native accessor of bIgnoreCollisionWithCriticalActors
+	bool ShouldUseRelativeCameraRotation() const;  // native accessor of bUseRelativeCameraRotation
 	static void StaticRegisterNativesUFortDecoItemDefinition();
 	static void execGetBlueprintClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetGridSnapSizeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -38751,7 +38894,29 @@ public:
 public:
 	float RotationAngleIncrement;  // +0x7A4, reflected property
 private:
-	unsigned char Opaque_7A8[0x18];
+	unsigned char Opaque_7A8[0x4];
+public:
+	uint32 bForceIgnoreOverlapTest : 1;  // +0x7AC bit 0, reflected property
+	uint32 bForceIgnoreBuildingOverlaps : 1;  // +0x7AC bit 1, reflected property
+	uint32 bIgnoreCollisionWithCriticalActors : 1;  // +0x7AC bit 2, reflected property
+	uint32 bDisableLocationLerpWhilePlacing : 1;  // +0x7AC bit 3, reflected property
+	uint32 bDisableRotationLerpWhilePlacing : 1;  // +0x7AC bit 4, reflected property
+	uint32 bDisableScaleLerpWhilePlacing : 1;  // +0x7AC bit 5, reflected property
+	uint32 bAttachWhenPlacing : 1;  // +0x7AC bit 6, reflected property
+	uint32 bAllowPlacementOnWorldGeometry : 1;  // +0x7AC bit 7, reflected property
+	uint32 bAllowPlacementOnBuildings : 1;  // +0x7AC bit 8, reflected property
+	uint32 : 1;
+	uint32 bConsumeWhenPlaced : 1;  // +0x7AC bit 10, reflected property
+	uint32 bCancelToolWhenPlaced : 1;  // +0x7AC bit 11, reflected property
+	uint32 bCancelAbilityOnUnequip : 1;  // +0x7AC bit 12, reflected property
+	uint32 bRequiresPlayerPlaceableAttachmentActors : 1;  // +0x7AC bit 13, reflected property
+	uint32 bUseRelativeCameraRotation : 1;  // +0x7AC bit 14, reflected property
+	uint32 bAllowStairsWhenAttachingToFloors : 1;  // +0x7AC bit 15, reflected property
+	uint32 : 1;
+	uint32 bAllowAnyFloorPlacement : 1;  // +0x7AC bit 17, reflected property
+	uint32 : 14;
+private:
+	unsigned char Opaque_7B0[0x10];
 public:
 	int32 MaxPlacementDistance;  // +0x7C0, reflected property
 private:
@@ -49971,6 +50136,7 @@ public:
 	UClothingSimulationInteractor* GetClothingSimulationInteractor() const;  // native accessor of ClothingInteractor
 	bool GetDisablePostProcessBlueprint() const;  // native accessor of bDisablePostProcessBlueprint
 	UAnimInstance* GetPostProcessInstance() const;  // native accessor of PostProcessAnimInstance
+	void SetEnablePhysicsBlending(bool bNewBlendPhysics);  // native accessor of bBlendPhysics
 	static void StaticRegisterNativesUSkeletalMeshComponent();
 	static void execAccumulateAllBodiesBelowPhysicsBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddForceToAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -50056,7 +50222,13 @@ public:
 public:
 	bool bDisablePostProcessBlueprint;  // +0x840, reflected property
 private:
-	unsigned char Opaque_841[0x25F];
+	unsigned char Opaque_841[0xB1];
+public:
+	uint8 : 3;
+	uint8 bBlendPhysics : 1;  // +0x8F2 bit 3, reflected property
+	uint8 : 4;
+private:
+	unsigned char Opaque_8F3[0x1AD];
 public:
 	UClothingSimulationInteractor* ClothingInteractor;  // +0xAA0, reflected property
 private:
@@ -52892,14 +53064,17 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	FVector2D GetBasePosition() const;  // native accessor of BasePosition
 	static void StaticRegisterNativesUFortSkillTreeCanvasSlot();
 	static void execGetBasePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	FVector2D BasePosition;  // +0x38, reflected property
 private:
-	unsigned char Opaque[0x18];  // sizeof(UFortSkillTreeCanvasSlot) = 0x50
+	unsigned char Opaque_40[0x10];  // sizeof(UFortSkillTreeCanvasSlot) = 0x50
 };
 
 class UFortSkillTreeLandingPage : public UCommonActivatablePanel
@@ -67465,6 +67640,9 @@ public:
 	virtual UPaperFlipbook* GetFlipbook();  // slot 265 (+0x848), UFunction UPaperFlipbookComponent::GetFlipbook
 	float GetPlayRate() const;  // native accessor of PlayRate
 	float GetPlaybackPosition() const;  // native accessor of AccumulatedTime
+	bool IsLooping() const;  // native accessor of bLooping
+	bool IsPlaying() const;  // native accessor of bPlaying
+	void SetLooping(bool bNewLooping);  // native accessor of bLooping
 	void SetPlayRate(float NewRate);  // native accessor of PlayRate
 	static void StaticRegisterNativesUPaperFlipbookComponent();
 	static void execGetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67494,8 +67672,11 @@ private:
 	unsigned char Opaque_690[0x8];
 public:
 	float PlayRate;  // +0x698, reflected property
-private:
-	unsigned char Opaque_69C[0x4];
+public:
+	uint32 bLooping : 1;  // +0x69C bit 0, reflected property
+	uint32 : 1;
+	uint32 bPlaying : 1;  // +0x69C bit 2, reflected property
+	uint32 : 29;
 public:
 	float AccumulatedTime;  // +0x6A0, reflected property
 private:
@@ -67823,6 +68004,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual void FNGC_VSlot_0x838();
 	virtual bool SetTileMap(UPaperTileMap* NewTileMap);  // slot 264 (+0x840), UFunction UPaperTileMapComponent::SetTileMap
+	FLinearColor GetTileMapColor() const;  // native accessor of TileMapColor
 	static void StaticRegisterNativesUPaperTileMapComponent();
 	static void execAddNewLayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCreateNewTileMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67844,7 +68026,11 @@ public:
 	static void execSetTileMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetTileMapColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x50];  // sizeof(UPaperTileMapComponent) = 0x6E0
+	unsigned char Opaque_690[0x28];
+public:
+	FLinearColor TileMapColor;  // +0x6B8, reflected property
+private:
+	unsigned char Opaque_6C8[0x18];  // sizeof(UPaperTileMapComponent) = 0x6E0
 };
 
 class UPaperTileSet : public UObject
@@ -73110,6 +73296,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	float GetBoundaryMax() const;  // native accessor of SplineBoundaryMax
 	float GetBoundaryMin() const;  // native accessor of SplineBoundaryMin
+	FVector GetSplineUpDir() const;  // native accessor of SplineUpDir
 	static void StaticRegisterNativesUSplineMeshComponent();
 	static void execGetBoundaryMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetBoundaryMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -73142,7 +73329,11 @@ public:
 	static void execSetStartTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUpdateMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque_6F0[0x74];
+	unsigned char Opaque_6F0[0x60];
+public:
+	FVector SplineUpDir;  // +0x750, reflected property
+private:
+	unsigned char Opaque_75C[0x8];
 public:
 	float SplineBoundaryMin;  // +0x764, reflected property
 public:
@@ -73869,6 +74060,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool GetIgnoreTimeDilation() const;  // native accessor of bIgnoreTimeDilation
+	void SetIgnoreTimeDilation(bool bNewIgnoreTimeDilation);  // native accessor of bIgnoreTimeDilation
 	static void StaticRegisterNativesUTimelineComponent();
 	static void execGetIgnoreTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -73894,7 +74087,12 @@ public:
 	static void execSetVectorCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xE0];  // sizeof(UTimelineComponent) = 0x1D0
+	unsigned char Opaque_F0[0xD0];
+public:
+	uint32 bIgnoreTimeDilation : 1;  // +0x1C0 bit 0, reflected property
+	uint32 : 31;
+private:
+	unsigned char Opaque_1C4[0xC];  // sizeof(UTimelineComponent) = 0x1D0
 };
 
 class UTimelineTemplate : public UObject
@@ -74793,6 +74991,7 @@ public:
 	virtual bool PressAndReleaseKey(FKey Key);  // slot 160 (+0x500), UFunction UWidgetInteractionComponent::PressAndReleaseKey
 	virtual bool SendKeyChar(FString Characters, bool bRepeat);  // slot 161 (+0x508), UFunction UWidgetInteractionComponent::SendKeyChar
 	virtual void ScrollWheel(float ScrollDelta);  // slot 162 (+0x510), UFunction UWidgetInteractionComponent::ScrollWheel
+	FVector2D Get2DHitLocation() const;  // native accessor of LocalHitLocation
 	UWidgetComponent* GetHoveredWidgetComponent() const;  // native accessor of HoveredWidgetComponent
 	bool IsOverFocusableWidget() const;  // native accessor of bIsHoveredWidgetFocusable
 	bool IsOverHitTestVisibleWidget() const;  // native accessor of bIsHoveredWidgetHitTestVisible
@@ -74813,7 +75012,11 @@ public:
 	static void execSendKeyChar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetCustomHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque_290[0x158];
+	unsigned char Opaque_290[0x148];
+public:
+	FVector2D LocalHitLocation;  // +0x3D8, reflected property
+private:
+	unsigned char Opaque_3E0[0x8];
 public:
 	UWidgetComponent* HoveredWidgetComponent;  // +0x3E8, reflected property
 private:

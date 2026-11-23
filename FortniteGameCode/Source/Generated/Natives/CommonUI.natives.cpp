@@ -5,6 +5,30 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0029B3F0 (end 0x0029B3FD), leaf (no .pdata)
+// Original VA: 0x000000014029B3F0 | File offset: 0x0029A9F0
+// Recovery: high-confidence inferred (called by execGetShouldSelectUponReceivingFocus at RVA 0x002C6310; UCommonButton::bShouldSelectUponReceivingFocus reflected at +0x2A0) | Matching: see analysis/functions-native-accessors.json
+bool UCommonButton::GetShouldSelectUponReceivingFocus() const
+{
+	return bShouldSelectUponReceivingFocus;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00299AB0 (end 0x00299ABB), leaf (no .pdata)
+// Original VA: 0x0000000140299AB0 | File offset: 0x002990B0
+// Recovery: high-confidence inferred (called by execGetButtonPadding at RVA 0x002C51C0; UCommonButtonStyle::ButtonPadding reflected at +0x3F0) | Matching: see analysis/functions-native-accessors.json
+void UCommonButtonStyle::GetButtonPadding(FMargin& OutButtonPadding) const
+{
+	OutButtonPadding = ButtonPadding;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00299CA0 (end 0x00299CAB), leaf (no .pdata)
+// Original VA: 0x0000000140299CA0 | File offset: 0x002992A0
+// Recovery: high-confidence inferred (called by execGetCustomPadding at RVA 0x002C5410; UCommonButtonStyle::CustomPadding reflected at +0x400) | Matching: see analysis/functions-native-accessors.json
+void UCommonButtonStyle::GetCustomPadding(FMargin& OutCustomPadding) const
+{
+	OutCustomPadding = CustomPadding;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002BA700 (end 0x002BA707), leaf (no .pdata)
 // Original VA: 0x00000001402BA700 | File offset: 0x002B9D00
 // Recovery: high-confidence inferred (called by execSetSimulateDoubleClickOnSelectedItemClick at RVA 0x002CEB40; UCommonListView::bSimulateDoubleClickOnSelectedItemClick reflected at +0x198) | Matching: see analysis/functions-native-accessors.json
@@ -21,12 +45,44 @@ UCommonWidgetSwitcher* UCommonTabListWidget::GetLinkedSwitcher() const
 	return LinkedSwitcher;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00299AC0 (end 0x00299ACB), leaf (no .pdata)
+// Original VA: 0x0000000140299AC0 | File offset: 0x002990C0
+// Recovery: high-confidence inferred (called by execGetColor at RVA 0x002CC4A0; UCommonTextStyle::Color reflected at +0x80) | Matching: see analysis/functions-native-accessors.json
+void UCommonTextStyle::GetColor(FLinearColor& OutColor) const
+{
+	OutColor = Color;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0029A5D0 (end 0x0029A5D9), leaf (no .pdata)
 // Original VA: 0x000000014029A5D0 | File offset: 0x00299BD0
 // Recovery: high-confidence inferred (called by execGetLineHeightPercentage at RVA 0x002CC780; UCommonTextStyle::LineHeightPercentage reflected at +0xBC) | Matching: see analysis/functions-native-accessors.json
 float UCommonTextStyle::GetLineHeightPercentage() const
 {
 	return LineHeightPercentage;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0029A6C0 (end 0x0029A6CB), leaf (no .pdata)
+// Original VA: 0x000000014029A6C0 | File offset: 0x00299CC0
+// Recovery: high-confidence inferred (called by execGetMargin at RVA 0x002CC7E0; UCommonTextStyle::Margin reflected at +0xAC) | Matching: see analysis/functions-native-accessors.json
+void UCommonTextStyle::GetMargin(FMargin& OutMargin) const
+{
+	OutMargin = Margin;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0029B3D0 (end 0x0029B3DB), leaf (no .pdata)
+// Original VA: 0x000000014029B3D0 | File offset: 0x0029A9D0
+// Recovery: high-confidence inferred (called by execGetShadowColor at RVA 0x002CCAF0; UCommonTextStyle::ShadowColor reflected at +0x9C) | Matching: see analysis/functions-native-accessors.json
+void UCommonTextStyle::GetShadowColor(FLinearColor& OutColor) const
+{
+	OutColor = ShadowColor;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0029B3E0 (end 0x0029B3ED), leaf (no .pdata)
+// Original VA: 0x000000014029B3E0 | File offset: 0x0029A9E0
+// Recovery: high-confidence inferred (called by execGetShadowOffset at RVA 0x002CCB80; UCommonTextStyle::ShadowOffset reflected at +0x94) | Matching: see analysis/functions-native-accessors.json
+void UCommonTextStyle::GetShadowOffset(FVector2D& OutShadowOffset) const
+{
+	OutShadowOffset = ShadowOffset;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002B82B0 (end 0x002B82B7), leaf (no .pdata)

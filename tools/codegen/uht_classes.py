@@ -340,13 +340,29 @@ def main() -> int:
             # (tools/codegen/uht_accessors.py); the rest of the class stays opaque.
             cursor = start
             for off in sorted(named):
-                mtype, mname, msize = named[off]
+                spec = named[off]
+                msize = spec[3] if spec[0] == "plain" else spec[1]
                 assert cursor <= off and off + msize <= decl_size[n], (n, off, cursor)
                 if off > cursor:
                     body_lines += ["private:", f"\tunsigned char Opaque_{cursor:X}[0x{off - cursor:X}];"]
-                body_lines += ["public:", f"\t{mtype} {mname};  // +0x{off:X}, reflected property"]
+                if spec[0] == "plain":
+                    body_lines += ["public:", f"\t{spec[1]} {spec[2]};  // +0x{off:X}, reflected property"]
+                    stats["members declared for native accessors"] += 1
+                else:
+                    # A bitfield storage unit: the reflected bits at their positions, unnamed bits
+                    # between them (UE declares these as uint8/uint32 Name : 1).
+                    unit = "uint8" if spec[1] == 1 else "uint32"
+                    body_lines.append("public:")
+                    bit = 0
+                    for b, bname in sorted(spec[2].items()):
+                        if b > bit:
+                            body_lines.append(f"\t{unit} : {b - bit};")
+                        body_lines.append(f"\t{unit} {bname} : 1;  // +0x{off:X} bit {b}, reflected property")
+                        bit = b + 1
+                        stats["bitfield members declared for native accessors"] += 1
+                    if bit < 8 * spec[1]:
+                        body_lines.append(f"\t{unit} : {8 * spec[1] - bit};")
                 cursor = off + msize
-                stats["members declared for native accessors"] += 1
             if decl_size[n] > cursor:
                 body_lines += ["private:", f"\tunsigned char Opaque_{cursor:X}[0x{decl_size[n] - cursor:X}];  "
                                f"// sizeof({n}) = 0x{decl_size[n]:X}"]
@@ -504,9 +520,7 @@ def main() -> int:
         obj = f"Source/Generated/Natives/{pkg}.natives.obj"
         for a in sorted(accs, key=lambda a: (a["class"], a["name"])):
             r, end = a["rva"], a["end"]
-            sig = (f"{a['ret']} {a['class']}::{a['name']}(){' const' if a['const'] else ''}" if a["kind"] == "get"
-                   else f"void {a['class']}::{a['name']}({a['param'][0]} {a['param'][1]}){' const' if a['const'] else ''}")
-            body = f"\treturn {a['member']};" if a["kind"] == "get" else f"\t{a['member']} = {a['param'][1]};"
+            sig, body = a["head"], a["body"]
             text += [f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{r:08X} (end 0x{end:08X}), leaf (no .pdata)",
                      f"// Original VA: 0x{base + r:016X} | File offset: 0x{img.rva_to_off(r):08X}",
                      f"// Recovery: high-confidence inferred (called by exec{a['ufunction']} at RVA {a['exec_rva']}; "

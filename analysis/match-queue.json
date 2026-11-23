@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 7596,
+ "total": 7594,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
@@ -53,9 +53,9 @@
   },
   {
    "key": "uht-struct-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 828,
+   "count": 827,
    "states": {
-    "relocation-equivalent": 828
+    "relocation-equivalent": 827
    },
    "examples": [
     "0x00095B70 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FOperation",
@@ -81,9 +81,9 @@
   },
   {
    "key": "uht-enum-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 490,
+   "count": 489,
    "states": {
-    "relocation-equivalent": 490
+    "relocation-equivalent": 489
    },
    "examples": [
     "0x00096DA0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ECommonInputType",

@@ -370,9 +370,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,707, at 1,455 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 921 read parameters |
-| of which call a native accessor (below) | 138, all exact |
-| exact | 1,445: 1,235 in the denominator, 210 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,759, at 1,507 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 935 read parameters |
+| of which call a native accessor (below) | 190, all exact |
+| exact | 1,497: 1,287 in the denominator, 210 leaf (no `.pdata`) |
 | relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
@@ -715,46 +715,75 @@ Limits:
 
 A thunk whose native is called directly needs the native's address, and only the thunk
 refers to it. The thunk is the only witness of that address, so the native must be
-reconstructed and match first. The simplest natives can be: those whose whole body is one load
-from `[this+N]` and `ret` (getter), or one store of the argument to `[this+N]` and `ret`
-(setter). Such a native is `return Member;` or `Member = Value;` when all of these agree:
-- N is the offset of a reflected property of the native's class or a superclass. Native
-  bools are located through their `SetBit` function (`mov byte ptr [rcx+N], 1`); bitfields
-  are skipped.
-- The property's C++ type is the UFunction's return type (getter, no parameters) or its only
-  parameter type (setter, no return value).
-- The instruction's width and register class fit that type.
+reconstructed and match first. The simplest natives can be: those whose whole body moves one
+reflected member. They take these forms:
+- scalar getter or setter: one load from `[this+N]` and `ret`, or one store of the argument
+  to `[this+N]` and `ret`;
+- struct getter by value: a copy of the struct at `[this+N]` to the hidden return pointer
+  (`rdx`), then `mov rax, rdx`;
+- struct getter through an out parameter: the same copy to the reference in `rdx`, with no
+  return value (`Out = Member;`);
+- struct setter: a copy from the reference in `rdx` to `[this+N]`;
+- bitfield getter or setter: the storage unit at `[this+N]` shifted and masked to one bit, or
+  that bit cleared and replaced by the argument's low bit.
+
+Each form is accepted only when all of these agree:
+- N is the offset of a reflected property of the native's class or a superclass.
+  - A native bool is located through its `SetBit` function (`mov byte ptr [rcx+N], 1`).
+  - A bitfield is located through its `or byte|dword ptr [rcx+N], mask`. That operand is the
+    storage width, uint8 or uint32. `FBoolPropertyParams.ElementSize` is 1 for both.
+- The property's C++ type is the UFunction's return type, its only parameter type, or its
+  only out parameter's type.
+- The copy covers exactly the struct's reflected size (`FStructParams`), or the instruction
+  width fits the scalar type, or the bitfield's storage width is the access width.
 
 The natives come from `analysis/native-implementations.json` (high-confidence, called
-directly, by a thunk no other UFunction shares). Of 6,758, 140 qualify:
-- 5,437 are not two instructions;
+directly, by a thunk no other UFunction shares). Of 6,758, 192 qualify:
+- 4,940 are not a short body ending in `ret`;
 - 1,076 are not high-confidence direct natives;
+- 399 have another shape;
 - 71 have no reflected member at the offset;
+- 20 have no reflected struct member there, and 19 no reflected bitfield at the bit;
+- 20 have no recovered signature;
 - 18 share a folded thunk;
-- 16 have another shape or disagree with the signature.
+- 3 disagree with the signature.
 
 Two more are skipped because the member is not in the owner's own bytes.
 
+The 190 natives are:
+- 138 scalar getters and setters;
+- 37 bitfield getters and setters;
+- 9 struct getters by value (`FVector`, `FVector2D`, `FLinearColor` and others);
+- 6 struct out-parameter getters (`FMargin` and others).
+
+One bitfield getter compiles to `shr eax, 4; and al, 1` where the others mask `eax`. With
+v140, `return b;`, `!= 0`, `!!b` and `(bool)b` all mask `eax` for a uint32 unit. Only
+`return b ? true : false;` masks `al`, so that form is generated where the reference shows
+it (`AFortWeaponRanged::UseFirstPersonTargeting`).
+
 Reconstruction:
-- The 134 members are declared at their reflected offsets in `Classes.gen.h`. The rest of each
-  class stays opaque.
+- The 149 members and 35 bitfield members are declared at their reflected offsets in
+  `Classes.gen.h`. A bitfield unit names its reflected bits and leaves the others unnamed
+  (`uint32 : 1;`). The rest of each class stays opaque.
 - The natives are defined out of line, one translation unit per package
   (`Source/Generated/Natives/<Package>.natives.cpp`). The reference compiles them in the
   class's own `.cpp`, apart from the generated code, so its thunks call them rather than
   inline them.
 - The thunks are UHT 4.20's `DECLARE_FUNCTION` bodies, as for virtual natives.
 - The manifest symbol is the MSVC decoration of the native's signature: bool, the sized
-  integers, float, double, class pointers, and enums. A returned enum carries the `?A`
+  integers, float, double, class pointers, enums, and structs the shims define with `struct`
+  (by value `U`, by reference `AEAU`/`AEBU`). A returned enum or struct carries the `?A`
   prefix. `TEnumAsByte` signatures are left out.
 
-All 138 natives are exact, outside the denominator (leaf). Each thunk's call then resolves
-through that exact match, and all 138 thunks are exact, in the denominator.
+All 190 natives are exact, outside the denominator (leaf). Each thunk's call then resolves
+through that exact match, and all 190 thunks are exact, in the denominator.
 
 The larger `Classes.gen.h` moves MSVC's `$SG` literal numbering. InputCore.1's literal order
 follows that numbering, so 2 of its registrars (`EControllerHand`, `FKey`) lose their
 section-relative literal prediction. One class registrar in another unit gains one. This is
 the known `.rdata` ripple (STATUS, "Known fragility"). `tools/matching/regressions.py`
-reports both.
+reports both. With the second accessor batch the numbering moved again, and both are exact
+once more.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 
@@ -1179,8 +1208,8 @@ package.
 
 Results:
 - class registrars: 2,212 of 3,283 exact;
-- struct registrars: 1,282 of 2,110;
-- enum registrars: 597 of 1,094;
+- struct registrars: 1,283 of 2,110;
+- enum registrars: 598 of 1,094;
 - class auto-initializers (outside the denominator): 1,248 of 3,283.
 
 **Registered function addresses.** A registrar passes `&C::StaticClass`,

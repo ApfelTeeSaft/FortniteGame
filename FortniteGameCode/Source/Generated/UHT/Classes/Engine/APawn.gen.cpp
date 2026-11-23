@@ -73,6 +73,15 @@ void APawn::execGetBaseAimRotation(UObject* Context, FFrame& Stack, void* const 
 	*(FRotator*)Z_Param__Result=P_THIS->GetBaseAimRotation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3770 (end 0x024A37AC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLastMovementInputVector); calls the native accessor APawn::GetLastMovementInputVector | Matching: see analysis/functions-uht-exec.json
+void APawn::execGetLastMovementInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetLastMovementInputVector();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3830 (end 0x024A3860)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMovementComponent) | Matching: see analysis/functions-uht-exec.json
 void APawn::execGetMovementComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

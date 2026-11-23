@@ -31,6 +31,150 @@ void UFortDecoItemDefinition::execGetRotationAngleIncrement(UObject* Context, FF
 	*(float*)Z_Param__Result=P_THIS->GetRotationAngleIncrement();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2920 (end 0x00FD294B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRequiresPlayerPlaceableAttachmentActors); calls the native accessor UFortDecoItemDefinition::RequiresPlayerPlaceableAttachmentActors | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execRequiresPlayerPlaceableAttachmentActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->RequiresPlayerPlaceableAttachmentActors();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2E40 (end 0x00FD2E6B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAllowAnyFloorPlacement); calls the native accessor UFortDecoItemDefinition::ShouldAllowAnyFloorPlacement | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldAllowAnyFloorPlacement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldAllowAnyFloorPlacement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2E70 (end 0x00FD2E9B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAllowPlacementOnBuildings); calls the native accessor UFortDecoItemDefinition::ShouldAllowPlacementOnBuildings | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldAllowPlacementOnBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldAllowPlacementOnBuildings();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2EA0 (end 0x00FD2ECB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAllowPlacementOnWorldGeometry); calls the native accessor UFortDecoItemDefinition::ShouldAllowPlacementOnWorldGeometry | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldAllowPlacementOnWorldGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldAllowPlacementOnWorldGeometry();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2ED0 (end 0x00FD2EFB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAllowStairsWhenAttachingToFloors); calls the native accessor UFortDecoItemDefinition::ShouldAllowStairsWhenAttachingToFloors | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldAllowStairsWhenAttachingToFloors(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldAllowStairsWhenAttachingToFloors();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2F00 (end 0x00FD2F2B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAttachWhenPlacing); calls the native accessor UFortDecoItemDefinition::ShouldAttachWhenPlacing | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldAttachWhenPlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldAttachWhenPlacing();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2F30 (end 0x00FD2F5B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldCancelAbilityOnUnequip); calls the native accessor UFortDecoItemDefinition::ShouldCancelAbilityOnUnequip | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldCancelAbilityOnUnequip(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldCancelAbilityOnUnequip();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2F60 (end 0x00FD2F8B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldCancelToolWhenPlaced); calls the native accessor UFortDecoItemDefinition::ShouldCancelToolWhenPlaced | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldCancelToolWhenPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldCancelToolWhenPlaced();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2F90 (end 0x00FD2FBB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldConsumeWhenPlaced); calls the native accessor UFortDecoItemDefinition::ShouldConsumeWhenPlaced | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldConsumeWhenPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldConsumeWhenPlaced();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2FF0 (end 0x00FD301B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldDisableLocationLerpWhilePlacing); calls the native accessor UFortDecoItemDefinition::ShouldDisableLocationLerpWhilePlacing | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldDisableLocationLerpWhilePlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldDisableLocationLerpWhilePlacing();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD3020 (end 0x00FD304B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldDisableRotationLerpWhilePlacing); calls the native accessor UFortDecoItemDefinition::ShouldDisableRotationLerpWhilePlacing | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldDisableRotationLerpWhilePlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldDisableRotationLerpWhilePlacing();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD3050 (end 0x00FD307B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldDisableScaleLerpWhilePlacing); calls the native accessor UFortDecoItemDefinition::ShouldDisableScaleLerpWhilePlacing | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldDisableScaleLerpWhilePlacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldDisableScaleLerpWhilePlacing();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD3080 (end 0x00FD30AB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldForceIgnoreBuildingOverlaps); calls the native accessor UFortDecoItemDefinition::ShouldForceIgnoreBuildingOverlaps | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldForceIgnoreBuildingOverlaps(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldForceIgnoreBuildingOverlaps();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD30B0 (end 0x00FD30DB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldForceIgnoreOverlapTest); calls the native accessor UFortDecoItemDefinition::ShouldForceIgnoreOverlapTest | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldForceIgnoreOverlapTest(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldForceIgnoreOverlapTest();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD30E0 (end 0x00FD310B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldIgnoreCollisionWithCriticalActors); calls the native accessor UFortDecoItemDefinition::ShouldIgnoreCollisionWithCriticalActors | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldIgnoreCollisionWithCriticalActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldIgnoreCollisionWithCriticalActors();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD3140 (end 0x00FD316B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldUseRelativeCameraRotation); calls the native accessor UFortDecoItemDefinition::ShouldUseRelativeCameraRotation | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execShouldUseRelativeCameraRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldUseRelativeCameraRotation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortDecoItemDefinition, 1355181804u)
 // Original dynamic initializer: RVA 0x000EFB00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDecoItemDefinition> AutoInitializeUFortDecoItemDefinition(TEXT("UFortDecoItemDefinition"), sizeof(UFortDecoItemDefinition), 1355181804u);

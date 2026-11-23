@@ -449,11 +449,37 @@ def test_accessor_mangling() -> None:
     assert mangle("UFoo", "GetState", "EFoo", [], True, {"EFoo": 1}) == "?GetState@UFoo@@QEBA?AW4EFoo@@XZ"
     assert mangle("UFoo", "SetMode", None, ["EMode::Type"], False, {"EMode::Type": 1}) == \
         "?SetMode@UFoo@@QEAAXW4Type@EMode@@@Z"
+    assert mangle("UFoo", "GetPoint", "FVector", [], True, {}) == "?GetPoint@UFoo@@QEBA?AUFVector@@XZ"
+    assert mangle("UFoo", "SetPoint", None, ["const FVector&"], False, {}) == "?SetPoint@UFoo@@QEAAXAEBUFVector@@@Z"
+    assert mangle("UFoo", "GetPad", None, ["FMargin&"], True, {}) == "?GetPad@UFoo@@QEBAXAEAUFMargin@@@Z"
     print("accessor mangling: ok")
+
+
+def test_accessor_shapes() -> None:
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "codegen"))
+    from types import SimpleNamespace as I
+    from uht_accessors import bit_shape, copy_shape
+    ins = lambda *t: [I(mnemonic=x.split(" ", 1)[0], op_str=x.split(" ", 1)[1] if " " in x else "") for x in t]  # noqa: E731
+    # FVector by value: 12 bytes from [rcx+0x3f0] to the return slot, which is returned.
+    s = copy_shape(ins("mov eax, dword ptr [rcx + 0x3f8]", "movsd xmm0, qword ptr [rcx + 0x3f0]",
+                       "movsd qword ptr [rdx], xmm0", "mov dword ptr [rdx + 8], eax", "mov rax, rdx"))
+    assert s == {"dst": "rdx", "src": "rcx", "delta": 0x3F0, "size": 12, "ret_rdx": True}, s
+    s = copy_shape(ins("movups xmm0, xmmword ptr [rcx + 0x2a0]", "movups xmmword ptr [rdx], xmm0"))
+    assert s["size"] == 16 and not s["ret_rdx"]                               # an out parameter
+    assert copy_shape(ins("movsd xmm0, qword ptr [rcx + 0x10]", "movsd qword ptr [rdx + 4], xmm0")) is None  # gap at 0
+    assert bit_shape(ins("mov eax, dword ptr [rcx + 0x69c]", "shr eax, 2", "and eax, 1")) == \
+        {"kind": "get", "offset": 0x69C, "width": 4, "bit": 2, "ternary": False}
+    assert bit_shape(ins("mov eax, dword ptr [rcx + 0xa84]", "shr eax, 4", "and al, 1"))["ternary"]  # b ? true : false
+    assert bit_shape(ins("and dword ptr [rcx + 0x69c], 0xfffffffe", "movzx eax, dl", "and eax, 1",
+                         "or dword ptr [rcx + 0x69c], eax")) == {"kind": "set", "offset": 0x69C, "width": 4, "bit": 0}
+    assert bit_shape(ins("and dword ptr [rcx + 0x69c], 0xfffffffd", "movzx eax, dl", "and eax, 1",
+                         "or dword ptr [rcx + 0x69c], eax")) is None          # clears bit 1, sets bit 0
+    print("accessor shapes: ok")
 
 
 def main() -> int:
     test_accessor_mangling()
+    test_accessor_shapes()
     test_match_queue()
     test_unwind()
     test_local_prediction()

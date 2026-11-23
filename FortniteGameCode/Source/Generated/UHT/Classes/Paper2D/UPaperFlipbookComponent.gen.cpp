@@ -31,6 +31,24 @@ void UPaperFlipbookComponent::execGetPlaybackPosition(UObject* Context, FFrame& 
 	*(float*)Z_Param__Result=P_THIS->GetPlaybackPosition();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00669ED0 (end 0x00669EFB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLooping); calls the native accessor UPaperFlipbookComponent::IsLooping | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execIsLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsLooping();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00669F00 (end 0x00669F2B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlaying); calls the native accessor UPaperFlipbookComponent::IsPlaying | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPlaying();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0066A6C0 (end 0x0066A756)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetFlipbook) | Matching: see analysis/functions-uht-exec.json
 void UPaperFlipbookComponent::execSetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -39,6 +57,16 @@ void UPaperFlipbookComponent::execSetFlipbook(UObject* Context, FFrame& Stack, v
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->SetFlipbook(Z_Param_NewFlipbook);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066AA50 (end 0x0066AAD2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLooping); calls the native accessor UPaperFlipbookComponent::SetLooping | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execSetLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewLooping);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLooping(Z_Param_bNewLooping);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0066AB60 (end 0x0066ABDB)

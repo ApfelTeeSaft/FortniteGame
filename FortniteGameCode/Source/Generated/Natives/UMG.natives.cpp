@@ -29,6 +29,14 @@ UUserWidget* UWidgetComponent::GetUserWidgetObject() const
 	return Widget;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BA4630 (end 0x01BA4640), leaf (no .pdata)
+// Original VA: 0x0000000141BA4630 | File offset: 0x01BA3C30
+// Recovery: high-confidence inferred (called by execGet2DHitLocation at RVA 0x01C036D0; UWidgetInteractionComponent::LocalHitLocation reflected at +0x3D8) | Matching: see analysis/functions-native-accessors.json
+FVector2D UWidgetInteractionComponent::Get2DHitLocation() const
+{
+	return LocalHitLocation;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BA7D10 (end 0x01BA7D18), leaf (no .pdata)
 // Original VA: 0x0000000141BA7D10 | File offset: 0x01BA7310
 // Recovery: high-confidence inferred (called by execGetHoveredWidgetComponent at RVA 0x01C03F70; UWidgetInteractionComponent::HoveredWidgetComponent reflected at +0x3E8) | Matching: see analysis/functions-native-accessors.json

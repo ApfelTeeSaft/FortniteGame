@@ -32,6 +32,15 @@ void AFortMission::execGetExpectedCompletionTime(UObject* Context, FFrame& Stack
 	*(float*)Z_Param__Result=P_THIS->GetExpectedCompletionTime_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103B520 (end 0x0103B554)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMissionGuid); calls the native accessor AFortMission::GetMissionGuid | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FGuid*)Z_Param__Result=P_THIS->GetMissionGuid();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0103B560 (end 0x0103B5DD)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMissionName) | Matching: see analysis/functions-uht-exec.json
 void AFortMission::execGetMissionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

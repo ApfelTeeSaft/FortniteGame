@@ -65,6 +65,24 @@ void AAIHotSpot::execIsAIAllowed(UObject* Context, FFrame& Stack, void* const Z_
 	*(bool*)Z_Param__Result=P_THIS->IsAIAllowed_Implementation(Z_Param_AI);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C3F0 (end 0x00F5C41B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsEnabled); calls the native accessor AAIHotSpot::IsEnabled | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsEnabled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C450 (end 0x00F5C47B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsSlotlessAssignmentAllowed); calls the native accessor AAIHotSpot::IsSlotlessAssignmentAllowed | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execIsSlotlessAssignmentAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsSlotlessAssignmentAllowed();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C480 (end 0x00F5C514)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOccupySlotByIndex) | Matching: see analysis/functions-uht-exec.json
 void AAIHotSpot::execOccupySlotByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

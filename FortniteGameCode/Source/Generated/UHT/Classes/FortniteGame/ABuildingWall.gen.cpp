@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79AA0 (end 0x00F79ACB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsDoorOpen); calls the native accessor ABuildingWall::IsDoorOpen | Matching: see analysis/functions-uht-exec.json
+void ABuildingWall::execIsDoorOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsDoorOpen();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6EC90 (end 0x00F6ECAF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bDoorCollisionDisabled) | Matching: see analysis/functions-uht-exec.json
 void ABuildingWall::execOnRep_bDoorCollisionDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

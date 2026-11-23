@@ -59,6 +59,15 @@ void UAIHotSpotSlot::execIsAIAllowed(UObject* Context, FFrame& Stack, void* cons
 	*(bool*)Z_Param__Result=P_THIS->IsAIAllowed_Implementation(Z_Param_AI);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C420 (end 0x00F5C44B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsEnabled); calls the native accessor UAIHotSpotSlot::IsEnabled | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsEnabled();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02423320 (end 0x024233A6)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSlotEnabled) | Matching: see analysis/functions-uht-exec.json
 void UAIHotSpotSlot::execSetSlotEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

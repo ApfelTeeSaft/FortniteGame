@@ -4,6 +4,25 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDE70 (end 0x024EDE9B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetIgnoreTimeDilation); calls the native accessor UTimelineComponent::GetIgnoreTimeDilation | Matching: see analysis/functions-uht-exec.json
+void UTimelineComponent::execGetIgnoreTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetIgnoreTimeDilation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EE170 (end 0x024EE1F2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIgnoreTimeDilation); calls the native accessor UTimelineComponent::SetIgnoreTimeDilation | Matching: see analysis/functions-uht-exec.json
+void UTimelineComponent::execSetIgnoreTimeDilation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewIgnoreTimeDilation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIgnoreTimeDilation(Z_Param_bNewIgnoreTimeDilation);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UTimelineComponent, 3869473079u)
 // Original dynamic initializer: RVA 0x002200C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UTimelineComponent> AutoInitializeUTimelineComponent(TEXT("UTimelineComponent"), sizeof(UTimelineComponent), 3869473079u);

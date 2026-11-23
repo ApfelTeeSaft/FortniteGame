@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA2F0 (end 0x010DA31B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldDisplayAmmoCounter); calls the native accessor AFortWeaponRanged::ShouldDisplayAmmoCounter | Matching: see analysis/functions-uht-exec.json
+void AFortWeaponRanged::execShouldDisplayAmmoCounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldDisplayAmmoCounter();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA440 (end 0x010DA46B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUseFirstPersonTargeting); calls the native accessor AFortWeaponRanged::UseFirstPersonTargeting | Matching: see analysis/functions-uht-exec.json
+void AFortWeaponRanged::execUseFirstPersonTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->UseFirstPersonTargeting();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortWeaponRanged, 2532238662u)
 // Original dynamic initializer: RVA 0x0011D320 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortWeaponRanged> AutoInitializeAFortWeaponRanged(TEXT("AFortWeaponRanged"), sizeof(AFortWeaponRanged), 2532238662u);

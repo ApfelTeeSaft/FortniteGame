@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C51C0 (end 0x002C5252)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetButtonPadding); calls the native accessor UCommonButtonStyle::GetButtonPadding | Matching: see analysis/functions-uht-exec.json
+void UCommonButtonStyle::execGetButtonPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FMargin,Z_Param_Out_OutButtonPadding);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetButtonPadding(Z_Param_Out_OutButtonPadding);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C5410 (end 0x002C54A2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCustomPadding); calls the native accessor UCommonButtonStyle::GetCustomPadding | Matching: see analysis/functions-uht-exec.json
+void UCommonButtonStyle::execGetCustomPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FMargin,Z_Param_Out_OutCustomPadding);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetCustomPadding(Z_Param_Out_OutCustomPadding);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonButtonStyle, 559593226u)
 // Original dynamic initializer: RVA 0x00095690 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonButtonStyle> AutoInitializeUCommonButtonStyle(TEXT("UCommonButtonStyle"), sizeof(UCommonButtonStyle), 559593226u);

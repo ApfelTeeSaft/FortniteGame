@@ -117,6 +117,14 @@ void UFortRewardInfoWidget::SetButtonGroup(UCommonButtonGroup* InButtonGroup)
 	ButtonGroup = InButtonGroup;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02828C00 (end 0x02828C0D), leaf (no .pdata)
+// Original VA: 0x0000000142828C00 | File offset: 0x02828200
+// Recovery: high-confidence inferred (called by execGetBasePosition at RVA 0x028F71D0; UFortSkillTreeCanvasSlot::BasePosition reflected at +0x38) | Matching: see analysis/functions-native-accessors.json
+FVector2D UFortSkillTreeCanvasSlot::GetBasePosition() const
+{
+	return BasePosition;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0285ECC0 (end 0x0285ECC7), leaf (no .pdata)
 // Original VA: 0x000000014285ECC0 | File offset: 0x0285E2C0
 // Recovery: high-confidence inferred (called by execGetIndexOfSelectedSquadSlot at RVA 0x028FE170; UFortSquadSlotsView::IndexOfSelectedSquadSlot reflected at +0x250) | Matching: see analysis/functions-native-accessors.json

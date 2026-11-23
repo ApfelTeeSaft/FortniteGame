@@ -80,6 +80,15 @@ void UCharacterMovementComponent::execGetAnalogInputModifier(UObject* Context, F
 	*(float*)Z_Param__Result=P_THIS->GetAnalogInputModifier();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0DE0 (end 0x023F0E1C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentAcceleration); calls the native accessor UCharacterMovementComponent::GetCurrentAcceleration | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetCurrentAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetCurrentAcceleration();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0E50 (end 0x023F0E90)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetImpartedMovementBaseVelocity) | Matching: see analysis/functions-uht-exec.json
 void UCharacterMovementComponent::execGetImpartedMovementBaseVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

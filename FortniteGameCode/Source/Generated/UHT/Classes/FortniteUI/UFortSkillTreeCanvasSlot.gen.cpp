@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F71D0 (end 0x028F7206)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBasePosition); calls the native accessor UFortSkillTreeCanvasSlot::GetBasePosition | Matching: see analysis/functions-uht-exec.json
+void UFortSkillTreeCanvasSlot::execGetBasePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector2D*)Z_Param__Result=P_THIS->GetBasePosition();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortSkillTreeCanvasSlot, 707863317u)
 // Original dynamic initializer: RVA 0x0025ABE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSkillTreeCanvasSlot> AutoInitializeUFortSkillTreeCanvasSlot(TEXT("UFortSkillTreeCanvasSlot"), sizeof(UFortSkillTreeCanvasSlot), 707863317u);
