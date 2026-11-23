@@ -370,8 +370,8 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,558, at 1,306 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 887 read parameters |
-| exact | 1,297: 1,087 in the denominator, 210 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,565, at 1,313 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 894 read parameters |
+| exact | 1,304: 1,094 in the denominator, 210 leaf (no `.pdata`) |
 | relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
@@ -438,6 +438,7 @@ Supported types:
 - `FModifierKeysState`, `FInputEvent` and `FPointerEvent` (without 4.20's `Force`), and the
   Fortnite-only `FFortConversationSentence`, `FFortSentenceAudio` and
   `FFortFeedbackHandle` (below);
+- `FGeometry`, with `FMatrix2x2` and `FTransform2D` (`FSlateRenderTransform`) (below);
 - `FTransform` (`TransformRecovered.h`, below);
 - soft object pointers, `TSoftObjectPtr<C>` (`EngineStructsRecovered.h`): `FSoftObjectPath`,
   `TPersistentObjectPtr`, `FSoftObjectPtr` and `TSoftObjectPtr`, read with
@@ -600,6 +601,13 @@ Limits:
     `FFortItemEntry`. The 2 `IFortClientAnnouncement_ConversationCodeInterface` thunks that
     take one are exact.
   - `FKey`'s registrar is exact again (`.rdata` ripple).
+- **`FGeometry`.** As 4.20. Its default constructor and assignment are out of line
+  (`Geometry.cpp`), and the reference's thunks call the constructor; the destructor is
+  trivial.
+  - It holds no pointers and is larger than 8 bytes, so /GS treats it as a buffer: the
+    thunks that construct one have a security cookie, as in the reference.
+  - The 7 `UFortTouchControlRegion` touch and tick events (`OnMovePlayerRegionTouchStarted`
+    and so on) are exact. They corroborate each other's constructor call.
 - **Interfaces.** UHT 4.20 declares an interface's native functions, and their exec thunks,
   in the native `I<Name>` class (`typedef I<Name> ThisClass`), and registers
   `&I<Name>::exec<Fn>`. `UFunction::Invoke` passes the thunk the object's interface address
@@ -679,13 +687,13 @@ Limits:
       `rdx` (`ABuildingSMActor::GetReplacementDestructionReason`,
       `AFortTimeOfDayManager::GetPreviousDayPhase`);
     - `IFortTeamActorInterface::GetTeam` has only the thunk's call to go on.
-- Of the 1,661 virtual-native UFunctions, 1,587 have a supported signature and 1,558 have
+- Of the 1,661 virtual-native UFunctions, 1,594 have a supported signature and 1,565 have
   thunks (folded bodies counted per UFunction). For the other 29, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FGeometry` (7) and `FSlateBrush` (6);
-  - `TArray` of enums (3);
-  - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
+  - `FSlateBrush` (6);
+  - `TArray` of enums (3), and 3 whose struct is not identified;
+  - 27 other types, mostly Fortnite-only structs, each the only blocker of 1 or 2.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 

@@ -54387,13 +54387,13 @@ public:
 	virtual void FNGC_VSlot_0x3F8();
 	virtual void FNGC_VSlot_0x400();
 	virtual void FNGC_VSlot_0x408();
-	virtual void FNGC_VSlot_0x410();  // slot 130: UFortTouchControlRegion::OnRotatePlayerRegionTouchEnded_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x418();  // slot 131: UFortTouchControlRegion::OnRotatePlayerRegionTouchMoved_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x420();  // slot 132: UFortTouchControlRegion::OnRotatePlayerRegionTouchStarted_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x428();  // slot 133: UFortTouchControlRegion::MovePlayerRegionTick_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x430();  // slot 134: UFortTouchControlRegion::OnMovePlayerRegionTouchEnded_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x438();  // slot 135: UFortTouchControlRegion::OnMovePlayerRegionTouchMoved_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x440();  // slot 136: UFortTouchControlRegion::OnMovePlayerRegionTouchStarted_Implementation (signature not recovered)
+	virtual void OnRotatePlayerRegionTouchEnded_Implementation(FGeometry const& InGeometry, FPointerEvent const& InGestureEvent);  // slot 130 (+0x410), UFunction UFortTouchControlRegion::OnRotatePlayerRegionTouchEnded
+	virtual void OnRotatePlayerRegionTouchMoved_Implementation(FGeometry const& InGeometry, FPointerEvent const& InGestureEvent, FVector2D const& MoveDelta);  // slot 131 (+0x418), UFunction UFortTouchControlRegion::OnRotatePlayerRegionTouchMoved
+	virtual void OnRotatePlayerRegionTouchStarted_Implementation(FGeometry const& InGeometry, FPointerEvent const& InGestureEvent);  // slot 132 (+0x420), UFunction UFortTouchControlRegion::OnRotatePlayerRegionTouchStarted
+	virtual void MovePlayerRegionTick_Implementation(FGeometry const& InGeometry, const float DeltaTime);  // slot 133 (+0x428), UFunction UFortTouchControlRegion::MovePlayerRegionTick
+	virtual void OnMovePlayerRegionTouchEnded_Implementation(FGeometry const& InGeometry, FPointerEvent const& InGestureEvent);  // slot 134 (+0x430), UFunction UFortTouchControlRegion::OnMovePlayerRegionTouchEnded
+	virtual void OnMovePlayerRegionTouchMoved_Implementation(FGeometry const& InGeometry, FPointerEvent const& InGestureEvent);  // slot 135 (+0x438), UFunction UFortTouchControlRegion::OnMovePlayerRegionTouchMoved
+	virtual void OnMovePlayerRegionTouchStarted_Implementation(FGeometry const& InGeometry, FPointerEvent const& InGestureEvent);  // slot 136 (+0x440), UFunction UFortTouchControlRegion::OnMovePlayerRegionTouchStarted
 	static void StaticRegisterNativesUFortTouchControlRegion();
 	static void execCalculateMoveStickPos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsMovePlayerRegionTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);

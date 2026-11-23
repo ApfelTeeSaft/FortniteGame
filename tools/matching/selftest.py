@@ -236,6 +236,7 @@ def test_uht_parameters() -> None:
     assert "EViewTargetBlendFunction" in P.MODELLED_ENUMS                # defined by the shims, not redeclared
     assert "EFortItemEntryState::Type" in P.MODELLED_ENUMS and P.MODELLED_STRUCTS["FortItemEntry"] == (192, 8)
     assert P.MODELLED_STRUCTS["PointerEvent"] == (104, 8)                # the reference's, without Force
+    assert P.MODELLED_STRUCTS["Geometry"] == (56, 4)                     # out-of-line constructor
     t = P.parameter(rec("Text", "Label", 0), names, base)
     assert (t["decl"], t["line"]) == ("FText Label", "P_GET_PROPERTY(UTextProperty,Z_Param_Label);"), t
     t = P.parameter(rec("Text", "Label", const | out | ref), names, base)

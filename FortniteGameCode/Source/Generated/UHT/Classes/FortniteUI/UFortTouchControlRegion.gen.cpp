@@ -4,6 +4,84 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029074E0 (end 0x029075DA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMovePlayerRegionTick) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchControlRegion::execMovePlayerRegionTick(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGeometry,Z_Param_Out_InGeometry);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MovePlayerRegionTick_Implementation(Z_Param_Out_InGeometry,Z_Param_DeltaTime);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907640 (end 0x0290780D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnMovePlayerRegionTouchEnded) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchControlRegion::execOnMovePlayerRegionTouchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGeometry,Z_Param_Out_InGeometry);
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_InGestureEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnMovePlayerRegionTouchEnded_Implementation(Z_Param_Out_InGeometry,Z_Param_Out_InGestureEvent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907810 (end 0x029079DD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnMovePlayerRegionTouchMoved) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchControlRegion::execOnMovePlayerRegionTouchMoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGeometry,Z_Param_Out_InGeometry);
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_InGestureEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnMovePlayerRegionTouchMoved_Implementation(Z_Param_Out_InGeometry,Z_Param_Out_InGestureEvent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029079E0 (end 0x02907BAD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnMovePlayerRegionTouchStarted) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchControlRegion::execOnMovePlayerRegionTouchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGeometry,Z_Param_Out_InGeometry);
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_InGestureEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnMovePlayerRegionTouchStarted_Implementation(Z_Param_Out_InGeometry,Z_Param_Out_InGestureEvent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907BB0 (end 0x02907D7D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRotatePlayerRegionTouchEnded) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchControlRegion::execOnRotatePlayerRegionTouchEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGeometry,Z_Param_Out_InGeometry);
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_InGestureEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRotatePlayerRegionTouchEnded_Implementation(Z_Param_Out_InGeometry,Z_Param_Out_InGestureEvent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907D80 (end 0x02907F96)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRotatePlayerRegionTouchMoved) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchControlRegion::execOnRotatePlayerRegionTouchMoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGeometry,Z_Param_Out_InGeometry);
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_InGestureEvent);
+	P_GET_STRUCT_REF(FVector2D,Z_Param_Out_MoveDelta);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRotatePlayerRegionTouchMoved_Implementation(Z_Param_Out_InGeometry,Z_Param_Out_InGestureEvent,Z_Param_Out_MoveDelta);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02907FA0 (end 0x0290816D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRotatePlayerRegionTouchStarted) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchControlRegion::execOnRotatePlayerRegionTouchStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FGeometry,Z_Param_Out_InGeometry);
+	P_GET_STRUCT_REF(FPointerEvent,Z_Param_Out_InGestureEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRotatePlayerRegionTouchStarted_Implementation(Z_Param_Out_InGeometry,Z_Param_Out_InGestureEvent);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTouchControlRegion, 2128704415u)
 // Original dynamic initializer: RVA 0x0025E510 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTouchControlRegion> AutoInitializeUFortTouchControlRegion(TEXT("UFortTouchControlRegion"), sizeof(UFortTouchControlRegion), 2128704415u);

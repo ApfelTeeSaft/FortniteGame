@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FGeometry();
 	UPackage* Z_Construct_UPackage__Script_SlateCore();  // RVA 0x0145CAE0
-struct alignas(4) FGeometry
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FGeometry is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0145B470 (end 0x0145B4E1, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014145B470 | File offset: 0x0145AA70
 // Recovery: confirmed (TEXT("Geometry") and Z_Construct_UScriptStruct_FGeometry) | Matching: see analysis/functions-uht-staticstruct.json

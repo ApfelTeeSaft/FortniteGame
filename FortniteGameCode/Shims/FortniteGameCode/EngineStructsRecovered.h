@@ -1085,3 +1085,58 @@ struct FFortConversationSentence
 	float PostSentenceDelay;
 	float DisplayDuration;
 };
+
+// Core: Math/TransformCalculus2D.h (FMatrix2x2, FTransform2D); SlateCore:
+// Rendering/SlateRenderTransform.h and Layout/Geometry.h. FGeometry's default constructor and
+// assignment are out of line in 4.20 (Geometry.cpp), and the reference's thunks call the
+// constructor. Its destructor is trivial. As it holds no pointers and is over 8 bytes, /GS
+// treats it as a buffer, and the thunks that construct one have a security cookie, as in the
+// reference.
+class FMatrix2x2
+{
+public:
+	/** Ctor. initialize to an identity. */
+	FMatrix2x2()
+	{
+		M[0][0] = 1; M[0][1] = 0;
+		M[1][0] = 0; M[1][1] = 1;
+	}
+
+private:
+	float M[2][2];
+};
+
+class FTransform2D
+{
+public:
+	/** Initialize the transform using an identity matrix and a translation. */
+	FTransform2D(const FVector2D& Translation = FVector2D(0.f,0.f))
+		: Trans(Translation)
+	{
+	}
+
+private:
+	FMatrix2x2 M;
+	FVector2D Trans;
+};
+
+typedef FTransform2D FSlateRenderTransform;
+
+struct FGeometry
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+public:
+	FGeometry();
+	FGeometry& operator=(const FGeometry& RHS);
+
+public:
+	const FVector2D /*Local*/Size;
+	const float /*Absolute*/Scale;
+	const FVector2D AbsolutePosition;
+	const FVector2D /*Local*/Position;
+
+private:
+	FSlateRenderTransform AccumulatedRenderTransform;
+	const uint8 bHasRenderTransform : 1;
+};
