@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 6814,
+ "total": 6812,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
@@ -81,9 +81,9 @@
   },
   {
    "key": "uht-staticenum | singleton (.bss)",
-   "count": 286,
+   "count": 285,
    "states": {
-    "relocation-equivalent": 286
+    "relocation-equivalent": 285
    },
    "examples": [
     "0x002C17E0 EDynamicBoxType_StaticEnum",
@@ -507,16 +507,6 @@
    },
    "examples": [
     "0x0013E480 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EProgressBarFillType"
-   ]
-  },
-  {
-   "key": "uht-exec-thunk | GlobalVectorConstants",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x0066B290 UPaperGroupedSpriteComponent::execUpdateInstanceTransform"
    ]
   },
   {

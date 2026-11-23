@@ -48,9 +48,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "codegen"))
 from genio import sync_tree  # noqa: E402
+sys.path.insert(0, str(ROOT / "tools" / "matching"))
+from manifest_io import dump_compact  # noqa: E402
 
 GEN = ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT"
 UNITY_DIR = GEN / "Unity"
+VECTOR_MANIFEST = ROOT / "analysis" / "functions-vector-constants.json"
 UNITY_ORDER = ROOT / "analysis" / "unity-order.json"
 UNIT_SOURCE = "FortniteGameCode/Source/Generated/UHT/Unity/{unit}.gen.cpp"
 UNIT_OBJECT = "Source/Generated/UHT/Unity/{unit}.gen.obj"
@@ -290,6 +293,26 @@ def main() -> int:
              if d.exists()
              for p in (d.glob("*.gen.cpp") if d == GEN else d.rglob("*.gen.cpp")) if p.resolve() not in used]
     stats["files_written"], stats["files_removed"] = sync_tree(UNITY_DIR, outputs)
+    # The leaf dynamic initializers of each unit's GlobalVectorConstants, in .CRT$XCU order
+    # (analysis/unity-order.json "vector_initializers"). Outside the denominator (no .pdata).
+    vc = []
+    for name, u in units():
+        if UNITY_DIR / f"{name}.gen.cpp" not in outputs:
+            continue                    # a unit without fragments is not compiled
+        for cname, (start, end) in zip(u.get("vector_constants", []), u.get("vector_initializers", [])):
+            vc.append({"start_rva": start, "end_rva": end, "name": f"dynamic initializer for GlobalVectorConstants::{cname} ({name})",
+                       "unit": name, "constant": cname})
+    dump_compact(VECTOR_MANIFEST, {
+        "schema_version": 1, "generated_by": "tools/codegen/unity.py",
+        "evidence": ("Leaf dynamic initializer 'movaps|movdqa xmm0, [K]; movaps|movdqa [slot], xmm0; ret' of a unit's "
+                     "GlobalVectorConstants constant (UnrealMathVectorConstants.h): the entries that open the unit's "
+                     ".CRT$XCU range, named by their value in header order (tools/analysis/unity_order.py)."),
+        "entry_defaults": {"category": "vector-constant-initializer",
+                           "source": "FortniteGameCode/Source/Generated/UHT/Unity/{unit}.gen.cpp",
+                           "object": UNIT_OBJECT, "symbol": "??__E{constant}@GlobalVectorConstants@@YAXXZ",
+                           "name_confidence": "high-confidence inferred", "compact": True},
+        "functions": vc})
+    stats["vector constant initializers"] = len(vc)
     print(dict(stats), "fragments outside any unit:", len(loose), [p.name for p in loose[:5]])
     return 1 if loose else 0
 

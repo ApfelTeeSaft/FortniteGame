@@ -204,6 +204,12 @@ class Resolver:
 
         def observed_pred(j: int):
             off, name = items[j]
+            if ("@GlobalVectorConstants@@" in name) != ("@GlobalVectorConstants@@" in symbol):
+                # A unit's header constants sit in its plain .bss after UnityPrologue.h, a
+                # stand-in whose size differs from the engine headers' statics: their offsets to
+                # the unit's other statics are not modelled. Constants predict only each other;
+                # their observations still count as occupied slots (_slot_elimination).
+                return None
             ovals, owho = self._observed(self.key(obj, objpath, name), exclude)
             if len(ovals) == 1:
                 return off, next(iter(ovals)) + mine - off, f"{name} (seen in {owho})"
@@ -586,7 +592,10 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
     if ref_dec is not None and not compact:
         res["decrypted_sha256"] = hashlib.sha256(ref_dec).hexdigest()
     for objpath, symbol in sources:
-        obj = load_obj(objpath)
+        try:
+            obj = load_obj(objpath)
+        except FileNotFoundError:
+            return {"match": "unimplemented", "compare_note": f"object {objpath} not built"}
         try:
             cand_raw, relocs = obj.function_bytes(symbol)
         except KeyError:

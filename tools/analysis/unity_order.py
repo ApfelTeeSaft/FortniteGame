@@ -620,18 +620,21 @@ def main() -> int:
         if k is None or k in opened:
             continue
         opened.add(k)
-        values, i = [], markers[k]
+        values, inits, i = [], [], markers[k]
         while i < t["table_range"][0]:
             K = constant_initializer(read(table[i], 20), table[i])
             if K is None:
                 break
             values.append(read(K, 16))
+            form = read(table[i], 3)
+            inits.append([f"0x{table[i]:08X}", f"0x{table[i] + (15 if form == bytes.fromhex('0f2805') else 17):08X}"])
             i += 1
         names = name_vector_constants(values)
         if names is None:
             stats["units with an unidentified vector constant"] += 1
         elif names:
             t["vector_constants"] = names
+            t["vector_initializers"] = inits      # [start, end] of their leaf dynamic initializers, same order
             stats["units with vector constants"] += 1
 
     head = {

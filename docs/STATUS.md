@@ -9,21 +9,21 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **30,821 / 157,719** primary `.pdata` functions (19.54 %, 1,845,766 bytes):
+| Exact functions | **30,823 / 157,719** primary `.pdata` functions (19.54 %, 1,846,349 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 30,814 generated UHT functions:
+- 30,816 generated UHT functions:
   - classes: 10,984 UFunction creators, 3,244 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
     2,222 `FCompiledInDefer` initializers and 1,318 exec thunks (1,111 of virtual natives, 207 of
     native accessors);
   - packages: 551 package-scope delegate creators and 69 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,098 `Z_Construct_UScriptStruct_*`, 1,873 `StaticStruct`, 1,782 `NewStructOps`,
     1,900 `StaticRegisterNatives` and 1,295 `FCompiledInDeferStruct` initializers;
-  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 653 `<Enum>_StaticEnum` and 599 `FCompiledInDeferEnum` initializers.
+  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 654 `<Enum>_StaticEnum` and 599 `FCompiledInDeferEnum` initializers.
 
-Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 3,143 `AutoInitialize` initializers, 212 leaf exec thunks, 207 native accessors and `FCommandLine::IsInitialized` |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,635 reconstructed and compiled; 30,821 exact; 6,814 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 6,810 in the denominator, mostly:
+Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 3,143 `AutoInitialize` initializers, 212 leaf exec thunks, 207 native accessors, 136 vector-constant initializers and `FCommandLine::IsInitialized` |
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,635 reconstructed and compiled; 30,823 exact; 6,812 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 6,808 in the denominator, mostly:
 - the 3,283 `GetPrivateStaticClass` bodies (template-instance and literal fields);
 - 2,329 registration initializers blocked by package-name literals that hand-written code
   also uses;
@@ -67,9 +67,10 @@ Largest queue groups (2026-11-23):
 - 3,283 `GetPrivateStaticClass` bodies: `InternalConstructor<C>` and
   `InternalVTableHelperCtorCaller<C>` are referenced only there.
 - 2,353 registrars waiting on per-occurrence `L"/Script/<Package>"` copies.
-- 268 `StaticEnum` singletons at an end of their `.bss` block, with both outer neighbours
-  unobserved. The `GlobalVectorConstants` that follow a block are written by leaf
-  initializers that are not reconstructed yet; adding them would pin the far end.
+- 267 `StaticEnum` singletons at an end of their `.bss` block, with both outer neighbours
+  unobserved. The vector constants rarely follow a block directly (8 to 88 bytes later).
+  Pinning the rest needs a model of the plain `.bss` between them, which `UnityPrologue.h`
+  only stands in for.
 - 222 struct-ops initializers waiting on pooled literals.
 - 202 creators whose `ReturnFunction` static in `.bss` is not predicted.
 - 22 units hold several `TClassCompiledInDefer` runs while their literals interleave. These
@@ -77,6 +78,7 @@ Largest queue groups (2026-11-23):
 
 Done (2026-11-23):
 - 279 `StaticEnum`s resolved by slot elimination in their unit's singleton block.
+- 414 vector-constant initializers added (136 exact, outside the denominator).
 - 22 units that span several of the reference's objects are cut into 64 (224 units in all).
   105 functions became exact, with no regressions.
 - The 442 creators that waited on `FFunctionParams` records are exact.

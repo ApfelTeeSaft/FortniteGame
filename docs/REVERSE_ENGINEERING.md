@@ -1117,8 +1117,25 @@ the 137 units with two or more `StaticEnum`s; the other 9 have wide gaps.
 - Anything else (a wider gap, two gaps, both ends free) resolves nothing. The byte comparison
   checks every prediction.
 
-This made 279 `StaticEnum`s exact, 653 of 1,089 in all, with no regressions. Of the rest:
-- 268 are blocked only at an end of their block with both outer neighbours unobserved;
+This made 279 `StaticEnum`s exact, 653 of 1,089 in all, with no regressions.
+
+**Vector-constant initializers.** Each unit's `GlobalVectorConstants` are written by leaf
+initializers that open its `.CRT$XCU` range. `unity_order.py` records their addresses next
+to the constants' names, and `unity.py` lists them in
+`analysis/functions-vector-constants.json` (outside the denominator). This was meant to pin
+the far end of singleton blocks.
+- In the reference, the first constant lies 8 to 88 bytes after the block; it is adjacent in
+  only 5 units. So the constants decide few block ends: one more `StaticEnum` (654).
+- 136 of the 414 initializers are exact. The rest wait on their slot.
+- A unit's constants sit in its plain `.bss`, after `UnityPrologue.h`. That stand-in is not
+  the size of the engine headers' statics, so the constants' offsets to the unit's other
+  statics are not modelled. They predict only each other's slots.
+- Used as neighbours of `OuterClass`/`ReturnFunction` statics, they cost 10 class
+  constructors and the registrars and creators depending on them. Their observations still
+  count as occupied slots for slot elimination.
+
+Of the `StaticEnum`s not exact:
+- 267 are blocked only at an end of their block, with both outer neighbours unobserved;
 - 125 wait on a literal copy;
 - 23 are a unit's only `StaticEnum`.
 
