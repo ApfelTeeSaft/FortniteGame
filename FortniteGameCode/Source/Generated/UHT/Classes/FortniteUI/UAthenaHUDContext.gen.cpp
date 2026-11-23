@@ -4,6 +4,25 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02882530 (end 0x0288255B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsInSelectWidgetToMoveMode); calls the native accessor UAthenaHUDContext::IsInSelectWidgetToMoveMode | Matching: see analysis/functions-uht-exec.json
+void UAthenaHUDContext::execIsInSelectWidgetToMoveMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsInSelectWidgetToMoveMode();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02882A10 (end 0x02882A90)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSelectWidgetToMove); calls the native accessor UAthenaHUDContext::SelectWidgetToMove | Matching: see analysis/functions-uht-exec.json
+void UAthenaHUDContext::execSelectWidgetToMove(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UWidget,Z_Param_Widget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SelectWidgetToMove(Z_Param_Widget);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAthenaHUDContext, 3141754721u)
 // Original dynamic initializer: RVA 0x00239160 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaHUDContext> AutoInitializeUAthenaHUDContext(TEXT("UAthenaHUDContext"), sizeof(UAthenaHUDContext), 3141754721u);

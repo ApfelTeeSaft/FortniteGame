@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC10C0 (end 0x00FC10EB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPriority); calls the native accessor AFortClientAnnouncement::GetPriority | Matching: see analysis/functions-uht-exec.json
+void AFortClientAnnouncement::execGetPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetPriority();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execStopClientAnnouncement) | Matching: see analysis/functions-uht-exec.json
 void AFortClientAnnouncement::execStopClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

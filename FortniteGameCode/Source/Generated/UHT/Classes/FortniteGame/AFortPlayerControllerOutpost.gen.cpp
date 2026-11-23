@@ -24,6 +24,15 @@ void AFortPlayerControllerOutpost::execClientOnOutpostRefundOccurred(UObject* Co
 	P_THIS->ClientOnOutpostRefundOccurred_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107AE60 (end 0x0107AE8C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPendingItemToFabricate); calls the native accessor AFortPlayerControllerOutpost::GetPendingItemToFabricate | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execGetPendingItemToFabricate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortWorldItemDefinition**)Z_Param__Result=P_THIS->GetPendingItemToFabricate();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B870 (end 0x0107B8BE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAbortDisintegration) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerOutpost::execServerAbortDisintegration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

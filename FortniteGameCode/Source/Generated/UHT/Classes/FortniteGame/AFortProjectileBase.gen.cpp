@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108D350 (end 0x0108D37D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetGravityScale); calls the native accessor AFortProjectileBase::GetGravityScale | Matching: see analysis/functions-uht-exec.json
+void AFortProjectileBase::execGetGravityScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetGravityScale();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DAB0 (end 0x0108DBBD)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBounceCallback) | Matching: see analysis/functions-uht-exec.json
 void AFortProjectileBase::execOnBounceCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

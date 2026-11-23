@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67F10 (end 0x00F67F3B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_IsPowered); calls the native accessor UBuildingConnectivityComponent::K2_IsPowered | Matching: see analysis/functions-uht-exec.json
+void UBuildingConnectivityComponent::execK2_IsPowered(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->K2_IsPowered();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C3870 (end 0x024C388F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPlaced) | Matching: see analysis/functions-uht-exec.json
 void UBuildingConnectivityComponent::execOnPlaced(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

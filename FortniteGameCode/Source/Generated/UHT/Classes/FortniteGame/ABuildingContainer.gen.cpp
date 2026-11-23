@@ -13,6 +13,15 @@ void ABuildingContainer::execBounceContainer(UObject* Context, FFrame& Stack, vo
 	P_THIS->BounceContainer();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67C70 (end 0x00F67C9B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLootTier); calls the native accessor ABuildingContainer::GetLootTier | Matching: see analysis/functions-uht-exec.json
+void ABuildingContainer::execGetLootTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetLootTier();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02400DC0 (end 0x02400DDF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bAlreadySearched) | Matching: see analysis/functions-uht-exec.json
 void ABuildingContainer::execOnRep_bAlreadySearched(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

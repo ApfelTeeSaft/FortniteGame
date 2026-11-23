@@ -13,6 +13,15 @@ void ABuildingGameplayActorConsumable::execGetDeathFXTransform(UObject* Context,
 	*(FTransform*)Z_Param__Result=P_THIS->GetDeathFXTransform_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6DDA0 (end 0x00F6DDCC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetOnConsumeMontage); calls the native accessor ABuildingGameplayActorConsumable::GetOnConsumeMontage | Matching: see analysis/functions-uht-exec.json
+void ABuildingGameplayActorConsumable::execGetOnConsumeMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAnimMontage**)Z_Param__Result=P_THIS->GetOnConsumeMontage();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingGameplayActorConsumable, 588693375u)
 // Original dynamic initializer: RVA 0x000DAEB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingGameplayActorConsumable> AutoInitializeABuildingGameplayActorConsumable(TEXT("ABuildingGameplayActorConsumable"), sizeof(ABuildingGameplayActorConsumable), 588693375u);

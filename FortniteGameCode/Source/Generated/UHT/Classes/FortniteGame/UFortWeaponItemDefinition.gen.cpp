@@ -4,6 +4,51 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9A80 (end 0x010D9AAD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDegradedPercentage); calls the native accessor UFortWeaponItemDefinition::GetDegradedPercentage | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponItemDefinition::execGetDegradedPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDegradedPercentage();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9C10 (end 0x010D9C3D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHitNotifyDuration); calls the native accessor UFortWeaponItemDefinition::GetHitNotifyDuration | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponItemDefinition::execGetHitNotifyDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetHitNotifyDuration();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9CA0 (end 0x010D9CCD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLowAmmoPercentage); calls the native accessor UFortWeaponItemDefinition::GetLowAmmoPercentage | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponItemDefinition::execGetLowAmmoPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetLowAmmoPercentage();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA2C0 (end 0x010DA2EB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAllowTargetingDuringReload); calls the native accessor UFortWeaponItemDefinition::ShouldAllowTargetingDuringReload | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponItemDefinition::execShouldAllowTargetingDuringReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldAllowTargetingDuringReload();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA410 (end 0x010DA43B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTargetingPreventsReload); calls the native accessor UFortWeaponItemDefinition::TargetingPreventsReload | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponItemDefinition::execTargetingPreventsReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->TargetingPreventsReload();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortWeaponItemDefinition, 107673333u)
 // Original dynamic initializer: RVA 0x0011D360 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortWeaponItemDefinition> AutoInitializeUFortWeaponItemDefinition(TEXT("UFortWeaponItemDefinition"), sizeof(UFortWeaponItemDefinition), 107673333u);

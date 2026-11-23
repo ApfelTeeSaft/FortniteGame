@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CB0E0 (end 0x024CB15E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCaptureSortPriority); calls the native accessor USceneCaptureComponent::SetCaptureSortPriority | Matching: see analysis/functions-uht-exec.json
+void USceneCaptureComponent::execSetCaptureSortPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewCaptureSortPriority);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCaptureSortPriority(Z_Param_NewCaptureSortPriority);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(USceneCaptureComponent, 1350712193u)
 // Original dynamic initializer: RVA 0x002197D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USceneCaptureComponent> AutoInitializeUSceneCaptureComponent(TEXT("USceneCaptureComponent"), sizeof(USceneCaptureComponent), 1350712193u);

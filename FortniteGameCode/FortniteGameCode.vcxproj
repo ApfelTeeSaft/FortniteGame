@@ -104,6 +104,9 @@
     <!-- Generated UHT code: per-item fragments (tools/codegen/uht_*.py) are compiled only through the
          unity units tools/codegen/unity.py assembles in the references recovered source order. -->
     <ClCompile Include="Source\Generated\UHT\Unity\*.gen.cpp" />
+    <!-- Native accessors (tools/codegen/uht_accessors.py): one unit per package, apart from the
+         exec thunks that call them, as the reference's class .cpp files are. -->
+    <ClCompile Include="Source\Generated\Natives\*.natives.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>

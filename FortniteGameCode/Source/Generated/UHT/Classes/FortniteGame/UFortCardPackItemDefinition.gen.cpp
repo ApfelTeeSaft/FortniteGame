@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAE510 (end 0x00FAE53B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsChoicePack); calls the native accessor UFortCardPackItemDefinition::IsChoicePack | Matching: see analysis/functions-uht-exec.json
+void UFortCardPackItemDefinition::execIsChoicePack(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsChoicePack();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCardPackItemDefinition, 1998970073u)
 // Original dynamic initializer: RVA 0x000E9510 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCardPackItemDefinition> AutoInitializeUFortCardPackItemDefinition(TEXT("UFortCardPackItemDefinition"), sizeof(UFortCardPackItemDefinition), 1998970073u);

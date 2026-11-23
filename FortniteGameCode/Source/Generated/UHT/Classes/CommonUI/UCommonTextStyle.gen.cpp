@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC780 (end 0x002CC7AD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLineHeightPercentage); calls the native accessor UCommonTextStyle::GetLineHeightPercentage | Matching: see analysis/functions-uht-exec.json
+void UCommonTextStyle::execGetLineHeightPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetLineHeightPercentage();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonTextStyle, 2371465046u)
 // Original dynamic initializer: RVA 0x00096140 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonTextStyle> AutoInitializeUCommonTextStyle(TEXT("UCommonTextStyle"), sizeof(UCommonTextStyle), 2371465046u);

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289DB90 (end 0x0289DBBC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetOfferInfo); calls the native accessor UFortDirectAcquisitionOfferWidgetBase::GetOfferInfo | Matching: see analysis/functions-uht-exec.json
+void UFortDirectAcquisitionOfferWidgetBase::execGetOfferInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortDirectAcquisitionOfferInfo**)Z_Param__Result=P_THIS->GetOfferInfo();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortDirectAcquisitionOfferWidgetBase, 2840109577u)
 // Original dynamic initializer: RVA 0x00242890 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDirectAcquisitionOfferWidgetBase> AutoInitializeUFortDirectAcquisitionOfferWidgetBase(TEXT("UFortDirectAcquisitionOfferWidgetBase"), sizeof(UFortDirectAcquisitionOfferWidgetBase), 2840109577u);

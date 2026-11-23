@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9A520 (end 0x00F9A54B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLargeSpawnGroup); calls the native accessor UFortAISpawnGroup::IsLargeSpawnGroup | Matching: see analysis/functions-uht-exec.json
+void UFortAISpawnGroup::execIsLargeSpawnGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsLargeSpawnGroup();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9A550 (end 0x00F9A57B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPrototype); calls the native accessor UFortAISpawnGroup::IsPrototype | Matching: see analysis/functions-uht-exec.json
+void UFortAISpawnGroup::execIsPrototype(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPrototype();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9A580 (end 0x00F9A5AB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsValidForEnemySpawners); calls the native accessor UFortAISpawnGroup::IsValidForEnemySpawners | Matching: see analysis/functions-uht-exec.json
+void UFortAISpawnGroup::execIsValidForEnemySpawners(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsValidForEnemySpawners();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortAISpawnGroup, 2973254055u)
 // Original dynamic initializer: RVA 0x000E4880 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAISpawnGroup> AutoInitializeUFortAISpawnGroup(TEXT("UFortAISpawnGroup"), sizeof(UFortAISpawnGroup), 2973254055u);

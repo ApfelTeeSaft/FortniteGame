@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4900 (end 0x010B492C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetTeamCornerstone); calls the native accessor AFortTeamInfoPvPBaseDestruction::GetTeamCornerstone | Matching: see analysis/functions-uht-exec.json
+void AFortTeamInfoPvPBaseDestruction::execGetTeamCornerstone(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortPvPBaseCornerstone**)Z_Param__Result=P_THIS->GetTeamCornerstone();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortTeamInfoPvPBaseDestruction, 3785139558u)
 // Original dynamic initializer: RVA 0x00114690 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTeamInfoPvPBaseDestruction> AutoInitializeAFortTeamInfoPvPBaseDestruction(TEXT("AFortTeamInfoPvPBaseDestruction"), sizeof(AFortTeamInfoPvPBaseDestruction), 3785139558u);

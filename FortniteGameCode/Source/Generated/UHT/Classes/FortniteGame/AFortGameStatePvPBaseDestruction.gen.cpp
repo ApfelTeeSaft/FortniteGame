@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFCD0 (end 0x00FEFCFB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxTeamExperience); calls the native accessor AFortGameStatePvPBaseDestruction::GetMaxTeamExperience | Matching: see analysis/functions-uht-exec.json
+void AFortGameStatePvPBaseDestruction::execGetMaxTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaxTeamExperience();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFD00 (end 0x00FEFD2B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxTeamLevel); calls the native accessor AFortGameStatePvPBaseDestruction::GetMaxTeamLevel | Matching: see analysis/functions-uht-exec.json
+void AFortGameStatePvPBaseDestruction::execGetMaxTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaxTeamLevel();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameStatePvPBaseDestruction, 1147978664u)
 // Original dynamic initializer: RVA 0x000F7690 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStatePvPBaseDestruction> AutoInitializeAFortGameStatePvPBaseDestruction(TEXT("AFortGameStatePvPBaseDestruction"), sizeof(AFortGameStatePvPBaseDestruction), 1147978664u);

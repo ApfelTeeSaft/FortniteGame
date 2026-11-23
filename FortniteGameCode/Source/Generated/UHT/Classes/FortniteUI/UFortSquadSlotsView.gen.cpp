@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FE170 (end 0x028FE19B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetIndexOfSelectedSquadSlot); calls the native accessor UFortSquadSlotsView::GetIndexOfSelectedSquadSlot | Matching: see analysis/functions-uht-exec.json
+void UFortSquadSlotsView::execGetIndexOfSelectedSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetIndexOfSelectedSquadSlot();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortSquadSlotsView, 2814306030u)
 // Original dynamic initializer: RVA 0x0025C1E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadSlotsView> AutoInitializeUFortSquadSlotsView(TEXT("UFortSquadSlotsView"), sizeof(UFortSquadSlotsView), 2814306030u);

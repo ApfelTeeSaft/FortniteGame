@@ -370,8 +370,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,569, at 1,317 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 897 read parameters |
-| exact | 1,307: 1,097 in the denominator, 210 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,707, at 1,455 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 921 read parameters |
+| of which call a native accessor (below) | 138, all exact |
+| exact | 1,445: 1,235 in the denominator, 210 leaf (no `.pdata`) |
 | relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
@@ -709,6 +710,51 @@ Limits:
   pair). The unsupported ones mostly use structs not modelled:
   - `TArray` of enums (3), and 3 whose struct is not identified;
   - 27 other types, mostly Fortnite-only structs, each the only blocker of 1 or 2.
+
+### Native accessors (`tools/codegen/uht_accessors.py`)
+
+A thunk whose native is called directly needs the native's address, and only the thunk
+refers to it. The thunk is the only witness of that address, so the native must be
+reconstructed and match first. The simplest natives can be: those whose whole body is one load
+from `[this+N]` and `ret` (getter), or one store of the argument to `[this+N]` and `ret`
+(setter). Such a native is `return Member;` or `Member = Value;` when all of these agree:
+- N is the offset of a reflected property of the native's class or a superclass. Native
+  bools are located through their `SetBit` function (`mov byte ptr [rcx+N], 1`); bitfields
+  are skipped.
+- The property's C++ type is the UFunction's return type (getter, no parameters) or its only
+  parameter type (setter, no return value).
+- The instruction's width and register class fit that type.
+
+The natives come from `analysis/native-implementations.json` (high-confidence, called
+directly, by a thunk no other UFunction shares). Of 6,758, 140 qualify:
+- 5,437 are not two instructions;
+- 1,076 are not high-confidence direct natives;
+- 71 have no reflected member at the offset;
+- 18 share a folded thunk;
+- 16 have another shape or disagree with the signature.
+
+Two more are skipped because the member is not in the owner's own bytes.
+
+Reconstruction:
+- The 134 members are declared at their reflected offsets in `Classes.gen.h`. The rest of each
+  class stays opaque.
+- The natives are defined out of line, one translation unit per package
+  (`Source/Generated/Natives/<Package>.natives.cpp`). The reference compiles them in the
+  class's own `.cpp`, apart from the generated code, so its thunks call them rather than
+  inline them.
+- The thunks are UHT 4.20's `DECLARE_FUNCTION` bodies, as for virtual natives.
+- The manifest symbol is the MSVC decoration of the native's signature: bool, the sized
+  integers, float, double, class pointers, and enums. A returned enum carries the `?A`
+  prefix. `TEnumAsByte` signatures are left out.
+
+All 138 natives are exact, outside the denominator (leaf). Each thunk's call then resolves
+through that exact match, and all 138 thunks are exact, in the denominator.
+
+The larger `Classes.gen.h` moves MSVC's `$SG` literal numbering. InputCore.1's literal order
+follows that numbering, so 2 of its registrars (`EControllerHand`, `FKey`) lose their
+section-relative literal prediction. One class registrar in another unit gains one. This is
+the known `.rdata` ripple (STATUS, "Known fragility"). `tools/matching/regressions.py`
+reports both.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 
@@ -1132,9 +1178,9 @@ all 1,094 enums, whatever form their `StaticEnum` takes; a missing one blocked a
 package.
 
 Results:
-- class registrars: 2,211 of 3,283 exact;
-- struct registrars: 1,283 of 2,110;
-- enum registrars: 598 of 1,094;
+- class registrars: 2,212 of 3,283 exact;
+- struct registrars: 1,282 of 2,110;
+- enum registrars: 597 of 1,094;
 - class auto-initializers (outside the denominator): 1,248 of 3,283.
 
 **Registered function addresses.** A registrar passes `&C::StaticClass`,

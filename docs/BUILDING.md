@@ -75,7 +75,9 @@ python tools/codegen/uht_packages.py     # package-scope delegates, package cons
 python tools/codegen/unity.py            # Unity/*.gen.cpp: fragments in recovered order
 ```
 
-Only `Source/Generated/UHT/Unity/*.gen.cpp` is compiled. Each unity unit `#include`s per-item
+Only `Source/Generated/UHT/Unity/*.gen.cpp` and `Source/Generated/Natives/*.natives.cpp` are
+compiled. The latter hold the native accessors (`uht_classes.py`, `uht_accessors.py`), one unit
+per package, apart from the thunks that call them. Each unity unit `#include`s per-item
 fragments in the order of the original unity file, after `UnityPrologue.h`, a stand-in for
 the engine headers' namespace-scope objects. Each unit first defines its `StaticEnum`
 functions (`.staticenum` fragments), before the prologue. The `StaticEnum`s and registration

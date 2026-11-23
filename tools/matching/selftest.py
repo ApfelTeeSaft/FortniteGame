@@ -436,7 +436,24 @@ def test_match_queue() -> None:
     print("match queue: ok")
 
 
+def test_accessor_mangling() -> None:
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "codegen"))
+    from uht_accessors import mangle
+    assert mangle("UCommonTextStyle", "GetLineHeightPercentage", "float", [], True, {}) == \
+        "?GetLineHeightPercentage@UCommonTextStyle@@QEBAMXZ"
+    assert mangle("UCommonUserWidget", "SetConsumePointerInput", None, ["bool"], False, {}) == \
+        "?SetConsumePointerInput@UCommonUserWidget@@QEAAX_N@Z"
+    assert mangle("UCommonTabListWidget", "GetLinkedSwitcher", "UCommonWidgetSwitcher*", [], True, {}) == \
+        "?GetLinkedSwitcher@UCommonTabListWidget@@QEBAPEAVUCommonWidgetSwitcher@@XZ"
+    assert mangle("UFoo", "GetOuterFoo", "UFoo*", [], True, {}) == "?GetOuterFoo@UFoo@@QEBAPEAV1@XZ"   # back-reference
+    assert mangle("UFoo", "GetState", "EFoo", [], True, {"EFoo": 1}) == "?GetState@UFoo@@QEBA?AW4EFoo@@XZ"
+    assert mangle("UFoo", "SetMode", None, ["EMode::Type"], False, {"EMode::Type": 1}) == \
+        "?SetMode@UFoo@@QEAAXW4Type@EMode@@@Z"
+    print("accessor mangling: ok")
+
+
 def main() -> int:
+    test_accessor_mangling()
     test_match_queue()
     test_unwind()
     test_local_prediction()

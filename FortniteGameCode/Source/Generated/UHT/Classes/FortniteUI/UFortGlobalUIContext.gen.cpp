@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B08E0 (end 0x028B090B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsUIVisible); calls the native accessor UFortGlobalUIContext::IsUIVisible | Matching: see analysis/functions-uht-exec.json
+void UFortGlobalUIContext::execIsUIVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsUIVisible();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortGlobalUIContext, 1288250790u)
 // Original dynamic initializer: RVA 0x00245B70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGlobalUIContext> AutoInitializeUFortGlobalUIContext(TEXT("UFortGlobalUIContext"), sizeof(UFortGlobalUIContext), 1288250790u);

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D4570 (end 0x028D45F2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetShowProgressCountDown); calls the native accessor UFortKeybindWidget::SetShowProgressCountDown | Matching: see analysis/functions-uht-exec.json
+void UFortKeybindWidget::execSetShowProgressCountDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bShow);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetShowProgressCountDown(Z_Param_bShow);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortKeybindWidget, 3866733346u)
 // Original dynamic initializer: RVA 0x0024F470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortKeybindWidget> AutoInitializeUFortKeybindWidget(TEXT("UFortKeybindWidget"), sizeof(UFortKeybindWidget), 3866733346u);

@@ -68,6 +68,24 @@ void UGameUserSettings::execIsDirty(UObject* Context, FFrame& Stack, void* const
 	*(bool*)Z_Param__Result=P_THIS->IsDirty();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02423200 (end 0x0242322B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsDynamicResolutionEnabled); calls the native accessor UGameUserSettings::IsDynamicResolutionEnabled | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execIsDynamicResolutionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsDynamicResolutionEnabled();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02423260 (end 0x0242328B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsHDREnabled); calls the native accessor UGameUserSettings::IsHDREnabled | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execIsHDREnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsHDREnabled();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02423320 (end 0x024233A6)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execLoadSettings) | Matching: see analysis/functions-uht-exec.json
 void UGameUserSettings::execLoadSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -108,6 +126,26 @@ void UGameUserSettings::execSaveSettings(UObject* Context, FFrame& Stack, void* 
 	P_THIS->SaveSettings();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02423940 (end 0x024239C2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDynamicResolutionEnabled); calls the native accessor UGameUserSettings::SetDynamicResolutionEnabled | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execSetDynamicResolutionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnable);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDynamicResolutionEnabled(Z_Param_bEnable);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02423A50 (end 0x02423ACB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetFrameRateLimit); calls the native accessor UGameUserSettings::SetFrameRateLimit | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execSetFrameRateLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewLimit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetFrameRateLimit(Z_Param_NewLimit);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024238B0 (end 0x02423932)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetOverallScalabilityLevel) | Matching: see analysis/functions-uht-exec.json
 void UGameUserSettings::execSetOverallScalabilityLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -125,6 +163,16 @@ void UGameUserSettings::execSetToDefaults(UObject* Context, FFrame& Stack, void*
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->SetToDefaults();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02423ED0 (end 0x02423F52)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetVSyncEnabled); calls the native accessor UGameUserSettings::SetVSyncEnabled | Matching: see analysis/functions-uht-exec.json
+void UGameUserSettings::execSetVSyncEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnable);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetVSyncEnabled(Z_Param_bEnable);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01009D80 (end 0x01009DAF)

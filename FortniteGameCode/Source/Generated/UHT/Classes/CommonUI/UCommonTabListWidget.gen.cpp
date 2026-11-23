@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC7B0 (end 0x002CC7DC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLinkedSwitcher); calls the native accessor UCommonTabListWidget::GetLinkedSwitcher | Matching: see analysis/functions-uht-exec.json
+void UCommonTabListWidget::execGetLinkedSwitcher(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UCommonWidgetSwitcher**)Z_Param__Result=P_THIS->GetLinkedSwitcher();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CCF70 (end 0x002CD033)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleTabCreated) | Matching: see analysis/functions-uht-exec.json
 void UCommonTabListWidget::execHandleTabCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC6820 (end 0x01AC684D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlaybackPosition); calls the native accessor UMovieSceneSequencePlayer::GetPlaybackPosition | Matching: see analysis/functions-uht-exec.json
+void UMovieSceneSequencePlayer::execGetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetPlaybackPosition();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UMovieSceneSequencePlayer, 1567386725u)
 // Original dynamic initializer: RVA 0x001A4A50 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMovieSceneSequencePlayer> AutoInitializeUMovieSceneSequencePlayer(TEXT("UMovieSceneSequencePlayer"), sizeof(UMovieSceneSequencePlayer), 1567386725u);

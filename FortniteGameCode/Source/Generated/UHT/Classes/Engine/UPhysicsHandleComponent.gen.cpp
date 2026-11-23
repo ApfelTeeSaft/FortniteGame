@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF7F0 (end 0x024AF81C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetGrabbedComponent); calls the native accessor UPhysicsHandleComponent::GetGrabbedComponent | Matching: see analysis/functions-uht-exec.json
+void UPhysicsHandleComponent::execGetGrabbedComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPrimitiveComponent**)Z_Param__Result=P_THIS->GetGrabbedComponent();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B0FB0 (end 0x024B10FE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGrabComponent) | Matching: see analysis/functions-uht-exec.json
 void UPhysicsHandleComponent::execGrabComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -24,6 +33,16 @@ void UPhysicsHandleComponent::execReleaseComponent(UObject* Context, FFrame& Sta
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ReleaseComponent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B3770 (end 0x024B37EB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetInterpolationSpeed); calls the native accessor UPhysicsHandleComponent::SetInterpolationSpeed | Matching: see analysis/functions-uht-exec.json
+void UPhysicsHandleComponent::execSetInterpolationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewInterpolationSpeed);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetInterpolationSpeed(Z_Param_NewInterpolationSpeed);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UPhysicsHandleComponent, 132082784u)

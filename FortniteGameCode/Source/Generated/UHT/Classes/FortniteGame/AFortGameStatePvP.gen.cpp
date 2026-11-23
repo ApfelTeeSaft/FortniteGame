@@ -13,6 +13,15 @@ void AFortGameStatePvP::execGetFOBFinalizationTimeRemaining(UObject* Context, FF
 	*(int32*)Z_Param__Result=P_THIS->GetFOBFinalizationTimeRemaining();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFC80 (end 0x00FEFCAC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetItemCollector); calls the native accessor AFortGameStatePvP::GetItemCollector | Matching: see analysis/functions-uht-exec.json
+void AFortGameStatePvP::execGetItemCollector(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(ABuildingItemCollectorActor**)Z_Param__Result=P_THIS->GetItemCollector();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFD30 (end 0x00FEFD5F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRoundTimeAccumulated) | Matching: see analysis/functions-uht-exec.json
 void AFortGameStatePvP::execGetRoundTimeAccumulated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

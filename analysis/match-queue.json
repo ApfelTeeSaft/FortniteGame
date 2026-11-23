@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 7595,
+ "total": 7596,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
@@ -39,9 +39,9 @@
   },
   {
    "key": "uht-class-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 1013,
+   "count": 1012,
    "states": {
-    "relocation-equivalent": 1013
+    "relocation-equivalent": 1012
    },
    "examples": [
     "0x00099C60 dynamic initializer for Z_CompiledInDefer_UClass_APartyBeaconClient",
@@ -53,9 +53,9 @@
   },
   {
    "key": "uht-struct-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 827,
+   "count": 828,
    "states": {
-    "relocation-equivalent": 827
+    "relocation-equivalent": 828
    },
    "examples": [
     "0x00095B70 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FOperation",
@@ -81,9 +81,9 @@
   },
   {
    "key": "uht-enum-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 489,
+   "count": 490,
    "states": {
-    "relocation-equivalent": 489
+    "relocation-equivalent": 490
    },
    "examples": [
     "0x00096DA0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ECommonInputType",
@@ -360,6 +360,20 @@
    ]
   },
   {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + pooled string literal (??_C@)",
+   "count": 5,
+   "states": {
+    "relocation-equivalent": 5
+   },
+   "examples": [
+    "0x01089EB0 UFortProceduralFoliageComponent::GetPrivateStaticClass",
+    "0x013A7730 UObject::GetPrivateStaticClass",
+    "0x01C92BD0 UGameplayTagsList::GetPrivateStaticClass",
+    "0x01D597B0 UAutomatedLevelSequenceCapture::GetPrivateStaticClass",
+    "0x023E93E0 UCameraModifier_CameraShake::GetPrivateStaticClass"
+   ]
+  },
+  {
    "key": "uht-staticstruct | Z_Construct_* creator + singleton (.bss)",
    "count": 5,
    "states": {
@@ -371,19 +385,6 @@
     "0x007DD470 FVivoxMuteList::StaticStruct",
     "0x007E01C0 FDropTimecode::StaticStruct",
     "0x010D4440 FFortTeamMemberInfo::StaticStruct"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + pooled string literal (??_C@)",
-   "count": 4,
-   "states": {
-    "relocation-equivalent": 4
-   },
-   "examples": [
-    "0x01089EB0 UFortProceduralFoliageComponent::GetPrivateStaticClass",
-    "0x01C92BD0 UGameplayTagsList::GetPrivateStaticClass",
-    "0x01D597B0 UAutomatedLevelSequenceCapture::GetPrivateStaticClass",
-    "0x023E93E0 UCameraModifier_CameraShake::GetPrivateStaticClass"
    ]
   },
   {
@@ -1304,16 +1305,6 @@
    },
    "examples": [
     "0x025A22E0 USocialCheckBoxStyleDataAsset::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + pooled string literal (??_C@) + string literal ($SG, per-occurrence copy)",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x013A7730 UObject::GetPrivateStaticClass"
    ]
   },
   {

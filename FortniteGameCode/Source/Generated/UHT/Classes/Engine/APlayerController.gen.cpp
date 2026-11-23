@@ -596,6 +596,15 @@ void APlayerController::execGetFocalLocation(UObject* Context, FFrame& Stack, vo
 	*(FVector*)Z_Param__Result=P_THIS->GetFocalLocation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF820 (end 0x024AF84C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHUD); calls the native accessor APlayerController::GetHUD | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execGetHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AHUD**)Z_Param__Result=P_THIS->GetHUD();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B14B0 (end 0x024B154A)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execLocalTravel) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execLocalTravel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

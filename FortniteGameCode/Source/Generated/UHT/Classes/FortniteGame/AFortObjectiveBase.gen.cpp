@@ -13,6 +13,15 @@ void AFortObjectiveBase::execGetObjectiveDisplayString(UObject* Context, FFrame&
 	*(FText*)Z_Param__Result=P_THIS->GetObjectiveDisplayString();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01052FA0 (end 0x01052FCB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsRelevantToASpecificTeam); calls the native accessor AFortObjectiveBase::IsRelevantToASpecificTeam | Matching: see analysis/functions-uht-exec.json
+void AFortObjectiveBase::execIsRelevantToASpecificTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsRelevantToASpecificTeam();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01053410 (end 0x0105343F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execStartPlayingObjective) | Matching: see analysis/functions-uht-exec.json
 void AFortObjectiveBase::execStartPlayingObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

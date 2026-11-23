@@ -54,7 +54,7 @@ DECRYPTED_REPORT = REPO_ROOT / "analysis" / "decrypted-reference.json"
 DECRYPTED_IMAGE = REPO_ROOT / "local-output" / "reference-dump" / "FortniteClient-Win64-Shipping.decrypted.image"
 DECRYPTED_PRESENT = DECRYPTED_IMAGE.with_suffix(".present")
 COMPUTED = ("in_denominator", "reference_state", "match", "original_sha256", "decrypted_sha256",
-            "candidate_sha256", "byte_diff", "structure", "compiler")
+            "candidate_sha256", "byte_diff", "structure", "compiler", "compare_note")
 DECRYPTED_STATES = ("decrypted", "decrypted-unverified")
 
 
@@ -532,7 +532,12 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
         res["decrypted_sha256"] = hashlib.sha256(ref_dec).hexdigest()
     for objpath, symbol in sources:
         obj = load_obj(objpath)
-        cand_raw, relocs = obj.function_bytes(symbol)
+        try:
+            cand_raw, relocs = obj.function_bytes(symbol)
+        except KeyError:
+            # A reconstruction whose symbol the build did not produce (a declaration or mangling
+            # mismatch): this entry is not compiled; the rest of the comparison goes on.
+            return {"match": "unimplemented", "compare_note": f"symbol {symbol} not defined in {objpath}"}
         ref = ref_dec if ref_dec is not None else ref_file
         cand, unresolved, resolved = resolve_fields(cand_raw, relocs, start, img.image_base,
                                                     resolver, obj, objpath, ref, idx)

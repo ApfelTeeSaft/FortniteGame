@@ -156,6 +156,15 @@ void AFortWeapon::execGetReticleColor(UObject* Context, FFrame& Stack, void* con
 	*(FColor*)Z_Param__Result=P_THIS->GetReticleColor();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6BE0 (end 0x010D6C0B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSupportsAutoFireAtReticleTargetMode); calls the native accessor AFortWeapon::GetSupportsAutoFireAtReticleTargetMode | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetSupportsAutoFireAtReticleTargetMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetSupportsAutoFireAtReticleTargetMode();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6ED0 (end 0x010D6EFF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsProjectileWeapon) | Matching: see analysis/functions-uht-exec.json
 void AFortWeapon::execIsProjectileWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -282,6 +291,16 @@ void AFortWeapon::execServerSetChargeState(UObject* Context, FFrame& Stack, void
 		return;
 	}
 	P_THIS->ServerSetChargeState_Implementation(Z_Param_NewState);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7900 (end 0x010D7982)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetShouldDrawNativeReticle); calls the native accessor AFortWeapon::SetShouldDrawNativeReticle | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execSetShouldDrawNativeReticle(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInShouldDrawReticle);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetShouldDrawNativeReticle(Z_Param_bInShouldDrawReticle);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FC10 (end 0x0032FC2F), leaf (no .pdata)

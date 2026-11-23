@@ -30,6 +30,42 @@ void USkeletalMeshComponent::execAddImpulseToAllBodiesBelow(UObject* Context, FF
 	P_THIS->AddImpulseToAllBodiesBelow(Z_Param_Impulse,Z_Param_BoneName,Z_Param_bVelChange,Z_Param_bIncludeSelf);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CE5A0 (end 0x024CE5CC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimInstance); calls the native accessor USkeletalMeshComponent::GetAnimInstance | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execGetAnimInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAnimInstance**)Z_Param__Result=P_THIS->GetAnimInstance();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CE750 (end 0x024CE77C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetClothingSimulationInteractor); calls the native accessor USkeletalMeshComponent::GetClothingSimulationInteractor | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execGetClothingSimulationInteractor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UClothingSimulationInteractor**)Z_Param__Result=P_THIS->GetClothingSimulationInteractor();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CE930 (end 0x024CE95B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDisablePostProcessBlueprint); calls the native accessor USkeletalMeshComponent::GetDisablePostProcessBlueprint | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execGetDisablePostProcessBlueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetDisablePostProcessBlueprint();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CEB40 (end 0x024CEB6C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPostProcessInstance); calls the native accessor USkeletalMeshComponent::GetPostProcessInstance | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execGetPostProcessInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAnimInstance**)Z_Param__Result=P_THIS->GetPostProcessInstance();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024CFFE0 (end 0x024D00A5)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBodyNotifyRigidBodyCollision) | Matching: see analysis/functions-uht-exec.json
 void USkeletalMeshComponent::execSetBodyNotifyRigidBodyCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

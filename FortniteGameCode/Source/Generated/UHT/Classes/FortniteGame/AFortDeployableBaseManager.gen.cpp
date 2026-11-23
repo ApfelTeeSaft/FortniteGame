@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD19A0 (end 0x00FD19CB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDeployableBaseUseType); calls the native accessor AFortDeployableBaseManager::GetDeployableBaseUseType | Matching: see analysis/functions-uht-exec.json
+void AFortDeployableBaseManager::execGetDeployableBaseUseType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(EDeployableBaseUseType*)Z_Param__Result=P_THIS->GetDeployableBaseUseType();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortDeployableBaseManager, 1936522375u)
 // Original dynamic initializer: RVA 0x000EFAE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortDeployableBaseManager> AutoInitializeAFortDeployableBaseManager(TEXT("AFortDeployableBaseManager"), sizeof(AFortDeployableBaseManager), 1936522375u);

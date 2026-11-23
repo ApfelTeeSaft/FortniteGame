@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1F80 (end 0x00FE1FAB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHasChargeUp); calls the native accessor UFortGadgetItemDefinition::HasChargeUp | Matching: see analysis/functions-uht-exec.json
+void UFortGadgetItemDefinition::execHasChargeUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->HasChargeUp();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortGadgetItemDefinition, 123851803u)
 // Original dynamic initializer: RVA 0x000F4610 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGadgetItemDefinition> AutoInitializeUFortGadgetItemDefinition(TEXT("UFortGadgetItemDefinition"), sizeof(UFortGadgetItemDefinition), 123851803u);

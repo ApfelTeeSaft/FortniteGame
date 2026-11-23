@@ -85,6 +85,15 @@ void ABuildingSMActor::execGetAnimatingMID(UObject* Context, FFrame& Stack, void
 	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->GetAnimatingMID(Z_Param_ElementIndex);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74080 (end 0x00F740AC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBuildingMeshComponent); calls the native accessor ABuildingSMActor::GetBuildingMeshComponent | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execGetBuildingMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UStaticMeshComponent**)Z_Param__Result=P_THIS->GetBuildingMeshComponent();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74350 (end 0x00F7437F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLogicalBuildingIndex) | Matching: see analysis/functions-uht-exec.json
 void ABuildingSMActor::execGetLogicalBuildingIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

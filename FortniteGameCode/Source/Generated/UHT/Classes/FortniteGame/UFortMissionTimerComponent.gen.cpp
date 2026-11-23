@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CD30 (end 0x0104CDB2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetTimerDisplayFormat); calls the native accessor UFortMissionTimerComponent::SetTimerDisplayFormat | Matching: see analysis/functions-uht-exec.json
+void UFortMissionTimerComponent::execSetTimerDisplayFormat(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewDisplayInTimeFormat);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetTimerDisplayFormat(Z_Param_bNewDisplayInTimeFormat);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortMissionTimerComponent, 1174423600u)
 // Original dynamic initializer: RVA 0x001040C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMissionTimerComponent> AutoInitializeUFortMissionTimerComponent(TEXT("UFortMissionTimerComponent"), sizeof(UFortMissionTimerComponent), 1174423600u);

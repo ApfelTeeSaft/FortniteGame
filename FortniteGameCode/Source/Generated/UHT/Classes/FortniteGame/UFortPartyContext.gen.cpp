@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010586E0 (end 0x0105870C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLocalPlayerTeam); calls the native accessor UFortPartyContext::GetLocalPlayerTeam | Matching: see analysis/functions-uht-exec.json
+void UFortPartyContext::execGetLocalPlayerTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortUITeamInfo**)Z_Param__Result=P_THIS->GetLocalPlayerTeam();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortPartyContext, 32185782u)
 // Original dynamic initializer: RVA 0x001073F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPartyContext> AutoInitializeUFortPartyContext(TEXT("UFortPartyContext"), sizeof(UFortPartyContext), 32185782u);

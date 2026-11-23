@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02889A70 (end 0x02889A9B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsNewNewsAvailable); calls the native accessor UCMSContext::IsNewNewsAvailable | Matching: see analysis/functions-uht-exec.json
+void UCMSContext::execIsNewNewsAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsNewNewsAvailable();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCMSContext, 546558783u)
 // Original dynamic initializer: RVA 0x0023B6C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCMSContext> AutoInitializeUCMSContext(TEXT("UCMSContext"), sizeof(UCMSContext), 546558783u);

@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D9080 (end 0x028D90AC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMediaPlayer); calls the native accessor UFortMovieWidget::GetMediaPlayer | Matching: see analysis/functions-uht-exec.json
+void UFortMovieWidget::execGetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMediaPlayer**)Z_Param__Result=P_THIS->GetMediaPlayer();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D90B0 (end 0x028D90DC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMediaSoundComponent); calls the native accessor UFortMovieWidget::GetMediaSoundComponent | Matching: see analysis/functions-uht-exec.json
+void UFortMovieWidget::execGetMediaSoundComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMediaSoundComponent**)Z_Param__Result=P_THIS->GetMediaSoundComponent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D90E0 (end 0x028D910C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMediaTexture); calls the native accessor UFortMovieWidget::GetMediaTexture | Matching: see analysis/functions-uht-exec.json
+void UFortMovieWidget::execGetMediaTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMediaTexture**)Z_Param__Result=P_THIS->GetMediaTexture();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortMovieWidget, 1168684143u)
 // Original dynamic initializer: RVA 0x002515F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortMovieWidget> AutoInitializeUFortMovieWidget(TEXT("UFortMovieWidget"), sizeof(UFortMovieWidget), 1168684143u);

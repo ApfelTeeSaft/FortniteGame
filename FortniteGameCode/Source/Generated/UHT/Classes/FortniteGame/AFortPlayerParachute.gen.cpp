@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01082450 (end 0x0108247C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetParachuteRootMesh); calls the native accessor AFortPlayerParachute::GetParachuteRootMesh | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerParachute::execGetParachuteRootMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(USkeletalMeshComponent**)Z_Param__Result=P_THIS->GetParachuteRootMesh();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerParachute, 1315811257u)
 // Original dynamic initializer: RVA 0x0010C4A0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerParachute> AutoInitializeAFortPlayerParachute(TEXT("AFortPlayerParachute"), sizeof(AFortPlayerParachute), 1315811257u);

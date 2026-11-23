@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDD970 (end 0x00FDD99B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCamera); calls the native accessor AFortFrontEndCameraManager::GetCamera | Matching: see analysis/functions-uht-exec.json
+void AFortFrontEndCameraManager::execGetCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(EFrontEndCamera*)Z_Param__Result=P_THIS->GetCamera();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortFrontEndCameraManager, 3411633446u)
 // Original dynamic initializer: RVA 0x000F25B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortFrontEndCameraManager> AutoInitializeAFortFrontEndCameraManager(TEXT("AFortFrontEndCameraManager"), sizeof(AFortFrontEndCameraManager), 3411633446u);

@@ -321,6 +321,15 @@ void AFortPlayerController::execFortClientPlaySoundAtLocation(UObject* Context, 
 	P_THIS->FortClientPlaySoundAtLocation_Implementation(Z_Param_Sound,Z_Param_Location,Z_Param_VolumeMultiplier,Z_Param_PitchMultiplier);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106F630 (end 0x0106F65C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAIDirectorDataManager); calls the native accessor AFortPlayerController::GetAIDirectorDataManager | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execGetAIDirectorDataManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortAIDirectorDataManager**)Z_Param__Result=P_THIS->GetAIDirectorDataManager();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0106F7E0 (end 0x0106F86A)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAwardManager) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerController::execGetAwardManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -329,6 +338,15 @@ void AFortPlayerController::execGetAwardManager(UObject* Context, FFrame& Stack,
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(UFortAwardManager**)Z_Param__Result=P_THIS->GetAwardManager(ESubGame(Z_Param_SubGame));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106F950 (end 0x0106F97C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlayerPawn); calls the native accessor AFortPlayerController::GetPlayerPawn | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execGetPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortPlayerPawn**)Z_Param__Result=P_THIS->GetPlayerPawn();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0106F980 (end 0x0106FA0A)
@@ -1500,6 +1518,16 @@ void AFortPlayerController::execSuicide(UObject* Context, FFrame& Stack, void* c
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->Suicide();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01075640 (end 0x010756C2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSuppressEventNotifications); calls the native accessor AFortPlayerController::SuppressEventNotifications | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execSuppressEventNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bSuppress);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SuppressEventNotifications(Z_Param_bSuppress);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01075750 (end 0x0107576F), leaf (no .pdata)

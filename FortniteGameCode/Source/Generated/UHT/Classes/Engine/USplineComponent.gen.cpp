@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E2860 (end 0x024E288B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsClosedLoop); calls the native accessor USplineComponent::IsClosedLoop | Matching: see analysis/functions-uht-exec.json
+void USplineComponent::execIsClosedLoop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsClosedLoop();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(USplineComponent, 1930139723u)
 // Original dynamic initializer: RVA 0x0021E1B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USplineComponent> AutoInitializeUSplineComponent(TEXT("USplineComponent"), sizeof(USplineComponent), 1930139723u);

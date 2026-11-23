@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F800 (end 0x0109F82B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsVisibleToUser); calls the native accessor UFortQuestObjectiveInfo::IsVisibleToUser | Matching: see analysis/functions-uht-exec.json
+void UFortQuestObjectiveInfo::execIsVisibleToUser(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsVisibleToUser();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortQuestObjectiveInfo, 3923051111u)
 // Original dynamic initializer: RVA 0x00111400 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestObjectiveInfo> AutoInitializeUFortQuestObjectiveInfo(TEXT("UFortQuestObjectiveInfo"), sizeof(UFortQuestObjectiveInfo), 3923051111u);

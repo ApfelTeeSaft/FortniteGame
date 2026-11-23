@@ -24,6 +24,26 @@ void AFortAIPawn::execSetCollisionProfileName(UObject* Context, FFrame& Stack, v
 	P_THIS->SetCollisionProfileName(Z_Param_InCollisionProfileName);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F953D0 (end 0x00F95450)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCurrentAimTarget); calls the native accessor AFortAIPawn::SetCurrentAimTarget | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetCurrentAimTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_AimTarget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCurrentAimTarget(Z_Param_AimTarget);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95580 (end 0x00F95600)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEncounterInfo); calls the native accessor AFortAIPawn::SetEncounterInfo | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortAIEncounterInfo,Z_Param_InEncounterInfo);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetEncounterInfo(Z_Param_InEncounterInfo);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95600 (end 0x00F956C5)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEyeColor) | Matching: see analysis/functions-uht-exec.json
 void AFortAIPawn::execSetEyeColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

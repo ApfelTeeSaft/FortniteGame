@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E010 (end 0x00F6E090)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInitializeAudio); calls the native accessor ABuildingPropAtlas::InitializeAudio | Matching: see analysis/functions-uht-exec.json
+void ABuildingPropAtlas::execInitializeAudio(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAudioComponent,Z_Param_InPortalLoopingComp);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InitializeAudio(Z_Param_InPortalLoopingComp);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingPropAtlas, 1598448763u)
 // Original dynamic initializer: RVA 0x000DB010 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingPropAtlas> AutoInitializeABuildingPropAtlas(TEXT("ABuildingPropAtlas"), sizeof(ABuildingPropAtlas), 1598448763u);

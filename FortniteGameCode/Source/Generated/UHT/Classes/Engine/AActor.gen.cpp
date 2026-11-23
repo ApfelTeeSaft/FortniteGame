@@ -64,6 +64,15 @@ void AActor::execGetActorEyesViewPoint(UObject* Context, FFrame& Stack, void* co
 	P_THIS->GetActorEyesViewPoint(Z_Param_Out_OutLocation,Z_Param_Out_OutRotation);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C0960 (end 0x023C098C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetInstigator); calls the native accessor AActor::GetInstigator | Matching: see analysis/functions-uht-exec.json
+void AActor::execGetInstigator(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APawn**)Z_Param__Result=P_THIS->GetInstigator();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C09C0 (end 0x023C09F1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLifeSpan) | Matching: see analysis/functions-uht-exec.json
 void AActor::execGetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

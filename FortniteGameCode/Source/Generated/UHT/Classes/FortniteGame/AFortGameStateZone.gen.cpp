@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF52D0 (end 0x00FF52FD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetGameDifficulty); calls the native accessor AFortGameStateZone::GetGameDifficulty | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execGetGameDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetGameDifficulty();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF5730 (end 0x00FF5760)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetUIMapManager) | Matching: see analysis/functions-uht-exec.json
 void AFortGameStateZone::execGetUIMapManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

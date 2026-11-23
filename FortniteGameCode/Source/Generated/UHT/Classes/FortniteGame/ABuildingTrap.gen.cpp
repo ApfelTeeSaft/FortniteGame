@@ -52,6 +52,15 @@ void ABuildingTrap::execGetAlterations(UObject* Context, FFrame& Stack, void* co
 	*(TArray<UFortAlterationItemDefinition*>*)Z_Param__Result=P_THIS->GetAlterations();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74050 (end 0x00F7407C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBuildingAttachedTo); calls the native accessor ABuildingTrap::GetBuildingAttachedTo | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetBuildingAttachedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(ABuildingSMActor**)Z_Param__Result=P_THIS->GetBuildingAttachedTo();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F740B0 (end 0x00F740F0)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCenter) | Matching: see analysis/functions-uht-exec.json
 void ABuildingTrap::execGetCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

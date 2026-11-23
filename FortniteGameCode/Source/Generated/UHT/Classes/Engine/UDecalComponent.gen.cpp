@@ -13,6 +13,24 @@ void UDecalComponent::execCreateDynamicMaterialInstance(UObject* Context, FFrame
 	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->CreateDynamicMaterialInstance();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FFFF0 (end 0x0240001D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFadeDuration); calls the native accessor UDecalComponent::GetFadeDuration | Matching: see analysis/functions-uht-exec.json
+void UDecalComponent::execGetFadeDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetFadeDuration();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02400020 (end 0x0240004D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFadeStartDelay); calls the native accessor UDecalComponent::GetFadeStartDelay | Matching: see analysis/functions-uht-exec.json
+void UDecalComponent::execGetFadeStartDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetFadeStartDelay();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UDecalComponent, 2973718226u)
 // Original dynamic initializer: RVA 0x001F8460 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UDecalComponent> AutoInitializeUDecalComponent(TEXT("UDecalComponent"), sizeof(UDecalComponent), 2973718226u);

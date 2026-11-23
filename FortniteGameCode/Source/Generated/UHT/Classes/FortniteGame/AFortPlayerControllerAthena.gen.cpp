@@ -97,6 +97,24 @@ void AFortPlayerControllerAthena::execClientVoiceChatLogin(UObject* Context, FFr
 	P_THIS->ClientVoiceChatLogin_Implementation(Z_Param_InVoiceChatPlayerName,Z_Param_LoginToken);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107ADD0 (end 0x0107ADFC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMatchReport); calls the native accessor AFortPlayerControllerAthena::GetMatchReport | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execGetMatchReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAthenaPlayerMatchReport**)Z_Param__Result=P_THIS->GetMatchReport();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107AE90 (end 0x0107AEBB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRevertPlayerListenerChangeFlag); calls the native accessor AFortPlayerControllerAthena::GetRevertPlayerListenerChangeFlag | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execGetRevertPlayerListenerChangeFlag(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetRevertPlayerListenerChangeFlag();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B910 (end 0x0107B9D9)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAttemptAircraftJump) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerAthena::execServerAttemptAircraftJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

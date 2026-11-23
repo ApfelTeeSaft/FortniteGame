@@ -42,6 +42,16 @@ void AFortTrack::execGetSplineFromPositionAndOrientation(UObject* Context, FFram
 	P_THIS->GetSplineFromPositionAndOrientation(Z_Param_Out_InLocation,Z_Param_Out_InRotation,Z_Param_Out_OutSpline,Z_Param_Out_OutDistanceAlongSpline,Z_Param_Out_OutReverseDirection);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CDF50 (end 0x010CDFD0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInitializeTrack); calls the native accessor AFortTrack::InitializeTrack | Matching: see analysis/functions-uht-exec.json
+void AFortTrack::execInitializeTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_InSwitchComp);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InitializeTrack(Z_Param_InSwitchComp);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CE1D0 (end 0x010CE1EF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ConfigurationIdx) | Matching: see analysis/functions-uht-exec.json
 void AFortTrack::execOnRep_ConfigurationIdx(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CDFD0 (end 0x010CE050)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInitializeTrackPreview); calls the native accessor AFortTrackPreview::InitializeTrackPreview | Matching: see analysis/functions-uht-exec.json
+void AFortTrackPreview::execInitializeTrackPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UStaticMeshComponent,Z_Param_InTrackMeshComp);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InitializeTrackPreview(Z_Param_InTrackMeshComp);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortTrackPreview, 3812215043u)
 // Original dynamic initializer: RVA 0x00117DE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTrackPreview> AutoInitializeAFortTrackPreview(TEXT("AFortTrackPreview"), sizeof(AFortTrackPreview), 3812215043u);

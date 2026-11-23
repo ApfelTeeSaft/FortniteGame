@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290C430 (end 0x0290C45C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentUIStateWidget); calls the native accessor UFortUIManagerWidget::GetCurrentUIStateWidget | Matching: see analysis/functions-uht-exec.json
+void UFortUIManagerWidget::execGetCurrentUIStateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortUIStateWidget**)Z_Param__Result=P_THIS->GetCurrentUIStateWidget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290CF00 (end 0x0290CF2C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNavigationManager); calls the native accessor UFortUIManagerWidget::GetNavigationManager | Matching: see analysis/functions-uht-exec.json
+void UFortUIManagerWidget::execGetNavigationManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortUINavigationManager**)Z_Param__Result=P_THIS->GetNavigationManager();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290D3B0 (end 0x0290D3DB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsStateContentDisplayed); calls the native accessor UFortUIManagerWidget::IsStateContentDisplayed | Matching: see analysis/functions-uht-exec.json
+void UFortUIManagerWidget::execIsStateContentDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsStateContentDisplayed();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortUIManagerWidget, 3058586110u)
 // Original dynamic initializer: RVA 0x00260C70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortUIManagerWidget> AutoInitializeUFortUIManagerWidget(TEXT("UFortUIManagerWidget"), sizeof(UFortUIManagerWidget), 3058586110u);

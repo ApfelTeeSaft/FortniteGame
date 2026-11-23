@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEFA90 (end 0x00FEFABC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAircraft); calls the native accessor AFortGameStateAthena::GetAircraft | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateAthena::execGetAircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortAthenaAircraft**)Z_Param__Result=P_THIS->GetAircraft();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortGameStateAthena, 3180367956u)
 // Original dynamic initializer: RVA 0x000F7590 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortGameStateAthena> AutoInitializeAFortGameStateAthena(TEXT("AFortGameStateAthena"), sizeof(AFortGameStateAthena), 3180367956u);

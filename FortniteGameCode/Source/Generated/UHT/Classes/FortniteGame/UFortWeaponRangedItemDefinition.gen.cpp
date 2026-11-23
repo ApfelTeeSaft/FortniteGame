@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA350 (end 0x010DA37B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldSpawnBulletShellFX); calls the native accessor UFortWeaponRangedItemDefinition::ShouldSpawnBulletShellFX | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponRangedItemDefinition::execShouldSpawnBulletShellFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldSpawnBulletShellFX();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA380 (end 0x010DA3AB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldTraceThroughPawns); calls the native accessor UFortWeaponRangedItemDefinition::ShouldTraceThroughPawns | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponRangedItemDefinition::execShouldTraceThroughPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldTraceThroughPawns();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DA3B0 (end 0x010DA3DB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldUseNativeWeaponTrace); calls the native accessor UFortWeaponRangedItemDefinition::ShouldUseNativeWeaponTrace | Matching: see analysis/functions-uht-exec.json
+void UFortWeaponRangedItemDefinition::execShouldUseNativeWeaponTrace(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldUseNativeWeaponTrace();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortWeaponRangedItemDefinition, 4180645654u)
 // Original dynamic initializer: RVA 0x0011D3E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortWeaponRangedItemDefinition> AutoInitializeUFortWeaponRangedItemDefinition(TEXT("UFortWeaponRangedItemDefinition"), sizeof(UFortWeaponRangedItemDefinition), 4180645654u);

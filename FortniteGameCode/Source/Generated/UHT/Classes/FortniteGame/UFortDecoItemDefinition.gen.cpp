@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1AE0 (end 0x00FD1B0D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetGridSnapSizeOverride); calls the native accessor UFortDecoItemDefinition::GetGridSnapSizeOverride | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execGetGridSnapSizeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetGridSnapSizeOverride();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1D00 (end 0x00FD1D2B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxPlacementDistance); calls the native accessor UFortDecoItemDefinition::GetMaxPlacementDistance | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execGetMaxPlacementDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaxPlacementDistance();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1E30 (end 0x00FD1E5D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRotationAngleIncrement); calls the native accessor UFortDecoItemDefinition::GetRotationAngleIncrement | Matching: see analysis/functions-uht-exec.json
+void UFortDecoItemDefinition::execGetRotationAngleIncrement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetRotationAngleIncrement();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortDecoItemDefinition, 1355181804u)
 // Original dynamic initializer: RVA 0x000EFB00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortDecoItemDefinition> AutoInitializeUFortDecoItemDefinition(TEXT("UFortDecoItemDefinition"), sizeof(UFortDecoItemDefinition), 1355181804u);

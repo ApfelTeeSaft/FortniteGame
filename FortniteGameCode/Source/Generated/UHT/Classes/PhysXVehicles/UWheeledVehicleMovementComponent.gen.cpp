@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067C730 (end 0x0067C75D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetEngineMaxRotationSpeed); calls the native accessor UWheeledVehicleMovementComponent::GetEngineMaxRotationSpeed | Matching: see analysis/functions-uht-exec.json
+void UWheeledVehicleMovementComponent::execGetEngineMaxRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetEngineMaxRotationSpeed();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067C910 (end 0x0067CADF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateState) | Matching: see analysis/functions-uht-exec.json
 void UWheeledVehicleMovementComponent::execServerUpdateState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

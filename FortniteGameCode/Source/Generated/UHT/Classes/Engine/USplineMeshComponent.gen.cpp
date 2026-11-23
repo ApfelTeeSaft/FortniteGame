@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DFF60 (end 0x024DFF8D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBoundaryMax); calls the native accessor USplineMeshComponent::GetBoundaryMax | Matching: see analysis/functions-uht-exec.json
+void USplineMeshComponent::execGetBoundaryMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetBoundaryMax();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DFF90 (end 0x024DFFBD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBoundaryMin); calls the native accessor USplineMeshComponent::GetBoundaryMin | Matching: see analysis/functions-uht-exec.json
+void USplineMeshComponent::execGetBoundaryMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetBoundaryMin();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(USplineMeshComponent, 252120460u)
 // Original dynamic initializer: RVA 0x0021E1D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USplineMeshComponent> AutoInitializeUSplineMeshComponent(TEXT("USplineMeshComponent"), sizeof(USplineMeshComponent), 252120460u);

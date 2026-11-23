@@ -71,6 +71,15 @@ void UCharacterMovementComponent::execDisableMovement(UObject* Context, FFrame& 
 	P_THIS->DisableMovement();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0CE0 (end 0x023F0D0D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnalogInputModifier); calls the native accessor UCharacterMovementComponent::GetAnalogInputModifier | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetAnalogInputModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetAnalogInputModifier();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0E50 (end 0x023F0E90)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetImpartedMovementBaseVelocity) | Matching: see analysis/functions-uht-exec.json
 void UCharacterMovementComponent::execGetImpartedMovementBaseVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -142,6 +151,24 @@ void UCharacterMovementComponent::execK2_GetModifiedMaxAcceleration(UObject* Con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->K2_GetModifiedMaxAcceleration();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F2F40 (end 0x023F2F6D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_GetWalkableFloorAngle); calls the native accessor UCharacterMovementComponent::K2_GetWalkableFloorAngle | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execK2_GetWalkableFloorAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->K2_GetWalkableFloorAngle();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F2F70 (end 0x023F2F9D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_GetWalkableFloorZ); calls the native accessor UCharacterMovementComponent::K2_GetWalkableFloorZ | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execK2_GetWalkableFloorZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->K2_GetWalkableFloorZ();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F50E0 (end 0x023F519B)

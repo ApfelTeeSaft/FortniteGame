@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028EF730 (end 0x028EF75C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetItemInstance); calls the native accessor UFortRewardInfoButton::GetItemInstance | Matching: see analysis/functions-uht-exec.json
+void UFortRewardInfoButton::execGetItemInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortItem**)Z_Param__Result=P_THIS->GetItemInstance();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortRewardInfoButton, 355932523u)
 // Original dynamic initializer: RVA 0x002585E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortRewardInfoButton> AutoInitializeUFortRewardInfoButton(TEXT("UFortRewardInfoButton"), sizeof(UFortRewardInfoButton), 355932523u);

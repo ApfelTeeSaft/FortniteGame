@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9FE10 (end 0x00F9FE3D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDropEndTime); calls the native accessor AFortAthenaAircraft::GetDropEndTime | Matching: see analysis/functions-uht-exec.json
+void AFortAthenaAircraft::execGetDropEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDropEndTime();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9FE40 (end 0x00F9FE6D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDropStartTime); calls the native accessor AFortAthenaAircraft::GetDropStartTime | Matching: see analysis/functions-uht-exec.json
+void AFortAthenaAircraft::execGetDropStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDropStartTime();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortAthenaAircraft, 2126471927u)
 // Original dynamic initializer: RVA 0x000E6650 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAthenaAircraft> AutoInitializeAFortAthenaAircraft(TEXT("AFortAthenaAircraft"), sizeof(AFortAthenaAircraft), 2126471927u);

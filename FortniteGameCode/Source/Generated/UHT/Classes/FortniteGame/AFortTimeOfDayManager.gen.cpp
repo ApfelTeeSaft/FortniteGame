@@ -13,6 +13,15 @@ void AFortTimeOfDayManager::execGetPreviousDayPhase(UObject* Context, FFrame& St
 	*(TEnumAsByte<EFortDayPhase::Type>*)Z_Param__Result=P_THIS->GetPreviousDayPhase();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BFFE0 (end 0x010C000D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetStormStrength); calls the native accessor AFortTimeOfDayManager::GetStormStrength | Matching: see analysis/functions-uht-exec.json
+void AFortTimeOfDayManager::execGetStormStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetStormStrength();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HeightFogEnabled) | Matching: see analysis/functions-uht-exec.json
 void AFortTimeOfDayManager::execOnRep_HeightFogEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -38,6 +47,16 @@ void AFortTimeOfDayManager::execOnRep_TimeOfDayInit(UObject* Context, FFrame& St
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_TimeOfDayInit();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C0FE0 (end 0x010C105B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetStormStrength); calls the native accessor AFortTimeOfDayManager::SetStormStrength | Matching: see analysis/functions-uht-exec.json
+void AFortTimeOfDayManager::execSetStormStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewStormStrength);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetStormStrength(Z_Param_NewStormStrength);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AFortTimeOfDayManager, 4162399111u)

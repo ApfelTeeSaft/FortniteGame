@@ -61,6 +61,15 @@ void ACharacter::execCrouch(UObject* Context, FFrame& Stack, void* const Z_Param
 	P_THIS->Crouch(Z_Param_bClientSimulation);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0D10 (end 0x023F0D3D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimRootMotionTranslationScale); calls the native accessor ACharacter::GetAnimRootMotionTranslationScale | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execGetAnimRootMotionTranslationScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetAnimRootMotionTranslationScale();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0D40 (end 0x023F0D90)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBaseRotationOffsetRotator) | Matching: see analysis/functions-uht-exec.json
 void ACharacter::execGetBaseRotationOffsetRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

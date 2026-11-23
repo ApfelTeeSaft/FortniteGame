@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02881AD0 (end 0x02881AFC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlayerViewModel); calls the native accessor UAthenaIndicatorLayerBase::GetPlayerViewModel | Matching: see analysis/functions-uht-exec.json
+void UAthenaIndicatorLayerBase::execGetPlayerViewModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAthenaPlayerViewModel**)Z_Param__Result=P_THIS->GetPlayerViewModel();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAthenaIndicatorLayerBase, 1325805880u)
 // Original dynamic initializer: RVA 0x00239200 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaIndicatorLayerBase> AutoInitializeUAthenaIndicatorLayerBase(TEXT("UAthenaIndicatorLayerBase"), sizeof(UAthenaIndicatorLayerBase), 1325805880u);

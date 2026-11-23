@@ -13,6 +13,42 @@ void UAIHotSpotSlot::execClearSlot(UObject* Context, FFrame& Stack, void* const 
 	P_THIS->ClearSlot();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5BA80 (end 0x00F5BAAB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSlotIndex); calls the native accessor UAIHotSpotSlot::GetSlotIndex | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execGetSlotIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetSlotIndex();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5BCE0 (end 0x00F5BD0D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSlotRadius); calls the native accessor UAIHotSpotSlot::GetSlotRadius | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execGetSlotRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetSlotRadius();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5BDF0 (end 0x00F5BE1B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSlotState); calls the native accessor UAIHotSpotSlot::GetSlotState | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execGetSlotState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(EAIHotSpotSlot*)Z_Param__Result=P_THIS->GetSlotState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5BF40 (end 0x00F5BF6B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSlotUserId); calls the native accessor UAIHotSpotSlot::GetSlotUserId | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execGetSlotUserId(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetSlotUserId();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C350 (end 0x00F5C3E6)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAIAllowed) | Matching: see analysis/functions-uht-exec.json
 void UAIHotSpotSlot::execIsAIAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

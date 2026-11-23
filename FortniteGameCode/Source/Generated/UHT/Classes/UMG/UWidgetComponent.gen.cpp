@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C04600 (end 0x01C0462C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaterialInstance); calls the native accessor UWidgetComponent::GetMaterialInstance | Matching: see analysis/functions-uht-exec.json
+void UWidgetComponent::execGetMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->GetMaterialInstance();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C04900 (end 0x01C0492C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRenderTarget); calls the native accessor UWidgetComponent::GetRenderTarget | Matching: see analysis/functions-uht-exec.json
+void UWidgetComponent::execGetRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UTextureRenderTarget2D**)Z_Param__Result=P_THIS->GetRenderTarget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C04AD0 (end 0x01C04AFC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetUserWidgetObject); calls the native accessor UWidgetComponent::GetUserWidgetObject | Matching: see analysis/functions-uht-exec.json
+void UWidgetComponent::execGetUserWidgetObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UUserWidget**)Z_Param__Result=P_THIS->GetUserWidgetObject();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05D90 (end 0x01C05DAF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execRequestRedraw) | Matching: see analysis/functions-uht-exec.json
 void UWidgetComponent::execRequestRedraw(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,33 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40720 (end 0x01D4074D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetStartTimeOffset); calls the native accessor UGeometryCacheComponent::GetStartTimeOffset | Matching: see analysis/functions-uht-exec.json
+void UGeometryCacheComponent::execGetStartTimeOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetStartTimeOffset();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40750 (end 0x01D4077B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLooping); calls the native accessor UGeometryCacheComponent::IsLooping | Matching: see analysis/functions-uht-exec.json
+void UGeometryCacheComponent::execIsLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsLooping();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40780 (end 0x01D407AB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlaying); calls the native accessor UGeometryCacheComponent::IsPlaying | Matching: see analysis/functions-uht-exec.json
+void UGeometryCacheComponent::execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsPlaying();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0066A6C0 (end 0x0066A756)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetGeometryCache) | Matching: see analysis/functions-uht-exec.json
 void UGeometryCacheComponent::execSetGeometryCache(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -12,6 +39,16 @@ void UGeometryCacheComponent::execSetGeometryCache(UObject* Context, FFrame& Sta
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->SetGeometryCache(Z_Param_NewGeomCache);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40880 (end 0x01D40902)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLooping); calls the native accessor UGeometryCacheComponent::SetLooping | Matching: see analysis/functions-uht-exec.json
+void UGeometryCacheComponent::execSetLooping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewLooping);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLooping(Z_Param_bNewLooping);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UGeometryCacheComponent, 2252282405u)

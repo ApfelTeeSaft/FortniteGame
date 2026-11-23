@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F08D0 (end 0x028F0950)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetButtonGroup); calls the native accessor UFortRewardInfoWidget::SetButtonGroup | Matching: see analysis/functions-uht-exec.json
+void UFortRewardInfoWidget::execSetButtonGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButtonGroup,Z_Param_InButtonGroup);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetButtonGroup(Z_Param_InButtonGroup);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortRewardInfoWidget, 3416053117u)
 // Original dynamic initializer: RVA 0x00258600 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortRewardInfoWidget> AutoInitializeUFortRewardInfoWidget(TEXT("UFortRewardInfoWidget"), sizeof(UFortRewardInfoWidget), 3416053117u);

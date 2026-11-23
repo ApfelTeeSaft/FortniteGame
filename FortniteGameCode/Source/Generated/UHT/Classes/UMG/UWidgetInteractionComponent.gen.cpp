@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C03F70 (end 0x01C03F9C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHoveredWidgetComponent); calls the native accessor UWidgetInteractionComponent::GetHoveredWidgetComponent | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execGetHoveredWidgetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UWidgetComponent**)Z_Param__Result=P_THIS->GetHoveredWidgetComponent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C04DA0 (end 0x01C04DCB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsOverFocusableWidget); calls the native accessor UWidgetInteractionComponent::IsOverFocusableWidget | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execIsOverFocusableWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsOverFocusableWidget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C04DD0 (end 0x01C04DFB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsOverHitTestVisibleWidget); calls the native accessor UWidgetInteractionComponent::IsOverHitTestVisibleWidget | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execIsOverHitTestVisibleWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsOverHitTestVisibleWidget();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C04E00 (end 0x01C04E2B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsOverInteractableWidget); calls the native accessor UWidgetInteractionComponent::IsOverInteractableWidget | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execIsOverInteractableWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsOverInteractableWidget();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05410 (end 0x01C05501)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execPressAndReleaseKey) | Matching: see analysis/functions-uht-exec.json
 void UWidgetInteractionComponent::execPressAndReleaseKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

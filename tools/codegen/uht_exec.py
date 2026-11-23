@@ -39,6 +39,7 @@ from pathlib import Path
 
 import capstone
 
+import uht_accessors
 import uht_props
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "analysis"))
@@ -403,7 +404,78 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         entries.append(entry_at[exec_rva])
         stats["exec thunk addresses"] += 1
         stats["exec thunk addresses, leaf"] += r not in rfs
+    # Exec thunks of direct natives that are trivial accessors (tools/codegen/uht_accessors.py): the
+    # native is declared (non-virtual) and defined out of line, so the thunk's call resolves through
+    # the accessor's own exact match.
+    def class_props(n: str) -> list[dict]:
+        c = classes.get(n)
+        if not c or not c.get("constructor"):
+            return []
+        if "props" not in c:
+            c["props"] = []
+            r = int(c["constructor"], 16)
+            b = dimg.read(r, 0x30)
+            i = b.find(b"\x48\x8d\x15")
+            if i >= 0:
+                rec = r + i + 7 + struct.unpack_from("<i", b, i + 3)[0]
+                props, nprops = struct.unpack("<Qi", dimg.read(rec + 0x28, 12))
+                if 0 < nprops < 4096:
+                    c["props"] = uht_props.decode(dimg, base, props, nprops)
+        return c["props"]
+
+    acc = uht_accessors.find(dimg, base, md, nat["natives"], class_props, sup, typenames, uht_props,
+                             lambda c, u, x: signature(dimg, base, syms, typenames, c, u, x, rfs))
+    taken = {e["start_rva"] for e in entries}
+    accessors, members = [], defaultdict(dict)
+    for a in acc["natives"]:
+        cls, uf = a["class"], a["ufunction"]
+        # A name the class already declares (a slot) or a member name that is also a declared
+        # function would not compile as the reference's source does; such accessors wait.
+        clash = {a["name"], a["member"]} & (set(visible.get(cls, {})) | set(visible.get(a["owner"], {})))
+        start = f"0x{int(a['exec_rva'], 16):08X}"
+        if clash or start in taken or (cls, uf) in thunks or cls in interfaces or a["owner"] in interfaces:
+            stats["accessor thunks skipped (name or thunk already declared)"] += 1
+            continue
+        # The member lies in the owner's own bytes: past its superclass and inside its size.
+        o = classes.get(a["owner"], {})
+        lo = classes.get(sup(a["owner"]) or "", {}).get("size") if sup(a["owner"]) else 8
+        if not o.get("size") or lo is None or not lo <= a["offset"] < a["offset"] + a["size"] <= o["size"]:
+            stats["accessor thunks skipped (member outside its class's own bytes)"] += 1
+            continue
+        sig = signature(dimg, base, syms, typenames, cls, uf, int(a["exec_rva"], 16), rfs)
+        accessors.append(a)
+        members[a["owner"]][a["offset"]] = (a["mtype"], a["member"], a["size"])
+        if a["kind"] == "get":
+            decls.setdefault(cls, []).append(
+                f"\t{a['ret']} {a['name']}(){' const' if a['const'] else ''};  // native accessor of {a['member']}")
+            call = f"*({sig['store']}*)Z_Param__Result=P_THIS->{a['name']}();"
+            body = ["\tP_FINISH;", "\tP_NATIVE_BEGIN;", f"\t{call}", "\tP_NATIVE_END;"]
+        else:
+            (pdecl, pline, parg), = sig["params"]
+            decls.setdefault(cls, []).append(
+                f"\tvoid {a['name']}({pdecl}){' const' if a['const'] else ''};  // native accessor of {a['member']}")
+            body = [f"\t{pline}", "\tP_FINISH;", "\tP_NATIVE_BEGIN;", f"\tP_THIS->{a['name']}({parg});",
+                    "\tP_NATIVE_END;"]
+            stats["exec thunks with parameters"] += 1
+        r = int(a["exec_rva"], 16)
+        end = function_end(dimg, rfs, r) if r in rfs else leaf_end(md, dimg, r)
+        if end is None:
+            continue
+        thunks[(cls, uf)] = (f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{r:08X} (end 0x{end:08X})"
+                             f"{'' if r in rfs else ', leaf (no .pdata)'}\n"
+                             f"// Recovery: UHT 4.20 DECLARE_FUNCTION(exec{uf}); calls the native accessor "
+                             f"{cls}::{a['name']} | Matching: see analysis/functions-uht-exec.json\n"
+                             f"void {cls}::exec{uf}(UObject* Context, FFrame& Stack, void* const Z_Param__Result)\n"
+                             "{\n" + "\n".join(body) + "\n}\n")
+        entries.append({"start_rva": f"0x{r:08X}", "end_rva": f"0x{end:08X}", "name": f"{cls}::exec{uf}",
+                        "class": cls})
+        stats["exec thunks defined"] += 1
+        stats["exec thunks of native accessors"] += 1
+        stats["exec thunk addresses"] += 1
+        stats["exec thunk addresses, leaf"] += r not in rfs
+    for k, v in acc["rejected"].items():
+        stats[f"accessor candidates rejected: {k}"] += v
     return {"decls": decls, "thunks": thunks, "roots_with_vptr": roots_with_vptr, "entries": entries,
-            "interfaces": interfaces,
+            "interfaces": interfaces, "accessors": accessors, "members": {k: dict(v) for k, v in members.items()},
             "enums": uht_props.enum_declarations(typenames),
             "stats": dict(stats)}

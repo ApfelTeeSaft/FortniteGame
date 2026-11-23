@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D1910 (end 0x002D1992)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetConsumePointerInput); calls the native accessor UCommonUserWidget::SetConsumePointerInput | Matching: see analysis/functions-uht-exec.json
+void UCommonUserWidget::execSetConsumePointerInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInConsumePointerInput);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetConsumePointerInput(Z_Param_bInConsumePointerInput);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonUserWidget, 2907812852u)
 // Original dynamic initializer: RVA 0x00096B70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonUserWidget> AutoInitializeUCommonUserWidget(TEXT("UCommonUserWidget"), sizeof(UCommonUserWidget), 2907812852u);

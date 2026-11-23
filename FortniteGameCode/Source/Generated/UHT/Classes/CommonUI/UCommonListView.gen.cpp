@@ -54,6 +54,16 @@ void UCommonListView::execSetDataProvider(UObject* Context, FFrame& Stack, void*
 	P_THIS->SetDataProvider(Z_Param_Out_InDataProvider);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CEB40 (end 0x002CEBC2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSimulateDoubleClickOnSelectedItemClick); calls the native accessor UCommonListView::SetSimulateDoubleClickOnSelectedItemClick | Matching: see analysis/functions-uht-exec.json
+void UCommonListView::execSetSimulateDoubleClickOnSelectedItemClick(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInSimulateDoubleClick);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSimulateDoubleClickOnSelectedItemClick(Z_Param_bInSimulateDoubleClick);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonListView, 3731617275u)
 // Original dynamic initializer: RVA 0x00095FE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonListView> AutoInitializeUCommonListView(TEXT("UCommonListView"), sizeof(UCommonListView), 3731617275u);

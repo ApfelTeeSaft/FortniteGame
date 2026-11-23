@@ -24,6 +24,15 @@ void AFortPlayerStateAthena::execClientReportKill(UObject* Context, FFrame& Stac
 	P_THIS->ClientReportKill_Implementation(Z_Param_Player);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DA30 (end 0x0108DA5B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsDisconnected); calls the native accessor AFortPlayerStateAthena::IsDisconnected | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerStateAthena::execIsDisconnected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsDisconnected();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerStateAthena, 1818457301u)
 // Original dynamic initializer: RVA 0x0010D3F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerStateAthena> AutoInitializeAFortPlayerStateAthena(TEXT("AFortPlayerStateAthena"), sizeof(AFortPlayerStateAthena), 1818457301u);

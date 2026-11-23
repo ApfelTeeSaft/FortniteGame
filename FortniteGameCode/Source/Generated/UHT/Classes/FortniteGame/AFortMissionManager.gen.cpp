@@ -31,6 +31,15 @@ void AFortMissionManager::execOnRep_Missions(UObject* Context, FFrame& Stack, vo
 	P_THIS->OnRep_Missions();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104CF80 (end 0x0104CFAB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldShowSecondaryMissionHeaders); calls the native accessor AFortMissionManager::ShouldShowSecondaryMissionHeaders | Matching: see analysis/functions-uht-exec.json
+void AFortMissionManager::execShouldShowSecondaryMissionHeaders(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldShowSecondaryMissionHeaders();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortMissionManager, 1173817512u)
 // Original dynamic initializer: RVA 0x00103F80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortMissionManager> AutoInitializeAFortMissionManager(TEXT("AFortMissionManager"), sizeof(AFortMissionManager), 1173817512u);

@@ -3346,6 +3346,7 @@ class UWrapBoxSlot;
 // and the underlying type are recovered, not the enumerators.
 enum class EAIHotSpotSlot : uint8 {};
 namespace EAbilityGenericReplicatedEvent { enum Type {}; }
+namespace EAnimationMode { enum Type {}; }
 enum EBuildingAnim {};
 enum EBuildingReplacementType {};
 namespace ECameraAnimPlaySpace { enum Type {}; }
@@ -3357,6 +3358,7 @@ enum ECollisionResponse {};
 enum EColorSwatchType {};
 namespace EDOFMode { enum Type {}; }
 enum class EDeployableBaseBuildingState : uint8 {};
+enum class EDeployableBaseUseType : uint8 {};
 enum class EFOBIOStatus : uint8 {};
 enum class EFOBMode : uint8 {};
 enum class EFortAIDirectorEvent : uint8 {};
@@ -3367,10 +3369,12 @@ namespace EFortBuildingPersistentState { enum Type {}; }
 enum class EFortCollectionBookState : uint8 {};
 namespace EFortCombatEvents { enum Type {}; }
 enum class EFortCompletionResult : uint8 {};
+enum class EFortControlRecoveryBehavior : uint8 {};
 namespace EFortCustomGender { enum Type {}; }
 namespace EFortCustomPartType { enum Type {}; }
 namespace EFortDayPhase { enum Type {}; }
 namespace EFortGameplayState { enum Type {}; }
+enum class EFortHuskAnimType : uint8 {};
 enum class EFortInventoryFilter : uint8 {};
 enum class EFortItemCategoryOrdinal : uint8 {};
 enum class EFortItemCollectorState : uint8 {};
@@ -3378,12 +3382,14 @@ enum class EFortItemType : uint8 {};
 namespace EFortMovementUrgency { enum Type {}; }
 enum class EFortObjectiveStatus : uint8 {};
 namespace EFortPvPGameResult { enum Type {}; }
+enum class EFortQuestRewardType : uint8 {};
 enum class EFortQuickBars : uint8 {};
 enum class EFortRarity : uint8 {};
 namespace EFortReloadFXState { enum Type {}; }
 namespace EFortRequestedGameplayAction { enum Type {}; }
 namespace EFortResourceType { enum Type {}; }
 namespace EFortTeam { enum Type {}; }
+enum class EFrontEndCamera : uint8 {};
 namespace EGameplayCueEvent { enum Type {}; }
 enum EHorizontalAlignment {};
 enum EMovementMode {};
@@ -3396,6 +3402,7 @@ enum ERadialImpulseFalloff {};
 enum ERelativeTransformSpace {};
 enum class ERichPresenceStateChange : uint8 {};
 enum class ESlateVisibility : uint8 {};
+namespace ESplineMeshAxis { enum Type {}; }
 enum class EStatCategory : uint8 {};
 enum class EStatMod : uint8 {};
 enum class ESubGame : uint8 {};
@@ -3619,6 +3626,7 @@ public:
 	virtual void ForceNetUpdate();  // slot 181 (+0x5A8), UFunction AActor::ForceNetUpdate
 	virtual void PrestreamTextures(float Seconds, bool bEnableStreaming, int32 CinematicTextureGroups);  // slot 182 (+0x5B0), UFunction AActor::PrestreamTextures
 	virtual void GetActorEyesViewPoint(FVector& OutLocation, FRotator& OutRotation) const;  // slot 183 (+0x5B8), UFunction AActor::GetActorEyesViewPoint
+	APawn* GetInstigator() const;  // native accessor of Instigator
 	static void StaticRegisterNativesAActor();
 	static void execActorHasTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -3724,7 +3732,11 @@ public:
 	static void execTearOff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execWasRecentlyRendered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x2F0];  // sizeof(AActor) = 0x318
+	unsigned char Opaque_28[0x118];
+public:
+	APawn* Instigator;  // +0x140, reflected property
+private:
+	unsigned char Opaque_148[0x1D0];  // sizeof(AActor) = 0x318
 };
 
 class AController : public AActor
@@ -4673,6 +4685,7 @@ public:
 	virtual void OnDynamicShrinkAndDestroyEffectFinished();  // slot 381 (+0xBE8), UFunction ABuildingSMActor::OnDynamicShrinkAndDestroyEffectFinished
 	virtual void GameplayCue_Abilities_Activation_Generic_BannerWallBuff1(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 382 (+0xBF0), UFunction ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff1
 	virtual void GameplayCue_Abilities_Activation_Generic_BannerWallBuff2(EGameplayCueEvent::Type EventType, FGameplayCueParameters Parameters);  // slot 383 (+0xBF8), UFunction ABuildingSMActor::GameplayCue_Abilities_Activation_Generic_BannerWallBuff2
+	UStaticMeshComponent* GetBuildingMeshComponent() const;  // native accessor of StaticMeshComponent
 	static void StaticRegisterNativesABuildingSMActor();
 	static void execAttachBuildingActorToMe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBlueprintOnStructurallyStable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -4723,7 +4736,11 @@ public:
 	static void execUpdateRepairMaterialAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execWillRegisterWithStructuralGrid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x740];  // sizeof(ABuildingSMActor) = 0xDB0
+	unsigned char Opaque_670[0x118];
+public:
+	UStaticMeshComponent* StaticMeshComponent;  // +0x788, reflected property
+private:
+	unsigned char Opaque_790[0x620];  // sizeof(ABuildingSMActor) = 0xDB0
 };
 
 class ABuildingAutoNav : public ABuildingSMActor
@@ -4926,13 +4943,18 @@ public:
 	virtual void FNGC_VSlot_0xD20();
 	virtual void OnRep_bAlreadySearched();  // slot 421 (+0xD28), UFunction ABuildingContainer::OnRep_bAlreadySearched
 	virtual void BounceContainer();  // slot 422 (+0xD30), UFunction ABuildingContainer::BounceContainer
+	int32 GetLootTier();  // native accessor of ReplicatedLootTier
 	static void StaticRegisterNativesABuildingContainer();
 	static void execBounceContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLootTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_bAlreadySearched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execRaiseTreasure(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x110];  // sizeof(ABuildingContainer) = 0xF10
+	unsigned char Opaque_E00[0x58];
+public:
+	int32 ReplicatedLootTier;  // +0xE58, reflected property
+private:
+	unsigned char Opaque_E5C[0xB4];  // sizeof(ABuildingContainer) = 0xF10
 };
 
 class ABuildingCorner : public ABuildingAutoNav
@@ -5002,6 +5024,7 @@ public:
 	virtual void OnRep_FOBMode();  // slot 312 (+0x9C0), UFunction ABuildingFOBConfigActor::OnRep_FOBMode
 	virtual void FNGC_VSlot_0x9C8();
 	virtual void OnRep_bFinalized();  // slot 314 (+0x9D0), UFunction ABuildingFOBConfigActor::OnRep_bFinalized
+	UFortFOBCoreDecoItemDefinition* GetSelectedFOBCoreItemDefinition() const;  // native accessor of SelectedCoreItemDef
 	static void StaticRegisterNativesABuildingFOBConfigActor();
 	static void execAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanPerformIOOperation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5023,7 +5046,11 @@ public:
 	static void execOnRep_FOBMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x310];  // sizeof(ABuildingFOBConfigActor) = 0xA80
+	unsigned char Opaque_770[0x190];
+public:
+	UFortFOBCoreDecoItemDefinition* SelectedCoreItemDef;  // +0x900, reflected property
+private:
+	unsigned char Opaque_908[0x178];  // sizeof(ABuildingFOBConfigActor) = 0xA80
 };
 
 class ABuildingFOBCoreActor : public ABuildingGameplayActor
@@ -5243,6 +5270,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	virtual void FNGC_VSlot_0x920();  // slot 292: ABuildingGameplayActorConsumable::PrepareOnConsumeGameplayEffectSpec_Implementation (signature not recovered)
 	virtual FTransform GetDeathFXTransform_Implementation() const;  // slot 293 (+0x928), UFunction ABuildingGameplayActorConsumable::GetDeathFXTransform
+	UAnimMontage* GetOnConsumeMontage() const;  // native accessor of OnConsumeMontage
 	static void StaticRegisterNativesABuildingGameplayActorConsumable();
 	static void execGetDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOnConsumeGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5250,7 +5278,11 @@ public:
 	static void execMakeOnConsumeGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execPrepareOnConsumeGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x30];  // sizeof(ABuildingGameplayActorConsumable) = 0x7A0
+	unsigned char Opaque_770[0x10];
+public:
+	UAnimMontage* OnConsumeMontage;  // +0x780, reflected property
+private:
+	unsigned char Opaque_788[0x18];  // sizeof(ABuildingGameplayActorConsumable) = 0x7A0
 };
 
 class ABuildingItemCollectorActor : public ABuildingGameplayActor
@@ -5491,6 +5523,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	void InitializeAudio(UAudioComponent* InPortalLoopingComp);  // native accessor of PortalAudioComp
 	static void StaticRegisterNativesABuildingPropAtlas();
 	static void execGetDefenseAnimSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetDefenseProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5505,7 +5538,11 @@ public:
 	static void execSetupAnimationTransition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStopRingSpinning(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x140];  // sizeof(ABuildingPropAtlas) = 0xF40
+	unsigned char Opaque_E00[0x20];
+public:
+	UAudioComponent* PortalAudioComp;  // +0xE20, reflected property
+private:
+	unsigned char Opaque_E28[0x118];  // sizeof(ABuildingPropAtlas) = 0xF40
 };
 
 class ABuildingPropCorner : public ABuildingCorner
@@ -5671,6 +5708,7 @@ public:
 	virtual void OnRep_AttachedTo();  // slot 437 (+0xDA8), UFunction ABuildingTrap::OnRep_AttachedTo
 	virtual void TriggerIfAppropriate();  // slot 438 (+0xDB0), UFunction ABuildingTrap::TriggerIfAppropriate
 	virtual void OnTriggerTouch(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, FHitResult const& SweepResult);  // slot 439 (+0xDB8), UFunction ABuildingTrap::OnTriggerTouch
+	ABuildingSMActor* GetBuildingAttachedTo() const;  // native accessor of AttachedTo
 	static void StaticRegisterNativesABuildingTrap();
 	static void execAddDamageComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddTriggerComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5695,7 +5733,11 @@ public:
 	static void execOnTriggerTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execTriggerIfAppropriate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x120];  // sizeof(ABuildingTrap) = 0xED0
+	unsigned char Opaque_DB0[0xA0];
+public:
+	ABuildingSMActor* AttachedTo;  // +0xE50, reflected property
+private:
+	unsigned char Opaque_E58[0x78];  // sizeof(ABuildingTrap) = 0xED0
 };
 
 class ABuildingTrapCeiling : public ABuildingTrap
@@ -5956,6 +5998,7 @@ public:
 	virtual void ServerTeleportNearLocation_Implementation(FVector ActorLocation);  // slot 262 (+0x830), UFunction AFortPawn::ServerTeleportNearLocation
 	virtual bool ServerInternalEquipWeapon_Validate(AFortWeapon* Weap);  // slot 263 (+0x838), UFunction AFortPawn::ServerInternalEquipWeapon
 	virtual void ServerInternalEquipWeapon_Implementation(AFortWeapon* Weap);  // slot 264 (+0x840), UFunction AFortPawn::ServerInternalEquipWeapon
+	float GetAnimRootMotionTranslationScale() const;  // native accessor of AnimRootMotionTranslationScale
 	static void StaticRegisterNativesACharacter();
 	static void execCacheInitialMeshOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5996,7 +6039,11 @@ public:
 	static void execStopJumping(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnCrouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x3A8];  // sizeof(ACharacter) = 0x720
+	unsigned char Opaque_378[0x78];
+public:
+	float AnimRootMotionTranslationScale;  // +0x3F0, reflected property
+private:
+	unsigned char Opaque_3F4[0x32C];  // sizeof(ACharacter) = 0x720
 };
 
 class ACineCameraActor : public ACameraActor
@@ -6265,6 +6312,7 @@ public:
 	virtual void FNGC_VSlot_0xCA8();
 	virtual void FNGC_VSlot_0xCB0();
 	virtual FVector GetFocalLocation() const;  // slot 407 (+0xCB8), UFunction APlayerController::GetFocalLocation
+	AHUD* GetHUD() const;  // native accessor of MyHUD
 	static void StaticRegisterNativesAPlayerController();
 	static void execActivateTouchInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddPitchInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -6393,7 +6441,11 @@ public:
 	static void execWasInputKeyJustPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execWasInputKeyJustReleased(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x300];  // sizeof(APlayerController) = 0x680
+	unsigned char Opaque_380[0x18];
+public:
+	AHUD* MyHUD;  // +0x398, reflected property
+private:
+	unsigned char Opaque_3A0[0x2E0];  // sizeof(APlayerController) = 0x680
 };
 
 class ADebugCameraController : public APlayerController
@@ -7131,6 +7183,8 @@ public:
 	virtual void FNGC_VSlot_0xB10();
 	virtual void FNGC_VSlot_0xB18();
 	virtual float GetHealthPercent() const;  // slot 356 (+0xB20), UFunction AFortPawn::GetHealthPercent
+	bool IsWeaponHolstered() const;  // native accessor of bWeaponHolstered
+	void SetControlRecoveryBehavior(EFortControlRecoveryBehavior NewBehavior);  // native accessor of ControlRecoveryBehavior
 	static void StaticRegisterNativesAFortPawn();
 	static void execAlignRotationToHitDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAnimMontage_LocalJumpToSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7227,7 +7281,15 @@ public:
 	static void execStopPushMomentum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execTriggerFeedbackEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x850];  // sizeof(AFortPawn) = 0xF70
+	unsigned char Opaque_720[0x123];
+public:
+	EFortControlRecoveryBehavior ControlRecoveryBehavior;  // +0x843, reflected property
+private:
+	unsigned char Opaque_844[0x3C4];
+public:
+	bool bWeaponHolstered;  // +0xC08, reflected property
+private:
+	unsigned char Opaque_C09[0x367];  // sizeof(AFortPawn) = 0xF70
 };
 
 class AFortAIPawn : public AFortPawn
@@ -7256,6 +7318,8 @@ public:
 	virtual void SetSkinColor(FLinearColor NewSkinColor, float NewSkinBrightness);  // slot 367 (+0xB78), UFunction AFortAIPawn::SetSkinColor
 	virtual void FNGC_VSlot_0xB80();
 	virtual void SetMovementUrgency(EFortMovementUrgency::Type Urgency);  // slot 369 (+0xB88), UFunction AFortAIPawn::SetMovementUrgency
+	void SetCurrentAimTarget(AActor* AimTarget);  // native accessor of CurrentAimTarget
+	void SetEncounterInfo(UFortAIEncounterInfo* InEncounterInfo);  // native accessor of EncounterInfo
 	static void StaticRegisterNativesAFortAIPawn();
 	static void execAddFortAbilitySet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddUnreachablePickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7316,7 +7380,15 @@ public:
 	static void execTriggerNoWeaponSpeech(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execTurnOnSleepingOptimizations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xBE0];  // sizeof(AFortAIPawn) = 0x1B50
+	unsigned char Opaque_F70[0xB8];
+public:
+	UFortAIEncounterInfo* EncounterInfo;  // +0x1028, reflected property
+private:
+	unsigned char Opaque_1030[0x990];
+public:
+	AActor* CurrentAimTarget;  // +0x19C0, reflected property
+private:
+	unsigned char Opaque_19C8[0x188];  // sizeof(AFortAIPawn) = 0x1B50
 };
 
 class AFortWeapon : public AActor
@@ -7439,6 +7511,8 @@ public:
 	virtual void FNGC_VSlot_0x908();
 	virtual void FNGC_VSlot_0x910();
 	virtual TArray<UFortAlterationItemDefinition*> GetAlterations() const;  // slot 291 (+0x918), UFunction AFortWeapon::GetAlterations
+	bool GetSupportsAutoFireAtReticleTargetMode() const;  // native accessor of bSupportsAutofireAtReticleTarget
+	void SetShouldDrawNativeReticle(bool bInShouldDrawReticle);  // native accessor of bShouldDrawNativeReticle
 	static void StaticRegisterNativesAFortWeapon();
 	static void execClientGivenTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientReportShotFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7489,7 +7563,15 @@ public:
 	static void execStopWeaponFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUseWeaponDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x738];  // sizeof(AFortWeapon) = 0xA50
+	unsigned char Opaque_318[0x75];
+public:
+	bool bShouldDrawNativeReticle;  // +0x38D, reflected property
+private:
+	unsigned char Opaque_38E[0x4A];
+public:
+	bool bSupportsAutofireAtReticleTarget;  // +0x3D8, reflected property
+private:
+	unsigned char Opaque_3D9[0x677];  // sizeof(AFortWeapon) = 0xA50
 };
 
 class AFortDecoTool : public AFortWeapon
@@ -7588,6 +7670,7 @@ public:
 	virtual void FNGC_VSlot_0x628();
 	virtual void KillTimerExpired();  // slot 198 (+0x630), UFunction AFortGameplayEffectDeliveryActor::KillTimerExpired
 	virtual void OnRep_IsBeingKilled();  // slot 199 (+0x638), UFunction AFortGameplayEffectDeliveryActor::OnRep_IsBeingKilled
+	UPrimitiveComponent* GetCollisionComponent() const;  // native accessor of CollisionComponent
 	static void StaticRegisterNativesAFortGameplayEffectDeliveryActor();
 	static void execBroadcastExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDoExplosion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -7601,7 +7684,11 @@ public:
 	static void execSetCollisionComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetIgnoreInstigatorCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x2F8];  // sizeof(AFortGameplayEffectDeliveryActor) = 0x610
+	unsigned char Opaque_318[0x138];
+public:
+	UPrimitiveComponent* CollisionComponent;  // +0x450, reflected property
+private:
+	unsigned char Opaque_458[0x1B8];  // sizeof(AFortGameplayEffectDeliveryActor) = 0x610
 };
 
 class AFortAreaOfEffectCloud : public AFortGameplayEffectDeliveryActor
@@ -7632,12 +7719,20 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	float GetDropEndTime() const;  // native accessor of DropEndTime
+	float GetDropStartTime() const;  // native accessor of DropStartTime
 	static void StaticRegisterNativesAFortAthenaAircraft();
 	static void execGetDropEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetDropStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_JumpFlashCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x120];  // sizeof(AFortAthenaAircraft) = 0x438
+	unsigned char Opaque_318[0x7C];
+public:
+	float DropStartTime;  // +0x394, reflected property
+public:
+	float DropEndTime;  // +0x398, reflected property
+private:
+	unsigned char Opaque_39C[0x9C];  // sizeof(AFortAthenaAircraft) = 0x438
 };
 
 class AFortAthenaMapInfo : public AActor
@@ -7927,12 +8022,17 @@ public:
 	virtual void FNGC_VSlot_0x5E0();
 	virtual void FNGC_VSlot_0x5E8();
 	virtual void StopClientAnnouncement();  // slot 190 (+0x5F0), UFunction AFortClientAnnouncement::StopClientAnnouncement
+	int32 GetPriority();  // native accessor of Priority
 	static void StaticRegisterNativesAFortClientAnnouncement();
 	static void execCancelClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStopClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x70];  // sizeof(AFortClientAnnouncement) = 0x388
+	unsigned char Opaque_318[0x28];
+public:
+	int32 Priority;  // +0x340, reflected property
+private:
+	unsigned char Opaque_344[0x44];  // sizeof(AFortClientAnnouncement) = 0x388
 };
 
 class AFortClientAnnouncementManager : public AActor
@@ -8423,6 +8523,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	EDeployableBaseUseType GetDeployableBaseUseType() const;  // native accessor of DeployableBaseUseType
 	static void StaticRegisterNativesAFortDeployableBaseManager();
 	static void execBroadcastHordeWaveStinger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAllDeployableBasePlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8435,7 +8536,11 @@ public:
 	static void execReloadAllPlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetKeepDeployableBasesOnLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x2C8];  // sizeof(AFortDeployableBaseManager) = 0x5E0
+	unsigned char Opaque_318[0xD];
+public:
+	EDeployableBaseUseType DeployableBaseUseType;  // +0x325, reflected property
+private:
+	unsigned char Opaque_326[0x2BA];  // sizeof(AFortDeployableBaseManager) = 0x5E0
 };
 
 class AFortPickup : public AActor
@@ -8804,12 +8909,15 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	EFrontEndCamera GetCamera() const;  // native accessor of CurrentCamera
 	static void StaticRegisterNativesAFortFrontEndCameraManager();
 	static void execGetCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetCameraActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	EFrontEndCamera CurrentCamera;  // +0x2BF0, reflected property
 private:
-	unsigned char Opaque[0x60];  // sizeof(AFortFrontEndCameraManager) = 0x2C50
+	unsigned char Opaque_2BF1[0x5F];  // sizeof(AFortFrontEndCameraManager) = 0x2C50
 };
 
 class AGameModeBase : public AInfo
@@ -9534,6 +9642,7 @@ public:
 	virtual void FNGC_VSlot_0x950();
 	virtual void FNGC_VSlot_0x958();
 	virtual AFortInGameMapManager* GetUIMapManager();  // slot 300 (+0x960), UFunction AFortGameStateZone::GetUIMapManager
+	float GetGameDifficulty() const;  // native accessor of GameDifficulty
 	static void StaticRegisterNativesAFortGameStateZone();
 	static void execApplyPlayerAbilityRestriction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBeginGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9591,7 +9700,11 @@ public:
 	static void execSubmitGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnregisterGameplayModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xA70];  // sizeof(AFortGameStateZone) = 0x1240
+	unsigned char Opaque_7D0[0x82C];
+public:
+	float GameDifficulty;  // +0xFFC, reflected property
+private:
+	unsigned char Opaque_1000[0x240];  // sizeof(AFortGameStateZone) = 0x1240
 };
 
 class AFortGameStatePvP : public AFortGameStateZone
@@ -9628,6 +9741,7 @@ public:
 	virtual void FNGC_VSlot_0xA00();
 	virtual void FNGC_VSlot_0xA08();
 	virtual int32 GetFOBFinalizationTimeRemaining() const;  // slot 322 (+0xA10), UFunction AFortGameStatePvP::GetFOBFinalizationTimeRemaining
+	ABuildingItemCollectorActor* GetItemCollector();  // native accessor of ItemCollector
 	static void StaticRegisterNativesAFortGameStatePvP();
 	static void execGetAverageHomebaseRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFOBFinalizationTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9644,7 +9758,11 @@ public:
 	static void execSetGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetMatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x140];  // sizeof(AFortGameStatePvP) = 0x1380
+	unsigned char Opaque_1240[0x90];
+public:
+	ABuildingItemCollectorActor* ItemCollector;  // +0x12D0, reflected property
+private:
+	unsigned char Opaque_12D8[0xA8];  // sizeof(AFortGameStatePvP) = 0x1380
 };
 
 class AFortGameStateAthena : public AFortGameStatePvP
@@ -9659,6 +9777,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	AFortAthenaAircraft* GetAircraft() const;  // native accessor of Aircraft
 	static void StaticRegisterNativesAFortGameStateAthena();
 	static void execGetAerialPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetAircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9670,7 +9789,11 @@ public:
 	static void execOnRep_WinningPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_WinningTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x240];  // sizeof(AFortGameStateAthena) = 0x15C0
+	unsigned char Opaque_1380[0x228];
+public:
+	AFortAthenaAircraft* Aircraft;  // +0x15A8, reflected property
+private:
+	unsigned char Opaque_15B0[0x10];  // sizeof(AFortGameStateAthena) = 0x15C0
 };
 
 class AFortGameStateDeployableBase : public AFortGameStateZone
@@ -9796,13 +9919,19 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
+	int32 GetMaxTeamExperience() const;  // native accessor of MaxTeamExperience
+	int32 GetMaxTeamLevel() const;  // native accessor of MaxTeamLevel
 	static void StaticRegisterNativesAFortGameStatePvPBaseDestruction();
 	static void execGetExperienceRequiredForTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMaxTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMaxTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTeamLevelForExperienceAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xF0];  // sizeof(AFortGameStatePvPBaseDestruction) = 0x1470
+	unsigned char Opaque_1380[0xE8];
+public:
+	int32 MaxTeamLevel;  // +0x1468, reflected property
+public:
+	int32 MaxTeamExperience;  // +0x146C, reflected property
 };
 
 class AFortGameStateSurvival : public AFortGameStateZone
@@ -11104,6 +11233,7 @@ public:
 	virtual void FNGC_VSlot_0x690();
 	virtual void OnRep_Missions();  // slot 211 (+0x698), UFunction AFortMissionManager::OnRep_Missions
 	virtual void OnRep_MissionUIActors();  // slot 212 (+0x6A0), UFunction AFortMissionManager::OnRep_MissionUIActors
+	bool ShouldShowSecondaryMissionHeaders() const;  // native accessor of bDisplaySecondaryMissionHeaders
 	static void StaticRegisterNativesAFortMissionManager();
 	static void execGetSpawnLocationActorsMatchingEntryItemQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetSpawnLocationActorsThatHaveAddedTagsMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11113,7 +11243,11 @@ public:
 	static void execOnRep_MissionUIActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShouldShowSecondaryMissionHeaders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x338];  // sizeof(AFortMissionManager) = 0x650
+	unsigned char Opaque_318[0x330];
+public:
+	bool bDisplaySecondaryMissionHeaders;  // +0x648, reflected property
+private:
+	unsigned char Opaque_649[0x7];  // sizeof(AFortMissionManager) = 0x650
 };
 
 class AFortMusicManager : public AActor
@@ -11250,6 +11384,7 @@ public:
 	virtual void FNGC_VSlot_0x640();
 	virtual void FNGC_VSlot_0x648();
 	virtual void StopObjective(EFortObjectiveStatus Status, const FString& Description, UFortBadgeItemDefinition* ExtraBadgeToGrant);  // slot 202 (+0x650), UFunction AFortObjectiveBase::StopObjective
+	bool IsRelevantToASpecificTeam() const;  // native accessor of bRelevantToSpecificTeam
 	static void StaticRegisterNativesAFortObjectiveBase();
 	static void execAttemptMissionSave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClearObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11275,7 +11410,11 @@ public:
 	static void execStopObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnpauseObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x98];  // sizeof(AFortObjectiveBase) = 0x3E8
+	unsigned char Opaque_350[0x55];
+public:
+	bool bRelevantToSpecificTeam;  // +0x3A5, reflected property
+private:
+	unsigned char Opaque_3A6[0x42];  // sizeof(AFortObjectiveBase) = 0x3E8
 };
 
 class AOnlineBeaconHost : public AOnlineBeacon
@@ -11996,6 +12135,9 @@ public:
 	virtual void Emote(FName const& AssetName);  // slot 751 (+0x1778), UFunction AFortPlayerController::Emote
 	virtual bool IsPlayingEmote() const;  // slot 752 (+0x1780), UFunction AFortPlayerController::IsPlayingEmote
 	virtual void PrintDebugInfo();  // slot 753 (+0x1788), UFunction AFortPlayerController::PrintDebugInfo
+	AFortAIDirectorDataManager* GetAIDirectorDataManager();  // native accessor of AIDirectorDataManager
+	AFortPlayerPawn* GetPlayerPawn() const;  // native accessor of MyFortPawn
+	void SuppressEventNotifications(bool bSuppress);  // native accessor of bSuppressEventNotifications
 	static void StaticRegisterNativesAFortPlayerController();
 	static void execActivateSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddItemToQuickBars(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12180,7 +12322,19 @@ public:
 	static void execToggleInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execToggleVirtualCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x1DE0];  // sizeof(AFortPlayerController) = 0x2460
+	unsigned char Opaque_680[0xB0];
+public:
+	AFortPlayerPawn* MyFortPawn;  // +0x730, reflected property
+private:
+	unsigned char Opaque_738[0xC3C];
+public:
+	bool bSuppressEventNotifications;  // +0x1374, reflected property
+private:
+	unsigned char Opaque_1375[0x143];
+public:
+	AFortAIDirectorDataManager* AIDirectorDataManager;  // +0x14B8, reflected property
+private:
+	unsigned char Opaque_14C0[0xFA0];  // sizeof(AFortPlayerController) = 0x2460
 };
 
 class AFortPlayerControllerGameplay : public AFortPlayerController
@@ -12347,6 +12501,8 @@ public:
 	virtual void ClientNotifyTeamWon_Implementation();  // slot 835 (+0x1A18), UFunction AFortPlayerControllerAthena::ClientNotifyTeamWon
 	virtual void ClientNotifyWon_Implementation();  // slot 836 (+0x1A20), UFunction AFortPlayerControllerAthena::ClientNotifyWon
 	virtual void ClientUnreliableSendMessage_Implementation(FText const& Message);  // slot 837 (+0x1A28), UFunction AFortPlayerControllerAthena::ClientUnreliableSendMessage
+	UAthenaPlayerMatchReport* GetMatchReport();  // native accessor of MatchReport
+	bool GetRevertPlayerListenerChangeFlag() const;  // native accessor of bRevertPlayerListenerChange
 	static void StaticRegisterNativesAFortPlayerControllerAthena();
 	static void execCancelSoloMatchmaking(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanFollowTeammate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12407,7 +12563,13 @@ public:
 	static void execUpdateRichPresenceTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execVoiceChatChannelJoinFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x740];  // sizeof(AFortPlayerControllerAthena) = 0x30E0
+	unsigned char Opaque_29A0[0x4B0];
+public:
+	bool bRevertPlayerListenerChange;  // +0x2E50, reflected property
+private:
+	unsigned char Opaque_2E51[0x287];
+public:
+	UAthenaPlayerMatchReport* MatchReport;  // +0x30D8, reflected property
 };
 
 class AFortPlayerControllerDeployableBase : public AFortPlayerControllerZone
@@ -12615,6 +12777,7 @@ public:
 	virtual void ServerMoveItemFromStorageVault_Implementation(FFortItemEntry const& NewlyCollectedItem);  // slot 820 (+0x19A0), UFunction AFortPlayerControllerOutpost::ServerMoveItemFromStorageVault
 	virtual bool ServerMoveItemToStorageVault_Validate(FFortItemEntry const& NewlyStoredItem);  // slot 821 (+0x19A8), UFunction AFortPlayerControllerOutpost::ServerMoveItemToStorageVault
 	virtual void ServerMoveItemToStorageVault_Implementation(FFortItemEntry const& NewlyStoredItem);  // slot 822 (+0x19B0), UFunction AFortPlayerControllerOutpost::ServerMoveItemToStorageVault
+	UFortWorldItemDefinition* GetPendingItemToFabricate() const;  // native accessor of ItemPendingToFabricate
 	static void StaticRegisterNativesAFortPlayerControllerOutpost();
 	static void execCanUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanUpgradeBuildingFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -12652,7 +12815,11 @@ public:
 	static void execUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUpgradeBuildingByDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x80];  // sizeof(AFortPlayerControllerOutpost) = 0x2A20
+	unsigned char Opaque_29A0[0x20];
+public:
+	UFortWorldItemDefinition* ItemPendingToFabricate;  // +0x29C0, reflected property
+private:
+	unsigned char Opaque_29C8[0x58];  // sizeof(AFortPlayerControllerOutpost) = 0x2A20
 };
 
 class AFortPlayerControllerPvPBaseDestruction : public AFortPlayerControllerPvP
@@ -12761,13 +12928,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	USkeletalMeshComponent* GetParachuteRootMesh() const;  // native accessor of ParachuteMesh
 	static void StaticRegisterNativesAFortPlayerParachute();
 	static void execGetFortPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetParachuteRootMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_ParachuteItemDef(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_PlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x28];  // sizeof(AFortPlayerParachute) = 0x340
+	unsigned char Opaque_318[0x20];
+public:
+	USkeletalMeshComponent* ParachuteMesh;  // +0x338, reflected property
 };
 
 class AFortPlayerPawn : public AFortPawn
@@ -13234,6 +13404,7 @@ public:
 	virtual void FNGC_VSlot_0x788();
 	virtual void ClientReportDBNO_Implementation(const AFortPlayerStateAthena* Player);  // slot 242 (+0x790), UFunction AFortPlayerStateAthena::ClientReportDBNO
 	virtual void ClientReportKill_Implementation(const AFortPlayerStateAthena* Player);  // slot 243 (+0x798), UFunction AFortPlayerStateAthena::ClientReportKill
+	bool IsDisconnected() const;  // native accessor of bIsDisconnected
 	static void StaticRegisterNativesAFortPlayerStateAthena();
 	static void execClientReportDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientReportKill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13248,7 +13419,11 @@ public:
 	static void execOnRep_SquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerSetInAircraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x650];  // sizeof(AFortPlayerStateAthena) = 0x1490
+	unsigned char Opaque_E40[0x634];
+public:
+	bool bIsDisconnected;  // +0x1474, reflected property
+private:
+	unsigned char Opaque_1475[0x1B];  // sizeof(AFortPlayerStateAthena) = 0x1490
 };
 
 class AFortPlayerStateFOB : public AFortPlayerStateZone
@@ -13356,6 +13531,7 @@ public:
 	virtual void FNGC_VSlot_0x650();
 	virtual void OnBounceCallback(FHitResult const& Hit, FVector const& ImpactVelocity);  // slot 203 (+0x658), UFunction AFortProjectileBase::OnBounceCallback
 	virtual void OnStopCallback(FHitResult const& Hit);  // slot 204 (+0x660), UFunction AFortProjectileBase::OnStopCallback
+	float GetGravityScale() const;  // native accessor of GravityScale
 	static void StaticRegisterNativesAFortProjectileBase();
 	static void execGetGravityScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOwnerPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13365,7 +13541,11 @@ public:
 	static void execOnStopCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetGravityScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x180];  // sizeof(AFortProjectileBase) = 0x790
+	unsigned char Opaque_610[0x3C];
+public:
+	float GravityScale;  // +0x64C, reflected property
+private:
+	unsigned char Opaque_650[0x140];  // sizeof(AFortProjectileBase) = 0x790
 };
 
 class AFortProjectileAthena : public AFortProjectileBase
@@ -13812,6 +13992,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	float GetSafeZoneRadius() const;  // native accessor of Radius
 	static void StaticRegisterNativesAFortSafeZoneIndicator();
 	static void execGetClockTickingAudioCurveValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMovementAudioCurveValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13820,7 +14001,11 @@ public:
 	static void execGetSafeZoneShrinkSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetSafeZoneRadiusAndCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x180];  // sizeof(AFortSafeZoneIndicator) = 0x498
+	unsigned char Opaque_318[0x124];
+public:
+	float Radius;  // +0x43C, reflected property
+private:
+	unsigned char Opaque_440[0x58];  // sizeof(AFortSafeZoneIndicator) = 0x498
 };
 
 class AFortScriptedAction : public AActor
@@ -13965,6 +14150,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	AFortPvPBaseCornerstone* GetTeamCornerstone() const;  // native accessor of TeamCornerstone
 	static void StaticRegisterNativesAFortTeamInfoPvPBaseDestruction();
 	static void execGetStrategicBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTeamCornerstone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -13974,8 +14160,10 @@ public:
 	static void execOnRep_TeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_TeamFOBCoreBuildingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_TeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	AFortPvPBaseCornerstone* TeamCornerstone;  // +0x418, reflected property
 private:
-	unsigned char Opaque[0x258];  // sizeof(AFortTeamInfoPvPBaseDestruction) = 0x670
+	unsigned char Opaque_420[0x250];  // sizeof(AFortTeamInfoPvPBaseDestruction) = 0x670
 };
 
 class AFortTeamPrivateInfo : public AInfo
@@ -14152,6 +14340,8 @@ public:
 	virtual void OnRep_TimeOfDayInit();  // slot 190 (+0x5F0), UFunction AFortTimeOfDayManager::OnRep_TimeOfDayInit
 	virtual TEnumAsByte<EFortDayPhase::Type> GetPreviousDayPhase() const;  // slot 191 (+0x5F8), UFunction AFortTimeOfDayManager::GetPreviousDayPhase
 	virtual void OnRep_HeightFogEnabled();  // slot 192 (+0x600), UFunction AFortTimeOfDayManager::OnRep_HeightFogEnabled
+	float GetStormStrength() const;  // native accessor of StormStrength
+	void SetStormStrength(float NewStormStrength);  // native accessor of StormStrength
 	static void StaticRegisterNativesAFortTimeOfDayManager();
 	static void execBreakExponentialHeightFogValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFFToTimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -14179,7 +14369,11 @@ public:
 	static void execToggleDebugForceStormEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execToggleSkipNight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x868];  // sizeof(AFortTimeOfDayManager) = 0xB80
+	unsigned char Opaque_318[0x830];
+public:
+	float StormStrength;  // +0xB48, reflected property
+private:
+	unsigned char Opaque_B4C[0x34];  // sizeof(AFortTimeOfDayManager) = 0xB80
 };
 
 class AFortTracerBase : public AFortClientOnlyActor
@@ -14220,6 +14414,7 @@ public:
 	virtual void OnRep_NeighborsByDirection();  // slot 425 (+0xD48), UFunction AFortTrack::OnRep_NeighborsByDirection
 	virtual void OnRep_SwitchState();  // slot 426 (+0xD50), UFunction AFortTrack::OnRep_SwitchState
 	virtual void OnRep_ConfigurationIdx();  // slot 427 (+0xD58), UFunction AFortTrack::OnRep_ConfigurationIdx
+	void InitializeTrack(UPrimitiveComponent* InSwitchComp);  // native accessor of SwitchComp
 	static void StaticRegisterNativesAFortTrack();
 	static void execGetOutgoingNeighborFromSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPathDistanceToTrack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -14232,7 +14427,11 @@ public:
 	static void execOnRep_NeighborsByDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_SwitchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x190];  // sizeof(AFortTrack) = 0xF90
+	unsigned char Opaque_E00[0x128];
+public:
+	UPrimitiveComponent* SwitchComp;  // +0xF28, reflected property
+private:
+	unsigned char Opaque_F30[0x60];  // sizeof(AFortTrack) = 0xF90
 };
 
 class AFortTrackPreview : public AFortDecoPreview
@@ -14247,10 +14446,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void InitializeTrackPreview(UStaticMeshComponent* InTrackMeshComp);  // native accessor of TrackMeshComp
 	static void StaticRegisterNativesAFortTrackPreview();
 	static void execInitializeTrackPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x40];  // sizeof(AFortTrackPreview) = 0x500
+	unsigned char Opaque_4C0[0x30];
+public:
+	UStaticMeshComponent* TrackMeshComp;  // +0x4F0, reflected property
+private:
+	unsigned char Opaque_4F8[0x8];  // sizeof(AFortTrackPreview) = 0x500
 };
 
 class AFortTrack_CustomSpline : public AFortTrack
@@ -17088,6 +17292,10 @@ public:
 	virtual void SetSlotState(EAIHotSpotSlot NewState);  // slot 76 (+0x260), UFunction UAIHotSpotSlot::SetSlotState
 	virtual void SetSlotEnabled(bool bNewEnabled);  // slot 77 (+0x268), UFunction UAIHotSpotSlot::SetSlotEnabled
 	virtual void ClearSlot();  // slot 78 (+0x270), UFunction UAIHotSpotSlot::ClearSlot
+	int32 GetSlotIndex() const;  // native accessor of SlotIndex
+	float GetSlotRadius() const;  // native accessor of Radius
+	EAIHotSpotSlot GetSlotState() const;  // native accessor of SlotState
+	int32 GetSlotUserId() const;  // native accessor of UserId
 	static void StaticRegisterNativesUAIHotSpotSlot();
 	static void execClearSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHotSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -17107,7 +17315,21 @@ public:
 	static void execSetSlotOwnerAndState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetSlotState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x98];  // sizeof(UAIHotSpotSlot) = 0xC0
+	unsigned char Opaque_28[0x3C];
+public:
+	float Radius;  // +0x64, reflected property
+private:
+	unsigned char Opaque_68[0x4];
+public:
+	int32 UserId;  // +0x6C, reflected property
+private:
+	unsigned char Opaque_70[0x10];
+public:
+	int32 SlotIndex;  // +0x80, reflected property
+public:
+	EAIHotSpotSlot SlotState;  // +0x84, reflected property
+private:
+	unsigned char Opaque_85[0x3B];  // sizeof(UAIHotSpotSlot) = 0xC0
 };
 
 class UAIHotSpotSlotGenerator : public UObject
@@ -21003,10 +21225,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void SetConsumePointerInput(bool bInConsumePointerInput);  // native accessor of bConsumePointerInput
 	static void StaticRegisterNativesUCommonUserWidget();
 	static void execSetConsumePointerInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	bool bConsumePointerInput;  // +0x208, reflected property
 private:
-	unsigned char Opaque[0x8];  // sizeof(UCommonUserWidget) = 0x210
+	unsigned char Opaque_209[0x7];  // sizeof(UCommonUserWidget) = 0x210
 };
 
 class UCommonActivatablePanel : public UCommonUserWidget
@@ -21181,10 +21406,15 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void BindToModel(UAthenaPlayerViewModel* ViewModel);  // native accessor of VM
 	static void StaticRegisterNativesUAthenaCompassBase();
 	static void execBindToModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x110];  // sizeof(UAthenaCompassBase) = 0x348
+	unsigned char Opaque_238[0x98];
+public:
+	UAthenaPlayerViewModel* VM;  // +0x2D0, reflected property
+private:
+	unsigned char Opaque_2D8[0x70];  // sizeof(UAthenaCompassBase) = 0x348
 };
 
 class UFortMontageItemDefinitionBase : public UFortAccountItemDefinition
@@ -21730,8 +21960,10 @@ public:
 	static void execHasBeenSeenLocally(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsFavorite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execMarkItemAsSeenBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	int32 level;  // +0xD0, reflected property
 private:
-	unsigned char Opaque[0x70];  // sizeof(UFortAccountItem) = 0x140
+	unsigned char Opaque_D4[0x6C];  // sizeof(UFortAccountItem) = 0x140
 };
 
 class UAthenaEventTokenItem : public UFortAccountItem
@@ -21895,6 +22127,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsInSelectWidgetToMoveMode() const;  // native accessor of bMoveButtonMode
+	void SelectWidgetToMove(UWidget* Widget);  // native accessor of MoveButtonWidget
 	static void StaticRegisterNativesUAthenaHUDContext();
 	static void execBeginUseFromHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCancelSwap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -21943,7 +22177,13 @@ public:
 	static void execUseOrRleoadFromHUDStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUseOrRleoadFromHUDStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x138];  // sizeof(UAthenaHUDContext) = 0x160
+	unsigned char Opaque_28[0x118];
+public:
+	UWidget* MoveButtonWidget;  // +0x140, reflected property
+public:
+	bool bMoveButtonMode;  // +0x148, reflected property
+private:
+	unsigned char Opaque_149[0x17];  // sizeof(UAthenaHUDContext) = 0x160
 };
 
 class UAthenaHUDGamePhaseChangingBase : public UFortHUDElementWidget
@@ -22041,12 +22281,13 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UAthenaPlayerViewModel* GetPlayerViewModel() const;  // native accessor of PlayerVM
 	static void StaticRegisterNativesUAthenaIndicatorLayerBase();
 	static void execGetPlayerViewModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetSquadMembers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-private:
-	unsigned char Opaque[0x8];  // sizeof(UAthenaIndicatorLayerBase) = 0x210
+public:
+	UAthenaPlayerViewModel* PlayerVM;  // +0x208, reflected property
 };
 
 class UAthenaInventoryEquipButtonBase : public UCommonButton
@@ -25111,6 +25352,7 @@ public:
 	virtual void OnRep_Connections();  // slot 157 (+0x4E8), UFunction UBuildingConnectivityComponent::OnRep_Connections
 	virtual void OnRep_bIsPowered();  // slot 158 (+0x4F0), UFunction UBuildingConnectivityComponent::OnRep_bIsPowered
 	virtual void OnRep_bIsProvidingPower();  // slot 159 (+0x4F8), UFunction UBuildingConnectivityComponent::OnRep_bIsProvidingPower
+	bool K2_IsPowered();  // native accessor of bIsPowered
 	static void StaticRegisterNativesUBuildingConnectivityComponent();
 	static void execCanConnectTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDisconnectAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -25122,7 +25364,11 @@ public:
 	static void execOnRep_bIsProvidingPower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_Connections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xE0];  // sizeof(UBuildingConnectivityComponent) = 0x370
+	unsigned char Opaque_290[0x40];
+public:
+	bool bIsPowered;  // +0x2D0, reflected property
+private:
+	unsigned char Opaque_2D1[0x9F];  // sizeof(UBuildingConnectivityComponent) = 0x370
 };
 
 class UBuildingEditModeMetadata : public UDataAsset
@@ -25610,13 +25856,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsNewNewsAvailable() const;  // native accessor of bNewNewsAvailable
 	static void StaticRegisterNativesUCMSContext();
 	static void execGetLatestEmergencyNotice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLatestNews(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsNewNewsAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execMarkNewsAsViewed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x108];  // sizeof(UCMSContext) = 0x130
+	unsigned char Opaque_28[0xE9];
+public:
+	bool bNewNewsAvailable;  // +0x111, reflected property
+private:
+	unsigned char Opaque_112[0x1E];  // sizeof(UCMSContext) = 0x130
 };
 
 class UCameraAnim : public UObject
@@ -26196,6 +26447,9 @@ public:
 	virtual void FNGC_VSlot_0x850();
 	virtual void FNGC_VSlot_0x858();
 	virtual void CapsuleTouched(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, FHitResult const& SweepResult);  // slot 268 (+0x860), UFunction UCharacterMovementComponent::CapsuleTouched
+	float GetAnalogInputModifier() const;  // native accessor of AnalogInputModifier
+	float K2_GetWalkableFloorAngle() const;  // native accessor of WalkableFloorAngle
+	float K2_GetWalkableFloorZ() const;  // native accessor of WalkableFloorZ
 	static void StaticRegisterNativesUCharacterMovementComponent();
 	static void execAddForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -26233,7 +26487,17 @@ public:
 	static void execSetWalkableFloorAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetWalkableFloorZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x648];  // sizeof(UCharacterMovementComponent) = 0x7C0
+	unsigned char Opaque_178[0x2C];
+public:
+	float WalkableFloorAngle;  // +0x1A4, reflected property
+public:
+	float WalkableFloorZ;  // +0x1A8, reflected property
+private:
+	unsigned char Opaque_1AC[0x134];
+public:
+	float AnalogInputModifier;  // +0x2E0, reflected property
+private:
+	unsigned char Opaque_2E4[0x4DC];  // sizeof(UCharacterMovementComponent) = 0x7C0
 };
 
 class UChatColorSchemeDataAsset : public UDataAsset
@@ -27440,6 +27704,7 @@ public:
 	virtual void DynamicHandleItemDoubleClickedCommonButton(UCommonButton* Button);  // slot 84 (+0x2A0), UFunction UCommonListView::DynamicHandleItemDoubleClickedCommonButton
 	virtual void DynamicHandleItemHoveredCommonButton(UCommonButton* Button);  // slot 85 (+0x2A8), UFunction UCommonListView::DynamicHandleItemHoveredCommonButton
 	virtual void DynamicHandleItemUnhoveredCommonButton(UCommonButton* Button);  // slot 86 (+0x2B0), UFunction UCommonListView::DynamicHandleItemUnhoveredCommonButton
+	void SetSimulateDoubleClickOnSelectedItemClick(bool bInSimulateDoubleClick);  // native accessor of bSimulateDoubleClickOnSelectedItemClick
 	static void StaticRegisterNativesUCommonListView();
 	static void execAddItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCancelScrollIntoView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27469,7 +27734,11 @@ public:
 	static void execSetSelectionMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetSimulateDoubleClickOnSelectedItemClick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x1D0];  // sizeof(UCommonListView) = 0x2D0
+	unsigned char Opaque_100[0x98];
+public:
+	bool bSimulateDoubleClickOnSelectedItemClick;  // +0x198, reflected property
+private:
+	unsigned char Opaque_199[0x137];  // sizeof(UCommonListView) = 0x2D0
 };
 
 class UCommonListViewNullItem : public UObject
@@ -27683,6 +27952,7 @@ public:
 	virtual void FNGC_VSlot_0x408();
 	virtual void HandleTabRemoved_Implementation(FName TabNameID, UCommonButton* TabButton);  // slot 130 (+0x410), UFunction UCommonTabListWidget::HandleTabRemoved
 	virtual void HandleTabCreated_Implementation(FName TabNameID, UCommonButton* TabButton);  // slot 131 (+0x418), UFunction UCommonTabListWidget::HandleTabCreated
+	UCommonWidgetSwitcher* GetLinkedSwitcher() const;  // native accessor of LinkedSwitcher
 	static void StaticRegisterNativesUCommonTabListWidget();
 	static void execDisableTabWithReason(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetActiveTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27705,7 +27975,11 @@ public:
 	static void execSetTabEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetTabVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xC8];  // sizeof(UCommonTabListWidget) = 0x2D8
+	unsigned char Opaque_210[0x58];
+public:
+	UCommonWidgetSwitcher* LinkedSwitcher;  // +0x268, reflected property
+private:
+	unsigned char Opaque_270[0x68];  // sizeof(UCommonTabListWidget) = 0x2D8
 };
 
 class UCommonTagVisibilityWidget : public UContentWidget
@@ -27757,6 +28031,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/CommonUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	float GetLineHeightPercentage() const;  // native accessor of LineHeightPercentage
 	static void StaticRegisterNativesUCommonTextStyle();
 	static void execGetColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -27765,7 +28040,9 @@ public:
 	static void execGetShadowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetShadowOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x98];  // sizeof(UCommonTextStyle) = 0xC0
+	unsigned char Opaque_28[0x94];
+public:
+	float LineHeightPercentage;  // +0xBC, reflected property
 };
 
 class UCommonTileView : public UCommonListView
@@ -28965,6 +29242,8 @@ public:
 	virtual void FNGC_VSlot_0x4D0();
 	virtual void FNGC_VSlot_0x4D8();
 	virtual UMaterialInstanceDynamic* CreateDynamicMaterialInstance();  // slot 156 (+0x4E0), UFunction UDecalComponent::CreateDynamicMaterialInstance
+	float GetFadeDuration() const;  // native accessor of FadeDuration
+	float GetFadeStartDelay() const;  // native accessor of FadeStartDelay
 	static void StaticRegisterNativesUDecalComponent();
 	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -28975,7 +29254,13 @@ public:
 	static void execSetFadeScreenSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetSortOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x40];  // sizeof(UDecalComponent) = 0x2D0
+	unsigned char Opaque_290[0x10];
+public:
+	float FadeStartDelay;  // +0x2A0, reflected property
+public:
+	float FadeDuration;  // +0x2A4, reflected property
+private:
+	unsigned char Opaque_2A8[0x28];  // sizeof(UDecalComponent) = 0x2D0
 };
 
 class UDefaultLevelSequenceInstanceData : public UObject
@@ -31516,6 +31801,7 @@ public:
 	virtual void FNGC_VSlot_0x4D8();
 	virtual void Play(float StartTime);  // slot 156 (+0x4E0), UFunction UForceFeedbackComponent::Play
 	virtual void Stop();  // slot 157 (+0x4E8), UFunction UForceFeedbackComponent::Stop
+	void SetIntensityMultiplier(float NewIntensityMultiplier);  // native accessor of IntensityMultiplier
 	static void StaticRegisterNativesUForceFeedbackComponent();
 	static void execAdjustAttenuation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBP_GetAttenuationSettingsToApply(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -31524,7 +31810,11 @@ public:
 	static void execSetIntensityMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xE0];  // sizeof(UForceFeedbackComponent) = 0x370
+	unsigned char Opaque_290[0xC];
+public:
+	float IntensityMultiplier;  // +0x29C, reflected property
+private:
+	unsigned char Opaque_2A0[0xD0];  // sizeof(UForceFeedbackComponent) = 0x370
 };
 
 class UForceFeedbackEffect : public UObject
@@ -32170,6 +32460,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsLargeSpawnGroup() const;  // native accessor of bIsLargeSpawnGroup
+	bool IsPrototype() const;  // native accessor of bIsPrototype
+	bool IsValidForEnemySpawners() const;  // native accessor of bIsValidForEnemySpawners
 	static void StaticRegisterNativesUFortAISpawnGroup();
 	static void execGetEnemy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetNumberOfEnemies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -32177,7 +32470,15 @@ public:
 	static void execIsPrototype(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsValidForEnemySpawners(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xE0];  // sizeof(UFortAISpawnGroup) = 0x110
+	unsigned char Opaque_30[0x50];
+public:
+	bool bIsPrototype;  // +0x80, reflected property
+public:
+	bool bIsValidForEnemySpawners;  // +0x81, reflected property
+public:
+	bool bIsLargeSpawnGroup;  // +0x82, reflected property
+private:
+	unsigned char Opaque_83[0x8D];  // sizeof(UFortAISpawnGroup) = 0x110
 };
 
 class UFortAISpawnGroupCapsCategorySet : public UObject
@@ -34336,6 +34637,7 @@ public:
 	virtual void FNGC_VSlot_0x548();
 	virtual bool ServerUpdateState_Validate(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32 CurrentGear);  // slot 170 (+0x550), UFunction UWheeledVehicleMovementComponent::ServerUpdateState
 	virtual void ServerUpdateState_Implementation(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32 CurrentGear);  // slot 171 (+0x558), UFunction UWheeledVehicleMovementComponent::ServerUpdateState
+	float GetEngineMaxRotationSpeed() const;  // native accessor of MaxEngineRPM
 	static void StaticRegisterNativesUWheeledVehicleMovementComponent();
 	static void execGetCurrentGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetEngineMaxRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -34360,7 +34662,11 @@ public:
 	static void execSetThrottleInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetUseAutoGears(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x168];  // sizeof(UWheeledVehicleMovementComponent) = 0x2E0
+	unsigned char Opaque_178[0x3C];
+public:
+	float MaxEngineRPM;  // +0x1B4, reflected property
+private:
+	unsigned char Opaque_1B8[0x128];  // sizeof(UWheeledVehicleMovementComponent) = 0x2E0
 };
 
 class USimpleWheeledVehicleMovementComponent : public UWheeledVehicleMovementComponent
@@ -35789,6 +36095,11 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	float GetDegradedPercentage() const;  // native accessor of DegradedPercentage
+	float GetHitNotifyDuration() const;  // native accessor of HitNotifyDuration
+	float GetLowAmmoPercentage() const;  // native accessor of LowAmmoPercentage
+	bool ShouldAllowTargetingDuringReload() const;  // native accessor of bAllowTargetingDuringReload
+	bool TargetingPreventsReload() const;  // native accessor of bTargetingPreventsReload
 	static void StaticRegisterNativesUFortWeaponItemDefinition();
 	static void execGetAnalyticTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetBaseAlteration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -35818,7 +36129,23 @@ public:
 	static void execShouldAllowTargetingDuringReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execTargetingPreventsReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x2B0];  // sizeof(UFortWeaponItemDefinition) = 0x750
+	unsigned char Opaque_4A0[0x168];
+public:
+	float LowAmmoPercentage;  // +0x608, reflected property
+public:
+	float DegradedPercentage;  // +0x60C, reflected property
+private:
+	unsigned char Opaque_610[0x1];
+public:
+	bool bAllowTargetingDuringReload;  // +0x611, reflected property
+public:
+	bool bTargetingPreventsReload;  // +0x612, reflected property
+private:
+	unsigned char Opaque_613[0xE9];
+public:
+	float HitNotifyDuration;  // +0x6FC, reflected property
+private:
+	unsigned char Opaque_700[0x50];  // sizeof(UFortWeaponItemDefinition) = 0x750
 };
 
 class UFortBuildingItemDefinition : public UFortWeaponItemDefinition
@@ -36062,6 +36389,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsChoicePack() const;  // native accessor of bIsChoicePack
 	static void StaticRegisterNativesUFortCardPackItemDefinition();
 	static void execGetPackColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetPackImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -36069,7 +36397,11 @@ public:
 	static void execIsChoicePack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsLlama(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x90];  // sizeof(UFortCardPackItemDefinition) = 0x3A0
+	unsigned char Opaque_310[0x1C];
+public:
+	bool bIsChoicePack;  // +0x32C, reflected property
+private:
+	unsigned char Opaque_32D[0x73];  // sizeof(UFortCardPackItemDefinition) = 0x3A0
 };
 
 class UFortCarriedObjectHolderInterface : public UInterface
@@ -38383,6 +38715,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	float GetGridSnapSizeOverride() const;  // native accessor of GridSnapSizeOverride
+	int32 GetMaxPlacementDistance() const;  // native accessor of MaxPlacementDistance
+	float GetRotationAngleIncrement() const;  // native accessor of RotationAngleIncrement
 	static void StaticRegisterNativesUFortDecoItemDefinition();
 	static void execGetBlueprintClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetGridSnapSizeOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -38410,7 +38745,17 @@ public:
 	static void execShouldSnapYawToHorizontalAxes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShouldUseRelativeCameraRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x80];  // sizeof(UFortDecoItemDefinition) = 0x7D0
+	unsigned char Opaque_750[0x50];
+public:
+	float GridSnapSizeOverride;  // +0x7A0, reflected property
+public:
+	float RotationAngleIncrement;  // +0x7A4, reflected property
+private:
+	unsigned char Opaque_7A8[0x18];
+public:
+	int32 MaxPlacementDistance;  // +0x7C0, reflected property
+private:
+	unsigned char Opaque_7C4[0xC];  // sizeof(UFortDecoItemDefinition) = 0x7D0
 };
 
 class UFortTrapItemDefinition : public UFortDecoItemDefinition
@@ -40088,6 +40433,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UFortDirectAcquisitionOfferInfo* GetOfferInfo() const;  // native accessor of OfferData
 	static void StaticRegisterNativesUFortDirectAcquisitionOfferDetailsWidgetBase();
 	static void execAutoEquip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOfferInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -40095,7 +40441,11 @@ public:
 	static void execSetPagedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetupOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x60];  // sizeof(UFortDirectAcquisitionOfferDetailsWidgetBase) = 0x450
+	unsigned char Opaque_3F0[0x50];
+public:
+	UFortDirectAcquisitionOfferInfo* OfferData;  // +0x440, reflected property
+private:
+	unsigned char Opaque_448[0x8];  // sizeof(UFortDirectAcquisitionOfferDetailsWidgetBase) = 0x450
 };
 
 class UFortDirectAcquisitionOfferInfo : public UObject
@@ -40167,6 +40517,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UFortDirectAcquisitionOfferInfo* GetOfferInfo() const;  // native accessor of OfferData
 	static void StaticRegisterNativesUFortDirectAcquisitionOfferWidgetBase();
 	static void execAddOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOfferInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -40174,7 +40525,9 @@ public:
 	static void execRemoveAllOffers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetupOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x18];  // sizeof(UFortDirectAcquisitionOfferWidgetBase) = 0x798
+	unsigned char Opaque_780[0x10];
+public:
+	UFortDirectAcquisitionOfferInfo* OfferData;  // +0x790, reflected property
 };
 
 class UFortDirectAcquisitionWidgetBase : public UFortActivatablePanel
@@ -41358,13 +41711,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool HasChargeUp() const;  // native accessor of bHasChargeUp
 	static void StaticRegisterNativesUFortGadgetItemDefinition();
 	static void execGetDecoItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetGameplayAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLevelAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execHasChargeUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xA0];  // sizeof(UFortGadgetItemDefinition) = 0x540
+	unsigned char Opaque_4A0[0x30];
+public:
+	bool bHasChargeUp;  // +0x4D0, reflected property
+private:
+	unsigned char Opaque_4D1[0x6F];  // sizeof(UFortGadgetItemDefinition) = 0x540
 };
 
 class UFortGadgetItemDefinitionTooltip : public UFortWorldItemDefinitionTooltip
@@ -41565,6 +41923,11 @@ public:
 	virtual void RunHardwareBenchmark(int32 WorkScale, float CPUMultiplier, float GPUMultiplier);  // slot 85 (+0x2A8), UFunction UGameUserSettings::RunHardwareBenchmark
 	virtual void ApplyHardwareBenchmarkResults();  // slot 86 (+0x2B0), UFunction UGameUserSettings::ApplyHardwareBenchmarkResults
 	virtual bool SupportsHDRDisplayOutput() const;  // slot 87 (+0x2B8), UFunction UGameUserSettings::SupportsHDRDisplayOutput
+	bool IsDynamicResolutionEnabled() const;  // native accessor of bUseDynamicResolution
+	bool IsHDREnabled() const;  // native accessor of bUseHDRDisplayOutput
+	void SetDynamicResolutionEnabled(bool bEnable);  // native accessor of bUseDynamicResolution
+	void SetFrameRateLimit(float NewLimit);  // native accessor of FrameRateLimit
+	void SetVSyncEnabled(bool bEnable);  // native accessor of bUseVSync
 	static void StaticRegisterNativesUGameUserSettings();
 	static void execApplyHardwareBenchmarkResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execApplyNonResolutionSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -41631,8 +41994,20 @@ public:
 	static void execSetVSyncEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSupportsHDRDisplayOutput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execValidateSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	bool bUseVSync;  // +0x28, reflected property
+public:
+	bool bUseDynamicResolution;  // +0x29, reflected property
 private:
-	unsigned char Opaque[0xE8];  // sizeof(UGameUserSettings) = 0x110
+	unsigned char Opaque_2A[0x7A];
+public:
+	float FrameRateLimit;  // +0xA4, reflected property
+private:
+	unsigned char Opaque_A8[0x4C];
+public:
+	bool bUseHDRDisplayOutput;  // +0xF4, reflected property
+private:
+	unsigned char Opaque_F5[0x1B];  // sizeof(UGameUserSettings) = 0x110
 };
 
 class UFortGameUserSettings : public UGameUserSettings
@@ -41783,6 +42158,7 @@ public:
 	virtual void SetCanBeCanceled(bool bCanBeCanceled);  // slot 113 (+0x388), UFunction UGameplayAbility::SetCanBeCanceled
 	virtual void FNGC_VSlot_0x390();
 	virtual void SetShouldBlockOtherAbilities(bool bShouldBlockAbilities);  // slot 115 (+0x398), UFunction UGameplayAbility::SetShouldBlockOtherAbilities
+	UAnimMontage* GetCurrentMontage() const;  // native accessor of CurrentMontage
 	static void StaticRegisterNativesUGameplayAbility();
 	static void execBP_ApplyGameplayEffectToOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execBP_ApplyGameplayEffectToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -41829,7 +42205,11 @@ public:
 	static void execSetCanBeCanceled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetShouldBlockOtherAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x5D8];  // sizeof(UGameplayAbility) = 0x600
+	unsigned char Opaque_28[0x5A8];
+public:
+	UAnimMontage* CurrentMontage;  // +0x5D0, reflected property
+private:
+	unsigned char Opaque_5D8[0x28];  // sizeof(UGameplayAbility) = 0x600
 };
 
 class UFortGameplayAbility : public UGameplayAbility
@@ -42335,6 +42715,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsUIVisible() const;  // native accessor of bIsUIVisible
 	static void StaticRegisterNativesUFortGlobalUIContext();
 	static void execAllowLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAllowQuit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -42443,7 +42824,11 @@ public:
 	static void execUnregisterScriptedAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnregisterToReceiveNotifications(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x368];  // sizeof(UFortGlobalUIContext) = 0x390
+	unsigned char Opaque_28[0x308];
+public:
+	bool bIsUIVisible;  // +0x330, reflected property
+private:
+	unsigned char Opaque_331[0x5F];  // sizeof(UFortGlobalUIContext) = 0x390
 };
 
 class UFortGlobals : public UObject
@@ -43008,6 +43393,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	int32 GetUnclampedLevel() const;  // native accessor of level
 	static void StaticRegisterNativesUFortHero();
 	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHeroTypeBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -45259,6 +45645,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void SetShowProgressCountDown(bool bShow);  // native accessor of bShowTimeCountDown
 	static void StaticRegisterNativesUFortKeybindWidget();
 	static void execGetBrushForKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsHoldKeybind(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -45270,7 +45657,11 @@ public:
 	static void execStopHoldProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUpdateKeybindWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x58];  // sizeof(UFortKeybindWidget) = 0x268
+	unsigned char Opaque_210[0xC];
+public:
+	bool bShowTimeCountDown;  // +0x21C, reflected property
+private:
+	unsigned char Opaque_21D[0x4B];  // sizeof(UFortKeybindWidget) = 0x268
 };
 
 class UFortKismetLibrary : public UBlueprintFunctionLibrary
@@ -46860,6 +47251,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void SetTimerDisplayFormat(bool bNewDisplayInTimeFormat);  // native accessor of bDisplayInTimeFormat
 	static void StaticRegisterNativesUFortMissionTimerComponent();
 	static void execClearMissionTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execDummyTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -46880,7 +47272,11 @@ public:
 	static void execSetTimerVisibilityOverrideSetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnpauseMissionTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x78];  // sizeof(UFortMissionTimerComponent) = 0x168
+	unsigned char Opaque_F0[0x60];
+public:
+	bool bDisplayInTimeFormat;  // +0x150, reflected property
+private:
+	unsigned char Opaque_151[0x17];  // sizeof(UFortMissionTimerComponent) = 0x168
 };
 
 class UFortMissionTimerInterface : public UInterface
@@ -47111,6 +47507,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UMediaPlayer* GetMediaPlayer() const;  // native accessor of MediaPlayer
+	UMediaSoundComponent* GetMediaSoundComponent() const;  // native accessor of SoundComponent
+	UMediaTexture* GetMediaTexture() const;  // native accessor of MediaTexture
 	static void StaticRegisterNativesUFortMovieWidget();
 	static void execGetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMediaSoundComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -47120,7 +47519,13 @@ public:
 	static void execRequestStopMovie(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetMediaSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x28];  // sizeof(UFortMovieWidget) = 0x240
+	unsigned char Opaque_218[0x10];
+public:
+	UMediaPlayer* MediaPlayer;  // +0x228, reflected property
+public:
+	UMediaTexture* MediaTexture;  // +0x230, reflected property
+public:
+	UMediaSoundComponent* SoundComponent;  // +0x238, reflected property
 };
 
 class UFortMtxOfferData : public UPrimaryDataAsset
@@ -48549,6 +48954,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UFortUITeamInfo* GetLocalPlayerTeam() const;  // native accessor of LocalPlayerTeam
 	static void StaticRegisterNativesUFortPartyContext();
 	static void execAcceptFriendRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAttemptRefreshFriendsList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -48620,7 +49026,11 @@ public:
 	static void execShowLocalPlayerExternalProfile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnmutePartyMember(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x618];  // sizeof(UFortPartyContext) = 0x640
+	unsigned char Opaque_28[0x4B8];
+public:
+	UFortUITeamInfo* LocalPlayerTeam;  // +0x4E0, reflected property
+private:
+	unsigned char Opaque_4E8[0x158];  // sizeof(UFortPartyContext) = 0x640
 };
 
 class UPartyGameState : public UObject
@@ -49557,6 +49967,10 @@ public:
 	virtual void SetNotifyRigidBodyCollisionBelow(bool bNewNotifyRigidBodyCollision, FName BoneName, bool bIncludeSelf);  // slot 294 (+0x930), UFunction USkeletalMeshComponent::SetNotifyRigidBodyCollisionBelow
 	virtual void AddForceToAllBodiesBelow(FVector Force, FName BoneName, bool bAccelChange, bool bIncludeSelf);  // slot 295 (+0x938), UFunction USkeletalMeshComponent::AddForceToAllBodiesBelow
 	virtual void AddImpulseToAllBodiesBelow(FVector Impulse, FName BoneName, bool bVelChange, bool bIncludeSelf);  // slot 296 (+0x940), UFunction USkeletalMeshComponent::AddImpulseToAllBodiesBelow
+	UAnimInstance* GetAnimInstance() const;  // native accessor of AnimScriptInstance
+	UClothingSimulationInteractor* GetClothingSimulationInteractor() const;  // native accessor of ClothingInteractor
+	bool GetDisablePostProcessBlueprint() const;  // native accessor of bDisablePostProcessBlueprint
+	UAnimInstance* GetPostProcessInstance() const;  // native accessor of PostProcessAnimInstance
 	static void StaticRegisterNativesUSkeletalMeshComponent();
 	static void execAccumulateAllBodiesBelowPhysicsBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddForceToAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -49632,7 +50046,21 @@ public:
 	static void execToggleDisablePostProcessBlueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnbindClothFromMasterPoseComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x500];  // sizeof(USkeletalMeshComponent) = 0xD10
+	unsigned char Opaque_810[0x10];
+public:
+	UAnimInstance* AnimScriptInstance;  // +0x820, reflected property
+private:
+	unsigned char Opaque_828[0x10];
+public:
+	UAnimInstance* PostProcessAnimInstance;  // +0x838, reflected property
+public:
+	bool bDisablePostProcessBlueprint;  // +0x840, reflected property
+private:
+	unsigned char Opaque_841[0x25F];
+public:
+	UClothingSimulationInteractor* ClothingInteractor;  // +0xAA0, reflected property
+private:
+	unsigned char Opaque_AA8[0x268];  // sizeof(USkeletalMeshComponent) = 0xD10
 };
 
 class UFortPooledSkelMeshComponent : public USkeletalMeshComponent
@@ -51146,6 +51574,12 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool ExpandsStormShield() const;  // native accessor of bExpandsStormShield
+	EFortQuestRewardType GetRewardType() const;  // native accessor of RewardType
+	float GetWeight() const;  // native accessor of Weight
+	bool IsDeprecated() const;  // native accessor of bDeprecated
+	bool IsHidden() const;  // native accessor of bHidden
+	bool ShouldAutoLaunch() const;  // native accessor of bAutoLaunch
 	static void StaticRegisterNativesUFortQuestItemDefinition();
 	static void execAllowsTileMatching(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execExpandsStormShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -51170,7 +51604,25 @@ public:
 	static void execIsHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShouldAutoLaunch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x1C0];  // sizeof(UFortQuestItemDefinition) = 0x4D0
+	unsigned char Opaque_310[0x38];
+public:
+	EFortQuestRewardType RewardType;  // +0x348, reflected property
+private:
+	unsigned char Opaque_349[0x6F];
+public:
+	float Weight;  // +0x3B8, reflected property
+private:
+	unsigned char Opaque_3BC[0xDC];
+public:
+	bool bExpandsStormShield;  // +0x498, reflected property
+public:
+	bool bHidden;  // +0x499, reflected property
+public:
+	bool bAutoLaunch;  // +0x49A, reflected property
+public:
+	bool bDeprecated;  // +0x49B, reflected property
+private:
+	unsigned char Opaque_49C[0x34];  // sizeof(UFortQuestItemDefinition) = 0x4D0
 };
 
 class UFortQuestItemDefinitionTooltip : public UFortItemDefinitionTooltip
@@ -51268,6 +51720,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsVisibleToUser() const;  // native accessor of bVisible
 	static void StaticRegisterNativesUFortQuestObjectiveInfo();
 	static void execDisplayDynamicQuestUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetOwningQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -51276,7 +51729,11 @@ public:
 	static void execIsInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execIsVisibleToUser(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x88];  // sizeof(UFortQuestObjectiveInfo) = 0xB0
+	unsigned char Opaque_28[0x7C];
+public:
+	bool bVisible;  // +0xA4, reflected property
+private:
+	unsigned char Opaque_A5[0xB];  // sizeof(UFortQuestObjectiveInfo) = 0xB0
 };
 
 class UFortQuestObjectiveTooltip : public UFortTooltip
@@ -51869,13 +52326,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UFortItem* GetItemInstance() const;  // native accessor of ItemInstance
 	static void StaticRegisterNativesUFortRewardInfoButton();
 	static void execGetItemInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetItemInstanceQuantityPair(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetShowDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x20];  // sizeof(UFortRewardInfoButton) = 0x7A0
+	unsigned char Opaque_780[0x18];
+public:
+	UFortItem* ItemInstance;  // +0x798, reflected property
 };
 
 class UFortRewardInfoWidget : public UCommonUserWidget
@@ -51890,11 +52350,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void SetButtonGroup(UCommonButtonGroup* InButtonGroup);  // native accessor of ButtonGroup
 	static void StaticRegisterNativesUFortRewardInfoWidget();
 	static void execSetButtonGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x88];  // sizeof(UFortRewardInfoWidget) = 0x298
+	unsigned char Opaque_210[0x50];
+public:
+	UCommonButtonGroup* ButtonGroup;  // +0x260, reflected property
+private:
+	unsigned char Opaque_268[0x30];  // sizeof(UFortRewardInfoWidget) = 0x298
 };
 
 class UFortRewardMissionAlertData : public UFortRewardNotificationData
@@ -53198,6 +53663,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	int32 GetIndexOfSelectedSquadSlot() const;  // native accessor of IndexOfSelectedSquadSlot
 	static void StaticRegisterNativesUFortSquadSlotsView();
 	static void execGetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetIndexOfSelectedSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -53214,7 +53680,11 @@ public:
 	static void execTryGetSelectedSquadSlotSortTypes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execTryGetStaticSquadDataBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xE8];  // sizeof(UFortSquadSlotsView) = 0x2F8
+	unsigned char Opaque_210[0x40];
+public:
+	int32 IndexOfSelectedSquadSlot;  // +0x250, reflected property
+private:
+	unsigned char Opaque_254[0xA4];  // sizeof(UFortSquadSlotsView) = 0x2F8
 };
 
 class UFortSquadStatValueWithIcon : public UCommonUserWidget
@@ -55028,6 +55498,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UFortUIStateWidget* GetCurrentUIStateWidget() const;  // native accessor of CurrentStateWidget
+	UFortUINavigationManager* GetNavigationManager() const;  // native accessor of NavigationManager
+	bool IsStateContentDisplayed() const;  // native accessor of bIsStateContentDisplayed
 	static void StaticRegisterNativesUFortUIManagerWidget();
 	static void exec_BPGetCurrentUIState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCreateNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -55043,7 +55516,19 @@ public:
 	static void execShowErrorDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnregisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x2E8];  // sizeof(UFortUIManagerWidget) = 0x500
+	unsigned char Opaque_218[0x210];
+public:
+	UFortUIStateWidget* CurrentStateWidget;  // +0x428, reflected property
+private:
+	unsigned char Opaque_430[0x50];
+public:
+	bool bIsStateContentDisplayed;  // +0x480, reflected property
+private:
+	unsigned char Opaque_481[0x7];
+public:
+	UFortUINavigationManager* NavigationManager;  // +0x488, reflected property
+private:
+	unsigned char Opaque_490[0x70];  // sizeof(UFortUIManagerWidget) = 0x500
 };
 
 class UFortUIManagerWidget_NUI : public UCommonUserWidget
@@ -55059,6 +55544,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	UFortUIStateWidget_NUI* GetCurrentUIStateWidget() const;  // native accessor of CurrentStateWidget
+	bool IsStateContentDisplayed() const;  // native accessor of bIsStateContentDisplayed
 	static void StaticRegisterNativesUFortUIManagerWidget_NUI();
 	static void exec_BPGetCurrentUIState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCreateNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -55085,7 +55572,15 @@ public:
 	static void execShowErrorDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnregisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x1C0];  // sizeof(UFortUIManagerWidget_NUI) = 0x3D0
+	unsigned char Opaque_210[0x40];
+public:
+	UFortUIStateWidget_NUI* CurrentStateWidget;  // +0x250, reflected property
+private:
+	unsigned char Opaque_258[0x38];
+public:
+	bool bIsStateContentDisplayed;  // +0x290, reflected property
+private:
+	unsigned char Opaque_291[0x13F];  // sizeof(UFortUIManagerWidget_NUI) = 0x3D0
 };
 
 class UFortUIMessageItemWidget : public UCommonUserWidget
@@ -55688,6 +56183,9 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteGame"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool ShouldSpawnBulletShellFX() const;  // native accessor of bShouldSpawnBulletShellFX
+	bool ShouldTraceThroughPawns() const;  // native accessor of bTraceThroughPawns
+	bool ShouldUseNativeWeaponTrace() const;  // native accessor of bUseNativeWeaponTrace
 	static void StaticRegisterNativesUFortWeaponRangedItemDefinition();
 	static void execGetBulletShellFXTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetProjectileTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -55696,7 +56194,17 @@ public:
 	static void execShouldUseNativeWeaponTrace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShouldUsePerfectAimWhenTargetingMinSpread(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x60];  // sizeof(UFortWeaponRangedItemDefinition) = 0x7B0
+	unsigned char Opaque_750[0x28];
+public:
+	bool bUseNativeWeaponTrace;  // +0x778, reflected property
+public:
+	bool bTraceThroughPawns;  // +0x779, reflected property
+private:
+	unsigned char Opaque_77A[0x2E];
+public:
+	bool bShouldSpawnBulletShellFX;  // +0x7A8, reflected property
+private:
+	unsigned char Opaque_7A9[0x7];  // sizeof(UFortWeaponRangedItemDefinition) = 0x7B0
 };
 
 class UFortWeaponRangedItemDefinitionTooltip : public UFortWeaponItemDefinitionTooltip
@@ -56822,6 +57330,10 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual void FNGC_VSlot_0x838();
 	virtual bool SetGeometryCache(UGeometryCache* NewGeomCache);  // slot 264 (+0x840), UFunction UGeometryCacheComponent::SetGeometryCache
+	float GetStartTimeOffset() const;  // native accessor of StartTimeOffset
+	bool IsLooping() const;  // native accessor of bLooping
+	bool IsPlaying() const;  // native accessor of bRunning
+	void SetLooping(bool bNewLooping);  // native accessor of bLooping
 	static void StaticRegisterNativesUGeometryCacheComponent();
 	static void execGetPlaybackSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetStartTimeOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -56838,8 +57350,16 @@ public:
 	static void execSetPlaybackSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetStartTimeOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	bool bRunning;  // +0x690, reflected property
+public:
+	bool bLooping;  // +0x691, reflected property
 private:
-	unsigned char Opaque[0x70];  // sizeof(UGeometryCacheComponent) = 0x700
+	unsigned char Opaque_692[0x2];
+public:
+	float StartTimeOffset;  // +0x694, reflected property
+private:
+	unsigned char Opaque_698[0x68];  // sizeof(UGeometryCacheComponent) = 0x700
 };
 
 class UGeometryCacheTrack : public UObject
@@ -60554,6 +61074,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/MovieScene"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	float GetPlaybackPosition() const;  // native accessor of TimeCursorPosition
 	static void StaticRegisterNativesUMovieSceneSequencePlayer();
 	static void execChangePlaybackDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetBoundObjects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -60579,7 +61100,11 @@ public:
 	static void execStartPlayingNextTick(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x7D8];  // sizeof(UMovieSceneSequencePlayer) = 0x800
+	unsigned char Opaque_28[0x3B0];
+public:
+	float TimeCursorPosition;  // +0x3D8, reflected property
+private:
+	unsigned char Opaque_3DC[0x424];  // sizeof(UMovieSceneSequencePlayer) = 0x800
 };
 
 class ULevelSequencePlayer : public UMovieSceneSequencePlayer
@@ -66938,6 +67463,9 @@ public:
 	virtual void FNGC_VSlot_0x838();
 	virtual bool SetFlipbook(UPaperFlipbook* NewFlipbook);  // slot 264 (+0x840), UFunction UPaperFlipbookComponent::SetFlipbook
 	virtual UPaperFlipbook* GetFlipbook();  // slot 265 (+0x848), UFunction UPaperFlipbookComponent::GetFlipbook
+	float GetPlayRate() const;  // native accessor of PlayRate
+	float GetPlaybackPosition() const;  // native accessor of AccumulatedTime
+	void SetPlayRate(float NewRate);  // native accessor of PlayRate
 	static void StaticRegisterNativesUPaperFlipbookComponent();
 	static void execGetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetFlipbookFramerate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -66963,7 +67491,15 @@ public:
 	static void execSetSpriteColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x40];  // sizeof(UPaperFlipbookComponent) = 0x6D0
+	unsigned char Opaque_690[0x8];
+public:
+	float PlayRate;  // +0x698, reflected property
+private:
+	unsigned char Opaque_69C[0x4];
+public:
+	float AccumulatedTime;  // +0x6A0, reflected property
+private:
+	unsigned char Opaque_6A4[0x2C];  // sizeof(UPaperFlipbookComponent) = 0x6D0
 };
 
 class UPaperGroupedSpriteComponent : public UMeshComponent
@@ -67132,6 +67668,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	bool IsClosedLoop() const;  // native accessor of bClosedLoop
 	static void StaticRegisterNativesUSplineComponent();
 	static void execAddPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execAddPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -67214,7 +67751,11 @@ public:
 	static void execSetWorldLocationAtSplinePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUpdateSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xF0];  // sizeof(USplineComponent) = 0x750
+	unsigned char Opaque_660[0xD1];
+public:
+	bool bClosedLoop;  // +0x731, reflected property
+private:
+	unsigned char Opaque_732[0x1E];  // sizeof(USplineComponent) = 0x750
 };
 
 class UPaperTerrainSplineComponent : public USplineComponent
@@ -69755,6 +70296,8 @@ public:
 	virtual void FNGC_VSlot_0x3A8();
 	virtual void GrabComponent(UPrimitiveComponent* Component, FName InBoneName, FVector GrabLocation, bool bConstrainRotation);  // slot 118 (+0x3B0), UFunction UPhysicsHandleComponent::GrabComponent
 	virtual void ReleaseComponent();  // slot 119 (+0x3B8), UFunction UPhysicsHandleComponent::ReleaseComponent
+	UPrimitiveComponent* GetGrabbedComponent() const;  // native accessor of GrabbedComponent
+	void SetInterpolationSpeed(float NewInterpolationSpeed);  // native accessor of InterpolationSpeed
 	static void StaticRegisterNativesUPhysicsHandleComponent();
 	static void execGetGrabbedComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetTargetLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -69770,8 +70313,14 @@ public:
 	static void execSetTargetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetTargetLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetTargetRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+public:
+	UPrimitiveComponent* GrabbedComponent;  // +0xF0, reflected property
 private:
-	unsigned char Opaque[0xB0];  // sizeof(UPhysicsHandleComponent) = 0x1A0
+	unsigned char Opaque_F8[0x88];
+public:
+	float InterpolationSpeed;  // +0x180, reflected property
+private:
+	unsigned char Opaque_184[0x1C];  // sizeof(UPhysicsHandleComponent) = 0x1A0
 };
 
 class UPhysicsSerializer : public UObject
@@ -69859,6 +70408,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void AddReferencedObjects(UObject* InThis, FReferenceCollector& Collector);
+	void SetCaptureSortPriority(int32 NewCaptureSortPriority);  // native accessor of CaptureSortPriority
 	static void StaticRegisterNativesUSceneCaptureComponent();
 	static void execClearHiddenComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClearShowOnlyComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -69870,7 +70420,11 @@ public:
 	static void execShowOnlyActorComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execShowOnlyComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x90];  // sizeof(USceneCaptureComponent) = 0x320
+	unsigned char Opaque_290[0x54];
+public:
+	int32 CaptureSortPriority;  // +0x2E4, reflected property
+private:
+	unsigned char Opaque_2E8[0x38];  // sizeof(USceneCaptureComponent) = 0x320
 };
 
 class UPlanarReflectionComponent : public USceneCaptureComponent
@@ -70973,11 +71527,16 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UFortSeasonPassLevelInfo* GetLevelInfo() const;  // native accessor of LevelInfo
 	static void StaticRegisterNativesUSeasonPassLevelPanel();
 	static void execGetLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x20];  // sizeof(USeasonPassLevelPanel) = 0x3E0
+	unsigned char Opaque_3C0[0x10];
+public:
+	UFortSeasonPassLevelInfo* LevelInfo;  // +0x3D0, reflected property
+private:
+	unsigned char Opaque_3D8[0x8];  // sizeof(USeasonPassLevelPanel) = 0x3E0
 };
 
 class USeasonPassLevelWidget : public UCommonUserWidget
@@ -70992,11 +71551,14 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	UFortSeasonPassLevelInfo* GetLevelInfo() const;  // native accessor of LevelInfo
 	static void StaticRegisterNativesUSeasonPassLevelWidget();
 	static void execAttemptClaim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x18];  // sizeof(USeasonPassLevelWidget) = 0x228
+	unsigned char Opaque_210[0x10];
+public:
+	UFortSeasonPassLevelInfo* LevelInfo;  // +0x220, reflected property
 };
 
 class USeasonPassPageWidget : public UCommonUserWidget
@@ -72546,6 +73108,8 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	float GetBoundaryMax() const;  // native accessor of SplineBoundaryMax
+	float GetBoundaryMin() const;  // native accessor of SplineBoundaryMin
 	static void StaticRegisterNativesUSplineMeshComponent();
 	static void execGetBoundaryMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetBoundaryMin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -72578,7 +73142,13 @@ public:
 	static void execSetStartTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUpdateMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0xA0];  // sizeof(USplineMeshComponent) = 0x790
+	unsigned char Opaque_6F0[0x74];
+public:
+	float SplineBoundaryMin;  // +0x764, reflected property
+public:
+	float SplineBoundaryMax;  // +0x768, reflected property
+private:
+	unsigned char Opaque_76C[0x24];  // sizeof(USplineMeshComponent) = 0x790
 };
 
 class USpotLightComponent : public UPointLightComponent
@@ -74167,6 +74737,9 @@ public:
 	virtual void SetWidget(UUserWidget* Widget);  // slot 269 (+0x868), UFunction UWidgetComponent::SetWidget
 	virtual void FNGC_VSlot_0x870();
 	virtual void RequestRedraw();  // slot 271 (+0x878), UFunction UWidgetComponent::RequestRedraw
+	UMaterialInstanceDynamic* GetMaterialInstance() const;  // native accessor of MaterialInstance
+	UTextureRenderTarget2D* GetRenderTarget() const;  // native accessor of RenderTarget
+	UUserWidget* GetUserWidgetObject() const;  // native accessor of Widget
 	static void StaticRegisterNativesUWidgetComponent();
 	static void execGetDrawSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -74180,7 +74753,17 @@ public:
 	static void execSetTintColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x120];  // sizeof(UWidgetComponent) = 0x7B0
+	unsigned char Opaque_690[0x68];
+public:
+	UUserWidget* Widget;  // +0x6F8, reflected property
+private:
+	unsigned char Opaque_700[0x58];
+public:
+	UTextureRenderTarget2D* RenderTarget;  // +0x758, reflected property
+public:
+	UMaterialInstanceDynamic* MaterialInstance;  // +0x760, reflected property
+private:
+	unsigned char Opaque_768[0x48];  // sizeof(UWidgetComponent) = 0x7B0
 };
 
 class UWidgetInteractionComponent : public USceneComponent
@@ -74210,6 +74793,10 @@ public:
 	virtual bool PressAndReleaseKey(FKey Key);  // slot 160 (+0x500), UFunction UWidgetInteractionComponent::PressAndReleaseKey
 	virtual bool SendKeyChar(FString Characters, bool bRepeat);  // slot 161 (+0x508), UFunction UWidgetInteractionComponent::SendKeyChar
 	virtual void ScrollWheel(float ScrollDelta);  // slot 162 (+0x510), UFunction UWidgetInteractionComponent::ScrollWheel
+	UWidgetComponent* GetHoveredWidgetComponent() const;  // native accessor of HoveredWidgetComponent
+	bool IsOverFocusableWidget() const;  // native accessor of bIsHoveredWidgetFocusable
+	bool IsOverHitTestVisibleWidget() const;  // native accessor of bIsHoveredWidgetHitTestVisible
+	bool IsOverInteractableWidget() const;  // native accessor of bIsHoveredWidgetInteractable
 	static void StaticRegisterNativesUWidgetInteractionComponent();
 	static void execGet2DHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHoveredWidgetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -74226,7 +74813,19 @@ public:
 	static void execSendKeyChar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSetCustomHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x1F0];  // sizeof(UWidgetInteractionComponent) = 0x480
+	unsigned char Opaque_290[0x158];
+public:
+	UWidgetComponent* HoveredWidgetComponent;  // +0x3E8, reflected property
+private:
+	unsigned char Opaque_3F0[0x88];
+public:
+	bool bIsHoveredWidgetInteractable;  // +0x478, reflected property
+public:
+	bool bIsHoveredWidgetFocusable;  // +0x479, reflected property
+public:
+	bool bIsHoveredWidgetHitTestVisible;  // +0x47A, reflected property
+private:
+	unsigned char Opaque_47B[0x5];  // sizeof(UWidgetInteractionComponent) = 0x480
 };
 
 class UWidgetLayoutLibrary : public UBlueprintFunctionLibrary

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F670 (end 0x0109F69D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSafeZoneRadius); calls the native accessor AFortSafeZoneIndicator::GetSafeZoneRadius | Matching: see analysis/functions-uht-exec.json
+void AFortSafeZoneIndicator::execGetSafeZoneRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetSafeZoneRadius();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortSafeZoneIndicator, 2324706876u)
 // Original dynamic initializer: RVA 0x001113C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortSafeZoneIndicator> AutoInitializeAFortSafeZoneIndicator(TEXT("AFortSafeZoneIndicator"), sizeof(AFortSafeZoneIndicator), 2324706876u);

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0291AE30 (end 0x0291AE5C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLevelInfo); calls the native accessor USeasonPassLevelPanel::GetLevelInfo | Matching: see analysis/functions-uht-exec.json
+void USeasonPassLevelPanel::execGetLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortSeasonPassLevelInfo**)Z_Param__Result=P_THIS->GetLevelInfo();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(USeasonPassLevelPanel, 1478093585u)
 // Original dynamic initializer: RVA 0x00265760 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USeasonPassLevelPanel> AutoInitializeUSeasonPassLevelPanel(TEXT("USeasonPassLevelPanel"), sizeof(USeasonPassLevelPanel), 1478093585u);

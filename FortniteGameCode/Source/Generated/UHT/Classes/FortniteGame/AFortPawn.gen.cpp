@@ -109,6 +109,15 @@ void AFortPawn::execIsActionInputIgnored(UObject* Context, FFrame& Stack, void* 
 	*(bool*)Z_Param__Result=P_THIS->IsActionInputIgnored();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01060EE0 (end 0x01060F0B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsWeaponHolstered); calls the native accessor AFortPawn::IsWeaponHolstered | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execIsWeaponHolstered(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsWeaponHolstered();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01084190 (end 0x010841AF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_IsDBNO) | Matching: see analysis/functions-uht-exec.json
 void AFortPawn::execOnRep_IsDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -217,6 +226,16 @@ void AFortPawn::execServerTeleportNearLocation(UObject* Context, FFrame& Stack, 
 		return;
 	}
 	P_THIS->ServerTeleportNearLocation_Implementation(Z_Param_ActorLocation);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01061B90 (end 0x01061C06)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetControlRecoveryBehavior); calls the native accessor AFortPawn::SetControlRecoveryBehavior | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execSetControlRecoveryBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortControlRecoveryBehavior,Z_Param_NewBehavior);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetControlRecoveryBehavior(EFortControlRecoveryBehavior(Z_Param_NewBehavior));
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010621B0 (end 0x01062234)

@@ -24,6 +24,15 @@ void AFortGameplayEffectDeliveryActor::execDoExplosion(UObject* Context, FFrame&
 	P_THIS->DoExplosion();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9910 (end 0x00FE993C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCollisionComponent); calls the native accessor AFortGameplayEffectDeliveryActor::GetCollisionComponent | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execGetCollisionComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPrimitiveComponent**)Z_Param__Result=P_THIS->GetCollisionComponent();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB030 (end 0x00FEB05F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsBeingKilled) | Matching: see analysis/functions-uht-exec.json
 void AFortGameplayEffectDeliveryActor::execIsBeingKilled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02881210 (end 0x02881290)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBindToModel); calls the native accessor UAthenaCompassBase::BindToModel | Matching: see analysis/functions-uht-exec.json
+void UAthenaCompassBase::execBindToModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAthenaPlayerViewModel,Z_Param_ViewModel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BindToModel(Z_Param_ViewModel);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAthenaCompassBase, 3521414028u)
 // Original dynamic initializer: RVA 0x00239040 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAthenaCompassBase> AutoInitializeUAthenaCompassBase(TEXT("UAthenaCompassBase"), sizeof(UAthenaCompassBase), 3521414028u);

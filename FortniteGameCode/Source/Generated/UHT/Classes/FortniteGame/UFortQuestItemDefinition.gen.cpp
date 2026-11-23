@@ -4,6 +4,60 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01097E50 (end 0x01097E7B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execExpandsStormShield); calls the native accessor UFortQuestItemDefinition::ExpandsStormShield | Matching: see analysis/functions-uht-exec.json
+void UFortQuestItemDefinition::execExpandsStormShield(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ExpandsStormShield();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01098D40 (end 0x01098D6B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRewardType); calls the native accessor UFortQuestItemDefinition::GetRewardType | Matching: see analysis/functions-uht-exec.json
+void UFortQuestItemDefinition::execGetRewardType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(EFortQuestRewardType*)Z_Param__Result=P_THIS->GetRewardType();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01099100 (end 0x0109912D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetWeight); calls the native accessor UFortQuestItemDefinition::GetWeight | Matching: see analysis/functions-uht-exec.json
+void UFortQuestItemDefinition::execGetWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetWeight();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010996B0 (end 0x010996DB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsDeprecated); calls the native accessor UFortQuestItemDefinition::IsDeprecated | Matching: see analysis/functions-uht-exec.json
+void UFortQuestItemDefinition::execIsDeprecated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsDeprecated();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010996E0 (end 0x0109970B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsHidden); calls the native accessor UFortQuestItemDefinition::IsHidden | Matching: see analysis/functions-uht-exec.json
+void UFortQuestItemDefinition::execIsHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsHidden();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01099FE0 (end 0x0109A00B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldAutoLaunch); calls the native accessor UFortQuestItemDefinition::ShouldAutoLaunch | Matching: see analysis/functions-uht-exec.json
+void UFortQuestItemDefinition::execShouldAutoLaunch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldAutoLaunch();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortQuestItemDefinition, 563161599u)
 // Original dynamic initializer: RVA 0x00110740 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortQuestItemDefinition> AutoInitializeUFortQuestItemDefinition(TEXT("UFortQuestItemDefinition"), sizeof(UFortQuestItemDefinition), 563161599u);

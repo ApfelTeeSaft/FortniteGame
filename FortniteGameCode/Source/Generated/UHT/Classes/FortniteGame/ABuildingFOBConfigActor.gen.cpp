@@ -50,6 +50,15 @@ void ABuildingFOBConfigActor::execGetFOBMode(UObject* Context, FFrame& Stack, vo
 	*(EFOBMode*)Z_Param__Result=P_THIS->GetFOBMode();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67CA0 (end 0x00F67CCC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSelectedFOBCoreItemDefinition); calls the native accessor ABuildingFOBConfigActor::GetSelectedFOBCoreItemDefinition | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execGetSelectedFOBCoreItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UFortFOBCoreDecoItemDefinition**)Z_Param__Result=P_THIS->GetSelectedFOBCoreItemDefinition();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67E20 (end 0x00F67E4F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsFinalized) | Matching: see analysis/functions-uht-exec.json
 void ABuildingFOBConfigActor::execIsFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

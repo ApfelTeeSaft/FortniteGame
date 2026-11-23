@@ -13,6 +13,24 @@ void UPaperFlipbookComponent::execGetFlipbook(UObject* Context, FFrame& Stack, v
 	*(UPaperFlipbook**)Z_Param__Result=P_THIS->GetFlipbook();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00669580 (end 0x006695AD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlayRate); calls the native accessor UPaperFlipbookComponent::GetPlayRate | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execGetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetPlayRate();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x006695B0 (end 0x006695DD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlaybackPosition); calls the native accessor UPaperFlipbookComponent::GetPlaybackPosition | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execGetPlaybackPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetPlaybackPosition();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0066A6C0 (end 0x0066A756)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetFlipbook) | Matching: see analysis/functions-uht-exec.json
 void UPaperFlipbookComponent::execSetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -21,6 +39,16 @@ void UPaperFlipbookComponent::execSetFlipbook(UObject* Context, FFrame& Stack, v
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->SetFlipbook(Z_Param_NewFlipbook);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066AB60 (end 0x0066ABDB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPlayRate); calls the native accessor UPaperFlipbookComponent::SetPlayRate | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewRate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPlayRate(Z_Param_NewRate);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UPaperFlipbookComponent, 2273606821u)
