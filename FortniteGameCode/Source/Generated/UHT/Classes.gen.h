@@ -3373,7 +3373,6 @@ namespace EFortGameplayState { enum Type {}; }
 enum class EFortInventoryFilter : uint8 {};
 enum class EFortItemCategoryOrdinal : uint8 {};
 enum class EFortItemCollectorState : uint8 {};
-namespace EFortItemEntryState { enum Type {}; }
 enum class EFortItemType : uint8 {};
 namespace EFortMovementUrgency { enum Type {}; }
 enum class EFortObjectiveStatus : uint8 {};
@@ -11709,8 +11708,8 @@ public:
 	virtual void ServerAddPawnMovementInput_Implementation(AFortPawn* InChar, FVector WorldDirection, float ScaleValue, bool bForce);  // slot 464 (+0xE80), UFunction AFortPlayerController::ServerAddPawnMovementInput
 	virtual bool ServerRemoveInventoryStateValue_Validate(FGuid ItemGuid, EFortItemEntryState::Type StateValueType);  // slot 465 (+0xE88), UFunction AFortPlayerController::ServerRemoveInventoryStateValue
 	virtual void ServerRemoveInventoryStateValue_Implementation(FGuid ItemGuid, EFortItemEntryState::Type StateValueType);  // slot 466 (+0xE90), UFunction AFortPlayerController::ServerRemoveInventoryStateValue
-	virtual void FNGC_VSlot_0xE98();  // slot 467: AFortPlayerController::ServerSetInventoryStateValue_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xEA0();  // slot 468: AFortPlayerController::ServerSetInventoryStateValue_Implementation (signature not recovered)
+	virtual bool ServerSetInventoryStateValue_Validate(FGuid ItemGuid, FFortItemEntryStateValue StateValue);  // slot 467 (+0xE98), UFunction AFortPlayerController::ServerSetInventoryStateValue
+	virtual void ServerSetInventoryStateValue_Implementation(FGuid ItemGuid, FFortItemEntryStateValue StateValue);  // slot 468 (+0xEA0), UFunction AFortPlayerController::ServerSetInventoryStateValue
 	virtual bool ServerModDurability_Validate(FGuid ItemGuid, float DurabilityMod, bool bForceSet);  // slot 469 (+0xEA8), UFunction AFortPlayerController::ServerModDurability
 	virtual void ServerModDurability_Implementation(FGuid ItemGuid, float DurabilityMod, bool bForceSet);  // slot 470 (+0xEB0), UFunction AFortPlayerController::ServerModDurability
 	virtual bool ServerDisassembleInventoryItems_Validate(TArray<FGuid> const& ItemGuids, TArray<int32> const& ItemCounts);  // slot 471 (+0xEB8), UFunction AFortPlayerController::ServerDisassembleInventoryItems
@@ -12611,10 +12610,10 @@ public:
 	virtual void ServerFabricateItem_Implementation(const UFortWorldItemDefinition* ItemDef);  // slot 816 (+0x1980), UFunction AFortPlayerControllerOutpost::ServerFabricateItem
 	virtual bool ServerDisintegrateItem_Validate(FGuid ItemGuid, int32 Count);  // slot 817 (+0x1988), UFunction AFortPlayerControllerOutpost::ServerDisintegrateItem
 	virtual void ServerDisintegrateItem_Implementation(FGuid ItemGuid, int32 Count);  // slot 818 (+0x1990), UFunction AFortPlayerControllerOutpost::ServerDisintegrateItem
-	virtual void FNGC_VSlot_0x1998();  // slot 819: AFortPlayerControllerOutpost::ServerMoveItemFromStorageVault_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x19A0();  // slot 820: AFortPlayerControllerOutpost::ServerMoveItemFromStorageVault_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x19A8();  // slot 821: AFortPlayerControllerOutpost::ServerMoveItemToStorageVault_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x19B0();  // slot 822: AFortPlayerControllerOutpost::ServerMoveItemToStorageVault_Implementation (signature not recovered)
+	virtual bool ServerMoveItemFromStorageVault_Validate(FFortItemEntry const& NewlyCollectedItem);  // slot 819 (+0x1998), UFunction AFortPlayerControllerOutpost::ServerMoveItemFromStorageVault
+	virtual void ServerMoveItemFromStorageVault_Implementation(FFortItemEntry const& NewlyCollectedItem);  // slot 820 (+0x19A0), UFunction AFortPlayerControllerOutpost::ServerMoveItemFromStorageVault
+	virtual bool ServerMoveItemToStorageVault_Validate(FFortItemEntry const& NewlyStoredItem);  // slot 821 (+0x19A8), UFunction AFortPlayerControllerOutpost::ServerMoveItemToStorageVault
+	virtual void ServerMoveItemToStorageVault_Implementation(FFortItemEntry const& NewlyStoredItem);  // slot 822 (+0x19B0), UFunction AFortPlayerControllerOutpost::ServerMoveItemToStorageVault
 	static void StaticRegisterNativesAFortPlayerControllerOutpost();
 	static void execCanUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execCanUpgradeBuildingFromDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);

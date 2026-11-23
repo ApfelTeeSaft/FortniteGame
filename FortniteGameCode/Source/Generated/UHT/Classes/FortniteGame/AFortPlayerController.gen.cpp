@@ -1198,6 +1198,22 @@ void AFortPlayerController::execServerSetHero(UObject* Context, FFrame& Stack, v
 	P_THIS->ServerSetHero_Implementation(Z_Param_NewHeroID);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01073C80 (end 0x01073DB6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetInventoryStateValue) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerSetInventoryStateValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_ItemGuid);
+	P_GET_STRUCT(FFortItemEntryStateValue,Z_Param_StateValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetInventoryStateValue_Validate(Z_Param_ItemGuid,Z_Param_StateValue))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetInventoryStateValue_Validate"));
+		return;
+	}
+	P_THIS->ServerSetInventoryStateValue_Implementation(Z_Param_ItemGuid,Z_Param_StateValue);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01073DC0 (end 0x01073EC1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetMarkText) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerController::execServerSetMarkText(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

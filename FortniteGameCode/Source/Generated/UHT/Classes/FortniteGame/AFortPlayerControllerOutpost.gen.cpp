@@ -127,6 +127,36 @@ void AFortPlayerControllerOutpost::execServerLeaveOutpostAsParty(UObject* Contex
 	P_THIS->ServerLeaveOutpostAsParty_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C430 (end 0x0107C4E5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerMoveItemFromStorageVault) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerMoveItemFromStorageVault(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FFortItemEntry,Z_Param_NewlyCollectedItem);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerMoveItemFromStorageVault_Validate(Z_Param_NewlyCollectedItem))
+	{
+		RPC_ValidateFailed(TEXT("ServerMoveItemFromStorageVault_Validate"));
+		return;
+	}
+	P_THIS->ServerMoveItemFromStorageVault_Implementation(Z_Param_NewlyCollectedItem);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C640 (end 0x0107C6F5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerMoveItemToStorageVault) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerMoveItemToStorageVault(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FFortItemEntry,Z_Param_NewlyStoredItem);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerMoveItemToStorageVault_Validate(Z_Param_NewlyStoredItem))
+	{
+		RPC_ValidateFailed(TEXT("ServerMoveItemToStorageVault_Validate"));
+		return;
+	}
+	P_THIS->ServerMoveItemToStorageVault_Implementation(Z_Param_NewlyStoredItem);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C700 (end 0x0107C74E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerNotifyPendingFabricationCompleted) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerOutpost::execServerNotifyPendingFabricationCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

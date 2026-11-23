@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FFortGiftingInfo();
 	UPackage* Z_Construct_UPackage__Script_FortniteGame();  // RVA 0x01051BE0
-struct alignas(8) FFortGiftingInfo
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FFortGiftingInfo is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BD50 (end 0x0100BDA2, chained .pdata fragments)
 // Original VA: 0x000000014100BD50 | File offset: 0x0100B350
 // Recovery: confirmed (TEXT("FortGiftingInfo") and Z_Construct_UScriptStruct_FFortGiftingInfo) | Matching: see analysis/functions-uht-staticstruct.json

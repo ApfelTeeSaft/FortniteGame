@@ -61,10 +61,12 @@ MODELLED_STRUCTS = {"Vector": (12, 4), "Rotator": (12, 4), "Vector2D": (8, 4), "
                     "GameplayAbilityTargetDataHandle": (32, 8), "GameplayEventData": (168, 8),
                     "PlayerReservation": (64, 8), "PartyReservation": (64, 8),
                     "AthenaQuickChatActiveEntry": (24, 8), "AssetData": (80, 8), "GameplayAttribute": (32, 8),
-                    "GameplayEffectModifiedAttribute": (40, 8), "GameplayEffectSpecForRPC": (120, 8)}
+                    "GameplayEffectModifiedAttribute": (40, 8), "GameplayEffectSpecForRPC": (120, 8),
+                    "FastArraySerializerItem": (12, 4), "FortItemEntryStateValue": (24, 8),
+                    "FortGiftingInfo": (40, 8), "FortItemEntry": (192, 8)}
 # Enums EngineStructsRecovered.h defines, with the reference's enumerator values, for the
 # structs' constructors; enum_declarations does not redeclare them.
-MODELLED_ENUMS = {"EViewTargetBlendFunction", "EGameplayAbilityActivationMode::Type"}
+MODELLED_ENUMS = {"EViewTargetBlendFunction", "EGameplayAbilityActivationMode::Type", "EFortItemEntryState::Type"}
 REGISTER_RETURN = {"bool", "uint8", "int8", "int16", "int32", "int64", "uint16", "uint32", "uint64", "float", "double"}
 
 

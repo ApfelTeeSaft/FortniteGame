@@ -784,3 +784,125 @@ struct FGameplayEffectSpecForRPC
 
 	float AbilityLevel;
 };
+
+// Engine: Engine/NetSerialization.h
+struct FFastArraySerializerItem
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FFastArraySerializerItem()
+		: ReplicationID(INDEX_NONE), ReplicationKey(INDEX_NONE), MostRecentArrayReplicationKey(INDEX_NONE)
+	{
+
+	}
+
+	FFastArraySerializerItem(const FFastArraySerializerItem &InItem)
+		: ReplicationID(INDEX_NONE), ReplicationKey(INDEX_NONE), MostRecentArrayReplicationKey(INDEX_NONE)
+	{
+
+	}
+
+	FFastArraySerializerItem& operator=(const FFastArraySerializerItem& In)
+	{
+		if (&In != this)
+		{
+			ReplicationID = INDEX_NONE;
+			ReplicationKey = INDEX_NONE;
+			MostRecentArrayReplicationKey = INDEX_NONE;
+		}
+		return *this;
+	}
+
+	int32 ReplicationID;
+
+	int32 ReplicationKey;
+
+	int32 MostRecentArrayReplicationKey;
+};
+
+// FortniteGame (no source): the item entry and the structs it holds. Members, types and offsets
+// are the reference's reflected properties (FStructParams), class types from their ClassFunc.
+// Their constructors are out of line in the reference (the thunks call them), and so is
+// FFortItemEntry's destructor. Their code agrees with the offsets:
+// - FFortItemEntry::FFortItemEntry (0x00C3DB80) sets the base's three INDEX_NONE, Count 1,
+//   Durability 1.0f, and the three bools as bytes at 0x60-0x62;
+// - FFortItemEntryStateValue's (0x00C3DC40) zeroes IntValue and NameValue and stores its
+//   argument, which the thunks pass as 0, in StateType.
+// The bools' order is the declaration order of their properties.
+namespace EFortItemEntryState
+{
+	// The reference's enumerators and values (FEnumParams).
+	enum Type
+	{
+		NoneState = 0,
+		NewItemCount = 1,
+		ShouldShowItemToast = 2,
+		DurabilityInitialized = 3,
+		DoNotShowSpawnParticles = 4,
+		FromRecoveredBackpack = 5,
+		FromGift = 6,
+		PendingUpgradeCriteriaProgress = 7,
+		OwnerBuildingHandle = 8,
+		FromDroppedPickup = 9,
+		JustCrafted = 10,
+		CraftAndSlotTarget = 11,
+	};
+}
+
+struct FFortItemEntryStateValue
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FFortItemEntryStateValue(EFortItemEntryState::Type InStateType = EFortItemEntryState::NoneState);
+
+	int32 IntValue;
+	FName NameValue;
+	TEnumAsByte<EFortItemEntryState::Type> StateType;
+};
+
+class UFortHeroType;
+class UFortItemDefinition;
+class AFortInventory;
+class UFortAlterationItemDefinition;
+
+// 24-40 has no reflected property. FFortItemEntry's destructor (0x0098E350) releases it as a
+// non-thread-safe TSharedPtr (the controller at +0x88 of the entry: shared count, DestroyObject,
+// weak count, delete); the pointee's type is not recovered.
+struct FNGCUnrecoveredGiftingData;
+
+struct FFortGiftingInfo
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FString PlayerName;
+	UFortHeroType* HeroType;
+
+private:
+	TSharedPtr<FNGCUnrecoveredGiftingData> Unreflected;
+};
+
+struct FFortItemEntry : public FFastArraySerializerItem
+{
+	static class UScriptStruct* StaticStruct();  // GENERATED_USTRUCT_BODY
+
+	FFortItemEntry();
+	~FFortItemEntry();
+
+	int32 Count;
+	int32 PreviousCount;
+	UFortItemDefinition* ItemDefinition;
+	float Durability;
+	int32 Level;
+	int32 LoadedAmmo;
+	TArray<FString> AlterationDefinitions;
+	FString ItemSource;
+	FGuid ItemGuid;
+	bool inventory_overflow_date;
+	bool bIsReplicatedCopy;
+	bool bIsDirty;
+	FFortGiftingInfo GiftingInfo;
+	TArray<FFortItemEntryStateValue> StateValues;
+	TWeakObjectPtr<AFortInventory> ParentInventory;
+	FGameplayAbilitySpecHandle GameplayAbilitySpecHandle;
+	TArray<UFortAlterationItemDefinition*> AlterationInstances;
+};

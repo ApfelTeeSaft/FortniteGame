@@ -234,6 +234,7 @@ def test_uht_parameters() -> None:
     names.structs[0xA00] = ("SlateBrush", 120, 8)                    # not modelled: 4.20's is 136 bytes
     assert P.parameter(rec("Struct", "Brush", 0x180, 0xA00), names, base) is None
     assert "EViewTargetBlendFunction" in P.MODELLED_ENUMS                # defined by the shims, not redeclared
+    assert "EFortItemEntryState::Type" in P.MODELLED_ENUMS and P.MODELLED_STRUCTS["FortItemEntry"] == (192, 8)
     t = P.parameter(rec("Text", "Label", 0), names, base)
     assert (t["decl"], t["line"]) == ("FText Label", "P_GET_PROPERTY(UTextProperty,Z_Param_Label);"), t
     t = P.parameter(rec("Text", "Label", const | out | ref), names, base)

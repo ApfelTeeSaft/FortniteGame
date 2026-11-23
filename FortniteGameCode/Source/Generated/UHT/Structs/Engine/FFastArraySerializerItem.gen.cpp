@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FFastArraySerializerItem();
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
-struct alignas(4) FFastArraySerializerItem
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FFastArraySerializerItem is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024954D0 (end 0x02495522, chained .pdata fragments)
 // Original VA: 0x00000001424954D0 | File offset: 0x02494AD0
 // Recovery: confirmed (TEXT("FastArraySerializerItem") and Z_Construct_UScriptStruct_FFastArraySerializerItem) | Matching: see analysis/functions-uht-staticstruct.json

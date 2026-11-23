@@ -370,9 +370,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,550, at 1,298 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 879 read parameters |
-| exact | 1,290: 1,080 in the denominator, 210 leaf (no `.pdata`) |
-| relocation-equivalent | 5: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest` and `IAssetRegistry::GetAssetByObjectPath` (below) |
+| UFunction thunks defined | 1,553, at 1,301 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 882 read parameters |
+| exact | 1,292: 1,082 in the denominator, 210 leaf (no `.pdata`) |
+| relocation-equivalent | 6: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest`, `IAssetRegistry::GetAssetByObjectPath` and `AFortPlayerController::ServerSetInventoryStateValue` (below) |
 | `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
@@ -433,6 +433,8 @@ Supported types:
 - `FAthenaQuickChatActiveEntry`, Fortnite-only (below);
 - `FAssetData` (with `FAssetDataTagMapSharedView`), `FGameplayAttribute`,
   `FGameplayEffectModifiedAttribute` and `FGameplayEffectSpecForRPC`;
+- `FFastArraySerializerItem`, and the Fortnite-only `FFortItemEntry`,
+  `FFortItemEntryStateValue` and `FFortGiftingInfo` (below);
 - `FTransform` (`TransformRecovered.h`, below);
 - soft object pointers, `TSoftObjectPtr<C>` (`EngineStructsRecovered.h`): `FSoftObjectPath`,
   `TPersistentObjectPtr`, `FSoftObjectPtr` and `TSoftObjectPtr`, read with
@@ -564,6 +566,24 @@ Limits:
     - `FKey`'s struct registration initializer lost its literal again (`.rdata` ripple).
     - `FAssetData` is used by the `UAssetRegistry` UFunctions, which are interface
       UFunctions (next point).
+- **`FFortItemEntry`** (Fortnite-only) derives from 4.20's `FFastArraySerializerItem`.
+  Its members, types and offsets are its reflected properties; its constructor and destructor
+  are out of line in the reference, and the thunks call them. Their code confirms the layout:
+  - the constructor (`0x00C3DB80`) sets the base's three `INDEX_NONE`, `Count` 1 and
+    `Durability` 1.0f, zeroes the rest, and stores the three bools as bytes at 0x60-0x62
+    (declaration order assumed);
+  - the destructor (`0x0098E350`) frees the arrays and strings at their offsets. It also
+    releases a non-thread-safe `TSharedPtr` in `FFortGiftingInfo`'s 16 unreflected bytes
+    (after `HeroType`); its pointee type is not recovered.
+  - A first version had a `char[16]` there, which gave the thunks a `/GS` cookie the
+    reference does not have.
+  - `FFortItemEntryStateValue`'s constructor (`0x00C3DC40`) zeroes `IntValue` and
+    `NameValue` and stores its argument in `StateType`. The thunk passes 0, so it is modelled
+    with a defaulted `EFortItemEntryState::Type` parameter. The enum is declared with the
+    reference's enumerators.
+  - Both storage-vault RPC thunks are exact (they corroborate each other's constructor and
+    destructor). `ServerSetInventoryStateValue` is relocation-equivalent: only it calls the
+    state value's constructor.
 - **Interfaces.** UHT 4.20 declares an interface's native functions, and their exec thunks,
   in the native `I<Name>` class (`typedef I<Name> ThisClass`), and registers
   `&I<Name>::exec<Fn>`. `UFunction::Invoke` passes the thunk the object's interface address
@@ -643,11 +663,11 @@ Limits:
       `rdx` (`ABuildingSMActor::GetReplacementDestructionReason`,
       `AFortTimeOfDayManager::GetPreviousDayPhase`);
     - `IFortTeamActorInterface::GetTeam` has only the thunk's call to go on.
-- Of the 1,661 virtual-native UFunctions, 1,578 have a supported signature and 1,550 have
+- Of the 1,661 virtual-native UFunctions, 1,581 have a supported signature and 1,553 have
   thunks (folded bodies counted per UFunction). For the other 28, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FSlateBrush` (6) and `FFortItemEntry` (4);
+  - `FSlateBrush` (6);
   - `FPointerEvent`, `FFortConversationSentence` and `TArray` of enums (3 each);
   - `FPointerEvent` and `FGeometry` (9 and 7, mostly alongside other such types).
 
