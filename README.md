@@ -20,6 +20,8 @@ limitations are in [docs/REVERSE_ENGINEERING.md](docs/REVERSE_ENGINEERING.md).
 This repository contains no original game files, executables, assets, keys or Unreal
 Engine source. You need your own copies to build or verify anything.
 
-Donate BTC: `bc1q3f3lmp4t50q4lwmty4rcql6x79gff79qh0xyc2`
+Contribute and Donate
+
+If you want to contribute to this project, the easiest way would be to donate Money that I can turn into AI Tokens for Claude to work 24/7, without it, the AI will stop due to usage running out and the result will be delayed!
 
 All Donations will end up being converted into Tokens to aid this project!
