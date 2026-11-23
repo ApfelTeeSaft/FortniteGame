@@ -1455,26 +1455,46 @@ The address comes from the code layout, as data does from the data layout. Two l
 compared:
 - In general the two compilers emit a unit's functions in different orders. Only 8,004 of
   22,970 consecutive exact pairs have the reference spacing.
-- Template instances are emitted in first use, that is class, order in both builds.
-  Consecutive instances have the reference spacing in 2,253 of 2,799 pairs.
+- Template instances are emitted in first use order in both builds, which is the order of the
+  object's `GetPrivateStaticClass` sections (all 224 units). Consecutive instances have the
+  reference spacing in 2,253 of 2,799 pairs.
 
-`compare.py` therefore predicts an instance from the nearest instance observed on each side,
-over the object's `.text$mn` layout. Both sides must exist and agree. A side declines when its
-neighbour is folded, that is, another instance is observed at the same address:
-- ICF folds identical constructors' instances into one copy, so a folded neighbour's slot may
-  be empty in the reference.
-- Without this rule, 4 of 1,899 predictions were wrong. Twice the sides agreed on a slot that
-  belonged to a folded instance, and once a vanished slot on one side cancelled an extra
-  function on the other. The byte comparison reported each as `partial`.
-- An offline simulation over all classes gave 1,833 correct predictions and none wrong with
-  the rule.
+`compare.py` predicts an instance from its unit's run: one member per
+`GetPrivateStaticClass`, in section order. Every member's address comes from other entries'
+observations (each class's own body observes its instance):
+- A member's slot is its compiled size. An instance declared only (an inlined constructor) is
+  still a member; its slot is the extent of the reference function at its observed address.
+  These were most of the gaps between compiled instances: one `.pdata` function of 41 or 47
+  bytes.
+- A member is folded when another instance is observed at its address (ICF folds identical
+  constructors' instances into one copy). Its slot here is occupied only if that address is
+  exactly where the walk has arrived.
+- Each side walks from its nearest unfolded member to the instance. With both sides, the
+  predictions must agree. With one side only (a run end, or the other side blocked), the
+  reference at the prediction must hold this instance's compiled body outside its relocation,
+  and no other symbol may be observed there.
 
-This made 1,776 `GetPrivateStaticClass` bodies exact, and 15 more `StaticClass` thunks that
-jump to them, with no regressions. Of the 1,507 bodies left:
-- 1,364 wait only on `InternalConstructor<C>`: the run declines (a gap, a folded neighbour,
-  or an end of the run), or the constructor is inlined;
-- the rest also wait on `PrivateStaticClass`, `AddReferencedObjects` or a
-  `StaticRegisterNatives` with natives.
+The first version used only adjacent compiled instances, needed both sides and declined at a
+folded neighbour.
+- Without the folded-neighbour rule, 4 of 1,899 predictions were wrong. Twice the sides
+  agreed on a slot that belonged to a folded instance, and once a vanished slot on one side
+  cancelled an extra function on the other. The byte comparison reported each as `partial`.
+- Ordering the run by unity class order instead was wrong 20 times. That order differs from
+  the object's in 114 units.
+
+An offline simulation over all classes gave 2,735 correct predictions and none wrong with the
+rules above:
+- 2,289 two-sided;
+- 294 one-sided;
+- 152 for declared-only instances.
+The first version gave 1,833.
+
+This made 2,621 `GetPrivateStaticClass` bodies exact, and 33 more `StaticClass` thunks that
+jump to them, with no regressions. Of the 662 bodies left:
+- 519 wait only on `InternalConstructor<C>`: the walk is blocked (an unobserved or unsized
+  member, sides that disagree), or one side's shape or free-slot check fails;
+- 63 wait only on `PrivateStaticClass`, 23 on `AddReferencedObjects`, and the rest on
+  several fields or a `StaticRegisterNatives` with natives.
 
 ## Naming confidence
 

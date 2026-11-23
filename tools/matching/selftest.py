@@ -590,29 +590,45 @@ def test_folded_and_code_run() -> None:
     r.folded_obs = {fb: {0x5000: {1}, 0x6000: {2}}}
     assert r._observed_folded(fb, 3)[0] == {0x5000, 0x6000}       # conflicting: resolve() declines
 
-    # Instances A, B, C at layout offsets 0, 48, 80 (a 5-byte function between A and B).
+    # A unit's GetPrivateStaticClass sections give the run order A, B, C, D. A, B and D have
+    # compiled 20-byte instances (32-byte slots); C's instance is declared only.
     ic = lambda c: f"??$InternalConstructor@V{c}@@@@YAXAEBVFObjectInitializer@@@Z"
-    body = bytes(20)
-    secs = [NS(index=1, name=".text$mn", chars=CODE, data=body, relocs=[]),
-            NS(index=2, name=".text$mn", chars=CODE, data=bytes(5), relocs=[]),
-            NS(index=3, name=".text$mn", chars=CODE, data=body, relocs=[]),
-            NS(index=4, name=".text$mn", chars=CODE, data=body, relocs=[])]
-    o = obj_of(secs, [ic("A"), "?StaticClass@X@@SAPEAVUClass@@XZ", ic("B"), ic("C")])
-    r.observations = {ic("A"): {0x1000: {1}}, ic("C"): {0x1050: {2}}}
-    r.by_addr = {0x1000: {ic("A"): {1}}, 0x1050: {ic("C"): {2}}}
-    got = r._internal_constructor_run(o, "u", ic("B"), 9)
-    assert got and got[0][0] == 0x1030, got
-    r.by_addr[0x1050][ic("D")] = {4}                               # C is folded with D: declines
-    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None
-    r.by_addr[0x1050] = {ic("C"): {2}, ic("B"): {9}}                # only the entry under test: kept
-    assert r._internal_constructor_run(o, "u", ic("B"), 9)[0][0] == 0x1030
-    r.observations[ic("C")] = {0x1060: {2}}                        # the sides disagree: a gap
-    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None
-    r.observations = {ic("A"): {0x1000: {1}}}                      # one side only
-    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None
-    r.observations = {ic("A"): {0x1000: {1}}, ic("C"): {0x1050: {9}}}
-    assert r._internal_constructor_run(o, "u", ic("B"), 9) is None  # C seen only by the entry under test
-    assert r._internal_constructor_run(o, "u", "?StaticClass@X@@SAPEAVUClass@@XZ", 9) is None
+    gp = lambda c: f"?GetPrivateStaticClass@{c}@@CAPEAVUClass@@XZ"
+    body = bytes.fromhex("488b014885c0740b488bd1488bc8e900000000c3")
+    secs, names = [], []
+    for k, c in enumerate("ABCD"):
+        secs.append(NS(index=k + 1, name=".text$mn", chars=CODE, data=bytes(8), relocs=[NS(offset=1, symbol=ic(c))]))
+        names.append(gp(c))
+    for k, c in enumerate("ABD"):
+        secs.append(NS(index=k + 5, name=".text$mn", chars=CODE, data=body, relocs=[NS(offset=15, symbol="?ctor")]))
+        names.append(ic(c))
+    o = obj_of(secs, names)
+    r._rf_end, r.img = {0x1040: 0x1069}, None      # C's inlined form: 41 bytes, a 48-byte slot
+
+    def run(sym, obs, extra=None):
+        r.observations = {ic(c): {a: {n}} for n, (c, a) in enumerate(obs.items(), 1)}
+        r.by_addr = {}
+        for c, a in obs.items():
+            r.by_addr.setdefault(a, {})[ic(c)] = {list(obs).index(c) + 1}
+        for a, k in (extra or {}).items():
+            r.by_addr.setdefault(a, {}).update(k)
+        got = r._internal_constructor_run(o, "u", ic(sym), 9)
+        return got[0][0] if got else None
+    assert run("B", {"A": 0x1000, "C": 0x1040, "D": 0x1070}) == 0x1020        # both sides agree
+    assert run("B", {"A": 0x1000, "C": 0x1050, "D": 0x1080}) is None          # a gap: they disagree
+    assert run("D", {"A": 0x1000, "B": 0x1020, "C": 0x1040}) is None          # one side, no image
+    assert run("C", {"A": 0x1000, "B": 0x1020, "D": 0x1070}) == 0x1040        # declared only: its extent
+    # B folded with E elsewhere: B's slot is empty, so C follows A directly.
+    assert run("C", {"A": 0x1000, "B": 0x9000, "D": 0x1050}, {0x9000: {ic("E"): {7}}}) is None
+    r._rf_end = {0x1020: 0x1049}
+    assert run("C", {"A": 0x1000, "B": 0x9000, "D": 0x1050}, {0x9000: {ic("E"): {7}}}) == 0x1020
+    # One side only: the reference must hold B's body at the prediction, with nothing else seen there.
+    r.dimg = NS(read=lambda a, n: (body if a == 0x1020 else bytes(n))[:n])
+    assert run("B", {"A": 0x1000}) == 0x1020
+    assert run("B", {"A": 0x1000}, {0x1020: {"?Other": {5}}}) is None
+    r.dimg = NS(read=lambda a, n: bytes(n))
+    assert run("B", {"A": 0x1000}) is None
+    assert r._internal_constructor_run(o, "u", gp("A"), 9) is None
     print("folded bodies and code runs: ok")
 
 

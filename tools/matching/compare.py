@@ -316,13 +316,20 @@ class Resolver:
 
     def _internal_constructor_run(self, obj: CoffObject, objpath: str, symbol: str,
                                   exclude: int | None) -> list[tuple[int, str]] | None:
-        """InternalConstructor<C> from the instances next to it. A unit's instances are emitted in
-        first use, that is class, order in both builds, each in its own 16-byte-aligned COMDAT.
-        The nearest instance observed on each side (by other entries) predicts the address from
-        the object's .text$mn layout; both sides must exist and agree. A gap in the reference
-        (an inline constructor between them) then vetoes. So does a folded neighbour: when the
-        nearest observed instance shares its address with another instance (ICF folds
-        identical constructors' instances), its slot here may be empty, and that side declines."""
+        """InternalConstructor<C> from the instances next to it in its unit's run (leave-one-out).
+
+        Both compilers emit a unit's instances in first use order, that is, in the order of the
+        object's GetPrivateStaticClass sections, each 16-byte aligned. Every run member's
+        address comes from other entries' observations. A member's slot is its compiled size,
+        or for an instance declared only here (an inlined constructor) the extent of the
+        reference function at its observed address. A member is folded when another instance
+        is observed at its address (ICF merges identical constructors' instances); its slot
+        here is occupied only if that address is exactly where the walk has arrived.
+
+        Each side walks from its nearest unfolded member to the symbol. With both sides, they
+        must agree. With one side only (a run end, or the other side blocked), the reference at
+        the prediction must hold this instance's compiled body outside its relocation, and no
+        other symbol may be observed there."""
         if not symbol.startswith("??$InternalConstructor@"):
             return None
         groups = getattr(self, "_code_groups", None)
@@ -333,42 +340,92 @@ class Resolver:
             first = {}
             for sym, sec in obj.functions():
                 first.setdefault(sec.index, sym.name)
-            items, cur = [], 0
+            items, bodies = [], {}
             for sec in obj.sections:
-                if not sec.chars & 0x20 or sec.name != ".text$mn" or sec.index not in first:
+                if not sec.chars & 0x20 or sec.index not in first:
                     continue
-                bits = (sec.chars >> 20) & 0xF
-                align = 1 << (bits - 1) if bits else 16
-                cur = (cur + align - 1) & ~(align - 1)
-                if first[sec.index].startswith("??$InternalConstructor@"):
-                    items.append((cur, first[sec.index]))
-                cur += len(sec.data)
-            g = groups[objpath] = (items, {name: k for k, (_, name) in enumerate(items)})
-        items, index = g
+                name = first[sec.index]
+                if name.startswith("?GetPrivateStaticClass@"):
+                    ic = next((r.symbol for r in sec.relocs if r.symbol.startswith("??$InternalConstructor@")), None)
+                    if ic is not None and ic not in items:
+                        items.append(ic)
+                elif name.startswith("??$InternalConstructor@"):
+                    bodies[name] = (bytes(sec.data), [r.offset for r in sec.relocs])
+            g = groups[objpath] = (items, {n: k for k, n in enumerate(items)}, bodies)
+        items, index, bodies = g
         i = index.get(symbol)
         if i is None:
             return None
-        mine = items[i][0]
-        preds = []
-        for step in (-1, 1):
-            j = i + step
-            while 0 <= j < len(items):
-                off, name = items[j]
-                vals, who = self._observed(name, exclude)
-                if len(vals) > 1:
+        if getattr(self, "_rf_end", None) is None:
+            img = getattr(self, "img", None)
+            self._rf_end = {r.begin: r.end for r in img.runtime_functions()} if img is not None else {}
+
+        def addr(f):
+            vals, _ = self._observed(f, exclude)
+            return next(iter(vals)) if len(vals) == 1 else None
+
+        def folded(f, a):
+            return any(k != f and isinstance(k, str) and k.startswith("??$InternalConstructor@") and ents - {exclude}
+                       for k, ents in self.by_addr.get(a, {}).items())
+
+        def slot(f, a):
+            if f in bodies:
+                return (len(bodies[f][0]) + 15) & ~15
+            if a is not None and a in self._rf_end:
+                return ((self._rf_end[a] + 15) & ~15) - a
+            return None
+
+        preds = {}
+        j = i - 1
+        while j >= 0 and addr(items[j]) is not None and folded(items[j], addr(items[j])):
+            j -= 1
+        if j >= 0 and addr(items[j]) is not None:
+            a = addr(items[j])
+            s = slot(items[j], a)
+            cur = a + s if s else None
+            for k in range(j + 1, i):
+                af = addr(items[k])
+                if cur is None or af is None:
+                    cur = None
                     break
-                if len(vals) == 1:
-                    addr = next(iter(vals))
-                    folded = any(k != name and isinstance(k, str) and k.startswith("??$InternalConstructor@")
-                                 and ents - {exclude} for k, ents in self.by_addr.get(addr, {}).items())
-                    if not folded:
-                        preds.append((addr + mine - off, f"{name} (seen in {who})"))
+                if af == cur:
+                    s = slot(items[k], af)
+                    cur = cur + s if s else None
+            if cur is not None:
+                preds["left"] = (cur, items[j])
+        j = i + 1
+        while j < len(items) and addr(items[j]) is not None and folded(items[j], addr(items[j])):
+            j += 1
+        if j < len(items) and addr(items[j]) is not None:
+            cur = addr(items[j])
+            for k in range(j - 1, i, -1):
+                af = addr(items[k])
+                s = slot(items[k], af) if af is not None else None
+                if s is None:
+                    cur = None
                     break
-                j += step
-        if len(preds) == 2 and preds[0][0] == preds[1][0]:
-            return [(preds[0][0], "code layout (InternalConstructor instances in class order) between "
-                     + preds[0][1] + " and " + preds[1][1])]
-        return None
+                if af + s == cur:
+                    cur = af
+            mine = slot(symbol, preds["left"][0] if "left" in preds else None)
+            if cur is not None and mine:
+                preds["right"] = (cur - mine, items[j])
+        if "left" in preds and "right" in preds:
+            if preds["left"][0] != preds["right"][0]:
+                return None
+            return [(preds["left"][0], f"code layout (InternalConstructor run in GetPrivateStaticClass order) "
+                                       f"between {preds['left'][1]} and {preds['right'][1]}")]
+        if len(preds) != 1 or symbol not in bodies or getattr(self, "dimg", None) is None:
+            return None
+        side, (p, anchor) = next(iter(preds.items()))
+        body, rels = bodies[symbol]
+        ref = self.dimg.read(p, len(body))
+        masked = {o + d for o in rels for d in range(4)}
+        if any(body[k] != ref[k] for k in range(len(body)) if k not in masked):
+            return None
+        if any(ents - {exclude} for k, ents in self.by_addr.get(p, {}).items() if k != symbol):
+            return None
+        return [(p, f"code layout (InternalConstructor run, {side} side only, from {anchor}); "
+                    "the reference holds this instance's body there")]
 
     def _referenced_by_code(self, addr: int, exclude: int | None = None) -> bool:
         """Whether exactly one `lea reg, [rip+disp]` in the reference's .text, outside the entry
