@@ -22,10 +22,7 @@ void UFortDailyRewards::StaticRegisterNativesUFortDailyRewards()
 struct Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04563D70; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "ClaimResultReceived", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x10, Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C030 (end 0x0289C05F)
 // Original VA: 0x000000014289C030 | File offset: 0x0289B630
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,17 +31,13 @@ UFunction* Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived_Statics::FuncParams);
+		// FuncParams: original RVA 0x04563D70; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "ClaimResultReceived", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x10, Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortDailyRewards_FinishedClaiming_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04563DB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDailyRewards_FinishedClaiming_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "FinishedClaiming", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C060 (end 0x0289C08F)
 // Original VA: 0x000000014289C060 | File offset: 0x0289B660
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +46,13 @@ UFunction* Z_Construct_UFunction_UFortDailyRewards_FinishedClaiming()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDailyRewards_FinishedClaiming_Statics::FuncParams);
+		// FuncParams: original RVA 0x04563DB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "FinishedClaiming", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortDailyRewards_SetupDailyRewards_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04563DF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDailyRewards_SetupDailyRewards_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "SetupDailyRewards", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C090 (end 0x0289C0BF)
 // Original VA: 0x000000014289C090 | File offset: 0x0289B690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,7 +61,9 @@ UFunction* Z_Construct_UFunction_UFortDailyRewards_SetupDailyRewards()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDailyRewards_SetupDailyRewards_Statics::FuncParams);
+		// FuncParams: original RVA 0x04563DF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "SetupDailyRewards", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -80,10 +71,7 @@ UFunction* Z_Construct_UFunction_UFortDailyRewards_SetupDailyRewards()
 struct Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04563F30; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "TryGetDailyRewardsData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04440401, 0x28, Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C0C0 (end 0x0289C0EF)
 // Original VA: 0x000000014289C0C0 | File offset: 0x0289B6C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -92,7 +80,9 @@ UFunction* Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData_Statics::FuncParams);
+		// FuncParams: original RVA 0x04563F30; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDailyRewards, "TryGetDailyRewardsData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04440401, 0x28, Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

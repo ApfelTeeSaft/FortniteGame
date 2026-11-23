@@ -31,25 +31,12 @@ class UScriptStruct* FFortNamedCounterStat::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6EE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortNamedCounterStat_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortNamedCounterStat>();
 	}
-	// ReturnStructParams: original RVA 0x042EE0D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortNamedCounterStat_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortNamedCounterStat",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortNamedCounterStat),
-		alignof(FFortNamedCounterStat),
-		Z_Construct_UScriptStruct_FFortNamedCounterStat_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066230 (end 0x0106625F)
 	// Original VA: 0x0000000141066230 | File offset: 0x01065830
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortNamedCounterStat::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortNamedCounterStat_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EE0D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortNamedCounterStat_Statics::NewStructOps,
+				"FortNamedCounterStat",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortNamedCounterStat),
+				alignof(FFortNamedCounterStat),
+				Z_Construct_UScriptStruct_FFortNamedCounterStat_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

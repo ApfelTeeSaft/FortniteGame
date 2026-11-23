@@ -19,12 +19,6 @@ void AFortLobbyBeaconState::StaticRegisterNativesAFortLobbyBeaconState()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorClassPath_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042B2C40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorClassPath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLobbyBeaconState, "OnRep_MissionGeneratorClassPath", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101F2F0 (end 0x0101F31F)
 // Original VA: 0x000000014101F2F0 | File offset: 0x0101E8F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +27,13 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorCla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorClassPath_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B2C40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLobbyBeaconState, "OnRep_MissionGeneratorClassPath", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorDetailsRequirement_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042B2C80; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorDetailsRequirement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLobbyBeaconState, "OnRep_MissionGeneratorDetailsRequirement", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101F320 (end 0x0101F34F)
 // Original VA: 0x000000014101F320 | File offset: 0x0101E920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +42,9 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorDet
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLobbyBeaconState_OnRep_MissionGeneratorDetailsRequirement_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B2C80; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLobbyBeaconState, "OnRep_MissionGeneratorDetailsRequirement", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

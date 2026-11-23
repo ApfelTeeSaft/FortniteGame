@@ -31,25 +31,12 @@ class UScriptStruct* FStrategicBuildingUpgradePathInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0A00 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FStrategicBuildingUpgradePathInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FStrategicBuildingUpgradePathInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04366750
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStrategicBuildingUpgradePathInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"StrategicBuildingUpgradePathInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FStrategicBuildingUpgradePathInfo),
-		alignof(FStrategicBuildingUpgradePathInfo),
-		Z_Construct_UScriptStruct_FStrategicBuildingUpgradePathInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2770 (end 0x010F279F)
 	// Original VA: 0x00000001410F2770 | File offset: 0x010F1D70
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FStrategicBuildingUpgradePathInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FStrategicBuildingUpgradePathInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04366750
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FStrategicBuildingUpgradePathInfo_Statics::NewStructOps,
+				"StrategicBuildingUpgradePathInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FStrategicBuildingUpgradePathInfo),
+				alignof(FStrategicBuildingUpgradePathInfo),
+				Z_Construct_UScriptStruct_FStrategicBuildingUpgradePathInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

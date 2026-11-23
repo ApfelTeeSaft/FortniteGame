@@ -62,7 +62,7 @@ LEAF_LIMIT = 64
 
 
 def funcparams(syms: dict, cls: str, ufunction: str) -> int | None:
-    rec = syms.get(f"?FuncParams@Z_Construct_UFunction_{cls}_{ufunction}_Statics@@2UFFunctionParams@UE4CodeGen_Private@@B")
+    rec = syms.get(f"?FuncParams@?4??Z_Construct_UFunction_{cls}_{ufunction}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B")
     return int(rec[0], 16) if rec else None
 
 

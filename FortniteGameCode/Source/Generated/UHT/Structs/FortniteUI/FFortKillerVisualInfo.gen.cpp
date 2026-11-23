@@ -31,25 +31,12 @@ class UScriptStruct* FFortKillerVisualInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortKillerVisualInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortKillerVisualInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04581BA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortKillerVisualInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortKillerVisualInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortKillerVisualInfo),
-		alignof(FFortKillerVisualInfo),
-		Z_Construct_UScriptStruct_FFortKillerVisualInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD660 (end 0x028BD68F)
 	// Original VA: 0x00000001428BD660 | File offset: 0x028BCC60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortKillerVisualInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortKillerVisualInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04581BA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortKillerVisualInfo_Statics::NewStructOps,
+				"FortKillerVisualInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortKillerVisualInfo),
+				alignof(FFortKillerVisualInfo),
+				Z_Construct_UScriptStruct_FFortKillerVisualInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

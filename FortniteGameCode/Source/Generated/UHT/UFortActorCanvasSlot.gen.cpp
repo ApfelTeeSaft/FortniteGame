@@ -23,10 +23,7 @@ void UFortActorCanvasSlot::StaticRegisterNativesUFortActorCanvasSlot()
 struct Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04553880; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActorCanvasSlot, "SetCanAutoRemove", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888B10 (end 0x02888B3F)
 // Original VA: 0x0000000142888B10 | File offset: 0x02888110
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove_Statics::FuncParams);
+		// FuncParams: original RVA 0x04553880; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActorCanvasSlot, "SetCanAutoRemove", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove()
 struct Z_Construct_UFunction_UFortActorCanvasSlot_SetHorizontalAlignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04553900; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActorCanvasSlot_SetHorizontalAlignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActorCanvasSlot, "SetHorizontalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortActorCanvasSlot_SetHorizontalAlignment_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888B40 (end 0x02888B6F)
 // Original VA: 0x0000000142888B40 | File offset: 0x02888140
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortActorCanvasSlot_SetHorizontalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActorCanvasSlot_SetHorizontalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04553900; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActorCanvasSlot, "SetHorizontalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortActorCanvasSlot_SetHorizontalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortActorCanvasSlot_SetHorizontalAlignment()
 struct Z_Construct_UFunction_UFortActorCanvasSlot_SetVerticalAlignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04553980; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActorCanvasSlot_SetVerticalAlignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActorCanvasSlot, "SetVerticalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortActorCanvasSlot_SetVerticalAlignment_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888B70 (end 0x02888B9F)
 // Original VA: 0x0000000142888B70 | File offset: 0x02888170
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortActorCanvasSlot_SetVerticalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActorCanvasSlot_SetVerticalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04553980; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActorCanvasSlot, "SetVerticalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortActorCanvasSlot_SetVerticalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

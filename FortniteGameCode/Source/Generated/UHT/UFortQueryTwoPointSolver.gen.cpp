@@ -26,10 +26,7 @@ void UFortQueryTwoPointSolver::StaticRegisterNativesUFortQueryTwoPointSolver()
 struct Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04318DC0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "AddNamedFloatParamA", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01096870 (end 0x0109689F)
 // Original VA: 0x0000000141096870 | File offset: 0x01095E70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA_Statics::FuncParams);
+		// FuncParams: original RVA 0x04318DC0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "AddNamedFloatParamA", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA()
 struct Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04318E70; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "AddNamedFloatParamB", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010968A0 (end 0x010968CF)
 // Original VA: 0x00000001410968A0 | File offset: 0x01095EA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB_Statics::FuncParams);
+		// FuncParams: original RVA 0x04318E70; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "AddNamedFloatParamB", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB()
 struct Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04318EF0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "GetRandomRotationOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffset_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010968D0 (end 0x010968FF)
 // Original VA: 0x00000001410968D0 | File offset: 0x01095ED0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffse
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffset_Statics::FuncParams);
+		// FuncParams: original RVA 0x04318EF0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "GetRandomRotationOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffset_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffse
 struct Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04318FB0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "OnCustomRotationMode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20800, 0x18, Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01096900 (end 0x0109692F)
 // Original VA: 0x0000000141096900 | File offset: 0x01095F00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +92,9 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode_Statics::FuncParams);
+		// FuncParams: original RVA 0x04318FB0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "OnCustomRotationMode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20800, 0x18, Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +102,7 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode()
 struct Z_Construct_UFunction_UFortQueryTwoPointSolver_SetCustomRotationA_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04319030; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQueryTwoPointSolver_SetCustomRotationA_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "SetCustomRotationA", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0xC, Z_Construct_UFunction_UFortQueryTwoPointSolver_SetCustomRotationA_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01096930 (end 0x0109695F)
 // Original VA: 0x0000000141096930 | File offset: 0x01095F30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,17 +111,13 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_SetCustomRotationA()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQueryTwoPointSolver_SetCustomRotationA_Statics::FuncParams);
+		// FuncParams: original RVA 0x04319030; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "SetCustomRotationA", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0xC, Z_Construct_UFunction_UFortQueryTwoPointSolver_SetCustomRotationA_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortQueryTwoPointSolver_SkipToNextPointA_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04319070; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQueryTwoPointSolver_SkipToNextPointA_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "SkipToNextPointA", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01096960 (end 0x0109698F)
 // Original VA: 0x0000000141096960 | File offset: 0x01095F60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -137,7 +126,9 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_SkipToNextPointA()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQueryTwoPointSolver_SkipToNextPointA_Statics::FuncParams);
+		// FuncParams: original RVA 0x04319070; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "SkipToNextPointA", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -145,10 +136,7 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_SkipToNextPointA()
 struct Z_Construct_UFunction_UFortQueryTwoPointSolver_Start_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043190F0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQueryTwoPointSolver_Start_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "Start", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortQueryTwoPointSolver_Start_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01096990 (end 0x010969BF)
 // Original VA: 0x0000000141096990 | File offset: 0x01095F90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -157,7 +145,9 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_Start()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQueryTwoPointSolver_Start_Statics::FuncParams);
+		// FuncParams: original RVA 0x043190F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQueryTwoPointSolver, "Start", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortQueryTwoPointSolver_Start_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

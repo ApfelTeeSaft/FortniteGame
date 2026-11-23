@@ -31,25 +31,12 @@ class UScriptStruct* FNavAgentSelector::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248ED10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FNavAgentSelector_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNavAgentSelector>();
 	}
-	// ReturnStructParams: original RVA 0x044CC780
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNavAgentSelector_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"NavAgentSelector",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FNavAgentSelector),
-		alignof(FNavAgentSelector),
-		Z_Construct_UScriptStruct_FNavAgentSelector_Statics::PropPointers, 16,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02490510 (end 0x0249053F)
 	// Original VA: 0x0000000142490510 | File offset: 0x0248FB10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FNavAgentSelector::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FNavAgentSelector_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044CC780
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FNavAgentSelector_Statics::NewStructOps,
+				"NavAgentSelector",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FNavAgentSelector),
+				alignof(FNavAgentSelector),
+				Z_Construct_UScriptStruct_FNavAgentSelector_Statics::PropPointers, 16,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

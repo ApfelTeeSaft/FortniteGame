@@ -31,25 +31,12 @@ class UScriptStruct* FVehicleGearData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FCB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVehicleGearData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVehicleGearData>();
 	}
-	// ReturnStructParams: original RVA 0x041BA700
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVehicleGearData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
-		nullptr,
-		&NewStructOps,
-		"VehicleGearData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FVehicleGearData),
-		alignof(FVehicleGearData),
-		Z_Construct_UScriptStruct_FVehicleGearData_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067C640 (end 0x0067C66F)
 	// Original VA: 0x000000014067C640 | File offset: 0x0067BC40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FVehicleGearData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVehicleGearData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BA700
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
+				nullptr,
+				&Z_Construct_UScriptStruct_FVehicleGearData_Statics::NewStructOps,
+				"VehicleGearData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FVehicleGearData),
+				alignof(FVehicleGearData),
+				Z_Construct_UScriptStruct_FVehicleGearData_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

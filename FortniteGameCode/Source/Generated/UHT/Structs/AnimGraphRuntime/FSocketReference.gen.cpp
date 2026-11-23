@@ -31,25 +31,12 @@ class UScriptStruct* FSocketReference::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0B910 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSocketReference_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSocketReference>();
 	}
-	// ReturnStructParams: original RVA 0x043AF9E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSocketReference_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		nullptr,
-		&NewStructOps,
-		"SocketReference",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSocketReference),
-		alignof(FSocketReference),
-		Z_Construct_UScriptStruct_FSocketReference_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F610 (end 0x01B0F63F)
 	// Original VA: 0x0000000141B0F610 | File offset: 0x01B0EC10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSocketReference::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSocketReference_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AF9E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSocketReference_Statics::NewStructOps,
+				"SocketReference",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSocketReference),
+				alignof(FSocketReference),
+				Z_Construct_UScriptStruct_FSocketReference_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

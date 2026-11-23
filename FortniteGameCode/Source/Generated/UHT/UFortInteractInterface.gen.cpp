@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0334A770, FClassParams RVA 0x0334A790.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortInteractInterface();  // RVA 0x01006CE0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01006360 (end 0x01006382)
 // Original VA: 0x0000000141006360 | File offset: 0x01005960
@@ -20,7 +20,7 @@ void UFortInteractInterface::StaticRegisterNativesUFortInteractInterface()
 
 struct Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0429E3B0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007980 (end 0x010079AF)
 // Original VA: 0x0000000141007980 | File offset: 0x01006F80
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429E3B0; StructureSize 0x2C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInteractInterface, "ServerOnAttemptInteract", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420400, 0x2C, Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

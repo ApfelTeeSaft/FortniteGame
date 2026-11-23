@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneSequenceID::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC2600 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneSequenceID_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneSequenceID>();
 	}
-	// ReturnStructParams: original RVA 0x043A5480
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneSequenceID_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneSequenceID",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneSequenceID),
-		alignof(FMovieSceneSequenceID),
-		Z_Construct_UScriptStruct_FMovieSceneSequenceID_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC6290 (end 0x01AC62BF)
 	// Original VA: 0x0000000141AC6290 | File offset: 0x01AC5890
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneSequenceID::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneSequenceID_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A5480
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneSequenceID_Statics::NewStructOps,
+				"MovieSceneSequenceID",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneSequenceID),
+				alignof(FMovieSceneSequenceID),
+				Z_Construct_UScriptStruct_FMovieSceneSequenceID_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

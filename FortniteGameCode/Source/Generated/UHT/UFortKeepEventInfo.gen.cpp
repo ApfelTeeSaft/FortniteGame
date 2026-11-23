@@ -22,10 +22,7 @@ void UFortKeepEventInfo::StaticRegisterNativesUFortKeepEventInfo()
 struct Z_Construct_UFunction_UFortKeepEventInfo_GetWave_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042A4C70; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeepEventInfo_GetWave_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeepEventInfo, "GetWave", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x48, Z_Construct_UFunction_UFortKeepEventInfo_GetWave_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100CA80 (end 0x0100CAAF)
 // Original VA: 0x000000014100CA80 | File offset: 0x0100C080
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortKeepEventInfo_GetWave()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeepEventInfo_GetWave_Statics::FuncParams);
+		// FuncParams: original RVA 0x042A4C70; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeepEventInfo, "GetWave", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x48, Z_Construct_UFunction_UFortKeepEventInfo_GetWave_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortKeepEventInfo_GetWave()
 struct Z_Construct_UFunction_UFortKeepEventInfo_NumberOfWaves_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042A4CF0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeepEventInfo_NumberOfWaves_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeepEventInfo, "NumberOfWaves", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortKeepEventInfo_NumberOfWaves_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100CAB0 (end 0x0100CADF)
 // Original VA: 0x000000014100CAB0 | File offset: 0x0100C0B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortKeepEventInfo_NumberOfWaves()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeepEventInfo_NumberOfWaves_Statics::FuncParams);
+		// FuncParams: original RVA 0x042A4CF0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeepEventInfo, "NumberOfWaves", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortKeepEventInfo_NumberOfWaves_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

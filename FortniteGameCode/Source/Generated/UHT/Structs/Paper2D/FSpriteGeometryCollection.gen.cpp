@@ -31,25 +31,12 @@ class UScriptStruct* FSpriteGeometryCollection::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666A40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSpriteGeometryCollection_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSpriteGeometryCollection>();
 	}
-	// ReturnStructParams: original RVA 0x041B6D70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSpriteGeometryCollection_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
-		nullptr,
-		&NewStructOps,
-		"SpriteGeometryCollection",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSpriteGeometryCollection),
-		alignof(FSpriteGeometryCollection),
-		Z_Construct_UScriptStruct_FSpriteGeometryCollection_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x006689C0 (end 0x006689EF)
 	// Original VA: 0x00000001406689C0 | File offset: 0x00667FC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSpriteGeometryCollection::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSpriteGeometryCollection_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041B6D70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSpriteGeometryCollection_Statics::NewStructOps,
+				"SpriteGeometryCollection",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSpriteGeometryCollection),
+				alignof(FSpriteGeometryCollection),
+				Z_Construct_UScriptStruct_FSpriteGeometryCollection_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -27,10 +27,7 @@ void UFortCollectionBookProgressWidget::StaticRegisterNativesUFortCollectionBook
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetailsModalWidgetDeactivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455FBD0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetailsModalWidgetDeactivated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "HandleDetailsModalWidgetDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetailsModalWidgetDeactivated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895940 (end 0x0289596F)
 // Original VA: 0x0000000142895940 | File offset: 0x02894F40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +36,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetails
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetailsModalWidgetDeactivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FBD0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "HandleDetailsModalWidgetDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetailsModalWidgetDeactivated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +46,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetails
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455FC50; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookLevelChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x4, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895970 (end 0x0289599F)
 // Original VA: 0x0000000142895970 | File offset: 0x02894F70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +55,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FC50; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookLevelChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x4, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +65,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelProgressionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455FCD0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelProgressionChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookLevelProgressionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x4, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelProgressionChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028959A0 (end 0x028959CF)
 // Original VA: 0x00000001428959A0 | File offset: 0x02894FA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +74,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelProgressionChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FCD0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookLevelProgressionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x4, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookLevelProgressionChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +84,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPageSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455FD50; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPageSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookPageSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x8, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPageSelected_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028959D0 (end 0x028959FF)
 // Original VA: 0x00000001428959D0 | File offset: 0x02894FD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +93,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPageSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FD50; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookPageSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x8, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPageSelected_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +103,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPreviewXPChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455FDD0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPreviewXPChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookPreviewXPChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x4, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPreviewXPChange_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895A00 (end 0x02895A2F)
 // Original VA: 0x0000000142895A00 | File offset: 0x02895000
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +112,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPreviewXPChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FDD0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnCollectionBookPreviewXPChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x4, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionBookPreviewXPChange_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +122,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnCollectionB
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnDetailsButtonClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455FE50; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnDetailsButtonClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnDetailsButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnDetailsButtonClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895A30 (end 0x02895A5F)
 // Original VA: 0x0000000142895A30 | File offset: 0x02895030
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,7 +131,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnDetailsButt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnDetailsButtonClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FE50; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnDetailsButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnDetailsButtonClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -147,10 +141,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnDetailsButt
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnSlottedItemOperationComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455FF10; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnSlottedItemOperationComplete_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnSlottedItemOperationComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x10, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnSlottedItemOperationComplete_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895A60 (end 0x02895A8F)
 // Original VA: 0x0000000142895A60 | File offset: 0x02895060
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -159,7 +150,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnSlottedItem
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnSlottedItemOperationComplete_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FF10; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressWidget, "OnSlottedItemOperationComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x10, Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnSlottedItemOperationComplete_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

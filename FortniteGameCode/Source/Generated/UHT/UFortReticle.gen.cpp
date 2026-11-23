@@ -21,12 +21,6 @@ void UFortReticle::StaticRegisterNativesUFortReticle()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortReticle_OnContextualReticleChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045AF7C0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortReticle_OnContextualReticleChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnContextualReticleChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE240 (end 0x028EE26F)
 // Original VA: 0x00000001428EE240 | File offset: 0x028ED840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +29,13 @@ UFunction* Z_Construct_UFunction_UFortReticle_OnContextualReticleChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortReticle_OnContextualReticleChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AF7C0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnContextualReticleChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortReticle_OnPawnSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045AF800; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortReticle_OnPawnSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnPawnSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE270 (end 0x028EE29F)
 // Original VA: 0x00000001428EE270 | File offset: 0x028ED870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +44,13 @@ UFunction* Z_Construct_UFunction_UFortReticle_OnPawnSet()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortReticle_OnPawnSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AF800; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnPawnSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortReticle_OnReticleColorChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045AF840; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortReticle_OnReticleColorChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnReticleColorChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE2A0 (end 0x028EE2CF)
 // Original VA: 0x00000001428EE2A0 | File offset: 0x028ED8A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +59,9 @@ UFunction* Z_Construct_UFunction_UFortReticle_OnReticleColorChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortReticle_OnReticleColorChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AF840; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnReticleColorChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +69,7 @@ UFunction* Z_Construct_UFunction_UFortReticle_OnReticleColorChanged()
 struct Z_Construct_UFunction_UFortReticle_OnWeaponEquipped_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AF900; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortReticle_OnWeaponEquipped_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnWeaponEquipped", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x10, Z_Construct_UFunction_UFortReticle_OnWeaponEquipped_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE2D0 (end 0x028EE2FF)
 // Original VA: 0x00000001428EE2D0 | File offset: 0x028ED8D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +78,9 @@ UFunction* Z_Construct_UFunction_UFortReticle_OnWeaponEquipped()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortReticle_OnWeaponEquipped_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AF900; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortReticle, "OnWeaponEquipped", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x10, Z_Construct_UFunction_UFortReticle_OnWeaponEquipped_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

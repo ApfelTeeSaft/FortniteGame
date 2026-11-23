@@ -31,25 +31,12 @@ class UScriptStruct* FFortTheaterTileEditorData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B25D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTheaterTileEditorData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTheaterTileEditorData>();
 	}
-	// ReturnStructParams: original RVA 0x0432F290
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTheaterTileEditorData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTheaterTileEditorData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTheaterTileEditorData),
-		alignof(FFortTheaterTileEditorData),
-		Z_Construct_UScriptStruct_FFortTheaterTileEditorData_Statics::PropPointers, 15,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4530 (end 0x010B455F)
 	// Original VA: 0x00000001410B4530 | File offset: 0x010B3B30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTheaterTileEditorData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTheaterTileEditorData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432F290
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTheaterTileEditorData_Statics::NewStructOps,
+				"FortTheaterTileEditorData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTheaterTileEditorData),
+				alignof(FFortTheaterTileEditorData),
+				Z_Construct_UScriptStruct_FFortTheaterTileEditorData_Statics::PropPointers, 15,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

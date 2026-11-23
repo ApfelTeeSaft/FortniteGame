@@ -31,25 +31,12 @@ class UScriptStruct* FMaterialQualityOverrides::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x016641C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMaterialQualityOverrides_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMaterialQualityOverrides>();
 	}
-	// ReturnStructParams: original RVA 0x0437E960
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMaterialQualityOverrides_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MaterialShaderQualitySettings,
-		nullptr,
-		&NewStructOps,
-		"MaterialQualityOverrides",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMaterialQualityOverrides),
-		alignof(FMaterialQualityOverrides),
-		Z_Construct_UScriptStruct_FMaterialQualityOverrides_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01664360 (end 0x0166438F)
 	// Original VA: 0x0000000141664360 | File offset: 0x01663960
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMaterialQualityOverrides::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMaterialQualityOverrides_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437E960
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MaterialShaderQualitySettings,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMaterialQualityOverrides_Statics::NewStructOps,
+				"MaterialQualityOverrides",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMaterialQualityOverrides),
+				alignof(FMaterialQualityOverrides),
+				Z_Construct_UScriptStruct_FMaterialQualityOverrides_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

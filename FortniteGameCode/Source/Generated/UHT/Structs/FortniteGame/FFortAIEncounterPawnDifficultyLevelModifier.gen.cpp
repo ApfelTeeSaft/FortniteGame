@@ -31,25 +31,12 @@ class UScriptStruct* FFortAIEncounterPawnDifficultyLevelModifier::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F86CD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAIEncounterPawnDifficultyLevelModifier_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAIEncounterPawnDifficultyLevelModifier>();
 	}
-	// ReturnStructParams: original RVA 0x0421CBB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAIEncounterPawnDifficultyLevelModifier_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAIEncounterPawnDifficultyLevelModifier",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAIEncounterPawnDifficultyLevelModifier),
-		alignof(FFortAIEncounterPawnDifficultyLevelModifier),
-		Z_Construct_UScriptStruct_FFortAIEncounterPawnDifficultyLevelModifier_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F888A0 (end 0x00F888CF)
 	// Original VA: 0x0000000140F888A0 | File offset: 0x00F87EA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAIEncounterPawnDifficultyLevelModifier::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAIEncounterPawnDifficultyLevelModifier_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0421CBB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAIEncounterPawnDifficultyLevelModifier_Statics::NewStructOps,
+				"FortAIEncounterPawnDifficultyLevelModifier",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAIEncounterPawnDifficultyLevelModifier),
+				alignof(FFortAIEncounterPawnDifficultyLevelModifier),
+				Z_Construct_UScriptStruct_FFortAIEncounterPawnDifficultyLevelModifier_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FCustomFieldData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0264B720 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCustomFieldData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCustomFieldData>();
 	}
-	// ReturnStructParams: original RVA 0x04542170
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCustomFieldData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_BuildPatchServices,
-		nullptr,
-		&NewStructOps,
-		"CustomFieldData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCustomFieldData),
-		alignof(FCustomFieldData),
-		Z_Construct_UScriptStruct_FCustomFieldData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0264BAF0 (end 0x0264BB1F)
 	// Original VA: 0x000000014264BAF0 | File offset: 0x0264B0F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCustomFieldData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCustomFieldData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04542170
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_BuildPatchServices,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCustomFieldData_Statics::NewStructOps,
+				"CustomFieldData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCustomFieldData),
+				alignof(FCustomFieldData),
+				Z_Construct_UScriptStruct_FCustomFieldData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

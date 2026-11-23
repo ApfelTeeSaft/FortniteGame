@@ -21,10 +21,7 @@ void UPaperSpriteBlueprintLibrary::StaticRegisterNativesUPaperSpriteBlueprintLib
 struct Z_Construct_UFunction_UPaperSpriteBlueprintLibrary_MakeBrushFromSprite_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B39E0; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperSpriteBlueprintLibrary_MakeBrushFromSprite_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperSpriteBlueprintLibrary, "MakeBrushFromSprite", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x88, Z_Construct_UFunction_UPaperSpriteBlueprintLibrary_MakeBrushFromSprite_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668270 (end 0x0066829F)
 // Original VA: 0x0000000140668270 | File offset: 0x00667870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UPaperSpriteBlueprintLibrary_MakeBrushFromSprit
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperSpriteBlueprintLibrary_MakeBrushFromSprite_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B39E0; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperSpriteBlueprintLibrary, "MakeBrushFromSprite", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x88, Z_Construct_UFunction_UPaperSpriteBlueprintLibrary_MakeBrushFromSprite_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

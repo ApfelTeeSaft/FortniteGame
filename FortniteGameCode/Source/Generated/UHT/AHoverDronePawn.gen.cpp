@@ -22,10 +22,7 @@ void AHoverDronePawn::StaticRegisterNativesAHoverDronePawn()
 struct Z_Construct_UFunction_AHoverDronePawn_GetAltitude_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435B4D0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AHoverDronePawn_GetAltitude_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AHoverDronePawn, "GetAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AHoverDronePawn_GetAltitude_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3560 (end 0x010E358F)
 // Original VA: 0x00000001410E3560 | File offset: 0x010E2B60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_AHoverDronePawn_GetAltitude()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AHoverDronePawn_GetAltitude_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435B4D0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AHoverDronePawn, "GetAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AHoverDronePawn_GetAltitude_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_AHoverDronePawn_GetAltitude()
 struct Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435B560; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AHoverDronePawn, "IsMaintainingConstantAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3590 (end 0x010E35BF)
 // Original VA: 0x00000001410E3590 | File offset: 0x010E2B90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435B560; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AHoverDronePawn, "IsMaintainingConstantAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03D5B450, FClassParams RVA 0x03D5B4B0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UARPlaneGeometry();  // RVA 0x029217C0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921660 (end 0x02921682)
 // Original VA: 0x0000000142921660 | File offset: 0x02920C60
@@ -23,7 +23,7 @@ void UARPlaneGeometry::StaticRegisterNativesUARPlaneGeometry()
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetCenter_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9C70 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A30 (end 0x02921A5F)
 // Original VA: 0x0000000142921A30 | File offset: 0x02921030
@@ -33,14 +33,16 @@ UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetCenter()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetCenter_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D9C70; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UARPlaneGeometry, "GetCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UARPlaneGeometry_GetCenter_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetExtent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9CF0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A60 (end 0x02921A8F)
 // Original VA: 0x0000000142921A60 | File offset: 0x02921060
@@ -50,14 +52,16 @@ UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetExtent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetExtent_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D9CF0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UARPlaneGeometry, "GetExtent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UARPlaneGeometry_GetExtent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9D70 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A90 (end 0x02921ABF)
 // Original VA: 0x0000000142921A90 | File offset: 0x02921090
@@ -67,14 +71,16 @@ UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D9D70; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UARPlaneGeometry, "GetLocalToTrackingTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x30, Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D9DF0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921AC0 (end 0x02921AEF)
 // Original VA: 0x0000000142921AC0 | File offset: 0x029210C0
@@ -84,7 +90,9 @@ UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D9DF0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UARPlaneGeometry, "GetLocalToWorldTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x30, Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

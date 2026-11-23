@@ -31,25 +31,12 @@ class UScriptStruct* FConvolutionBloomSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C4860 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FConvolutionBloomSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FConvolutionBloomSettings>();
 	}
-	// ReturnStructParams: original RVA 0x04507E30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FConvolutionBloomSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ConvolutionBloomSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FConvolutionBloomSettings),
-		alignof(FConvolutionBloomSettings),
-		Z_Construct_UScriptStruct_FConvolutionBloomSettings_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C59A0 (end 0x024C59CF)
 	// Original VA: 0x00000001424C59A0 | File offset: 0x024C4FA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FConvolutionBloomSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FConvolutionBloomSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04507E30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FConvolutionBloomSettings_Statics::NewStructOps,
+				"ConvolutionBloomSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FConvolutionBloomSettings),
+				alignof(FConvolutionBloomSettings),
+				Z_Construct_UScriptStruct_FConvolutionBloomSettings_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

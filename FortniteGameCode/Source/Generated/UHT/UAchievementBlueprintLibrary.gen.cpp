@@ -22,10 +22,7 @@ void UAchievementBlueprintLibrary::StaticRegisterNativesUAchievementBlueprintLib
 struct Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04185670; StructureSize 0x70 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementDescription_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementBlueprintLibrary, "GetCachedAchievementDescription", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x70, Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementDescription_Statics::PropPointers, 8, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F2D0 (end 0x0032F2FF)
 // Original VA: 0x000000014032F2D0 | File offset: 0x0032E8D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchieveme
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementDescription_Statics::FuncParams);
+		// FuncParams: original RVA 0x04185670; StructureSize 0x70 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementBlueprintLibrary, "GetCachedAchievementDescription", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x70, Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementDescription_Statics::PropPointers, 8, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchieveme
 struct Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementProgress_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041857F0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementProgress_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementBlueprintLibrary, "GetCachedAchievementProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementProgress_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F300 (end 0x0032F32F)
 // Original VA: 0x000000014032F300 | File offset: 0x0032E900
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchieveme
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementProgress_Statics::FuncParams);
+		// FuncParams: original RVA 0x041857F0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementBlueprintLibrary, "GetCachedAchievementProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementProgress_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

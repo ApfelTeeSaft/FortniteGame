@@ -19,12 +19,6 @@ void UFortRejoinWindowBase::StaticRegisterNativesUFortRejoinWindowBase()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045AEB00; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRejoinWindowBase, "OnTimeoutTimeReached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDEE0 (end 0x028EDF0F)
 // Original VA: 0x00000001428EDEE0 | File offset: 0x028ED4E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +27,9 @@ UFunction* Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AEB00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRejoinWindowBase, "OnTimeoutTimeReached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +37,7 @@ UFunction* Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached()
 struct Z_Construct_UFunction_UFortRejoinWindowBase_StartTimeout_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AEB80; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRejoinWindowBase_StartTimeout_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRejoinWindowBase, "StartTimeout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortRejoinWindowBase_StartTimeout_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDF10 (end 0x028EDF3F)
 // Original VA: 0x00000001428EDF10 | File offset: 0x028ED510
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +46,13 @@ UFunction* Z_Construct_UFunction_UFortRejoinWindowBase_StartTimeout()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRejoinWindowBase_StartTimeout_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AEB80; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRejoinWindowBase, "StartTimeout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortRejoinWindowBase_StartTimeout_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortRejoinWindowBase_StopTimeout_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045AEBC0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRejoinWindowBase_StopTimeout_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRejoinWindowBase, "StopTimeout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDF40 (end 0x028EDF6F)
 // Original VA: 0x00000001428EDF40 | File offset: 0x028ED540
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,7 +61,9 @@ UFunction* Z_Construct_UFunction_UFortRejoinWindowBase_StopTimeout()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRejoinWindowBase_StopTimeout_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AEBC0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRejoinWindowBase, "StopTimeout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

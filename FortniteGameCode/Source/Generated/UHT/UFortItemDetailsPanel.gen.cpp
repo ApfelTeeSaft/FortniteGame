@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03CCCEB0, FClassParams RVA 0x03CCCF40.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortItemDetailsPanel();  // RVA 0x028C9E50 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9990 (end 0x028C99B2)
 // Original VA: 0x00000001428C9990 | File offset: 0x028C8F90
@@ -24,7 +24,7 @@ void UFortItemDetailsPanel::StaticRegisterNativesUFortItemDetailsPanel()
 
 struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04590E80 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA8D0 (end 0x028CA8FF)
 // Original VA: 0x00000001428CA8D0 | File offset: 0x028C9ED0
@@ -34,15 +34,13 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04590E80; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemDetailsPanel, "HandleCursorModeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x18, Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04590EC0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA900 (end 0x028CA92F)
 // Original VA: 0x00000001428CA900 | File offset: 0x028C9F00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -51,15 +49,13 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToComp
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x04590EC0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemDetailsPanel, "HandleDifferentItemToCompareSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDetailSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04590F00 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA930 (end 0x028CA95F)
 // Original VA: 0x00000001428CA930 | File offset: 0x028C9F30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -68,14 +64,16 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDeta
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDetailSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x04590F00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemDetailsPanel, "HandleDifferentItemToDetailSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591030 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA960 (end 0x028CA98F)
 // Original VA: 0x00000001428CA960 | File offset: 0x028C9F60
@@ -85,14 +83,16 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithCh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591030; StructureSize 0x3 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemDetailsPanel, "HandleItemToCompareWithChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x3, Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591160 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA990 (end 0x028CA9BF)
 // Original VA: 0x00000001428CA990 | File offset: 0x028C9F90
@@ -102,14 +102,16 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591160; StructureSize 0x3 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemDetailsPanel, "HandleItemToDetailChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x3, Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045911E0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA9C0 (end 0x028CA9EF)
 // Original VA: 0x00000001428CA9C0 | File offset: 0x028C9FC0
@@ -119,14 +121,16 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith_Statics::FuncParams);
+		// FuncParams: original RVA 0x045911E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemDetailsPanel, "SetItemToCompareWith", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591260 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA9F0 (end 0x028CAA1F)
 // Original VA: 0x00000001428CA9F0 | File offset: 0x028C9FF0
@@ -136,7 +140,9 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591260; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemDetailsPanel, "SetItemToDetail", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

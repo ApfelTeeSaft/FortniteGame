@@ -31,25 +31,12 @@ class UScriptStruct* FAppleARKitLightEstimate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x008060B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAppleARKitLightEstimate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAppleARKitLightEstimate>();
 	}
-	// ReturnStructParams: original RVA 0x041C8960
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAppleARKitLightEstimate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AppleARKit,
-		nullptr,
-		&NewStructOps,
-		"AppleARKitLightEstimate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAppleARKitLightEstimate),
-		alignof(FAppleARKitLightEstimate),
-		Z_Construct_UScriptStruct_FAppleARKitLightEstimate_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x008066D0 (end 0x008066FF)
 	// Original VA: 0x00000001408066D0 | File offset: 0x00805CD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAppleARKitLightEstimate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAppleARKitLightEstimate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C8960
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AppleARKit,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAppleARKitLightEstimate_Statics::NewStructOps,
+				"AppleARKitLightEstimate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAppleARKitLightEstimate),
+				alignof(FAppleARKitLightEstimate),
+				Z_Construct_UScriptStruct_FAppleARKitLightEstimate_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

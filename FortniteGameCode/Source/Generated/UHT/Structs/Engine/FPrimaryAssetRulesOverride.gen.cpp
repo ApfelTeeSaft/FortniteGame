@@ -31,25 +31,12 @@ class UScriptStruct* FPrimaryAssetRulesOverride::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D9F00 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPrimaryAssetRulesOverride_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPrimaryAssetRulesOverride>();
 	}
-	// ReturnStructParams: original RVA 0x0441E430
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPrimaryAssetRulesOverride_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"PrimaryAssetRulesOverride",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPrimaryAssetRulesOverride),
-		alignof(FPrimaryAssetRulesOverride),
-		Z_Construct_UScriptStruct_FPrimaryAssetRulesOverride_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DC270 (end 0x023DC29F)
 	// Original VA: 0x00000001423DC270 | File offset: 0x023DB870
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPrimaryAssetRulesOverride::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPrimaryAssetRulesOverride_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441E430
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPrimaryAssetRulesOverride_Statics::NewStructOps,
+				"PrimaryAssetRulesOverride",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPrimaryAssetRulesOverride),
+				alignof(FPrimaryAssetRulesOverride),
+				Z_Construct_UScriptStruct_FPrimaryAssetRulesOverride_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

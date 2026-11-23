@@ -21,10 +21,7 @@ void UAbilityTask_WaitAttributeChangeThreshold::StaticRegisterNativesUAbilityTas
 struct Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0419A9A0; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold, "WaitForAttributeChangeThreshold", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x48, Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold_Statics::PropPointers, 7, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054DCB0 (end 0x0054DCDF)
 // Original VA: 0x000000014054DCB0 | File offset: 0x0054D2B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitF
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold_Statics::FuncParams);
+		// FuncParams: original RVA 0x0419A9A0; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold, "WaitForAttributeChangeThreshold", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x48, Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold_Statics::PropPointers, 7, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

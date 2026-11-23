@@ -31,25 +31,12 @@ class UScriptStruct* FFortEditorTheaterMapRegionColor::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2710 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortEditorTheaterMapRegionColor_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortEditorTheaterMapRegionColor>();
 	}
-	// ReturnStructParams: original RVA 0x0432F360
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortEditorTheaterMapRegionColor_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortEditorTheaterMapRegionColor",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortEditorTheaterMapRegionColor),
-		alignof(FFortEditorTheaterMapRegionColor),
-		Z_Construct_UScriptStruct_FFortEditorTheaterMapRegionColor_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4230 (end 0x010B425F)
 	// Original VA: 0x00000001410B4230 | File offset: 0x010B3830
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortEditorTheaterMapRegionColor::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortEditorTheaterMapRegionColor_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432F360
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortEditorTheaterMapRegionColor_Statics::NewStructOps,
+				"FortEditorTheaterMapRegionColor",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortEditorTheaterMapRegionColor),
+				alignof(FFortEditorTheaterMapRegionColor),
+				Z_Construct_UScriptStruct_FFortEditorTheaterMapRegionColor_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

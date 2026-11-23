@@ -31,25 +31,12 @@ class UScriptStruct* FSkeletalMeshLODInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC110 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSkeletalMeshLODInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSkeletalMeshLODInfo>();
 	}
-	// ReturnStructParams: original RVA 0x0450FAB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSkeletalMeshLODInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SkeletalMeshLODInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSkeletalMeshLODInfo),
-		alignof(FSkeletalMeshLODInfo),
-		Z_Construct_UScriptStruct_FSkeletalMeshLODInfo_Statics::PropPointers, 17,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CDCD0 (end 0x024CDCFF)
 	// Original VA: 0x00000001424CDCD0 | File offset: 0x024CD2D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSkeletalMeshLODInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSkeletalMeshLODInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0450FAB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSkeletalMeshLODInfo_Statics::NewStructOps,
+				"SkeletalMeshLODInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSkeletalMeshLODInfo),
+				alignof(FSkeletalMeshLODInfo),
+				Z_Construct_UScriptStruct_FSkeletalMeshLODInfo_Statics::PropPointers, 17,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

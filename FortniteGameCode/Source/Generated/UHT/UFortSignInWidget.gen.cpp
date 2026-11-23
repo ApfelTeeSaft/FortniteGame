@@ -26,10 +26,7 @@ void UFortSignInWidget::StaticRegisterNativesUFortSignInWidget()
 struct Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B24B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleBackSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5AD0 (end 0x028F5AFF)
 // Original VA: 0x00000001428F5AD0 | File offset: 0x028F50D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B24B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleBackSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected()
 struct Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B2530; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleForgotPassword", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5B00 (end 0x028F5B2F)
 // Original VA: 0x00000001428F5B00 | File offset: 0x028F5100
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B2530; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleForgotPassword", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword()
 struct Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B25B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleSignInRequest", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5B30 (end 0x028F5B5F)
 // Original VA: 0x00000001428F5B30 | File offset: 0x028F5130
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B25B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleSignInRequest", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest()
 struct Z_Construct_UFunction_UFortSignInWidget_HandleTextCommitted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B2670; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_HandleTextCommitted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleTextCommitted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04480401, 0x20, Z_Construct_UFunction_UFortSignInWidget_HandleTextCommitted_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5B60 (end 0x028F5B8F)
 // Original VA: 0x00000001428F5B60 | File offset: 0x028F5160
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,17 +92,13 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_HandleTextCommitted()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_HandleTextCommitted_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B2670; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "HandleTextCommitted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04480401, 0x20, Z_Construct_UFunction_UFortSignInWidget_HandleTextCommitted_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardHidden_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B26B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardHidden_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "OnVirtualKeyboardHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5B90 (end 0x028F5BBF)
 // Original VA: 0x00000001428F5B90 | File offset: 0x028F5190
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -117,17 +107,13 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardHidden()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardHidden_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B26B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "OnVirtualKeyboardHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardShown_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B26F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardShown_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "OnVirtualKeyboardShown", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5BC0 (end 0x028F5BEF)
 // Original VA: 0x00000001428F5BC0 | File offset: 0x028F51C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,17 +122,13 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardShown()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardShown_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B26F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "OnVirtualKeyboardShown", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSignInWidget_StartSignIn_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B2730; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_StartSignIn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "StartSignIn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5BF0 (end 0x028F5C1F)
 // Original VA: 0x00000001428F5BF0 | File offset: 0x028F51F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -155,7 +137,9 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_StartSignIn()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_StartSignIn_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B2730; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "StartSignIn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -163,10 +147,7 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_StartSignIn()
 struct Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B27B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "UpdateSignInButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04480401, 0x18, Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5C20 (end 0x028F5C4F)
 // Original VA: 0x00000001428F5C20 | File offset: 0x028F5220
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -175,7 +156,9 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B27B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSignInWidget, "UpdateSignInButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04480401, 0x18, Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

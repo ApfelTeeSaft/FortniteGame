@@ -30,25 +30,12 @@ class UScriptStruct* FMovieSceneKeyStruct::StaticStruct()
 	struct Z_Construct_UScriptStruct_FMovieSceneKeyStruct_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC2240 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneKeyStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneKeyStruct>();
 	}
-	// ReturnStructParams: original RVA 0x043A3D80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneKeyStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneKeyStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneKeyStruct),
-		alignof(FMovieSceneKeyStruct),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC6050 (end 0x01AC607F)
 	// Original VA: 0x0000000141AC6050 | File offset: 0x01AC5650
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FMovieSceneKeyStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneKeyStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A3D80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneKeyStruct_Statics::NewStructOps,
+				"MovieSceneKeyStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneKeyStruct),
+				alignof(FMovieSceneKeyStruct),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

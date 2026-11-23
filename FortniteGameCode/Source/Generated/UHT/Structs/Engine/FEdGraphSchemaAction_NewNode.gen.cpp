@@ -32,25 +32,12 @@ class UScriptStruct* FEdGraphSchemaAction_NewNode::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02403F40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEdGraphSchemaAction_NewNode_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEdGraphSchemaAction_NewNode>();
 	}
-	// ReturnStructParams: original RVA 0x04446FF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEdGraphSchemaAction_NewNode_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FEdGraphSchemaAction,
-		&NewStructOps,
-		"EdGraphSchemaAction_NewNode",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FEdGraphSchemaAction_NewNode),
-		alignof(FEdGraphSchemaAction_NewNode),
-		Z_Construct_UScriptStruct_FEdGraphSchemaAction_NewNode_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02405890 (end 0x024058BF)
 	// Original VA: 0x0000000142405890 | File offset: 0x02404E90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FEdGraphSchemaAction_NewNode::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEdGraphSchemaAction_NewNode_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04446FF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FEdGraphSchemaAction,
+				&Z_Construct_UScriptStruct_FEdGraphSchemaAction_NewNode_Statics::NewStructOps,
+				"EdGraphSchemaAction_NewNode",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FEdGraphSchemaAction_NewNode),
+				alignof(FEdGraphSchemaAction_NewNode),
+				Z_Construct_UScriptStruct_FEdGraphSchemaAction_NewNode_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

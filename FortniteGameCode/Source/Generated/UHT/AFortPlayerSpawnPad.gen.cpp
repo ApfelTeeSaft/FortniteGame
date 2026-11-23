@@ -25,10 +25,7 @@ void AFortPlayerSpawnPad::StaticRegisterNativesAFortPlayerSpawnPad()
 struct Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0430EA80; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "ChestProgressionUpdate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x18, Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BA10 (end 0x0108BA3F)
 // Original VA: 0x000000014108BA10 | File offset: 0x0108B010
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,7 +34,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate_Statics::FuncParams);
+		// FuncParams: original RVA 0x0430EA80; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "ChestProgressionUpdate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x18, Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -45,10 +44,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate()
 struct Z_Construct_UFunction_AFortPlayerSpawnPad_GetPossessedPlayerPawnsByID_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0430EB40; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerSpawnPad_GetPossessedPlayerPawnsByID_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "GetPossessedPlayerPawnsByID", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_AFortPlayerSpawnPad_GetPossessedPlayerPawnsByID_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BA40 (end 0x0108BA6F)
 // Original VA: 0x000000014108BA40 | File offset: 0x0108B040
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,7 +53,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_GetPossessedPlayerPawnsByID
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerSpawnPad_GetPossessedPlayerPawnsByID_Statics::FuncParams);
+		// FuncParams: original RVA 0x0430EB40; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "GetPossessedPlayerPawnsByID", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_AFortPlayerSpawnPad_GetPossessedPlayerPawnsByID_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -65,10 +63,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_GetPossessedPlayerPawnsByID
 struct Z_Construct_UFunction_AFortPlayerSpawnPad_GetRewardedChestIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0430EBC0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerSpawnPad_GetRewardedChestIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "GetRewardedChestIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020409, 0x4, Z_Construct_UFunction_AFortPlayerSpawnPad_GetRewardedChestIndex_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BA70 (end 0x0108BA9F)
 // Original VA: 0x000000014108BA70 | File offset: 0x0108B070
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,17 +72,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_GetRewardedChestIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerSpawnPad_GetRewardedChestIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x0430EBC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "GetRewardedChestIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020409, 0x4, Z_Construct_UFunction_AFortPlayerSpawnPad_GetRewardedChestIndex_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerSpawnPad_InitializeChestProgression_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0430EC00; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerSpawnPad_InitializeChestProgression_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "InitializeChestProgression", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BAA0 (end 0x0108BACF)
 // Original VA: 0x000000014108BAA0 | File offset: 0x0108B0A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,17 +87,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_InitializeChestProgression(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerSpawnPad_InitializeChestProgression_Statics::FuncParams);
+		// FuncParams: original RVA 0x0430EC00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "InitializeChestProgression", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerSpawnPad_PrestreamChestTextures_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0430EC40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerSpawnPad_PrestreamChestTextures_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "PrestreamChestTextures", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BAD0 (end 0x0108BAFF)
 // Original VA: 0x000000014108BAD0 | File offset: 0x0108B0D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -115,7 +102,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_PrestreamChestTextures()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerSpawnPad_PrestreamChestTextures_Statics::FuncParams);
+		// FuncParams: original RVA 0x0430EC40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerSpawnPad, "PrestreamChestTextures", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

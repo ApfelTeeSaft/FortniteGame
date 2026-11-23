@@ -6,12 +6,6 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWorkerSetBonusIcon();  // RVA 0x02918BF0 (consensus OuterFunc)
 
-struct Z_Construct_UFunction_UFortWorkerSetBonusIcon_HandleDifferentGameplayTagSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045D3F90; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWorkerSetBonusIcon_HandleDifferentGameplayTagSetBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWorkerSetBonusIcon, "HandleDifferentGameplayTagSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919E50 (end 0x02919E7F)
 // Original VA: 0x0000000142919E50 | File offset: 0x02919450
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -20,7 +14,9 @@ UFunction* Z_Construct_UFunction_UFortWorkerSetBonusIcon_HandleDifferentGameplay
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWorkerSetBonusIcon_HandleDifferentGameplayTagSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3F90; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWorkerSetBonusIcon, "HandleDifferentGameplayTagSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -28,10 +24,7 @@ UFunction* Z_Construct_UFunction_UFortWorkerSetBonusIcon_HandleDifferentGameplay
 struct Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D4010; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWorkerSetBonusIcon, "SetGameplayTag", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919E80 (end 0x02919EAF)
 // Original VA: 0x0000000142919E80 | File offset: 0x02919480
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -40,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D4010; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWorkerSetBonusIcon, "SetGameplayTag", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

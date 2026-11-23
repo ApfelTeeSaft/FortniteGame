@@ -5,12 +5,6 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 	UPackage* Z_Construct_UPackage__Script_MediaAssets();  // RVA 0x025DFBF0
-	struct Z_Construct_UDelegateFunction_MediaAssets_OnMediaPlayerMediaEvent__DelegateSignature_Statics
-	{
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	// FuncParams: original RVA 0x0453D220
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_MediaAssets_OnMediaPlayerMediaEvent__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_MediaAssets, "OnMediaPlayerMediaEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DEA50 (end 0x025DEA7F)
 	// Original VA: 0x00000001425DEA50 | File offset: 0x025DE050
 	// Recovery: confirmed (listed by Z_Construct_UPackage__Script_MediaAssets's SingletonFuncArray) | Matching: see analysis/functions-uht-package-delegates.json
@@ -19,7 +13,9 @@
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_MediaAssets_OnMediaPlayerMediaEvent__DelegateSignature_Statics::FuncParams);
+			// FuncParams: original RVA 0x0453D220
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_MediaAssets, "OnMediaPlayerMediaEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}

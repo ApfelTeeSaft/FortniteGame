@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_Trail::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0AC10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_Trail_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_Trail>();
 	}
-	// ReturnStructParams: original RVA 0x043B08C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_Trail_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_SkeletalControlBase,
-		&NewStructOps,
-		"AnimNode_Trail",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_Trail),
-		alignof(FAnimNode_Trail),
-		Z_Construct_UScriptStruct_FAnimNode_Trail_Statics::PropPointers, 11,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F250 (end 0x01B0F27F)
 	// Original VA: 0x0000000141B0F250 | File offset: 0x01B0E850
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_Trail::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_Trail_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B08C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_SkeletalControlBase,
+				&Z_Construct_UScriptStruct_FAnimNode_Trail_Statics::NewStructOps,
+				"AnimNode_Trail",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_Trail),
+				alignof(FAnimNode_Trail),
+				Z_Construct_UScriptStruct_FAnimNode_Trail_Statics::PropPointers, 11,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FLastBuildableState::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB300 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLastBuildableState_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLastBuildableState>();
 	}
-	// ReturnStructParams: original RVA 0x042F5E50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLastBuildableState_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"LastBuildableState",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLastBuildableState),
-		alignof(FLastBuildableState),
-		Z_Construct_UScriptStruct_FLastBuildableState_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106D730 (end 0x0106D75F)
 	// Original VA: 0x000000014106D730 | File offset: 0x0106CD30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLastBuildableState::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLastBuildableState_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042F5E50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLastBuildableState_Statics::NewStructOps,
+				"LastBuildableState",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLastBuildableState),
+				alignof(FLastBuildableState),
+				Z_Construct_UScriptStruct_FLastBuildableState_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -22,10 +22,7 @@ void UFortItemManagementItemTileButton::StaticRegisterNativesUFortItemManagement
 struct Z_Construct_UFunction_UFortItemManagementItemTileButton_GetItemManagementMode_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04593830; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_GetItemManagementMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "GetItemManagementMode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortItemManagementItemTileButton_GetItemManagementMode_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB350 (end 0x028CB37F)
 // Original VA: 0x00000001428CB350 | File offset: 0x028CA950
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_GetItemManage
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_GetItemManagementMode_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593830; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "GetItemManagementMode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortItemManagementItemTileButton_GetItemManagementMode_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_GetItemManage
 struct Z_Construct_UFunction_UFortItemManagementItemTileButton_GetPopupMenu_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045938B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_GetPopupMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "GetPopupMenu", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortItemManagementItemTileButton_GetPopupMenu_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB380 (end 0x028CB3AF)
 // Original VA: 0x00000001428CB380 | File offset: 0x028CA980
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +50,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_GetPopupMenu(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_GetPopupMenu_Statics::FuncParams);
+		// FuncParams: original RVA 0x045938B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "GetPopupMenu", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortItemManagementItemTileButton_GetPopupMenu_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleDifferentItemManagementModeSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045938F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleDifferentItemManagementModeSetBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleDifferentItemManagementModeSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB3B0 (end 0x028CB3DF)
 // Original VA: 0x00000001428CB3B0 | File offset: 0x028CA9B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +65,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleDiffere
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleDifferentItemManagementModeSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045938F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleDifferentItemManagementModeSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +75,7 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleDiffere
 struct Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleEquipSlotChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04593970; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleEquipSlotChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleEquipSlotChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x4, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleEquipSlotChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB3E0 (end 0x028CB40F)
 // Original VA: 0x00000001428CB3E0 | File offset: 0x028CA9E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,17 +84,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleEquipSl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleEquipSlotChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593970; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleEquipSlotChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x4, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleEquipSlotChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItemToCompareDetailsWithChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045939B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItemToCompareDetailsWithChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleHasItemToCompareDetailsWithChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB410 (end 0x028CB43F)
 // Original VA: 0x00000001428CB410 | File offset: 0x028CAA10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -112,17 +99,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItem
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItemToCompareDetailsWithChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045939B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleHasItemToCompareDetailsWithChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItemToDetailChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045939F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItemToDetailChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleHasItemToDetailChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB440 (end 0x028CB46F)
 // Original VA: 0x00000001428CB440 | File offset: 0x028CAA40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -131,17 +114,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItem
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleHasItemToDetailChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045939F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleHasItemToDetailChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemChangedBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04593A30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemChangedBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleItemChangedBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB470 (end 0x028CB49F)
 // Original VA: 0x00000001428CB470 | File offset: 0x028CAA70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -150,17 +129,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemCha
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemChangedBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593A30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleItemChangedBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemMulchStateChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04593A70; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemMulchStateChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleItemMulchStateChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB4A0 (end 0x028CB4CF)
 // Original VA: 0x00000001428CB4A0 | File offset: 0x028CAAA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -169,7 +144,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemMul
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemTileButton_HandleItemMulchStateChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593A70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemTileButton, "HandleItemMulchStateChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

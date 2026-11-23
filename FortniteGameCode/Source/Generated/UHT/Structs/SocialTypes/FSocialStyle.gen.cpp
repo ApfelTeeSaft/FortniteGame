@@ -31,25 +31,12 @@ class UScriptStruct* FSocialStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077F440 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSocialStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSocialStyle>();
 	}
-	// ReturnStructParams: original RVA 0x041C18F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSocialStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
-		nullptr,
-		&NewStructOps,
-		"SocialStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSocialStyle),
-		alignof(FSocialStyle),
-		Z_Construct_UScriptStruct_FSocialStyle_Statics::PropPointers, 17,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077FF80 (end 0x0077FFAF)
 	// Original VA: 0x000000014077FF80 | File offset: 0x0077F580
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSocialStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSocialStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C18F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSocialStyle_Statics::NewStructOps,
+				"SocialStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSocialStyle),
+				alignof(FSocialStyle),
+				Z_Construct_UScriptStruct_FSocialStyle_Statics::PropPointers, 17,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

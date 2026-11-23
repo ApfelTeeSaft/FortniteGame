@@ -32,25 +32,12 @@ class UScriptStruct* FMovieSceneLevelVisibilitySectionTemplate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B50100 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneLevelVisibilitySectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneLevelVisibilitySectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043B6850
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneLevelVisibilitySectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieSceneEvalTemplate,
-		&NewStructOps,
-		"MovieSceneLevelVisibilitySectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneLevelVisibilitySectionTemplate),
-		alignof(FMovieSceneLevelVisibilitySectionTemplate),
-		Z_Construct_UScriptStruct_FMovieSceneLevelVisibilitySectionTemplate_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B530E0 (end 0x01B5310F)
 	// Original VA: 0x0000000141B530E0 | File offset: 0x01B526E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieSceneLevelVisibilitySectionTemplate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneLevelVisibilitySectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B6850
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieSceneEvalTemplate,
+				&Z_Construct_UScriptStruct_FMovieSceneLevelVisibilitySectionTemplate_Statics::NewStructOps,
+				"MovieSceneLevelVisibilitySectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneLevelVisibilitySectionTemplate),
+				alignof(FMovieSceneLevelVisibilitySectionTemplate),
+				Z_Construct_UScriptStruct_FMovieSceneLevelVisibilitySectionTemplate_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

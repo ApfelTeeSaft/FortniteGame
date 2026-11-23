@@ -31,25 +31,12 @@ class UScriptStruct* FSubmixEffectDynamicsProcessorSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559D50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSubmixEffectDynamicsProcessorSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSubmixEffectDynamicsProcessorSettings>();
 	}
-	// ReturnStructParams: original RVA 0x0453AA20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSubmixEffectDynamicsProcessorSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AudioMixer,
-		nullptr,
-		&NewStructOps,
-		"SubmixEffectDynamicsProcessorSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSubmixEffectDynamicsProcessorSettings),
-		alignof(FSubmixEffectDynamicsProcessorSettings),
-		Z_Construct_UScriptStruct_FSubmixEffectDynamicsProcessorSettings_Statics::PropPointers, 14,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A620 (end 0x0255A64F)
 	// Original VA: 0x000000014255A620 | File offset: 0x02559C20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSubmixEffectDynamicsProcessorSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSubmixEffectDynamicsProcessorSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0453AA20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AudioMixer,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSubmixEffectDynamicsProcessorSettings_Statics::NewStructOps,
+				"SubmixEffectDynamicsProcessorSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSubmixEffectDynamicsProcessorSettings),
+				alignof(FSubmixEffectDynamicsProcessorSettings),
+				Z_Construct_UScriptStruct_FSubmixEffectDynamicsProcessorSettings_Statics::PropPointers, 14,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

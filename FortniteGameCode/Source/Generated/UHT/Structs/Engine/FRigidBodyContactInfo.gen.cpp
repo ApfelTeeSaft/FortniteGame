@@ -31,25 +31,12 @@ class UScriptStruct* FRigidBodyContactInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240A030 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRigidBodyContactInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRigidBodyContactInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04452BF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRigidBodyContactInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"RigidBodyContactInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FRigidBodyContactInfo),
-		alignof(FRigidBodyContactInfo),
-		Z_Construct_UScriptStruct_FRigidBodyContactInfo_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D610 (end 0x0240D63F)
 	// Original VA: 0x000000014240D610 | File offset: 0x0240CC10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FRigidBodyContactInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRigidBodyContactInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04452BF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FRigidBodyContactInfo_Statics::NewStructOps,
+				"RigidBodyContactInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FRigidBodyContactInfo),
+				alignof(FRigidBodyContactInfo),
+				Z_Construct_UScriptStruct_FRigidBodyContactInfo_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

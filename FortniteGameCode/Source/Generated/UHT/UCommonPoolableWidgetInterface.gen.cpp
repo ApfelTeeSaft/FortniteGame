@@ -19,12 +19,6 @@ void UCommonPoolableWidgetInterface::StaticRegisterNativesUCommonPoolableWidgetI
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnAcquireFromPool_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0417E030; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnAcquireFromPool_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonPoolableWidgetInterface, "OnAcquireFromPool", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CB430 (end 0x002CB45F)
 // Original VA: 0x00000001402CB430 | File offset: 0x002CAA30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +27,13 @@ UFunction* Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnAcquireFromPoo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnAcquireFromPool_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417E030; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonPoolableWidgetInterface, "OnAcquireFromPool", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnReleaseToPool_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0417E070; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnReleaseToPool_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonPoolableWidgetInterface, "OnReleaseToPool", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CB460 (end 0x002CB48F)
 // Original VA: 0x00000001402CB460 | File offset: 0x002CAA60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +42,9 @@ UFunction* Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnReleaseToPool(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnReleaseToPool_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417E070; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonPoolableWidgetInterface, "OnReleaseToPool", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

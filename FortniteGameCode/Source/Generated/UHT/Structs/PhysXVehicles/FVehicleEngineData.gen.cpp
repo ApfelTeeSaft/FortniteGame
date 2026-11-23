@@ -31,25 +31,12 @@ class UScriptStruct* FVehicleEngineData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B000 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVehicleEngineData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVehicleEngineData>();
 	}
-	// ReturnStructParams: original RVA 0x041BA8A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVehicleEngineData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
-		nullptr,
-		&NewStructOps,
-		"VehicleEngineData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FVehicleEngineData),
-		alignof(FVehicleEngineData),
-		Z_Construct_UScriptStruct_FVehicleEngineData_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067C610 (end 0x0067C63F)
 	// Original VA: 0x000000014067C610 | File offset: 0x0067BC10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FVehicleEngineData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVehicleEngineData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BA8A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
+				nullptr,
+				&Z_Construct_UScriptStruct_FVehicleEngineData_Statics::NewStructOps,
+				"VehicleEngineData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FVehicleEngineData),
+				alignof(FVehicleEngineData),
+				Z_Construct_UScriptStruct_FVehicleEngineData_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

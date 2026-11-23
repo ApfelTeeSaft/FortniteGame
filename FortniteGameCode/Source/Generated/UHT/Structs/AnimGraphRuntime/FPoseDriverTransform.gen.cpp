@@ -31,25 +31,12 @@ class UScriptStruct* FPoseDriverTransform::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0ACD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPoseDriverTransform_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPoseDriverTransform>();
 	}
-	// ReturnStructParams: original RVA 0x043AE4D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPoseDriverTransform_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		nullptr,
-		&NewStructOps,
-		"PoseDriverTransform",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPoseDriverTransform),
-		alignof(FPoseDriverTransform),
-		Z_Construct_UScriptStruct_FPoseDriverTransform_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F4F0 (end 0x01B0F51F)
 	// Original VA: 0x0000000141B0F4F0 | File offset: 0x01B0EAF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPoseDriverTransform::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPoseDriverTransform_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AE4D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPoseDriverTransform_Statics::NewStructOps,
+				"PoseDriverTransform",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPoseDriverTransform),
+				alignof(FPoseDriverTransform),
+				Z_Construct_UScriptStruct_FPoseDriverTransform_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -24,10 +24,7 @@ void UPhysicsSpringComponent::StaticRegisterNativesUPhysicsSpringComponent()
 struct Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressionScalar_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E6950; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressionScalar_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetNormalizedCompressionScalar", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressionScalar_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC190 (end 0x024AC1BF)
 // Original VA: 0x00000001424AC190 | File offset: 0x024AB790
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressio
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressionScalar_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E6950; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetNormalizedCompressionScalar", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressionScalar_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressio
 struct Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringCurrentEndPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E69D0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringCurrentEndPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetSpringCurrentEndPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringCurrentEndPoint_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC1C0 (end 0x024AC1EF)
 // Original VA: 0x00000001424AC1C0 | File offset: 0x024AB7C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringCurrentEndPoin
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringCurrentEndPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E69D0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetSpringCurrentEndPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringCurrentEndPoint_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringCurrentEndPoin
 struct Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringDirection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E6A50; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringDirection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetSpringDirection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringDirection_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC1F0 (end 0x024AC21F)
 // Original VA: 0x00000001424AC1F0 | File offset: 0x024AB7F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringDirection()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringDirection_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E6A50; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetSpringDirection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringDirection_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringDirection()
 struct Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringRestingPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E6AD0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringRestingPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetSpringRestingPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringRestingPoint_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC220 (end 0x024AC24F)
 // Original VA: 0x00000001424AC220 | File offset: 0x024AB820
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringRestingPoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringRestingPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E6AD0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsSpringComponent, "GetSpringRestingPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringRestingPoint_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

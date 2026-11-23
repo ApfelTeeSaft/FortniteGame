@@ -22,10 +22,7 @@ void UFortPlacementActorTagTest::StaticRegisterNativesUFortPlacementActorTagTest
 struct Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042F08A0; StructureSize 0xC8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlacementActorTagTest, "LineTraceByChannel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0xC8, Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel_Statics::PropPointers, 10, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01066020 (end 0x0106604F)
 // Original VA: 0x0000000141066020 | File offset: 0x01065620
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel_Statics::FuncParams);
+		// FuncParams: original RVA 0x042F08A0; StructureSize 0xC8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlacementActorTagTest, "LineTraceByChannel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0xC8, Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel_Statics::PropPointers, 10, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel()
 struct Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPlacementActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042F09B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPlacementActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlacementActorTagTest, "ShouldApplyTagsToPlacementActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48C20C00, 0x18, Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPlacementActor_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01066050 (end 0x0106607F)
 // Original VA: 0x0000000141066050 | File offset: 0x01065650
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPlacementActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x042F09B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlacementActorTagTest, "ShouldApplyTagsToPlacementActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48C20C00, 0x18, Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPlacementActor_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

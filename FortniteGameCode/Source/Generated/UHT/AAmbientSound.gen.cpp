@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03891D80, FClassParams RVA 0x03891DE0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AAmbientSound();  // RVA 0x023C8520 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7980 (end 0x023C79A2)
 // Original VA: 0x00000001423C7980 | File offset: 0x023C6F80
@@ -24,7 +24,7 @@ void AAmbientSound::StaticRegisterNativesAAmbientSound()
 
 struct Z_Construct_UFunction_AAmbientSound_AdjustVolume_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F140 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8AC0 (end 0x023C8AEF)
 // Original VA: 0x00000001423C8AC0 | File offset: 0x023C80C0
@@ -34,14 +34,16 @@ UFunction* Z_Construct_UFunction_AAmbientSound_AdjustVolume()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_AdjustVolume_Statics::FuncParams);
+		// FuncParams: original RVA 0x0440F140; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAmbientSound, "AdjustVolume", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_AAmbientSound_AdjustVolume_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_AAmbientSound_FadeIn_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F1F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8AF0 (end 0x023C8B1F)
 // Original VA: 0x00000001423C8AF0 | File offset: 0x023C80F0
@@ -51,14 +53,16 @@ UFunction* Z_Construct_UFunction_AAmbientSound_FadeIn()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_FadeIn_Statics::FuncParams);
+		// FuncParams: original RVA 0x0440F1F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAmbientSound, "FadeIn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_AAmbientSound_FadeIn_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_AAmbientSound_FadeOut_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F2A0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B20 (end 0x023C8B4F)
 // Original VA: 0x00000001423C8B20 | File offset: 0x023C8120
@@ -68,14 +72,16 @@ UFunction* Z_Construct_UFunction_AAmbientSound_FadeOut()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_FadeOut_Statics::FuncParams);
+		// FuncParams: original RVA 0x0440F2A0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAmbientSound, "FadeOut", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_AAmbientSound_FadeOut_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_AAmbientSound_Play_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F320 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B50 (end 0x023C8B7F)
 // Original VA: 0x00000001423C8B50 | File offset: 0x023C8150
@@ -85,15 +91,13 @@ UFunction* Z_Construct_UFunction_AAmbientSound_Play()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_Play_Statics::FuncParams);
+		// FuncParams: original RVA 0x0440F320; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAmbientSound, "Play", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_AAmbientSound_Play_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AAmbientSound_Stop_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0440F360 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B80 (end 0x023C8BAF)
 // Original VA: 0x00000001423C8B80 | File offset: 0x023C8180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -102,7 +106,9 @@ UFunction* Z_Construct_UFunction_AAmbientSound_Stop()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_Stop_Statics::FuncParams);
+		// FuncParams: original RVA 0x0440F360; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAmbientSound, "Stop", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

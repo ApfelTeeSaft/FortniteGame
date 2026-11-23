@@ -32,25 +32,12 @@ class UScriptStruct* FEditableTextBoxStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A470 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEditableTextBoxStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEditableTextBoxStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437BAF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEditableTextBoxStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"EditableTextBoxStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FEditableTextBoxStyle),
-		alignof(FEditableTextBoxStyle),
-		Z_Construct_UScriptStruct_FEditableTextBoxStyle_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CCF0 (end 0x0145CD1F)
 	// Original VA: 0x000000014145CCF0 | File offset: 0x0145C2F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FEditableTextBoxStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEditableTextBoxStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437BAF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FEditableTextBoxStyle_Statics::NewStructOps,
+				"EditableTextBoxStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FEditableTextBoxStyle),
+				alignof(FEditableTextBoxStyle),
+				Z_Construct_UScriptStruct_FEditableTextBoxStyle_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x036AB5E0, FClassParams RVA 0x036AB630.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UWidgetSwitcherSlot();  // RVA 0x01C07CE0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07B60 (end 0x01C07B82)
 // Original VA: 0x0000000141C07B60 | File offset: 0x01C07160
@@ -22,7 +22,7 @@ void UWidgetSwitcherSlot::StaticRegisterNativesUWidgetSwitcherSlot()
 
 struct Z_Construct_UFunction_UWidgetSwitcherSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9660 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07E20 (end 0x01C07E4F)
 // Original VA: 0x0000000141C07E20 | File offset: 0x01C07420
@@ -32,14 +32,16 @@ UFunction* Z_Construct_UFunction_UWidgetSwitcherSlot_SetHorizontalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetSwitcherSlot_SetHorizontalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043D9660; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetSwitcherSlot, "SetHorizontalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UWidgetSwitcherSlot_SetHorizontalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UWidgetSwitcherSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D96E0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07E50 (end 0x01C07E7F)
 // Original VA: 0x0000000141C07E50 | File offset: 0x01C07450
@@ -49,14 +51,16 @@ UFunction* Z_Construct_UFunction_UWidgetSwitcherSlot_SetPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetSwitcherSlot_SetPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x043D96E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetSwitcherSlot, "SetPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UWidgetSwitcherSlot_SetPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UWidgetSwitcherSlot_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9760 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07E80 (end 0x01C07EAF)
 // Original VA: 0x0000000141C07E80 | File offset: 0x01C07480
@@ -66,7 +70,9 @@ UFunction* Z_Construct_UFunction_UWidgetSwitcherSlot_SetVerticalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetSwitcherSlot_SetVerticalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043D9760; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetSwitcherSlot, "SetVerticalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UWidgetSwitcherSlot_SetVerticalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

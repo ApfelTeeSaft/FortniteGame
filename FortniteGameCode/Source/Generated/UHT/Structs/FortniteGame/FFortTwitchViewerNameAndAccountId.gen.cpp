@@ -31,25 +31,12 @@ class UScriptStruct* FFortTwitchViewerNameAndAccountId::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF28F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTwitchViewerNameAndAccountId_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTwitchViewerNameAndAccountId>();
 	}
-	// ReturnStructParams: original RVA 0x042C4A10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTwitchViewerNameAndAccountId_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTwitchViewerNameAndAccountId",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortTwitchViewerNameAndAccountId),
-		alignof(FFortTwitchViewerNameAndAccountId),
-		Z_Construct_UScriptStruct_FFortTwitchViewerNameAndAccountId_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039FB0 (end 0x01039FDF)
 	// Original VA: 0x0000000141039FB0 | File offset: 0x010395B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTwitchViewerNameAndAccountId::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTwitchViewerNameAndAccountId_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C4A10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTwitchViewerNameAndAccountId_Statics::NewStructOps,
+				"FortTwitchViewerNameAndAccountId",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortTwitchViewerNameAndAccountId),
+				alignof(FFortTwitchViewerNameAndAccountId),
+				Z_Construct_UScriptStruct_FFortTwitchViewerNameAndAccountId_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

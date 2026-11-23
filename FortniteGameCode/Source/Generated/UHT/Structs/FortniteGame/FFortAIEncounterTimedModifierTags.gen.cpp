@@ -31,25 +31,12 @@ class UScriptStruct* FFortAIEncounterTimedModifierTags::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6730 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAIEncounterTimedModifierTags_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAIEncounterTimedModifierTags>();
 	}
-	// ReturnStructParams: original RVA 0x04269C60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAIEncounterTimedModifierTags_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAIEncounterTimedModifierTags",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAIEncounterTimedModifierTags),
-		alignof(FFortAIEncounterTimedModifierTags),
-		Z_Construct_UScriptStruct_FFortAIEncounterTimedModifierTags_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7CD0 (end 0x00FD7CFF)
 	// Original VA: 0x0000000140FD7CD0 | File offset: 0x00FD72D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAIEncounterTimedModifierTags::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAIEncounterTimedModifierTags_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04269C60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAIEncounterTimedModifierTags_Statics::NewStructOps,
+				"FortAIEncounterTimedModifierTags",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAIEncounterTimedModifierTags),
+				alignof(FFortAIEncounterTimedModifierTags),
+				Z_Construct_UScriptStruct_FFortAIEncounterTimedModifierTags_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

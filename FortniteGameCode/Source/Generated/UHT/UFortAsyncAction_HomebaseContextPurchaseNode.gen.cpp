@@ -18,12 +18,6 @@ void UFortAsyncAction_HomebaseContextPurchaseNode::StaticRegisterNativesUFortAsy
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UFortAsyncAction_HomebaseContextPurchaseNode_OnMCPRequestComplete__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04294E40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortAsyncAction_HomebaseContextPurchaseNode_OnMCPRequestComplete__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode, "OnMCPRequestComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB320 (end 0x00FFB34F)
 // Original VA: 0x0000000140FFB320 | File offset: 0x00FFA920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,7 +26,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_HomebaseContextPurchas
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortAsyncAction_HomebaseContextPurchaseNode_OnMCPRequestComplete__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x04294E40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode, "OnMCPRequestComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -40,10 +36,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_HomebaseContextPurchas
 struct Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_PurchaseNode_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04295410; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_PurchaseNode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode, "PurchaseNode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_PurchaseNode_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB530 (end 0x00FFB55F)
 // Original VA: 0x0000000140FFB530 | File offset: 0x00FFAB30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +45,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_Pu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_PurchaseNode_Statics::FuncParams);
+		// FuncParams: original RVA 0x04295410; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode, "PurchaseNode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_PurchaseNode_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

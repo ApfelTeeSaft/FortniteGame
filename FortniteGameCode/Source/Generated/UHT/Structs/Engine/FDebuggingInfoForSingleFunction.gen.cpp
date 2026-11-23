@@ -30,25 +30,12 @@ class UScriptStruct* FDebuggingInfoForSingleFunction::StaticStruct()
 	struct Z_Construct_UScriptStruct_FDebuggingInfoForSingleFunction_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2200 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FDebuggingInfoForSingleFunction_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDebuggingInfoForSingleFunction>();
 	}
-	// ReturnStructParams: original RVA 0x04427850
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDebuggingInfoForSingleFunction_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"DebuggingInfoForSingleFunction",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FDebuggingInfoForSingleFunction),
-		alignof(FDebuggingInfoForSingleFunction),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E4460 (end 0x023E448F)
 	// Original VA: 0x00000001423E4460 | File offset: 0x023E3A60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FDebuggingInfoForSingleFunction::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FDebuggingInfoForSingleFunction_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04427850
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FDebuggingInfoForSingleFunction_Statics::NewStructOps,
+				"DebuggingInfoForSingleFunction",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FDebuggingInfoForSingleFunction),
+				alignof(FDebuggingInfoForSingleFunction),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x039A0440, FClassParams RVA 0x039A0470.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_ASceneCapture2D();  // RVA 0x024C6C90 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6AB0 (end 0x024C6AD2)
 // Original VA: 0x00000001424C6AB0 | File offset: 0x024C60B0
@@ -20,7 +20,7 @@ void ASceneCapture2D::StaticRegisterNativesASceneCapture2D()
 
 struct Z_Construct_UFunction_ASceneCapture2D_OnInterpToggle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045089C0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7070 (end 0x024C709F)
 // Original VA: 0x00000001424C7070 | File offset: 0x024C6670
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_ASceneCapture2D_OnInterpToggle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASceneCapture2D_OnInterpToggle_Statics::FuncParams);
+		// FuncParams: original RVA 0x045089C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASceneCapture2D, "OnInterpToggle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_ASceneCapture2D_OnInterpToggle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

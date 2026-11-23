@@ -26,10 +26,7 @@ void AFortPlayerStateOutpost::StaticRegisterNativesAFortPlayerStateOutpost()
 struct Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04311B10; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "CanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BD40 (end 0x0108BD6F)
 // Original VA: 0x000000014108BD40 | File offset: 0x0108B340
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost_Statics::FuncParams);
+		// FuncParams: original RVA 0x04311B10; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "CanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost()
 struct Z_Construct_UFunction_AFortPlayerStateOutpost_IsOutpostOwner_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04311BA0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerStateOutpost_IsOutpostOwner_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "IsOutpostOwner", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortPlayerStateOutpost_IsOutpostOwner_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BD70 (end 0x0108BD9F)
 // Original VA: 0x000000014108BD70 | File offset: 0x0108B370
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,17 +54,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_IsOutpostOwner()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerStateOutpost_IsOutpostOwner_Statics::FuncParams);
+		// FuncParams: original RVA 0x04311BA0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "IsOutpostOwner", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortPlayerStateOutpost_IsOutpostOwner_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CanEditOutpost_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04311BE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CanEditOutpost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "OnRep_CanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BDA0 (end 0x0108BDCF)
 // Original VA: 0x000000014108BDA0 | File offset: 0x0108B3A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,17 +69,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CanEditOutpost()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CanEditOutpost_Statics::FuncParams);
+		// FuncParams: original RVA 0x04311BE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "OnRep_CanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CraftingTableItemsRemaing_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04311C20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CraftingTableItemsRemaing_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "OnRep_CraftingTableItemsRemaing", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BDD0 (end 0x0108BDFF)
 // Original VA: 0x000000014108BDD0 | File offset: 0x0108B3D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +84,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CraftingTableItem
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CraftingTableItemsRemaing_Statics::FuncParams);
+		// FuncParams: original RVA 0x04311C20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "OnRep_CraftingTableItemsRemaing", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +94,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CraftingTableItem
 struct Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04311CF0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "ServerSetCanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80280CC0, 0x10, Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BE00 (end 0x0108BE2F)
 // Original VA: 0x000000014108BE00 | File offset: 0x0108B400
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +103,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost_Statics::FuncParams);
+		// FuncParams: original RVA 0x04311CF0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "ServerSetCanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80280CC0, 0x10, Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +113,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost
 struct Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04311DC0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "SetCanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108BE30 (end 0x0108BE5F)
 // Original VA: 0x000000014108BE30 | File offset: 0x0108B430
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +122,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost_Statics::FuncParams);
+		// FuncParams: original RVA 0x04311DC0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerStateOutpost, "SetCanEditOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

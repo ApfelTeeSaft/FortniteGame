@@ -31,25 +31,12 @@ class UScriptStruct* FInterpLookupPoint::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242EB50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FInterpLookupPoint_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FInterpLookupPoint>();
 	}
-	// ReturnStructParams: original RVA 0x04473390
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FInterpLookupPoint_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"InterpLookupPoint",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FInterpLookupPoint),
-		alignof(FInterpLookupPoint),
-		Z_Construct_UScriptStruct_FInterpLookupPoint_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024302B0 (end 0x024302DF)
 	// Original VA: 0x00000001424302B0 | File offset: 0x0242F8B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FInterpLookupPoint::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FInterpLookupPoint_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04473390
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FInterpLookupPoint_Statics::NewStructOps,
+				"InterpLookupPoint",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FInterpLookupPoint),
+				alignof(FInterpLookupPoint),
+				Z_Construct_UScriptStruct_FInterpLookupPoint_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

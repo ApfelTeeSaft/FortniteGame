@@ -53,10 +53,7 @@ void UFortVideoOptions::StaticRegisterNativesUFortVideoOptions()
 struct Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D2E40; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "AntiAliasingQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919820 (end 0x0291984F)
 // Original VA: 0x0000000142919820 | File offset: 0x02918E20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -65,7 +62,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D2E40; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "AntiAliasingQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -73,10 +72,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D2EC0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "EffectsQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919850 (end 0x0291987F)
 // Original VA: 0x0000000142919850 | File offset: 0x02918E50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -85,7 +81,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D2EC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "EffectsQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -93,10 +91,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D2F40; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "FrameRateLimitChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919880 (end 0x029198AF)
 // Original VA: 0x0000000142919880 | File offset: 0x02918E80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -105,7 +100,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D2F40; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "FrameRateLimitChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -113,10 +110,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D2FC0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetAntiAliasingQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029198B0 (end 0x029198DF)
 // Original VA: 0x00000001429198B0 | File offset: 0x02918EB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -125,7 +119,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D2FC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetAntiAliasingQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -133,10 +129,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality()
 struct Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3040; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetCurrentDisplayResolution", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029198E0 (end 0x0291990F)
 // Original VA: 0x00000001429198E0 | File offset: 0x02918EE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -145,7 +138,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3040; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetCurrentDisplayResolution", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -153,10 +148,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution()
 struct Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D30C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetCurrentFPS", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919910 (end 0x0291993F)
 // Original VA: 0x0000000142919910 | File offset: 0x02918F10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -165,7 +157,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D30C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetCurrentFPS", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -173,10 +167,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS()
 struct Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3140; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetCurrentWindowMode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919940 (end 0x0291996F)
 // Original VA: 0x0000000142919940 | File offset: 0x02918F40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -185,7 +176,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3140; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetCurrentWindowMode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -193,10 +186,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode()
 struct Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D31C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetEffectsQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919970 (end 0x0291999F)
 // Original VA: 0x0000000142919970 | File offset: 0x02918F70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -205,7 +195,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D31C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetEffectsQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -213,10 +205,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality()
 struct Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3250; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetMotionBlur", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029199A0 (end 0x029199CF)
 // Original VA: 0x00000001429199A0 | File offset: 0x02918FA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -225,7 +214,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3250; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetMotionBlur", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -233,10 +224,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur()
 struct Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D32D0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetOverallQualityLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029199D0 (end 0x029199FF)
 // Original VA: 0x00000001429199D0 | File offset: 0x02918FD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -245,7 +233,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D32D0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetOverallQualityLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -253,10 +243,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel()
 struct Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3380; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPossibleDisplayResolutions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919A00 (end 0x02919A2F)
 // Original VA: 0x0000000142919A00 | File offset: 0x02919000
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -265,7 +252,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3380; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPossibleDisplayResolutions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -273,10 +262,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions
 struct Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3430; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPossibleFPS", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919A30 (end 0x02919A5F)
 // Original VA: 0x0000000142919A30 | File offset: 0x02919030
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -285,7 +271,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3430; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPossibleFPS", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -293,10 +281,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS()
 struct Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D34E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPossibleWindowModes", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919A60 (end 0x02919A8F)
 // Original VA: 0x0000000142919A60 | File offset: 0x02919060
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -305,7 +290,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D34E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPossibleWindowModes", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -313,10 +300,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes()
 struct Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3560; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPostProcessQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919A90 (end 0x02919ABF)
 // Original VA: 0x0000000142919A90 | File offset: 0x02919090
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -325,7 +309,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3560; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetPostProcessQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -333,10 +319,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality()
 struct Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D35E0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetShadowQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919AC0 (end 0x02919AEF)
 // Original VA: 0x0000000142919AC0 | File offset: 0x029190C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -345,7 +328,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D35E0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetShadowQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -353,10 +338,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality()
 struct Z_Construct_UFunction_UFortVideoOptions_GetShowFPS_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3670; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetShowFPS_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetShowFPS", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetShowFPS_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919AF0 (end 0x02919B1F)
 // Original VA: 0x0000000142919AF0 | File offset: 0x029190F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -365,7 +347,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetShowFPS()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetShowFPS_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3670; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetShowFPS", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetShowFPS_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -373,10 +357,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetShowFPS()
 struct Z_Construct_UFunction_UFortVideoOptions_GetShowGrass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3700; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetShowGrass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetShowGrass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetShowGrass_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919B20 (end 0x02919B4F)
 // Original VA: 0x0000000142919B20 | File offset: 0x02919120
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -385,7 +366,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetShowGrass()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetShowGrass_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3700; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetShowGrass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetShowGrass_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -393,10 +376,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetShowGrass()
 struct Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3780; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetTextureQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919B50 (end 0x02919B7F)
 // Original VA: 0x0000000142919B50 | File offset: 0x02919150
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -405,7 +385,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3780; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetTextureQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -413,10 +395,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality()
 struct Z_Construct_UFunction_UFortVideoOptions_GetUseVsync_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3810; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetUseVsync_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetUseVsync", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetUseVsync_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919B80 (end 0x02919BAF)
 // Original VA: 0x0000000142919B80 | File offset: 0x02919180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -425,7 +404,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetUseVsync()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetUseVsync_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3810; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetUseVsync", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_GetUseVsync_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -433,10 +414,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetUseVsync()
 struct Z_Construct_UFunction_UFortVideoOptions_GetViewDistanceQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3890; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_GetViewDistanceQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetViewDistanceQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetViewDistanceQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919BB0 (end 0x02919BDF)
 // Original VA: 0x0000000142919BB0 | File offset: 0x029191B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -445,17 +423,13 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_GetViewDistanceQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_GetViewDistanceQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3890; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "GetViewDistanceQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_GetViewDistanceQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortVideoOptions_InitializeValues_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045D38D0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_InitializeValues_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "InitializeValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919BE0 (end 0x02919C0F)
 // Original VA: 0x0000000142919BE0 | File offset: 0x029191E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -464,7 +438,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_InitializeValues()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_InitializeValues_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D38D0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "InitializeValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -472,10 +448,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_InitializeValues()
 struct Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3990; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "IsWindowedFullscreen", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x8, Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919C10 (end 0x02919C3F)
 // Original VA: 0x0000000142919C10 | File offset: 0x02919210
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -484,7 +457,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3990; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "IsWindowedFullscreen", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x8, Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -492,10 +467,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen()
 struct Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3A20; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "MotionBlurChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919C40 (end 0x02919C6F)
 // Original VA: 0x0000000142919C40 | File offset: 0x02919240
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -504,7 +476,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3A20; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "MotionBlurChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -512,10 +486,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3AA0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "OnQualitySelectorChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919C70 (end 0x02919C9F)
 // Original VA: 0x0000000142919C70 | File offset: 0x02919270
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -524,7 +495,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3AA0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "OnQualitySelectorChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -532,10 +505,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3B20; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "PostProcessQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919CA0 (end 0x02919CCF)
 // Original VA: 0x0000000142919CA0 | File offset: 0x029192A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -544,7 +514,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3B20; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "PostProcessQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -552,10 +524,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3BA0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ResolutionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919CD0 (end 0x02919CFF)
 // Original VA: 0x0000000142919CD0 | File offset: 0x029192D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -564,7 +533,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3BA0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ResolutionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -572,10 +543,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3C20; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ShadowQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919D00 (end 0x02919D2F)
 // Original VA: 0x0000000142919D00 | File offset: 0x02919300
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -584,7 +552,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3C20; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ShadowQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -592,10 +562,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3CB0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ShowFPSChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919D30 (end 0x02919D5F)
 // Original VA: 0x0000000142919D30 | File offset: 0x02919330
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -604,7 +571,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3CB0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ShowFPSChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -612,10 +581,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3D40; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ShowGrassChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919D60 (end 0x02919D8F)
 // Original VA: 0x0000000142919D60 | File offset: 0x02919360
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -624,7 +590,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3D40; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ShowGrassChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -632,10 +600,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3DC0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "TextureQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919D90 (end 0x02919DBF)
 // Original VA: 0x0000000142919D90 | File offset: 0x02919390
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -644,7 +609,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3DC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "TextureQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -652,10 +619,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3E50; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "UseVsyncChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919DC0 (end 0x02919DEF)
 // Original VA: 0x0000000142919DC0 | File offset: 0x029193C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -664,7 +628,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3E50; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "UseVsyncChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -672,10 +638,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3ED0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ViewDistanceQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919DF0 (end 0x02919E1F)
 // Original VA: 0x0000000142919DF0 | File offset: 0x029193F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -684,7 +647,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3ED0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "ViewDistanceQualityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -692,10 +657,7 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged()
 struct Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D3F50; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "WindowModeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919E20 (end 0x02919E4F)
 // Original VA: 0x0000000142919E20 | File offset: 0x02919420
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -704,7 +666,9 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D3F50; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortVideoOptions, "WindowModeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

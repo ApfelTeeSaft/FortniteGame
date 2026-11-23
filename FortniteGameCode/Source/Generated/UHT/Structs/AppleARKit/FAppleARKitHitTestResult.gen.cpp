@@ -31,25 +31,12 @@ class UScriptStruct* FAppleARKitHitTestResult::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00805FF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAppleARKitHitTestResult_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAppleARKitHitTestResult>();
 	}
-	// ReturnStructParams: original RVA 0x041C8890
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAppleARKitHitTestResult_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AppleARKit,
-		nullptr,
-		&NewStructOps,
-		"AppleARKitHitTestResult",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAppleARKitHitTestResult),
-		alignof(FAppleARKitHitTestResult),
-		Z_Construct_UScriptStruct_FAppleARKitHitTestResult_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x008066A0 (end 0x008066CF)
 	// Original VA: 0x00000001408066A0 | File offset: 0x00805CA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAppleARKitHitTestResult::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAppleARKitHitTestResult_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C8890
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AppleARKit,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAppleARKitHitTestResult_Statics::NewStructOps,
+				"AppleARKitHitTestResult",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAppleARKitHitTestResult),
+				alignof(FAppleARKitHitTestResult),
+				Z_Construct_UScriptStruct_FAppleARKitHitTestResult_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

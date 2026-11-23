@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaPlaylistLeaderboardData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287E570 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaPlaylistLeaderboardData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaPlaylistLeaderboardData>();
 	}
-	// ReturnStructParams: original RVA 0x0454E440
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaPlaylistLeaderboardData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"AthenaPlaylistLeaderboardData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAthenaPlaylistLeaderboardData),
-		alignof(FAthenaPlaylistLeaderboardData),
-		Z_Construct_UScriptStruct_FAthenaPlaylistLeaderboardData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02881000 (end 0x0288102F)
 	// Original VA: 0x0000000142881000 | File offset: 0x02880600
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaPlaylistLeaderboardData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaPlaylistLeaderboardData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0454E440
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaPlaylistLeaderboardData_Statics::NewStructOps,
+				"AthenaPlaylistLeaderboardData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAthenaPlaylistLeaderboardData),
+				alignof(FAthenaPlaylistLeaderboardData),
+				Z_Construct_UScriptStruct_FAthenaPlaylistLeaderboardData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

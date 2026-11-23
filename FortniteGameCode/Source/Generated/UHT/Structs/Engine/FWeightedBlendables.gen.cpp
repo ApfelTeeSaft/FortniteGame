@@ -31,25 +31,12 @@ class UScriptStruct* FWeightedBlendables::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559CD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FWeightedBlendables_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWeightedBlendables>();
 	}
-	// ReturnStructParams: original RVA 0x04507590
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWeightedBlendables_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"WeightedBlendables",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FWeightedBlendables),
-		alignof(FWeightedBlendables),
-		Z_Construct_UScriptStruct_FWeightedBlendables_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5B20 (end 0x024C5B4F)
 	// Original VA: 0x00000001424C5B20 | File offset: 0x024C5120
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FWeightedBlendables::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FWeightedBlendables_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04507590
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FWeightedBlendables_Statics::NewStructOps,
+				"WeightedBlendables",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FWeightedBlendables),
+				alignof(FWeightedBlendables),
+				Z_Construct_UScriptStruct_FWeightedBlendables_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -23,10 +23,7 @@ void UFortSquadSelectorButton::StaticRegisterNativesUFortSquadSelectorButton()
 struct Z_Construct_UFunction_UFortSquadSelectorButton_GetIdOfSquadToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BB7F0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSelectorButton_GetIdOfSquadToManageBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "GetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSquadSelectorButton_GetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FBE80 (end 0x028FBEAF)
 // Original VA: 0x00000001428FBE80 | File offset: 0x028FB480
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +32,13 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_GetIdOfSquadToManageBP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSelectorButton_GetIdOfSquadToManageBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BB7F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "GetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSquadSelectorButton_GetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSquadSelectorButton_HandleDifferentSquadSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045BB830; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSelectorButton_HandleDifferentSquadSetBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "HandleDifferentSquadSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FBEB0 (end 0x028FBEDF)
 // Original VA: 0x00000001428FBEB0 | File offset: 0x028FB4B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +47,13 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_HandleDifferentSquadSe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSelectorButton_HandleDifferentSquadSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BB830; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "HandleDifferentSquadSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSquadSelectorButton_HandleSquadChangedBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045BB870; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSelectorButton_HandleSquadChangedBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "HandleSquadChangedBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FBEE0 (end 0x028FBF0F)
 // Original VA: 0x00000001428FBEE0 | File offset: 0x028FB4E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +62,9 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_HandleSquadChangedBP()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSelectorButton_HandleSquadChangedBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BB870; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "HandleSquadChangedBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +72,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_HandleSquadChangedBP()
 struct Z_Construct_UFunction_UFortSquadSelectorButton_SetIdOfSquadToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BB8F0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSelectorButton_SetIdOfSquadToManageBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "SetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortSquadSelectorButton_SetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FBF10 (end 0x028FBF3F)
 // Original VA: 0x00000001428FBF10 | File offset: 0x028FB510
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +81,9 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_SetIdOfSquadToManageBP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSelectorButton_SetIdOfSquadToManageBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BB8F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "SetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortSquadSelectorButton_SetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -101,10 +91,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_SetIdOfSquadToManageBP
 struct Z_Construct_UFunction_UFortSquadSelectorButton_TryGetStaticSquadDataBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BB9C0; StructureSize 0x90 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSelectorButton_TryGetStaticSquadDataBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "TryGetStaticSquadDataBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x90, Z_Construct_UFunction_UFortSquadSelectorButton_TryGetStaticSquadDataBP_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FBF40 (end 0x028FBF6F)
 // Original VA: 0x00000001428FBF40 | File offset: 0x028FB540
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -113,7 +100,9 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_TryGetStaticSquadDataB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSelectorButton_TryGetStaticSquadDataBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BB9C0; StructureSize 0x90 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSelectorButton, "TryGetStaticSquadDataBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x90, Z_Construct_UFunction_UFortSquadSelectorButton_TryGetStaticSquadDataBP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

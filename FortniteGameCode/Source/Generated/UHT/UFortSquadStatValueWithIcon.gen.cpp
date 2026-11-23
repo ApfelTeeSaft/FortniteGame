@@ -4,12 +4,8 @@
 // FClassFunctionLinkInfo array RVA 0x03D241C0, FClassParams RVA 0x03D24200.
 
 #include "FortniteGameCode/UHTRecovered.h"
+UClass* Z_Construct_UClass_UFortSquadStatValueWithIcon();  // RVA 0x028FB780 (registered by its FCompiledInDefer)
 
-
-struct Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BB630 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FCA50 (end 0x028FCA7F)
 // Original VA: 0x00000001428FCA50 | File offset: 0x028FC050
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -18,7 +14,9 @@ UFunction* Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttr
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BB630; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadStatValueWithIcon, "HandleDifferentAttributeSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

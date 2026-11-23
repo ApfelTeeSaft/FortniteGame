@@ -22,10 +22,7 @@ void UFortInfluenceMap::StaticRegisterNativesUFortInfluenceMap()
 struct Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0429CDF0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInfluenceMap, "K2_AddInfluenceSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x30, Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007860 (end 0x0100788F)
 // Original VA: 0x0000000141007860 | File offset: 0x01006E60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429CDF0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInfluenceMap, "K2_AddInfluenceSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x30, Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource()
 struct Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePositions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0429CEF0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePositions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInfluenceMap, "K2_GetInfluenceSourcePositions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePositions_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007890 (end 0x010078BF)
 // Original VA: 0x0000000141007890 | File offset: 0x01006E90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePosition
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePositions_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429CEF0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInfluenceMap, "K2_GetInfluenceSourcePositions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePositions_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

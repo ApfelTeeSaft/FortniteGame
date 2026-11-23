@@ -31,25 +31,12 @@ class UScriptStruct* FFortPlayerSpawnPadPlacementData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01040850 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortPlayerSpawnPadPlacementData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortPlayerSpawnPadPlacementData>();
 	}
-	// ReturnStructParams: original RVA 0x042CBF40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPlayerSpawnPadPlacementData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortPlayerSpawnPadPlacementData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortPlayerSpawnPadPlacementData),
-		alignof(FFortPlayerSpawnPadPlacementData),
-		Z_Construct_UScriptStruct_FFortPlayerSpawnPadPlacementData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010422A0 (end 0x010422CF)
 	// Original VA: 0x00000001410422A0 | File offset: 0x010418A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortPlayerSpawnPadPlacementData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortPlayerSpawnPadPlacementData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042CBF40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortPlayerSpawnPadPlacementData_Statics::NewStructOps,
+				"FortPlayerSpawnPadPlacementData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortPlayerSpawnPadPlacementData),
+				alignof(FFortPlayerSpawnPadPlacementData),
+				Z_Construct_UScriptStruct_FFortPlayerSpawnPadPlacementData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

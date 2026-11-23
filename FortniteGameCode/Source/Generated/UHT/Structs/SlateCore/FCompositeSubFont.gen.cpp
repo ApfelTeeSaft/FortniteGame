@@ -32,25 +32,12 @@ class UScriptStruct* FCompositeSubFont::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A170 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCompositeSubFont_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCompositeSubFont>();
 	}
-	// ReturnStructParams: original RVA 0x04378190
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCompositeSubFont_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FCompositeFallbackFont,
-		&NewStructOps,
-		"CompositeSubFont",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCompositeSubFont),
-		alignof(FCompositeSubFont),
-		Z_Construct_UScriptStruct_FCompositeSubFont_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CC90 (end 0x0145CCBF)
 	// Original VA: 0x000000014145CC90 | File offset: 0x0145C290
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FCompositeSubFont::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCompositeSubFont_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04378190
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FCompositeFallbackFont,
+				&Z_Construct_UScriptStruct_FCompositeSubFont_Statics::NewStructOps,
+				"CompositeSubFont",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCompositeSubFont),
+				alignof(FCompositeSubFont),
+				Z_Construct_UScriptStruct_FCompositeSubFont_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

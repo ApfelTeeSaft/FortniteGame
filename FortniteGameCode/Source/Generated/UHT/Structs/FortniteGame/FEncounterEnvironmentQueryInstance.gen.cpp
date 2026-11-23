@@ -31,25 +31,12 @@ class UScriptStruct* FEncounterEnvironmentQueryInstance::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8B7F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEncounterEnvironmentQueryInstance_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEncounterEnvironmentQueryInstance>();
 	}
-	// ReturnStructParams: original RVA 0x042229A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEncounterEnvironmentQueryInstance_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"EncounterEnvironmentQueryInstance",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FEncounterEnvironmentQueryInstance),
-		alignof(FEncounterEnvironmentQueryInstance),
-		Z_Construct_UScriptStruct_FEncounterEnvironmentQueryInstance_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8CF20 (end 0x00F8CF4F)
 	// Original VA: 0x0000000140F8CF20 | File offset: 0x00F8C520
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEncounterEnvironmentQueryInstance::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEncounterEnvironmentQueryInstance_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042229A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEncounterEnvironmentQueryInstance_Statics::NewStructOps,
+				"EncounterEnvironmentQueryInstance",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FEncounterEnvironmentQueryInstance),
+				alignof(FEncounterEnvironmentQueryInstance),
+				Z_Construct_UScriptStruct_FEncounterEnvironmentQueryInstance_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

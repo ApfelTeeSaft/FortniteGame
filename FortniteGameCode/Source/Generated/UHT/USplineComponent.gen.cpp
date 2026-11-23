@@ -100,10 +100,7 @@ void USplineComponent::StaticRegisterNativesUSplineComponent()
 struct Z_Construct_UFunction_USplineComponent_AddPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045202C0; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_AddPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x48, Z_Construct_UFunction_USplineComponent_AddPoint_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD910 (end 0x024DD93F)
 // Original VA: 0x00000001424DD910 | File offset: 0x024DCF10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -112,7 +109,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddPoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_AddPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x045202C0; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x48, Z_Construct_UFunction_USplineComponent_AddPoint_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -120,10 +119,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddPoint()
 struct Z_Construct_UFunction_USplineComponent_AddPoints_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045203C0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_AddPoints_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x18, Z_Construct_UFunction_USplineComponent_AddPoints_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD940 (end 0x024DD96F)
 // Original VA: 0x00000001424DD940 | File offset: 0x024DCF40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -132,7 +128,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddPoints()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_AddPoints_Statics::FuncParams);
+		// FuncParams: original RVA 0x045203C0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x18, Z_Construct_UFunction_USplineComponent_AddPoints_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -140,10 +138,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddPoints()
 struct Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520440; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplineLocalPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0xC, Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD970 (end 0x024DD99F)
 // Original VA: 0x00000001424DD970 | File offset: 0x024DCF70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -152,7 +147,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520440; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplineLocalPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0xC, Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -160,10 +157,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint()
 struct Z_Construct_UFunction_USplineComponent_AddSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520550; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_AddSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_AddSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD9A0 (end 0x024DD9CF)
 // Original VA: 0x00000001424DD9A0 | File offset: 0x024DCFA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -172,7 +166,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_AddSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520550; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_AddSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -180,10 +176,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045206A0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplinePointAtIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD9D0 (end 0x024DD9FF)
 // Original VA: 0x00000001424DD9D0 | File offset: 0x024DCFD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -192,7 +185,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x045206A0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplinePointAtIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -200,10 +195,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex()
 struct Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520720; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplineWorldPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0xC, Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDA00 (end 0x024DDA2F)
 // Original VA: 0x00000001424DDA00 | File offset: 0x024DD000
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -212,7 +204,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520720; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "AddSplineWorldPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0xC, Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -220,10 +214,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint()
 struct Z_Construct_UFunction_USplineComponent_ClearSplinePoints_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045207B0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_ClearSplinePoints_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "ClearSplinePoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_USplineComponent_ClearSplinePoints_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDA30 (end 0x024DDA5F)
 // Original VA: 0x00000001424DDA30 | File offset: 0x024DD030
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -232,7 +223,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_ClearSplinePoints()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_ClearSplinePoints_Statics::FuncParams);
+		// FuncParams: original RVA 0x045207B0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "ClearSplinePoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_USplineComponent_ClearSplinePoints_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -240,10 +233,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_ClearSplinePoints()
 struct Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045208B0; StructureSize 0x1C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindDirectionClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDA60 (end 0x024DDA8F)
 // Original VA: 0x00000001424DDA60 | File offset: 0x024DD060
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -252,7 +242,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLoc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x045208B0; StructureSize 0x1C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindDirectionClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -260,10 +252,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLoc
 struct Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520970; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindInputKeyClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x10, Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLocation_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDA90 (end 0x024DDABF)
 // Original VA: 0x00000001424DDA90 | File offset: 0x024DD090
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -272,7 +261,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLoca
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520970; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindInputKeyClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x10, Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLocation_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -280,10 +271,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLoca
 struct Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520A70; StructureSize 0x1C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindLocationClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDAC0 (end 0x024DDAEF)
 // Original VA: 0x00000001424DDAC0 | File offset: 0x024DD0C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -292,7 +280,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLoca
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520A70; StructureSize 0x1C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindLocationClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -300,10 +290,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLoca
 struct Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520B70; StructureSize 0x1C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindRightVectorClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDAF0 (end 0x024DDB1F)
 // Original VA: 0x00000001424DDAF0 | File offset: 0x024DD0F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -312,7 +299,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldL
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520B70; StructureSize 0x1C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindRightVectorClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -320,10 +309,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldL
 struct Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520C70; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindRollClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x14, Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDB20 (end 0x024DDB4F)
 // Original VA: 0x00000001424DDB20 | File offset: 0x024DD120
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -332,7 +318,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520C70; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindRollClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x14, Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -340,10 +328,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation
 struct Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520D70; StructureSize 0x1C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindRotationClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDB50 (end 0x024DDB7F)
 // Original VA: 0x00000001424DDB50 | File offset: 0x024DD150
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -352,7 +337,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLoca
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520D70; StructureSize 0x1C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindRotationClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -360,10 +347,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLoca
 struct Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520E30; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindScaleClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x18, Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocation_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDB80 (end 0x024DDBAF)
 // Original VA: 0x00000001424DDB80 | File offset: 0x024DD180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -372,7 +356,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocatio
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520E30; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindScaleClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x18, Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocation_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -380,10 +366,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocatio
 struct Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04520F30; StructureSize 0x1C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindTangentClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDBB0 (end 0x024DDBDF)
 // Original VA: 0x00000001424DDBB0 | File offset: 0x024DD1B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -392,7 +375,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocat
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04520F30; StructureSize 0x1C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindTangentClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -400,10 +385,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocat
 struct Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521080; StructureSize 0x40 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindTransformClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x40, Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLocation_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDBE0 (end 0x024DDC0F)
 // Original VA: 0x00000001424DDBE0 | File offset: 0x024DD1E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -412,7 +394,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLoc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521080; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindTransformClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x40, Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLocation_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -420,10 +404,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLoc
 struct Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521180; StructureSize 0x1C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindUpVectorClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDC10 (end 0x024DDC3F)
 // Original VA: 0x00000001424DDC10 | File offset: 0x024DD210
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -432,7 +413,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLoca
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521180; StructureSize 0x1C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "FindUpVectorClosestToWorldLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -440,10 +423,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLoca
 struct Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521280; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetArriveTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDC40 (end 0x024DDC6F)
 // Original VA: 0x00000001424DDC40 | File offset: 0x024DD240
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -452,7 +432,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521280; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetArriveTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -460,10 +442,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint(
 struct Z_Construct_UFunction_USplineComponent_GetDefaultUpVector_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521340; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetDefaultUpVector_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDefaultUpVector", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetDefaultUpVector_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDC70 (end 0x024DDC9F)
 // Original VA: 0x00000001424DDC70 | File offset: 0x024DD270
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -472,7 +451,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDefaultUpVector()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetDefaultUpVector_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521340; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDefaultUpVector", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetDefaultUpVector_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -480,10 +461,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDefaultUpVector()
 struct Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521440; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDirectionAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDCA0 (end 0x024DDCCF)
 // Original VA: 0x00000001424DDCA0 | File offset: 0x024DD2A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -492,7 +470,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521440; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDirectionAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -500,10 +480,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpl
 struct Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521540; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDirectionAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDCD0 (end 0x024DDCFF)
 // Original VA: 0x00000001424DDCD0 | File offset: 0x024DD2D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -512,7 +489,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521540; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDirectionAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -520,10 +499,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetDirectionAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521690; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetDirectionAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDirectionAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetDirectionAtTime_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDD00 (end 0x024DDD2F)
 // Original VA: 0x00000001424DDD00 | File offset: 0x024DD300
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -532,7 +508,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDirectionAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetDirectionAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521690; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDirectionAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetDirectionAtTime_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -540,10 +518,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDirectionAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521740; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDistanceAlongSplineAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDD30 (end 0x024DDD5F)
 // Original VA: 0x00000001424DDD30 | File offset: 0x024DD330
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -552,7 +527,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSpline
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521740; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetDistanceAlongSplineAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -560,10 +537,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSpline
 struct Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045217F0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetInputKeyAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDD60 (end 0x024DDD8F)
 // Original VA: 0x00000001424DDD60 | File offset: 0x024DD360
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -572,7 +546,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpli
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x045217F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetInputKeyAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -580,10 +556,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpli
 struct Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045218F0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLeaveTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDD90 (end 0x024DDDBF)
 // Original VA: 0x00000001424DDD90 | File offset: 0x024DD390
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -592,7 +565,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x045218F0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLeaveTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -600,10 +575,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045219F0; StructureSize 0x1C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocalLocationAndTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDDC0 (end 0x024DDDEF)
 // Original VA: 0x00000001424DDDC0 | File offset: 0x024DD3C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -612,7 +584,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSp
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x045219F0; StructureSize 0x1C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocalLocationAndTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x1C, Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -620,10 +594,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSp
 struct Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521B30; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAndTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x20, Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDDF0 (end 0x024DDE1F)
 // Original VA: 0x00000001424DDDF0 | File offset: 0x024DD3F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -632,7 +603,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplineP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521B30; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAndTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x20, Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -640,10 +613,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplineP
 struct Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521C30; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDE20 (end 0x024DDE4F)
 // Original VA: 0x00000001424DDE20 | File offset: 0x024DD420
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -652,7 +622,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpli
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521C30; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -660,10 +632,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpli
 struct Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521D30; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDE50 (end 0x024DDE7F)
 // Original VA: 0x00000001424DDE50 | File offset: 0x024DD450
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -672,7 +641,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521D30; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -680,10 +651,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetLocationAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521E80; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetLocationAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLocationAtTime_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDE80 (end 0x024DDEAF)
 // Original VA: 0x00000001424DDE80 | File offset: 0x024DD480
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -692,7 +660,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetLocationAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521E80; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetLocationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetLocationAtTime_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -700,10 +670,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetLocationAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04521F00; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetNumberOfSplinePoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDEB0 (end 0x024DDEDF)
 // Original VA: 0x00000001424DDEB0 | File offset: 0x024DD4B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -712,7 +679,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints_Statics::FuncParams);
+		// FuncParams: original RVA 0x04521F00; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetNumberOfSplinePoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -720,10 +689,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints()
 struct Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522000; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRightVectorAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDEE0 (end 0x024DDF0F)
 // Original VA: 0x00000001424DDEE0 | File offset: 0x024DD4E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -732,7 +698,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522000; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRightVectorAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -740,10 +708,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongS
 struct Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522100; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRightVectorAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDF10 (end 0x024DDF3F)
 // Original VA: 0x00000001424DDF10 | File offset: 0x024DD510
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -752,7 +717,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522100; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRightVectorAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -760,10 +727,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522250; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRightVectorAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDF40 (end 0x024DDF6F)
 // Original VA: 0x00000001424DDF40 | File offset: 0x024DD540
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -772,7 +736,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522250; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRightVectorAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -780,10 +746,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522350; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRollAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDF70 (end 0x024DDF9F)
 // Original VA: 0x00000001424DDF70 | File offset: 0x024DD570
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -792,7 +755,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522350; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRollAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -800,10 +765,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline()
 struct Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522450; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRollAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDFA0 (end 0x024DDFCF)
 // Original VA: 0x00000001424DDFA0 | File offset: 0x024DD5A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -812,7 +774,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522450; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRollAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -820,10 +784,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetRollAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045225A0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRollAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRollAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_USplineComponent_GetRollAtTime_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DDFD0 (end 0x024DDFFF)
 // Original VA: 0x00000001424DDFD0 | File offset: 0x024DD5D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -832,7 +793,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRollAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRollAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x045225A0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRollAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_USplineComponent_GetRollAtTime_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -840,10 +803,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRollAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045226A0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRotationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE000 (end 0x024DE02F)
 // Original VA: 0x00000001424DE000 | File offset: 0x024DD600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -852,7 +812,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpli
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x045226A0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRotationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -860,10 +822,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpli
 struct Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045227A0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRotationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE030 (end 0x024DE05F)
 // Original VA: 0x00000001424DE030 | File offset: 0x024DD630
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -872,7 +831,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x045227A0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRotationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -880,10 +841,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetRotationAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045228F0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetRotationAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRotationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRotationAtTime_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE060 (end 0x024DE08F)
 // Original VA: 0x00000001424DE060 | File offset: 0x024DD660
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -892,7 +850,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRotationAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetRotationAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x045228F0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetRotationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetRotationAtTime_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -900,10 +860,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetRotationAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045229B0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetScaleAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE090 (end 0x024DE0BF)
 // Original VA: 0x00000001424DE090 | File offset: 0x024DD690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -912,7 +869,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x045229B0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetScaleAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -920,10 +879,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline(
 struct Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522A70; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetScaleAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE0C0 (end 0x024DE0EF)
 // Original VA: 0x00000001424DE0C0 | File offset: 0x024DD6C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -932,7 +888,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522A70; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetScaleAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -940,10 +898,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetScaleAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522B70; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetScaleAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetScaleAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetScaleAtTime_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE0F0 (end 0x024DE11F)
 // Original VA: 0x00000001424DE0F0 | File offset: 0x024DD6F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -952,7 +907,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetScaleAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetScaleAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522B70; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetScaleAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetScaleAtTime_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -960,10 +917,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetScaleAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetSplineLength_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522BF0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetSplineLength_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetSplineLength", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_USplineComponent_GetSplineLength_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE120 (end 0x024DE14F)
 // Original VA: 0x00000001424DE120 | File offset: 0x024DD720
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -972,7 +926,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetSplineLength()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetSplineLength_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522BF0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetSplineLength", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_USplineComponent_GetSplineLength_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -980,10 +936,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetSplineLength()
 struct Z_Construct_UFunction_USplineComponent_GetSplinePointType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522CB0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetSplinePointType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetSplinePointType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USplineComponent_GetSplinePointType_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE150 (end 0x024DE17F)
 // Original VA: 0x00000001424DE150 | File offset: 0x024DD750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -992,7 +945,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetSplinePointType()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetSplinePointType_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522CB0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetSplinePointType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USplineComponent_GetSplinePointType_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1000,10 +955,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetSplinePointType()
 struct Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522DB0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTangentAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE180 (end 0x024DE1AF)
 // Original VA: 0x00000001424DE180 | File offset: 0x024DD780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1012,7 +964,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSplin
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522DB0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTangentAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1020,10 +974,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSplin
 struct Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04522EB0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE1B0 (end 0x024DE1DF)
 // Original VA: 0x00000001424DE1B0 | File offset: 0x024DD7B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1032,7 +983,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04522EB0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1040,10 +993,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetTangentAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523000; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetTangentAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTangentAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetTangentAtTime_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE1E0 (end 0x024DE20F)
 // Original VA: 0x00000001424DE1E0 | File offset: 0x024DD7E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1052,7 +1002,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTangentAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetTangentAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523000; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTangentAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetTangentAtTime_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1060,10 +1012,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTangentAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523150; StructureSize 0x40 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTransformAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x40, Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpline_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE210 (end 0x024DE23F)
 // Original VA: 0x00000001424DE210 | File offset: 0x024DD810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1072,7 +1021,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523150; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTransformAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x40, Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpline_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1080,10 +1031,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpl
 struct Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045232A0; StructureSize 0x40 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTransformAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x40, Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE240 (end 0x024DE26F)
 // Original VA: 0x00000001424DE240 | File offset: 0x024DD840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1092,7 +1040,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x045232A0; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTransformAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x40, Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1100,10 +1050,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetTransformAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523440; StructureSize 0x40 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetTransformAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTransformAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x40, Z_Construct_UFunction_USplineComponent_GetTransformAtTime_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE270 (end 0x024DE29F)
 // Original VA: 0x00000001424DE270 | File offset: 0x024DD870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1112,7 +1059,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTransformAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetTransformAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523440; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetTransformAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x40, Z_Construct_UFunction_USplineComponent_GetTransformAtTime_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1120,10 +1069,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetTransformAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523540; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetUpVectorAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE2A0 (end 0x024DE2CF)
 // Original VA: 0x00000001424DE2A0 | File offset: 0x024DD8A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1132,7 +1078,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpli
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523540; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetUpVectorAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpline_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1140,10 +1088,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpli
 struct Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523640; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetUpVectorAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE2D0 (end 0x024DE2FF)
 // Original VA: 0x00000001424DE2D0 | File offset: 0x024DD8D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1152,7 +1097,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523640; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetUpVectorAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1160,10 +1107,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523790; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetUpVectorAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE300 (end 0x024DE32F)
 // Original VA: 0x00000001424DE300 | File offset: 0x024DD900
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1172,7 +1116,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523790; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetUpVectorAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1180,10 +1126,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523850; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldDirectionAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE330 (end 0x024DE35F)
 // Original VA: 0x00000001424DE330 | File offset: 0x024DD930
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1192,7 +1135,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523850; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldDirectionAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1200,10 +1145,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlo
 struct Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523950; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldDirectionAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE360 (end 0x024DE38F)
 // Original VA: 0x00000001424DE360 | File offset: 0x024DD960
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1212,7 +1154,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523950; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldDirectionAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1220,10 +1164,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523A10; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldLocationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE390 (end 0x024DE3BF)
 // Original VA: 0x00000001424DE390 | File offset: 0x024DD990
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1232,7 +1173,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlon
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523A10; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldLocationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1240,10 +1183,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlon
 struct Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523AD0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE3C0 (end 0x024DE3EF)
 // Original VA: 0x00000001424DE3C0 | File offset: 0x024DD9C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1252,7 +1192,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523AD0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1260,10 +1202,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint(
 struct Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523BD0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldLocationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE3F0 (end 0x024DE41F)
 // Original VA: 0x00000001424DE3F0 | File offset: 0x024DD9F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1272,7 +1211,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523BD0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldLocationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1280,10 +1221,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523C90; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldRotationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE420 (end 0x024DE44F)
 // Original VA: 0x00000001424DE420 | File offset: 0x024DDA20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1292,7 +1230,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlon
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523C90; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldRotationAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1300,10 +1240,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlon
 struct Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523D90; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldRotationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE450 (end 0x024DE47F)
 // Original VA: 0x00000001424DE450 | File offset: 0x024DDA50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1312,7 +1249,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523D90; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldRotationAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x14, Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1320,10 +1259,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime()
 struct Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlongSpline_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523E50; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlongSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldTangentAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE480 (end 0x024DE4AF)
 // Original VA: 0x00000001424DE480 | File offset: 0x024DDA80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1332,7 +1268,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlong
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlongSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523E50; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "GetWorldTangentAtDistanceAlongSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlongSpline_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1340,10 +1278,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlong
 struct Z_Construct_UFunction_USplineComponent_IsClosedLoop_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523EE0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_IsClosedLoop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "IsClosedLoop", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_USplineComponent_IsClosedLoop_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE4B0 (end 0x024DE4DF)
 // Original VA: 0x00000001424DE4B0 | File offset: 0x024DDAB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1352,7 +1287,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_IsClosedLoop()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_IsClosedLoop_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523EE0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "IsClosedLoop", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_USplineComponent_IsClosedLoop_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1360,10 +1297,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_IsClosedLoop()
 struct Z_Construct_UFunction_USplineComponent_RemoveSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04523FA0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_RemoveSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "RemoveSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_USplineComponent_RemoveSplinePoint_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE4E0 (end 0x024DE50F)
 // Original VA: 0x00000001424DE4E0 | File offset: 0x024DDAE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1372,7 +1306,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_RemoveSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_RemoveSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04523FA0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "RemoveSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_USplineComponent_RemoveSplinePoint_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1380,10 +1316,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_RemoveSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_SetClosedLoop_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524080; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetClosedLoop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetClosedLoop", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x2, Z_Construct_UFunction_USplineComponent_SetClosedLoop_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE510 (end 0x024DE53F)
 // Original VA: 0x00000001424DE510 | File offset: 0x024DDB10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1392,7 +1325,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetClosedLoop()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetClosedLoop_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524080; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetClosedLoop", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x2, Z_Construct_UFunction_USplineComponent_SetClosedLoop_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1400,10 +1335,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetClosedLoop()
 struct Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524190; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetClosedLoopAtPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0xC, Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE540 (end 0x024DE56F)
 // Original VA: 0x00000001424DE540 | File offset: 0x024DDB40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1412,7 +1344,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524190; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetClosedLoopAtPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0xC, Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1420,10 +1354,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition()
 struct Z_Construct_UFunction_USplineComponent_SetDefaultUpVector_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524250; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetDefaultUpVector_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetDefaultUpVector", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetDefaultUpVector_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE570 (end 0x024DE59F)
 // Original VA: 0x00000001424DE570 | File offset: 0x024DDB70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1432,7 +1363,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetDefaultUpVector()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetDefaultUpVector_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524250; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetDefaultUpVector", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetDefaultUpVector_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1440,10 +1373,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetDefaultUpVector()
 struct Z_Construct_UFunction_USplineComponent_SetDrawDebug_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045242E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetDrawDebug_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetDrawDebug", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_USplineComponent_SetDrawDebug_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE5A0 (end 0x024DE5CF)
 // Original VA: 0x00000001424DE5A0 | File offset: 0x024DDBA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1452,7 +1382,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetDrawDebug()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetDrawDebug_Statics::FuncParams);
+		// FuncParams: original RVA 0x045242E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetDrawDebug", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_USplineComponent_SetDrawDebug_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1460,10 +1392,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetDrawDebug()
 struct Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524430; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE5D0 (end 0x024DE5FF)
 // Original VA: 0x00000001424DE5D0 | File offset: 0x024DDBD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1472,7 +1401,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524430; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1480,10 +1411,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045244B0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSelectedSplineSegmentColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE600 (end 0x024DE62F)
 // Original VA: 0x00000001424DE600 | File offset: 0x024DDC00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1492,7 +1420,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x045244B0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSelectedSplineSegmentColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1500,10 +1430,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor(
 struct Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524570; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplineLocalPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE630 (end 0x024DE65F)
 // Original VA: 0x00000001424DE630 | File offset: 0x024DDC30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1512,7 +1439,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524570; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplineLocalPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1520,10 +1449,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints()
 struct Z_Construct_UFunction_USplineComponent_SetSplinePoints_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045246C0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetSplinePoints_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplinePoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x18, Z_Construct_UFunction_USplineComponent_SetSplinePoints_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE690 (end 0x024DE6BF)
 // Original VA: 0x00000001424DE690 | File offset: 0x024DDC90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1532,7 +1458,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplinePoints()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetSplinePoints_Statics::FuncParams);
+		// FuncParams: original RVA 0x045246C0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplinePoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x18, Z_Construct_UFunction_USplineComponent_SetSplinePoints_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1540,10 +1468,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplinePoints()
 struct Z_Construct_UFunction_USplineComponent_SetSplinePointType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045247D0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetSplinePointType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplinePointType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_USplineComponent_SetSplinePointType_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE660 (end 0x024DE68F)
 // Original VA: 0x00000001424DE660 | File offset: 0x024DDC60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1552,7 +1477,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplinePointType()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetSplinePointType_Statics::FuncParams);
+		// FuncParams: original RVA 0x045247D0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplinePointType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_USplineComponent_SetSplinePointType_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1560,10 +1487,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplinePointType()
 struct Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524890; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplineWorldPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE6C0 (end 0x024DE6EF)
 // Original VA: 0x00000001424DE6C0 | File offset: 0x024DDCC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1572,7 +1496,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524890; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetSplineWorldPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1580,10 +1506,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints()
 struct Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045249E0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE6F0 (end 0x024DE71F)
 // Original VA: 0x00000001424DE6F0 | File offset: 0x024DDCF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1592,7 +1515,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x045249E0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetTangentAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1600,10 +1525,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524B70; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetTangentsAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x20, Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE720 (end 0x024DE74F)
 // Original VA: 0x00000001424DE720 | File offset: 0x024DDD20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1612,7 +1534,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524B70; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetTangentsAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x20, Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1620,10 +1544,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524BF0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetUnselectedSplineSegmentColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE750 (end 0x024DE77F)
 // Original VA: 0x00000001424DE750 | File offset: 0x024DDD50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1632,7 +1553,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524BF0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetUnselectedSplineSegmentColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1640,10 +1563,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColo
 struct Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524D40; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetUpVectorAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE780 (end 0x024DE7AF)
 // Original VA: 0x00000001424DE780 | File offset: 0x024DDD80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1652,7 +1572,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524D40; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetUpVectorAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x14, Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -1660,10 +1582,7 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint()
 struct Z_Construct_UFunction_USplineComponent_SetWorldLocationAtSplinePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04524E00; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_SetWorldLocationAtSplinePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetWorldLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetWorldLocationAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE7B0 (end 0x024DE7DF)
 // Original VA: 0x00000001424DE7B0 | File offset: 0x024DDDB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1672,17 +1591,13 @@ UFunction* Z_Construct_UFunction_USplineComponent_SetWorldLocationAtSplinePoint(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_SetWorldLocationAtSplinePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524E00; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "SetWorldLocationAtSplinePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_USplineComponent_SetWorldLocationAtSplinePoint_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USplineComponent_UpdateSpline_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04524E40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USplineComponent_UpdateSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "UpdateSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DE7E0 (end 0x024DE80F)
 // Original VA: 0x00000001424DE7E0 | File offset: 0x024DDDE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -1691,7 +1606,9 @@ UFunction* Z_Construct_UFunction_USplineComponent_UpdateSpline()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USplineComponent_UpdateSpline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04524E40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USplineComponent, "UpdateSpline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

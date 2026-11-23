@@ -31,25 +31,12 @@ class UScriptStruct* FAnimSingleNodeInstanceProxy::StaticStruct()
 	struct Z_Construct_UScriptStruct_FAnimSingleNodeInstanceProxy_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D51E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimSingleNodeInstanceProxy_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimSingleNodeInstanceProxy>();
 	}
-	// ReturnStructParams: original RVA 0x0441BEF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimSingleNodeInstanceProxy_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimInstanceProxy,
-		&NewStructOps,
-		"AnimSingleNodeInstanceProxy",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimSingleNodeInstanceProxy),
-		alignof(FAnimSingleNodeInstanceProxy),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D7040 (end 0x023D706F)
 	// Original VA: 0x00000001423D7040 | File offset: 0x023D6640
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAnimSingleNodeInstanceProxy::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimSingleNodeInstanceProxy_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441BEF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimInstanceProxy,
+				&Z_Construct_UScriptStruct_FAnimSingleNodeInstanceProxy_Statics::NewStructOps,
+				"AnimSingleNodeInstanceProxy",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimSingleNodeInstanceProxy),
+				alignof(FAnimSingleNodeInstanceProxy),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -19,12 +19,6 @@ void ALobbyBeaconPlayerState::StaticRegisterNativesALobbyBeaconPlayerState()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_InLobby_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041AF5B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_InLobby_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALobbyBeaconPlayerState, "OnRep_InLobby", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2530 (end 0x005C255F)
 // Original VA: 0x00000001405C2530 | File offset: 0x005C1B30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +27,13 @@ UFunction* Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_InLobby()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_InLobby_Statics::FuncParams);
+		// FuncParams: original RVA 0x041AF5B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ALobbyBeaconPlayerState, "OnRep_InLobby", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_PartyOwner_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041AF5F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_PartyOwner_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALobbyBeaconPlayerState, "OnRep_PartyOwner", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2560 (end 0x005C258F)
 // Original VA: 0x00000001405C2560 | File offset: 0x005C1B60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +42,9 @@ UFunction* Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_PartyOwner()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_PartyOwner_Statics::FuncParams);
+		// FuncParams: original RVA 0x041AF5F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ALobbyBeaconPlayerState, "OnRep_PartyOwner", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

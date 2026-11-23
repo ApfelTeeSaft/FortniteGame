@@ -31,25 +31,12 @@ class UScriptStruct* FCameraCacheEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8E80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCameraCacheEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCameraCacheEntry>();
 	}
-	// ReturnStructParams: original RVA 0x044E8200
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCameraCacheEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"CameraCacheEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCameraCacheEntry),
-		alignof(FCameraCacheEntry),
-		Z_Construct_UScriptStruct_FCameraCacheEntry_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC370 (end 0x024AC39F)
 	// Original VA: 0x00000001424AC370 | File offset: 0x024AB970
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCameraCacheEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCameraCacheEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044E8200
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCameraCacheEntry_Statics::NewStructOps,
+				"CameraCacheEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCameraCacheEntry),
+				alignof(FCameraCacheEntry),
+				Z_Construct_UScriptStruct_FCameraCacheEntry_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

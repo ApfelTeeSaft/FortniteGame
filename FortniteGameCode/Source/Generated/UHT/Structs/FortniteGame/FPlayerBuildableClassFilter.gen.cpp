@@ -31,25 +31,12 @@ class UScriptStruct* FPlayerBuildableClassFilter::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF26B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPlayerBuildableClassFilter_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPlayerBuildableClassFilter>();
 	}
-	// ReturnStructParams: original RVA 0x0428B580
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPlayerBuildableClassFilter_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"PlayerBuildableClassFilter",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPlayerBuildableClassFilter),
-		alignof(FPlayerBuildableClassFilter),
-		Z_Construct_UScriptStruct_FPlayerBuildableClassFilter_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF4B10 (end 0x00FF4B3F)
 	// Original VA: 0x0000000140FF4B10 | File offset: 0x00FF4110
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPlayerBuildableClassFilter::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPlayerBuildableClassFilter_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0428B580
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPlayerBuildableClassFilter_Statics::NewStructOps,
+				"PlayerBuildableClassFilter",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPlayerBuildableClassFilter),
+				alignof(FPlayerBuildableClassFilter),
+				Z_Construct_UScriptStruct_FPlayerBuildableClassFilter_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

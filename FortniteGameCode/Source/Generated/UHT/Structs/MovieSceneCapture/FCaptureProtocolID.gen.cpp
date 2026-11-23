@@ -31,25 +31,12 @@ class UScriptStruct* FCaptureProtocolID::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D59F50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCaptureProtocolID_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCaptureProtocolID>();
 	}
-	// ReturnStructParams: original RVA 0x043FFA30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCaptureProtocolID_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneCapture,
-		nullptr,
-		&NewStructOps,
-		"CaptureProtocolID",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCaptureProtocolID),
-		alignof(FCaptureProtocolID),
-		Z_Construct_UScriptStruct_FCaptureProtocolID_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5A580 (end 0x01D5A5AF)
 	// Original VA: 0x0000000141D5A580 | File offset: 0x01D59B80
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCaptureProtocolID::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCaptureProtocolID_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FFA30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneCapture,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCaptureProtocolID_Statics::NewStructOps,
+				"CaptureProtocolID",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCaptureProtocolID),
+				alignof(FCaptureProtocolID),
+				Z_Construct_UScriptStruct_FCaptureProtocolID_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

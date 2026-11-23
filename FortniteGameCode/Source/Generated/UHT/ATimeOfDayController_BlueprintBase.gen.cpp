@@ -6,12 +6,6 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ATimeOfDayController_BlueprintBase();  // RVA 0x00F61060 (consensus OuterFunc)
 
-struct Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetPostProcessSettings_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041F2230; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetPostProcessSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATimeOfDayController_BlueprintBase, "SetPostProcessSettings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61DA0 (end 0x00F61DCF)
 // Original VA: 0x0000000140F61DA0 | File offset: 0x00F613A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -20,17 +14,13 @@ UFunction* Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetPostProce
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetPostProcessSettings_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F2230; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ATimeOfDayController_BlueprintBase, "SetPostProcessSettings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetSunOrMoonScale_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041F2270; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetSunOrMoonScale_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATimeOfDayController_BlueprintBase, "SetSunOrMoonScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61DD0 (end 0x00F61DFF)
 // Original VA: 0x0000000140F61DD0 | File offset: 0x00F613D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +29,9 @@ UFunction* Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetSunOrMoon
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetSunOrMoonScale_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F2270; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ATimeOfDayController_BlueprintBase, "SetSunOrMoonScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

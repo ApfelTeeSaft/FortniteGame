@@ -32,25 +32,12 @@ class UScriptStruct* FTieredWaveSet::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0830 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTieredWaveSet_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTieredWaveSet>();
 	}
-	// ReturnStructParams: original RVA 0x042725A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTieredWaveSet_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"TieredWaveSet",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTieredWaveSet),
-		alignof(FTieredWaveSet),
-		Z_Construct_UScriptStruct_FTieredWaveSet_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1AB0 (end 0x00FE1ADF)
 	// Original VA: 0x0000000140FE1AB0 | File offset: 0x00FE10B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTieredWaveSet::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTieredWaveSet_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042725A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FTieredWaveSet_Statics::NewStructOps,
+				"TieredWaveSet",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTieredWaveSet),
+				alignof(FTieredWaveSet),
+				Z_Construct_UScriptStruct_FTieredWaveSet_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

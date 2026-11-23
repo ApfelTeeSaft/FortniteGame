@@ -31,25 +31,12 @@ class UScriptStruct* FClientReceiveData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02478250 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FClientReceiveData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FClientReceiveData>();
 	}
-	// ReturnStructParams: original RVA 0x044B25B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FClientReceiveData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ClientReceiveData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FClientReceiveData),
-		alignof(FClientReceiveData),
-		Z_Construct_UScriptStruct_FClientReceiveData_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024792E0 (end 0x0247930F)
 	// Original VA: 0x00000001424792E0 | File offset: 0x024788E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FClientReceiveData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FClientReceiveData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044B25B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FClientReceiveData_Statics::NewStructOps,
+				"ClientReceiveData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FClientReceiveData),
+				alignof(FClientReceiveData),
+				Z_Construct_UScriptStruct_FClientReceiveData_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -4,12 +4,8 @@
 // FClassFunctionLinkInfo array RVA 0x033D5530, FClassParams RVA 0x033D5550.
 
 #include "FortniteGameCode/UHTRecovered.h"
+UClass* Z_Construct_UClass_AFortAthenaPlaylistBase();  // RVA 0x0108B280 (registered by its FCompiledInDefer)
 
-
-struct Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04312530 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B9E0 (end 0x0108BA0F)
 // Original VA: 0x000000014108B9E0 | File offset: 0x0108AFE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -18,7 +14,9 @@ UFunction* Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist_Statics::FuncParams);
+		// FuncParams: original RVA 0x04312530; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAthenaPlaylistBase, "OnInitializePlaylist", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -23,10 +23,7 @@ void UCameraAnimInst::StaticRegisterNativesUCameraAnimInst()
 struct Z_Construct_UFunction_UCameraAnimInst_SetDuration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442D8D0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCameraAnimInst_SetDuration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraAnimInst, "SetDuration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCameraAnimInst_SetDuration_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EAD90 (end 0x023EADBF)
 // Original VA: 0x00000001423EAD90 | File offset: 0x023EA390
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UCameraAnimInst_SetDuration()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCameraAnimInst_SetDuration_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442D8D0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraAnimInst, "SetDuration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCameraAnimInst_SetDuration_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UCameraAnimInst_SetDuration()
 struct Z_Construct_UFunction_UCameraAnimInst_SetScale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442D950; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCameraAnimInst_SetScale_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraAnimInst, "SetScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCameraAnimInst_SetScale_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EADC0 (end 0x023EADEF)
 // Original VA: 0x00000001423EADC0 | File offset: 0x023EA3C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UCameraAnimInst_SetScale()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCameraAnimInst_SetScale_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442D950; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraAnimInst, "SetScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCameraAnimInst_SetScale_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UCameraAnimInst_SetScale()
 struct Z_Construct_UFunction_UCameraAnimInst_Stop_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442D9E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCameraAnimInst_Stop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraAnimInst, "Stop", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCameraAnimInst_Stop_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EADF0 (end 0x023EAE1F)
 // Original VA: 0x00000001423EADF0 | File offset: 0x023EA3F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UCameraAnimInst_Stop()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCameraAnimInst_Stop_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442D9E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraAnimInst, "Stop", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCameraAnimInst_Stop_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FFortPlayerAttributeSets::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108A2A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortPlayerAttributeSets_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortPlayerAttributeSets>();
 	}
-	// ReturnStructParams: original RVA 0x0430F400
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPlayerAttributeSets_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortPlayerAttributeSets",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FFortPlayerAttributeSets),
-		alignof(FFortPlayerAttributeSets),
-		Z_Construct_UScriptStruct_FFortPlayerAttributeSets_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C9D0 (end 0x0108C9FF)
 	// Original VA: 0x000000014108C9D0 | File offset: 0x0108BFD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortPlayerAttributeSets::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortPlayerAttributeSets_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0430F400
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortPlayerAttributeSets_Statics::NewStructOps,
+				"FortPlayerAttributeSets",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FFortPlayerAttributeSets),
+				alignof(FFortPlayerAttributeSets),
+				Z_Construct_UScriptStruct_FFortPlayerAttributeSets_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

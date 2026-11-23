@@ -31,25 +31,12 @@ class UScriptStruct* FAutoCompleteNode::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6B40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAutoCompleteNode_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAutoCompleteNode>();
 	}
-	// ReturnStructParams: original RVA 0x0443D000
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAutoCompleteNode_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"AutoCompleteNode",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAutoCompleteNode),
-		alignof(FAutoCompleteNode),
-		Z_Construct_UScriptStruct_FAutoCompleteNode_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F8B10 (end 0x023F8B3F)
 	// Original VA: 0x00000001423F8B10 | File offset: 0x023F8110
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAutoCompleteNode::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAutoCompleteNode_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0443D000
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAutoCompleteNode_Statics::NewStructOps,
+				"AutoCompleteNode",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAutoCompleteNode),
+				alignof(FAutoCompleteNode),
+				Z_Construct_UScriptStruct_FAutoCompleteNode_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

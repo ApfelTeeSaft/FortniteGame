@@ -31,25 +31,12 @@ class UScriptStruct* FFortWindImpulseCylinderDelta::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DBAB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortWindImpulseCylinderDelta_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortWindImpulseCylinderDelta>();
 	}
-	// ReturnStructParams: original RVA 0x04351470
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortWindImpulseCylinderDelta_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortWindImpulseCylinderDelta",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortWindImpulseCylinderDelta),
-		alignof(FFortWindImpulseCylinderDelta),
-		Z_Construct_UScriptStruct_FFortWindImpulseCylinderDelta_Statics::PropPointers, 17,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DD430 (end 0x010DD45F)
 	// Original VA: 0x00000001410DD430 | File offset: 0x010DCA30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortWindImpulseCylinderDelta::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortWindImpulseCylinderDelta_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04351470
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortWindImpulseCylinderDelta_Statics::NewStructOps,
+				"FortWindImpulseCylinderDelta",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortWindImpulseCylinderDelta),
+				alignof(FFortWindImpulseCylinderDelta),
+				Z_Construct_UScriptStruct_FFortWindImpulseCylinderDelta_Statics::PropPointers, 17,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

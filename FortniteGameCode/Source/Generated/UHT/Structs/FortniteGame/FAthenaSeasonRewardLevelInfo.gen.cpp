@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaSeasonRewardLevelInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5F670 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaSeasonRewardLevelInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaSeasonRewardLevelInfo>();
 	}
-	// ReturnStructParams: original RVA 0x041F13B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaSeasonRewardLevelInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaSeasonRewardLevelInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAthenaSeasonRewardLevelInfo),
-		alignof(FAthenaSeasonRewardLevelInfo),
-		Z_Construct_UScriptStruct_FAthenaSeasonRewardLevelInfo_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62040 (end 0x00F6206F)
 	// Original VA: 0x0000000140F62040 | File offset: 0x00F61640
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaSeasonRewardLevelInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaSeasonRewardLevelInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041F13B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaSeasonRewardLevelInfo_Statics::NewStructOps,
+				"AthenaSeasonRewardLevelInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAthenaSeasonRewardLevelInfo),
+				alignof(FAthenaSeasonRewardLevelInfo),
+				Z_Construct_UScriptStruct_FAthenaSeasonRewardLevelInfo_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

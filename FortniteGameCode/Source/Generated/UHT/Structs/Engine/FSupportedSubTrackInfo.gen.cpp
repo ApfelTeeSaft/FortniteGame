@@ -31,25 +31,12 @@ class UScriptStruct* FSupportedSubTrackInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242EA50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSupportedSubTrackInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSupportedSubTrackInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04471740
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSupportedSubTrackInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SupportedSubTrackInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSupportedSubTrackInfo),
-		alignof(FSupportedSubTrackInfo),
-		Z_Construct_UScriptStruct_FSupportedSubTrackInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024303A0 (end 0x024303CF)
 	// Original VA: 0x00000001424303A0 | File offset: 0x0242F9A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSupportedSubTrackInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSupportedSubTrackInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04471740
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSupportedSubTrackInfo_Statics::NewStructOps,
+				"SupportedSubTrackInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSupportedSubTrackInfo),
+				alignof(FSupportedSubTrackInfo),
+				Z_Construct_UScriptStruct_FSupportedSubTrackInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

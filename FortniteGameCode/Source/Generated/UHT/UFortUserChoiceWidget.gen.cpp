@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortUserChoiceWidget();  // RVA 0x02918B30 (consensu
 struct Z_Construct_UFunction_UFortUserChoiceWidget_SetChoices_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D2C90; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortUserChoiceWidget_SetChoices_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUserChoiceWidget, "SetChoices", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x30, Z_Construct_UFunction_UFortUserChoiceWidget_SetChoices_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919790 (end 0x029197BF)
 // Original VA: 0x0000000142919790 | File offset: 0x02918D90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortUserChoiceWidget_SetChoices()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUserChoiceWidget_SetChoices_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D2C90; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUserChoiceWidget, "SetChoices", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x30, Z_Construct_UFunction_UFortUserChoiceWidget_SetChoices_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

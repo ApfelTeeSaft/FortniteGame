@@ -32,25 +32,12 @@ class UScriptStruct* FTeamSpottedActorInfoArray::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2890 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTeamSpottedActorInfoArray_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTeamSpottedActorInfoArray>();
 	}
-	// ReturnStructParams: original RVA 0x0432D6A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTeamSpottedActorInfoArray_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializer,
-		&NewStructOps,
-		"TeamSpottedActorInfoArray",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTeamSpottedActorInfoArray),
-		alignof(FTeamSpottedActorInfoArray),
-		Z_Construct_UScriptStruct_FTeamSpottedActorInfoArray_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4650 (end 0x010B467F)
 	// Original VA: 0x00000001410B4650 | File offset: 0x010B3C50
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTeamSpottedActorInfoArray::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTeamSpottedActorInfoArray_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432D6A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializer,
+				&Z_Construct_UScriptStruct_FTeamSpottedActorInfoArray_Statics::NewStructOps,
+				"TeamSpottedActorInfoArray",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTeamSpottedActorInfoArray),
+				alignof(FTeamSpottedActorInfoArray),
+				Z_Construct_UScriptStruct_FTeamSpottedActorInfoArray_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

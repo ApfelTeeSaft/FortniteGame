@@ -31,25 +31,12 @@ class UScriptStruct* FParticleReplayTrackKey::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0BD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FParticleReplayTrackKey_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FParticleReplayTrackKey>();
 	}
-	// ReturnStructParams: original RVA 0x044738E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FParticleReplayTrackKey_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ParticleReplayTrackKey",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FParticleReplayTrackKey),
-		alignof(FParticleReplayTrackKey),
-		Z_Construct_UScriptStruct_FParticleReplayTrackKey_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02430310 (end 0x0243033F)
 	// Original VA: 0x0000000142430310 | File offset: 0x0242F910
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FParticleReplayTrackKey::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FParticleReplayTrackKey_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044738E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FParticleReplayTrackKey_Statics::NewStructOps,
+				"ParticleReplayTrackKey",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FParticleReplayTrackKey),
+				alignof(FParticleReplayTrackKey),
+				Z_Construct_UScriptStruct_FParticleReplayTrackKey_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

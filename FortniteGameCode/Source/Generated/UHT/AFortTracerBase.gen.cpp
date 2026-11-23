@@ -21,10 +21,7 @@ void AFortTracerBase::StaticRegisterNativesAFortTracerBase()
 struct Z_Construct_UFunction_AFortTracerBase_Init_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0433ADC0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTracerBase_Init_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTracerBase, "Init", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x18, Z_Construct_UFunction_AFortTracerBase_Init_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CB9C0 (end 0x010CB9EF)
 // Original VA: 0x00000001410CB9C0 | File offset: 0x010CAFC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +30,13 @@ UFunction* Z_Construct_UFunction_AFortTracerBase_Init()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTracerBase_Init_Statics::FuncParams);
+		// FuncParams: original RVA 0x0433ADC0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTracerBase, "Init", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x18, Z_Construct_UFunction_AFortTracerBase_Init_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTracerBase_OnDead_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0433AE00; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTracerBase_OnDead_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTracerBase, "OnDead", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CB9F0 (end 0x010CBA1F)
 // Original VA: 0x00000001410CB9F0 | File offset: 0x010CAFF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +45,9 @@ UFunction* Z_Construct_UFunction_AFortTracerBase_OnDead()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTracerBase_OnDead_Statics::FuncParams);
+		// FuncParams: original RVA 0x0433AE00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTracerBase, "OnDead", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -60,10 +55,7 @@ UFunction* Z_Construct_UFunction_AFortTracerBase_OnDead()
 struct Z_Construct_UFunction_AFortTracerBase_OnInit_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0433AEC0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTracerBase_OnInit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTracerBase, "OnInit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20800, 0x18, Z_Construct_UFunction_AFortTracerBase_OnInit_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBA20 (end 0x010CBA4F)
 // Original VA: 0x00000001410CBA20 | File offset: 0x010CB020
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,7 +64,9 @@ UFunction* Z_Construct_UFunction_AFortTracerBase_OnInit()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTracerBase_OnInit_Statics::FuncParams);
+		// FuncParams: original RVA 0x0433AEC0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTracerBase, "OnInit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20800, 0x18, Z_Construct_UFunction_AFortTracerBase_OnInit_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

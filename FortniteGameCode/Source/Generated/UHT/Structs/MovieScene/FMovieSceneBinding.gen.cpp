@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneBinding::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC2540 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneBinding_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneBinding>();
 	}
-	// ReturnStructParams: original RVA 0x043A1E60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneBinding_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneBinding",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneBinding),
-		alignof(FMovieSceneBinding),
-		Z_Construct_UScriptStruct_FMovieSceneBinding_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC5C90 (end 0x01AC5CBF)
 	// Original VA: 0x0000000141AC5C90 | File offset: 0x01AC5290
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneBinding::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneBinding_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A1E60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneBinding_Statics::NewStructOps,
+				"MovieSceneBinding",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneBinding),
+				alignof(FMovieSceneBinding),
+				Z_Construct_UScriptStruct_FMovieSceneBinding_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

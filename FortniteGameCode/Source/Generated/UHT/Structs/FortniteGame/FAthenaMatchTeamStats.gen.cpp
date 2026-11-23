@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaMatchTeamStats::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB000 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaMatchTeamStats_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaMatchTeamStats>();
 	}
-	// ReturnStructParams: original RVA 0x041EFF90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaMatchTeamStats_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaMatchTeamStats",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAthenaMatchTeamStats),
-		alignof(FAthenaMatchTeamStats),
-		Z_Construct_UScriptStruct_FAthenaMatchTeamStats_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5AC70 (end 0x00F5AC9F)
 	// Original VA: 0x0000000140F5AC70 | File offset: 0x00F5A270
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaMatchTeamStats::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaMatchTeamStats_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041EFF90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaMatchTeamStats_Statics::NewStructOps,
+				"AthenaMatchTeamStats",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAthenaMatchTeamStats),
+				alignof(FAthenaMatchTeamStats),
+				Z_Construct_UScriptStruct_FAthenaMatchTeamStats_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

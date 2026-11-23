@@ -31,25 +31,12 @@ class UScriptStruct* FOverlayItem::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02516AB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FOverlayItem_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOverlayItem>();
 	}
-	// ReturnStructParams: original RVA 0x04536A20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOverlayItem_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Overlay,
-		nullptr,
-		&NewStructOps,
-		"OverlayItem",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FOverlayItem),
-		alignof(FOverlayItem),
-		Z_Construct_UScriptStruct_FOverlayItem_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02516C50 (end 0x02516C7F)
 	// Original VA: 0x0000000142516C50 | File offset: 0x02516250
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FOverlayItem::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FOverlayItem_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04536A20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Overlay,
+				nullptr,
+				&Z_Construct_UScriptStruct_FOverlayItem_Statics::NewStructOps,
+				"OverlayItem",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FOverlayItem),
+				alignof(FOverlayItem),
+				Z_Construct_UScriptStruct_FOverlayItem_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

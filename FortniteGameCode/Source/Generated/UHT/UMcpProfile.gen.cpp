@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UMcpProfile();  // RVA 0x007AF850 (consensus OuterFun
 struct Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C2B40; StructureSize 0x70 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "DeleteAllProfiles", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x70, Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AF930 (end 0x007AF95F)
 // Original VA: 0x00000001407AF930 | File offset: 0x007AEF30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C2B40; StructureSize 0x70 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "DeleteAllProfiles", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x70, Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles()
 struct Z_Construct_UFunction_UMcpProfile_DeleteProfile_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C2BC0; StructureSize 0x70 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMcpProfile_DeleteProfile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "DeleteProfile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x70, Z_Construct_UFunction_UMcpProfile_DeleteProfile_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AF960 (end 0x007AF98F)
 // Original VA: 0x00000001407AF960 | File offset: 0x007AEF60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UMcpProfile_DeleteProfile()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMcpProfile_DeleteProfile_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C2BC0; StructureSize 0x70 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "DeleteProfile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x70, Z_Construct_UFunction_UMcpProfile_DeleteProfile_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +47,7 @@ UFunction* Z_Construct_UFunction_UMcpProfile_DeleteProfile()
 struct Z_Construct_UFunction_UMcpProfile_LockProfileForWrite_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C2CB0; StructureSize 0x90 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMcpProfile_LockProfileForWrite_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "LockProfileForWrite", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x90, Z_Construct_UFunction_UMcpProfile_LockProfileForWrite_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AF990 (end 0x007AF9BF)
 // Original VA: 0x00000001407AF990 | File offset: 0x007AEF90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +56,9 @@ UFunction* Z_Construct_UFunction_UMcpProfile_LockProfileForWrite()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMcpProfile_LockProfileForWrite_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C2CB0; StructureSize 0x90 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "LockProfileForWrite", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x90, Z_Construct_UFunction_UMcpProfile_LockProfileForWrite_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -69,10 +66,7 @@ UFunction* Z_Construct_UFunction_UMcpProfile_LockProfileForWrite()
 struct Z_Construct_UFunction_UMcpProfile_QueryProfile_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C2D30; StructureSize 0x70 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMcpProfile_QueryProfile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "QueryProfile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x70, Z_Construct_UFunction_UMcpProfile_QueryProfile_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AF9C0 (end 0x007AF9EF)
 // Original VA: 0x00000001407AF9C0 | File offset: 0x007AEFC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +75,9 @@ UFunction* Z_Construct_UFunction_UMcpProfile_QueryProfile()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMcpProfile_QueryProfile_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C2D30; StructureSize 0x70 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "QueryProfile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x70, Z_Construct_UFunction_UMcpProfile_QueryProfile_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +85,7 @@ UFunction* Z_Construct_UFunction_UMcpProfile_QueryProfile()
 struct Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C2DF0; StructureSize 0x80 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "UnlockProfileForWrite", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x80, Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AF9F0 (end 0x007AFA1F)
 // Original VA: 0x00000001407AF9F0 | File offset: 0x007AEFF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +94,9 @@ UFunction* Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C2DF0; StructureSize 0x80 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMcpProfile, "UnlockProfileForWrite", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440DC1, 0x80, Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

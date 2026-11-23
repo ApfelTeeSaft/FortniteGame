@@ -26,25 +26,12 @@ class UScriptStruct* FGeometry::StaticStruct()
 	struct Z_Construct_UScriptStruct_FGeometry_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A5B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGeometry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGeometry>();
 	}
-	// ReturnStructParams: original RVA 0x04378A30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGeometry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		nullptr,
-		&NewStructOps,
-		"Geometry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGeometry),
-		alignof(FGeometry),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CE10 (end 0x0145CE3F)
 	// Original VA: 0x000000014145CE10 | File offset: 0x0145C410
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -53,7 +40,19 @@ class UScriptStruct* FGeometry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGeometry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04378A30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGeometry_Statics::NewStructOps,
+				"Geometry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGeometry),
+				alignof(FGeometry),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

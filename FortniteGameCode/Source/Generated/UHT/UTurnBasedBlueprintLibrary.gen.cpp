@@ -24,10 +24,7 @@ void UTurnBasedBlueprintLibrary::StaticRegisterNativesUTurnBasedBlueprintLibrary
 struct Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0418A110; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "GetIsMyTurn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F7B0 (end 0x0032F7DF)
 // Original VA: 0x000000014032F7B0 | File offset: 0x0032EDB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn_Statics::FuncParams);
+		// FuncParams: original RVA 0x0418A110; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "GetIsMyTurn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn()
 struct Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0418A240; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "GetMyPlayerIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F7E0 (end 0x0032F80F)
 // Original VA: 0x000000014032F7E0 | File offset: 0x0032EDE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x0418A240; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "GetMyPlayerIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex()
 struct Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0418A3B0; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "GetPlayerDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x38, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F810 (end 0x0032F83F)
 // Original VA: 0x000000014032F810 | File offset: 0x0032EE10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0418A3B0; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "GetPlayerDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x38, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName
 struct Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0418A4B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "RegisterTurnBasedMatchInterfaceObject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F840 (end 0x0032F86F)
 // Original VA: 0x000000014032F840 | File offset: 0x0032EE40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMat
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Statics::FuncParams);
+		// FuncParams: original RVA 0x0418A4B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedBlueprintLibrary, "RegisterTurnBasedMatchInterfaceObject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

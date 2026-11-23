@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayEffectAttributeCaptureSpec::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00562930 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayEffectAttributeCaptureSpec_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayEffectAttributeCaptureSpec>();
 	}
-	// ReturnStructParams: original RVA 0x041A7C00
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayEffectAttributeCaptureSpec_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayEffectAttributeCaptureSpec",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameplayEffectAttributeCaptureSpec),
-		alignof(FGameplayEffectAttributeCaptureSpec),
-		Z_Construct_UScriptStruct_FGameplayEffectAttributeCaptureSpec_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564CB0 (end 0x00564CDF)
 	// Original VA: 0x0000000140564CB0 | File offset: 0x005642B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayEffectAttributeCaptureSpec::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayEffectAttributeCaptureSpec_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A7C00
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayEffectAttributeCaptureSpec_Statics::NewStructOps,
+				"GameplayEffectAttributeCaptureSpec",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameplayEffectAttributeCaptureSpec),
+				alignof(FGameplayEffectAttributeCaptureSpec),
+				Z_Construct_UScriptStruct_FGameplayEffectAttributeCaptureSpec_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

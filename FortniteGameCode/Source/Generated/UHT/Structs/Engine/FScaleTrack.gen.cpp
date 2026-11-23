@@ -31,25 +31,12 @@ class UScriptStruct* FScaleTrack::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D53E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FScaleTrack_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FScaleTrack>();
 	}
-	// ReturnStructParams: original RVA 0x0441A4D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FScaleTrack_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ScaleTrack",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FScaleTrack),
-		alignof(FScaleTrack),
-		Z_Construct_UScriptStruct_FScaleTrack_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D7370 (end 0x023D739F)
 	// Original VA: 0x00000001423D7370 | File offset: 0x023D6970
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FScaleTrack::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FScaleTrack_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441A4D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FScaleTrack_Statics::NewStructOps,
+				"ScaleTrack",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FScaleTrack),
+				alignof(FScaleTrack),
+				Z_Construct_UScriptStruct_FScaleTrack_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

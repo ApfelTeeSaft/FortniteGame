@@ -31,25 +31,12 @@ class UScriptStruct* FNodeHierarchyData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01ACF7F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FNodeHierarchyData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNodeHierarchyData>();
 	}
-	// ReturnStructParams: original RVA 0x043A8090
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNodeHierarchyData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
-		nullptr,
-		&NewStructOps,
-		"NodeHierarchyData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FNodeHierarchyData),
-		alignof(FNodeHierarchyData),
-		Z_Construct_UScriptStruct_FNodeHierarchyData_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AD0480 (end 0x01AD04AF)
 	// Original VA: 0x0000000141AD0480 | File offset: 0x01ACFA80
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FNodeHierarchyData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FNodeHierarchyData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A8090
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
+				nullptr,
+				&Z_Construct_UScriptStruct_FNodeHierarchyData_Statics::NewStructOps,
+				"NodeHierarchyData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FNodeHierarchyData),
+				alignof(FNodeHierarchyData),
+				Z_Construct_UScriptStruct_FNodeHierarchyData_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

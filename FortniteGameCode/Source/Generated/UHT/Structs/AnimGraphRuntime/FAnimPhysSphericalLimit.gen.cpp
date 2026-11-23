@@ -31,25 +31,12 @@ class UScriptStruct* FAnimPhysSphericalLimit::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0B290 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimPhysSphericalLimit_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimPhysSphericalLimit>();
 	}
-	// ReturnStructParams: original RVA 0x043A9260
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimPhysSphericalLimit_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		nullptr,
-		&NewStructOps,
-		"AnimPhysSphericalLimit",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAnimPhysSphericalLimit),
-		alignof(FAnimPhysSphericalLimit),
-		Z_Construct_UScriptStruct_FAnimPhysSphericalLimit_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F370 (end 0x01B0F39F)
 	// Original VA: 0x0000000141B0F370 | File offset: 0x01B0E970
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAnimPhysSphericalLimit::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimPhysSphericalLimit_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A9260
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAnimPhysSphericalLimit_Statics::NewStructOps,
+				"AnimPhysSphericalLimit",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAnimPhysSphericalLimit),
+				alignof(FAnimPhysSphericalLimit),
+				Z_Construct_UScriptStruct_FAnimPhysSphericalLimit_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

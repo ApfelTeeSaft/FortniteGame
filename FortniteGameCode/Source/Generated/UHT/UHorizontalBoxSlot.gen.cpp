@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03696D30, FClassParams RVA 0x03696DA0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UHorizontalBoxSlot();  // RVA 0x01BED460 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECF10 (end 0x01BECF32)
 // Original VA: 0x0000000141BECF10 | File offset: 0x01BEC510
@@ -23,7 +23,7 @@ void UHorizontalBoxSlot::StaticRegisterNativesUHorizontalBoxSlot()
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C0350 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDE40 (end 0x01BEDE6F)
 // Original VA: 0x0000000141BEDE40 | File offset: 0x01BED440
@@ -33,14 +33,16 @@ UFunction* Z_Construct_UFunction_UHorizontalBoxSlot_SetHorizontalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UHorizontalBoxSlot_SetHorizontalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C0350; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UHorizontalBoxSlot, "SetHorizontalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UHorizontalBoxSlot_SetHorizontalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C03D0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDE70 (end 0x01BEDE9F)
 // Original VA: 0x0000000141BEDE70 | File offset: 0x01BED470
@@ -50,14 +52,16 @@ UFunction* Z_Construct_UFunction_UHorizontalBoxSlot_SetPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UHorizontalBoxSlot_SetPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C03D0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UHorizontalBoxSlot, "SetPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UHorizontalBoxSlot_SetPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetSize_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C0450 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDEA0 (end 0x01BEDECF)
 // Original VA: 0x0000000141BEDEA0 | File offset: 0x01BED4A0
@@ -67,14 +71,16 @@ UFunction* Z_Construct_UFunction_UHorizontalBoxSlot_SetSize()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UHorizontalBoxSlot_SetSize_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C0450; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UHorizontalBoxSlot, "SetSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UHorizontalBoxSlot_SetSize_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UHorizontalBoxSlot_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C04D0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDED0 (end 0x01BEDEFF)
 // Original VA: 0x0000000141BEDED0 | File offset: 0x01BED4D0
@@ -84,7 +90,9 @@ UFunction* Z_Construct_UFunction_UHorizontalBoxSlot_SetVerticalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UHorizontalBoxSlot_SetVerticalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C04D0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UHorizontalBoxSlot, "SetVerticalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UHorizontalBoxSlot_SetVerticalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

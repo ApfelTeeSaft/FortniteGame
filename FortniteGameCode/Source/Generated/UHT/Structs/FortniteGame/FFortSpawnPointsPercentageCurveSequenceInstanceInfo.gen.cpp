@@ -32,25 +32,12 @@ class UScriptStruct* FFortSpawnPointsPercentageCurveSequenceInstanceInfo::Static
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8B9F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSpawnPointsPercentageCurveSequenceInstanceInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSpawnPointsPercentageCurveSequenceInstanceInfo>();
 	}
-	// ReturnStructParams: original RVA 0x042233C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSpawnPointsPercentageCurveSequenceInstanceInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortCurveSequenceInstanceInfo,
-		&NewStructOps,
-		"FortSpawnPointsPercentageCurveSequenceInstanceInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSpawnPointsPercentageCurveSequenceInstanceInfo),
-		alignof(FFortSpawnPointsPercentageCurveSequenceInstanceInfo),
-		Z_Construct_UScriptStruct_FFortSpawnPointsPercentageCurveSequenceInstanceInfo_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8D1C0 (end 0x00F8D1EF)
 	// Original VA: 0x0000000140F8D1C0 | File offset: 0x00F8C7C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortSpawnPointsPercentageCurveSequenceInstanceInfo::Static
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSpawnPointsPercentageCurveSequenceInstanceInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042233C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortCurveSequenceInstanceInfo,
+				&Z_Construct_UScriptStruct_FFortSpawnPointsPercentageCurveSequenceInstanceInfo_Statics::NewStructOps,
+				"FortSpawnPointsPercentageCurveSequenceInstanceInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSpawnPointsPercentageCurveSequenceInstanceInfo),
+				alignof(FFortSpawnPointsPercentageCurveSequenceInstanceInfo),
+				Z_Construct_UScriptStruct_FFortSpawnPointsPercentageCurveSequenceInstanceInfo_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

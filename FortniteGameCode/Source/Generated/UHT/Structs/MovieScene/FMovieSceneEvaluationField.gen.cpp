@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneEvaluationField::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC2180 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneEvaluationField_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneEvaluationField>();
 	}
-	// ReturnStructParams: original RVA 0x043A26E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneEvaluationField_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneEvaluationField",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneEvaluationField),
-		alignof(FMovieSceneEvaluationField),
-		Z_Construct_UScriptStruct_FMovieSceneEvaluationField_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC5E10 (end 0x01AC5E3F)
 	// Original VA: 0x0000000141AC5E10 | File offset: 0x01AC5410
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneEvaluationField::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneEvaluationField_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A26E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneEvaluationField_Statics::NewStructOps,
+				"MovieSceneEvaluationField",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneEvaluationField),
+				alignof(FMovieSceneEvaluationField),
+				Z_Construct_UScriptStruct_FMovieSceneEvaluationField_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

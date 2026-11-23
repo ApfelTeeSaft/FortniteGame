@@ -31,25 +31,12 @@ class UScriptStruct* FCompositeFallbackFont::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A6B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCompositeFallbackFont_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCompositeFallbackFont>();
 	}
-	// ReturnStructParams: original RVA 0x04378250
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCompositeFallbackFont_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		nullptr,
-		&NewStructOps,
-		"CompositeFallbackFont",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCompositeFallbackFont),
-		alignof(FCompositeFallbackFont),
-		Z_Construct_UScriptStruct_FCompositeFallbackFont_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CC30 (end 0x0145CC5F)
 	// Original VA: 0x000000014145CC30 | File offset: 0x0145C230
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCompositeFallbackFont::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCompositeFallbackFont_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04378250
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCompositeFallbackFont_Statics::NewStructOps,
+				"CompositeFallbackFont",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCompositeFallbackFont),
+				alignof(FCompositeFallbackFont),
+				Z_Construct_UScriptStruct_FCompositeFallbackFont_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

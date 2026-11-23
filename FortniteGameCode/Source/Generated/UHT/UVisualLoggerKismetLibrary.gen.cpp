@@ -26,10 +26,7 @@ void UVisualLoggerKismetLibrary::StaticRegisterNativesUVisualLoggerKismetLibrary
 struct Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045320C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "EnableRecording", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x1, Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0FA0 (end 0x024F0FCF)
 // Original VA: 0x00000001424F0FA0 | File offset: 0x024F05A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording_Statics::FuncParams);
+		// FuncParams: original RVA 0x045320C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "EnableRecording", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x1, Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording()
 struct Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04532280; StructureSize 0x58 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogBox", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x58, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0FD0 (end 0x024F0FFF)
 // Original VA: 0x00000001424F0FD0 | File offset: 0x024F05D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox_Statics::FuncParams);
+		// FuncParams: original RVA 0x04532280; StructureSize 0x58 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogBox", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x58, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox()
 struct Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04532480; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x50, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation_Statics::PropPointers, 7, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1000 (end 0x024F102F)
 // Original VA: 0x00000001424F1000 | File offset: 0x024F0600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04532480; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x50, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation_Statics::PropPointers, 7, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation()
 struct Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045326C0; StructureSize 0x58 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogSegment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x58, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment_Statics::PropPointers, 8, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1030 (end 0x024F105F)
 // Original VA: 0x00000001424F1030 | File offset: 0x024F0630
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +92,9 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment_Statics::FuncParams);
+		// FuncParams: original RVA 0x045326C0; StructureSize 0x58 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogSegment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x58, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment_Statics::PropPointers, 8, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +102,7 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment()
 struct Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04532800; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1060 (end 0x024F108F)
 // Original VA: 0x00000001424F1060 | File offset: 0x024F0660
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,7 +111,9 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText_Statics::FuncParams);
+		// FuncParams: original RVA 0x04532800; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "LogText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -126,10 +121,7 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText()
 struct Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045328C0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "RedirectVislog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1090 (end 0x024F10BF)
 // Original VA: 0x00000001424F1090 | File offset: 0x024F0690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -138,7 +130,9 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog_Statics::FuncParams);
+		// FuncParams: original RVA 0x045328C0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UVisualLoggerKismetLibrary, "RedirectVislog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

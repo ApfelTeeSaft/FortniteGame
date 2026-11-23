@@ -31,25 +31,12 @@ class UScriptStruct* FFortAlterationSlots::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010045E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAlterationSlots_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAlterationSlots>();
 	}
-	// ReturnStructParams: original RVA 0x042EDAA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAlterationSlots_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAlterationSlots",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortAlterationSlots),
-		alignof(FFortAlterationSlots),
-		Z_Construct_UScriptStruct_FFortAlterationSlots_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010661D0 (end 0x010661FF)
 	// Original VA: 0x00000001410661D0 | File offset: 0x010657D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAlterationSlots::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAlterationSlots_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EDAA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAlterationSlots_Statics::NewStructOps,
+				"FortAlterationSlots",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortAlterationSlots),
+				alignof(FFortAlterationSlots),
+				Z_Construct_UScriptStruct_FFortAlterationSlots_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

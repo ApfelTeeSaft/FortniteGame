@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x039785F0, FClassParams RVA 0x03978640.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UPawnNoiseEmitterComponent();  // RVA 0x024A09F0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0510 (end 0x024A0532)
 // Original VA: 0x00000001424A0510 | File offset: 0x0249FB10
@@ -20,7 +20,7 @@ void UPawnNoiseEmitterComponent::StaticRegisterNativesUPawnNoiseEmitterComponent
 
 struct Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044E1C50 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A1860 (end 0x024A188F)
 // Original VA: 0x00000001424A1860 | File offset: 0x024A0E60
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E1C50; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPawnNoiseEmitterComponent, "MakeNoise", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20404, 0x18, Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

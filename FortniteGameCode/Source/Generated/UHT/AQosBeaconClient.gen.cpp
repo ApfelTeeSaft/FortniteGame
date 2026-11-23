@@ -22,10 +22,7 @@ void AQosBeaconClient::StaticRegisterNativesAQosBeaconClient()
 struct Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041AD620; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AQosBeaconClient, "ClientQosResponse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01080CC0, 0x1, Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005A2210 (end 0x005A223F)
 // Original VA: 0x00000001405A2210 | File offset: 0x005A1810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse_Statics::FuncParams);
+		// FuncParams: original RVA 0x041AD620; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AQosBeaconClient, "ClientQosResponse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01080CC0, 0x1, Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse()
 struct Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041AD6A0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AQosBeaconClient, "ServerQosRequest", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80280CC0, 0x10, Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005A2240 (end 0x005A226F)
 // Original VA: 0x00000001405A2240 | File offset: 0x005A1840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest_Statics::FuncParams);
+		// FuncParams: original RVA 0x041AD6A0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AQosBeaconClient, "ServerQosRequest", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80280CC0, 0x10, Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

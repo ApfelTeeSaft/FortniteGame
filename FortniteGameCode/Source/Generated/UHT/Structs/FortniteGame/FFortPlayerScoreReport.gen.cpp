@@ -31,25 +31,12 @@ class UScriptStruct* FFortPlayerScoreReport::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064920 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortPlayerScoreReport_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortPlayerScoreReport>();
 	}
-	// ReturnStructParams: original RVA 0x042EE540
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPlayerScoreReport_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortPlayerScoreReport",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortPlayerScoreReport),
-		alignof(FFortPlayerScoreReport),
-		Z_Construct_UScriptStruct_FFortPlayerScoreReport_Statics::PropPointers, 11,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066320 (end 0x0106634F)
 	// Original VA: 0x0000000141066320 | File offset: 0x01065920
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortPlayerScoreReport::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortPlayerScoreReport_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EE540
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortPlayerScoreReport_Statics::NewStructOps,
+				"FortPlayerScoreReport",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortPlayerScoreReport),
+				alignof(FFortPlayerScoreReport),
+				Z_Construct_UScriptStruct_FFortPlayerScoreReport_Statics::PropPointers, 11,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

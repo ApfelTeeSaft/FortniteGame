@@ -32,25 +32,12 @@ class UScriptStruct* FTTEventTrack::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC100 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTTEventTrack_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTTEventTrack>();
 	}
-	// ReturnStructParams: original RVA 0x0452FA20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTTEventTrack_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FTTTrackBase,
-		&NewStructOps,
-		"TTEventTrack",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTTEventTrack),
-		alignof(FTTEventTrack),
-		Z_Construct_UScriptStruct_FTTEventTrack_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDA30 (end 0x024EDA5F)
 	// Original VA: 0x00000001424EDA30 | File offset: 0x024ED030
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTTEventTrack::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTTEventTrack_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0452FA20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FTTTrackBase,
+				&Z_Construct_UScriptStruct_FTTEventTrack_Statics::NewStructOps,
+				"TTEventTrack",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTTEventTrack),
+				alignof(FTTEventTrack),
+				Z_Construct_UScriptStruct_FTTEventTrack_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

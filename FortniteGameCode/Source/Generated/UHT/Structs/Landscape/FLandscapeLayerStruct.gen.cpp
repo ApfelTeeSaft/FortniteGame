@@ -31,25 +31,12 @@ class UScriptStruct* FLandscapeLayerStruct::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74C70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLandscapeLayerStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLandscapeLayerStruct>();
 	}
-	// ReturnStructParams: original RVA 0x0439E370
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLandscapeLayerStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
-		nullptr,
-		&NewStructOps,
-		"LandscapeLayerStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLandscapeLayerStruct),
-		alignof(FLandscapeLayerStruct),
-		Z_Construct_UScriptStruct_FLandscapeLayerStruct_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A765C0 (end 0x01A765EF)
 	// Original VA: 0x0000000141A765C0 | File offset: 0x01A75BC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLandscapeLayerStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLandscapeLayerStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0439E370
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLandscapeLayerStruct_Statics::NewStructOps,
+				"LandscapeLayerStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLandscapeLayerStruct),
+				alignof(FLandscapeLayerStruct),
+				Z_Construct_UScriptStruct_FLandscapeLayerStruct_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

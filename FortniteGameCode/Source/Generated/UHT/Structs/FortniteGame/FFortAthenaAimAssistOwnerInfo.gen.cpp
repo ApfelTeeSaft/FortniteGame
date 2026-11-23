@@ -30,25 +30,12 @@ class UScriptStruct* FFortAthenaAimAssistOwnerInfo::StaticStruct()
 	struct Z_Construct_UScriptStruct_FFortAthenaAimAssistOwnerInfo_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9DAB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAthenaAimAssistOwnerInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAthenaAimAssistOwnerInfo>();
 	}
-	// ReturnStructParams: original RVA 0x042399D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAthenaAimAssistOwnerInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAthenaAimAssistOwnerInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAthenaAimAssistOwnerInfo),
-		alignof(FFortAthenaAimAssistOwnerInfo),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F990 (end 0x00F9F9BF)
 	// Original VA: 0x0000000140F9F990 | File offset: 0x00F9EF90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FFortAthenaAimAssistOwnerInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAthenaAimAssistOwnerInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042399D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAthenaAimAssistOwnerInfo_Statics::NewStructOps,
+				"FortAthenaAimAssistOwnerInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAthenaAimAssistOwnerInfo),
+				alignof(FFortAthenaAimAssistOwnerInfo),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

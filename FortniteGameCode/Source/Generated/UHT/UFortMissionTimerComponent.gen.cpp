@@ -35,12 +35,6 @@ void UFortMissionTimerComponent::StaticRegisterNativesUFortMissionTimerComponent
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortMissionTimerComponent_ClearMissionTimer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042D4E20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_ClearMissionTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "ClearMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B6F0 (end 0x0104B71F)
 // Original VA: 0x000000014104B6F0 | File offset: 0x0104ACF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -49,17 +43,13 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_ClearMissionTimer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_ClearMissionTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D4E20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "ClearMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortMissionTimerComponent_DummyTimer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042D4E60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_DummyTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "DummyTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B720 (end 0x0104B74F)
 // Original VA: 0x000000014104B720 | File offset: 0x0104AD20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -68,7 +58,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_DummyTimer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_DummyTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D4E60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "DummyTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -76,10 +68,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_DummyTimer()
 struct Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDisplayData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D4EE0; StructureSize 0x2C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDisplayData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetCorrectTimeDisplayData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x2C, Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDisplayData_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B750 (end 0x0104B77F)
 // Original VA: 0x000000014104B750 | File offset: 0x0104AD50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -88,7 +77,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDispla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDisplayData_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D4EE0; StructureSize 0x2C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetCorrectTimeDisplayData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x2C, Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDisplayData_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -96,10 +87,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDispla
 struct Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeRemaining_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D4F60; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeRemaining_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetMissionTimerTimeRemaining", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeRemaining_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B780 (end 0x0104B7AF)
 // Original VA: 0x000000014104B780 | File offset: 0x0104AD80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -108,7 +96,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeR
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeRemaining_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D4F60; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetMissionTimerTimeRemaining", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeRemaining_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -116,10 +106,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeR
 struct Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D4FE0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetNormalizedTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B7B0 (end 0x0104B7DF)
 // Original VA: 0x000000014104B7B0 | File offset: 0x0104ADB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -128,7 +115,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D4FE0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetNormalizedTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -136,10 +125,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime()
 struct Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D5060; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetTimeText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B7E0 (end 0x0104B80F)
 // Original VA: 0x000000014104B7E0 | File offset: 0x0104ADE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -148,7 +134,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5060; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "GetTimeText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -156,10 +144,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText()
 struct Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D50F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "IsMissionTimerPaused", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B810 (end 0x0104B83F)
 // Original VA: 0x000000014104B810 | File offset: 0x0104AE10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -168,7 +153,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D50F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "IsMissionTimerPaused", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -176,10 +163,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused
 struct Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D5180; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "IsMissionTimerSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B840 (end 0x0104B86F)
 // Original VA: 0x000000014104B840 | File offset: 0x0104AE40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -188,7 +172,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5180; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "IsMissionTimerSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -196,10 +182,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet()
 struct Z_Construct_UFunction_UFortMissionTimerComponent_IsTimerVisible_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D5210; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_IsTimerVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "IsTimerVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_IsTimerVisible_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B870 (end 0x0104B89F)
 // Original VA: 0x000000014104B870 | File offset: 0x0104AE70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -208,17 +191,13 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_IsTimerVisible()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_IsTimerVisible_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5210; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "IsTimerVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_IsTimerVisible_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerData_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042D5250; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "OnRep_TimerData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B8A0 (end 0x0104B8CF)
 // Original VA: 0x000000014104B8A0 | File offset: 0x0104AEA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -227,17 +206,13 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerData_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5250; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "OnRep_TimerData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerVisibilityOverride_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042D5290; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerVisibilityOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "OnRep_TimerVisibilityOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B8D0 (end 0x0104B8FF)
 // Original VA: 0x000000014104B8D0 | File offset: 0x0104AED0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -246,17 +221,13 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerVisibilit
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerVisibilityOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5290; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "OnRep_TimerVisibilityOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortMissionTimerComponent_PauseMissionTimer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042D52D0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_PauseMissionTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "PauseMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B900 (end 0x0104B92F)
 // Original VA: 0x000000014104B900 | File offset: 0x0104AF00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -265,17 +236,13 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_PauseMissionTimer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_PauseMissionTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D52D0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "PauseMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortMissionTimerComponent_ResetMissionTimer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042D5310; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_ResetMissionTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "ResetMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B930 (end 0x0104B95F)
 // Original VA: 0x000000014104B930 | File offset: 0x0104AF30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -284,7 +251,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_ResetMissionTimer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_ResetMissionTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5310; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "ResetMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -292,10 +261,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_ResetMissionTimer()
 struct Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D5400; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x20, Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B960 (end 0x0104B98F)
 // Original VA: 0x000000014104B960 | File offset: 0x0104AF60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -304,7 +270,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5400; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x20, Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -312,10 +280,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer()
 struct Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayFormat_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D5490; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayFormat_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetTimerDisplayFormat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayFormat_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B990 (end 0x0104B9BF)
 // Original VA: 0x000000014104B990 | File offset: 0x0104AF90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -324,7 +289,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayForma
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayFormat_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5490; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetTimerDisplayFormat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayFormat_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -332,10 +299,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayForma
 struct Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D5510; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetTimerLabelText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x18, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B9C0 (end 0x0104B9EF)
 // Original VA: 0x000000014104B9C0 | File offset: 0x0104AFC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -344,7 +308,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5510; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetTimerLabelText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x18, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -352,10 +318,7 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText()
 struct Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerVisibilityOverrideSetting_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D5590; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerVisibilityOverrideSetting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetTimerVisibilityOverrideSetting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerVisibilityOverrideSetting_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B9F0 (end 0x0104BA1F)
 // Original VA: 0x000000014104B9F0 | File offset: 0x0104AFF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -364,17 +327,13 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerVisibilityOv
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerVisibilityOverrideSetting_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D5590; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "SetTimerVisibilityOverrideSetting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerVisibilityOverrideSetting_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortMissionTimerComponent_UnpauseMissionTimer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042D55D0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionTimerComponent_UnpauseMissionTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "UnpauseMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BA20 (end 0x0104BA4F)
 // Original VA: 0x000000014104BA20 | File offset: 0x0104B020
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -383,7 +342,9 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_UnpauseMissionTimer(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionTimerComponent_UnpauseMissionTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D55D0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionTimerComponent, "UnpauseMissionTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

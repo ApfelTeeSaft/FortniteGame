@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneEasingSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC2280 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneEasingSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneEasingSettings>();
 	}
-	// ReturnStructParams: original RVA 0x043A44D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneEasingSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneEasingSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneEasingSettings),
-		alignof(FMovieSceneEasingSettings),
-		Z_Construct_UScriptStruct_FMovieSceneEasingSettings_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC5CF0 (end 0x01AC5D1F)
 	// Original VA: 0x0000000141AC5CF0 | File offset: 0x01AC52F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneEasingSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneEasingSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A44D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneEasingSettings_Statics::NewStructOps,
+				"MovieSceneEasingSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneEasingSettings),
+				alignof(FMovieSceneEasingSettings),
+				Z_Construct_UScriptStruct_FMovieSceneEasingSettings_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -23,10 +23,7 @@ void UFortTooltipContext::StaticRegisterNativesUFortTooltipContext()
 struct Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0433A870; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTooltipContext, "SpawnTooltipContext", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022409, 0x8, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBD50 (end 0x010CBD7F)
 // Original VA: 0x00000001410CBD50 | File offset: 0x010CB350
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext_Statics::FuncParams);
+		// FuncParams: original RVA 0x0433A870; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTooltipContext, "SpawnTooltipContext", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022409, 0x8, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext()
 struct Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithNetID_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0433A970; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithNetID_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTooltipContext, "SpawnTooltipContextWithNetID", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422409, 0x38, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithNetID_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBD80 (end 0x010CBDAF)
 // Original VA: 0x00000001410CBD80 | File offset: 0x010CB380
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithNetI
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithNetID_Statics::FuncParams);
+		// FuncParams: original RVA 0x0433A970; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTooltipContext, "SpawnTooltipContextWithNetID", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422409, 0x38, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithNetID_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithNetI
 struct Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithSource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0433AA30; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithSource_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTooltipContext, "SpawnTooltipContextWithSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022409, 0x10, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithSource_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBDB0 (end 0x010CBDDF)
 // Original VA: 0x00000001410CBDB0 | File offset: 0x010CB3B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithSour
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithSource_Statics::FuncParams);
+		// FuncParams: original RVA 0x0433AA30; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTooltipContext, "SpawnTooltipContextWithSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022409, 0x10, Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithSource_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

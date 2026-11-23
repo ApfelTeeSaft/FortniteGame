@@ -31,25 +31,12 @@ class UScriptStruct* FVehicleAnimInstanceProxy::StaticStruct()
 	struct Z_Construct_UScriptStruct_FVehicleAnimInstanceProxy_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067AE80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVehicleAnimInstanceProxy_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVehicleAnimInstanceProxy>();
 	}
-	// ReturnStructParams: original RVA 0x041B7AE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVehicleAnimInstanceProxy_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
-		Z_Construct_UScriptStruct_FAnimInstanceProxy,
-		&NewStructOps,
-		"VehicleAnimInstanceProxy",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FVehicleAnimInstanceProxy),
-		alignof(FVehicleAnimInstanceProxy),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067C5B0 (end 0x0067C5DF)
 	// Original VA: 0x000000014067C5B0 | File offset: 0x0067BBB0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FVehicleAnimInstanceProxy::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVehicleAnimInstanceProxy_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041B7AE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
+				Z_Construct_UScriptStruct_FAnimInstanceProxy,
+				&Z_Construct_UScriptStruct_FVehicleAnimInstanceProxy_Statics::NewStructOps,
+				"VehicleAnimInstanceProxy",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FVehicleAnimInstanceProxy),
+				alignof(FVehicleAnimInstanceProxy),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

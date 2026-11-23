@@ -32,25 +32,12 @@ class UScriptStruct* FMovieSceneColorSectionTemplate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B50080 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneColorSectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneColorSectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043B5BF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneColorSectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate,
-		&NewStructOps,
-		"MovieSceneColorSectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneColorSectionTemplate),
-		alignof(FMovieSceneColorSectionTemplate),
-		Z_Construct_UScriptStruct_FMovieSceneColorSectionTemplate_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B52F00 (end 0x01B52F2F)
 	// Original VA: 0x0000000141B52F00 | File offset: 0x01B52500
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieSceneColorSectionTemplate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneColorSectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B5BF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate,
+				&Z_Construct_UScriptStruct_FMovieSceneColorSectionTemplate_Statics::NewStructOps,
+				"MovieSceneColorSectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneColorSectionTemplate),
+				alignof(FMovieSceneColorSectionTemplate),
+				Z_Construct_UScriptStruct_FMovieSceneColorSectionTemplate_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

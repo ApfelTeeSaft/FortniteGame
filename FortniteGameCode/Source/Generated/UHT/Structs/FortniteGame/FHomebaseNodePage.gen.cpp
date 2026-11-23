@@ -32,25 +32,12 @@ class UScriptStruct* FHomebaseNodePage::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9FD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FHomebaseNodePage_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FHomebaseNodePage>();
 	}
-	// ReturnStructParams: original RVA 0x042974A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHomebaseNodePage_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"HomebaseNodePage",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FHomebaseNodePage),
-		alignof(FHomebaseNodePage),
-		Z_Construct_UScriptStruct_FHomebaseNodePage_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFC280 (end 0x00FFC2AF)
 	// Original VA: 0x0000000140FFC280 | File offset: 0x00FFB880
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FHomebaseNodePage::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FHomebaseNodePage_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042974A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FHomebaseNodePage_Statics::NewStructOps,
+				"HomebaseNodePage",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FHomebaseNodePage),
+				alignof(FHomebaseNodePage),
+				Z_Construct_UScriptStruct_FHomebaseNodePage_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

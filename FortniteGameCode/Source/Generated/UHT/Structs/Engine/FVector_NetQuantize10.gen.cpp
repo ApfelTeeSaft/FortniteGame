@@ -27,25 +27,12 @@ class UScriptStruct* FVector_NetQuantize10::StaticStruct()
 	struct Z_Construct_UScriptStruct_FVector_NetQuantize10_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024950A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVector_NetQuantize10_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVector_NetQuantize10>();
 	}
-	// ReturnStructParams: original RVA 0x044CF9B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVector_NetQuantize10_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_Unrecovered_0x013A83A0,
-		&NewStructOps,
-		"Vector_NetQuantize10",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000011),
-		sizeof(FVector_NetQuantize10),
-		alignof(FVector_NetQuantize10),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024964C0 (end 0x024964EF)
 	// Original VA: 0x00000001424964C0 | File offset: 0x02495AC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -54,7 +41,19 @@ class UScriptStruct* FVector_NetQuantize10::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVector_NetQuantize10_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044CF9B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_Unrecovered_0x013A83A0,
+				&Z_Construct_UScriptStruct_FVector_NetQuantize10_Statics::NewStructOps,
+				"Vector_NetQuantize10",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000011),
+				sizeof(FVector_NetQuantize10),
+				alignof(FVector_NetQuantize10),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

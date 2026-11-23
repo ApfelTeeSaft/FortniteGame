@@ -31,10 +31,7 @@ void UProceduralMeshComponent::StaticRegisterNativesUProceduralMeshComponent()
 struct Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BCD90; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "AddCollisionConvexMesh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BEC0 (end 0x0069BEEF)
 // Original VA: 0x000000014069BEC0 | File offset: 0x0069B4C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -43,17 +40,13 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BCD90; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "AddCollisionConvexMesh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UProceduralMeshComponent_ClearAllMeshSections_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041BCDD0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_ClearAllMeshSections_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "ClearAllMeshSections", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BEF0 (end 0x0069BF1F)
 // Original VA: 0x000000014069BEF0 | File offset: 0x0069B4F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -62,17 +55,13 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_ClearAllMeshSections()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_ClearAllMeshSections_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BCDD0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "ClearAllMeshSections", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UProceduralMeshComponent_ClearCollisionConvexMeshes_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041BCE10; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_ClearCollisionConvexMeshes_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "ClearCollisionConvexMeshes", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BF20 (end 0x0069BF4F)
 // Original VA: 0x000000014069BF20 | File offset: 0x0069B520
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +70,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_ClearCollisionConvexMe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_ClearCollisionConvexMeshes_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BCE10; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "ClearCollisionConvexMeshes", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +80,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_ClearCollisionConvexMe
 struct Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BCE90; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "ClearMeshSection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BF50 (end 0x0069BF7F)
 // Original VA: 0x000000014069BF50 | File offset: 0x0069B550
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +89,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BCE90; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "ClearMeshSection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -109,10 +99,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection()
 struct Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BD240; StructureSize 0x70 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "CreateMeshSection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x70, Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_Statics::PropPointers, 14, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BF80 (end 0x0069BFAF)
 // Original VA: 0x000000014069BF80 | File offset: 0x0069B580
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -121,7 +108,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BD240; StructureSize 0x70 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "CreateMeshSection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x70, Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_Statics::PropPointers, 14, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -129,10 +118,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection()
 struct Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_LinearColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BD770; StructureSize 0xA0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_LinearColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "CreateMeshSection_LinearColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0xA0, Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_LinearColor_Statics::PropPointers, 20, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BFB0 (end 0x0069BFDF)
 // Original VA: 0x000000014069BFB0 | File offset: 0x0069B5B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -141,7 +127,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_Line
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_LinearColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BD770; StructureSize 0xA0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "CreateMeshSection_LinearColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0xA0, Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_LinearColor_Statics::PropPointers, 20, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -149,10 +137,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_Line
 struct Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BD7F0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "GetNumSections", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BFE0 (end 0x0069C00F)
 // Original VA: 0x000000014069BFE0 | File offset: 0x0069B5E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -161,7 +146,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BD7F0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "GetNumSections", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -169,10 +156,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections()
 struct Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BD8B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "IsMeshSectionVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069C010 (end 0x0069C03F)
 // Original VA: 0x000000014069C010 | File offset: 0x0069B610
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,7 +165,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BD8B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "IsMeshSectionVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -189,10 +175,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible()
 struct Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BD970; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "SetMeshSectionVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069C040 (end 0x0069C06F)
 // Original VA: 0x000000014069C040 | File offset: 0x0069B640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -201,7 +184,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BD970; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "SetMeshSectionVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -209,10 +194,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible(
 struct Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BDC70; StructureSize 0x58 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "UpdateMeshSection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x58, Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_Statics::PropPointers, 11, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069C070 (end 0x0069C09F)
 // Original VA: 0x000000014069C070 | File offset: 0x0069B670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -221,7 +203,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BDC70; StructureSize 0x58 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "UpdateMeshSection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x58, Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_Statics::PropPointers, 11, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -229,10 +213,7 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection()
 struct Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_LinearColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BE0F0; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_LinearColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "UpdateMeshSection_LinearColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x88, Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_LinearColor_Statics::PropPointers, 17, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069C0A0 (end 0x0069C0CF)
 // Original VA: 0x000000014069C0A0 | File offset: 0x0069B6A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -241,7 +222,9 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_Line
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_LinearColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BE0F0; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UProceduralMeshComponent, "UpdateMeshSection_LinearColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x88, Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_LinearColor_Statics::PropPointers, 17, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

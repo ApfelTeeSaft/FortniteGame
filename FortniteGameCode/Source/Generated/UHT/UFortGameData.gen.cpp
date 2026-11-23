@@ -23,10 +23,7 @@ void UFortGameData::StaticRegisterNativesUFortGameData()
 struct Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04273FC0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameData, "GetPersonalXpBoost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x4, Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE16F0 (end 0x00FE171F)
 // Original VA: 0x0000000140FE16F0 | File offset: 0x00FE0CF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost_Statics::FuncParams);
+		// FuncParams: original RVA 0x04273FC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameData, "GetPersonalXpBoost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x4, Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost()
 struct Z_Construct_UFunction_UFortGameData_GetTeamXpBoost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04274040; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameData_GetTeamXpBoost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameData, "GetTeamXpBoost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x4, Z_Construct_UFunction_UFortGameData_GetTeamXpBoost_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1720 (end 0x00FE174F)
 // Original VA: 0x0000000140FE1720 | File offset: 0x00FE0D20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortGameData_GetTeamXpBoost()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameData_GetTeamXpBoost_Statics::FuncParams);
+		// FuncParams: original RVA 0x04274040; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameData, "GetTeamXpBoost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x4, Z_Construct_UFunction_UFortGameData_GetTeamXpBoost_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortGameData_GetTeamXpBoost()
 struct Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042740C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameData, "GetXpPerAccountLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x4, Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1750 (end 0x00FE177F)
 // Original VA: 0x0000000140FE1750 | File offset: 0x00FE0D50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x042740C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameData, "GetXpPerAccountLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x4, Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

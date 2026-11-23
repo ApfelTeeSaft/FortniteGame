@@ -32,10 +32,7 @@ void AFortThreatVisualsManager::StaticRegisterNativesAFortThreatVisualsManager()
 struct Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPrecursor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333990; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPrecursor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "BeginThreatVisualsPrecursor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00824CC0, 0x18, Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPrecursor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE960 (end 0x010BE98F)
 // Original VA: 0x00000001410BE960 | File offset: 0x010BDF60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -44,7 +41,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPre
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPrecursor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333990; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "BeginThreatVisualsPrecursor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00824CC0, 0x18, Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPrecursor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -52,10 +51,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPre
 struct Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333A20; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "GetCloudsAreHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE990 (end 0x010BE9BF)
 // Original VA: 0x00000001410BE990 | File offset: 0x010BDF90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -64,7 +60,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333A20; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "GetCloudsAreHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -72,10 +70,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden()
 struct Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333AE0; StructureSize 0x68 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "GetThreatCloud", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x68, Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE9C0 (end 0x010BE9EF)
 // Original VA: 0x00000001410BE9C0 | File offset: 0x010BDFC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -84,7 +79,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333AE0; StructureSize 0x68 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "GetThreatCloud", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x68, Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -92,10 +89,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud()
 struct Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333BA0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "GetThreatClouds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE9F0 (end 0x010BEA1F)
 // Original VA: 0x00000001410BE9F0 | File offset: 0x010BDFF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -104,7 +98,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333BA0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "GetThreatClouds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -112,10 +108,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds()
 struct Z_Construct_UFunction_AFortThreatVisualsManager_OnBeginThreatVisualsPrecursor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333C60; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_OnBeginThreatVisualsPrecursor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnBeginThreatVisualsPrecursor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20808, 0x18, Z_Construct_UFunction_AFortThreatVisualsManager_OnBeginThreatVisualsPrecursor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEA20 (end 0x010BEA4F)
 // Original VA: 0x00000001410BEA20 | File offset: 0x010BE020
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -124,17 +117,13 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnBeginThreatVisualsP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_OnBeginThreatVisualsPrecursor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333C60; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnBeginThreatVisualsPrecursor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20808, 0x18, Z_Construct_UFunction_AFortThreatVisualsManager_OnBeginThreatVisualsPrecursor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_GoalActorLocations_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04333CA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_GoalActorLocations_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_GoalActorLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEA50 (end 0x010BEA7F)
 // Original VA: 0x00000001410BEA50 | File offset: 0x010BE050
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -143,17 +132,13 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_GoalActorLocati
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_GoalActorLocations_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333CA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_GoalActorLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_HideClouds_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04333CE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_HideClouds_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_HideClouds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEA80 (end 0x010BEAAF)
 // Original VA: 0x00000001410BEA80 | File offset: 0x010BE080
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -162,17 +147,13 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_HideClouds()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_HideClouds_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333CE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_HideClouds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_StormWinds_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04333D20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_StormWinds_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_StormWinds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEAB0 (end 0x010BEADF)
 // Original VA: 0x00000001410BEAB0 | File offset: 0x010BE0B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,17 +162,13 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_StormWinds()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_StormWinds_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333D20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_StormWinds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_ThreatLocations_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04333D60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_ThreatLocations_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_ThreatLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEAE0 (end 0x010BEB0F)
 // Original VA: 0x00000001410BEAE0 | File offset: 0x010BE0E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -200,7 +177,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_ThreatLocations
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_ThreatLocations_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333D60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnRep_ThreatLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -208,10 +187,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_ThreatLocations
 struct Z_Construct_UFunction_AFortThreatVisualsManager_OnThreatCloudsChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333E20; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_OnThreatCloudsChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnThreatCloudsChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x10, Z_Construct_UFunction_AFortThreatVisualsManager_OnThreatCloudsChanged_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEB10 (end 0x010BEB3F)
 // Original VA: 0x00000001410BEB10 | File offset: 0x010BE110
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -220,17 +196,13 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnThreatCloudsChanged
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_OnThreatCloudsChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333E20; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnThreatCloudsChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x10, Z_Construct_UFunction_AFortThreatVisualsManager_OnThreatCloudsChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortThreatVisualsManager_OnWorldReady_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04333E60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_OnWorldReady_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnWorldReady", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEB40 (end 0x010BEB6F)
 // Original VA: 0x00000001410BEB40 | File offset: 0x010BE140
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -239,17 +211,13 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_OnWorldReady()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_OnWorldReady_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333E60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "OnWorldReady", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortThreatVisualsManager_ResetMinimumCloudAltitude_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04333EA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_ResetMinimumCloudAltitude_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "ResetMinimumCloudAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEB70 (end 0x010BEB9F)
 // Original VA: 0x00000001410BEB70 | File offset: 0x010BE170
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -258,7 +226,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_ResetMinimumCloudAlti
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_ResetMinimumCloudAltitude_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333EA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "ResetMinimumCloudAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -266,10 +236,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_ResetMinimumCloudAlti
 struct Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333F30; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "SetCloudsAreHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEBA0 (end 0x010BEBCF)
 // Original VA: 0x00000001410BEBA0 | File offset: 0x010BE1A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -278,7 +245,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333F30; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "SetCloudsAreHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -286,10 +255,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden()
 struct Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitude_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04333FB0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitude_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "SetMinimumCloudAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitude_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEBD0 (end 0x010BEBFF)
 // Original VA: 0x00000001410BEBD0 | File offset: 0x010BE1D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -298,7 +264,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitude_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333FB0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "SetMinimumCloudAltitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitude_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -306,10 +274,7 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitu
 struct Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04334040; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "StormsExist", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEC00 (end 0x010BEC2F)
 // Original VA: 0x00000001410BEC00 | File offset: 0x010BE200
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -318,7 +283,9 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist_Statics::FuncParams);
+		// FuncParams: original RVA 0x04334040; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatVisualsManager, "StormsExist", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

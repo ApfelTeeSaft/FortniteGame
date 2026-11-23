@@ -31,25 +31,12 @@ class UScriptStruct* FFortGlobalMission::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A44C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortGlobalMission_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortGlobalMission>();
 	}
-	// ReturnStructParams: original RVA 0x04329590
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortGlobalMission_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortGlobalMission",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortGlobalMission),
-		alignof(FFortGlobalMission),
-		Z_Construct_UScriptStruct_FFortGlobalMission_Statics::PropPointers, 15,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A68F0 (end 0x010A691F)
 	// Original VA: 0x00000001410A68F0 | File offset: 0x010A5EF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortGlobalMission::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortGlobalMission_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04329590
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortGlobalMission_Statics::NewStructOps,
+				"FortGlobalMission",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortGlobalMission),
+				alignof(FFortGlobalMission),
+				Z_Construct_UScriptStruct_FFortGlobalMission_Statics::PropPointers, 15,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

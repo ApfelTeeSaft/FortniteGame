@@ -31,25 +31,12 @@ class UScriptStruct* FSkeletalMeshSamplingBuiltData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3D60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSkeletalMeshSamplingBuiltData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSkeletalMeshSamplingBuiltData>();
 	}
-	// ReturnStructParams: original RVA 0x04516520
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSkeletalMeshSamplingBuiltData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SkeletalMeshSamplingBuiltData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSkeletalMeshSamplingBuiltData),
-		alignof(FSkeletalMeshSamplingBuiltData),
-		Z_Construct_UScriptStruct_FSkeletalMeshSamplingBuiltData_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5FD0 (end 0x024D5FFF)
 	// Original VA: 0x00000001424D5FD0 | File offset: 0x024D55D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSkeletalMeshSamplingBuiltData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSkeletalMeshSamplingBuiltData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04516520
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSkeletalMeshSamplingBuiltData_Statics::NewStructOps,
+				"SkeletalMeshSamplingBuiltData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSkeletalMeshSamplingBuiltData),
+				alignof(FSkeletalMeshSamplingBuiltData),
+				Z_Construct_UScriptStruct_FSkeletalMeshSamplingBuiltData_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

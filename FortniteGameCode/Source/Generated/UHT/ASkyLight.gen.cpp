@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x039AEF98, FClassParams RVA 0x039AEFC0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_ASkyLight();  // RVA 0x024D5070 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4590 (end 0x024D45B2)
 // Original VA: 0x00000001424D4590 | File offset: 0x024D3B90
@@ -18,10 +18,6 @@ void ASkyLight::StaticRegisterNativesASkyLight()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_ASkyLight_OnRep_bEnabled_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045197F0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D54F0 (end 0x024D551F)
 // Original VA: 0x00000001424D54F0 | File offset: 0x024D4AF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_ASkyLight_OnRep_bEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASkyLight_OnRep_bEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x045197F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkyLight, "OnRep_bEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

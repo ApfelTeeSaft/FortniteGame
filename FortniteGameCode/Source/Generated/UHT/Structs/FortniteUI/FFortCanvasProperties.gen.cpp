@@ -31,25 +31,12 @@ class UScriptStruct* FFortCanvasProperties::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDCE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortCanvasProperties_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortCanvasProperties>();
 	}
-	// ReturnStructParams: original RVA 0x045A2BC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortCanvasProperties_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortCanvasProperties",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortCanvasProperties),
-		alignof(FFortCanvasProperties),
-		Z_Construct_UScriptStruct_FFortCanvasProperties_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E01B0 (end 0x028E01DF)
 	// Original VA: 0x00000001428E01B0 | File offset: 0x028DF7B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortCanvasProperties::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortCanvasProperties_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045A2BC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortCanvasProperties_Statics::NewStructOps,
+				"FortCanvasProperties",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortCanvasProperties),
+				alignof(FFortCanvasProperties),
+				Z_Construct_UScriptStruct_FFortCanvasProperties_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

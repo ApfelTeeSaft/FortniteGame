@@ -32,25 +32,12 @@ class UScriptStruct* FFortTrapStats::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8C90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTrapStats_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTrapStats>();
 	}
-	// ReturnStructParams: original RVA 0x0433D510
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTrapStats_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortBaseWeaponStats,
-		&NewStructOps,
-		"FortTrapStats",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTrapStats),
-		alignof(FFortTrapStats),
-		Z_Construct_UScriptStruct_FFortTrapStats_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CCA70 (end 0x010CCA9F)
 	// Original VA: 0x00000001410CCA70 | File offset: 0x010CC070
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortTrapStats::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTrapStats_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0433D510
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortBaseWeaponStats,
+				&Z_Construct_UScriptStruct_FFortTrapStats_Statics::NewStructOps,
+				"FortTrapStats",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTrapStats),
+				alignof(FFortTrapStats),
+				Z_Construct_UScriptStruct_FFortTrapStats_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

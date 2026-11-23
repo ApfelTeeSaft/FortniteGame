@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03697690, FClassParams RVA 0x036976B0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UMouseCursorBinding();  // RVA 0x01BED5D0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED030 (end 0x01BED052)
 // Original VA: 0x0000000141BED030 | File offset: 0x01BEC630
@@ -20,7 +20,7 @@ void UMouseCursorBinding::StaticRegisterNativesUMouseCursorBinding()
 
 struct Z_Construct_UFunction_UMouseCursorBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C1F90 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEE470 (end 0x01BEE49F)
 // Original VA: 0x0000000141BEE470 | File offset: 0x01BEDA70
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UMouseCursorBinding_GetValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMouseCursorBinding_GetValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C1F90; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMouseCursorBinding, "GetValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x1, Z_Construct_UFunction_UMouseCursorBinding_GetValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

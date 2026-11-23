@@ -28,10 +28,7 @@ void UPaperGroupedSpriteComponent::StaticRegisterNativesUPaperGroupedSpriteCompo
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B28A0; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "AddInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x50, Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006680F0 (end 0x0066811F)
 // Original VA: 0x00000001406680F0 | File offset: 0x006676F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -40,17 +37,13 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B28A0; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "AddInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x50, Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_ClearInstances_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041B28E0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_ClearInstances_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "ClearInstances", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668120 (end 0x0066814F)
 // Original VA: 0x0000000140668120 | File offset: 0x00667720
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +52,9 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_ClearInstances()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_ClearInstances_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B28E0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "ClearInstances", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +62,7 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_ClearInstances()
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B2960; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "GetInstanceCount", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668150 (end 0x0066817F)
 // Original VA: 0x0000000140668150 | File offset: 0x00667750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +71,9 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B2960; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "GetInstanceCount", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +81,7 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount()
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransform_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B2AC0; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransform_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "GetInstanceTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x50, Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransform_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668180 (end 0x006681AF)
 // Original VA: 0x0000000140668180 | File offset: 0x00667780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +90,9 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransfo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransform_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B2AC0; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "GetInstanceTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x50, Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransform_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +100,7 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransfo
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B2B80; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "RemoveInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x8, Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006681B0 (end 0x006681DF)
 // Original VA: 0x00000001406681B0 | File offset: 0x006677B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +109,9 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B2B80; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "RemoveInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x8, Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +119,7 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance()
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlongAxis_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B2C00; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlongAxis_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "SortInstancesAlongAxis", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0xC, Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlongAxis_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006681E0 (end 0x0066820F)
 // Original VA: 0x00000001406681E0 | File offset: 0x006677E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,7 +128,9 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlong
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlongAxis_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B2C00; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "SortInstancesAlongAxis", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0xC, Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlongAxis_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -147,10 +138,7 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlong
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B2D60; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "UpdateInstanceColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820400, 0x18, Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColor_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668210 (end 0x0066823F)
 // Original VA: 0x0000000140668210 | File offset: 0x00667810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -159,7 +147,9 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B2D60; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "UpdateInstanceColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820400, 0x18, Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColor_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -167,10 +157,7 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColo
 struct Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTransform_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B2F60; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTransform_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "UpdateInstanceTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20400, 0x50, Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTransform_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668240 (end 0x0066826F)
 // Original VA: 0x0000000140668240 | File offset: 0x00667840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -179,7 +166,9 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTran
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTransform_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B2F60; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperGroupedSpriteComponent, "UpdateInstanceTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20400, 0x50, Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTransform_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

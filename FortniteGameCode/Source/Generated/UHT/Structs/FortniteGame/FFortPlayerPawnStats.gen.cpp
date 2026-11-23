@@ -32,25 +32,12 @@ class UScriptStruct* FFortPlayerPawnStats::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107EFB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortPlayerPawnStats_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortPlayerPawnStats>();
 	}
-	// ReturnStructParams: original RVA 0x04308730
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPlayerPawnStats_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortPawnStats,
-		&NewStructOps,
-		"FortPlayerPawnStats",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortPlayerPawnStats),
-		alignof(FFortPlayerPawnStats),
-		Z_Construct_UScriptStruct_FFortPlayerPawnStats_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01081960 (end 0x0108198F)
 	// Original VA: 0x0000000141081960 | File offset: 0x01080F60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortPlayerPawnStats::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortPlayerPawnStats_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04308730
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortPawnStats,
+				&Z_Construct_UScriptStruct_FFortPlayerPawnStats_Statics::NewStructOps,
+				"FortPlayerPawnStats",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortPlayerPawnStats),
+				alignof(FFortPlayerPawnStats),
+				Z_Construct_UScriptStruct_FFortPlayerPawnStats_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

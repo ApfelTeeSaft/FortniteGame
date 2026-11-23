@@ -32,25 +32,12 @@ class UScriptStruct* FAttributeMetaData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CB20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAttributeMetaData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAttributeMetaData>();
 	}
-	// ReturnStructParams: original RVA 0x0419E4C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAttributeMetaData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"AttributeMetaData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAttributeMetaData),
-		alignof(FAttributeMetaData),
-		Z_Construct_UScriptStruct_FAttributeMetaData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054EE80 (end 0x0054EEAF)
 	// Original VA: 0x000000014054EE80 | File offset: 0x0054E480
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAttributeMetaData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAttributeMetaData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0419E4C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FAttributeMetaData_Statics::NewStructOps,
+				"AttributeMetaData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAttributeMetaData),
+				alignof(FAttributeMetaData),
+				Z_Construct_UScriptStruct_FAttributeMetaData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

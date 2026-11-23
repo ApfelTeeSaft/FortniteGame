@@ -29,10 +29,7 @@ void UFortSeasonPassLevelInfo::StaticRegisterNativesUFortSeasonPassLevelInfo()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6300; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029195E0 (end 0x0291960F)
 // Original VA: 0x00000001429195E0 | File offset: 0x02918BE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +38,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6300; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +48,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6380; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetLevelProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919610 (end 0x0291963F)
 // Original VA: 0x0000000142919610 | File offset: 0x02918C10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +57,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6380; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetLevelProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -69,10 +67,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6480; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetNumRewardItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919640 (end 0x0291966F)
 // Original VA: 0x0000000142919640 | File offset: 0x02918C40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +76,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6480; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetNumRewardItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +86,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D65C0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetRewardItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919670 (end 0x0291969F)
 // Original VA: 0x0000000142919670 | File offset: 0x02918C70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +95,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D65C0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetRewardItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -109,10 +105,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6640; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetSeasonPassMaxLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029196A0 (end 0x029196CF)
 // Original VA: 0x00000001429196A0 | File offset: 0x02918CA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -121,7 +114,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6640; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "GetSeasonPassMaxLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -129,10 +124,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel(
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D66D0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsFreeClaimed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029196D0 (end 0x029196FF)
 // Original VA: 0x00000001429196D0 | File offset: 0x02918CD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -141,7 +133,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D66D0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsFreeClaimed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -149,10 +143,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6760; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsFreeUnlocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919700 (end 0x0291972F)
 // Original VA: 0x0000000142919700 | File offset: 0x02918D00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -161,7 +152,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6760; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsFreeUnlocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -169,10 +162,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D67F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsPaidClaimed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919730 (end 0x0291975F)
 // Original VA: 0x0000000142919730 | File offset: 0x02918D30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,7 +171,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D67F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsPaidClaimed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -189,10 +181,7 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed()
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6880; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsPaidUnlocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919760 (end 0x0291978F)
 // Original VA: 0x0000000142919760 | File offset: 0x02918D60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -201,7 +190,9 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6880; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSeasonPassLevelInfo, "IsPaidUnlocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

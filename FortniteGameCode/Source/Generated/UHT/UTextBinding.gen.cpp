@@ -22,10 +22,7 @@ void UTextBinding::StaticRegisterNativesUTextBinding()
 struct Z_Construct_UFunction_UTextBinding_GetStringValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C9B90; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTextBinding_GetStringValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTextBinding, "GetStringValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x10, Z_Construct_UFunction_UTextBinding_GetStringValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF4280 (end 0x01BF42AF)
 // Original VA: 0x0000000141BF4280 | File offset: 0x01BF3880
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UTextBinding_GetStringValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTextBinding_GetStringValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C9B90; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTextBinding, "GetStringValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x10, Z_Construct_UFunction_UTextBinding_GetStringValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UTextBinding_GetStringValue()
 struct Z_Construct_UFunction_UTextBinding_GetTextValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C9C10; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTextBinding_GetTextValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTextBinding, "GetTextValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x18, Z_Construct_UFunction_UTextBinding_GetTextValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF42B0 (end 0x01BF42DF)
 // Original VA: 0x0000000141BF42B0 | File offset: 0x01BF38B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UTextBinding_GetTextValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTextBinding_GetTextValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C9C10; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTextBinding, "GetTextValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x18, Z_Construct_UFunction_UTextBinding_GetTextValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

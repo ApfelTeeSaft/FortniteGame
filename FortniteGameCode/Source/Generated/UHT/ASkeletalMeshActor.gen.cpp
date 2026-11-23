@@ -21,12 +21,6 @@ void ASkeletalMeshActor::StaticRegisterNativesASkeletalMeshActor()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04510ED0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedMaterial0", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024CCB00 (end 0x024CCB2F)
 // Original VA: 0x00000001424CCB00 | File offset: 0x024CC100
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +29,13 @@ UFunction* Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial0()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Statics::FuncParams);
+		// FuncParams: original RVA 0x04510ED0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedMaterial0", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial1_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04510F10; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial1_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedMaterial1", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024CCB30 (end 0x024CCB5F)
 // Original VA: 0x00000001424CCB30 | File offset: 0x024CC130
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +44,13 @@ UFunction* Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial1()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial1_Statics::FuncParams);
+		// FuncParams: original RVA 0x04510F10; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedMaterial1", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMesh_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04510F50; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMesh_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedMesh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024CCB60 (end 0x024CCB8F)
 // Original VA: 0x00000001424CCB60 | File offset: 0x024CC160
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,17 +59,13 @@ UFunction* Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMesh()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMesh_Statics::FuncParams);
+		// FuncParams: original RVA 0x04510F50; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedMesh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedPhysAsset_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04510F90; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedPhysAsset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedPhysAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024CCB90 (end 0x024CCBBF)
 // Original VA: 0x00000001424CCB90 | File offset: 0x024CC190
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -92,7 +74,9 @@ UFunction* Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedPhysAsset()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedPhysAsset_Statics::FuncParams);
+		// FuncParams: original RVA 0x04510F90; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkeletalMeshActor, "OnRep_ReplicatedPhysAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

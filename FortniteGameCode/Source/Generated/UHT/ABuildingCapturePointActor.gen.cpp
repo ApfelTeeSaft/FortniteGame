@@ -31,10 +31,7 @@ void ABuildingCapturePointActor::StaticRegisterNativesABuildingCapturePointActor
 struct Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F87A0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "GetCaptureState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66CE0 (end 0x00F66D0F)
 // Original VA: 0x0000000140F66CE0 | File offset: 0x00F662E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -43,7 +40,9 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F87A0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "GetCaptureState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -51,10 +50,7 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState()
 struct Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActiveStateChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F8830; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActiveStateChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnCapturePointActiveStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActiveStateChange_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66D10 (end 0x00F66D3F)
 // Original VA: 0x0000000140F66D10 | File offset: 0x00F66310
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -63,7 +59,9 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActive
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActiveStateChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8830; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnCapturePointActiveStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActiveStateChange_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -71,10 +69,7 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActive
 struct Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockStateChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F88C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockStateChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnCapturePointLockStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockStateChange_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66D40 (end 0x00F66D6F)
 // Original VA: 0x0000000140F66D40 | File offset: 0x00F66340
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -83,7 +78,9 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockSt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockStateChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F88C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnCapturePointLockStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockStateChange_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -91,10 +88,7 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockSt
 struct Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F8980; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnCapturePointStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x2, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateChange_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66D70 (end 0x00F66D9F)
 // Original VA: 0x0000000140F66D70 | File offset: 0x00F66370
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -103,7 +97,9 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateC
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8980; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnCapturePointStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x2, Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateChange_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -111,10 +107,7 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateC
 struct Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F8B40; StructureSize 0xA8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnEnterCapturePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0xA8, Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66DA0 (end 0x00F66DCF)
 // Original VA: 0x0000000140F66DA0 | File offset: 0x00F663A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -123,7 +116,9 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8B40; StructureSize 0xA8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnEnterCapturePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0xA8, Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -131,10 +126,7 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint(
 struct Z_Construct_UFunction_ABuildingCapturePointActor_OnLeaveCapturePoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F8C80; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnLeaveCapturePoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnLeaveCapturePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x20, Z_Construct_UFunction_ABuildingCapturePointActor_OnLeaveCapturePoint_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66DD0 (end 0x00F66DFF)
 // Original VA: 0x0000000140F66DD0 | File offset: 0x00F663D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -143,17 +135,13 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnLeaveCapturePoint(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnLeaveCapturePoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8C80; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnLeaveCapturePoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x20, Z_Construct_UFunction_ABuildingCapturePointActor_OnLeaveCapturePoint_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bActivated_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041F8CC0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bActivated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_bActivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66E60 (end 0x00F66E8F)
 // Original VA: 0x0000000140F66E60 | File offset: 0x00F66460
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -162,17 +150,13 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bActivated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bActivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8CC0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_bActivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bLocked_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041F8D00; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bLocked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_bLocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66E90 (end 0x00F66EBF)
 // Original VA: 0x0000000140F66E90 | File offset: 0x00F66490
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,17 +165,13 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bLocked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bLocked_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8D00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_bLocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_CaptureState_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041F8D40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_CaptureState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_CaptureState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66E00 (end 0x00F66E2F)
 // Original VA: 0x0000000140F66E00 | File offset: 0x00F66400
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -200,17 +180,13 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_CaptureState()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_CaptureState_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8D40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_CaptureState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_ReplicatedCapturePercentage_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041F8D80; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_ReplicatedCapturePercentage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_ReplicatedCapturePercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66E30 (end 0x00F66E5F)
 // Original VA: 0x0000000140F66E30 | File offset: 0x00F66430
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -219,7 +195,9 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_ReplicatedCapt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_ReplicatedCapturePercentage_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8D80; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "OnRep_ReplicatedCapturePercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -227,10 +205,7 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_ReplicatedCapt
 struct Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F8E10; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "SetActivatedState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66EC0 (end 0x00F66EEF)
 // Original VA: 0x0000000140F66EC0 | File offset: 0x00F664C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -239,7 +214,9 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F8E10; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingCapturePointActor, "SetActivatedState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

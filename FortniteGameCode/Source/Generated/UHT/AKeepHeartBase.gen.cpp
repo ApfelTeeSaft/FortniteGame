@@ -26,10 +26,7 @@ void AKeepHeartBase::StaticRegisterNativesAKeepHeartBase()
 struct Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435C3B0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "IsKeepLoaded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E35C0 (end 0x010E35EF)
 // Original VA: 0x00000001410E35C0 | File offset: 0x010E2BC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435C3B0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "IsKeepLoaded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded()
 struct Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435C480; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "IsKeepOwner", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E35F0 (end 0x010E361F)
 // Original VA: 0x00000001410E35F0 | File offset: 0x010E2BF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435C480; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "IsKeepOwner", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner()
 struct Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435C500; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "LoadUserKeep", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3620 (end 0x010E364F)
 // Original VA: 0x00000001410E3620 | File offset: 0x010E2C20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435C500; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "LoadUserKeep", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep()
 struct Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435C5D0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "ResetUserKeep", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x10, Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3650 (end 0x010E367F)
 // Original VA: 0x00000001410E3650 | File offset: 0x010E2C50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +92,9 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435C5D0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "ResetUserKeep", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x10, Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +102,7 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep()
 struct Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435C6A0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "SaveUserKeep", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x10, Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3680 (end 0x010E36AF)
 // Original VA: 0x00000001410E3680 | File offset: 0x010E2C80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,7 +111,9 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435C6A0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "SaveUserKeep", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x10, Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -126,10 +121,7 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep()
 struct Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435C730; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "SetAllowLooting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020404, 0x1, Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E36B0 (end 0x010E36DF)
 // Original VA: 0x00000001410E36B0 | File offset: 0x010E2CB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -138,7 +130,9 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435C730; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepHeartBase, "SetAllowLooting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020404, 0x1, Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

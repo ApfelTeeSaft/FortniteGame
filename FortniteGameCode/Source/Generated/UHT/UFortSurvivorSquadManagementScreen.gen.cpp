@@ -4,11 +4,11 @@
 // FClassFunctionLinkInfo array RVA 0x03D2F5C8, FClassParams RVA 0x03D2F5F0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortSurvivorSquadManagementScreen();  // RVA 0x02904AA0 (registered by its FCompiledInDefer)
 
 struct Z_Construct_UFunction_UFortSurvivorSquadManagementScreen_PlayFeedbackForSlottingPerson_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045BED70 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905000 (end 0x0290502F)
 // Original VA: 0x0000000142905000 | File offset: 0x02904600
@@ -18,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadManagementScreen_PlayFeedback
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSurvivorSquadManagementScreen_PlayFeedbackForSlottingPerson_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BED70; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadManagementScreen, "PlayFeedbackForSlottingPerson", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x40, Z_Construct_UFunction_UFortSurvivorSquadManagementScreen_PlayFeedbackForSlottingPerson_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

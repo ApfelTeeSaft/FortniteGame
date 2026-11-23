@@ -31,25 +31,12 @@ class UScriptStruct* FCustomChannelSetup::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6DC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCustomChannelSetup_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCustomChannelSetup>();
 	}
-	// ReturnStructParams: original RVA 0x0443C460
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCustomChannelSetup_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"CustomChannelSetup",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCustomChannelSetup),
-		alignof(FCustomChannelSetup),
-		Z_Construct_UScriptStruct_FCustomChannelSetup_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F8CC0 (end 0x023F8CEF)
 	// Original VA: 0x00000001423F8CC0 | File offset: 0x023F82C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCustomChannelSetup::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCustomChannelSetup_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0443C460
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCustomChannelSetup_Statics::NewStructOps,
+				"CustomChannelSetup",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCustomChannelSetup),
+				alignof(FCustomChannelSetup),
+				Z_Construct_UScriptStruct_FCustomChannelSetup_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

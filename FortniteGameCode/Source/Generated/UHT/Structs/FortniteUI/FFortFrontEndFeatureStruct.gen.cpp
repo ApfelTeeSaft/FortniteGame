@@ -31,25 +31,12 @@ class UScriptStruct* FFortFrontEndFeatureStruct::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2790 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortFrontEndFeatureStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortFrontEndFeatureStruct>();
 	}
-	// ReturnStructParams: original RVA 0x0456C3F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortFrontEndFeatureStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortFrontEndFeatureStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FFortFrontEndFeatureStruct),
-		alignof(FFortFrontEndFeatureStruct),
-		Z_Construct_UScriptStruct_FFortFrontEndFeatureStruct_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A5B10 (end 0x028A5B3F)
 	// Original VA: 0x00000001428A5B10 | File offset: 0x028A5110
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortFrontEndFeatureStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortFrontEndFeatureStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0456C3F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortFrontEndFeatureStruct_Statics::NewStructOps,
+				"FortFrontEndFeatureStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FFortFrontEndFeatureStruct),
+				alignof(FFortFrontEndFeatureStruct),
+				Z_Construct_UScriptStruct_FFortFrontEndFeatureStruct_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

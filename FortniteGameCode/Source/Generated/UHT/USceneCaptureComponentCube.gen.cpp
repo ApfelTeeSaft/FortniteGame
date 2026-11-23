@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x039A09E8, FClassParams RVA 0x039A0A10.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_USceneCaptureComponentCube();  // RVA 0x024C6DE0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6B70 (end 0x024C6B92)
 // Original VA: 0x00000001424C6B70 | File offset: 0x024C6170
@@ -18,10 +18,6 @@ void USceneCaptureComponentCube::StaticRegisterNativesUSceneCaptureComponentCube
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04509900 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7130 (end 0x024C715F)
 // Original VA: 0x00000001424C7130 | File offset: 0x024C6730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene_Statics::FuncParams);
+		// FuncParams: original RVA 0x04509900; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USceneCaptureComponentCube, "CaptureScene", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

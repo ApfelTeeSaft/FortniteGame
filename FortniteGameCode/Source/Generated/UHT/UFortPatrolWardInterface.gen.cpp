@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortPatrolWardInterface();  // RVA 0x0105DF00 (conse
 struct Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042E5280; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPatrolWardInterface, "GetAffectingDistance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020804, 0x4, Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0105F5E0 (end 0x0105F60F)
 // Original VA: 0x000000014105F5E0 | File offset: 0x0105EBE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance_Statics::FuncParams);
+		// FuncParams: original RVA 0x042E5280; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPatrolWardInterface, "GetAffectingDistance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020804, 0x4, Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance()
 struct Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042E5340; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPatrolWardInterface, "GetAffectingType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020804, 0x1, Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0105F610 (end 0x0105F63F)
 // Original VA: 0x000000014105F610 | File offset: 0x0105EC10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType_Statics::FuncParams);
+		// FuncParams: original RVA 0x042E5340; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPatrolWardInterface, "GetAffectingType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020804, 0x1, Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

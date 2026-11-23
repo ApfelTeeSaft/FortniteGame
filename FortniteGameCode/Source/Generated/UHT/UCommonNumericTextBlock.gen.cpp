@@ -24,10 +24,7 @@ void UCommonNumericTextBlock::StaticRegisterNativesUCommonNumericTextBlock()
 struct Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417D680; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "OnInterpolationEnded__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA890 (end 0x002CA8BF)
 // Original VA: 0x00000001402CA890 | File offset: 0x002C9E90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolation
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417D680; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "OnInterpolationEnded__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolation
 struct Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417D700; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "OnOutro__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA8C0 (end 0x002CA8EF)
 // Original VA: 0x00000001402CA8C0 | File offset: 0x002C9EC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__Delega
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417D700; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "OnOutro__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__Delega
 struct Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417D980; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "GetTargetValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CB2E0 (end 0x002CB30F)
 // Original VA: 0x00000001402CB2E0 | File offset: 0x002CA8E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417D980; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "GetTargetValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue()
 struct Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417DAA0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "InterpolateToValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CB310 (end 0x002CB33F)
 // Original VA: 0x00000001402CB310 | File offset: 0x002CA910
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417DAA0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "InterpolateToValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +100,7 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue()
 struct Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417DB30; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "IsInterpolatingNumericValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CB340 (end 0x002CB36F)
 // Original VA: 0x00000001402CB340 | File offset: 0x002CA940
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +109,9 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericV
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417DB30; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "IsInterpolatingNumericValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +119,7 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericV
 struct Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417DBB0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "SetCurrentValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CB370 (end 0x002CB39F)
 // Original VA: 0x00000001402CB370 | File offset: 0x002CA970
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +128,9 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417DBB0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonNumericTextBlock, "SetCurrentValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -21,10 +21,7 @@ void UCurveLinearColor::StaticRegisterNativesUCurveLinearColor()
 struct Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044409A0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveLinearColor, "GetLinearColorValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820400, 0x14, Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEE50 (end 0x023FEE7F)
 // Original VA: 0x00000001423FEE50 | File offset: 0x023FE450
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x044409A0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveLinearColor, "GetLinearColorValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820400, 0x14, Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

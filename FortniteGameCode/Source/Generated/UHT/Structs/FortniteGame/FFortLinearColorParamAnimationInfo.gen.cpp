@@ -31,25 +31,12 @@ class UScriptStruct* FFortLinearColorParamAnimationInfo::StaticStruct()
 	struct Z_Construct_UScriptStruct_FFortLinearColorParamAnimationInfo_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDA770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortLinearColorParamAnimationInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortLinearColorParamAnimationInfo>();
 	}
-	// ReturnStructParams: original RVA 0x0426EFE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortLinearColorParamAnimationInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortLinearColorAnimationInfo,
-		&NewStructOps,
-		"FortLinearColorParamAnimationInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortLinearColorParamAnimationInfo),
-		alignof(FFortLinearColorParamAnimationInfo),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC430 (end 0x00FDC45F)
 	// Original VA: 0x0000000140FDC430 | File offset: 0x00FDBA30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortLinearColorParamAnimationInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortLinearColorParamAnimationInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0426EFE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortLinearColorAnimationInfo,
+				&Z_Construct_UScriptStruct_FFortLinearColorParamAnimationInfo_Statics::NewStructOps,
+				"FortLinearColorParamAnimationInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortLinearColorParamAnimationInfo),
+				alignof(FFortLinearColorParamAnimationInfo),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -21,12 +21,6 @@ void UFortItemManagementMulchDetailsPanel::StaticRegisterNativesUFortItemManagem
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_CommitMulch_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04593DB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_CommitMulch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "CommitMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB560 (end 0x028CB58F)
 // Original VA: 0x00000001428CB560 | File offset: 0x028CAB60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +29,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_CommitMulc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_CommitMulch_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593DB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "CommitMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +39,7 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_CommitMulc
 struct Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemCountsToMulch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04593E60; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemCountsToMulch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "GetItemCountsToMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x10, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemCountsToMulch_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB590 (end 0x028CB5BF)
 // Original VA: 0x00000001428CB590 | File offset: 0x028CAB90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +48,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemCou
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemCountsToMulch_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593E60; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "GetItemCountsToMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x10, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemCountsToMulch_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +58,7 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemCou
 struct Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemsToMulch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04593F20; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemsToMulch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "GetItemsToMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x10, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemsToMulch_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB5C0 (end 0x028CB5EF)
 // Original VA: 0x00000001428CB5C0 | File offset: 0x028CABC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,17 +67,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemsTo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemsToMulch_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593F20; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "GetItemsToMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x10, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_GetItemsToMulch_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleHostSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04593F60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleHostSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "HandleHostSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB5F0 (end 0x028CB61F)
 // Original VA: 0x00000001428CB5F0 | File offset: 0x028CABF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,17 +82,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleHost
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleHostSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593F60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "HandleHostSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleSetOfItemsToMulchChangedBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04593FA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleSetOfItemsToMulchChangedBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "HandleSetOfItemsToMulchChangedBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB620 (end 0x028CB64F)
 // Original VA: 0x00000001428CB620 | File offset: 0x028CAC20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -113,7 +97,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleSetO
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleSetOfItemsToMulchChangedBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593FA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "HandleSetOfItemsToMulchChangedBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -121,10 +107,7 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_HandleSetO
 struct Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_IsSpaceAvailableForMulch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04594030; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_IsSpaceAvailableForMulch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "IsSpaceAvailableForMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_IsSpaceAvailableForMulch_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB650 (end 0x028CB67F)
 // Original VA: 0x00000001428CB650 | File offset: 0x028CAC50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -133,7 +116,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_IsSpaceAva
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_IsSpaceAvailableForMulch_Statics::FuncParams);
+		// FuncParams: original RVA 0x04594030; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementMulchDetailsPanel, "IsSpaceAvailableForMulch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_IsSpaceAvailableForMulch_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

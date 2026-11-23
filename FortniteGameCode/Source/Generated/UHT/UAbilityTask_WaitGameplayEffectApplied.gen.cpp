@@ -21,10 +21,7 @@ void UAbilityTask_WaitGameplayEffectApplied::StaticRegisterNativesUAbilityTask_W
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyGameplayEffectCallback_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0419B260; StructureSize 0x2A8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyGameplayEffectCallback_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied, "OnApplyGameplayEffectCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x2A8, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyGameplayEffectCallback_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054DEF0 (end 0x0054DF1F)
 // Original VA: 0x000000014054DEF0 | File offset: 0x0054D4F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyG
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyGameplayEffectCallback_Statics::FuncParams);
+		// FuncParams: original RVA 0x0419B260; StructureSize 0x2A8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied, "OnApplyGameplayEffectCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x2A8, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyGameplayEffectCallback_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

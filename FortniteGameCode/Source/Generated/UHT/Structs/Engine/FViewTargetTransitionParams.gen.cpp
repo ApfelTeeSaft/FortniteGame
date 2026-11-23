@@ -27,25 +27,12 @@ class UScriptStruct* FViewTargetTransitionParams::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8D40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FViewTargetTransitionParams_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FViewTargetTransitionParams>();
 	}
-	// ReturnStructParams: original RVA 0x044E8020
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FViewTargetTransitionParams_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ViewTargetTransitionParams",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FViewTargetTransitionParams),
-		alignof(FViewTargetTransitionParams),
-		Z_Construct_UScriptStruct_FViewTargetTransitionParams_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC520 (end 0x024AC54F)
 	// Original VA: 0x00000001424AC520 | File offset: 0x024ABB20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -54,7 +41,19 @@ class UScriptStruct* FViewTargetTransitionParams::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FViewTargetTransitionParams_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044E8020
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FViewTargetTransitionParams_Statics::NewStructOps,
+				"ViewTargetTransitionParams",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FViewTargetTransitionParams),
+				alignof(FViewTargetTransitionParams),
+				Z_Construct_UScriptStruct_FViewTargetTransitionParams_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

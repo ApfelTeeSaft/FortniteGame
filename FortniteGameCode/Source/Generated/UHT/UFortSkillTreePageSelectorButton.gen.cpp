@@ -24,10 +24,7 @@ void UFortSkillTreePageSelectorButton::StaticRegisterNativesUFortSkillTreePageSe
 struct Z_Construct_UFunction_UFortSkillTreePageSelectorButton_GetButtonNodeCompletionText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B3DA0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreePageSelectorButton_GetButtonNodeCompletionText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "GetButtonNodeCompletionText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14080401, 0x18, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_GetButtonNodeCompletionText_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6190 (end 0x028F61BF)
 // Original VA: 0x00000001428F6190 | File offset: 0x028F5790
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,17 +33,13 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_GetButtonNodeC
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_GetButtonNodeCompletionText_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3DA0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "GetButtonNodeCompletionText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14080401, 0x18, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_GetButtonNodeCompletionText_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleDifferentSkillTreePageSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B3DE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleDifferentSkillTreePageSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "HandleDifferentSkillTreePageSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F61C0 (end 0x028F61EF)
 // Original VA: 0x00000001428F61C0 | File offset: 0x028F57C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,17 +48,13 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleDifferen
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleDifferentSkillTreePageSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3DE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "HandleDifferentSkillTreePageSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleRefreshSkillTreeNodePage_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B3E20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleRefreshSkillTreeNodePage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "HandleRefreshSkillTreeNodePage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F61F0 (end 0x028F621F)
 // Original VA: 0x00000001428F61F0 | File offset: 0x028F57F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +63,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleRefreshS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleRefreshSkillTreeNodePage_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3E20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "HandleRefreshSkillTreeNodePage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -82,10 +73,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_HandleRefreshS
 struct Z_Construct_UFunction_UFortSkillTreePageSelectorButton_IsSkillTreePageLocked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B3EB0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreePageSelectorButton_IsSkillTreePageLocked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "IsSkillTreePageLocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14080401, 0x1, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_IsSkillTreePageLocked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6220 (end 0x028F624F)
 // Original VA: 0x00000001428F6220 | File offset: 0x028F5820
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,7 +82,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_IsSkillTreePag
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_IsSkillTreePageLocked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3EB0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "IsSkillTreePageLocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14080401, 0x1, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_IsSkillTreePageLocked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -102,10 +92,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_IsSkillTreePag
 struct Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetSkillTreeNodeState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B3FC0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetSkillTreeNodeState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "TryGetSkillTreeNodeState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x18, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetSkillTreeNodeState_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6250 (end 0x028F627F)
 // Original VA: 0x00000001428F6250 | File offset: 0x028F5850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -114,7 +101,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetSkillTre
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetSkillTreeNodeState_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3FC0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "TryGetSkillTreeNodeState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x18, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetSkillTreeNodeState_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -122,10 +111,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetSkillTre
 struct Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetStaticSkillTreePageData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B4090; StructureSize 0x68 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetStaticSkillTreePageData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "TryGetStaticSkillTreePageData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x68, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetStaticSkillTreePageData_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6280 (end 0x028F62AF)
 // Original VA: 0x00000001428F6280 | File offset: 0x028F5880
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -134,7 +120,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetStaticSk
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetStaticSkillTreePageData_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4090; StructureSize 0x68 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageSelectorButton, "TryGetStaticSkillTreePageData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x68, Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetStaticSkillTreePageData_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

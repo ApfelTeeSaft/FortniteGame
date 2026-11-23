@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03714C80, FClassParams RVA 0x03714CA0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UGeometryCacheTrack_TransformAnimation();  // RVA 0x01D400D0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FDF0 (end 0x01D3FE12)
 // Original VA: 0x0000000141D3FDF0 | File offset: 0x01D3F3F0
@@ -20,7 +20,7 @@ void UGeometryCacheTrack_TransformAnimation::StaticRegisterNativesUGeometryCache
 
 struct Z_Construct_UFunction_UGeometryCacheTrack_TransformAnimation_SetMesh_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043FD790 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40460 (end 0x01D4048F)
 // Original VA: 0x0000000141D40460 | File offset: 0x01D3FA60
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UGeometryCacheTrack_TransformAnimation_SetMesh(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGeometryCacheTrack_TransformAnimation_SetMesh_Statics::FuncParams);
+		// FuncParams: original RVA 0x043FD790; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UGeometryCacheTrack_TransformAnimation, "SetMesh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x50, Z_Construct_UFunction_UGeometryCacheTrack_TransformAnimation_SetMesh_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

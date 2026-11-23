@@ -31,25 +31,12 @@ class UScriptStruct* FPoseDataContainer::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6E50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPoseDataContainer_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPoseDataContainer>();
 	}
-	// ReturnStructParams: original RVA 0x044F3AC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPoseDataContainer_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"PoseDataContainer",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FPoseDataContainer),
-		alignof(FPoseDataContainer),
-		Z_Construct_UScriptStruct_FPoseDataContainer_Statics::PropPointers, 11,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B9F00 (end 0x024B9F2F)
 	// Original VA: 0x00000001424B9F00 | File offset: 0x024B9500
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPoseDataContainer::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPoseDataContainer_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044F3AC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPoseDataContainer_Statics::NewStructOps,
+				"PoseDataContainer",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FPoseDataContainer),
+				alignof(FPoseDataContainer),
+				Z_Construct_UScriptStruct_FPoseDataContainer_Statics::PropPointers, 11,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

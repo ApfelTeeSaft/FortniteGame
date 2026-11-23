@@ -30,25 +30,12 @@ class UScriptStruct* FGameplayTagNode::StaticStruct()
 	struct Z_Construct_UScriptStruct_FGameplayTagNode_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C92F10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayTagNode_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayTagNode>();
 	}
-	// ReturnStructParams: original RVA 0x043E2150
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayTagNode_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
-		nullptr,
-		&NewStructOps,
-		"GameplayTagNode",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGameplayTagNode),
-		alignof(FGameplayTagNode),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C94180 (end 0x01C941AF)
 	// Original VA: 0x0000000141C94180 | File offset: 0x01C93780
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FGameplayTagNode::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayTagNode_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043E2150
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayTagNode_Statics::NewStructOps,
+				"GameplayTagNode",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGameplayTagNode),
+				alignof(FGameplayTagNode),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

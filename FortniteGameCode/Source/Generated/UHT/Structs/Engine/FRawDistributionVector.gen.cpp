@@ -32,25 +32,12 @@ class UScriptStruct* FRawDistributionVector::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02403D40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRawDistributionVector_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRawDistributionVector>();
 	}
-	// ReturnStructParams: original RVA 0x044450C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRawDistributionVector_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_Unrecovered_0x023FF5A0,
-		&NewStructOps,
-		"RawDistributionVector",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000205),
-		sizeof(FRawDistributionVector),
-		alignof(FRawDistributionVector),
-		Z_Construct_UScriptStruct_FRawDistributionVector_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02405A40 (end 0x02405A6F)
 	// Original VA: 0x0000000142405A40 | File offset: 0x02405040
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FRawDistributionVector::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRawDistributionVector_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044450C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_Unrecovered_0x023FF5A0,
+				&Z_Construct_UScriptStruct_FRawDistributionVector_Statics::NewStructOps,
+				"RawDistributionVector",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000205),
+				sizeof(FRawDistributionVector),
+				alignof(FRawDistributionVector),
+				Z_Construct_UScriptStruct_FRawDistributionVector_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

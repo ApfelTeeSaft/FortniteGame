@@ -23,10 +23,7 @@ void UFortSkillTreeCanvas::StaticRegisterNativesUFortSkillTreeCanvas()
 struct Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B3230; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeCanvas, "HandleButtonGroupSelectionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x10, Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5EF0 (end 0x028F5F1F)
 // Original VA: 0x00000001428F5EF0 | File offset: 0x028F54F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +32,13 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelection
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3230; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeCanvas, "HandleButtonGroupSelectionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x10, Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionCleared_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B3270; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionCleared_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeCanvas, "HandleButtonGroupSelectionCleared", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5F20 (end 0x028F5F4F)
 // Original VA: 0x00000001428F5F20 | File offset: 0x028F5520
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +47,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelection
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionCleared_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3270; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeCanvas, "HandleButtonGroupSelectionCleared", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -62,10 +57,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelection
 struct Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B32F0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeCanvas, "HandleNodeButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5F50 (end 0x028F5F7F)
 // Original VA: 0x00000001428F5F50 | File offset: 0x028F5550
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +66,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B32F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeCanvas, "HandleNodeButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

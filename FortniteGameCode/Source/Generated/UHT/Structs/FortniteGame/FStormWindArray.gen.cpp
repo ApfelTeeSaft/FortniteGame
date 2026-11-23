@@ -32,25 +32,12 @@ class UScriptStruct* FStormWindArray::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BCB60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FStormWindArray_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FStormWindArray>();
 	}
-	// ReturnStructParams: original RVA 0x043332E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStormWindArray_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializer,
-		&NewStructOps,
-		"StormWindArray",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FStormWindArray),
-		alignof(FStormWindArray),
-		Z_Construct_UScriptStruct_FStormWindArray_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF5F0 (end 0x010BF61F)
 	// Original VA: 0x00000001410BF5F0 | File offset: 0x010BEBF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FStormWindArray::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FStormWindArray_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043332E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializer,
+				&Z_Construct_UScriptStruct_FStormWindArray_Statics::NewStructOps,
+				"StormWindArray",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FStormWindArray),
+				alignof(FStormWindArray),
+				Z_Construct_UScriptStruct_FStormWindArray_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

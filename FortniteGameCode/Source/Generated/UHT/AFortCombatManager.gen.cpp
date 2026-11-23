@@ -23,10 +23,7 @@ void AFortCombatManager::StaticRegisterNativesAFortCombatManager()
 struct Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042596A0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "GetEventHeatPercent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC6660 (end 0x00FC668F)
 // Original VA: 0x0000000140FC6660 | File offset: 0x00FC5C60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent_Statics::FuncParams);
+		// FuncParams: original RVA 0x042596A0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "GetEventHeatPercent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent()
 struct Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercentTotal_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04259760; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercentTotal_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "GetEventHeatPercentTotal", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercentTotal_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC6690 (end 0x00FC66BF)
 // Original VA: 0x0000000140FC6690 | File offset: 0x00FC5C90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,17 +51,13 @@ UFunction* Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercentTotal()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercentTotal_Statics::FuncParams);
+		// FuncParams: original RVA 0x04259760; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "GetEventHeatPercentTotal", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercentTotal_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortCombatManager_OnRep_CombatEventHeat_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042597A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortCombatManager_OnRep_CombatEventHeat_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "OnRep_CombatEventHeat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC66C0 (end 0x00FC66EF)
 // Original VA: 0x0000000140FC66C0 | File offset: 0x00FC5CC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +66,9 @@ UFunction* Z_Construct_UFunction_AFortCombatManager_OnRep_CombatEventHeat()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortCombatManager_OnRep_CombatEventHeat_Statics::FuncParams);
+		// FuncParams: original RVA 0x042597A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "OnRep_CombatEventHeat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -82,10 +76,7 @@ UFunction* Z_Construct_UFunction_AFortCombatManager_OnRep_CombatEventHeat()
 struct Z_Construct_UFunction_AFortCombatManager_OnThresholdChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04259860; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortCombatManager_OnThresholdChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "OnThresholdChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_AFortCombatManager_OnThresholdChange_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC66F0 (end 0x00FC671F)
 // Original VA: 0x0000000140FC66F0 | File offset: 0x00FC5CF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,7 +85,9 @@ UFunction* Z_Construct_UFunction_AFortCombatManager_OnThresholdChange()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortCombatManager_OnThresholdChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x04259860; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortCombatManager, "OnThresholdChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_AFortCombatManager_OnThresholdChange_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

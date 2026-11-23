@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x036915C0, FClassParams RVA 0x03691610.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UButtonSlot();  // RVA 0x01BE6080 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5B80 (end 0x01BE5BA2)
 // Original VA: 0x0000000141BE5B80 | File offset: 0x01BE5180
@@ -22,7 +22,7 @@ void UButtonSlot::StaticRegisterNativesUButtonSlot()
 
 struct Z_Construct_UFunction_UButtonSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BA990 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6AC0 (end 0x01BE6AEF)
 // Original VA: 0x0000000141BE6AC0 | File offset: 0x01BE60C0
@@ -32,14 +32,16 @@ UFunction* Z_Construct_UFunction_UButtonSlot_SetHorizontalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UButtonSlot_SetHorizontalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043BA990; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UButtonSlot, "SetHorizontalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UButtonSlot_SetHorizontalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UButtonSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BAA10 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6AF0 (end 0x01BE6B1F)
 // Original VA: 0x0000000141BE6AF0 | File offset: 0x01BE60F0
@@ -49,14 +51,16 @@ UFunction* Z_Construct_UFunction_UButtonSlot_SetPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UButtonSlot_SetPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x043BAA10; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UButtonSlot, "SetPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UButtonSlot_SetPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UButtonSlot_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BAA90 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6B20 (end 0x01BE6B4F)
 // Original VA: 0x0000000141BE6B20 | File offset: 0x01BE6120
@@ -66,7 +70,9 @@ UFunction* Z_Construct_UFunction_UButtonSlot_SetVerticalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UButtonSlot_SetVerticalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043BAA90; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UButtonSlot, "SetVerticalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UButtonSlot_SetVerticalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

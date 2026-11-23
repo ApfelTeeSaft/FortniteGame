@@ -31,25 +31,12 @@ class UScriptStruct* FEQSParametrizedQueryExecutionRequest::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2E960 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEQSParametrizedQueryExecutionRequest_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEQSParametrizedQueryExecutionRequest>();
 	}
-	// ReturnStructParams: original RVA 0x043F8180
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEQSParametrizedQueryExecutionRequest_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
-		nullptr,
-		&NewStructOps,
-		"EQSParametrizedQueryExecutionRequest",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FEQSParametrizedQueryExecutionRequest),
-		alignof(FEQSParametrizedQueryExecutionRequest),
-		Z_Construct_UScriptStruct_FEQSParametrizedQueryExecutionRequest_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D30410 (end 0x01D3043F)
 	// Original VA: 0x0000000141D30410 | File offset: 0x01D2FA10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEQSParametrizedQueryExecutionRequest::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEQSParametrizedQueryExecutionRequest_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043F8180
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEQSParametrizedQueryExecutionRequest_Statics::NewStructOps,
+				"EQSParametrizedQueryExecutionRequest",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FEQSParametrizedQueryExecutionRequest),
+				alignof(FEQSParametrizedQueryExecutionRequest),
+				Z_Construct_UScriptStruct_FEQSParametrizedQueryExecutionRequest_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

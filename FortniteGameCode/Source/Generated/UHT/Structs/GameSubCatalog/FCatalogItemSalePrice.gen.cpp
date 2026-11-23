@@ -31,25 +31,12 @@ class UScriptStruct* FCatalogItemSalePrice::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C21A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCatalogItemSalePrice_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCatalogItemSalePrice>();
 	}
-	// ReturnStructParams: original RVA 0x041C6470
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCatalogItemSalePrice_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
-		nullptr,
-		&NewStructOps,
-		"CatalogItemSalePrice",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCatalogItemSalePrice),
-		alignof(FCatalogItemSalePrice),
-		Z_Construct_UScriptStruct_FCatalogItemSalePrice_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C2D40 (end 0x007C2D6F)
 	// Original VA: 0x00000001407C2D40 | File offset: 0x007C2340
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCatalogItemSalePrice::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCatalogItemSalePrice_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C6470
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCatalogItemSalePrice_Statics::NewStructOps,
+				"CatalogItemSalePrice",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCatalogItemSalePrice),
+				alignof(FCatalogItemSalePrice),
+				Z_Construct_UScriptStruct_FCatalogItemSalePrice_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

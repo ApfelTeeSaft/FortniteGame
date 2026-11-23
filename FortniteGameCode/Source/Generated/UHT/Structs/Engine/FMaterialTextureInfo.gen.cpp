@@ -31,25 +31,12 @@ class UScriptStruct* FMaterialTextureInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485A20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMaterialTextureInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMaterialTextureInfo>();
 	}
-	// ReturnStructParams: original RVA 0x044BF7F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMaterialTextureInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"MaterialTextureInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMaterialTextureInfo),
-		alignof(FMaterialTextureInfo),
-		Z_Construct_UScriptStruct_FMaterialTextureInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487500 (end 0x0248752F)
 	// Original VA: 0x0000000142487500 | File offset: 0x02486B00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMaterialTextureInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMaterialTextureInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044BF7F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMaterialTextureInfo_Statics::NewStructOps,
+				"MaterialTextureInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMaterialTextureInfo),
+				alignof(FMaterialTextureInfo),
+				Z_Construct_UScriptStruct_FMaterialTextureInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

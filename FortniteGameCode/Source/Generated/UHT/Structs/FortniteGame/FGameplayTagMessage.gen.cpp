@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayTagMessage::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F58AB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayTagMessage_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayTagMessage>();
 	}
-	// ReturnStructParams: original RVA 0x041EF450
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayTagMessage_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"GameplayTagMessage",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGameplayTagMessage),
-		alignof(FGameplayTagMessage),
-		Z_Construct_UScriptStruct_FGameplayTagMessage_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5ACD0 (end 0x00F5ACFF)
 	// Original VA: 0x0000000140F5ACD0 | File offset: 0x00F5A2D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayTagMessage::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayTagMessage_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041EF450
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayTagMessage_Statics::NewStructOps,
+				"GameplayTagMessage",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGameplayTagMessage),
+				alignof(FGameplayTagMessage),
+				Z_Construct_UScriptStruct_FGameplayTagMessage_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

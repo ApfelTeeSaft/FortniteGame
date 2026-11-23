@@ -32,25 +32,12 @@ class UScriptStruct* FComboButtonStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A5F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FComboButtonStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FComboButtonStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437C280
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FComboButtonStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"ComboButtonStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FComboButtonStyle),
-		alignof(FComboButtonStyle),
-		Z_Construct_UScriptStruct_FComboButtonStyle_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CC00 (end 0x0145CC2F)
 	// Original VA: 0x000000014145CC00 | File offset: 0x0145C200
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FComboButtonStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FComboButtonStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437C280
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FComboButtonStyle_Statics::NewStructOps,
+				"ComboButtonStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FComboButtonStyle),
+				alignof(FComboButtonStyle),
+				Z_Construct_UScriptStruct_FComboButtonStyle_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

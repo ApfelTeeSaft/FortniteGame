@@ -31,25 +31,12 @@ class UScriptStruct* FFortAbilityTargetSelection::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C4C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAbilityTargetSelection_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAbilityTargetSelection>();
 	}
-	// ReturnStructParams: original RVA 0x04214DC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAbilityTargetSelection_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAbilityTargetSelection",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAbilityTargetSelection),
-		alignof(FFortAbilityTargetSelection),
-		Z_Construct_UScriptStruct_FFortAbilityTargetSelection_Statics::PropPointers, 20,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DFA0 (end 0x00F7DFCF)
 	// Original VA: 0x0000000140F7DFA0 | File offset: 0x00F7D5A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAbilityTargetSelection::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAbilityTargetSelection_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04214DC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAbilityTargetSelection_Statics::NewStructOps,
+				"FortAbilityTargetSelection",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAbilityTargetSelection),
+				alignof(FFortAbilityTargetSelection),
+				Z_Construct_UScriptStruct_FFortAbilityTargetSelection_Statics::PropPointers, 20,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

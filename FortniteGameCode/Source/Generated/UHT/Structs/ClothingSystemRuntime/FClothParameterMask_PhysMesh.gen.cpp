@@ -31,25 +31,12 @@ class UScriptStruct* FClothParameterMask_PhysMesh::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x025243D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FClothParameterMask_PhysMesh_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FClothParameterMask_PhysMesh>();
 	}
-	// ReturnStructParams: original RVA 0x04537BB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FClothParameterMask_PhysMesh_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_ClothingSystemRuntime,
-		nullptr,
-		&NewStructOps,
-		"ClothParameterMask_PhysMesh",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FClothParameterMask_PhysMesh),
-		alignof(FClothParameterMask_PhysMesh),
-		Z_Construct_UScriptStruct_FClothParameterMask_PhysMesh_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02524B40 (end 0x02524B6F)
 	// Original VA: 0x0000000142524B40 | File offset: 0x02524140
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FClothParameterMask_PhysMesh::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FClothParameterMask_PhysMesh_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04537BB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_ClothingSystemRuntime,
+				nullptr,
+				&Z_Construct_UScriptStruct_FClothParameterMask_PhysMesh_Statics::NewStructOps,
+				"ClothParameterMask_PhysMesh",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FClothParameterMask_PhysMesh),
+				alignof(FClothParameterMask_PhysMesh),
+				Z_Construct_UScriptStruct_FClothParameterMask_PhysMesh_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

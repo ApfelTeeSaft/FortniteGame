@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaLevelInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C540 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaLevelInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaLevelInfo>();
 	}
-	// ReturnStructParams: original RVA 0x042B89C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaLevelInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaLevelInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAthenaLevelInfo),
-		alignof(FAthenaLevelInfo),
-		Z_Construct_UScriptStruct_FAthenaLevelInfo_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010251B0 (end 0x010251DF)
 	// Original VA: 0x00000001410251B0 | File offset: 0x010247B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaLevelInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaLevelInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042B89C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaLevelInfo_Statics::NewStructOps,
+				"AthenaLevelInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAthenaLevelInfo),
+				alignof(FAthenaLevelInfo),
+				Z_Construct_UScriptStruct_FAthenaLevelInfo_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

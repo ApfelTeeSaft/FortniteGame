@@ -31,25 +31,12 @@ class UScriptStruct* FRollbackNetStartupActorInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FD580 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRollbackNetStartupActorInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRollbackNetStartupActorInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04442F20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRollbackNetStartupActorInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"RollbackNetStartupActorInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FRollbackNetStartupActorInfo),
-		alignof(FRollbackNetStartupActorInfo),
-		Z_Construct_UScriptStruct_FRollbackNetStartupActorInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF600 (end 0x023FF62F)
 	// Original VA: 0x00000001423FF600 | File offset: 0x023FEC00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FRollbackNetStartupActorInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRollbackNetStartupActorInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04442F20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FRollbackNetStartupActorInfo_Statics::NewStructOps,
+				"RollbackNetStartupActorInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FRollbackNetStartupActorInfo),
+				alignof(FRollbackNetStartupActorInfo),
+				Z_Construct_UScriptStruct_FRollbackNetStartupActorInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

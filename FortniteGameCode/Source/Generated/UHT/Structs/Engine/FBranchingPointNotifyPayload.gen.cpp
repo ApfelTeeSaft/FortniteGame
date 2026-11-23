@@ -30,25 +30,12 @@ class UScriptStruct* FBranchingPointNotifyPayload::StaticStruct()
 	struct Z_Construct_UScriptStruct_FBranchingPointNotifyPayload_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5060 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBranchingPointNotifyPayload_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBranchingPointNotifyPayload>();
 	}
-	// ReturnStructParams: original RVA 0x04418EF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBranchingPointNotifyPayload_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BranchingPointNotifyPayload",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBranchingPointNotifyPayload),
-		alignof(FBranchingPointNotifyPayload),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D71F0 (end 0x023D721F)
 	// Original VA: 0x00000001423D71F0 | File offset: 0x023D67F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FBranchingPointNotifyPayload::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBranchingPointNotifyPayload_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04418EF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBranchingPointNotifyPayload_Statics::NewStructOps,
+				"BranchingPointNotifyPayload",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBranchingPointNotifyPayload),
+				alignof(FBranchingPointNotifyPayload),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

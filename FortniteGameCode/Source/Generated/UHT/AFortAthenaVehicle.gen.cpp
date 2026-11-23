@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x032C61A8, FClassParams RVA 0x032C61F0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AFortAthenaVehicle();  // RVA 0x00FA3900 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3350 (end 0x00FA3372)
 // Original VA: 0x0000000140FA3350 | File offset: 0x00FA2950
@@ -20,7 +20,7 @@ void AFortAthenaVehicle::StaticRegisterNativesAFortAthenaVehicle()
 
 struct Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0423BB50 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3EF0 (end 0x00FA3F1F)
 // Original VA: 0x0000000140FA3EF0 | File offset: 0x00FA34F0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423BB50; StructureSize 0x2C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAthenaVehicle, "ServerOnAttemptInteract", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420400, 0x2C, Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

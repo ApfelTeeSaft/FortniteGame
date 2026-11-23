@@ -31,25 +31,12 @@ class UScriptStruct* FStructSerializerMapTestStruct::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x025155C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FStructSerializerMapTestStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FStructSerializerMapTestStruct>();
 	}
-	// ReturnStructParams: original RVA 0x04535ED0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStructSerializerMapTestStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Serialization,
-		nullptr,
-		&NewStructOps,
-		"StructSerializerMapTestStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FStructSerializerMapTestStruct),
-		alignof(FStructSerializerMapTestStruct),
-		Z_Construct_UScriptStruct_FStructSerializerMapTestStruct_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02515F00 (end 0x02515F2F)
 	// Original VA: 0x0000000142515F00 | File offset: 0x02515500
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FStructSerializerMapTestStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FStructSerializerMapTestStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04535ED0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Serialization,
+				nullptr,
+				&Z_Construct_UScriptStruct_FStructSerializerMapTestStruct_Statics::NewStructOps,
+				"StructSerializerMapTestStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FStructSerializerMapTestStruct),
+				alignof(FStructSerializerMapTestStruct),
+				Z_Construct_UScriptStruct_FStructSerializerMapTestStruct_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

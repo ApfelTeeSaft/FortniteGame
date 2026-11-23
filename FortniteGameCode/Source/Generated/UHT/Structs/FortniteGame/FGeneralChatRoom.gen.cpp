@@ -31,25 +31,12 @@ class UScriptStruct* FGeneralChatRoom::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104FC90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGeneralChatRoom_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGeneralChatRoom>();
 	}
-	// ReturnStructParams: original RVA 0x042DA5A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGeneralChatRoom_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"GeneralChatRoom",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGeneralChatRoom),
-		alignof(FGeneralChatRoom),
-		Z_Construct_UScriptStruct_FGeneralChatRoom_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01051CA0 (end 0x01051CCF)
 	// Original VA: 0x0000000141051CA0 | File offset: 0x010512A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGeneralChatRoom::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGeneralChatRoom_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042DA5A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGeneralChatRoom_Statics::NewStructOps,
+				"GeneralChatRoom",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGeneralChatRoom),
+				alignof(FGeneralChatRoom),
+				Z_Construct_UScriptStruct_FGeneralChatRoom_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FFortTaggedDeployableBaseLootUnlock::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6EE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTaggedDeployableBaseLootUnlock_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTaggedDeployableBaseLootUnlock>();
 	}
-	// ReturnStructParams: original RVA 0x04268510
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTaggedDeployableBaseLootUnlock_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortTaggedUnlockBase,
-		&NewStructOps,
-		"FortTaggedDeployableBaseLootUnlock",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTaggedDeployableBaseLootUnlock),
-		alignof(FFortTaggedDeployableBaseLootUnlock),
-		Z_Construct_UScriptStruct_FFortTaggedDeployableBaseLootUnlock_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7D60 (end 0x00FD7D8F)
 	// Original VA: 0x0000000140FD7D60 | File offset: 0x00FD7360
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortTaggedDeployableBaseLootUnlock::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTaggedDeployableBaseLootUnlock_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04268510
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortTaggedUnlockBase,
+				&Z_Construct_UScriptStruct_FFortTaggedDeployableBaseLootUnlock_Statics::NewStructOps,
+				"FortTaggedDeployableBaseLootUnlock",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTaggedDeployableBaseLootUnlock),
+				alignof(FFortTaggedDeployableBaseLootUnlock),
+				Z_Construct_UScriptStruct_FFortTaggedDeployableBaseLootUnlock_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

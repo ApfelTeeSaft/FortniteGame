@@ -31,25 +31,12 @@ class UScriptStruct* FCrowdAvoidanceSamplingPattern::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3EE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCrowdAvoidanceSamplingPattern_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCrowdAvoidanceSamplingPattern>();
 	}
-	// ReturnStructParams: original RVA 0x043F3FE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCrowdAvoidanceSamplingPattern_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
-		nullptr,
-		&NewStructOps,
-		"CrowdAvoidanceSamplingPattern",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCrowdAvoidanceSamplingPattern),
-		alignof(FCrowdAvoidanceSamplingPattern),
-		Z_Construct_UScriptStruct_FCrowdAvoidanceSamplingPattern_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D29AF0 (end 0x01D29B1F)
 	// Original VA: 0x0000000141D29AF0 | File offset: 0x01D290F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCrowdAvoidanceSamplingPattern::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCrowdAvoidanceSamplingPattern_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043F3FE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCrowdAvoidanceSamplingPattern_Statics::NewStructOps,
+				"CrowdAvoidanceSamplingPattern",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCrowdAvoidanceSamplingPattern),
+				alignof(FCrowdAvoidanceSamplingPattern),
+				Z_Construct_UScriptStruct_FCrowdAvoidanceSamplingPattern_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

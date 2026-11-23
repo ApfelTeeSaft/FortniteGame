@@ -32,10 +32,7 @@ void AFortPlayerControllerZone::StaticRegisterNativesAFortPlayerControllerZone()
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04305DB0; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnPawnDied", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x50, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080070 (end 0x0108009F)
 // Original VA: 0x0000000141080070 | File offset: 0x0107F670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -44,7 +41,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305DB0; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnPawnDied", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x50, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -52,10 +51,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied()
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnRevived_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04305E30; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnRevived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnPawnRevived", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x8, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnRevived_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010800A0 (end 0x010800CF)
 // Original VA: 0x00000001410800A0 | File offset: 0x0107F6A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -64,17 +60,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnRevived()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnRevived_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305E30; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnPawnRevived", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x8, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnRevived_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnSpawned_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04305E70; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnSpawned_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnPawnSpawned", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010800D0 (end 0x010800FF)
 // Original VA: 0x00000001410800D0 | File offset: 0x0107F6D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -83,7 +75,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnSpawned()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnSpawned_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305E70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnPawnSpawned", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -91,10 +85,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnSpawned()
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreReports_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04305F30; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreReports_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnZoneEndScoreReports", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x10, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreReports_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080100 (end 0x0108012F)
 // Original VA: 0x0000000141080100 | File offset: 0x0107F700
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -103,7 +94,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreR
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreReports_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305F30; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientOnZoneEndScoreReports", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x10, Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreReports_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -111,10 +104,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreR
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ClientSendPartyJoinInfoToPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04305FB0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ClientSendPartyJoinInfoToPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientSendPartyJoinInfoToPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x10, Z_Construct_UFunction_AFortPlayerControllerZone_ClientSendPartyJoinInfoToPlayer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080130 (end 0x0108015F)
 // Original VA: 0x0000000141080130 | File offset: 0x0107F730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -123,17 +113,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ClientSendPartyJoinIn
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ClientSendPartyJoinInfoToPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305FB0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ClientSendPartyJoinInfoToPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x01020CC0, 0x10, Z_Construct_UFunction_AFortPlayerControllerZone_ClientSendPartyJoinInfoToPlayer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerControllerZone_PopDeathInputComponent_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04305FF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_PopDeathInputComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "PopDeathInputComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080160 (end 0x0108018F)
 // Original VA: 0x0000000141080160 | File offset: 0x0107F760
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -142,17 +128,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_PopDeathInputComponen
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_PopDeathInputComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305FF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "PopDeathInputComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerControllerZone_PushDeathInputComponent_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04306030; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_PushDeathInputComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "PushDeathInputComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080190 (end 0x010801BF)
 // Original VA: 0x0000000141080190 | File offset: 0x0107F790
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -161,7 +143,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_PushDeathInputCompone
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_PushDeathInputComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04306030; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "PushDeathInputComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -169,10 +153,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_PushDeathInputCompone
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConfig_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04306130; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConfig_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSendLoadoutConfig", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x18, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConfig_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010801C0 (end 0x010801EF)
 // Original VA: 0x00000001410801C0 | File offset: 0x0107F7C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,7 +162,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConf
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConfig_Statics::FuncParams);
+		// FuncParams: original RVA 0x04306130; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSendLoadoutConfig", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x18, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConfig_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -189,10 +172,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConf
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendPartyJoinInfoToPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043061F0; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendPartyJoinInfoToPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSendPartyJoinInfoToPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x38, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendPartyJoinInfoToPlayer_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010801F0 (end 0x0108021F)
 // Original VA: 0x00000001410801F0 | File offset: 0x0107F7F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -201,17 +181,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendPartyJoinIn
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendPartyJoinInfoToPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x043061F0; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSendPartyJoinInfoToPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x38, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendPartyJoinInfoToPlayer_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerControllerZone_ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04306230; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSetShouldDisablePlayerTeleportingDuringMissionResults", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080220 (end 0x0108024F)
 // Original VA: 0x0000000141080220 | File offset: 0x0107F820
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -220,7 +196,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerSetShouldDisabl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Statics::FuncParams);
+		// FuncParams: original RVA 0x04306230; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSetShouldDisablePlayerTeleportingDuringMissionResults", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -228,10 +206,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerSetShouldDisabl
 struct Z_Construct_UFunction_AFortPlayerControllerZone_ServerSubmitGameplayVote_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043062B0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ServerSubmitGameplayVote_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSubmitGameplayVote", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x4, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSubmitGameplayVote_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080250 (end 0x0108027F)
 // Original VA: 0x0000000141080250 | File offset: 0x0107F850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -240,17 +215,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerSubmitGameplayV
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSubmitGameplayVote_Statics::FuncParams);
+		// FuncParams: original RVA 0x043062B0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerSubmitGameplayVote", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x4, Z_Construct_UFunction_AFortPlayerControllerZone_ServerSubmitGameplayVote_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerControllerZone_ServerTriggerSetupTeleportCameraEvent_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043062F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerZone_ServerTriggerSetupTeleportCameraEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerTriggerSetupTeleportCameraEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01080280 (end 0x010802AF)
 // Original VA: 0x0000000141080280 | File offset: 0x0107F880
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -259,7 +230,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerTriggerSetupTel
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerZone_ServerTriggerSetupTeleportCameraEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x043062F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerZone, "ServerTriggerSetupTeleportCameraEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

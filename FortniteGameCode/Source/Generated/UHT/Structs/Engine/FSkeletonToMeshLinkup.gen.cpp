@@ -31,25 +31,12 @@ class UScriptStruct* FSkeletonToMeshLinkup::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3EE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSkeletonToMeshLinkup_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSkeletonToMeshLinkup>();
 	}
-	// ReturnStructParams: original RVA 0x045170E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSkeletonToMeshLinkup_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SkeletonToMeshLinkup",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSkeletonToMeshLinkup),
-		alignof(FSkeletonToMeshLinkup),
-		Z_Construct_UScriptStruct_FSkeletonToMeshLinkup_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D6120 (end 0x024D614F)
 	// Original VA: 0x00000001424D6120 | File offset: 0x024D5720
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSkeletonToMeshLinkup::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSkeletonToMeshLinkup_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045170E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSkeletonToMeshLinkup_Statics::NewStructOps,
+				"SkeletonToMeshLinkup",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSkeletonToMeshLinkup),
+				alignof(FSkeletonToMeshLinkup),
+				Z_Construct_UScriptStruct_FSkeletonToMeshLinkup_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

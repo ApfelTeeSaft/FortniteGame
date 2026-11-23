@@ -27,10 +27,7 @@ void AKeepItemContainer::StaticRegisterNativesAKeepItemContainer()
 struct Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435CCA0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "GetContainerNameAndLevelKey", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA680 (end 0x010EA6AF)
 // Original VA: 0x00000001410EA680 | File offset: 0x010E9C80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +36,9 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435CCA0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "GetContainerNameAndLevelKey", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +46,7 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey(
 struct Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435CD20; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "GetLootTierOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C020C00, 0x4, Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA6B0 (end 0x010EA6DF)
 // Original VA: 0x00000001410EA6B0 | File offset: 0x010E9CB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +55,9 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435CD20; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "GetLootTierOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C020C00, 0x4, Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +65,7 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride()
 struct Z_Construct_UFunction_AKeepItemContainer_InitializeContainer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435CDA0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepItemContainer_InitializeContainer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "InitializeContainer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_AKeepItemContainer_InitializeContainer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA6E0 (end 0x010EA70F)
 // Original VA: 0x00000001410EA6E0 | File offset: 0x010E9CE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,17 +74,13 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_InitializeContainer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepItemContainer_InitializeContainer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435CDA0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "InitializeContainer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_AKeepItemContainer_InitializeContainer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AKeepItemContainer_OnRep_HostUpgradeLevel_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0435CDE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepItemContainer_OnRep_HostUpgradeLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "OnRep_HostUpgradeLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA710 (end 0x010EA73F)
 // Original VA: 0x00000001410EA710 | File offset: 0x010E9D10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,17 +89,13 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_OnRep_HostUpgradeLevel()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepItemContainer_OnRep_HostUpgradeLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435CDE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "OnRep_HostUpgradeLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AKeepItemContainer_OnRep_SearchedBy_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0435CE20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepItemContainer_OnRep_SearchedBy_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "OnRep_SearchedBy", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA740 (end 0x010EA76F)
 // Original VA: 0x00000001410EA740 | File offset: 0x010E9D40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -117,7 +104,9 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_OnRep_SearchedBy()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepItemContainer_OnRep_SearchedBy_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435CE20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "OnRep_SearchedBy", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -125,10 +114,7 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_OnRep_SearchedBy()
 struct Z_Construct_UFunction_AKeepItemContainer_ResetContainer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435CEA0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepItemContainer_ResetContainer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "ResetContainer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AKeepItemContainer_ResetContainer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA770 (end 0x010EA79F)
 // Original VA: 0x00000001410EA770 | File offset: 0x010E9D70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -137,17 +123,13 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_ResetContainer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepItemContainer_ResetContainer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435CEA0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "ResetContainer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AKeepItemContainer_ResetContainer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AKeepItemContainer_RestoreLoot_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0435CEE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AKeepItemContainer_RestoreLoot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "RestoreLoot", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020404, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA7A0 (end 0x010EA7CF)
 // Original VA: 0x00000001410EA7A0 | File offset: 0x010E9DA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -156,7 +138,9 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_RestoreLoot()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AKeepItemContainer_RestoreLoot_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435CEE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AKeepItemContainer, "RestoreLoot", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020404, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -22,10 +22,7 @@ void UFortTheaterSelect::StaticRegisterNativesUFortTheaterSelect()
 struct Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C0D20; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "GetSurvivalCMSText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x38, Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905420 (end 0x0290544F)
 // Original VA: 0x0000000142905420 | File offset: 0x02904A20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C0D20; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "GetSurvivalCMSText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x38, Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText()
 struct Z_Construct_UFunction_UFortTheaterSelect_GetTheaterRecommendedRatingRange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C0E50; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTheaterSelect_GetTheaterRecommendedRatingRange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "GetTheaterRecommendedRatingRange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x20, Z_Construct_UFunction_UFortTheaterSelect_GetTheaterRecommendedRatingRange_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905450 (end 0x0290547F)
 // Original VA: 0x0000000142905450 | File offset: 0x02904A50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +50,13 @@ UFunction* Z_Construct_UFunction_UFortTheaterSelect_GetTheaterRecommendedRatingR
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTheaterSelect_GetTheaterRecommendedRatingRange_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C0E50; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "GetTheaterRecommendedRatingRange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x20, Z_Construct_UFunction_UFortTheaterSelect_GetTheaterRecommendedRatingRange_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortTheaterSelect_OnNavigationLeft_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045C0E90; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTheaterSelect_OnNavigationLeft_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "OnNavigationLeft", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905480 (end 0x029054AF)
 // Original VA: 0x0000000142905480 | File offset: 0x02904A80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,17 +65,13 @@ UFunction* Z_Construct_UFunction_UFortTheaterSelect_OnNavigationLeft()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTheaterSelect_OnNavigationLeft_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C0E90; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "OnNavigationLeft", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortTheaterSelect_OnNavigationRight_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045C0ED0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTheaterSelect_OnNavigationRight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "OnNavigationRight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029054B0 (end 0x029054DF)
 // Original VA: 0x00000001429054B0 | File offset: 0x02904AB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -92,7 +80,9 @@ UFunction* Z_Construct_UFunction_UFortTheaterSelect_OnNavigationRight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTheaterSelect_OnNavigationRight_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C0ED0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTheaterSelect, "OnNavigationRight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

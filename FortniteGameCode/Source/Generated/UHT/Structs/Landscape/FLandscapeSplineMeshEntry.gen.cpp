@@ -31,25 +31,12 @@ class UScriptStruct* FLandscapeSplineMeshEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74AB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLandscapeSplineMeshEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLandscapeSplineMeshEntry>();
 	}
-	// ReturnStructParams: original RVA 0x043A02A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLandscapeSplineMeshEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
-		nullptr,
-		&NewStructOps,
-		"LandscapeSplineMeshEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLandscapeSplineMeshEntry),
-		alignof(FLandscapeSplineMeshEntry),
-		Z_Construct_UScriptStruct_FLandscapeSplineMeshEntry_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A76650 (end 0x01A7667F)
 	// Original VA: 0x0000000141A76650 | File offset: 0x01A75C50
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLandscapeSplineMeshEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLandscapeSplineMeshEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A02A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLandscapeSplineMeshEntry_Statics::NewStructOps,
+				"LandscapeSplineMeshEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLandscapeSplineMeshEntry),
+				alignof(FLandscapeSplineMeshEntry),
+				Z_Construct_UScriptStruct_FLandscapeSplineMeshEntry_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

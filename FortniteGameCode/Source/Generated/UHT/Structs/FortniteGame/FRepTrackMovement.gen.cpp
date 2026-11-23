@@ -32,25 +32,12 @@ class UScriptStruct* FRepTrackMovement::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8E90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRepTrackMovement_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRepTrackMovement>();
 	}
-	// ReturnStructParams: original RVA 0x0433CBD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRepTrackMovement_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTrackMovement,
-		&NewStructOps,
-		"RepTrackMovement",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FRepTrackMovement),
-		alignof(FRepTrackMovement),
-		Z_Construct_UScriptStruct_FRepTrackMovement_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CCB60 (end 0x010CCB8F)
 	// Original VA: 0x00000001410CCB60 | File offset: 0x010CC160
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FRepTrackMovement::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRepTrackMovement_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0433CBD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTrackMovement,
+				&Z_Construct_UScriptStruct_FRepTrackMovement_Statics::NewStructOps,
+				"RepTrackMovement",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FRepTrackMovement),
+				alignof(FRepTrackMovement),
+				Z_Construct_UScriptStruct_FRepTrackMovement_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

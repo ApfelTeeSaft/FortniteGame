@@ -19,12 +19,6 @@ void UAthenaCustomizationPicker::StaticRegisterNativesUAthenaCustomizationPicker
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticChangeSaveEvent__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04549230; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticChangeSaveEvent__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaCustomizationPicker, "OnCosmeticChangeSaveEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FB00 (end 0x0287FB2F)
 // Original VA: 0x000000014287FB00 | File offset: 0x0287F100
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +27,9 @@ UFunction* Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticCh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticChangeSaveEvent__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x04549230; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaCustomizationPicker, "OnCosmeticChangeSaveEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +37,7 @@ UFunction* Z_Construct_UDelegateFunction_UAthenaCustomizationPicker_OnCosmeticCh
 struct Z_Construct_UFunction_UAthenaCustomizationPicker_BeginCustomizationCategory_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04549330; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaCustomizationPicker_BeginCustomizationCategory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaCustomizationPicker, "BeginCustomizationCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UAthenaCustomizationPicker_BeginCustomizationCategory_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FD40 (end 0x0287FD6F)
 // Original VA: 0x000000014287FD40 | File offset: 0x0287F340
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +46,13 @@ UFunction* Z_Construct_UFunction_UAthenaCustomizationPicker_BeginCustomizationCa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaCustomizationPicker_BeginCustomizationCategory_Statics::FuncParams);
+		// FuncParams: original RVA 0x04549330; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaCustomizationPicker, "BeginCustomizationCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UAthenaCustomizationPicker_BeginCustomizationCategory_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UAthenaCustomizationPicker_EndCustomizationCategory_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04549370; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaCustomizationPicker_EndCustomizationCategory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaCustomizationPicker, "EndCustomizationCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FD70 (end 0x0287FD9F)
 // Original VA: 0x000000014287FD70 | File offset: 0x0287F370
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,7 +61,9 @@ UFunction* Z_Construct_UFunction_UAthenaCustomizationPicker_EndCustomizationCate
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaCustomizationPicker_EndCustomizationCategory_Statics::FuncParams);
+		// FuncParams: original RVA 0x04549370; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaCustomizationPicker, "EndCustomizationCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

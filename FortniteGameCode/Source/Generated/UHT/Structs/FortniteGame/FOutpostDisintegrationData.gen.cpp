@@ -32,25 +32,12 @@ class UScriptStruct* FOutpostDisintegrationData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104FDD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FOutpostDisintegrationData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOutpostDisintegrationData>();
 	}
-	// ReturnStructParams: original RVA 0x042DCFA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOutpostDisintegrationData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"OutpostDisintegrationData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FOutpostDisintegrationData),
-		alignof(FOutpostDisintegrationData),
-		Z_Construct_UScriptStruct_FOutpostDisintegrationData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01051D90 (end 0x01051DBF)
 	// Original VA: 0x0000000141051D90 | File offset: 0x01051390
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FOutpostDisintegrationData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FOutpostDisintegrationData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042DCFA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FOutpostDisintegrationData_Statics::NewStructOps,
+				"OutpostDisintegrationData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FOutpostDisintegrationData),
+				alignof(FOutpostDisintegrationData),
+				Z_Construct_UScriptStruct_FOutpostDisintegrationData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FFortSearchBounceData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F657E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSearchBounceData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSearchBounceData>();
 	}
-	// ReturnStructParams: original RVA 0x041FA1E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSearchBounceData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSearchBounceData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSearchBounceData),
-		alignof(FFortSearchBounceData),
-		Z_Construct_UScriptStruct_FFortSearchBounceData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67940 (end 0x00F6796F)
 	// Original VA: 0x0000000140F67940 | File offset: 0x00F66F40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSearchBounceData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSearchBounceData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041FA1E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSearchBounceData_Statics::NewStructOps,
+				"FortSearchBounceData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSearchBounceData),
+				alignof(FFortSearchBounceData),
+				Z_Construct_UScriptStruct_FFortSearchBounceData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

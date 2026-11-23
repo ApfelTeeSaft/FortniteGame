@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayAbilityLocalAnimMontage::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055A850 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayAbilityLocalAnimMontage_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayAbilityLocalAnimMontage>();
 	}
-	// ReturnStructParams: original RVA 0x041A3910
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayAbilityLocalAnimMontage_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayAbilityLocalAnimMontage",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameplayAbilityLocalAnimMontage),
-		alignof(FGameplayAbilityLocalAnimMontage),
-		Z_Construct_UScriptStruct_FGameplayAbilityLocalAnimMontage_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C890 (end 0x0055C8BF)
 	// Original VA: 0x000000014055C890 | File offset: 0x0055BE90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayAbilityLocalAnimMontage::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayAbilityLocalAnimMontage_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A3910
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayAbilityLocalAnimMontage_Statics::NewStructOps,
+				"GameplayAbilityLocalAnimMontage",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameplayAbilityLocalAnimMontage),
+				alignof(FGameplayAbilityLocalAnimMontage),
+				Z_Construct_UScriptStruct_FGameplayAbilityLocalAnimMontage_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

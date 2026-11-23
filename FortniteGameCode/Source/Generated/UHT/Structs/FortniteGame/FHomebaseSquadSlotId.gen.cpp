@@ -31,25 +31,12 @@ class UScriptStruct* FHomebaseSquadSlotId::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9F10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FHomebaseSquadSlotId_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FHomebaseSquadSlotId>();
 	}
-	// ReturnStructParams: original RVA 0x04298170
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHomebaseSquadSlotId_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"HomebaseSquadSlotId",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FHomebaseSquadSlotId),
-		alignof(FHomebaseSquadSlotId),
-		Z_Construct_UScriptStruct_FHomebaseSquadSlotId_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFC370 (end 0x00FFC39F)
 	// Original VA: 0x0000000140FFC370 | File offset: 0x00FFB970
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FHomebaseSquadSlotId::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FHomebaseSquadSlotId_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04298170
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FHomebaseSquadSlotId_Statics::NewStructOps,
+				"HomebaseSquadSlotId",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FHomebaseSquadSlotId),
+				alignof(FHomebaseSquadSlotId),
+				Z_Construct_UScriptStruct_FHomebaseSquadSlotId_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

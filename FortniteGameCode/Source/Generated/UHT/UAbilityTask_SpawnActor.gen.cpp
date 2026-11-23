@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x02F2B830, FClassParams RVA 0x02F2B880.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UAbilityTask_SpawnActor();  // RVA 0x005469B0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546520 (end 0x00546542)
 // Original VA: 0x0000000140546520 | File offset: 0x00545B20
@@ -22,7 +22,7 @@ void UAbilityTask_SpawnActor::StaticRegisterNativesUAbilityTask_SpawnActor()
 
 struct Z_Construct_UFunction_UAbilityTask_SpawnActor_BeginSpawningActor_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04198500 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00547240 (end 0x0054726F)
 // Original VA: 0x0000000140547240 | File offset: 0x00546840
@@ -32,14 +32,16 @@ UFunction* Z_Construct_UFunction_UAbilityTask_SpawnActor_BeginSpawningActor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_SpawnActor_BeginSpawningActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04198500; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_SpawnActor, "BeginSpawningActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x40, Z_Construct_UFunction_UAbilityTask_SpawnActor_BeginSpawningActor_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UAbilityTask_SpawnActor_FinishSpawningActor_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04198600 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00547270 (end 0x0054729F)
 // Original VA: 0x0000000140547270 | File offset: 0x00546870
@@ -49,14 +51,16 @@ UFunction* Z_Construct_UFunction_UAbilityTask_SpawnActor_FinishSpawningActor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_SpawnActor_FinishSpawningActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04198600; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_SpawnActor, "FinishSpawningActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x30, Z_Construct_UFunction_UAbilityTask_SpawnActor_FinishSpawningActor_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UAbilityTask_SpawnActor_SpawnActor_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04198750 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005472A0 (end 0x005472CF)
 // Original VA: 0x00000001405472A0 | File offset: 0x005468A0
@@ -66,7 +70,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_SpawnActor_SpawnActor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_SpawnActor_SpawnActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04198750; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_SpawnActor, "SpawnActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x38, Z_Construct_UFunction_UAbilityTask_SpawnActor_SpawnActor_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FShapedTextOptions::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF26E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FShapedTextOptions_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FShapedTextOptions>();
 	}
-	// ReturnStructParams: original RVA 0x043CA6D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FShapedTextOptions_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_UMG,
-		nullptr,
-		&NewStructOps,
-		"ShapedTextOptions",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FShapedTextOptions),
-		alignof(FShapedTextOptions),
-		Z_Construct_UScriptStruct_FShapedTextOptions_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF4640 (end 0x01BF466F)
 	// Original VA: 0x0000000141BF4640 | File offset: 0x01BF3C40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FShapedTextOptions::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FShapedTextOptions_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043CA6D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_UMG,
+				nullptr,
+				&Z_Construct_UScriptStruct_FShapedTextOptions_Statics::NewStructOps,
+				"ShapedTextOptions",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FShapedTextOptions),
+				alignof(FShapedTextOptions),
+				Z_Construct_UScriptStruct_FShapedTextOptions_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

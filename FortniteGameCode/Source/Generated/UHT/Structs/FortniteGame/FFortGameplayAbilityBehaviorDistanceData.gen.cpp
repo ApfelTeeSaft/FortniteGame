@@ -31,25 +31,12 @@ class UScriptStruct* FFortGameplayAbilityBehaviorDistanceData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE6DA0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortGameplayAbilityBehaviorDistanceData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortGameplayAbilityBehaviorDistanceData>();
 	}
-	// ReturnStructParams: original RVA 0x0427E7F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortGameplayAbilityBehaviorDistanceData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortGameplayAbilityBehaviorDistanceData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortGameplayAbilityBehaviorDistanceData),
-		alignof(FFortGameplayAbilityBehaviorDistanceData),
-		Z_Construct_UScriptStruct_FFortGameplayAbilityBehaviorDistanceData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE8B80 (end 0x00FE8BAF)
 	// Original VA: 0x0000000140FE8B80 | File offset: 0x00FE8180
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortGameplayAbilityBehaviorDistanceData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortGameplayAbilityBehaviorDistanceData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0427E7F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortGameplayAbilityBehaviorDistanceData_Statics::NewStructOps,
+				"FortGameplayAbilityBehaviorDistanceData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortGameplayAbilityBehaviorDistanceData),
+				alignof(FFortGameplayAbilityBehaviorDistanceData),
+				Z_Construct_UScriptStruct_FFortGameplayAbilityBehaviorDistanceData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

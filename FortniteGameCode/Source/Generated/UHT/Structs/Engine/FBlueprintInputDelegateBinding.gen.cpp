@@ -31,25 +31,12 @@ class UScriptStruct* FBlueprintInputDelegateBinding::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427060 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBlueprintInputDelegateBinding>();
 	}
-	// ReturnStructParams: original RVA 0x0446CFB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BlueprintInputDelegateBinding",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FBlueprintInputDelegateBinding),
-		alignof(FBlueprintInputDelegateBinding),
-		Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428CA0 (end 0x02428CCF)
 	// Original VA: 0x0000000142428CA0 | File offset: 0x024282A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBlueprintInputDelegateBinding::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0446CFB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding_Statics::NewStructOps,
+				"BlueprintInputDelegateBinding",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FBlueprintInputDelegateBinding),
+				alignof(FBlueprintInputDelegateBinding),
+				Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

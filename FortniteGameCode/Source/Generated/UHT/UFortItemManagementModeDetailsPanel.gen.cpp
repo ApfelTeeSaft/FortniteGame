@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03CCE9E8, FClassParams RVA 0x03CCEA50.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortItemManagementModeDetailsPanel();  // RVA 0x028CA030 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9B10 (end 0x028C9B32)
 // Original VA: 0x00000001428C9B10 | File offset: 0x028C9110
@@ -20,7 +20,7 @@ void UFortItemManagementModeDetailsPanel::StaticRegisterNativesUFortItemManageme
 
 struct Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04594170 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB4D0 (end 0x028CB4FF)
 // Original VA: 0x00000001428CB4D0 | File offset: 0x028CAAD0
@@ -30,15 +30,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemMana
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode_Statics::FuncParams);
+		// FuncParams: original RVA 0x04594170; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementModeDetailsPanel, "GetItemManagementMode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045941B0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB500 (end 0x028CB52F)
 // Original VA: 0x00000001428CB500 | File offset: 0x028CAB00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -47,15 +45,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDiffe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045941B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementModeDetailsPanel, "HandleDifferentItemManagementModeSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045941F0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB530 (end 0x028CB55F)
 // Original VA: 0x00000001428CB530 | File offset: 0x028CAB30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -64,7 +60,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x045941F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementModeDetailsPanel, "HandleHostSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

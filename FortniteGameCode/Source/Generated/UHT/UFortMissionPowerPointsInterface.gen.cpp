@@ -24,10 +24,7 @@ void UFortMissionPowerPointsInterface::StaticRegisterNativesUFortMissionPowerPoi
 struct Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilityWeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D4320; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilityWeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetAvailabilityWeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0x8, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilityWeight_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B630 (end 0x0104B65F)
 // Original VA: 0x000000014104B630 | File offset: 0x0104AC30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilit
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilityWeight_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D4320; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetAvailabilityWeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0x8, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilityWeight_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilit
 struct Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRangeLerpValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D43D0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRangeLerpValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetInitialRangeLerpValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0x8, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRangeLerpValue_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B660 (end 0x0104B68F)
 // Original VA: 0x000000014104B660 | File offset: 0x0104AC60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRang
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRangeLerpValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D43D0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetInitialRangeLerpValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0x8, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRangeLerpValue_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRang
 struct Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLerpValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D44C0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLerpValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetMaxRangeLerpValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0xC, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLerpValue_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B690 (end 0x0104B6BF)
 // Original VA: 0x000000014104B690 | File offset: 0x0104AC90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLer
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLerpValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D44C0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetMaxRangeLerpValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0xC, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLerpValue_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLer
 struct Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPointsCost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D4570; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPointsCost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetPowerPointsCost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0x8, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPointsCost_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B6C0 (end 0x0104B6EF)
 // Original VA: 0x000000014104B6C0 | File offset: 0x0104ACC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPoints
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPointsCost_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D4570; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMissionPowerPointsInterface, "GetPowerPointsCost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020400, 0x8, Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPointsCost_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

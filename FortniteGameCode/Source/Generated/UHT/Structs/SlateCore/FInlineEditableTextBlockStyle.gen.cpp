@@ -32,25 +32,12 @@ class UScriptStruct* FInlineEditableTextBlockStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145AA30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FInlineEditableTextBlockStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FInlineEditableTextBlockStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437B7A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FInlineEditableTextBlockStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"InlineEditableTextBlockStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FInlineEditableTextBlockStyle),
-		alignof(FInlineEditableTextBlockStyle),
-		Z_Construct_UScriptStruct_FInlineEditableTextBlockStyle_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CEA0 (end 0x0145CECF)
 	// Original VA: 0x000000014145CEA0 | File offset: 0x0145C4A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FInlineEditableTextBlockStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FInlineEditableTextBlockStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437B7A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FInlineEditableTextBlockStyle_Statics::NewStructOps,
+				"InlineEditableTextBlockStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FInlineEditableTextBlockStyle),
+				alignof(FInlineEditableTextBlockStyle),
+				Z_Construct_UScriptStruct_FInlineEditableTextBlockStyle_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

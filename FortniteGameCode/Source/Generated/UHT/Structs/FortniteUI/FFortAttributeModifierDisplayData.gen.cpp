@@ -31,25 +31,12 @@ class UScriptStruct* FFortAttributeModifierDisplayData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02910DC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAttributeModifierDisplayData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAttributeModifierDisplayData>();
 	}
-	// ReturnStructParams: original RVA 0x045D21F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAttributeModifierDisplayData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortAttributeModifierDisplayData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAttributeModifierDisplayData),
-		alignof(FFortAttributeModifierDisplayData),
-		Z_Construct_UScriptStruct_FFortAttributeModifierDisplayData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02913950 (end 0x0291397F)
 	// Original VA: 0x0000000142913950 | File offset: 0x02912F50
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAttributeModifierDisplayData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAttributeModifierDisplayData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045D21F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAttributeModifierDisplayData_Statics::NewStructOps,
+				"FortAttributeModifierDisplayData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAttributeModifierDisplayData),
+				alignof(FFortAttributeModifierDisplayData),
+				Z_Construct_UScriptStruct_FFortAttributeModifierDisplayData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

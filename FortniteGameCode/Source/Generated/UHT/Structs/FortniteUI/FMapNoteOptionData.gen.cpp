@@ -32,25 +32,12 @@ class UScriptStruct* FMapNoteOptionData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E5A80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMapNoteOptionData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMapNoteOptionData>();
 	}
-	// ReturnStructParams: original RVA 0x045AA690
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMapNoteOptionData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		Z_Construct_UScriptStruct_FRadialOptionData,
-		&NewStructOps,
-		"MapNoteOptionData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMapNoteOptionData),
-		alignof(FMapNoteOptionData),
-		Z_Construct_UScriptStruct_FMapNoteOptionData_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E8500 (end 0x028E852F)
 	// Original VA: 0x00000001428E8500 | File offset: 0x028E7B00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMapNoteOptionData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMapNoteOptionData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045AA690
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				Z_Construct_UScriptStruct_FRadialOptionData,
+				&Z_Construct_UScriptStruct_FMapNoteOptionData_Statics::NewStructOps,
+				"MapNoteOptionData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMapNoteOptionData),
+				alignof(FMapNoteOptionData),
+				Z_Construct_UScriptStruct_FMapNoteOptionData_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

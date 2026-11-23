@@ -22,10 +22,7 @@ void UAndroidPermissionFunctionLibrary::StaticRegisterNativesUAndroidPermissionF
 struct Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C7E90; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAndroidPermissionFunctionLibrary, "AcquirePermissions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00803F60 (end 0x00803F8F)
 // Original VA: 0x0000000140803F60 | File offset: 0x00803560
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermis
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C7E90; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAndroidPermissionFunctionLibrary, "AcquirePermissions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermis
 struct Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermission_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C7F50; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermission_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAndroidPermissionFunctionLibrary, "CheckPermission", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermission_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00803F90 (end 0x00803FBF)
 // Original VA: 0x0000000140803F90 | File offset: 0x00803590
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermissi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermission_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C7F50; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAndroidPermissionFunctionLibrary, "CheckPermission", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermission_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

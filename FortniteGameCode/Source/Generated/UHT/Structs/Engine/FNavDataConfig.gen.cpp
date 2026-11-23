@@ -32,25 +32,12 @@ class UScriptStruct* FNavDataConfig::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248EE90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FNavDataConfig_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNavDataConfig>();
 	}
-	// ReturnStructParams: original RVA 0x044CBED0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNavDataConfig_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FNavAgentProperties,
-		&NewStructOps,
-		"NavDataConfig",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FNavDataConfig),
-		alignof(FNavDataConfig),
-		Z_Construct_UScriptStruct_FNavDataConfig_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02490540 (end 0x0249056F)
 	// Original VA: 0x0000000142490540 | File offset: 0x0248FB40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FNavDataConfig::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FNavDataConfig_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044CBED0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FNavAgentProperties,
+				&Z_Construct_UScriptStruct_FNavDataConfig_Statics::NewStructOps,
+				"NavDataConfig",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FNavDataConfig),
+				alignof(FNavDataConfig),
+				Z_Construct_UScriptStruct_FNavDataConfig_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

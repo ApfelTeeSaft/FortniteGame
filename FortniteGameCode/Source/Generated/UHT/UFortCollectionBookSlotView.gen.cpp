@@ -23,10 +23,7 @@ void UFortCollectionBookSlotView::StaticRegisterNativesUFortCollectionBookSlotVi
 struct Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButtonChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045627A0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButtonChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSlotView, "OnSelectedSlotButtonChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x10, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButtonChanged_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BC70 (end 0x0289BC9F)
 // Original VA: 0x000000014289BC70 | File offset: 0x0289B270
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButto
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButtonChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045627A0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSlotView, "OnSelectedSlotButtonChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x10, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButtonChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButto
 struct Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04562860; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSlotView, "OnSlotButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x10, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BCA0 (end 0x0289BCCF)
 // Original VA: 0x000000014289BCA0 | File offset: 0x0289B2A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x04562860; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSlotView, "OnSlotButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x10, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked
 struct Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04562920; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSlotView, "OnSlotButtonCommitted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x10, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitted_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BCD0 (end 0x0289BCFF)
 // Original VA: 0x000000014289BCD0 | File offset: 0x0289B2D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04562920; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSlotView, "OnSlotButtonCommitted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x10, Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitted_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

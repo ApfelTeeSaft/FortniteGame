@@ -19,12 +19,6 @@ void AGameplayAbilityTargetActor::StaticRegisterNativesAGameplayAbilityTargetAct
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AGameplayAbilityTargetActor_CancelTargeting_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041A21D0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGameplayAbilityTargetActor_CancelTargeting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGameplayAbilityTargetActor, "CancelTargeting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C2F0 (end 0x0055C31F)
 // Original VA: 0x000000014055C2F0 | File offset: 0x0055B8F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +27,13 @@ UFunction* Z_Construct_UFunction_AGameplayAbilityTargetActor_CancelTargeting()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGameplayAbilityTargetActor_CancelTargeting_Statics::FuncParams);
+		// FuncParams: original RVA 0x041A21D0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGameplayAbilityTargetActor, "CancelTargeting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AGameplayAbilityTargetActor_ConfirmTargeting_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041A2210; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGameplayAbilityTargetActor_ConfirmTargeting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGameplayAbilityTargetActor, "ConfirmTargeting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C320 (end 0x0055C34F)
 // Original VA: 0x000000014055C320 | File offset: 0x0055B920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +42,9 @@ UFunction* Z_Construct_UFunction_AGameplayAbilityTargetActor_ConfirmTargeting()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGameplayAbilityTargetActor_ConfirmTargeting_Statics::FuncParams);
+		// FuncParams: original RVA 0x041A2210; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGameplayAbilityTargetActor, "ConfirmTargeting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

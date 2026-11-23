@@ -22,10 +22,7 @@ void UFortAIFunctionLibrary::StaticRegisterNativesUFortAIFunctionLibrary()
 struct Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04228890; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIFunctionLibrary, "MakeNoiseEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022405, 0x10, Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F92730 (end 0x00F9275F)
 // Original VA: 0x0000000140F92730 | File offset: 0x00F91D30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04228890; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIFunctionLibrary, "MakeNoiseEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022405, 0x10, Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent()
 struct Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04228990; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIFunctionLibrary, "MakeNoiseEventAtLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22405, 0x18, Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F92760 (end 0x00F9278F)
 // Original VA: 0x0000000140F92760 | File offset: 0x00F91D60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04228990; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIFunctionLibrary, "MakeNoiseEventAtLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22405, 0x18, Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

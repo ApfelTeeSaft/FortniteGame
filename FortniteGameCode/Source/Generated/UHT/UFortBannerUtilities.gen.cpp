@@ -43,10 +43,7 @@ void UFortBannerUtilities::StaticRegisterNativesUFortBannerUtilities()
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D0D0; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA40A0 (end 0x00FA40CF)
 // Original VA: 0x0000000140FA40A0 | File offset: 0x00FA36A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D0D0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor()
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D180; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorCategoryName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA40D0 (end 0x00FA40FF)
 // Original VA: 0x0000000140FA40D0 | File offset: 0x00FA36D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D180; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorCategoryName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -83,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D230; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorCategoryRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422403, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4100 (end 0x00FA412F)
 // Original VA: 0x0000000140FA4100 | File offset: 0x00FA3700
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -95,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowN
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D230; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorCategoryRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422403, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -103,10 +100,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowN
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D2F0; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4130 (end 0x00FA415F)
 // Original VA: 0x0000000140FA4130 | File offset: 0x00FA3730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -115,7 +109,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D2F0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -123,10 +119,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName(
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D3F0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorItemFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowName_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4160 (end 0x00FA418F)
 // Original VA: 0x0000000140FA4160 | File offset: 0x00FA3760
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -135,7 +128,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowN
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D3F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorItemFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowName_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -143,10 +138,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowN
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D4B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorPrimaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4190 (end 0x00FA41BF)
 // Original VA: 0x0000000140FA4190 | File offset: 0x00FA3790
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -155,7 +147,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D4B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorPrimaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -163,10 +157,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColorFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D570; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColorFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorPrimaryColorFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColorFromRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA41C0 (end 0x00FA41EF)
 // Original VA: 0x0000000140FA41C0 | File offset: 0x00FA37C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -175,7 +166,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColorFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D570; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorPrimaryColorFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColorFromRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -183,10 +176,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D630; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorSecondaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA41F0 (end 0x00FA421F)
 // Original VA: 0x0000000140FA41F0 | File offset: 0x00FA37F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -195,7 +185,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryCol
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D630; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorSecondaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -203,10 +195,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryCol
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColorFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D6F0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColorFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorSecondaryColorFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColorFromRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4220 (end 0x00FA424F)
 // Original VA: 0x0000000140FA4220 | File offset: 0x00FA3820
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -215,7 +204,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryCol
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColorFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D6F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorSecondaryColorFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColorFromRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -223,10 +214,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryCol
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D830; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorsForCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4250 (end 0x00FA427F)
 // Original VA: 0x0000000140FA4250 | File offset: 0x00FA3850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -235,7 +223,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D830; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerColorsForCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -243,10 +233,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D8E0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconCategoryName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4280 (end 0x00FA42AF)
 // Original VA: 0x0000000140FA4280 | File offset: 0x00FA3880
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -255,7 +242,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D8E0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconCategoryName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -263,10 +252,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName(
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423D990; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconCategoryRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422403, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA42B0 (end 0x00FA42DF)
 // Original VA: 0x0000000140FA42B0 | File offset: 0x00FA38B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -275,7 +261,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowNa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423D990; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconCategoryRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422403, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -283,10 +271,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowNa
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423DA90; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconItemFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowName_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA42E0 (end 0x00FA430F)
 // Original VA: 0x0000000140FA42E0 | File offset: 0x00FA38E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -295,7 +280,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowNa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423DA90; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconItemFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowName_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -303,10 +290,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowNa
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423DBD0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconsForCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4310 (end 0x00FA433F)
 // Original VA: 0x0000000140FA4310 | File offset: 0x00FA3910
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -315,7 +299,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423DBD0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerIconsForCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -323,10 +309,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory(
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423DC90; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerLargeIconAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4340 (end 0x00FA436F)
 // Original VA: 0x0000000140FA4340 | File offset: 0x00FA3940
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -335,7 +318,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423DC90; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerLargeIconAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -343,10 +328,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset()
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423DD50; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerLargeIconAssetFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFromRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4370 (end 0x00FA439F)
 // Original VA: 0x0000000140FA4370 | File offset: 0x00FA3970
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -355,7 +337,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFro
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423DD50; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerLargeIconAssetFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFromRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -363,10 +347,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFro
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423DE10; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerSmallIconAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA43A0 (end 0x00FA43CF)
 // Original VA: 0x0000000140FA43A0 | File offset: 0x00FA39A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -375,7 +356,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423DE10; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerSmallIconAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -383,10 +366,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset()
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423DED0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerSmallIconAssetFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFromRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA43D0 (end 0x00FA43FF)
 // Original VA: 0x0000000140FA43D0 | File offset: 0x00FA39D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -395,7 +375,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFro
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423DED0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetBannerSmallIconAssetFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFromRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -403,10 +385,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFro
 struct Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423DF90; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetPrimaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4400 (end 0x00FA442F)
 // Original VA: 0x0000000140FA4400 | File offset: 0x00FA3A00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -415,7 +394,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423DF90; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetPrimaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -423,10 +404,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor()
 struct Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423E050; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetRowNameForBannerColorItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorItem_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4430 (end 0x00FA445F)
 // Original VA: 0x0000000140FA4430 | File offset: 0x00FA3A30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -435,7 +413,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorIt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorItem_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423E050; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetRowNameForBannerColorItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorItem_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -443,10 +423,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorIt
 struct Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423E110; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetRowNameForBannerIconItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconItem_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4460 (end 0x00FA448F)
 // Original VA: 0x0000000140FA4460 | File offset: 0x00FA3A60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -455,7 +432,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconIte
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconItem_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423E110; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetRowNameForBannerIconItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconItem_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -463,10 +442,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconIte
 struct Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423E1D0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetSecondaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4490 (end 0x00FA44BF)
 // Original VA: 0x0000000140FA4490 | File offset: 0x00FA3A90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -475,7 +451,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423E1D0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "GetSecondaryColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x30, Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -483,10 +461,7 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor()
 struct Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconFromRowName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423E290; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconFromRowName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "LoadAndGetBannerLargeIconFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x10, Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconFromRowName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA44C0 (end 0x00FA44EF)
 // Original VA: 0x0000000140FA44C0 | File offset: 0x00FA3AC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -495,7 +470,9 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconF
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconFromRowName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423E290; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBannerUtilities, "LoadAndGetBannerLargeIconFromRowName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x10, Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconFromRowName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

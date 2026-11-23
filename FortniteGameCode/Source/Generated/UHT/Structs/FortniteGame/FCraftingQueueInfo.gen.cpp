@@ -30,25 +30,12 @@ class UScriptStruct* FCraftingQueueInfo::StaticStruct()
 	struct Z_Construct_UScriptStruct_FCraftingQueueInfo_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01068AA0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCraftingQueueInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCraftingQueueInfo>();
 	}
-	// ReturnStructParams: original RVA 0x042F5EA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCraftingQueueInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"CraftingQueueInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCraftingQueueInfo),
-		alignof(FCraftingQueueInfo),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106D670 (end 0x0106D69F)
 	// Original VA: 0x000000014106D670 | File offset: 0x0106CC70
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FCraftingQueueInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCraftingQueueInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042F5EA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCraftingQueueInfo_Statics::NewStructOps,
+				"CraftingQueueInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCraftingQueueInfo),
+				alignof(FCraftingQueueInfo),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

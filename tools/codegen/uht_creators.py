@@ -117,6 +117,11 @@ def class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rf
             f"\treturn OuterClass;\n}}\n")
 
 
+def local_funcparams(creator: str) -> str:
+    """MSVC name of a creator's static local FuncParams (block scope 4, as the probes show)."""
+    return f"?FuncParams@?4??{creator}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B"
+
+
 def main() -> int:
     img = PEImage()
     dimg = load_decrypted(img)
@@ -244,24 +249,13 @@ def main() -> int:
                 rec = hits[0][0] if len(hits) == 1 else None
                 why = "only FFunctionParams record naming this function with the class's OuterFunc"
                 stats[f"funcparams_resolved_by_{outer_code}"] += rec is not None
-            by_class_ctor = rec is not None and len(cands) != 1 and outer_code == "name+class-ctor"
-            if rec is None or by_class_ctor:
+            if rec is None:
                 # The creator's code is the standard shape; only its FFunctionParams record is not
                 # identified (no unique record by name). It is emitted with the record declared, so
                 # its ReturnFunction static keeps its place in the unity layout.
-                # A record identified through the class constructor is declared only, too, with
-                # its address as evidence: defining it moves the unit's TClassCompiledInDefer
-                # objects, which the reference keeps in one block ahead of its records, and
-                # that layout is not modelled yet (docs/REVERSE_ENGINEERING.md).
                 end = rfs[crva].end
-                if by_class_ctor:
-                    note = f"record 0x{rec:08X} (name and class constructor), declared only"
-                    symbols[f"?FuncParams@{statics}@@2UFFunctionParams@UE4CodeGen_Private@@B"] = [
-                        f"0x{rec:08X}", outer_code]
-                    stats["funcparams_declared_by_class_ctor"] += 1
-                else:
-                    note = f"record not identified: {len(cands)} candidate(s) by name"
-                    stats["funcparams_unresolved"] += 1
+                note = f"record not identified: {len(cands)} candidate(s) by name"
+                stats["funcparams_unresolved"] += 1
                 bodies.append(
                     f"struct {statics}\n{{\n"
                     f"\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;  // {note}\n}};\n"
@@ -308,21 +302,24 @@ def main() -> int:
             else:
                 prop_expr = "nullptr, 0"
             end = rfs[crva].end
+            # FuncParams is a static local of the creator, as the reference's generated code has it
+            # (the 4.20 release moved it to <Creator>_Statics): the reference keeps each unit's
+            # TClassCompiledInDefer objects in one block of the object's .data, with every
+            # parameter record after it in its own section (docs/REVERSE_ENGINEERING.md, "Data
+            # layout"). Only PropPointers stays a declared member until properties are recovered.
             bodies.append(
-                f"struct {statics}\n{{\n{prop_decl}"
-                f"\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;\n}};\n"
-                f"// FuncParams: original RVA 0x{rec:08X}; StructureSize 0x{size:X} is sizeof the event parms struct.\n"
-                f"const UE4CodeGen_Private::FFunctionParams {statics}::FuncParams = {{ (UObject*(*)()){outer_expr}, "
-                f"\"{name_lit}\", {flags_expr}, {super_expr}, (EFunctionFlags)0x{fflags:08X}, 0x{size:X}, "
-                f"{prop_expr}, {rpc}, {rpcr} }};\n"
-                f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
+                (f"struct {statics}\n{{\n{prop_decl}}};\n" if prop_decl else "")
+                + f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
                 f"// Original VA: 0x{base + crva:016X} | File offset: 0x{img.rva_to_off(crva):08X}\n"
                 f"// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json\n"
                 f"UFunction* {cname}()\n{{\n\tstatic UFunction* ReturnFunction = nullptr;\n\tif (!ReturnFunction)\n\t{{\n"
-                f"\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, {statics}::FuncParams);\n\t}}\n"
+                f"\t\t// FuncParams: original RVA 0x{rec:08X}; StructureSize 0x{size:X} is sizeof the event parms struct.\n"
+                f"\t\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams = {{ (UObject*(*)()){outer_expr}, "
+                f"\"{name_lit}\", {flags_expr}, {super_expr}, (EFunctionFlags)0x{fflags:08X}, 0x{size:X}, "
+                f"{prop_expr}, {rpc}, {rpcr} }};\n"
+                f"\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);\n\t}}\n"
                 f"\treturn ReturnFunction;\n}}\n")
-            symbols[f"?FuncParams@{statics}@@2UFFunctionParams@UE4CodeGen_Private@@B"] = [
-                f"0x{rec:08X}", "name" if len(cands) == 1 else outer_code]
+            symbols[local_funcparams(cname)] = [f"0x{rec:08X}", "name" if len(cands) == 1 else outer_code]
             entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}",
                             "name": cname, "class": cls})
             emitted_fns.add(fname)

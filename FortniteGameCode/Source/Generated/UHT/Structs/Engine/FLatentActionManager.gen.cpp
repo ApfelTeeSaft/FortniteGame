@@ -30,25 +30,12 @@ class UScriptStruct* FLatentActionManager::StaticStruct()
 	struct Z_Construct_UScriptStruct_FLatentActionManager_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FBF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLatentActionManager_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLatentActionManager>();
 	}
-	// ReturnStructParams: original RVA 0x044AD5F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLatentActionManager_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LatentActionManager",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FLatentActionManager),
-		alignof(FLatentActionManager),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02471760 (end 0x0247178F)
 	// Original VA: 0x0000000142471760 | File offset: 0x02470D60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FLatentActionManager::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLatentActionManager_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044AD5F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLatentActionManager_Statics::NewStructOps,
+				"LatentActionManager",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FLatentActionManager),
+				alignof(FLatentActionManager),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

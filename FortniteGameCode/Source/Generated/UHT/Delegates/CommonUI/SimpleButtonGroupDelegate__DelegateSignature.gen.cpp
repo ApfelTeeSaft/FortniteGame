@@ -8,10 +8,7 @@
 	struct Z_Construct_UDelegateFunction_CommonUI_SimpleButtonGroupDelegate__DelegateSignature_Statics
 	{
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	// FuncParams: original RVA 0x04178D60
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_CommonUI_SimpleButtonGroupDelegate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_CommonUI, "SimpleButtonGroupDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_CommonUI_SimpleButtonGroupDelegate__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3030 (end 0x002C305F)
 	// Original VA: 0x00000001402C3030 | File offset: 0x002C2630
 	// Recovery: confirmed (listed by Z_Construct_UPackage__Script_CommonUI's SingletonFuncArray) | Matching: see analysis/functions-uht-package-delegates.json
@@ -20,7 +17,9 @@
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_CommonUI_SimpleButtonGroupDelegate__DelegateSignature_Statics::FuncParams);
+			// FuncParams: original RVA 0x04178D60
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_CommonUI, "SimpleButtonGroupDelegate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_CommonUI_SimpleButtonGroupDelegate__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}

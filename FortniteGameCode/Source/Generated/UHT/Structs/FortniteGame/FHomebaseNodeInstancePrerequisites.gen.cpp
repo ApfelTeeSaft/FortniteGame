@@ -31,25 +31,12 @@ class UScriptStruct* FHomebaseNodeInstancePrerequisites::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9F50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FHomebaseNodeInstancePrerequisites_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FHomebaseNodeInstancePrerequisites>();
 	}
-	// ReturnStructParams: original RVA 0x04297D60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHomebaseNodeInstancePrerequisites_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"HomebaseNodeInstancePrerequisites",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FHomebaseNodeInstancePrerequisites),
-		alignof(FHomebaseNodeInstancePrerequisites),
-		Z_Construct_UScriptStruct_FHomebaseNodeInstancePrerequisites_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFC250 (end 0x00FFC27F)
 	// Original VA: 0x0000000140FFC250 | File offset: 0x00FFB850
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FHomebaseNodeInstancePrerequisites::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FHomebaseNodeInstancePrerequisites_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04297D60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FHomebaseNodeInstancePrerequisites_Statics::NewStructOps,
+				"HomebaseNodeInstancePrerequisites",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FHomebaseNodeInstancePrerequisites),
+				alignof(FHomebaseNodeInstancePrerequisites),
+				Z_Construct_UScriptStruct_FHomebaseNodeInstancePrerequisites_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

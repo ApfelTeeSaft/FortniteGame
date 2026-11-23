@@ -31,25 +31,12 @@ class UScriptStruct* FTimelineEventEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC0C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTimelineEventEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTimelineEventEntry>();
 	}
-	// ReturnStructParams: original RVA 0x0452EBA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTimelineEventEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"TimelineEventEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FTimelineEventEntry),
-		alignof(FTimelineEventEntry),
-		Z_Construct_UScriptStruct_FTimelineEventEntry_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDC10 (end 0x024EDC3F)
 	// Original VA: 0x00000001424EDC10 | File offset: 0x024ED210
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FTimelineEventEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTimelineEventEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0452EBA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTimelineEventEntry_Statics::NewStructOps,
+				"TimelineEventEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FTimelineEventEntry),
+				alignof(FTimelineEventEntry),
+				Z_Construct_UScriptStruct_FTimelineEventEntry_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

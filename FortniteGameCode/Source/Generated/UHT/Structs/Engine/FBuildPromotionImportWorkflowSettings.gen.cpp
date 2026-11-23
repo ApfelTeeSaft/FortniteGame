@@ -31,25 +31,12 @@ class UScriptStruct* FBuildPromotionImportWorkflowSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA040 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBuildPromotionImportWorkflowSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBuildPromotionImportWorkflowSettings>();
 	}
-	// ReturnStructParams: original RVA 0x044243A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBuildPromotionImportWorkflowSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BuildPromotionImportWorkflowSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBuildPromotionImportWorkflowSettings),
-		alignof(FBuildPromotionImportWorkflowSettings),
-		Z_Construct_UScriptStruct_FBuildPromotionImportWorkflowSettings_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DBFD0 (end 0x023DBFFF)
 	// Original VA: 0x00000001423DBFD0 | File offset: 0x023DB5D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBuildPromotionImportWorkflowSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBuildPromotionImportWorkflowSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044243A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBuildPromotionImportWorkflowSettings_Statics::NewStructOps,
+				"BuildPromotionImportWorkflowSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBuildPromotionImportWorkflowSettings),
+				alignof(FBuildPromotionImportWorkflowSettings),
+				Z_Construct_UScriptStruct_FBuildPromotionImportWorkflowSettings_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

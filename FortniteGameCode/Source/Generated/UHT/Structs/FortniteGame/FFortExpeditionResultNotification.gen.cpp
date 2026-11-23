@@ -31,25 +31,12 @@ class UScriptStruct* FFortExpeditionResultNotification::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102DA50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortExpeditionResultNotification_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortExpeditionResultNotification>();
 	}
-	// ReturnStructParams: original RVA 0x042C0720
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortExpeditionResultNotification_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortExpeditionResultNotification",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortExpeditionResultNotification),
-		alignof(FFortExpeditionResultNotification),
-		Z_Construct_UScriptStruct_FFortExpeditionResultNotification_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01031AD0 (end 0x01031AFF)
 	// Original VA: 0x0000000141031AD0 | File offset: 0x010310D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortExpeditionResultNotification::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortExpeditionResultNotification_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C0720
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortExpeditionResultNotification_Statics::NewStructOps,
+				"FortExpeditionResultNotification",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortExpeditionResultNotification),
+				alignof(FFortExpeditionResultNotification),
+				Z_Construct_UScriptStruct_FFortExpeditionResultNotification_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

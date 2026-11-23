@@ -32,25 +32,12 @@ class UScriptStruct* FScrollBorderStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A230 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FScrollBorderStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FScrollBorderStyle>();
 	}
-	// ReturnStructParams: original RVA 0x04379EE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FScrollBorderStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"ScrollBorderStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FScrollBorderStyle),
-		alignof(FScrollBorderStyle),
-		Z_Construct_UScriptStruct_FScrollBorderStyle_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D080 (end 0x0145D0AF)
 	// Original VA: 0x000000014145D080 | File offset: 0x0145C680
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FScrollBorderStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FScrollBorderStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04379EE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FScrollBorderStyle_Statics::NewStructOps,
+				"ScrollBorderStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FScrollBorderStyle),
+				alignof(FScrollBorderStyle),
+				Z_Construct_UScriptStruct_FScrollBorderStyle_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

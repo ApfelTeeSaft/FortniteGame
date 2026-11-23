@@ -31,25 +31,12 @@ class UScriptStruct* FMyTownWorkerSetBonusData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0940 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMyTownWorkerSetBonusData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMyTownWorkerSetBonusData>();
 	}
-	// ReturnStructParams: original RVA 0x04364D10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMyTownWorkerSetBonusData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"MyTownWorkerSetBonusData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FMyTownWorkerSetBonusData),
-		alignof(FMyTownWorkerSetBonusData),
-		Z_Construct_UScriptStruct_FMyTownWorkerSetBonusData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2650 (end 0x010F267F)
 	// Original VA: 0x00000001410F2650 | File offset: 0x010F1C50
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMyTownWorkerSetBonusData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMyTownWorkerSetBonusData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04364D10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMyTownWorkerSetBonusData_Statics::NewStructOps,
+				"MyTownWorkerSetBonusData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FMyTownWorkerSetBonusData),
+				alignof(FMyTownWorkerSetBonusData),
+				Z_Construct_UScriptStruct_FMyTownWorkerSetBonusData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

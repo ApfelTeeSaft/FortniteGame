@@ -31,25 +31,12 @@ class UScriptStruct* FSkeletalMeshSamplingRegionBoneFilter::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3FA0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSkeletalMeshSamplingRegionBoneFilter_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSkeletalMeshSamplingRegionBoneFilter>();
 	}
-	// ReturnStructParams: original RVA 0x045163E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSkeletalMeshSamplingRegionBoneFilter_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SkeletalMeshSamplingRegionBoneFilter",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSkeletalMeshSamplingRegionBoneFilter),
-		alignof(FSkeletalMeshSamplingRegionBoneFilter),
-		Z_Construct_UScriptStruct_FSkeletalMeshSamplingRegionBoneFilter_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D6090 (end 0x024D60BF)
 	// Original VA: 0x00000001424D6090 | File offset: 0x024D5690
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSkeletalMeshSamplingRegionBoneFilter::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSkeletalMeshSamplingRegionBoneFilter_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045163E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSkeletalMeshSamplingRegionBoneFilter_Statics::NewStructOps,
+				"SkeletalMeshSamplingRegionBoneFilter",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSkeletalMeshSamplingRegionBoneFilter),
+				alignof(FSkeletalMeshSamplingRegionBoneFilter),
+				Z_Construct_UScriptStruct_FSkeletalMeshSamplingRegionBoneFilter_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

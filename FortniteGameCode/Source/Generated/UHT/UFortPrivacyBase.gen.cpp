@@ -25,10 +25,7 @@ void UFortPrivacyBase::StaticRegisterNativesUFortPrivacyBase()
 struct Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045ACA10; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "AddPrivacyButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E8290 (end 0x028E82BF)
 // Original VA: 0x00000001428E8290 | File offset: 0x028E7890
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,17 +34,13 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ACA10; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "AddPrivacyButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortPrivacyBase_ApplyPrivacySetting_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045ACA50; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPrivacyBase_ApplyPrivacySetting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "ApplyPrivacySetting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E82C0 (end 0x028E82EF)
 // Original VA: 0x00000001428E82C0 | File offset: 0x028E78C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +49,9 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_ApplyPrivacySetting()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPrivacyBase_ApplyPrivacySetting_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ACA50; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "ApplyPrivacySetting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +59,7 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_ApplyPrivacySetting()
 struct Z_Construct_UFunction_UFortPrivacyBase_HandleAllowFriendsButtonClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045ACAD0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPrivacyBase_HandleAllowFriendsButtonClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "HandleAllowFriendsButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortPrivacyBase_HandleAllowFriendsButtonClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E82F0 (end 0x028E831F)
 // Original VA: 0x00000001428E82F0 | File offset: 0x028E78F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +68,9 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_HandleAllowFriendsButtonClicke
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPrivacyBase_HandleAllowFriendsButtonClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ACAD0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "HandleAllowFriendsButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortPrivacyBase_HandleAllowFriendsButtonClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +78,7 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_HandleAllowFriendsButtonClicke
 struct Z_Construct_UFunction_UFortPrivacyBase_HandlePrivacyButtonSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045ACB90; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPrivacyBase_HandlePrivacyButtonSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "HandlePrivacyButtonSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x10, Z_Construct_UFunction_UFortPrivacyBase_HandlePrivacyButtonSelected_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E8320 (end 0x028E834F)
 // Original VA: 0x00000001428E8320 | File offset: 0x028E7920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +87,9 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_HandlePrivacyButtonSelected()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPrivacyBase_HandlePrivacyButtonSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ACB90; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "HandlePrivacyButtonSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x10, Z_Construct_UFunction_UFortPrivacyBase_HandlePrivacyButtonSelected_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +97,7 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_HandlePrivacyButtonSelected()
 struct Z_Construct_UFunction_UFortPrivacyBase_SetTencentBuild_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045ACC20; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPrivacyBase_SetTencentBuild_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "SetTencentBuild", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortPrivacyBase_SetTencentBuild_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E8350 (end 0x028E837F)
 // Original VA: 0x00000001428E8350 | File offset: 0x028E7950
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +106,9 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_SetTencentBuild()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPrivacyBase_SetTencentBuild_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ACC20; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrivacyBase, "SetTencentBuild", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortPrivacyBase_SetTencentBuild_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

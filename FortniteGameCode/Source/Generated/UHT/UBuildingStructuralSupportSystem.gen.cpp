@@ -23,10 +23,7 @@ void UBuildingStructuralSupportSystem::StaticRegisterNativesUBuildingStructuralS
 struct Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuildingGroundSupportedActors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042091B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuildingGroundSupportedActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBuildingStructuralSupportSystem, "GetLogicalBuildingGroundSupportedActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420405, 0x18, Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuildingGroundSupportedActors_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73190 (end 0x00F731BF)
 // Original VA: 0x0000000140F73190 | File offset: 0x00F72790
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuil
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuildingGroundSupportedActors_Statics::FuncParams);
+		// FuncParams: original RVA 0x042091B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UBuildingStructuralSupportSystem, "GetLogicalBuildingGroundSupportedActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420405, 0x18, Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuildingGroundSupportedActors_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuil
 struct Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActorStructurallySupported_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04209280; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActorStructurallySupported_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBuildingStructuralSupportSystem, "IsBuildingActorStructurallySupported", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActorStructurallySupported_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F731C0 (end 0x00F731EF)
 // Original VA: 0x0000000140F731C0 | File offset: 0x00F727C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActorStructurallySupported_Statics::FuncParams);
+		// FuncParams: original RVA 0x04209280; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UBuildingStructuralSupportSystem, "IsBuildingActorStructurallySupported", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActorStructurallySupported_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActo
 struct Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalBuildingActors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04209380; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalBuildingActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBuildingStructuralSupportSystem, "K2_GetLogicalBuildingActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420405, 0x18, Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalBuildingActors_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F731F0 (end 0x00F7321F)
 // Original VA: 0x0000000140F731F0 | File offset: 0x00F727F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalBuildingActors_Statics::FuncParams);
+		// FuncParams: original RVA 0x04209380; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UBuildingStructuralSupportSystem, "K2_GetLogicalBuildingActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420405, 0x18, Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalBuildingActors_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

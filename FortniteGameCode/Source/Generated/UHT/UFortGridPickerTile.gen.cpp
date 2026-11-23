@@ -18,12 +18,6 @@ void UFortGridPickerTile::StaticRegisterNativesUFortGridPickerTile()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortGridPickerTile_ForwardClicked_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04578770; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGridPickerTile_ForwardClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "ForwardClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3FF0 (end 0x028B401F)
 // Original VA: 0x00000001428B3FF0 | File offset: 0x028B35F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,17 +26,13 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_ForwardClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGridPickerTile_ForwardClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x04578770; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "ForwardClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortGridPickerTile_OnClicked_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045787B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGridPickerTile_OnClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "OnClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B4020 (end 0x028B404F)
 // Original VA: 0x00000001428B4020 | File offset: 0x028B3620
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -51,7 +41,9 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_OnClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGridPickerTile_OnClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045787B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "OnClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -59,10 +51,7 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_OnClicked()
 struct Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04578870; StructureSize 0xA0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "OnMouseEnter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0xA0, Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B4050 (end 0x028B407F)
 // Original VA: 0x00000001428B4050 | File offset: 0x028B3650
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -71,7 +60,9 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter_Statics::FuncParams);
+		// FuncParams: original RVA 0x04578870; StructureSize 0xA0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "OnMouseEnter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0xA0, Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -79,10 +70,7 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter()
 struct Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045788F0; StructureSize 0x68 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "OnMouseLeave", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x68, Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B4080 (end 0x028B40AF)
 // Original VA: 0x00000001428B4080 | File offset: 0x028B3680
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -91,7 +79,9 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave_Statics::FuncParams);
+		// FuncParams: original RVA 0x045788F0; StructureSize 0x68 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "OnMouseLeave", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x68, Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -99,10 +89,7 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave()
 struct Z_Construct_UFunction_UFortGridPickerTile_SetData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04578970; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGridPickerTile_SetData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "SetData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_UFortGridPickerTile_SetData_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B40B0 (end 0x028B40DF)
 // Original VA: 0x00000001428B40B0 | File offset: 0x028B36B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -111,7 +98,9 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_SetData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGridPickerTile_SetData_Statics::FuncParams);
+		// FuncParams: original RVA 0x04578970; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerTile, "SetData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_UFortGridPickerTile_SetData_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FCatalogMetaAssetInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE8A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCatalogMetaAssetInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCatalogMetaAssetInfo>();
 	}
-	// ReturnStructParams: original RVA 0x041C6130
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCatalogMetaAssetInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
-		nullptr,
-		&NewStructOps,
-		"CatalogMetaAssetInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCatalogMetaAssetInfo),
-		alignof(FCatalogMetaAssetInfo),
-		Z_Construct_UScriptStruct_FCatalogMetaAssetInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C2DA0 (end 0x007C2DCF)
 	// Original VA: 0x00000001407C2DA0 | File offset: 0x007C23A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCatalogMetaAssetInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCatalogMetaAssetInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C6130
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCatalogMetaAssetInfo_Statics::NewStructOps,
+				"CatalogMetaAssetInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCatalogMetaAssetInfo),
+				alignof(FCatalogMetaAssetInfo),
+				Z_Construct_UScriptStruct_FCatalogMetaAssetInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

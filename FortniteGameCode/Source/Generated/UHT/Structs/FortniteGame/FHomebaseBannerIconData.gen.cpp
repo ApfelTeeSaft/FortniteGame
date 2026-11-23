@@ -32,25 +32,12 @@ class UScriptStruct* FHomebaseBannerIconData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01004420 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FHomebaseBannerIconData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FHomebaseBannerIconData>();
 	}
-	// ReturnStructParams: original RVA 0x0429B800
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHomebaseBannerIconData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"HomebaseBannerIconData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FHomebaseBannerIconData),
-		alignof(FHomebaseBannerIconData),
-		Z_Construct_UScriptStruct_FHomebaseBannerIconData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010085E0 (end 0x0100860F)
 	// Original VA: 0x00000001410085E0 | File offset: 0x01007BE0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FHomebaseBannerIconData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FHomebaseBannerIconData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0429B800
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FHomebaseBannerIconData_Statics::NewStructOps,
+				"HomebaseBannerIconData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FHomebaseBannerIconData),
+				alignof(FHomebaseBannerIconData),
+				Z_Construct_UScriptStruct_FHomebaseBannerIconData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

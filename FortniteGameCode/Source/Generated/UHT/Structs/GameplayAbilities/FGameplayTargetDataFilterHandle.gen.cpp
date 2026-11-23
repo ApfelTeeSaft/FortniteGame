@@ -30,25 +30,12 @@ class UScriptStruct* FGameplayTargetDataFilterHandle::StaticStruct()
 	struct Z_Construct_UScriptStruct_FGameplayTargetDataFilterHandle_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055A810 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayTargetDataFilterHandle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayTargetDataFilterHandle>();
 	}
-	// ReturnStructParams: original RVA 0x041A27A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayTargetDataFilterHandle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayTargetDataFilterHandle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameplayTargetDataFilterHandle),
-		alignof(FGameplayTargetDataFilterHandle),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055CBF0 (end 0x0055CC1F)
 	// Original VA: 0x000000014055CBF0 | File offset: 0x0055C1F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FGameplayTargetDataFilterHandle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayTargetDataFilterHandle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A27A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayTargetDataFilterHandle_Statics::NewStructOps,
+				"GameplayTargetDataFilterHandle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameplayTargetDataFilterHandle),
+				alignof(FGameplayTargetDataFilterHandle),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

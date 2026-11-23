@@ -18,12 +18,6 @@ void AFortInventory::StaticRegisterNativesAFortInventory()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429E540; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInventory, "HandleInventoryLocalUpdate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007080 (end 0x010070AF)
 // Original VA: 0x0000000141007080 | File offset: 0x01006680
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,7 +26,9 @@ UFunction* Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429E540; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInventory, "HandleInventoryLocalUpdate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

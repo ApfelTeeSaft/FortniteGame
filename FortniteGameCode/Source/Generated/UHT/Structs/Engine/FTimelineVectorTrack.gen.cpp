@@ -31,25 +31,12 @@ class UScriptStruct* FTimelineVectorTrack::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EBEC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTimelineVectorTrack_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTimelineVectorTrack>();
 	}
-	// ReturnStructParams: original RVA 0x0452EAD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTimelineVectorTrack_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"TimelineVectorTrack",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FTimelineVectorTrack),
-		alignof(FTimelineVectorTrack),
-		Z_Construct_UScriptStruct_FTimelineVectorTrack_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDCA0 (end 0x024EDCCF)
 	// Original VA: 0x00000001424EDCA0 | File offset: 0x024ED2A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FTimelineVectorTrack::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTimelineVectorTrack_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0452EAD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTimelineVectorTrack_Statics::NewStructOps,
+				"TimelineVectorTrack",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FTimelineVectorTrack),
+				alignof(FTimelineVectorTrack),
+				Z_Construct_UScriptStruct_FTimelineVectorTrack_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

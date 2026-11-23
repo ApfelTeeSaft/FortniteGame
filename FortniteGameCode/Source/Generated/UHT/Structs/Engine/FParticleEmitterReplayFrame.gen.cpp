@@ -30,25 +30,12 @@ class UScriptStruct* FParticleEmitterReplayFrame::StaticStruct()
 	struct Z_Construct_UScriptStruct_FParticleEmitterReplayFrame_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A00B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FParticleEmitterReplayFrame_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FParticleEmitterReplayFrame>();
 	}
-	// ReturnStructParams: original RVA 0x044E0390
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FParticleEmitterReplayFrame_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ParticleEmitterReplayFrame",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FParticleEmitterReplayFrame),
-		alignof(FParticleEmitterReplayFrame),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2010 (end 0x024A203F)
 	// Original VA: 0x00000001424A2010 | File offset: 0x024A1610
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FParticleEmitterReplayFrame::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FParticleEmitterReplayFrame_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044E0390
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FParticleEmitterReplayFrame_Statics::NewStructOps,
+				"ParticleEmitterReplayFrame",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FParticleEmitterReplayFrame),
+				alignof(FParticleEmitterReplayFrame),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FFortCollectionBookXPData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC50C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortCollectionBookXPData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortCollectionBookXPData>();
 	}
-	// ReturnStructParams: original RVA 0x04259130
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortCollectionBookXPData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortCollectionBookXPData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortCollectionBookXPData),
-		alignof(FFortCollectionBookXPData),
-		Z_Construct_UScriptStruct_FFortCollectionBookXPData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC70B0 (end 0x00FC70DF)
 	// Original VA: 0x0000000140FC70B0 | File offset: 0x00FC66B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortCollectionBookXPData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortCollectionBookXPData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04259130
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortCollectionBookXPData_Statics::NewStructOps,
+				"FortCollectionBookXPData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortCollectionBookXPData),
+				alignof(FFortCollectionBookXPData),
+				Z_Construct_UScriptStruct_FFortCollectionBookXPData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

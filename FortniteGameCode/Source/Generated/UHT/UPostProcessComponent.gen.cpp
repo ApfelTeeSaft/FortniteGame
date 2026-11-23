@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0398E188, FClassParams RVA 0x0398E1E0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UPostProcessComponent();  // RVA 0x024B7F90 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B77B0 (end 0x024B77D2)
 // Original VA: 0x00000001424B77B0 | File offset: 0x024B6DB0
@@ -20,7 +20,7 @@ void UPostProcessComponent::StaticRegisterNativesUPostProcessComponent()
 
 struct Z_Construct_UFunction_UPostProcessComponent_AddOrUpdateBlendable_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044F40B0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B89D0 (end 0x024B89FF)
 // Original VA: 0x00000001424B89D0 | File offset: 0x024B7FD0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UPostProcessComponent_AddOrUpdateBlendable()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPostProcessComponent_AddOrUpdateBlendable_Statics::FuncParams);
+		// FuncParams: original RVA 0x044F40B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPostProcessComponent, "AddOrUpdateBlendable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x18, Z_Construct_UFunction_UPostProcessComponent_AddOrUpdateBlendable_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

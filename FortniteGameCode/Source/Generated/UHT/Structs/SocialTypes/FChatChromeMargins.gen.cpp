@@ -31,25 +31,12 @@ class UScriptStruct* FChatChromeMargins::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077F6C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FChatChromeMargins_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FChatChromeMargins>();
 	}
-	// ReturnStructParams: original RVA 0x041BF000
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FChatChromeMargins_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
-		nullptr,
-		&NewStructOps,
-		"ChatChromeMargins",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FChatChromeMargins),
-		alignof(FChatChromeMargins),
-		Z_Construct_UScriptStruct_FChatChromeMargins_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077FDA0 (end 0x0077FDCF)
 	// Original VA: 0x000000014077FDA0 | File offset: 0x0077F3A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FChatChromeMargins::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FChatChromeMargins_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BF000
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
+				nullptr,
+				&Z_Construct_UScriptStruct_FChatChromeMargins_Statics::NewStructOps,
+				"ChatChromeMargins",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FChatChromeMargins),
+				alignof(FChatChromeMargins),
+				Z_Construct_UScriptStruct_FChatChromeMargins_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

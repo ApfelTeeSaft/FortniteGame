@@ -22,10 +22,7 @@ void UColorBinding::StaticRegisterNativesUColorBinding()
 struct Z_Construct_UFunction_UColorBinding_GetLinearValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043BC3E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UColorBinding_GetLinearValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UColorBinding, "GetLinearValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40820401, 0x10, Z_Construct_UFunction_UColorBinding_GetLinearValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE71B0 (end 0x01BE71DF)
 // Original VA: 0x0000000141BE71B0 | File offset: 0x01BE67B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UColorBinding_GetLinearValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UColorBinding_GetLinearValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x043BC3E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UColorBinding, "GetLinearValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40820401, 0x10, Z_Construct_UFunction_UColorBinding_GetLinearValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UColorBinding_GetLinearValue()
 struct Z_Construct_UFunction_UColorBinding_GetSlateValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043BC460; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UColorBinding_GetSlateValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UColorBinding, "GetSlateValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x28, Z_Construct_UFunction_UColorBinding_GetSlateValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE71E0 (end 0x01BE720F)
 // Original VA: 0x0000000141BE71E0 | File offset: 0x01BE67E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UColorBinding_GetSlateValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UColorBinding_GetSlateValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x043BC460; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UColorBinding, "GetSlateValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x28, Z_Construct_UFunction_UColorBinding_GetSlateValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

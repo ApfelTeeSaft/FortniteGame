@@ -31,25 +31,12 @@ class UScriptStruct* FInterpControlPoint::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242EB90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FInterpControlPoint_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FInterpControlPoint>();
 	}
-	// ReturnStructParams: original RVA 0x04470F90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FInterpControlPoint_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"InterpControlPoint",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FInterpControlPoint),
-		alignof(FInterpControlPoint),
-		Z_Construct_UScriptStruct_FInterpControlPoint_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02430280 (end 0x024302AF)
 	// Original VA: 0x0000000142430280 | File offset: 0x0242F880
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FInterpControlPoint::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FInterpControlPoint_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04470F90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FInterpControlPoint_Statics::NewStructOps,
+				"InterpControlPoint",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FInterpControlPoint),
+				alignof(FInterpControlPoint),
+				Z_Construct_UScriptStruct_FInterpControlPoint_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

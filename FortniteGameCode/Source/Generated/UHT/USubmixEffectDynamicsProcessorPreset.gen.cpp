@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03B47FB8, FClassParams RVA 0x03B47FE0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_USubmixEffectDynamicsProcessorPreset();  // RVA 0x0255A170 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02559E80 (end 0x02559EA2)
 // Original VA: 0x0000000142559E80 | File offset: 0x02559480
@@ -20,7 +20,7 @@ void USubmixEffectDynamicsProcessorPreset::StaticRegisterNativesUSubmixEffectDyn
 
 struct Z_Construct_UFunction_USubmixEffectDynamicsProcessorPreset_SetSettings_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0453AAB0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A440 (end 0x0255A46F)
 // Original VA: 0x000000014255A440 | File offset: 0x02559A40
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_USubmixEffectDynamicsProcessorPreset_SetSetting
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USubmixEffectDynamicsProcessorPreset_SetSettings_Statics::FuncParams);
+		// FuncParams: original RVA 0x0453AAB0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USubmixEffectDynamicsProcessorPreset, "SetSettings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x28, Z_Construct_UFunction_USubmixEffectDynamicsProcessorPreset_SetSettings_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

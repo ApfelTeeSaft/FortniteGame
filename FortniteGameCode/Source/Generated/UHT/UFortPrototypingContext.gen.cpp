@@ -18,12 +18,6 @@ void UFortPrototypingContext::StaticRegisterNativesUFortPrototypingContext()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingStatusChanged__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043138B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingStatusChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrototypingContext, "OnPrototypingStatusChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B8C0 (end 0x0108B8EF)
 // Original VA: 0x000000014108B8C0 | File offset: 0x0108AEC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,7 +26,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingSt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingStatusChanged__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x043138B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrototypingContext, "OnPrototypingStatusChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -40,10 +36,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingSt
 struct Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043139C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrototypingContext, "GetPrototypingStatus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C760 (end 0x0108C78F)
 // Original VA: 0x000000014108C760 | File offset: 0x0108BD60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +45,9 @@ UFunction* Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus_Statics::FuncParams);
+		// FuncParams: original RVA 0x043139C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPrototypingContext, "GetPrototypingStatus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

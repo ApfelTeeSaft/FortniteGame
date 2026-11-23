@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03CB2360, FClassParams RVA 0x03CB23A0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortHUDElementWidget();  // RVA 0x028BBD90 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBA90 (end 0x028BBAB2)
 // Original VA: 0x00000001428BBA90 | File offset: 0x028BB090
@@ -21,7 +21,7 @@ void UFortHUDElementWidget::StaticRegisterNativesUFortHUDElementWidget()
 
 struct Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04584D50 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD240 (end 0x028BD26F)
 // Original VA: 0x00000001428BD240 | File offset: 0x028BC840
@@ -31,15 +31,13 @@ UFunction* Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibil
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04584D50; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHUDElementWidget, "HandleOnHUDElementVisibilityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x20, Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04584D90 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD270 (end 0x028BD29F)
 // Original VA: 0x00000001428BD270 | File offset: 0x028BC870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -48,14 +46,16 @@ UFunction* Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefault
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults_Statics::FuncParams);
+		// FuncParams: original RVA 0x04584D90; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHUDElementWidget, "HandleOnHUDResetToDefaults", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04584E50 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD2A0 (end 0x028BD2CF)
 // Original VA: 0x00000001428BD2A0 | File offset: 0x028BC8A0
@@ -65,7 +65,9 @@ UFunction* Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04584E50; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHUDElementWidget, "OnVisibilitySetEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

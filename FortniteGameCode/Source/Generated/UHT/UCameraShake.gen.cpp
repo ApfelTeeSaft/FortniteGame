@@ -21,10 +21,7 @@ void UCameraShake::StaticRegisterNativesUCameraShake()
 struct Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442F150; StructureSize 0xAF0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "BlueprintUpdateCameraShake", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xAF0, Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB180 (end 0x023EB1AF)
 // Original VA: 0x00000001423EB180 | File offset: 0x023EA780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442F150; StructureSize 0xAF0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "BlueprintUpdateCameraShake", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xAF0, Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake()
 struct Z_Construct_UFunction_UCameraShake_ReceiveIsFinished_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442F1E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCameraShake_ReceiveIsFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "ReceiveIsFinished", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x1, Z_Construct_UFunction_UCameraShake_ReceiveIsFinished_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB1B0 (end 0x023EB1DF)
 // Original VA: 0x00000001423EB1B0 | File offset: 0x023EA7B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UCameraShake_ReceiveIsFinished()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCameraShake_ReceiveIsFinished_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442F1E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "ReceiveIsFinished", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x1, Z_Construct_UFunction_UCameraShake_ReceiveIsFinished_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -61,10 +59,7 @@ UFunction* Z_Construct_UFunction_UCameraShake_ReceiveIsFinished()
 struct Z_Construct_UFunction_UCameraShake_ReceivePlayShake_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442F260; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCameraShake_ReceivePlayShake_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "ReceivePlayShake", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UCameraShake_ReceivePlayShake_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB1E0 (end 0x023EB20F)
 // Original VA: 0x00000001423EB1E0 | File offset: 0x023EA7E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +68,9 @@ UFunction* Z_Construct_UFunction_UCameraShake_ReceivePlayShake()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCameraShake_ReceivePlayShake_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442F260; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "ReceivePlayShake", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UCameraShake_ReceivePlayShake_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +78,7 @@ UFunction* Z_Construct_UFunction_UCameraShake_ReceivePlayShake()
 struct Z_Construct_UFunction_UCameraShake_ReceiveStopShake_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442F2F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCameraShake_ReceiveStopShake_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "ReceiveStopShake", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UCameraShake_ReceiveStopShake_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB210 (end 0x023EB23F)
 // Original VA: 0x00000001423EB210 | File offset: 0x023EA810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +87,9 @@ UFunction* Z_Construct_UFunction_UCameraShake_ReceiveStopShake()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCameraShake_ReceiveStopShake_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442F2F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCameraShake, "ReceiveStopShake", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UCameraShake_ReceiveStopShake_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

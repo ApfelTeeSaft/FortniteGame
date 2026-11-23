@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03D0AC80, FClassParams RVA 0x03D0ACA0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortRewardEpicQuestData();  // RVA 0x028ED5F0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECF20 (end 0x028ECF42)
 // Original VA: 0x00000001428ECF20 | File offset: 0x028EC520
@@ -20,7 +20,7 @@ void UFortRewardEpicQuestData::StaticRegisterNativesUFortRewardEpicQuestData()
 
 struct Z_Construct_UFunction_UFortRewardEpicQuestData_GetIconBrush_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045AFD30 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE390 (end 0x028EE3BF)
 // Original VA: 0x00000001428EE390 | File offset: 0x028ED990
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortRewardEpicQuestData_GetIconBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRewardEpicQuestData_GetIconBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AFD30; StructureSize 0x80 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRewardEpicQuestData, "GetIconBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420400, 0x80, Z_Construct_UFunction_UFortRewardEpicQuestData_GetIconBrush_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

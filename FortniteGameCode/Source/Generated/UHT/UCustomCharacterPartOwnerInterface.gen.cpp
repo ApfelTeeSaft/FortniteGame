@@ -22,10 +22,7 @@ void UCustomCharacterPartOwnerInterface::StaticRegisterNativesUCustomCharacterPa
 struct Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomizationRootSkeletalMeshComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420F260; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomizationRootSkeletalMeshComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartOwnerInterface, "GetCustomizationRootSkeletalMeshComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomizationRootSkeletalMeshComponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79600 (end 0x00F7962F)
 // Original VA: 0x0000000140F79600 | File offset: 0x00F78C00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomiza
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomizationRootSkeletalMeshComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420F260; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartOwnerInterface, "GetCustomizationRootSkeletalMeshComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomizationRootSkeletalMeshComponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomiza
 struct Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_PlayAnimationsMatchingQuery_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420F2E0; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_PlayAnimationsMatchingQuery_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartOwnerInterface, "PlayAnimationsMatchingQuery", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420400, 0x48, Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_PlayAnimationsMatchingQuery_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79630 (end 0x00F7965F)
 // Original VA: 0x0000000140F79630 | File offset: 0x00F78C30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_PlayAnimatio
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_PlayAnimationsMatchingQuery_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420F2E0; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartOwnerInterface, "PlayAnimationsMatchingQuery", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420400, 0x48, Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_PlayAnimationsMatchingQuery_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

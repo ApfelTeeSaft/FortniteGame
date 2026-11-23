@@ -31,25 +31,12 @@ class UScriptStruct* FMaterialProxySettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485BE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMaterialProxySettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMaterialProxySettings>();
 	}
-	// ReturnStructParams: original RVA 0x044C0920
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMaterialProxySettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"MaterialProxySettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMaterialProxySettings),
-		alignof(FMaterialProxySettings),
-		Z_Construct_UScriptStruct_FMaterialProxySettings_Statics::PropPointers, 28,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024874A0 (end 0x024874CF)
 	// Original VA: 0x00000001424874A0 | File offset: 0x02486AA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMaterialProxySettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMaterialProxySettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044C0920
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMaterialProxySettings_Statics::NewStructOps,
+				"MaterialProxySettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMaterialProxySettings),
+				alignof(FMaterialProxySettings),
+				Z_Construct_UScriptStruct_FMaterialProxySettings_Statics::PropPointers, 28,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

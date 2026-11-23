@@ -35,10 +35,7 @@ void UCommonButtonStyle::StaticRegisterNativesUCommonButtonStyle()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176260; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetButtonPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3990 (end 0x002C39BF)
 // Original VA: 0x00000001402C3990 | File offset: 0x002C2F90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -47,7 +44,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176260; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetButtonPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -55,10 +54,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetCustomPadding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041762E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetCustomPadding_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetCustomPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_UCommonButtonStyle_GetCustomPadding_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C39C0 (end 0x002C39EF)
 // Original VA: 0x00000001402C39C0 | File offset: 0x002C2FC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -67,7 +63,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetCustomPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetCustomPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x041762E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetCustomPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_UCommonButtonStyle_GetCustomPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -75,10 +73,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetCustomPadding()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetDisabledBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176360; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetDisabledBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetDisabledBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetDisabledBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C39F0 (end 0x002C3A1F)
 // Original VA: 0x00000001402C39F0 | File offset: 0x002C2FF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -87,7 +82,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetDisabledBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetDisabledBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176360; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetDisabledBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetDisabledBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -95,10 +92,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetDisabledBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetDisabledTextStyle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041763E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetDisabledTextStyle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetDisabledTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetDisabledTextStyle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3A20 (end 0x002C3A4F)
 // Original VA: 0x00000001402C3A20 | File offset: 0x002C3020
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -107,7 +101,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetDisabledTextStyle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetDisabledTextStyle_Statics::FuncParams);
+		// FuncParams: original RVA 0x041763E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetDisabledTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetDisabledTextStyle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -115,10 +111,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetDisabledTextStyle()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetMaterialBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176460; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetMaterialBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetMaterialBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetMaterialBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3A50 (end 0x002C3A7F)
 // Original VA: 0x00000001402C3A50 | File offset: 0x002C3050
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -127,7 +120,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetMaterialBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetMaterialBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176460; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetMaterialBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetMaterialBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -135,10 +130,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetMaterialBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetNormalBaseBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041764E0; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetNormalBaseBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalBaseBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetNormalBaseBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3A80 (end 0x002C3AAF)
 // Original VA: 0x00000001402C3A80 | File offset: 0x002C3080
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -147,7 +139,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalBaseBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetNormalBaseBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x041764E0; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalBaseBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetNormalBaseBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -155,10 +149,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalBaseBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176560; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalHoveredBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3AB0 (end 0x002C3ADF)
 // Original VA: 0x00000001402C3AB0 | File offset: 0x002C30B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -167,7 +158,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176560; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalHoveredBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -175,10 +168,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredTextStyle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041765E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredTextStyle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalHoveredTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredTextStyle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3AE0 (end 0x002C3B0F)
 // Original VA: 0x00000001402C3AE0 | File offset: 0x002C30E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -187,7 +177,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredTextStyle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredTextStyle_Statics::FuncParams);
+		// FuncParams: original RVA 0x041765E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalHoveredTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredTextStyle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -195,10 +187,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalHoveredTextStyle()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetNormalPressedBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176660; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetNormalPressedBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalPressedBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetNormalPressedBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3B10 (end 0x002C3B3F)
 // Original VA: 0x00000001402C3B10 | File offset: 0x002C3110
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -207,7 +196,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalPressedBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetNormalPressedBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176660; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalPressedBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetNormalPressedBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -215,10 +206,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalPressedBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetNormalTextStyle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041766E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetNormalTextStyle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetNormalTextStyle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3B40 (end 0x002C3B6F)
 // Original VA: 0x00000001402C3B40 | File offset: 0x002C3140
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -227,7 +215,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalTextStyle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetNormalTextStyle_Statics::FuncParams);
+		// FuncParams: original RVA 0x041766E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetNormalTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetNormalTextStyle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -235,10 +225,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetNormalTextStyle()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetSelectedBaseBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176760; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetSelectedBaseBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedBaseBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedBaseBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3B70 (end 0x002C3B9F)
 // Original VA: 0x00000001402C3B70 | File offset: 0x002C3170
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -247,7 +234,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedBaseBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedBaseBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176760; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedBaseBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedBaseBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -255,10 +244,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedBaseBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041767E0; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedHoveredBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3BA0 (end 0x002C3BCF)
 // Original VA: 0x00000001402C3BA0 | File offset: 0x002C31A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -267,7 +253,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x041767E0; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedHoveredBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -275,10 +263,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredTextStyle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176860; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredTextStyle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedHoveredTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredTextStyle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3BD0 (end 0x002C3BFF)
 // Original VA: 0x00000001402C3BD0 | File offset: 0x002C31D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -287,7 +272,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredTextStyle(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredTextStyle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176860; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedHoveredTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredTextStyle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -295,10 +282,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedHoveredTextStyle(
 struct Z_Construct_UFunction_UCommonButtonStyle_GetSelectedPressedBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041768E0; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetSelectedPressedBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedPressedBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedPressedBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3C00 (end 0x002C3C2F)
 // Original VA: 0x00000001402C3C00 | File offset: 0x002C3200
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -307,7 +291,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedPressedBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedPressedBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x041768E0; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedPressedBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x78, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedPressedBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -315,10 +301,7 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedPressedBrush()
 struct Z_Construct_UFunction_UCommonButtonStyle_GetSelectedTextStyle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04176960; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonButtonStyle_GetSelectedTextStyle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedTextStyle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C3C30 (end 0x002C3C5F)
 // Original VA: 0x00000001402C3C30 | File offset: 0x002C3230
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -327,7 +310,9 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedTextStyle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedTextStyle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04176960; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonButtonStyle, "GetSelectedTextStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCommonButtonStyle_GetSelectedTextStyle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

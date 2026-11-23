@@ -31,25 +31,12 @@ class UScriptStruct* FProcMeshTangent::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BA80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FProcMeshTangent_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FProcMeshTangent>();
 	}
-	// ReturnStructParams: original RVA 0x041BCCD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FProcMeshTangent_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_ProceduralMeshComponent,
-		nullptr,
-		&NewStructOps,
-		"ProcMeshTangent",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FProcMeshTangent),
-		alignof(FProcMeshTangent),
-		Z_Construct_UScriptStruct_FProcMeshTangent_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0069C130 (end 0x0069C15F)
 	// Original VA: 0x000000014069C130 | File offset: 0x0069B730
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FProcMeshTangent::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FProcMeshTangent_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BCCD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_ProceduralMeshComponent,
+				nullptr,
+				&Z_Construct_UScriptStruct_FProcMeshTangent_Statics::NewStructOps,
+				"ProcMeshTangent",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FProcMeshTangent),
+				alignof(FProcMeshTangent),
+				Z_Construct_UScriptStruct_FProcMeshTangent_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

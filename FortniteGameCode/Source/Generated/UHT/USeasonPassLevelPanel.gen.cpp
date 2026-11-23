@@ -22,10 +22,7 @@ void USeasonPassLevelPanel::StaticRegisterNativesUSeasonPassLevelPanel()
 struct Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6CC0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "GetLevelInfo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919EB0 (end 0x02919EDF)
 // Original VA: 0x0000000142919EB0 | File offset: 0x029194B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6CC0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "GetLevelInfo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo()
 struct Z_Construct_UFunction_USeasonPassLevelPanel_OnLockedStatusChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6DA0; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassLevelPanel_OnLockedStatusChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "OnLockedStatusChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_USeasonPassLevelPanel_OnLockedStatusChanged_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919EE0 (end 0x02919F0F)
 // Original VA: 0x0000000142919EE0 | File offset: 0x029194E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +50,13 @@ UFunction* Z_Construct_UFunction_USeasonPassLevelPanel_OnLockedStatusChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassLevelPanel_OnLockedStatusChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6DA0; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "OnLockedStatusChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_USeasonPassLevelPanel_OnLockedStatusChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USeasonPassLevelPanel_OnSetup_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045D6DE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassLevelPanel_OnSetup_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "OnSetup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919F10 (end 0x02919F3F)
 // Original VA: 0x0000000142919F10 | File offset: 0x02919510
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +65,9 @@ UFunction* Z_Construct_UFunction_USeasonPassLevelPanel_OnSetup()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassLevelPanel_OnSetup_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6DE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "OnSetup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +75,7 @@ UFunction* Z_Construct_UFunction_USeasonPassLevelPanel_OnSetup()
 struct Z_Construct_UFunction_USeasonPassLevelPanel_Setup_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6E60; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassLevelPanel_Setup_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "Setup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_USeasonPassLevelPanel_Setup_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02919F40 (end 0x02919F6F)
 // Original VA: 0x0000000142919F40 | File offset: 0x02919540
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +84,9 @@ UFunction* Z_Construct_UFunction_USeasonPassLevelPanel_Setup()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassLevelPanel_Setup_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6E60; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassLevelPanel, "Setup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_USeasonPassLevelPanel_Setup_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

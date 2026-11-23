@@ -29,10 +29,7 @@ void UFortKeybindWidget::StaticRegisterNativesUFortKeybindWidget()
 struct Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A4B0; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "GetBrushForKey", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x88, Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D10D0 (end 0x028D10FF)
 // Original VA: 0x00000001428D10D0 | File offset: 0x028D06D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +38,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A4B0; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "GetBrushForKey", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x88, Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +48,7 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey()
 struct Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A540; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "IsHoldKeybind", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D1100 (end 0x028D112F)
 // Original VA: 0x00000001428D1100 | File offset: 0x028D0700
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +57,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A540; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "IsHoldKeybind", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -69,10 +67,7 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind()
 struct Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A5C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetBoundAction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D1130 (end 0x028D115F)
 // Original VA: 0x00000001428D1130 | File offset: 0x028D0730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +76,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A5C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetBoundAction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +86,7 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction()
 struct Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A650; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetForcedHoldKeybind", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D1160 (end 0x028D118F)
 // Original VA: 0x00000001428D1160 | File offset: 0x028D0760
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +95,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A650; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetForcedHoldKeybind", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -109,10 +105,7 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind()
 struct Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A710; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetForcedHoldKeybindStatus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D1190 (end 0x028D11BF)
 // Original VA: 0x00000001428D1190 | File offset: 0x028D0790
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -121,7 +114,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A710; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetForcedHoldKeybindStatus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -129,10 +124,7 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus()
 struct Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A7A0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetShowProgressCountDown", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D11C0 (end 0x028D11EF)
 // Original VA: 0x00000001428D11C0 | File offset: 0x028D07C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -141,7 +133,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A7A0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "SetShowProgressCountDown", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -149,10 +143,7 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown()
 struct Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A850; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "StartHoldProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D11F0 (end 0x028D121F)
 // Original VA: 0x00000001428D11F0 | File offset: 0x028D07F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -161,7 +152,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A850; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "StartHoldProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -169,10 +162,7 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress()
 struct Z_Construct_UFunction_UFortKeybindWidget_StopHoldProgress_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459A910; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_StopHoldProgress_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "StopHoldProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortKeybindWidget_StopHoldProgress_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D1220 (end 0x028D124F)
 // Original VA: 0x00000001428D1220 | File offset: 0x028D0820
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,17 +171,13 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_StopHoldProgress()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_StopHoldProgress_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A910; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "StopHoldProgress", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortKeybindWidget_StopHoldProgress_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortKeybindWidget_Update_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0459A950; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_Update_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "Update", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D1250 (end 0x028D127F)
 // Original VA: 0x00000001428D1250 | File offset: 0x028D0850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -200,17 +186,13 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_Update()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_Update_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A950; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "Update", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortKeybindWidget_UpdateKeybindWidget_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0459A990; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortKeybindWidget_UpdateKeybindWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "UpdateKeybindWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D1280 (end 0x028D12AF)
 // Original VA: 0x00000001428D1280 | File offset: 0x028D0880
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -219,7 +201,9 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_UpdateKeybindWidget()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortKeybindWidget_UpdateKeybindWidget_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459A990; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortKeybindWidget, "UpdateKeybindWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

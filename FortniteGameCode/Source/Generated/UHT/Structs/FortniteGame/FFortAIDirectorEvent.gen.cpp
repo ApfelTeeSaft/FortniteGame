@@ -31,25 +31,12 @@ class UScriptStruct* FFortAIDirectorEvent::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC4F00 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAIDirectorEvent_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAIDirectorEvent>();
 	}
-	// ReturnStructParams: original RVA 0x0425A970
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAIDirectorEvent_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAIDirectorEvent",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAIDirectorEvent),
-		alignof(FFortAIDirectorEvent),
-		Z_Construct_UScriptStruct_FFortAIDirectorEvent_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC6EA0 (end 0x00FC6ECF)
 	// Original VA: 0x0000000140FC6EA0 | File offset: 0x00FC64A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAIDirectorEvent::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAIDirectorEvent_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0425A970
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAIDirectorEvent_Statics::NewStructOps,
+				"FortAIDirectorEvent",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAIDirectorEvent),
+				alignof(FFortAIDirectorEvent),
+				Z_Construct_UScriptStruct_FFortAIDirectorEvent_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

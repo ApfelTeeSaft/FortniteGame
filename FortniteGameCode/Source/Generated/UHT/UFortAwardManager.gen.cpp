@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x032C7BE8, FClassParams RVA 0x032C7C20.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortAwardManager();  // RVA 0x00FA3BB0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3410 (end 0x00FA3432)
 // Original VA: 0x0000000140FA3410 | File offset: 0x00FA2A10
@@ -20,7 +20,7 @@ void UFortAwardManager::StaticRegisterNativesUFortAwardManager()
 
 struct Z_Construct_UFunction_UFortAwardManager_GetSourceAndContextTags_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0423C9A0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3FB0 (end 0x00FA3FDF)
 // Original VA: 0x0000000140FA3FB0 | File offset: 0x00FA35B0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortAwardManager_GetSourceAndContextTags()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAwardManager_GetSourceAndContextTags_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423C9A0; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAwardManager, "GetSourceAndContextTags", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420405, 0x40, Z_Construct_UFunction_UFortAwardManager_GetSourceAndContextTags_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

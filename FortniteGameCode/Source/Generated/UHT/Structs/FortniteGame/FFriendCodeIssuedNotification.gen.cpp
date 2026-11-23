@@ -31,25 +31,12 @@ class UScriptStruct* FFriendCodeIssuedNotification::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF28F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFriendCodeIssuedNotification_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFriendCodeIssuedNotification>();
 	}
-	// ReturnStructParams: original RVA 0x042BF830
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFriendCodeIssuedNotification_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FriendCodeIssuedNotification",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFriendCodeIssuedNotification),
-		alignof(FFriendCodeIssuedNotification),
-		Z_Construct_UScriptStruct_FFriendCodeIssuedNotification_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01031D40 (end 0x01031D6F)
 	// Original VA: 0x0000000141031D40 | File offset: 0x01031340
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFriendCodeIssuedNotification::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFriendCodeIssuedNotification_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042BF830
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFriendCodeIssuedNotification_Statics::NewStructOps,
+				"FriendCodeIssuedNotification",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFriendCodeIssuedNotification),
+				alignof(FFriendCodeIssuedNotification),
+				Z_Construct_UScriptStruct_FFriendCodeIssuedNotification_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

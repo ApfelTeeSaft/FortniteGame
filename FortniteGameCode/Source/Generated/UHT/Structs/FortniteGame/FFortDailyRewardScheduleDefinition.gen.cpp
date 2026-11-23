@@ -31,25 +31,12 @@ class UScriptStruct* FFortDailyRewardScheduleDefinition::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA9F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortDailyRewardScheduleDefinition_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortDailyRewardScheduleDefinition>();
 	}
-	// ReturnStructParams: original RVA 0x0425F410
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortDailyRewardScheduleDefinition_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortDailyRewardScheduleDefinition",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortDailyRewardScheduleDefinition),
-		alignof(FFortDailyRewardScheduleDefinition),
-		Z_Construct_UScriptStruct_FFortDailyRewardScheduleDefinition_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCC9C0 (end 0x00FCC9EF)
 	// Original VA: 0x0000000140FCC9C0 | File offset: 0x00FCBFC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortDailyRewardScheduleDefinition::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortDailyRewardScheduleDefinition_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0425F410
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortDailyRewardScheduleDefinition_Statics::NewStructOps,
+				"FortDailyRewardScheduleDefinition",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortDailyRewardScheduleDefinition),
+				alignof(FFortDailyRewardScheduleDefinition),
+				Z_Construct_UScriptStruct_FFortDailyRewardScheduleDefinition_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

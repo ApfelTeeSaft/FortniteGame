@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_PoseBlendNode::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0B050 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_PoseBlendNode_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_PoseBlendNode>();
 	}
-	// ReturnStructParams: original RVA 0x043ADB50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_PoseBlendNode_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_PoseHandler,
-		&NewStructOps,
-		"AnimNode_PoseBlendNode",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_PoseBlendNode),
-		alignof(FAnimNode_PoseBlendNode),
-		Z_Construct_UScriptStruct_FAnimNode_PoseBlendNode_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0EF20 (end 0x01B0EF4F)
 	// Original VA: 0x0000000141B0EF20 | File offset: 0x01B0E520
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_PoseBlendNode::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_PoseBlendNode_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043ADB50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_PoseHandler,
+				&Z_Construct_UScriptStruct_FAnimNode_PoseBlendNode_Statics::NewStructOps,
+				"AnimNode_PoseBlendNode",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_PoseBlendNode),
+				alignof(FAnimNode_PoseBlendNode),
+				Z_Construct_UScriptStruct_FAnimNode_PoseBlendNode_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

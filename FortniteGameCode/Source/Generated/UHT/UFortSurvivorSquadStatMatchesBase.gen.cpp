@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase();  // RVA 0x02904B
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BF890; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "AddStatMatch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029050F0 (end 0x0290511F)
 // Original VA: 0x00000001429050F0 | File offset: 0x029046F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BF890; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "AddStatMatch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch(
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_GetIdOfSquadToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BF910; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_GetIdOfSquadToManageBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "GetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_GetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905120 (end 0x0290514F)
 // Original VA: 0x0000000142905120 | File offset: 0x02904720
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,17 +37,13 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_GetIdOfSquadT
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_GetIdOfSquadToManageBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BF910; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "GetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_GetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_HandleDifferentSquadSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045BF950; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_HandleDifferentSquadSetBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "HandleDifferentSquadSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905150 (end 0x0290517F)
 // Original VA: 0x0000000142905150 | File offset: 0x02904750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -60,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_HandleDiffere
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_HandleDifferentSquadSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BF950; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "HandleDifferentSquadSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -68,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_HandleDiffere
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BF9D0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadToManageBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "SetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905180 (end 0x029051AF)
 // Original VA: 0x0000000142905180 | File offset: 0x02904780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -80,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadT
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadToManageBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BF9D0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "SetIdOfSquadToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadToManageBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -88,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadT
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryView_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BFA60; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryView_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "SetSummaryView", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryView_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029051B0 (end 0x029051DF)
 // Original VA: 0x00000001429051B0 | File offset: 0x029047B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -100,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryVie
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryView_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BFA60; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "SetSummaryView", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryView_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -108,10 +100,7 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryVie
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticSquadDataBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045BFB30; StructureSize 0x90 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticSquadDataBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "TryGetStaticSquadDataBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x90, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticSquadDataBP_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029051E0 (end 0x0290520F)
 // Original VA: 0x00000001429051E0 | File offset: 0x029047E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -120,7 +109,9 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticSquadDataBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045BFB30; StructureSize 0x90 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase, "TryGetStaticSquadDataBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x90, Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticSquadDataBP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

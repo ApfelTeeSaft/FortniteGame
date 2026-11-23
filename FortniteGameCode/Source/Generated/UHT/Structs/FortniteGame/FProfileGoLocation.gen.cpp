@@ -31,25 +31,12 @@ class UScriptStruct* FProfileGoLocation::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108A3A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FProfileGoLocation_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FProfileGoLocation>();
 	}
-	// ReturnStructParams: original RVA 0x04312920
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FProfileGoLocation_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ProfileGoLocation",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FProfileGoLocation),
-		alignof(FProfileGoLocation),
-		Z_Construct_UScriptStruct_FProfileGoLocation_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108CAF0 (end 0x0108CB1F)
 	// Original VA: 0x000000014108CAF0 | File offset: 0x0108C0F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FProfileGoLocation::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FProfileGoLocation_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04312920
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FProfileGoLocation_Statics::NewStructOps,
+				"ProfileGoLocation",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FProfileGoLocation),
+				alignof(FProfileGoLocation),
+				Z_Construct_UScriptStruct_FProfileGoLocation_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

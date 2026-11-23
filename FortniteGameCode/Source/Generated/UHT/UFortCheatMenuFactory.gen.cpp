@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03C75F28, FClassParams RVA 0x03C75F50.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortCheatMenuFactory();  // RVA 0x028945E0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894190 (end 0x028941B2)
 // Original VA: 0x0000000142894190 | File offset: 0x02893790
@@ -21,7 +21,7 @@ void UFortCheatMenuFactory::StaticRegisterNativesUFortCheatMenuFactory()
 
 struct Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0455D0E0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028952E0 (end 0x0289530F)
 // Original VA: 0x00000001428952E0 | File offset: 0x028948E0
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455D0E0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCheatMenuFactory, "AddGrantCheatMenu", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0455D160 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895310 (end 0x0289533F)
 // Original VA: 0x0000000142895310 | File offset: 0x02894910
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455D160; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCheatMenuFactory, "AddStoreCheatMenu", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x8, Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

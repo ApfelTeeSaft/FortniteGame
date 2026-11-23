@@ -22,12 +22,6 @@ void UCommonTextBlock::StaticRegisterNativesUCommonTextBlock()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UCommonTextBlock_ResetScrollState_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04180120; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTextBlock_ResetScrollState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "ResetScrollState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBAF0 (end 0x002CBB1F)
 // Original VA: 0x00000001402CBAF0 | File offset: 0x002CB0F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +30,9 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_ResetScrollState()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTextBlock_ResetScrollState_Statics::FuncParams);
+		// FuncParams: original RVA 0x04180120; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "ResetScrollState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +40,7 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_ResetScrollState()
 struct Z_Construct_UFunction_UCommonTextBlock_SetProperties_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04180200; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTextBlock_SetProperties_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetProperties", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonTextBlock_SetProperties_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBB20 (end 0x002CBB4F)
 // Original VA: 0x00000001402CBB20 | File offset: 0x002CB120
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +49,9 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetProperties()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTextBlock_SetProperties_Statics::FuncParams);
+		// FuncParams: original RVA 0x04180200; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetProperties", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonTextBlock_SetProperties_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +59,7 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetProperties()
 struct Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04180290; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetScrollStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBB50 (end 0x002CBB7F)
 // Original VA: 0x00000001402CBB50 | File offset: 0x002CB150
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +68,9 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04180290; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetScrollStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +78,7 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle()
 struct Z_Construct_UFunction_UCommonTextBlock_SetStyle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04180320; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTextBlock_SetStyle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonTextBlock_SetStyle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBB80 (end 0x002CBBAF)
 // Original VA: 0x00000001402CBB80 | File offset: 0x002CB180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +87,9 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetStyle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTextBlock_SetStyle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04180320; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetStyle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonTextBlock_SetStyle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +97,7 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetStyle()
 struct Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041803A0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetWrapTextWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBBB0 (end 0x002CBBDF)
 // Original VA: 0x00000001402CBBB0 | File offset: 0x002CB1B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +106,9 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth_Statics::FuncParams);
+		// FuncParams: original RVA 0x041803A0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTextBlock, "SetWrapTextWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

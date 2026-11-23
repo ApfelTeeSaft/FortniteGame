@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0395BAD0, FClassParams RVA 0x0395BB00.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_ANavModifierVolume();  // RVA 0x0248F7D0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F320 (end 0x0248F342)
 // Original VA: 0x000000014248F320 | File offset: 0x0248E920
@@ -20,7 +20,7 @@ void ANavModifierVolume::StaticRegisterNativesANavModifierVolume()
 
 struct Z_Construct_UFunction_ANavModifierVolume_SetAreaClass_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044CE140 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248FEB0 (end 0x0248FEDF)
 // Original VA: 0x000000014248FEB0 | File offset: 0x0248F4B0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_ANavModifierVolume_SetAreaClass()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANavModifierVolume_SetAreaClass_Statics::FuncParams);
+		// FuncParams: original RVA 0x044CE140; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ANavModifierVolume, "SetAreaClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_ANavModifierVolume_SetAreaClass_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

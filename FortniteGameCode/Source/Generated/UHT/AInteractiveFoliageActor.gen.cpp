@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03611CD8, FClassParams RVA 0x03611D70.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AInteractiveFoliageActor();  // RVA 0x01A489C0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48780 (end 0x01A487A2)
 // Original VA: 0x0000000141A48780 | File offset: 0x01A47D80
@@ -20,7 +20,7 @@ void AInteractiveFoliageActor::StaticRegisterNativesAInteractiveFoliageActor()
 
 struct Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0439B1B0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48D30 (end 0x01A48D5F)
 // Original VA: 0x0000000141A48D30 | File offset: 0x01A48330
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched_Statics::FuncParams);
+		// FuncParams: original RVA 0x0439B1B0; StructureSize 0xA8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AInteractiveFoliageActor, "CapsuleTouched", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0xA8, Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

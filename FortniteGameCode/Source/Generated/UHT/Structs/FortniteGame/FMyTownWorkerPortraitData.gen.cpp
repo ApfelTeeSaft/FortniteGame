@@ -31,25 +31,12 @@ class UScriptStruct* FMyTownWorkerPortraitData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0A40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMyTownWorkerPortraitData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMyTownWorkerPortraitData>();
 	}
-	// ReturnStructParams: original RVA 0x04365080
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMyTownWorkerPortraitData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"MyTownWorkerPortraitData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FMyTownWorkerPortraitData),
-		alignof(FMyTownWorkerPortraitData),
-		Z_Construct_UScriptStruct_FMyTownWorkerPortraitData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2620 (end 0x010F264F)
 	// Original VA: 0x00000001410F2620 | File offset: 0x010F1C20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMyTownWorkerPortraitData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMyTownWorkerPortraitData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04365080
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMyTownWorkerPortraitData_Statics::NewStructOps,
+				"MyTownWorkerPortraitData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FMyTownWorkerPortraitData),
+				alignof(FMyTownWorkerPortraitData),
+				Z_Construct_UScriptStruct_FMyTownWorkerPortraitData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -23,10 +23,7 @@ void UFortTieredCollectionLayout::StaticRegisterNativesUFortTieredCollectionLayo
 struct Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayoutDisplayName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04334E50; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayoutDisplayName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTieredCollectionLayout, "GetCollectionLayoutDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayoutDisplayName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF1A0 (end 0x010BF1CF)
 // Original VA: 0x00000001410BF1A0 | File offset: 0x010BE7A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayout
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayoutDisplayName_Statics::FuncParams);
+		// FuncParams: original RVA 0x04334E50; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTieredCollectionLayout, "GetCollectionLayoutDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayoutDisplayName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayout
 struct Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsForTier_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04334F00; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsForTier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTieredCollectionLayout, "GetMissionPointsForTier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsForTier_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF1D0 (end 0x010BF1FF)
 // Original VA: 0x00000001410BF1D0 | File offset: 0x010BE7D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsFor
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsForTier_Statics::FuncParams);
+		// FuncParams: original RVA 0x04334F00; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTieredCollectionLayout, "GetMissionPointsForTier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsForTier_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsFor
 struct Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRandomSeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04334F90; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRandomSeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTieredCollectionLayout, "ShouldUseTierAsRandomSeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRandomSeed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF200 (end 0x010BF22F)
 // Original VA: 0x00000001410BF200 | File offset: 0x010BE800
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRand
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRandomSeed_Statics::FuncParams);
+		// FuncParams: original RVA 0x04334F90; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTieredCollectionLayout, "ShouldUseTierAsRandomSeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRandomSeed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

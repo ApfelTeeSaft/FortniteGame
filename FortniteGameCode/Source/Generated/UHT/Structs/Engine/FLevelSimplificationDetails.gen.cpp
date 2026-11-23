@@ -31,25 +31,12 @@ class UScriptStruct* FLevelSimplificationDetails::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FB30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLevelSimplificationDetails_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelSimplificationDetails>();
 	}
-	// ReturnStructParams: original RVA 0x044ADEA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelSimplificationDetails_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LevelSimplificationDetails",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FLevelSimplificationDetails),
-		alignof(FLevelSimplificationDetails),
-		Z_Construct_UScriptStruct_FLevelSimplificationDetails_Statics::PropPointers, 16,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024717C0 (end 0x024717EF)
 	// Original VA: 0x00000001424717C0 | File offset: 0x02470DC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLevelSimplificationDetails::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLevelSimplificationDetails_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044ADEA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLevelSimplificationDetails_Statics::NewStructOps,
+				"LevelSimplificationDetails",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FLevelSimplificationDetails),
+				alignof(FLevelSimplificationDetails),
+				Z_Construct_UScriptStruct_FLevelSimplificationDetails_Statics::PropPointers, 16,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

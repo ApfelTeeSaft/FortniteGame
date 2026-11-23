@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortAIEncounterTargetInterface();  // RVA 0x00F91400
 struct Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCompletionPercentage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04228740; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCompletionPercentage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIEncounterTargetInterface, "GetObjectiveCompletionPercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCompletionPercentage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F926D0 (end 0x00F926FF)
 // Original VA: 0x0000000140F926D0 | File offset: 0x00F91CD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCom
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCompletionPercentage_Statics::FuncParams);
+		// FuncParams: original RVA 0x04228740; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIEncounterTargetInterface, "GetObjectiveCompletionPercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCompletionPercentage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCom
 struct Z_Construct_UFunction_UFortAIEncounterTargetInterface_IsFloatingTarget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042287D0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAIEncounterTargetInterface_IsFloatingTarget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIEncounterTargetInterface, "IsFloatingTarget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UFortAIEncounterTargetInterface_IsFloatingTarget_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F92700 (end 0x00F9272F)
 // Original VA: 0x0000000140F92700 | File offset: 0x00F91D00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterTargetInterface_IsFloatingTarge
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAIEncounterTargetInterface_IsFloatingTarget_Statics::FuncParams);
+		// FuncParams: original RVA 0x042287D0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAIEncounterTargetInterface, "IsFloatingTarget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UFortAIEncounterTargetInterface_IsFloatingTarget_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

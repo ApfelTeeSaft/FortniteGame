@@ -31,25 +31,12 @@ class UScriptStruct* FFortTransmogResultNotification::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102D810 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTransmogResultNotification_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTransmogResultNotification>();
 	}
-	// ReturnStructParams: original RVA 0x042C0050
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTransmogResultNotification_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTransmogResultNotification",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortTransmogResultNotification),
-		alignof(FFortTransmogResultNotification),
-		Z_Construct_UScriptStruct_FFortTransmogResultNotification_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01031CE0 (end 0x01031D0F)
 	// Original VA: 0x0000000141031CE0 | File offset: 0x010312E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTransmogResultNotification::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTransmogResultNotification_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C0050
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTransmogResultNotification_Statics::NewStructOps,
+				"FortTransmogResultNotification",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortTransmogResultNotification),
+				alignof(FFortTransmogResultNotification),
+				Z_Construct_UScriptStruct_FFortTransmogResultNotification_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

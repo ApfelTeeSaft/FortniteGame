@@ -18,12 +18,6 @@ void AWorldSettings::StaticRegisterNativesAWorldSettings()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04534DB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWorldSettings, "OnRep_WorldGravityZ", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0E20 (end 0x024F0E4F)
 // Original VA: 0x00000001424F0E20 | File offset: 0x024F0420
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,7 +26,9 @@ UFunction* Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ_Statics::FuncParams);
+		// FuncParams: original RVA 0x04534DB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AWorldSettings, "OnRep_WorldGravityZ", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

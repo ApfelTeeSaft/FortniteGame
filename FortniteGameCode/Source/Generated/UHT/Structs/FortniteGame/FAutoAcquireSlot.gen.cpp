@@ -31,25 +31,12 @@ class UScriptStruct* FAutoAcquireSlot::StaticStruct()
 	struct Z_Construct_UScriptStruct_FAutoAcquireSlot_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90570 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAutoAcquireSlot_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAutoAcquireSlot>();
 	}
-	// ReturnStructParams: original RVA 0x0422AD00
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAutoAcquireSlot_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FAIHotSpotSlotInfo,
-		&NewStructOps,
-		"AutoAcquireSlot",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAutoAcquireSlot),
-		alignof(FAutoAcquireSlot),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F92880 (end 0x00F928AF)
 	// Original VA: 0x0000000140F92880 | File offset: 0x00F91E80
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAutoAcquireSlot::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAutoAcquireSlot_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0422AD00
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FAIHotSpotSlotInfo,
+				&Z_Construct_UScriptStruct_FAutoAcquireSlot_Statics::NewStructOps,
+				"AutoAcquireSlot",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAutoAcquireSlot),
+				alignof(FAutoAcquireSlot),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

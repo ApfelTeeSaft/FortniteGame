@@ -31,25 +31,12 @@ class UScriptStruct* FFortQuestObjectiveCompletion::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109CE20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortQuestObjectiveCompletion_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortQuestObjectiveCompletion>();
 	}
-	// ReturnStructParams: original RVA 0x04320AB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortQuestObjectiveCompletion_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortQuestObjectiveCompletion",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortQuestObjectiveCompletion),
-		alignof(FFortQuestObjectiveCompletion),
-		Z_Construct_UScriptStruct_FFortQuestObjectiveCompletion_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E890 (end 0x0109E8BF)
 	// Original VA: 0x000000014109E890 | File offset: 0x0109DE90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortQuestObjectiveCompletion::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortQuestObjectiveCompletion_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04320AB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortQuestObjectiveCompletion_Statics::NewStructOps,
+				"FortQuestObjectiveCompletion",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortQuestObjectiveCompletion),
+				alignof(FFortQuestObjectiveCompletion),
+				Z_Construct_UScriptStruct_FFortQuestObjectiveCompletion_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

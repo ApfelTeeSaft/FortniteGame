@@ -31,25 +31,12 @@ class UScriptStruct* FAssetAttachment::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105C960 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAssetAttachment_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAssetAttachment>();
 	}
-	// ReturnStructParams: original RVA 0x042E64B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAssetAttachment_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AssetAttachment",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FAssetAttachment),
-		alignof(FAssetAttachment),
-		Z_Construct_UScriptStruct_FAssetAttachment_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105F640 (end 0x0105F66F)
 	// Original VA: 0x000000014105F640 | File offset: 0x0105EC40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAssetAttachment::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAssetAttachment_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042E64B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAssetAttachment_Statics::NewStructOps,
+				"AssetAttachment",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FAssetAttachment),
+				alignof(FAssetAttachment),
+				Z_Construct_UScriptStruct_FAssetAttachment_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

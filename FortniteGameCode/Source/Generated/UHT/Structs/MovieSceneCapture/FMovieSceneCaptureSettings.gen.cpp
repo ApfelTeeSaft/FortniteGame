@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneCaptureSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D59F90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneCaptureSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneCaptureSettings>();
 	}
-	// ReturnStructParams: original RVA 0x043FFF10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneCaptureSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneCapture,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneCaptureSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FMovieSceneCaptureSettings),
-		alignof(FMovieSceneCaptureSettings),
-		Z_Construct_UScriptStruct_FMovieSceneCaptureSettings_Statics::PropPointers, 16,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5A610 (end 0x01D5A63F)
 	// Original VA: 0x0000000141D5A610 | File offset: 0x01D59C10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneCaptureSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneCaptureSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FFF10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneCapture,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneCaptureSettings_Statics::NewStructOps,
+				"MovieSceneCaptureSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FMovieSceneCaptureSettings),
+				alignof(FMovieSceneCaptureSettings),
+				Z_Construct_UScriptStruct_FMovieSceneCaptureSettings_Statics::PropPointers, 16,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x033E6DC0, FClassParams RVA 0x033E6E10.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortQuestCategory();  // RVA 0x010964A0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01095E40 (end 0x01095E62)
 // Original VA: 0x0000000141095E40 | File offset: 0x01095440
@@ -21,7 +21,7 @@ void UFortQuestCategory::StaticRegisterNativesUFortQuestCategory()
 
 struct Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0431D900 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010969C0 (end 0x010969EF)
 // Original VA: 0x00000001410969C0 | File offset: 0x01095FC0
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount_Statics::FuncParams);
+		// FuncParams: original RVA 0x0431D900; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestCategory, "GetUnseenQuestCount", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0431D990 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010969F0 (end 0x01096A1F)
 // Original VA: 0x00000001410969F0 | File offset: 0x01095FF0
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests_Statics::FuncParams);
+		// FuncParams: original RVA 0x0431D990; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestCategory, "HasUnseenQuests", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

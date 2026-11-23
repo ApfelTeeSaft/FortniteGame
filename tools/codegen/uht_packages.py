@@ -157,24 +157,26 @@ def main() -> int:
                 f"// Package-scope delegate {name} of {pname}: its UFunction creator in UHT 4.20 output shape.\n\n"
                 '#include "FortniteGameCode/UHTRecovered.h"\n\n'
                 f"\tUPackage* {pkg_fn}();  // RVA 0x{prva:08X}\n"
-                + (f"\tUFunction* {super_expr}();\n" if superf else "") +
-                f"\tstruct {statics}\n\t{{\n{prop_decl}"
-                f"\t\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;\n\t}};\n"
-                f"\t// FuncParams: original RVA 0x{rec:08X}\n"
-                f"\tconst UE4CodeGen_Private::FFunctionParams {statics}::FuncParams = {{ (UObject*(*)()){pkg_fn}, "
-                f"\"{name}\", {OBJECT_FLAGS.get(oflags, f'(EObjectFlags)0x{oflags:08X}')}, {super_expr}, "
-                f"(EFunctionFlags)0x{fflags:08X}, 0x{size:X}, {prop_expr}, {rpc}, {rpcr} }};\n"
+                + (f"\tUFunction* {super_expr}();\n" if superf else "")
+                # FuncParams is a static local of the creator, as in the reference's generated code
+                # (see tools/codegen/uht_creators.py); PropPointers stays a declared member.
+                + (f"\tstruct {statics}\n\t{{\n{prop_decl}\t}};\n" if prop_decl else "") +
                 f"\t// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
                 f"\t// Original VA: 0x{base + crva:016X} | File offset: 0x{img.rva_to_off(crva):08X}\n"
                 f"\t// Recovery: confirmed (listed by {pkg_fn}'s SingletonFuncArray) | "
                 "Matching: see analysis/functions-uht-package-delegates.json\n"
                 f"\tUFunction* {cname}()\n\t{{\n\t\tstatic UFunction* ReturnFunction = nullptr;\n"
                 f"\t\tif (!ReturnFunction)\n\t\t{{\n"
-                f"\t\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, {statics}::FuncParams);\n\t\t}}\n"
+                f"\t\t\t// FuncParams: original RVA 0x{rec:08X}\n"
+                f"\t\t\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams = {{ (UObject*(*)()){pkg_fn}, "
+                f"\"{name}\", {OBJECT_FLAGS.get(oflags, f'(EObjectFlags)0x{oflags:08X}')}, {super_expr}, "
+                f"(EFunctionFlags)0x{fflags:08X}, 0x{size:X}, {prop_expr}, {rpc}, {rpcr} }};\n"
+                f"\t\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);\n\t\t}}\n"
                 "\t\treturn ReturnFunction;\n\t}\n")
             del_entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}", "name": cname,
                                 "package": short, "delegate": name, "unit": units[("delegate", f"{pname}:{name}")]})
-            symbols[f"?FuncParams@{statics}@@2UFFunctionParams@UE4CodeGen_Private@@B"] = [f"0x{rec:08X}", "name+package"]
+            symbols[f"?FuncParams@?4??{cname}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B"] = [
+                f"0x{rec:08X}", "name+package"]
             stats["package_delegates"] += 1
 
     # Package singletons.

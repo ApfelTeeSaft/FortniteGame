@@ -32,25 +32,12 @@ class UScriptStruct* FBlueprintInputTouchDelegateBinding::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427360 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBlueprintInputTouchDelegateBinding_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBlueprintInputTouchDelegateBinding>();
 	}
-	// ReturnStructParams: original RVA 0x0446E2D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBlueprintInputTouchDelegateBinding_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding,
-		&NewStructOps,
-		"BlueprintInputTouchDelegateBinding",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FBlueprintInputTouchDelegateBinding),
-		alignof(FBlueprintInputTouchDelegateBinding),
-		Z_Construct_UScriptStruct_FBlueprintInputTouchDelegateBinding_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428D00 (end 0x02428D2F)
 	// Original VA: 0x0000000142428D00 | File offset: 0x02428300
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FBlueprintInputTouchDelegateBinding::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBlueprintInputTouchDelegateBinding_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0446E2D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding,
+				&Z_Construct_UScriptStruct_FBlueprintInputTouchDelegateBinding_Statics::NewStructOps,
+				"BlueprintInputTouchDelegateBinding",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FBlueprintInputTouchDelegateBinding),
+				alignof(FBlueprintInputTouchDelegateBinding),
+				Z_Construct_UScriptStruct_FBlueprintInputTouchDelegateBinding_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

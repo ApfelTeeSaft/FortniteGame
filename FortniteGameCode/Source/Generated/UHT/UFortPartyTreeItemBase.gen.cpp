@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortPartyTreeItemBase();  // RVA 0x028E6B00 (consens
 struct Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A7970; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPartyTreeItemBase, "ExpansionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7180 (end 0x028E71AF)
 // Original VA: 0x00000001428E7180 | File offset: 0x028E6780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,17 +18,13 @@ UFunction* Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A7970; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPartyTreeItemBase, "ExpansionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortPartyTreeItemBase_OnSocialItemSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045A79B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPartyTreeItemBase_OnSocialItemSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPartyTreeItemBase, "OnSocialItemSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E71B0 (end 0x028E71DF)
 // Original VA: 0x00000001428E71B0 | File offset: 0x028E67B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -40,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortPartyTreeItemBase_OnSocialItemSet()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPartyTreeItemBase_OnSocialItemSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A79B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPartyTreeItemBase, "OnSocialItemSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

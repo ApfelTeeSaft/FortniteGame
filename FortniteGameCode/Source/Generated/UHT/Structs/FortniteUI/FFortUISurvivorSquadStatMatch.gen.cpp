@@ -31,25 +31,12 @@ class UScriptStruct* FFortUISurvivorSquadStatMatch::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02903E60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortUISurvivorSquadStatMatch_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortUISurvivorSquadStatMatch>();
 	}
-	// ReturnStructParams: original RVA 0x045BF740
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortUISurvivorSquadStatMatch_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortUISurvivorSquadStatMatch",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortUISurvivorSquadStatMatch),
-		alignof(FFortUISurvivorSquadStatMatch),
-		Z_Construct_UScriptStruct_FFortUISurvivorSquadStatMatch_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02905E40 (end 0x02905E6F)
 	// Original VA: 0x0000000142905E40 | File offset: 0x02905440
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortUISurvivorSquadStatMatch::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortUISurvivorSquadStatMatch_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045BF740
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortUISurvivorSquadStatMatch_Statics::NewStructOps,
+				"FortUISurvivorSquadStatMatch",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortUISurvivorSquadStatMatch),
+				alignof(FFortUISurvivorSquadStatMatch),
+				Z_Construct_UScriptStruct_FFortUISurvivorSquadStatMatch_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

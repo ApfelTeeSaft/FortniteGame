@@ -32,25 +32,12 @@ class UScriptStruct* FTeamFOBCoreBuildingEntryArray::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2750 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTeamFOBCoreBuildingEntryArray_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTeamFOBCoreBuildingEntryArray>();
 	}
-	// ReturnStructParams: original RVA 0x0432E050
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTeamFOBCoreBuildingEntryArray_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializer,
-		&NewStructOps,
-		"TeamFOBCoreBuildingEntryArray",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTeamFOBCoreBuildingEntryArray),
-		alignof(FTeamFOBCoreBuildingEntryArray),
-		Z_Construct_UScriptStruct_FTeamFOBCoreBuildingEntryArray_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B45F0 (end 0x010B461F)
 	// Original VA: 0x00000001410B45F0 | File offset: 0x010B3BF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTeamFOBCoreBuildingEntryArray::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTeamFOBCoreBuildingEntryArray_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432E050
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializer,
+				&Z_Construct_UScriptStruct_FTeamFOBCoreBuildingEntryArray_Statics::NewStructOps,
+				"TeamFOBCoreBuildingEntryArray",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTeamFOBCoreBuildingEntryArray),
+				alignof(FTeamFOBCoreBuildingEntryArray),
+				Z_Construct_UScriptStruct_FTeamFOBCoreBuildingEntryArray_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

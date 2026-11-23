@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortPermaniteStructureInterface();  // RVA 0x010658F
 struct Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042ED6D0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPermaniteStructureInterface, "OnBoundariesChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0xC, Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesChanged_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065FC0 (end 0x01065FEF)
 // Original VA: 0x0000000141065FC0 | File offset: 0x010655C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesCh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x042ED6D0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPermaniteStructureInterface, "OnBoundariesChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0xC, Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesChanged_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

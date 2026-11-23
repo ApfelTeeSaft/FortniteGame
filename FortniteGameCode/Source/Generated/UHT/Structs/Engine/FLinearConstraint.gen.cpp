@@ -32,25 +32,12 @@ class UScriptStruct* FLinearConstraint::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6D80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLinearConstraint_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLinearConstraint>();
 	}
-	// ReturnStructParams: original RVA 0x0443E1C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLinearConstraint_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FConstraintBaseParams,
-		&NewStructOps,
-		"LinearConstraint",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FLinearConstraint),
-		alignof(FLinearConstraint),
-		Z_Construct_UScriptStruct_FLinearConstraint_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F8D50 (end 0x023F8D7F)
 	// Original VA: 0x00000001423F8D50 | File offset: 0x023F8350
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FLinearConstraint::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLinearConstraint_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0443E1C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FConstraintBaseParams,
+				&Z_Construct_UScriptStruct_FLinearConstraint_Statics::NewStructOps,
+				"LinearConstraint",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FLinearConstraint),
+				alignof(FLinearConstraint),
+				Z_Construct_UScriptStruct_FLinearConstraint_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

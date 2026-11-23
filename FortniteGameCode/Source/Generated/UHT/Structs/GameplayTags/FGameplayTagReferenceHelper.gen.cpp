@@ -30,25 +30,12 @@ class UScriptStruct* FGameplayTagReferenceHelper::StaticStruct()
 	struct Z_Construct_UScriptStruct_FGameplayTagReferenceHelper_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C93050 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayTagReferenceHelper_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayTagReferenceHelper>();
 	}
-	// ReturnStructParams: original RVA 0x043E1BF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayTagReferenceHelper_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
-		nullptr,
-		&NewStructOps,
-		"GameplayTagReferenceHelper",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGameplayTagReferenceHelper),
-		alignof(FGameplayTagReferenceHelper),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C94210 (end 0x01C9423F)
 	// Original VA: 0x0000000141C94210 | File offset: 0x01C93810
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FGameplayTagReferenceHelper::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayTagReferenceHelper_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043E1BF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayTagReferenceHelper_Statics::NewStructOps,
+				"GameplayTagReferenceHelper",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGameplayTagReferenceHelper),
+				alignof(FGameplayTagReferenceHelper),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

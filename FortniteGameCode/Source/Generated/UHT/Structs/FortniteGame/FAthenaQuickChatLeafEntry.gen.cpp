@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaQuickChatLeafEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5F770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaQuickChatLeafEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaQuickChatLeafEntry>();
 	}
-	// ReturnStructParams: original RVA 0x041F0F30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaQuickChatLeafEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaQuickChatLeafEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAthenaQuickChatLeafEntry),
-		alignof(FAthenaQuickChatLeafEntry),
-		Z_Construct_UScriptStruct_FAthenaQuickChatLeafEntry_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61F20 (end 0x00F61F4F)
 	// Original VA: 0x0000000140F61F20 | File offset: 0x00F61520
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaQuickChatLeafEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaQuickChatLeafEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041F0F30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaQuickChatLeafEntry_Statics::NewStructOps,
+				"AthenaQuickChatLeafEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAthenaQuickChatLeafEntry),
+				alignof(FAthenaQuickChatLeafEntry),
+				Z_Construct_UScriptStruct_FAthenaQuickChatLeafEntry_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

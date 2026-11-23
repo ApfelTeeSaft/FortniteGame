@@ -4,12 +4,8 @@
 // FClassFunctionLinkInfo array RVA 0x0335DF28, FClassParams RVA 0x0335DF70.
 
 #include "FortniteGameCode/UHTRecovered.h"
+UClass* Z_Construct_UClass_AFortLevelScriptActor();  // RVA 0x0101E1C0 (registered by its FCompiledInDefer)
 
-
-struct Z_Construct_UFunction_AFortLevelScriptActor_OnMatchStarted_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B10C0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EC00 (end 0x0101EC2F)
 // Original VA: 0x000000014101EC00 | File offset: 0x0101E200
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -18,15 +14,13 @@ UFunction* Z_Construct_UFunction_AFortLevelScriptActor_OnMatchStarted()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLevelScriptActor_OnMatchStarted_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B10C0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLevelScriptActor, "OnMatchStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortLevelScriptActor_OnWorldReady_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B1100 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EC30 (end 0x0101EC5F)
 // Original VA: 0x000000014101EC30 | File offset: 0x0101E230
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +29,9 @@ UFunction* Z_Construct_UFunction_AFortLevelScriptActor_OnWorldReady()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLevelScriptActor_OnWorldReady_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B1100; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLevelScriptActor, "OnWorldReady", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

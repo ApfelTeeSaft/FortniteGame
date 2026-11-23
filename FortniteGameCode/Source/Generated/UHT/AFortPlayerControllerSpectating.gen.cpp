@@ -20,12 +20,6 @@ void AFortPlayerControllerSpectating::StaticRegisterNativesAFortPlayerController
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlayer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04305A30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerSpectating, "FollowNextPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01079270 (end 0x0107929F)
 // Original VA: 0x0000000141079270 | File offset: 0x01078870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +28,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlaye
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305A30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerSpectating, "FollowNextPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +38,7 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlaye
 struct Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04305AB0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerSpectating, "FollowPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x10, Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPlayer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010792A0 (end 0x010792CF)
 // Original VA: 0x00000001410792A0 | File offset: 0x010788A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +47,13 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPlayer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305AB0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerSpectating, "FollowPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x10, Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPlayer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPrevPlayer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04305AF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPrevPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerSpectating, "FollowPrevPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010792D0 (end 0x010792FF)
 // Original VA: 0x00000001410792D0 | File offset: 0x010788D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +62,9 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPrevPlaye
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPrevPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x04305AF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPlayerControllerSpectating, "FollowPrevPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

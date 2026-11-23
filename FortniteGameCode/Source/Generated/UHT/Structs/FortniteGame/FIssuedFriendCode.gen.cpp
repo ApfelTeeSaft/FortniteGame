@@ -31,25 +31,12 @@ class UScriptStruct* FIssuedFriendCode::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037170 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FIssuedFriendCode_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FIssuedFriendCode>();
 	}
-	// ReturnStructParams: original RVA 0x042C50A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FIssuedFriendCode_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"IssuedFriendCode",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FIssuedFriendCode),
-		alignof(FIssuedFriendCode),
-		Z_Construct_UScriptStruct_FIssuedFriendCode_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103A040 (end 0x0103A06F)
 	// Original VA: 0x000000014103A040 | File offset: 0x01039640
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FIssuedFriendCode::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FIssuedFriendCode_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C50A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FIssuedFriendCode_Statics::NewStructOps,
+				"IssuedFriendCode",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FIssuedFriendCode),
+				alignof(FIssuedFriendCode),
+				Z_Construct_UScriptStruct_FIssuedFriendCode_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

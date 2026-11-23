@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayTagQuery::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C92F50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayTagQuery_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayTagQuery>();
 	}
-	// ReturnStructParams: original RVA 0x043E1B50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayTagQuery_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
-		nullptr,
-		&NewStructOps,
-		"GameplayTagQuery",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameplayTagQuery),
-		alignof(FGameplayTagQuery),
-		Z_Construct_UScriptStruct_FGameplayTagQuery_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C941B0 (end 0x01C941DF)
 	// Original VA: 0x0000000141C941B0 | File offset: 0x01C937B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayTagQuery::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayTagQuery_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043E1B50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayTagQuery_Statics::NewStructOps,
+				"GameplayTagQuery",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameplayTagQuery),
+				alignof(FGameplayTagQuery),
+				Z_Construct_UScriptStruct_FGameplayTagQuery_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

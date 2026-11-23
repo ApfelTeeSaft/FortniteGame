@@ -31,25 +31,12 @@ class UScriptStruct* FDedicatedServerUrlContext::StaticStruct()
 	struct Z_Construct_UScriptStruct_FDedicatedServerUrlContext_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE7A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FDedicatedServerUrlContext_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDedicatedServerUrlContext>();
 	}
-	// ReturnStructParams: original RVA 0x041C3420
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDedicatedServerUrlContext_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
-		Z_Construct_UScriptStruct_FBaseUrlContext,
-		&NewStructOps,
-		"DedicatedServerUrlContext",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FDedicatedServerUrlContext),
-		alignof(FDedicatedServerUrlContext),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AFAE0 (end 0x007AFB0F)
 	// Original VA: 0x00000001407AFAE0 | File offset: 0x007AF0E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FDedicatedServerUrlContext::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FDedicatedServerUrlContext_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C3420
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
+				Z_Construct_UScriptStruct_FBaseUrlContext,
+				&Z_Construct_UScriptStruct_FDedicatedServerUrlContext_Statics::NewStructOps,
+				"DedicatedServerUrlContext",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FDedicatedServerUrlContext),
+				alignof(FDedicatedServerUrlContext),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

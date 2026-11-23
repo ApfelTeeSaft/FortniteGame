@@ -31,25 +31,12 @@ class UScriptStruct* FLevelSequenceObject::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E3F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLevelSequenceObject_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelSequenceObject>();
 	}
-	// ReturnStructParams: original RVA 0x043FEC30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelSequenceObject_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
-		nullptr,
-		&NewStructOps,
-		"LevelSequenceObject",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLevelSequenceObject),
-		alignof(FLevelSequenceObject),
-		Z_Construct_UScriptStruct_FLevelSequenceObject_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4F200 (end 0x01D4F22F)
 	// Original VA: 0x0000000141D4F200 | File offset: 0x01D4E800
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLevelSequenceObject::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLevelSequenceObject_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FEC30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLevelSequenceObject_Statics::NewStructOps,
+				"LevelSequenceObject",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLevelSequenceObject),
+				alignof(FLevelSequenceObject),
+				Z_Construct_UScriptStruct_FLevelSequenceObject_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

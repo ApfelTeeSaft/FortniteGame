@@ -27,10 +27,7 @@ void UFortMovieWidget::StaticRegisterNativesUFortMovieWidget()
 struct Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459F9F0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "GetMediaPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8640 (end 0x028D866F)
 // Original VA: 0x00000001428D8640 | File offset: 0x028D7C40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +36,9 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459F9F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "GetMediaPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +46,7 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer()
 struct Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459FA70; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "GetMediaSoundComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8670 (end 0x028D869F)
 // Original VA: 0x00000001428D8670 | File offset: 0x028D7C70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +55,9 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459FA70; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "GetMediaSoundComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +65,7 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent()
 struct Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459FAF0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "GetMediaTexture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D86A0 (end 0x028D86CF)
 // Original VA: 0x00000001428D86A0 | File offset: 0x028D7CA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +74,9 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459FAF0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "GetMediaTexture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +84,7 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture()
 struct Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459FBC0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "HasPlayerForSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D86D0 (end 0x028D86FF)
 // Original VA: 0x00000001428D86D0 | File offset: 0x028D7CD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +93,9 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459FBC0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "HasPlayerForSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +103,7 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource()
 struct Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459FC70; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "MediaDimensionsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x8, Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8700 (end 0x028D872F)
 // Original VA: 0x00000001428D8700 | File offset: 0x028D7D00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +112,9 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459FC70; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "MediaDimensionsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x8, Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +122,7 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated()
 struct Z_Construct_UFunction_UFortMovieWidget_RequestPlayMovie_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459FD00; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_RequestPlayMovie_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "RequestPlayMovie", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortMovieWidget_RequestPlayMovie_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8730 (end 0x028D875F)
 // Original VA: 0x00000001428D8730 | File offset: 0x028D7D30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,17 +131,13 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_RequestPlayMovie()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_RequestPlayMovie_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459FD00; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "RequestPlayMovie", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortMovieWidget_RequestPlayMovie_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortMovieWidget_RequestStopMovie_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0459FD40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_RequestStopMovie_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "RequestStopMovie", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8760 (end 0x028D878F)
 // Original VA: 0x00000001428D8760 | File offset: 0x028D7D60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -158,7 +146,9 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_RequestStopMovie()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_RequestStopMovie_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459FD40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "RequestStopMovie", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -166,10 +156,7 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_RequestStopMovie()
 struct Z_Construct_UFunction_UFortMovieWidget_SetMediaSource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459FDC0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMovieWidget_SetMediaSource_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "SetMediaSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_SetMediaSource_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8790 (end 0x028D87BF)
 // Original VA: 0x00000001428D8790 | File offset: 0x028D7D90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -178,7 +165,9 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_SetMediaSource()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovieWidget_SetMediaSource_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459FDC0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovieWidget, "SetMediaSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortMovieWidget_SetMediaSource_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

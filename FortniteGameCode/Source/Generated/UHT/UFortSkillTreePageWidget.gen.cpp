@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03D13E78, FClassParams RVA 0x03D13EC0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortSkillTreePageWidget();  // RVA 0x028F5660 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F90 (end 0x028F4FB2)
 // Original VA: 0x00000001428F4F90 | File offset: 0x028F4590
@@ -20,7 +20,7 @@ void UFortSkillTreePageWidget::StaticRegisterNativesUFortSkillTreePageWidget()
 
 struct Z_Construct_UFunction_UFortSkillTreePageWidget_PlayIntroTransitionBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B4D60 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F62B0 (end 0x028F62DF)
 // Original VA: 0x00000001428F62B0 | File offset: 0x028F58B0
@@ -30,14 +30,16 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageWidget_PlayIntroTransitionBP(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageWidget_PlayIntroTransitionBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4D60; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageWidget, "PlayIntroTransitionBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortSkillTreePageWidget_PlayIntroTransitionBP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortSkillTreePageWidget_PlayOutroTransitionBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B4E20 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F62E0 (end 0x028F630F)
 // Original VA: 0x00000001428F62E0 | File offset: 0x028F58E0
@@ -47,14 +49,16 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageWidget_PlayOutroTransitionBP(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageWidget_PlayOutroTransitionBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4E20; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageWidget, "PlayOutroTransitionBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortSkillTreePageWidget_PlayOutroTransitionBP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortSkillTreePageWidget_TryGetStaticSkillTreePageData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B4EF0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6310 (end 0x028F633F)
 // Original VA: 0x00000001428F6310 | File offset: 0x028F5910
@@ -64,7 +68,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageWidget_TryGetStaticSkillTreeP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreePageWidget_TryGetStaticSkillTreePageData_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4EF0; StructureSize 0x68 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreePageWidget, "TryGetStaticSkillTreePageData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x68, Z_Construct_UFunction_UFortSkillTreePageWidget_TryGetStaticSkillTreePageData_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

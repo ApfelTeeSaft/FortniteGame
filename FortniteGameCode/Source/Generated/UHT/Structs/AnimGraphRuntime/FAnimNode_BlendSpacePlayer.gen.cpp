@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_BlendSpacePlayer::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0B110 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_BlendSpacePlayer_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_BlendSpacePlayer>();
 	}
-	// ReturnStructParams: original RVA 0x043AA9F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_BlendSpacePlayer_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_AssetPlayerBase,
-		&NewStructOps,
-		"AnimNode_BlendSpacePlayer",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_BlendSpacePlayer),
-		alignof(FAnimNode_BlendSpacePlayer),
-		Z_Construct_UScriptStruct_FAnimNode_BlendSpacePlayer_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0EBC0 (end 0x01B0EBEF)
 	// Original VA: 0x0000000141B0EBC0 | File offset: 0x01B0E1C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_BlendSpacePlayer::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_BlendSpacePlayer_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AA9F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_AssetPlayerBase,
+				&Z_Construct_UScriptStruct_FAnimNode_BlendSpacePlayer_Statics::NewStructOps,
+				"AnimNode_BlendSpacePlayer",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_BlendSpacePlayer),
+				alignof(FAnimNode_BlendSpacePlayer),
+				Z_Construct_UScriptStruct_FAnimNode_BlendSpacePlayer_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

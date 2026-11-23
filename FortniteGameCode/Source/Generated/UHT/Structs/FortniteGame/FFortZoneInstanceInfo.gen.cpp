@@ -31,25 +31,12 @@ class UScriptStruct* FFortZoneInstanceInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064760 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortZoneInstanceInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortZoneInstanceInfo>();
 	}
-	// ReturnStructParams: original RVA 0x042EDF10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortZoneInstanceInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortZoneInstanceInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortZoneInstanceInfo),
-		alignof(FFortZoneInstanceInfo),
-		Z_Construct_UScriptStruct_FFortZoneInstanceInfo_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066470 (end 0x0106649F)
 	// Original VA: 0x0000000141066470 | File offset: 0x01065A70
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortZoneInstanceInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortZoneInstanceInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EDF10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortZoneInstanceInfo_Statics::NewStructOps,
+				"FortZoneInstanceInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortZoneInstanceInfo),
+				alignof(FFortZoneInstanceInfo),
+				Z_Construct_UScriptStruct_FFortZoneInstanceInfo_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

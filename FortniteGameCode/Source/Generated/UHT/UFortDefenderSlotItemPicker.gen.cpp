@@ -22,10 +22,7 @@ void UFortDefenderSlotItemPicker::StaticRegisterNativesUFortDefenderSlotItemPick
 struct Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCreated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564DD0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCreated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSlotItemPicker, "HandleItemWidgetCreated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCreated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C330 (end 0x0289C35F)
 // Original VA: 0x000000014289C330 | File offset: 0x0289B930
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCre
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCreated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564DD0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSlotItemPicker, "HandleItemWidgetCreated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCreated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCre
 struct Z_Construct_UFunction_UFortDefenderSlotItemPicker_PopulateDefenderSlotItems_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564E50; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderSlotItemPicker_PopulateDefenderSlotItems_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSlotItemPicker, "PopulateDefenderSlotItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortDefenderSlotItemPicker_PopulateDefenderSlotItems_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C360 (end 0x0289C38F)
 // Original VA: 0x000000014289C360 | File offset: 0x0289B960
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderSlotItemPicker_PopulateDefenderSlo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderSlotItemPicker_PopulateDefenderSlotItems_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564E50; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSlotItemPicker, "PopulateDefenderSlotItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortDefenderSlotItemPicker_PopulateDefenderSlotItems_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

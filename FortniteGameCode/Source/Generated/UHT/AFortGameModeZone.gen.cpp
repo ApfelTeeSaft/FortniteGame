@@ -20,12 +20,6 @@ void AFortGameModeZone::StaticRegisterNativesAFortGameModeZone()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortGameModeZone_OnEveningReached_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0427CC60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameModeZone_OnEveningReached_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameModeZone, "OnEveningReached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4960 (end 0x00FE498F)
 // Original VA: 0x0000000140FE4960 | File offset: 0x00FE3F60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,17 +28,13 @@ UFunction* Z_Construct_UFunction_AFortGameModeZone_OnEveningReached()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameModeZone_OnEveningReached_Statics::FuncParams);
+		// FuncParams: original RVA 0x0427CC60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameModeZone, "OnEveningReached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortGameModeZone_OnMorningReached_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0427CCA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameModeZone_OnMorningReached_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameModeZone, "OnMorningReached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4990 (end 0x00FE49BF)
 // Original VA: 0x0000000140FE4990 | File offset: 0x00FE3F90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +43,13 @@ UFunction* Z_Construct_UFunction_AFortGameModeZone_OnMorningReached()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameModeZone_OnMorningReached_Statics::FuncParams);
+		// FuncParams: original RVA 0x0427CCA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameModeZone, "OnMorningReached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortGameModeZone_ReplicateHealthAndShield_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0427CCE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameModeZone_ReplicateHealthAndShield_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameModeZone, "ReplicateHealthAndShield", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE49C0 (end 0x00FE49EF)
 // Original VA: 0x0000000140FE49C0 | File offset: 0x00FE3FC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,7 +58,9 @@ UFunction* Z_Construct_UFunction_AFortGameModeZone_ReplicateHealthAndShield()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameModeZone_ReplicateHealthAndShield_Statics::FuncParams);
+		// FuncParams: original RVA 0x0427CCE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameModeZone, "ReplicateHealthAndShield", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

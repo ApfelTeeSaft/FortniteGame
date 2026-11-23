@@ -30,25 +30,12 @@ class UScriptStruct* FFortAnalyticsEventAttribute::StaticStruct()
 	struct Z_Construct_UScriptStruct_FFortAnalyticsEventAttribute_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3030 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAnalyticsEventAttribute_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAnalyticsEventAttribute>();
 	}
-	// ReturnStructParams: original RVA 0x0423E2D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAnalyticsEventAttribute_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAnalyticsEventAttribute",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAnalyticsEventAttribute),
-		alignof(FFortAnalyticsEventAttribute),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4B80 (end 0x00FA4BAF)
 	// Original VA: 0x0000000140FA4B80 | File offset: 0x00FA4180
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FFortAnalyticsEventAttribute::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAnalyticsEventAttribute_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0423E2D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAnalyticsEventAttribute_Statics::NewStructOps,
+				"FortAnalyticsEventAttribute",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAnalyticsEventAttribute),
+				alignof(FFortAnalyticsEventAttribute),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

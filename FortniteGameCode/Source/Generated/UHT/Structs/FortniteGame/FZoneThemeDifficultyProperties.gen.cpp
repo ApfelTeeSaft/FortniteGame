@@ -31,25 +31,12 @@ class UScriptStruct* FZoneThemeDifficultyProperties::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01040990 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FZoneThemeDifficultyProperties_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FZoneThemeDifficultyProperties>();
 	}
-	// ReturnStructParams: original RVA 0x0435A470
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FZoneThemeDifficultyProperties_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ZoneThemeDifficultyProperties",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FZoneThemeDifficultyProperties),
-		alignof(FZoneThemeDifficultyProperties),
-		Z_Construct_UScriptStruct_FZoneThemeDifficultyProperties_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3EF0 (end 0x010E3F1F)
 	// Original VA: 0x00000001410E3EF0 | File offset: 0x010E34F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FZoneThemeDifficultyProperties::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FZoneThemeDifficultyProperties_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0435A470
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FZoneThemeDifficultyProperties_Statics::NewStructOps,
+				"ZoneThemeDifficultyProperties",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FZoneThemeDifficultyProperties),
+				alignof(FZoneThemeDifficultyProperties),
+				Z_Construct_UScriptStruct_FZoneThemeDifficultyProperties_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

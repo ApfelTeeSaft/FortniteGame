@@ -32,25 +32,12 @@ class UScriptStruct* FMovieSceneIntegerPropertySectionTemplate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4F740 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneIntegerPropertySectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneIntegerPropertySectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043B7820
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneIntegerPropertySectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate,
-		&NewStructOps,
-		"MovieSceneIntegerPropertySectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneIntegerPropertySectionTemplate),
-		alignof(FMovieSceneIntegerPropertySectionTemplate),
-		Z_Construct_UScriptStruct_FMovieSceneIntegerPropertySectionTemplate_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B530B0 (end 0x01B530DF)
 	// Original VA: 0x0000000141B530B0 | File offset: 0x01B526B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieSceneIntegerPropertySectionTemplate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneIntegerPropertySectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B7820
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate,
+				&Z_Construct_UScriptStruct_FMovieSceneIntegerPropertySectionTemplate_Statics::NewStructOps,
+				"MovieSceneIntegerPropertySectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneIntegerPropertySectionTemplate),
+				alignof(FMovieSceneIntegerPropertySectionTemplate),
+				Z_Construct_UScriptStruct_FMovieSceneIntegerPropertySectionTemplate_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FAvailableTierLayout::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCF480 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAvailableTierLayout_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAvailableTierLayout>();
 	}
-	// ReturnStructParams: original RVA 0x042664A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAvailableTierLayout_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AvailableTierLayout",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAvailableTierLayout),
-		alignof(FAvailableTierLayout),
-		Z_Construct_UScriptStruct_FAvailableTierLayout_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1010 (end 0x00FD103F)
 	// Original VA: 0x0000000140FD1010 | File offset: 0x00FD0610
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAvailableTierLayout::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAvailableTierLayout_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042664A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAvailableTierLayout_Statics::NewStructOps,
+				"AvailableTierLayout",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAvailableTierLayout),
+				alignof(FAvailableTierLayout),
+				Z_Construct_UScriptStruct_FAvailableTierLayout_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

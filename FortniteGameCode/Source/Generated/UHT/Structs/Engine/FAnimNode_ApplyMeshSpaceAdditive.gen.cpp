@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_ApplyMeshSpaceAdditive::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CD250 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_ApplyMeshSpaceAdditive_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_ApplyMeshSpaceAdditive>();
 	}
-	// ReturnStructParams: original RVA 0x04417850
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_ApplyMeshSpaceAdditive_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimNode_Base,
-		&NewStructOps,
-		"AnimNode_ApplyMeshSpaceAdditive",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_ApplyMeshSpaceAdditive),
-		alignof(FAnimNode_ApplyMeshSpaceAdditive),
-		Z_Construct_UScriptStruct_FAnimNode_ApplyMeshSpaceAdditive_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CF530 (end 0x023CF55F)
 	// Original VA: 0x00000001423CF530 | File offset: 0x023CEB30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_ApplyMeshSpaceAdditive::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_ApplyMeshSpaceAdditive_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04417850
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimNode_Base,
+				&Z_Construct_UScriptStruct_FAnimNode_ApplyMeshSpaceAdditive_Statics::NewStructOps,
+				"AnimNode_ApplyMeshSpaceAdditive",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_ApplyMeshSpaceAdditive),
+				alignof(FAnimNode_ApplyMeshSpaceAdditive),
+				Z_Construct_UScriptStruct_FAnimNode_ApplyMeshSpaceAdditive_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

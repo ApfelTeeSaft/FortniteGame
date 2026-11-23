@@ -30,25 +30,12 @@ class UScriptStruct* FEventReply::StaticStruct()
 	struct Z_Construct_UScriptStruct_FEventReply_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF27A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEventReply_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEventReply>();
 	}
-	// ReturnStructParams: original RVA 0x043C8270
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEventReply_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_UMG,
-		nullptr,
-		&NewStructOps,
-		"EventReply",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FEventReply),
-		alignof(FEventReply),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF45E0 (end 0x01BF460F)
 	// Original VA: 0x0000000141BF45E0 | File offset: 0x01BF3BE0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FEventReply::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEventReply_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043C8270
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_UMG,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEventReply_Statics::NewStructOps,
+				"EventReply",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FEventReply),
+				alignof(FEventReply),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

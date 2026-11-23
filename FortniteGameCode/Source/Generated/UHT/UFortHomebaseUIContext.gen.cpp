@@ -44,10 +44,7 @@ void UFortHomebaseUIContext::StaticRegisterNativesUFortHomebaseUIContext()
 struct Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E0C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "OnNodesPurchased__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3F00 (end 0x028B3F2F)
 // Original VA: 0x00000001428B3F00 | File offset: 0x028B3500
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +53,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E0C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "OnNodesPurchased__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +63,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased
 struct Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E170; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "OnSquadSlotChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3F30 (end 0x028B3F5F)
 // Original VA: 0x00000001428B3F30 | File offset: 0x028B3530
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +72,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChang
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E170; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "OnSquadSlotChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +82,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChang
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E270; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameNodePageId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5040 (end 0x028B506F)
 // Original VA: 0x00000001428B5040 | File offset: 0x028B4640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +91,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E270; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameNodePageId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +101,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgressionState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E320; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgressionState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameNodeProgressionState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgressionState_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5070 (end 0x028B509F)
 // Original VA: 0x00000001428B5070 | File offset: 0x028B4670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +110,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgress
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgressionState_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E320; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameNodeProgressionState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgressionState_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +120,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgress
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreeNodeId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E3A0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreeNodeId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameRootSkillTreeNodeId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreeNodeId_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B50A0 (end 0x028B50CF)
 // Original VA: 0x00000001428B50A0 | File offset: 0x028B46A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +129,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTre
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreeNodeId_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E3A0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameRootSkillTreeNodeId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreeNodeId_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -144,10 +139,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTre
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreePageId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E420; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreePageId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameRootSkillTreePageId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreePageId_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B50D0 (end 0x028B50FF)
 // Original VA: 0x00000001428B50D0 | File offset: 0x028B46D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -156,7 +148,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTre
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreePageId_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E420; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetEarlyGameRootSkillTreePageId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreePageId_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -164,10 +158,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTre
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E510; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetItemInSquadSlot", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5100 (end 0x028B512F)
 // Original VA: 0x00000001428B5100 | File offset: 0x028B4700
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -176,7 +167,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E510; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetItemInSquadSlot", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -184,10 +177,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E650; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetItemsInSquad", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x20, Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5130 (end 0x028B515F)
 // Original VA: 0x00000001428B5130 | File offset: 0x028B4730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -196,7 +186,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E650; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetItemsInSquad", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x20, Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -204,10 +196,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBackpack_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E6E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBackpack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetLocalPlayerHasHeroBackpack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBackpack_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5160 (end 0x028B518F)
 // Original VA: 0x00000001428B5160 | File offset: 0x028B4760
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -216,7 +205,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBac
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBackpack_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E6E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetLocalPlayerHasHeroBackpack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBackpack_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -224,10 +215,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBac
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHeadAccessories_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E770; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHeadAccessories_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetLocalPlayerHasHeroHeadAccessories", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHeadAccessories_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5190 (end 0x028B51BF)
 // Original VA: 0x00000001428B5190 | File offset: 0x028B4790
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -236,7 +224,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHea
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHeadAccessories_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E770; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetLocalPlayerHasHeroHeadAccessories", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHeadAccessories_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -244,10 +234,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHea
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesForDisplay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E8B0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesForDisplay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNodeAttributeBonusesForDisplay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x20, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesForDisplay_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B51C0 (end 0x028B51EF)
 // Original VA: 0x00000001428B51C0 | File offset: 0x028B47C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -256,7 +243,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesF
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesForDisplay_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E8B0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNodeAttributeBonusesForDisplay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x20, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesForDisplay_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -264,10 +253,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesF
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457E9B0; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNodeDescription", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x28, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B51F0 (end 0x028B521F)
 // Original VA: 0x00000001428B51F0 | File offset: 0x028B47F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -276,7 +262,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457E9B0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNodeDescription", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x28, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -284,10 +272,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisplay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457EAF0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisplay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNodeTagBonusesForDisplay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x20, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisplay_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5220 (end 0x028B524F)
 // Original VA: 0x00000001428B5220 | File offset: 0x028B4820
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -296,7 +281,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisp
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisplay_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457EAF0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNodeTagBonusesForDisplay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x20, Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisplay_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -304,10 +291,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisp
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillTreePage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457EBA0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillTreePage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNumOwnedNodesInSkillTreePage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillTreePage_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5250 (end 0x028B527F)
 // Original VA: 0x00000001428B5250 | File offset: 0x028B4850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -316,7 +300,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillT
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillTreePage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457EBA0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetNumOwnedNodesInSkillTreePage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillTreePage_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -324,10 +310,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillT
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457EC20; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetQuestNodeColour", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x28, Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5280 (end 0x028B52AF)
 // Original VA: 0x00000001428B5280 | File offset: 0x028B4880
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -336,7 +319,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457EC20; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetQuestNodeColour", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x28, Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -344,10 +329,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457ECA0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetRootSkillTreeNodeId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B52B0 (end 0x028B52DF)
 // Original VA: 0x00000001428B52B0 | File offset: 0x028B48B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -356,7 +338,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457ECA0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetRootSkillTreeNodeId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -364,10 +348,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457ED20; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetRootSkillTreePageId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B52E0 (end 0x028B530F)
 // Original VA: 0x00000001428B52E0 | File offset: 0x028B48E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -376,7 +357,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457ED20; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetRootSkillTreePageId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -384,10 +367,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLocalPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457EDB0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLocalPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetShowHeroBackpackForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5310 (end 0x028B533F)
 // Original VA: 0x00000001428B5310 | File offset: 0x028B4910
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -396,7 +376,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLocalPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457EDB0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetShowHeroBackpackForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -404,10 +386,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLo
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessoriesForLocalPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457EE40; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessoriesForLocalPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetShowHeroHeadAccessoriesForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessoriesForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5340 (end 0x028B536F)
 // Original VA: 0x00000001428B5340 | File offset: 0x028B4940
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -416,7 +395,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessori
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessoriesForLocalPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457EE40; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetShowHeroHeadAccessoriesForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessoriesForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -424,10 +405,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessori
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457EF00; StructureSize 0x2D8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetSquadIcon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x2D8, Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5370 (end 0x028B539F)
 // Original VA: 0x00000001428B5370 | File offset: 0x028B4970
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -436,7 +414,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457EF00; StructureSize 0x2D8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetSquadIcon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x2D8, Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -444,10 +424,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTreePage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457EFB0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTreePage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetTotalNodesInSkillTreePage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTreePage_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B53A0 (end 0x028B53CF)
 // Original VA: 0x00000001428B53A0 | File offset: 0x028B49A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -456,7 +433,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTree
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTreePage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457EFB0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetTotalNodesInSkillTreePage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTreePage_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -464,10 +443,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTree
 struct Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectModifiers_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457F0B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectModifiers_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetWorkerSetBonusEffectModifiers", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x18, Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectModifiers_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B53D0 (end 0x028B53FF)
 // Original VA: 0x00000001428B53D0 | File offset: 0x028B49D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -476,7 +452,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectM
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectModifiers_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457F0B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "GetWorkerSetBonusEffectModifiers", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x18, Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectModifiers_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -484,10 +462,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectM
 struct Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457F170; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "IsAnySquadSlotUnlocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5400 (end 0x028B542F)
 // Original VA: 0x00000001428B5400 | File offset: 0x028B4A00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -496,7 +471,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457F170; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "IsAnySquadSlotUnlocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -504,10 +481,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457F200; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "IsInEarlyGame", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5430 (end 0x028B545F)
 // Original VA: 0x00000001428B5430 | File offset: 0x028B4A30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -516,7 +490,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457F200; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "IsInEarlyGame", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -524,10 +500,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame()
 struct Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLocalPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457F290; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLocalPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "SetShowHeroBackpackForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5460 (end 0x028B548F)
 // Original VA: 0x00000001428B5460 | File offset: 0x028B4A60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -536,7 +509,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLocalPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457F290; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "SetShowHeroBackpackForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -544,10 +519,7 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLo
 struct Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessoriesForLocalPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0457F320; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessoriesForLocalPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "SetShowHeroHeadAccessoriesForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessoriesForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B5490 (end 0x028B54BF)
 // Original VA: 0x00000001428B5490 | File offset: 0x028B4A90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -556,7 +528,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessori
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessoriesForLocalPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0457F320; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseUIContext, "SetShowHeroHeadAccessoriesForLocalPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessoriesForLocalPlayer_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

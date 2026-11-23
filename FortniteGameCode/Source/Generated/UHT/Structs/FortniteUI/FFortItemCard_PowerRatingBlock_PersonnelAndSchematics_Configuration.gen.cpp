@@ -32,25 +32,12 @@ class UScriptStruct* FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Confi
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0DD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration>();
 	}
-	// ReturnStructParams: original RVA 0x0458E890
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_Configuration,
-		&NewStructOps,
-		"FortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration),
-		alignof(FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration),
-		Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C2FE0 (end 0x028C300F)
 	// Original VA: 0x00000001428C2FE0 | File offset: 0x028C25E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Confi
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0458E890
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_Configuration,
+				&Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration_Statics::NewStructOps,
+				"FortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration),
+				alignof(FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration),
+				Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

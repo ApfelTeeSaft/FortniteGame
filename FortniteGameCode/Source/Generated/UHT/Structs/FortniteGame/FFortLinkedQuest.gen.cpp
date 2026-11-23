@@ -31,25 +31,12 @@ class UScriptStruct* FFortLinkedQuest::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037070 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortLinkedQuest_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortLinkedQuest>();
 	}
-	// ReturnStructParams: original RVA 0x04330650
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortLinkedQuest_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortLinkedQuest",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortLinkedQuest),
-		alignof(FFortLinkedQuest),
-		Z_Construct_UScriptStruct_FFortLinkedQuest_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4290 (end 0x010B42BF)
 	// Original VA: 0x00000001410B4290 | File offset: 0x010B3890
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortLinkedQuest::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortLinkedQuest_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04330650
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortLinkedQuest_Statics::NewStructOps,
+				"FortLinkedQuest",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortLinkedQuest),
+				alignof(FFortLinkedQuest),
+				Z_Construct_UScriptStruct_FFortLinkedQuest_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -8,10 +8,7 @@
 	struct Z_Construct_UDelegateFunction_FortniteGame_OnDisplayDynamicQuestUpdate__DelegateSignature_Statics
 	{
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	// FuncParams: original RVA 0x0431CEE0
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_FortniteGame_OnDisplayDynamicQuestUpdate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_FortniteGame, "OnDisplayDynamicQuestUpdate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_FortniteGame_OnDisplayDynamicQuestUpdate__DelegateSignature_Statics::PropPointers, 3, 0, 0 };
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010965D0 (end 0x010965FF)
 	// Original VA: 0x00000001410965D0 | File offset: 0x01095BD0
 	// Recovery: confirmed (listed by Z_Construct_UPackage__Script_FortniteGame's SingletonFuncArray) | Matching: see analysis/functions-uht-package-delegates.json
@@ -20,7 +17,9 @@
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_FortniteGame_OnDisplayDynamicQuestUpdate__DelegateSignature_Statics::FuncParams);
+			// FuncParams: original RVA 0x0431CEE0
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_FortniteGame, "OnDisplayDynamicQuestUpdate__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_FortniteGame_OnDisplayDynamicQuestUpdate__DelegateSignature_Statics::PropPointers, 3, 0, 0 };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}

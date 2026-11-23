@@ -21,10 +21,7 @@ void UFortInventorySortFunctionLibrary::StaticRegisterNativesUFortInventorySortF
 struct Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionDisplayNameOfSortType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04342730; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionDisplayNameOfSortType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInventorySortFunctionLibrary, "GetCriterionDisplayNameOfSortType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x20, Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionDisplayNameOfSortType_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBD20 (end 0x010CBD4F)
 // Original VA: 0x00000001410CBD20 | File offset: 0x010CB320
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionD
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionDisplayNameOfSortType_Statics::FuncParams);
+		// FuncParams: original RVA 0x04342730; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInventorySortFunctionLibrary, "GetCriterionDisplayNameOfSortType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x20, Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionDisplayNameOfSortType_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -21,10 +21,7 @@ void UAthenaHUDPlayerActionAlertBase::StaticRegisterNativesUAthenaHUDPlayerActio
 struct Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0454D330; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase, "AlertPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x20, Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02880A90 (end 0x02880ABF)
 // Original VA: 0x0000000142880A90 | File offset: 0x02880090
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +30,13 @@ UFunction* Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x0454D330; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase, "AlertPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x20, Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_RequestNextAlert_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0454D370; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_RequestNextAlert_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase, "RequestNextAlert", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02880AC0 (end 0x02880AEF)
 // Original VA: 0x0000000142880AC0 | File offset: 0x028800C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +45,9 @@ UFunction* Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_RequestNextAler
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_RequestNextAlert_Statics::FuncParams);
+		// FuncParams: original RVA 0x0454D370; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase, "RequestNextAlert", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

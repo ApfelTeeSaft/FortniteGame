@@ -31,25 +31,12 @@ class UScriptStruct* FGoalSelectionCriteria::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F904F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGoalSelectionCriteria_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGoalSelectionCriteria>();
 	}
-	// ReturnStructParams: original RVA 0x0422AC00
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGoalSelectionCriteria_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"GoalSelectionCriteria",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGoalSelectionCriteria),
-		alignof(FGoalSelectionCriteria),
-		Z_Construct_UScriptStruct_FGoalSelectionCriteria_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F92A00 (end 0x00F92A2F)
 	// Original VA: 0x0000000140F92A00 | File offset: 0x00F92000
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGoalSelectionCriteria::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGoalSelectionCriteria_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0422AC00
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGoalSelectionCriteria_Statics::NewStructOps,
+				"GoalSelectionCriteria",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGoalSelectionCriteria),
+				alignof(FGoalSelectionCriteria),
+				Z_Construct_UScriptStruct_FGoalSelectionCriteria_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

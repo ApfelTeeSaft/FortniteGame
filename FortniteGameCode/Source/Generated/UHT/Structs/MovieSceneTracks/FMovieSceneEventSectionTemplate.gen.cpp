@@ -32,25 +32,12 @@ class UScriptStruct* FMovieSceneEventSectionTemplate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4F600 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneEventSectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneEventSectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043B6140
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneEventSectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieSceneEvalTemplate,
-		&NewStructOps,
-		"MovieSceneEventSectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneEventSectionTemplate),
-		alignof(FMovieSceneEventSectionTemplate),
-		Z_Construct_UScriptStruct_FMovieSceneEventSectionTemplate_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B53020 (end 0x01B5304F)
 	// Original VA: 0x0000000141B53020 | File offset: 0x01B52620
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieSceneEventSectionTemplate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneEventSectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B6140
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieSceneEvalTemplate,
+				&Z_Construct_UScriptStruct_FMovieSceneEventSectionTemplate_Statics::NewStructOps,
+				"MovieSceneEventSectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneEventSectionTemplate),
+				alignof(FMovieSceneEventSectionTemplate),
+				Z_Construct_UScriptStruct_FMovieSceneEventSectionTemplate_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

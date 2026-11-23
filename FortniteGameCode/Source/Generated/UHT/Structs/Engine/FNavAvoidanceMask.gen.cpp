@@ -31,25 +31,12 @@ class UScriptStruct* FNavAvoidanceMask::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1AAC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FNavAvoidanceMask_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNavAvoidanceMask>();
 	}
-	// ReturnStructParams: original RVA 0x044C74F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNavAvoidanceMask_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"NavAvoidanceMask",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FNavAvoidanceMask),
-		alignof(FNavAvoidanceMask),
-		Z_Construct_UScriptStruct_FNavAvoidanceMask_Statics::PropPointers, 32,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C280 (end 0x0248C2AF)
 	// Original VA: 0x000000014248C280 | File offset: 0x0248B880
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FNavAvoidanceMask::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FNavAvoidanceMask_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044C74F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FNavAvoidanceMask_Statics::NewStructOps,
+				"NavAvoidanceMask",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FNavAvoidanceMask),
+				alignof(FNavAvoidanceMask),
+				Z_Construct_UScriptStruct_FNavAvoidanceMask_Statics::PropPointers, 32,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

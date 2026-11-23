@@ -30,25 +30,12 @@ class UScriptStruct* FLevelSequenceLegacyObjectReference::StaticStruct()
 	struct Z_Construct_UScriptStruct_FLevelSequenceLegacyObjectReference_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E370 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLevelSequenceLegacyObjectReference_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelSequenceLegacyObjectReference>();
 	}
-	// ReturnStructParams: original RVA 0x043FEB20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelSequenceLegacyObjectReference_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
-		nullptr,
-		&NewStructOps,
-		"LevelSequenceLegacyObjectReference",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLevelSequenceLegacyObjectReference),
-		alignof(FLevelSequenceLegacyObjectReference),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4F1D0 (end 0x01D4F1FF)
 	// Original VA: 0x0000000141D4F1D0 | File offset: 0x01D4E7D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FLevelSequenceLegacyObjectReference::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLevelSequenceLegacyObjectReference_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FEB20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLevelSequenceLegacyObjectReference_Statics::NewStructOps,
+				"LevelSequenceLegacyObjectReference",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLevelSequenceLegacyObjectReference),
+				alignof(FLevelSequenceLegacyObjectReference),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

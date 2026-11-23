@@ -32,25 +32,12 @@ class UScriptStruct* FCompositeSection::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CD550 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCompositeSection_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCompositeSection>();
 	}
-	// ReturnStructParams: original RVA 0x04417100
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCompositeSection_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimLinkableElement,
-		&NewStructOps,
-		"CompositeSection",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FCompositeSection),
-		alignof(FCompositeSection),
-		Z_Construct_UScriptStruct_FCompositeSection_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CF830 (end 0x023CF85F)
 	// Original VA: 0x00000001423CF830 | File offset: 0x023CEE30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FCompositeSection::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCompositeSection_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04417100
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimLinkableElement,
+				&Z_Construct_UScriptStruct_FCompositeSection_Statics::NewStructOps,
+				"CompositeSection",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FCompositeSection),
+				alignof(FCompositeSection),
+				Z_Construct_UScriptStruct_FCompositeSection_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

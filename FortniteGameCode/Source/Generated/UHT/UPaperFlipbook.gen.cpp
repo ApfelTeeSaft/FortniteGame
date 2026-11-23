@@ -27,10 +27,7 @@ void UPaperFlipbook::StaticRegisterNativesUPaperFlipbook()
 struct Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B11B0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetKeyFrameIndexAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00667FA0 (end 0x00667FCF)
 // Original VA: 0x0000000140667FA0 | File offset: 0x006675A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +36,9 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B11B0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetKeyFrameIndexAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0xC, Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +46,7 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime()
 struct Z_Construct_UFunction_UPaperFlipbook_GetNumFrames_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B1230; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperFlipbook_GetNumFrames_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetNumFrames", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperFlipbook_GetNumFrames_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00667FD0 (end 0x00667FFF)
 // Original VA: 0x0000000140667FD0 | File offset: 0x006675D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +55,9 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetNumFrames()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperFlipbook_GetNumFrames_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B1230; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetNumFrames", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperFlipbook_GetNumFrames_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +65,7 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetNumFrames()
 struct Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B12B0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetNumKeyFrames", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668000 (end 0x0066802F)
 // Original VA: 0x0000000140668000 | File offset: 0x00667600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +74,9 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B12B0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetNumKeyFrames", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +84,7 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames()
 struct Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B1370; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetSpriteAtFrame", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668030 (end 0x0066805F)
 // Original VA: 0x0000000140668030 | File offset: 0x00667630
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +93,9 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B1370; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetSpriteAtFrame", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +103,7 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame()
 struct Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B1470; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetSpriteAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668060 (end 0x0066808F)
 // Original VA: 0x0000000140668060 | File offset: 0x00667660
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +112,9 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B1470; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetSpriteAtTime", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +122,7 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime()
 struct Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B14F0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetTotalDuration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668090 (end 0x006680BF)
 // Original VA: 0x0000000140668090 | File offset: 0x00667690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,7 +131,9 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B14F0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "GetTotalDuration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -147,10 +141,7 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration()
 struct Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B15B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "IsValidKeyFrameIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006680C0 (end 0x006680EF)
 // Original VA: 0x00000001406680C0 | File offset: 0x006676C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -159,7 +150,9 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B15B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperFlipbook, "IsValidKeyFrameIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

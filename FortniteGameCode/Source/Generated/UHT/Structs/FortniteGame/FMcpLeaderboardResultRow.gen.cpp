@@ -31,25 +31,12 @@ class UScriptStruct* FMcpLeaderboardResultRow::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01036FF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMcpLeaderboardResultRow_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMcpLeaderboardResultRow>();
 	}
-	// ReturnStructParams: original RVA 0x042C4DA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMcpLeaderboardResultRow_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"McpLeaderboardResultRow",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMcpLeaderboardResultRow),
-		alignof(FMcpLeaderboardResultRow),
-		Z_Construct_UScriptStruct_FMcpLeaderboardResultRow_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103A0D0 (end 0x0103A0FF)
 	// Original VA: 0x000000014103A0D0 | File offset: 0x010396D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMcpLeaderboardResultRow::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMcpLeaderboardResultRow_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C4DA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMcpLeaderboardResultRow_Statics::NewStructOps,
+				"McpLeaderboardResultRow",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMcpLeaderboardResultRow),
+				alignof(FMcpLeaderboardResultRow),
+				Z_Construct_UScriptStruct_FMcpLeaderboardResultRow_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

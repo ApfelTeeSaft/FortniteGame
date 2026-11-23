@@ -31,25 +31,12 @@ class UScriptStruct* FFunctionExpressionInput::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0247D310 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFunctionExpressionInput_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFunctionExpressionInput>();
 	}
-	// ReturnStructParams: original RVA 0x044B9860
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFunctionExpressionInput_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"FunctionExpressionInput",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFunctionExpressionInput),
-		alignof(FFunctionExpressionInput),
-		Z_Construct_UScriptStruct_FFunctionExpressionInput_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0247E4D0 (end 0x0247E4FF)
 	// Original VA: 0x000000014247E4D0 | File offset: 0x0247DAD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFunctionExpressionInput::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFunctionExpressionInput_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044B9860
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFunctionExpressionInput_Statics::NewStructOps,
+				"FunctionExpressionInput",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFunctionExpressionInput),
+				alignof(FFunctionExpressionInput),
+				Z_Construct_UScriptStruct_FFunctionExpressionInput_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

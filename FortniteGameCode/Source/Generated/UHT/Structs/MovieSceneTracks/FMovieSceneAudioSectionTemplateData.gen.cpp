@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneAudioSectionTemplateData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4F7C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneAudioSectionTemplateData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneAudioSectionTemplateData>();
 	}
-	// ReturnStructParams: original RVA 0x043B4C20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneAudioSectionTemplateData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneAudioSectionTemplateData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneAudioSectionTemplateData),
-		alignof(FMovieSceneAudioSectionTemplateData),
-		Z_Construct_UScriptStruct_FMovieSceneAudioSectionTemplateData_Statics::PropPointers, 11,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B52D50 (end 0x01B52D7F)
 	// Original VA: 0x0000000141B52D50 | File offset: 0x01B52350
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneAudioSectionTemplateData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneAudioSectionTemplateData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B4C20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneAudioSectionTemplateData_Statics::NewStructOps,
+				"MovieSceneAudioSectionTemplateData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneAudioSectionTemplateData),
+				alignof(FMovieSceneAudioSectionTemplateData),
+				Z_Construct_UScriptStruct_FMovieSceneAudioSectionTemplateData_Statics::PropPointers, 11,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FCommonInputActionHandlerData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2290 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCommonInputActionHandlerData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCommonInputActionHandlerData>();
 	}
-	// ReturnStructParams: original RVA 0x04174800
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCommonInputActionHandlerData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_CommonUI,
-		nullptr,
-		&NewStructOps,
-		"CommonInputActionHandlerData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCommonInputActionHandlerData),
-		alignof(FCommonInputActionHandlerData),
-		Z_Construct_UScriptStruct_FCommonInputActionHandlerData_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C48C0 (end 0x002C48EF)
 	// Original VA: 0x00000001402C48C0 | File offset: 0x002C3EC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCommonInputActionHandlerData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCommonInputActionHandlerData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04174800
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_CommonUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCommonInputActionHandlerData_Statics::NewStructOps,
+				"CommonInputActionHandlerData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCommonInputActionHandlerData),
+				alignof(FCommonInputActionHandlerData),
+				Z_Construct_UScriptStruct_FCommonInputActionHandlerData_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

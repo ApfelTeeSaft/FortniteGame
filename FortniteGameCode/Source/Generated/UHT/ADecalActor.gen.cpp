@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x038CE7E0, FClassParams RVA 0x038CE820.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_ADecalActor();  // RVA 0x023FE3D0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDB50 (end 0x023FDB72)
 // Original VA: 0x00000001423FDB50 | File offset: 0x023FD150
@@ -22,7 +22,7 @@ void ADecalActor::StaticRegisterNativesADecalActor()
 
 struct Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044422F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEC40 (end 0x023FEC6F)
 // Original VA: 0x00000001423FEC40 | File offset: 0x023FE240
@@ -32,14 +32,16 @@ UFunction* Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance_Statics::FuncParams);
+		// FuncParams: original RVA 0x044422F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ADecalActor, "CreateDynamicMaterialInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x8, Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_ADecalActor_GetDecalMaterial_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04442370 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEC70 (end 0x023FEC9F)
 // Original VA: 0x00000001423FEC70 | File offset: 0x023FE270
@@ -49,14 +51,16 @@ UFunction* Z_Construct_UFunction_ADecalActor_GetDecalMaterial()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ADecalActor_GetDecalMaterial_Statics::FuncParams);
+		// FuncParams: original RVA 0x04442370; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ADecalActor, "GetDecalMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_ADecalActor_GetDecalMaterial_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_ADecalActor_SetDecalMaterial_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044423F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FECA0 (end 0x023FECCF)
 // Original VA: 0x00000001423FECA0 | File offset: 0x023FE2A0
@@ -66,7 +70,9 @@ UFunction* Z_Construct_UFunction_ADecalActor_SetDecalMaterial()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ADecalActor_SetDecalMaterial_Statics::FuncParams);
+		// FuncParams: original RVA 0x044423F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ADecalActor, "SetDecalMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_ADecalActor_SetDecalMaterial_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

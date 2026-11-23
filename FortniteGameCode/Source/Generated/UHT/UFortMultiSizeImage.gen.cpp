@@ -23,10 +23,7 @@ void UFortMultiSizeImage::StaticRegisterNativesUFortMultiSizeImage()
 struct Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A1A60; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMultiSizeImage, "SetBrushSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEEC0 (end 0x028DEEEF)
 // Original VA: 0x00000001428DEEC0 | File offset: 0x028DE4C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A1A60; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMultiSizeImage, "SetBrushSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize()
 struct Z_Construct_UFunction_UFortMultiSizeImage_SetColorAndOpacity_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A1AE0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMultiSizeImage_SetColorAndOpacity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMultiSizeImage, "SetColorAndOpacity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_UFortMultiSizeImage_SetColorAndOpacity_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEEF0 (end 0x028DEF1F)
 // Original VA: 0x00000001428DEEF0 | File offset: 0x028DE4F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortMultiSizeImage_SetColorAndOpacity()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMultiSizeImage_SetColorAndOpacity_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A1AE0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMultiSizeImage, "SetColorAndOpacity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_UFortMultiSizeImage_SetColorAndOpacity_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortMultiSizeImage_SetColorAndOpacity()
 struct Z_Construct_UFunction_UFortMultiSizeImage_SetMultiSizeBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A1B60; StructureSize 0x2D0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMultiSizeImage_SetMultiSizeBrush_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMultiSizeImage, "SetMultiSizeBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x2D0, Z_Construct_UFunction_UFortMultiSizeImage_SetMultiSizeBrush_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEF20 (end 0x028DEF4F)
 // Original VA: 0x00000001428DEF20 | File offset: 0x028DE520
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortMultiSizeImage_SetMultiSizeBrush()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMultiSizeImage_SetMultiSizeBrush_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A1B60; StructureSize 0x2D0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMultiSizeImage, "SetMultiSizeBrush", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x2D0, Z_Construct_UFunction_UFortMultiSizeImage_SetMultiSizeBrush_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

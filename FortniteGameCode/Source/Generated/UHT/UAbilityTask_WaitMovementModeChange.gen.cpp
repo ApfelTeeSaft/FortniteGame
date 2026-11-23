@@ -22,10 +22,7 @@ void UAbilityTask_WaitMovementModeChange::StaticRegisterNativesUAbilityTask_Wait
 struct Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitMovementModeChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0419D4A0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitMovementModeChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitMovementModeChange, "CreateWaitMovementModeChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitMovementModeChange_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054E250 (end 0x0054E27F)
 // Original VA: 0x000000014054E250 | File offset: 0x0054D850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitM
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitMovementModeChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x0419D4A0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitMovementModeChange, "CreateWaitMovementModeChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitMovementModeChange_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitM
 struct Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_OnMovementModeChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0419D5A0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_OnMovementModeChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitMovementModeChange, "OnMovementModeChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_OnMovementModeChange_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054E280 (end 0x0054E2AF)
 // Original VA: 0x000000014054E280 | File offset: 0x0054D880
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_OnMovementM
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_OnMovementModeChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x0419D5A0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitMovementModeChange, "OnMovementModeChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_OnMovementModeChange_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

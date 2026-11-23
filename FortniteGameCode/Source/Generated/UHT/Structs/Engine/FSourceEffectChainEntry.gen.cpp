@@ -31,25 +31,12 @@ class UScriptStruct* FSourceEffectChainEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB300 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSourceEffectChainEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSourceEffectChainEntry>();
 	}
-	// ReturnStructParams: original RVA 0x0451CE60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSourceEffectChainEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SourceEffectChainEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSourceEffectChainEntry),
-		alignof(FSourceEffectChainEntry),
-		Z_Construct_UScriptStruct_FSourceEffectChainEntry_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DC8C0 (end 0x024DC8EF)
 	// Original VA: 0x00000001424DC8C0 | File offset: 0x024DBEC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSourceEffectChainEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSourceEffectChainEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0451CE60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSourceEffectChainEntry_Statics::NewStructOps,
+				"SourceEffectChainEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSourceEffectChainEntry),
+				alignof(FSourceEffectChainEntry),
+				Z_Construct_UScriptStruct_FSourceEffectChainEntry_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

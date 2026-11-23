@@ -31,25 +31,12 @@ class UScriptStruct* FInputAxisProperties::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7110 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FInputAxisProperties_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FInputAxisProperties>();
 	}
-	// ReturnStructParams: original RVA 0x044F1570
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FInputAxisProperties_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"InputAxisProperties",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FInputAxisProperties),
-		alignof(FInputAxisProperties),
-		Z_Construct_UScriptStruct_FInputAxisProperties_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B9E40 (end 0x024B9E6F)
 	// Original VA: 0x00000001424B9E40 | File offset: 0x024B9440
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FInputAxisProperties::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FInputAxisProperties_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044F1570
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FInputAxisProperties_Statics::NewStructOps,
+				"InputAxisProperties",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FInputAxisProperties),
+				alignof(FInputAxisProperties),
+				Z_Construct_UScriptStruct_FInputAxisProperties_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -24,10 +24,7 @@ void UDataTableFunctionLibrary::StaticRegisterNativesUDataTableFunctionLibrary()
 struct Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04441500; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "EvaluateCurveTableRow", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEF40 (end 0x023FEF6F)
 // Original VA: 0x00000001423FEF40 | File offset: 0x023FE540
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow_Statics::FuncParams);
+		// FuncParams: original RVA 0x04441500; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "EvaluateCurveTableRow", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow
 struct Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsString_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04441630; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsString_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "GetDataTableColumnAsString", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsString_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEF70 (end 0x023FEF9F)
 // Original VA: 0x00000001423FEF70 | File offset: 0x023FE570
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsString_Statics::FuncParams);
+		// FuncParams: original RVA 0x04441630; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "GetDataTableColumnAsString", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsString_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsS
 struct Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04441780; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "GetDataTableRowFromName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromName_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEFA0 (end 0x023FEFCF)
 // Original VA: 0x00000001423FEFA0 | File offset: 0x023FE5A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromNa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromName_Statics::FuncParams);
+		// FuncParams: original RVA 0x04441780; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "GetDataTableRowFromName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromName_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromNa
 struct Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04441870; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "GetDataTableRowNames", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEFD0 (end 0x023FEFFF)
 // Original VA: 0x00000001423FEFD0 | File offset: 0x023FE5D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames_Statics::FuncParams);
+		// FuncParams: original RVA 0x04441870; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDataTableFunctionLibrary, "GetDataTableRowNames", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

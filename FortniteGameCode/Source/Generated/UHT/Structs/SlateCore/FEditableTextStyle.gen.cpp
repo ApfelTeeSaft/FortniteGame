@@ -32,25 +32,12 @@ class UScriptStruct* FEditableTextStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145AB30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEditableTextStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEditableTextStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437BF10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEditableTextStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"EditableTextStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FEditableTextStyle),
-		alignof(FEditableTextStyle),
-		Z_Construct_UScriptStruct_FEditableTextStyle_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CD20 (end 0x0145CD4F)
 	// Original VA: 0x000000014145CD20 | File offset: 0x0145C320
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FEditableTextStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEditableTextStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437BF10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FEditableTextStyle_Statics::NewStructOps,
+				"EditableTextStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FEditableTextStyle),
+				alignof(FEditableTextStyle),
+				Z_Construct_UScriptStruct_FEditableTextStyle_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

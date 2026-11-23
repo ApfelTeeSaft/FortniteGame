@@ -31,25 +31,12 @@ class UScriptStruct* FFortAbilitySetDeliveryInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81370 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAbilitySetDeliveryInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAbilitySetDeliveryInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04219090
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAbilitySetDeliveryInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAbilitySetDeliveryInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortAbilitySetDeliveryInfo),
-		alignof(FFortAbilitySetDeliveryInfo),
-		Z_Construct_UScriptStruct_FFortAbilitySetDeliveryInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82B90 (end 0x00F82BBF)
 	// Original VA: 0x0000000140F82B90 | File offset: 0x00F82190
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAbilitySetDeliveryInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAbilitySetDeliveryInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04219090
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAbilitySetDeliveryInfo_Statics::NewStructOps,
+				"FortAbilitySetDeliveryInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortAbilitySetDeliveryInfo),
+				alignof(FFortAbilitySetDeliveryInfo),
+				Z_Construct_UScriptStruct_FFortAbilitySetDeliveryInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

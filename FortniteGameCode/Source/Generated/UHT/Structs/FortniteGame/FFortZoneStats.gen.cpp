@@ -30,25 +30,12 @@ class UScriptStruct* FFortZoneStats::StaticStruct()
 	struct Z_Construct_UScriptStruct_FFortZoneStats_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E22D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortZoneStats_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortZoneStats>();
 	}
-	// ReturnStructParams: original RVA 0x043597F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortZoneStats_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortZoneStats",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortZoneStats),
-		alignof(FFortZoneStats),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3DA0 (end 0x010E3DCF)
 	// Original VA: 0x00000001410E3DA0 | File offset: 0x010E33A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FFortZoneStats::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortZoneStats_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043597F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortZoneStats_Statics::NewStructOps,
+				"FortZoneStats",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortZoneStats),
+				alignof(FFortZoneStats),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

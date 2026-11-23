@@ -31,25 +31,12 @@ class UScriptStruct* FPurchaseFlowOffer::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x006A7E60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPurchaseFlowOffer_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPurchaseFlowOffer>();
 	}
-	// ReturnStructParams: original RVA 0x041BE680
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPurchaseFlowOffer_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_PurchaseFlow,
-		nullptr,
-		&NewStructOps,
-		"PurchaseFlowOffer",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPurchaseFlowOffer),
-		alignof(FPurchaseFlowOffer),
-		Z_Construct_UScriptStruct_FPurchaseFlowOffer_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x006A8150 (end 0x006A817F)
 	// Original VA: 0x00000001406A8150 | File offset: 0x006A7750
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPurchaseFlowOffer::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPurchaseFlowOffer_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BE680
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_PurchaseFlow,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPurchaseFlowOffer_Statics::NewStructOps,
+				"PurchaseFlowOffer",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPurchaseFlowOffer),
+				alignof(FPurchaseFlowOffer),
+				Z_Construct_UScriptStruct_FPurchaseFlowOffer_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

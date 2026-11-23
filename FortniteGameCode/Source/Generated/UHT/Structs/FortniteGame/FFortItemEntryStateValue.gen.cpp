@@ -27,25 +27,12 @@ class UScriptStruct* FFortItemEntryStateValue::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100B950 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortItemEntryStateValue_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortItemEntryStateValue>();
 	}
-	// ReturnStructParams: original RVA 0x042A3E40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortItemEntryStateValue_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortItemEntryStateValue",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortItemEntryStateValue),
-		alignof(FFortItemEntryStateValue),
-		Z_Construct_UScriptStruct_FFortItemEntryStateValue_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100EA00 (end 0x0100EA2F)
 	// Original VA: 0x000000014100EA00 | File offset: 0x0100E000
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -54,7 +41,19 @@ class UScriptStruct* FFortItemEntryStateValue::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortItemEntryStateValue_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042A3E40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortItemEntryStateValue_Statics::NewStructOps,
+				"FortItemEntryStateValue",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortItemEntryStateValue),
+				alignof(FFortItemEntryStateValue),
+				Z_Construct_UScriptStruct_FFortItemEntryStateValue_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

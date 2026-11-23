@@ -31,25 +31,12 @@ class UScriptStruct* FFortEventConditional::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2810 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortEventConditional_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortEventConditional>();
 	}
-	// ReturnStructParams: original RVA 0x0432C860
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortEventConditional_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortEventConditional",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortEventConditional),
-		alignof(FFortEventConditional),
-		Z_Construct_UScriptStruct_FFortEventConditional_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4260 (end 0x010B428F)
 	// Original VA: 0x00000001410B4260 | File offset: 0x010B3860
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortEventConditional::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortEventConditional_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432C860
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortEventConditional_Statics::NewStructOps,
+				"FortEventConditional",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortEventConditional),
+				alignof(FFortEventConditional),
+				Z_Construct_UScriptStruct_FFortEventConditional_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

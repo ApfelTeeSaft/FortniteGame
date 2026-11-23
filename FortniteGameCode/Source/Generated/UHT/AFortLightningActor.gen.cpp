@@ -20,12 +20,6 @@ void AFortLightningActor::StaticRegisterNativesAFortLightningActor()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortLightningActor_CleanupLightning_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042B1190; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLightningActor_CleanupLightning_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "CleanupLightning", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EC60 (end 0x0101EC8F)
 // Original VA: 0x000000014101EC60 | File offset: 0x0101E260
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +28,9 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_CleanupLightning()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLightningActor_CleanupLightning_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B1190; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "CleanupLightning", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +38,7 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_CleanupLightning()
 struct Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042B13A0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "GenerateBoltLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x30, Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations_Statics::PropPointers, 8, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EC90 (end 0x0101ECBF)
 // Original VA: 0x000000014101EC90 | File offset: 0x0101E290
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +47,9 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B13A0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "GenerateBoltLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x30, Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations_Statics::PropPointers, 8, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -62,10 +57,7 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations()
 struct Z_Construct_UFunction_AFortLightningActor_InitializeLightning_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042B1420; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLightningActor_InitializeLightning_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "InitializeLightning", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_AFortLightningActor_InitializeLightning_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101ECC0 (end 0x0101ECEF)
 // Original VA: 0x000000014101ECC0 | File offset: 0x0101E2C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,17 +66,13 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_InitializeLightning()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLightningActor_InitializeLightning_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B1420; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "InitializeLightning", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_AFortLightningActor_InitializeLightning_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortLightningActor_OnLightingCleanup_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042B1460; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLightningActor_OnLightingCleanup_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "OnLightingCleanup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101ECF0 (end 0x0101ED1F)
 // Original VA: 0x000000014101ECF0 | File offset: 0x0101E2F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,17 +81,13 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_OnLightingCleanup()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLightningActor_OnLightingCleanup_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B1460; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "OnLightingCleanup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortLightningActor_OnLightingInitialized_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042B14A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLightningActor_OnLightingInitialized_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "OnLightingInitialized", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101ED20 (end 0x0101ED4F)
 // Original VA: 0x000000014101ED20 | File offset: 0x0101E320
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -112,7 +96,9 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_OnLightingInitialized()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLightningActor_OnLightingInitialized_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B14A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLightningActor, "OnLightingInitialized", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

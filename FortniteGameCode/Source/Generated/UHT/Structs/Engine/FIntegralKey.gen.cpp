@@ -31,25 +31,12 @@ class UScriptStruct* FIntegralKey::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB000 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FIntegralKey_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FIntegralKey>();
 	}
-	// ReturnStructParams: original RVA 0x0446F380
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FIntegralKey_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"IntegralKey",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FIntegralKey),
-		alignof(FIntegralKey),
-		Z_Construct_UScriptStruct_FIntegralKey_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428F70 (end 0x02428F9F)
 	// Original VA: 0x0000000142428F70 | File offset: 0x02428570
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FIntegralKey::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FIntegralKey_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0446F380
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FIntegralKey_Statics::NewStructOps,
+				"IntegralKey",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FIntegralKey),
+				alignof(FIntegralKey),
+				Z_Construct_UScriptStruct_FIntegralKey_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

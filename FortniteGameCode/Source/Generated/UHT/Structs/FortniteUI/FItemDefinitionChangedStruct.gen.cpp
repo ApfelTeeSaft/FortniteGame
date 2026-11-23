@@ -31,25 +31,12 @@ class UScriptStruct* FItemDefinitionChangedStruct::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8E00 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FItemDefinitionChangedStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FItemDefinitionChangedStruct>();
 	}
-	// ReturnStructParams: original RVA 0x045865A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemDefinitionChangedStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"ItemDefinitionChangedStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FItemDefinitionChangedStruct),
-		alignof(FItemDefinitionChangedStruct),
-		Z_Construct_UScriptStruct_FItemDefinitionChangedStruct_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C3280 (end 0x028C32AF)
 	// Original VA: 0x00000001428C3280 | File offset: 0x028C2880
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FItemDefinitionChangedStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FItemDefinitionChangedStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045865A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FItemDefinitionChangedStruct_Statics::NewStructOps,
+				"ItemDefinitionChangedStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FItemDefinitionChangedStruct),
+				alignof(FItemDefinitionChangedStruct),
+				Z_Construct_UScriptStruct_FItemDefinitionChangedStruct_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

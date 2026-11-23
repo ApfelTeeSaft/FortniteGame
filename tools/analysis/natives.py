@@ -335,7 +335,7 @@ def main() -> int:
         return pkg in {points[j][1] for j in (i - 1, i) if 0 <= j < len(points)}
 
     def flags_of(cls: str, name: str) -> int | None:
-        rec = syms.get(f"?FuncParams@Z_Construct_UFunction_{cls}_{name}_Statics@@2UFFunctionParams@UE4CodeGen_Private@@B")
+        rec = syms.get(f"?FuncParams@?4??Z_Construct_UFunction_{cls}_{name}@@YAPEAVUFunction@@XZ@4UFFunctionParams@UE4CodeGen_Private@@B")
         return struct.unpack("<I", dimg.read(int(rec[0], 16) + 0x20, 4))[0] if rec else None
 
     natives, virtuals, unresolved = [], [], Counter()

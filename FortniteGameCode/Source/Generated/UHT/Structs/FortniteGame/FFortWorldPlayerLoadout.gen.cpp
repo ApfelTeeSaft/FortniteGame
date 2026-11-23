@@ -31,25 +31,12 @@ class UScriptStruct* FFortWorldPlayerLoadout::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01036F30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortWorldPlayerLoadout_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortWorldPlayerLoadout>();
 	}
-	// ReturnStructParams: original RVA 0x042C3500
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortWorldPlayerLoadout_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortWorldPlayerLoadout",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortWorldPlayerLoadout),
-		alignof(FFortWorldPlayerLoadout),
-		Z_Construct_UScriptStruct_FFortWorldPlayerLoadout_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039FE0 (end 0x0103A00F)
 	// Original VA: 0x0000000141039FE0 | File offset: 0x010395E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortWorldPlayerLoadout::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortWorldPlayerLoadout_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C3500
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortWorldPlayerLoadout_Statics::NewStructOps,
+				"FortWorldPlayerLoadout",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortWorldPlayerLoadout),
+				alignof(FFortWorldPlayerLoadout),
+				Z_Construct_UScriptStruct_FFortWorldPlayerLoadout_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

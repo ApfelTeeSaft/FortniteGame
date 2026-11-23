@@ -26,10 +26,7 @@ void UAthenaBattleBusItemDefinition::StaticRegisterNativesUAthenaBattleBusItemDe
 struct Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041EE4C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetBusPrefabClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClass_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5A8B0 (end 0x00F5A8DF)
 // Original VA: 0x0000000140F5A8B0 | File offset: 0x00F59EB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClas
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClass_Statics::FuncParams);
+		// FuncParams: original RVA 0x041EE4C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetBusPrefabClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClass_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClas
 struct Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingMusic_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041EE540; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingMusic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetFlightLoopingMusic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingMusic_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5A8E0 (end 0x00F5A90F)
 // Original VA: 0x0000000140F5A8E0 | File offset: 0x00F59EE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLooping
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingMusic_Statics::FuncParams);
+		// FuncParams: original RVA 0x041EE540; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetFlightLoopingMusic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingMusic_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLooping
 struct Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingSound_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041EE5C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetFlightLoopingSound", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingSound_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5A910 (end 0x00F5A93F)
 // Original VA: 0x0000000140F5A910 | File offset: 0x00F59F10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLooping
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingSound_Statics::FuncParams);
+		// FuncParams: original RVA 0x041EE5C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetFlightLoopingSound", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLoopingSound_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetFlightLooping
 struct Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetIgnitionSound_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041EE640; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetIgnitionSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetIgnitionSound", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetIgnitionSound_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5A940 (end 0x00F5A96F)
 // Original VA: 0x0000000140F5A940 | File offset: 0x00F59F40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +92,9 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetIgnitionSound
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetIgnitionSound_Statics::FuncParams);
+		// FuncParams: original RVA 0x041EE640; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetIgnitionSound", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetIgnitionSound_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +102,7 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetIgnitionSound
 struct Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingMusic_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041EE6C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingMusic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetLobbyLoopingMusic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingMusic_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5A970 (end 0x00F5A99F)
 // Original VA: 0x0000000140F5A970 | File offset: 0x00F59F70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,7 +111,9 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingM
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingMusic_Statics::FuncParams);
+		// FuncParams: original RVA 0x041EE6C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetLobbyLoopingMusic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingMusic_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -126,10 +121,7 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingM
 struct Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingSound_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041EE740; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetLobbyLoopingSound", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingSound_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5A9A0 (end 0x00F5A9CF)
 // Original VA: 0x0000000140F5A9A0 | File offset: 0x00F59FA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -138,7 +130,9 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingSound_Statics::FuncParams);
+		// FuncParams: original RVA 0x041EE740; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaBattleBusItemDefinition, "GetLobbyLoopingSound", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingSound_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

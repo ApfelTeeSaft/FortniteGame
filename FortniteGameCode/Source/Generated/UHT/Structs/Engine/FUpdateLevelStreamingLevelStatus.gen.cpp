@@ -31,25 +31,12 @@ class UScriptStruct* FUpdateLevelStreamingLevelStatus::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEDDB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FUpdateLevelStreamingLevelStatus_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUpdateLevelStreamingLevelStatus>();
 	}
-	// ReturnStructParams: original RVA 0x044EA460
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUpdateLevelStreamingLevelStatus_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"UpdateLevelStreamingLevelStatus",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FUpdateLevelStreamingLevelStatus),
-		alignof(FUpdateLevelStreamingLevelStatus),
-		Z_Construct_UScriptStruct_FUpdateLevelStreamingLevelStatus_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC4C0 (end 0x024AC4EF)
 	// Original VA: 0x00000001424AC4C0 | File offset: 0x024ABAC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FUpdateLevelStreamingLevelStatus::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FUpdateLevelStreamingLevelStatus_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044EA460
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FUpdateLevelStreamingLevelStatus_Statics::NewStructOps,
+				"UpdateLevelStreamingLevelStatus",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FUpdateLevelStreamingLevelStatus),
+				alignof(FUpdateLevelStreamingLevelStatus),
+				Z_Construct_UScriptStruct_FUpdateLevelStreamingLevelStatus_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

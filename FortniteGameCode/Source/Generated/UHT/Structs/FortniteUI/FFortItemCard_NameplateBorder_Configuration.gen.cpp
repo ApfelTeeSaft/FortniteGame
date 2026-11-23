@@ -31,25 +31,12 @@ class UScriptStruct* FFortItemCard_NameplateBorder_Configuration::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0C90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortItemCard_NameplateBorder_Configuration_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortItemCard_NameplateBorder_Configuration>();
 	}
-	// ReturnStructParams: original RVA 0x0458E5E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortItemCard_NameplateBorder_Configuration_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortItemCard_NameplateBorder_Configuration",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortItemCard_NameplateBorder_Configuration),
-		alignof(FFortItemCard_NameplateBorder_Configuration),
-		Z_Construct_UScriptStruct_FFortItemCard_NameplateBorder_Configuration_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C2F50 (end 0x028C2F7F)
 	// Original VA: 0x00000001428C2F50 | File offset: 0x028C2550
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortItemCard_NameplateBorder_Configuration::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortItemCard_NameplateBorder_Configuration_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0458E5E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortItemCard_NameplateBorder_Configuration_Statics::NewStructOps,
+				"FortItemCard_NameplateBorder_Configuration",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortItemCard_NameplateBorder_Configuration),
+				alignof(FFortItemCard_NameplateBorder_Configuration),
+				Z_Construct_UScriptStruct_FFortItemCard_NameplateBorder_Configuration_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

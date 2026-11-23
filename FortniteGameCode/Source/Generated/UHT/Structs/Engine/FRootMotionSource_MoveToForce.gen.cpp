@@ -32,25 +32,12 @@ class UScriptStruct* FRootMotionSource_MoveToForce::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1C50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRootMotionSource_MoveToForce_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRootMotionSource_MoveToForce>();
 	}
-	// ReturnStructParams: original RVA 0x045011A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRootMotionSource_MoveToForce_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FRootMotionSource,
-		&NewStructOps,
-		"RootMotionSource_MoveToForce",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FRootMotionSource_MoveToForce),
-		alignof(FRootMotionSource_MoveToForce),
-		Z_Construct_UScriptStruct_FRootMotionSource_MoveToForce_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C3720 (end 0x024C374F)
 	// Original VA: 0x00000001424C3720 | File offset: 0x024C2D20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FRootMotionSource_MoveToForce::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRootMotionSource_MoveToForce_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045011A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FRootMotionSource,
+				&Z_Construct_UScriptStruct_FRootMotionSource_MoveToForce_Statics::NewStructOps,
+				"RootMotionSource_MoveToForce",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FRootMotionSource_MoveToForce),
+				alignof(FRootMotionSource_MoveToForce),
+				Z_Construct_UScriptStruct_FRootMotionSource_MoveToForce_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

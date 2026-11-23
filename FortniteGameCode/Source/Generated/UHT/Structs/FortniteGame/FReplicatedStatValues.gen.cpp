@@ -31,25 +31,12 @@ class UScriptStruct* FReplicatedStatValues::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB000 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FReplicatedStatValues_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FReplicatedStatValues>();
 	}
-	// ReturnStructParams: original RVA 0x042EEEB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FReplicatedStatValues_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ReplicatedStatValues",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FReplicatedStatValues),
-		alignof(FReplicatedStatValues),
-		Z_Construct_UScriptStruct_FReplicatedStatValues_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010664A0 (end 0x010664CF)
 	// Original VA: 0x00000001410664A0 | File offset: 0x01065AA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FReplicatedStatValues::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FReplicatedStatValues_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EEEB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FReplicatedStatValues_Statics::NewStructOps,
+				"ReplicatedStatValues",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FReplicatedStatValues),
+				alignof(FReplicatedStatValues),
+				Z_Construct_UScriptStruct_FReplicatedStatValues_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

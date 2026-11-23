@@ -22,10 +22,7 @@ void UMaterialBillboardComponent::StaticRegisterNativesUMaterialBillboardCompone
 struct Z_Construct_UFunction_UMaterialBillboardComponent_AddElement_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044B54A0; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMaterialBillboardComponent_AddElement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMaterialBillboardComponent, "AddElement", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x28, Z_Construct_UFunction_UMaterialBillboardComponent_AddElement_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02479220 (end 0x0247924F)
 // Original VA: 0x0000000142479220 | File offset: 0x02478820
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UMaterialBillboardComponent_AddElement()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMaterialBillboardComponent_AddElement_Statics::FuncParams);
+		// FuncParams: original RVA 0x044B54A0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMaterialBillboardComponent, "AddElement", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x28, Z_Construct_UFunction_UMaterialBillboardComponent_AddElement_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UMaterialBillboardComponent_AddElement()
 struct Z_Construct_UFunction_UMaterialBillboardComponent_SetElements_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044B5560; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMaterialBillboardComponent_SetElements_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMaterialBillboardComponent, "SetElements", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UMaterialBillboardComponent_SetElements_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02479250 (end 0x0247927F)
 // Original VA: 0x0000000142479250 | File offset: 0x02478850
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UMaterialBillboardComponent_SetElements()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMaterialBillboardComponent_SetElements_Statics::FuncParams);
+		// FuncParams: original RVA 0x044B5560; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMaterialBillboardComponent, "SetElements", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UMaterialBillboardComponent_SetElements_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayEffectQuery::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00562FB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayEffectQuery_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayEffectQuery>();
 	}
-	// ReturnStructParams: original RVA 0x041A7050
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayEffectQuery_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayEffectQuery",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000205),
-		sizeof(FGameplayEffectQuery),
-		alignof(FGameplayEffectQuery),
-		Z_Construct_UScriptStruct_FGameplayEffectQuery_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564EC0 (end 0x00564EEF)
 	// Original VA: 0x0000000140564EC0 | File offset: 0x005644C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayEffectQuery::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayEffectQuery_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A7050
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayEffectQuery_Statics::NewStructOps,
+				"GameplayEffectQuery",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000205),
+				sizeof(FGameplayEffectQuery),
+				alignof(FGameplayEffectQuery),
+				Z_Construct_UScriptStruct_FGameplayEffectQuery_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

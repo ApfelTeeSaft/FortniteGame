@@ -31,25 +31,12 @@ class UScriptStruct* FPublicUrlContext::StaticStruct()
 	struct Z_Construct_UScriptStruct_FPublicUrlContext_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE760 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPublicUrlContext_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPublicUrlContext>();
 	}
-	// ReturnStructParams: original RVA 0x041C3380
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPublicUrlContext_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
-		Z_Construct_UScriptStruct_FBaseUrlContext,
-		&NewStructOps,
-		"PublicUrlContext",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FPublicUrlContext),
-		alignof(FPublicUrlContext),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AFDE0 (end 0x007AFE0F)
 	// Original VA: 0x00000001407AFDE0 | File offset: 0x007AF3E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPublicUrlContext::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPublicUrlContext_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C3380
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
+				Z_Construct_UScriptStruct_FBaseUrlContext,
+				&Z_Construct_UScriptStruct_FPublicUrlContext_Statics::NewStructOps,
+				"PublicUrlContext",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FPublicUrlContext),
+				alignof(FPublicUrlContext),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

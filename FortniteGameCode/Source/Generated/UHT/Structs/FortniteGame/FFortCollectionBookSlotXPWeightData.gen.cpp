@@ -32,25 +32,12 @@ class UScriptStruct* FFortCollectionBookSlotXPWeightData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC4E80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortCollectionBookSlotXPWeightData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortCollectionBookSlotXPWeightData>();
 	}
-	// ReturnStructParams: original RVA 0x04258BA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortCollectionBookSlotXPWeightData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortCollectionBookSlotXPWeightData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortCollectionBookSlotXPWeightData),
-		alignof(FFortCollectionBookSlotXPWeightData),
-		Z_Construct_UScriptStruct_FFortCollectionBookSlotXPWeightData_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC7050 (end 0x00FC707F)
 	// Original VA: 0x0000000140FC7050 | File offset: 0x00FC6650
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortCollectionBookSlotXPWeightData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortCollectionBookSlotXPWeightData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04258BA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortCollectionBookSlotXPWeightData_Statics::NewStructOps,
+				"FortCollectionBookSlotXPWeightData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortCollectionBookSlotXPWeightData),
+				alignof(FFortCollectionBookSlotXPWeightData),
+				Z_Construct_UScriptStruct_FFortCollectionBookSlotXPWeightData_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

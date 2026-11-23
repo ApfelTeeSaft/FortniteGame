@@ -31,25 +31,12 @@ class UScriptStruct* FFortGameplayAbilityMontageInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE6D20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortGameplayAbilityMontageInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortGameplayAbilityMontageInfo>();
 	}
-	// ReturnStructParams: original RVA 0x0427EA60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortGameplayAbilityMontageInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortGameplayAbilityMontageInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortGameplayAbilityMontageInfo),
-		alignof(FFortGameplayAbilityMontageInfo),
-		Z_Construct_UScriptStruct_FFortGameplayAbilityMontageInfo_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE8BB0 (end 0x00FE8BDF)
 	// Original VA: 0x0000000140FE8BB0 | File offset: 0x00FE81B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortGameplayAbilityMontageInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortGameplayAbilityMontageInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0427EA60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortGameplayAbilityMontageInfo_Statics::NewStructOps,
+				"FortGameplayAbilityMontageInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortGameplayAbilityMontageInfo),
+				alignof(FFortGameplayAbilityMontageInfo),
+				Z_Construct_UScriptStruct_FFortGameplayAbilityMontageInfo_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

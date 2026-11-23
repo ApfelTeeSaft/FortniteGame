@@ -24,10 +24,7 @@ void UCommonTreeView::StaticRegisterNativesUCommonTreeView()
 struct Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04180740; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "DynamicHandleItemClickedCommonButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBD30 (end 0x002CBD5F)
 // Original VA: 0x00000001402CBD30 | File offset: 0x002CB330
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,17 +33,13 @@ UFunction* Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton_Statics::FuncParams);
+		// FuncParams: original RVA 0x04180740; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "DynamicHandleItemClickedCommonButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UCommonTreeView_RequestRefresh_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04180780; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTreeView_RequestRefresh_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "RequestRefresh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBD60 (end 0x002CBD8F)
 // Original VA: 0x00000001402CBD60 | File offset: 0x002CB360
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +48,9 @@ UFunction* Z_Construct_UFunction_UCommonTreeView_RequestRefresh()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTreeView_RequestRefresh_Statics::FuncParams);
+		// FuncParams: original RVA 0x04180780; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "RequestRefresh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +58,7 @@ UFunction* Z_Construct_UFunction_UCommonTreeView_RequestRefresh()
 struct Z_Construct_UFunction_UCommonTreeView_SetItemExpansion_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04180850; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTreeView_SetItemExpansion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "SetItemExpansion", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonTreeView_SetItemExpansion_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBD90 (end 0x002CBDBF)
 // Original VA: 0x00000001402CBD90 | File offset: 0x002CB390
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +67,9 @@ UFunction* Z_Construct_UFunction_UCommonTreeView_SetItemExpansion()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTreeView_SetItemExpansion_Statics::FuncParams);
+		// FuncParams: original RVA 0x04180850; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "SetItemExpansion", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonTreeView_SetItemExpansion_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -83,10 +77,7 @@ UFunction* Z_Construct_UFunction_UCommonTreeView_SetItemExpansion()
 struct Z_Construct_UFunction_UCommonTreeView_SetSelection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041808D0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonTreeView_SetSelection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "SetSelection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonTreeView_SetSelection_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBDC0 (end 0x002CBDEF)
 // Original VA: 0x00000001402CBDC0 | File offset: 0x002CB3C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -95,7 +86,9 @@ UFunction* Z_Construct_UFunction_UCommonTreeView_SetSelection()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTreeView_SetSelection_Statics::FuncParams);
+		// FuncParams: original RVA 0x041808D0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTreeView, "SetSelection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonTreeView_SetSelection_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

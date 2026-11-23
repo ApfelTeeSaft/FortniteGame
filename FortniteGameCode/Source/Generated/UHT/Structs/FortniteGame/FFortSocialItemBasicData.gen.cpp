@@ -31,25 +31,12 @@ class UScriptStruct* FFortSocialItemBasicData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A42C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSocialItemBasicData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSocialItemBasicData>();
 	}
-	// ReturnStructParams: original RVA 0x04329BF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSocialItemBasicData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSocialItemBasicData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSocialItemBasicData),
-		alignof(FFortSocialItemBasicData),
-		Z_Construct_UScriptStruct_FFortSocialItemBasicData_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A6AD0 (end 0x010A6AFF)
 	// Original VA: 0x00000001410A6AD0 | File offset: 0x010A60D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSocialItemBasicData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSocialItemBasicData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04329BF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSocialItemBasicData_Statics::NewStructOps,
+				"FortSocialItemBasicData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSocialItemBasicData),
+				alignof(FFortSocialItemBasicData),
+				Z_Construct_UScriptStruct_FFortSocialItemBasicData_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

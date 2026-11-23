@@ -31,25 +31,12 @@ class UScriptStruct* FMcpRemoveItemRequest::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102DB10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMcpRemoveItemRequest_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMcpRemoveItemRequest>();
 	}
-	// ReturnStructParams: original RVA 0x041C40B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMcpRemoveItemRequest_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
-		nullptr,
-		&NewStructOps,
-		"McpRemoveItemRequest",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FMcpRemoveItemRequest),
-		alignof(FMcpRemoveItemRequest),
-		Z_Construct_UScriptStruct_FMcpRemoveItemRequest_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AFC90 (end 0x007AFCBF)
 	// Original VA: 0x00000001407AFC90 | File offset: 0x007AF290
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMcpRemoveItemRequest::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMcpRemoveItemRequest_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C40B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMcpRemoveItemRequest_Statics::NewStructOps,
+				"McpRemoveItemRequest",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FMcpRemoveItemRequest),
+				alignof(FMcpRemoveItemRequest),
+				Z_Construct_UScriptStruct_FMcpRemoveItemRequest_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

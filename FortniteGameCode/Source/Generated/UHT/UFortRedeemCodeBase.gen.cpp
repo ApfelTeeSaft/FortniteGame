@@ -21,10 +21,7 @@ void UFortRedeemCodeBase::StaticRegisterNativesUFortRedeemCodeBase()
 struct Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AE2F0; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedeemCodeBase, "OnRedeemFriendCodeComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDD90 (end 0x028EDDBF)
 // Original VA: 0x00000001428EDD90 | File offset: 0x028ED390
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AE2F0; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedeemCodeBase, "OnRedeemFriendCodeComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete(
 struct Z_Construct_UFunction_UFortRedeemCodeBase_RedeemFriendCode_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AE370; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRedeemCodeBase_RedeemFriendCode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedeemCodeBase, "RedeemFriendCode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortRedeemCodeBase_RedeemFriendCode_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDDC0 (end 0x028EDDEF)
 // Original VA: 0x00000001428EDDC0 | File offset: 0x028ED3C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UFortRedeemCodeBase_RedeemFriendCode()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRedeemCodeBase_RedeemFriendCode_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AE370; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedeemCodeBase, "RedeemFriendCode", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortRedeemCodeBase_RedeemFriendCode_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

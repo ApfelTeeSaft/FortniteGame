@@ -31,25 +31,12 @@ class UScriptStruct* FClothCollisionPrim_Convex::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3B430 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FClothCollisionPrim_Convex_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FClothCollisionPrim_Convex>();
 	}
-	// ReturnStructParams: original RVA 0x043FC890
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FClothCollisionPrim_Convex_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_ClothingSystemRuntimeInterface,
-		nullptr,
-		&NewStructOps,
-		"ClothCollisionPrim_Convex",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FClothCollisionPrim_Convex),
-		alignof(FClothCollisionPrim_Convex),
-		Z_Construct_UScriptStruct_FClothCollisionPrim_Convex_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3BB80 (end 0x01D3BBAF)
 	// Original VA: 0x0000000141D3BB80 | File offset: 0x01D3B180
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FClothCollisionPrim_Convex::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FClothCollisionPrim_Convex_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FC890
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_ClothingSystemRuntimeInterface,
+				nullptr,
+				&Z_Construct_UScriptStruct_FClothCollisionPrim_Convex_Statics::NewStructOps,
+				"ClothCollisionPrim_Convex",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FClothCollisionPrim_Convex),
+				alignof(FClothCollisionPrim_Convex),
+				Z_Construct_UScriptStruct_FClothCollisionPrim_Convex_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

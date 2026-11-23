@@ -31,25 +31,12 @@ class UScriptStruct* FFortExperienceDelta::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010648A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortExperienceDelta_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortExperienceDelta>();
 	}
-	// ReturnStructParams: original RVA 0x042EE9C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortExperienceDelta_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortExperienceDelta",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortExperienceDelta),
-		alignof(FFortExperienceDelta),
-		Z_Construct_UScriptStruct_FFortExperienceDelta_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066200 (end 0x0106622F)
 	// Original VA: 0x0000000141066200 | File offset: 0x01065800
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortExperienceDelta::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortExperienceDelta_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EE9C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortExperienceDelta_Statics::NewStructOps,
+				"FortExperienceDelta",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortExperienceDelta),
+				alignof(FFortExperienceDelta),
+				Z_Construct_UScriptStruct_FFortExperienceDelta_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

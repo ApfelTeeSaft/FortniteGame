@@ -35,10 +35,7 @@ void AFortWindManager::StaticRegisterNativesAFortWindManager()
 struct Z_Construct_UFunction_AFortWindManager_AddWindImpulse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04351D40; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_AddWindImpulse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "AddWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x50, Z_Construct_UFunction_AFortWindManager_AddWindImpulse_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCAA0 (end 0x010DCACF)
 // Original VA: 0x00000001410DCAA0 | File offset: 0x010DC0A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -47,7 +44,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_AddWindImpulse()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_AddWindImpulse_Statics::FuncParams);
+		// FuncParams: original RVA 0x04351D40; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "AddWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x50, Z_Construct_UFunction_AFortWindManager_AddWindImpulse_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -55,10 +54,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_AddWindImpulse()
 struct Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04351E40; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "AddWindImpulseCylinder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x50, Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCAD0 (end 0x010DCAFF)
 // Original VA: 0x00000001410DCAD0 | File offset: 0x010DC0D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -67,7 +63,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder_Statics::FuncParams);
+		// FuncParams: original RVA 0x04351E40; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "AddWindImpulseCylinder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x50, Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -75,10 +73,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder()
 struct Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04351EC0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "AddWindParticleSystemComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCB00 (end 0x010DCB2F)
 // Original VA: 0x00000001410DCB00 | File offset: 0x010DC100
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -87,7 +82,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04351EC0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "AddWindParticleSystemComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -95,10 +92,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent
 struct Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352070; StructureSize 0x6C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseCylinder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x6C, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCB30 (end 0x010DCB5F)
 // Original VA: 0x00000001410DCB30 | File offset: 0x010DC130
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -107,7 +101,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352070; StructureSize 0x6C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseCylinder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x6C, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -115,10 +111,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder()
 struct Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanced_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352300; StructureSize 0x8C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanced_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseCylinderAdvanced", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x8C, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanced_Statics::PropPointers, 9, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCB60 (end 0x010DCB8F)
 // Original VA: 0x00000001410DCB60 | File offset: 0x010DC160
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -127,7 +120,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanced_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352300; StructureSize 0x8C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseCylinderAdvanced", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x8C, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanced_Statics::PropPointers, 9, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -135,10 +130,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanc
 struct Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352790; StructureSize 0x120 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseCylinderDelta", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x120, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta_Statics::PropPointers, 18, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCB90 (end 0x010DCBBF)
 // Original VA: 0x00000001410DCB90 | File offset: 0x010DC190
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -147,7 +139,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352790; StructureSize 0x120 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseCylinderDelta", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x120, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta_Statics::PropPointers, 18, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -155,10 +149,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta(
 struct Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352900; StructureSize 0x64 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseRadius", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x64, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCBC0 (end 0x010DCBEF)
 // Original VA: 0x00000001410DCBC0 | File offset: 0x010DC1C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -167,7 +158,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352900; StructureSize 0x64 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "BreakWindImpulseRadius", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x64, Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -175,10 +168,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius()
 struct Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderDelta_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352A10; StructureSize 0xDC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderDelta_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "GetCurrentWindImpulseCylinderDelta", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0xDC, Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderDelta_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCBF0 (end 0x010DCC1F)
 // Original VA: 0x00000001410DCBF0 | File offset: 0x010DC1F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -187,7 +177,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderD
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderDelta_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352A10; StructureSize 0xDC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "GetCurrentWindImpulseCylinderDelta", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0xDC, Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderDelta_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -195,10 +187,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderD
 struct Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352AD0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "GetGlobalWindIntensityAndDirection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x44C20401, 0x10, Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirection_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCC20 (end 0x010DCC4F)
 // Original VA: 0x00000001410DCC20 | File offset: 0x010DC220
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -207,7 +196,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirec
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirection_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352AD0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "GetGlobalWindIntensityAndDirection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x44C20401, 0x10, Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirection_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -215,10 +206,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirec
 struct Z_Construct_UFunction_AFortWindManager_GetWindManager_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352B90; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_GetWindManager_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "GetWindManager", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_AFortWindManager_GetWindManager_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCC50 (end 0x010DCC7F)
 // Original VA: 0x00000001410DCC50 | File offset: 0x010DC250
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -227,7 +215,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_GetWindManager()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_GetWindManager_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352B90; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "GetWindManager", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_AFortWindManager_GetWindManager_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -235,10 +225,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_GetWindManager()
 struct Z_Construct_UFunction_AFortWindManager_HasWindImpulse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352C60; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_HasWindImpulse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "HasWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x8, Z_Construct_UFunction_AFortWindManager_HasWindImpulse_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCC80 (end 0x010DCCAF)
 // Original VA: 0x00000001410DCC80 | File offset: 0x010DC280
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -247,7 +234,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_HasWindImpulse()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_HasWindImpulse_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352C60; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "HasWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x8, Z_Construct_UFunction_AFortWindManager_HasWindImpulse_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -255,10 +244,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_HasWindImpulse()
 struct Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352E10; StructureSize 0x6C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "MakeWindImpulseCylinder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x6C, Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCCB0 (end 0x010DCCDF)
 // Original VA: 0x00000001410DCCB0 | File offset: 0x010DC2B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -267,7 +253,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352E10; StructureSize 0x6C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "MakeWindImpulseCylinder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x6C, Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -275,10 +263,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder()
 struct Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04352F80; StructureSize 0x64 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "MakeWindImpulseRadius", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x64, Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCCE0 (end 0x010DCD0F)
 // Original VA: 0x00000001410DCCE0 | File offset: 0x010DC2E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -287,7 +272,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius_Statics::FuncParams);
+		// FuncParams: original RVA 0x04352F80; StructureSize 0x64 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "MakeWindImpulseRadius", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x64, Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -295,10 +282,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius()
 struct Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04353000; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindAudioBecameActive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCD10 (end 0x010DCD3F)
 // Original VA: 0x00000001410DCD10 | File offset: 0x010DC310
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -307,7 +291,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive_Statics::FuncParams);
+		// FuncParams: original RVA 0x04353000; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindAudioBecameActive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -315,10 +301,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive()
 struct Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04353080; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindAudioBecameInactive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCD40 (end 0x010DCD6F)
 // Original VA: 0x00000001410DCD40 | File offset: 0x010DC340
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -327,7 +310,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive_Statics::FuncParams);
+		// FuncParams: original RVA 0x04353080; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindAudioBecameInactive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -335,10 +320,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive()
 struct Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04353140; StructureSize 0xD8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindImpulseCylinderCreation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xD8, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCD70 (end 0x010DCD9F)
 // Original VA: 0x00000001410DCD70 | File offset: 0x010DC370
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -347,7 +329,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04353140; StructureSize 0xD8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindImpulseCylinderCreation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xD8, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -355,10 +339,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation(
 struct Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043531C0; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindImpulseCylinderDeath", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x48, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCDA0 (end 0x010DCDCF)
 // Original VA: 0x00000001410DCDA0 | File offset: 0x010DC3A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -367,7 +348,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath_Statics::FuncParams);
+		// FuncParams: original RVA 0x043531C0; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindImpulseCylinderDeath", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x48, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -375,10 +358,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath()
 struct Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeltaComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04353240; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeltaComplete_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindImpulseCylinderDeltaComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x48, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeltaComplete_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCDD0 (end 0x010DCDFF)
 // Original VA: 0x00000001410DCDD0 | File offset: 0x010DC3D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -387,17 +367,13 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeltaComp
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeltaComplete_Statics::FuncParams);
+		// FuncParams: original RVA 0x04353240; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWindImpulseCylinderDeltaComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x48, Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeltaComplete_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortWindManager_OnWorldReady_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04353280; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_OnWorldReady_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWorldReady", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCE00 (end 0x010DCE2F)
 // Original VA: 0x00000001410DCE00 | File offset: 0x010DC400
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -406,7 +382,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWorldReady()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_OnWorldReady_Statics::FuncParams);
+		// FuncParams: original RVA 0x04353280; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "OnWorldReady", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -414,10 +392,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_OnWorldReady()
 struct Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04353340; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "RemoveWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCE30 (end 0x010DCE5F)
 // Original VA: 0x00000001410DCE30 | File offset: 0x010DC430
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -426,7 +401,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse_Statics::FuncParams);
+		// FuncParams: original RVA 0x04353340; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "RemoveWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -434,10 +411,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse()
 struct Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043533C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "RemoveWindParticleSystemComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemComponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCE60 (end 0x010DCE8F)
 // Original VA: 0x00000001410DCE60 | File offset: 0x010DC460
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -446,7 +420,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemCompon
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x043533C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "RemoveWindParticleSystemComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemComponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -454,10 +430,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemCompon
 struct Z_Construct_UFunction_AFortWindManager_SetWindImpulse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043534D0; StructureSize 0x54 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_SetWindImpulse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "SetWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x54, Z_Construct_UFunction_AFortWindManager_SetWindImpulse_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCE90 (end 0x010DCEBF)
 // Original VA: 0x00000001410DCE90 | File offset: 0x010DC490
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -466,7 +439,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_SetWindImpulse()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_SetWindImpulse_Statics::FuncParams);
+		// FuncParams: original RVA 0x043534D0; StructureSize 0x54 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "SetWindImpulse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x54, Z_Construct_UFunction_AFortWindManager_SetWindImpulse_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -474,10 +449,7 @@ UFunction* Z_Construct_UFunction_AFortWindManager_SetWindImpulse()
 struct Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitude_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04353610; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitude_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "SetWindImpulseCylinderMagnitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitude_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DCEC0 (end 0x010DCEEF)
 // Original VA: 0x00000001410DCEC0 | File offset: 0x010DC4C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -486,7 +458,9 @@ UFunction* Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitud
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitude_Statics::FuncParams);
+		// FuncParams: original RVA 0x04353610; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWindManager, "SetWindImpulseCylinderMagnitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitude_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

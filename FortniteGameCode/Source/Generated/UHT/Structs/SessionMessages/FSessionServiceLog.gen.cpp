@@ -31,25 +31,12 @@ class UScriptStruct* FSessionServiceLog::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02525090 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSessionServiceLog_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSessionServiceLog>();
 	}
-	// ReturnStructParams: original RVA 0x045382F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSessionServiceLog_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SessionMessages,
-		nullptr,
-		&NewStructOps,
-		"SessionServiceLog",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSessionServiceLog),
-		alignof(FSessionServiceLog),
-		Z_Construct_UScriptStruct_FSessionServiceLog_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x025253C0 (end 0x025253EF)
 	// Original VA: 0x00000001425253C0 | File offset: 0x025249C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSessionServiceLog::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSessionServiceLog_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045382F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SessionMessages,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSessionServiceLog_Statics::NewStructOps,
+				"SessionServiceLog",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSessionServiceLog),
+				alignof(FSessionServiceLog),
+				Z_Construct_UScriptStruct_FSessionServiceLog_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

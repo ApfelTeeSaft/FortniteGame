@@ -31,25 +31,12 @@ class UScriptStruct* FServerAbilityRPCBatch::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055A650 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FServerAbilityRPCBatch_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FServerAbilityRPCBatch>();
 	}
-	// ReturnStructParams: original RVA 0x041A3200
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FServerAbilityRPCBatch_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"ServerAbilityRPCBatch",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FServerAbilityRPCBatch),
-		alignof(FServerAbilityRPCBatch),
-		Z_Construct_UScriptStruct_FServerAbilityRPCBatch_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055CC50 (end 0x0055CC7F)
 	// Original VA: 0x000000014055CC50 | File offset: 0x0055C250
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FServerAbilityRPCBatch::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FServerAbilityRPCBatch_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A3200
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FServerAbilityRPCBatch_Statics::NewStructOps,
+				"ServerAbilityRPCBatch",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FServerAbilityRPCBatch),
+				alignof(FServerAbilityRPCBatch),
+				Z_Construct_UScriptStruct_FServerAbilityRPCBatch_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FFortAthenaSeasonStats::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0BD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAthenaSeasonStats_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAthenaSeasonStats>();
 	}
-	// ReturnStructParams: original RVA 0x042C1040
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAthenaSeasonStats_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAthenaSeasonStats",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAthenaSeasonStats),
-		alignof(FFortAthenaSeasonStats),
-		Z_Construct_UScriptStruct_FFortAthenaSeasonStats_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01031890 (end 0x010318BF)
 	// Original VA: 0x0000000141031890 | File offset: 0x01030E90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAthenaSeasonStats::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAthenaSeasonStats_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C1040
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAthenaSeasonStats_Statics::NewStructOps,
+				"FortAthenaSeasonStats",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAthenaSeasonStats),
+				alignof(FFortAthenaSeasonStats),
+				Z_Construct_UScriptStruct_FFortAthenaSeasonStats_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

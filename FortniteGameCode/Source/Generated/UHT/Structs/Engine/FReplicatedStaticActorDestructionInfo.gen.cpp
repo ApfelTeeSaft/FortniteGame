@@ -31,25 +31,12 @@ class UScriptStruct* FReplicatedStaticActorDestructionInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FAB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FReplicatedStaticActorDestructionInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FReplicatedStaticActorDestructionInfo>();
 	}
-	// ReturnStructParams: original RVA 0x044AD990
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FReplicatedStaticActorDestructionInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ReplicatedStaticActorDestructionInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FReplicatedStaticActorDestructionInfo),
-		alignof(FReplicatedStaticActorDestructionInfo),
-		Z_Construct_UScriptStruct_FReplicatedStaticActorDestructionInfo_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024717F0 (end 0x0247181F)
 	// Original VA: 0x00000001424717F0 | File offset: 0x02470DF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FReplicatedStaticActorDestructionInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FReplicatedStaticActorDestructionInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044AD990
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FReplicatedStaticActorDestructionInfo_Statics::NewStructOps,
+				"ReplicatedStaticActorDestructionInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FReplicatedStaticActorDestructionInfo),
+				alignof(FReplicatedStaticActorDestructionInfo),
+				Z_Construct_UScriptStruct_FReplicatedStaticActorDestructionInfo_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

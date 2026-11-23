@@ -31,25 +31,12 @@ class UScriptStruct* FExternalAccountServiceConfig::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6EE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FExternalAccountServiceConfig_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FExternalAccountServiceConfig>();
 	}
-	// ReturnStructParams: original RVA 0x045429C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FExternalAccountServiceConfig_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Account,
-		nullptr,
-		&NewStructOps,
-		"ExternalAccountServiceConfig",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FExternalAccountServiceConfig),
-		alignof(FExternalAccountServiceConfig),
-		Z_Construct_UScriptStruct_FExternalAccountServiceConfig_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0267BC10 (end 0x0267BC3F)
 	// Original VA: 0x000000014267BC10 | File offset: 0x0267B210
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FExternalAccountServiceConfig::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FExternalAccountServiceConfig_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045429C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Account,
+				nullptr,
+				&Z_Construct_UScriptStruct_FExternalAccountServiceConfig_Statics::NewStructOps,
+				"ExternalAccountServiceConfig",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FExternalAccountServiceConfig),
+				alignof(FExternalAccountServiceConfig),
+				Z_Construct_UScriptStruct_FExternalAccountServiceConfig_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FCommonInputKeyDisplayConfiguration::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D00E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCommonInputKeyDisplayConfiguration_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCommonInputKeyDisplayConfiguration>();
 	}
-	// ReturnStructParams: original RVA 0x04181490
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCommonInputKeyDisplayConfiguration_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_CommonUI,
-		nullptr,
-		&NewStructOps,
-		"CommonInputKeyDisplayConfiguration",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCommonInputKeyDisplayConfiguration),
-		alignof(FCommonInputKeyDisplayConfiguration),
-		Z_Construct_UScriptStruct_FCommonInputKeyDisplayConfiguration_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0E80 (end 0x002D0EAF)
 	// Original VA: 0x00000001402D0E80 | File offset: 0x002D0480
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCommonInputKeyDisplayConfiguration::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCommonInputKeyDisplayConfiguration_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04181490
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_CommonUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCommonInputKeyDisplayConfiguration_Statics::NewStructOps,
+				"CommonInputKeyDisplayConfiguration",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCommonInputKeyDisplayConfiguration),
+				alignof(FCommonInputKeyDisplayConfiguration),
+				Z_Construct_UScriptStruct_FCommonInputKeyDisplayConfiguration_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

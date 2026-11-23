@@ -31,25 +31,12 @@ class UScriptStruct* FCameraTrackingFocusSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0AA80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCameraTrackingFocusSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCameraTrackingFocusSettings>();
 	}
-	// ReturnStructParams: original RVA 0x043DAF10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCameraTrackingFocusSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
-		nullptr,
-		&NewStructOps,
-		"CameraTrackingFocusSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCameraTrackingFocusSettings),
-		alignof(FCameraTrackingFocusSettings),
-		Z_Construct_UScriptStruct_FCameraTrackingFocusSettings_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0B300 (end 0x01C0B32F)
 	// Original VA: 0x0000000141C0B300 | File offset: 0x01C0A900
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCameraTrackingFocusSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCameraTrackingFocusSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043DAF10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCameraTrackingFocusSettings_Statics::NewStructOps,
+				"CameraTrackingFocusSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCameraTrackingFocusSettings),
+				alignof(FCameraTrackingFocusSettings),
+				Z_Construct_UScriptStruct_FCameraTrackingFocusSettings_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

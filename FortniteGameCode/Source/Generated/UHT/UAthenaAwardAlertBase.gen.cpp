@@ -21,10 +21,7 @@ void UAthenaAwardAlertBase::StaticRegisterNativesUAthenaAwardAlertBase()
 struct Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04548BB0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAwardAlertBase, "OnAwardGranted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FC50 (end 0x0287FC7F)
 // Original VA: 0x000000014287FC50 | File offset: 0x0287F250
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04548BB0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAwardAlertBase, "OnAwardGranted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x8, Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted()
 struct Z_Construct_UFunction_UAthenaAwardAlertBase_SetDataSource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04548C30; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaAwardAlertBase_SetDataSource_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAwardAlertBase, "SetDataSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UAthenaAwardAlertBase_SetDataSource_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FC80 (end 0x0287FCAF)
 // Original VA: 0x000000014287FC80 | File offset: 0x0287F280
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UAthenaAwardAlertBase_SetDataSource()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaAwardAlertBase_SetDataSource_Statics::FuncParams);
+		// FuncParams: original RVA 0x04548C30; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAwardAlertBase, "SetDataSource", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UAthenaAwardAlertBase_SetDataSource_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

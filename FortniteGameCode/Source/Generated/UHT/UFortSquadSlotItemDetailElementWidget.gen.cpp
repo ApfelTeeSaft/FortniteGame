@@ -4,11 +4,11 @@
 // FClassFunctionLinkInfo array RVA 0x03D22640, FClassParams RVA 0x03D226A0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortSquadSlotItemDetailElementWidget();  // RVA 0x028FB560 (registered by its FCompiledInDefer)
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetIdOfSquadSlotToManageBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B8F10 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC150 (end 0x028FC17F)
 // Original VA: 0x00000001428FC150 | File offset: 0x028FB750
@@ -18,14 +18,16 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetIdOfSq
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetIdOfSquadSlotToManageBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B8F10; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemDetailElementWidget, "GetIdOfSquadSlotToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetIdOfSquadSlotToManageBP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetItemInSquadSlotBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B8FD0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC180 (end 0x028FC1AF)
 // Original VA: 0x00000001428FC180 | File offset: 0x028FB780
@@ -35,15 +37,13 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetItemIn
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetItemInSquadSlotBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B8FD0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemDetailElementWidget, "GetItemInSquadSlotBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetItemInSquadSlotBP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_HandlePostDifferentSquadSlotSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B9010 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC1B0 (end 0x028FC1DF)
 // Original VA: 0x00000001428FC1B0 | File offset: 0x028FB7B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,14 +52,16 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_HandlePos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_HandlePostDifferentSquadSlotSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B9010; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemDetailElementWidget, "HandlePostDifferentSquadSlotSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_IsSquadSlotLockedBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B90A0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC1E0 (end 0x028FC20F)
 // Original VA: 0x00000001428FC1E0 | File offset: 0x028FB7E0
@@ -69,14 +71,16 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_IsSquadSl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_IsSquadSlotLockedBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B90A0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemDetailElementWidget, "IsSquadSlotLockedBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_IsSquadSlotLockedBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_SetIdOfSquadSlotToManageBP_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B9150 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC210 (end 0x028FC23F)
 // Original VA: 0x00000001428FC210 | File offset: 0x028FB810
@@ -86,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_SetIdOfSq
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_SetIdOfSquadSlotToManageBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B9150; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemDetailElementWidget, "SetIdOfSquadSlotToManageBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_SetIdOfSquadSlotToManageBP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

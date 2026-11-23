@@ -31,25 +31,12 @@ class UScriptStruct* FChoiceData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8D10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FChoiceData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FChoiceData>();
 	}
-	// ReturnStructParams: original RVA 0x04341C30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FChoiceData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ChoiceData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FChoiceData),
-		alignof(FChoiceData),
-		Z_Construct_UScriptStruct_FChoiceData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC320 (end 0x010CC34F)
 	// Original VA: 0x00000001410CC320 | File offset: 0x010CB920
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FChoiceData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FChoiceData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04341C30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FChoiceData_Statics::NewStructOps,
+				"ChoiceData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FChoiceData),
+				alignof(FChoiceData),
+				Z_Construct_UScriptStruct_FChoiceData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

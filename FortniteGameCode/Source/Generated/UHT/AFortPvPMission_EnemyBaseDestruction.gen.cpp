@@ -21,10 +21,7 @@ void AFortPvPMission_EnemyBaseDestruction::StaticRegisterNativesAFortPvPMission_
 struct Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCornerstoneForTeam_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04315430; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCornerstoneForTeam_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction, "GetCornerstoneForTeam", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCornerstoneForTeam_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01093E80 (end 0x01093EAF)
 // Original VA: 0x0000000141093E80 | File offset: 0x01093480
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCorners
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCornerstoneForTeam_Statics::FuncParams);
+		// FuncParams: original RVA 0x04315430; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction, "GetCornerstoneForTeam", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCornerstoneForTeam_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

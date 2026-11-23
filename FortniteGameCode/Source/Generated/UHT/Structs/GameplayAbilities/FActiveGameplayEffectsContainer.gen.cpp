@@ -32,25 +32,12 @@ class UScriptStruct* FActiveGameplayEffectsContainer::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00562EF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FActiveGameplayEffectsContainer_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FActiveGameplayEffectsContainer>();
 	}
-	// ReturnStructParams: original RVA 0x041A6DE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FActiveGameplayEffectsContainer_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		Z_Construct_UScriptStruct_FFastArraySerializer,
-		&NewStructOps,
-		"ActiveGameplayEffectsContainer",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FActiveGameplayEffectsContainer),
-		alignof(FActiveGameplayEffectsContainer),
-		Z_Construct_UScriptStruct_FActiveGameplayEffectsContainer_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564AA0 (end 0x00564ACF)
 	// Original VA: 0x0000000140564AA0 | File offset: 0x005640A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FActiveGameplayEffectsContainer::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FActiveGameplayEffectsContainer_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A6DE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				Z_Construct_UScriptStruct_FFastArraySerializer,
+				&Z_Construct_UScriptStruct_FActiveGameplayEffectsContainer_Statics::NewStructOps,
+				"ActiveGameplayEffectsContainer",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FActiveGameplayEffectsContainer),
+				alignof(FActiveGameplayEffectsContainer),
+				Z_Construct_UScriptStruct_FActiveGameplayEffectsContainer_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

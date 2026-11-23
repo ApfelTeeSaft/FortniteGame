@@ -21,10 +21,7 @@ void UAbilityTask_ApplyRootMotionRadialForce::StaticRegisterNativesUAbilityTask_
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionRadialForce_ApplyRootMotionRadialForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041971E0; StructureSize 0x78 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_ApplyRootMotionRadialForce_ApplyRootMotionRadialForce_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionRadialForce, "ApplyRootMotionRadialForce", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x78, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionRadialForce_ApplyRootMotionRadialForce_Statics::PropPointers, 19, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00547090 (end 0x005470BF)
 // Original VA: 0x0000000140547090 | File offset: 0x00546690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionRadialForce_ApplyRo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionRadialForce_ApplyRootMotionRadialForce_Statics::FuncParams);
+		// FuncParams: original RVA 0x041971E0; StructureSize 0x78 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionRadialForce, "ApplyRootMotionRadialForce", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x78, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionRadialForce_ApplyRootMotionRadialForce_Statics::PropPointers, 19, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

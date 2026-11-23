@@ -31,25 +31,12 @@ class UScriptStruct* FLandscapeEditToolRenderData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74CF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLandscapeEditToolRenderData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLandscapeEditToolRenderData>();
 	}
-	// ReturnStructParams: original RVA 0x0439C5F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLandscapeEditToolRenderData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
-		nullptr,
-		&NewStructOps,
-		"LandscapeEditToolRenderData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLandscapeEditToolRenderData),
-		alignof(FLandscapeEditToolRenderData),
-		Z_Construct_UScriptStruct_FLandscapeEditToolRenderData_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A76500 (end 0x01A7652F)
 	// Original VA: 0x0000000141A76500 | File offset: 0x01A75B00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLandscapeEditToolRenderData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLandscapeEditToolRenderData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0439C5F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLandscapeEditToolRenderData_Statics::NewStructOps,
+				"LandscapeEditToolRenderData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLandscapeEditToolRenderData),
+				alignof(FLandscapeEditToolRenderData),
+				Z_Construct_UScriptStruct_FLandscapeEditToolRenderData_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

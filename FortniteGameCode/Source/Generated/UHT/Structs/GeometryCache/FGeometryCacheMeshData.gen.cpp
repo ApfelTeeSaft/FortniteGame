@@ -30,25 +30,12 @@ class UScriptStruct* FGeometryCacheMeshData::StaticStruct()
 	struct Z_Construct_UScriptStruct_FGeometryCacheMeshData_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FCF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGeometryCacheMeshData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGeometryCacheMeshData>();
 	}
-	// ReturnStructParams: original RVA 0x043FD5C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGeometryCacheMeshData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GeometryCache,
-		nullptr,
-		&NewStructOps,
-		"GeometryCacheMeshData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGeometryCacheMeshData),
-		alignof(FGeometryCacheMeshData),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40520 (end 0x01D4054F)
 	// Original VA: 0x0000000141D40520 | File offset: 0x01D3FB20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FGeometryCacheMeshData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGeometryCacheMeshData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FD5C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GeometryCache,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGeometryCacheMeshData_Statics::NewStructOps,
+				"GeometryCacheMeshData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGeometryCacheMeshData),
+				alignof(FGeometryCacheMeshData),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

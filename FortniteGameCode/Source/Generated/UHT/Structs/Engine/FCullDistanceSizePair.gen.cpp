@@ -31,25 +31,12 @@ class UScriptStruct* FCullDistanceSizePair::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431570 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCullDistanceSizePair_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCullDistanceSizePair>();
 	}
-	// ReturnStructParams: original RVA 0x044403D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCullDistanceSizePair_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"CullDistanceSizePair",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCullDistanceSizePair),
-		alignof(FCullDistanceSizePair),
-		Z_Construct_UScriptStruct_FCullDistanceSizePair_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF330 (end 0x023FF35F)
 	// Original VA: 0x00000001423FF330 | File offset: 0x023FE930
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCullDistanceSizePair::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCullDistanceSizePair_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044403D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCullDistanceSizePair_Statics::NewStructOps,
+				"CullDistanceSizePair",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCullDistanceSizePair),
+				alignof(FCullDistanceSizePair),
+				Z_Construct_UScriptStruct_FCullDistanceSizePair_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

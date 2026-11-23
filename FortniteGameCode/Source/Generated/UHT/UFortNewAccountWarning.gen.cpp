@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortNewAccountWarning();  // RVA 0x028DE450 (consens
 struct Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A2390; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNewAccountWarning, "HandleBackClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DF0A0 (end 0x028DF0CF)
 // Original VA: 0x00000001428DF0A0 | File offset: 0x028DE6A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A2390; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNewAccountWarning, "HandleBackClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked()
 struct Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A2410; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNewAccountWarning, "HandleNewAccountClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DF0D0 (end 0x028DF0FF)
 // Original VA: 0x00000001428DF0D0 | File offset: 0x028DE6D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A2410; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNewAccountWarning, "HandleNewAccountClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -423,22 +423,24 @@ def main() -> int:
             f"\t\textern uint32 {crc_fn}();\n"
             f"\t\tSingleton = GetStaticStruct({zc}, {pkg_fn}(), TEXT(\"{name}\"), sizeof({cpp}), {crc_fn}());\n"
             "\t}\n\treturn Singleton;\n}\n"
-            f"\tstruct {statics}\n\t{{\n" + "\n".join(decl) + "\n"
-            "\t\tstatic const UE4CodeGen_Private::FStructParams ReturnStructParams;\n\t};\n"
+            f"\tstruct {statics}\n\t{{\n" + "\n".join(decl) + "\n\t};\n"
             f"{nso_note}"
             f"\tvoid* {statics}::NewStructOps()\n\t{{\n"
             f"\t\treturn (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<{cpp}>();\n\t}}\n"
-            f"\t// ReturnStructParams: original RVA 0x{r['rec']:08X}\n"
-            f"\tconst UE4CodeGen_Private::FStructParams {statics}::ReturnStructParams = {{\n"
-            f"\t\t(UObject* (*)()){pkg_fn},\n\t\t{super_expr},\n\t\t&NewStructOps,\n\t\t\"{name}\",\n"
-            f"\t\t{flags},\n\t\tEStructFlags(0x{r['sflags']:08X}),\n\t\tsizeof({cpp}),\n\t\talignof({cpp}),\n"
-            f"\t\t{props_expr},\n\t}};\n"
             f"\t// Original FortniteClient-Win64-Shipping.exe: RVA 0x{r['ctor']:08X} (end 0x{r['ctor_end']:08X})\n"
             f"\t// Original VA: 0x{base + r['ctor']:016X} | File offset: 0x{img.rva_to_off(r['ctor']):08X}\n"
             f"\t// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json\n"
             f"\tUScriptStruct* {zc}()\n\t{{\n\t\tstatic UScriptStruct* ReturnStruct = nullptr;\n"
             f"\t\tif (!ReturnStruct)\n\t\t{{\n"
-            f"\t\t\tUE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, {statics}::ReturnStructParams);\n"
+            # ReturnStructParams is a static local, as in the reference's generated code: its
+            # record follows the unit's TClassCompiledInDefer block in its own section
+            # (docs/REVERSE_ENGINEERING.md, "Data layout").
+            f"\t\t\t// ReturnStructParams: original RVA 0x{r['rec']:08X}\n"
+            f"\t\t\tstatic const UE4CodeGen_Private::FStructParams ReturnStructParams = {{\n"
+            f"\t\t\t\t(UObject* (*)()){pkg_fn},\n\t\t\t\t{super_expr},\n\t\t\t\t&{statics}::NewStructOps,\n"
+            f"\t\t\t\t\"{name}\",\n\t\t\t\t{flags},\n\t\t\t\tEStructFlags(0x{r['sflags']:08X}),\n"
+            f"\t\t\t\tsizeof({cpp}),\n\t\t\t\talignof({cpp}),\n\t\t\t\t{props_expr},\n\t\t\t}};\n"
+            f"\t\t\tUE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);\n"
             "\t\t}\n\t\treturn ReturnStruct;\n\t}\n"
             f"\t// Original RVA 0x{r['crc_fn']:08X} (leaf, no .pdata); the constant is read from it.\n"
             f"\tuint32 {crc_fn}() {{ return {r['crc']}U; }}\n"
@@ -467,7 +469,7 @@ def main() -> int:
                                 "name": f"dynamic initializer for ScriptStruct_{short}_StaticRegisterNatives{cpp}", **common})
         if r["nso"]:
             ops_groups[r["nso"][0]].append((cpp, short))
-        symbols[f"?ReturnStructParams@{statics}@@2UFStructParams@UE4CodeGen_Private@@B"] = [
+        symbols[f"?ReturnStructParams@?4??{zc}@@YAPEAVUScriptStruct@@XZ@4UFStructParams@UE4CodeGen_Private@@B"] = [
             f"0x{r['rec']:08X}", "name+package"]
         symbols[f"?{crc_fn}@@YAIXZ"] = [f"0x{r['crc_fn']:08X}", "crc-content"]
         stats["structs"] += 1

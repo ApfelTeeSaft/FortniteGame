@@ -32,25 +32,12 @@ class UScriptStruct* FMovieSceneFadeSectionTemplate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4F880 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneFadeSectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneFadeSectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043B6550
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneFadeSectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieSceneEvalTemplate,
-		&NewStructOps,
-		"MovieSceneFadeSectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneFadeSectionTemplate),
-		alignof(FMovieSceneFadeSectionTemplate),
-		Z_Construct_UScriptStruct_FMovieSceneFadeSectionTemplate_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B53050 (end 0x01B5307F)
 	// Original VA: 0x0000000141B53050 | File offset: 0x01B52650
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieSceneFadeSectionTemplate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneFadeSectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B6550
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieSceneEvalTemplate,
+				&Z_Construct_UScriptStruct_FMovieSceneFadeSectionTemplate_Statics::NewStructOps,
+				"MovieSceneFadeSectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneFadeSectionTemplate),
+				alignof(FMovieSceneFadeSectionTemplate),
+				Z_Construct_UScriptStruct_FMovieSceneFadeSectionTemplate_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

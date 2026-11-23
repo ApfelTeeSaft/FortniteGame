@@ -32,25 +32,12 @@ class UScriptStruct* FFortLoginReward::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C84D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortLoginReward_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortLoginReward>();
 	}
-	// ReturnStructParams: original RVA 0x04340B70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortLoginReward_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortLoginReward",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortLoginReward),
-		alignof(FFortLoginReward),
-		Z_Construct_UScriptStruct_FFortLoginReward_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC6E0 (end 0x010CC70F)
 	// Original VA: 0x00000001410CC6E0 | File offset: 0x010CBCE0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortLoginReward::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortLoginReward_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04340B70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortLoginReward_Statics::NewStructOps,
+				"FortLoginReward",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortLoginReward),
+				alignof(FFortLoginReward),
+				Z_Construct_UScriptStruct_FFortLoginReward_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

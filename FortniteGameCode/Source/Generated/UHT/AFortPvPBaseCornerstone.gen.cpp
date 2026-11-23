@@ -23,10 +23,7 @@ void AFortPvPBaseCornerstone::StaticRegisterNativesAFortPvPBaseCornerstone()
 struct Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04313BD0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPBaseCornerstone, "OnInvincibilityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x1, Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C6D0 (end 0x0108C6FF)
 // Original VA: 0x000000014108C6D0 | File offset: 0x0108BCD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +32,13 @@ UFunction* Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04313BD0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPBaseCornerstone, "OnInvincibilityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x1, Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPvPBaseCornerstone_OnRep_bInvincible_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04313C10; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPvPBaseCornerstone_OnRep_bInvincible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPBaseCornerstone, "OnRep_bInvincible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C700 (end 0x0108C72F)
 // Original VA: 0x000000014108C700 | File offset: 0x0108BD00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +47,9 @@ UFunction* Z_Construct_UFunction_AFortPvPBaseCornerstone_OnRep_bInvincible()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPvPBaseCornerstone_OnRep_bInvincible_Statics::FuncParams);
+		// FuncParams: original RVA 0x04313C10; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPBaseCornerstone, "OnRep_bInvincible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -62,10 +57,7 @@ UFunction* Z_Construct_UFunction_AFortPvPBaseCornerstone_OnRep_bInvincible()
 struct Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04313CA0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPBaseCornerstone, "SetInvincibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C730 (end 0x0108C75F)
 // Original VA: 0x000000014108C730 | File offset: 0x0108BD30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +66,9 @@ UFunction* Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility_Statics::FuncParams);
+		// FuncParams: original RVA 0x04313CA0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPBaseCornerstone, "SetInvincibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

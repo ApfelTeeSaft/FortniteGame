@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x036AB8A0, FClassParams RVA 0x036AB8F0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UWindowTitleBarArea();  // RVA 0x01C07D50 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07B90 (end 0x01C07BB2)
 // Original VA: 0x0000000141C07B90 | File offset: 0x01C07190
@@ -22,7 +22,7 @@ void UWindowTitleBarArea::StaticRegisterNativesUWindowTitleBarArea()
 
 struct Z_Construct_UFunction_UWindowTitleBarArea_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9AA0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C08060 (end 0x01C0808F)
 // Original VA: 0x0000000141C08060 | File offset: 0x01C07660
@@ -32,14 +32,16 @@ UFunction* Z_Construct_UFunction_UWindowTitleBarArea_SetHorizontalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWindowTitleBarArea_SetHorizontalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043D9AA0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UWindowTitleBarArea, "SetHorizontalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UWindowTitleBarArea_SetHorizontalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UWindowTitleBarArea_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9B20 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C08090 (end 0x01C080BF)
 // Original VA: 0x0000000141C08090 | File offset: 0x01C07690
@@ -49,14 +51,16 @@ UFunction* Z_Construct_UFunction_UWindowTitleBarArea_SetPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWindowTitleBarArea_SetPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x043D9B20; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UWindowTitleBarArea, "SetPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UWindowTitleBarArea_SetPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UWindowTitleBarArea_SetVerticalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043D9BA0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C080C0 (end 0x01C080EF)
 // Original VA: 0x0000000141C080C0 | File offset: 0x01C076C0
@@ -66,7 +70,9 @@ UFunction* Z_Construct_UFunction_UWindowTitleBarArea_SetVerticalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWindowTitleBarArea_SetVerticalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043D9BA0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UWindowTitleBarArea, "SetVerticalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UWindowTitleBarArea_SetVerticalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

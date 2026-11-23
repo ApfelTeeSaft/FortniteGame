@@ -21,12 +21,6 @@ void AFortProjectileAthena::StaticRegisterNativesAFortProjectileAthena()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortProjectileAthena_KillAfterNoPawnHit_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04312DE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortProjectileAthena_KillAfterNoPawnHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "KillAfterNoPawnHit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C3D0 (end 0x0108C3FF)
 // Original VA: 0x000000014108C3D0 | File offset: 0x0108B9D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +29,13 @@ UFunction* Z_Construct_UFunction_AFortProjectileAthena_KillAfterNoPawnHit()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortProjectileAthena_KillAfterNoPawnHit_Statics::FuncParams);
+		// FuncParams: original RVA 0x04312DE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "KillAfterNoPawnHit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortProjectileAthena_OnRep_FireStart_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04312E20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortProjectileAthena_OnRep_FireStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "OnRep_FireStart", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C400 (end 0x0108C42F)
 // Original VA: 0x000000014108C400 | File offset: 0x0108BA00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +44,13 @@ UFunction* Z_Construct_UFunction_AFortProjectileAthena_OnRep_FireStart()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortProjectileAthena_OnRep_FireStart_Statics::FuncParams);
+		// FuncParams: original RVA 0x04312E20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "OnRep_FireStart", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortProjectileAthena_OnRep_PawnHitResult_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04312E60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortProjectileAthena_OnRep_PawnHitResult_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "OnRep_PawnHitResult", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C430 (end 0x0108C45F)
 // Original VA: 0x000000014108C430 | File offset: 0x0108BA30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +59,9 @@ UFunction* Z_Construct_UFunction_AFortProjectileAthena_OnRep_PawnHitResult()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortProjectileAthena_OnRep_PawnHitResult_Statics::FuncParams);
+		// FuncParams: original RVA 0x04312E60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "OnRep_PawnHitResult", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +69,7 @@ UFunction* Z_Construct_UFunction_AFortProjectileAthena_OnRep_PawnHitResult()
 struct Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04312EE0; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "ServerNotifyPawnHit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x88, Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108C460 (end 0x0108C48F)
 // Original VA: 0x000000014108C460 | File offset: 0x0108BA60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +78,9 @@ UFunction* Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit_Statics::FuncParams);
+		// FuncParams: original RVA 0x04312EE0; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortProjectileAthena, "ServerNotifyPawnHit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0x88, Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

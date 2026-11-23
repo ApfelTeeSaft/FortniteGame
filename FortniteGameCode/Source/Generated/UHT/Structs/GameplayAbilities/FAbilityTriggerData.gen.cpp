@@ -31,25 +31,12 @@ class UScriptStruct* FAbilityTriggerData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7060 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAbilityTriggerData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAbilityTriggerData>();
 	}
-	// ReturnStructParams: original RVA 0x0419E880
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAbilityTriggerData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"AbilityTriggerData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAbilityTriggerData),
-		alignof(FAbilityTriggerData),
-		Z_Construct_UScriptStruct_FAbilityTriggerData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054EE50 (end 0x0054EE7F)
 	// Original VA: 0x000000014054EE50 | File offset: 0x0054E450
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAbilityTriggerData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAbilityTriggerData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0419E880
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAbilityTriggerData_Statics::NewStructOps,
+				"AbilityTriggerData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAbilityTriggerData),
+				alignof(FAbilityTriggerData),
+				Z_Construct_UScriptStruct_FAbilityTriggerData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

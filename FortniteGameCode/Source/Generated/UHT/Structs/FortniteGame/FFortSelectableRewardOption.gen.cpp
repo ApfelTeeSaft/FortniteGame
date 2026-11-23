@@ -31,25 +31,12 @@ class UScriptStruct* FFortSelectableRewardOption::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01095C40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSelectableRewardOption_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSelectableRewardOption>();
 	}
-	// ReturnStructParams: original RVA 0x04341070
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSelectableRewardOption_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSelectableRewardOption",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortSelectableRewardOption),
-		alignof(FFortSelectableRewardOption),
-		Z_Construct_UScriptStruct_FFortSelectableRewardOption_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC8C0 (end 0x010CC8EF)
 	// Original VA: 0x00000001410CC8C0 | File offset: 0x010CBEC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSelectableRewardOption::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSelectableRewardOption_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04341070
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSelectableRewardOption_Statics::NewStructOps,
+				"FortSelectableRewardOption",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortSelectableRewardOption),
+				alignof(FFortSelectableRewardOption),
+				Z_Construct_UScriptStruct_FFortSelectableRewardOption_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

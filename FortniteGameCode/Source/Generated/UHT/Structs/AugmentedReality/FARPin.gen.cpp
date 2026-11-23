@@ -30,25 +30,12 @@ class UScriptStruct* FARPin::StaticStruct()
 	struct Z_Construct_UScriptStruct_FARPin_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055A810 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FARPin_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FARPin>();
 	}
-	// ReturnStructParams: original RVA 0x045D9BE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FARPin_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AugmentedReality,
-		nullptr,
-		&NewStructOps,
-		"ARPin",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FARPin),
-		alignof(FARPin),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921B20 (end 0x02921B4F)
 	// Original VA: 0x0000000142921B20 | File offset: 0x02921120
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FARPin::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FARPin_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045D9BE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AugmentedReality,
+				nullptr,
+				&Z_Construct_UScriptStruct_FARPin_Statics::NewStructOps,
+				"ARPin",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FARPin),
+				alignof(FARPin),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

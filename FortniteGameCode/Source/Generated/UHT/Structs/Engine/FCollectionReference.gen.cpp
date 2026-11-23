@@ -31,25 +31,12 @@ class UScriptStruct* FCollectionReference::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D53A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCollectionReference_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCollectionReference>();
 	}
-	// ReturnStructParams: original RVA 0x0444F7D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCollectionReference_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"CollectionReference",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCollectionReference),
-		alignof(FCollectionReference),
-		Z_Construct_UScriptStruct_FCollectionReference_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240CFB0 (end 0x0240CFDF)
 	// Original VA: 0x000000014240CFB0 | File offset: 0x0240C5B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCollectionReference::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCollectionReference_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0444F7D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCollectionReference_Statics::NewStructOps,
+				"CollectionReference",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCollectionReference),
+				alignof(FCollectionReference),
+				Z_Construct_UScriptStruct_FCollectionReference_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

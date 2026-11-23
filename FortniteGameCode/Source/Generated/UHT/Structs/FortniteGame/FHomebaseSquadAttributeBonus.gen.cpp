@@ -31,25 +31,12 @@ class UScriptStruct* FHomebaseSquadAttributeBonus::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA050 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FHomebaseSquadAttributeBonus_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FHomebaseSquadAttributeBonus>();
 	}
-	// ReturnStructParams: original RVA 0x04298510
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHomebaseSquadAttributeBonus_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"HomebaseSquadAttributeBonus",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FHomebaseSquadAttributeBonus),
-		alignof(FHomebaseSquadAttributeBonus),
-		Z_Construct_UScriptStruct_FHomebaseSquadAttributeBonus_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFC310 (end 0x00FFC33F)
 	// Original VA: 0x0000000140FFC310 | File offset: 0x00FFB910
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FHomebaseSquadAttributeBonus::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FHomebaseSquadAttributeBonus_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04298510
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FHomebaseSquadAttributeBonus_Statics::NewStructOps,
+				"HomebaseSquadAttributeBonus",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FHomebaseSquadAttributeBonus),
+				alignof(FHomebaseSquadAttributeBonus),
+				Z_Construct_UScriptStruct_FHomebaseSquadAttributeBonus_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

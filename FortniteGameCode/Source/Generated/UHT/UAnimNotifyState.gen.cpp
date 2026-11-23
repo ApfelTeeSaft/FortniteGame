@@ -21,10 +21,7 @@ void UAnimNotifyState::StaticRegisterNativesUAnimNotifyState()
 struct Z_Construct_UFunction_UAnimNotifyState_GetNotifyName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044198E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAnimNotifyState_GetNotifyName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "GetNotifyName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x10, Z_Construct_UFunction_UAnimNotifyState_GetNotifyName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6A40 (end 0x023D6A6F)
 // Original VA: 0x00000001423D6A40 | File offset: 0x023D6040
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_GetNotifyName()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAnimNotifyState_GetNotifyName_Statics::FuncParams);
+		// FuncParams: original RVA 0x044198E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "GetNotifyName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x10, Z_Construct_UFunction_UAnimNotifyState_GetNotifyName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_GetNotifyName()
 struct Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04419A20; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "Received_NotifyBegin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020800, 0x18, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6A70 (end 0x023D6A9F)
 // Original VA: 0x00000001423D6A70 | File offset: 0x023D6070
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin_Statics::FuncParams);
+		// FuncParams: original RVA 0x04419A20; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "Received_NotifyBegin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020800, 0x18, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -61,10 +59,7 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin()
 struct Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04419B30; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "Received_NotifyEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020800, 0x18, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6AA0 (end 0x023D6ACF)
 // Original VA: 0x00000001423D6AA0 | File offset: 0x023D60A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +68,9 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd_Statics::FuncParams);
+		// FuncParams: original RVA 0x04419B30; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "Received_NotifyEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020800, 0x18, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +78,7 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd()
 struct Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04419C70; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "Received_NotifyTick", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020800, 0x18, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6AD0 (end 0x023D6AFF)
 // Original VA: 0x00000001423D6AD0 | File offset: 0x023D60D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +87,9 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick_Statics::FuncParams);
+		// FuncParams: original RVA 0x04419C70; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAnimNotifyState, "Received_NotifyTick", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020800, 0x18, Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

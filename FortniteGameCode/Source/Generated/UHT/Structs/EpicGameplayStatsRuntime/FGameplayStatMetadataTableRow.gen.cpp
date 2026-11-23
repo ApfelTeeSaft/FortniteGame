@@ -32,25 +32,12 @@ class UScriptStruct* FGameplayStatMetadataTableRow::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00792510 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayStatMetadataTableRow_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayStatMetadataTableRow>();
 	}
-	// ReturnStructParams: original RVA 0x041C23D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayStatMetadataTableRow_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_EpicGameplayStatsRuntime,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"GameplayStatMetadataTableRow",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameplayStatMetadataTableRow),
-		alignof(FGameplayStatMetadataTableRow),
-		Z_Construct_UScriptStruct_FGameplayStatMetadataTableRow_Statics::PropPointers, 14,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00792940 (end 0x0079296F)
 	// Original VA: 0x0000000140792940 | File offset: 0x00791F40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FGameplayStatMetadataTableRow::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayStatMetadataTableRow_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C23D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_EpicGameplayStatsRuntime,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FGameplayStatMetadataTableRow_Statics::NewStructOps,
+				"GameplayStatMetadataTableRow",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameplayStatMetadataTableRow),
+				alignof(FGameplayStatMetadataTableRow),
+				Z_Construct_UScriptStruct_FGameplayStatMetadataTableRow_Statics::PropPointers, 14,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

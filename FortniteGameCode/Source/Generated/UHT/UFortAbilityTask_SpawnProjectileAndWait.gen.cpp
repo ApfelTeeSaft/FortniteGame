@@ -24,10 +24,7 @@ void UFortAbilityTask_SpawnProjectileAndWait::StaticRegisterNativesUFortAbilityT
 struct Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSpawningActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04217C20; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSpawningActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "BeginSpawningActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x20, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSpawningActor_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82740 (end 0x00F8276F)
 // Original VA: 0x0000000140F82740 | File offset: 0x00F81D40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSp
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSpawningActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04217C20; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "BeginSpawningActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x20, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSpawningActor_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSp
 struct Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishSpawningActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04217CE0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishSpawningActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "FinishSpawningActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishSpawningActor_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82770 (end 0x00F8279F)
 // Original VA: 0x0000000140F82770 | File offset: 0x00F81D70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishSpawningActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04217CE0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "FinishSpawningActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishSpawningActor_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishS
 struct Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProjectileDestroyed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04217D60; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProjectileDestroyed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "OnProjectileDestroyed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProjectileDestroyed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F827A0 (end 0x00F827CF)
 // Original VA: 0x0000000140F827A0 | File offset: 0x00F81DA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProje
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProjectileDestroyed_Statics::FuncParams);
+		// FuncParams: original RVA 0x04217D60; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "OnProjectileDestroyed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProjectileDestroyed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProje
 struct Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnProjectileAndWait_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042180B0; StructureSize 0x158 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnProjectileAndWait_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "SpawnProjectileAndWait", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x158, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnProjectileAndWait_Statics::PropPointers, 12, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F827D0 (end 0x00F827FF)
 // Original VA: 0x0000000140F827D0 | File offset: 0x00F81DD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnPr
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnProjectileAndWait_Statics::FuncParams);
+		// FuncParams: original RVA 0x042180B0; StructureSize 0x158 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, "SpawnProjectileAndWait", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x158, Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnProjectileAndWait_Statics::PropPointers, 12, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

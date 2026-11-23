@@ -24,10 +24,7 @@ void AFortInGameMapManager::StaticRegisterNativesAFortInGameMapManager()
 struct Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0429D2F0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "BroadcastExplorationEvents", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00084CC0, 0x10, Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01006FC0 (end 0x01006FEF)
 // Original VA: 0x0000000141006FC0 | File offset: 0x010065C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvent
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429D2F0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "BroadcastExplorationEvents", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00084CC0, 0x10, Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvent
 struct Z_Construct_UFunction_AFortInGameMapManager_GetCurrent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0429D3B0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortInGameMapManager_GetCurrent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "GetCurrent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_AFortInGameMapManager_GetCurrent_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01006FF0 (end 0x0100701F)
 // Original VA: 0x0000000141006FF0 | File offset: 0x010065F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,17 +52,13 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_GetCurrent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortInGameMapManager_GetCurrent_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429D3B0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "GetCurrent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_AFortInGameMapManager_GetCurrent_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortInGameMapManager_OnRep_MapData_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429D3F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortInGameMapManager_OnRep_MapData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "OnRep_MapData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007020 (end 0x0100704F)
 // Original VA: 0x0000000141007020 | File offset: 0x01006620
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +67,9 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_OnRep_MapData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortInGameMapManager_OnRep_MapData_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429D3F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "OnRep_MapData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -83,10 +77,7 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_OnRep_MapData()
 struct Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0429D4B0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "PaintOnFog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007050 (end 0x0100707F)
 // Original VA: 0x0000000141007050 | File offset: 0x01006650
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -95,7 +86,9 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429D4B0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortInGameMapManager, "PaintOnFog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x10, Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 7153,
+ "total": 7154,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
@@ -39,9 +39,9 @@
   },
   {
    "key": "uht-class-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 1012,
+   "count": 1013,
    "states": {
-    "relocation-equivalent": 1012
+    "relocation-equivalent": 1013
    },
    "examples": [
     "0x00099C60 dynamic initializer for Z_CompiledInDefer_UClass_APartyBeaconClient",

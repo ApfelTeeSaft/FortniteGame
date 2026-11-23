@@ -31,25 +31,12 @@ class UScriptStruct* FBuildingRequirements::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A28D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBuildingRequirements_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBuildingRequirements>();
 	}
-	// ReturnStructParams: original RVA 0x0456CE40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBuildingRequirements_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"BuildingRequirements",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBuildingRequirements),
-		alignof(FBuildingRequirements),
-		Z_Construct_UScriptStruct_FBuildingRequirements_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A5A80 (end 0x028A5AAF)
 	// Original VA: 0x00000001428A5A80 | File offset: 0x028A5080
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBuildingRequirements::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBuildingRequirements_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0456CE40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBuildingRequirements_Statics::NewStructOps,
+				"BuildingRequirements",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBuildingRequirements),
+				alignof(FBuildingRequirements),
+				Z_Construct_UScriptStruct_FBuildingRequirements_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

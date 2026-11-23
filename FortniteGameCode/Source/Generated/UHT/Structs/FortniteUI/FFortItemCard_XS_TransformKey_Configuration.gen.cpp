@@ -31,25 +31,12 @@ class UScriptStruct* FFortItemCard_XS_TransformKey_Configuration::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0AD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortItemCard_XS_TransformKey_Configuration_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortItemCard_XS_TransformKey_Configuration>();
 	}
-	// ReturnStructParams: original RVA 0x0458BCF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortItemCard_XS_TransformKey_Configuration_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortItemCard_XS_TransformKey_Configuration",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortItemCard_XS_TransformKey_Configuration),
-		alignof(FFortItemCard_XS_TransformKey_Configuration),
-		Z_Construct_UScriptStruct_FFortItemCard_XS_TransformKey_Configuration_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C31F0 (end 0x028C321F)
 	// Original VA: 0x00000001428C31F0 | File offset: 0x028C27F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortItemCard_XS_TransformKey_Configuration::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortItemCard_XS_TransformKey_Configuration_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0458BCF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortItemCard_XS_TransformKey_Configuration_Statics::NewStructOps,
+				"FortItemCard_XS_TransformKey_Configuration",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortItemCard_XS_TransformKey_Configuration),
+				alignof(FFortItemCard_XS_TransformKey_Configuration),
+				Z_Construct_UScriptStruct_FFortItemCard_XS_TransformKey_Configuration_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

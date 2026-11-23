@@ -32,25 +32,12 @@ class UScriptStruct* FFortFeedbackActionBankDefined::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDA830 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortFeedbackActionBankDefined_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortFeedbackActionBankDefined>();
 	}
-	// ReturnStructParams: original RVA 0x0426D0A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortFeedbackActionBankDefined_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortFeedbackAction,
-		&NewStructOps,
-		"FortFeedbackActionBankDefined",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortFeedbackActionBankDefined),
-		alignof(FFortFeedbackActionBankDefined),
-		Z_Construct_UScriptStruct_FFortFeedbackActionBankDefined_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC1C0 (end 0x00FDC1EF)
 	// Original VA: 0x0000000140FDC1C0 | File offset: 0x00FDB7C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortFeedbackActionBankDefined::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortFeedbackActionBankDefined_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0426D0A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortFeedbackAction,
+				&Z_Construct_UScriptStruct_FFortFeedbackActionBankDefined_Statics::NewStructOps,
+				"FortFeedbackActionBankDefined",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortFeedbackActionBankDefined),
+				alignof(FFortFeedbackActionBankDefined),
+				Z_Construct_UScriptStruct_FFortFeedbackActionBankDefined_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

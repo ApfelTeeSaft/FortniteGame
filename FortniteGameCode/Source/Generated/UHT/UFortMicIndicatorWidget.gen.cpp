@@ -21,10 +21,7 @@ void UFortMicIndicatorWidget::StaticRegisterNativesUFortMicIndicatorWidget()
 struct Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459E490; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "OnPlayerMicAvailable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D82E0 (end 0x028D830F)
 // Original VA: 0x00000001428D82E0 | File offset: 0x028D78E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459E490; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "OnPlayerMicAvailable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable()
 struct Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459E520; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "OnPlayerMuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8310 (end 0x028D833F)
 // Original VA: 0x00000001428D8310 | File offset: 0x028D7910
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMuted()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459E520; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "OnPlayerMuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -61,10 +59,7 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMuted()
 struct Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerTalkingChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459E5B0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerTalkingChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "OnPlayerTalkingChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerTalkingChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8340 (end 0x028D836F)
 // Original VA: 0x00000001428D8340 | File offset: 0x028D7940
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +68,9 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerTalkingChanged(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerTalkingChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459E5B0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "OnPlayerTalkingChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerTalkingChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +78,7 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerTalkingChanged(
 struct Z_Construct_UFunction_UFortMicIndicatorWidget_SetPlayerUniqueId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0459E630; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMicIndicatorWidget_SetPlayerUniqueId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "SetPlayerUniqueId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04480401, 0x28, Z_Construct_UFunction_UFortMicIndicatorWidget_SetPlayerUniqueId_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8370 (end 0x028D839F)
 // Original VA: 0x00000001428D8370 | File offset: 0x028D7970
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +87,9 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_SetPlayerUniqueId()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMicIndicatorWidget_SetPlayerUniqueId_Statics::FuncParams);
+		// FuncParams: original RVA 0x0459E630; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMicIndicatorWidget, "SetPlayerUniqueId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04480401, 0x28, Z_Construct_UFunction_UFortMicIndicatorWidget_SetPlayerUniqueId_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -26,10 +26,7 @@ void UFortItemInspectCycleWidget::StaticRegisterNativesUFortItemInspectCycleWidg
 struct Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_BP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04591D60; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_BP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "GetItemWithOffset_BP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_BP_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAB40 (end 0x028CAB6F)
 // Original VA: 0x00000001428CAB40 | File offset: 0x028CA140
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_B
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_BP_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591D60; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "GetItemWithOffset_BP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_BP_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_B
 struct Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04591E60; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "OnItemCycled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x18, Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAB70 (end 0x028CAB9F)
 // Original VA: 0x00000001428CAB70 | File offset: 0x028CA170
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591E60; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "OnItemCycled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x18, Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled()
 struct Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectItemWithOffset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04591EE0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectItemWithOffset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SelectItemWithOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectItemWithOffset_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CABA0 (end 0x028CABCF)
 // Original VA: 0x00000001428CABA0 | File offset: 0x028CA1A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,17 +73,13 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectItemWithOffse
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectItemWithOffset_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591EE0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SelectItemWithOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectItemWithOffset_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectNextItem_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04591F20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectNextItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SelectNextItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CABD0 (end 0x028CABFF)
 // Original VA: 0x00000001428CABD0 | File offset: 0x028CA1D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -97,17 +88,13 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectNextItem()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectNextItem_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591F20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SelectNextItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectPreviousItem_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04591F60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectPreviousItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SelectPreviousItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAC00 (end 0x028CAC2F)
 // Original VA: 0x00000001428CAC00 | File offset: 0x028CA200
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +103,9 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectPreviousItem(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectPreviousItem_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591F60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SelectPreviousItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +113,7 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectPreviousItem(
 struct Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04591FF0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SetInputEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAC30 (end 0x028CAC5F)
 // Original VA: 0x00000001428CAC30 | File offset: 0x028CA230
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +122,9 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591FF0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SetInputEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -144,10 +132,7 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled()
 struct Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04592070; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAC60 (end 0x028CAC8F)
 // Original VA: 0x00000001428CAC60 | File offset: 0x028CA260
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -156,7 +141,9 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04592070; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemInspectCycleWidget, "SetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

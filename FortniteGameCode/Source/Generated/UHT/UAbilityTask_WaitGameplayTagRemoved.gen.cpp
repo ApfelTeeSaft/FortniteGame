@@ -21,10 +21,7 @@ void UAbilityTask_WaitGameplayTagRemoved::StaticRegisterNativesUAbilityTask_Wait
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGameplayTagRemove_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0419CDC0; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGameplayTagRemove_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayTagRemoved, "WaitGameplayTagRemove", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGameplayTagRemove_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054E130 (end 0x0054E15F)
 // Original VA: 0x000000014054E130 | File offset: 0x0054D730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGamepla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGameplayTagRemove_Statics::FuncParams);
+		// FuncParams: original RVA 0x0419CDC0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayTagRemoved, "WaitGameplayTagRemove", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGameplayTagRemove_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

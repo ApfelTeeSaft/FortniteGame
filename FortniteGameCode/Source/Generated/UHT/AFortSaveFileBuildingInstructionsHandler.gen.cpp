@@ -24,10 +24,7 @@ void AFortSaveFileBuildingInstructionsHandler::StaticRegisterNativesAFortSaveFil
 struct Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBuildingsLoaded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04325E70; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBuildingsLoaded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "AreBuildingsLoaded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBuildingsLoaded_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5E10 (end 0x010A5E3F)
 // Original VA: 0x00000001410A5E10 | File offset: 0x010A5410
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBui
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBuildingsLoaded_Statics::FuncParams);
+		// FuncParams: original RVA 0x04325E70; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "AreBuildingsLoaded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBuildingsLoaded_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBui
 struct Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_LoadBuildings_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04325EF0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_LoadBuildings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "LoadBuildings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_LoadBuildings_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5E40 (end 0x010A5E6F)
 // Original VA: 0x00000001410A5E40 | File offset: 0x010A5440
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_LoadBu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_LoadBuildings_Statics::FuncParams);
+		// FuncParams: original RVA 0x04325EF0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "LoadBuildings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_LoadBuildings_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_LoadBu
 struct Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_ResetBuildings_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04325F80; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_ResetBuildings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "ResetBuildings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_ResetBuildings_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5E70 (end 0x010A5E9F)
 // Original VA: 0x00000001410A5E70 | File offset: 0x010A5470
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_ResetB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_ResetBuildings_Statics::FuncParams);
+		// FuncParams: original RVA 0x04325F80; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "ResetBuildings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_ResetBuildings_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_ResetB
 struct Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_SaveBuildings_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04326050; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_SaveBuildings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "SaveBuildings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x10, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_SaveBuildings_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5EA0 (end 0x010A5ECF)
 // Original VA: 0x00000001410A5EA0 | File offset: 0x010A54A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_SaveBu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_SaveBuildings_Statics::FuncParams);
+		// FuncParams: original RVA 0x04326050; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler, "SaveBuildings", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x10, Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_SaveBuildings_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

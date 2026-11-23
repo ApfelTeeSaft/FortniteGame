@@ -23,10 +23,7 @@ void UAbilityTask_WaitAbilityCommit::StaticRegisterNativesUAbilityTask_WaitAbili
 struct Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041996C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAbilityCommit, "OnAbilityCommit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00547480 (end 0x005474AF)
 // Original VA: 0x0000000140547480 | File offset: 0x00546A80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit_Statics::FuncParams);
+		// FuncParams: original RVA 0x041996C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAbilityCommit, "OnAbilityCommit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit(
 struct Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04199850; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAbilityCommit, "WaitForAbilityCommit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005474B0 (end 0x005474DF)
 // Original VA: 0x00000001405474B0 | File offset: 0x00546AB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Statics::FuncParams);
+		// FuncParams: original RVA 0x04199850; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAbilityCommit, "WaitForAbilityCommit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCo
 struct Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041999A0; StructureSize 0x60 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAbilityCommit, "WaitForAbilityCommit_Query", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x60, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005474E0 (end 0x0054750F)
 // Original VA: 0x00000001405474E0 | File offset: 0x00546AE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query_Statics::FuncParams);
+		// FuncParams: original RVA 0x041999A0; StructureSize 0x60 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitAbilityCommit, "WaitForAbilityCommit_Query", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x60, Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

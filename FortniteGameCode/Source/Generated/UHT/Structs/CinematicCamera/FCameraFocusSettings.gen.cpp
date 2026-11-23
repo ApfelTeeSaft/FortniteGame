@@ -31,25 +31,12 @@ class UScriptStruct* FCameraFocusSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0AAC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCameraFocusSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCameraFocusSettings>();
 	}
-	// ReturnStructParams: original RVA 0x043DADF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCameraFocusSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
-		nullptr,
-		&NewStructOps,
-		"CameraFocusSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCameraFocusSettings),
-		alignof(FCameraFocusSettings),
-		Z_Construct_UScriptStruct_FCameraFocusSettings_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0B270 (end 0x01C0B29F)
 	// Original VA: 0x0000000141C0B270 | File offset: 0x01C0A870
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCameraFocusSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCameraFocusSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043DADF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCameraFocusSettings_Statics::NewStructOps,
+				"CameraFocusSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCameraFocusSettings),
+				alignof(FCameraFocusSettings),
+				Z_Construct_UScriptStruct_FCameraFocusSettings_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FBlackboardEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D222C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBlackboardEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBlackboardEntry>();
 	}
-	// ReturnStructParams: original RVA 0x043ED820
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBlackboardEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
-		nullptr,
-		&NewStructOps,
-		"BlackboardEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FBlackboardEntry),
-		alignof(FBlackboardEntry),
-		Z_Construct_UScriptStruct_FBlackboardEntry_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D24260 (end 0x01D2428F)
 	// Original VA: 0x0000000141D24260 | File offset: 0x01D23860
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBlackboardEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBlackboardEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043ED820
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBlackboardEntry_Statics::NewStructOps,
+				"BlackboardEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FBlackboardEntry),
+				alignof(FBlackboardEntry),
+				Z_Construct_UScriptStruct_FBlackboardEntry_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

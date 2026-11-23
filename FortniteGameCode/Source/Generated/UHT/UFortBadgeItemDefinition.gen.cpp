@@ -24,10 +24,7 @@ void UFortBadgeItemDefinition::StaticRegisterNativesUFortBadgeItemDefinition()
 struct Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423CCA0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetBadgeScoreCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3FE0 (end 0x00FA400F)
 // Original VA: 0x0000000140FA3FE0 | File offset: 0x00FA35E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423CCA0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetBadgeScoreCategory", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory(
 struct Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreThreshold_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423CD20; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreThreshold_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetBadgeScoreThreshold", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreThreshold_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4010 (end 0x00FA403F)
 // Original VA: 0x0000000140FA4010 | File offset: 0x00FA3610
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreThreshold
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreThreshold_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423CD20; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetBadgeScoreThreshold", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreThreshold_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreThreshold
 struct Z_Construct_UFunction_UFortBadgeItemDefinition_GetMissionPoints_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423CDA0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBadgeItemDefinition_GetMissionPoints_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetMissionPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortBadgeItemDefinition_GetMissionPoints_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4040 (end 0x00FA406F)
 // Original VA: 0x0000000140FA4040 | File offset: 0x00FA3640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetMissionPoints()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBadgeItemDefinition_GetMissionPoints_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423CDA0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetMissionPoints", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortBadgeItemDefinition_GetMissionPoints_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetMissionPoints()
 struct Z_Construct_UFunction_UFortBadgeItemDefinition_GetScoreAwarded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423CE60; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortBadgeItemDefinition_GetScoreAwarded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetScoreAwarded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortBadgeItemDefinition_GetScoreAwarded_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4070 (end 0x00FA409F)
 // Original VA: 0x0000000140FA4070 | File offset: 0x00FA3670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetScoreAwarded()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBadgeItemDefinition_GetScoreAwarded_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423CE60; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBadgeItemDefinition, "GetScoreAwarded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortBadgeItemDefinition_GetScoreAwarded_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

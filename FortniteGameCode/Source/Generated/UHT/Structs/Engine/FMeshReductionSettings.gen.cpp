@@ -31,25 +31,12 @@ class UScriptStruct* FMeshReductionSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AA30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMeshReductionSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMeshReductionSettings>();
 	}
-	// ReturnStructParams: original RVA 0x044C41B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMeshReductionSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"MeshReductionSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMeshReductionSettings),
-		alignof(FMeshReductionSettings),
-		Z_Construct_UScriptStruct_FMeshReductionSettings_Statics::PropPointers, 16,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C1F0 (end 0x0248C21F)
 	// Original VA: 0x000000014248C1F0 | File offset: 0x0248B7F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMeshReductionSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMeshReductionSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044C41B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMeshReductionSettings_Statics::NewStructOps,
+				"MeshReductionSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMeshReductionSettings),
+				alignof(FMeshReductionSettings),
+				Z_Construct_UScriptStruct_FMeshReductionSettings_Statics::PropPointers, 16,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

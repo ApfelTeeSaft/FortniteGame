@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayAbilityBindInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055A4D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayAbilityBindInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayAbilityBindInfo>();
 	}
-	// ReturnStructParams: original RVA 0x041A1730
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayAbilityBindInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayAbilityBindInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGameplayAbilityBindInfo),
-		alignof(FGameplayAbilityBindInfo),
-		Z_Construct_UScriptStruct_FGameplayAbilityBindInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C860 (end 0x0055C88F)
 	// Original VA: 0x000000014055C860 | File offset: 0x0055BE60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayAbilityBindInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayAbilityBindInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A1730
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayAbilityBindInfo_Statics::NewStructOps,
+				"GameplayAbilityBindInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGameplayAbilityBindInfo),
+				alignof(FGameplayAbilityBindInfo),
+				Z_Construct_UScriptStruct_FGameplayAbilityBindInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

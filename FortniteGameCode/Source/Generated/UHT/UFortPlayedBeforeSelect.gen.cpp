@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortPlayedBeforeSelect();  // RVA 0x028E6CD0 (consen
 struct Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AB110; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlayedBeforeSelect, "HandleNoClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7AE0 (end 0x028E7B0F)
 // Original VA: 0x00000001428E7AE0 | File offset: 0x028E70E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AB110; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlayedBeforeSelect, "HandleNoClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked()
 struct Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleYesClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AB190; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleYesClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlayedBeforeSelect, "HandleYesClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleYesClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7B10 (end 0x028E7B3F)
 // Original VA: 0x00000001428E7B10 | File offset: 0x028E7110
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleYesClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleYesClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AB190; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPlayedBeforeSelect, "HandleYesClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleYesClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FAccountIdAndScore::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3910 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAccountIdAndScore_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAccountIdAndScore>();
 	}
-	// ReturnStructParams: original RVA 0x0427A1D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAccountIdAndScore_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AccountIdAndScore",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAccountIdAndScore),
-		alignof(FAccountIdAndScore),
-		Z_Construct_UScriptStruct_FAccountIdAndScore_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4A50 (end 0x00FE4A7F)
 	// Original VA: 0x0000000140FE4A50 | File offset: 0x00FE4050
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAccountIdAndScore::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAccountIdAndScore_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0427A1D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAccountIdAndScore_Statics::NewStructOps,
+				"AccountIdAndScore",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAccountIdAndScore),
+				alignof(FAccountIdAndScore),
+				Z_Construct_UScriptStruct_FAccountIdAndScore_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

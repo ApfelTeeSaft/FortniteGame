@@ -32,25 +32,12 @@ class UScriptStruct* FTableColumnHeaderStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145AA70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTableColumnHeaderStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTableColumnHeaderStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437A7A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTableColumnHeaderStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"TableColumnHeaderStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FTableColumnHeaderStyle),
-		alignof(FTableColumnHeaderStyle),
-		Z_Construct_UScriptStruct_FTableColumnHeaderStyle_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D290 (end 0x0145D2BF)
 	// Original VA: 0x000000014145D290 | File offset: 0x0145C890
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTableColumnHeaderStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTableColumnHeaderStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437A7A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FTableColumnHeaderStyle_Statics::NewStructOps,
+				"TableColumnHeaderStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FTableColumnHeaderStyle),
+				alignof(FTableColumnHeaderStyle),
+				Z_Construct_UScriptStruct_FTableColumnHeaderStyle_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -23,10 +23,7 @@ void ULinearTimecodeComponent::StaticRegisterNativesULinearTimecodeComponent()
 struct Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C7580; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ULinearTimecodeComponent, "GetDropFrameNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0300 (end 0x007E032F)
 // Original VA: 0x00000001407E0300 | File offset: 0x007DF900
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C7580; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ULinearTimecodeComponent, "GetDropFrameNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber()
 struct Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C7640; StructureSize 0x2C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ULinearTimecodeComponent, "GetDropTimeCodeFrameNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x2C, Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0330 (end 0x007E035F)
 // Original VA: 0x00000001407E0330 | File offset: 0x007DF930
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C7640; StructureSize 0x2C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ULinearTimecodeComponent, "GetDropTimeCodeFrameNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x2C, Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNu
 struct Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C7740; StructureSize 0x54 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ULinearTimecodeComponent, "SetDropTimecodeFrameNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x54, Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0360 (end 0x007E038F)
 // Original VA: 0x00000001407E0360 | File offset: 0x007DF960
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C7740; StructureSize 0x54 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ULinearTimecodeComponent, "SetDropTimecodeFrameNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x54, Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

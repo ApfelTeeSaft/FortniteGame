@@ -25,12 +25,6 @@ void UFortItemQuantityListEntryBase::StaticRegisterNativesUFortItemQuantityListE
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_ClearPreviewData_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04596880; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_ClearPreviewData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "ClearPreviewData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0380 (end 0x028D03AF)
 // Original VA: 0x00000001428D0380 | File offset: 0x028CF980
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_ClearPreviewData
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_ClearPreviewData_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596880; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "ClearPreviewData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +43,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_ClearPreviewData
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596900; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "GetItemDefinition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinition_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D03B0 (end 0x028D03DF)
 // Original VA: 0x00000001428D03B0 | File offset: 0x028CF9B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinitio
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinition_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596900; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "GetItemDefinition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinition_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinitio
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596980; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "GetItemInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D03E0 (end 0x028D040F)
 // Original VA: 0x00000001428D03E0 | File offset: 0x028CF9E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596980; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "GetItemInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance(
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596A00; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "GetPreviewData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0410 (end 0x028D043F)
 // Original VA: 0x00000001428D0410 | File offset: 0x028CFA10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596A00; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "GetPreviewData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +100,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData()
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentItemOrQuantitySetBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596A90; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentItemOrQuantitySetBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "HandleDifferentItemOrQuantitySetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentItemOrQuantitySetBP_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0440 (end 0x028D046F)
 // Original VA: 0x00000001428D0440 | File offset: 0x028CFA40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +109,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentI
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentItemOrQuantitySetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596A90; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "HandleDifferentItemOrQuantitySetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentItemOrQuantitySetBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +119,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentI
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_IsBeingPreviewed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596B20; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_IsBeingPreviewed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "IsBeingPreviewed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortItemQuantityListEntryBase_IsBeingPreviewed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0470 (end 0x028D049F)
 // Original VA: 0x00000001428D0470 | File offset: 0x028CFA70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,17 +128,13 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_IsBeingPreviewed
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_IsBeingPreviewed_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596B20; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "IsBeingPreviewed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortItemQuantityListEntryBase_IsBeingPreviewed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewEnded_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04596B60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewEnded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "PreviewEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D04A0 (end 0x028D04CF)
 // Original VA: 0x00000001428D04A0 | File offset: 0x028CFAA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -158,17 +143,13 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewEnded()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewEnded_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596B60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "PreviewEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewStarted_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04596BA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewStarted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "PreviewStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D04D0 (end 0x028D04FF)
 // Original VA: 0x00000001428D04D0 | File offset: 0x028CFAD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -177,7 +158,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewStarted()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewStarted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596BA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "PreviewStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -185,10 +168,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewStarted()
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitionAndQuantity_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596C70; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitionAndQuantity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "SetItemDefinitionAndQuantity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x38, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitionAndQuantity_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0500 (end 0x028D052F)
 // Original VA: 0x00000001428D0500 | File offset: 0x028CFB00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -197,7 +177,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitio
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitionAndQuantity_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596C70; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "SetItemDefinitionAndQuantity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x38, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitionAndQuantity_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -205,10 +187,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitio
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceAndQuantity_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596D40; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceAndQuantity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "SetItemInstanceAndQuantity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x18, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceAndQuantity_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0530 (end 0x028D055F)
 // Original VA: 0x00000001428D0530 | File offset: 0x028CFB30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -217,7 +196,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceA
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceAndQuantity_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596D40; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "SetItemInstanceAndQuantity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x18, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceAndQuantity_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -225,10 +206,7 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceA
 struct Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04596DC0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "SetPreviewData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0560 (end 0x028D058F)
 // Original VA: 0x00000001428D0560 | File offset: 0x028CFB60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -237,7 +215,9 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData_Statics::FuncParams);
+		// FuncParams: original RVA 0x04596DC0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemQuantityListEntryBase, "SetPreviewData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

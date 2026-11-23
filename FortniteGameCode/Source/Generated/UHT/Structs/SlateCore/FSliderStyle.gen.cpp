@@ -32,25 +32,12 @@ class UScriptStruct* FSliderStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A730 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSliderStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSliderStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437B260
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSliderStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"SliderStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSliderStyle),
-		alignof(FSliderStyle),
-		Z_Construct_UScriptStruct_FSliderStyle_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D200 (end 0x0145D22F)
 	// Original VA: 0x000000014145D200 | File offset: 0x0145C800
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FSliderStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSliderStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437B260
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FSliderStyle_Statics::NewStructOps,
+				"SliderStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSliderStyle),
+				alignof(FSliderStyle),
+				Z_Construct_UScriptStruct_FSliderStyle_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

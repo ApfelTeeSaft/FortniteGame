@@ -31,25 +31,12 @@ class UScriptStruct* FGPUSpriteEmitterInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249DD10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGPUSpriteEmitterInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGPUSpriteEmitterInfo>();
 	}
-	// ReturnStructParams: original RVA 0x044DAD80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGPUSpriteEmitterInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"GPUSpriteEmitterInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FGPUSpriteEmitterInfo),
-		alignof(FGPUSpriteEmitterInfo),
-		Z_Construct_UScriptStruct_FGPUSpriteEmitterInfo_Statics::PropPointers, 30,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249EE40 (end 0x0249EE6F)
 	// Original VA: 0x000000014249EE40 | File offset: 0x0249E440
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGPUSpriteEmitterInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGPUSpriteEmitterInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044DAD80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGPUSpriteEmitterInfo_Statics::NewStructOps,
+				"GPUSpriteEmitterInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FGPUSpriteEmitterInfo),
+				alignof(FGPUSpriteEmitterInfo),
+				Z_Construct_UScriptStruct_FGPUSpriteEmitterInfo_Statics::PropPointers, 30,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

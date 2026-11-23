@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortDefenderSquadSelectorButton();  // RVA 0x0289B5E
 struct Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564F90; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSquadSelectorButton, "TryGetPowerLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14420401, 0x8, Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLevel_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C390 (end 0x0289C3BF)
 // Original VA: 0x000000014289C390 | File offset: 0x0289B990
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLev
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564F90; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSquadSelectorButton, "TryGetPowerLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14420401, 0x8, Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLevel_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLev
 struct Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterUniqueId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045650A0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterUniqueId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSquadSelectorButton, "TryGetTheaterUniqueId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x18, Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterUniqueId_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C3C0 (end 0x0289C3EF)
 // Original VA: 0x000000014289C3C0 | File offset: 0x0289B9C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterU
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterUniqueId_Statics::FuncParams);
+		// FuncParams: original RVA 0x045650A0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderSquadSelectorButton, "TryGetTheaterUniqueId", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x18, Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterUniqueId_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

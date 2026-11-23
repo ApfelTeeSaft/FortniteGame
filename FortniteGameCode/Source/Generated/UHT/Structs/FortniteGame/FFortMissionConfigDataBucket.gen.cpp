@@ -31,25 +31,12 @@ class UScriptStruct* FFortMissionConfigDataBucket::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E89E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMissionConfigDataBucket_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMissionConfigDataBucket>();
 	}
-	// ReturnStructParams: original RVA 0x0435FE30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMissionConfigDataBucket_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortMissionConfigDataBucket",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortMissionConfigDataBucket),
-		alignof(FFortMissionConfigDataBucket),
-		Z_Construct_UScriptStruct_FFortMissionConfigDataBucket_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB610 (end 0x010EB63F)
 	// Original VA: 0x00000001410EB610 | File offset: 0x010EAC10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMissionConfigDataBucket::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMissionConfigDataBucket_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0435FE30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMissionConfigDataBucket_Statics::NewStructOps,
+				"FortMissionConfigDataBucket",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortMissionConfigDataBucket),
+				alignof(FFortMissionConfigDataBucket),
+				Z_Construct_UScriptStruct_FFortMissionConfigDataBucket_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

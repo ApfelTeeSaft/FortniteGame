@@ -32,25 +32,12 @@ class UScriptStruct* FButtonStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A370 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FButtonStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FButtonStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437C4D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FButtonStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"ButtonStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FButtonStyle),
-		alignof(FButtonStyle),
-		Z_Construct_UScriptStruct_FButtonStyle_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CB40 (end 0x0145CB6F)
 	// Original VA: 0x000000014145CB40 | File offset: 0x0145C140
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FButtonStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FButtonStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437C4D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FButtonStyle_Statics::NewStructOps,
+				"ButtonStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FButtonStyle),
+				alignof(FButtonStyle),
+				Z_Construct_UScriptStruct_FButtonStyle_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

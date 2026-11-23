@@ -21,10 +21,7 @@ void UAthenaHUDGamePhaseChangingBase::StaticRegisterNativesUAthenaHUDGamePhaseCh
 struct Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0454D000; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase, "GamePhaseStepChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepChanged_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02880A00 (end 0x02880A2F)
 // Original VA: 0x0000000142880A00 | File offset: 0x02880000
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepCh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0454D000; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase, "GamePhaseStepChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepCh
 struct Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhaseStepChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0454D0C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhaseStepChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase, "HandleGamePhaseStepChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x1, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhaseStepChanged_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02880A30 (end 0x02880A5F)
 // Original VA: 0x0000000142880A30 | File offset: 0x02880030
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhase
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhaseStepChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0454D0C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase, "HandleGamePhaseStepChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x1, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhaseStepChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -61,10 +59,7 @@ UFunction* Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhase
 struct Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0454D1F0; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase, "UpdateMessaging", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x38, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02880A60 (end 0x02880A8F)
 // Original VA: 0x0000000142880A60 | File offset: 0x02880060
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +68,9 @@ UFunction* Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging_Statics::FuncParams);
+		// FuncParams: original RVA 0x0454D1F0; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase, "UpdateMessaging", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x38, Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

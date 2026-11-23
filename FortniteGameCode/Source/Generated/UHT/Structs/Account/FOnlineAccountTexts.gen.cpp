@@ -31,25 +31,12 @@ class UScriptStruct* FOnlineAccountTexts::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0267B710 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FOnlineAccountTexts_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOnlineAccountTexts>();
 	}
-	// ReturnStructParams: original RVA 0x045442A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOnlineAccountTexts_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Account,
-		nullptr,
-		&NewStructOps,
-		"OnlineAccountTexts",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FOnlineAccountTexts),
-		alignof(FOnlineAccountTexts),
-		Z_Construct_UScriptStruct_FOnlineAccountTexts_Statics::PropPointers, 83,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0267BC70 (end 0x0267BC9F)
 	// Original VA: 0x000000014267BC70 | File offset: 0x0267B270
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FOnlineAccountTexts::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FOnlineAccountTexts_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045442A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Account,
+				nullptr,
+				&Z_Construct_UScriptStruct_FOnlineAccountTexts_Statics::NewStructOps,
+				"OnlineAccountTexts",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FOnlineAccountTexts),
+				alignof(FOnlineAccountTexts),
+				Z_Construct_UScriptStruct_FOnlineAccountTexts_Statics::PropPointers, 83,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

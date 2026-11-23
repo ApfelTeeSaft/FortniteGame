@@ -31,25 +31,12 @@ class UScriptStruct* FMaterialSharedInputInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024859E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMaterialSharedInputInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMaterialSharedInputInfo>();
 	}
-	// ReturnStructParams: original RVA 0x044C0E60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMaterialSharedInputInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"MaterialSharedInputInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMaterialSharedInputInfo),
-		alignof(FMaterialSharedInputInfo),
-		Z_Construct_UScriptStruct_FMaterialSharedInputInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024874D0 (end 0x024874FF)
 	// Original VA: 0x00000001424874D0 | File offset: 0x02486AD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMaterialSharedInputInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMaterialSharedInputInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044C0E60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMaterialSharedInputInfo_Statics::NewStructOps,
+				"MaterialSharedInputInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMaterialSharedInputInfo),
+				alignof(FMaterialSharedInputInfo),
+				Z_Construct_UScriptStruct_FMaterialSharedInputInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

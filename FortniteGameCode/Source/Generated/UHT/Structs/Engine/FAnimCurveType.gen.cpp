@@ -30,25 +30,12 @@ class UScriptStruct* FAnimCurveType::StaticStruct()
 	struct Z_Construct_UScriptStruct_FAnimCurveType_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3E20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimCurveType_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimCurveType>();
 	}
-	// ReturnStructParams: original RVA 0x0451A4B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimCurveType_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"AnimCurveType",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimCurveType),
-		alignof(FAnimCurveType),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5D60 (end 0x024D5D8F)
 	// Original VA: 0x00000001424D5D60 | File offset: 0x024D5360
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FAnimCurveType::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimCurveType_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0451A4B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAnimCurveType_Statics::NewStructOps,
+				"AnimCurveType",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimCurveType),
+				alignof(FAnimCurveType),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

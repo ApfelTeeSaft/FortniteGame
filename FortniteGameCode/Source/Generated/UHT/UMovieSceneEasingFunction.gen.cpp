@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UMovieSceneEasingFunction();  // RVA 0x01AC5390 (cons
 struct Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043A2330; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMovieSceneEasingFunction, "OnEvaluate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C080800, 0x8, Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC57E0 (end 0x01AC580F)
 // Original VA: 0x0000000141AC57E0 | File offset: 0x01AC4DE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate_Statics::FuncParams);
+		// FuncParams: original RVA 0x043A2330; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMovieSceneEasingFunction, "OnEvaluate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C080800, 0x8, Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

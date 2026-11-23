@@ -28,25 +28,12 @@ class UScriptStruct* FUniqueNetIdRepl::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02494F20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FUniqueNetIdRepl_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUniqueNetIdRepl>();
 	}
-	// ReturnStructParams: original RVA 0x044D0200
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUniqueNetIdRepl_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_Unrecovered_0x013A8310,
-		&NewStructOps,
-		"UniqueNetIdRepl",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FUniqueNetIdRepl),
-		alignof(FUniqueNetIdRepl),
-		Z_Construct_UScriptStruct_FUniqueNetIdRepl_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02496460 (end 0x0249648F)
 	// Original VA: 0x0000000142496460 | File offset: 0x02495A60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -55,7 +42,19 @@ class UScriptStruct* FUniqueNetIdRepl::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FUniqueNetIdRepl_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044D0200
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_Unrecovered_0x013A8310,
+				&Z_Construct_UScriptStruct_FUniqueNetIdRepl_Statics::NewStructOps,
+				"UniqueNetIdRepl",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FUniqueNetIdRepl),
+				alignof(FUniqueNetIdRepl),
+				Z_Construct_UScriptStruct_FUniqueNetIdRepl_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

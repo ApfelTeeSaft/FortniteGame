@@ -31,25 +31,12 @@ class UScriptStruct* FTransformConstraint::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01ACF770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTransformConstraint_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTransformConstraint>();
 	}
-	// ReturnStructParams: original RVA 0x043A7870
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTransformConstraint_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
-		nullptr,
-		&NewStructOps,
-		"TransformConstraint",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FTransformConstraint),
-		alignof(FTransformConstraint),
-		Z_Construct_UScriptStruct_FTransformConstraint_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AD0510 (end 0x01AD053F)
 	// Original VA: 0x0000000141AD0510 | File offset: 0x01ACFB10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FTransformConstraint::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTransformConstraint_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A7870
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTransformConstraint_Statics::NewStructOps,
+				"TransformConstraint",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FTransformConstraint),
+				alignof(FTransformConstraint),
+				Z_Construct_UScriptStruct_FTransformConstraint_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

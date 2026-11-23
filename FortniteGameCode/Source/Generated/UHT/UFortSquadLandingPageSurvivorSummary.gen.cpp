@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortSquadLandingPageSurvivorSummary();  // RVA 0x028
 struct Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleAddSetBonusSummaryLineItemBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B74B0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleAddSetBonusSummaryLineItemBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadLandingPageSurvivorSummary, "HandleAddSetBonusSummaryLineItemBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x30, Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleAddSetBonusSummaryLineItemBP_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6B80 (end 0x028F6BAF)
 // Original VA: 0x00000001428F6B80 | File offset: 0x028F6180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,17 +18,13 @@ UFunction* Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleAddS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleAddSetBonusSummaryLineItemBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B74B0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadLandingPageSurvivorSummary, "HandleAddSetBonusSummaryLineItemBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x30, Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleAddSetBonusSummaryLineItemBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleClearSetBonusSummaryLineItemsBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B74F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleClearSetBonusSummaryLineItemsBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadLandingPageSurvivorSummary, "HandleClearSetBonusSummaryLineItemsBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6BB0 (end 0x028F6BDF)
 // Original VA: 0x00000001428F6BB0 | File offset: 0x028F61B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -40,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleClea
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadLandingPageSurvivorSummary_HandleClearSetBonusSummaryLineItemsBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B74F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadLandingPageSurvivorSummary, "HandleClearSetBonusSummaryLineItemsBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

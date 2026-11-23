@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03C6BA70, FClassParams RVA 0x03C6BAD0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortBangWrapper();  // RVA 0x0288CC60 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C740 (end 0x0288C762)
 // Original VA: 0x000000014288C740 | File offset: 0x0288BD40
@@ -20,7 +20,7 @@ void UFortBangWrapper::StaticRegisterNativesUFortBangWrapper()
 
 struct Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04559C50 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288E1C0 (end 0x0288E1EF)
 // Original VA: 0x000000014288E1C0 | File offset: 0x0288D7C0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559C50; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortBangWrapper, "SetBangVisibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

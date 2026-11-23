@@ -31,25 +31,12 @@ class UScriptStruct* FPendingSpawnInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F86C90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPendingSpawnInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPendingSpawnInfo>();
 	}
-	// ReturnStructParams: original RVA 0x0421EC60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPendingSpawnInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"PendingSpawnInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPendingSpawnInfo),
-		alignof(FPendingSpawnInfo),
-		Z_Construct_UScriptStruct_FPendingSpawnInfo_Statics::PropPointers, 27,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F88B40 (end 0x00F88B6F)
 	// Original VA: 0x0000000140F88B40 | File offset: 0x00F88140
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPendingSpawnInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPendingSpawnInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0421EC60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPendingSpawnInfo_Statics::NewStructOps,
+				"PendingSpawnInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPendingSpawnInfo),
+				alignof(FPendingSpawnInfo),
+				Z_Construct_UScriptStruct_FPendingSpawnInfo_Statics::PropPointers, 27,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

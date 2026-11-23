@@ -31,25 +31,12 @@ class UScriptStruct* FFortSearchPassParams::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4340 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSearchPassParams_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSearchPassParams>();
 	}
-	// ReturnStructParams: original RVA 0x043283A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSearchPassParams_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSearchPassParams",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSearchPassParams),
-		alignof(FFortSearchPassParams),
-		Z_Construct_UScriptStruct_FFortSearchPassParams_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A6A70 (end 0x010A6A9F)
 	// Original VA: 0x00000001410A6A70 | File offset: 0x010A6070
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSearchPassParams::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSearchPassParams_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043283A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSearchPassParams_Statics::NewStructOps,
+				"FortSearchPassParams",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSearchPassParams),
+				alignof(FFortSearchPassParams),
+				Z_Construct_UScriptStruct_FFortSearchPassParams_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

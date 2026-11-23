@@ -21,10 +21,7 @@ void UAIAsyncTaskBlueprintProxy::StaticRegisterNativesUAIAsyncTaskBlueprintProxy
 struct Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043E4B30; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAIAsyncTaskBlueprintProxy, "OnMoveCompleted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1C4C0 (end 0x01D1C4EF)
 // Original VA: 0x0000000141D1C4C0 | File offset: 0x01D1BAC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Statics::FuncParams);
+		// FuncParams: original RVA 0x043E4B30; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAIAsyncTaskBlueprintProxy, "OnMoveCompleted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

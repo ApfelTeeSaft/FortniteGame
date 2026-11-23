@@ -31,25 +31,12 @@ class UScriptStruct* FComponentOverrideRecord::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02426F20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FComponentOverrideRecord_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FComponentOverrideRecord>();
 	}
-	// ReturnStructParams: original RVA 0x0446BCE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FComponentOverrideRecord_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ComponentOverrideRecord",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FComponentOverrideRecord),
-		alignof(FComponentOverrideRecord),
-		Z_Construct_UScriptStruct_FComponentOverrideRecord_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428D90 (end 0x02428DBF)
 	// Original VA: 0x0000000142428D90 | File offset: 0x02428390
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FComponentOverrideRecord::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FComponentOverrideRecord_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0446BCE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FComponentOverrideRecord_Statics::NewStructOps,
+				"ComponentOverrideRecord",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FComponentOverrideRecord),
+				alignof(FComponentOverrideRecord),
+				Z_Construct_UScriptStruct_FComponentOverrideRecord_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

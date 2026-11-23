@@ -31,25 +31,12 @@ class UScriptStruct* FCachedAnimTransitionData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9650 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCachedAnimTransitionData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCachedAnimTransitionData>();
 	}
-	// ReturnStructParams: original RVA 0x0442D0B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCachedAnimTransitionData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"CachedAnimTransitionData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCachedAnimTransitionData),
-		alignof(FCachedAnimTransitionData),
-		Z_Construct_UScriptStruct_FCachedAnimTransitionData_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB3C0 (end 0x023EB3EF)
 	// Original VA: 0x00000001423EB3C0 | File offset: 0x023EA9C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCachedAnimTransitionData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCachedAnimTransitionData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0442D0B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCachedAnimTransitionData_Statics::NewStructOps,
+				"CachedAnimTransitionData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCachedAnimTransitionData),
+				alignof(FCachedAnimTransitionData),
+				Z_Construct_UScriptStruct_FCachedAnimTransitionData_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

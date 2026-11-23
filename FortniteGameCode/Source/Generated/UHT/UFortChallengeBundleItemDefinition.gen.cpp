@@ -22,10 +22,7 @@ void UFortChallengeBundleItemDefinition::StaticRegisterNativesUFortChallengeBund
 struct Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042464D0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortChallengeBundleItemDefinition, "GetEventName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0550 (end 0x00FB057F)
 // Original VA: 0x0000000140FB0550 | File offset: 0x00FAFB50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName_Statics::FuncParams);
+		// FuncParams: original RVA 0x042464D0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortChallengeBundleItemDefinition, "GetEventName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName
 struct Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04246650; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortChallengeBundleItemDefinition, "GetQuests", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x28, Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0580 (end 0x00FB05AF)
 // Original VA: 0x0000000140FB0580 | File offset: 0x00FAFB80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests_Statics::FuncParams);
+		// FuncParams: original RVA 0x04246650; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortChallengeBundleItemDefinition, "GetQuests", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x28, Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

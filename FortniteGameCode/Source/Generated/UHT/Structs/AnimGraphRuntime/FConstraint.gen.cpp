@@ -31,25 +31,12 @@ class UScriptStruct* FConstraint::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0AE10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FConstraint_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FConstraint>();
 	}
-	// ReturnStructParams: original RVA 0x043AB570
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FConstraint_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		nullptr,
-		&NewStructOps,
-		"Constraint",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FConstraint),
-		alignof(FConstraint),
-		Z_Construct_UScriptStruct_FConstraint_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F430 (end 0x01B0F45F)
 	// Original VA: 0x0000000141B0F430 | File offset: 0x01B0EA30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FConstraint::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FConstraint_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AB570
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				nullptr,
+				&Z_Construct_UScriptStruct_FConstraint_Statics::NewStructOps,
+				"Constraint",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FConstraint),
+				alignof(FConstraint),
+				Z_Construct_UScriptStruct_FConstraint_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

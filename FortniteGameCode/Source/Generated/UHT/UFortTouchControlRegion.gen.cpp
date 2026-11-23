@@ -36,10 +36,7 @@ void UFortTouchControlRegion::StaticRegisterNativesUFortTouchControlRegion()
 struct Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C1F90; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "CalculateMoveStickPos", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54880401, 0x18, Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029057B0 (end 0x029057DF)
 // Original VA: 0x00000001429057B0 | File offset: 0x02904DB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -48,7 +45,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C1F90; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "CalculateMoveStickPos", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54880401, 0x18, Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -56,10 +55,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos()
 struct Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouched_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2020; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouched_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "IsMovePlayerRegionTouched", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouched_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029057E0 (end 0x0290580F)
 // Original VA: 0x00000001429057E0 | File offset: 0x02904DE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -68,7 +64,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouch
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouched_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2020; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "IsMovePlayerRegionTouched", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouched_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -76,10 +74,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouch
 struct Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTouched_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C20B0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTouched_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "IsRotatePlayerRegionTouched", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTouched_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905810 (end 0x0290583F)
 // Original VA: 0x0000000142905810 | File offset: 0x02904E10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -88,7 +83,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTou
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTouched_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C20B0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "IsRotatePlayerRegionTouched", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTouched_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -96,10 +93,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTou
 struct Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2170; StructureSize 0x3C is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "MovePlayerRegionTick", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0x3C, Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905840 (end 0x0290586F)
 // Original VA: 0x0000000142905840 | File offset: 0x02904E40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -108,7 +102,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2170; StructureSize 0x3C is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "MovePlayerRegionTick", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0x3C, Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -116,10 +112,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick()
 struct Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPosition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2200; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPosition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "MoveStickIsInLockPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPosition_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905870 (end 0x0290589F)
 // Original VA: 0x0000000142905870 | File offset: 0x02904E70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -128,7 +121,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPositi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPosition_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2200; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "MoveStickIsInLockPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPosition_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -136,10 +131,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPositi
 struct Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThreshold_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2290; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThreshold_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "MoveStickIsInSprintThreshold", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThreshold_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029058A0 (end 0x029058CF)
 // Original VA: 0x00000001429058A0 | File offset: 0x02904EA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -148,7 +140,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThre
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThreshold_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2290; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "MoveStickIsInSprintThreshold", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThreshold_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -156,10 +150,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThre
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchEnded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2350; StructureSize 0xA0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchEnded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnMovePlayerRegionTouchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchEnded_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029058D0 (end 0x029058FF)
 // Original VA: 0x00000001429058D0 | File offset: 0x02904ED0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -168,7 +159,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouch
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchEnded_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2350; StructureSize 0xA0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnMovePlayerRegionTouchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchEnded_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -176,10 +169,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouch
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchMoved_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2410; StructureSize 0xA0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchMoved_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnMovePlayerRegionTouchMoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchMoved_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905900 (end 0x0290592F)
 // Original VA: 0x0000000142905900 | File offset: 0x02904F00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -188,7 +178,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouch
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchMoved_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2410; StructureSize 0xA0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnMovePlayerRegionTouchMoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchMoved_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -196,10 +188,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouch
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchStarted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C24D0; StructureSize 0xA0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchStarted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnMovePlayerRegionTouchStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchStarted_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905930 (end 0x0290595F)
 // Original VA: 0x0000000142905930 | File offset: 0x02904F30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -208,7 +197,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouch
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchStarted_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C24D0; StructureSize 0xA0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnMovePlayerRegionTouchStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchStarted_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -216,10 +207,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouch
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2610; StructureSize 0xA8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRegionTouchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xA8, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905960 (end 0x0290598F)
 // Original VA: 0x0000000142905960 | File offset: 0x02904F60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -228,7 +216,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2610; StructureSize 0xA8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRegionTouchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xA8, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -236,10 +226,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded()
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2790; StructureSize 0xB0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRegionTouchMoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20800, 0xB0, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905990 (end 0x029059BF)
 // Original VA: 0x0000000142905990 | File offset: 0x02904F90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -248,7 +235,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2790; StructureSize 0xB0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRegionTouchMoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20800, 0xB0, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -256,10 +245,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved()
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C28D0; StructureSize 0xA8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRegionTouchStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xA8, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029059C0 (end 0x029059EF)
 // Original VA: 0x00000001429059C0 | File offset: 0x02904FC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -268,7 +254,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C28D0; StructureSize 0xA8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRegionTouchStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0xA8, Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -276,10 +264,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted()
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchEnded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2990; StructureSize 0xA0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchEnded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRotatePlayerRegionTouchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchEnded_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029059F0 (end 0x02905A1F)
 // Original VA: 0x00000001429059F0 | File offset: 0x02904FF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -288,7 +273,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTou
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchEnded_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2990; StructureSize 0xA0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRotatePlayerRegionTouchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchEnded_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -296,10 +283,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTou
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchMoved_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2A90; StructureSize 0xA8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchMoved_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRotatePlayerRegionTouchMoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0CC80C00, 0xA8, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchMoved_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905A20 (end 0x02905A4F)
 // Original VA: 0x0000000142905A20 | File offset: 0x02905020
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -308,7 +292,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTou
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchMoved_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2A90; StructureSize 0xA8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRotatePlayerRegionTouchMoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0CC80C00, 0xA8, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchMoved_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -316,10 +302,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTou
 struct Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchStarted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2B50; StructureSize 0xA0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchStarted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRotatePlayerRegionTouchStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchStarted_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905A50 (end 0x02905A7F)
 // Original VA: 0x0000000142905A50 | File offset: 0x02905050
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -328,7 +311,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTou
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchStarted_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2B50; StructureSize 0xA0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "OnRotatePlayerRegionTouchStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C480C00, 0xA0, Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchStarted_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -336,10 +321,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTou
 struct Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2BD0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "SetLockOnStickPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04880401, 0x8, Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905A80 (end 0x02905AAF)
 // Original VA: 0x0000000142905A80 | File offset: 0x02905080
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -348,7 +330,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2BD0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "SetLockOnStickPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04880401, 0x8, Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -356,10 +340,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition(
 struct Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2CA0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "UpdateLockOnStickOrigin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04880401, 0xC, Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905AB0 (end 0x02905ADF)
 // Original VA: 0x0000000142905AB0 | File offset: 0x029050B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -368,7 +349,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2CA0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "UpdateLockOnStickOrigin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04880401, 0xC, Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -376,10 +359,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin
 struct Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPosition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2D20; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPosition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "UpdateLockOnStickPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04880401, 0x8, Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPosition_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905AE0 (end 0x02905B0F)
 // Original VA: 0x0000000142905AE0 | File offset: 0x029050E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -388,7 +368,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPositi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPosition_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2D20; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "UpdateLockOnStickPosition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04880401, 0x8, Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPosition_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -396,10 +378,7 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPositi
 struct Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C2DA0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "UpdateMoveStickLock", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905B10 (end 0x02905B3F)
 // Original VA: 0x0000000142905B10 | File offset: 0x02905110
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -408,7 +387,9 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C2DA0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchControlRegion, "UpdateMoveStickLock", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

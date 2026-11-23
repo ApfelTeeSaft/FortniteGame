@@ -22,10 +22,7 @@ void AFortGameplayCueNotify_Looping::StaticRegisterNativesAFortGameplayCueNotify
 struct Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransform_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042839D0; StructureSize 0x110 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransform_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "GetSpawnTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x110, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransform_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7E90 (end 0x00FE7EBF)
 // Original VA: 0x0000000140FE7E90 | File offset: 0x00FE7490
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransfor
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransform_Statics::FuncParams);
+		// FuncParams: original RVA 0x042839D0; StructureSize 0x110 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "GetSpawnTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20401, 0x110, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransform_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransfor
 struct Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04283AD0; StructureSize 0xC8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "GetTargetComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0xC8, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetComponent_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7EC0 (end 0x00FE7EEF)
 // Original VA: 0x0000000140FE7EC0 | File offset: 0x00FE74C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetCompone
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04283AD0; StructureSize 0xC8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "GetTargetComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0xC8, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetComponent_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -62,10 +60,7 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetCompone
 struct Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleSystemSpawned_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04283B90; StructureSize 0xC0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleSystemSpawned_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnStartParticleSystemSpawned", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleSystemSpawned_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7EF0 (end 0x00FE7F1F)
 // Original VA: 0x0000000140FE7EF0 | File offset: 0x00FE74F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +69,9 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleSystemSpawned_Statics::FuncParams);
+		// FuncParams: original RVA 0x04283B90; StructureSize 0xC0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnStartParticleSystemSpawned", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleSystemSpawned_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -82,10 +79,7 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleS
 struct Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSystemSpawned_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04283C50; StructureSize 0xC0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSystemSpawned_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnStopParticleSystemSpawned", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSystemSpawned_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7F20 (end 0x00FE7F4F)
 // Original VA: 0x0000000140FE7F20 | File offset: 0x00FE7520
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,7 +88,9 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSy
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSystemSpawned_Statics::FuncParams);
+		// FuncParams: original RVA 0x04283C50; StructureSize 0xC0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnStopParticleSystemSpawned", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSystemSpawned_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -102,10 +98,7 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSy
 struct Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemActivate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04283D10; StructureSize 0xC0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemActivate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnWhileActiveParticleSystemActivate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemActivate_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7F50 (end 0x00FE7F7F)
 // Original VA: 0x0000000140FE7F50 | File offset: 0x00FE7550
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -114,7 +107,9 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActivePar
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemActivate_Statics::FuncParams);
+		// FuncParams: original RVA 0x04283D10; StructureSize 0xC0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnWhileActiveParticleSystemActivate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemActivate_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -122,10 +117,7 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActivePar
 struct Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemDeactivate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04283DD0; StructureSize 0xC0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemDeactivate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnWhileActiveParticleSystemDeactivate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemDeactivate_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7F80 (end 0x00FE7FAF)
 // Original VA: 0x0000000140FE7F80 | File offset: 0x00FE7580
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -134,7 +126,9 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActivePar
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemDeactivate_Statics::FuncParams);
+		// FuncParams: original RVA 0x04283DD0; StructureSize 0xC0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayCueNotify_Looping, "OnWhileActiveParticleSystemDeactivate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420800, 0xC0, Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemDeactivate_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

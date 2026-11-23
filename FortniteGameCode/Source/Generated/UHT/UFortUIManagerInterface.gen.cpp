@@ -6,12 +6,6 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIManagerInterface();  // RVA 0x010D4A40 (consensus OuterFunc)
 
-struct Z_Construct_UFunction_UFortUIManagerInterface_KillConfirmation_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04343110; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortUIManagerInterface_KillConfirmation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIManagerInterface, "KillConfirmation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D5E10 (end 0x010D5E3F)
 // Original VA: 0x00000001410D5E10 | File offset: 0x010D5410
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -20,7 +14,9 @@ UFunction* Z_Construct_UFunction_UFortUIManagerInterface_KillConfirmation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIManagerInterface_KillConfirmation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04343110; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIManagerInterface, "KillConfirmation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

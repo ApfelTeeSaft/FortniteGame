@@ -32,25 +32,12 @@ class UScriptStruct* FFortHeroNamesData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B32A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortHeroNamesData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortHeroNamesData>();
 	}
-	// ReturnStructParams: original RVA 0x0457C830
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortHeroNamesData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortHeroNamesData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortHeroNamesData),
-		alignof(FFortHeroNamesData),
-		Z_Construct_UScriptStruct_FFortHeroNamesData_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B54F0 (end 0x028B551F)
 	// Original VA: 0x00000001428B54F0 | File offset: 0x028B4AF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortHeroNamesData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortHeroNamesData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0457C830
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortHeroNamesData_Statics::NewStructOps,
+				"FortHeroNamesData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortHeroNamesData),
+				alignof(FFortHeroNamesData),
+				Z_Construct_UScriptStruct_FFortHeroNamesData_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

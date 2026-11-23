@@ -31,25 +31,12 @@ class UScriptStruct* FCatalogDynamicBundleItem::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C20A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCatalogDynamicBundleItem_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCatalogDynamicBundleItem>();
 	}
-	// ReturnStructParams: original RVA 0x041C5F60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCatalogDynamicBundleItem_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
-		nullptr,
-		&NewStructOps,
-		"CatalogDynamicBundleItem",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCatalogDynamicBundleItem),
-		alignof(FCatalogDynamicBundleItem),
-		Z_Construct_UScriptStruct_FCatalogDynamicBundleItem_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C2CB0 (end 0x007C2CDF)
 	// Original VA: 0x00000001407C2CB0 | File offset: 0x007C22B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCatalogDynamicBundleItem::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCatalogDynamicBundleItem_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C5F60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCatalogDynamicBundleItem_Statics::NewStructOps,
+				"CatalogDynamicBundleItem",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCatalogDynamicBundleItem),
+				alignof(FCatalogDynamicBundleItem),
+				Z_Construct_UScriptStruct_FCatalogDynamicBundleItem_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

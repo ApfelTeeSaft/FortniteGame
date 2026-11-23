@@ -22,10 +22,7 @@ void UAchievementQueryCallbackProxy::StaticRegisterNativesUAchievementQueryCallb
 struct Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04185E90; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementQueryCallbackProxy, "CacheAchievementDescriptions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F330 (end 0x0032F35F)
 // Original VA: 0x000000014032F330 | File offset: 0x0032E930
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievement
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Statics::FuncParams);
+		// FuncParams: original RVA 0x04185E90; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementQueryCallbackProxy, "CacheAchievementDescriptions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievement
 struct Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievements_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04185F90; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievements_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementQueryCallbackProxy, "CacheAchievements", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievements_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F360 (end 0x0032F38F)
 // Original VA: 0x000000014032F360 | File offset: 0x0032E960
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievement
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievements_Statics::FuncParams);
+		// FuncParams: original RVA 0x04185F90; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAchievementQueryCallbackProxy, "CacheAchievements", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievements_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

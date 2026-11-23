@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03D54578, FClassParams RVA 0x03D545C0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortUserWidget();  // RVA 0x02918B60 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02918830 (end 0x02918852)
 // Original VA: 0x0000000142918830 | File offset: 0x02917E30
@@ -21,7 +21,7 @@ void UFortUserWidget::StaticRegisterNativesUFortUserWidget()
 
 struct Z_Construct_UFunction_UFortUserWidget_AddGrantCheatMenu_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D2D40 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029197C0 (end 0x029197EF)
 // Original VA: 0x00000001429197C0 | File offset: 0x02918DC0
@@ -31,15 +31,13 @@ UFunction* Z_Construct_UFunction_UFortUserWidget_AddGrantCheatMenu()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUserWidget_AddGrantCheatMenu_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D2D40; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUserWidget, "AddGrantCheatMenu", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x20, Z_Construct_UFunction_UFortUserWidget_AddGrantCheatMenu_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortUserWidget_AddStoreCheatMenu_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045D2D80 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029197F0 (end 0x0291981F)
 // Original VA: 0x00000001429197F0 | File offset: 0x02918DF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -48,7 +46,9 @@ UFunction* Z_Construct_UFunction_UFortUserWidget_AddStoreCheatMenu()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUserWidget_AddStoreCheatMenu_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D2D80; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUserWidget, "AddStoreCheatMenu", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

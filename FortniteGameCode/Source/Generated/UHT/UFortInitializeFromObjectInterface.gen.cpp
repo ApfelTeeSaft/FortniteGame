@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortInitializeFromObjectInterface();  // RVA 0x01006
 struct Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0429DCE0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObject_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInitializeFromObjectInterface, "InitFromObject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObject_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007950 (end 0x0100797F)
 // Original VA: 0x0000000141007950 | File offset: 0x01006F50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObje
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObject_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429DCE0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInitializeFromObjectInterface, "InitFromObject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObject_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

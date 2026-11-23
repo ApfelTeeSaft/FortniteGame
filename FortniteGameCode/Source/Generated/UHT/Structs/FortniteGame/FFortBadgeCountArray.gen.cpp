@@ -32,25 +32,12 @@ class UScriptStruct* FFortBadgeCountArray::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01036FB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortBadgeCountArray_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortBadgeCountArray>();
 	}
-	// ReturnStructParams: original RVA 0x042C6D50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortBadgeCountArray_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializer,
-		&NewStructOps,
-		"FortBadgeCountArray",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortBadgeCountArray),
-		alignof(FFortBadgeCountArray),
-		Z_Construct_UScriptStruct_FFortBadgeCountArray_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039D70 (end 0x01039D9F)
 	// Original VA: 0x0000000141039D70 | File offset: 0x01039370
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortBadgeCountArray::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortBadgeCountArray_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C6D50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializer,
+				&Z_Construct_UScriptStruct_FFortBadgeCountArray_Statics::NewStructOps,
+				"FortBadgeCountArray",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortBadgeCountArray),
+				alignof(FFortBadgeCountArray),
+				Z_Construct_UScriptStruct_FFortBadgeCountArray_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

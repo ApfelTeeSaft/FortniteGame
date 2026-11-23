@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03430318, FClassParams RVA 0x03430350.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortWeaponMeleeItemDefinitionTooltip();  // RVA 0x010D8C00 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D88F0 (end 0x010D8912)
 // Original VA: 0x00000001410D88F0 | File offset: 0x010D7EF0
@@ -22,7 +22,7 @@ void UFortWeaponMeleeItemDefinitionTooltip::StaticRegisterNativesUFortWeaponMele
 
 struct Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetNumericValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0434D290 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9630 (end 0x010D965F)
 // Original VA: 0x00000001410D9630 | File offset: 0x010D8C30
@@ -32,14 +32,16 @@ UFunction* Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetNumeri
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetNumericValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434D290; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponMeleeItemDefinitionTooltip, "GetNumericValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420400, 0x28, Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetNumericValue_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0434D450 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9660 (end 0x010D968F)
 // Original VA: 0x00000001410D9660 | File offset: 0x010D8C60
@@ -49,14 +51,16 @@ UFunction* Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTextFo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTextForToken_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434D450; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponMeleeItemDefinitionTooltip, "GetTextForToken", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420400, 0x40, Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTextForToken_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0434D610 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9690 (end 0x010D96BF)
 // Original VA: 0x00000001410D9690 | File offset: 0x010D8C90
@@ -66,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTokeni
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTokenizedDescriptionText_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434D610; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponMeleeItemDefinitionTooltip, "GetTokenizedDescriptionText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420400, 0x30, Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTokenizedDescriptionText_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

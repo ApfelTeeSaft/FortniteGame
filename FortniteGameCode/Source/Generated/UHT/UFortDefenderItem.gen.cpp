@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x032FFA78, FClassParams RVA 0x032FFAC0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortDefenderItem();  // RVA 0x00FD00B0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFA80 (end 0x00FCFAA2)
 // Original VA: 0x0000000140FCFA80 | File offset: 0x00FCF080
@@ -20,7 +20,7 @@ void UFortDefenderItem::StaticRegisterNativesUFortDefenderItem()
 
 struct Z_Construct_UFunction_UFortDefenderItem_GetDefenderSubtype_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04264620 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD0C80 (end 0x00FD0CAF)
 // Original VA: 0x0000000140FD0C80 | File offset: 0x00FD0280
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderItem_GetDefenderSubtype()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderItem_GetDefenderSubtype_Statics::FuncParams);
+		// FuncParams: original RVA 0x04264620; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderItem, "GetDefenderSubtype", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderItem_GetDefenderSubtype_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

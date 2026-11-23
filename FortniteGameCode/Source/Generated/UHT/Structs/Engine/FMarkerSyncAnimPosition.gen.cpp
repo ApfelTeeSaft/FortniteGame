@@ -31,25 +31,12 @@ class UScriptStruct* FMarkerSyncAnimPosition::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6F60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMarkerSyncAnimPosition_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMarkerSyncAnimPosition>();
 	}
-	// ReturnStructParams: original RVA 0x0440F7A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMarkerSyncAnimPosition_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"MarkerSyncAnimPosition",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMarkerSyncAnimPosition),
-		alignof(FMarkerSyncAnimPosition),
-		Z_Construct_UScriptStruct_FMarkerSyncAnimPosition_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C93F0 (end 0x023C941F)
 	// Original VA: 0x00000001423C93F0 | File offset: 0x023C89F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMarkerSyncAnimPosition::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMarkerSyncAnimPosition_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0440F7A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMarkerSyncAnimPosition_Statics::NewStructOps,
+				"MarkerSyncAnimPosition",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMarkerSyncAnimPosition),
+				alignof(FMarkerSyncAnimPosition),
+				Z_Construct_UScriptStruct_FMarkerSyncAnimPosition_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

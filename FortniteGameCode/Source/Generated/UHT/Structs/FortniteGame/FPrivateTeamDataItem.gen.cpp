@@ -32,25 +32,12 @@ class UScriptStruct* FPrivateTeamDataItem::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2590 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPrivateTeamDataItem_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPrivateTeamDataItem>();
 	}
-	// ReturnStructParams: original RVA 0x0432EB50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPrivateTeamDataItem_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializerItem,
-		&NewStructOps,
-		"PrivateTeamDataItem",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPrivateTeamDataItem),
-		alignof(FPrivateTeamDataItem),
-		Z_Construct_UScriptStruct_FPrivateTeamDataItem_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4590 (end 0x010B45BF)
 	// Original VA: 0x00000001410B4590 | File offset: 0x010B3B90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FPrivateTeamDataItem::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPrivateTeamDataItem_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432EB50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializerItem,
+				&Z_Construct_UScriptStruct_FPrivateTeamDataItem_Statics::NewStructOps,
+				"PrivateTeamDataItem",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPrivateTeamDataItem),
+				alignof(FPrivateTeamDataItem),
+				Z_Construct_UScriptStruct_FPrivateTeamDataItem_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

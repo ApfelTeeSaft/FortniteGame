@@ -31,25 +31,12 @@ class UScriptStruct* FLensImperfectionSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C4A20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLensImperfectionSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLensImperfectionSettings>();
 	}
-	// ReturnStructParams: original RVA 0x04507B30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLensImperfectionSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LensImperfectionSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLensImperfectionSettings),
-		alignof(FLensImperfectionSettings),
-		Z_Construct_UScriptStruct_FLensImperfectionSettings_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5A60 (end 0x024C5A8F)
 	// Original VA: 0x00000001424C5A60 | File offset: 0x024C5060
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLensImperfectionSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLensImperfectionSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04507B30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLensImperfectionSettings_Statics::NewStructOps,
+				"LensImperfectionSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLensImperfectionSettings),
+				alignof(FLensImperfectionSettings),
+				Z_Construct_UScriptStruct_FLensImperfectionSettings_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

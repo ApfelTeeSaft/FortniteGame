@@ -21,10 +21,7 @@ void ASBAGrantedBuildingGameplayActor::StaticRegisterNativesASBAGrantedBuildingG
 struct Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrategicBuildingActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04365D20; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrategicBuildingActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBAGrantedBuildingGameplayActor, "GetOwnerStrategicBuildingActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020405, 0x8, Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrategicBuildingActor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1FC0 (end 0x010F1FEF)
 // Original VA: 0x00000001410F1FC0 | File offset: 0x010F15C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrate
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrategicBuildingActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04365D20; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBAGrantedBuildingGameplayActor, "GetOwnerStrategicBuildingActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020405, 0x8, Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrategicBuildingActor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

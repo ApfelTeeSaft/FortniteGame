@@ -31,25 +31,12 @@ class UScriptStruct* FComponentSpacePoseLink::StaticStruct()
 	struct Z_Construct_UScriptStruct_FComponentSpacePoseLink_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CD7D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FComponentSpacePoseLink_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FComponentSpacePoseLink>();
 	}
-	// ReturnStructParams: original RVA 0x04418CB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FComponentSpacePoseLink_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FPoseLinkBase,
-		&NewStructOps,
-		"ComponentSpacePoseLink",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FComponentSpacePoseLink),
-		alignof(FComponentSpacePoseLink),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CF800 (end 0x023CF82F)
 	// Original VA: 0x00000001423CF800 | File offset: 0x023CEE00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FComponentSpacePoseLink::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FComponentSpacePoseLink_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04418CB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FPoseLinkBase,
+				&Z_Construct_UScriptStruct_FComponentSpacePoseLink_Statics::NewStructOps,
+				"ComponentSpacePoseLink",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FComponentSpacePoseLink),
+				alignof(FComponentSpacePoseLink),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FLightmassDebugOptions::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240A2F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLightmassDebugOptions_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLightmassDebugOptions>();
 	}
-	// ReturnStructParams: original RVA 0x04451FC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLightmassDebugOptions_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LightmassDebugOptions",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLightmassDebugOptions),
-		alignof(FLightmassDebugOptions),
-		Z_Construct_UScriptStruct_FLightmassDebugOptions_Statics::PropPointers, 16,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D280 (end 0x0240D2AF)
 	// Original VA: 0x000000014240D280 | File offset: 0x0240C880
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLightmassDebugOptions::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLightmassDebugOptions_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04451FC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLightmassDebugOptions_Statics::NewStructOps,
+				"LightmassDebugOptions",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLightmassDebugOptions),
+				alignof(FLightmassDebugOptions),
+				Z_Construct_UScriptStruct_FLightmassDebugOptions_Statics::PropPointers, 16,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

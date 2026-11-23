@@ -31,25 +31,12 @@ class UScriptStruct* FPlayerBannerInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108A2E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPlayerBannerInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPlayerBannerInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04310E60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPlayerBannerInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"PlayerBannerInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPlayerBannerInfo),
-		alignof(FPlayerBannerInfo),
-		Z_Construct_UScriptStruct_FPlayerBannerInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108CA60 (end 0x0108CA8F)
 	// Original VA: 0x000000014108CA60 | File offset: 0x0108C060
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPlayerBannerInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPlayerBannerInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04310E60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPlayerBannerInfo_Statics::NewStructOps,
+				"PlayerBannerInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPlayerBannerInfo),
+				alignof(FPlayerBannerInfo),
+				Z_Construct_UScriptStruct_FPlayerBannerInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

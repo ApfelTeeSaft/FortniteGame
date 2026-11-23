@@ -24,10 +24,7 @@ void AFortGameStatePvPBaseDestruction::StaticRegisterNativesAFortGameStatePvPBas
 struct Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceRequiredForTeamLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0428A830; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceRequiredForTeamLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetExperienceRequiredForTeamLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceRequiredForTeamLevel_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEF060 (end 0x00FEF08F)
 // Original VA: 0x0000000140FEF060 | File offset: 0x00FEE660
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceR
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceRequiredForTeamLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x0428A830; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetExperienceRequiredForTeamLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceRequiredForTeamLevel_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceR
 struct Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExperience_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0428A8B0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExperience_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetMaxTeamExperience", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExperience_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEF090 (end 0x00FEF0BF)
 // Original VA: 0x0000000140FEF090 | File offset: 0x00FEE690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExpe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExperience_Statics::FuncParams);
+		// FuncParams: original RVA 0x0428A8B0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetMaxTeamExperience", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExperience_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExpe
 struct Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0428A930; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetMaxTeamLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLevel_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEF0C0 (end 0x00FEF0EF)
 // Original VA: 0x0000000140FEF0C0 | File offset: 0x00FEE6C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLeve
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x0428A930; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetMaxTeamLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLevel_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLeve
 struct Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelForExperienceAmount_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0428A9E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelForExperienceAmount_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetTeamLevelForExperienceAmount", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelForExperienceAmount_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEF0F0 (end 0x00FEF11F)
 // Original VA: 0x0000000140FEF0F0 | File offset: 0x00FEE6F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelFo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelForExperienceAmount_Statics::FuncParams);
+		// FuncParams: original RVA 0x0428A9E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStatePvPBaseDestruction, "GetTeamLevelForExperienceAmount", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelForExperienceAmount_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

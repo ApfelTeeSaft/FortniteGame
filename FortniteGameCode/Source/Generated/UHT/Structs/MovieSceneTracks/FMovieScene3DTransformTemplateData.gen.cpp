@@ -31,25 +31,12 @@ class UScriptStruct* FMovieScene3DTransformTemplateData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4FD40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieScene3DTransformTemplateData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieScene3DTransformTemplateData>();
 	}
-	// ReturnStructParams: original RVA 0x043B4340
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieScene3DTransformTemplateData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		nullptr,
-		&NewStructOps,
-		"MovieScene3DTransformTemplateData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieScene3DTransformTemplateData),
-		alignof(FMovieScene3DTransformTemplateData),
-		Z_Construct_UScriptStruct_FMovieScene3DTransformTemplateData_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B52C90 (end 0x01B52CBF)
 	// Original VA: 0x0000000141B52C90 | File offset: 0x01B52290
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieScene3DTransformTemplateData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieScene3DTransformTemplateData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B4340
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieScene3DTransformTemplateData_Statics::NewStructOps,
+				"MovieScene3DTransformTemplateData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieScene3DTransformTemplateData),
+				alignof(FMovieScene3DTransformTemplateData),
+				Z_Construct_UScriptStruct_FMovieScene3DTransformTemplateData_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

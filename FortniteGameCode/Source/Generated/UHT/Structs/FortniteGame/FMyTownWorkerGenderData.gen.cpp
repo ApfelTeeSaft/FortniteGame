@@ -31,25 +31,12 @@ class UScriptStruct* FMyTownWorkerGenderData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0B40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMyTownWorkerGenderData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMyTownWorkerGenderData>();
 	}
-	// ReturnStructParams: original RVA 0x04364FC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMyTownWorkerGenderData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"MyTownWorkerGenderData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FMyTownWorkerGenderData),
-		alignof(FMyTownWorkerGenderData),
-		Z_Construct_UScriptStruct_FMyTownWorkerGenderData_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F25C0 (end 0x010F25EF)
 	// Original VA: 0x00000001410F25C0 | File offset: 0x010F1BC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMyTownWorkerGenderData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMyTownWorkerGenderData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04364FC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMyTownWorkerGenderData_Statics::NewStructOps,
+				"MyTownWorkerGenderData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FMyTownWorkerGenderData),
+				alignof(FMyTownWorkerGenderData),
+				Z_Construct_UScriptStruct_FMyTownWorkerGenderData_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

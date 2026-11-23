@@ -31,25 +31,12 @@ class UScriptStruct* FRuntimeCurveLinearColor::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FD700 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRuntimeCurveLinearColor_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRuntimeCurveLinearColor>();
 	}
-	// ReturnStructParams: original RVA 0x044408D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRuntimeCurveLinearColor_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"RuntimeCurveLinearColor",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FRuntimeCurveLinearColor),
-		alignof(FRuntimeCurveLinearColor),
-		Z_Construct_UScriptStruct_FRuntimeCurveLinearColor_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF630 (end 0x023FF65F)
 	// Original VA: 0x00000001423FF630 | File offset: 0x023FEC30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FRuntimeCurveLinearColor::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRuntimeCurveLinearColor_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044408D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FRuntimeCurveLinearColor_Statics::NewStructOps,
+				"RuntimeCurveLinearColor",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FRuntimeCurveLinearColor),
+				alignof(FRuntimeCurveLinearColor),
+				Z_Construct_UScriptStruct_FRuntimeCurveLinearColor_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

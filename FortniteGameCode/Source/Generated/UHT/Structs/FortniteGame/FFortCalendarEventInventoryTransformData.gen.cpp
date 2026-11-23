@@ -32,25 +32,12 @@ class UScriptStruct* FFortCalendarEventInventoryTransformData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAC6C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortCalendarEventInventoryTransformData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortCalendarEventInventoryTransformData>();
 	}
-	// ReturnStructParams: original RVA 0x042441B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortCalendarEventInventoryTransformData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortCalendarEventInventoryTransformData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortCalendarEventInventoryTransformData),
-		alignof(FFortCalendarEventInventoryTransformData),
-		Z_Construct_UScriptStruct_FFortCalendarEventInventoryTransformData_Statics::PropPointers, 25,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAE0E0 (end 0x00FAE10F)
 	// Original VA: 0x0000000140FAE0E0 | File offset: 0x00FAD6E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortCalendarEventInventoryTransformData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortCalendarEventInventoryTransformData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042441B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortCalendarEventInventoryTransformData_Statics::NewStructOps,
+				"FortCalendarEventInventoryTransformData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortCalendarEventInventoryTransformData),
+				alignof(FFortCalendarEventInventoryTransformData),
+				Z_Construct_UScriptStruct_FFortCalendarEventInventoryTransformData_Statics::PropPointers, 25,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

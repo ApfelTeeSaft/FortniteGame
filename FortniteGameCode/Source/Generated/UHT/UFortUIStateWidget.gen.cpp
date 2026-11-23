@@ -4,11 +4,11 @@
 // FClassFunctionLinkInfo array RVA 0x03D4A5D8, FClassParams RVA 0x03D4A600.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortUIStateWidget();  // RVA 0x02911F70 (registered by its FCompiledInDefer)
 
 struct Z_Construct_UFunction_UFortUIStateWidget_OnEnterState_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045CFD80 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029137A0 (end 0x029137CF)
 // Original VA: 0x00000001429137A0 | File offset: 0x02912DA0
@@ -18,14 +18,16 @@ UFunction* Z_Construct_UFunction_UFortUIStateWidget_OnEnterState()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIStateWidget_OnEnterState_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CFD80; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIStateWidget, "OnEnterState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UFortUIStateWidget_OnEnterState_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortUIStateWidget_OnExitState_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045CFE40 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029137D0 (end 0x029137FF)
 // Original VA: 0x00000001429137D0 | File offset: 0x02912DD0
@@ -35,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortUIStateWidget_OnExitState()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIStateWidget_OnExitState_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CFE40; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIStateWidget, "OnExitState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UFortUIStateWidget_OnExitState_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

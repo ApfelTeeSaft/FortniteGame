@@ -32,25 +32,12 @@ class UScriptStruct* FEpicCMSLayoutTypeMapping::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3820 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEpicCMSLayoutTypeMapping_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEpicCMSLayoutTypeMapping>();
 	}
-	// ReturnStructParams: original RVA 0x04183C20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEpicCMSLayoutTypeMapping_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_EpicCMSUIFramework,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"EpicCMSLayoutTypeMapping",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FEpicCMSLayoutTypeMapping),
-		alignof(FEpicCMSLayoutTypeMapping),
-		Z_Construct_UScriptStruct_FEpicCMSLayoutTypeMapping_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3EF0 (end 0x002E3F1F)
 	// Original VA: 0x00000001402E3EF0 | File offset: 0x002E34F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FEpicCMSLayoutTypeMapping::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEpicCMSLayoutTypeMapping_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04183C20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_EpicCMSUIFramework,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FEpicCMSLayoutTypeMapping_Statics::NewStructOps,
+				"EpicCMSLayoutTypeMapping",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FEpicCMSLayoutTypeMapping),
+				alignof(FEpicCMSLayoutTypeMapping),
+				Z_Construct_UScriptStruct_FEpicCMSLayoutTypeMapping_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

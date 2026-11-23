@@ -31,25 +31,12 @@ class UScriptStruct* FGfeSDKHighlightConfigParams::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00597160 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGfeSDKHighlightConfigParams_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGfeSDKHighlightConfigParams>();
 	}
-	// ReturnStructParams: original RVA 0x041ACDB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGfeSDKHighlightConfigParams_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_NVIDIAGfeSDK,
-		nullptr,
-		&NewStructOps,
-		"GfeSDKHighlightConfigParams",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGfeSDKHighlightConfigParams),
-		alignof(FGfeSDKHighlightConfigParams),
-		Z_Construct_UScriptStruct_FGfeSDKHighlightConfigParams_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00597AC0 (end 0x00597AEF)
 	// Original VA: 0x0000000140597AC0 | File offset: 0x005970C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGfeSDKHighlightConfigParams::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGfeSDKHighlightConfigParams_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041ACDB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_NVIDIAGfeSDK,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGfeSDKHighlightConfigParams_Statics::NewStructOps,
+				"GfeSDKHighlightConfigParams",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGfeSDKHighlightConfigParams),
+				alignof(FGfeSDKHighlightConfigParams),
+				Z_Construct_UScriptStruct_FGfeSDKHighlightConfigParams_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

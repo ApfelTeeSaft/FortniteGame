@@ -31,12 +31,6 @@ void UFortMiniMapComponent::StaticRegisterNativesUFortMiniMapComponent()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042C60C0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "OnRep_MiniMapData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039A70 (end 0x01039A9F)
 // Original VA: 0x0000000141039A70 | File offset: 0x01039070
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -45,7 +39,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C60C0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "OnRep_MiniMapData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -53,10 +49,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData()
 struct Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C6140; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "OverrideLocalMiniMapIcon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039AA0 (end 0x01039ACF)
 // Original VA: 0x0000000141039AA0 | File offset: 0x010390A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -65,7 +58,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C6140; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "OverrideLocalMiniMapIcon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -73,10 +68,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon(
 struct Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndicatorIsVisible_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C61D0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndicatorIsVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "OverrideLocalMiniMapIndicatorIsVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndicatorIsVisible_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039AD0 (end 0x01039AFF)
 // Original VA: 0x0000000141039AD0 | File offset: 0x010390D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -85,7 +77,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndic
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndicatorIsVisible_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C61D0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "OverrideLocalMiniMapIndicatorIsVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndicatorIsVisible_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -93,10 +87,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndic
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C6250; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIcon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039B00 (end 0x01039B2F)
 // Original VA: 0x0000000141039B00 | File offset: 0x01039100
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -105,7 +96,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C6250; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIcon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x8, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -113,10 +106,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon()
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C62D0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820405, 0x10, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039B30 (end 0x01039B5F)
 // Original VA: 0x0000000141039B30 | File offset: 0x01039130
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -125,7 +115,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C62D0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820405, 0x10, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -133,10 +125,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor()
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulsesPerSecond_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C6350; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulsesPerSecond_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconColorPulsesPerSecond", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulsesPerSecond_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039B60 (end 0x01039B8F)
 // Original VA: 0x0000000141039B60 | File offset: 0x01039160
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -145,7 +134,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulses
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulsesPerSecond_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C6350; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconColorPulsesPerSecond", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulsesPerSecond_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -153,10 +144,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulses
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C63D0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconPulseColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820405, 0x10, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039B90 (end 0x01039BBF)
 // Original VA: 0x0000000141039B90 | File offset: 0x01039190
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -165,7 +153,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C63D0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconPulseColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820405, 0x10, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -173,10 +163,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor(
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C6450; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20405, 0x8, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039BC0 (end 0x01039BEF)
 // Original VA: 0x0000000141039BC0 | File offset: 0x010391C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -185,7 +172,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C6450; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20405, 0x8, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -193,10 +182,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale()
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesPerSecond_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C64D0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesPerSecond_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconSizePulsesPerSecond", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesPerSecond_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039BF0 (end 0x01039C1F)
 // Original VA: 0x0000000141039BF0 | File offset: 0x010391F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -205,7 +191,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesPerSecond_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C64D0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIconSizePulsesPerSecond", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesPerSecond_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -213,10 +201,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesP
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisible_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C6560; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIndicatorIsVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisible_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039C20 (end 0x01039C4F)
 // Original VA: 0x0000000141039C20 | File offset: 0x01039220
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -225,7 +210,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisible_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C6560; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIndicatorIsVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisible_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -233,10 +220,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisi
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisibleOnMiniMap_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C65F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisibleOnMiniMap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIndicatorIsVisibleOnMiniMap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisibleOnMiniMap_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039C50 (end 0x01039C7F)
 // Original VA: 0x0000000141039C50 | File offset: 0x01039250
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -245,7 +229,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisibleOnMiniMap_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C65F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapIndicatorIsVisibleOnMiniMap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisibleOnMiniMap_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -253,10 +239,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisi
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C6670; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapLocationOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20405, 0xC, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039C80 (end 0x01039CAF)
 // Original VA: 0x0000000141039C80 | File offset: 0x01039280
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -265,7 +248,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C6670; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapLocationOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20405, 0xC, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -273,10 +258,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset(
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C66F0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapViewableDistance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistance_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039CB0 (end 0x01039CDF)
 // Original VA: 0x0000000141039CB0 | File offset: 0x010392B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -285,7 +267,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistanc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistance_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C66F0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetMiniMapViewableDistance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistance_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -293,10 +277,7 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistanc
 struct Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042C6860; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetupMiniMapComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820405, 0x30, Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01039CE0 (end 0x01039D0F)
 // Original VA: 0x0000000141039CE0 | File offset: 0x010392E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -305,7 +286,9 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x042C6860; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMiniMapComponent, "SetupMiniMapComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820405, 0x30, Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

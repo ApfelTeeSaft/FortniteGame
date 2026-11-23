@@ -26,10 +26,7 @@ void UFortHealthRegenInterface::StaticRegisterNativesUFortHealthRegenInterface()
 struct Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGameplayEffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04322960; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGameplayEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetHealthRegenDelayGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGameplayEffect_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E2F0 (end 0x0109E31F)
 // Original VA: 0x000000014109E2F0 | File offset: 0x0109D8F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGameplayEffect_Statics::FuncParams);
+		// FuncParams: original RVA 0x04322960; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetHealthRegenDelayGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGameplayEffect_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGa
 struct Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043229E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetHealthRegenGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffect_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E320 (end 0x0109E34F)
 // Original VA: 0x000000014109E320 | File offset: 0x0109D920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGamepla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffect_Statics::FuncParams);
+		// FuncParams: original RVA 0x043229E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetHealthRegenGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffect_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGamepla
 struct Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffectClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04322A70; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffectClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetHealthRegenGameplayEffectClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffectClass_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E350 (end 0x0109E37F)
 // Original VA: 0x000000014109E350 | File offset: 0x0109D950
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGamepla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffectClass_Statics::FuncParams);
+		// FuncParams: original RVA 0x04322A70; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetHealthRegenGameplayEffectClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffectClass_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGamepla
 struct Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGameplayEffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04322AF0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGameplayEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetShieldRegenDelayGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGameplayEffect_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E380 (end 0x0109E3AF)
 // Original VA: 0x000000014109E380 | File offset: 0x0109D980
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +92,9 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGameplayEffect_Statics::FuncParams);
+		// FuncParams: original RVA 0x04322AF0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetShieldRegenDelayGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGameplayEffect_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +102,7 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGa
 struct Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04322B70; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetShieldRegenGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffect_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E3B0 (end 0x0109E3DF)
 // Original VA: 0x000000014109E3B0 | File offset: 0x0109D9B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,7 +111,9 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGamepla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffect_Statics::FuncParams);
+		// FuncParams: original RVA 0x04322B70; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetShieldRegenGameplayEffect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffect_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -126,10 +121,7 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGamepla
 struct Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffectClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04322C00; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffectClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetShieldRegenGameplayEffectClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffectClass_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E3E0 (end 0x0109E40F)
 // Original VA: 0x000000014109E3E0 | File offset: 0x0109D9E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -138,7 +130,9 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGamepla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffectClass_Statics::FuncParams);
+		// FuncParams: original RVA 0x04322C00; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthRegenInterface, "GetShieldRegenGameplayEffectClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffectClass_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

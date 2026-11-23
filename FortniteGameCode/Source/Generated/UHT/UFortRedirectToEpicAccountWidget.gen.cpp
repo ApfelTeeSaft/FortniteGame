@@ -24,10 +24,7 @@ void UFortRedirectToEpicAccountWidget::StaticRegisterNativesUFortRedirectToEpicA
 struct Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AE580; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "HandleBackSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSelected_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDDF0 (end 0x028EDE1F)
 // Original VA: 0x00000001428EDDF0 | File offset: 0x028ED3F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSele
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AE580; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "HandleBackSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSelected_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSele
 struct Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleEpicClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AE600; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleEpicClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "HandleEpicClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleEpicClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDE20 (end 0x028EDE4F)
 // Original VA: 0x00000001428EDE20 | File offset: 0x028ED420
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleEpicClic
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleEpicClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AE600; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "HandleEpicClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleEpicClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleEpicClic
 struct Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleNewAccountSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AE680; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleNewAccountSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "HandleNewAccountSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x8, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleNewAccountSelected_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDE50 (end 0x028EDE7F)
 // Original VA: 0x00000001428EDE50 | File offset: 0x028ED450
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleNewAccou
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleNewAccountSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AE680; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "HandleNewAccountSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x8, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleNewAccountSelected_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleNewAccou
 struct Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_SetLoginType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AE740; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_SetLoginType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "SetLoginType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_SetLoginType_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDE80 (end 0x028EDEAF)
 // Original VA: 0x00000001428EDE80 | File offset: 0x028ED480
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_SetLoginType()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_SetLoginType_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AE740; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "SetLoginType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_SetLoginType_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +100,7 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_SetLoginType()
 struct Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_UpdateNewAccountText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AE850; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_UpdateNewAccountText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "UpdateNewAccountText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x2, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_UpdateNewAccountText_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDEB0 (end 0x028EDEDF)
 // Original VA: 0x00000001428EDEB0 | File offset: 0x028ED4B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +109,9 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_UpdateNewAccou
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_UpdateNewAccountText_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AE850; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRedirectToEpicAccountWidget, "UpdateNewAccountText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x2, Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_UpdateNewAccountText_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

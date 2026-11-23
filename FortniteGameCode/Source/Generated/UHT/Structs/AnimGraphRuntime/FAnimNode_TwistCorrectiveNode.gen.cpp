@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_TwistCorrectiveNode::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0B250 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_TwistCorrectiveNode_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_TwistCorrectiveNode>();
 	}
-	// ReturnStructParams: original RVA 0x043B0AC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_TwistCorrectiveNode_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_SkeletalControlBase,
-		&NewStructOps,
-		"AnimNode_TwistCorrectiveNode",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_TwistCorrectiveNode),
-		alignof(FAnimNode_TwistCorrectiveNode),
-		Z_Construct_UScriptStruct_FAnimNode_TwistCorrectiveNode_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F280 (end 0x01B0F2AF)
 	// Original VA: 0x0000000141B0F280 | File offset: 0x01B0E880
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_TwistCorrectiveNode::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_TwistCorrectiveNode_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B0AC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_SkeletalControlBase,
+				&Z_Construct_UScriptStruct_FAnimNode_TwistCorrectiveNode_Statics::NewStructOps,
+				"AnimNode_TwistCorrectiveNode",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_TwistCorrectiveNode),
+				alignof(FAnimNode_TwistCorrectiveNode),
+				Z_Construct_UScriptStruct_FAnimNode_TwistCorrectiveNode_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

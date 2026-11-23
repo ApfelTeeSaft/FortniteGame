@@ -31,25 +31,12 @@ class UScriptStruct* FFortAvailableMissionData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC9E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAvailableMissionData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAvailableMissionData>();
 	}
-	// ReturnStructParams: original RVA 0x04332BF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAvailableMissionData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAvailableMissionData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortAvailableMissionData),
-		alignof(FFortAvailableMissionData),
-		Z_Construct_UScriptStruct_FFortAvailableMissionData_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF440 (end 0x010BF46F)
 	// Original VA: 0x00000001410BF440 | File offset: 0x010BEA40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAvailableMissionData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAvailableMissionData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04332BF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAvailableMissionData_Statics::NewStructOps,
+				"FortAvailableMissionData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortAvailableMissionData),
+				alignof(FFortAvailableMissionData),
+				Z_Construct_UScriptStruct_FFortAvailableMissionData_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

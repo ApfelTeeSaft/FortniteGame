@@ -21,10 +21,7 @@ void UFortHUDObjectiveSizeInterface::StaticRegisterNativesUFortHUDObjectiveSizeI
 struct Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04584F90; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHUDObjectiveSizeInterface, "GetHeightEstimate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C020C00, 0x4, Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimate_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD2D0 (end 0x028BD2FF)
 // Original VA: 0x00000001428BD2D0 | File offset: 0x028BC8D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimat
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimate_Statics::FuncParams);
+		// FuncParams: original RVA 0x04584F90; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHUDObjectiveSizeInterface, "GetHeightEstimate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C020C00, 0x4, Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimate_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

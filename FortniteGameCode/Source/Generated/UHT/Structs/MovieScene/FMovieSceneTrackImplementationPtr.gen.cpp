@@ -30,25 +30,12 @@ class UScriptStruct* FMovieSceneTrackImplementationPtr::StaticStruct()
 	struct Z_Construct_UScriptStruct_FMovieSceneTrackImplementationPtr_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC22C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneTrackImplementationPtr_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneTrackImplementationPtr>();
 	}
-	// ReturnStructParams: original RVA 0x043A7000
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneTrackImplementationPtr_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneTrackImplementationPtr",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneTrackImplementationPtr),
-		alignof(FMovieSceneTrackImplementationPtr),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC6530 (end 0x01AC655F)
 	// Original VA: 0x0000000141AC6530 | File offset: 0x01AC5B30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FMovieSceneTrackImplementationPtr::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneTrackImplementationPtr_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A7000
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneTrackImplementationPtr_Statics::NewStructOps,
+				"MovieSceneTrackImplementationPtr",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneTrackImplementationPtr),
+				alignof(FMovieSceneTrackImplementationPtr),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

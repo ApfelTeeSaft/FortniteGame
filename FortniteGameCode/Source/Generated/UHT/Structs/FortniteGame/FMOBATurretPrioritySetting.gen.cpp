@@ -31,25 +31,12 @@ class UScriptStruct* FMOBATurretPrioritySetting::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F77B60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMOBATurretPrioritySetting_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMOBATurretPrioritySetting>();
 	}
-	// ReturnStructParams: original RVA 0x0420C960
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMOBATurretPrioritySetting_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"MOBATurretPrioritySetting",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMOBATurretPrioritySetting),
-		alignof(FMOBATurretPrioritySetting),
-		Z_Construct_UScriptStruct_FMOBATurretPrioritySetting_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79810 (end 0x00F7983F)
 	// Original VA: 0x0000000140F79810 | File offset: 0x00F78E10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMOBATurretPrioritySetting::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMOBATurretPrioritySetting_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0420C960
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMOBATurretPrioritySetting_Statics::NewStructOps,
+				"MOBATurretPrioritySetting",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMOBATurretPrioritySetting),
+				alignof(FMOBATurretPrioritySetting),
+				Z_Construct_UScriptStruct_FMOBATurretPrioritySetting_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

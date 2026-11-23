@@ -31,25 +31,12 @@ class UScriptStruct* FFortAIEncounterRiftManagerInitializationData::StaticStruct
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BA70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAIEncounterRiftManagerInitializationData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAIEncounterRiftManagerInitializationData>();
 	}
-	// ReturnStructParams: original RVA 0x042271F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAIEncounterRiftManagerInitializationData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAIEncounterRiftManagerInitializationData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAIEncounterRiftManagerInitializationData),
-		alignof(FFortAIEncounterRiftManagerInitializationData),
-		Z_Construct_UScriptStruct_FFortAIEncounterRiftManagerInitializationData_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8CFB0 (end 0x00F8CFDF)
 	// Original VA: 0x0000000140F8CFB0 | File offset: 0x00F8C5B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAIEncounterRiftManagerInitializationData::StaticStruct
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAIEncounterRiftManagerInitializationData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042271F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAIEncounterRiftManagerInitializationData_Statics::NewStructOps,
+				"FortAIEncounterRiftManagerInitializationData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAIEncounterRiftManagerInitializationData),
+				alignof(FFortAIEncounterRiftManagerInitializationData),
+				Z_Construct_UScriptStruct_FFortAIEncounterRiftManagerInitializationData_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FFortVariantSpawnPoints::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98500 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortVariantSpawnPoints_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortVariantSpawnPoints>();
 	}
-	// ReturnStructParams: original RVA 0x04230D10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortVariantSpawnPoints_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortVariantSpawnPoints",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortVariantSpawnPoints),
-		alignof(FFortVariantSpawnPoints),
-		Z_Construct_UScriptStruct_FFortVariantSpawnPoints_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F99F10 (end 0x00F99F3F)
 	// Original VA: 0x0000000140F99F10 | File offset: 0x00F99510
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortVariantSpawnPoints::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortVariantSpawnPoints_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04230D10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortVariantSpawnPoints_Statics::NewStructOps,
+				"FortVariantSpawnPoints",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortVariantSpawnPoints),
+				alignof(FFortVariantSpawnPoints),
+				Z_Construct_UScriptStruct_FFortVariantSpawnPoints_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

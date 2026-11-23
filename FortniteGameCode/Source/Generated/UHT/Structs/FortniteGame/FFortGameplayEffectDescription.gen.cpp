@@ -31,25 +31,12 @@ class UScriptStruct* FFortGameplayEffectDescription::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C740 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortGameplayEffectDescription_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortGameplayEffectDescription>();
 	}
-	// ReturnStructParams: original RVA 0x04214210
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortGameplayEffectDescription_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortGameplayEffectDescription",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortGameplayEffectDescription),
-		alignof(FFortGameplayEffectDescription),
-		Z_Construct_UScriptStruct_FFortGameplayEffectDescription_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7E000 (end 0x00F7E02F)
 	// Original VA: 0x0000000140F7E000 | File offset: 0x00F7D600
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortGameplayEffectDescription::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortGameplayEffectDescription_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04214210
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortGameplayEffectDescription_Statics::NewStructOps,
+				"FortGameplayEffectDescription",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortGameplayEffectDescription),
+				alignof(FFortGameplayEffectDescription),
+				Z_Construct_UScriptStruct_FFortGameplayEffectDescription_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

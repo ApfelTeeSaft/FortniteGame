@@ -31,25 +31,12 @@ class UScriptStruct* FChatMarkupStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077F480 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FChatMarkupStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FChatMarkupStyle>();
 	}
-	// ReturnStructParams: original RVA 0x041BFA70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FChatMarkupStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
-		nullptr,
-		&NewStructOps,
-		"ChatMarkupStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FChatMarkupStyle),
-		alignof(FChatMarkupStyle),
-		Z_Construct_UScriptStruct_FChatMarkupStyle_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077FE30 (end 0x0077FE5F)
 	// Original VA: 0x000000014077FE30 | File offset: 0x0077F430
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FChatMarkupStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FChatMarkupStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BFA70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
+				nullptr,
+				&Z_Construct_UScriptStruct_FChatMarkupStyle_Statics::NewStructOps,
+				"ChatMarkupStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FChatMarkupStyle),
+				alignof(FChatMarkupStyle),
+				Z_Construct_UScriptStruct_FChatMarkupStyle_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

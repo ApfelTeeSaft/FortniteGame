@@ -31,25 +31,12 @@ class UScriptStruct* FFortFootstepAudioData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDA730 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortFootstepAudioData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortFootstepAudioData>();
 	}
-	// ReturnStructParams: original RVA 0x0426E020
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortFootstepAudioData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortFootstepAudioData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortFootstepAudioData),
-		alignof(FFortFootstepAudioData),
-		Z_Construct_UScriptStruct_FFortFootstepAudioData_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC340 (end 0x00FDC36F)
 	// Original VA: 0x0000000140FDC340 | File offset: 0x00FDB940
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortFootstepAudioData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortFootstepAudioData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0426E020
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortFootstepAudioData_Statics::NewStructOps,
+				"FortFootstepAudioData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortFootstepAudioData),
+				alignof(FFortFootstepAudioData),
+				Z_Construct_UScriptStruct_FFortFootstepAudioData_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

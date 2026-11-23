@@ -31,25 +31,12 @@ class UScriptStruct* FCloudColorState::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC820 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCloudColorState_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCloudColorState>();
 	}
-	// ReturnStructParams: original RVA 0x043362E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCloudColorState_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"CloudColorState",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCloudColorState),
-		alignof(FCloudColorState),
-		Z_Construct_UScriptStruct_FCloudColorState_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF260 (end 0x010BF28F)
 	// Original VA: 0x00000001410BF260 | File offset: 0x010BE860
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCloudColorState::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCloudColorState_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043362E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCloudColorState_Statics::NewStructOps,
+				"CloudColorState",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCloudColorState),
+				alignof(FCloudColorState),
+				Z_Construct_UScriptStruct_FCloudColorState_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

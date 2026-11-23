@@ -32,25 +32,12 @@ class UScriptStruct* FMovieScene2DTransformSectionTemplate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECBB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieScene2DTransformSectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043C2250
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_UMG,
-		Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate,
-		&NewStructOps,
-		"MovieScene2DTransformSectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieScene2DTransformSectionTemplate),
-		alignof(FMovieScene2DTransformSectionTemplate),
-		Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEE9E0 (end 0x01BEEA0F)
 	// Original VA: 0x0000000141BEE9E0 | File offset: 0x01BEDFE0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieScene2DTransformSectionTemplate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043C2250
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_UMG,
+				Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate,
+				&Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate_Statics::NewStructOps,
+				"MovieScene2DTransformSectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieScene2DTransformSectionTemplate),
+				alignof(FMovieScene2DTransformSectionTemplate),
+				Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

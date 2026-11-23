@@ -26,10 +26,7 @@ void UCommonLazyImage::StaticRegisterNativesUCommonLazyImage()
 struct Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417B170; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "ForwardLoadingStateChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x1, Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CAA40 (end 0x002CAA6F)
 // Original VA: 0x00000001402CAA40 | File offset: 0x002CA040
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417B170; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "ForwardLoadingStateChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x1, Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged()
 struct Z_Construct_UFunction_UCommonLazyImage_IsLoading_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417B200; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonLazyImage_IsLoading_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "IsLoading", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UCommonLazyImage_IsLoading_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CAA70 (end 0x002CAA9F)
 // Original VA: 0x00000001402CAA70 | File offset: 0x002CA070
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_IsLoading()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonLazyImage_IsLoading_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417B200; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "IsLoading", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UCommonLazyImage_IsLoading_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_IsLoading()
 struct Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyDisplayAsset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417B2D0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyDisplayAsset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "SetBrushFromLazyDisplayAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x30, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyDisplayAsset_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CAAA0 (end 0x002CAACF)
 // Original VA: 0x00000001402CAAA0 | File offset: 0x002CA0A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyDisplayAsset()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyDisplayAsset_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417B2D0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "SetBrushFromLazyDisplayAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x30, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyDisplayAsset_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyDisplayAsset()
 struct Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417B350; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyMaterial_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "SetBrushFromLazyMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x28, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyMaterial_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CAAD0 (end 0x002CAAFF)
 // Original VA: 0x00000001402CAAD0 | File offset: 0x002CA0D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +92,9 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyMaterial()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyMaterial_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417B350; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "SetBrushFromLazyMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x28, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyMaterial_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +102,7 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyMaterial()
 struct Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyTexture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0417B420; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyTexture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "SetBrushFromLazyTexture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x30, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyTexture_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CAB00 (end 0x002CAB2F)
 // Original VA: 0x00000001402CAB00 | File offset: 0x002CA100
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,17 +111,13 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyTexture()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyTexture_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417B420; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "SetBrushFromLazyTexture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x30, Z_Construct_UFunction_UCommonLazyImage_SetBrushFromLazyTexture_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UCommonLazyImage_ShowDefaultImage_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0417B460; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonLazyImage_ShowDefaultImage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "ShowDefaultImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CAB30 (end 0x002CAB5F)
 // Original VA: 0x00000001402CAB30 | File offset: 0x002CA130
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -137,7 +126,9 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_ShowDefaultImage()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonLazyImage_ShowDefaultImage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0417B460; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonLazyImage, "ShowDefaultImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

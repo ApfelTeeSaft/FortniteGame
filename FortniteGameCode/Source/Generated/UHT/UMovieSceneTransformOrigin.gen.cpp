@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UMovieSceneTransformOrigin();  // RVA 0x01B528F0 (con
 struct Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigin_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043B2480; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMovieSceneTransformOrigin, "BP_GetTransformOrigin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C880800, 0x30, Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigin_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B52AB0 (end 0x01B52ADF)
 // Original VA: 0x0000000141B52AB0 | File offset: 0x01B520B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigin_Statics::FuncParams);
+		// FuncParams: original RVA 0x043B2480; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UMovieSceneTransformOrigin, "BP_GetTransformOrigin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C880800, 0x30, Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigin_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

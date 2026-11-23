@@ -31,25 +31,12 @@ class UScriptStruct* FBoneReductionSetting::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BCBE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBoneReductionSetting_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBoneReductionSetting>();
 	}
-	// ReturnStructParams: original RVA 0x04516DB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBoneReductionSetting_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BoneReductionSetting",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBoneReductionSetting),
-		alignof(FBoneReductionSetting),
-		Z_Construct_UScriptStruct_FBoneReductionSetting_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5E20 (end 0x024D5E4F)
 	// Original VA: 0x00000001424D5E20 | File offset: 0x024D5420
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBoneReductionSetting::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBoneReductionSetting_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04516DB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBoneReductionSetting_Statics::NewStructOps,
+				"BoneReductionSetting",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBoneReductionSetting),
+				alignof(FBoneReductionSetting),
+				Z_Construct_UScriptStruct_FBoneReductionSetting_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

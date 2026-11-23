@@ -31,25 +31,12 @@ class UScriptStruct* FFortMultiSizeBrush::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8D90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMultiSizeBrush_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMultiSizeBrush>();
 	}
-	// ReturnStructParams: original RVA 0x04342380
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMultiSizeBrush_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortMultiSizeBrush",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortMultiSizeBrush),
-		alignof(FFortMultiSizeBrush),
-		Z_Construct_UScriptStruct_FFortMultiSizeBrush_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC740 (end 0x010CC76F)
 	// Original VA: 0x00000001410CC740 | File offset: 0x010CBD40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMultiSizeBrush::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMultiSizeBrush_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04342380
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMultiSizeBrush_Statics::NewStructOps,
+				"FortMultiSizeBrush",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortMultiSizeBrush),
+				alignof(FFortMultiSizeBrush),
+				Z_Construct_UScriptStruct_FFortMultiSizeBrush_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

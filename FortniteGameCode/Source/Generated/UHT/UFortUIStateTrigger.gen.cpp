@@ -22,10 +22,7 @@ void UFortUIStateTrigger::StaticRegisterNativesUFortUIStateTrigger()
 struct Z_Construct_UFunction_UFortUIStateTrigger_EvalBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045CFBB0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortUIStateTrigger_EvalBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIStateTrigger, "EvalBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48080C00, 0x1, Z_Construct_UFunction_UFortUIStateTrigger_EvalBP_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02913140 (end 0x0291316F)
 // Original VA: 0x0000000142913140 | File offset: 0x02912740
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortUIStateTrigger_EvalBP()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIStateTrigger_EvalBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CFBB0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIStateTrigger, "EvalBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48080C00, 0x1, Z_Construct_UFunction_UFortUIStateTrigger_EvalBP_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortUIStateTrigger_EvalBP()
 struct Z_Construct_UFunction_UFortUIStateTrigger_IsLoggedIn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045CFC40; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortUIStateTrigger_IsLoggedIn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIStateTrigger, "IsLoggedIn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortUIStateTrigger_IsLoggedIn_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02913170 (end 0x0291319F)
 // Original VA: 0x0000000142913170 | File offset: 0x02912770
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortUIStateTrigger_IsLoggedIn()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIStateTrigger_IsLoggedIn_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CFC40; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIStateTrigger, "IsLoggedIn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortUIStateTrigger_IsLoggedIn_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

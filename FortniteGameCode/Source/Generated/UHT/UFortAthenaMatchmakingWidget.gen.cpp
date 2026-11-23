@@ -26,10 +26,7 @@ void UFortAthenaMatchmakingWidget::StaticRegisterNativesUFortAthenaMatchmakingWi
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556A30; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "GetActivePlaylists", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D350 (end 0x0288D37F)
 // Original VA: 0x000000014288D350 | File offset: 0x0288C950
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,17 +35,13 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556A30; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "GetActivePlaylists", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnAvailablePlaylistsUpdated_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04556A70; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnAvailablePlaylistsUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnAvailablePlaylistsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D380 (end 0x0288D3AF)
 // Original VA: 0x000000014288D380 | File offset: 0x0288C980
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,17 +50,13 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnAvailablePlaylis
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnAvailablePlaylistsUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556A70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnAvailablePlaylistsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnCancelButtonPressed_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04556AB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnCancelButtonPressed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnCancelButtonPressed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D3B0 (end 0x0288D3DF)
 // Original VA: 0x000000014288D3B0 | File offset: 0x0288C9B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +65,9 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnCancelButtonPres
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnCancelButtonPressed_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556AB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnCancelButtonPressed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +75,7 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnCancelButtonPres
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnChangeTeamFillChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556B40; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnChangeTeamFillChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnChangeTeamFillChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnChangeTeamFillChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D3E0 (end 0x0288D40F)
 // Original VA: 0x000000014288D3E0 | File offset: 0x0288C9E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,17 +84,13 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnChangeTeamFillCh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnChangeTeamFillChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556B40; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnChangeTeamFillChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnChangeTeamFillChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonPressed_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04556B80; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonPressed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnPlayButtonPressed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D410 (end 0x0288D43F)
 // Original VA: 0x000000014288D410 | File offset: 0x0288CA10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -115,7 +99,9 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonPresse
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonPressed_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556B80; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnPlayButtonPressed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -123,10 +109,7 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonPresse
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556C10; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnPlayButtonUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D440 (end 0x0288D46F)
 // Original VA: 0x000000014288D440 | File offset: 0x0288CA40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -135,7 +118,9 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdate
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556C10; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnPlayButtonUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -143,10 +128,7 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdate
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlaylistRotatorChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556C90; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlaylistRotatorChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnPlaylistRotatorChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlaylistRotatorChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D470 (end 0x0288D49F)
 // Original VA: 0x000000014288D470 | File offset: 0x0288CA70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -155,17 +137,13 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlaylistRotatorC
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlaylistRotatorChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556C90; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "OnPlaylistRotatorChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlaylistRotatorChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_RefreshBang_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04556CD0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_RefreshBang_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "RefreshBang", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D4A0 (end 0x0288D4CF)
 // Original VA: 0x000000014288D4A0 | File offset: 0x0288CAA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -174,7 +152,9 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_RefreshBang()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_RefreshBang_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556CD0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "RefreshBang", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -182,10 +162,7 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_RefreshBang()
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556D60; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "SetCancelButtonState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonState_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D4D0 (end 0x0288D4FF)
 // Original VA: 0x000000014288D4D0 | File offset: 0x0288CAD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -194,7 +171,9 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonSta
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonState_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556D60; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "SetCancelButtonState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonState_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -202,10 +181,7 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonSta
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556E70; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "SetCurrentPlaylist", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x2, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D500 (end 0x0288D52F)
 // Original VA: 0x000000014288D500 | File offset: 0x0288CB00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -214,7 +190,9 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556E70; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "SetCurrentPlaylist", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x2, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -222,10 +200,7 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist
 struct Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556F00; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "SetPlayButtonState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D530 (end 0x0288D55F)
 // Original VA: 0x000000014288D530 | File offset: 0x0288CB30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -234,7 +209,9 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556F00; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAthenaMatchmakingWidget, "SetPlayButtonState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

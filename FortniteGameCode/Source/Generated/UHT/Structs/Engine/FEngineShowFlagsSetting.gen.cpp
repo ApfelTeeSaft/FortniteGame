@@ -31,25 +31,12 @@ class UScriptStruct* FEngineShowFlagsSetting::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C68C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEngineShowFlagsSetting_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEngineShowFlagsSetting>();
 	}
-	// ReturnStructParams: original RVA 0x04508B50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEngineShowFlagsSetting_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"EngineShowFlagsSetting",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FEngineShowFlagsSetting),
-		alignof(FEngineShowFlagsSetting),
-		Z_Construct_UScriptStruct_FEngineShowFlagsSetting_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7E50 (end 0x024C7E7F)
 	// Original VA: 0x00000001424C7E50 | File offset: 0x024C7450
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEngineShowFlagsSetting::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEngineShowFlagsSetting_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04508B50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEngineShowFlagsSetting_Statics::NewStructOps,
+				"EngineShowFlagsSetting",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FEngineShowFlagsSetting),
+				alignof(FEngineShowFlagsSetting),
+				Z_Construct_UScriptStruct_FEngineShowFlagsSetting_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

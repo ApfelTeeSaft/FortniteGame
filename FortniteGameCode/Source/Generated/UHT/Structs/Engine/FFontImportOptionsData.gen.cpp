@@ -31,25 +31,12 @@ class UScriptStruct* FFontImportOptionsData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240F2C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFontImportOptionsData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFontImportOptionsData>();
 	}
-	// ReturnStructParams: original RVA 0x044560A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFontImportOptionsData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"FontImportOptionsData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFontImportOptionsData),
-		alignof(FFontImportOptionsData),
-		Z_Construct_UScriptStruct_FFontImportOptionsData_Statics::PropPointers, 29,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02412190 (end 0x024121BF)
 	// Original VA: 0x0000000142412190 | File offset: 0x02411790
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFontImportOptionsData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFontImportOptionsData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044560A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFontImportOptionsData_Statics::NewStructOps,
+				"FontImportOptionsData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFontImportOptionsData),
+				alignof(FFontImportOptionsData),
+				Z_Construct_UScriptStruct_FFontImportOptionsData_Statics::PropPointers, 29,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

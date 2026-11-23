@@ -31,25 +31,12 @@ class UScriptStruct* FFortTimeOfDayTheme::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC7A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTimeOfDayTheme_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTimeOfDayTheme>();
 	}
-	// ReturnStructParams: original RVA 0x04335510
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTimeOfDayTheme_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTimeOfDayTheme",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTimeOfDayTheme),
-		alignof(FFortTimeOfDayTheme),
-		Z_Construct_UScriptStruct_FFortTimeOfDayTheme_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF500 (end 0x010BF52F)
 	// Original VA: 0x00000001410BF500 | File offset: 0x010BEB00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTimeOfDayTheme::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTimeOfDayTheme_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04335510
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTimeOfDayTheme_Statics::NewStructOps,
+				"FortTimeOfDayTheme",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTimeOfDayTheme),
+				alignof(FFortTimeOfDayTheme),
+				Z_Construct_UScriptStruct_FFortTimeOfDayTheme_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

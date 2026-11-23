@@ -31,25 +31,12 @@ class UScriptStruct* FFortDialogDescription_NUI::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8890 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortDialogDescription_NUI_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortDialogDescription_NUI>();
 	}
-	// ReturnStructParams: original RVA 0x0433FC60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortDialogDescription_NUI_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortDialogDescription_NUI",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000205),
-		sizeof(FFortDialogDescription_NUI),
-		alignof(FFortDialogDescription_NUI),
-		Z_Construct_UScriptStruct_FFortDialogDescription_NUI_Statics::PropPointers, 13,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC560 (end 0x010CC58F)
 	// Original VA: 0x00000001410CC560 | File offset: 0x010CBB60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortDialogDescription_NUI::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortDialogDescription_NUI_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0433FC60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortDialogDescription_NUI_Statics::NewStructOps,
+				"FortDialogDescription_NUI",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000205),
+				sizeof(FFortDialogDescription_NUI),
+				alignof(FFortDialogDescription_NUI),
+				Z_Construct_UScriptStruct_FFortDialogDescription_NUI_Statics::PropPointers, 13,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

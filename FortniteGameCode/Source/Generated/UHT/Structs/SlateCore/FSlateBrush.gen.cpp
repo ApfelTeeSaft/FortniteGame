@@ -27,25 +27,12 @@ class UScriptStruct* FSlateBrush::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A970 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSlateBrush_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSlateBrush>();
 	}
-	// ReturnStructParams: original RVA 0x04379060
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSlateBrush_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		nullptr,
-		&NewStructOps,
-		"SlateBrush",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSlateBrush),
-		alignof(FSlateBrush),
-		Z_Construct_UScriptStruct_FSlateBrush_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D110 (end 0x0145D13F)
 	// Original VA: 0x000000014145D110 | File offset: 0x0145C710
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -54,7 +41,19 @@ class UScriptStruct* FSlateBrush::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSlateBrush_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04379060
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSlateBrush_Statics::NewStructOps,
+				"SlateBrush",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSlateBrush),
+				alignof(FSlateBrush),
+				Z_Construct_UScriptStruct_FSlateBrush_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

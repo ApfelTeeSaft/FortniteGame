@@ -30,25 +30,12 @@ class UScriptStruct* FSessionServiceLogSubscribe::StaticStruct()
 	struct Z_Construct_UScriptStruct_FSessionServiceLogSubscribe_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74CB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSessionServiceLogSubscribe_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSessionServiceLogSubscribe>();
 	}
-	// ReturnStructParams: original RVA 0x04538170
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSessionServiceLogSubscribe_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SessionMessages,
-		nullptr,
-		&NewStructOps,
-		"SessionServiceLogSubscribe",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSessionServiceLogSubscribe),
-		alignof(FSessionServiceLogSubscribe),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x025253F0 (end 0x0252541F)
 	// Original VA: 0x00000001425253F0 | File offset: 0x025249F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FSessionServiceLogSubscribe::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSessionServiceLogSubscribe_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04538170
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SessionMessages,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSessionServiceLogSubscribe_Statics::NewStructOps,
+				"SessionServiceLogSubscribe",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSessionServiceLogSubscribe),
+				alignof(FSessionServiceLogSubscribe),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

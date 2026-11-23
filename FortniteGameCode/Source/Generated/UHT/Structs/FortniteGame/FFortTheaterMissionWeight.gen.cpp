@@ -31,25 +31,12 @@ class UScriptStruct* FFortTheaterMissionWeight::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109CC20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTheaterMissionWeight_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTheaterMissionWeight>();
 	}
-	// ReturnStructParams: original RVA 0x043231F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTheaterMissionWeight_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTheaterMissionWeight",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTheaterMissionWeight),
-		alignof(FFortTheaterMissionWeight),
-		Z_Construct_UScriptStruct_FFortTheaterMissionWeight_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109EA10 (end 0x0109EA3F)
 	// Original VA: 0x000000014109EA10 | File offset: 0x0109E010
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTheaterMissionWeight::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTheaterMissionWeight_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043231F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTheaterMissionWeight_Statics::NewStructOps,
+				"FortTheaterMissionWeight",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTheaterMissionWeight),
+				alignof(FFortTheaterMissionWeight),
+				Z_Construct_UScriptStruct_FFortTheaterMissionWeight_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

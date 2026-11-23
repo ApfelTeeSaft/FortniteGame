@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortConsumableAccountItem();  // RVA 0x00FCB870 (con
 struct Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0425C170; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortConsumableAccountItem, "CanActivateOnOthers", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCC150 (end 0x00FCC17F)
 // Original VA: 0x0000000140FCC150 | File offset: 0x00FCB750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers_Statics::FuncParams);
+		// FuncParams: original RVA 0x0425C170; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortConsumableAccountItem, "CanActivateOnOthers", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers(
 struct Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnSelf_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0425C200; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnSelf_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortConsumableAccountItem, "CanActivateOnSelf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnSelf_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCC180 (end 0x00FCC1AF)
 // Original VA: 0x0000000140FCC180 | File offset: 0x00FCB780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnSelf()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnSelf_Statics::FuncParams);
+		// FuncParams: original RVA 0x0425C200; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortConsumableAccountItem, "CanActivateOnSelf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnSelf_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

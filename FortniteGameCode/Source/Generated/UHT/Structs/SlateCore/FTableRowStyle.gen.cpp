@@ -32,25 +32,12 @@ class UScriptStruct* FTableRowStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A0F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTableRowStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTableRowStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437AB70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTableRowStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"TableRowStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FTableRowStyle),
-		alignof(FTableRowStyle),
-		Z_Construct_UScriptStruct_FTableRowStyle_Statics::PropPointers, 14,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D2C0 (end 0x0145D2EF)
 	// Original VA: 0x000000014145D2C0 | File offset: 0x0145C8C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTableRowStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTableRowStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437AB70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FTableRowStyle_Statics::NewStructOps,
+				"TableRowStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FTableRowStyle),
+				alignof(FTableRowStyle),
+				Z_Construct_UScriptStruct_FTableRowStyle_Statics::PropPointers, 14,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

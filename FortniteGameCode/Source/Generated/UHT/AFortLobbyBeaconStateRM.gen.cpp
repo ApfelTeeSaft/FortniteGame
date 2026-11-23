@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0335F348, FClassParams RVA 0x0335F370.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AFortLobbyBeaconStateRM();  // RVA 0x0101E550 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DDC0 (end 0x0101DDE2)
 // Original VA: 0x000000014101DDC0 | File offset: 0x0101D3C0
@@ -18,10 +18,6 @@ void AFortLobbyBeaconStateRM::StaticRegisterNativesAFortLobbyBeaconStateRM()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042B2EF0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101F2C0 (end 0x0101F2EF)
 // Original VA: 0x000000014101F2C0 | File offset: 0x0101E8C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemainin
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B2EF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLobbyBeaconStateRM, "OnRep_LobbyTimeRemaining", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

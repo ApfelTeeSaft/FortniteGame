@@ -31,25 +31,12 @@ class UScriptStruct* FFileManifestData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0264B6A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFileManifestData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFileManifestData>();
 	}
-	// ReturnStructParams: original RVA 0x04541D90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFileManifestData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_BuildPatchServices,
-		nullptr,
-		&NewStructOps,
-		"FileManifestData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFileManifestData),
-		alignof(FFileManifestData),
-		Z_Construct_UScriptStruct_FFileManifestData_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0264BB20 (end 0x0264BB4F)
 	// Original VA: 0x000000014264BB20 | File offset: 0x0264B120
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFileManifestData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFileManifestData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04541D90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_BuildPatchServices,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFileManifestData_Statics::NewStructOps,
+				"FileManifestData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFileManifestData),
+				alignof(FFileManifestData),
+				Z_Construct_UScriptStruct_FFileManifestData_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

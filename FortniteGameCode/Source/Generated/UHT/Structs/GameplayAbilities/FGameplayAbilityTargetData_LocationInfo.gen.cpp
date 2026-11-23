@@ -32,25 +32,12 @@ class UScriptStruct* FGameplayAbilityTargetData_LocationInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055A550 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayAbilityTargetData_LocationInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayAbilityTargetData_LocationInfo>();
 	}
-	// ReturnStructParams: original RVA 0x041A2C60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayAbilityTargetData_LocationInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		Z_Construct_UScriptStruct_FGameplayAbilityTargetData,
-		&NewStructOps,
-		"GameplayAbilityTargetData_LocationInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000205),
-		sizeof(FGameplayAbilityTargetData_LocationInfo),
-		alignof(FGameplayAbilityTargetData_LocationInfo),
-		Z_Construct_UScriptStruct_FGameplayAbilityTargetData_LocationInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055CA70 (end 0x0055CA9F)
 	// Original VA: 0x000000014055CA70 | File offset: 0x0055C070
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FGameplayAbilityTargetData_LocationInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayAbilityTargetData_LocationInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A2C60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				Z_Construct_UScriptStruct_FGameplayAbilityTargetData,
+				&Z_Construct_UScriptStruct_FGameplayAbilityTargetData_LocationInfo_Statics::NewStructOps,
+				"GameplayAbilityTargetData_LocationInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000205),
+				sizeof(FGameplayAbilityTargetData_LocationInfo),
+				alignof(FGameplayAbilityTargetData_LocationInfo),
+				Z_Construct_UScriptStruct_FGameplayAbilityTargetData_LocationInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

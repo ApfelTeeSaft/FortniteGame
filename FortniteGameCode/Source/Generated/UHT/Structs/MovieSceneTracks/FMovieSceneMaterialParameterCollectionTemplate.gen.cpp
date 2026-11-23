@@ -32,25 +32,12 @@ class UScriptStruct* FMovieSceneMaterialParameterCollectionTemplate::StaticStruc
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4FE40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneMaterialParameterCollectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneMaterialParameterCollectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043B6950
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneMaterialParameterCollectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieSceneParameterSectionTemplate,
-		&NewStructOps,
-		"MovieSceneMaterialParameterCollectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneMaterialParameterCollectionTemplate),
-		alignof(FMovieSceneMaterialParameterCollectionTemplate),
-		Z_Construct_UScriptStruct_FMovieSceneMaterialParameterCollectionTemplate_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B53110 (end 0x01B5313F)
 	// Original VA: 0x0000000141B53110 | File offset: 0x01B52710
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieSceneMaterialParameterCollectionTemplate::StaticStruc
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneMaterialParameterCollectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B6950
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieSceneParameterSectionTemplate,
+				&Z_Construct_UScriptStruct_FMovieSceneMaterialParameterCollectionTemplate_Statics::NewStructOps,
+				"MovieSceneMaterialParameterCollectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneMaterialParameterCollectionTemplate),
+				alignof(FMovieSceneMaterialParameterCollectionTemplate),
+				Z_Construct_UScriptStruct_FMovieSceneMaterialParameterCollectionTemplate_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

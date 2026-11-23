@@ -32,25 +32,12 @@ class UScriptStruct* FProgressBarStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A570 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FProgressBarStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FProgressBarStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437B6D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FProgressBarStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"ProgressBarStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FProgressBarStyle),
-		alignof(FProgressBarStyle),
-		Z_Construct_UScriptStruct_FProgressBarStyle_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D020 (end 0x0145D04F)
 	// Original VA: 0x000000014145D020 | File offset: 0x0145C620
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FProgressBarStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FProgressBarStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437B6D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FProgressBarStyle_Statics::NewStructOps,
+				"ProgressBarStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FProgressBarStyle),
+				alignof(FProgressBarStyle),
+				Z_Construct_UScriptStruct_FProgressBarStyle_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

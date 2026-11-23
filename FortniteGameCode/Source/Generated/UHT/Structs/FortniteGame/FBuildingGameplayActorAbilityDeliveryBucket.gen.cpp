@@ -31,25 +31,12 @@ class UScriptStruct* FBuildingGameplayActorAbilityDeliveryBucket::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6B4A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBuildingGameplayActorAbilityDeliveryBucket_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBuildingGameplayActorAbilityDeliveryBucket>();
 	}
-	// ReturnStructParams: original RVA 0x042004A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBuildingGameplayActorAbilityDeliveryBucket_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"BuildingGameplayActorAbilityDeliveryBucket",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FBuildingGameplayActorAbilityDeliveryBucket),
-		alignof(FBuildingGameplayActorAbilityDeliveryBucket),
-		Z_Construct_UScriptStruct_FBuildingGameplayActorAbilityDeliveryBucket_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6D720 (end 0x00F6D74F)
 	// Original VA: 0x0000000140F6D720 | File offset: 0x00F6CD20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBuildingGameplayActorAbilityDeliveryBucket::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBuildingGameplayActorAbilityDeliveryBucket_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042004A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBuildingGameplayActorAbilityDeliveryBucket_Statics::NewStructOps,
+				"BuildingGameplayActorAbilityDeliveryBucket",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FBuildingGameplayActorAbilityDeliveryBucket),
+				alignof(FBuildingGameplayActorAbilityDeliveryBucket),
+				Z_Construct_UScriptStruct_FBuildingGameplayActorAbilityDeliveryBucket_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

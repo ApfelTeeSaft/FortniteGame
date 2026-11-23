@@ -21,10 +21,7 @@ void UFortSkillTreeLandingPage::StaticRegisterNativesUFortSkillTreeLandingPage()
 struct Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B41A0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeLandingPage, "ClearEventSkillTrees", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5F80 (end 0x028F5FAF)
 // Original VA: 0x00000001428F5F80 | File offset: 0x028F5580
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B41A0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeLandingPage, "ClearEventSkillTrees", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees(
 struct Z_Construct_UFunction_UFortSkillTreeLandingPage_CreateAndAddPageButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B4330; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeLandingPage_CreateAndAddPageButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeLandingPage, "CreateAndAddPageButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x18, Z_Construct_UFunction_UFortSkillTreeLandingPage_CreateAndAddPageButton_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5FB0 (end 0x028F5FDF)
 // Original VA: 0x00000001428F5FB0 | File offset: 0x028F55B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeLandingPage_CreateAndAddPageButto
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeLandingPage_CreateAndAddPageButton_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4330; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeLandingPage, "CreateAndAddPageButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x18, Z_Construct_UFunction_UFortSkillTreeLandingPage_CreateAndAddPageButton_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -61,10 +59,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeLandingPage_CreateAndAddPageButto
 struct Z_Construct_UFunction_UFortSkillTreeLandingPage_SetupEventBasedSkillTreePages_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B43E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeLandingPage_SetupEventBasedSkillTreePages_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeLandingPage, "SetupEventBasedSkillTreePages", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440401, 0x10, Z_Construct_UFunction_UFortSkillTreeLandingPage_SetupEventBasedSkillTreePages_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5FE0 (end 0x028F600F)
 // Original VA: 0x00000001428F5FE0 | File offset: 0x028F55E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +68,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeLandingPage_SetupEventBasedSkillT
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeLandingPage_SetupEventBasedSkillTreePages_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B43E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeLandingPage, "SetupEventBasedSkillTreePages", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440401, 0x10, Z_Construct_UFunction_UFortSkillTreeLandingPage_SetupEventBasedSkillTreePages_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

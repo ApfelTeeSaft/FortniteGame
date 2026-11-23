@@ -32,25 +32,12 @@ class UScriptStruct* FFortPartyMemberRepState::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105C8E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortPartyMemberRepState_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortPartyMemberRepState>();
 	}
-	// ReturnStructParams: original RVA 0x042E4FA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPartyMemberRepState_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FPartyMemberRepState,
-		&NewStructOps,
-		"FortPartyMemberRepState",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortPartyMemberRepState),
-		alignof(FFortPartyMemberRepState),
-		Z_Construct_UScriptStruct_FFortPartyMemberRepState_Statics::PropPointers, 15,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105F6D0 (end 0x0105F6FF)
 	// Original VA: 0x000000014105F6D0 | File offset: 0x0105ECD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortPartyMemberRepState::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortPartyMemberRepState_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042E4FA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FPartyMemberRepState,
+				&Z_Construct_UScriptStruct_FFortPartyMemberRepState_Statics::NewStructOps,
+				"FortPartyMemberRepState",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortPartyMemberRepState),
+				alignof(FFortPartyMemberRepState),
+				Z_Construct_UScriptStruct_FFortPartyMemberRepState_Statics::PropPointers, 15,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

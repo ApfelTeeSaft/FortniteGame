@@ -31,25 +31,12 @@ class UScriptStruct* FFortQuestRewardNotification::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102DBD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortQuestRewardNotification_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortQuestRewardNotification>();
 	}
-	// ReturnStructParams: original RVA 0x042C0610
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortQuestRewardNotification_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortQuestRewardNotification",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortQuestRewardNotification),
-		alignof(FFortQuestRewardNotification),
-		Z_Construct_UScriptStruct_FFortQuestRewardNotification_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01031C80 (end 0x01031CAF)
 	// Original VA: 0x0000000141031C80 | File offset: 0x01031280
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortQuestRewardNotification::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortQuestRewardNotification_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C0610
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortQuestRewardNotification_Statics::NewStructOps,
+				"FortQuestRewardNotification",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortQuestRewardNotification),
+				alignof(FFortQuestRewardNotification),
+				Z_Construct_UScriptStruct_FFortQuestRewardNotification_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

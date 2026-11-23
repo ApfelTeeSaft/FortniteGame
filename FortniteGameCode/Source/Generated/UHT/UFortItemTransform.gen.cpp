@@ -18,12 +18,6 @@ void UFortItemTransform::StaticRegisterNativesUFortItemTransform()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04598280; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemTransform, "OnRequestCloseItemPicker", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0860 (end 0x028D088F)
 // Original VA: 0x00000001428D0860 | File offset: 0x028CFE60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,17 +26,13 @@ UFunction* Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker_Statics::FuncParams);
+		// FuncParams: original RVA 0x04598280; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemTransform, "OnRequestCloseItemPicker", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemTransform_ProcessPendingSeenTransformKeys_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045982C0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemTransform_ProcessPendingSeenTransformKeys_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemTransform, "ProcessPendingSeenTransformKeys", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0890 (end 0x028D08BF)
 // Original VA: 0x00000001428D0890 | File offset: 0x028CFE90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -51,7 +41,9 @@ UFunction* Z_Construct_UFunction_UFortItemTransform_ProcessPendingSeenTransformK
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemTransform_ProcessPendingSeenTransformKeys_Statics::FuncParams);
+		// FuncParams: original RVA 0x045982C0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemTransform, "ProcessPendingSeenTransformKeys", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

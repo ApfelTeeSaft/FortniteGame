@@ -23,10 +23,7 @@ void AFortMusicManager::StaticRegisterNativesAFortMusicManager()
 struct Z_Construct_UFunction_AFortMusicManager_ChangeMusic_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D6D20; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortMusicManager_ChangeMusic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "ChangeMusic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_AFortMusicManager_ChangeMusic_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B540 (end 0x0104B56F)
 // Original VA: 0x000000014104B540 | File offset: 0x0104AB40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_ChangeMusic()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortMusicManager_ChangeMusic_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D6D20; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "ChangeMusic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_AFortMusicManager_ChangeMusic_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_ChangeMusic()
 struct Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D6DE0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "GetEventHeatPercent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B570 (end 0x0104B59F)
 // Original VA: 0x000000014104B570 | File offset: 0x0104AB70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D6DE0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "GetEventHeatPercent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent()
 struct Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D6EA0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "GetEventHeatPercentTotal", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B5A0 (end 0x0104B5CF)
 // Original VA: 0x000000014104B5A0 | File offset: 0x0104ABA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D6EA0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "GetEventHeatPercentTotal", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020400, 0x8, Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -83,10 +80,7 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal()
 struct Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D6FB0; StructureSize 0x3 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "OnDayPhaseChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x3, Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B5D0 (end 0x0104B5FF)
 // Original VA: 0x000000014104B5D0 | File offset: 0x0104ABD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -95,7 +89,9 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D6FB0; StructureSize 0x3 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "OnDayPhaseChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x3, Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -103,10 +99,7 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged()
 struct Z_Construct_UFunction_AFortMusicManager_OnThresholdChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D7070; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortMusicManager_OnThresholdChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "OnThresholdChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_AFortMusicManager_OnThresholdChange_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104B600 (end 0x0104B62F)
 // Original VA: 0x000000014104B600 | File offset: 0x0104AC00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -115,7 +108,9 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_OnThresholdChange()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortMusicManager_OnThresholdChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D7070; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortMusicManager, "OnThresholdChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x2, Z_Construct_UFunction_AFortMusicManager_OnThresholdChange_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

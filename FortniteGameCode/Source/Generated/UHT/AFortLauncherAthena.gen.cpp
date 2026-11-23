@@ -18,12 +18,6 @@ void AFortLauncherAthena::StaticRegisterNativesAFortLauncherAthena()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042B08A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLauncherAthena, "OnRepLaunchServerInfo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EBA0 (end 0x0101EBCF)
 // Original VA: 0x000000014101EBA0 | File offset: 0x0101E1A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,7 +26,9 @@ UFunction* Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B08A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLauncherAthena, "OnRepLaunchServerInfo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -40,10 +36,7 @@ UFunction* Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo()
 struct Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042B0920; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLauncherAthena, "TriggerLaunchEffects", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x8, Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101EBD0 (end 0x0101EBFF)
 // Original VA: 0x000000014101EBD0 | File offset: 0x0101E1D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +45,9 @@ UFunction* Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects_Statics::FuncParams);
+		// FuncParams: original RVA 0x042B0920; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortLauncherAthena, "TriggerLaunchEffects", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x8, Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

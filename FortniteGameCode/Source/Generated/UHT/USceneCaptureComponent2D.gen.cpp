@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x039A08C8, FClassParams RVA 0x039A0970.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_USceneCaptureComponent2D();  // RVA 0x024C6D80 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6B10 (end 0x024C6B32)
 // Original VA: 0x00000001424C6B10 | File offset: 0x024C6110
@@ -21,7 +21,7 @@ void USceneCaptureComponent2D::StaticRegisterNativesUSceneCaptureComponent2D()
 
 struct Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045094F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C70D0 (end 0x024C70FF)
 // Original VA: 0x00000001424C70D0 | File offset: 0x024C66D0
@@ -31,15 +31,13 @@ UFunction* Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable_Statics::FuncParams);
+		// FuncParams: original RVA 0x045094F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USceneCaptureComponent2D, "AddOrUpdateBlendable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USceneCaptureComponent2D_CaptureScene_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04509530 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7100 (end 0x024C712F)
 // Original VA: 0x00000001424C7100 | File offset: 0x024C6700
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -48,7 +46,9 @@ UFunction* Z_Construct_UFunction_USceneCaptureComponent2D_CaptureScene()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USceneCaptureComponent2D_CaptureScene_Statics::FuncParams);
+		// FuncParams: original RVA 0x04509530; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USceneCaptureComponent2D, "CaptureScene", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -21,10 +21,7 @@ void UCommonUserWidget::StaticRegisterNativesUCommonUserWidget()
 struct Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04181C80; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonUserWidget, "SetConsumePointerInput", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D09D0 (end 0x002D09FF)
 // Original VA: 0x00000001402D09D0 | File offset: 0x002CFFD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput_Statics::FuncParams);
+		// FuncParams: original RVA 0x04181C80; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonUserWidget, "SetConsumePointerInput", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

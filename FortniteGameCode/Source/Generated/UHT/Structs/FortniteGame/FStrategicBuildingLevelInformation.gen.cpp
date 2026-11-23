@@ -31,25 +31,12 @@ class UScriptStruct* FStrategicBuildingLevelInformation::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0B80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FStrategicBuildingLevelInformation_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FStrategicBuildingLevelInformation>();
 	}
-	// ReturnStructParams: original RVA 0x04366480
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStrategicBuildingLevelInformation_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"StrategicBuildingLevelInformation",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FStrategicBuildingLevelInformation),
-		alignof(FStrategicBuildingLevelInformation),
-		Z_Construct_UScriptStruct_FStrategicBuildingLevelInformation_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2710 (end 0x010F273F)
 	// Original VA: 0x00000001410F2710 | File offset: 0x010F1D10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FStrategicBuildingLevelInformation::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FStrategicBuildingLevelInformation_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04366480
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FStrategicBuildingLevelInformation_Statics::NewStructOps,
+				"StrategicBuildingLevelInformation",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FStrategicBuildingLevelInformation),
+				alignof(FStrategicBuildingLevelInformation),
+				Z_Construct_UScriptStruct_FStrategicBuildingLevelInformation_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

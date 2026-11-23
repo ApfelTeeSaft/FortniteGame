@@ -21,10 +21,7 @@ void AFortPickupEffect::StaticRegisterNativesAFortPickupEffect()
 struct Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042F0130; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMaterial_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "ApplyCosmeticOverridesToMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMaterial_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065CC0 (end 0x01065CEF)
 // Original VA: 0x0000000141065CC0 | File offset: 0x010652C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMater
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMaterial_Statics::FuncParams);
+		// FuncParams: original RVA 0x042F0130; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "ApplyCosmeticOverridesToMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMaterial_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMater
 struct Z_Construct_UFunction_AFortPickupEffect_OnAboutToEnterBackpack_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042F01B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPickupEffect_OnAboutToEnterBackpack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnAboutToEnterBackpack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x8, Z_Construct_UFunction_AFortPickupEffect_OnAboutToEnterBackpack_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065CF0 (end 0x01065D1F)
 // Original VA: 0x0000000141065CF0 | File offset: 0x010652F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +49,13 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_OnAboutToEnterBackpack()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPickupEffect_OnAboutToEnterBackpack_Statics::FuncParams);
+		// FuncParams: original RVA 0x042F01B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnAboutToEnterBackpack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x8, Z_Construct_UFunction_AFortPickupEffect_OnAboutToEnterBackpack_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPickupEffect_OnAttached_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042F01F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPickupEffect_OnAttached_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnAttached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065D20 (end 0x01065D4F)
 // Original VA: 0x0000000141065D20 | File offset: 0x01065320
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,17 +64,13 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_OnAttached()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPickupEffect_OnAttached_Statics::FuncParams);
+		// FuncParams: original RVA 0x042F01F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnAttached", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPickupEffect_OnPickedUp_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042F0230; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPickupEffect_OnPickedUp_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnPickedUp", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065D50 (end 0x01065D7F)
 // Original VA: 0x0000000141065D50 | File offset: 0x01065350
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -91,17 +79,13 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_OnPickedUp()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPickupEffect_OnPickedUp_Statics::FuncParams);
+		// FuncParams: original RVA 0x042F0230; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnPickedUp", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortPickupEffect_OnTossed_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042F0270; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPickupEffect_OnTossed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnTossed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01065D80 (end 0x01065DAF)
 // Original VA: 0x0000000141065D80 | File offset: 0x01065380
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -110,7 +94,9 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_OnTossed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPickupEffect_OnTossed_Statics::FuncParams);
+		// FuncParams: original RVA 0x042F0270; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPickupEffect, "OnTossed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

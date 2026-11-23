@@ -27,10 +27,7 @@ void UFortClientAnnouncement_ConversationCodeInterface::StaticRegisterNativesUFo
 struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingConversation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04252D50; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingConversation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "IsPlayingConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020408, 0x2, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingConversation_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0950 (end 0x00FC097F)
 // Original VA: 0x0000000140FC0950 | File offset: 0x00FBFF50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +36,9 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingConversation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04252D50; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "IsPlayingConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020408, 0x2, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingConversation_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +46,7 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentence_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04252E20; StructureSize 0xD0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentence_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "IsPlayingSentence", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420408, 0xD0, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentence_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0980 (end 0x00FC09AF)
 // Original VA: 0x0000000140FC0980 | File offset: 0x00FBFF80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +55,9 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentence_Statics::FuncParams);
+		// FuncParams: original RVA 0x04252E20; StructureSize 0xD0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "IsPlayingSentence", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420408, 0xD0, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentence_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +65,7 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentenceIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04252EE0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentenceIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "IsPlayingSentenceIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020408, 0x8, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentenceIndex_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC09B0 (end 0x00FC09DF)
 // Original VA: 0x0000000140FC09B0 | File offset: 0x00FBFFB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +74,9 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentenceIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x04252EE0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "IsPlayingSentenceIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020408, 0x8, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentenceIndex_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +84,7 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04252F70; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "PlayConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020408, 0x1, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversation_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC09E0 (end 0x00FC0A0F)
 // Original VA: 0x0000000140FC09E0 | File offset: 0x00FBFFE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +93,9 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04252F70; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "PlayConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020408, 0x1, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversation_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +103,7 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentence_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04253040; StructureSize 0xD0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentence_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "PlayConversationFromSentence", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420408, 0xD0, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentence_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0A10 (end 0x00FC0A3F)
 // Original VA: 0x0000000140FC0A10 | File offset: 0x00FC0010
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +112,9 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentence_Statics::FuncParams);
+		// FuncParams: original RVA 0x04253040; StructureSize 0xD0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "PlayConversationFromSentence", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420408, 0xD0, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentence_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +122,7 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentenceIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04253100; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentenceIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "PlayConversationFromSentenceIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020408, 0x8, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentenceIndex_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0A40 (end 0x00FC0A6F)
 // Original VA: 0x0000000140FC0A40 | File offset: 0x00FC0040
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,17 +131,13 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentenceIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x04253100; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "PlayConversationFromSentenceIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020408, 0x8, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentenceIndex_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_StopConversation_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04253140; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_StopConversation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "StopConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020408, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0A70 (end 0x00FC0A9F)
 // Original VA: 0x0000000140FC0A70 | File offset: 0x00FC0070
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -158,7 +146,9 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_StopConversation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04253140; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, "StopConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020408, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

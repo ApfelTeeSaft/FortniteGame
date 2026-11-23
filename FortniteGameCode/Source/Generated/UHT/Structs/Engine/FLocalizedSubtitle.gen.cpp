@@ -31,25 +31,12 @@ class UScriptStruct* FLocalizedSubtitle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02409E70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLocalizedSubtitle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLocalizedSubtitle>();
 	}
-	// ReturnStructParams: original RVA 0x04452630
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLocalizedSubtitle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LocalizedSubtitle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLocalizedSubtitle),
-		alignof(FLocalizedSubtitle),
-		Z_Construct_UScriptStruct_FLocalizedSubtitle_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D370 (end 0x0240D39F)
 	// Original VA: 0x000000014240D370 | File offset: 0x0240C970
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLocalizedSubtitle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLocalizedSubtitle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04452630
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLocalizedSubtitle_Statics::NewStructOps,
+				"LocalizedSubtitle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLocalizedSubtitle),
+				alignof(FLocalizedSubtitle),
+				Z_Construct_UScriptStruct_FLocalizedSubtitle_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

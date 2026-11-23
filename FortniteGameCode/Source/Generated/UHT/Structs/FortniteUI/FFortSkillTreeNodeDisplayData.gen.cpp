@@ -31,25 +31,12 @@ class UScriptStruct* FFortSkillTreeNodeDisplayData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4AC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSkillTreeNodeDisplayData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSkillTreeNodeDisplayData>();
 	}
-	// ReturnStructParams: original RVA 0x045B4BE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSkillTreeNodeDisplayData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortSkillTreeNodeDisplayData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortSkillTreeNodeDisplayData),
-		alignof(FFortSkillTreeNodeDisplayData),
-		Z_Construct_UScriptStruct_FFortSkillTreeNodeDisplayData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6C70 (end 0x028F6C9F)
 	// Original VA: 0x00000001428F6C70 | File offset: 0x028F6270
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSkillTreeNodeDisplayData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSkillTreeNodeDisplayData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045B4BE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSkillTreeNodeDisplayData_Statics::NewStructOps,
+				"FortSkillTreeNodeDisplayData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortSkillTreeNodeDisplayData),
+				alignof(FFortSkillTreeNodeDisplayData),
+				Z_Construct_UScriptStruct_FFortSkillTreeNodeDisplayData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

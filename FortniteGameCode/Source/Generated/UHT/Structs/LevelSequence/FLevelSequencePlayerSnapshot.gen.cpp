@@ -31,25 +31,12 @@ class UScriptStruct* FLevelSequencePlayerSnapshot::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E430 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLevelSequencePlayerSnapshot_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelSequencePlayerSnapshot>();
 	}
-	// ReturnStructParams: original RVA 0x043FEEA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelSequencePlayerSnapshot_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
-		nullptr,
-		&NewStructOps,
-		"LevelSequencePlayerSnapshot",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FLevelSequencePlayerSnapshot),
-		alignof(FLevelSequencePlayerSnapshot),
-		Z_Construct_UScriptStruct_FLevelSequencePlayerSnapshot_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4F260 (end 0x01D4F28F)
 	// Original VA: 0x0000000141D4F260 | File offset: 0x01D4E860
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLevelSequencePlayerSnapshot::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLevelSequencePlayerSnapshot_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FEEA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLevelSequencePlayerSnapshot_Statics::NewStructOps,
+				"LevelSequencePlayerSnapshot",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FLevelSequencePlayerSnapshot),
+				alignof(FLevelSequencePlayerSnapshot),
+				Z_Construct_UScriptStruct_FLevelSequencePlayerSnapshot_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

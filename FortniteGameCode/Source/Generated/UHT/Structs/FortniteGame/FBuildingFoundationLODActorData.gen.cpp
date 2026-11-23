@@ -31,25 +31,12 @@ class UScriptStruct* FBuildingFoundationLODActorData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6B460 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBuildingFoundationLODActorData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBuildingFoundationLODActorData>();
 	}
-	// ReturnStructParams: original RVA 0x041FF360
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBuildingFoundationLODActorData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"BuildingFoundationLODActorData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBuildingFoundationLODActorData),
-		alignof(FBuildingFoundationLODActorData),
-		Z_Construct_UScriptStruct_FBuildingFoundationLODActorData_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6D6F0 (end 0x00F6D71F)
 	// Original VA: 0x0000000140F6D6F0 | File offset: 0x00F6CCF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBuildingFoundationLODActorData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBuildingFoundationLODActorData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041FF360
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBuildingFoundationLODActorData_Statics::NewStructOps,
+				"BuildingFoundationLODActorData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBuildingFoundationLODActorData),
+				alignof(FBuildingFoundationLODActorData),
+				Z_Construct_UScriptStruct_FBuildingFoundationLODActorData_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

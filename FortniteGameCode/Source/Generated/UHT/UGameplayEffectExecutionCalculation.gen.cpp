@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x02F46FA0, FClassParams RVA 0x02F46FC0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UGameplayEffectExecutionCalculation();  // RVA 0x00564600 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005635D0 (end 0x005635F2)
 // Original VA: 0x00000001405635D0 | File offset: 0x00562BD0
@@ -20,7 +20,7 @@ void UGameplayEffectExecutionCalculation::StaticRegisterNativesUGameplayEffectEx
 
 struct Z_Construct_UFunction_UGameplayEffectExecutionCalculation_Execute_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x041A9E90 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005649B0 (end 0x005649DF)
 // Original VA: 0x00000001405649B0 | File offset: 0x00563FB0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UGameplayEffectExecutionCalculation_Execute()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayEffectExecutionCalculation_Execute_Statics::FuncParams);
+		// FuncParams: original RVA 0x041A9E90; StructureSize 0xC0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UGameplayEffectExecutionCalculation, "Execute", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420C00, 0xC0, Z_Construct_UFunction_UGameplayEffectExecutionCalculation_Execute_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

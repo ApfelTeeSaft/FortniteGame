@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneTransformMask::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A42C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneTransformMask_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneTransformMask>();
 	}
-	// ReturnStructParams: original RVA 0x043B3BE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneTransformMask_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneTransformMask",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneTransformMask),
-		alignof(FMovieSceneTransformMask),
-		Z_Construct_UScriptStruct_FMovieSceneTransformMask_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B532F0 (end 0x01B5331F)
 	// Original VA: 0x0000000141B532F0 | File offset: 0x01B528F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneTransformMask::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneTransformMask_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B3BE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneTransformMask_Statics::NewStructOps,
+				"MovieSceneTransformMask",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneTransformMask),
+				alignof(FMovieSceneTransformMask),
+				Z_Construct_UScriptStruct_FMovieSceneTransformMask_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

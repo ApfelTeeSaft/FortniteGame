@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0338A8F8, FClassParams RVA 0x0338A9D0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortMovementComp_CharacterAthena();  // RVA 0x0104AB10 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A3B0 (end 0x0104A3D2)
 // Original VA: 0x000000014104A3B0 | File offset: 0x010499B0
@@ -22,7 +22,7 @@ void UFortMovementComp_CharacterAthena::StaticRegisterNativesUFortMovementComp_C
 
 struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D6300 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BAE0 (end 0x0104BB0F)
 // Original VA: 0x000000014104BAE0 | File offset: 0x0104B0E0
@@ -32,14 +32,16 @@ UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySky
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D6300; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovementComp_CharacterAthena, "IsActivelySkydiving", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D6390 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BB10 (end 0x0104BB3F)
 // Original VA: 0x000000014104BB10 | File offset: 0x0104B110
@@ -49,14 +51,16 @@ UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStr
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D6390; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovementComp_CharacterAthena, "IsActivelyStrafingInAir", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042D6420 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BB40 (end 0x0104BB6F)
 // Original VA: 0x000000014104BB40 | File offset: 0x0104B140
@@ -66,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySk
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D6420; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortMovementComp_CharacterAthena, "IsPassivelySkydiving", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

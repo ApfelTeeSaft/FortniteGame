@@ -32,25 +32,12 @@ class UScriptStruct* FActiveGameplayCue::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055A6D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FActiveGameplayCue_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FActiveGameplayCue>();
 	}
-	// ReturnStructParams: original RVA 0x041A4B30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FActiveGameplayCue_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		Z_Construct_UScriptStruct_FFastArraySerializerItem,
-		&NewStructOps,
-		"ActiveGameplayCue",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FActiveGameplayCue),
-		alignof(FActiveGameplayCue),
-		Z_Construct_UScriptStruct_FActiveGameplayCue_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C770 (end 0x0055C79F)
 	// Original VA: 0x000000014055C770 | File offset: 0x0055BD70
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FActiveGameplayCue::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FActiveGameplayCue_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A4B30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				Z_Construct_UScriptStruct_FFastArraySerializerItem,
+				&Z_Construct_UScriptStruct_FActiveGameplayCue_Statics::NewStructOps,
+				"ActiveGameplayCue",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FActiveGameplayCue),
+				alignof(FActiveGameplayCue),
+				Z_Construct_UScriptStruct_FActiveGameplayCue_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

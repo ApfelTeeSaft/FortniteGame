@@ -31,25 +31,12 @@ class UScriptStruct* FRewardBadgesProgression::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BCBE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRewardBadgesProgression_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRewardBadgesProgression>();
 	}
-	// ReturnStructParams: original RVA 0x04334AB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRewardBadgesProgression_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"RewardBadgesProgression",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FRewardBadgesProgression),
-		alignof(FRewardBadgesProgression),
-		Z_Construct_UScriptStruct_FRewardBadgesProgression_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF560 (end 0x010BF58F)
 	// Original VA: 0x00000001410BF560 | File offset: 0x010BEB60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FRewardBadgesProgression::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRewardBadgesProgression_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04334AB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FRewardBadgesProgression_Statics::NewStructOps,
+				"RewardBadgesProgression",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FRewardBadgesProgression),
+				alignof(FRewardBadgesProgression),
+				Z_Construct_UScriptStruct_FRewardBadgesProgression_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

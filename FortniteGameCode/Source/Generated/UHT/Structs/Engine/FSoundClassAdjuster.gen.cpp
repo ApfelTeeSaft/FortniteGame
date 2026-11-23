@@ -31,25 +31,12 @@ class UScriptStruct* FSoundClassAdjuster::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB1C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSoundClassAdjuster_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSoundClassAdjuster>();
 	}
-	// ReturnStructParams: original RVA 0x0451D2B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSoundClassAdjuster_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SoundClassAdjuster",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSoundClassAdjuster),
-		alignof(FSoundClassAdjuster),
-		Z_Construct_UScriptStruct_FSoundClassAdjuster_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DC740 (end 0x024DC76F)
 	// Original VA: 0x00000001424DC740 | File offset: 0x024DBD40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSoundClassAdjuster::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSoundClassAdjuster_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0451D2B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSoundClassAdjuster_Statics::NewStructOps,
+				"SoundClassAdjuster",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSoundClassAdjuster),
+				alignof(FSoundClassAdjuster),
+				Z_Construct_UScriptStruct_FSoundClassAdjuster_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

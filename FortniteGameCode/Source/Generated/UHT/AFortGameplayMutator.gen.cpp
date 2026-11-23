@@ -21,10 +21,7 @@ void AFortGameplayMutator::StaticRegisterNativesAFortGameplayMutator()
 struct Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04285860; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayMutator, "IsMutatorActive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEF6C0 (end 0x00FEF6EF)
 // Original VA: 0x0000000140FEF6C0 | File offset: 0x00FEECC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive_Statics::FuncParams);
+		// FuncParams: original RVA 0x04285860; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameplayMutator, "IsMutatorActive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

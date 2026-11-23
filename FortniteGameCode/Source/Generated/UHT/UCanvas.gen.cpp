@@ -33,10 +33,7 @@ void UCanvas::StaticRegisterNativesUCanvas()
 struct Z_Construct_UFunction_UCanvas_K2_Deproject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0442FF80; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_Deproject_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_Deproject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x20, Z_Construct_UFunction_UCanvas_K2_Deproject_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEB70 (end 0x023EEB9F)
 // Original VA: 0x00000001423EEB70 | File offset: 0x023EE170
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -45,7 +42,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_Deproject()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_Deproject_Statics::FuncParams);
+		// FuncParams: original RVA 0x0442FF80; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_Deproject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C20401, 0x20, Z_Construct_UFunction_UCanvas_K2_Deproject_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -53,10 +52,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_Deproject()
 struct Z_Construct_UFunction_UCanvas_K2_DrawBorder_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044303C0; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawBorder_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawBorder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x88, Z_Construct_UFunction_UCanvas_K2_DrawBorder_Statics::PropPointers, 16, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEBA0 (end 0x023EEBCF)
 // Original VA: 0x00000001423EEBA0 | File offset: 0x023EE1A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -65,7 +61,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawBorder()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawBorder_Statics::FuncParams);
+		// FuncParams: original RVA 0x044303C0; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawBorder", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x88, Z_Construct_UFunction_UCanvas_K2_DrawBorder_Statics::PropPointers, 16, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -73,10 +71,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawBorder()
 struct Z_Construct_UFunction_UCanvas_K2_DrawBox_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044304C0; StructureSize 0x14 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawBox_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawBox", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x14, Z_Construct_UFunction_UCanvas_K2_DrawBox_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEBD0 (end 0x023EEBFF)
 // Original VA: 0x00000001423EEBD0 | File offset: 0x023EE1D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -85,7 +80,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawBox()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawBox_Statics::FuncParams);
+		// FuncParams: original RVA 0x044304C0; StructureSize 0x14 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawBox", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x14, Z_Construct_UFunction_UCanvas_K2_DrawBox_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -93,10 +90,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawBox()
 struct Z_Construct_UFunction_UCanvas_K2_DrawLine_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04430600; StructureSize 0x24 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawLine_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawLine", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x24, Z_Construct_UFunction_UCanvas_K2_DrawLine_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEC00 (end 0x023EEC2F)
 // Original VA: 0x00000001423EEC00 | File offset: 0x023EE200
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -105,7 +99,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawLine()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawLine_Statics::FuncParams);
+		// FuncParams: original RVA 0x04430600; StructureSize 0x24 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawLine", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x24, Z_Construct_UFunction_UCanvas_K2_DrawLine_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -113,10 +109,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawLine()
 struct Z_Construct_UFunction_UCanvas_K2_DrawMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04430800; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawMaterial_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x38, Z_Construct_UFunction_UCanvas_K2_DrawMaterial_Statics::PropPointers, 7, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEC30 (end 0x023EEC5F)
 // Original VA: 0x00000001423EEC30 | File offset: 0x023EE230
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -125,7 +118,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawMaterial()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawMaterial_Statics::FuncParams);
+		// FuncParams: original RVA 0x04430800; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawMaterial", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x38, Z_Construct_UFunction_UCanvas_K2_DrawMaterial_Statics::PropPointers, 7, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -133,10 +128,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawMaterial()
 struct Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04430900; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawMaterialTriangle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEC60 (end 0x023EEC8F)
 // Original VA: 0x00000001423EEC60 | File offset: 0x023EE260
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -145,7 +137,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04430900; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawMaterialTriangle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -153,10 +147,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle()
 struct Z_Construct_UFunction_UCanvas_K2_DrawPolygon_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04430A80; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawPolygon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawPolygon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x30, Z_Construct_UFunction_UCanvas_K2_DrawPolygon_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEC90 (end 0x023EECBF)
 // Original VA: 0x00000001423EEC90 | File offset: 0x023EE290
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -165,7 +156,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawPolygon()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawPolygon_Statics::FuncParams);
+		// FuncParams: original RVA 0x04430A80; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawPolygon", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x30, Z_Construct_UFunction_UCanvas_K2_DrawPolygon_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -173,10 +166,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawPolygon()
 struct Z_Construct_UFunction_UCanvas_K2_DrawText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04430DB0; StructureSize 0x60 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x60, Z_Construct_UFunction_UCanvas_K2_DrawText_Statics::PropPointers, 11, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EECC0 (end 0x023EECEF)
 // Original VA: 0x00000001423EECC0 | File offset: 0x023EE2C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -185,7 +175,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawText_Statics::FuncParams);
+		// FuncParams: original RVA 0x04430DB0; StructureSize 0x60 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x60, Z_Construct_UFunction_UCanvas_K2_DrawText_Statics::PropPointers, 11, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -193,10 +185,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawText()
 struct Z_Construct_UFunction_UCanvas_K2_DrawTexture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04431030; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawTexture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawTexture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x48, Z_Construct_UFunction_UCanvas_K2_DrawTexture_Statics::PropPointers, 9, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EECF0 (end 0x023EED1F)
 // Original VA: 0x00000001423EECF0 | File offset: 0x023EE2F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -205,7 +194,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawTexture()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawTexture_Statics::FuncParams);
+		// FuncParams: original RVA 0x04431030; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawTexture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x48, Z_Construct_UFunction_UCanvas_K2_DrawTexture_Statics::PropPointers, 9, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -213,10 +204,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawTexture()
 struct Z_Construct_UFunction_UCanvas_K2_DrawTriangle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04431130; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_DrawTriangle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawTriangle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_UCanvas_K2_DrawTriangle_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EED20 (end 0x023EED4F)
 // Original VA: 0x00000001423EED20 | File offset: 0x023EE320
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -225,7 +213,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawTriangle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_DrawTriangle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04431130; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_DrawTriangle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_UCanvas_K2_DrawTriangle_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -233,10 +223,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_DrawTriangle()
 struct Z_Construct_UFunction_UCanvas_K2_Project_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044311F0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_Project_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_Project", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x18, Z_Construct_UFunction_UCanvas_K2_Project_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EED50 (end 0x023EED7F)
 // Original VA: 0x00000001423EED50 | File offset: 0x023EE350
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -245,7 +232,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_Project()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_Project_Statics::FuncParams);
+		// FuncParams: original RVA 0x044311F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_Project", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x18, Z_Construct_UFunction_UCanvas_K2_Project_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -253,10 +242,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_Project()
 struct Z_Construct_UFunction_UCanvas_K2_StrLen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044312F0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_StrLen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_StrLen", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x20, Z_Construct_UFunction_UCanvas_K2_StrLen_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EED80 (end 0x023EEDAF)
 // Original VA: 0x00000001423EED80 | File offset: 0x023EE380
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -265,7 +251,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_StrLen()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_StrLen_Statics::FuncParams);
+		// FuncParams: original RVA 0x044312F0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_StrLen", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x20, Z_Construct_UFunction_UCanvas_K2_StrLen_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -273,10 +261,7 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_StrLen()
 struct Z_Construct_UFunction_UCanvas_K2_TextSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04431430; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCanvas_K2_TextSize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_TextSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x28, Z_Construct_UFunction_UCanvas_K2_TextSize_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EEDB0 (end 0x023EEDDF)
 // Original VA: 0x00000001423EEDB0 | File offset: 0x023EE3B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -285,7 +270,9 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_TextSize()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCanvas_K2_TextSize_Statics::FuncParams);
+		// FuncParams: original RVA 0x04431430; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCanvas, "K2_TextSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x28, Z_Construct_UFunction_UCanvas_K2_TextSize_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

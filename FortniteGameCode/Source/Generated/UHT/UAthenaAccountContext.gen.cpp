@@ -24,10 +24,7 @@ void UAthenaAccountContext::StaticRegisterNativesUAthenaAccountContext()
 struct Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimit_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04548930; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "GetBattleBookPurchaseLimit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimit_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FB90 (end 0x0287FBBF)
 // Original VA: 0x000000014287FB90 | File offset: 0x0287F190
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimit_Statics::FuncParams);
+		// FuncParams: original RVA 0x04548930; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "GetBattleBookPurchaseLimit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimit_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimi
 struct Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045489B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "GetCurrentSeasonDefinition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinition_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FBC0 (end 0x0287FBEF)
 // Original VA: 0x000000014287FBC0 | File offset: 0x0287F1C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinitio
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinition_Statics::FuncParams);
+		// FuncParams: original RVA 0x045489B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "GetCurrentSeasonDefinition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinition_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinitio
 struct Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04548A30; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "GetCurrentSeasonName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FBF0 (end 0x0287FC1F)
 // Original VA: 0x000000014287FBF0 | File offset: 0x0287F1F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName_Statics::FuncParams);
+		// FuncParams: original RVA 0x04548A30; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "GetCurrentSeasonName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName()
 struct Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04548B30; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchase_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "SimulateBattleBookPurchase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0xC, Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchase_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FC20 (end 0x0287FC4F)
 // Original VA: 0x000000014287FC20 | File offset: 0x0287F220
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchas
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchase_Statics::FuncParams);
+		// FuncParams: original RVA 0x04548B30; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaAccountContext, "SimulateBattleBookPurchase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0xC, Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchase_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

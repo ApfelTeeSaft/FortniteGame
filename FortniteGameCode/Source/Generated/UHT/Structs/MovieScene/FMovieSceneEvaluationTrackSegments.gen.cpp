@@ -31,25 +31,12 @@ class UScriptStruct* FMovieSceneEvaluationTrackSegments::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC23C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneEvaluationTrackSegments_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneEvaluationTrackSegments>();
 	}
-	// ReturnStructParams: original RVA 0x043A3AF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneEvaluationTrackSegments_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneEvaluationTrackSegments",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneEvaluationTrackSegments),
-		alignof(FMovieSceneEvaluationTrackSegments),
-		Z_Construct_UScriptStruct_FMovieSceneEvaluationTrackSegments_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC5FF0 (end 0x01AC601F)
 	// Original VA: 0x0000000141AC5FF0 | File offset: 0x01AC55F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovieSceneEvaluationTrackSegments::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneEvaluationTrackSegments_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A3AF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneEvaluationTrackSegments_Statics::NewStructOps,
+				"MovieSceneEvaluationTrackSegments",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneEvaluationTrackSegments),
+				alignof(FMovieSceneEvaluationTrackSegments),
+				Z_Construct_UScriptStruct_FMovieSceneEvaluationTrackSegments_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

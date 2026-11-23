@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayCueTranslatorNodeIndex::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010929C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayCueTranslatorNodeIndex_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayCueTranslatorNodeIndex>();
 	}
-	// ReturnStructParams: original RVA 0x041A69F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayCueTranslatorNodeIndex_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayCueTranslatorNodeIndex",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameplayCueTranslatorNodeIndex),
-		alignof(FGameplayCueTranslatorNodeIndex),
-		Z_Construct_UScriptStruct_FGameplayCueTranslatorNodeIndex_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564C50 (end 0x00564C7F)
 	// Original VA: 0x0000000140564C50 | File offset: 0x00564250
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayCueTranslatorNodeIndex::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayCueTranslatorNodeIndex_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A69F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayCueTranslatorNodeIndex_Statics::NewStructOps,
+				"GameplayCueTranslatorNodeIndex",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameplayCueTranslatorNodeIndex),
+				alignof(FGameplayCueTranslatorNodeIndex),
+				Z_Construct_UScriptStruct_FGameplayCueTranslatorNodeIndex_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

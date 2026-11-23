@@ -25,10 +25,7 @@ void UFortCardPackItemDefinition::StaticRegisterNativesUFortCardPackItemDefiniti
 struct Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04245260; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "GetPackColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FADF00 (end 0x00FADF2F)
 // Original VA: 0x0000000140FADF00 | File offset: 0x00FAD500
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,7 +34,9 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04245260; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "GetPackColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x10, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -45,10 +44,7 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor()
 struct Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackImage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042452E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackImage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "GetPackImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x8, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackImage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FADF30 (end 0x00FADF5F)
 // Original VA: 0x0000000140FADF30 | File offset: 0x00FAD530
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,7 +53,9 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackImage()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackImage_Statics::FuncParams);
+		// FuncParams: original RVA 0x042452E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "GetPackImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x8, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackImage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -65,10 +63,7 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackImage()
 struct Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackPersonality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04245360; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackPersonality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "GetPackPersonality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackPersonality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FADF60 (end 0x00FADF8F)
 // Original VA: 0x0000000140FADF60 | File offset: 0x00FAD560
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,7 +72,9 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackPersonality(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackPersonality_Statics::FuncParams);
+		// FuncParams: original RVA 0x04245360; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "GetPackPersonality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackPersonality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -85,10 +82,7 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackPersonality(
 struct Z_Construct_UFunction_UFortCardPackItemDefinition_IsChoicePack_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042453F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCardPackItemDefinition_IsChoicePack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "IsChoicePack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x1, Z_Construct_UFunction_UFortCardPackItemDefinition_IsChoicePack_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FADF90 (end 0x00FADFBF)
 // Original VA: 0x0000000140FADF90 | File offset: 0x00FAD590
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -97,7 +91,9 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_IsChoicePack()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCardPackItemDefinition_IsChoicePack_Statics::FuncParams);
+		// FuncParams: original RVA 0x042453F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "IsChoicePack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x1, Z_Construct_UFunction_UFortCardPackItemDefinition_IsChoicePack_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -105,10 +101,7 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_IsChoicePack()
 struct Z_Construct_UFunction_UFortCardPackItemDefinition_IsLlama_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04245480; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCardPackItemDefinition_IsLlama_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "IsLlama", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x1, Z_Construct_UFunction_UFortCardPackItemDefinition_IsLlama_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FADFC0 (end 0x00FADFEF)
 // Original VA: 0x0000000140FADFC0 | File offset: 0x00FAD5C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -117,7 +110,9 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_IsLlama()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCardPackItemDefinition_IsLlama_Statics::FuncParams);
+		// FuncParams: original RVA 0x04245480; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCardPackItemDefinition, "IsLlama", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x1, Z_Construct_UFunction_UFortCardPackItemDefinition_IsLlama_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

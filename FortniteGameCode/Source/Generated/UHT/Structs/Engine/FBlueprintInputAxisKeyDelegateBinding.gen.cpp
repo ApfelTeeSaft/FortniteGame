@@ -32,25 +32,12 @@ class UScriptStruct* FBlueprintInputAxisKeyDelegateBinding::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024272A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBlueprintInputAxisKeyDelegateBinding_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBlueprintInputAxisKeyDelegateBinding>();
 	}
-	// ReturnStructParams: original RVA 0x0446C270
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBlueprintInputAxisKeyDelegateBinding_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding,
-		&NewStructOps,
-		"BlueprintInputAxisKeyDelegateBinding",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FBlueprintInputAxisKeyDelegateBinding),
-		alignof(FBlueprintInputAxisKeyDelegateBinding),
-		Z_Construct_UScriptStruct_FBlueprintInputAxisKeyDelegateBinding_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428C70 (end 0x02428C9F)
 	// Original VA: 0x0000000142428C70 | File offset: 0x02428270
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FBlueprintInputAxisKeyDelegateBinding::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBlueprintInputAxisKeyDelegateBinding_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0446C270
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FBlueprintInputDelegateBinding,
+				&Z_Construct_UScriptStruct_FBlueprintInputAxisKeyDelegateBinding_Statics::NewStructOps,
+				"BlueprintInputAxisKeyDelegateBinding",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FBlueprintInputAxisKeyDelegateBinding),
+				alignof(FBlueprintInputAxisKeyDelegateBinding),
+				Z_Construct_UScriptStruct_FBlueprintInputAxisKeyDelegateBinding_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

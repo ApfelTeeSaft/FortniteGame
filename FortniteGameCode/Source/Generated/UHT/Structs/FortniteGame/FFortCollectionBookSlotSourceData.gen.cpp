@@ -32,25 +32,12 @@ class UScriptStruct* FFortCollectionBookSlotSourceData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2A10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortCollectionBookSlotSourceData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortCollectionBookSlotSourceData>();
 	}
-	// ReturnStructParams: original RVA 0x04258A70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortCollectionBookSlotSourceData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortCollectionBookSlotSourceData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortCollectionBookSlotSourceData),
-		alignof(FFortCollectionBookSlotSourceData),
-		Z_Construct_UScriptStruct_FFortCollectionBookSlotSourceData_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC7020 (end 0x00FC704F)
 	// Original VA: 0x0000000140FC7020 | File offset: 0x00FC6620
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortCollectionBookSlotSourceData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortCollectionBookSlotSourceData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04258A70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortCollectionBookSlotSourceData_Statics::NewStructOps,
+				"FortCollectionBookSlotSourceData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortCollectionBookSlotSourceData),
+				alignof(FFortCollectionBookSlotSourceData),
+				Z_Construct_UScriptStruct_FFortCollectionBookSlotSourceData_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

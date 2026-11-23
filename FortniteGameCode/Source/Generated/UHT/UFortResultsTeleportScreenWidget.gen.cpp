@@ -21,10 +21,7 @@ void UFortResultsTeleportScreenWidget::StaticRegisterNativesUFortResultsTeleport
 struct Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AED70; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "OnExitTimePercentagePassedUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDFA0 (end 0x028EDFCF)
 // Original VA: 0x00000001428EDFA0 | File offset: 0x028ED5A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePerc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AED70; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "OnExitTimePercentagePassedUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePerc
 struct Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimeRemainingUpdated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045AEDF0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimeRemainingUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "OnExitTimeRemainingUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimeRemainingUpdated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDFD0 (end 0x028EDFFF)
 // Original VA: 0x00000001428EDFD0 | File offset: 0x028ED5D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +49,13 @@ UFunction* Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimeRema
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimeRemainingUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AEDF0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "OnExitTimeRemainingUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x4, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimeRemainingUpdated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimerFinished_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045AEE30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimerFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "OnExitTimerFinished", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE000 (end 0x028EE02F)
 // Original VA: 0x00000001428EE000 | File offset: 0x028ED600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,17 +64,13 @@ UFunction* Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimerFin
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimerFinished_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AEE30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "OnExitTimerFinished", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortResultsTeleportScreenWidget_StartExitTimer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045AEE70; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortResultsTeleportScreenWidget_StartExitTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "StartExitTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE030 (end 0x028EE05F)
 // Original VA: 0x00000001428EE030 | File offset: 0x028ED630
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -91,7 +79,9 @@ UFunction* Z_Construct_UFunction_UFortResultsTeleportScreenWidget_StartExitTimer
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortResultsTeleportScreenWidget_StartExitTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x045AEE70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortResultsTeleportScreenWidget, "StartExitTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

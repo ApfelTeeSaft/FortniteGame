@@ -34,10 +34,7 @@ void UFortCollectionBookSectionPanel::StaticRegisterNativesUFortCollectionBookSe
 struct Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemAction__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561170; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemAction__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnItemAction__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemAction__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B730 (end 0x0289B75F)
 // Original VA: 0x000000014289B730 | File offset: 0x0289AD30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -46,7 +43,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemA
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemAction__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561170; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnItemAction__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x8, Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemAction__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -54,10 +53,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemA
 struct Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemInspectAction__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045610F0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemInspectAction__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnItemInspectAction__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemInspectAction__DelegateSignature_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B760 (end 0x0289B78F)
 // Original VA: 0x000000014289B760 | File offset: 0x0289AD60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -66,7 +62,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemI
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemInspectAction__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x045610F0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnItemInspectAction__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemInspectAction__DelegateSignature_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -74,10 +72,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemI
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExecuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561310; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExecuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnBackActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExecuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B940 (end 0x0289B96F)
 // Original VA: 0x000000014289B940 | File offset: 0x0289AF40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -86,7 +81,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExecuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561310; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnBackActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExecuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -94,10 +91,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExe
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045613A0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnInputMethodChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B970 (end 0x0289B99F)
 // Original VA: 0x000000014289B970 | File offset: 0x0289AF70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -106,7 +100,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodCh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045613A0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnInputMethodChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -114,10 +110,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodCh
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectActionExecuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561430; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectActionExecuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnInspectActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectActionExecuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B9A0 (end 0x0289B9CF)
 // Original VA: 0x000000014289B9A0 | File offset: 0x0289AFA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -126,7 +119,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectAction
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectActionExecuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561430; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnInspectActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectActionExecuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -134,10 +129,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectAction
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedItemsActionExecuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045614C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedItemsActionExecuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnLogAllowedItemsActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedItemsActionExecuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B9D0 (end 0x0289B9FF)
 // Original VA: 0x000000014289B9D0 | File offset: 0x0289AFD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -146,7 +138,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedIte
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedItemsActionExecuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x045614C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnLogAllowedItemsActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedItemsActionExecuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -154,10 +148,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedIte
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerActionExecuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561550; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerActionExecuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnOpenPickerActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerActionExecuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BA00 (end 0x0289BA2F)
 // Original VA: 0x000000014289BA00 | File offset: 0x0289B000
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -166,7 +157,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerAct
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerActionExecuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561550; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnOpenPickerActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerActionExecuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -174,10 +167,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerAct
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045615D0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSectionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BA30 (end 0x0289BA5F)
 // Original VA: 0x000000014289BA30 | File offset: 0x0289B030
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -186,7 +176,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChange
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045615D0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSectionChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -194,10 +186,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChange
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCommitted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561650; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCommitted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotButtonCommitted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCommitted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BA60 (end 0x0289BA8F)
 // Original VA: 0x000000014289BA60 | File offset: 0x0289B060
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -206,7 +195,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCom
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCommitted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561650; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotButtonCommitted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCommitted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -214,10 +205,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCom
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045616D0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotButtonSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSelected_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BA90 (end 0x0289BABF)
 // Original VA: 0x000000014289BA90 | File offset: 0x0289B090
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -226,7 +214,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSel
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x045616D0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotButtonSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSelected_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -234,10 +224,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSel
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActionExecuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561760; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActionExecuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotItemActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActionExecuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BAC0 (end 0x0289BAEF)
 // Original VA: 0x000000014289BAC0 | File offset: 0x0289B0C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -246,7 +233,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActio
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActionExecuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561760; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotItemActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActionExecuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -254,10 +243,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActio
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561820; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemComplete_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotItemComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x10, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemComplete_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BAF0 (end 0x0289BB1F)
 // Original VA: 0x000000014289BAF0 | File offset: 0x0289B0F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -266,7 +252,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemCompl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemComplete_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561820; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotItemComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x10, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemComplete_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -274,10 +262,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemCompl
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfirmationCompleted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561920; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfirmationCompleted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotItemConfirmationCompleted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x18, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfirmationCompleted_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BB20 (end 0x0289BB4F)
 // Original VA: 0x000000014289BB20 | File offset: 0x0289B120
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -286,7 +271,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfirmationCompleted_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561920; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotItemConfirmationCompleted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x18, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfirmationCompleted_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -294,10 +281,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfi
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemHovered_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045619A0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemHovered_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotPickerItemHovered", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemHovered_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BB50 (end 0x0289BB7F)
 // Original VA: 0x000000014289BB50 | File offset: 0x0289B150
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -306,7 +290,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerIte
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemHovered_Statics::FuncParams);
+		// FuncParams: original RVA 0x045619A0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotPickerItemHovered", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemHovered_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -314,10 +300,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerIte
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561A20; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotPickerItemSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemSelected_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BB80 (end 0x0289BBAF)
 // Original VA: 0x000000014289BB80 | File offset: 0x0289B180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -326,7 +309,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerIte
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561A20; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlotPickerItemSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemSelected_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -334,10 +319,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerIte
 struct Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOperationComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04561AE0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOperationComplete_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlottedItemOperationComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x10, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOperationComplete_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BBB0 (end 0x0289BBDF)
 // Original VA: 0x000000014289BBB0 | File offset: 0x0289B1B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -346,7 +328,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOp
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOperationComplete_Statics::FuncParams);
+		// FuncParams: original RVA 0x04561AE0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionPanel, "OnSlottedItemOperationComplete", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x10, Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOperationComplete_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

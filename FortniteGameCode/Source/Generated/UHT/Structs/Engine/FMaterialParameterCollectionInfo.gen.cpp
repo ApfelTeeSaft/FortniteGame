@@ -31,25 +31,12 @@ class UScriptStruct* FMaterialParameterCollectionInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037070 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMaterialParameterCollectionInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMaterialParameterCollectionInfo>();
 	}
-	// ReturnStructParams: original RVA 0x044B2BF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMaterialParameterCollectionInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"MaterialParameterCollectionInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMaterialParameterCollectionInfo),
-		alignof(FMaterialParameterCollectionInfo),
-		Z_Construct_UScriptStruct_FMaterialParameterCollectionInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02479430 (end 0x0247945F)
 	// Original VA: 0x0000000142479430 | File offset: 0x02478A30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMaterialParameterCollectionInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMaterialParameterCollectionInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044B2BF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMaterialParameterCollectionInfo_Statics::NewStructOps,
+				"MaterialParameterCollectionInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMaterialParameterCollectionInfo),
+				alignof(FMaterialParameterCollectionInfo),
+				Z_Construct_UScriptStruct_FMaterialParameterCollectionInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x02FE2AB0, FClassParams RVA 0x02FE2AD0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UAppleARKitAnchor();  // RVA 0x008063C0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00806100 (end 0x00806122)
 // Original VA: 0x0000000140806100 | File offset: 0x00805700
@@ -20,7 +20,7 @@ void UAppleARKitAnchor::StaticRegisterNativesUAppleARKitAnchor()
 
 struct Z_Construct_UFunction_UAppleARKitAnchor_GetTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x041C8000 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x008064F0 (end 0x0080651F)
 // Original VA: 0x00000001408064F0 | File offset: 0x00805AF0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAppleARKitAnchor_GetTransform()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAppleARKitAnchor_GetTransform_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C8000; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAppleARKitAnchor, "GetTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x30, Z_Construct_UFunction_UAppleARKitAnchor_GetTransform_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

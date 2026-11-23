@@ -30,25 +30,12 @@ class UScriptStruct* FQueuedMusic::StaticStruct()
 	struct Z_Construct_UScriptStruct_FQueuedMusic_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01049D10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FQueuedMusic_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FQueuedMusic>();
 	}
-	// ReturnStructParams: original RVA 0x042D6BD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FQueuedMusic_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"QueuedMusic",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FQueuedMusic),
-		alignof(FQueuedMusic),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BD50 (end 0x0104BD7F)
 	// Original VA: 0x000000014104BD50 | File offset: 0x0104B350
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FQueuedMusic::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FQueuedMusic_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042D6BD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FQueuedMusic_Statics::NewStructOps,
+				"QueuedMusic",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FQueuedMusic),
+				alignof(FQueuedMusic),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

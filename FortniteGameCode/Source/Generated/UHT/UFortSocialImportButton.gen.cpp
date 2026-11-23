@@ -21,10 +21,7 @@ void UFortSocialImportButton::StaticRegisterNativesUFortSocialImportButton()
 struct Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B5E30; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSocialImportButton, "DynamicHandleClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6640 (end 0x028F666F)
 // Original VA: 0x00000001428F6640 | File offset: 0x028F5C40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B5E30; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSocialImportButton, "DynamicHandleClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked()
 struct Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B5EB0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSocialImportButton, "OnCaptionGenerated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x18, Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6670 (end 0x028F669F)
 // Original VA: 0x00000001428F6670 | File offset: 0x028F5C70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B5EB0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSocialImportButton, "OnCaptionGenerated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x18, Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FActorComponentTickFunction::StaticStruct()
 	struct Z_Construct_UScriptStruct_FActorComponentTickFunction_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240A230 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FActorComponentTickFunction_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FActorComponentTickFunction>();
 	}
-	// ReturnStructParams: original RVA 0x0444D820
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FActorComponentTickFunction_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FTickFunction,
-		&NewStructOps,
-		"ActorComponentTickFunction",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FActorComponentTickFunction),
-		alignof(FActorComponentTickFunction),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240CE60 (end 0x0240CE8F)
 	// Original VA: 0x000000014240CE60 | File offset: 0x0240C460
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FActorComponentTickFunction::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FActorComponentTickFunction_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0444D820
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FTickFunction,
+				&Z_Construct_UScriptStruct_FActorComponentTickFunction_Statics::NewStructOps,
+				"ActorComponentTickFunction",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FActorComponentTickFunction),
+				alignof(FActorComponentTickFunction),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

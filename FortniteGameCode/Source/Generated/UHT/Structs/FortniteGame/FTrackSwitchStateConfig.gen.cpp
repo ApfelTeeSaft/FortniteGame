@@ -31,25 +31,12 @@ class UScriptStruct* FTrackSwitchStateConfig::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8790 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTrackSwitchStateConfig_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTrackSwitchStateConfig>();
 	}
-	// ReturnStructParams: original RVA 0x0433B890
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTrackSwitchStateConfig_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"TrackSwitchStateConfig",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTrackSwitchStateConfig),
-		alignof(FTrackSwitchStateConfig),
-		Z_Construct_UScriptStruct_FTrackSwitchStateConfig_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CCC80 (end 0x010CCCAF)
 	// Original VA: 0x00000001410CCC80 | File offset: 0x010CC280
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FTrackSwitchStateConfig::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTrackSwitchStateConfig_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0433B890
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTrackSwitchStateConfig_Statics::NewStructOps,
+				"TrackSwitchStateConfig",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTrackSwitchStateConfig),
+				alignof(FTrackSwitchStateConfig),
+				Z_Construct_UScriptStruct_FTrackSwitchStateConfig_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

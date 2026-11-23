@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0369CFE8, FClassParams RVA 0x0369D020.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UScrollBoxSlot();  // RVA 0x01BF2FD0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2AC0 (end 0x01BF2AE2)
 // Original VA: 0x0000000141BF2AC0 | File offset: 0x01BF20C0
@@ -21,7 +21,7 @@ void UScrollBoxSlot::StaticRegisterNativesUScrollBoxSlot()
 
 struct Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C6450 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF36B0 (end 0x01BF36DF)
 // Original VA: 0x0000000141BF36B0 | File offset: 0x01BF2CB0
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6450; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UScrollBoxSlot, "SetHorizontalAlignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UScrollBoxSlot_SetPadding_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043C64D0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF36E0 (end 0x01BF370F)
 // Original VA: 0x0000000141BF36E0 | File offset: 0x01BF2CE0
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_UScrollBoxSlot_SetPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UScrollBoxSlot_SetPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C64D0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UScrollBoxSlot, "SetPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UScrollBoxSlot_SetPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

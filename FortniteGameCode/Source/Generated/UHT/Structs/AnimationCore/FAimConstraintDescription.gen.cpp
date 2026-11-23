@@ -32,25 +32,12 @@ class UScriptStruct* FAimConstraintDescription::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01ACF6F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAimConstraintDescription_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAimConstraintDescription>();
 	}
-	// ReturnStructParams: original RVA 0x043A7590
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAimConstraintDescription_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
-		Z_Construct_UScriptStruct_FConstraintDescriptionEx,
-		&NewStructOps,
-		"AimConstraintDescription",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAimConstraintDescription),
-		alignof(FAimConstraintDescription),
-		Z_Construct_UScriptStruct_FAimConstraintDescription_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AD02D0 (end 0x01AD02FF)
 	// Original VA: 0x0000000141AD02D0 | File offset: 0x01ACF8D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAimConstraintDescription::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAimConstraintDescription_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A7590
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
+				Z_Construct_UScriptStruct_FConstraintDescriptionEx,
+				&Z_Construct_UScriptStruct_FAimConstraintDescription_Statics::NewStructOps,
+				"AimConstraintDescription",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAimConstraintDescription),
+				alignof(FAimConstraintDescription),
+				Z_Construct_UScriptStruct_FAimConstraintDescription_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

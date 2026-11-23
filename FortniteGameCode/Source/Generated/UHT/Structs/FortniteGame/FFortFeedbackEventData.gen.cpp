@@ -31,25 +31,12 @@ class UScriptStruct* FFortFeedbackEventData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDA5F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortFeedbackEventData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortFeedbackEventData>();
 	}
-	// ReturnStructParams: original RVA 0x0426CFE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortFeedbackEventData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortFeedbackEventData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortFeedbackEventData),
-		alignof(FFortFeedbackEventData),
-		Z_Construct_UScriptStruct_FFortFeedbackEventData_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC220 (end 0x00FDC24F)
 	// Original VA: 0x0000000140FDC220 | File offset: 0x00FDB820
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortFeedbackEventData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortFeedbackEventData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0426CFE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortFeedbackEventData_Statics::NewStructOps,
+				"FortFeedbackEventData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortFeedbackEventData),
+				alignof(FFortFeedbackEventData),
+				Z_Construct_UScriptStruct_FFortFeedbackEventData_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

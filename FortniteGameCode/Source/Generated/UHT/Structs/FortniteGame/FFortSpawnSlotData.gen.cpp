@@ -31,25 +31,12 @@ class UScriptStruct* FFortSpawnSlotData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6B3A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSpawnSlotData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSpawnSlotData>();
 	}
-	// ReturnStructParams: original RVA 0x04203770
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSpawnSlotData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSpawnSlotData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSpawnSlotData),
-		alignof(FFortSpawnSlotData),
-		Z_Construct_UScriptStruct_FFortSpawnSlotData_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6D7B0 (end 0x00F6D7DF)
 	// Original VA: 0x0000000140F6D7B0 | File offset: 0x00F6CDB0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSpawnSlotData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSpawnSlotData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04203770
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSpawnSlotData_Statics::NewStructOps,
+				"FortSpawnSlotData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSpawnSlotData),
+				alignof(FFortSpawnSlotData),
+				Z_Construct_UScriptStruct_FFortSpawnSlotData_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

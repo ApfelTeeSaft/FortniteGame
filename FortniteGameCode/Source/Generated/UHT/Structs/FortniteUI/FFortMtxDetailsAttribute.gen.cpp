@@ -31,25 +31,12 @@ class UScriptStruct* FFortMtxDetailsAttribute::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6720 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMtxDetailsAttribute_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMtxDetailsAttribute>();
 	}
-	// ReturnStructParams: original RVA 0x045A0040
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMtxDetailsAttribute_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortMtxDetailsAttribute",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortMtxDetailsAttribute),
-		alignof(FFortMtxDetailsAttribute),
-		Z_Construct_UScriptStruct_FFortMtxDetailsAttribute_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8AF0 (end 0x028D8B1F)
 	// Original VA: 0x00000001428D8AF0 | File offset: 0x028D80F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMtxDetailsAttribute::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMtxDetailsAttribute_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045A0040
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMtxDetailsAttribute_Statics::NewStructOps,
+				"FortMtxDetailsAttribute",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortMtxDetailsAttribute),
+				alignof(FFortMtxDetailsAttribute),
+				Z_Construct_UScriptStruct_FFortMtxDetailsAttribute_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

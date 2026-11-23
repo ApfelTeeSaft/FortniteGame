@@ -25,12 +25,6 @@ void UFortTwitchLogin::StaticRegisterNativesUFortTwitchLogin()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045C48E0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "CancelLoginFlow", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AEC0 (end 0x0290AEEF)
 // Original VA: 0x000000014290AEC0 | File offset: 0x0290A4C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C48E0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "CancelLoginFlow", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +43,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow()
 struct Z_Construct_UFunction_UFortTwitchLogin_GetAccountName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C4960; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_GetAccountName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "GetAccountName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortTwitchLogin_GetAccountName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AEF0 (end 0x0290AF1F)
 // Original VA: 0x000000014290AEF0 | File offset: 0x0290A4F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +52,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_GetAccountName()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_GetAccountName_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4960; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "GetAccountName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortTwitchLogin_GetAccountName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +62,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_GetAccountName()
 struct Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C49E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "GetLinkedTwitchAccountName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AF20 (end 0x0290AF4F)
 // Original VA: 0x000000014290AF20 | File offset: 0x0290A520
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +71,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C49E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "GetLinkedTwitchAccountName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +81,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName()
 struct Z_Construct_UFunction_UFortTwitchLogin_IsLoggedIn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C4A70; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_IsLoggedIn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "IsLoggedIn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortTwitchLogin_IsLoggedIn_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AF50 (end 0x0290AF7F)
 // Original VA: 0x000000014290AF50 | File offset: 0x0290A550
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,17 +90,13 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_IsLoggedIn()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_IsLoggedIn_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4A70; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "IsLoggedIn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortTwitchLogin_IsLoggedIn_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortTwitchLogin_Login_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045C4AB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_Login_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "Login", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AF80 (end 0x0290AFAF)
 // Original VA: 0x000000014290AF80 | File offset: 0x0290A580
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,17 +105,13 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_Login()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_Login_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4AB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "Login", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortTwitchLogin_Logout_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045C4AF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_Logout_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "Logout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AFB0 (end 0x0290AFDF)
 // Original VA: 0x000000014290AFB0 | File offset: 0x0290A5B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -137,7 +120,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_Logout()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_Logout_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4AF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "Logout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -145,10 +130,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_Logout()
 struct Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C4B70; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLinkedTwitchAccountChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x10, Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AFE0 (end 0x0290B00F)
 // Original VA: 0x000000014290AFE0 | File offset: 0x0290A5E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -157,7 +139,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4B70; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLinkedTwitchAccountChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x10, Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -165,10 +149,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged()
 struct Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C4BF0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLoginFlowModalCreated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x8, Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290B010 (end 0x0290B03F)
 // Original VA: 0x000000014290B010 | File offset: 0x0290A610
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -177,7 +158,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4BF0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLoginFlowModalCreated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x8, Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -185,10 +168,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated()
 struct Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C4C70; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLoginFlowModalDismissed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x8, Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290B040 (end 0x0290B06F)
 // Original VA: 0x000000014290B040 | File offset: 0x0290A640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -197,7 +177,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4C70; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLoginFlowModalDismissed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x8, Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -205,10 +187,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed()
 struct Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C4D40; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLoginStatusChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x18, Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290B070 (end 0x0290B09F)
 // Original VA: 0x000000014290B070 | File offset: 0x0290A670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -217,7 +196,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4D40; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnLoginStatusChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x18, Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -225,10 +206,7 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged()
 struct Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C4DF0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnShowLoginError", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x30, Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290B0A0 (end 0x0290B0CF)
 // Original VA: 0x000000014290B0A0 | File offset: 0x0290A6A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -237,7 +215,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C4DF0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchLogin, "OnShowLoginError", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x30, Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

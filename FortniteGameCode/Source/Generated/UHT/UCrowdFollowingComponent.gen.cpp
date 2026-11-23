@@ -21,10 +21,7 @@ void UCrowdFollowingComponent::StaticRegisterNativesUCrowdFollowingComponent()
 struct Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043F3D80; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCrowdFollowingComponent, "SuspendCrowdSteering", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x1, Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D29A90 (end 0x01D29ABF)
 // Original VA: 0x0000000141D29A90 | File offset: 0x01D29090
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering_Statics::FuncParams);
+		// FuncParams: original RVA 0x043F3D80; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCrowdFollowingComponent, "SuspendCrowdSteering", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x1, Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

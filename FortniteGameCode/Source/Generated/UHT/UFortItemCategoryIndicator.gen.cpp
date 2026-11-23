@@ -21,12 +21,6 @@ void UFortItemCategoryIndicator::StaticRegisterNativesUFortItemCategoryIndicator
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverride_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0458F080; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "ClearLabelColorOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA1E0 (end 0x028CA20F)
 // Original VA: 0x00000001428CA1E0 | File offset: 0x028C97E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +29,9 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverr
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x0458F080; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "ClearLabelColorOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +39,7 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverr
 struct Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0458F100; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "SetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA210 (end 0x028CA23F)
 // Original VA: 0x00000001428CA210 | File offset: 0x028C9810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +48,9 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent_Statics::FuncParams);
+		// FuncParams: original RVA 0x0458F100; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "SetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +58,7 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent()
 struct Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverride_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0458F180; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "SetLabelColorOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverride_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA240 (end 0x028CA26F)
 // Original VA: 0x00000001428CA240 | File offset: 0x028C9840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +67,9 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverrid
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x0458F180; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "SetLabelColorOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverride_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -83,10 +77,7 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverrid
 struct Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategoryToRepresent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0458F240; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategoryToRepresent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "SetOrdinalOfCategoryToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategoryToRepresent_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA270 (end 0x028CA29F)
 // Original VA: 0x00000001428CA270 | File offset: 0x028C9870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -95,7 +86,9 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategory
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategoryToRepresent_Statics::FuncParams);
+		// FuncParams: original RVA 0x0458F240; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemCategoryIndicator, "SetOrdinalOfCategoryToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategoryToRepresent_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

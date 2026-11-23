@@ -22,10 +22,7 @@ void USeasonPassPageWidget::StaticRegisterNativesUSeasonPassPageWidget()
 struct Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6F60; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "ContainsLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291A090 (end 0x0291A0BF)
 // Original VA: 0x000000014291A090 | File offset: 0x02919690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6F60; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "ContainsLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x8, Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel()
 struct Z_Construct_UFunction_USeasonPassPageWidget_GetCurrentSeasonNumber_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D6FE0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassPageWidget_GetCurrentSeasonNumber_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "GetCurrentSeasonNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x4, Z_Construct_UFunction_USeasonPassPageWidget_GetCurrentSeasonNumber_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291A0C0 (end 0x0291A0EF)
 // Original VA: 0x000000014291A0C0 | File offset: 0x029196C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +50,13 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_GetCurrentSeasonNumber()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassPageWidget_GetCurrentSeasonNumber_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D6FE0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "GetCurrentSeasonNumber", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x4, Z_Construct_UFunction_USeasonPassPageWidget_GetCurrentSeasonNumber_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageLeft_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045D7020; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageLeft_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "NavigatePageLeft", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291A0F0 (end 0x0291A11F)
 // Original VA: 0x000000014291A0F0 | File offset: 0x029196F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,17 +65,13 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageLeft()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageLeft_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D7020; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "NavigatePageLeft", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageRight_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045D7060; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageRight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "NavigatePageRight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291A120 (end 0x0291A14F)
 // Original VA: 0x000000014291A120 | File offset: 0x02919720
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -92,17 +80,13 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageRight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassPageWidget_NavigatePageRight_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D7060; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "NavigatePageRight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USeasonPassPageWidget_OnBattlePassChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045D70A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassPageWidget_OnBattlePassChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "OnBattlePassChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291A150 (end 0x0291A17F)
 // Original VA: 0x000000014291A150 | File offset: 0x02919750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -111,7 +95,9 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_OnBattlePassChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassPageWidget_OnBattlePassChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D70A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "OnBattlePassChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -119,10 +105,7 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_OnBattlePassChanged()
 struct Z_Construct_UFunction_USeasonPassPageWidget_OwnsSeasonPass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045D7130; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USeasonPassPageWidget_OwnsSeasonPass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "OwnsSeasonPass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_USeasonPassPageWidget_OwnsSeasonPass_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291A180 (end 0x0291A1AF)
 // Original VA: 0x000000014291A180 | File offset: 0x02919780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -131,7 +114,9 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_OwnsSeasonPass()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USeasonPassPageWidget_OwnsSeasonPass_Statics::FuncParams);
+		// FuncParams: original RVA 0x045D7130; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USeasonPassPageWidget, "OwnsSeasonPass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_USeasonPassPageWidget_OwnsSeasonPass_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

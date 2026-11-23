@@ -27,10 +27,7 @@ void UFortCollectionBookPrimaryPanel::StaticRegisterNativesUFortCollectionBookPr
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTileClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455EDA0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTileClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "HandleSectionTileClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTileClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028957F0 (end 0x0289581F)
 // Original VA: 0x00000001428957F0 | File offset: 0x02894DF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +36,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTileClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455EDA0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "HandleSectionTileClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTileClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -47,10 +46,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTi
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExecuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455EE30; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExecuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnBackActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExecuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895820 (end 0x0289584F)
 // Original VA: 0x0000000142895820 | File offset: 0x02894E20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +55,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExecuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455EE30; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnBackActionExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x1, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExecuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +65,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExe
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455EEB0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnCollectionBookPageClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895850 (end 0x0289587F)
 // Original VA: 0x0000000142895850 | File offset: 0x02894E50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +74,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBoo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455EEB0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnCollectionBookPageClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +84,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBoo
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455EF30; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnCollectionBookPageSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageSelected_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895880 (end 0x028958AF)
 // Original VA: 0x0000000142895880 | File offset: 0x02894E80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +93,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBoo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageSelected_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455EF30; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnCollectionBookPageSelected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageSelected_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +103,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBoo
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookSectionClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455EFB0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookSectionClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnCollectionBookSectionClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookSectionClicked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028958B0 (end 0x028958DF)
 // Original VA: 0x00000001428958B0 | File offset: 0x02894EB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +112,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBoo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookSectionClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455EFB0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnCollectionBookSectionClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookSectionClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +122,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBoo
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455F040; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnInputMethodChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x1, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028958E0 (end 0x0289590F)
 // Original VA: 0x00000001428958E0 | File offset: 0x02894EE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,7 +131,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodCh
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455F040; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnInputMethodChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x1, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -147,10 +141,7 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodCh
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPanelExecuted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0455F0D0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPanelExecuted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnSummonInfoPanelExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480C00, 0x1, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPanelExecuted_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895910 (end 0x0289593F)
 // Original VA: 0x0000000142895910 | File offset: 0x02894F10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -159,7 +150,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPan
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPanelExecuted_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455F0D0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookPrimaryPanel, "OnSummonInfoPanelExecuted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480C00, 0x1, Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPanelExecuted_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

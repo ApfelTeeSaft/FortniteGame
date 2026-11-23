@@ -31,25 +31,12 @@ class UScriptStruct* FPaperTerrainMaterialRule::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x006668C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPaperTerrainMaterialRule_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPaperTerrainMaterialRule>();
 	}
-	// ReturnStructParams: original RVA 0x041B42F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPaperTerrainMaterialRule_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
-		nullptr,
-		&NewStructOps,
-		"PaperTerrainMaterialRule",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPaperTerrainMaterialRule),
-		alignof(FPaperTerrainMaterialRule),
-		Z_Construct_UScriptStruct_FPaperTerrainMaterialRule_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x006688A0 (end 0x006688CF)
 	// Original VA: 0x00000001406688A0 | File offset: 0x00667EA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPaperTerrainMaterialRule::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPaperTerrainMaterialRule_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041B42F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPaperTerrainMaterialRule_Statics::NewStructOps,
+				"PaperTerrainMaterialRule",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPaperTerrainMaterialRule),
+				alignof(FPaperTerrainMaterialRule),
+				Z_Construct_UScriptStruct_FPaperTerrainMaterialRule_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

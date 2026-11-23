@@ -22,10 +22,7 @@ void UAthenaChallengeBundleScheduleScreenBase::StaticRegisterNativesUAthenaChall
 struct Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleItems_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04548E30; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleItems_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase, "GetChallengeBundleItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x28, Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleItems_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FCB0 (end 0x0287FCDF)
 // Original VA: 0x000000014287FCB0 | File offset: 0x0287F2B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetCha
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleItems_Statics::FuncParams);
+		// FuncParams: original RVA 0x04548E30; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase, "GetChallengeBundleItems", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x28, Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleItems_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetCha
 struct Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleSchedules_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04548F70; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleSchedules_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase, "GetChallengeBundleSchedules", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x20, Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleSchedules_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287FCE0 (end 0x0287FD0F)
 // Original VA: 0x000000014287FCE0 | File offset: 0x0287F2E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetCha
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleSchedules_Statics::FuncParams);
+		// FuncParams: original RVA 0x04548F70; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase, "GetChallengeBundleSchedules", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x20, Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleSchedules_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

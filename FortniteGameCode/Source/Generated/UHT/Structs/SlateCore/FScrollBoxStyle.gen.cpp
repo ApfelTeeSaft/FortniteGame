@@ -32,25 +32,12 @@ class UScriptStruct* FScrollBoxStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A930 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FScrollBoxStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FScrollBoxStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437A030
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FScrollBoxStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"ScrollBoxStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FScrollBoxStyle),
-		alignof(FScrollBoxStyle),
-		Z_Construct_UScriptStruct_FScrollBoxStyle_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D0B0 (end 0x0145D0DF)
 	// Original VA: 0x000000014145D0B0 | File offset: 0x0145C6B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FScrollBoxStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FScrollBoxStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437A030
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FScrollBoxStyle_Statics::NewStructOps,
+				"ScrollBoxStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FScrollBoxStyle),
+				alignof(FScrollBoxStyle),
+				Z_Construct_UScriptStruct_FScrollBoxStyle_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

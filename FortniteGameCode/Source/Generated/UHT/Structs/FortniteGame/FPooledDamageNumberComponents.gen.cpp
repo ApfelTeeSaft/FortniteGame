@@ -31,25 +31,12 @@ class UScriptStruct* FPooledDamageNumberComponents::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF2770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPooledDamageNumberComponents_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPooledDamageNumberComponents>();
 	}
-	// ReturnStructParams: original RVA 0x0425FAD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPooledDamageNumberComponents_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"PooledDamageNumberComponents",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FPooledDamageNumberComponents),
-		alignof(FPooledDamageNumberComponents),
-		Z_Construct_UScriptStruct_FPooledDamageNumberComponents_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCAE0 (end 0x00FCCB0F)
 	// Original VA: 0x0000000140FCCAE0 | File offset: 0x00FCC0E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPooledDamageNumberComponents::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPooledDamageNumberComponents_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0425FAD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPooledDamageNumberComponents_Statics::NewStructOps,
+				"PooledDamageNumberComponents",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FPooledDamageNumberComponents),
+				alignof(FPooledDamageNumberComponents),
+				Z_Construct_UScriptStruct_FPooledDamageNumberComponents_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

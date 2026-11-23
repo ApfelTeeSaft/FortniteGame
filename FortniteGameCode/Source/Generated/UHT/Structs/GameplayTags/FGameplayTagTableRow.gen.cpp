@@ -32,25 +32,12 @@ class UScriptStruct* FGameplayTagTableRow::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C92FD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayTagTableRow_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayTagTableRow>();
 	}
-	// ReturnStructParams: original RVA 0x043E2360
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayTagTableRow_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"GameplayTagTableRow",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGameplayTagTableRow),
-		alignof(FGameplayTagTableRow),
-		Z_Construct_UScriptStruct_FGameplayTagTableRow_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C94270 (end 0x01C9429F)
 	// Original VA: 0x0000000141C94270 | File offset: 0x01C93870
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FGameplayTagTableRow::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayTagTableRow_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043E2360
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayTags,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FGameplayTagTableRow_Statics::NewStructOps,
+				"GameplayTagTableRow",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGameplayTagTableRow),
+				alignof(FGameplayTagTableRow),
+				Z_Construct_UScriptStruct_FGameplayTagTableRow_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

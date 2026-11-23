@@ -31,25 +31,12 @@ class UScriptStruct* FWrappedStringElement::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023ED070 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FWrappedStringElement_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWrappedStringElement>();
 	}
-	// ReturnStructParams: original RVA 0x04431D90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWrappedStringElement_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"WrappedStringElement",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FWrappedStringElement),
-		alignof(FWrappedStringElement),
-		Z_Construct_UScriptStruct_FWrappedStringElement_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EF860 (end 0x023EF88F)
 	// Original VA: 0x00000001423EF860 | File offset: 0x023EEE60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FWrappedStringElement::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FWrappedStringElement_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04431D90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FWrappedStringElement_Statics::NewStructOps,
+				"WrappedStringElement",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FWrappedStringElement),
+				alignof(FWrappedStringElement),
+				Z_Construct_UScriptStruct_FWrappedStringElement_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

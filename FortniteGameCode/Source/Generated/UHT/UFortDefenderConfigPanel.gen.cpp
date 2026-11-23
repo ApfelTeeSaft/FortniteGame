@@ -31,10 +31,7 @@ void UFortDefenderConfigPanel::StaticRegisterNativesUFortDefenderConfigPanel()
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefender_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045644F0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefender_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetAmmoCountFromDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefender_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C0F0 (end 0x0289C11F)
 // Original VA: 0x000000014289C0F0 | File offset: 0x0289B6F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -43,7 +40,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefend
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefender_Statics::FuncParams);
+		// FuncParams: original RVA 0x045644F0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetAmmoCountFromDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefender_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -51,10 +50,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefend
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045645B0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetAmmoCountFromPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C120 (end 0x0289C14F)
 // Original VA: 0x000000014289C120 | File offset: 0x0289B720
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -63,7 +59,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer_Statics::FuncParams);
+		// FuncParams: original RVA 0x045645B0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetAmmoCountFromPlayer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -71,10 +69,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564630; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetCompatibleAmmo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C150 (end 0x0289C17F)
 // Original VA: 0x000000014289C150 | File offset: 0x0289B750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -83,7 +78,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564630; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetCompatibleAmmo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -91,10 +88,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo()
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045646B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetCompatibleAmmoDef", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C180 (end 0x0289C1AF)
 // Original VA: 0x000000014289C180 | File offset: 0x0289B780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -103,7 +97,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef_Statics::FuncParams);
+		// FuncParams: original RVA 0x045646B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetCompatibleAmmoDef", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -111,10 +107,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef()
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564770; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetDefenderPawnWeaponItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponItem_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C1B0 (end 0x0289C1DF)
 // Original VA: 0x000000014289C1B0 | File offset: 0x0289B7B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -123,7 +116,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponI
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponItem_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564770; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetDefenderPawnWeaponItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponItem_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -131,10 +126,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponI
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564830; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetSourceSchematic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C1E0 (end 0x0289C20F)
 // Original VA: 0x000000014289C1E0 | File offset: 0x0289B7E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -143,7 +135,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564830; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "GetSourceSchematic", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -151,10 +145,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic()
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045648C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "HasAnyDefenders", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C210 (end 0x0289C23F)
 // Original VA: 0x000000014289C210 | File offset: 0x0289B810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -163,7 +154,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders_Statics::FuncParams);
+		// FuncParams: original RVA 0x045648C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "HasAnyDefenders", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -171,10 +164,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders()
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDefender_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564950; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDefender_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "HasWeaponForSelectedDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDefender_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C240 (end 0x0289C26F)
 // Original VA: 0x000000014289C240 | File offset: 0x0289B840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -183,7 +173,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDefender_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564950; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "HasWeaponForSelectedDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDefender_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -191,10 +183,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDe
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045649E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "IsWeaponSelectionValid", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C270 (end 0x0289C29F)
 // Original VA: 0x000000014289C270 | File offset: 0x0289B870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -203,7 +192,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid_Statics::FuncParams);
+		// FuncParams: original RVA 0x045649E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "IsWeaponSelectionValid", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -211,10 +202,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564A70; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "SpawnDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C2A0 (end 0x0289C2CF)
 // Original VA: 0x000000014289C2A0 | File offset: 0x0289B8A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -223,7 +211,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564A70; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "SpawnDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -231,10 +221,7 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender()
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04564B00; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "UnsummonDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C2D0 (end 0x0289C2FF)
 // Original VA: 0x000000014289C2D0 | File offset: 0x0289B8D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -243,7 +230,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564B00; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderConfigPanel, "UnsummonDefender", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

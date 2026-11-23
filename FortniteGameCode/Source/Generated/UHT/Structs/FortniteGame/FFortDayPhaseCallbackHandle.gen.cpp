@@ -30,25 +30,12 @@ class UScriptStruct* FFortDayPhaseCallbackHandle::StaticStruct()
 	struct Z_Construct_UScriptStruct_FFortDayPhaseCallbackHandle_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8F50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortDayPhaseCallbackHandle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortDayPhaseCallbackHandle>();
 	}
-	// ReturnStructParams: original RVA 0x043419A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortDayPhaseCallbackHandle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortDayPhaseCallbackHandle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortDayPhaseCallbackHandle),
-		alignof(FFortDayPhaseCallbackHandle),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC500 (end 0x010CC52F)
 	// Original VA: 0x00000001410CC500 | File offset: 0x010CBB00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FFortDayPhaseCallbackHandle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortDayPhaseCallbackHandle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043419A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortDayPhaseCallbackHandle_Statics::NewStructOps,
+				"FortDayPhaseCallbackHandle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortDayPhaseCallbackHandle),
+				alignof(FFortDayPhaseCallbackHandle),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

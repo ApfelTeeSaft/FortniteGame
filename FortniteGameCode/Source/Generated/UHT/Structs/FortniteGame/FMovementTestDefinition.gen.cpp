@@ -31,25 +31,12 @@ class UScriptStruct* FMovementTestDefinition::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBF560 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovementTestDefinition_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovementTestDefinition>();
 	}
-	// ReturnStructParams: original RVA 0x042551D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovementTestDefinition_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"MovementTestDefinition",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovementTestDefinition),
-		alignof(FMovementTestDefinition),
-		Z_Construct_UScriptStruct_FMovementTestDefinition_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0FE0 (end 0x00FC100F)
 	// Original VA: 0x0000000140FC0FE0 | File offset: 0x00FC05E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMovementTestDefinition::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovementTestDefinition_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042551D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovementTestDefinition_Statics::NewStructOps,
+				"MovementTestDefinition",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovementTestDefinition),
+				alignof(FMovementTestDefinition),
+				Z_Construct_UScriptStruct_FMovementTestDefinition_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

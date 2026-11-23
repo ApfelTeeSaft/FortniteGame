@@ -22,10 +22,7 @@ void UFortOutpostStorageItemPicker::StaticRegisterNativesUFortOutpostStorageItem
 struct Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A77E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostStorageItemPicker, "UseFilter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilter_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7120 (end 0x028E714F)
 // Original VA: 0x00000001428E7120 | File offset: 0x028E6720
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilter()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilter_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A77E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostStorageItemPicker, "UseFilter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x1, Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilter_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilter()
 struct Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilters_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045A78E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilters_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostStorageItemPicker, "UseFilters", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilters_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7150 (end 0x028E717F)
 // Original VA: 0x00000001428E7150 | File offset: 0x028E6750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilters()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilters_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A78E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostStorageItemPicker, "UseFilters", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_UFortOutpostStorageItemPicker_UseFilters_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

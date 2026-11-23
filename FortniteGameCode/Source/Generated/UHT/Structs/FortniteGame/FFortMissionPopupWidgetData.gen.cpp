@@ -31,25 +31,12 @@ class UScriptStruct* FFortMissionPopupWidgetData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01040890 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMissionPopupWidgetData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMissionPopupWidgetData>();
 	}
-	// ReturnStructParams: original RVA 0x042CD510
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMissionPopupWidgetData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortMissionPopupWidgetData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortMissionPopupWidgetData),
-		alignof(FFortMissionPopupWidgetData),
-		Z_Construct_UScriptStruct_FFortMissionPopupWidgetData_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010421E0 (end 0x0104220F)
 	// Original VA: 0x00000001410421E0 | File offset: 0x010417E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMissionPopupWidgetData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMissionPopupWidgetData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042CD510
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMissionPopupWidgetData_Statics::NewStructOps,
+				"FortMissionPopupWidgetData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortMissionPopupWidgetData),
+				alignof(FFortMissionPopupWidgetData),
+				Z_Construct_UScriptStruct_FFortMissionPopupWidgetData_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

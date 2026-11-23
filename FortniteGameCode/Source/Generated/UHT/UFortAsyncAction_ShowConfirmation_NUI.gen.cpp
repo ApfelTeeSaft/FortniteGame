@@ -23,10 +23,7 @@ void UFortAsyncAction_ShowConfirmation_NUI::StaticRegisterNativesUFortAsyncActio
 struct Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfirmationDialog_NUI_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04555F80; StructureSize 0xE0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfirmationDialog_NUI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI, "ShowConfirmationDialog_NUI", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0xE0, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfirmationDialog_NUI_Statics::PropPointers, 10, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D230 (end 0x0288D25F)
 // Original VA: 0x000000014288D230 | File offset: 0x0288C830
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfirmationDialog_NUI_Statics::FuncParams);
+		// FuncParams: original RVA 0x04555F80; StructureSize 0xE0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI, "ShowConfirmationDialog_NUI", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0xE0, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfirmationDialog_NUI_Statics::PropPointers, 10, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfi
 struct Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_CustomInput_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045561E0; StructureSize 0xD8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_CustomInput_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI, "ShowSimpleConfirmationDialog_CustomInput", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0xD8, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_CustomInput_Statics::PropPointers, 9, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D260 (end 0x0288D28F)
 // Original VA: 0x000000014288D260 | File offset: 0x0288C860
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_CustomInput_Statics::FuncParams);
+		// FuncParams: original RVA 0x045561E0; StructureSize 0xD8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI, "ShowSimpleConfirmationDialog_CustomInput", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0xD8, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_CustomInput_Statics::PropPointers, 9, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpl
 struct Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_NUI_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556470; StructureSize 0xD0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_NUI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI, "ShowSimpleConfirmationDialog_NUI", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0xD0, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_NUI_Statics::PropPointers, 9, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D290 (end 0x0288D2BF)
 // Original VA: 0x000000014288D290 | File offset: 0x0288C890
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_NUI_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556470; StructureSize 0xD0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI, "ShowSimpleConfirmationDialog_NUI", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0xD0, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_NUI_Statics::PropPointers, 9, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

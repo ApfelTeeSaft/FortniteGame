@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03290260, FClassParams RVA 0x032902B0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortAbilitySystemComponentTooltip();  // RVA 0x00F7D4A0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CAD0 (end 0x00F7CAF2)
 // Original VA: 0x0000000140F7CAD0 | File offset: 0x00F7C0D0
@@ -23,7 +23,7 @@ void UFortAbilitySystemComponentTooltip::StaticRegisterNativesUFortAbilitySystem
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetNumericValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042139F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DC10 (end 0x00F7DC3F)
 // Original VA: 0x0000000140F7DC10 | File offset: 0x00F7D210
@@ -33,14 +33,16 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetNumericVa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetNumericValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x042139F0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilitySystemComponentTooltip, "GetNumericValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420400, 0x28, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetNumericValue_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTextForToken_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04213BB0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DC40 (end 0x00F7DC6F)
 // Original VA: 0x0000000140F7DC40 | File offset: 0x00F7D240
@@ -50,14 +52,16 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTextForTo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTextForToken_Statics::FuncParams);
+		// FuncParams: original RVA 0x04213BB0; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilitySystemComponentTooltip, "GetTextForToken", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420400, 0x40, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTextForToken_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTokenizedDescriptionText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04213D70 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DC70 (end 0x00F7DC9F)
 // Original VA: 0x0000000140F7DC70 | File offset: 0x00F7D270
@@ -67,14 +71,16 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTokenized
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTokenizedDescriptionText_Statics::FuncParams);
+		// FuncParams: original RVA 0x04213D70; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilitySystemComponentTooltip, "GetTokenizedDescriptionText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420400, 0x30, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetTokenizedDescriptionText_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetValueData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04213F00 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7DCA0 (end 0x00F7DCCF)
 // Original VA: 0x0000000140F7DCA0 | File offset: 0x00F7D2A0
@@ -84,7 +90,9 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetValueData
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetValueData_Statics::FuncParams);
+		// FuncParams: original RVA 0x04213F00; StructureSize 0x90 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilitySystemComponentTooltip, "GetValueData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420400, 0x90, Z_Construct_UFunction_UFortAbilitySystemComponentTooltip_GetValueData_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

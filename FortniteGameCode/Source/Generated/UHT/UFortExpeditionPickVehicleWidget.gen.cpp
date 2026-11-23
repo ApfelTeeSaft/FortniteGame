@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03C8FB60, FClassParams RVA 0x03C8FB80.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortExpeditionPickVehicleWidget();  // RVA 0x028A3680 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3070 (end 0x028A3092)
 // Original VA: 0x00000001428A3070 | File offset: 0x028A2670
@@ -20,7 +20,7 @@ void UFortExpeditionPickVehicleWidget::StaticRegisterNativesUFortExpeditionPickV
 
 struct Z_Construct_UFunction_UFortExpeditionPickVehicleWidget_SetData_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045695F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A46D0 (end 0x028A46FF)
 // Original VA: 0x00000001428A46D0 | File offset: 0x028A3CD0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortExpeditionPickVehicleWidget_SetData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortExpeditionPickVehicleWidget_SetData_Statics::FuncParams);
+		// FuncParams: original RVA 0x045695F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionPickVehicleWidget, "SetData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020C00, 0x8, Z_Construct_UFunction_UFortExpeditionPickVehicleWidget_SetData_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

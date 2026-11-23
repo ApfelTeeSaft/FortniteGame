@@ -31,25 +31,12 @@ class UScriptStruct* FFortInstensityCurveSequenceProgression::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037070 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortInstensityCurveSequenceProgression_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortInstensityCurveSequenceProgression>();
 	}
-	// ReturnStructParams: original RVA 0x0429DEB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortInstensityCurveSequenceProgression_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortInstensityCurveSequenceProgression",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortInstensityCurveSequenceProgression),
-		alignof(FFortInstensityCurveSequenceProgression),
-		Z_Construct_UScriptStruct_FFortInstensityCurveSequenceProgression_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010084F0 (end 0x0100851F)
 	// Original VA: 0x00000001410084F0 | File offset: 0x01007AF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortInstensityCurveSequenceProgression::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortInstensityCurveSequenceProgression_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0429DEB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortInstensityCurveSequenceProgression_Statics::NewStructOps,
+				"FortInstensityCurveSequenceProgression",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortInstensityCurveSequenceProgression),
+				alignof(FFortInstensityCurveSequenceProgression),
+				Z_Construct_UScriptStruct_FFortInstensityCurveSequenceProgression_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

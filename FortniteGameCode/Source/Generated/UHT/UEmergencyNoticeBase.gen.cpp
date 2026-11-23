@@ -6,12 +6,6 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEmergencyNoticeBase();  // RVA 0x028875E0 (consensus OuterFunc)
 
-struct Z_Construct_UFunction_UEmergencyNoticeBase_HideNotice_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04551BA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEmergencyNoticeBase_HideNotice_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEmergencyNoticeBase, "HideNotice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888780 (end 0x028887AF)
 // Original VA: 0x0000000142888780 | File offset: 0x02887D80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -20,7 +14,9 @@ UFunction* Z_Construct_UFunction_UEmergencyNoticeBase_HideNotice()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEmergencyNoticeBase_HideNotice_Statics::FuncParams);
+		// FuncParams: original RVA 0x04551BA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEmergencyNoticeBase, "HideNotice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -28,10 +24,7 @@ UFunction* Z_Construct_UFunction_UEmergencyNoticeBase_HideNotice()
 struct Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04551C50; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEmergencyNoticeBase, "ShowNotice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x30, Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028887B0 (end 0x028887DF)
 // Original VA: 0x00000001428887B0 | File offset: 0x02887DB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -40,7 +33,9 @@ UFunction* Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice_Statics::FuncParams);
+		// FuncParams: original RVA 0x04551C50; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEmergencyNoticeBase, "ShowNotice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x30, Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

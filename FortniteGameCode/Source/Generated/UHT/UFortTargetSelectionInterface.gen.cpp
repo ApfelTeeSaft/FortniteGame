@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03400188, FClassParams RVA 0x034001A0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortTargetSelectionInterface();  // RVA 0x010B3B30 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2E00 (end 0x010B2E22)
 // Original VA: 0x00000001410B2E00 | File offset: 0x010B2400
@@ -20,7 +20,7 @@ void UFortTargetSelectionInterface::StaticRegisterNativesUFortTargetSelectionInt
 
 struct Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0432D4A0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B41D0 (end 0x010B41FF)
 // Original VA: 0x00000001410B41D0 | File offset: 0x010B37D0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTrans
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform_Statics::FuncParams);
+		// FuncParams: original RVA 0x0432D4A0; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTargetSelectionInterface, "GetTargetingTransform", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820400, 0x40, Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

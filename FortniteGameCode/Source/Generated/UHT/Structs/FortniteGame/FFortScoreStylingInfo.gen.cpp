@@ -31,25 +31,12 @@ class UScriptStruct* FFortScoreStylingInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4440 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortScoreStylingInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortScoreStylingInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04327460
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortScoreStylingInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortScoreStylingInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortScoreStylingInfo),
-		alignof(FFortScoreStylingInfo),
-		Z_Construct_UScriptStruct_FFortScoreStylingInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A6A10 (end 0x010A6A3F)
 	// Original VA: 0x00000001410A6A10 | File offset: 0x010A6010
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortScoreStylingInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortScoreStylingInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04327460
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortScoreStylingInfo_Statics::NewStructOps,
+				"FortScoreStylingInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortScoreStylingInfo),
+				alignof(FFortScoreStylingInfo),
+				Z_Construct_UScriptStruct_FFortScoreStylingInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FMatchmakingParams::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010233E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMatchmakingParams_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMatchmakingParams>();
 	}
-	// ReturnStructParams: original RVA 0x042B66B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMatchmakingParams_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"MatchmakingParams",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMatchmakingParams),
-		alignof(FMatchmakingParams),
-		Z_Construct_UScriptStruct_FMatchmakingParams_Statics::PropPointers, 21,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01025360 (end 0x0102538F)
 	// Original VA: 0x0000000141025360 | File offset: 0x01024960
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMatchmakingParams::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMatchmakingParams_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042B66B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMatchmakingParams_Statics::NewStructOps,
+				"MatchmakingParams",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMatchmakingParams),
+				alignof(FMatchmakingParams),
+				Z_Construct_UScriptStruct_FMatchmakingParams_Statics::PropPointers, 21,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

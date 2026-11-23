@@ -31,25 +31,12 @@ class UScriptStruct* FFortUserCloudRequestPayload::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D3960 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortUserCloudRequestPayload_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortUserCloudRequestPayload>();
 	}
-	// ReturnStructParams: original RVA 0x04345330
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortUserCloudRequestPayload_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortUserCloudRequestPayload",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortUserCloudRequestPayload),
-		alignof(FFortUserCloudRequestPayload),
-		Z_Construct_UScriptStruct_FFortUserCloudRequestPayload_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6110 (end 0x010D613F)
 	// Original VA: 0x00000001410D6110 | File offset: 0x010D5710
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortUserCloudRequestPayload::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortUserCloudRequestPayload_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04345330
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortUserCloudRequestPayload_Statics::NewStructOps,
+				"FortUserCloudRequestPayload",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortUserCloudRequestPayload),
+				alignof(FFortUserCloudRequestPayload),
+				Z_Construct_UScriptStruct_FFortUserCloudRequestPayload_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

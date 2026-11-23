@@ -31,25 +31,12 @@ class UScriptStruct* FFortSafeZoneVolumeDefinition::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109CD60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSafeZoneVolumeDefinition_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSafeZoneVolumeDefinition>();
 	}
-	// ReturnStructParams: original RVA 0x04324F30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSafeZoneVolumeDefinition_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSafeZoneVolumeDefinition",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSafeZoneVolumeDefinition),
-		alignof(FFortSafeZoneVolumeDefinition),
-		Z_Construct_UScriptStruct_FFortSafeZoneVolumeDefinition_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E980 (end 0x0109E9AF)
 	// Original VA: 0x000000014109E980 | File offset: 0x0109DF80
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSafeZoneVolumeDefinition::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSafeZoneVolumeDefinition_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04324F30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSafeZoneVolumeDefinition_Statics::NewStructOps,
+				"FortSafeZoneVolumeDefinition",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSafeZoneVolumeDefinition),
+				alignof(FFortSafeZoneVolumeDefinition),
+				Z_Construct_UScriptStruct_FFortSafeZoneVolumeDefinition_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

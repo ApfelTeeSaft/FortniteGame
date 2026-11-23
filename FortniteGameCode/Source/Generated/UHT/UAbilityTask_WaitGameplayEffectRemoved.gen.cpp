@@ -22,10 +22,7 @@ void UAbilityTask_WaitGameplayEffectRemoved::StaticRegisterNativesUAbilityTask_W
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGameplayEffectRemoved_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0419C2B0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGameplayEffectRemoved_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayEffectRemoved, "OnGameplayEffectRemoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x20, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGameplayEffectRemoved_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054E010 (end 0x0054E03F)
 // Original VA: 0x000000014054E010 | File offset: 0x0054D610
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGamepl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGameplayEffectRemoved_Statics::FuncParams);
+		// FuncParams: original RVA 0x0419C2B0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayEffectRemoved, "OnGameplayEffectRemoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x20, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGameplayEffectRemoved_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGamepl
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_WaitForGameplayEffectRemoved_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0419C3B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_WaitForGameplayEffectRemoved_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayEffectRemoved, "WaitForGameplayEffectRemoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_WaitForGameplayEffectRemoved_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054E040 (end 0x0054E06F)
 // Original VA: 0x000000014054E040 | File offset: 0x0054D640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_WaitForG
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_WaitForGameplayEffectRemoved_Statics::FuncParams);
+		// FuncParams: original RVA 0x0419C3B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_WaitGameplayEffectRemoved, "WaitForGameplayEffectRemoved", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_WaitForGameplayEffectRemoved_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

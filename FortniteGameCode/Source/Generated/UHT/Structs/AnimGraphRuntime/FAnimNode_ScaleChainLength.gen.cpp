@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_ScaleChainLength::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0AD90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_ScaleChainLength_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_ScaleChainLength>();
 	}
-	// ReturnStructParams: original RVA 0x043AF440
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_ScaleChainLength_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_Base,
-		&NewStructOps,
-		"AnimNode_ScaleChainLength",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_ScaleChainLength),
-		alignof(FAnimNode_ScaleChainLength),
-		Z_Construct_UScriptStruct_FAnimNode_ScaleChainLength_Statics::PropPointers, 11,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F130 (end 0x01B0F15F)
 	// Original VA: 0x0000000141B0F130 | File offset: 0x01B0E730
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_ScaleChainLength::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_ScaleChainLength_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AF440
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_Base,
+				&Z_Construct_UScriptStruct_FAnimNode_ScaleChainLength_Statics::NewStructOps,
+				"AnimNode_ScaleChainLength",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_ScaleChainLength),
+				alignof(FAnimNode_ScaleChainLength),
+				Z_Construct_UScriptStruct_FAnimNode_ScaleChainLength_Statics::PropPointers, 11,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

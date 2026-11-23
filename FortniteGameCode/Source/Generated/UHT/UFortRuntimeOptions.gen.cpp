@@ -20,12 +20,6 @@ void UFortRuntimeOptions::StaticRegisterNativesUFortRuntimeOptions()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043246E0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "OnHotfixApplied__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109DE40 (end 0x0109DE6F)
 // Original VA: 0x000000014109DE40 | File offset: 0x0109D440
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +28,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__De
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x043246E0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "OnHotfixApplied__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +38,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__De
 struct Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04324770; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "GetEnableMainMenuSocialButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButton_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E740 (end 0x0109E76F)
 // Original VA: 0x000000014109E740 | File offset: 0x0109DD40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +47,9 @@ UFunction* Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButton_Statics::FuncParams);
+		// FuncParams: original RVA 0x04324770; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "GetEnableMainMenuSocialButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButton_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -62,10 +57,7 @@ UFunction* Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButt
 struct Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043247F0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "GetRuntimeOptions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x8, Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E770 (end 0x0109E79F)
 // Original VA: 0x000000014109E770 | File offset: 0x0109DD70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +66,9 @@ UFunction* Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions_Statics::FuncParams);
+		// FuncParams: original RVA 0x043247F0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "GetRuntimeOptions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x8, Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -82,10 +76,7 @@ UFunction* Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions()
 struct Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04324880; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "SetEnableMainMenuSocialButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButton_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E7A0 (end 0x0109E7CF)
 // Original VA: 0x000000014109E7A0 | File offset: 0x0109DDA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,7 +85,9 @@ UFunction* Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButton_Statics::FuncParams);
+		// FuncParams: original RVA 0x04324880; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRuntimeOptions, "SetEnableMainMenuSocialButton", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButton_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

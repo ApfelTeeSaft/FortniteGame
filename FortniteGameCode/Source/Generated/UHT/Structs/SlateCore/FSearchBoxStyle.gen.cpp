@@ -32,25 +32,12 @@ class UScriptStruct* FSearchBoxStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A270 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSearchBoxStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSearchBoxStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437B4C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSearchBoxStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"SearchBoxStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSearchBoxStyle),
-		alignof(FSearchBoxStyle),
-		Z_Construct_UScriptStruct_FSearchBoxStyle_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D0E0 (end 0x0145D10F)
 	// Original VA: 0x000000014145D0E0 | File offset: 0x0145C6E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FSearchBoxStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSearchBoxStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437B4C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FSearchBoxStyle_Statics::NewStructOps,
+				"SearchBoxStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSearchBoxStyle),
+				alignof(FSearchBoxStyle),
+				Z_Construct_UScriptStruct_FSearchBoxStyle_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

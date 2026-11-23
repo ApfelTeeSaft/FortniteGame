@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_TransitionResult::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CD3D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_TransitionResult_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_TransitionResult>();
 	}
-	// ReturnStructParams: original RVA 0x04418510
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_TransitionResult_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimNode_Base,
-		&NewStructOps,
-		"AnimNode_TransitionResult",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_TransitionResult),
-		alignof(FAnimNode_TransitionResult),
-		Z_Construct_UScriptStruct_FAnimNode_TransitionResult_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CF6E0 (end 0x023CF70F)
 	// Original VA: 0x00000001423CF6E0 | File offset: 0x023CECE0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_TransitionResult::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_TransitionResult_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04418510
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimNode_Base,
+				&Z_Construct_UScriptStruct_FAnimNode_TransitionResult_Statics::NewStructOps,
+				"AnimNode_TransitionResult",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_TransitionResult),
+				alignof(FAnimNode_TransitionResult),
+				Z_Construct_UScriptStruct_FAnimNode_TransitionResult_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

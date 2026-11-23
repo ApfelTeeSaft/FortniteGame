@@ -28,10 +28,7 @@ void UCommonWidgetSwitcher::StaticRegisterNativesUCommonWidgetSwitcher()
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04182AC0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "ActivateNextWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0CD0 (end 0x002D0CFF)
 // Original VA: 0x00000001402D0CD0 | File offset: 0x002D02D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -40,7 +37,9 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182AC0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "ActivateNextWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -48,10 +47,7 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget()
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_ActivatePreviousWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04182B50; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_ActivatePreviousWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "ActivatePreviousWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCommonWidgetSwitcher_ActivatePreviousWidget_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0D00 (end 0x002D0D2F)
 // Original VA: 0x00000001402D0D00 | File offset: 0x002D0300
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -60,17 +56,13 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_ActivatePreviousWidget()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_ActivatePreviousWidget_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182B50; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "ActivatePreviousWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UCommonWidgetSwitcher_ActivatePreviousWidget_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateWidget_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04182B90; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "ActivateWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0D30 (end 0x002D0D5F)
 // Original VA: 0x00000001402D0D30 | File offset: 0x002D0330
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,17 +71,13 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateWidget()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateWidget_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182B90; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "ActivateWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UCommonWidgetSwitcher_DeactivateWidget_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04182BD0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_DeactivateWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "DeactivateWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0D60 (end 0x002D0D8F)
 // Original VA: 0x00000001402D0D60 | File offset: 0x002D0360
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +86,9 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_DeactivateWidget()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_DeactivateWidget_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182BD0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "DeactivateWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +96,7 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_DeactivateWidget()
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04182C50; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactivated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "HandleActiveWidgetDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactivated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0D90 (end 0x002D0DBF)
 // Original VA: 0x00000001402D0D90 | File offset: 0x002D0390
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,7 +105,9 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactiv
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182C50; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "HandleActiveWidgetDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactivated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -126,10 +115,7 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactiv
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04182CE0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "HasWidgets", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0DC0 (end 0x002D0DEF)
 // Original VA: 0x00000001402D0DC0 | File offset: 0x002D03C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -138,7 +124,9 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182CE0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "HasWidgets", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -146,10 +134,7 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets()
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04182DB0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "SetActiveWidget_Advanced", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0E20 (end 0x002D0E4F)
 // Original VA: 0x00000001402D0E20 | File offset: 0x002D0420
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -158,7 +143,9 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182DB0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "SetActiveWidget_Advanced", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -166,10 +153,7 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced(
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Advanced_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04182E70; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Advanced_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "SetActiveWidgetIndex_Advanced", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Advanced_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0DF0 (end 0x002D0E1F)
 // Original VA: 0x00000001402D0DF0 | File offset: 0x002D03F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -178,7 +162,9 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Adva
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Advanced_Statics::FuncParams);
+		// FuncParams: original RVA 0x04182E70; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonWidgetSwitcher, "SetActiveWidgetIndex_Advanced", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Advanced_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

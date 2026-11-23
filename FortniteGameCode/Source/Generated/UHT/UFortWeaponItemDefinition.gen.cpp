@@ -47,10 +47,7 @@ void UFortWeaponItemDefinition::StaticRegisterNativesUFortWeaponItemDefinition()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B250; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetAnalyticTags", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x20, Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9120 (end 0x010D914F)
 // Original VA: 0x00000001410D9120 | File offset: 0x010D8720
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -59,7 +56,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B250; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetAnalyticTags", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x20, Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -67,10 +66,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B2D0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetBaseAlteration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9150 (end 0x010D917F)
 // Original VA: 0x00000001410D9150 | File offset: 0x010D8750
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -79,7 +75,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B2D0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetBaseAlteration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -87,10 +85,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAlteration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B350; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAlteration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetBaseCosmeticAlteration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAlteration_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9180 (end 0x010D91AF)
 // Original VA: 0x00000001410D9180 | File offset: 0x010D8780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -99,7 +94,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAltera
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAlteration_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B350; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetBaseCosmeticAlteration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAlteration_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -107,10 +104,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAltera
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B3D0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetDegradedPercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D91B0 (end 0x010D91DF)
 // Original VA: 0x00000001410D91B0 | File offset: 0x010D87B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -119,7 +113,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B3D0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetDegradedPercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -127,10 +123,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B490; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetDisplayTier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D91E0 (end 0x010D920F)
 // Original VA: 0x00000001410D91E0 | File offset: 0x010D87E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -139,7 +132,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B490; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetDisplayTier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -147,10 +142,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B590; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetDisplayTierAsText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x20, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9210 (end 0x010D923F)
 // Original VA: 0x00000001410D9210 | File offset: 0x010D8810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -159,7 +151,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B590; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetDisplayTierAsText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x20, Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -167,10 +161,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText(
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B660; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetEquippedAbilities", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9240 (end 0x010D926F)
 // Original VA: 0x00000001410D9240 | File offset: 0x010D8840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -179,7 +170,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B660; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetEquippedAbilities", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -187,10 +180,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities(
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B6E0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetHitNotifyDuration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9270 (end 0x010D929F)
 // Original VA: 0x00000001410D9270 | File offset: 0x010D8870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -199,7 +189,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B6E0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetHitNotifyDuration", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -207,10 +199,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration(
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B760; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetHitNotifyImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D92A0 (end 0x010D92CF)
 // Original VA: 0x00000001410D92A0 | File offset: 0x010D88A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -219,7 +208,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B760; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetHitNotifyImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -227,10 +218,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCurve_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B7E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCurve_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetHitNotifyOpacityCurve", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCurve_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D92D0 (end 0x010D92FF)
 // Original VA: 0x00000001410D92D0 | File offset: 0x010D88D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -239,7 +227,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCurve_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B7E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetHitNotifyOpacityCurve", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCurve_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -247,10 +237,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCu
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B860; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetLowAmmoPercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9300 (end 0x010D932F)
 // Original VA: 0x00000001410D9300 | File offset: 0x010D8900
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -259,7 +246,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B860; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetLowAmmoPercentage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -267,10 +256,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage(
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B8E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetMuzzleBlockedImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9330 (end 0x010D935F)
 // Original VA: 0x00000001410D9330 | File offset: 0x010D8930
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -279,7 +265,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B8E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetMuzzleBlockedImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -287,10 +275,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434B970; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetPrimaryFireAbility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9360 (end 0x010D938F)
 // Original VA: 0x00000001410D9360 | File offset: 0x010D8960
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -299,7 +284,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434B970; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetPrimaryFireAbility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -307,10 +294,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BA00; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReloadAbility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9390 (end 0x010D93BF)
 // Original VA: 0x00000001410D9390 | File offset: 0x010D8990
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -319,7 +303,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BA00; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReloadAbility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -327,10 +313,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BA80; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCenterImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D93C0 (end 0x010D93EF)
 // Original VA: 0x00000001410D93C0 | File offset: 0x010D89C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -339,7 +322,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BA80; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCenterImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -347,10 +332,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImageOffset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BB00; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImageOffset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCenterImageOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImageOffset_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D93F0 (end 0x010D941F)
 // Original VA: 0x00000001410D93F0 | File offset: 0x010D89F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -359,7 +341,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImageOffset_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BB00; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCenterImageOffset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImageOffset_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -367,10 +351,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfectAimImage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BB80; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfectAimImage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCenterPerfectAimImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfectAimImage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9420 (end 0x010D944F)
 // Original VA: 0x00000001410D9420 | File offset: 0x010D8A20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -379,7 +360,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfectAimImage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BB80; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCenterPerfectAimImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfectAimImage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -387,10 +370,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfe
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngles_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BC30; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngles_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCornerAngles", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngles_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9450 (end 0x010D947F)
 // Original VA: 0x00000001410D9450 | File offset: 0x010D8A50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -399,7 +379,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngle
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngles_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BC30; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleCornerAngles", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngles_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -407,10 +389,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngle
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BCB0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9480 (end 0x010D94AF)
 // Original VA: 0x00000001410D9480 | File offset: 0x010D8A80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -419,7 +398,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BCB0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetReticleImage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -427,10 +408,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BD40; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetSecondaryFireAbility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbility_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D94B0 (end 0x010D94DF)
 // Original VA: 0x00000001410D94B0 | File offset: 0x010D8AB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -439,7 +417,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbili
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbility_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BD40; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetSecondaryFireAbility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -447,10 +427,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbili
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BDC0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetShortDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D94E0 (end 0x010D950F)
 // Original VA: 0x00000001410D94E0 | File offset: 0x010D8AE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -459,7 +436,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BDC0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetShortDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -467,10 +446,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BE40; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetTriggerType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9510 (end 0x010D953F)
 // Original VA: 0x00000001410D9510 | File offset: 0x010D8B10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -479,7 +455,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BE40; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetTriggerType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -487,10 +465,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BED0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetWeaponActorClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9540 (end 0x010D956F)
 // Original VA: 0x00000001410D9540 | File offset: 0x010D8B40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -499,7 +474,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BED0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetWeaponActorClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -507,10 +484,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BF50; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetWeaponMeshOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9570 (end 0x010D959F)
 // Original VA: 0x00000001410D9570 | File offset: 0x010D8B70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -519,7 +493,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BF50; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetWeaponMeshOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -527,10 +503,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434BFD0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetWeaponStatHandle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D95A0 (end 0x010D95CF)
 // Original VA: 0x00000001410D95A0 | File offset: 0x010D8BA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -539,7 +512,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434BFD0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "GetWeaponStatHandle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -547,10 +522,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle()
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingDuringReload_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434C060; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingDuringReload_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "ShouldAllowTargetingDuringReload", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingDuringReload_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D95D0 (end 0x010D95FF)
 // Original VA: 0x00000001410D95D0 | File offset: 0x010D8BD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -559,7 +531,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingD
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingDuringReload_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434C060; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "ShouldAllowTargetingDuringReload", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingDuringReload_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -567,10 +541,7 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingD
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsReload_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0434C0F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsReload_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "TargetingPreventsReload", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsReload_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9600 (end 0x010D962F)
 // Original VA: 0x00000001410D9600 | File offset: 0x010D8C00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -579,7 +550,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsRelo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsReload_Statics::FuncParams);
+		// FuncParams: original RVA 0x0434C0F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponItemDefinition, "TargetingPreventsReload", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsReload_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

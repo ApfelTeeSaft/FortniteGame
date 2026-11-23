@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03CFD7D8, FClassParams RVA 0x03CFD820.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortPerksWidget();  // RVA 0x028E6C00 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E64D0 (end 0x028E64F2)
 // Original VA: 0x00000001428E64D0 | File offset: 0x028E5AD0
@@ -20,7 +20,7 @@ void UFortPerksWidget::StaticRegisterNativesUFortPerksWidget()
 
 struct Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A7F40 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E78A0 (end 0x028E78CF)
 // Original VA: 0x00000001428E78A0 | File offset: 0x028E6EA0
@@ -30,15 +30,13 @@ UFunction* Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A7F40; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPerksWidget, "OnGeneratePerkTier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x20, Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045A7F80 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E78D0 (end 0x028E78FF)
 // Original VA: 0x00000001428E78D0 | File offset: 0x028E6ED0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -47,7 +45,9 @@ UFunction* Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers_Statics::FuncParams);
+		// FuncParams: original RVA 0x045A7F80; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortPerksWidget, "ProcessPerkTiers", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

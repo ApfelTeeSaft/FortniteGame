@@ -31,25 +31,12 @@ class UScriptStruct* FProfileUpdateNotification::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE8E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FProfileUpdateNotification_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FProfileUpdateNotification>();
 	}
-	// ReturnStructParams: original RVA 0x041C4370
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FProfileUpdateNotification_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
-		nullptr,
-		&NewStructOps,
-		"ProfileUpdateNotification",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FProfileUpdateNotification),
-		alignof(FProfileUpdateNotification),
-		Z_Construct_UScriptStruct_FProfileUpdateNotification_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AFD80 (end 0x007AFDAF)
 	// Original VA: 0x00000001407AFD80 | File offset: 0x007AF380
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FProfileUpdateNotification::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FProfileUpdateNotification_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C4370
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
+				nullptr,
+				&Z_Construct_UScriptStruct_FProfileUpdateNotification_Statics::NewStructOps,
+				"ProfileUpdateNotification",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FProfileUpdateNotification),
+				alignof(FProfileUpdateNotification),
+				Z_Construct_UScriptStruct_FProfileUpdateNotification_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

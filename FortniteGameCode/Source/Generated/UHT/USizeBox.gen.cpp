@@ -31,12 +31,6 @@ void USizeBox::StaticRegisterNativesUSizeBox()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_USizeBox_ClearHeightOverride_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043C6590; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_ClearHeightOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearHeightOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3980 (end 0x01BF39AF)
 // Original VA: 0x0000000141BF3980 | File offset: 0x01BF2F80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -45,17 +39,13 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearHeightOverride()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_ClearHeightOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6590; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearHeightOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USizeBox_ClearMaxAspectRatio_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043C65D0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_ClearMaxAspectRatio_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMaxAspectRatio", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF39B0 (end 0x01BF39DF)
 // Original VA: 0x0000000141BF39B0 | File offset: 0x01BF2FB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -64,17 +54,13 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearMaxAspectRatio()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_ClearMaxAspectRatio_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C65D0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMaxAspectRatio", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USizeBox_ClearMaxDesiredHeight_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043C6610; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_ClearMaxDesiredHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMaxDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF39E0 (end 0x01BF3A0F)
 // Original VA: 0x0000000141BF39E0 | File offset: 0x01BF2FE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -83,17 +69,13 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearMaxDesiredHeight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_ClearMaxDesiredHeight_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6610; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMaxDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USizeBox_ClearMaxDesiredWidth_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043C6650; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_ClearMaxDesiredWidth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMaxDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3A10 (end 0x01BF3A3F)
 // Original VA: 0x0000000141BF3A10 | File offset: 0x01BF3010
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -102,17 +84,13 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearMaxDesiredWidth()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_ClearMaxDesiredWidth_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6650; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMaxDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USizeBox_ClearMinDesiredHeight_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043C6690; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_ClearMinDesiredHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMinDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3A40 (end 0x01BF3A6F)
 // Original VA: 0x0000000141BF3A40 | File offset: 0x01BF3040
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -121,17 +99,13 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearMinDesiredHeight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_ClearMinDesiredHeight_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6690; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMinDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USizeBox_ClearMinDesiredWidth_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043C66D0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_ClearMinDesiredWidth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMinDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3A70 (end 0x01BF3A9F)
 // Original VA: 0x0000000141BF3A70 | File offset: 0x01BF3070
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -140,17 +114,13 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearMinDesiredWidth()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_ClearMinDesiredWidth_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C66D0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearMinDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_USizeBox_ClearWidthOverride_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043C6710; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_ClearWidthOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearWidthOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3AA0 (end 0x01BF3ACF)
 // Original VA: 0x0000000141BF3AA0 | File offset: 0x01BF30A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -159,7 +129,9 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearWidthOverride()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_ClearWidthOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6710; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "ClearWidthOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -167,10 +139,7 @@ UFunction* Z_Construct_UFunction_USizeBox_ClearWidthOverride()
 struct Z_Construct_UFunction_USizeBox_SetHeightOverride_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C6790; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_SetHeightOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetHeightOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetHeightOverride_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3AD0 (end 0x01BF3AFF)
 // Original VA: 0x0000000141BF3AD0 | File offset: 0x01BF30D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -179,7 +148,9 @@ UFunction* Z_Construct_UFunction_USizeBox_SetHeightOverride()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_SetHeightOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6790; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetHeightOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetHeightOverride_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -187,10 +158,7 @@ UFunction* Z_Construct_UFunction_USizeBox_SetHeightOverride()
 struct Z_Construct_UFunction_USizeBox_SetMaxAspectRatio_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C6810; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_SetMaxAspectRatio_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMaxAspectRatio", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMaxAspectRatio_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3B00 (end 0x01BF3B2F)
 // Original VA: 0x0000000141BF3B00 | File offset: 0x01BF3100
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -199,7 +167,9 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMaxAspectRatio()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_SetMaxAspectRatio_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6810; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMaxAspectRatio", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMaxAspectRatio_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -207,10 +177,7 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMaxAspectRatio()
 struct Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C6890; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMaxDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3B30 (end 0x01BF3B5F)
 // Original VA: 0x0000000141BF3B30 | File offset: 0x01BF3130
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -219,7 +186,9 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6890; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMaxDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -227,10 +196,7 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight()
 struct Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C6910; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMaxDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3B60 (end 0x01BF3B8F)
 // Original VA: 0x0000000141BF3B60 | File offset: 0x01BF3160
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -239,7 +205,9 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6910; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMaxDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -247,10 +215,7 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth()
 struct Z_Construct_UFunction_USizeBox_SetMinDesiredHeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C6990; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_SetMinDesiredHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMinDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMinDesiredHeight_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3B90 (end 0x01BF3BBF)
 // Original VA: 0x0000000141BF3B90 | File offset: 0x01BF3190
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -259,7 +224,9 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMinDesiredHeight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_SetMinDesiredHeight_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6990; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMinDesiredHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMinDesiredHeight_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -267,10 +234,7 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMinDesiredHeight()
 struct Z_Construct_UFunction_USizeBox_SetMinDesiredWidth_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C6A10; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_SetMinDesiredWidth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMinDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMinDesiredWidth_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3BC0 (end 0x01BF3BEF)
 // Original VA: 0x0000000141BF3BC0 | File offset: 0x01BF31C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -279,7 +243,9 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMinDesiredWidth()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_SetMinDesiredWidth_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6A10; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetMinDesiredWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetMinDesiredWidth_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -287,10 +253,7 @@ UFunction* Z_Construct_UFunction_USizeBox_SetMinDesiredWidth()
 struct Z_Construct_UFunction_USizeBox_SetWidthOverride_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043C6A90; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USizeBox_SetWidthOverride_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetWidthOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetWidthOverride_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3BF0 (end 0x01BF3C1F)
 // Original VA: 0x0000000141BF3BF0 | File offset: 0x01BF31F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -299,7 +262,9 @@ UFunction* Z_Construct_UFunction_USizeBox_SetWidthOverride()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBox_SetWidthOverride_Statics::FuncParams);
+		// FuncParams: original RVA 0x043C6A90; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_USizeBox, "SetWidthOverride", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_USizeBox_SetWidthOverride_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FLevelViewportInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F02E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLevelViewportInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelViewportInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04533670
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelViewportInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LevelViewportInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FLevelViewportInfo),
-		alignof(FLevelViewportInfo),
-		Z_Construct_UScriptStruct_FLevelViewportInfo_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1270 (end 0x024F129F)
 	// Original VA: 0x00000001424F1270 | File offset: 0x024F0870
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLevelViewportInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLevelViewportInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04533670
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLevelViewportInfo_Statics::NewStructOps,
+				"LevelViewportInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FLevelViewportInfo),
+				alignof(FLevelViewportInfo),
+				Z_Construct_UScriptStruct_FLevelViewportInfo_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

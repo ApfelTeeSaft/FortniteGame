@@ -31,25 +31,12 @@ class UScriptStruct* FPredictProjectilePathResult::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241E980 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPredictProjectilePathResult_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPredictProjectilePathResult>();
 	}
-	// ReturnStructParams: original RVA 0x04463970
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPredictProjectilePathResult_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"PredictProjectilePathResult",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FPredictProjectilePathResult),
-		alignof(FPredictProjectilePathResult),
-		Z_Construct_UScriptStruct_FPredictProjectilePathResult_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02420820 (end 0x0242084F)
 	// Original VA: 0x0000000142420820 | File offset: 0x0241FE20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPredictProjectilePathResult::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPredictProjectilePathResult_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04463970
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPredictProjectilePathResult_Statics::NewStructOps,
+				"PredictProjectilePathResult",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FPredictProjectilePathResult),
+				alignof(FPredictProjectilePathResult),
+				Z_Construct_UScriptStruct_FPredictProjectilePathResult_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

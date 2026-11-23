@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayEffectModifierMagnitude::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00562A70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayEffectModifierMagnitude_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayEffectModifierMagnitude>();
 	}
-	// ReturnStructParams: original RVA 0x041A8870
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayEffectModifierMagnitude_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayEffectModifierMagnitude",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameplayEffectModifierMagnitude),
-		alignof(FGameplayEffectModifierMagnitude),
-		Z_Construct_UScriptStruct_FGameplayEffectModifierMagnitude_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564E90 (end 0x00564EBF)
 	// Original VA: 0x0000000140564E90 | File offset: 0x00564490
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayEffectModifierMagnitude::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayEffectModifierMagnitude_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041A8870
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayEffectModifierMagnitude_Statics::NewStructOps,
+				"GameplayEffectModifierMagnitude",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameplayEffectModifierMagnitude),
+				alignof(FGameplayEffectModifierMagnitude),
+				Z_Construct_UScriptStruct_FGameplayEffectModifierMagnitude_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

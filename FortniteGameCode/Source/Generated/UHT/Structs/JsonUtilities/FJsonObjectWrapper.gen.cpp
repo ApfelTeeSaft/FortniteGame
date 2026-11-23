@@ -31,25 +31,12 @@ class UScriptStruct* FJsonObjectWrapper::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D45C70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FJsonObjectWrapper_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FJsonObjectWrapper>();
 	}
-	// ReturnStructParams: original RVA 0x043FD8C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FJsonObjectWrapper_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_JsonUtilities,
-		nullptr,
-		&NewStructOps,
-		"JsonObjectWrapper",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FJsonObjectWrapper),
-		alignof(FJsonObjectWrapper),
-		Z_Construct_UScriptStruct_FJsonObjectWrapper_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D45DA0 (end 0x01D45DCF)
 	// Original VA: 0x0000000141D45DA0 | File offset: 0x01D453A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FJsonObjectWrapper::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FJsonObjectWrapper_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FD8C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_JsonUtilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FJsonObjectWrapper_Statics::NewStructOps,
+				"JsonObjectWrapper",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FJsonObjectWrapper),
+				alignof(FJsonObjectWrapper),
+				Z_Construct_UScriptStruct_FJsonObjectWrapper_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

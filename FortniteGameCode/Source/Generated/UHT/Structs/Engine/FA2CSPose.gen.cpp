@@ -32,25 +32,12 @@ class UScriptStruct* FA2CSPose::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CD590 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FA2CSPose_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FA2CSPose>();
 	}
-	// ReturnStructParams: original RVA 0x04412D70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FA2CSPose_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FA2Pose,
-		&NewStructOps,
-		"A2CSPose",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FA2CSPose),
-		alignof(FA2CSPose),
-		Z_Construct_UScriptStruct_FA2CSPose_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CF440 (end 0x023CF46F)
 	// Original VA: 0x00000001423CF440 | File offset: 0x023CEA40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FA2CSPose::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FA2CSPose_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04412D70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FA2Pose,
+				&Z_Construct_UScriptStruct_FA2CSPose_Statics::NewStructOps,
+				"A2CSPose",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FA2CSPose),
+				alignof(FA2CSPose),
+				Z_Construct_UScriptStruct_FA2CSPose_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

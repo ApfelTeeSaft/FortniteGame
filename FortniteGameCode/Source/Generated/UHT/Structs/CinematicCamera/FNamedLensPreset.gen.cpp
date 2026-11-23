@@ -31,25 +31,12 @@ class UScriptStruct* FNamedLensPreset::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0AB40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FNamedLensPreset_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNamedLensPreset>();
 	}
-	// ReturnStructParams: original RVA 0x043DAFE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNamedLensPreset_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
-		nullptr,
-		&NewStructOps,
-		"NamedLensPreset",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FNamedLensPreset),
-		alignof(FNamedLensPreset),
-		Z_Construct_UScriptStruct_FNamedLensPreset_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0B360 (end 0x01C0B38F)
 	// Original VA: 0x0000000141C0B360 | File offset: 0x01C0A960
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FNamedLensPreset::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FNamedLensPreset_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043DAFE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
+				nullptr,
+				&Z_Construct_UScriptStruct_FNamedLensPreset_Statics::NewStructOps,
+				"NamedLensPreset",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FNamedLensPreset),
+				alignof(FNamedLensPreset),
+				Z_Construct_UScriptStruct_FNamedLensPreset_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FGameplayEffectRemovalInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00562A30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameplayEffectRemovalInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameplayEffectRemovalInfo>();
 	}
-	// ReturnStructParams: original RVA 0x041AA8C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayEffectRemovalInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
-		nullptr,
-		&NewStructOps,
-		"GameplayEffectRemovalInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGameplayEffectRemovalInfo),
-		alignof(FGameplayEffectRemovalInfo),
-		Z_Construct_UScriptStruct_FGameplayEffectRemovalInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564EF0 (end 0x00564F1F)
 	// Original VA: 0x0000000140564EF0 | File offset: 0x005644F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGameplayEffectRemovalInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameplayEffectRemovalInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041AA8C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameplayAbilities,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGameplayEffectRemovalInfo_Statics::NewStructOps,
+				"GameplayEffectRemovalInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGameplayEffectRemovalInfo),
+				alignof(FGameplayEffectRemovalInfo),
+				Z_Construct_UScriptStruct_FGameplayEffectRemovalInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

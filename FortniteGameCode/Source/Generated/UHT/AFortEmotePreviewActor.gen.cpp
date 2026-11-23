@@ -21,10 +21,7 @@ void AFortEmotePreviewActor::StaticRegisterNativesAFortEmotePreviewActor()
 struct Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0426AE50; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortEmotePreviewActor, "GetAthenaSlottedCharacter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x28, Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacter_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7B50 (end 0x00FD7B7F)
 // Original VA: 0x0000000140FD7B50 | File offset: 0x00FD7150
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacte
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacter_Statics::FuncParams);
+		// FuncParams: original RVA 0x0426AE50; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortEmotePreviewActor, "GetAthenaSlottedCharacter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x28, Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacter_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacte
 struct Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0426AED0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortEmotePreviewActor, "PreviewEmote", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x8, Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7B80 (end 0x00FD7BAF)
 // Original VA: 0x0000000140FD7B80 | File offset: 0x00FD7180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,7 +49,9 @@ UFunction* Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote_Statics::FuncParams);
+		// FuncParams: original RVA 0x0426AED0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortEmotePreviewActor, "PreviewEmote", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x8, Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

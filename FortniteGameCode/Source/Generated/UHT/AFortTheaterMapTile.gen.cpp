@@ -37,10 +37,7 @@ void AFortTheaterMapTile::StaticRegisterNativesAFortTheaterMapTile()
 struct Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04330DA0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "DoesTileAllowQuickplay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE360 (end 0x010BE38F)
 // Original VA: 0x00000001410BE360 | File offset: 0x010BD960
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -49,7 +46,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay_Statics::FuncParams);
+		// FuncParams: original RVA 0x04330DA0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "DoesTileAllowQuickplay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -57,10 +56,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay()
 struct Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04330E20; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "GetMissionAlertCategoryName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE390 (end 0x010BE3BF)
 // Original VA: 0x00000001410BE390 | File offset: 0x010BD990
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -69,7 +65,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName_Statics::FuncParams);
+		// FuncParams: original RVA 0x04330E20; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "GetMissionAlertCategoryName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -77,10 +75,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName
 struct Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04330EA0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "GetMissionAlertVisualTags", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x20, Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE3C0 (end 0x010BE3EF)
 // Original VA: 0x00000001410BE3C0 | File offset: 0x010BD9C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -89,7 +84,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags_Statics::FuncParams);
+		// FuncParams: original RVA 0x04330EA0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "GetMissionAlertVisualTags", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x20, Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -97,10 +94,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags()
 struct Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04330F20; StructureSize 0x98 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "GetZoneDifficulty", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x98, Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE3F0 (end 0x010BE41F)
 // Original VA: 0x00000001410BE3F0 | File offset: 0x010BD9F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -109,7 +103,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty_Statics::FuncParams);
+		// FuncParams: original RVA 0x04330F20; StructureSize 0x98 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "GetZoneDifficulty", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x98, Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -117,10 +113,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty()
 struct Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04330FB0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "HasValidMissionData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE420 (end 0x010BE44F)
 // Original VA: 0x00000001410BE420 | File offset: 0x010BDA20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -129,7 +122,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData_Statics::FuncParams);
+		// FuncParams: original RVA 0x04330FB0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "HasValidMissionData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -137,10 +132,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData()
 struct Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04331040; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsMissionAlertTile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE450 (end 0x010BE47F)
 // Original VA: 0x00000001410BE450 | File offset: 0x010BDA50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -149,7 +141,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331040; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsMissionAlertTile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -157,10 +151,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile()
 struct Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043310D0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE480 (end 0x010BE4AF)
 // Original VA: 0x00000001410BE480 | File offset: 0x010BDA80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -169,7 +160,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden_Statics::FuncParams);
+		// FuncParams: original RVA 0x043310D0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -177,10 +170,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden()
 struct Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04331160; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileLocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE4B0 (end 0x010BE4DF)
 // Original VA: 0x00000001410BE4B0 | File offset: 0x010BDAB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -189,7 +179,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331160; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileLocked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -197,10 +189,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked()
 struct Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043311F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTilePlayable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE4E0 (end 0x010BE50F)
 // Original VA: 0x00000001410BE4E0 | File offset: 0x010BDAE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -209,7 +198,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable_Statics::FuncParams);
+		// FuncParams: original RVA 0x043311F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTilePlayable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -217,10 +208,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable()
 struct Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04331280; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileQuestRecommended", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE510 (end 0x010BE53F)
 // Original VA: 0x00000001410BE510 | File offset: 0x010BDB10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -229,7 +217,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331280; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileQuestRecommended", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -237,10 +227,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended()
 struct Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04331310; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileSelectable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE540 (end 0x010BE56F)
 // Original VA: 0x00000001410BE540 | File offset: 0x010BDB40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -249,7 +236,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331310; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileSelectable", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -257,10 +246,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable()
 struct Z_Construct_UFunction_AFortTheaterMapTile_IsTileValidForMarkedQuest_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043313E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_IsTileValidForMarkedQuest_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileValidForMarkedQuest", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_AFortTheaterMapTile_IsTileValidForMarkedQuest_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE570 (end 0x010BE59F)
 // Original VA: 0x00000001410BE570 | File offset: 0x010BDB70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -269,17 +255,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_IsTileValidForMarkedQuest()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_IsTileValidForMarkedQuest_Statics::FuncParams);
+		// FuncParams: original RVA 0x043313E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "IsTileValidForMarkedQuest", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54420401, 0x10, Z_Construct_UFunction_AFortTheaterMapTile_IsTileValidForMarkedQuest_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnClientDeselect_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04331420; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnClientDeselect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnClientDeselect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE5A0 (end 0x010BE5CF)
 // Original VA: 0x00000001410BE5A0 | File offset: 0x010BDBA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -288,17 +270,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnClientDeselect()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnClientDeselect_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331420; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnClientDeselect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnClientSelect_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04331460; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnClientSelect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnClientSelect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE5D0 (end 0x010BE5FF)
 // Original VA: 0x00000001410BE5D0 | File offset: 0x010BDBD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -307,17 +285,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnClientSelect()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnClientSelect_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331460; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnClientSelect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnDefocus_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043314A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnDefocus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnDefocus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE600 (end 0x010BE62F)
 // Original VA: 0x00000001410BE600 | File offset: 0x010BDC00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -326,7 +300,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnDefocus()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnDefocus_Statics::FuncParams);
+		// FuncParams: original RVA 0x043314A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnDefocus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -334,10 +310,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnDefocus()
 struct Z_Construct_UFunction_AFortTheaterMapTile_OnDeselectWrapper_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04331530; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnDeselectWrapper_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnDeselectWrapper", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_OnDeselectWrapper_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE630 (end 0x010BE65F)
 // Original VA: 0x00000001410BE630 | File offset: 0x010BDC30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -346,17 +319,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnDeselectWrapper()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnDeselectWrapper_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331530; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnDeselectWrapper", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_OnDeselectWrapper_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnDisableGoToPrompt_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04331570; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnDisableGoToPrompt_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnDisableGoToPrompt", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE660 (end 0x010BE68F)
 // Original VA: 0x00000001410BE660 | File offset: 0x010BDC60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -365,17 +334,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnDisableGoToPrompt()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnDisableGoToPrompt_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331570; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnDisableGoToPrompt", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnEnableGoToPrompt_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043315B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnEnableGoToPrompt_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnEnableGoToPrompt", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE690 (end 0x010BE6BF)
 // Original VA: 0x00000001410BE690 | File offset: 0x010BDC90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -384,17 +349,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnEnableGoToPrompt()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnEnableGoToPrompt_Statics::FuncParams);
+		// FuncParams: original RVA 0x043315B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnEnableGoToPrompt", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnFocus_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043315F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnFocus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnFocus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE6C0 (end 0x010BE6EF)
 // Original VA: 0x00000001410BE6C0 | File offset: 0x010BDCC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -403,17 +364,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnFocus()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnFocus_Statics::FuncParams);
+		// FuncParams: original RVA 0x043315F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnFocus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnHostDeselect_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04331630; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnHostDeselect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnHostDeselect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE6F0 (end 0x010BE71F)
 // Original VA: 0x00000001410BE6F0 | File offset: 0x010BDCF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -422,17 +379,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnHostDeselect()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnHostDeselect_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331630; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnHostDeselect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnHostSelect_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04331670; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnHostSelect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnHostSelect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE720 (end 0x010BE74F)
 // Original VA: 0x00000001410BE720 | File offset: 0x010BDD20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -441,17 +394,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnHostSelect()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnHostSelect_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331670; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnHostSelect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnInitializeTile_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043316B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnInitializeTile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnInitializeTile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE750 (end 0x010BE77F)
 // Original VA: 0x00000001410BE750 | File offset: 0x010BDD50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -460,17 +409,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnInitializeTile()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnInitializeTile_Statics::FuncParams);
+		// FuncParams: original RVA 0x043316B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnInitializeTile", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnMarkedQuestChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043316F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnMarkedQuestChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMarkedQuestChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE780 (end 0x010BE7AF)
 // Original VA: 0x00000001410BE780 | File offset: 0x010BDD80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -479,17 +424,13 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnMarkedQuestChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnMarkedQuestChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x043316F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMarkedQuestChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTheaterMapTile_OnMissionDataUpdated_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04331730; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnMissionDataUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMissionDataUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE7B0 (end 0x010BE7DF)
 // Original VA: 0x00000001410BE7B0 | File offset: 0x010BDDB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -498,7 +439,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnMissionDataUpdated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnMissionDataUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331730; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMissionDataUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -506,10 +449,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnMissionDataUpdated()
 struct Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043317B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMouseOverBegin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE7E0 (end 0x010BE80F)
 // Original VA: 0x00000001410BE7E0 | File offset: 0x010BDDE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -518,7 +458,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin_Statics::FuncParams);
+		// FuncParams: original RVA 0x043317B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMouseOverBegin", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -526,10 +468,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin()
 struct Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04331830; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMouseOverEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE810 (end 0x010BE83F)
 // Original VA: 0x00000001410BE810 | File offset: 0x010BDE10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -538,7 +477,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331830; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnMouseOverEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -546,10 +487,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd()
 struct Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043318C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnSelectWrapper", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE840 (end 0x010BE86F)
 // Original VA: 0x00000001410BE840 | File offset: 0x010BDE40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -558,7 +496,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper_Statics::FuncParams);
+		// FuncParams: original RVA 0x043318C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnSelectWrapper", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x1, Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -566,10 +506,7 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper()
 struct Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04331980; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnTileClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x20, Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE870 (end 0x010BE89F)
 // Original VA: 0x00000001410BE870 | File offset: 0x010BDE70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -578,7 +515,9 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x04331980; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTheaterMapTile, "OnTileClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x20, Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

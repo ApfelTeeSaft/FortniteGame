@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03C76D10, FClassParams RVA 0x03C76D40.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardWidget();  // RVA 0x028947E0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894340 (end 0x02894362)
 // Original VA: 0x0000000142894340 | File offset: 0x02893940
@@ -20,7 +20,7 @@ void UFortCollectionBookProgressionRewardWidget::StaticRegisterNativesUFortColle
 
 struct Z_Construct_UFunction_UFortCollectionBookProgressionRewardWidget_SetAssociatedLevel_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0455FAD0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02895B20 (end 0x02895B4F)
 // Original VA: 0x0000000142895B20 | File offset: 0x02895120
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressionRewardWidget_SetA
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookProgressionRewardWidget_SetAssociatedLevel_Statics::FuncParams);
+		// FuncParams: original RVA 0x0455FAD0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookProgressionRewardWidget, "SetAssociatedLevel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortCollectionBookProgressionRewardWidget_SetAssociatedLevel_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

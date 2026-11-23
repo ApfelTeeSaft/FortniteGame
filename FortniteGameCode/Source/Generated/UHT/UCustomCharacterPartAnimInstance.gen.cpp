@@ -24,10 +24,7 @@ void UCustomCharacterPartAnimInstance::StaticRegisterNativesUCustomCharacterPart
 struct Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedPlayerPawn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420E970; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedPlayerPawn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetAssociatedPlayerPawn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedPlayerPawn_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F794B0 (end 0x00F794DF)
 // Original VA: 0x0000000140F794B0 | File offset: 0x00F78AB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedPlayerPawn_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420E970; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetAssociatedPlayerPawn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x8, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedPlayerPawn_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedP
 struct Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPartType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420E9F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPartType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetCharacterPartType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x1, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPartType_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F794E0 (end 0x00F7950F)
 // Original VA: 0x0000000140F794E0 | File offset: 0x00F78AE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPartType_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420E9F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetCharacterPartType", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x1, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPartType_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPa
 struct Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkeletalMeshComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420EA70; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkeletalMeshComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetOwnerSkeletalMeshComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkeletalMeshComponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79510 (end 0x00F7953F)
 // Original VA: 0x0000000140F79510 | File offset: 0x00F78B10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkelet
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkeletalMeshComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420EA70; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetOwnerSkeletalMeshComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkeletalMeshComponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkelet
 struct Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeletalMeshComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420EAF0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeletalMeshComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetPartSkeletalMeshComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeletalMeshComponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79540 (end 0x00F7956F)
 // Original VA: 0x0000000140F79540 | File offset: 0x00F78B40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeleta
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeletalMeshComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420EAF0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "GetPartSkeletalMeshComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeletalMeshComponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +100,7 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeleta
 struct Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420EC00; StructureSize 0x3 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "OnDayPhaseChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x3, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChanged_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79570 (end 0x00F7959F)
 // Original VA: 0x0000000140F79570 | File offset: 0x00F78B70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +109,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChan
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420EC00; StructureSize 0x3 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "OnDayPhaseChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x3, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChanged_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +119,7 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChan
 struct Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnPlayMontageFromGameplayTagQuery_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0420ECC0; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnPlayMontageFromGameplayTagQuery_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "OnPlayMontageFromGameplayTagQuery", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x50, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnPlayMontageFromGameplayTagQuery_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F795A0 (end 0x00F795CF)
 // Original VA: 0x0000000140F795A0 | File offset: 0x00F78BA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,17 +128,13 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnPlayMontageF
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnPlayMontageFromGameplayTagQuery_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420ECC0; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "OnPlayMontageFromGameplayTagQuery", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x50, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnPlayMontageFromGameplayTagQuery_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UCustomCharacterPartAnimInstance_PreDestruction_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0420ED00; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomCharacterPartAnimInstance_PreDestruction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "PreDestruction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F795D0 (end 0x00F795FF)
 // Original VA: 0x0000000140F795D0 | File offset: 0x00F78BD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -155,7 +143,9 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_PreDestruction
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCustomCharacterPartAnimInstance_PreDestruction_Statics::FuncParams);
+		// FuncParams: original RVA 0x0420ED00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCustomCharacterPartAnimInstance, "PreDestruction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

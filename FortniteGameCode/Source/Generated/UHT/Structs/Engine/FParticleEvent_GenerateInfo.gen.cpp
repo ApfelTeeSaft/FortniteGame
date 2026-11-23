@@ -31,25 +31,12 @@ class UScriptStruct* FParticleEvent_GenerateInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02499980 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FParticleEvent_GenerateInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FParticleEvent_GenerateInfo>();
 	}
-	// ReturnStructParams: original RVA 0x044D48D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FParticleEvent_GenerateInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ParticleEvent_GenerateInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FParticleEvent_GenerateInfo),
-		alignof(FParticleEvent_GenerateInfo),
-		Z_Construct_UScriptStruct_FParticleEvent_GenerateInfo_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249AB20 (end 0x0249AB4F)
 	// Original VA: 0x000000014249AB20 | File offset: 0x0249A120
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FParticleEvent_GenerateInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FParticleEvent_GenerateInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044D48D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FParticleEvent_GenerateInfo_Statics::NewStructOps,
+				"ParticleEvent_GenerateInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FParticleEvent_GenerateInfo),
+				alignof(FParticleEvent_GenerateInfo),
+				Z_Construct_UScriptStruct_FParticleEvent_GenerateInfo_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

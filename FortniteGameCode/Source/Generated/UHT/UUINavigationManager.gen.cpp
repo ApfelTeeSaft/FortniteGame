@@ -23,12 +23,6 @@ void UUINavigationManager::StaticRegisterNativesUUINavigationManager()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UUINavigationManager_ClearStack_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045CD370; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUINavigationManager_ClearStack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "ClearStack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02913800 (end 0x0291382F)
 // Original VA: 0x0000000142913800 | File offset: 0x02912E00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,7 +31,9 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_ClearStack()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUINavigationManager_ClearStack_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CD370; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "ClearStack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -45,10 +41,7 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_ClearStack()
 struct Z_Construct_UFunction_UUINavigationManager_GetDisplayName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045CD420; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUINavigationManager_GetDisplayName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "GetDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x20, Z_Construct_UFunction_UUINavigationManager_GetDisplayName_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02913830 (end 0x0291385F)
 // Original VA: 0x0000000142913830 | File offset: 0x02912E30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,7 +50,9 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_GetDisplayName()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUINavigationManager_GetDisplayName_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CD420; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "GetDisplayName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x20, Z_Construct_UFunction_UUINavigationManager_GetDisplayName_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -65,10 +60,7 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_GetDisplayName()
 struct Z_Construct_UFunction_UUINavigationManager_GetStackSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045CD4A0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUINavigationManager_GetStackSize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "GetStackSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUINavigationManager_GetStackSize_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02913860 (end 0x0291388F)
 // Original VA: 0x0000000142913860 | File offset: 0x02912E60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,7 +69,9 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_GetStackSize()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUINavigationManager_GetStackSize_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CD4A0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "GetStackSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUINavigationManager_GetStackSize_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -85,10 +79,7 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_GetStackSize()
 struct Z_Construct_UFunction_UUINavigationManager_NavigationToIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045CD520; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUINavigationManager_NavigationToIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "NavigationToIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUINavigationManager_NavigationToIndex_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02913890 (end 0x029138BF)
 // Original VA: 0x0000000142913890 | File offset: 0x02912E90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -97,17 +88,13 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_NavigationToIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUINavigationManager_NavigationToIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CD520; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "NavigationToIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUINavigationManager_NavigationToIndex_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UUINavigationManager_PopNavigation_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045CD560; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUINavigationManager_PopNavigation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "PopNavigation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029138C0 (end 0x029138EF)
 // Original VA: 0x00000001429138C0 | File offset: 0x02912EC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +103,9 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_PopNavigation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUINavigationManager_PopNavigation_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CD560; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "PopNavigation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +113,7 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_PopNavigation()
 struct Z_Construct_UFunction_UUINavigationManager_PushNavigation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045CD710; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUINavigationManager_PushNavigation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "PushNavigation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x50, Z_Construct_UFunction_UUINavigationManager_PushNavigation_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029138F0 (end 0x0291391F)
 // Original VA: 0x00000001429138F0 | File offset: 0x02912EF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +122,9 @@ UFunction* Z_Construct_UFunction_UUINavigationManager_PushNavigation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUINavigationManager_PushNavigation_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CD710; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUINavigationManager, "PushNavigation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x50, Z_Construct_UFunction_UUINavigationManager_PushNavigation_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

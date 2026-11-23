@@ -31,25 +31,12 @@ class UScriptStruct* FNamedFilmbackPreset::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0AB00 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FNamedFilmbackPreset_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNamedFilmbackPreset>();
 	}
-	// ReturnStructParams: original RVA 0x043DB210
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNamedFilmbackPreset_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
-		nullptr,
-		&NewStructOps,
-		"NamedFilmbackPreset",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FNamedFilmbackPreset),
-		alignof(FNamedFilmbackPreset),
-		Z_Construct_UScriptStruct_FNamedFilmbackPreset_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0B330 (end 0x01C0B35F)
 	// Original VA: 0x0000000141C0B330 | File offset: 0x01C0A930
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FNamedFilmbackPreset::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FNamedFilmbackPreset_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043DB210
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_CinematicCamera,
+				nullptr,
+				&Z_Construct_UScriptStruct_FNamedFilmbackPreset_Statics::NewStructOps,
+				"NamedFilmbackPreset",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FNamedFilmbackPreset),
+				alignof(FNamedFilmbackPreset),
+				Z_Construct_UScriptStruct_FNamedFilmbackPreset_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

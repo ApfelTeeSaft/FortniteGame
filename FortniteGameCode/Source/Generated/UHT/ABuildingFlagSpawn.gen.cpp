@@ -24,10 +24,7 @@ void ABuildingFlagSpawn::StaticRegisterNativesABuildingFlagSpawn()
 struct Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041FC340; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "IsSpawnedObjectAwayFromBase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67520 (end 0x00F6754F)
 // Original VA: 0x0000000140F67520 | File offset: 0x00F66B20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,17 +33,13 @@ UFunction* Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics::FuncParams);
+		// FuncParams: original RVA 0x041FC340; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "IsSpawnedObjectAwayFromBase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectAttachedEvent_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041FC380; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectAttachedEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "OnCarriedObjectAttachedEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67550 (end 0x00F6757F)
 // Original VA: 0x0000000140F67550 | File offset: 0x00F66B50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,17 +48,13 @@ UFunction* Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectAttachedEvent
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectAttachedEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x041FC380; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "OnCarriedObjectAttachedEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectDetachedEvent_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041FC3C0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectDetachedEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "OnCarriedObjectDetachedEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67580 (end 0x00F675AF)
 // Original VA: 0x0000000140F67580 | File offset: 0x00F66B80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,17 +63,13 @@ UFunction* Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectDetachedEvent
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectDetachedEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x041FC3C0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "OnCarriedObjectDetachedEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_ABuildingFlagSpawn_SpawnCarriedObject_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041FC400; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuildingFlagSpawn_SpawnCarriedObject_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "SpawnCarriedObject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F675B0 (end 0x00F675DF)
 // Original VA: 0x0000000140F675B0 | File offset: 0x00F66BB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +78,9 @@ UFunction* Z_Construct_UFunction_ABuildingFlagSpawn_SpawnCarriedObject()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuildingFlagSpawn_SpawnCarriedObject_Statics::FuncParams);
+		// FuncParams: original RVA 0x041FC400; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuildingFlagSpawn, "SpawnCarriedObject", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

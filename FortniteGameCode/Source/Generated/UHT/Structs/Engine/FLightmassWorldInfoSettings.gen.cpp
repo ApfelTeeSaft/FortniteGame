@@ -31,25 +31,12 @@ class UScriptStruct* FLightmassWorldInfoSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F02A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLightmassWorldInfoSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLightmassWorldInfoSettings>();
 	}
-	// ReturnStructParams: original RVA 0x04534CA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLightmassWorldInfoSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LightmassWorldInfoSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLightmassWorldInfoSettings),
-		alignof(FLightmassWorldInfoSettings),
-		Z_Construct_UScriptStruct_FLightmassWorldInfoSettings_Statics::PropPointers, 24,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F12A0 (end 0x024F12CF)
 	// Original VA: 0x00000001424F12A0 | File offset: 0x024F08A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLightmassWorldInfoSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLightmassWorldInfoSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04534CA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLightmassWorldInfoSettings_Statics::NewStructOps,
+				"LightmassWorldInfoSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLightmassWorldInfoSettings),
+				alignof(FLightmassWorldInfoSettings),
+				Z_Construct_UScriptStruct_FLightmassWorldInfoSettings_Statics::PropPointers, 24,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

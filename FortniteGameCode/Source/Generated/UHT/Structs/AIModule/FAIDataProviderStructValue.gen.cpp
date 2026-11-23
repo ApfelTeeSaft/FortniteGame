@@ -31,25 +31,12 @@ class UScriptStruct* FAIDataProviderStructValue::StaticStruct()
 	struct Z_Construct_UScriptStruct_FAIDataProviderStructValue_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1AA80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAIDataProviderStructValue_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAIDataProviderStructValue>();
 	}
-	// ReturnStructParams: original RVA 0x043E6F90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAIDataProviderStructValue_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
-		Z_Construct_UScriptStruct_FAIDataProviderValue,
-		&NewStructOps,
-		"AIDataProviderStructValue",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000205),
-		sizeof(FAIDataProviderStructValue),
-		alignof(FAIDataProviderStructValue),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1CD30 (end 0x01D1CD5F)
 	// Original VA: 0x0000000141D1CD30 | File offset: 0x01D1C330
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAIDataProviderStructValue::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAIDataProviderStructValue_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043E6F90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
+				Z_Construct_UScriptStruct_FAIDataProviderValue,
+				&Z_Construct_UScriptStruct_FAIDataProviderStructValue_Statics::NewStructOps,
+				"AIDataProviderStructValue",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000205),
+				sizeof(FAIDataProviderStructValue),
+				alignof(FAIDataProviderStructValue),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

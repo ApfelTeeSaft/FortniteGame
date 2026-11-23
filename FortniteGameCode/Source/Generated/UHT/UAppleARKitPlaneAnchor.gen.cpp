@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UAppleARKitPlaneAnchor();  // RVA 0x00806430 (consens
 struct Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C89F0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAppleARKitPlaneAnchor, "GetCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00806580 (end 0x008065AF)
 // Original VA: 0x0000000140806580 | File offset: 0x00805B80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C89F0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAppleARKitPlaneAnchor, "GetCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter()
 struct Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C8A70; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAppleARKitPlaneAnchor, "GetExtent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x008065B0 (end 0x008065DF)
 // Original VA: 0x00000001408065B0 | File offset: 0x00805BB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C8A70; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAppleARKitPlaneAnchor, "GetExtent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +47,7 @@ UFunction* Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent()
 struct Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041C8AF0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAppleARKitPlaneAnchor, "GetTransformToCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x30, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x008065E0 (end 0x0080660F)
 // Original VA: 0x00000001408065E0 | File offset: 0x00805BE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +56,9 @@ UFunction* Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter_Statics::FuncParams);
+		// FuncParams: original RVA 0x041C8AF0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAppleARKitPlaneAnchor, "GetTransformToCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0x30, Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

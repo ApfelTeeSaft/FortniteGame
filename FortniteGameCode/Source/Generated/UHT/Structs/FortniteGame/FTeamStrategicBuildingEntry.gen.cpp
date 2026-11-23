@@ -32,25 +32,12 @@ class UScriptStruct* FTeamStrategicBuildingEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2550 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTeamStrategicBuildingEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTeamStrategicBuildingEntry>();
 	}
-	// ReturnStructParams: original RVA 0x0432E2B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTeamStrategicBuildingEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializerItem,
-		&NewStructOps,
-		"TeamStrategicBuildingEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTeamStrategicBuildingEntry),
-		alignof(FTeamStrategicBuildingEntry),
-		Z_Construct_UScriptStruct_FTeamStrategicBuildingEntry_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4680 (end 0x010B46AF)
 	// Original VA: 0x00000001410B4680 | File offset: 0x010B3C80
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTeamStrategicBuildingEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTeamStrategicBuildingEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432E2B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializerItem,
+				&Z_Construct_UScriptStruct_FTeamStrategicBuildingEntry_Statics::NewStructOps,
+				"TeamStrategicBuildingEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTeamStrategicBuildingEntry),
+				alignof(FTeamStrategicBuildingEntry),
+				Z_Construct_UScriptStruct_FTeamStrategicBuildingEntry_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

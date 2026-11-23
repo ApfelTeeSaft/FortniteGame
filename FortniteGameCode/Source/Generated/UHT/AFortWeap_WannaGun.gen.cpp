@@ -18,12 +18,6 @@ void AFortWeap_WannaGun::StaticRegisterNativesAFortWeap_WannaGun()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04345F60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWeap_WannaGun, "OnRep_LastHitActorClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D50F0 (end 0x010D511F)
 // Original VA: 0x00000001410D50F0 | File offset: 0x010D46F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,7 +26,9 @@ UFunction* Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass_Statics::FuncParams);
+		// FuncParams: original RVA 0x04345F60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortWeap_WannaGun, "OnRep_LastHitActorClass", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

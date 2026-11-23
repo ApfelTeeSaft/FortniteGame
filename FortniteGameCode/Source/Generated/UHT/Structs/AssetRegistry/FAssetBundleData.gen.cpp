@@ -31,25 +31,12 @@ class UScriptStruct* FAssetBundleData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C7FBE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAssetBundleData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAssetBundleData>();
 	}
-	// ReturnStructParams: original RVA 0x043DBE00
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAssetBundleData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AssetRegistry,
-		nullptr,
-		&NewStructOps,
-		"AssetBundleData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAssetBundleData),
-		alignof(FAssetBundleData),
-		Z_Construct_UScriptStruct_FAssetBundleData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C80540 (end 0x01C8056F)
 	// Original VA: 0x0000000141C80540 | File offset: 0x01C7FB40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAssetBundleData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAssetBundleData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043DBE00
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AssetRegistry,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAssetBundleData_Statics::NewStructOps,
+				"AssetBundleData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAssetBundleData),
+				alignof(FAssetBundleData),
+				Z_Construct_UScriptStruct_FAssetBundleData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

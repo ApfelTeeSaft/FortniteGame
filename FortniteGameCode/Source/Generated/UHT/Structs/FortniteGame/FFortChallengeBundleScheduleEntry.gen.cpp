@@ -31,25 +31,12 @@ class UScriptStruct* FFortChallengeBundleScheduleEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFBD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortChallengeBundleScheduleEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortChallengeBundleScheduleEntry>();
 	}
-	// ReturnStructParams: original RVA 0x04246900
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortChallengeBundleScheduleEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortChallengeBundleScheduleEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortChallengeBundleScheduleEntry),
-		alignof(FFortChallengeBundleScheduleEntry),
-		Z_Construct_UScriptStruct_FFortChallengeBundleScheduleEntry_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB4ED0 (end 0x00FB4EFF)
 	// Original VA: 0x0000000140FB4ED0 | File offset: 0x00FB44D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortChallengeBundleScheduleEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortChallengeBundleScheduleEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04246900
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortChallengeBundleScheduleEntry_Statics::NewStructOps,
+				"FortChallengeBundleScheduleEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortChallengeBundleScheduleEntry),
+				alignof(FFortChallengeBundleScheduleEntry),
+				Z_Construct_UScriptStruct_FFortChallengeBundleScheduleEntry_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

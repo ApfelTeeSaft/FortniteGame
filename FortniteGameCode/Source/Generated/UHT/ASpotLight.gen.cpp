@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x039BE1F8, FClassParams RVA 0x039BE230.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_ASpotLight();  // RVA 0x024DD730 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD4F0 (end 0x024DD512)
 // Original VA: 0x00000001424DD4F0 | File offset: 0x024DCAF0
@@ -21,7 +21,7 @@ void ASpotLight::StaticRegisterNativesASpotLight()
 
 struct Z_Construct_UFunction_ASpotLight_SetInnerConeAngle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04526E40 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD8B0 (end 0x024DD8DF)
 // Original VA: 0x00000001424DD8B0 | File offset: 0x024DCEB0
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_ASpotLight_SetInnerConeAngle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASpotLight_SetInnerConeAngle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04526E40; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpotLight, "SetInnerConeAngle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_ASpotLight_SetInnerConeAngle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_ASpotLight_SetOuterConeAngle_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04526EC0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD8E0 (end 0x024DD90F)
 // Original VA: 0x00000001424DD8E0 | File offset: 0x024DCEE0
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_ASpotLight_SetOuterConeAngle()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASpotLight_SetOuterConeAngle_Statics::FuncParams);
+		// FuncParams: original RVA 0x04526EC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpotLight, "SetOuterConeAngle", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_ASpotLight_SetOuterConeAngle_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

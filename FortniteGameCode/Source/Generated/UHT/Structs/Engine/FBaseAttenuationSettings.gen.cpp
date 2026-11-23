@@ -31,25 +31,12 @@ class UScriptStruct* FBaseAttenuationSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA100 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBaseAttenuationSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBaseAttenuationSettings>();
 	}
-	// ReturnStructParams: original RVA 0x04420E00
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBaseAttenuationSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BaseAttenuationSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FBaseAttenuationSettings),
-		alignof(FBaseAttenuationSettings),
-		Z_Construct_UScriptStruct_FBaseAttenuationSettings_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DBF70 (end 0x023DBF9F)
 	// Original VA: 0x00000001423DBF70 | File offset: 0x023DB570
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBaseAttenuationSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBaseAttenuationSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04420E00
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBaseAttenuationSettings_Statics::NewStructOps,
+				"BaseAttenuationSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FBaseAttenuationSettings),
+				alignof(FBaseAttenuationSettings),
+				Z_Construct_UScriptStruct_FBaseAttenuationSettings_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

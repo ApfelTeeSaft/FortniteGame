@@ -31,25 +31,12 @@ class UScriptStruct* FFortTheaterMapData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2510 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTheaterMapData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTheaterMapData>();
 	}
-	// ReturnStructParams: original RVA 0x0432F6B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTheaterMapData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTheaterMapData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTheaterMapData),
-		alignof(FFortTheaterMapData),
-		Z_Construct_UScriptStruct_FFortTheaterMapData_Statics::PropPointers, 13,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4440 (end 0x010B446F)
 	// Original VA: 0x00000001410B4440 | File offset: 0x010B3A40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTheaterMapData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTheaterMapData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432F6B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTheaterMapData_Statics::NewStructOps,
+				"FortTheaterMapData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTheaterMapData),
+				alignof(FFortTheaterMapData),
+				Z_Construct_UScriptStruct_FFortTheaterMapData_Statics::PropPointers, 13,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -26,10 +26,7 @@ void AFortSafeZoneIndicator::StaticRegisterNativesAFortSafeZoneIndicator()
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurveValues_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043252B0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurveValues_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetClockTickingAudioCurveValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0xC, Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurveValues_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E1A0 (end 0x0109E1CF)
 // Original VA: 0x000000014109E1A0 | File offset: 0x0109D7A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,7 +35,9 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurv
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurveValues_Statics::FuncParams);
+		// FuncParams: original RVA 0x043252B0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetClockTickingAudioCurveValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0xC, Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurveValues_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -46,10 +45,7 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurv
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveValues_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043253A0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveValues_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetMovementAudioCurveValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0xC, Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveValues_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E1D0 (end 0x0109E1FF)
 // Original VA: 0x000000014109E1D0 | File offset: 0x0109D7D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,7 +54,9 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveVal
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveValues_Statics::FuncParams);
+		// FuncParams: original RVA 0x043253A0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetMovementAudioCurveValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0xC, Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveValues_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -66,10 +64,7 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveVal
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04325420; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetSafeZoneCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E200 (end 0x0109E22F)
 // Original VA: 0x000000014109E200 | File offset: 0x0109D800
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -78,7 +73,9 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter_Statics::FuncParams);
+		// FuncParams: original RVA 0x04325420; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetSafeZoneCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820401, 0xC, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -86,10 +83,7 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter()
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043254A0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetSafeZoneRadius", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E230 (end 0x0109E25F)
 // Original VA: 0x000000014109E230 | File offset: 0x0109D830
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -98,7 +92,9 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius_Statics::FuncParams);
+		// FuncParams: original RVA 0x043254A0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetSafeZoneRadius", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -106,10 +102,7 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius()
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04325520; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetSafeZoneShrinkSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E260 (end 0x0109E28F)
 // Original VA: 0x000000014109E260 | File offset: 0x0109D860
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -118,7 +111,9 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed_Statics::FuncParams);
+		// FuncParams: original RVA 0x04325520; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "GetSafeZoneShrinkSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -126,10 +121,7 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed()
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043255E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "OnSafeZoneStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E290 (end 0x0109E2BF)
 // Original VA: 0x000000014109E290 | File offset: 0x0109D890
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -138,7 +130,9 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x043255E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "OnSafeZoneStateChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x1, Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -146,10 +140,7 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange()
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043256A0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCenter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "SetSafeZoneRadiusAndCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCenter_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E2C0 (end 0x0109E2EF)
 // Original VA: 0x000000014109E2C0 | File offset: 0x0109D8C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -158,7 +149,9 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCent
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCenter_Statics::FuncParams);
+		// FuncParams: original RVA 0x043256A0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortSafeZoneIndicator, "SetSafeZoneRadiusAndCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCenter_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

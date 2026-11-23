@@ -42,12 +42,6 @@ void UFortHomebaseSet::StaticRegisterNativesUFortHomebaseSet()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_InventorySizeBonus_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A820; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_InventorySizeBonus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_InventorySizeBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010072F0 (end 0x0100731F)
 // Original VA: 0x00000001410072F0 | File offset: 0x010068F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,17 +50,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_InventorySizeBonus()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_InventorySizeBonus_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A820; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_InventorySizeBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_AmmoStash_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A860; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_AmmoStash_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_AmmoStash_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007320 (end 0x0100734F)
 // Original VA: 0x0000000141007320 | File offset: 0x01006920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,17 +65,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_AmmoStash_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_AmmoStash_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A860; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_AmmoStash_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Armory_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A8A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Armory_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Armory_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007350 (end 0x0100737F)
 // Original VA: 0x0000000141007350 | File offset: 0x01006950
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,17 +80,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Armory_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Armory_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A8A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Armory_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A8E0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007380 (end 0x010073AF)
 // Original VA: 0x0000000141007380 | File offset: 0x01006980
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -113,17 +95,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A8E0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Medical_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A920; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Medical_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Medical_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010073B0 (end 0x010073DF)
 // Original VA: 0x00000001410073B0 | File offset: 0x010069B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -132,17 +110,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Medical_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Medical_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A920; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Medical_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_PermaniteCap_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A960; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_PermaniteCap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_PermaniteCap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010073E0 (end 0x0100740F)
 // Original VA: 0x00000001410073E0 | File offset: 0x010069E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -151,17 +125,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_PermaniteCap()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_PermaniteCap_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A960; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_PermaniteCap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Storage_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A9A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Storage_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Storage_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007410 (end 0x0100743F)
 // Original VA: 0x0000000141007410 | File offset: 0x01006A10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -170,17 +140,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Storage_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Storage_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A9A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Storage_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_StructureCap_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429A9E0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_StructureCap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_StructureCap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007440 (end 0x0100746F)
 // Original VA: 0x0000000141007440 | File offset: 0x01006A40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -189,17 +155,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_StructureCap()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_StructureCap_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429A9E0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_StructureCap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Workshop_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AA20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Workshop_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Workshop_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007470 (end 0x0100749F)
 // Original VA: 0x0000000141007470 | File offset: 0x01006A70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -208,17 +170,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Workshop_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Workshop_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AA20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Keep_Workshop_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AA60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Manor_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010074A0 (end 0x010074CF)
 // Original VA: 0x00000001410074A0 | File offset: 0x01006AA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -227,17 +185,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AA60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Manor_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_StructureCap_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AAA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_StructureCap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Manor_StructureCap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010074D0 (end 0x010074FF)
 // Original VA: 0x00000001410074D0 | File offset: 0x01006AD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -246,17 +200,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_StructureCap()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_StructureCap_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AAA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_Manor_StructureCap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AAE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007740 (end 0x0100776F)
 // Original VA: 0x0000000141007740 | File offset: 0x01006D40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -265,17 +215,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_max_capacity_collector_T
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AAE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Alterations_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AB20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Alterations_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Alterations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007500 (end 0x0100752F)
 // Original VA: 0x0000000141007500 | File offset: 0x01006B00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -284,17 +230,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Alteration
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Alterations_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AB20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Alterations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Global_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AB60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Global_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Global", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007530 (end 0x0100755F)
 // Original VA: 0x0000000141007530 | File offset: 0x01006B30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -303,17 +245,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Global()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Global_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AB60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Global", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Personnel_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429ABA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Personnel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Personnel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007560 (end 0x0100758F)
 // Original VA: 0x0000000141007560 | File offset: 0x01006B60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -322,17 +260,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Personnel(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Personnel_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429ABA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Personnel", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429ABE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007590 (end 0x010075BF)
 // Original VA: 0x0000000141007590 | File offset: 0x01006B90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -341,17 +275,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429ABE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Melee_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AC20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Melee_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics_Melee", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010075C0 (end 0x010075EF)
 // Original VA: 0x00000001410075C0 | File offset: 0x01006BC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -360,17 +290,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Melee_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AC20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics_Melee", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Ranged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AC60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Ranged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics_Ranged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010075F0 (end 0x0100761F)
 // Original VA: 0x00000001410075F0 | File offset: 0x01006BF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -379,17 +305,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Ranged_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AC60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics_Ranged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Traps_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429ACA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Traps_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics_Traps", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007620 (end 0x0100764F)
 // Original VA: 0x0000000141007620 | File offset: 0x01006C20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -398,17 +320,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Traps_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429ACA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_MaxLevelBonus_Schematics_Traps", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429ACE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007770 (end 0x0100779F)
 // Original VA: 0x0000000141007770 | File offset: 0x01006D70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -417,17 +335,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_rate_per_second_collecto
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429ACE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_ResearchPointMaxBonus_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AD20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_ResearchPointMaxBonus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_ResearchPointMaxBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007650 (end 0x0100767F)
 // Original VA: 0x0000000141007650 | File offset: 0x01006C50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -436,17 +350,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_ResearchPointMaxBonus()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_ResearchPointMaxBonus_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AD20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_ResearchPointMaxBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_StorageInventorySizeBonus_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AD60; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_StorageInventorySizeBonus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_StorageInventorySizeBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007680 (end 0x010076AF)
 // Original VA: 0x0000000141007680 | File offset: 0x01006C80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -455,17 +365,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_StorageInventorySizeBonu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_StorageInventorySizeBonus_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AD60; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_StorageInventorySizeBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Level_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429ADA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Level_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_SupplyDrop_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010076B0 (end 0x010076DF)
 // Original VA: 0x00000001410076B0 | File offset: 0x01006CB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -474,17 +380,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Level()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Level_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429ADA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_SupplyDrop_Level", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Magnitude_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429ADE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Magnitude_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_SupplyDrop_Magnitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010076E0 (end 0x0100770F)
 // Original VA: 0x00000001410076E0 | File offset: 0x01006CE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -493,17 +395,13 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Magnitude()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Magnitude_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429ADE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_SupplyDrop_Magnitude", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_WorldInventorySizeBonus_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x0429AE20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHomebaseSet_OnRep_WorldInventorySizeBonus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_WorldInventorySizeBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01007710 (end 0x0100773F)
 // Original VA: 0x0000000141007710 | File offset: 0x01006D10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -512,7 +410,9 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_WorldInventorySizeBonus(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHomebaseSet_OnRep_WorldInventorySizeBonus_Statics::FuncParams);
+		// FuncParams: original RVA 0x0429AE20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHomebaseSet, "OnRep_WorldInventorySizeBonus", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

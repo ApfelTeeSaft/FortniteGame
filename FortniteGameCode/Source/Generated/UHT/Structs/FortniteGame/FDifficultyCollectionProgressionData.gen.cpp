@@ -32,25 +32,12 @@ class UScriptStruct* FDifficultyCollectionProgressionData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC7E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FDifficultyCollectionProgressionData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDifficultyCollectionProgressionData>();
 	}
-	// ReturnStructParams: original RVA 0x04334B70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDifficultyCollectionProgressionData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTieredCollectionProgressionDataBase,
-		&NewStructOps,
-		"DifficultyCollectionProgressionData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FDifficultyCollectionProgressionData),
-		alignof(FDifficultyCollectionProgressionData),
-		Z_Construct_UScriptStruct_FDifficultyCollectionProgressionData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF2F0 (end 0x010BF31F)
 	// Original VA: 0x00000001410BF2F0 | File offset: 0x010BE8F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FDifficultyCollectionProgressionData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FDifficultyCollectionProgressionData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04334B70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTieredCollectionProgressionDataBase,
+				&Z_Construct_UScriptStruct_FDifficultyCollectionProgressionData_Statics::NewStructOps,
+				"DifficultyCollectionProgressionData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FDifficultyCollectionProgressionData),
+				alignof(FDifficultyCollectionProgressionData),
+				Z_Construct_UScriptStruct_FDifficultyCollectionProgressionData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

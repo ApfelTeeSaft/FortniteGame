@@ -31,25 +31,12 @@ class UScriptStruct* FAnimNode_SubInput::StaticStruct()
 	struct Z_Construct_UScriptStruct_FAnimNode_SubInput_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CD790 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_SubInput_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_SubInput>();
 	}
-	// ReturnStructParams: original RVA 0x04417FA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_SubInput_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimNode_Base,
-		&NewStructOps,
-		"AnimNode_SubInput",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_SubInput),
-		alignof(FAnimNode_SubInput),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CF650 (end 0x023CF67F)
 	// Original VA: 0x00000001423CF650 | File offset: 0x023CEC50
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAnimNode_SubInput::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_SubInput_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04417FA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimNode_Base,
+				&Z_Construct_UScriptStruct_FAnimNode_SubInput_Statics::NewStructOps,
+				"AnimNode_SubInput",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_SubInput),
+				alignof(FAnimNode_SubInput),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

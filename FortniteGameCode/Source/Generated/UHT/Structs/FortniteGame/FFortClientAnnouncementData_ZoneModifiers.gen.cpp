@@ -32,25 +32,12 @@ class UScriptStruct* FFortClientAnnouncementData_ZoneModifiers::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BCBE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortClientAnnouncementData_ZoneModifiers_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortClientAnnouncementData_ZoneModifiers>();
 	}
-	// ReturnStructParams: original RVA 0x042540A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortClientAnnouncementData_ZoneModifiers_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortClientAnnouncementData,
-		&NewStructOps,
-		"FortClientAnnouncementData_ZoneModifiers",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortClientAnnouncementData_ZoneModifiers),
-		alignof(FFortClientAnnouncementData_ZoneModifiers),
-		Z_Construct_UScriptStruct_FFortClientAnnouncementData_ZoneModifiers_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0F20 (end 0x00FC0F4F)
 	// Original VA: 0x0000000140FC0F20 | File offset: 0x00FC0520
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortClientAnnouncementData_ZoneModifiers::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortClientAnnouncementData_ZoneModifiers_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042540A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortClientAnnouncementData,
+				&Z_Construct_UScriptStruct_FFortClientAnnouncementData_ZoneModifiers_Statics::NewStructOps,
+				"FortClientAnnouncementData_ZoneModifiers",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortClientAnnouncementData_ZoneModifiers),
+				alignof(FFortClientAnnouncementData_ZoneModifiers),
+				Z_Construct_UScriptStruct_FFortClientAnnouncementData_ZoneModifiers_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

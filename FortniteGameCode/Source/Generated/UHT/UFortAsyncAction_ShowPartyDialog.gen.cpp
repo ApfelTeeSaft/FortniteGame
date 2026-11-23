@@ -22,10 +22,7 @@ void UFortAsyncAction_ShowPartyDialog::StaticRegisterNativesUFortAsyncAction_Sho
 struct Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyLeaderManageDialog_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045566B0; StructureSize 0x1C8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyLeaderManageDialog_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowPartyDialog, "ShowPartyLeaderManageDialog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x1C8, Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyLeaderManageDialog_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D2F0 (end 0x0288D31F)
 // Original VA: 0x000000014288D2F0 | File offset: 0x0288C8F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyLeade
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyLeaderManageDialog_Statics::FuncParams);
+		// FuncParams: original RVA 0x045566B0; StructureSize 0x1C8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowPartyDialog, "ShowPartyLeaderManageDialog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x1C8, Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyLeaderManageDialog_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyLeade
 struct Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyMemberManageDialog_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04556830; StructureSize 0x1C8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyMemberManageDialog_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowPartyDialog, "ShowPartyMemberManageDialog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x1C8, Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyMemberManageDialog_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D320 (end 0x0288D34F)
 // Original VA: 0x000000014288D320 | File offset: 0x0288C920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyMembe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyMemberManageDialog_Statics::FuncParams);
+		// FuncParams: original RVA 0x04556830; StructureSize 0x1C8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowPartyDialog, "ShowPartyMemberManageDialog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x1C8, Z_Construct_UFunction_UFortAsyncAction_ShowPartyDialog_ShowPartyMemberManageDialog_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

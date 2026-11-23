@@ -30,25 +30,12 @@ class UScriptStruct* FBoundActorProxy::StaticStruct()
 	struct Z_Construct_UScriptStruct_FBoundActorProxy_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74CB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBoundActorProxy_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBoundActorProxy>();
 	}
-	// ReturnStructParams: original RVA 0x043FDC50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBoundActorProxy_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
-		nullptr,
-		&NewStructOps,
-		"BoundActorProxy",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBoundActorProxy),
-		alignof(FBoundActorProxy),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4F110 (end 0x01D4F13F)
 	// Original VA: 0x0000000141D4F110 | File offset: 0x01D4E710
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FBoundActorProxy::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBoundActorProxy_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FDC50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBoundActorProxy_Statics::NewStructOps,
+				"BoundActorProxy",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBoundActorProxy),
+				alignof(FBoundActorProxy),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

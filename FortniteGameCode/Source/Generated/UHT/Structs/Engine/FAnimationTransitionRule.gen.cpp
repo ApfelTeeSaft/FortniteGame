@@ -31,25 +31,12 @@ class UScriptStruct* FAnimationTransitionRule::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5320 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimationTransitionRule_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimationTransitionRule>();
 	}
-	// ReturnStructParams: original RVA 0x0441CCF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimationTransitionRule_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"AnimationTransitionRule",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAnimationTransitionRule),
-		alignof(FAnimationTransitionRule),
-		Z_Construct_UScriptStruct_FAnimationTransitionRule_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D7130 (end 0x023D715F)
 	// Original VA: 0x00000001423D7130 | File offset: 0x023D6730
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAnimationTransitionRule::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimationTransitionRule_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441CCF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAnimationTransitionRule_Statics::NewStructOps,
+				"AnimationTransitionRule",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAnimationTransitionRule),
+				alignof(FAnimationTransitionRule),
+				Z_Construct_UScriptStruct_FAnimationTransitionRule_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

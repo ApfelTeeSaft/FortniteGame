@@ -31,25 +31,12 @@ class UScriptStruct* FAIDirectorDebugInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01068B60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAIDirectorDebugInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAIDirectorDebugInfo>();
 	}
-	// ReturnStructParams: original RVA 0x042F5D40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAIDirectorDebugInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AIDirectorDebugInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAIDirectorDebugInfo),
-		alignof(FAIDirectorDebugInfo),
-		Z_Construct_UScriptStruct_FAIDirectorDebugInfo_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106D610 (end 0x0106D63F)
 	// Original VA: 0x000000014106D610 | File offset: 0x0106CC10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAIDirectorDebugInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAIDirectorDebugInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042F5D40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAIDirectorDebugInfo_Statics::NewStructOps,
+				"AIDirectorDebugInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAIDirectorDebugInfo),
+				alignof(FAIDirectorDebugInfo),
+				Z_Construct_UScriptStruct_FAIDirectorDebugInfo_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

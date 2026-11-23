@@ -32,25 +32,12 @@ class UScriptStruct* FEarnedBadgeEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01049F50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEarnedBadgeEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEarnedBadgeEntry>();
 	}
-	// ReturnStructParams: original RVA 0x042D3730
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEarnedBadgeEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializerItem,
-		&NewStructOps,
-		"EarnedBadgeEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FEarnedBadgeEntry),
-		alignof(FEarnedBadgeEntry),
-		Z_Construct_UScriptStruct_FEarnedBadgeEntry_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BC00 (end 0x0104BC2F)
 	// Original VA: 0x000000014104BC00 | File offset: 0x0104B200
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FEarnedBadgeEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEarnedBadgeEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042D3730
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializerItem,
+				&Z_Construct_UScriptStruct_FEarnedBadgeEntry_Statics::NewStructOps,
+				"EarnedBadgeEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FEarnedBadgeEntry),
+				alignof(FEarnedBadgeEntry),
+				Z_Construct_UScriptStruct_FEarnedBadgeEntry_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

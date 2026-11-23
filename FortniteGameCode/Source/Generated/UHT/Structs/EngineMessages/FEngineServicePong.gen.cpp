@@ -31,25 +31,12 @@ class UScriptStruct* FEngineServicePong::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C825A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEngineServicePong_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEngineServicePong>();
 	}
-	// ReturnStructParams: original RVA 0x043DDF80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEngineServicePong_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_EngineMessages,
-		nullptr,
-		&NewStructOps,
-		"EngineServicePong",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FEngineServicePong),
-		alignof(FEngineServicePong),
-		Z_Construct_UScriptStruct_FEngineServicePong_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C82AC0 (end 0x01C82AEF)
 	// Original VA: 0x0000000141C82AC0 | File offset: 0x01C820C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEngineServicePong::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEngineServicePong_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043DDF80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_EngineMessages,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEngineServicePong_Statics::NewStructOps,
+				"EngineServicePong",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FEngineServicePong),
+				alignof(FEngineServicePong),
+				Z_Construct_UScriptStruct_FEngineServicePong_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -8,10 +8,7 @@
 	struct Z_Construct_UDelegateFunction_GameplayAbilities_ActiveGameplayEffectQueryCustomMatch_Dynamic__DelegateSignature_Statics
 	{
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	// FuncParams: original RVA 0x041A6AD0
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_GameplayAbilities_ActiveGameplayEffectQueryCustomMatch_Dynamic__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_GameplayAbilities, "ActiveGameplayEffectQueryCustomMatch_Dynamic__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x540, Z_Construct_UDelegateFunction_GameplayAbilities_ActiveGameplayEffectQueryCustomMatch_Dynamic__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564710 (end 0x0056473F)
 	// Original VA: 0x0000000140564710 | File offset: 0x00563D10
 	// Recovery: confirmed (listed by Z_Construct_UPackage__Script_GameplayAbilities's SingletonFuncArray) | Matching: see analysis/functions-uht-package-delegates.json
@@ -20,7 +17,9 @@
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_GameplayAbilities_ActiveGameplayEffectQueryCustomMatch_Dynamic__DelegateSignature_Statics::FuncParams);
+			// FuncParams: original RVA 0x041A6AD0
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_GameplayAbilities, "ActiveGameplayEffectQueryCustomMatch_Dynamic__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x540, Z_Construct_UDelegateFunction_GameplayAbilities_ActiveGameplayEffectQueryCustomMatch_Dynamic__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}

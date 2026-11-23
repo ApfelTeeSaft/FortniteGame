@@ -31,25 +31,12 @@ class UScriptStruct* FFortObjectiveRecord::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E88A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortObjectiveRecord_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortObjectiveRecord>();
 	}
-	// ReturnStructParams: original RVA 0x0435E950
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortObjectiveRecord_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortObjectiveRecord",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortObjectiveRecord),
-		alignof(FFortObjectiveRecord),
-		Z_Construct_UScriptStruct_FFortObjectiveRecord_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB7C0 (end 0x010EB7EF)
 	// Original VA: 0x00000001410EB7C0 | File offset: 0x010EADC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortObjectiveRecord::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortObjectiveRecord_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0435E950
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortObjectiveRecord_Statics::NewStructOps,
+				"FortObjectiveRecord",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortObjectiveRecord),
+				alignof(FFortObjectiveRecord),
+				Z_Construct_UScriptStruct_FFortObjectiveRecord_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

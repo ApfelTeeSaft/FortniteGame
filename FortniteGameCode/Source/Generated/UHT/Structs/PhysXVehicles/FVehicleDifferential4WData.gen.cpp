@@ -31,25 +31,12 @@ class UScriptStruct* FVehicleDifferential4WData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B080 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVehicleDifferential4WData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVehicleDifferential4WData>();
 	}
-	// ReturnStructParams: original RVA 0x041BAA80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVehicleDifferential4WData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
-		nullptr,
-		&NewStructOps,
-		"VehicleDifferential4WData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FVehicleDifferential4WData),
-		alignof(FVehicleDifferential4WData),
-		Z_Construct_UScriptStruct_FVehicleDifferential4WData_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067C5E0 (end 0x0067C60F)
 	// Original VA: 0x000000014067C5E0 | File offset: 0x0067BBE0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FVehicleDifferential4WData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVehicleDifferential4WData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BAA80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_PhysXVehicles,
+				nullptr,
+				&Z_Construct_UScriptStruct_FVehicleDifferential4WData_Statics::NewStructOps,
+				"VehicleDifferential4WData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FVehicleDifferential4WData),
+				alignof(FVehicleDifferential4WData),
+				Z_Construct_UScriptStruct_FVehicleDifferential4WData_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

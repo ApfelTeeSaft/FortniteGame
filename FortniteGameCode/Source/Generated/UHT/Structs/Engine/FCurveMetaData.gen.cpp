@@ -30,25 +30,12 @@ class UScriptStruct* FCurveMetaData::StaticStruct()
 	struct Z_Construct_UScriptStruct_FCurveMetaData_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3D20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCurveMetaData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCurveMetaData>();
 	}
-	// ReturnStructParams: original RVA 0x0451A460
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCurveMetaData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"CurveMetaData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCurveMetaData),
-		alignof(FCurveMetaData),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5E50 (end 0x024D5E7F)
 	// Original VA: 0x00000001424D5E50 | File offset: 0x024D5450
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FCurveMetaData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCurveMetaData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0451A460
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCurveMetaData_Statics::NewStructOps,
+				"CurveMetaData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCurveMetaData),
+				alignof(FCurveMetaData),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

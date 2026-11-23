@@ -30,25 +30,12 @@ class UScriptStruct* FBlueprintMacroCosmeticInfo::StaticStruct()
 	struct Z_Construct_UScriptStruct_FBlueprintMacroCosmeticInfo_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2340 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBlueprintMacroCosmeticInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBlueprintMacroCosmeticInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04426CA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBlueprintMacroCosmeticInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BlueprintMacroCosmeticInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBlueprintMacroCosmeticInfo),
-		alignof(FBlueprintMacroCosmeticInfo),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E4400 (end 0x023E442F)
 	// Original VA: 0x00000001423E4400 | File offset: 0x023E3A00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FBlueprintMacroCosmeticInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBlueprintMacroCosmeticInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04426CA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBlueprintMacroCosmeticInfo_Statics::NewStructOps,
+				"BlueprintMacroCosmeticInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBlueprintMacroCosmeticInfo),
+				alignof(FBlueprintMacroCosmeticInfo),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -8,10 +8,7 @@
 	struct Z_Construct_UDelegateFunction_Engine_InputVectorAxisHandlerDynamicSignature__DelegateSignature_Statics
 	{
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	// FuncParams: original RVA 0x0446C3F0
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_Engine_InputVectorAxisHandlerDynamicSignature__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_Engine, "InputVectorAxisHandlerDynamicSignature__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0xC, Z_Construct_UDelegateFunction_Engine_InputVectorAxisHandlerDynamicSignature__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024283A0 (end 0x024283CF)
 	// Original VA: 0x00000001424283A0 | File offset: 0x024279A0
 	// Recovery: confirmed (listed by Z_Construct_UPackage__Script_Engine's SingletonFuncArray) | Matching: see analysis/functions-uht-package-delegates.json
@@ -20,7 +17,9 @@
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_Engine_InputVectorAxisHandlerDynamicSignature__DelegateSignature_Statics::FuncParams);
+			// FuncParams: original RVA 0x0446C3F0
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_Engine, "InputVectorAxisHandlerDynamicSignature__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0xC, Z_Construct_UDelegateFunction_Engine_InputVectorAxisHandlerDynamicSignature__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}

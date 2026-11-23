@@ -31,25 +31,12 @@ class UScriptStruct* FLevelCollection::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0260 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLevelCollection_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelCollection>();
 	}
-	// ReturnStructParams: original RVA 0x04533430
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelCollection_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LevelCollection",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FLevelCollection),
-		alignof(FLevelCollection),
-		Z_Construct_UScriptStruct_FLevelCollection_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1240 (end 0x024F126F)
 	// Original VA: 0x00000001424F1240 | File offset: 0x024F0840
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLevelCollection::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLevelCollection_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04533430
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLevelCollection_Statics::NewStructOps,
+				"LevelCollection",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FLevelCollection),
+				alignof(FLevelCollection),
+				Z_Construct_UScriptStruct_FLevelCollection_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

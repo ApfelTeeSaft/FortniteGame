@@ -31,25 +31,12 @@ class UScriptStruct* FCustomPartTextureParameter::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F77AA0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCustomPartTextureParameter_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCustomPartTextureParameter>();
 	}
-	// ReturnStructParams: original RVA 0x0420E200
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCustomPartTextureParameter_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"CustomPartTextureParameter",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCustomPartTextureParameter),
-		alignof(FCustomPartTextureParameter),
-		Z_Construct_UScriptStruct_FCustomPartTextureParameter_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79720 (end 0x00F7974F)
 	// Original VA: 0x0000000140F79720 | File offset: 0x00F78D20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCustomPartTextureParameter::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCustomPartTextureParameter_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0420E200
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCustomPartTextureParameter_Statics::NewStructOps,
+				"CustomPartTextureParameter",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCustomPartTextureParameter),
+				alignof(FCustomPartTextureParameter),
+				Z_Construct_UScriptStruct_FCustomPartTextureParameter_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

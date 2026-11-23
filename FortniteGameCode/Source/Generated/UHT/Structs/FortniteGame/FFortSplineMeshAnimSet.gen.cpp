@@ -31,25 +31,12 @@ class UScriptStruct* FFortSplineMeshAnimSet::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDA570 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSplineMeshAnimSet_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSplineMeshAnimSet>();
 	}
-	// ReturnStructParams: original RVA 0x0426EF40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSplineMeshAnimSet_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSplineMeshAnimSet",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FFortSplineMeshAnimSet),
-		alignof(FFortSplineMeshAnimSet),
-		Z_Construct_UScriptStruct_FFortSplineMeshAnimSet_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC4C0 (end 0x00FDC4EF)
 	// Original VA: 0x0000000140FDC4C0 | File offset: 0x00FDBAC0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSplineMeshAnimSet::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSplineMeshAnimSet_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0426EF40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSplineMeshAnimSet_Statics::NewStructOps,
+				"FortSplineMeshAnimSet",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FFortSplineMeshAnimSet),
+				alignof(FFortSplineMeshAnimSet),
+				Z_Construct_UScriptStruct_FFortSplineMeshAnimSet_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

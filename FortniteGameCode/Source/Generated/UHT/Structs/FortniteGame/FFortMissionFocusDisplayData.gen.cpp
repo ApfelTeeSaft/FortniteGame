@@ -31,25 +31,12 @@ class UScriptStruct* FFortMissionFocusDisplayData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037230 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMissionFocusDisplayData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMissionFocusDisplayData>();
 	}
-	// ReturnStructParams: original RVA 0x042C6B90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMissionFocusDisplayData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortMissionFocusDisplayData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortMissionFocusDisplayData),
-		alignof(FFortMissionFocusDisplayData),
-		Z_Construct_UScriptStruct_FFortMissionFocusDisplayData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039E60 (end 0x01039E8F)
 	// Original VA: 0x0000000141039E60 | File offset: 0x01039460
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMissionFocusDisplayData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMissionFocusDisplayData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C6B90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMissionFocusDisplayData_Statics::NewStructOps,
+				"FortMissionFocusDisplayData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortMissionFocusDisplayData),
+				alignof(FFortMissionFocusDisplayData),
+				Z_Construct_UScriptStruct_FFortMissionFocusDisplayData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

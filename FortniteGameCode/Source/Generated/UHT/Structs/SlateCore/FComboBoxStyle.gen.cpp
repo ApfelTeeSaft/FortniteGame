@@ -32,25 +32,12 @@ class UScriptStruct* FComboBoxStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A1F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FComboBoxStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FComboBoxStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437C130
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FComboBoxStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"ComboBoxStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FComboBoxStyle),
-		alignof(FComboBoxStyle),
-		Z_Construct_UScriptStruct_FComboBoxStyle_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CBD0 (end 0x0145CBFF)
 	// Original VA: 0x000000014145CBD0 | File offset: 0x0145C1D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FComboBoxStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FComboBoxStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437C130
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FComboBoxStyle_Statics::NewStructOps,
+				"ComboBoxStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FComboBoxStyle),
+				alignof(FComboBoxStyle),
+				Z_Construct_UScriptStruct_FComboBoxStyle_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

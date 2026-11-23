@@ -32,25 +32,12 @@ class UScriptStruct* FTwistConstraint::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6CC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTwistConstraint_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTwistConstraint>();
 	}
-	// ReturnStructParams: original RVA 0x0443DF30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTwistConstraint_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FConstraintBaseParams,
-		&NewStructOps,
-		"TwistConstraint",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FTwistConstraint),
-		alignof(FTwistConstraint),
-		Z_Construct_UScriptStruct_FTwistConstraint_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F8DE0 (end 0x023F8E0F)
 	// Original VA: 0x00000001423F8DE0 | File offset: 0x023F83E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTwistConstraint::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTwistConstraint_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0443DF30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FConstraintBaseParams,
+				&Z_Construct_UScriptStruct_FTwistConstraint_Statics::NewStructOps,
+				"TwistConstraint",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FTwistConstraint),
+				alignof(FTwistConstraint),
+				Z_Construct_UScriptStruct_FTwistConstraint_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

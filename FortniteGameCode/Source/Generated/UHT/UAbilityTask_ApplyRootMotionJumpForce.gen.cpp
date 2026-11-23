@@ -23,10 +23,7 @@ void UAbilityTask_ApplyRootMotionJumpForce::StaticRegisterNativesUAbilityTask_Ap
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_ApplyRootMotionJumpForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04195170; StructureSize 0x58 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_ApplyRootMotionJumpForce_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce, "ApplyRootMotionJumpForce", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x58, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_ApplyRootMotionJumpForce_Statics::PropPointers, 15, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546F10 (end 0x00546F3F)
 // Original VA: 0x0000000140546F10 | File offset: 0x00546510
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +32,13 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_ApplyRoot
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_ApplyRootMotionJumpForce_Statics::FuncParams);
+		// FuncParams: original RVA 0x04195170; StructureSize 0x58 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce, "ApplyRootMotionJumpForce", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x58, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_ApplyRootMotionJumpForce_Statics::PropPointers, 15, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_Finish_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041951B0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_Finish_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce, "Finish", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546F40 (end 0x00546F6F)
 // Original VA: 0x0000000140546F40 | File offset: 0x00546540
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +47,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_Finish()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_Finish_Statics::FuncParams);
+		// FuncParams: original RVA 0x041951B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce, "Finish", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -62,10 +57,7 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_Finish()
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_OnLandedCallback_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04195230; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_OnLandedCallback_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce, "OnLandedCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x88, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_OnLandedCallback_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546F70 (end 0x00546F9F)
 // Original VA: 0x0000000140546F70 | File offset: 0x00546570
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +66,9 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_OnLandedC
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_OnLandedCallback_Statics::FuncParams);
+		// FuncParams: original RVA 0x04195230; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce, "OnLandedCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x88, Z_Construct_UFunction_UAbilityTask_ApplyRootMotionJumpForce_OnLandedCallback_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -21,10 +21,7 @@ void UFortSquadSlotItemPickerTileButton::StaticRegisterNativesUFortSquadSlotItem
 struct Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingRestrictionReasons_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B98A0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingRestrictionReasons_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemPickerTileButton, "GetSlottingRestrictionReasons", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x10, Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingRestrictionReasons_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC300 (end 0x028FC32F)
 // Original VA: 0x00000001428FC300 | File offset: 0x028FB900
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingR
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingRestrictionReasons_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B98A0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemPickerTileButton, "GetSlottingRestrictionReasons", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x10, Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingRestrictionReasons_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -41,10 +40,7 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingR
 struct Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleItemSlottedToDifferentSquad_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B9920; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleItemSlottedToDifferentSquad_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemPickerTileButton, "HandleItemSlottedToDifferentSquad", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x10, Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleItemSlottedToDifferentSquad_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC330 (end 0x028FC35F)
 // Original VA: 0x00000001428FC330 | File offset: 0x028FB930
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +49,13 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleItemSl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleItemSlottedToDifferentSquad_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B9920; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemPickerTileButton, "HandleItemSlottedToDifferentSquad", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08480800, 0x10, Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleItemSlottedToDifferentSquad_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleSlottingRestrictionReasonsChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B9960; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleSlottingRestrictionReasonsChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemPickerTileButton, "HandleSlottingRestrictionReasonsChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC360 (end 0x028FC38F)
 // Original VA: 0x00000001428FC360 | File offset: 0x028FB960
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,7 +64,9 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleSlotti
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleSlottingRestrictionReasonsChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B9960; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadSlotItemPickerTileButton, "HandleSlottingRestrictionReasonsChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

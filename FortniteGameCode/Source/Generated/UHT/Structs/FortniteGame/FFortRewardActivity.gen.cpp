@@ -31,25 +31,12 @@ class UScriptStruct* FFortRewardActivity::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010647E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortRewardActivity_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortRewardActivity>();
 	}
-	// ReturnStructParams: original RVA 0x042EECF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortRewardActivity_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortRewardActivity",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortRewardActivity),
-		alignof(FFortRewardActivity),
-		Z_Construct_UScriptStruct_FFortRewardActivity_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01066380 (end 0x010663AF)
 	// Original VA: 0x0000000141066380 | File offset: 0x01065980
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortRewardActivity::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortRewardActivity_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EECF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortRewardActivity_Statics::NewStructOps,
+				"FortRewardActivity",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortRewardActivity),
+				alignof(FFortRewardActivity),
+				Z_Construct_UScriptStruct_FFortRewardActivity_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

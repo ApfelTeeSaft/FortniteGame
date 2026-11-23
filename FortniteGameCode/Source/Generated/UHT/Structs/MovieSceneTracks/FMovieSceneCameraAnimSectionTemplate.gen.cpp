@@ -32,25 +32,12 @@ class UScriptStruct* FMovieSceneCameraAnimSectionTemplate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4FA80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneCameraAnimSectionTemplate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneCameraAnimSectionTemplate>();
 	}
-	// ReturnStructParams: original RVA 0x043B52A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneCameraAnimSectionTemplate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieSceneAdditiveCameraAnimationTemplate,
-		&NewStructOps,
-		"MovieSceneCameraAnimSectionTemplate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FMovieSceneCameraAnimSectionTemplate),
-		alignof(FMovieSceneCameraAnimSectionTemplate),
-		Z_Construct_UScriptStruct_FMovieSceneCameraAnimSectionTemplate_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B52E10 (end 0x01B52E3F)
 	// Original VA: 0x0000000141B52E10 | File offset: 0x01B52410
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieSceneCameraAnimSectionTemplate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneCameraAnimSectionTemplate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B52A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieSceneAdditiveCameraAnimationTemplate,
+				&Z_Construct_UScriptStruct_FMovieSceneCameraAnimSectionTemplate_Statics::NewStructOps,
+				"MovieSceneCameraAnimSectionTemplate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FMovieSceneCameraAnimSectionTemplate),
+				alignof(FMovieSceneCameraAnimSectionTemplate),
+				Z_Construct_UScriptStruct_FMovieSceneCameraAnimSectionTemplate_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

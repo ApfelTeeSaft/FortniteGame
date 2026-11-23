@@ -29,10 +29,7 @@ void UDirectionalLightComponent::StaticRegisterNativesUDirectionalLightComponent
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributionExponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443980; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributionExponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetCascadeDistributionExponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributionExponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF180 (end 0x023FF1AF)
 // Original VA: 0x00000001423FF180 | File offset: 0x023FE780
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +38,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributionExponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443980; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetCascadeDistributionExponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributionExponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +48,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributi
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransitionFraction_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443A00; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransitionFraction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetCascadeTransitionFraction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransitionFraction_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF1B0 (end 0x023FF1DF)
 // Original VA: 0x00000001423FF1B0 | File offset: 0x023FE7B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +57,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransition
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransitionFraction_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443A00; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetCascadeTransitionFraction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransitionFraction_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -69,10 +67,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransition
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCascades_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443A80; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCascades_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetDynamicShadowCascades", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCascades_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF1E0 (end 0x023FF20F)
 // Original VA: 0x00000001423FF1E0 | File offset: 0x023FE7E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +76,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCasc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCascades_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443A80; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetDynamicShadowCascades", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCascades_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +86,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCasc
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443B00; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetDynamicShadowDistanceMovableLight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF210 (end 0x023FF23F)
 // Original VA: 0x00000001423FF210 | File offset: 0x023FE810
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +95,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDist
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443B00; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetDynamicShadowDistanceMovableLight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -109,10 +105,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDist
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443B80; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetDynamicShadowDistanceStationaryLight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF240 (end 0x023FF26F)
 // Original VA: 0x00000001423FF240 | File offset: 0x023FE840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -121,7 +114,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDist
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443B80; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetDynamicShadowDistanceStationaryLight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -129,10 +124,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDist
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftOcclusion_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443C10; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftOcclusion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetEnableLightShaftOcclusion", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftOcclusion_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF270 (end 0x023FF29F)
 // Original VA: 0x00000001423FF270 | File offset: 0x023FE870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -141,7 +133,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftO
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftOcclusion_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443C10; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetEnableLightShaftOcclusion", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftOcclusion_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -149,10 +143,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftO
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrideDirection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443C90; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrideDirection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetLightShaftOverrideDirection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0xC, Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrideDirection_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF2A0 (end 0x023FF2CF)
 // Original VA: 0x00000001423FF2A0 | File offset: 0x023FE8A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -161,7 +152,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrid
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrideDirection_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443C90; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetLightShaftOverrideDirection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0xC, Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrideDirection_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -169,10 +162,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrid
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDarkness_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443D10; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDarkness_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetOcclusionMaskDarkness", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDarkness_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF2D0 (end 0x023FF2FF)
 // Original VA: 0x00000001423FF2D0 | File offset: 0x023FE8D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,7 +171,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDark
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDarkness_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443D10; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetOcclusionMaskDarkness", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDarkness_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -189,10 +181,7 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDark
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04443D90; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetShadowDistanceFadeoutFraction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF300 (end 0x023FF32F)
 // Original VA: 0x00000001423FF300 | File offset: 0x023FE900
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -201,7 +190,9 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFad
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Statics::FuncParams);
+		// FuncParams: original RVA 0x04443D90; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDirectionalLightComponent, "SetShadowDistanceFadeoutFraction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

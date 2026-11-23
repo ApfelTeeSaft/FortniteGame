@@ -31,25 +31,12 @@ class UScriptStruct* FStaticSwitchParameter::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E6910 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FStaticSwitchParameter_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FStaticSwitchParameter>();
 	}
-	// ReturnStructParams: original RVA 0x0452A700
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStaticSwitchParameter_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"StaticSwitchParameter",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FStaticSwitchParameter),
-		alignof(FStaticSwitchParameter),
-		Z_Construct_UScriptStruct_FStaticSwitchParameter_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E8860 (end 0x024E888F)
 	// Original VA: 0x00000001424E8860 | File offset: 0x024E7E60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FStaticSwitchParameter::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FStaticSwitchParameter_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0452A700
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FStaticSwitchParameter_Statics::NewStructOps,
+				"StaticSwitchParameter",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FStaticSwitchParameter),
+				alignof(FStaticSwitchParameter),
+				Z_Construct_UScriptStruct_FStaticSwitchParameter_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -23,10 +23,7 @@ void UFortFootstepAudioBank::StaticRegisterNativesUFortFootstepAudioBank()
 struct Z_Construct_UFunction_UFortFootstepAudioBank_GetAttenuationAsset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0426E180; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortFootstepAudioBank_GetAttenuationAsset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortFootstepAudioBank, "GetAttenuationAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortFootstepAudioBank_GetAttenuationAsset_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC070 (end 0x00FDC09F)
 // Original VA: 0x0000000140FDC070 | File offset: 0x00FDB670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortFootstepAudioBank_GetAttenuationAsset()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortFootstepAudioBank_GetAttenuationAsset_Statics::FuncParams);
+		// FuncParams: original RVA 0x0426E180; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortFootstepAudioBank, "GetAttenuationAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortFootstepAudioBank_GetAttenuationAsset_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortFootstepAudioBank_GetAttenuationAsset()
 struct Z_Construct_UFunction_UFortFootstepAudioBank_GetFootstepVolumeMultiplier_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0426E2E0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortFootstepAudioBank_GetFootstepVolumeMultiplier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortFootstepAudioBank, "GetFootstepVolumeMultiplier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UFortFootstepAudioBank_GetFootstepVolumeMultiplier_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC0A0 (end 0x00FDC0CF)
 // Original VA: 0x0000000140FDC0A0 | File offset: 0x00FDB6A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortFootstepAudioBank_GetFootstepVolumeMultipl
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortFootstepAudioBank_GetFootstepVolumeMultiplier_Statics::FuncParams);
+		// FuncParams: original RVA 0x0426E2E0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortFootstepAudioBank, "GetFootstepVolumeMultiplier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x8, Z_Construct_UFunction_UFortFootstepAudioBank_GetFootstepVolumeMultiplier_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortFootstepAudioBank_GetFootstepVolumeMultipl
 struct Z_Construct_UFunction_UFortFootstepAudioBank_GetSoundAsset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0426E470; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortFootstepAudioBank_GetSoundAsset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortFootstepAudioBank, "GetSoundAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortFootstepAudioBank_GetSoundAsset_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDC0D0 (end 0x00FDC0FF)
 // Original VA: 0x0000000140FDC0D0 | File offset: 0x00FDB6D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortFootstepAudioBank_GetSoundAsset()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortFootstepAudioBank_GetSoundAsset_Statics::FuncParams);
+		// FuncParams: original RVA 0x0426E470; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortFootstepAudioBank, "GetSoundAsset", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UFortFootstepAudioBank_GetSoundAsset_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

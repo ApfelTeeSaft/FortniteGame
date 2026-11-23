@@ -31,25 +31,12 @@ class UScriptStruct* FFortCatalogMetaPreload::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8D50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortCatalogMetaPreload_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortCatalogMetaPreload>();
 	}
-	// ReturnStructParams: original RVA 0x04340530
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortCatalogMetaPreload_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortCatalogMetaPreload",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortCatalogMetaPreload),
-		alignof(FFortCatalogMetaPreload),
-		Z_Construct_UScriptStruct_FFortCatalogMetaPreload_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC470 (end 0x010CC49F)
 	// Original VA: 0x00000001410CC470 | File offset: 0x010CBA70
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortCatalogMetaPreload::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortCatalogMetaPreload_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04340530
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortCatalogMetaPreload_Statics::NewStructOps,
+				"FortCatalogMetaPreload",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortCatalogMetaPreload),
+				alignof(FFortCatalogMetaPreload),
+				Z_Construct_UScriptStruct_FFortCatalogMetaPreload_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

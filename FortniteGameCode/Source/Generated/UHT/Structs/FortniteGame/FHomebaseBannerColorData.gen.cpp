@@ -32,25 +32,12 @@ class UScriptStruct* FHomebaseBannerColorData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010045A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FHomebaseBannerColorData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FHomebaseBannerColorData>();
 	}
-	// ReturnStructParams: original RVA 0x0429B690
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHomebaseBannerColorData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"HomebaseBannerColorData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FHomebaseBannerColorData),
-		alignof(FHomebaseBannerColorData),
-		Z_Construct_UScriptStruct_FHomebaseBannerColorData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010085B0 (end 0x010085DF)
 	// Original VA: 0x00000001410085B0 | File offset: 0x01007BB0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FHomebaseBannerColorData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FHomebaseBannerColorData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0429B690
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FHomebaseBannerColorData_Statics::NewStructOps,
+				"HomebaseBannerColorData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FHomebaseBannerColorData),
+				alignof(FHomebaseBannerColorData),
+				Z_Construct_UScriptStruct_FHomebaseBannerColorData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FFortTheaterColorInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2610 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTheaterColorInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTheaterColorInfo>();
 	}
-	// ReturnStructParams: original RVA 0x0432FD50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTheaterColorInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTheaterColorInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTheaterColorInfo),
-		alignof(FFortTheaterColorInfo),
-		Z_Construct_UScriptStruct_FFortTheaterColorInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B4410 (end 0x010B443F)
 	// Original VA: 0x00000001410B4410 | File offset: 0x010B3A10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTheaterColorInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTheaterColorInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0432FD50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTheaterColorInfo_Statics::NewStructOps,
+				"FortTheaterColorInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTheaterColorInfo),
+				alignof(FFortTheaterColorInfo),
+				Z_Construct_UScriptStruct_FFortTheaterColorInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FFortAISpawnGroupUpgradeUIData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90670 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAISpawnGroupUpgradeUIData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAISpawnGroupUpgradeUIData>();
 	}
-	// ReturnStructParams: original RVA 0x0422BAD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAISpawnGroupUpgradeUIData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAISpawnGroupUpgradeUIData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAISpawnGroupUpgradeUIData),
-		alignof(FFortAISpawnGroupUpgradeUIData),
-		Z_Construct_UScriptStruct_FFortAISpawnGroupUpgradeUIData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F929D0 (end 0x00F929FF)
 	// Original VA: 0x0000000140F929D0 | File offset: 0x00F91FD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAISpawnGroupUpgradeUIData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAISpawnGroupUpgradeUIData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0422BAD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAISpawnGroupUpgradeUIData_Statics::NewStructOps,
+				"FortAISpawnGroupUpgradeUIData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAISpawnGroupUpgradeUIData),
+				alignof(FFortAISpawnGroupUpgradeUIData),
+				Z_Construct_UScriptStruct_FFortAISpawnGroupUpgradeUIData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

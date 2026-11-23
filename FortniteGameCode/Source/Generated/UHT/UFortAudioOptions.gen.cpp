@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortAudioOptions();  // RVA 0x0288CC30 (consensus Ou
 struct Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04558F60; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "ChatVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DBF0 (end 0x0288DC1F)
 // Original VA: 0x000000014288DBF0 | File offset: 0x0288D1F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04558F60; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "ChatVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged()
 struct Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04558FE0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "DialogVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DC20 (end 0x0288DC4F)
 // Original VA: 0x000000014288DC20 | File offset: 0x0288D220
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04558FE0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "DialogVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +47,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged()
 struct Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDevices_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559090; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDevices_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetAvailableVoiceChatInputDevices", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDevices_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DC50 (end 0x0288DC7F)
 // Original VA: 0x000000014288DC50 | File offset: 0x0288D250
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +56,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDev
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDevices_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559090; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetAvailableVoiceChatInputDevices", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDevices_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -69,10 +66,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDev
 struct Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559110; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetChatVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DC80 (end 0x0288DCAF)
 // Original VA: 0x000000014288DC80 | File offset: 0x0288D280
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +75,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559110; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetChatVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +85,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue()
 struct Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559190; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetDialogVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DCB0 (end 0x0288DCDF)
 // Original VA: 0x000000014288DCB0 | File offset: 0x0288D2B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +94,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559190; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetDialogVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -109,10 +104,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue()
 struct Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559210; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetMusicVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DCE0 (end 0x0288DD0F)
 // Original VA: 0x000000014288DCE0 | File offset: 0x0288D2E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -121,7 +113,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559210; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetMusicVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -129,10 +123,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue()
 struct Z_Construct_UFunction_UFortAudioOptions_GetQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559290; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DD10 (end 0x0288DD3F)
 // Original VA: 0x000000014288DD10 | File offset: 0x0288D310
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -141,7 +132,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559290; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -149,10 +142,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetQuality()
 struct Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559310; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetSoundFXVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DD40 (end 0x0288DD6F)
 // Original VA: 0x000000014288DD40 | File offset: 0x0288D340
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -161,7 +151,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559310; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetSoundFXVolumeValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -169,10 +161,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue()
 struct Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045593A0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetSubtitlesEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DD70 (end 0x0288DD9F)
 // Original VA: 0x000000014288DD70 | File offset: 0x0288D370
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,7 +170,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x045593A0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetSubtitlesEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -189,10 +180,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559430; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChat3DEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DDA0 (end 0x0288DDCF)
 // Original VA: 0x000000014288DDA0 | File offset: 0x0288D3A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -201,7 +189,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559430; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChat3DEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -209,10 +199,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045594C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChatEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DDD0 (end 0x0288DDFF)
 // Original VA: 0x000000014288DDD0 | File offset: 0x0288D3D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -221,7 +208,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x045594C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChatEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -229,10 +218,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559540; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChatInputDevice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DE00 (end 0x0288DE2F)
 // Original VA: 0x000000014288DE00 | File offset: 0x0288D400
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -241,7 +227,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559540; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChatInputDevice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -249,10 +237,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice()
 struct Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045595D0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChatPTTEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DE30 (end 0x0288DE5F)
 // Original VA: 0x000000014288DE30 | File offset: 0x0288D430
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -261,7 +246,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x045595D0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "GetVoiceChatPTTEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -269,10 +256,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDevice_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559660; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDevice_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "IsUsingCustomVoiceChatInputDevice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDevice_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DE60 (end 0x0288DE8F)
 // Original VA: 0x000000014288DE60 | File offset: 0x0288D460
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -281,7 +265,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDevice_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559660; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "IsUsingCustomVoiceChatInputDevice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDevice_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -289,10 +275,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDe
 struct Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045596E0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "MusicVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DE90 (end 0x0288DEBF)
 // Original VA: 0x000000014288DE90 | File offset: 0x0288D490
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -301,7 +284,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045596E0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "MusicVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -309,10 +294,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged()
 struct Z_Construct_UFunction_UFortAudioOptions_SetQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559760; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_SetQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_SetQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DEC0 (end 0x0288DEEF)
 // Original VA: 0x000000014288DEC0 | File offset: 0x0288D4C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -321,7 +303,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_SetQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559760; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_SetQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -329,10 +313,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetQuality()
 struct Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045597F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetSubtitlesEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DEF0 (end 0x0288DF1F)
 // Original VA: 0x000000014288DEF0 | File offset: 0x0288D4F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -341,7 +322,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x045597F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetSubtitlesEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -349,10 +332,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559880; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChat3DEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DF20 (end 0x0288DF4F)
 // Original VA: 0x000000014288DF20 | File offset: 0x0288D520
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -361,7 +341,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559880; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChat3DEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -369,10 +351,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559910; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChatEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DF50 (end 0x0288DF7F)
 // Original VA: 0x000000014288DF50 | File offset: 0x0288D550
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -381,7 +360,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559910; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChatEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -389,10 +370,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559990; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChatInputDevice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DF80 (end 0x0288DFAF)
 // Original VA: 0x000000014288DF80 | File offset: 0x0288D580
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -401,7 +379,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559990; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChatInputDevice", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x10, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -409,10 +389,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice()
 struct Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559A20; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChatPTTEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DFB0 (end 0x0288DFDF)
 // Original VA: 0x000000014288DFB0 | File offset: 0x0288D5B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -421,7 +398,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559A20; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SetVoiceChatPTTEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -429,10 +408,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled()
 struct Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559AB0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "ShowChatVolume", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288DFE0 (end 0x0288E00F)
 // Original VA: 0x000000014288DFE0 | File offset: 0x0288D5E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -441,7 +417,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559AB0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "ShowChatVolume", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -449,10 +427,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume()
 struct Z_Construct_UFunction_UFortAudioOptions_ShowQuality_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559B40; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_ShowQuality_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "ShowQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_ShowQuality_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288E010 (end 0x0288E03F)
 // Original VA: 0x000000014288E010 | File offset: 0x0288D610
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -461,7 +436,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_ShowQuality()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_ShowQuality_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559B40; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "ShowQuality", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54040401, 0x1, Z_Construct_UFunction_UFortAudioOptions_ShowQuality_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -469,10 +446,7 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_ShowQuality()
 struct Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04559BC0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SoundFXVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288E040 (end 0x0288E06F)
 // Original VA: 0x000000014288E040 | File offset: 0x0288D640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -481,7 +455,9 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04559BC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAudioOptions, "SoundFXVolumeChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04040401, 0x4, Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -32,25 +32,12 @@ class UScriptStruct* FDeployableBaseArray::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCF500 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FDeployableBaseArray_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDeployableBaseArray>();
 	}
-	// ReturnStructParams: original RVA 0x04266A20
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDeployableBaseArray_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializer,
-		&NewStructOps,
-		"DeployableBaseArray",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FDeployableBaseArray),
-		alignof(FDeployableBaseArray),
-		Z_Construct_UScriptStruct_FDeployableBaseArray_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD1040 (end 0x00FD106F)
 	// Original VA: 0x0000000140FD1040 | File offset: 0x00FD0640
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FDeployableBaseArray::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FDeployableBaseArray_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04266A20
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializer,
+				&Z_Construct_UScriptStruct_FDeployableBaseArray_Statics::NewStructOps,
+				"DeployableBaseArray",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FDeployableBaseArray),
+				alignof(FDeployableBaseArray),
+				Z_Construct_UScriptStruct_FDeployableBaseArray_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

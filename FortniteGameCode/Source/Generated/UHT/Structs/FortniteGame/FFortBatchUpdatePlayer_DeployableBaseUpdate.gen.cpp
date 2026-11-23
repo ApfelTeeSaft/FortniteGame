@@ -31,25 +31,12 @@ class UScriptStruct* FFortBatchUpdatePlayer_DeployableBaseUpdate::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010370B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortBatchUpdatePlayer_DeployableBaseUpdate_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortBatchUpdatePlayer_DeployableBaseUpdate>();
 	}
-	// ReturnStructParams: original RVA 0x042C3040
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortBatchUpdatePlayer_DeployableBaseUpdate_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortBatchUpdatePlayer_DeployableBaseUpdate",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortBatchUpdatePlayer_DeployableBaseUpdate),
-		alignof(FFortBatchUpdatePlayer_DeployableBaseUpdate),
-		Z_Construct_UScriptStruct_FFortBatchUpdatePlayer_DeployableBaseUpdate_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039DA0 (end 0x01039DCF)
 	// Original VA: 0x0000000141039DA0 | File offset: 0x010393A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortBatchUpdatePlayer_DeployableBaseUpdate::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortBatchUpdatePlayer_DeployableBaseUpdate_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C3040
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortBatchUpdatePlayer_DeployableBaseUpdate_Statics::NewStructOps,
+				"FortBatchUpdatePlayer_DeployableBaseUpdate",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortBatchUpdatePlayer_DeployableBaseUpdate),
+				alignof(FFortBatchUpdatePlayer_DeployableBaseUpdate),
+				Z_Construct_UScriptStruct_FFortBatchUpdatePlayer_DeployableBaseUpdate_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

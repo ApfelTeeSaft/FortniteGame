@@ -25,10 +25,7 @@ void UEpicCMSTileCarousel::StaticRegisterNativesUEpicCMSTileCarousel()
 struct Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041844E0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "GetCurrentPageIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x4, Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3DA0 (end 0x002E3DCF)
 // Original VA: 0x00000001402E3DA0 | File offset: 0x002E33A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,7 +34,9 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x041844E0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "GetCurrentPageIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x4, Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -45,10 +44,7 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex()
 struct Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04184560; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "HandleTilePageAdded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3DD0 (end 0x002E3DFF)
 // Original VA: 0x00000001402E3DD0 | File offset: 0x002E33D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,7 +53,9 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded_Statics::FuncParams);
+		// FuncParams: original RVA 0x04184560; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "HandleTilePageAdded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x8, Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -65,10 +63,7 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded()
 struct Z_Construct_UFunction_UEpicCMSTileCarousel_NavigationVisibilityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041845F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEpicCMSTileCarousel_NavigationVisibilityChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "NavigationVisibilityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UEpicCMSTileCarousel_NavigationVisibilityChanged_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3E00 (end 0x002E3E2F)
 // Original VA: 0x00000001402E3E00 | File offset: 0x002E3400
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,17 +72,13 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_NavigationVisibilityChange
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEpicCMSTileCarousel_NavigationVisibilityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x041845F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "NavigationVisibilityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UEpicCMSTileCarousel_NavigationVisibilityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UEpicCMSTileCarousel_NextPage_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04184630; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEpicCMSTileCarousel_NextPage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "NextPage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3E30 (end 0x002E3E5F)
 // Original VA: 0x00000001402E3E30 | File offset: 0x002E3430
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,17 +87,13 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_NextPage()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEpicCMSTileCarousel_NextPage_Statics::FuncParams);
+		// FuncParams: original RVA 0x04184630; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "NextPage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UEpicCMSTileCarousel_PreviousPage_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04184670; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEpicCMSTileCarousel_PreviousPage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "PreviousPage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3E60 (end 0x002E3E8F)
 // Original VA: 0x00000001402E3E60 | File offset: 0x002E3460
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -115,7 +102,9 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_PreviousPage()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEpicCMSTileCarousel_PreviousPage_Statics::FuncParams);
+		// FuncParams: original RVA 0x04184670; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "PreviousPage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -123,10 +112,7 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_PreviousPage()
 struct Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041846F0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "SetCurrentPageByIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3E90 (end 0x002E3EBF)
 // Original VA: 0x00000001402E3E90 | File offset: 0x002E3490
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -135,7 +121,9 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x041846F0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEpicCMSTileCarousel, "SetCurrentPageByIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x4, Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

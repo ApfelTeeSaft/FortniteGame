@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x02EAE198, FClassParams RVA 0x02EAE1C0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_ULogoutCallbackProxy();  // RVA 0x0032EC90 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E430 (end 0x0032E452)
 // Original VA: 0x000000014032E430 | File offset: 0x0032DA30
@@ -20,7 +20,7 @@ void ULogoutCallbackProxy::StaticRegisterNativesULogoutCallbackProxy()
 
 struct Z_Construct_UFunction_ULogoutCallbackProxy_Logout_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04188820 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F720 (end 0x0032F74F)
 // Original VA: 0x000000014032F720 | File offset: 0x0032ED20
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_ULogoutCallbackProxy_Logout()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ULogoutCallbackProxy_Logout_Statics::FuncParams);
+		// FuncParams: original RVA 0x04188820; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ULogoutCallbackProxy, "Logout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_ULogoutCallbackProxy_Logout_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -32,25 +32,12 @@ class UScriptStruct* FGameDifficultyInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3950 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGameDifficultyInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameDifficultyInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04278C60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameDifficultyInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"GameDifficultyInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FGameDifficultyInfo),
-		alignof(FGameDifficultyInfo),
-		Z_Construct_UScriptStruct_FGameDifficultyInfo_Statics::PropPointers, 17,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4BA0 (end 0x00FE4BCF)
 	// Original VA: 0x0000000140FE4BA0 | File offset: 0x00FE41A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FGameDifficultyInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGameDifficultyInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04278C60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FGameDifficultyInfo_Statics::NewStructOps,
+				"GameDifficultyInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FGameDifficultyInfo),
+				alignof(FGameDifficultyInfo),
+				Z_Construct_UScriptStruct_FGameDifficultyInfo_Statics::PropPointers, 17,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

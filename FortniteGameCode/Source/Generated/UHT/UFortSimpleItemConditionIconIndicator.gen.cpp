@@ -23,10 +23,7 @@ void UFortSimpleItemConditionIconIndicator::StaticRegisterNativesUFortSimpleItem
 struct Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemToRepresent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B3020; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemToRepresent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSimpleItemConditionIconIndicator, "GetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5C50 (end 0x028F5C7F)
 // Original VA: 0x00000001428F5C50 | File offset: 0x028F5250
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemTo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemToRepresent_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3020; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSimpleItemConditionIconIndicator, "GetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemTo
 struct Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemToRepresent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B30A0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemToRepresent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSimpleItemConditionIconIndicator, "SetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5C80 (end 0x028F5CAF)
 // Original VA: 0x00000001428F5C80 | File offset: 0x028F5280
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemTo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemToRepresent_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B30A0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSimpleItemConditionIconIndicator, "SetItemToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemToRepresent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemTo
 struct Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCollapseWhenConditionIsFalse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B3130; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCollapseWhenConditionIsFalse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSimpleItemConditionIconIndicator, "ShouldCollapseWhenConditionIsFalse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCollapseWhenConditionIsFalse_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5CB0 (end 0x028F5CDF)
 // Original VA: 0x00000001428F5CB0 | File offset: 0x028F52B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCol
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCollapseWhenConditionIsFalse_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B3130; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSimpleItemConditionIconIndicator, "ShouldCollapseWhenConditionIsFalse", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCollapseWhenConditionIsFalse_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

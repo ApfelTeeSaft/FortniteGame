@@ -31,25 +31,12 @@ class UScriptStruct* FExternalToolDefinition::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA180 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FExternalToolDefinition_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FExternalToolDefinition>();
 	}
-	// ReturnStructParams: original RVA 0x044248B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FExternalToolDefinition_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ExternalToolDefinition",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FExternalToolDefinition),
-		alignof(FExternalToolDefinition),
-		Z_Construct_UScriptStruct_FExternalToolDefinition_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DC120 (end 0x023DC14F)
 	// Original VA: 0x00000001423DC120 | File offset: 0x023DB720
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FExternalToolDefinition::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FExternalToolDefinition_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044248B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FExternalToolDefinition_Statics::NewStructOps,
+				"ExternalToolDefinition",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FExternalToolDefinition),
+				alignof(FExternalToolDefinition),
+				Z_Construct_UScriptStruct_FExternalToolDefinition_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FSpinBoxStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A4B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSpinBoxStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSpinBoxStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437AE50
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSpinBoxStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"SpinBoxStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSpinBoxStyle),
-		alignof(FSpinBoxStyle),
-		Z_Construct_UScriptStruct_FSpinBoxStyle_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D230 (end 0x0145D25F)
 	// Original VA: 0x000000014145D230 | File offset: 0x0145C830
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FSpinBoxStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSpinBoxStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437AE50
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FSpinBoxStyle_Statics::NewStructOps,
+				"SpinBoxStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSpinBoxStyle),
+				alignof(FSpinBoxStyle),
+				Z_Construct_UScriptStruct_FSpinBoxStyle_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

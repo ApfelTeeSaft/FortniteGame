@@ -31,25 +31,12 @@ class UScriptStruct* FFortEncounterSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8E10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortEncounterSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortEncounterSettings>();
 	}
-	// ReturnStructParams: original RVA 0x043418C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortEncounterSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortEncounterSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortEncounterSettings),
-		alignof(FFortEncounterSettings),
-		Z_Construct_UScriptStruct_FFortEncounterSettings_Statics::PropPointers, 16,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC5F0 (end 0x010CC61F)
 	// Original VA: 0x00000001410CC5F0 | File offset: 0x010CBBF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortEncounterSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortEncounterSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043418C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortEncounterSettings_Statics::NewStructOps,
+				"FortEncounterSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortEncounterSettings),
+				alignof(FFortEncounterSettings),
+				Z_Construct_UScriptStruct_FFortEncounterSettings_Statics::PropPointers, 16,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

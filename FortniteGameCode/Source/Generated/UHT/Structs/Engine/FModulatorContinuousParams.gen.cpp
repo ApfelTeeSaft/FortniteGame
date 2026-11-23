@@ -31,25 +31,12 @@ class UScriptStruct* FModulatorContinuousParams::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB080 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FModulatorContinuousParams_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FModulatorContinuousParams>();
 	}
-	// ReturnStructParams: original RVA 0x0451E4A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FModulatorContinuousParams_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"ModulatorContinuousParams",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FModulatorContinuousParams),
-		alignof(FModulatorContinuousParams),
-		Z_Construct_UScriptStruct_FModulatorContinuousParams_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DC6E0 (end 0x024DC70F)
 	// Original VA: 0x00000001424DC6E0 | File offset: 0x024DBCE0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FModulatorContinuousParams::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FModulatorContinuousParams_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0451E4A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FModulatorContinuousParams_Statics::NewStructOps,
+				"ModulatorContinuousParams",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FModulatorContinuousParams),
+				alignof(FModulatorContinuousParams),
+				Z_Construct_UScriptStruct_FModulatorContinuousParams_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

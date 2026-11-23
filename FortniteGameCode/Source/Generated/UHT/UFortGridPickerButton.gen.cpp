@@ -22,10 +22,7 @@ void UFortGridPickerButton::StaticRegisterNativesUFortGridPickerButton()
 struct Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04578220; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "CreateGridWidget__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x8, Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC650 (end 0x028AC67F)
 // Original VA: 0x00000001428AC650 | File offset: 0x028ABC50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget_
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x04578220; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "CreateGridWidget__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00120000, 0x8, Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget_
 struct Z_Construct_UDelegateFunction_UFortGridPickerButton_OnIsGridPickerOpenChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045781A0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortGridPickerButton_OnIsGridPickerOpenChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "OnIsGridPickerOpenChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x1, Z_Construct_UDelegateFunction_UFortGridPickerButton_OnIsGridPickerOpenChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC680 (end 0x028AC6AF)
 // Original VA: 0x00000001428AC680 | File offset: 0x028ABC80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +50,13 @@ UFunction* Z_Construct_UDelegateFunction_UFortGridPickerButton_OnIsGridPickerOpe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortGridPickerButton_OnIsGridPickerOpenChanged__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x045781A0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "OnIsGridPickerOpenChanged__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x1, Z_Construct_UDelegateFunction_UFortGridPickerButton_OnIsGridPickerOpenChanged__DelegateSignature_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortGridPickerButton_OnButtonClicked_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04578260; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGridPickerButton_OnButtonClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "OnButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ADFA0 (end 0x028ADFCF)
 // Original VA: 0x00000001428ADFA0 | File offset: 0x028AD5A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +65,9 @@ UFunction* Z_Construct_UFunction_UFortGridPickerButton_OnButtonClicked()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGridPickerButton_OnButtonClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x04578260; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "OnButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +75,7 @@ UFunction* Z_Construct_UFunction_UFortGridPickerButton_OnButtonClicked()
 struct Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045782F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "SetIsOpen", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ADFD0 (end 0x028ADFFF)
 // Original VA: 0x00000001428ADFD0 | File offset: 0x028AD5D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,7 +84,9 @@ UFunction* Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen_Statics::FuncParams);
+		// FuncParams: original RVA 0x045782F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGridPickerButton, "SetIsOpen", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

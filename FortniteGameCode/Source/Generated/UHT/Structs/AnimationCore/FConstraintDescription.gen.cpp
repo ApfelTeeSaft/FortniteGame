@@ -31,25 +31,12 @@ class UScriptStruct* FConstraintDescription::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01ACF6B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FConstraintDescription_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FConstraintDescription>();
 	}
-	// ReturnStructParams: original RVA 0x043A7C10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FConstraintDescription_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
-		nullptr,
-		&NewStructOps,
-		"ConstraintDescription",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FConstraintDescription),
-		alignof(FConstraintDescription),
-		Z_Construct_UScriptStruct_FConstraintDescription_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AD0360 (end 0x01AD038F)
 	// Original VA: 0x0000000141AD0360 | File offset: 0x01ACF960
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FConstraintDescription::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FConstraintDescription_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A7C10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimationCore,
+				nullptr,
+				&Z_Construct_UScriptStruct_FConstraintDescription_Statics::NewStructOps,
+				"ConstraintDescription",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FConstraintDescription),
+				alignof(FConstraintDescription),
+				Z_Construct_UScriptStruct_FConstraintDescription_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FAIDataProviderTypedValue::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1AC80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAIDataProviderTypedValue_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAIDataProviderTypedValue>();
 	}
-	// ReturnStructParams: original RVA 0x043E7030
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAIDataProviderTypedValue_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
-		Z_Construct_UScriptStruct_FAIDataProviderValue,
-		&NewStructOps,
-		"AIDataProviderTypedValue",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000205),
-		sizeof(FAIDataProviderTypedValue),
-		alignof(FAIDataProviderTypedValue),
-		Z_Construct_UScriptStruct_FAIDataProviderTypedValue_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1CD60 (end 0x01D1CD8F)
 	// Original VA: 0x0000000141D1CD60 | File offset: 0x01D1C360
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAIDataProviderTypedValue::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAIDataProviderTypedValue_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043E7030
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
+				Z_Construct_UScriptStruct_FAIDataProviderValue,
+				&Z_Construct_UScriptStruct_FAIDataProviderTypedValue_Statics::NewStructOps,
+				"AIDataProviderTypedValue",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000205),
+				sizeof(FAIDataProviderTypedValue),
+				alignof(FAIDataProviderTypedValue),
+				Z_Construct_UScriptStruct_FAIDataProviderTypedValue_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

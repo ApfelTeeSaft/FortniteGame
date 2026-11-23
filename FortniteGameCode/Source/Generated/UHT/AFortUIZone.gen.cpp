@@ -22,12 +22,6 @@ void AFortUIZone::StaticRegisterNativesAFortUIZone()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortUIZone_ToggleTargetInfo_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043446F0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortUIZone_ToggleTargetInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020603, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4F70 (end 0x010D4F9F)
 // Original VA: 0x00000001410D4F70 | File offset: 0x010D4570
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,17 +30,13 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfo()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortUIZone_ToggleTargetInfo_Statics::FuncParams);
+		// FuncParams: original RVA 0x043446F0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020603, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoAI_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04344730; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoAI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoAI", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4FA0 (end 0x010D4FCF)
 // Original VA: 0x00000001410D4FA0 | File offset: 0x010D45A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +45,9 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoAI()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoAI_Statics::FuncParams);
+		// FuncParams: original RVA 0x04344730; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoAI", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +55,7 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoAI()
 struct Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoLock_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043447C0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoLock_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoLock", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x1, Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoLock_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4FD0 (end 0x010D4FFF)
 // Original VA: 0x00000001410D4FD0 | File offset: 0x010D45D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,17 +64,13 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoLock()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoLock_Statics::FuncParams);
+		// FuncParams: original RVA 0x043447C0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoLock", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x1, Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoLock_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoPaths_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04344800; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoPaths_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoPaths", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D5000 (end 0x010D502F)
 // Original VA: 0x00000001410D5000 | File offset: 0x010D4600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,17 +79,13 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoPaths()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoPaths_Statics::FuncParams);
+		// FuncParams: original RVA 0x04344800; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoPaths", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoSensing_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04344840; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoSensing_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoSensing", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D5030 (end 0x010D505F)
 // Original VA: 0x00000001410D5030 | File offset: 0x010D4630
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -113,7 +94,9 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoSensing()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoSensing_Statics::FuncParams);
+		// FuncParams: original RVA 0x04344840; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortUIZone, "ToggleTargetInfoSensing", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020601, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

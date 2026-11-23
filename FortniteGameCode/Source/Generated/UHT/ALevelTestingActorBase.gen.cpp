@@ -22,10 +22,7 @@ void ALevelTestingActorBase::StaticRegisterNativesALevelTestingActorBase()
 struct Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435D9F0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelTestingActorBase, "ExtractSkeletalMesh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA7D0 (end 0x010EA7FF)
 // Original VA: 0x00000001410EA7D0 | File offset: 0x010E9DD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435D9F0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelTestingActorBase, "ExtractSkeletalMesh", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh()
 struct Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMeshScale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0435DAC0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMeshScale_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelTestingActorBase, "ExtractSkeletalMeshScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14822401, 0x18, Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMeshScale_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA800 (end 0x010EA82F)
 // Original VA: 0x00000001410EA800 | File offset: 0x010E9E00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMeshScale
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMeshScale_Statics::FuncParams);
+		// FuncParams: original RVA 0x0435DAC0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ALevelTestingActorBase, "ExtractSkeletalMeshScale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14822401, 0x18, Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMeshScale_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

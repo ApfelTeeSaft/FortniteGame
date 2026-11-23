@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_PoseByName::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0B150 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_PoseByName_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_PoseByName>();
 	}
-	// ReturnStructParams: original RVA 0x043ADC10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_PoseByName_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_PoseHandler,
-		&NewStructOps,
-		"AnimNode_PoseByName",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_PoseByName),
-		alignof(FAnimNode_PoseByName),
-		Z_Construct_UScriptStruct_FAnimNode_PoseByName_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0EF50 (end 0x01B0EF7F)
 	// Original VA: 0x0000000141B0EF50 | File offset: 0x01B0E550
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_PoseByName::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_PoseByName_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043ADC10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_PoseHandler,
+				&Z_Construct_UScriptStruct_FAnimNode_PoseByName_Statics::NewStructOps,
+				"AnimNode_PoseByName",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_PoseByName),
+				alignof(FAnimNode_PoseByName),
+				Z_Construct_UScriptStruct_FAnimNode_PoseByName_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FQuickBarSlotData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109CC60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FQuickBarSlotData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FQuickBarSlotData>();
 	}
-	// ReturnStructParams: original RVA 0x04321280
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FQuickBarSlotData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"QuickBarSlotData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FQuickBarSlotData),
-		alignof(FQuickBarSlotData),
-		Z_Construct_UScriptStruct_FQuickBarSlotData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109EB00 (end 0x0109EB2F)
 	// Original VA: 0x000000014109EB00 | File offset: 0x0109E100
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FQuickBarSlotData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FQuickBarSlotData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04321280
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FQuickBarSlotData_Statics::NewStructOps,
+				"QuickBarSlotData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FQuickBarSlotData),
+				alignof(FQuickBarSlotData),
+				Z_Construct_UScriptStruct_FQuickBarSlotData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

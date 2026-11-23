@@ -32,25 +32,12 @@ class UScriptStruct* FVolumeControlStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A830 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVolumeControlStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVolumeControlStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0437B0E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVolumeControlStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FSlateWidgetStyle,
-		&NewStructOps,
-		"VolumeControlStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FVolumeControlStyle),
-		alignof(FVolumeControlStyle),
-		Z_Construct_UScriptStruct_FVolumeControlStyle_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D380 (end 0x0145D3AF)
 	// Original VA: 0x000000014145D380 | File offset: 0x0145C980
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FVolumeControlStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVolumeControlStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0437B0E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FSlateWidgetStyle,
+				&Z_Construct_UScriptStruct_FVolumeControlStyle_Statics::NewStructOps,
+				"VolumeControlStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FVolumeControlStyle),
+				alignof(FVolumeControlStyle),
+				Z_Construct_UScriptStruct_FVolumeControlStyle_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_ConvertComponentToLocalSpace::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5120 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_ConvertComponentToLocalSpace_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_ConvertComponentToLocalSpace>();
 	}
-	// ReturnStructParams: original RVA 0x04418EA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_ConvertComponentToLocalSpace_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimNode_Base,
-		&NewStructOps,
-		"AnimNode_ConvertComponentToLocalSpace",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_ConvertComponentToLocalSpace),
-		alignof(FAnimNode_ConvertComponentToLocalSpace),
-		Z_Construct_UScriptStruct_FAnimNode_ConvertComponentToLocalSpace_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6E60 (end 0x023D6E8F)
 	// Original VA: 0x00000001423D6E60 | File offset: 0x023D6460
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_ConvertComponentToLocalSpace::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_ConvertComponentToLocalSpace_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04418EA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimNode_Base,
+				&Z_Construct_UScriptStruct_FAnimNode_ConvertComponentToLocalSpace_Statics::NewStructOps,
+				"AnimNode_ConvertComponentToLocalSpace",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_ConvertComponentToLocalSpace),
+				alignof(FAnimNode_ConvertComponentToLocalSpace),
+				Z_Construct_UScriptStruct_FAnimNode_ConvertComponentToLocalSpace_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

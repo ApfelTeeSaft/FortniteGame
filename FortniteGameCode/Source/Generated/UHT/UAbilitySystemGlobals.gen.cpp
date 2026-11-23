@@ -19,12 +19,6 @@ void UAbilitySystemGlobals::StaticRegisterNativesUAbilitySystemGlobals()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCooldowns_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04193930; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCooldowns_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilitySystemGlobals, "ToggleIgnoreAbilitySystemCooldowns", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020600, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546E80 (end 0x00546EAF)
 // Original VA: 0x0000000140546E80 | File offset: 0x00546480
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +27,13 @@ UFunction* Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystem
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCooldowns_Statics::FuncParams);
+		// FuncParams: original RVA 0x04193930; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilitySystemGlobals, "ToggleIgnoreAbilitySystemCooldowns", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020600, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCosts_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04193970; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCosts_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilitySystemGlobals, "ToggleIgnoreAbilitySystemCosts", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020600, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546EB0 (end 0x00546EDF)
 // Original VA: 0x0000000140546EB0 | File offset: 0x005464B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +42,9 @@ UFunction* Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystem
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCosts_Statics::FuncParams);
+		// FuncParams: original RVA 0x04193970; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAbilitySystemGlobals, "ToggleIgnoreAbilitySystemCosts", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020600, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

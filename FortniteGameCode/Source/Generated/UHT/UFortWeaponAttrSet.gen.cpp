@@ -25,12 +25,6 @@ void UFortWeaponAttrSet::StaticRegisterNativesUFortWeaponAttrSet()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_AccumulatedWeaponChanceToNotConsumeAmmo_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349C30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_AccumulatedWeaponChanceToNotConsumeAmmo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_AccumulatedWeaponChanceToNotConsumeAmmo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8F10 (end 0x010D8F3F)
 // Original VA: 0x00000001410D8F10 | File offset: 0x010D8510
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,17 +33,13 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_AccumulatedWeaponChanc
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_AccumulatedWeaponChanceToNotConsumeAmmo_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349C30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_AccumulatedWeaponChanceToNotConsumeAmmo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_CharacterItemDurabilityDecayModifier_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349C70; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_CharacterItemDurabilityDecayModifier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_CharacterItemDurabilityDecayModifier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8F40 (end 0x010D8F6F)
 // Original VA: 0x00000001410D8F40 | File offset: 0x010D8540
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -58,17 +48,13 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_CharacterItemDurabilit
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_CharacterItemDurabilityDecayModifier_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349C70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_CharacterItemDurabilityDecayModifier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponAmmoClipSize_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349CB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponAmmoClipSize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponAmmoClipSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8F70 (end 0x010D8F9F)
 // Original VA: 0x00000001410D8F70 | File offset: 0x010D8570
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,17 +63,13 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponAmmoClipSize()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponAmmoClipSize_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349CB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponAmmoClipSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponChanceToNotConsumeAmmo_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349CF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponChanceToNotConsumeAmmo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponChanceToNotConsumeAmmo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8FA0 (end 0x010D8FCF)
 // Original VA: 0x00000001410D8FA0 | File offset: 0x010D85A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,17 +78,13 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponChanceToNotConsu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponChanceToNotConsumeAmmo_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349CF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponChanceToNotConsumeAmmo", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponHorizontalRecoil_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349D30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponHorizontalRecoil_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponHorizontalRecoil", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8FD0 (end 0x010D8FFF)
 // Original VA: 0x00000001410D8FD0 | File offset: 0x010D85D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -115,17 +93,13 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponHorizontalRecoil
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponHorizontalRecoil_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349D30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponHorizontalRecoil", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponRateOfFire_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349D70; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponRateOfFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponRateOfFire", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9000 (end 0x010D902F)
 // Original VA: 0x00000001410D9000 | File offset: 0x010D8600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -134,17 +108,13 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponRateOfFire()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponRateOfFire_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349D70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponRateOfFire", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponReloadSpeed_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349DB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponReloadSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponReloadSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9030 (end 0x010D905F)
 // Original VA: 0x00000001410D9030 | File offset: 0x010D8630
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -153,17 +123,13 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponReloadSpeed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponReloadSpeed_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349DB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponReloadSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponVerticalRecoil_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04349DF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponVerticalRecoil_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponVerticalRecoil", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9060 (end 0x010D908F)
 // Original VA: 0x00000001410D9060 | File offset: 0x010D8660
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -172,7 +138,9 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponVerticalRecoil()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponVerticalRecoil_Statics::FuncParams);
+		// FuncParams: original RVA 0x04349DF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortWeaponAttrSet, "OnRep_WeaponVerticalRecoil", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

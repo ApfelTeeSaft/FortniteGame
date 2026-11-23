@@ -21,10 +21,7 @@ void UInAppPurchaseQueryCallbackProxy::StaticRegisterNativesUInAppPurchaseQueryC
 struct Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04187AA0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy, "CreateProxyObjectForInAppPurchaseQuery", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F600 (end 0x0032F62F)
 // Original VA: 0x000000014032F600 | File offset: 0x0032EC00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObj
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Statics::FuncParams);
+		// FuncParams: original RVA 0x04187AA0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy, "CreateProxyObjectForInAppPurchaseQuery", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x20, Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

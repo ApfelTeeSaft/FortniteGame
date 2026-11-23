@@ -32,25 +32,12 @@ class UScriptStruct* FAnimationState::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5520 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimationState_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimationState>();
 	}
-	// ReturnStructParams: original RVA 0x0441CB70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimationState_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimationStateBase,
-		&NewStructOps,
-		"AnimationState",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAnimationState),
-		alignof(FAnimationState),
-		Z_Construct_UScriptStruct_FAnimationState_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D70A0 (end 0x023D70CF)
 	// Original VA: 0x00000001423D70A0 | File offset: 0x023D66A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimationState::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimationState_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441CB70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimationStateBase,
+				&Z_Construct_UScriptStruct_FAnimationState_Statics::NewStructOps,
+				"AnimationState",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAnimationState),
+				alignof(FAnimationState),
+				Z_Construct_UScriptStruct_FAnimationState_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

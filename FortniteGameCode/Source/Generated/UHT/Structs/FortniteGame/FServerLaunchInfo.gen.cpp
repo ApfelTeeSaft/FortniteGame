@@ -31,25 +31,12 @@ class UScriptStruct* FServerLaunchInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB300 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FServerLaunchInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FServerLaunchInfo>();
 	}
-	// ReturnStructParams: original RVA 0x042B0850
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FServerLaunchInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ServerLaunchInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FServerLaunchInfo),
-		alignof(FServerLaunchInfo),
-		Z_Construct_UScriptStruct_FServerLaunchInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101F920 (end 0x0101F94F)
 	// Original VA: 0x000000014101F920 | File offset: 0x0101EF20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FServerLaunchInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FServerLaunchInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042B0850
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FServerLaunchInfo_Statics::NewStructOps,
+				"ServerLaunchInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FServerLaunchInfo),
+				alignof(FServerLaunchInfo),
+				Z_Construct_UScriptStruct_FServerLaunchInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

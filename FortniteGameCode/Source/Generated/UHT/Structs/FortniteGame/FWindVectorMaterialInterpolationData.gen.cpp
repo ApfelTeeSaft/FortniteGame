@@ -31,25 +31,12 @@ class UScriptStruct* FWindVectorMaterialInterpolationData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DB930 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FWindVectorMaterialInterpolationData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWindVectorMaterialInterpolationData>();
 	}
-	// ReturnStructParams: original RVA 0x04354A80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWindVectorMaterialInterpolationData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"WindVectorMaterialInterpolationData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FWindVectorMaterialInterpolationData),
-		alignof(FWindVectorMaterialInterpolationData),
-		Z_Construct_UScriptStruct_FWindVectorMaterialInterpolationData_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DD610 (end 0x010DD63F)
 	// Original VA: 0x00000001410DD610 | File offset: 0x010DCC10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FWindVectorMaterialInterpolationData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FWindVectorMaterialInterpolationData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04354A80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FWindVectorMaterialInterpolationData_Statics::NewStructOps,
+				"WindVectorMaterialInterpolationData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FWindVectorMaterialInterpolationData),
+				alignof(FWindVectorMaterialInterpolationData),
+				Z_Construct_UScriptStruct_FWindVectorMaterialInterpolationData_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

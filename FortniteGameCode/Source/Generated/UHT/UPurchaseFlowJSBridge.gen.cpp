@@ -22,10 +22,7 @@ void UPurchaseFlowJSBridge::StaticRegisterNativesUPurchaseFlowJSBridge()
 struct Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BE800; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPurchaseFlowJSBridge, "Receipt", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x30, Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006A8090 (end 0x006A80BF)
 // Original VA: 0x00000001406A8090 | File offset: 0x006A7690
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BE800; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPurchaseFlowJSBridge, "Receipt", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x30, Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt()
 struct Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041BE880; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPurchaseFlowJSBridge, "RequestClose", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006A80C0 (end 0x006A80EF)
 // Original VA: 0x00000001406A80C0 | File offset: 0x006A76C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose_Statics::FuncParams);
+		// FuncParams: original RVA 0x041BE880; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPurchaseFlowJSBridge, "RequestClose", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x10, Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

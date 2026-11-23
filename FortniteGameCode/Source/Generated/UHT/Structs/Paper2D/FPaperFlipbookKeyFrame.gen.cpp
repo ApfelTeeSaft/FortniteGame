@@ -31,25 +31,12 @@ class UScriptStruct* FPaperFlipbookKeyFrame::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666A80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPaperFlipbookKeyFrame_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPaperFlipbookKeyFrame>();
 	}
-	// ReturnStructParams: original RVA 0x041B10B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPaperFlipbookKeyFrame_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
-		nullptr,
-		&NewStructOps,
-		"PaperFlipbookKeyFrame",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPaperFlipbookKeyFrame),
-		alignof(FPaperFlipbookKeyFrame),
-		Z_Construct_UScriptStruct_FPaperFlipbookKeyFrame_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00668810 (end 0x0066883F)
 	// Original VA: 0x0000000140668810 | File offset: 0x00667E10
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPaperFlipbookKeyFrame::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPaperFlipbookKeyFrame_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041B10B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPaperFlipbookKeyFrame_Statics::NewStructOps,
+				"PaperFlipbookKeyFrame",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPaperFlipbookKeyFrame),
+				alignof(FPaperFlipbookKeyFrame),
+				Z_Construct_UScriptStruct_FPaperFlipbookKeyFrame_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

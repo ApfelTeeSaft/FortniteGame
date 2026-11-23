@@ -32,25 +32,12 @@ class UScriptStruct* FTieredWaveCollectionLootSet::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0730 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTieredWaveCollectionLootSet_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTieredWaveCollectionLootSet>();
 	}
-	// ReturnStructParams: original RVA 0x04272200
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTieredWaveCollectionLootSet_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"TieredWaveCollectionLootSet",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTieredWaveCollectionLootSet),
-		alignof(FTieredWaveCollectionLootSet),
-		Z_Construct_UScriptStruct_FTieredWaveCollectionLootSet_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1A50 (end 0x00FE1A7F)
 	// Original VA: 0x0000000140FE1A50 | File offset: 0x00FE1050
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FTieredWaveCollectionLootSet::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTieredWaveCollectionLootSet_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04272200
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FTieredWaveCollectionLootSet_Statics::NewStructOps,
+				"TieredWaveCollectionLootSet",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTieredWaveCollectionLootSet),
+				alignof(FTieredWaveCollectionLootSet),
+				Z_Construct_UScriptStruct_FTieredWaveCollectionLootSet_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

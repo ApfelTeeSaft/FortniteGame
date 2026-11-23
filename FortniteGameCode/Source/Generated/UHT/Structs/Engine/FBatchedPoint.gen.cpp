@@ -31,25 +31,12 @@ class UScriptStruct* FBatchedPoint::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024781D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBatchedPoint_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBatchedPoint>();
 	}
-	// ReturnStructParams: original RVA 0x044B21F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBatchedPoint_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BatchedPoint",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBatchedPoint),
-		alignof(FBatchedPoint),
-		Z_Construct_UScriptStruct_FBatchedPoint_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024792B0 (end 0x024792DF)
 	// Original VA: 0x00000001424792B0 | File offset: 0x024788B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBatchedPoint::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBatchedPoint_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044B21F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBatchedPoint_Statics::NewStructOps,
+				"BatchedPoint",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBatchedPoint),
+				alignof(FBatchedPoint),
+				Z_Construct_UScriptStruct_FBatchedPoint_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

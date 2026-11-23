@@ -22,10 +22,7 @@ void AFortAIDirectorDataManager::StaticRegisterNativesAFortAIDirectorDataManager
 struct Z_Construct_UFunction_AFortAIDirectorDataManager_GetAIDirectorFactorValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04221920; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIDirectorDataManager_GetAIDirectorFactorValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIDirectorDataManager, "GetAIDirectorFactorValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortAIDirectorDataManager_GetAIDirectorFactorValue_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F88240 (end 0x00F8826F)
 // Original VA: 0x0000000140F88240 | File offset: 0x00F87840
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_AFortAIDirectorDataManager_GetAIDirectorFactorV
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIDirectorDataManager_GetAIDirectorFactorValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x04221920; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIDirectorDataManager, "GetAIDirectorFactorValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x8, Z_Construct_UFunction_AFortAIDirectorDataManager_GetAIDirectorFactorValue_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_AFortAIDirectorDataManager_GetAIDirectorFactorV
 struct Z_Construct_UFunction_AFortAIDirectorDataManager_TriggerEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042219A0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIDirectorDataManager_TriggerEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIDirectorDataManager, "TriggerEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420400, 0x20, Z_Construct_UFunction_AFortAIDirectorDataManager_TriggerEvent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F88270 (end 0x00F8829F)
 // Original VA: 0x0000000140F88270 | File offset: 0x00F87870
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_AFortAIDirectorDataManager_TriggerEvent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIDirectorDataManager_TriggerEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x042219A0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIDirectorDataManager, "TriggerEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420400, 0x20, Z_Construct_UFunction_AFortAIDirectorDataManager_TriggerEvent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

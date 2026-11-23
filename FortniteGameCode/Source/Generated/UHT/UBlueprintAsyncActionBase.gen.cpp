@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x038B2CD8, FClassParams RVA 0x038B2CF0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UBlueprintAsyncActionBase();  // RVA 0x023E3710 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2C90 (end 0x023E2CB2)
 // Original VA: 0x00000001423E2C90 | File offset: 0x023E2290
@@ -18,10 +18,6 @@ void UBlueprintAsyncActionBase::StaticRegisterNativesUBlueprintAsyncActionBase()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04427320 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E3CE0 (end 0x023E3D0F)
 // Original VA: 0x00000001423E3CE0 | File offset: 0x023E32E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate_Statics::FuncParams);
+		// FuncParams: original RVA 0x04427320; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UBlueprintAsyncActionBase, "Activate", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

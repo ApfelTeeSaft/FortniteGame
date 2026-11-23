@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNotifyEvent::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5160 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNotifyEvent_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNotifyEvent>();
 	}
-	// ReturnStructParams: original RVA 0x0441D690
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNotifyEvent_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FAnimLinkableElement,
-		&NewStructOps,
-		"AnimNotifyEvent",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FAnimNotifyEvent),
-		alignof(FAnimNotifyEvent),
-		Z_Construct_UScriptStruct_FAnimNotifyEvent_Statics::PropPointers, 17,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6F20 (end 0x023D6F4F)
 	// Original VA: 0x00000001423D6F20 | File offset: 0x023D6520
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNotifyEvent::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNotifyEvent_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441D690
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FAnimLinkableElement,
+				&Z_Construct_UScriptStruct_FAnimNotifyEvent_Statics::NewStructOps,
+				"AnimNotifyEvent",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FAnimNotifyEvent),
+				alignof(FAnimNotifyEvent),
+				Z_Construct_UScriptStruct_FAnimNotifyEvent_Statics::PropPointers, 17,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

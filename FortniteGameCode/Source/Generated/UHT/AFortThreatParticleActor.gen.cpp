@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0340AD08, FClassParams RVA 0x0340AD50.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AFortThreatParticleActor();  // RVA 0x010BE1B0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD610 (end 0x010BD632)
 // Original VA: 0x00000001410BD610 | File offset: 0x010BCC10
@@ -20,7 +20,7 @@ void AFortThreatParticleActor::StaticRegisterNativesAFortThreatParticleActor()
 
 struct Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04333120 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE8D0 (end 0x010BE8FF)
 // Original VA: 0x00000001410BE8D0 | File offset: 0x010BDED0
@@ -30,14 +30,16 @@ UFunction* Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333120; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatParticleActor, "GetThreatClouds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043331E0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE900 (end 0x010BE92F)
 // Original VA: 0x00000001410BE900 | File offset: 0x010BDF00
@@ -47,15 +49,13 @@ UFunction* Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x043331E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatParticleActor, "OnThreatCloudsChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420800, 0x10, Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04333220 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE930 (end 0x010BE95F)
 // Original VA: 0x00000001410BE930 | File offset: 0x010BDF30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -64,7 +64,9 @@ UFunction* Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady_Statics::FuncParams);
+		// FuncParams: original RVA 0x04333220; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortThreatParticleActor, "OnWorldReady", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

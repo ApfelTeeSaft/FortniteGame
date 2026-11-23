@@ -23,12 +23,6 @@ void UFortSkillTreeNodeDetailsPanel::StaticRegisterNativesUFortSkillTreeNodeDeta
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleDifferentSkillTreeNodeToRepresentSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B4520; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleDifferentSkillTreeNodeToRepresentSetBP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "HandleDifferentSkillTreeNodeToRepresentSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6010 (end 0x028F603F)
 // Original VA: 0x00000001428F6010 | File offset: 0x028F5610
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,17 +31,13 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleDifferentS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleDifferentSkillTreeNodeToRepresentSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4520; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "HandleDifferentSkillTreeNodeToRepresentSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleSkillTreeNodeStateChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045B4560; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleSkillTreeNodeStateChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "HandleSkillTreeNodeStateChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6040 (end 0x028F606F)
 // Original VA: 0x00000001428F6040 | File offset: 0x028F5640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +46,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleSkillTreeN
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleSkillTreeNodeStateChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4560; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "HandleSkillTreeNodeStateChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +56,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleSkillTreeN
 struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNodeToRepresent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B45F0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNodeToRepresent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "HasSkillTreeNodeToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNodeToRepresent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6070 (end 0x028F609F)
 // Original VA: 0x00000001428F6070 | File offset: 0x028F5670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +65,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNode
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNodeToRepresent_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B45F0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "HasSkillTreeNodeToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54080401, 0x1, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNodeToRepresent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +75,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNode
 struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNodeToRepresent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B4670; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNodeToRepresent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "SetSkillTreeNodeToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNodeToRepresent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F60A0 (end 0x028F60CF)
 // Original VA: 0x00000001428F60A0 | File offset: 0x028F56A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +84,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNode
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNodeToRepresent_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4670; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "SetSkillTreeNodeToRepresent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNodeToRepresent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +94,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNode
 struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B4780; StructureSize 0x3A0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetNodeDisplayData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x3A0, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayData_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F60D0 (end 0x028F60FF)
 // Original VA: 0x00000001428F60D0 | File offset: 0x028F56D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +103,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDispla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayData_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4780; StructureSize 0x3A0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetNodeDisplayData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x3A0, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayData_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +113,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDispla
 struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayDataFromID_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B4890; StructureSize 0x2E8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayDataFromID_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetNodeDisplayDataFromID", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x2E8, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayDataFromID_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6100 (end 0x028F612F)
 // Original VA: 0x00000001428F6100 | File offset: 0x028F5700
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +122,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDispla
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayDataFromID_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4890; StructureSize 0x2E8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetNodeDisplayDataFromID", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x2E8, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayDataFromID_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -144,10 +132,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDispla
 struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadAttributeData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B4A10; StructureSize 0x3C8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadAttributeData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetNodeSquadAttributeData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x3C8, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadAttributeData_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6130 (end 0x028F615F)
 // Original VA: 0x00000001428F6130 | File offset: 0x028F5730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -156,7 +141,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadA
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadAttributeData_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4A10; StructureSize 0x3C8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetNodeSquadAttributeData", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0x3C8, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadAttributeData_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -164,10 +151,7 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadA
 struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeNodeState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045B4AE0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeNodeState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetSkillTreeNodeState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0xC, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeNodeState_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6160 (end 0x028F618F)
 // Original VA: 0x00000001428F6160 | File offset: 0x028F5760
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -176,7 +160,9 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeN
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeNodeState_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B4AE0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, "TryGetSkillTreeNodeState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54480401, 0xC, Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeNodeState_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

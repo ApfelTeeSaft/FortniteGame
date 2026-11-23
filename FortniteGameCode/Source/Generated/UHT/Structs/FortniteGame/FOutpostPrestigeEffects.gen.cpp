@@ -31,25 +31,12 @@ class UScriptStruct* FOutpostPrestigeEffects::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF2770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FOutpostPrestigeEffects_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOutpostPrestigeEffects>();
 	}
-	// ReturnStructParams: original RVA 0x042DCC90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOutpostPrestigeEffects_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"OutpostPrestigeEffects",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FOutpostPrestigeEffects),
-		alignof(FOutpostPrestigeEffects),
-		Z_Construct_UScriptStruct_FOutpostPrestigeEffects_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01051E80 (end 0x01051EAF)
 	// Original VA: 0x0000000141051E80 | File offset: 0x01051480
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FOutpostPrestigeEffects::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FOutpostPrestigeEffects_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042DCC90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FOutpostPrestigeEffects_Statics::NewStructOps,
+				"OutpostPrestigeEffects",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FOutpostPrestigeEffects),
+				alignof(FOutpostPrestigeEffects),
+				Z_Construct_UScriptStruct_FOutpostPrestigeEffects_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

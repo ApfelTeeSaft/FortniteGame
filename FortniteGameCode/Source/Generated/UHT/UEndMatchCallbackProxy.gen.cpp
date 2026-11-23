@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x02EAD5C0, FClassParams RVA 0x02EAD5F0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UEndMatchCallbackProxy();  // RVA 0x0032EA10 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E220 (end 0x0032E242)
 // Original VA: 0x000000014032E220 | File offset: 0x0032D820
@@ -20,7 +20,7 @@ void UEndMatchCallbackProxy::StaticRegisterNativesUEndMatchCallbackProxy()
 
 struct Z_Construct_UFunction_UEndMatchCallbackProxy_EndMatch_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04186AB0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F450 (end 0x0032F47F)
 // Original VA: 0x000000014032F450 | File offset: 0x0032EA50
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UEndMatchCallbackProxy_EndMatch()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEndMatchCallbackProxy_EndMatch_Statics::FuncParams);
+		// FuncParams: original RVA 0x04186AB0; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEndMatchCallbackProxy, "EndMatch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x40, Z_Construct_UFunction_UEndMatchCallbackProxy_EndMatch_Statics::PropPointers, 7, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

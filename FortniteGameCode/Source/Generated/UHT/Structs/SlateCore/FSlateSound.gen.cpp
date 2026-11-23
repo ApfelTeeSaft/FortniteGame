@@ -31,25 +31,12 @@ class UScriptStruct* FSlateSound::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A2B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSlateSound_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSlateSound>();
 	}
-	// ReturnStructParams: original RVA 0x04379950
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSlateSound_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		nullptr,
-		&NewStructOps,
-		"SlateSound",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSlateSound),
-		alignof(FSlateSound),
-		Z_Construct_UScriptStruct_FSlateSound_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145D1A0 (end 0x0145D1CF)
 	// Original VA: 0x000000014145D1A0 | File offset: 0x0145C7A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSlateSound::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSlateSound_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04379950
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSlateSound_Statics::NewStructOps,
+				"SlateSound",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSlateSound),
+				alignof(FSlateSound),
+				Z_Construct_UScriptStruct_FSlateSound_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

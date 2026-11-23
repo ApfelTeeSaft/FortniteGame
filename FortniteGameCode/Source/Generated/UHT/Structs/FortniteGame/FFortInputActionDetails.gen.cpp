@@ -31,25 +31,12 @@ class UScriptStruct* FFortInputActionDetails::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107F070 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortInputActionDetails_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortInputActionDetails>();
 	}
-	// ReturnStructParams: original RVA 0x043068F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortInputActionDetails_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortInputActionDetails",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortInputActionDetails),
-		alignof(FFortInputActionDetails),
-		Z_Construct_UScriptStruct_FFortInputActionDetails_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010818D0 (end 0x010818FF)
 	// Original VA: 0x00000001410818D0 | File offset: 0x01080ED0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortInputActionDetails::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortInputActionDetails_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043068F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortInputActionDetails_Statics::NewStructOps,
+				"FortInputActionDetails",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortInputActionDetails),
+				alignof(FFortInputActionDetails),
+				Z_Construct_UScriptStruct_FFortInputActionDetails_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

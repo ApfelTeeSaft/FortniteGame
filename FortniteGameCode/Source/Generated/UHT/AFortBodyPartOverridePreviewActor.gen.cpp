@@ -21,10 +21,7 @@ void AFortBodyPartOverridePreviewActor::StaticRegisterNativesAFortBodyPartOverri
 struct Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmeticItemToHero_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04241850; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmeticItemToHero_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortBodyPartOverridePreviewActor, "ApplyMyCosmeticItemToHero", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmeticItemToHero_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD990 (end 0x00FAD9BF)
 // Original VA: 0x0000000140FAD990 | File offset: 0x00FACF90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +30,13 @@ UFunction* Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmet
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmeticItemToHero_Statics::FuncParams);
+		// FuncParams: original RVA 0x04241850; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortBodyPartOverridePreviewActor, "ApplyMyCosmeticItemToHero", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x10, Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmeticItemToHero_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_OnPreviewCosmeticItem_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04241890; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_OnPreviewCosmeticItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortBodyPartOverridePreviewActor, "OnPreviewCosmeticItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD9C0 (end 0x00FAD9EF)
 // Original VA: 0x0000000140FAD9C0 | File offset: 0x00FACFC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,7 +45,9 @@ UFunction* Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_OnPreviewCosm
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_OnPreviewCosmeticItem_Statics::FuncParams);
+		// FuncParams: original RVA 0x04241890; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortBodyPartOverridePreviewActor, "OnPreviewCosmeticItem", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

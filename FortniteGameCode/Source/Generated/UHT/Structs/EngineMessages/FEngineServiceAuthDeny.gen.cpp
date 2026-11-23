@@ -31,25 +31,12 @@ class UScriptStruct* FEngineServiceAuthDeny::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF28F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEngineServiceAuthDeny_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEngineServiceAuthDeny>();
 	}
-	// ReturnStructParams: original RVA 0x043DDD80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEngineServiceAuthDeny_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_EngineMessages,
-		nullptr,
-		&NewStructOps,
-		"EngineServiceAuthDeny",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FEngineServiceAuthDeny),
-		alignof(FEngineServiceAuthDeny),
-		Z_Construct_UScriptStruct_FEngineServiceAuthDeny_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C829D0 (end 0x01C829FF)
 	// Original VA: 0x0000000141C829D0 | File offset: 0x01C81FD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEngineServiceAuthDeny::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEngineServiceAuthDeny_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043DDD80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_EngineMessages,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEngineServiceAuthDeny_Statics::NewStructOps,
+				"EngineServiceAuthDeny",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FEngineServiceAuthDeny),
+				alignof(FEngineServiceAuthDeny),
+				Z_Construct_UScriptStruct_FEngineServiceAuthDeny_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

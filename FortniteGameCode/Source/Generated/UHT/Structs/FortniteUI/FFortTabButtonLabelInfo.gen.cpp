@@ -31,25 +31,12 @@ class UScriptStruct* FFortTabButtonLabelInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02903EA0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTabButtonLabelInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTabButtonLabelInfo>();
 	}
-	// ReturnStructParams: original RVA 0x045C0360
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTabButtonLabelInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortTabButtonLabelInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTabButtonLabelInfo),
-		alignof(FFortTabButtonLabelInfo),
-		Z_Construct_UScriptStruct_FFortTabButtonLabelInfo_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02905DE0 (end 0x02905E0F)
 	// Original VA: 0x0000000142905DE0 | File offset: 0x029053E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTabButtonLabelInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTabButtonLabelInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045C0360
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTabButtonLabelInfo_Statics::NewStructOps,
+				"FortTabButtonLabelInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTabButtonLabelInfo),
+				alignof(FFortTabButtonLabelInfo),
+				Z_Construct_UScriptStruct_FFortTabButtonLabelInfo_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

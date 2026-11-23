@@ -31,25 +31,12 @@ class UScriptStruct* FThreatCloudValues::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC760 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FThreatCloudValues_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FThreatCloudValues>();
 	}
-	// ReturnStructParams: original RVA 0x04336150
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FThreatCloudValues_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ThreatCloudValues",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FThreatCloudValues),
-		alignof(FThreatCloudValues),
-		Z_Construct_UScriptStruct_FThreatCloudValues_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF620 (end 0x010BF64F)
 	// Original VA: 0x00000001410BF620 | File offset: 0x010BEC20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FThreatCloudValues::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FThreatCloudValues_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04336150
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FThreatCloudValues_Statics::NewStructOps,
+				"ThreatCloudValues",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FThreatCloudValues),
+				alignof(FThreatCloudValues),
+				Z_Construct_UScriptStruct_FThreatCloudValues_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

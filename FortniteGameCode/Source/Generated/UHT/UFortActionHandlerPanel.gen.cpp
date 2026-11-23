@@ -23,12 +23,6 @@ void UFortActionHandlerPanel::StaticRegisterNativesUFortActionHandlerPanel()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04552FD0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "ActivateActionHandler", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888990 (end 0x028889BF)
 // Original VA: 0x0000000142888990 | File offset: 0x02887F90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,17 +31,13 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler_Statics::FuncParams);
+		// FuncParams: original RVA 0x04552FD0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "ActivateActionHandler", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortActionHandlerPanel_DeactivateActionHandler_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04553010; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActionHandlerPanel_DeactivateActionHandler_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "DeactivateActionHandler", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028889C0 (end 0x028889EF)
 // Original VA: 0x00000001428889C0 | File offset: 0x02887FC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +46,9 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_DeactivateActionHandler
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActionHandlerPanel_DeactivateActionHandler_Statics::FuncParams);
+		// FuncParams: original RVA 0x04553010; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "DeactivateActionHandler", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +56,7 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_DeactivateActionHandler
 struct Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045530E0; StructureSize 0xC0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "OnHandleAction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420C00, 0xC0, Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028889F0 (end 0x02888A1F)
 // Original VA: 0x00000001428889F0 | File offset: 0x02887FF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +65,9 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction_Statics::FuncParams);
+		// FuncParams: original RVA 0x045530E0; StructureSize 0xC0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "OnHandleAction", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08420C00, 0xC0, Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +75,7 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction()
 struct Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04553160; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "RemoveOnPanelDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888A20 (end 0x02888A4F)
 // Original VA: 0x0000000142888A20 | File offset: 0x02888020
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +84,9 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivate
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04553160; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "RemoveOnPanelDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +94,7 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivate
 struct Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045531E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "SetOnPanelActivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888A50 (end 0x02888A7F)
 // Original VA: 0x0000000142888A50 | File offset: 0x02888050
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +103,9 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x045531E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "SetOnPanelActivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +113,7 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated()
 struct Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04553260; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "SetOnPanelDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888A80 (end 0x02888AAF)
 // Original VA: 0x0000000142888A80 | File offset: 0x02888080
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +122,9 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04553260; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortActionHandlerPanel, "SetOnPanelDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

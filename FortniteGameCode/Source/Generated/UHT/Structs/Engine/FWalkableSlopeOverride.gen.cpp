@@ -31,25 +31,12 @@ class UScriptStruct* FWalkableSlopeOverride::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02409AB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FWalkableSlopeOverride_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWalkableSlopeOverride>();
 	}
-	// ReturnStructParams: original RVA 0x0444FAD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWalkableSlopeOverride_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"WalkableSlopeOverride",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FWalkableSlopeOverride),
-		alignof(FWalkableSlopeOverride),
-		Z_Construct_UScriptStruct_FWalkableSlopeOverride_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D7F0 (end 0x0240D81F)
 	// Original VA: 0x000000014240D7F0 | File offset: 0x0240CDF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FWalkableSlopeOverride::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FWalkableSlopeOverride_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0444FAD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FWalkableSlopeOverride_Statics::NewStructOps,
+				"WalkableSlopeOverride",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FWalkableSlopeOverride),
+				alignof(FWalkableSlopeOverride),
+				Z_Construct_UScriptStruct_FWalkableSlopeOverride_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

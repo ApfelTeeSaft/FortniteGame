@@ -21,12 +21,6 @@ void UFortDialogNotificationHandler::StaticRegisterNativesUFortDialogNotificatio
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x042688C0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "OnActionComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7AC0 (end 0x00FD7AEF)
 // Original VA: 0x0000000140FD7AC0 | File offset: 0x00FD70C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,17 +29,13 @@ UFunction* Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnAction
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x042688C0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "OnActionComplete__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortDialogNotificationHandler_Accept_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04268940; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDialogNotificationHandler_Accept_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "Accept", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C08, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7BB0 (end 0x00FD7BDF)
 // Original VA: 0x0000000140FD7BB0 | File offset: 0x00FD71B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,17 +44,13 @@ UFunction* Z_Construct_UFunction_UFortDialogNotificationHandler_Accept()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDialogNotificationHandler_Accept_Statics::FuncParams);
+		// FuncParams: original RVA 0x04268940; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "Accept", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C08, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortDialogNotificationHandler_Decline_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04268980; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDialogNotificationHandler_Decline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "Decline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C08, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7BE0 (end 0x00FD7C0F)
 // Original VA: 0x0000000140FD7BE0 | File offset: 0x00FD71E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -73,7 +59,9 @@ UFunction* Z_Construct_UFunction_UFortDialogNotificationHandler_Decline()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDialogNotificationHandler_Decline_Statics::FuncParams);
+		// FuncParams: original RVA 0x04268980; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "Decline", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C08, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -81,10 +69,7 @@ UFunction* Z_Construct_UFunction_UFortDialogNotificationHandler_Decline()
 struct Z_Construct_UFunction_UFortDialogNotificationHandler_SetDialogDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04268A00; StructureSize 0x150 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDialogNotificationHandler_SetDialogDescription_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "SetDialogDescription", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x150, Z_Construct_UFunction_UFortDialogNotificationHandler_SetDialogDescription_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7C10 (end 0x00FD7C3F)
 // Original VA: 0x0000000140FD7C10 | File offset: 0x00FD7210
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -93,17 +78,13 @@ UFunction* Z_Construct_UFunction_UFortDialogNotificationHandler_SetDialogDescrip
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDialogNotificationHandler_SetDialogDescription_Statics::FuncParams);
+		// FuncParams: original RVA 0x04268A00; StructureSize 0x150 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "SetDialogDescription", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x150, Z_Construct_UFunction_UFortDialogNotificationHandler_SetDialogDescription_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortDialogNotificationHandler_Timeout_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04268A40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDialogNotificationHandler_Timeout_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "Timeout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C08, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7C40 (end 0x00FD7C6F)
 // Original VA: 0x0000000140FD7C40 | File offset: 0x00FD7240
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -112,7 +93,9 @@ UFunction* Z_Construct_UFunction_UFortDialogNotificationHandler_Timeout()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDialogNotificationHandler_Timeout_Statics::FuncParams);
+		// FuncParams: original RVA 0x04268A40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDialogNotificationHandler, "Timeout", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C08, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

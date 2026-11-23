@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03CCD1E0, FClassParams RVA 0x03CCD270.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortItemIcon();  // RVA 0x028C9EB0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C99F0 (end 0x028C9A12)
 // Original VA: 0x00000001428C99F0 | File offset: 0x028C8FF0
@@ -24,7 +24,7 @@ void UFortItemIcon::StaticRegisterNativesUFortItemIcon()
 
 struct Z_Construct_UFunction_UFortItemIcon_SetBrushSize_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591470 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAA50 (end 0x028CAA7F)
 // Original VA: 0x00000001428CAA50 | File offset: 0x028CA050
@@ -34,14 +34,16 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetBrushSize()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetBrushSize_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591470; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemIcon, "SetBrushSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortItemIcon_SetBrushSize_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045914F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAA80 (end 0x028CAAAF)
 // Original VA: 0x00000001428CAA80 | File offset: 0x028CA080
@@ -51,14 +53,16 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity_Statics::FuncParams);
+		// FuncParams: original RVA 0x045914F0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemIcon, "SetColorAndOpacity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemIcon_SetItemDefinition_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591570 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAAB0 (end 0x028CAADF)
 // Original VA: 0x00000001428CAAB0 | File offset: 0x028CA0B0
@@ -68,14 +72,16 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetItemDefinition()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetItemDefinition_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591570; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemIcon, "SetItemDefinition", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x8, Z_Construct_UFunction_UFortItemIcon_SetItemDefinition_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemIcon_SetOpacity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045915F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAAE0 (end 0x028CAB0F)
 // Original VA: 0x00000001428CAAE0 | File offset: 0x028CA0E0
@@ -85,14 +91,16 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetOpacity()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetOpacity_Statics::FuncParams);
+		// FuncParams: original RVA 0x045915F0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemIcon, "SetOpacity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UFortItemIcon_SetOpacity_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04591670 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAB10 (end 0x028CAB3F)
 // Original VA: 0x00000001428CAB10 | File offset: 0x028CA110
@@ -102,7 +110,9 @@ UFunction* Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity_Statics::FuncParams);
+		// FuncParams: original RVA 0x04591670; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemIcon, "SetShadowColorAndOpacity", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

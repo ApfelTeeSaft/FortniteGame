@@ -31,25 +31,12 @@ class UScriptStruct* FFortClientAnnouncementQueue::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BCBE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortClientAnnouncementQueue_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortClientAnnouncementQueue>();
 	}
-	// ReturnStructParams: original RVA 0x042541E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortClientAnnouncementQueue_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortClientAnnouncementQueue",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortClientAnnouncementQueue),
-		alignof(FFortClientAnnouncementQueue),
-		Z_Construct_UScriptStruct_FFortClientAnnouncementQueue_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0F50 (end 0x00FC0F7F)
 	// Original VA: 0x0000000140FC0F50 | File offset: 0x00FC0550
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortClientAnnouncementQueue::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortClientAnnouncementQueue_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042541E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortClientAnnouncementQueue_Statics::NewStructOps,
+				"FortClientAnnouncementQueue",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortClientAnnouncementQueue),
+				alignof(FFortClientAnnouncementQueue),
+				Z_Construct_UScriptStruct_FFortClientAnnouncementQueue_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

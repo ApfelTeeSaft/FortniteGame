@@ -31,25 +31,12 @@ class UScriptStruct* FFortAnimInput_TurnInPlace::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98380 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAnimInput_TurnInPlace_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAnimInput_TurnInPlace>();
 	}
-	// ReturnStructParams: original RVA 0x04234DD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAnimInput_TurnInPlace_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAnimInput_TurnInPlace",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAnimInput_TurnInPlace),
-		alignof(FFortAnimInput_TurnInPlace),
-		Z_Construct_UScriptStruct_FFortAnimInput_TurnInPlace_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F99DF0 (end 0x00F99E1F)
 	// Original VA: 0x0000000140F99DF0 | File offset: 0x00F993F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAnimInput_TurnInPlace::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAnimInput_TurnInPlace_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04234DD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAnimInput_TurnInPlace_Statics::NewStructOps,
+				"FortAnimInput_TurnInPlace",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAnimInput_TurnInPlace),
+				alignof(FFortAnimInput_TurnInPlace),
+				Z_Construct_UScriptStruct_FFortAnimInput_TurnInPlace_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FChatChromeColorScheme::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077F4C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FChatChromeColorScheme_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FChatChromeColorScheme>();
 	}
-	// ReturnStructParams: original RVA 0x041BEDF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FChatChromeColorScheme_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
-		nullptr,
-		&NewStructOps,
-		"ChatChromeColorScheme",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FChatChromeColorScheme),
-		alignof(FChatChromeColorScheme),
-		Z_Construct_UScriptStruct_FChatChromeColorScheme_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077FD70 (end 0x0077FD9F)
 	// Original VA: 0x000000014077FD70 | File offset: 0x0077F370
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FChatChromeColorScheme::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FChatChromeColorScheme_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BEDF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
+				nullptr,
+				&Z_Construct_UScriptStruct_FChatChromeColorScheme_Statics::NewStructOps,
+				"ChatChromeColorScheme",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FChatChromeColorScheme),
+				alignof(FChatChromeColorScheme),
+				Z_Construct_UScriptStruct_FChatChromeColorScheme_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

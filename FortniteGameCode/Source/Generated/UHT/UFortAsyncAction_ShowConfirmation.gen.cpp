@@ -21,10 +21,7 @@ void UFortAsyncAction_ShowConfirmation::StaticRegisterNativesUFortAsyncAction_Sh
 struct Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmationDialog_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04555AA0; StructureSize 0x80 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmationDialog_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation, "ShowConfirmationDialog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x80, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmationDialog_Statics::PropPointers, 8, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D2C0 (end 0x0288D2EF)
 // Original VA: 0x000000014288D2C0 | File offset: 0x0288C8C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmat
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmationDialog_Statics::FuncParams);
+		// FuncParams: original RVA 0x04555AA0; StructureSize 0x80 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_ShowConfirmation, "ShowConfirmationDialog", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x80, Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmationDialog_Statics::PropPointers, 8, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

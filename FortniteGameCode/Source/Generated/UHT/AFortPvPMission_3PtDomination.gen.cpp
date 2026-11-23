@@ -18,12 +18,6 @@ void AFortPvPMission_3PtDomination::StaticRegisterNativesAFortPvPMission_3PtDomi
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSetterHackTimer_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x043151A0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSetterHackTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPMission_3PtDomination, "CapturePointSetterHackTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01093E50 (end 0x01093E7F)
 // Original VA: 0x0000000141093E50 | File offset: 0x01093450
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -32,7 +26,9 @@ UFunction* Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSette
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSetterHackTimer_Statics::FuncParams);
+		// FuncParams: original RVA 0x043151A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortPvPMission_3PtDomination, "CapturePointSetterHackTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

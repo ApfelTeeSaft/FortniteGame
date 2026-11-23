@@ -25,10 +25,7 @@ void UFortGameplayAbility_AIPortal::StaticRegisterNativesUFortGameplayAbility_AI
 struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04281D30; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "GetPortalBuilding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020405, 0x8, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE8400 (end 0x00FE842F)
 // Original VA: 0x0000000140FE8400 | File offset: 0x00FE7A00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,7 +34,9 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics::FuncParams);
+		// FuncParams: original RVA 0x04281D30; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "GetPortalBuilding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020405, 0x8, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -45,10 +44,7 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding
 struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalInPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04281DB0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalInPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "GetPortalInPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820405, 0xC, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalInPoint_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE8430 (end 0x00FE845F)
 // Original VA: 0x0000000140FE8430 | File offset: 0x00FE7A30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,7 +53,9 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalInPoint(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalInPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04281DB0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "GetPortalInPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820405, 0xC, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalInPoint_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -65,10 +63,7 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalInPoint(
 struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalOutPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04281E30; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalOutPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "GetPortalOutPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820405, 0xC, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalOutPoint_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE8460 (end 0x00FE848F)
 // Original VA: 0x0000000140FE8460 | File offset: 0x00FE7A60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,7 +72,9 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalOutPoint
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalOutPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04281E30; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "GetPortalOutPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54820405, 0xC, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalOutPoint_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -85,10 +82,7 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalOutPoint
 struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_HasPortalOutPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04281EC0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameplayAbility_AIPortal_HasPortalOutPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "HasPortalOutPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020405, 0x1, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_HasPortalOutPoint_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE8490 (end 0x00FE84BF)
 // Original VA: 0x0000000140FE8490 | File offset: 0x00FE7A90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -97,17 +91,13 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_HasPortalOutPoint
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_HasPortalOutPoint_Statics::FuncParams);
+		// FuncParams: original RVA 0x04281EC0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "HasPortalOutPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020405, 0x1, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_HasPortalOutPoint_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_ModifyCollisions_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04281F00; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortGameplayAbility_AIPortal_ModifyCollisions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "ModifyCollisions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE84C0 (end 0x00FE84EF)
 // Original VA: 0x0000000140FE84C0 | File offset: 0x00FE7AC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +106,9 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_ModifyCollisions(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortGameplayAbility_AIPortal_ModifyCollisions_Statics::FuncParams);
+		// FuncParams: original RVA 0x04281F00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortGameplayAbility_AIPortal, "ModifyCollisions", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FFortDifficultyIncreaseRewardRecord::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102DAD0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortDifficultyIncreaseRewardRecord_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortDifficultyIncreaseRewardRecord>();
 	}
-	// ReturnStructParams: original RVA 0x042BF8F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortDifficultyIncreaseRewardRecord_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortDifficultyIncreaseRewardRecord",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortDifficultyIncreaseRewardRecord),
-		alignof(FFortDifficultyIncreaseRewardRecord),
-		Z_Construct_UScriptStruct_FFortDifficultyIncreaseRewardRecord_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01031A40 (end 0x01031A6F)
 	// Original VA: 0x0000000141031A40 | File offset: 0x01031040
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortDifficultyIncreaseRewardRecord::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortDifficultyIncreaseRewardRecord_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042BF8F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortDifficultyIncreaseRewardRecord_Statics::NewStructOps,
+				"FortDifficultyIncreaseRewardRecord",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortDifficultyIncreaseRewardRecord),
+				alignof(FFortDifficultyIncreaseRewardRecord),
+				Z_Construct_UScriptStruct_FFortDifficultyIncreaseRewardRecord_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

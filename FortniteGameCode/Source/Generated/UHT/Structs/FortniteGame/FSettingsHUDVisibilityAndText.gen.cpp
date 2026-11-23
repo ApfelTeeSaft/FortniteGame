@@ -31,25 +31,12 @@ class UScriptStruct* FSettingsHUDVisibilityAndText::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE08B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSettingsHUDVisibilityAndText_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSettingsHUDVisibilityAndText>();
 	}
-	// ReturnStructParams: original RVA 0x04273AA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSettingsHUDVisibilityAndText_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"SettingsHUDVisibilityAndText",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSettingsHUDVisibilityAndText),
-		alignof(FSettingsHUDVisibilityAndText),
-		Z_Construct_UScriptStruct_FSettingsHUDVisibilityAndText_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1960 (end 0x00FE198F)
 	// Original VA: 0x0000000140FE1960 | File offset: 0x00FE0F60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSettingsHUDVisibilityAndText::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSettingsHUDVisibilityAndText_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04273AA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSettingsHUDVisibilityAndText_Statics::NewStructOps,
+				"SettingsHUDVisibilityAndText",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSettingsHUDVisibilityAndText),
+				alignof(FSettingsHUDVisibilityAndText),
+				Z_Construct_UScriptStruct_FSettingsHUDVisibilityAndText_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

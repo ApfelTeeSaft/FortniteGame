@@ -31,25 +31,12 @@ class UScriptStruct* FPurchaseFlowReceiptParam::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x006A7E20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPurchaseFlowReceiptParam_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPurchaseFlowReceiptParam>();
 	}
-	// ReturnStructParams: original RVA 0x041BE510
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPurchaseFlowReceiptParam_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_PurchaseFlow,
-		nullptr,
-		&NewStructOps,
-		"PurchaseFlowReceiptParam",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FPurchaseFlowReceiptParam),
-		alignof(FPurchaseFlowReceiptParam),
-		Z_Construct_UScriptStruct_FPurchaseFlowReceiptParam_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x006A8180 (end 0x006A81AF)
 	// Original VA: 0x00000001406A8180 | File offset: 0x006A7780
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPurchaseFlowReceiptParam::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPurchaseFlowReceiptParam_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BE510
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_PurchaseFlow,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPurchaseFlowReceiptParam_Statics::NewStructOps,
+				"PurchaseFlowReceiptParam",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FPurchaseFlowReceiptParam),
+				alignof(FPurchaseFlowReceiptParam),
+				Z_Construct_UScriptStruct_FPurchaseFlowReceiptParam_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

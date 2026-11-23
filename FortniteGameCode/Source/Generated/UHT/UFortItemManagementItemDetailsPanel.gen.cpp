@@ -6,12 +6,6 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementItemDetailsPanel();  // RVA 0x028C9FA0 (consensus OuterFunc)
 
-struct Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHasItemMarkedForMulchingChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04593CA0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHasItemMarkedForMulchingChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemDetailsPanel, "HandleHasItemMarkedForMulchingChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB260 (end 0x028CB28F)
 // Original VA: 0x00000001428CB260 | File offset: 0x028CA860
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -20,17 +14,13 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHasIt
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHasItemMarkedForMulchingChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593CA0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemDetailsPanel, "HandleHasItemMarkedForMulchingChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHostSet_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04593CE0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHostSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemDetailsPanel, "HandleHostSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB290 (end 0x028CB2BF)
 // Original VA: 0x00000001428CB290 | File offset: 0x028CA890
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -39,7 +29,9 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHostS
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementItemDetailsPanel_HandleHostSet_Statics::FuncParams);
+		// FuncParams: original RVA 0x04593CE0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortItemManagementItemDetailsPanel, "HandleHostSet", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

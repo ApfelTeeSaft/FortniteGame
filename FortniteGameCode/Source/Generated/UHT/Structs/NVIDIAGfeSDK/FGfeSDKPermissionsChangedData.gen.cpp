@@ -31,25 +31,12 @@ class UScriptStruct* FGfeSDKPermissionsChangedData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00597260 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGfeSDKPermissionsChangedData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGfeSDKPermissionsChangedData>();
 	}
-	// ReturnStructParams: original RVA 0x041ACBB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGfeSDKPermissionsChangedData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_NVIDIAGfeSDK,
-		nullptr,
-		&NewStructOps,
-		"GfeSDKPermissionsChangedData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGfeSDKPermissionsChangedData),
-		alignof(FGfeSDKPermissionsChangedData),
-		Z_Construct_UScriptStruct_FGfeSDKPermissionsChangedData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00597C10 (end 0x00597C3F)
 	// Original VA: 0x0000000140597C10 | File offset: 0x00597210
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGfeSDKPermissionsChangedData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGfeSDKPermissionsChangedData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041ACBB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_NVIDIAGfeSDK,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGfeSDKPermissionsChangedData_Statics::NewStructOps,
+				"GfeSDKPermissionsChangedData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGfeSDKPermissionsChangedData),
+				alignof(FGfeSDKPermissionsChangedData),
+				Z_Construct_UScriptStruct_FGfeSDKPermissionsChangedData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FInputScaleBiasClamp::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02426FE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FInputScaleBiasClamp_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FInputScaleBiasClamp>();
 	}
-	// ReturnStructParams: original RVA 0x0446D2A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FInputScaleBiasClamp_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"InputScaleBiasClamp",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FInputScaleBiasClamp),
-		alignof(FInputScaleBiasClamp),
-		Z_Construct_UScriptStruct_FInputScaleBiasClamp_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428EB0 (end 0x02428EDF)
 	// Original VA: 0x0000000142428EB0 | File offset: 0x024284B0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FInputScaleBiasClamp::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FInputScaleBiasClamp_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0446D2A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FInputScaleBiasClamp_Statics::NewStructOps,
+				"InputScaleBiasClamp",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FInputScaleBiasClamp),
+				alignof(FInputScaleBiasClamp),
+				Z_Construct_UScriptStruct_FInputScaleBiasClamp_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

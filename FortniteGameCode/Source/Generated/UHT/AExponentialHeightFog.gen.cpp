@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x038EF598, FClassParams RVA 0x038EF5C0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AExponentialHeightFog();  // RVA 0x0240FC40 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240F910 (end 0x0240F932)
 // Original VA: 0x000000014240F910 | File offset: 0x0240EF10
@@ -18,10 +18,6 @@ void AExponentialHeightFog::StaticRegisterNativesAExponentialHeightFog()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04453C90 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02410000 (end 0x0241002F)
 // Original VA: 0x0000000142410000 | File offset: 0x0240F600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04453C90; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AExponentialHeightFog, "OnRep_bEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

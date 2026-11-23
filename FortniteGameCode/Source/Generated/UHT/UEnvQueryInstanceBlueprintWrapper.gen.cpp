@@ -24,10 +24,7 @@ void UEnvQueryInstanceBlueprintWrapper::StaticRegisterNativesUEnvQueryInstanceBl
 struct Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043F6300; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "EQSQueryDoneSignature__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2FCF0 (end 0x01D2FD1F)
 // Original VA: 0x0000000141D2FCF0 | File offset: 0x01D2F2F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics::FuncParams);
+		// FuncParams: original RVA 0x043F6300; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "EQSQueryDoneSignature__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x10, Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQu
 struct Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043F63B0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "GetItemScore", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x8, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D302F0 (end 0x01D3031F)
 // Original VA: 0x0000000141D302F0 | File offset: 0x01D2F8F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore_Statics::FuncParams);
+		// FuncParams: original RVA 0x043F63B0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "GetItemScore", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x8, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore(
 struct Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsActors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043F6470; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "GetResultsAsActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsActors_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D30320 (end 0x01D3034F)
 // Original VA: 0x0000000141D30320 | File offset: 0x01D2F920
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsA
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsActors_Statics::FuncParams);
+		// FuncParams: original RVA 0x043F6470; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "GetResultsAsActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsActors_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsA
 struct Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043F6530; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "GetResultsAsLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D30350 (end 0x01D3037F)
 // Original VA: 0x0000000141D30350 | File offset: 0x01D2F950
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsL
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations_Statics::FuncParams);
+		// FuncParams: original RVA 0x043F6530; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "GetResultsAsLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, 0x10, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +100,7 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsL
 struct Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043F65E0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "SetNamedParam", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D30380 (end 0x01D303AF)
 // Original VA: 0x0000000141D30380 | File offset: 0x01D2F980
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +109,9 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam_Statics::FuncParams);
+		// FuncParams: original RVA 0x043F65E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper, "SetNamedParam", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FElementalCharValues::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC8A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FElementalCharValues_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FElementalCharValues>();
 	}
-	// ReturnStructParams: original RVA 0x04336080
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FElementalCharValues_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ElementalCharValues",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FElementalCharValues),
-		alignof(FElementalCharValues),
-		Z_Construct_UScriptStruct_FElementalCharValues_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF380 (end 0x010BF3AF)
 	// Original VA: 0x00000001410BF380 | File offset: 0x010BE980
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FElementalCharValues::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FElementalCharValues_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04336080
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FElementalCharValues_Statics::NewStructOps,
+				"ElementalCharValues",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FElementalCharValues),
+				alignof(FElementalCharValues),
+				Z_Construct_UScriptStruct_FElementalCharValues_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

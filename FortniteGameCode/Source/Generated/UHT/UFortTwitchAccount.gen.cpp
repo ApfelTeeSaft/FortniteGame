@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0341CF18, FClassParams RVA 0x0341CF30.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortTwitchAccount();  // RVA 0x010CADF0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9560 (end 0x010C9582)
 // Original VA: 0x00000001410C9560 | File offset: 0x010C8B60
@@ -18,10 +18,6 @@ void UFortTwitchAccount::StaticRegisterNativesUFortTwitchAccount()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortTwitchAccount_HandleQuestsUpdated_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0433E070 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC2C0 (end 0x010CC2EF)
 // Original VA: 0x00000001410CC2C0 | File offset: 0x010CB8C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_UFortTwitchAccount_HandleQuestsUpdated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTwitchAccount_HandleQuestsUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x0433E070; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTwitchAccount, "HandleQuestsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

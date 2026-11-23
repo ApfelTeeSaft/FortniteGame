@@ -19,12 +19,6 @@ void UFortQuestTrackerSubEntry::StaticRegisterNativesUFortQuestTrackerSubEntry()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortQuestTrackerSubEntry_HandleQuestsUpdated_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045ADD30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQuestTrackerSubEntry_HandleQuestsUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "HandleQuestsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDBB0 (end 0x028EDBDF)
 // Original VA: 0x00000001428EDBB0 | File offset: 0x028ED1B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,17 +27,13 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerSubEntry_HandleQuestsUpdated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestTrackerSubEntry_HandleQuestsUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ADD30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "HandleQuestsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortQuestTrackerSubEntry_NotifyCompletionAnimationFinished_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045ADD70; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQuestTrackerSubEntry_NotifyCompletionAnimationFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "NotifyCompletionAnimationFinished", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDBE0 (end 0x028EDC0F)
 // Original VA: 0x00000001428EDBE0 | File offset: 0x028ED1E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -52,17 +42,13 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerSubEntry_NotifyCompletionAnima
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestTrackerSubEntry_NotifyCompletionAnimationFinished_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ADD70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "NotifyCompletionAnimationFinished", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnPlayObjectiveCompletedAnimation_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045ADDB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnPlayObjectiveCompletedAnimation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "OnPlayObjectiveCompletedAnimation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDC10 (end 0x028EDC3F)
 // Original VA: 0x00000001428EDC10 | File offset: 0x028ED210
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -71,17 +57,13 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnPlayObjectiveComple
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnPlayObjectiveCompletedAnimation_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ADDB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "OnPlayObjectiveCompletedAnimation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnQuestsUpdated_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045ADDF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnQuestsUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "OnQuestsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDC40 (end 0x028EDC6F)
 // Original VA: 0x00000001428EDC40 | File offset: 0x028ED240
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -90,17 +72,13 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnQuestsUpdated()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnQuestsUpdated_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ADDF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "OnQuestsUpdated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnSetup_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045ADE30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnSetup_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "OnSetup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EDC70 (end 0x028EDC9F)
 // Original VA: 0x00000001428EDC70 | File offset: 0x028ED270
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -109,7 +87,9 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnSetup()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnSetup_Statics::FuncParams);
+		// FuncParams: original RVA 0x045ADE30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortQuestTrackerSubEntry, "OnSetup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

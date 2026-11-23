@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03CB2A28, FClassParams RVA 0x03CB2A50.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortInfoWindow();  // RVA 0x028BBEF0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBB50 (end 0x028BBB72)
 // Original VA: 0x00000001428BBB50 | File offset: 0x028BB150
@@ -20,7 +20,7 @@ void UFortInfoWindow::StaticRegisterNativesUFortInfoWindow()
 
 struct Z_Construct_UFunction_UFortInfoWindow_GetListWidget_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045855E0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD4B0 (end 0x028BD4DF)
 // Original VA: 0x00000001428BD4B0 | File offset: 0x028BCAB0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortInfoWindow_GetListWidget()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInfoWindow_GetListWidget_Statics::FuncParams);
+		// FuncParams: original RVA 0x045855E0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortInfoWindow, "GetListWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortInfoWindow_GetListWidget_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

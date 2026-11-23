@@ -31,25 +31,12 @@ class UScriptStruct* FSwarmDebugOptions::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240A0F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSwarmDebugOptions_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSwarmDebugOptions>();
 	}
-	// ReturnStructParams: original RVA 0x04451AB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSwarmDebugOptions_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"SwarmDebugOptions",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FSwarmDebugOptions),
-		alignof(FSwarmDebugOptions),
-		Z_Construct_UScriptStruct_FSwarmDebugOptions_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D6D0 (end 0x0240D6FF)
 	// Original VA: 0x000000014240D6D0 | File offset: 0x0240CCD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSwarmDebugOptions::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSwarmDebugOptions_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04451AB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSwarmDebugOptions_Statics::NewStructOps,
+				"SwarmDebugOptions",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FSwarmDebugOptions),
+				alignof(FSwarmDebugOptions),
+				Z_Construct_UScriptStruct_FSwarmDebugOptions_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FEnvOverlapData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2EA60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEnvOverlapData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEnvOverlapData>();
 	}
-	// ReturnStructParams: original RVA 0x043F8680
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEnvOverlapData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
-		nullptr,
-		&NewStructOps,
-		"EnvOverlapData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FEnvOverlapData),
-		alignof(FEnvOverlapData),
-		Z_Construct_UScriptStruct_FEnvOverlapData_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D304A0 (end 0x01D304CF)
 	// Original VA: 0x0000000141D304A0 | File offset: 0x01D2FAA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEnvOverlapData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEnvOverlapData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043F8680
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEnvOverlapData_Statics::NewStructOps,
+				"EnvOverlapData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FEnvOverlapData),
+				alignof(FEnvOverlapData),
+				Z_Construct_UScriptStruct_FEnvOverlapData_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

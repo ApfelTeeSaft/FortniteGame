@@ -31,25 +31,12 @@ class UScriptStruct* FFortMaterialProgressBarSectionStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D66E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMaterialProgressBarSectionStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMaterialProgressBarSectionStyle>();
 	}
-	// ReturnStructParams: original RVA 0x0459DE10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMaterialProgressBarSectionStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortMaterialProgressBarSectionStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortMaterialProgressBarSectionStyle),
-		alignof(FFortMaterialProgressBarSectionStyle),
-		Z_Construct_UScriptStruct_FFortMaterialProgressBarSectionStyle_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D8A90 (end 0x028D8ABF)
 	// Original VA: 0x00000001428D8A90 | File offset: 0x028D8090
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMaterialProgressBarSectionStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMaterialProgressBarSectionStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0459DE10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMaterialProgressBarSectionStyle_Statics::NewStructOps,
+				"FortMaterialProgressBarSectionStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortMaterialProgressBarSectionStyle),
+				alignof(FFortMaterialProgressBarSectionStyle),
+				Z_Construct_UScriptStruct_FFortMaterialProgressBarSectionStyle_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

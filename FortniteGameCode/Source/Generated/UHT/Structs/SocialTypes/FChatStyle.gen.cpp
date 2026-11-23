@@ -31,25 +31,12 @@ class UScriptStruct* FChatStyle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077F640 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FChatStyle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FChatStyle>();
 	}
-	// ReturnStructParams: original RVA 0x041BFD40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FChatStyle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
-		nullptr,
-		&NewStructOps,
-		"ChatStyle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FChatStyle),
-		alignof(FChatStyle),
-		Z_Construct_UScriptStruct_FChatStyle_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0077FE60 (end 0x0077FE8F)
 	// Original VA: 0x000000014077FE60 | File offset: 0x0077F460
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FChatStyle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FChatStyle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041BFD40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SocialTypes,
+				nullptr,
+				&Z_Construct_UScriptStruct_FChatStyle_Statics::NewStructOps,
+				"ChatStyle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FChatStyle),
+				alignof(FChatStyle),
+				Z_Construct_UScriptStruct_FChatStyle_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

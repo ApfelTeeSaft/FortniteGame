@@ -31,25 +31,12 @@ class UScriptStruct* FAnimNode_MeshSpaceRefPose::StaticStruct()
 	struct Z_Construct_UScriptStruct_FAnimNode_MeshSpaceRefPose_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0AF90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_MeshSpaceRefPose_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_MeshSpaceRefPose>();
 	}
-	// ReturnStructParams: original RVA 0x043AEAA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_MeshSpaceRefPose_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_Base,
-		&NewStructOps,
-		"AnimNode_MeshSpaceRefPose",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_MeshSpaceRefPose),
-		alignof(FAnimNode_MeshSpaceRefPose),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0EE30 (end 0x01B0EE5F)
 	// Original VA: 0x0000000141B0EE30 | File offset: 0x01B0E430
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAnimNode_MeshSpaceRefPose::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_MeshSpaceRefPose_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AEAA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_Base,
+				&Z_Construct_UScriptStruct_FAnimNode_MeshSpaceRefPose_Statics::NewStructOps,
+				"AnimNode_MeshSpaceRefPose",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_MeshSpaceRefPose),
+				alignof(FAnimNode_MeshSpaceRefPose),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

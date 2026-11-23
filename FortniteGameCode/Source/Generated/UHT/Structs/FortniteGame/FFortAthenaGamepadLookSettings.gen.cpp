@@ -31,25 +31,12 @@ class UScriptStruct* FFortAthenaGamepadLookSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3850 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAthenaGamepadLookSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAthenaGamepadLookSettings>();
 	}
-	// ReturnStructParams: original RVA 0x0427D720
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAthenaGamepadLookSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAthenaGamepadLookSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAthenaGamepadLookSettings),
-		alignof(FFortAthenaGamepadLookSettings),
-		Z_Construct_UScriptStruct_FFortAthenaGamepadLookSettings_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4B70 (end 0x00FE4B9F)
 	// Original VA: 0x0000000140FE4B70 | File offset: 0x00FE4170
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAthenaGamepadLookSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAthenaGamepadLookSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0427D720
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAthenaGamepadLookSettings_Statics::NewStructOps,
+				"FortAthenaGamepadLookSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAthenaGamepadLookSettings),
+				alignof(FFortAthenaGamepadLookSettings),
+				Z_Construct_UScriptStruct_FFortAthenaGamepadLookSettings_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

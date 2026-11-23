@@ -31,25 +31,12 @@ class UScriptStruct* FNamedInterfaceDef::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2440 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FNamedInterfaceDef_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNamedInterfaceDef>();
 	}
-	// ReturnStructParams: original RVA 0x04184AB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNamedInterfaceDef_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_OnlineSubsystem,
-		nullptr,
-		&NewStructOps,
-		"NamedInterfaceDef",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FNamedInterfaceDef),
-		alignof(FNamedInterfaceDef),
-		Z_Construct_UScriptStruct_FNamedInterfaceDef_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002FC840 (end 0x002FC86F)
 	// Original VA: 0x00000001402FC840 | File offset: 0x002FBE40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FNamedInterfaceDef::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FNamedInterfaceDef_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04184AB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_OnlineSubsystem,
+				nullptr,
+				&Z_Construct_UScriptStruct_FNamedInterfaceDef_Statics::NewStructOps,
+				"NamedInterfaceDef",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FNamedInterfaceDef),
+				alignof(FNamedInterfaceDef),
+				Z_Construct_UScriptStruct_FNamedInterfaceDef_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

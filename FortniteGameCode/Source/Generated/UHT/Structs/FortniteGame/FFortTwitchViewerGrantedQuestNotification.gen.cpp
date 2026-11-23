@@ -31,25 +31,12 @@ class UScriptStruct* FFortTwitchViewerGrantedQuestNotification::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010371F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTwitchViewerGrantedQuestNotification_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTwitchViewerGrantedQuestNotification>();
 	}
-	// ReturnStructParams: original RVA 0x042C4950
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTwitchViewerGrantedQuestNotification_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTwitchViewerGrantedQuestNotification",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortTwitchViewerGrantedQuestNotification),
-		alignof(FFortTwitchViewerGrantedQuestNotification),
-		Z_Construct_UScriptStruct_FFortTwitchViewerGrantedQuestNotification_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039F80 (end 0x01039FAF)
 	// Original VA: 0x0000000141039F80 | File offset: 0x01039580
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTwitchViewerGrantedQuestNotification::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTwitchViewerGrantedQuestNotification_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C4950
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTwitchViewerGrantedQuestNotification_Statics::NewStructOps,
+				"FortTwitchViewerGrantedQuestNotification",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortTwitchViewerGrantedQuestNotification),
+				alignof(FFortTwitchViewerGrantedQuestNotification),
+				Z_Construct_UScriptStruct_FFortTwitchViewerGrantedQuestNotification_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

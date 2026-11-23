@@ -31,25 +31,12 @@ class UScriptStruct* FFortItemCard_DetailAreaBorder_Configuration::StaticStruct(
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0D10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortItemCard_DetailAreaBorder_Configuration_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortItemCard_DetailAreaBorder_Configuration>();
 	}
-	// ReturnStructParams: original RVA 0x0458E480
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortItemCard_DetailAreaBorder_Configuration_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortItemCard_DetailAreaBorder_Configuration",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortItemCard_DetailAreaBorder_Configuration),
-		alignof(FFortItemCard_DetailAreaBorder_Configuration),
-		Z_Construct_UScriptStruct_FFortItemCard_DetailAreaBorder_Configuration_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C2DA0 (end 0x028C2DCF)
 	// Original VA: 0x00000001428C2DA0 | File offset: 0x028C23A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortItemCard_DetailAreaBorder_Configuration::StaticStruct(
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortItemCard_DetailAreaBorder_Configuration_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0458E480
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortItemCard_DetailAreaBorder_Configuration_Statics::NewStructOps,
+				"FortItemCard_DetailAreaBorder_Configuration",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortItemCard_DetailAreaBorder_Configuration),
+				alignof(FFortItemCard_DetailAreaBorder_Configuration),
+				Z_Construct_UScriptStruct_FFortItemCard_DetailAreaBorder_Configuration_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

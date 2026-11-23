@@ -31,25 +31,12 @@ class UScriptStruct* FFortItemTransformFilterTabLabelInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02903DE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortItemTransformFilterTabLabelInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortItemTransformFilterTabLabelInfo>();
 	}
-	// ReturnStructParams: original RVA 0x045C3BB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortItemTransformFilterTabLabelInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortItemTransformFilterTabLabelInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortItemTransformFilterTabLabelInfo),
-		alignof(FFortItemTransformFilterTabLabelInfo),
-		Z_Construct_UScriptStruct_FFortItemTransformFilterTabLabelInfo_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02905CF0 (end 0x02905D1F)
 	// Original VA: 0x0000000142905CF0 | File offset: 0x029052F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortItemTransformFilterTabLabelInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortItemTransformFilterTabLabelInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045C3BB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortItemTransformFilterTabLabelInfo_Statics::NewStructOps,
+				"FortItemTransformFilterTabLabelInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortItemTransformFilterTabLabelInfo),
+				alignof(FFortItemTransformFilterTabLabelInfo),
+				Z_Construct_UScriptStruct_FFortItemTransformFilterTabLabelInfo_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

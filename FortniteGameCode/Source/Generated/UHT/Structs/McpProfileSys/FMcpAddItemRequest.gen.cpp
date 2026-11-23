@@ -31,25 +31,12 @@ class UScriptStruct* FMcpAddItemRequest::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AEAE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMcpAddItemRequest_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMcpAddItemRequest>();
 	}
-	// ReturnStructParams: original RVA 0x041C41F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMcpAddItemRequest_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
-		nullptr,
-		&NewStructOps,
-		"McpAddItemRequest",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FMcpAddItemRequest),
-		alignof(FMcpAddItemRequest),
-		Z_Construct_UScriptStruct_FMcpAddItemRequest_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AFB40 (end 0x007AFB6F)
 	// Original VA: 0x00000001407AFB40 | File offset: 0x007AF140
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMcpAddItemRequest::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMcpAddItemRequest_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C41F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMcpAddItemRequest_Statics::NewStructOps,
+				"McpAddItemRequest",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FMcpAddItemRequest),
+				alignof(FMcpAddItemRequest),
+				Z_Construct_UScriptStruct_FMcpAddItemRequest_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

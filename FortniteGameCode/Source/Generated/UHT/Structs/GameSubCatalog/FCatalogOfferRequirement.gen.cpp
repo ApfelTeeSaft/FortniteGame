@@ -31,25 +31,12 @@ class UScriptStruct* FCatalogOfferRequirement::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C2060 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCatalogOfferRequirement_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCatalogOfferRequirement>();
 	}
-	// ReturnStructParams: original RVA 0x041C5BB0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCatalogOfferRequirement_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
-		nullptr,
-		&NewStructOps,
-		"CatalogOfferRequirement",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCatalogOfferRequirement),
-		alignof(FCatalogOfferRequirement),
-		Z_Construct_UScriptStruct_FCatalogOfferRequirement_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C2E00 (end 0x007C2E2F)
 	// Original VA: 0x00000001407C2E00 | File offset: 0x007C2400
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCatalogOfferRequirement::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCatalogOfferRequirement_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C5BB0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCatalogOfferRequirement_Statics::NewStructOps,
+				"CatalogOfferRequirement",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCatalogOfferRequirement),
+				alignof(FCatalogOfferRequirement),
+				Z_Construct_UScriptStruct_FCatalogOfferRequirement_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

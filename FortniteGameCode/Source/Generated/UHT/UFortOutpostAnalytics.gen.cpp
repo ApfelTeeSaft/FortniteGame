@@ -29,10 +29,7 @@ void UFortOutpostAnalytics::StaticRegisterNativesUFortOutpostAnalytics()
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveCompleted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423FB00; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveCompleted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostAttackWaveCompleted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x38, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveCompleted_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA49A0 (end 0x00FA49CF)
 // Original VA: 0x0000000140FA49A0 | File offset: 0x00FA3FA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +38,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveCompleted_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423FB00; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostAttackWaveCompleted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x38, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveCompleted_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +48,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveStarted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423FC60; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveStarted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostAttackWaveStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x38, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveStarted_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA49D0 (end 0x00FA49FF)
 // Original VA: 0x0000000140FA49D0 | File offset: 0x00FA3FD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +57,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveStarted_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423FC60; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostAttackWaveStarted", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x38, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveStarted_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -69,10 +67,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingActivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423FD50; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingActivated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostBuildingActivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingActivated_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4A00 (end 0x00FA4A2F)
 // Original VA: 0x0000000140FA4A00 | File offset: 0x00FA4000
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +76,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingActivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423FD50; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostBuildingActivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingActivated_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +86,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingDefended_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0423FE40; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingDefended_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostBuildingDefended", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingDefended_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4A30 (end 0x00FA4A5F)
 // Original VA: 0x0000000140FA4A30 | File offset: 0x00FA4030
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +95,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingDefended_Statics::FuncParams);
+		// FuncParams: original RVA 0x0423FE40; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostBuildingDefended", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingDefended_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -109,10 +105,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseEnd_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04240010; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseEnd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostDefenseEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseEnd_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4A60 (end 0x00FA4A8F)
 // Original VA: 0x0000000140FA4A60 | File offset: 0x00FA4060
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -121,7 +114,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseEnd_Statics::FuncParams);
+		// FuncParams: original RVA 0x04240010; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostDefenseEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseEnd_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -129,10 +124,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseStart_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04240100; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostDefenseStart", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseStart_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4A90 (end 0x00FA4ABF)
 // Original VA: 0x0000000140FA4A90 | File offset: 0x00FA4090
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -141,7 +133,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseStart_Statics::FuncParams);
+		// FuncParams: original RVA 0x04240100; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostDefenseStart", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseStart_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -149,10 +143,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLeaveOutpost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04240230; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLeaveOutpost_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostLeaveOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLeaveOutpost_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4AC0 (end 0x00FA4AEF)
 // Original VA: 0x0000000140FA4AC0 | File offset: 0x00FA40C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -161,7 +152,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLeaveOutpost_Statics::FuncParams);
+		// FuncParams: original RVA 0x04240230; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostLeaveOutpost", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLeaveOutpost_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -169,10 +162,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLoaded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042402F0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLoaded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostLoaded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLoaded_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4AF0 (end 0x00FA4B1F)
 // Original VA: 0x0000000140FA4AF0 | File offset: 0x00FA40F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -181,7 +171,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLoaded_Statics::FuncParams);
+		// FuncParams: original RVA 0x042402F0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostLoaded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLoaded_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -189,10 +181,7 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostSupplyDropPickedUp_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042403F0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostSupplyDropPickedUp_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostSupplyDropPickedUp", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostSupplyDropPickedUp_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA4B20 (end 0x00FA4B4F)
 // Original VA: 0x0000000140FA4B20 | File offset: 0x00FA4120
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -201,7 +190,9 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostSupplyDropPickedUp_Statics::FuncParams);
+		// FuncParams: original RVA 0x042403F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortOutpostAnalytics, "FireAnalyticsEvent_OutpostSupplyDropPickedUp", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x18, Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostSupplyDropPickedUp_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

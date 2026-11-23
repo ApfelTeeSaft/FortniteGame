@@ -31,25 +31,12 @@ class UScriptStruct* FOutpostPOSTPerTheaterData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104FB90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FOutpostPOSTPerTheaterData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOutpostPOSTPerTheaterData>();
 	}
-	// ReturnStructParams: original RVA 0x042DCD60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOutpostPOSTPerTheaterData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"OutpostPOSTPerTheaterData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FOutpostPOSTPerTheaterData),
-		alignof(FOutpostPOSTPerTheaterData),
-		Z_Construct_UScriptStruct_FOutpostPOSTPerTheaterData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01051E50 (end 0x01051E7F)
 	// Original VA: 0x0000000141051E50 | File offset: 0x01051450
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FOutpostPOSTPerTheaterData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FOutpostPOSTPerTheaterData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042DCD60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FOutpostPOSTPerTheaterData_Statics::NewStructOps,
+				"OutpostPOSTPerTheaterData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FOutpostPOSTPerTheaterData),
+				alignof(FOutpostPOSTPerTheaterData),
+				Z_Construct_UScriptStruct_FOutpostPOSTPerTheaterData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

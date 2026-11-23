@@ -20,12 +20,6 @@ void UFortAbilityTask_WaitTargetSelection::StaticRegisterNativesUFortAbilityTask
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataCancelledCallback_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04218630; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataCancelledCallback_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection, "OnTargetDataCancelledCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82800 (end 0x00F8282F)
 // Original VA: 0x0000000140F82800 | File offset: 0x00F81E00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +28,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataCancelledCallback_Statics::FuncParams);
+		// FuncParams: original RVA 0x04218630; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection, "OnTargetDataCancelledCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +38,7 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDa
 struct Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataReadyCallback_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042186F0; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataReadyCallback_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection, "OnTargetDataReadyCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x28, Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataReadyCallback_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82830 (end 0x00F8285F)
 // Original VA: 0x0000000140F82830 | File offset: 0x00F81E30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +47,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataReadyCallback_Statics::FuncParams);
+		// FuncParams: original RVA 0x042186F0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection, "OnTargetDataReadyCallback", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00420401, 0x28, Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataReadyCallback_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -62,10 +57,7 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDa
 struct Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_WaitTargetSelection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04218880; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_WaitTargetSelection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection, "WaitTargetSelection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_WaitTargetSelection_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82860 (end 0x00F8288F)
 // Original VA: 0x0000000140F82860 | File offset: 0x00F81E60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +66,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_WaitTarget
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_WaitTargetSelection_Statics::FuncParams);
+		// FuncParams: original RVA 0x04218880; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection, "WaitTargetSelection", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x28, Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_WaitTargetSelection_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

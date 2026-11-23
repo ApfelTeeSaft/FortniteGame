@@ -4,11 +4,11 @@
 // FClassFunctionLinkInfo array RVA 0x03C83308, FClassParams RVA 0x03C83320.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortDefenderItemTileButton();  // RVA 0x0289B4C0 (registered by its FCompiledInDefer)
 
 struct Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04564CC0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C300 (end 0x0289C32F)
 // Original VA: 0x000000014289C300 | File offset: 0x0289B900
@@ -18,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChan
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04564CC0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDefenderItemTileButton, "HandleEquipSlotChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x4, Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

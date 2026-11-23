@@ -31,25 +31,12 @@ class UScriptStruct* FLightmassLightSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02409B30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLightmassLightSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLightmassLightSettings>();
 	}
-	// ReturnStructParams: original RVA 0x04452440
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLightmassLightSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"LightmassLightSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLightmassLightSettings),
-		alignof(FLightmassLightSettings),
-		Z_Construct_UScriptStruct_FLightmassLightSettings_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D2E0 (end 0x0240D30F)
 	// Original VA: 0x000000014240D2E0 | File offset: 0x0240C8E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLightmassLightSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLightmassLightSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04452440
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLightmassLightSettings_Statics::NewStructOps,
+				"LightmassLightSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLightmassLightSettings),
+				alignof(FLightmassLightSettings),
+				Z_Construct_UScriptStruct_FLightmassLightSettings_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

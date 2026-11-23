@@ -31,25 +31,12 @@ class UScriptStruct* FWorkerSetBonusData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA250 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FWorkerSetBonusData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWorkerSetBonusData>();
 	}
-	// ReturnStructParams: original RVA 0x04296E40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWorkerSetBonusData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"WorkerSetBonusData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FWorkerSetBonusData),
-		alignof(FWorkerSetBonusData),
-		Z_Construct_UScriptStruct_FWorkerSetBonusData_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFC460 (end 0x00FFC48F)
 	// Original VA: 0x0000000140FFC460 | File offset: 0x00FFBA60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FWorkerSetBonusData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FWorkerSetBonusData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04296E40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FWorkerSetBonusData_Statics::NewStructOps,
+				"WorkerSetBonusData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FWorkerSetBonusData),
+				alignof(FWorkerSetBonusData),
+				Z_Construct_UScriptStruct_FWorkerSetBonusData_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

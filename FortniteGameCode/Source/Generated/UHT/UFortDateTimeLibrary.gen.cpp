@@ -22,10 +22,7 @@ void UFortDateTimeLibrary::StaticRegisterNativesUFortDateTimeLibrary()
 struct Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04261200; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDateTimeLibrary, "GetMcpRelativeUtcNow", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x10, Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCC7E0 (end 0x00FCC80F)
 // Original VA: 0x0000000140FCC7E0 | File offset: 0x00FCBDE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow_Statics::FuncParams);
+		// FuncParams: original RVA 0x04261200; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDateTimeLibrary, "GetMcpRelativeUtcNow", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x10, Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow()
 struct Z_Construct_UFunction_UFortDateTimeLibrary_GetTimespanAsText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04261390; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortDateTimeLibrary_GetTimespanAsText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDateTimeLibrary, "GetTimespanAsText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x28, Z_Construct_UFunction_UFortDateTimeLibrary_GetTimespanAsText_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCC810 (end 0x00FCC83F)
 // Original VA: 0x0000000140FCC810 | File offset: 0x00FCBE10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortDateTimeLibrary_GetTimespanAsText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDateTimeLibrary_GetTimespanAsText_Statics::FuncParams);
+		// FuncParams: original RVA 0x04261390; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortDateTimeLibrary, "GetTimespanAsText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x28, Z_Construct_UFunction_UFortDateTimeLibrary_GetTimespanAsText_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03334540, FClassParams RVA 0x03334570.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AFortGameStateSurvival();  // RVA 0x00FF34D0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF2F90 (end 0x00FF2FB2)
 // Original VA: 0x0000000140FF2F90 | File offset: 0x00FF2590
@@ -20,7 +20,7 @@ void AFortGameStateSurvival::StaticRegisterNativesAFortGameStateSurvival()
 
 struct Z_Construct_UFunction_AFortGameStateSurvival_SetGameDifficultyRow_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x0428AB90 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3820 (end 0x00FF384F)
 // Original VA: 0x0000000140FF3820 | File offset: 0x00FF2E20
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_AFortGameStateSurvival_SetGameDifficultyRow()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameStateSurvival_SetGameDifficultyRow_Statics::FuncParams);
+		// FuncParams: original RVA 0x0428AB90; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameStateSurvival, "SetGameDifficultyRow", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420405, 0x10, Z_Construct_UFunction_AFortGameStateSurvival_SetGameDifficultyRow_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

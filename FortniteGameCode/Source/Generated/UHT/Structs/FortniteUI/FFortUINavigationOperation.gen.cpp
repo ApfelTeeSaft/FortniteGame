@@ -31,25 +31,12 @@ class UScriptStruct* FFortUINavigationOperation::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02910EC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortUINavigationOperation_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortUINavigationOperation>();
 	}
-	// ReturnStructParams: original RVA 0x045CD0D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortUINavigationOperation_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortUINavigationOperation",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortUINavigationOperation),
-		alignof(FFortUINavigationOperation),
-		Z_Construct_UScriptStruct_FFortUINavigationOperation_Statics::PropPointers, 11,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02913A70 (end 0x02913A9F)
 	// Original VA: 0x0000000142913A70 | File offset: 0x02913070
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortUINavigationOperation::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortUINavigationOperation_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045CD0D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortUINavigationOperation_Statics::NewStructOps,
+				"FortUINavigationOperation",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortUINavigationOperation),
+				alignof(FFortUINavigationOperation),
+				Z_Construct_UScriptStruct_FFortUINavigationOperation_Statics::PropPointers, 11,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

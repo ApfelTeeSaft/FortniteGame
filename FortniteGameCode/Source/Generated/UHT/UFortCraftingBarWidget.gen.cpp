@@ -21,12 +21,6 @@ void UFortCraftingBarWidget::StaticRegisterNativesUFortCraftingBarWidget()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCrafting_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x045638D0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCrafting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "HandlePlayerStartedCrafting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BF70 (end 0x0289BF9F)
 // Original VA: 0x000000014289BF70 | File offset: 0x0289B570
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +29,9 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCraft
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCrafting_Statics::FuncParams);
+		// FuncParams: original RVA 0x045638D0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "HandlePlayerStartedCrafting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +39,7 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCraft
 struct Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStoppedCrafting_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045639E0; StructureSize 0x2 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStoppedCrafting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "HandlePlayerStoppedCrafting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x2, Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStoppedCrafting_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BFA0 (end 0x0289BFCF)
 // Original VA: 0x000000014289BFA0 | File offset: 0x0289B5A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,17 +48,13 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStoppedCraft
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStoppedCrafting_Statics::FuncParams);
+		// FuncParams: original RVA 0x045639E0; StructureSize 0x2 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "HandlePlayerStoppedCrafting", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x2, Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStoppedCrafting_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortCraftingBarWidget_OnCompletedSetHidden_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04563A20; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCraftingBarWidget_OnCompletedSetHidden_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "OnCompletedSetHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289BFD0 (end 0x0289BFFF)
 // Original VA: 0x000000014289BFD0 | File offset: 0x0289B5D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -74,7 +63,9 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_OnCompletedSetHidden()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCraftingBarWidget_OnCompletedSetHidden_Statics::FuncParams);
+		// FuncParams: original RVA 0x04563A20; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "OnCompletedSetHidden", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -82,10 +73,7 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_OnCompletedSetHidden()
 struct Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04563AB0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "SetHideCraftingBar", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C000 (end 0x0289C02F)
 // Original VA: 0x000000014289C000 | File offset: 0x0289B600
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -94,7 +82,9 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar_Statics::FuncParams);
+		// FuncParams: original RVA 0x04563AB0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCraftingBarWidget, "SetHideCraftingBar", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0344A280, FClassParams RVA 0x0344A2B0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortObjectiveFailedParams();  // RVA 0x010EA0A0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9050 (end 0x010E9072)
 // Original VA: 0x00000001410E9050 | File offset: 0x010E8650
@@ -21,7 +21,7 @@ void UFortObjectiveFailedParams::StaticRegisterNativesUFortObjectiveFailedParams
 
 struct Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04363C60 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAEF0 (end 0x010EAF1F)
 // Original VA: 0x00000001410EAEF0 | File offset: 0x010EA4F0
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams_Statics::FuncParams);
+		// FuncParams: original RVA 0x04363C60; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortObjectiveFailedParams, "BreakParams", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14420401, 0x8, Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04363D20 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAF20 (end 0x010EAF4F)
 // Original VA: 0x00000001410EAF20 | File offset: 0x010EA520
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams_Statics::FuncParams);
+		// FuncParams: original RVA 0x04363D20; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortObjectiveFailedParams, "SetParams", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x10, Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

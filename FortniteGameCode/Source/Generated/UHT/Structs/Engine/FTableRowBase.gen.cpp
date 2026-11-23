@@ -30,25 +30,12 @@ class UScriptStruct* FTableRowBase::StaticStruct()
 	struct Z_Construct_UScriptStruct_FTableRowBase_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FD6C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTableRowBase_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTableRowBase>();
 	}
-	// ReturnStructParams: original RVA 0x04441270
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTableRowBase_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"TableRowBase",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTableRowBase),
-		alignof(FTableRowBase),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FF690 (end 0x023FF6BF)
 	// Original VA: 0x00000001423FF690 | File offset: 0x023FEC90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FTableRowBase::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTableRowBase_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04441270
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTableRowBase_Statics::NewStructOps,
+				"TableRowBase",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTableRowBase),
+				alignof(FTableRowBase),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FPaperSpriteAtlasSlot::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666980 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPaperSpriteAtlasSlot_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPaperSpriteAtlasSlot>();
 	}
-	// ReturnStructParams: original RVA 0x041B38A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPaperSpriteAtlasSlot_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
-		nullptr,
-		&NewStructOps,
-		"PaperSpriteAtlasSlot",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPaperSpriteAtlasSlot),
-		alignof(FPaperSpriteAtlasSlot),
-		Z_Construct_UScriptStruct_FPaperSpriteAtlasSlot_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00668840 (end 0x0066886F)
 	// Original VA: 0x0000000140668840 | File offset: 0x00667E40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPaperSpriteAtlasSlot::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPaperSpriteAtlasSlot_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041B38A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Paper2D,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPaperSpriteAtlasSlot_Statics::NewStructOps,
+				"PaperSpriteAtlasSlot",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPaperSpriteAtlasSlot),
+				alignof(FPaperSpriteAtlasSlot),
+				Z_Construct_UScriptStruct_FPaperSpriteAtlasSlot_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

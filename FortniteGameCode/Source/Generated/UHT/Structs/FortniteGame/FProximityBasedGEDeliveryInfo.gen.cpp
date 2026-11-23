@@ -31,25 +31,12 @@ class UScriptStruct* FProximityBasedGEDeliveryInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F812B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FProximityBasedGEDeliveryInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FProximityBasedGEDeliveryInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04218F90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FProximityBasedGEDeliveryInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"ProximityBasedGEDeliveryInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FProximityBasedGEDeliveryInfo),
-		alignof(FProximityBasedGEDeliveryInfo),
-		Z_Construct_UScriptStruct_FProximityBasedGEDeliveryInfo_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82D10 (end 0x00F82D3F)
 	// Original VA: 0x0000000140F82D10 | File offset: 0x00F82310
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FProximityBasedGEDeliveryInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FProximityBasedGEDeliveryInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04218F90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FProximityBasedGEDeliveryInfo_Statics::NewStructOps,
+				"ProximityBasedGEDeliveryInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FProximityBasedGEDeliveryInfo),
+				alignof(FProximityBasedGEDeliveryInfo),
+				Z_Construct_UScriptStruct_FProximityBasedGEDeliveryInfo_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

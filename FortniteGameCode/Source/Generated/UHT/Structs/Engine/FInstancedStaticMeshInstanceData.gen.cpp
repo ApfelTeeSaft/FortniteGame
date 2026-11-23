@@ -31,25 +31,12 @@ class UScriptStruct* FInstancedStaticMeshInstanceData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02426F60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FInstancedStaticMeshInstanceData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FInstancedStaticMeshInstanceData>();
 	}
-	// ReturnStructParams: original RVA 0x0446E420
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FInstancedStaticMeshInstanceData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"InstancedStaticMeshInstanceData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FInstancedStaticMeshInstanceData),
-		alignof(FInstancedStaticMeshInstanceData),
-		Z_Construct_UScriptStruct_FInstancedStaticMeshInstanceData_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428EE0 (end 0x02428F0F)
 	// Original VA: 0x0000000142428EE0 | File offset: 0x024284E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FInstancedStaticMeshInstanceData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FInstancedStaticMeshInstanceData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0446E420
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FInstancedStaticMeshInstanceData_Statics::NewStructOps,
+				"InstancedStaticMeshInstanceData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FInstancedStaticMeshInstanceData),
+				alignof(FInstancedStaticMeshInstanceData),
+				Z_Construct_UScriptStruct_FInstancedStaticMeshInstanceData_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

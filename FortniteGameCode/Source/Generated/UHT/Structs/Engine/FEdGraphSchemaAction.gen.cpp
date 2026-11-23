@@ -31,25 +31,12 @@ class UScriptStruct* FEdGraphSchemaAction::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02403FC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEdGraphSchemaAction_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEdGraphSchemaAction>();
 	}
-	// ReturnStructParams: original RVA 0x04447540
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEdGraphSchemaAction_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"EdGraphSchemaAction",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FEdGraphSchemaAction),
-		alignof(FEdGraphSchemaAction),
-		Z_Construct_UScriptStruct_FEdGraphSchemaAction_Statics::PropPointers, 23,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02405860 (end 0x0240588F)
 	// Original VA: 0x0000000142405860 | File offset: 0x02404E60
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEdGraphSchemaAction::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEdGraphSchemaAction_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04447540
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEdGraphSchemaAction_Statics::NewStructOps,
+				"EdGraphSchemaAction",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FEdGraphSchemaAction),
+				alignof(FEdGraphSchemaAction),
+				Z_Construct_UScriptStruct_FEdGraphSchemaAction_Statics::PropPointers, 23,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

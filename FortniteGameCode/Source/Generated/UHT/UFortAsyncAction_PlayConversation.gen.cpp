@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x032BFA50, FClassParams RVA 0x032BFA90.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortAsyncAction_PlayConversation();  // RVA 0x00F9F200 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E5D0 (end 0x00F9E5F2)
 // Original VA: 0x0000000140F9E5D0 | File offset: 0x00F9DBD0
@@ -20,7 +20,7 @@ void UFortAsyncAction_PlayConversation::StaticRegisterNativesUFortAsyncAction_Pl
 
 struct Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04238930 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F780 (end 0x00F9F7AF)
 // Original VA: 0x0000000140F9F780 | File offset: 0x00F9ED80
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversat
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation_Statics::FuncParams);
+		// FuncParams: original RVA 0x04238930; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_PlayConversation, "PlayConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FRigidBodyErrorCorrection::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02409FF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRigidBodyErrorCorrection_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRigidBodyErrorCorrection>();
 	}
-	// ReturnStructParams: original RVA 0x04452DC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRigidBodyErrorCorrection_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"RigidBodyErrorCorrection",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FRigidBodyErrorCorrection),
-		alignof(FRigidBodyErrorCorrection),
-		Z_Construct_UScriptStruct_FRigidBodyErrorCorrection_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D640 (end 0x0240D66F)
 	// Original VA: 0x000000014240D640 | File offset: 0x0240CC40
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FRigidBodyErrorCorrection::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRigidBodyErrorCorrection_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04452DC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FRigidBodyErrorCorrection_Statics::NewStructOps,
+				"RigidBodyErrorCorrection",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FRigidBodyErrorCorrection),
+				alignof(FRigidBodyErrorCorrection),
+				Z_Construct_UScriptStruct_FRigidBodyErrorCorrection_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FFortSurfaceDamageRatioByAffiliationStats::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5280 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSurfaceDamageRatioByAffiliationStats_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSurfaceDamageRatioByAffiliationStats>();
 	}
-	// ReturnStructParams: original RVA 0x0425A720
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSurfaceDamageRatioByAffiliationStats_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortSurfaceDamageRatioByAffiliationStats",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSurfaceDamageRatioByAffiliationStats),
-		alignof(FFortSurfaceDamageRatioByAffiliationStats),
-		Z_Construct_UScriptStruct_FFortSurfaceDamageRatioByAffiliationStats_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC71D0 (end 0x00FC71FF)
 	// Original VA: 0x0000000140FC71D0 | File offset: 0x00FC67D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortSurfaceDamageRatioByAffiliationStats::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSurfaceDamageRatioByAffiliationStats_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0425A720
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortSurfaceDamageRatioByAffiliationStats_Statics::NewStructOps,
+				"FortSurfaceDamageRatioByAffiliationStats",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSurfaceDamageRatioByAffiliationStats),
+				alignof(FFortSurfaceDamageRatioByAffiliationStats),
+				Z_Construct_UScriptStruct_FFortSurfaceDamageRatioByAffiliationStats_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

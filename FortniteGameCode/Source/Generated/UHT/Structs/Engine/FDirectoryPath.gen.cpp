@@ -31,25 +31,12 @@ class UScriptStruct* FDirectoryPath::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102DB10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FDirectoryPath_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDirectoryPath>();
 	}
-	// ReturnStructParams: original RVA 0x0444F850
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDirectoryPath_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"DirectoryPath",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FDirectoryPath),
-		alignof(FDirectoryPath),
-		Z_Construct_UScriptStruct_FDirectoryPath_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240D130 (end 0x0240D15F)
 	// Original VA: 0x000000014240D130 | File offset: 0x0240C730
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FDirectoryPath::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FDirectoryPath_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0444F850
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FDirectoryPath_Statics::NewStructOps,
+				"DirectoryPath",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FDirectoryPath),
+				alignof(FDirectoryPath),
+				Z_Construct_UScriptStruct_FDirectoryPath_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

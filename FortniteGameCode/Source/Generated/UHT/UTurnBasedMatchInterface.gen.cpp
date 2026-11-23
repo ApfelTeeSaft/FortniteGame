@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UTurnBasedMatchInterface();  // RVA 0x002FC650 (conse
 struct Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04185250; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedMatchInterface, "OnMatchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x10, Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002FC6F0 (end 0x002FC71F)
 // Original VA: 0x00000001402FC6F0 | File offset: 0x002FBCF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded_Statics::FuncParams);
+		// FuncParams: original RVA 0x04185250; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedMatchInterface, "OnMatchEnded", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x10, Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded()
 struct Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04185310; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedMatchInterface, "OnMatchReceivedTurn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x18, Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002FC720 (end 0x002FC74F)
 // Original VA: 0x00000001402FC720 | File offset: 0x002FBD20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn_Statics::FuncParams);
+		// FuncParams: original RVA 0x04185310; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UTurnBasedMatchInterface, "OnMatchReceivedTurn", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, 0x18, Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

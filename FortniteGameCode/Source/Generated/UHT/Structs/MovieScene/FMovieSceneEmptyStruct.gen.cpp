@@ -30,25 +30,12 @@ class UScriptStruct* FMovieSceneEmptyStruct::StaticStruct()
 	struct Z_Construct_UScriptStruct_FMovieSceneEmptyStruct_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74CB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieSceneEmptyStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieSceneEmptyStruct>();
 	}
-	// ReturnStructParams: original RVA 0x043A2520
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneEmptyStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
-		nullptr,
-		&NewStructOps,
-		"MovieSceneEmptyStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieSceneEmptyStruct),
-		alignof(FMovieSceneEmptyStruct),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC5D50 (end 0x01AC5D7F)
 	// Original VA: 0x0000000141AC5D50 | File offset: 0x01AC5350
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FMovieSceneEmptyStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieSceneEmptyStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043A2520
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieScene,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMovieSceneEmptyStruct_Statics::NewStructOps,
+				"MovieSceneEmptyStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieSceneEmptyStruct),
+				alignof(FMovieSceneEmptyStruct),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

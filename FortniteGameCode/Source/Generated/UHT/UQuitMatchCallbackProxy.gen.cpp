@@ -21,10 +21,7 @@ void UQuitMatchCallbackProxy::StaticRegisterNativesUQuitMatchCallbackProxy()
 struct Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04189CD0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UQuitMatchCallbackProxy, "QuitMatch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x30, Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F750 (end 0x0032F77F)
 // Original VA: 0x000000014032F750 | File offset: 0x0032ED50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch_Statics::FuncParams);
+		// FuncParams: original RVA 0x04189CD0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UQuitMatchCallbackProxy, "QuitMatch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x30, Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

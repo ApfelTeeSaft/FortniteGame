@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03696880, FClassParams RVA 0x036968A0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFloatBinding();  // RVA 0x01BED390 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECE50 (end 0x01BECE72)
 // Original VA: 0x0000000141BECE50 | File offset: 0x01BEC450
@@ -20,7 +20,7 @@ void UFloatBinding::StaticRegisterNativesUFloatBinding()
 
 struct Z_Construct_UFunction_UFloatBinding_GetValue_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x043BF8F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEDC00 (end 0x01BEDC2F)
 // Original VA: 0x0000000141BEDC00 | File offset: 0x01BED200
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFloatBinding_GetValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFloatBinding_GetValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x043BF8F0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFloatBinding, "GetValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020401, 0x4, Z_Construct_UFunction_UFloatBinding_GetValue_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

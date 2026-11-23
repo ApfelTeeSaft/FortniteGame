@@ -30,25 +30,12 @@ class UScriptStruct* FVivoxMuteList::StaticStruct()
 	struct Z_Construct_UScriptStruct_FVivoxMuteList_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007DD430 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVivoxMuteList_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVivoxMuteList>();
 	}
-	// ReturnStructParams: original RVA 0x041C6C10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVivoxMuteList_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Vivox,
-		nullptr,
-		&NewStructOps,
-		"VivoxMuteList",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FVivoxMuteList),
-		alignof(FVivoxMuteList),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007DD520 (end 0x007DD54F)
 	// Original VA: 0x00000001407DD520 | File offset: 0x007DCB20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FVivoxMuteList::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVivoxMuteList_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C6C10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Vivox,
+				nullptr,
+				&Z_Construct_UScriptStruct_FVivoxMuteList_Statics::NewStructOps,
+				"VivoxMuteList",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FVivoxMuteList),
+				alignof(FVivoxMuteList),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

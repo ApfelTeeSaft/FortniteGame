@@ -31,25 +31,12 @@ class UScriptStruct* FBuildingActorHotSpotDirection::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F65720 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBuildingActorHotSpotDirection_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBuildingActorHotSpotDirection>();
 	}
-	// ReturnStructParams: original RVA 0x041F8380
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBuildingActorHotSpotDirection_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"BuildingActorHotSpotDirection",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBuildingActorHotSpotDirection),
-		alignof(FBuildingActorHotSpotDirection),
-		Z_Construct_UScriptStruct_FBuildingActorHotSpotDirection_Statics::PropPointers, 8,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67850 (end 0x00F6787F)
 	// Original VA: 0x0000000140F67850 | File offset: 0x00F66E50
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBuildingActorHotSpotDirection::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBuildingActorHotSpotDirection_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041F8380
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBuildingActorHotSpotDirection_Statics::NewStructOps,
+				"BuildingActorHotSpotDirection",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBuildingActorHotSpotDirection),
+				alignof(FBuildingActorHotSpotDirection),
+				Z_Construct_UScriptStruct_FBuildingActorHotSpotDirection_Statics::PropPointers, 8,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

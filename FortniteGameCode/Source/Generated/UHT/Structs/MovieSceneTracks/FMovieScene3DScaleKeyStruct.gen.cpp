@@ -32,25 +32,12 @@ class UScriptStruct* FMovieScene3DScaleKeyStruct::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4FA00 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieScene3DScaleKeyStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieScene3DScaleKeyStruct>();
 	}
-	// ReturnStructParams: original RVA 0x043B3DE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieScene3DScaleKeyStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieSceneKeyStruct,
-		&NewStructOps,
-		"MovieScene3DScaleKeyStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieScene3DScaleKeyStruct),
-		alignof(FMovieScene3DScaleKeyStruct),
-		Z_Construct_UScriptStruct_FMovieScene3DScaleKeyStruct_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B52C30 (end 0x01B52C5F)
 	// Original VA: 0x0000000141B52C30 | File offset: 0x01B52230
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieScene3DScaleKeyStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieScene3DScaleKeyStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B3DE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieSceneKeyStruct,
+				&Z_Construct_UScriptStruct_FMovieScene3DScaleKeyStruct_Statics::NewStructOps,
+				"MovieScene3DScaleKeyStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieScene3DScaleKeyStruct),
+				alignof(FMovieScene3DScaleKeyStruct),
+				Z_Construct_UScriptStruct_FMovieScene3DScaleKeyStruct_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FEdGraphPinReference::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02403D80 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FEdGraphPinReference_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEdGraphPinReference>();
 	}
-	// ReturnStructParams: original RVA 0x04446710
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEdGraphPinReference_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"EdGraphPinReference",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FEdGraphPinReference),
-		alignof(FEdGraphPinReference),
-		Z_Construct_UScriptStruct_FEdGraphPinReference_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02405800 (end 0x0240582F)
 	// Original VA: 0x0000000142405800 | File offset: 0x02404E00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FEdGraphPinReference::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FEdGraphPinReference_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04446710
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FEdGraphPinReference_Statics::NewStructOps,
+				"EdGraphPinReference",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FEdGraphPinReference),
+				alignof(FEdGraphPinReference),
+				Z_Construct_UScriptStruct_FEdGraphPinReference_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

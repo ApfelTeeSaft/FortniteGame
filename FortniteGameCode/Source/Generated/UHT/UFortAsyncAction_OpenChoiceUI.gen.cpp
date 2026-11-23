@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x032BF988, FClassParams RVA 0x032BF9C0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortAsyncAction_OpenChoiceUI();  // RVA 0x00F9F1C0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E5A0 (end 0x00F9E5C2)
 // Original VA: 0x0000000140F9E5A0 | File offset: 0x00F9DBA0
@@ -20,7 +20,7 @@ void UFortAsyncAction_OpenChoiceUI::StaticRegisterNativesUFortAsyncAction_OpenCh
 
 struct Z_Construct_UFunction_UFortAsyncAction_OpenChoiceUI_OpenChoiceUI_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042386F0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F750 (end 0x00F9F77F)
 // Original VA: 0x0000000140F9F750 | File offset: 0x00F9ED50
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_OpenChoiceUI_OpenChoiceUI()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_OpenChoiceUI_OpenChoiceUI_Statics::FuncParams);
+		// FuncParams: original RVA 0x042386F0; StructureSize 0x40 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_OpenChoiceUI, "OpenChoiceUI", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x40, Z_Construct_UFunction_UFortAsyncAction_OpenChoiceUI_OpenChoiceUI_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

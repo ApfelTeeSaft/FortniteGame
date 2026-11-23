@@ -31,25 +31,12 @@ class UScriptStruct* FFortSavedModeLoadout::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064820 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortSavedModeLoadout_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortSavedModeLoadout>();
 	}
-	// ReturnStructParams: original RVA 0x042EE000
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortSavedModeLoadout_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortSavedModeLoadout",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortSavedModeLoadout),
-		alignof(FFortSavedModeLoadout),
-		Z_Construct_UScriptStruct_FFortSavedModeLoadout_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010663E0 (end 0x0106640F)
 	// Original VA: 0x00000001410663E0 | File offset: 0x010659E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortSavedModeLoadout::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortSavedModeLoadout_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042EE000
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortSavedModeLoadout_Statics::NewStructOps,
+				"FortSavedModeLoadout",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortSavedModeLoadout),
+				alignof(FFortSavedModeLoadout),
+				Z_Construct_UScriptStruct_FFortSavedModeLoadout_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

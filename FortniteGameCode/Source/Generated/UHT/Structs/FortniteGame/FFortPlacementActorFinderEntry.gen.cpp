@@ -31,25 +31,12 @@ class UScriptStruct* FFortPlacementActorFinderEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8A60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortPlacementActorFinderEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortPlacementActorFinderEntry>();
 	}
-	// ReturnStructParams: original RVA 0x043606A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPlacementActorFinderEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortPlacementActorFinderEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortPlacementActorFinderEntry),
-		alignof(FFortPlacementActorFinderEntry),
-		Z_Construct_UScriptStruct_FFortPlacementActorFinderEntry_Statics::PropPointers, 11,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB7F0 (end 0x010EB81F)
 	// Original VA: 0x00000001410EB7F0 | File offset: 0x010EADF0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortPlacementActorFinderEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortPlacementActorFinderEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043606A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortPlacementActorFinderEntry_Statics::NewStructOps,
+				"FortPlacementActorFinderEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortPlacementActorFinderEntry),
+				alignof(FFortPlacementActorFinderEntry),
+				Z_Construct_UScriptStruct_FFortPlacementActorFinderEntry_Statics::PropPointers, 11,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

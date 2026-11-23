@@ -32,25 +32,12 @@ class UScriptStruct* FCollectionVectorParameter::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485B20 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCollectionVectorParameter_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCollectionVectorParameter>();
 	}
-	// ReturnStructParams: original RVA 0x044C09B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCollectionVectorParameter_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FCollectionParameterBase,
-		&NewStructOps,
-		"CollectionVectorParameter",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FCollectionVectorParameter),
-		alignof(FCollectionVectorParameter),
-		Z_Construct_UScriptStruct_FCollectionVectorParameter_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487350 (end 0x0248737F)
 	// Original VA: 0x0000000142487350 | File offset: 0x02486950
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FCollectionVectorParameter::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCollectionVectorParameter_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044C09B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FCollectionParameterBase,
+				&Z_Construct_UScriptStruct_FCollectionVectorParameter_Statics::NewStructOps,
+				"CollectionVectorParameter",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FCollectionVectorParameter),
+				alignof(FCollectionVectorParameter),
+				Z_Construct_UScriptStruct_FCollectionVectorParameter_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

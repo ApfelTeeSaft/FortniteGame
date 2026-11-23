@@ -31,25 +31,12 @@ class UScriptStruct* FFortTooltipValueData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8F10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTooltipValueData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTooltipValueData>();
 	}
-	// ReturnStructParams: original RVA 0x0433A6D0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTooltipValueData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTooltipValueData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTooltipValueData),
-		alignof(FFortTooltipValueData),
-		Z_Construct_UScriptStruct_FFortTooltipValueData_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CCA40 (end 0x010CCA6F)
 	// Original VA: 0x00000001410CCA40 | File offset: 0x010CC040
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTooltipValueData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTooltipValueData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0433A6D0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTooltipValueData_Statics::NewStructOps,
+				"FortTooltipValueData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTooltipValueData),
+				alignof(FFortTooltipValueData),
+				Z_Construct_UScriptStruct_FFortTooltipValueData_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

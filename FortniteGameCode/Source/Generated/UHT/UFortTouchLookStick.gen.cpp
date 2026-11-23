@@ -22,10 +22,7 @@ void UFortTouchLookStick::StaticRegisterNativesUFortTouchLookStick()
 struct Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C3650; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchLookStick, "IsFireButtonUnderTouch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C820C00, 0xC, Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905B40 (end 0x02905B6F)
 // Original VA: 0x0000000142905B40 | File offset: 0x02905140
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C3650; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchLookStick, "IsFireButtonUnderTouch", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x5C820C00, 0xC, Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch()
 struct Z_Construct_UFunction_UFortTouchLookStick_SetFiringState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x045C36E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortTouchLookStick_SetFiringState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchLookStick, "SetFiringState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020C00, 0x1, Z_Construct_UFunction_UFortTouchLookStick_SetFiringState_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02905B70 (end 0x02905B9F)
 // Original VA: 0x0000000142905B70 | File offset: 0x02905170
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortTouchLookStick_SetFiringState()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTouchLookStick_SetFiringState_Statics::FuncParams);
+		// FuncParams: original RVA 0x045C36E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortTouchLookStick, "SetFiringState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x0C020C00, 0x1, Z_Construct_UFunction_UFortTouchLookStick_SetFiringState_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

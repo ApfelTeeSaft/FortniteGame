@@ -21,10 +21,7 @@ void UPaperTerrainComponent::StaticRegisterNativesUPaperTerrainComponent()
 struct Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041B3DB0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperTerrainComponent, "SetTerrainColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00668330 (end 0x0066835F)
 // Original VA: 0x0000000140668330 | File offset: 0x00667930
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor_Statics::FuncParams);
+		// FuncParams: original RVA 0x041B3DB0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPaperTerrainComponent, "SetTerrainColor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820401, 0x10, Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

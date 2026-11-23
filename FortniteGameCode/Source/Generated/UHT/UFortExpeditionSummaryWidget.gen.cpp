@@ -20,12 +20,6 @@ void UFortExpeditionSummaryWidget::StaticRegisterNativesUFortExpeditionSummaryWi
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortExpeditionSummaryWidget_BindInventoryDelegates_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04569BB0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortExpeditionSummaryWidget_BindInventoryDelegates_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionSummaryWidget, "BindInventoryDelegates", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A47F0 (end 0x028A481F)
 // Original VA: 0x00000001428A47F0 | File offset: 0x028A3DF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,17 +28,13 @@ UFunction* Z_Construct_UFunction_UFortExpeditionSummaryWidget_BindInventoryDeleg
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortExpeditionSummaryWidget_BindInventoryDelegates_Statics::FuncParams);
+		// FuncParams: original RVA 0x04569BB0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionSummaryWidget, "BindInventoryDelegates", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortExpeditionSummaryWidget_OnRefreshSummaryWidget_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04569BF0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortExpeditionSummaryWidget_OnRefreshSummaryWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionSummaryWidget, "OnRefreshSummaryWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A4820 (end 0x028A484F)
 // Original VA: 0x00000001428A4820 | File offset: 0x028A3E20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -53,17 +43,13 @@ UFunction* Z_Construct_UFunction_UFortExpeditionSummaryWidget_OnRefreshSummaryWi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortExpeditionSummaryWidget_OnRefreshSummaryWidget_Statics::FuncParams);
+		// FuncParams: original RVA 0x04569BF0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionSummaryWidget, "OnRefreshSummaryWidget", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortExpeditionSummaryWidget_UnbindInventoryDelegates_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04569C30; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortExpeditionSummaryWidget_UnbindInventoryDelegates_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionSummaryWidget, "UnbindInventoryDelegates", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A4850 (end 0x028A487F)
 // Original VA: 0x00000001428A4850 | File offset: 0x028A3E50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -72,7 +58,9 @@ UFunction* Z_Construct_UFunction_UFortExpeditionSummaryWidget_UnbindInventoryDel
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortExpeditionSummaryWidget_UnbindInventoryDelegates_Statics::FuncParams);
+		// FuncParams: original RVA 0x04569C30; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionSummaryWidget, "UnbindInventoryDelegates", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

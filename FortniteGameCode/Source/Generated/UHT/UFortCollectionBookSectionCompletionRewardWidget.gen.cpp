@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03C81388, FClassParams RVA 0x03C813E0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget();  // RVA 0x0289B1F0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AD30 (end 0x0289AD52)
 // Original VA: 0x000000014289AD30 | File offset: 0x0289A330
@@ -21,7 +21,7 @@ void UFortCollectionBookSectionCompletionRewardWidget::StaticRegisterNativesUFor
 
 struct Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04560E10 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B8E0 (end 0x0289B90F)
 // Original VA: 0x000000014289B8E0 | File offset: 0x0289AEE0
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidge
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated_Statics::FuncParams);
+		// FuncParams: original RVA 0x04560E10; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget, "HandleRewardDetailsModalWidgetDeactivated", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04560E90 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B910 (end 0x0289B93F)
 // Original VA: 0x000000014289B910 | File offset: 0x0289AF10
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidge
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked_Statics::FuncParams);
+		// FuncParams: original RVA 0x04560E90; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget, "OnRewardDetailsButtonClicked", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, 0x8, Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

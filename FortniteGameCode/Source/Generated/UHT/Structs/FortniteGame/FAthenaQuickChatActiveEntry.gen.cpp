@@ -27,25 +27,12 @@ class UScriptStruct* FAthenaQuickChatActiveEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5F5B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaQuickChatActiveEntry>();
 	}
-	// ReturnStructParams: original RVA 0x041F0D60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaQuickChatActiveEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAthenaQuickChatActiveEntry),
-		alignof(FAthenaQuickChatActiveEntry),
-		Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61EF0 (end 0x00F61F1F)
 	// Original VA: 0x0000000140F61EF0 | File offset: 0x00F614F0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -54,7 +41,19 @@ class UScriptStruct* FAthenaQuickChatActiveEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041F0D60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry_Statics::NewStructOps,
+				"AthenaQuickChatActiveEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAthenaQuickChatActiveEntry),
+				alignof(FAthenaQuickChatActiveEntry),
+				Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

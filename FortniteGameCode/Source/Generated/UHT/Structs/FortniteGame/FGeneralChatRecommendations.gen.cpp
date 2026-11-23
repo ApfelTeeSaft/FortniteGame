@@ -31,25 +31,12 @@ class UScriptStruct* FGeneralChatRecommendations::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104FD90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGeneralChatRecommendations_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGeneralChatRecommendations>();
 	}
-	// ReturnStructParams: original RVA 0x042DA470
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGeneralChatRecommendations_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"GeneralChatRecommendations",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGeneralChatRecommendations),
-		alignof(FGeneralChatRecommendations),
-		Z_Construct_UScriptStruct_FGeneralChatRecommendations_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01051C70 (end 0x01051C9F)
 	// Original VA: 0x0000000141051C70 | File offset: 0x01051270
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FGeneralChatRecommendations::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGeneralChatRecommendations_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042DA470
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGeneralChatRecommendations_Statics::NewStructOps,
+				"GeneralChatRecommendations",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGeneralChatRecommendations),
+				alignof(FGeneralChatRecommendations),
+				Z_Construct_UScriptStruct_FGeneralChatRecommendations_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

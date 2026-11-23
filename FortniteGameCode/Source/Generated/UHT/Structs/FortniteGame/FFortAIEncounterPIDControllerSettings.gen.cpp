@@ -31,25 +31,12 @@ class UScriptStruct* FFortAIEncounterPIDControllerSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F86E50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAIEncounterPIDControllerSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAIEncounterPIDControllerSettings>();
 	}
-	// ReturnStructParams: original RVA 0x0421DC40
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAIEncounterPIDControllerSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAIEncounterPIDControllerSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAIEncounterPIDControllerSettings),
-		alignof(FFortAIEncounterPIDControllerSettings),
-		Z_Construct_UScriptStruct_FFortAIEncounterPIDControllerSettings_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F88870 (end 0x00F8889F)
 	// Original VA: 0x0000000140F88870 | File offset: 0x00F87E70
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAIEncounterPIDControllerSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAIEncounterPIDControllerSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0421DC40
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAIEncounterPIDControllerSettings_Statics::NewStructOps,
+				"FortAIEncounterPIDControllerSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAIEncounterPIDControllerSettings),
+				alignof(FFortAIEncounterPIDControllerSettings),
+				Z_Construct_UScriptStruct_FFortAIEncounterPIDControllerSettings_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

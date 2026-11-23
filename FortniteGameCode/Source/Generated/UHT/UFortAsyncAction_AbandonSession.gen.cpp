@@ -21,10 +21,7 @@ void UFortAsyncAction_AbandonSession::StaticRegisterNativesUFortAsyncAction_Aban
 struct Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04238070; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_AbandonSession, "AbandonSession", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F6C0 (end 0x00F9F6EF)
 // Original VA: 0x0000000140F9F6C0 | File offset: 0x00F9ECC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession_Statics::FuncParams);
+		// FuncParams: original RVA 0x04238070; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAsyncAction_AbandonSession, "AbandonSession", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

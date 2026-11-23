@@ -31,25 +31,12 @@ class UScriptStruct* FAIStimulus::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1AB00 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAIStimulus_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAIStimulus>();
 	}
-	// ReturnStructParams: original RVA 0x043E8940
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAIStimulus_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
-		nullptr,
-		&NewStructOps,
-		"AIStimulus",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAIStimulus),
-		alignof(FAIStimulus),
-		Z_Construct_UScriptStruct_FAIStimulus_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1CE80 (end 0x01D1CEAF)
 	// Original VA: 0x0000000141D1CE80 | File offset: 0x01D1C480
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAIStimulus::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAIStimulus_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043E8940
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AIModule,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAIStimulus_Statics::NewStructOps,
+				"AIStimulus",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAIStimulus),
+				alignof(FAIStimulus),
+				Z_Construct_UScriptStruct_FAIStimulus_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

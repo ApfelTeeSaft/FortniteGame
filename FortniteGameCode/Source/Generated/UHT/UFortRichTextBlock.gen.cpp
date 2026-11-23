@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03D0BBE0, FClassParams RVA 0x03D0BC40.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortRichTextBlock();  // RVA 0x028ED850 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED100 (end 0x028ED122)
 // Original VA: 0x00000001428ED100 | File offset: 0x028EC700
@@ -20,7 +20,7 @@ void UFortRichTextBlock::StaticRegisterNativesUFortRichTextBlock()
 
 struct Z_Construct_UFunction_UFortRichTextBlock_SetText_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B21E0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EEED0 (end 0x028EEEFF)
 // Original VA: 0x00000001428EEED0 | File offset: 0x028EE4D0
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortRichTextBlock_SetText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRichTextBlock_SetText_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B21E0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRichTextBlock, "SetText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_UFortRichTextBlock_SetText_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FTextSizingParameters::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023ECFF0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTextSizingParameters_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTextSizingParameters>();
 	}
-	// ReturnStructParams: original RVA 0x04431F80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTextSizingParameters_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"TextSizingParameters",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTextSizingParameters),
-		alignof(FTextSizingParameters),
-		Z_Construct_UScriptStruct_FTextSizingParameters_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EF830 (end 0x023EF85F)
 	// Original VA: 0x00000001423EF830 | File offset: 0x023EEE30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FTextSizingParameters::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTextSizingParameters_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04431F80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTextSizingParameters_Statics::NewStructOps,
+				"TextSizingParameters",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTextSizingParameters),
+				alignof(FTextSizingParameters),
+				Z_Construct_UScriptStruct_FTextSizingParameters_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

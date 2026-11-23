@@ -31,25 +31,12 @@ class UScriptStruct* FSubmixEffectEQBand::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559D90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSubmixEffectEQBand_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSubmixEffectEQBand>();
 	}
-	// ReturnStructParams: original RVA 0x0453ACF0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSubmixEffectEQBand_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AudioMixer,
-		nullptr,
-		&NewStructOps,
-		"SubmixEffectEQBand",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSubmixEffectEQBand),
-		alignof(FSubmixEffectEQBand),
-		Z_Construct_UScriptStruct_FSubmixEffectEQBand_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A650 (end 0x0255A67F)
 	// Original VA: 0x000000014255A650 | File offset: 0x02559C50
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSubmixEffectEQBand::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSubmixEffectEQBand_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0453ACF0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AudioMixer,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSubmixEffectEQBand_Statics::NewStructOps,
+				"SubmixEffectEQBand",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSubmixEffectEQBand),
+				alignof(FSubmixEffectEQBand),
+				Z_Construct_UScriptStruct_FSubmixEffectEQBand_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FBlendProfileBoneEntry::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2180 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBlendProfileBoneEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBlendProfileBoneEntry>();
 	}
-	// ReturnStructParams: original RVA 0x04425B00
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBlendProfileBoneEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BlendProfileBoneEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBlendProfileBoneEntry),
-		alignof(FBlendProfileBoneEntry),
-		Z_Construct_UScriptStruct_FBlendProfileBoneEntry_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E4310 (end 0x023E433F)
 	// Original VA: 0x00000001423E4310 | File offset: 0x023E3910
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBlendProfileBoneEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBlendProfileBoneEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04425B00
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBlendProfileBoneEntry_Statics::NewStructOps,
+				"BlendProfileBoneEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBlendProfileBoneEntry),
+				alignof(FBlendProfileBoneEntry),
+				Z_Construct_UScriptStruct_FBlendProfileBoneEntry_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

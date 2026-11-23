@@ -26,10 +26,7 @@ void UFortHealthBarComponent::StaticRegisterNativesUFortHealthBarComponent()
 struct Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042924F0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "GetHealthBarDisplayText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB560 (end 0x00FFB58F)
 // Original VA: 0x0000000140FFB560 | File offset: 0x00FFAB60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -38,17 +35,13 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText_Statics::FuncParams);
+		// FuncParams: original RVA 0x042924F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "GetHealthBarDisplayText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x18, Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHealthBarComponent_OnRep_DisplayText_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04292530; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthBarComponent_OnRep_DisplayText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "OnRep_DisplayText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB590 (end 0x00FFB5BF)
 // Original VA: 0x0000000140FFB590 | File offset: 0x00FFAB90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,17 +50,13 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_OnRep_DisplayText()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthBarComponent_OnRep_DisplayText_Statics::FuncParams);
+		// FuncParams: original RVA 0x04292530; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "OnRep_DisplayText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UFortHealthBarComponent_OnRep_IsVisible_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04292570; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthBarComponent_OnRep_IsVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "OnRep_IsVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB5C0 (end 0x00FFB5EF)
 // Original VA: 0x0000000140FFB5C0 | File offset: 0x00FFABC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +65,9 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_OnRep_IsVisible()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthBarComponent_OnRep_IsVisible_Statics::FuncParams);
+		// FuncParams: original RVA 0x04292570; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "OnRep_IsVisible", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +75,7 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_OnRep_IsVisible()
 struct Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042925F0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "SetHealthBarDisplayText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x18, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB5F0 (end 0x00FFB61F)
 // Original VA: 0x0000000140FFB5F0 | File offset: 0x00FFABF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +84,9 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText_Statics::FuncParams);
+		// FuncParams: original RVA 0x042925F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "SetHealthBarDisplayText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x18, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -104,10 +94,7 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText
 struct Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04292680; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "SetHealthBarVisibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB620 (end 0x00FFB64F)
 // Original VA: 0x0000000140FFB620 | File offset: 0x00FFAC20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +103,9 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility_Statics::FuncParams);
+		// FuncParams: original RVA 0x04292680; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "SetHealthBarVisibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x1, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -124,10 +113,7 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility(
 struct Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisibility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04292710; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisibility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "SetHealthBarWidgetVisibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisibility_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB650 (end 0x00FFB67F)
 // Original VA: 0x0000000140FFB650 | File offset: 0x00FFAC50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -136,7 +122,9 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisib
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisibility_Statics::FuncParams);
+		// FuncParams: original RVA 0x04292710; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortHealthBarComponent, "SetHealthBarWidgetVisibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisibility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

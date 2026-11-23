@@ -31,25 +31,12 @@ class UScriptStruct* FFortAvailableScriptedAction::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4300 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortAvailableScriptedAction_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortAvailableScriptedAction>();
 	}
-	// ReturnStructParams: original RVA 0x04327D60
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAvailableScriptedAction_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortAvailableScriptedAction",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortAvailableScriptedAction),
-		alignof(FFortAvailableScriptedAction),
-		Z_Construct_UScriptStruct_FFortAvailableScriptedAction_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A67D0 (end 0x010A67FF)
 	// Original VA: 0x00000001410A67D0 | File offset: 0x010A5DD0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortAvailableScriptedAction::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortAvailableScriptedAction_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04327D60
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortAvailableScriptedAction_Statics::NewStructOps,
+				"FortAvailableScriptedAction",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortAvailableScriptedAction),
+				alignof(FFortAvailableScriptedAction),
+				Z_Construct_UScriptStruct_FFortAvailableScriptedAction_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

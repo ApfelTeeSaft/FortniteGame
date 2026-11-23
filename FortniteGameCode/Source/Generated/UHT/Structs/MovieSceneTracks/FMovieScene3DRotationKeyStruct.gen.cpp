@@ -32,25 +32,12 @@ class UScriptStruct* FMovieScene3DRotationKeyStruct::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4F640 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMovieScene3DRotationKeyStruct_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMovieScene3DRotationKeyStruct>();
 	}
-	// ReturnStructParams: original RVA 0x043B3EA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieScene3DRotationKeyStruct_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
-		Z_Construct_UScriptStruct_FMovieSceneKeyStruct,
-		&NewStructOps,
-		"MovieScene3DRotationKeyStruct",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMovieScene3DRotationKeyStruct),
-		alignof(FMovieScene3DRotationKeyStruct),
-		Z_Construct_UScriptStruct_FMovieScene3DRotationKeyStruct_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B52C00 (end 0x01B52C2F)
 	// Original VA: 0x0000000141B52C00 | File offset: 0x01B52200
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FMovieScene3DRotationKeyStruct::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMovieScene3DRotationKeyStruct_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043B3EA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_MovieSceneTracks,
+				Z_Construct_UScriptStruct_FMovieSceneKeyStruct,
+				&Z_Construct_UScriptStruct_FMovieScene3DRotationKeyStruct_Statics::NewStructOps,
+				"MovieScene3DRotationKeyStruct",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMovieScene3DRotationKeyStruct),
+				alignof(FMovieScene3DRotationKeyStruct),
+				Z_Construct_UScriptStruct_FMovieScene3DRotationKeyStruct_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

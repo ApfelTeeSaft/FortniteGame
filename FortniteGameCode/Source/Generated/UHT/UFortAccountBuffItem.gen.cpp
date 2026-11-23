@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03297470, FClassParams RVA 0x03297490.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortAccountBuffItem();  // RVA 0x00F82010 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81870 (end 0x00F81892)
 // Original VA: 0x0000000140F81870 | File offset: 0x00F80E70
@@ -20,7 +20,7 @@ void UFortAccountBuffItem::StaticRegisterNativesUFortAccountBuffItem()
 
 struct Z_Construct_UFunction_UFortAccountBuffItem_IsActive_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04219AC0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82890 (end 0x00F828BF)
 // Original VA: 0x0000000140F82890 | File offset: 0x00F81E90
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortAccountBuffItem_IsActive()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAccountBuffItem_IsActive_Statics::FuncParams);
+		// FuncParams: original RVA 0x04219AC0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAccountBuffItem, "IsActive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x1, Z_Construct_UFunction_UFortAccountBuffItem_IsActive_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

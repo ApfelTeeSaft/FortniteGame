@@ -31,25 +31,12 @@ class UScriptStruct* FFortGeneratedDifficultyOptions::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E87E0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortGeneratedDifficultyOptions_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortGeneratedDifficultyOptions>();
 	}
-	// ReturnStructParams: original RVA 0x0435F110
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortGeneratedDifficultyOptions_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortGeneratedDifficultyOptions",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortGeneratedDifficultyOptions),
-		alignof(FFortGeneratedDifficultyOptions),
-		Z_Construct_UScriptStruct_FFortGeneratedDifficultyOptions_Statics::PropPointers, 10,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB490 (end 0x010EB4BF)
 	// Original VA: 0x00000001410EB490 | File offset: 0x010EAA90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortGeneratedDifficultyOptions::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortGeneratedDifficultyOptions_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0435F110
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortGeneratedDifficultyOptions_Statics::NewStructOps,
+				"FortGeneratedDifficultyOptions",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortGeneratedDifficultyOptions),
+				alignof(FFortGeneratedDifficultyOptions),
+				Z_Construct_UScriptStruct_FFortGeneratedDifficultyOptions_Statics::PropPointers, 10,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

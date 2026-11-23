@@ -30,25 +30,12 @@ class UScriptStruct* FAthenaNewsEntry::StaticStruct()
 	struct Z_Construct_UScriptStruct_FAthenaNewsEntry_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028860F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaNewsEntry_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaNewsEntry>();
 	}
-	// ReturnStructParams: original RVA 0x04551620
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaNewsEntry_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"AthenaNewsEntry",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAthenaNewsEntry),
-		alignof(FAthenaNewsEntry),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02888D20 (end 0x02888D4F)
 	// Original VA: 0x0000000142888D20 | File offset: 0x02888320
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FAthenaNewsEntry::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaNewsEntry_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04551620
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaNewsEntry_Statics::NewStructOps,
+				"AthenaNewsEntry",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAthenaNewsEntry),
+				alignof(FAthenaNewsEntry),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

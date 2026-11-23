@@ -31,25 +31,12 @@ class UScriptStruct* FSpectatorOwnedCameraComponentRecord::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01076A70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSpectatorOwnedCameraComponentRecord_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSpectatorOwnedCameraComponentRecord>();
 	}
-	// ReturnStructParams: original RVA 0x043059E0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSpectatorOwnedCameraComponentRecord_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"SpectatorOwnedCameraComponentRecord",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000005),
-		sizeof(FSpectatorOwnedCameraComponentRecord),
-		alignof(FSpectatorOwnedCameraComponentRecord),
-		Z_Construct_UScriptStruct_FSpectatorOwnedCameraComponentRecord_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079300 (end 0x0107932F)
 	// Original VA: 0x0000000141079300 | File offset: 0x01078900
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSpectatorOwnedCameraComponentRecord::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSpectatorOwnedCameraComponentRecord_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043059E0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSpectatorOwnedCameraComponentRecord_Statics::NewStructOps,
+				"SpectatorOwnedCameraComponentRecord",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000005),
+				sizeof(FSpectatorOwnedCameraComponentRecord),
+				alignof(FSpectatorOwnedCameraComponentRecord),
+				Z_Construct_UScriptStruct_FSpectatorOwnedCameraComponentRecord_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

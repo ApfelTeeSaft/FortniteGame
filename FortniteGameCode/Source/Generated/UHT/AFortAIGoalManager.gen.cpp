@@ -35,10 +35,7 @@ void AFortAIGoalManager::StaticRegisterNativesAFortAIGoalManager()
 struct Z_Construct_UFunction_AFortAIGoalManager_AddGoal_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229040; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_AddGoal_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoal", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AFortAIGoalManager_AddGoal_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F917A0 (end 0x00F917CF)
 // Original VA: 0x0000000140F917A0 | File offset: 0x00F90DA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -47,7 +44,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoal()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_AddGoal_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229040; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoal", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AFortAIGoalManager_AddGoal_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -55,10 +54,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoal()
 struct Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229100; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoalActorToAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F917D0 (end 0x00F917FF)
 // Original VA: 0x0000000140F917D0 | File offset: 0x00F90DD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -67,7 +63,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229100; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoalActorToAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -75,10 +73,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment()
 struct Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229240; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoalsToWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x48, Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91830 (end 0x00F9185F)
 // Original VA: 0x0000000140F91830 | File offset: 0x00F90E30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -87,7 +82,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229240; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoalsToWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x48, Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -95,10 +92,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment()
 struct Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229340; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoalToWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x50, Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91800 (end 0x00F9182F)
 // Original VA: 0x0000000140F91800 | File offset: 0x00F90E00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -107,7 +101,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229340; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddGoalToWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x50, Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -115,10 +111,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment()
 struct Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229440; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91860 (end 0x00F9188F)
 // Original VA: 0x0000000140F91860 | File offset: 0x00F90E60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -127,7 +120,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229440; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "AddWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -135,10 +130,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment()
 struct Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229650; StructureSize 0x80 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "CreateWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x80, Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment_Statics::PropPointers, 7, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91890 (end 0x00F918BF)
 // Original VA: 0x0000000140F91890 | File offset: 0x00F90E90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -147,7 +139,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229650; StructureSize 0x80 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "CreateWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x80, Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment_Statics::PropPointers, 7, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -155,10 +149,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment()
 struct Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042297F0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalFromActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F918C0 (end 0x00F918EF)
 // Original VA: 0x0000000140F918C0 | File offset: 0x00F90EC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -167,7 +158,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x042297F0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalFromActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -175,10 +168,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor()
 struct Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042298F0; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalFromLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F918F0 (end 0x00F9191F)
 // Original VA: 0x0000000140F918F0 | File offset: 0x00F90EF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -187,7 +177,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x042298F0; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalFromLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04C22401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -195,10 +187,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation()
 struct Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229B00; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalsFromActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors_Statics::PropPointers, 7, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91920 (end 0x00F9194F)
 // Original VA: 0x0000000140F91920 | File offset: 0x00F90F20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -207,7 +196,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229B00; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalsFromActors", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors_Statics::PropPointers, 7, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -215,10 +206,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors()
 struct Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229C80; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalsFromLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations_Statics::PropPointers, 5, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91950 (end 0x00F9197F)
 // Original VA: 0x0000000140F91950 | File offset: 0x00F90F50
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -227,7 +215,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229C80; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalsFromLocations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x28, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations_Statics::PropPointers, 5, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -235,10 +225,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations()
 struct Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229E40; StructureSize 0x30 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalsFromLocationsAndActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndActor_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91980 (end 0x00F919AF)
 // Original VA: 0x0000000140F91980 | File offset: 0x00F90F80
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -247,7 +234,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndAct
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndActor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229E40; StructureSize 0x30 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "MakeGoalsFromLocationsAndActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x30, Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndActor_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -255,10 +244,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndAct
 struct Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04229F40; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "RemoveGoalFromWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x50, Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignment_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F919B0 (end 0x00F919DF)
 // Original VA: 0x0000000140F919B0 | File offset: 0x00F90FB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -267,7 +253,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignmen
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x04229F40; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "RemoveGoalFromWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x50, Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignment_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -275,10 +263,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignmen
 struct Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0422A080; StructureSize 0x48 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "RemoveGoalsFromWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x48, Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignment_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F919E0 (end 0x00F91A0F)
 // Original VA: 0x0000000140F919E0 | File offset: 0x00F90FE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -287,7 +272,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignme
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x0422A080; StructureSize 0x48 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "RemoveGoalsFromWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04422401, 0x48, Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignment_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -295,10 +282,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignme
 struct Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0422A140; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "RemoveWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x38, Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91A10 (end 0x00F91A3F)
 // Original VA: 0x0000000140F91A10 | File offset: 0x00F91010
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -307,7 +291,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment_Statics::FuncParams);
+		// FuncParams: original RVA 0x0422A140; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "RemoveWorldAssignment", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x38, Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -315,10 +301,7 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment()
 struct Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x0422A200; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "SetCurrentGoalDiscouragement", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91A40 (end 0x00F91A6F)
 // Original VA: 0x0000000140F91A40 | File offset: 0x00F91040
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -327,7 +310,9 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement_Statics::FuncParams);
+		// FuncParams: original RVA 0x0422A200; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortAIGoalManager, "SetCurrentGoalDiscouragement", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FManagedGameplayTagDataTableItem::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6EE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FManagedGameplayTagDataTableItem_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FManagedGameplayTagDataTableItem>();
 	}
-	// ReturnStructParams: original RVA 0x041C2530
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FManagedGameplayTagDataTableItem_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_EpicGameplayStatsRuntime,
-		nullptr,
-		&NewStructOps,
-		"ManagedGameplayTagDataTableItem",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FManagedGameplayTagDataTableItem),
-		alignof(FManagedGameplayTagDataTableItem),
-		Z_Construct_UScriptStruct_FManagedGameplayTagDataTableItem_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007929A0 (end 0x007929CF)
 	// Original VA: 0x00000001407929A0 | File offset: 0x00791FA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FManagedGameplayTagDataTableItem::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FManagedGameplayTagDataTableItem_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C2530
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_EpicGameplayStatsRuntime,
+				nullptr,
+				&Z_Construct_UScriptStruct_FManagedGameplayTagDataTableItem_Statics::NewStructOps,
+				"ManagedGameplayTagDataTableItem",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FManagedGameplayTagDataTableItem),
+				alignof(FManagedGameplayTagDataTableItem),
+				Z_Construct_UScriptStruct_FManagedGameplayTagDataTableItem_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

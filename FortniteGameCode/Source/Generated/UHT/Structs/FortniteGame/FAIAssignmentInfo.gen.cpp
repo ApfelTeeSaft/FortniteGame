@@ -31,25 +31,12 @@ class UScriptStruct* FAIAssignmentInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F906B0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAIAssignmentInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAIAssignmentInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04228E70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAIAssignmentInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AIAssignmentInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAIAssignmentInfo),
-		alignof(FAIAssignmentInfo),
-		Z_Construct_UScriptStruct_FAIAssignmentInfo_Statics::PropPointers, 9,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F92820 (end 0x00F9284F)
 	// Original VA: 0x0000000140F92820 | File offset: 0x00F91E20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAIAssignmentInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAIAssignmentInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04228E70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAIAssignmentInfo_Statics::NewStructOps,
+				"AIAssignmentInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAIAssignmentInfo),
+				alignof(FAIAssignmentInfo),
+				Z_Construct_UScriptStruct_FAIAssignmentInfo_Statics::PropPointers, 9,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

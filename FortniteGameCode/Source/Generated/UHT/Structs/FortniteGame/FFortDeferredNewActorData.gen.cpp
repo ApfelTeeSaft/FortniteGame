@@ -31,25 +31,12 @@ class UScriptStruct* FFortDeferredNewActorData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2210 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortDeferredNewActorData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortDeferredNewActorData>();
 	}
-	// ReturnStructParams: original RVA 0x04357580
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortDeferredNewActorData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortDeferredNewActorData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortDeferredNewActorData),
-		alignof(FFortDeferredNewActorData),
-		Z_Construct_UScriptStruct_FFortDeferredNewActorData_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3CE0 (end 0x010E3D0F)
 	// Original VA: 0x00000001410E3CE0 | File offset: 0x010E32E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortDeferredNewActorData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortDeferredNewActorData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04357580
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortDeferredNewActorData_Statics::NewStructOps,
+				"FortDeferredNewActorData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortDeferredNewActorData),
+				alignof(FFortDeferredNewActorData),
+				Z_Construct_UScriptStruct_FFortDeferredNewActorData_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

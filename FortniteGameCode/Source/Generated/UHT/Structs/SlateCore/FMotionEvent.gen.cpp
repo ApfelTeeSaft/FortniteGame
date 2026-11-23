@@ -31,25 +31,12 @@ class UScriptStruct* FMotionEvent::StaticStruct()
 	struct Z_Construct_UScriptStruct_FMotionEvent_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145A770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMotionEvent_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMotionEvent>();
 	}
-	// ReturnStructParams: original RVA 0x043786A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMotionEvent_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
-		Z_Construct_UScriptStruct_FInputEvent,
-		&NewStructOps,
-		"MotionEvent",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMotionEvent),
-		alignof(FMotionEvent),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0145CF90 (end 0x0145CFBF)
 	// Original VA: 0x000000014145CF90 | File offset: 0x0145C590
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMotionEvent::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMotionEvent_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043786A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_SlateCore,
+				Z_Construct_UScriptStruct_FInputEvent,
+				&Z_Construct_UScriptStruct_FMotionEvent_Statics::NewStructOps,
+				"MotionEvent",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMotionEvent),
+				alignof(FMotionEvent),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

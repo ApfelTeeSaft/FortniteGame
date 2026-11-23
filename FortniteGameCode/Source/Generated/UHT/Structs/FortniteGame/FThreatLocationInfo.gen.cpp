@@ -32,25 +32,12 @@ class UScriptStruct* FThreatLocationInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BCBA0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FThreatLocationInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FThreatLocationInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04333800
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FThreatLocationInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializerItem,
-		&NewStructOps,
-		"ThreatLocationInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FThreatLocationInfo),
-		alignof(FThreatLocationInfo),
-		Z_Construct_UScriptStruct_FThreatLocationInfo_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF6B0 (end 0x010BF6DF)
 	// Original VA: 0x00000001410BF6B0 | File offset: 0x010BECB0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FThreatLocationInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FThreatLocationInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04333800
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializerItem,
+				&Z_Construct_UScriptStruct_FThreatLocationInfo_Statics::NewStructOps,
+				"ThreatLocationInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FThreatLocationInfo),
+				alignof(FThreatLocationInfo),
+				Z_Construct_UScriptStruct_FThreatLocationInfo_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

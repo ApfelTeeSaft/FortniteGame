@@ -31,25 +31,12 @@ class UScriptStruct* FFortTargetFilter::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C600 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortTargetFilter_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortTargetFilter>();
 	}
-	// ReturnStructParams: original RVA 0x04215470
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortTargetFilter_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortTargetFilter",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortTargetFilter),
-		alignof(FFortTargetFilter),
-		Z_Construct_UScriptStruct_FFortTargetFilter_Statics::PropPointers, 18,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7E060 (end 0x00F7E08F)
 	// Original VA: 0x0000000140F7E060 | File offset: 0x00F7D660
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortTargetFilter::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortTargetFilter_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04215470
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortTargetFilter_Statics::NewStructOps,
+				"FortTargetFilter",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortTargetFilter),
+				alignof(FFortTargetFilter),
+				Z_Construct_UScriptStruct_FFortTargetFilter_Statics::PropPointers, 18,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

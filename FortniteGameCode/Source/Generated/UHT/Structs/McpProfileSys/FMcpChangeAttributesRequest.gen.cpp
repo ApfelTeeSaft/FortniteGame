@@ -31,25 +31,12 @@ class UScriptStruct* FMcpChangeAttributesRequest::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE8A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMcpChangeAttributesRequest_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMcpChangeAttributesRequest>();
 	}
-	// ReturnStructParams: original RVA 0x041C3F70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMcpChangeAttributesRequest_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
-		nullptr,
-		&NewStructOps,
-		"McpChangeAttributesRequest",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FMcpChangeAttributesRequest),
-		alignof(FMcpChangeAttributesRequest),
-		Z_Construct_UScriptStruct_FMcpChangeAttributesRequest_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AFB70 (end 0x007AFB9F)
 	// Original VA: 0x00000001407AFB70 | File offset: 0x007AF170
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMcpChangeAttributesRequest::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMcpChangeAttributesRequest_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C3F70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_McpProfileSys,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMcpChangeAttributesRequest_Statics::NewStructOps,
+				"McpChangeAttributesRequest",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FMcpChangeAttributesRequest),
+				alignof(FMcpChangeAttributesRequest),
+				Z_Construct_UScriptStruct_FMcpChangeAttributesRequest_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

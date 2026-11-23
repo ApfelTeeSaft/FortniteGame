@@ -31,25 +31,12 @@ class UScriptStruct* FFortMiniMapData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01036F70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMiniMapData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMiniMapData>();
 	}
-	// ReturnStructParams: original RVA 0x042C6070
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMiniMapData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortMiniMapData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortMiniMapData),
-		alignof(FFortMiniMapData),
-		Z_Construct_UScriptStruct_FFortMiniMapData_Statics::PropPointers, 19,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039E30 (end 0x01039E5F)
 	// Original VA: 0x0000000141039E30 | File offset: 0x01039430
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMiniMapData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMiniMapData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C6070
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMiniMapData_Statics::NewStructOps,
+				"FortMiniMapData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortMiniMapData),
+				alignof(FFortMiniMapData),
+				Z_Construct_UScriptStruct_FFortMiniMapData_Statics::PropPointers, 19,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

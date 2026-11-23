@@ -836,7 +836,7 @@ Each creator has five relocation fields, all resolved without reading the creato
 
 | Field | Evidence |
 | --- | --- |
-| `Statics::FuncParams` | content: the only `FFunctionParams` record in `.data` whose `NameUTF8` names the function. Where the name is shared, the only one also matching the class's `OuterFunc`. That is the consensus outer of the class's uniquely named records (1,588 creators), or, for a class without one, the `Z_Construct_UClass_<Class>` its `FCompiledInDefer` initializer registers (446 creators). Where the name was unique (9,063 creators), the record agreed with each creator's `lea` in every case |
+| `FuncParams` (a static local, see "Data layout") | content: the only `FFunctionParams` record in `.data` whose `NameUTF8` names the function. Where the name is shared, the only one also matching the class's `OuterFunc`. That is the consensus outer of the class's uniquely named records (1,588 creators), or, for a class without one, the `Z_Construct_UClass_<Class>` its `FCompiledInDefer` initializer registers (446 creators). Where the name was unique (9,063 creators), the record agreed with each creator's `lea` in every case |
 | `ConstructUFunction` | corroborated by the other creators |
 | `ReturnFunction` (3 fields) | section-relative to sibling creators' observed slots. Each static local gets its own COMDAT `.bss` section, which the linker places in object order |
 
@@ -852,16 +852,51 @@ Results:
 | 10,976 | exact against the decrypted image, 442 of them with the record identified through the class constructor (see above) |
 | 121 | relocation-equivalent: only the `ReturnFunction` static in `.bss` is not predicted (a class with a single creator has no sibling to predict it from, or the slot sits across a layout gap) |
 
-**Declared-only records.** The 446 records found through the class constructor stay declared,
-not defined. Their creators need only the record's address, and record contents are not
-byte-compared. The reference keeps each unit's `TClassCompiledInDefer` objects
-(`AutoInitialize<Class>`) in one block at the start of its `.data`, 0x28 bytes apart, with
-the parameter records after them. This build emits them in source order, interleaved with
-the records.
+### Data layout: the `TClassCompiledInDefer` block and the parameter records
 
-Defining these 446 records broke the adjacency that 95 `AutoInitialize` initializers'
-section-relative predictions relied on. Defining all records waits for a model of that
-block.
+In the reference, a unit's `TClassCompiledInDefer` objects (`AutoInitialize<Class>`) form one
+block, 0x28 bytes apart, ahead of its `FFunctionParams` and `FStructParams` records:
+- 121 of 166 units have a single such run;
+- the others split into a few runs, with blocks of records between them.
+
+The 4.20 release's `_Statics` form, a file-scope member per record, compiles them interleaved
+in source order. Our build did that, so only the `AutoInitialize` objects that happened to be
+adjacent could be predicted.
+
+v140 probes show the cause:
+- A record whose initializer is not a constant expression is statically initialized in
+  `.data`. The `(UObject*(*)())` cast and `EObjectFlags`' non-constexpr `operator|` make it so.
+- As a file-scope object, such a record is emitted in the main `.data` in source order,
+  between the `TClassCompiledInDefer` objects.
+- As a static local of the creator, it gets a section of its own after the main `.data`.
+  The main `.data` then holds only the `TClassCompiledInDefer` objects, in one block.
+- The creator's 47 bytes are the same either way.
+
+So the reference's generated code has `FuncParams` and `ReturnStructParams` as static locals
+of their creators. That is the form before the 4.20 release; the enum creators' `EnumParams`
+already were. With `Engine.22` rewritten this way, all 90 `.data` symbols that have reference
+addresses come out in the reference's order, with no inversion.
+
+The generators (`uht_creators.py`, `uht_packages.py`, `uht_structs.py`) now emit that form:
+- `static const FFunctionParams FuncParams = {...};` in the creator's `if` block, and
+  `ReturnStructParams` likewise.
+- The evidence keys are the static locals' decorated names
+  (`?FuncParams@?4??<Creator>@@YAPEAVUFunction@@XZ@4...`).
+- `PropPointers` stays a declared `_Statics` member until properties are recovered.
+- All 11,097 function records are defined, including the 446 identified through the class
+  constructor.
+
+Results:
+- 3,103 of 3,283 `AutoInitialize` initializers (outside the denominator) are exact, up from
+  1,248 before this model.
+- 4 more were lost; they are in units with several runs (`FortniteGame.20` has 5). One
+  object's main `.data` cannot hold several runs, so such a unit probably spans several of
+  the reference's objects. Splitting units at these boundaries is the next layout task.
+- Moving the records' name literals changes the `.rdata` string order of `Engine.26`.
+  `AVolume`'s class registrar loses its section-relative package-literal prediction (the known
+  ripple).
+
+`ClassParams` (constant-initialized, in `.rdata`) is still a `_Statics` member.
 
 ### Class constructors
 
@@ -1255,10 +1290,10 @@ all 1,094 enums, whatever form their `StaticEnum` takes; a missing one blocked a
 package.
 
 Results:
-- class registrars: 2,212 of 3,283 exact;
+- class registrars: 2,211 of 3,283 exact;
 - struct registrars: 1,283 of 2,110;
 - enum registrars: 598 of 1,094;
-- class auto-initializers (outside the denominator): 1,248 of 3,283.
+- class auto-initializers (outside the denominator): 3,103 of 3,283 (see "Data layout").
 
 **Registered function addresses.** A registrar passes `&C::StaticClass`,
 `<E>_StaticEnum` or `F<S>::StaticStruct`. Where nothing else refers to that function, the
@@ -1284,8 +1319,8 @@ What remains:
 - In Engine (7 extra copies), CoreUObject (4), MovieScene and others, hand-written code uses
   the package-name literal too. 2,329 registrars wait only on these copies
   (`analysis/match-queue.json`).
-- `AutoInitialize` objects are not predicted: MSVC emits these vtable-bearing `.data` objects
-  out of source order.
+- 180 `AutoInitialize` objects are not predicted, mostly in units that span several of the
+  reference's objects (see "Data layout").
 
 The 3,283 `GetPrivateStaticClass` bodies are relocation-equivalent. Fields not yet resolved
 include `InternalConstructor<C>`, `InternalVTableHelperCtorCaller<C>`, the package and

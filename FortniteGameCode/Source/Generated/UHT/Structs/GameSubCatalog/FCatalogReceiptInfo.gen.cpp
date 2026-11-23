@@ -31,25 +31,12 @@ class UScriptStruct* FCatalogReceiptInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C1FE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCatalogReceiptInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCatalogReceiptInfo>();
 	}
-	// ReturnStructParams: original RVA 0x041C6A90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCatalogReceiptInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
-		nullptr,
-		&NewStructOps,
-		"CatalogReceiptInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCatalogReceiptInfo),
-		alignof(FCatalogReceiptInfo),
-		Z_Construct_UScriptStruct_FCatalogReceiptInfo_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x007C2EC0 (end 0x007C2EEF)
 	// Original VA: 0x00000001407C2EC0 | File offset: 0x007C24C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCatalogReceiptInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCatalogReceiptInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041C6A90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_GameSubCatalog,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCatalogReceiptInfo_Statics::NewStructOps,
+				"CatalogReceiptInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCatalogReceiptInfo),
+				alignof(FCatalogReceiptInfo),
+				Z_Construct_UScriptStruct_FCatalogReceiptInfo_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

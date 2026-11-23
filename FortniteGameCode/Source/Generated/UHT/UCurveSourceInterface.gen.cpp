@@ -23,10 +23,7 @@ void UCurveSourceInterface::StaticRegisterNativesUCurveSourceInterface()
 struct Z_Construct_UFunction_UCurveSourceInterface_GetBindingName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04440B10; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCurveSourceInterface_GetBindingName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveSourceInterface, "GetBindingName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x8, Z_Construct_UFunction_UCurveSourceInterface_GetBindingName_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEE80 (end 0x023FEEAF)
 // Original VA: 0x00000001423FEE80 | File offset: 0x023FE480
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -35,7 +32,9 @@ UFunction* Z_Construct_UFunction_UCurveSourceInterface_GetBindingName()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCurveSourceInterface_GetBindingName_Statics::FuncParams);
+		// FuncParams: original RVA 0x04440B10; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveSourceInterface, "GetBindingName", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x8, Z_Construct_UFunction_UCurveSourceInterface_GetBindingName_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -43,10 +42,7 @@ UFunction* Z_Construct_UFunction_UCurveSourceInterface_GetBindingName()
 struct Z_Construct_UFunction_UCurveSourceInterface_GetCurves_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04440BD0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCurveSourceInterface_GetCurves_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveSourceInterface, "GetCurves", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420C00, 0x10, Z_Construct_UFunction_UCurveSourceInterface_GetCurves_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEEE0 (end 0x023FEF0F)
 // Original VA: 0x00000001423FEEE0 | File offset: 0x023FE4E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -55,7 +51,9 @@ UFunction* Z_Construct_UFunction_UCurveSourceInterface_GetCurves()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCurveSourceInterface_GetCurves_Statics::FuncParams);
+		// FuncParams: original RVA 0x04440BD0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveSourceInterface, "GetCurves", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48420C00, 0x10, Z_Construct_UFunction_UCurveSourceInterface_GetCurves_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -63,10 +61,7 @@ UFunction* Z_Construct_UFunction_UCurveSourceInterface_GetCurves()
 struct Z_Construct_UFunction_UCurveSourceInterface_GetCurveValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04440C80; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCurveSourceInterface_GetCurveValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveSourceInterface, "GetCurveValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x10, Z_Construct_UFunction_UCurveSourceInterface_GetCurveValue_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEEB0 (end 0x023FEEDF)
 // Original VA: 0x00000001423FEEB0 | File offset: 0x023FE4B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -75,7 +70,9 @@ UFunction* Z_Construct_UFunction_UCurveSourceInterface_GetCurveValue()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCurveSourceInterface_GetCurveValue_Statics::FuncParams);
+		// FuncParams: original RVA 0x04440C80; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCurveSourceInterface, "GetCurveValue", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x48020C00, 0x10, Z_Construct_UFunction_UCurveSourceInterface_GetCurveValue_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

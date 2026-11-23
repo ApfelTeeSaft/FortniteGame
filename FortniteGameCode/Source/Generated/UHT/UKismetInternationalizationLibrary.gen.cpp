@@ -30,10 +30,7 @@ void UKismetInternationalizationLibrary::StaticRegisterNativesUKismetInternation
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478260; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "ClearCurrentAssetGroupCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024327B0 (end 0x024327DF)
 // Original VA: 0x00000001424327B0 | File offset: 0x02431DB0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -42,7 +39,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrent
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478260; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "ClearCurrentAssetGroupCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -50,10 +49,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrent
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAssetGroupCulture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478310; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAssetGroupCulture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentAssetGroupCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAssetGroupCulture_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024327E0 (end 0x0243280F)
 // Original VA: 0x00000001424327E0 | File offset: 0x02431DE0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -62,7 +58,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAs
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAssetGroupCulture_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478310; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentAssetGroupCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAssetGroupCulture_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -70,10 +68,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAs
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCulture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478390; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCulture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCulture_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02432810 (end 0x0243283F)
 // Original VA: 0x0000000142432810 | File offset: 0x02431E10
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -82,7 +77,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCulture_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478390; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCulture_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -90,10 +87,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCu
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLanguage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478410; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLanguage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentLanguage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLanguage_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02432840 (end 0x0243286F)
 // Original VA: 0x0000000142432840 | File offset: 0x02431E40
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -102,7 +96,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLanguage_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478410; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentLanguage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLanguage_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -110,10 +106,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLa
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLocale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478490; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLocale_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentLocale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLocale_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02432870 (end 0x0243289F)
 // Original VA: 0x0000000142432870 | File offset: 0x02431E70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -122,7 +115,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLocale_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478490; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "GetCurrentLocale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLocale_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -130,10 +125,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLo
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAssetGroupCulture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044785E0; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAssetGroupCulture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentAssetGroupCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAssetGroupCulture_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024328A0 (end 0x024328CF)
 // Original VA: 0x00000001424328A0 | File offset: 0x02431EA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -142,7 +134,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAs
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAssetGroupCulture_Statics::FuncParams);
+		// FuncParams: original RVA 0x044785E0; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentAssetGroupCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x20, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAssetGroupCulture_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -150,10 +144,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAs
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCulture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044786F0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCulture_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCulture_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024328D0 (end 0x024328FF)
 // Original VA: 0x00000001424328D0 | File offset: 0x02431ED0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -162,7 +153,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCu
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCulture_Statics::FuncParams);
+		// FuncParams: original RVA 0x044786F0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentCulture", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCulture_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -170,10 +163,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCu
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478800; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentLanguage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguage_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02432900 (end 0x0243292F)
 // Original VA: 0x0000000142432900 | File offset: 0x02431F00
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -182,7 +172,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguage_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478800; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentLanguage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguage_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -190,10 +182,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLa
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguageAndLocale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478910; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguageAndLocale_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentLanguageAndLocale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguageAndLocale_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02432930 (end 0x0243295F)
 // Original VA: 0x0000000142432930 | File offset: 0x02431F30
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -202,7 +191,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLa
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguageAndLocale_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478910; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentLanguageAndLocale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguageAndLocale_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -210,10 +201,7 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLa
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLocale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04478A20; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLocale_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentLocale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLocale_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02432960 (end 0x0243298F)
 // Original VA: 0x0000000142432960 | File offset: 0x02431F60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -222,7 +210,9 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLocale_Statics::FuncParams);
+		// FuncParams: original RVA 0x04478A20; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UKismetInternationalizationLibrary, "SetCurrentLocale", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLocale_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

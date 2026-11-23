@@ -31,25 +31,12 @@ class UScriptStruct* FDynamicPropertyPath::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5770 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FDynamicPropertyPath_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDynamicPropertyPath>();
 	}
-	// ReturnStructParams: original RVA 0x043BD620
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDynamicPropertyPath_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_UMG,
-		nullptr,
-		&NewStructOps,
-		"DynamicPropertyPath",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FDynamicPropertyPath),
-		alignof(FDynamicPropertyPath),
-		Z_Construct_UScriptStruct_FDynamicPropertyPath_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE7780 (end 0x01BE77AF)
 	// Original VA: 0x0000000141BE7780 | File offset: 0x01BE6D80
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FDynamicPropertyPath::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FDynamicPropertyPath_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043BD620
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_UMG,
+				nullptr,
+				&Z_Construct_UScriptStruct_FDynamicPropertyPath_Statics::NewStructOps,
+				"DynamicPropertyPath",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FDynamicPropertyPath),
+				alignof(FDynamicPropertyPath),
+				Z_Construct_UScriptStruct_FDynamicPropertyPath_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

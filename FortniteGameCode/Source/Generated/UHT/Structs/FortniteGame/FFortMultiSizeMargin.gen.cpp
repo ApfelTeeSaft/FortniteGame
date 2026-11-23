@@ -31,25 +31,12 @@ class UScriptStruct* FFortMultiSizeMargin::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8A50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMultiSizeMargin_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMultiSizeMargin>();
 	}
-	// ReturnStructParams: original RVA 0x04341FE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMultiSizeMargin_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortMultiSizeMargin",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortMultiSizeMargin),
-		alignof(FFortMultiSizeMargin),
-		Z_Construct_UScriptStruct_FFortMultiSizeMargin_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC7A0 (end 0x010CC7CF)
 	// Original VA: 0x00000001410CC7A0 | File offset: 0x010CBDA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortMultiSizeMargin::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMultiSizeMargin_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04341FE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortMultiSizeMargin_Statics::NewStructOps,
+				"FortMultiSizeMargin",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortMultiSizeMargin),
+				alignof(FFortMultiSizeMargin),
+				Z_Construct_UScriptStruct_FFortMultiSizeMargin_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

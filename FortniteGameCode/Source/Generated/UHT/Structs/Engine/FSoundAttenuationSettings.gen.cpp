@@ -32,25 +32,12 @@ class UScriptStruct* FSoundAttenuationSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D40A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSoundAttenuationSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSoundAttenuationSettings>();
 	}
-	// ReturnStructParams: original RVA 0x0451B310
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSoundAttenuationSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_FBaseAttenuationSettings,
-		&NewStructOps,
-		"SoundAttenuationSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSoundAttenuationSettings),
-		alignof(FSoundAttenuationSettings),
-		Z_Construct_UScriptStruct_FSoundAttenuationSettings_Statics::PropPointers, 52,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D6210 (end 0x024D623F)
 	// Original VA: 0x00000001424D6210 | File offset: 0x024D5810
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FSoundAttenuationSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSoundAttenuationSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0451B310
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				Z_Construct_UScriptStruct_FBaseAttenuationSettings,
+				&Z_Construct_UScriptStruct_FSoundAttenuationSettings_Statics::NewStructOps,
+				"SoundAttenuationSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSoundAttenuationSettings),
+				alignof(FSoundAttenuationSettings),
+				Z_Construct_UScriptStruct_FSoundAttenuationSettings_Statics::PropPointers, 52,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

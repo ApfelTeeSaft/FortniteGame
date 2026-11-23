@@ -31,25 +31,12 @@ class UScriptStruct* FMissionTimerData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01049D50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FMissionTimerData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMissionTimerData>();
 	}
-	// ReturnStructParams: original RVA 0x042D4DD0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMissionTimerData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"MissionTimerData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FMissionTimerData),
-		alignof(FMissionTimerData),
-		Z_Construct_UScriptStruct_FMissionTimerData_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BD20 (end 0x0104BD4F)
 	// Original VA: 0x000000014104BD20 | File offset: 0x0104B320
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FMissionTimerData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FMissionTimerData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042D4DD0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FMissionTimerData_Statics::NewStructOps,
+				"MissionTimerData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FMissionTimerData),
+				alignof(FMissionTimerData),
+				Z_Construct_UScriptStruct_FMissionTimerData_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

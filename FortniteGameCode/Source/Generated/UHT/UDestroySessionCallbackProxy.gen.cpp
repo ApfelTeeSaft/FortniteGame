@@ -21,10 +21,7 @@ void UDestroySessionCallbackProxy::StaticRegisterNativesUDestroySessionCallbackP
 struct Z_Construct_UFunction_UDestroySessionCallbackProxy_DestroySession_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04186830; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDestroySessionCallbackProxy_DestroySession_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDestroySessionCallbackProxy, "DestroySession", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UDestroySessionCallbackProxy_DestroySession_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F420 (end 0x0032F44F)
 // Original VA: 0x000000014032F420 | File offset: 0x0032EA20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UDestroySessionCallbackProxy_DestroySession()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UDestroySessionCallbackProxy_DestroySession_Statics::FuncParams);
+		// FuncParams: original RVA 0x04186830; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UDestroySessionCallbackProxy, "DestroySession", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UDestroySessionCallbackProxy_DestroySession_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

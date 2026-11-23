@@ -32,25 +32,12 @@ class UScriptStruct* FFortMissionAlertCategoryData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010408D0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortMissionAlertCategoryData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortMissionAlertCategoryData>();
 	}
-	// ReturnStructParams: original RVA 0x042CB640
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortMissionAlertCategoryData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortMissionAlertCategoryData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortMissionAlertCategoryData),
-		alignof(FFortMissionAlertCategoryData),
-		Z_Construct_UScriptStruct_FFortMissionAlertCategoryData_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01042090 (end 0x010420BF)
 	// Original VA: 0x0000000141042090 | File offset: 0x01041690
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortMissionAlertCategoryData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortMissionAlertCategoryData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042CB640
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortMissionAlertCategoryData_Statics::NewStructOps,
+				"FortMissionAlertCategoryData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortMissionAlertCategoryData),
+				alignof(FFortMissionAlertCategoryData),
+				Z_Construct_UScriptStruct_FFortMissionAlertCategoryData_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

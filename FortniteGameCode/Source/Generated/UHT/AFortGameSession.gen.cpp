@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0332D630, FClassParams RVA 0x0332D690.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_AFortGameSession();  // RVA 0x00FEE5B0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEDF80 (end 0x00FEDFA2)
 // Original VA: 0x0000000140FEDF80 | File offset: 0x00FED580
@@ -18,10 +18,6 @@ void AFortGameSession::StaticRegisterNativesAFortGameSession()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_AFortGameSession_DumpReservations_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x042865B0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEED00 (end 0x00FEED2F)
 // Original VA: 0x0000000140FEED00 | File offset: 0x00FEE300
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_AFortGameSession_DumpReservations()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameSession_DumpReservations_Statics::FuncParams);
+		// FuncParams: original RVA 0x042865B0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortGameSession, "DumpReservations", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x40020600, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

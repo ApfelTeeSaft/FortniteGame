@@ -5,12 +5,6 @@
 #include "FortniteGameCode/UHTRecovered.h"
 
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
-	struct Z_Construct_UDelegateFunction_Engine_OnMatineeEvent__DelegateSignature_Statics
-	{
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	// FuncParams: original RVA 0x044C0F60
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_Engine_OnMatineeEvent__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_Engine, "OnMatineeEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486B10 (end 0x02486B3F)
 	// Original VA: 0x0000000142486B10 | File offset: 0x02486110
 	// Recovery: confirmed (listed by Z_Construct_UPackage__Script_Engine's SingletonFuncArray) | Matching: see analysis/functions-uht-package-delegates.json
@@ -19,7 +13,9 @@
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_Engine_OnMatineeEvent__DelegateSignature_Statics::FuncParams);
+			// FuncParams: original RVA 0x044C0F60
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_Engine, "OnMatineeEvent__DelegateSignature", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00130000, 0x0, nullptr, 0, 0, 0 };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
 	}

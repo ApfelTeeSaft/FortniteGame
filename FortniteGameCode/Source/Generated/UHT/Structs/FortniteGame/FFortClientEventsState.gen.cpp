@@ -32,25 +32,12 @@ class UScriptStruct* FFortClientEventsState::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A41C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortClientEventsState_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortClientEventsState>();
 	}
-	// ReturnStructParams: original RVA 0x04328B70
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortClientEventsState_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortRotationalContentEventsState,
-		&NewStructOps,
-		"FortClientEventsState",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortClientEventsState),
-		alignof(FFortClientEventsState),
-		Z_Construct_UScriptStruct_FFortClientEventsState_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A6890 (end 0x010A68BF)
 	// Original VA: 0x00000001410A6890 | File offset: 0x010A5E90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortClientEventsState::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortClientEventsState_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04328B70
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortRotationalContentEventsState,
+				&Z_Construct_UScriptStruct_FFortClientEventsState_Statics::NewStructOps,
+				"FortClientEventsState",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortClientEventsState),
+				alignof(FFortClientEventsState),
+				Z_Construct_UScriptStruct_FFortClientEventsState_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

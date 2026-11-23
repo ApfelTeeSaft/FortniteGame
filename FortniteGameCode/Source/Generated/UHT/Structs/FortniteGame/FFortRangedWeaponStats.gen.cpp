@@ -32,25 +32,12 @@ class UScriptStruct* FFortRangedWeaponStats::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D85A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortRangedWeaponStats_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortRangedWeaponStats>();
 	}
-	// ReturnStructParams: original RVA 0x0434F880
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortRangedWeaponStats_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFortBaseWeaponStats,
-		&NewStructOps,
-		"FortRangedWeaponStats",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortRangedWeaponStats),
-		alignof(FFortRangedWeaponStats),
-		Z_Construct_UScriptStruct_FFortRangedWeaponStats_Statics::PropPointers, 76,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D98D0 (end 0x010D98FF)
 	// Original VA: 0x00000001410D98D0 | File offset: 0x010D8ED0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortRangedWeaponStats::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortRangedWeaponStats_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0434F880
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFortBaseWeaponStats,
+				&Z_Construct_UScriptStruct_FFortRangedWeaponStats_Statics::NewStructOps,
+				"FortRangedWeaponStats",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortRangedWeaponStats),
+				alignof(FFortRangedWeaponStats),
+				Z_Construct_UScriptStruct_FFortRangedWeaponStats_Statics::PropPointers, 76,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

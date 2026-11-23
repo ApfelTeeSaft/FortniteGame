@@ -22,10 +22,7 @@ void UAISense_Prediction::StaticRegisterNativesUAISense_Prediction()
 struct Z_Construct_UFunction_UAISense_Prediction_RequestControllerPredictionEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043E9AD0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAISense_Prediction_RequestControllerPredictionEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAISense_Prediction, "RequestControllerPredictionEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAISense_Prediction_RequestControllerPredictionEvent_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1CBE0 (end 0x01D1CC0F)
 // Original VA: 0x0000000141D1CBE0 | File offset: 0x01D1C1E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UAISense_Prediction_RequestControllerPrediction
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAISense_Prediction_RequestControllerPredictionEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x043E9AD0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAISense_Prediction, "RequestControllerPredictionEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAISense_Prediction_RequestControllerPredictionEvent_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UAISense_Prediction_RequestControllerPrediction
 struct Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043E9BD0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAISense_Prediction, "RequestPawnPredictionEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1CC10 (end 0x01D1CC3F)
 // Original VA: 0x0000000141D1CC10 | File offset: 0x01D1C210
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent(
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x043E9BD0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAISense_Prediction, "RequestPawnPredictionEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x18, Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

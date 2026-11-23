@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaMatchLootReward::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x005A1D50 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaMatchLootReward_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaMatchLootReward>();
 	}
-	// ReturnStructParams: original RVA 0x041EFE10
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaMatchLootReward_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaMatchLootReward",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAthenaMatchLootReward),
-		alignof(FAthenaMatchLootReward),
-		Z_Construct_UScriptStruct_FAthenaMatchLootReward_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5AC10 (end 0x00F5AC3F)
 	// Original VA: 0x0000000140F5AC10 | File offset: 0x00F5A210
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaMatchLootReward::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaMatchLootReward_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041EFE10
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaMatchLootReward_Statics::NewStructOps,
+				"AthenaMatchLootReward",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAthenaMatchLootReward),
+				alignof(FAthenaMatchLootReward),
+				Z_Construct_UScriptStruct_FAthenaMatchLootReward_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

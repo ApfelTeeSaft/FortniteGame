@@ -31,25 +31,12 @@ class UScriptStruct* FBakedStateExitTransition::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5260 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBakedStateExitTransition_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBakedStateExitTransition>();
 	}
-	// ReturnStructParams: original RVA 0x0441C6F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBakedStateExitTransition_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BakedStateExitTransition",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBakedStateExitTransition),
-		alignof(FBakedStateExitTransition),
-		Z_Construct_UScriptStruct_FBakedStateExitTransition_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D71C0 (end 0x023D71EF)
 	// Original VA: 0x00000001423D71C0 | File offset: 0x023D67C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FBakedStateExitTransition::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBakedStateExitTransition_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441C6F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBakedStateExitTransition_Statics::NewStructOps,
+				"BakedStateExitTransition",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBakedStateExitTransition),
+				alignof(FBakedStateExitTransition),
+				Z_Construct_UScriptStruct_FBakedStateExitTransition_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

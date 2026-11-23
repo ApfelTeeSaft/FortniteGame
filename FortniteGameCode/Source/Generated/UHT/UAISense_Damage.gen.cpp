@@ -21,10 +21,7 @@ void UAISense_Damage::StaticRegisterNativesUAISense_Damage()
 struct Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043E94B0; StructureSize 0x38 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAISense_Damage, "ReportDamageEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x38, Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent_Statics::PropPointers, 6, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1CB80 (end 0x01D1CBAF)
 // Original VA: 0x0000000141D1CB80 | File offset: 0x01D1C180
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x043E94B0; StructureSize 0x38 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAISense_Damage, "ReportDamageEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x38, Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent_Statics::PropPointers, 6, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

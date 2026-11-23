@@ -21,10 +21,7 @@ void UFortAbilityTask_MoveAI::StaticRegisterNativesUFortAbilityTask_MoveAI()
 struct Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04216C50; StructureSize 0x50 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_MoveAI, "CreateMoveAITask", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x50, Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask_Statics::PropPointers, 15, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82590 (end 0x00F825BF)
 // Original VA: 0x0000000140F82590 | File offset: 0x00F81B90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -33,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask_Statics::FuncParams);
+		// FuncParams: original RVA 0x04216C50; StructureSize 0x50 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAbilityTask_MoveAI, "CreateMoveAITask", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04822401, 0x50, Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask_Statics::PropPointers, 15, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

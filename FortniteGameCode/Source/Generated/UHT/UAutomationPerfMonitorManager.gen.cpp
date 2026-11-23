@@ -25,10 +25,7 @@ void UAutomationPerfMonitorManager::StaticRegisterNativesUAutomationPerfMonitorM
 struct Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F3300; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorInstance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "GetPerfMonitorInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x8, Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorInstance_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61E00 (end 0x00F61E2F)
 // Original VA: 0x0000000140F61E00 | File offset: 0x00F61400
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -37,7 +34,9 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorIns
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorInstance_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F3300; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "GetPerfMonitorInstance", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, 0x8, Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorInstance_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -45,10 +44,7 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorIns
 struct Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F33B0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "GetStatAverage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61E30 (end 0x00F61E5F)
 // Original VA: 0x0000000140F61E30 | File offset: 0x00F61430
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,7 +53,9 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F33B0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "GetStatAverage", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x18, Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -65,10 +63,7 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage()
 struct Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestPerf_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F3440; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestPerf_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "IsRecordingFTestPerf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestPerf_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61E60 (end 0x00F61E8F)
 // Original VA: 0x0000000140F61E60 | File offset: 0x00F61460
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,7 +72,9 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestP
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestPerf_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F3440; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "IsRecordingFTestPerf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestPerf_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -85,10 +82,7 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestP
 struct Z_Construct_UFunction_UAutomationPerfMonitorManager_StartRecordingFTestPerf_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x041F34F0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationPerfMonitorManager_StartRecordingFTestPerf_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "StartRecordingFTestPerf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UAutomationPerfMonitorManager_StartRecordingFTestPerf_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61E90 (end 0x00F61EBF)
 // Original VA: 0x0000000140F61E90 | File offset: 0x00F61490
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -97,17 +91,13 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_StartRecordingFTe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAutomationPerfMonitorManager_StartRecordingFTestPerf_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F34F0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "StartRecordingFTestPerf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UAutomationPerfMonitorManager_StartRecordingFTestPerf_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UAutomationPerfMonitorManager_StopRecordingFTestPerf_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x041F3530; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationPerfMonitorManager_StopRecordingFTestPerf_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "StopRecordingFTestPerf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61EC0 (end 0x00F61EEF)
 // Original VA: 0x0000000140F61EC0 | File offset: 0x00F614C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -116,7 +106,9 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_StopRecordingFTes
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAutomationPerfMonitorManager_StopRecordingFTestPerf_Statics::FuncParams);
+		// FuncParams: original RVA 0x041F3530; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationPerfMonitorManager, "StopRecordingFTestPerf", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

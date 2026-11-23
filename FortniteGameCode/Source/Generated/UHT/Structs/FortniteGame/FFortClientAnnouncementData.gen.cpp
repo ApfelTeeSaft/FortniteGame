@@ -30,25 +30,12 @@ class UScriptStruct* FFortClientAnnouncementData::StaticStruct()
 	struct Z_Construct_UScriptStruct_FFortClientAnnouncementData_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C73A0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortClientAnnouncementData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortClientAnnouncementData>();
 	}
-	// ReturnStructParams: original RVA 0x04252150
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortClientAnnouncementData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortClientAnnouncementData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortClientAnnouncementData),
-		alignof(FFortClientAnnouncementData),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0E60 (end 0x00FC0E8F)
 	// Original VA: 0x0000000140FC0E60 | File offset: 0x00FC0460
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FFortClientAnnouncementData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortClientAnnouncementData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04252150
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortClientAnnouncementData_Statics::NewStructOps,
+				"FortClientAnnouncementData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortClientAnnouncementData),
+				alignof(FFortClientAnnouncementData),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

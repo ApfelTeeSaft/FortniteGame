@@ -31,25 +31,12 @@ class UScriptStruct* FRootMotionSourceGroup::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1C10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FRootMotionSourceGroup_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRootMotionSourceGroup>();
 	}
-	// ReturnStructParams: original RVA 0x04500C90
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRootMotionSourceGroup_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"RootMotionSourceGroup",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FRootMotionSourceGroup),
-		alignof(FRootMotionSourceGroup),
-		Z_Construct_UScriptStruct_FRootMotionSourceGroup_Statics::PropPointers, 5,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C3600 (end 0x024C362F)
 	// Original VA: 0x00000001424C3600 | File offset: 0x024C2C00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FRootMotionSourceGroup::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FRootMotionSourceGroup_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04500C90
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FRootMotionSourceGroup_Statics::NewStructOps,
+				"RootMotionSourceGroup",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FRootMotionSourceGroup),
+				alignof(FRootMotionSourceGroup),
+				Z_Construct_UScriptStruct_FRootMotionSourceGroup_Statics::PropPointers, 5,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

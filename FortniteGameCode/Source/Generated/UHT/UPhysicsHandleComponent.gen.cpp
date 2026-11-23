@@ -34,10 +34,7 @@ void UPhysicsHandleComponent::StaticRegisterNativesUPhysicsHandleComponent()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5150; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GetGrabbedComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x8, Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024ABEF0 (end 0x024ABF1F)
 // Original VA: 0x00000001424ABEF0 | File offset: 0x024AB4F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -46,7 +43,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5150; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GetGrabbedComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020403, 0x8, Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -54,10 +53,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRotation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5210; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GetTargetLocationAndRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20403, 0x18, Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRotation_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024ABF20 (end 0x024ABF4F)
 // Original VA: 0x00000001424ABF20 | File offset: 0x024AB520
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -66,7 +62,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRot
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRotation_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5210; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GetTargetLocationAndRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54C20403, 0x18, Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRotation_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -74,10 +72,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRot
 struct Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5360; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GrabComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820402, 0x20, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024ABF50 (end 0x024ABF7F)
 // Original VA: 0x00000001424ABF50 | File offset: 0x024AB550
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -86,7 +81,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5360; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GrabComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820402, 0x20, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -94,10 +91,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5460; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GrabComponentAtLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0x20, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation_Statics::PropPointers, 3, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024ABF80 (end 0x024ABFAF)
 // Original VA: 0x00000001424ABF80 | File offset: 0x024AB580
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -106,7 +100,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5460; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GrabComponentAtLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0x20, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -114,10 +110,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation
 struct Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocationWithRotation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E55A0; StructureSize 0x28 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocationWithRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GrabComponentAtLocationWithRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0x28, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocationWithRotation_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024ABFB0 (end 0x024ABFDF)
 // Original VA: 0x00000001424ABFB0 | File offset: 0x024AB5B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -126,17 +119,13 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocationWithRotation_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E55A0; StructureSize 0x28 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "GrabComponentAtLocationWithRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0x28, Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocationWithRotation_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UPhysicsHandleComponent_ReleaseComponent_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x044E55E0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_ReleaseComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "ReleaseComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020402, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024ABFE0 (end 0x024AC00F)
 // Original VA: 0x00000001424ABFE0 | File offset: 0x024AB5E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -145,7 +134,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_ReleaseComponent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_ReleaseComponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E55E0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "ReleaseComponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020402, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -153,10 +144,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_ReleaseComponent()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5660; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetAngularDamping", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC010 (end 0x024AC03F)
 // Original VA: 0x00000001424AC010 | File offset: 0x024AB610
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -165,7 +153,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5660; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetAngularDamping", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -173,10 +163,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E56E0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetAngularStiffness", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC040 (end 0x024AC06F)
 // Original VA: 0x00000001424AC040 | File offset: 0x024AB640
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -185,7 +172,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E56E0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetAngularStiffness", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -193,10 +182,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5760; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetInterpolationSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC070 (end 0x024AC09F)
 // Original VA: 0x00000001424AC070 | File offset: 0x024AB670
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -205,7 +191,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5760; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetInterpolationSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -213,10 +201,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E57E0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetLinearDamping", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC0A0 (end 0x024AC0CF)
 // Original VA: 0x00000001424AC0A0 | File offset: 0x024AB6A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -225,7 +210,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E57E0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetLinearDamping", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -233,10 +220,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5860; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetLinearStiffness", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC0D0 (end 0x024AC0FF)
 // Original VA: 0x00000001424AC0D0 | File offset: 0x024AB6D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -245,7 +229,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5860; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetLinearStiffness", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -253,10 +239,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E58E0; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetTargetLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0xC, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC100 (end 0x024AC12F)
 // Original VA: 0x00000001424AC100 | File offset: 0x024AB700
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -265,7 +248,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E58E0; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetTargetLocation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0xC, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -273,10 +258,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation()
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRotation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E59A0; StructureSize 0x18 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetTargetLocationAndRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0x18, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRotation_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC130 (end 0x024AC15F)
 // Original VA: 0x00000001424AC130 | File offset: 0x024AB730
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -285,7 +267,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRot
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRotation_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E59A0; StructureSize 0x18 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetTargetLocationAndRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0x18, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRotation_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -293,10 +277,7 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRot
 struct Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x044E5A20; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetTargetRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0xC, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC160 (end 0x024AC18F)
 // Original VA: 0x00000001424AC160 | File offset: 0x024AB760
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -305,7 +286,9 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation_Statics::FuncParams);
+		// FuncParams: original RVA 0x044E5A20; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UPhysicsHandleComponent, "SetTargetRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04820403, 0xC, Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

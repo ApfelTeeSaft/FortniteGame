@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03C8F658, FClassParams RVA 0x03C8F690.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortExpeditionListItemWidget();  // RVA 0x028A35C0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2FE0 (end 0x028A3002)
 // Original VA: 0x00000001428A2FE0 | File offset: 0x028A25E0
@@ -18,10 +18,6 @@ void UFortExpeditionListItemWidget::StaticRegisterNativesUFortExpeditionListItem
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-struct Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04568C40 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A4520 (end 0x028A454F)
 // Original VA: 0x00000001428A4520 | File offset: 0x028A3B20
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -30,7 +26,9 @@ UFunction* Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04568C40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortExpeditionListItemWidget, "OnItemChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080C00, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

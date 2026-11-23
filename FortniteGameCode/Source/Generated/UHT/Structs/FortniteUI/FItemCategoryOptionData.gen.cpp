@@ -32,25 +32,12 @@ class UScriptStruct* FItemCategoryOptionData::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E5C40 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FItemCategoryOptionData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FItemCategoryOptionData>();
 	}
-	// ReturnStructParams: original RVA 0x045AA860
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemCategoryOptionData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		Z_Construct_UScriptStruct_FRadialOptionData,
-		&NewStructOps,
-		"ItemCategoryOptionData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FItemCategoryOptionData),
-		alignof(FItemCategoryOptionData),
-		Z_Construct_UScriptStruct_FItemCategoryOptionData_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E84A0 (end 0x028E84CF)
 	// Original VA: 0x00000001428E84A0 | File offset: 0x028E7AA0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FItemCategoryOptionData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FItemCategoryOptionData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045AA860
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				Z_Construct_UScriptStruct_FRadialOptionData,
+				&Z_Construct_UScriptStruct_FItemCategoryOptionData_Statics::NewStructOps,
+				"ItemCategoryOptionData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FItemCategoryOptionData),
+				alignof(FItemCategoryOptionData),
+				Z_Construct_UScriptStruct_FItemCategoryOptionData_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -31,25 +31,12 @@ class UScriptStruct* FTrackToSkeletonMap::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A42C0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTrackToSkeletonMap_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTrackToSkeletonMap>();
 	}
-	// ReturnStructParams: original RVA 0x0441A7B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTrackToSkeletonMap_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"TrackToSkeletonMap",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FTrackToSkeletonMap),
-		alignof(FTrackToSkeletonMap),
-		Z_Construct_UScriptStruct_FTrackToSkeletonMap_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D73A0 (end 0x023D73CF)
 	// Original VA: 0x00000001423D73A0 | File offset: 0x023D69A0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FTrackToSkeletonMap::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTrackToSkeletonMap_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0441A7B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTrackToSkeletonMap_Statics::NewStructOps,
+				"TrackToSkeletonMap",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FTrackToSkeletonMap),
+				alignof(FTrackToSkeletonMap),
+				Z_Construct_UScriptStruct_FTrackToSkeletonMap_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03C5FC70, FClassParams RVA 0x03C5FCC0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UCommonTagVisibilityWidget();  // RVA 0x028875B0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886CC0 (end 0x02886CE2)
 // Original VA: 0x0000000142886CC0 | File offset: 0x028862C0
@@ -22,7 +22,7 @@ void UCommonTagVisibilityWidget::StaticRegisterNativesUCommonTagVisibilityWidget
 
 struct Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04551960 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028886C0 (end 0x028886EF)
 // Original VA: 0x00000001428886C0 | File offset: 0x02887CC0
@@ -32,15 +32,13 @@ UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged_Statics::FuncParams);
+		// FuncParams: original RVA 0x04551960; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTagVisibilityWidget, "HandleOnHUDElementVisibilityChanged", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00480401, 0x20, Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045519A0 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028886F0 (end 0x0288871F)
 // Original VA: 0x00000001428886F0 | File offset: 0x02887CF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -49,14 +47,16 @@ UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults_Statics::FuncParams);
+		// FuncParams: original RVA 0x045519A0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTagVisibilityWidget, "HandleOnHUDResetToDefaults", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04551A60 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888720 (end 0x0288874F)
 // Original VA: 0x0000000142888720 | File offset: 0x02887D20
@@ -66,14 +66,16 @@ UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize_Statics::FuncParams);
+		// FuncParams: original RVA 0x04551A60; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTagVisibilityWidget, "Initialize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x04551B20 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02888750 (end 0x0288877F)
 // Original VA: 0x0000000142888750 | File offset: 0x02887D50
@@ -83,7 +85,9 @@ UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent_Statics::FuncParams);
+		// FuncParams: original RVA 0x04551B20; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UCommonTagVisibilityWidget, "OnVisibilitySetEvent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x1, Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

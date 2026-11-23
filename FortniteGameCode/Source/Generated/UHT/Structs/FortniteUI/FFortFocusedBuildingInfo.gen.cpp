@@ -31,25 +31,12 @@ class UScriptStruct* FFortFocusedBuildingInfo::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB730 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortFocusedBuildingInfo_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortFocusedBuildingInfo>();
 	}
-	// ReturnStructParams: original RVA 0x04582090
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortFocusedBuildingInfo_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
-		nullptr,
-		&NewStructOps,
-		"FortFocusedBuildingInfo",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortFocusedBuildingInfo),
-		alignof(FFortFocusedBuildingInfo),
-		Z_Construct_UScriptStruct_FFortFocusedBuildingInfo_Statics::PropPointers, 18,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD600 (end 0x028BD62F)
 	// Original VA: 0x00000001428BD600 | File offset: 0x028BCC00
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortFocusedBuildingInfo::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortFocusedBuildingInfo_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04582090
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortFocusedBuildingInfo_Statics::NewStructOps,
+				"FortFocusedBuildingInfo",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortFocusedBuildingInfo),
+				alignof(FFortFocusedBuildingInfo),
+				Z_Construct_UScriptStruct_FFortFocusedBuildingInfo_Statics::PropPointers, 18,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

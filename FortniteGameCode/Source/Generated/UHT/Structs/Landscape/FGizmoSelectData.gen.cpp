@@ -30,25 +30,12 @@ class UScriptStruct* FGizmoSelectData::StaticStruct()
 	struct Z_Construct_UScriptStruct_FGizmoSelectData_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74B70 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FGizmoSelectData_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGizmoSelectData>();
 	}
-	// ReturnStructParams: original RVA 0x0439D070
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGizmoSelectData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
-		nullptr,
-		&NewStructOps,
-		"GizmoSelectData",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FGizmoSelectData),
-		alignof(FGizmoSelectData),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A76470 (end 0x01A7649F)
 	// Original VA: 0x0000000141A76470 | File offset: 0x01A75A70
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FGizmoSelectData::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FGizmoSelectData_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0439D070
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
+				nullptr,
+				&Z_Construct_UScriptStruct_FGizmoSelectData_Statics::NewStructOps,
+				"GizmoSelectData",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FGizmoSelectData),
+				alignof(FGizmoSelectData),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

@@ -32,25 +32,12 @@ class UScriptStruct* FFortQuestAchievementTableRow::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01095BC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortQuestAchievementTableRow_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortQuestAchievementTableRow>();
 	}
-	// ReturnStructParams: original RVA 0x04319640
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortQuestAchievementTableRow_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FTableRowBase,
-		&NewStructOps,
-		"FortQuestAchievementTableRow",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortQuestAchievementTableRow),
-		alignof(FFortQuestAchievementTableRow),
-		Z_Construct_UScriptStruct_FFortQuestAchievementTableRow_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01097A40 (end 0x01097A6F)
 	// Original VA: 0x0000000141097A40 | File offset: 0x01097040
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FFortQuestAchievementTableRow::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortQuestAchievementTableRow_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04319640
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FTableRowBase,
+				&Z_Construct_UScriptStruct_FFortQuestAchievementTableRow_Statics::NewStructOps,
+				"FortQuestAchievementTableRow",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortQuestAchievementTableRow),
+				alignof(FFortQuestAchievementTableRow),
+				Z_Construct_UScriptStruct_FFortQuestAchievementTableRow_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

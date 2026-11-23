@@ -31,25 +31,12 @@ class UScriptStruct* FFortDailyLoginRewardStat_ScheduleClaimed::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCAB30 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortDailyLoginRewardStat_ScheduleClaimed_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortDailyLoginRewardStat_ScheduleClaimed>();
 	}
-	// ReturnStructParams: original RVA 0x0425F7C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortDailyLoginRewardStat_ScheduleClaimed_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortDailyLoginRewardStat_ScheduleClaimed",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortDailyLoginRewardStat_ScheduleClaimed),
-		alignof(FFortDailyLoginRewardStat_ScheduleClaimed),
-		Z_Construct_UScriptStruct_FFortDailyLoginRewardStat_ScheduleClaimed_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCC990 (end 0x00FCC9BF)
 	// Original VA: 0x0000000140FCC990 | File offset: 0x00FCBF90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortDailyLoginRewardStat_ScheduleClaimed::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortDailyLoginRewardStat_ScheduleClaimed_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0425F7C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortDailyLoginRewardStat_ScheduleClaimed_Statics::NewStructOps,
+				"FortDailyLoginRewardStat_ScheduleClaimed",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortDailyLoginRewardStat_ScheduleClaimed),
+				alignof(FFortDailyLoginRewardStat_ScheduleClaimed),
+				Z_Construct_UScriptStruct_FFortDailyLoginRewardStat_ScheduleClaimed_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

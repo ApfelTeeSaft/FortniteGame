@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x0398D488, FClassParams RVA 0x0398D4C0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_APointLight();  // RVA 0x024B7D80 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B76C0 (end 0x024B76E2)
 // Original VA: 0x00000001424B76C0 | File offset: 0x024B6CC0
@@ -21,7 +21,7 @@ void APointLight::StaticRegisterNativesAPointLight()
 
 struct Z_Construct_UFunction_APointLight_SetLightFalloffExponent_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044F27A0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B8550 (end 0x024B857F)
 // Original VA: 0x00000001424B8550 | File offset: 0x024B7B50
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_APointLight_SetLightFalloffExponent()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APointLight_SetLightFalloffExponent_Statics::FuncParams);
+		// FuncParams: original RVA 0x044F27A0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_APointLight, "SetLightFalloffExponent", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_APointLight_SetLightFalloffExponent_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_APointLight_SetRadius_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x044F2820 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B8580 (end 0x024B85AF)
 // Original VA: 0x00000001424B8580 | File offset: 0x024B7B80
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_APointLight_SetRadius()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APointLight_SetRadius_Statics::FuncParams);
+		// FuncParams: original RVA 0x044F2820; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_APointLight, "SetRadius", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020403, 0x4, Z_Construct_UFunction_APointLight_SetRadius_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

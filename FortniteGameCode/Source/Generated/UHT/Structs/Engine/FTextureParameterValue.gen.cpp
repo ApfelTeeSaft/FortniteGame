@@ -31,25 +31,12 @@ class UScriptStruct* FTextureParameterValue::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485B60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FTextureParameterValue_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTextureParameterValue>();
 	}
-	// ReturnStructParams: original RVA 0x044BE1F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTextureParameterValue_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"TextureParameterValue",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FTextureParameterValue),
-		alignof(FTextureParameterValue),
-		Z_Construct_UScriptStruct_FTextureParameterValue_Statics::PropPointers, 4,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487590 (end 0x024875BF)
 	// Original VA: 0x0000000142487590 | File offset: 0x02486B90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FTextureParameterValue::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FTextureParameterValue_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044BE1F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FTextureParameterValue_Statics::NewStructOps,
+				"TextureParameterValue",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FTextureParameterValue),
+				alignof(FTextureParameterValue),
+				Z_Construct_UScriptStruct_FTextureParameterValue_Statics::PropPointers, 4,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

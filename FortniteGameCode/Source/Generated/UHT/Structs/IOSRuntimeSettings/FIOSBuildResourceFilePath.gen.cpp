@@ -31,25 +31,12 @@ class UScriptStruct* FIOSBuildResourceFilePath::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0291F7F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FIOSBuildResourceFilePath_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FIOSBuildResourceFilePath>();
 	}
-	// ReturnStructParams: original RVA 0x045D7E80
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FIOSBuildResourceFilePath_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_IOSRuntimeSettings,
-		nullptr,
-		&NewStructOps,
-		"IOSBuildResourceFilePath",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FIOSBuildResourceFilePath),
-		alignof(FIOSBuildResourceFilePath),
-		Z_Construct_UScriptStruct_FIOSBuildResourceFilePath_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0291FB70 (end 0x0291FB9F)
 	// Original VA: 0x000000014291FB70 | File offset: 0x0291F170
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FIOSBuildResourceFilePath::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FIOSBuildResourceFilePath_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x045D7E80
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_IOSRuntimeSettings,
+				nullptr,
+				&Z_Construct_UScriptStruct_FIOSBuildResourceFilePath_Statics::NewStructOps,
+				"IOSBuildResourceFilePath",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FIOSBuildResourceFilePath),
+				alignof(FIOSBuildResourceFilePath),
+				Z_Construct_UScriptStruct_FIOSBuildResourceFilePath_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

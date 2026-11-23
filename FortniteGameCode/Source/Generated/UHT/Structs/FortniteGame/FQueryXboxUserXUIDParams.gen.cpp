@@ -31,25 +31,12 @@ class UScriptStruct* FQueryXboxUserXUIDParams::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037270 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FQueryXboxUserXUIDParams_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FQueryXboxUserXUIDParams>();
 	}
-	// ReturnStructParams: original RVA 0x042C4FA0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FQueryXboxUserXUIDParams_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"QueryXboxUserXUIDParams",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FQueryXboxUserXUIDParams),
-		alignof(FQueryXboxUserXUIDParams),
-		Z_Construct_UScriptStruct_FQueryXboxUserXUIDParams_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103A190 (end 0x0103A1BF)
 	// Original VA: 0x000000014103A190 | File offset: 0x01039790
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FQueryXboxUserXUIDParams::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FQueryXboxUserXUIDParams_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C4FA0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FQueryXboxUserXUIDParams_Statics::NewStructOps,
+				"QueryXboxUserXUIDParams",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FQueryXboxUserXUIDParams),
+				alignof(FQueryXboxUserXUIDParams),
+				Z_Construct_UScriptStruct_FQueryXboxUserXUIDParams_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

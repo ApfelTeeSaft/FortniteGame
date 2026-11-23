@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03D0B240, FClassParams RVA 0x03D0B270.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortRewardNewQuestWidget();  // RVA 0x028ED750 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED010 (end 0x028ED032)
 // Original VA: 0x00000001428ED010 | File offset: 0x028EC610
@@ -21,7 +21,7 @@ void UFortRewardNewQuestWidget::StaticRegisterNativesUFortRewardNewQuestWidget()
 
 struct Z_Construct_UFunction_UFortRewardNewQuestWidget_GetDataFromSentence_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B09C0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE5D0 (end 0x028EE5FF)
 // Original VA: 0x00000001428EE5D0 | File offset: 0x028EDBD0
@@ -31,14 +31,16 @@ UFunction* Z_Construct_UFunction_UFortRewardNewQuestWidget_GetDataFromSentence()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRewardNewQuestWidget_GetDataFromSentence_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B09C0; StructureSize 0xE8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRewardNewQuestWidget, "GetDataFromSentence", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0xE8, Z_Construct_UFunction_UFortRewardNewQuestWidget_GetDataFromSentence_Statics::PropPointers, 3, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortRewardNewQuestWidget_IsValidConversation_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B0A90 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE600 (end 0x028EE62F)
 // Original VA: 0x00000001428EE600 | File offset: 0x028EDC00
@@ -48,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortRewardNewQuestWidget_IsValidConversation()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRewardNewQuestWidget_IsValidConversation_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B0A90; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortRewardNewQuestWidget, "IsValidConversation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UFortRewardNewQuestWidget_IsValidConversation_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

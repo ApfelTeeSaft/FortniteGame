@@ -22,10 +22,7 @@ void UFortNavSystem::StaticRegisterNativesUFortNavSystem()
 struct Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D7B40; StructureSize 0x20 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNavSystem, "IsNavmeshInRadiusInitialized", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x20, Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized_Statics::PropPointers, 4, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01051790 (end 0x010517BF)
 // Original VA: 0x0000000141051790 | File offset: 0x01050D90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -34,7 +31,9 @@ UFunction* Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D7B40; StructureSize 0x20 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNavSystem, "IsNavmeshInRadiusInitialized", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x20, Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized_Statics::PropPointers, 4, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -42,10 +41,7 @@ UFunction* Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized()
 struct Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042D7BC0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNavSystem, "OnNavDataRegistered", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010517C0 (end 0x010517EF)
 // Original VA: 0x00000001410517C0 | File offset: 0x01050DC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -54,7 +50,9 @@ UFunction* Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered_Statics::FuncParams);
+		// FuncParams: original RVA 0x042D7BC0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortNavSystem, "OnNavDataRegistered", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0x8, Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -32,25 +32,12 @@ class UScriptStruct* FAnimNode_MultiWayBlend::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0B810 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAnimNode_MultiWayBlend_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAnimNode_MultiWayBlend>();
 	}
-	// ReturnStructParams: original RVA 0x043AD820
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAnimNode_MultiWayBlend_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		Z_Construct_UScriptStruct_FAnimNode_Base,
-		&NewStructOps,
-		"AnimNode_MultiWayBlend",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAnimNode_MultiWayBlend),
-		alignof(FAnimNode_MultiWayBlend),
-		Z_Construct_UScriptStruct_FAnimNode_MultiWayBlend_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0EEC0 (end 0x01B0EEEF)
 	// Original VA: 0x0000000141B0EEC0 | File offset: 0x01B0E4C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FAnimNode_MultiWayBlend::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAnimNode_MultiWayBlend_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AD820
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				Z_Construct_UScriptStruct_FAnimNode_Base,
+				&Z_Construct_UScriptStruct_FAnimNode_MultiWayBlend_Statics::NewStructOps,
+				"AnimNode_MultiWayBlend",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAnimNode_MultiWayBlend),
+				alignof(FAnimNode_MultiWayBlend),
+				Z_Construct_UScriptStruct_FAnimNode_MultiWayBlend_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

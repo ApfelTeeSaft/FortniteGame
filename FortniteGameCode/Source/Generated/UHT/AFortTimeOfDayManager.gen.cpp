@@ -45,10 +45,7 @@ void AFortTimeOfDayManager::StaticRegisterNativesAFortTimeOfDayManager()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04336710; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "BreakExponentialHeightFogValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x88, Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues_Statics::PropPointers, 12, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEC30 (end 0x010BEC5F)
 // Original VA: 0x00000001410BEC30 | File offset: 0x010BE230
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -57,7 +54,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFog
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336710; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "BreakExponentialHeightFogValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14C22401, 0x88, Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues_Statics::PropPointers, 12, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -65,10 +64,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFog
 struct Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043367C0; StructureSize 0x8 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "FFToTimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x8, Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEC60 (end 0x010BEC8F)
 // Original VA: 0x00000001410BEC60 | File offset: 0x010BE260
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -77,7 +73,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay_Statics::FuncParams);
+		// FuncParams: original RVA 0x043367C0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "FFToTimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x8, Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -85,10 +83,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04336840; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetPreviousDayPhase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x1, Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEC90 (end 0x010BECBF)
 // Original VA: 0x00000001410BEC90 | File offset: 0x010BE290
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -97,7 +92,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336840; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetPreviousDayPhase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020400, 0x1, Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -105,10 +102,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043368C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetStormStrength", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BECC0 (end 0x010BECEF)
 // Original VA: 0x00000001410BECC0 | File offset: 0x010BE2C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -117,7 +111,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength_Statics::FuncParams);
+		// FuncParams: original RVA 0x043368C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetStormStrength", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -125,10 +121,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04336980; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetThreatClouds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BECF0 (end 0x010BED1F)
 // Original VA: 0x00000001410BECF0 | File offset: 0x010BE2F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -137,7 +130,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336980; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetThreatClouds", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -145,10 +140,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromContext_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04336A40; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromContext_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetTimeOfDayManagerFromContext", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromContext_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BED20 (end 0x010BED4F)
 // Original VA: 0x00000001410BED20 | File offset: 0x010BE320
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -157,7 +149,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromCo
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromContext_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336A40; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "GetTimeOfDayManagerFromContext", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14022401, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromContext_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -165,10 +159,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromCo
 struct Z_Construct_UFunction_AFortTimeOfDayManager_MakeExponentialHeightFogValues_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04336D40; StructureSize 0x88 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_MakeExponentialHeightFogValues_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "MakeExponentialHeightFogValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14822401, 0x88, Z_Construct_UFunction_AFortTimeOfDayManager_MakeExponentialHeightFogValues_Statics::PropPointers, 12, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BED50 (end 0x010BED7F)
 // Original VA: 0x00000001410BED50 | File offset: 0x010BE350
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -177,17 +168,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_MakeExponentialHeightFogV
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_MakeExponentialHeightFogValues_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336D40; StructureSize 0x88 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "MakeExponentialHeightFogValues", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14822401, 0x88, Z_Construct_UFunction_AFortTimeOfDayManager_MakeExponentialHeightFogValues_Statics::PropPointers, 12, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_OnDayPhaseChange_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04336D80; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_OnDayPhaseChange_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnDayPhaseChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BED80 (end 0x010BEDAF)
 // Original VA: 0x00000001410BED80 | File offset: 0x010BE380
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -196,17 +183,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnDayPhaseChange()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_OnDayPhaseChange_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336D80; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnDayPhaseChange", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_HeightFogEnabled_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04336DC0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_HeightFogEnabled_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnRep_HeightFogEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEDB0 (end 0x010BEDDF)
 // Original VA: 0x00000001410BEDB0 | File offset: 0x010BE3B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -215,17 +198,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_HeightFogEnabled()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_HeightFogEnabled_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336DC0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnRep_HeightFogEnabled", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDay_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04336E00; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnRep_TimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEDE0 (end 0x010BEE0F)
 // Original VA: 0x00000001410BEDE0 | File offset: 0x010BE3E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -234,17 +213,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDay()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDay_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336E00; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnRep_TimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDayInit_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04336E40; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDayInit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnRep_TimeOfDayInit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEE10 (end 0x010BEE3F)
 // Original VA: 0x00000001410BEE10 | File offset: 0x010BE410
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -253,17 +228,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDayInit()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDayInit_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336E40; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnRep_TimeOfDayInit", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_OnStormEnd_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04336E80; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_OnStormEnd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnStormEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEE40 (end 0x010BEE6F)
 // Original VA: 0x00000001410BEE40 | File offset: 0x010BE440
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -272,17 +243,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnStormEnd()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_OnStormEnd_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336E80; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnStormEnd", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_OnStormStart_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04336EC0; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_OnStormStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnStormStart", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEE70 (end 0x010BEE9F)
 // Original VA: 0x00000001410BEE70 | File offset: 0x010BE470
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -291,7 +258,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnStormStart()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_OnStormStart_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336EC0; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnStormStart", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020808, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -299,10 +268,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnStormStart()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightForTimeOfDay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04336F40; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightForTimeOfDay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnUpdateDirectionalLightForTimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20808, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightForTimeOfDay_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEEA0 (end 0x010BEECF)
 // Original VA: 0x00000001410BEEA0 | File offset: 0x010BE4A0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -311,7 +277,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightF
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightForTimeOfDay_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336F40; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "OnUpdateDirectionalLightForTimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08C20808, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightForTimeOfDay_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -319,10 +287,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightF
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04336FC0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetDayPhase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEED0 (end 0x010BEEFF)
 // Original VA: 0x00000001410BEED0 | File offset: 0x010BE4D0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -331,7 +296,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase_Statics::FuncParams);
+		// FuncParams: original RVA 0x04336FC0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetDayPhase", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -339,10 +306,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorMultiplier_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04337040; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorMultiplier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetDirectionalLightColorMultiplier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorMultiplier_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEF00 (end 0x010BEF2F)
 // Original VA: 0x00000001410BEF00 | File offset: 0x010BE500
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -351,7 +315,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorM
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorMultiplier_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337040; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetDirectionalLightColorMultiplier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorMultiplier_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -359,10 +325,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorM
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatteringMultiplier_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043370C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatteringMultiplier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetFogDirectionalInscatteringMultiplier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatteringMultiplier_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEF30 (end 0x010BEF5F)
 // Original VA: 0x00000001410BEF30 | File offset: 0x010BE530
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -371,7 +334,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatte
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatteringMultiplier_Statics::FuncParams);
+		// FuncParams: original RVA 0x043370C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetFogDirectionalInscatteringMultiplier", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatteringMultiplier_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -379,10 +344,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatte
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEditor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04337140; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEditor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetSpecificTimeOfDayInEditor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEditor_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEF60 (end 0x010BEF8F)
 // Original VA: 0x00000001410BEF60 | File offset: 0x010BE560
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -391,7 +353,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEdi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEditor_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337140; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetSpecificTimeOfDayInEditor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEditor_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -399,10 +363,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEdi
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043371C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetStormStrength", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEF90 (end 0x010BEFBF)
 // Original VA: 0x00000001410BEF90 | File offset: 0x010BE590
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -411,7 +372,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength_Statics::FuncParams);
+		// FuncParams: original RVA 0x043371C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetStormStrength", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -419,10 +382,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04337240; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEFC0 (end 0x010BEFEF)
 // Original VA: 0x00000001410BEFC0 | File offset: 0x010BE5C0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -431,7 +391,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337240; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDay", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x10, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -439,10 +401,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043372C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayAbsoluteSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BEFF0 (end 0x010BF01F)
 // Original VA: 0x00000001410BEFF0 | File offset: 0x010BE5F0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -451,7 +410,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed_Statics::FuncParams);
+		// FuncParams: original RVA 0x043372C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayAbsoluteSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -459,10 +420,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04337340; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayFloat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF020 (end 0x010BF04F)
 // Original VA: 0x00000001410BF020 | File offset: 0x010BE620
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -471,7 +429,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337340; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayFloat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -479,10 +439,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043373C0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayInHours", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF050 (end 0x010BF07F)
 // Original VA: 0x00000001410BF050 | File offset: 0x010BE650
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -491,7 +448,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours_Statics::FuncParams);
+		// FuncParams: original RVA 0x043373C0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayInHours", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -499,10 +458,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04337450; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayManagerVisibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibility_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF080 (end 0x010BF0AF)
 // Original VA: 0x00000001410BF080 | File offset: 0x010BE680
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -511,7 +467,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibi
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibility_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337450; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDayManagerVisibility", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibility_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -519,10 +477,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibi
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043374D0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDaySpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF0B0 (end 0x010BF0DF)
 // Original VA: 0x00000001410BF0B0 | File offset: 0x010BE6B0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -531,7 +486,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed_Statics::FuncParams);
+		// FuncParams: original RVA 0x043374D0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDaySpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -539,10 +496,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04337550; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDaySpeedFloat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF0E0 (end 0x010BF10F)
 // Original VA: 0x00000001410BF0E0 | File offset: 0x010BE6E0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -551,7 +505,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337550; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetTimeOfDaySpeedFloat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020405, 0x4, Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -559,10 +515,7 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat()
 struct Z_Construct_UFunction_AFortTimeOfDayManager_SetUseSpecificTimeOfDayEditing_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043375E0; StructureSize 0x1 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_SetUseSpecificTimeOfDayEditing_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetUseSpecificTimeOfDayEditing", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_AFortTimeOfDayManager_SetUseSpecificTimeOfDayEditing_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF110 (end 0x010BF13F)
 // Original VA: 0x00000001410BF110 | File offset: 0x010BE710
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -571,17 +524,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_SetUseSpecificTimeOfDayEd
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_SetUseSpecificTimeOfDayEditing_Statics::FuncParams);
+		// FuncParams: original RVA 0x043375E0; StructureSize 0x1 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "SetUseSpecificTimeOfDayEditing", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x1, Z_Construct_UFunction_AFortTimeOfDayManager_SetUseSpecificTimeOfDayEditing_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_ToggleDebugForceStormEffects_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04337620; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_ToggleDebugForceStormEffects_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "ToggleDebugForceStormEffects", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF140 (end 0x010BF16F)
 // Original VA: 0x00000001410BF140 | File offset: 0x010BE740
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -590,17 +539,13 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_ToggleDebugForceStormEffe
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_ToggleDebugForceStormEffects_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337620; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "ToggleDebugForceStormEffects", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020409, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
-struct Z_Construct_UFunction_AFortTimeOfDayManager_ToggleSkipNight_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
-};
-// FuncParams: original RVA 0x04337660; StructureSize 0x0 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFortTimeOfDayManager_ToggleSkipNight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "ToggleSkipNight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x0, nullptr, 0, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF170 (end 0x010BF19F)
 // Original VA: 0x00000001410BF170 | File offset: 0x010BE770
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -609,7 +554,9 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_ToggleSkipNight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortTimeOfDayManager_ToggleSkipNight_Statics::FuncParams);
+		// FuncParams: original RVA 0x04337660; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFortTimeOfDayManager, "ToggleSkipNight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040601, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaSeasonBannerLevel::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5F7F0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaSeasonBannerLevel_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaSeasonBannerLevel>();
 	}
-	// ReturnStructParams: original RVA 0x041F1540
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaSeasonBannerLevel_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaSeasonBannerLevel",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FAthenaSeasonBannerLevel),
-		alignof(FAthenaSeasonBannerLevel),
-		Z_Construct_UScriptStruct_FAthenaSeasonBannerLevel_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61FE0 (end 0x00F6200F)
 	// Original VA: 0x0000000140F61FE0 | File offset: 0x00F615E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaSeasonBannerLevel::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaSeasonBannerLevel_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x041F1540
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaSeasonBannerLevel_Statics::NewStructOps,
+				"AthenaSeasonBannerLevel",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FAthenaSeasonBannerLevel),
+				alignof(FAthenaSeasonBannerLevel),
+				Z_Construct_UScriptStruct_FAthenaSeasonBannerLevel_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

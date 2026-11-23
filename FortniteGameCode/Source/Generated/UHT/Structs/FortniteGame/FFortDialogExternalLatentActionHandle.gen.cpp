@@ -31,25 +31,12 @@ class UScriptStruct* FFortDialogExternalLatentActionHandle::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8450 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortDialogExternalLatentActionHandle_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortDialogExternalLatentActionHandle>();
 	}
-	// ReturnStructParams: original RVA 0x0433FCE0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortDialogExternalLatentActionHandle_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortDialogExternalLatentActionHandle",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FFortDialogExternalLatentActionHandle),
-		alignof(FFortDialogExternalLatentActionHandle),
-		Z_Construct_UScriptStruct_FFortDialogExternalLatentActionHandle_Statics::PropPointers, 1,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC590 (end 0x010CC5BF)
 	// Original VA: 0x00000001410CC590 | File offset: 0x010CBB90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortDialogExternalLatentActionHandle::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortDialogExternalLatentActionHandle_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0433FCE0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortDialogExternalLatentActionHandle_Statics::NewStructOps,
+				"FortDialogExternalLatentActionHandle",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FFortDialogExternalLatentActionHandle),
+				alignof(FFortDialogExternalLatentActionHandle),
+				Z_Construct_UScriptStruct_FFortDialogExternalLatentActionHandle_Statics::PropPointers, 1,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

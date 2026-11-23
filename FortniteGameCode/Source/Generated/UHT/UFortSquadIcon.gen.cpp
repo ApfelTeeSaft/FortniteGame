@@ -4,12 +4,8 @@
 // FClassFunctionLinkInfo array RVA 0x03D15308, FClassParams RVA 0x03D15350.
 
 #include "FortniteGameCode/UHTRecovered.h"
+UClass* Z_Construct_UClass_UFortSquadIcon();  // RVA 0x028F5890 (registered by its FCompiledInDefer)
 
-
-struct Z_Construct_UFunction_UFortSquadIcon_HandleDifferentSquadSetBP_Statics
-{
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B6C70 (name and class constructor), declared only
-};
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F69D0 (end 0x028F69FF)
 // Original VA: 0x00000001428F69D0 | File offset: 0x028F5FD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -18,14 +14,16 @@ UFunction* Z_Construct_UFunction_UFortSquadIcon_HandleDifferentSquadSetBP()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadIcon_HandleDifferentSquadSetBP_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B6C70; StructureSize 0x0 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadIcon, "HandleDifferentSquadSetBP", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08080800, 0x0, nullptr, 0, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
 
 struct Z_Construct_UFunction_UFortSquadIcon_SetSquad_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045B6CF0 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F6A00 (end 0x028F6A2F)
 // Original VA: 0x00000001428F6A00 | File offset: 0x028F6000
@@ -35,7 +33,9 @@ UFunction* Z_Construct_UFunction_UFortSquadIcon_SetSquad()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadIcon_SetSquad_Statics::FuncParams);
+		// FuncParams: original RVA 0x045B6CF0; StructureSize 0x8 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortSquadIcon, "SetSquad", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04420401, 0x8, Z_Construct_UFunction_UFortSquadIcon_SetSquad_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

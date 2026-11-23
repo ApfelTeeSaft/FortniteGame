@@ -31,25 +31,12 @@ class UScriptStruct* FPhysicalSurfaceName::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8CC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FPhysicalSurfaceName_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPhysicalSurfaceName>();
 	}
-	// ReturnStructParams: original RVA 0x044E5DC0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPhysicalSurfaceName_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"PhysicalSurfaceName",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FPhysicalSurfaceName),
-		alignof(FPhysicalSurfaceName),
-		Z_Construct_UScriptStruct_FPhysicalSurfaceName_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC3D0 (end 0x024AC3FF)
 	// Original VA: 0x00000001424AC3D0 | File offset: 0x024AB9D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FPhysicalSurfaceName::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FPhysicalSurfaceName_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x044E5DC0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FPhysicalSurfaceName_Statics::NewStructOps,
+				"PhysicalSurfaceName",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FPhysicalSurfaceName),
+				alignof(FPhysicalSurfaceName),
+				Z_Construct_UScriptStruct_FPhysicalSurfaceName_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

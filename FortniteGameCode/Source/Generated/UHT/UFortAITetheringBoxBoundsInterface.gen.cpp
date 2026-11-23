@@ -9,10 +9,7 @@ UClass* Z_Construct_UClass_UFortAITetheringBoxBoundsInterface();  // RVA 0x00F99
 struct Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04232630; StructureSize 0xC is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsCenter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08820804, 0xC, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsCenter_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F99970 (end 0x00F9999F)
 // Original VA: 0x0000000140F99970 | File offset: 0x00F98F70
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -21,7 +18,9 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsCenter_Statics::FuncParams);
+		// FuncParams: original RVA 0x04232630; StructureSize 0xC is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsCenter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08820804, 0xC, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsCenter_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -29,10 +28,7 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 struct Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSGridSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042326B0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSGridSize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsEQSGridSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSGridSize_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F999A0 (end 0x00F999CF)
 // Original VA: 0x0000000140F999A0 | File offset: 0x00F98FA0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -41,7 +37,9 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSGridSize_Statics::FuncParams);
+		// FuncParams: original RVA 0x042326B0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsEQSGridSize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSGridSize_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -49,10 +47,7 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 struct Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSSpaceBetween_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04232730; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSSpaceBetween_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsEQSSpaceBetween", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSSpaceBetween_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F999D0 (end 0x00F999FF)
 // Original VA: 0x0000000140F999D0 | File offset: 0x00F98FD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -61,7 +56,9 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSSpaceBetween_Statics::FuncParams);
+		// FuncParams: original RVA 0x04232730; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsEQSSpaceBetween", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSSpaceBetween_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -69,10 +66,7 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 struct Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsHeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x042327B0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsHeight_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F99A00 (end 0x00F99A2F)
 // Original VA: 0x0000000140F99A00 | File offset: 0x00F99000
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -81,7 +75,9 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsHeight_Statics::FuncParams);
+		// FuncParams: original RVA 0x042327B0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsHeight_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -89,10 +85,7 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 struct Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsWidth_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x04232830; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsWidth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsWidth_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F99A30 (end 0x00F99A5F)
 // Original VA: 0x0000000140F99A30 | File offset: 0x00F99030
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -101,7 +94,9 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsWidth_Statics::FuncParams);
+		// FuncParams: original RVA 0x04232830; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, "GetTetheredBoxBoundsWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020804, 0x4, Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsWidth_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

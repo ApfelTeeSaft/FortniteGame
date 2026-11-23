@@ -31,25 +31,12 @@ class UScriptStruct* FFortPointsOnCurve::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01092AC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortPointsOnCurve_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortPointsOnCurve>();
 	}
-	// ReturnStructParams: original RVA 0x04315680
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPointsOnCurve_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortPointsOnCurve",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortPointsOnCurve),
-		alignof(FFortPointsOnCurve),
-		Z_Construct_UScriptStruct_FFortPointsOnCurve_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01093F10 (end 0x01093F3F)
 	// Original VA: 0x0000000141093F10 | File offset: 0x01093510
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FFortPointsOnCurve::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortPointsOnCurve_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x04315680
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortPointsOnCurve_Statics::NewStructOps,
+				"FortPointsOnCurve",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortPointsOnCurve),
+				alignof(FFortPointsOnCurve),
+				Z_Construct_UScriptStruct_FFortPointsOnCurve_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

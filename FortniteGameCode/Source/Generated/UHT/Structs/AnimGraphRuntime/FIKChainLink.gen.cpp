@@ -30,25 +30,12 @@ class UScriptStruct* FIKChainLink::StaticStruct()
 	struct Z_Construct_UScriptStruct_FIKChainLink_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0AB90 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FIKChainLink_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FIKChainLink>();
 	}
-	// ReturnStructParams: original RVA 0x043AC850
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FIKChainLink_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
-		nullptr,
-		&NewStructOps,
-		"IKChainLink",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FIKChainLink),
-		alignof(FIKChainLink),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0F490 (end 0x01B0F4BF)
 	// Original VA: 0x0000000141B0F490 | File offset: 0x01B0EA90
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FIKChainLink::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FIKChainLink_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043AC850
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AnimGraphRuntime,
+				nullptr,
+				&Z_Construct_UScriptStruct_FIKChainLink_Statics::NewStructOps,
+				"IKChainLink",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FIKChainLink),
+				alignof(FIKChainLink),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

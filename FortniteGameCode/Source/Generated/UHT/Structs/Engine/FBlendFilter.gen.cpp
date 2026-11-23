@@ -30,25 +30,12 @@ class UScriptStruct* FBlendFilter::StaticStruct()
 	struct Z_Construct_UScriptStruct_FBlendFilter_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6FE0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FBlendFilter_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBlendFilter>();
 	}
-	// ReturnStructParams: original RVA 0x0440F7F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBlendFilter_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		nullptr,
-		&NewStructOps,
-		"BlendFilter",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FBlendFilter),
-		alignof(FBlendFilter),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C92D0 (end 0x023C92FF)
 	// Original VA: 0x00000001423C92D0 | File offset: 0x023C88D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FBlendFilter::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBlendFilter_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0440F7F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Engine,
+				nullptr,
+				&Z_Construct_UScriptStruct_FBlendFilter_Statics::NewStructOps,
+				"BlendFilter",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FBlendFilter),
+				alignof(FBlendFilter),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

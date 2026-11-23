@@ -24,10 +24,7 @@ void UUniformGridPanel::StaticRegisterNativesUUniformGridPanel()
 struct Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043CB220; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "AddChildToUniformGrid", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid_Statics::PropPointers, 2, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB760 (end 0x01BFB78F)
 // Original VA: 0x0000000141BFB760 | File offset: 0x01BFAD60
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -36,7 +33,9 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid_Statics::FuncParams);
+		// FuncParams: original RVA 0x043CB220; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "AddChildToUniformGrid", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid_Statics::PropPointers, 2, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -44,10 +43,7 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid()
 struct Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043CB2A0; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "SetMinDesiredSlotHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB790 (end 0x01BFB7BF)
 // Original VA: 0x0000000141BFB790 | File offset: 0x01BFAD90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -56,7 +52,9 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight_Statics::FuncParams);
+		// FuncParams: original RVA 0x043CB2A0; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "SetMinDesiredSlotHeight", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -64,10 +62,7 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight()
 struct Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043CB320; StructureSize 0x4 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "SetMinDesiredSlotWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB7C0 (end 0x01BFB7EF)
 // Original VA: 0x0000000141BFB7C0 | File offset: 0x01BFADC0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -76,7 +71,9 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth_Statics::FuncParams);
+		// FuncParams: original RVA 0x043CB320; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "SetMinDesiredSlotWidth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x4, Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }
@@ -84,10 +81,7 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth()
 struct Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;
 };
-// FuncParams: original RVA 0x043CB3A0; StructureSize 0x10 is sizeof the event parms struct.
-const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "SetSlotPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding_Statics::PropPointers, 1, 0, 0 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB7F0 (end 0x01BFB81F)
 // Original VA: 0x0000000141BFB7F0 | File offset: 0x01BFADF0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
@@ -96,7 +90,9 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding_Statics::FuncParams);
+		// FuncParams: original RVA 0x043CB3A0; StructureSize 0x10 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UUniformGridPanel, "SetSlotPadding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0x10, Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

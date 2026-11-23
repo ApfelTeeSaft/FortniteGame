@@ -31,25 +31,12 @@ class UScriptStruct* FAthenaAwardGroup::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01095AC0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FAthenaAwardGroup_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAthenaAwardGroup>();
 	}
-	// ReturnStructParams: original RVA 0x0431D780
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAthenaAwardGroup_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"AthenaAwardGroup",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FAthenaAwardGroup),
-		alignof(FAthenaAwardGroup),
-		Z_Construct_UScriptStruct_FAthenaAwardGroup_Statics::PropPointers, 7,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01097920 (end 0x0109794F)
 	// Original VA: 0x0000000141097920 | File offset: 0x01096F20
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FAthenaAwardGroup::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FAthenaAwardGroup_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0431D780
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FAthenaAwardGroup_Statics::NewStructOps,
+				"AthenaAwardGroup",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FAthenaAwardGroup),
+				alignof(FAthenaAwardGroup),
+				Z_Construct_UScriptStruct_FAthenaAwardGroup_Statics::PropPointers, 7,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

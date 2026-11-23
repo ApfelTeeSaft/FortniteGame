@@ -30,25 +30,12 @@ class UScriptStruct* FLandscapeEditorLayerSettings::StaticStruct()
 	struct Z_Construct_UScriptStruct_FLandscapeEditorLayerSettings_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74CB0 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLandscapeEditorLayerSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLandscapeEditorLayerSettings>();
 	}
-	// ReturnStructParams: original RVA 0x0439E3C0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLandscapeEditorLayerSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
-		nullptr,
-		&NewStructOps,
-		"LandscapeEditorLayerSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLandscapeEditorLayerSettings),
-		alignof(FLandscapeEditorLayerSettings),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A76530 (end 0x01A7655F)
 	// Original VA: 0x0000000141A76530 | File offset: 0x01A75B30
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FLandscapeEditorLayerSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLandscapeEditorLayerSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0439E3C0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_Landscape,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLandscapeEditorLayerSettings_Statics::NewStructOps,
+				"LandscapeEditorLayerSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLandscapeEditorLayerSettings),
+				alignof(FLandscapeEditorLayerSettings),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

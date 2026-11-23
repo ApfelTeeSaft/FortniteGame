@@ -31,25 +31,12 @@ class UScriptStruct* FLevelSequenceBindingReferenceArray::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E470 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FLevelSequenceBindingReferenceArray_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelSequenceBindingReferenceArray>();
 	}
-	// ReturnStructParams: original RVA 0x043FE7F0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelSequenceBindingReferenceArray_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
-		nullptr,
-		&NewStructOps,
-		"LevelSequenceBindingReferenceArray",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FLevelSequenceBindingReferenceArray),
-		alignof(FLevelSequenceBindingReferenceArray),
-		Z_Construct_UScriptStruct_FLevelSequenceBindingReferenceArray_Statics::PropPointers, 2,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4F170 (end 0x01D4F19F)
 	// Original VA: 0x0000000141D4F170 | File offset: 0x01D4E770
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FLevelSequenceBindingReferenceArray::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLevelSequenceBindingReferenceArray_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x043FE7F0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_LevelSequence,
+				nullptr,
+				&Z_Construct_UScriptStruct_FLevelSequenceBindingReferenceArray_Statics::NewStructOps,
+				"LevelSequenceBindingReferenceArray",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FLevelSequenceBindingReferenceArray),
+				alignof(FLevelSequenceBindingReferenceArray),
+				Z_Construct_UScriptStruct_FLevelSequenceBindingReferenceArray_Statics::PropPointers, 2,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

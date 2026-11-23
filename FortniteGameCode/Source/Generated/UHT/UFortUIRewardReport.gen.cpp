@@ -4,7 +4,7 @@
 // FClassFunctionLinkInfo array RVA 0x03D49DB0, FClassParams RVA 0x03D49DE0.
 
 #include "FortniteGameCode/UHTRecovered.h"
-
+UClass* Z_Construct_UClass_UFortUIRewardReport();  // RVA 0x02911DC0 (registered by its FCompiledInDefer)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02911700 (end 0x02911722)
 // Original VA: 0x0000000142911700 | File offset: 0x02910D00
@@ -20,7 +20,7 @@ void UFortUIRewardReport::StaticRegisterNativesUFortUIRewardReport()
 
 struct Z_Construct_UFunction_UFortUIRewardReport_GetRewardedChestIndex_Statics
 {
-	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record 0x045CEE60 (name and class constructor), declared only
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
 };
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02912E40 (end 0x02912E6F)
 // Original VA: 0x0000000142912E40 | File offset: 0x02912440
@@ -30,7 +30,9 @@ UFunction* Z_Construct_UFunction_UFortUIRewardReport_GetRewardedChestIndex()
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIRewardReport_GetRewardedChestIndex_Statics::FuncParams);
+		// FuncParams: original RVA 0x045CEE60; StructureSize 0x4 is sizeof the event parms struct.
+		static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_UFortUIRewardReport, "GetRewardedChestIndex", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, 0x4, Z_Construct_UFunction_UFortUIRewardReport_GetRewardedChestIndex_Statics::PropPointers, 1, 0, 0 };
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 	}
 	return ReturnFunction;
 }

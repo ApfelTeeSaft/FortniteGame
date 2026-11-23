@@ -31,25 +31,12 @@ class UScriptStruct* FVerifyProfileTokenPayload::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104FA10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FVerifyProfileTokenPayload_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVerifyProfileTokenPayload>();
 	}
-	// ReturnStructParams: original RVA 0x042DA010
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVerifyProfileTokenPayload_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"VerifyProfileTokenPayload",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FVerifyProfileTokenPayload),
-		alignof(FVerifyProfileTokenPayload),
-		Z_Construct_UScriptStruct_FVerifyProfileTokenPayload_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01051FD0 (end 0x01051FFF)
 	// Original VA: 0x0000000141051FD0 | File offset: 0x010515D0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FVerifyProfileTokenPayload::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FVerifyProfileTokenPayload_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042DA010
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FVerifyProfileTokenPayload_Statics::NewStructOps,
+				"VerifyProfileTokenPayload",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FVerifyProfileTokenPayload),
+				alignof(FVerifyProfileTokenPayload),
+				Z_Construct_UScriptStruct_FVerifyProfileTokenPayload_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

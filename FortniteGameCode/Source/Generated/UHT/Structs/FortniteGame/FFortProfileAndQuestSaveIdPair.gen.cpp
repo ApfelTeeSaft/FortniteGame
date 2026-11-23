@@ -30,25 +30,12 @@ class UScriptStruct* FFortProfileAndQuestSaveIdPair::StaticStruct()
 	struct Z_Construct_UScriptStruct_FFortProfileAndQuestSaveIdPair_Statics
 	{
 		static void* NewStructOps();
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037370 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FFortProfileAndQuestSaveIdPair_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FFortProfileAndQuestSaveIdPair>();
 	}
-	// ReturnStructParams: original RVA 0x042C2F30
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortProfileAndQuestSaveIdPair_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		nullptr,
-		&NewStructOps,
-		"FortProfileAndQuestSaveIdPair",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FFortProfileAndQuestSaveIdPair),
-		alignof(FFortProfileAndQuestSaveIdPair),
-		nullptr, 0,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x01039EC0 (end 0x01039EEF)
 	// Original VA: 0x0000000141039EC0 | File offset: 0x010394C0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -57,7 +44,19 @@ class UScriptStruct* FFortProfileAndQuestSaveIdPair::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FFortProfileAndQuestSaveIdPair_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042C2F30
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				nullptr,
+				&Z_Construct_UScriptStruct_FFortProfileAndQuestSaveIdPair_Statics::NewStructOps,
+				"FortProfileAndQuestSaveIdPair",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FFortProfileAndQuestSaveIdPair),
+				alignof(FFortProfileAndQuestSaveIdPair),
+				nullptr, 0,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

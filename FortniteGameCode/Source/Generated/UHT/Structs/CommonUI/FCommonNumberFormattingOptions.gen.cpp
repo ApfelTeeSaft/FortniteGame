@@ -31,25 +31,12 @@ class UScriptStruct* FCommonNumberFormattingOptions::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9E60 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FCommonNumberFormattingOptions_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCommonNumberFormattingOptions>();
 	}
-	// ReturnStructParams: original RVA 0x0417D900
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCommonNumberFormattingOptions_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_CommonUI,
-		nullptr,
-		&NewStructOps,
-		"CommonNumberFormattingOptions",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FCommonNumberFormattingOptions),
-		alignof(FCommonNumberFormattingOptions),
-		Z_Construct_UScriptStruct_FCommonNumberFormattingOptions_Statics::PropPointers, 6,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CBE20 (end 0x002CBE4F)
 	// Original VA: 0x00000001402CBE20 | File offset: 0x002CB420
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FCommonNumberFormattingOptions::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FCommonNumberFormattingOptions_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0417D900
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_CommonUI,
+				nullptr,
+				&Z_Construct_UScriptStruct_FCommonNumberFormattingOptions_Statics::NewStructOps,
+				"CommonNumberFormattingOptions",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FCommonNumberFormattingOptions),
+				alignof(FCommonNumberFormattingOptions),
+				Z_Construct_UScriptStruct_FCommonNumberFormattingOptions_Statics::PropPointers, 6,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

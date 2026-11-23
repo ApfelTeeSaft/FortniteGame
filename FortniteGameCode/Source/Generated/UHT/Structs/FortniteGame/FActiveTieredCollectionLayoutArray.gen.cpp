@@ -32,25 +32,12 @@ class UScriptStruct* FActiveTieredCollectionLayoutArray::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCF380 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FActiveTieredCollectionLayoutArray_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FActiveTieredCollectionLayoutArray>();
 	}
-	// ReturnStructParams: original RVA 0x042665B0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FActiveTieredCollectionLayoutArray_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_FFastArraySerializer,
-		&NewStructOps,
-		"ActiveTieredCollectionLayoutArray",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		sizeof(FActiveTieredCollectionLayoutArray),
-		alignof(FActiveTieredCollectionLayoutArray),
-		Z_Construct_UScriptStruct_FActiveTieredCollectionLayoutArray_Statics::PropPointers, 3,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD0FE0 (end 0x00FD100F)
 	// Original VA: 0x0000000140FD0FE0 | File offset: 0x00FD05E0
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -59,7 +46,19 @@ class UScriptStruct* FActiveTieredCollectionLayoutArray::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FActiveTieredCollectionLayoutArray_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x042665B0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
+				Z_Construct_UScriptStruct_FFastArraySerializer,
+				&Z_Construct_UScriptStruct_FActiveTieredCollectionLayoutArray_Statics::NewStructOps,
+				"ActiveTieredCollectionLayoutArray",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000001),
+				sizeof(FActiveTieredCollectionLayoutArray),
+				alignof(FActiveTieredCollectionLayoutArray),
+				Z_Construct_UScriptStruct_FActiveTieredCollectionLayoutArray_Statics::PropPointers, 3,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}

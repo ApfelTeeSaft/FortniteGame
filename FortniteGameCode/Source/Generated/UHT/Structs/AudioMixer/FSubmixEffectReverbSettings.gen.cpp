@@ -31,25 +31,12 @@ class UScriptStruct* FSubmixEffectReverbSettings::StaticStruct()
 	{
 		static void* NewStructOps();
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559D10 (StructOpsFunc; may be ICF-folded)
 	void* Z_Construct_UScriptStruct_FSubmixEffectReverbSettings_Statics::NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSubmixEffectReverbSettings>();
 	}
-	// ReturnStructParams: original RVA 0x0453B0A0
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSubmixEffectReverbSettings_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_AudioMixer,
-		nullptr,
-		&NewStructOps,
-		"SubmixEffectReverbSettings",
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000201),
-		sizeof(FSubmixEffectReverbSettings),
-		alignof(FSubmixEffectReverbSettings),
-		Z_Construct_UScriptStruct_FSubmixEffectReverbSettings_Statics::PropPointers, 12,
-	};
 	// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A680 (end 0x0255A6AF)
 	// Original VA: 0x000000014255A680 | File offset: 0x02559C80
 	// Recovery: confirmed (StaticStruct registers it) | Matching: see analysis/functions-uht-structs.json
@@ -58,7 +45,19 @@ class UScriptStruct* FSubmixEffectReverbSettings::StaticStruct()
 		static UScriptStruct* ReturnStruct = nullptr;
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FSubmixEffectReverbSettings_Statics::ReturnStructParams);
+			// ReturnStructParams: original RVA 0x0453B0A0
+			static const UE4CodeGen_Private::FStructParams ReturnStructParams = {
+				(UObject* (*)())Z_Construct_UPackage__Script_AudioMixer,
+				nullptr,
+				&Z_Construct_UScriptStruct_FSubmixEffectReverbSettings_Statics::NewStructOps,
+				"SubmixEffectReverbSettings",
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EStructFlags(0x00000201),
+				sizeof(FSubmixEffectReverbSettings),
+				alignof(FSubmixEffectReverbSettings),
+				Z_Construct_UScriptStruct_FSubmixEffectReverbSettings_Statics::PropPointers, 12,
+			};
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
