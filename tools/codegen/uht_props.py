@@ -135,9 +135,12 @@ def _with_qualifiers(p: dict, ctype: str, name: str) -> str:
     return f"{ctype}{'&' if ref else ''} {name}"
 
 
-def parameter(p: dict, names: Names, base: int, strings_by_ref: bool = False) -> dict | None:
+def parameter(p: dict, names: Names, base: int, strings_by_ref: bool = False,
+              enum_as_byte: bool = False) -> dict | None:
     """UHT 4.20 text for a supported property: decl (native declaration), line (P_GET macro),
-    arg (argument), ret (declared return type) and store (Z_Param__Result cast type)."""
+    arg (argument), ret (declared return type) and store (Z_Param__Result cast type).
+    enum_as_byte: the native declares a by-value byte enum or return as TEnumAsByte<E>
+    (the thunk text is the same)."""
     if p["dim"] != 1:
         return None
     t, out, retp = p["type"], p["flags"] & CPF_OUTPARM, p["flags"] & CPF_RETURNPARM
@@ -152,8 +155,9 @@ def parameter(p: dict, names: Names, base: int, strings_by_ref: bool = False) ->
             return None
         cls_form = e["form"] == ENUM_CLASS
         wrapped = e["cpp"] if cls_form else f"TEnumAsByte<{e['cpp']}>"
-        # GetCPPType with CPPF_ArgumentOrReturnValue: the raw enum unless an out parameter.
-        ctype = wrapped if out and not retp else e["cpp"]
+        # GetCPPType with CPPF_ArgumentOrReturnValue: the raw enum unless an out parameter,
+        # or unless the programmer declared TEnumAsByte (uht_exec.byte_enum_form).
+        ctype = wrapped if (out and not retp) or (enum_as_byte and not cls_form) else e["cpp"]
         store = wrapped
         line = f"P_GET_PROPERTY{ref}(UByteProperty,{pname});"
         arg = f"({wrapped}&)({pname})" if out else f"{e['cpp']}({pname})"
@@ -257,7 +261,20 @@ def _props(dimg, rec: int) -> tuple[int, int]:
     return nprops, props
 
 
-def function_signature(dimg, base: int, rec: int, names: Names, strings_by_ref: bool = False) -> dict | None:
+def byte_enums(ps: list[dict], names: Names, base: int) -> tuple[int, bool]:
+    """(by-value parameters, return) among ps that are byte enums UHT writes as the raw enum
+    (TEnumAsByte properties of non-class enums)."""
+    def raw(p):
+        if p["type"] != "Byte" or not p["func"]:
+            return False
+        e = names.enums.get(p["func"] - base)
+        return e is not None and e["form"] != ENUM_CLASS
+    n = sum(1 for p in ps if raw(p) and not p["flags"] & (CPF_OUTPARM | CPF_RETURNPARM))
+    return n, any(raw(p) and p["flags"] & CPF_RETURNPARM for p in ps)
+
+
+def function_signature(dimg, base: int, rec: int, names: Names, strings_by_ref: bool = False,
+                       enum_as_byte: tuple[bool, bool] = (False, False)) -> dict | None:
     """Parameters and return of a UFunction (FFunctionParams at rec), or None if a type is not
     supported. Keys: flags, params [(declaration, P_GET line, argument)], ret (declared C++
     return type), store (the type UHT casts Z_Param__Result to)."""
@@ -266,14 +283,16 @@ def function_signature(dimg, base: int, rec: int, names: Names, strings_by_ref: 
     ret = store = None
     params = []
     for p in ps:
-        t = parameter(p, names, base, strings_by_ref)
+        retp = bool(p["flags"] & CPF_RETURNPARM)
+        t = parameter(p, names, base, strings_by_ref, enum_as_byte[1] if retp else enum_as_byte[0])
         if t is None:
             return None
         if p["flags"] & CPF_RETURNPARM:
             r = t["ret"]
             if ret is not None or not (r in REGISTER_RETURN or r.endswith("*") or r == "FName"
                                        or r in names.used_enums or r[1:] in MODELLED_STRUCTS
-                                       or r in ("FString", "FText") or r.startswith(("TArray<", "TSubclassOf<", "TSoftObjectPtr<"))):
+                                       or r in ("FString", "FText")
+                                       or r.startswith(("TArray<", "TSubclassOf<", "TSoftObjectPtr<", "TEnumAsByte<"))):
                 return None
             ret, store = r, t["store"]
             continue

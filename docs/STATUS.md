@@ -9,12 +9,12 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **28,370 / 157,719** primary `.pdata` functions (17.99 %, 1,693,618 bytes):
+| Exact functions | **28,377 / 157,719** primary `.pdata` functions (17.99 %, 1,694,304 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 28,363 generated UHT functions:
+- 28,370 generated UHT functions:
   - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
-    1,189 `FCompiledInDefer` initializers and 1,073 exec thunks of virtual natives;
+    1,189 `FCompiledInDefer` initializers and 1,080 exec thunks of virtual natives;
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,859 `StaticStruct`, 1,782 `NewStructOps`,
     1,888 `StaticRegisterNatives` and 1,252 `FCompiledInDeferStruct` initializers;
@@ -27,10 +27,9 @@ Generated code is compiled in 182 unity units in the reference's recovered sourc
   hand-written code also uses;
 - statics next to items not modelled yet.
 
-Eleven are `partial`: one enum registration initializer (shared literal copy) and ten exec thunks:
-three whose virtual natives were misidentified (inlined natives) and seven whose byte-enum parameter
-or return the programmer declared as `TEnumAsByte` (see `docs/REVERSE_ENGINEERING.md`, "Exec thunk
-parameters"). The per-manifest counts are in `analysis/functions-uht-*.json` |
+Four are `partial`: one enum registration initializer (shared literal copy) and three exec thunks
+whose virtual natives were misidentified (inlined natives; see `docs/REVERSE_ENGINEERING.md`, "Exec
+thunk parameters"). The per-manifest counts are in `analysis/functions-uht-*.json` |
 | Named functions | 27,699 denominator functions (17.56 %):
 - from UHT reflection tables: 7,819 exec thunks, 11,102 `Z_Construct_UFunction_*` creators, and
   registrar/`GetPrivateStaticClass` pairs for 1,155 attributed classes (`analysis/reflection-natives.json`);
@@ -107,11 +106,12 @@ Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Class vt
        `FAthenaQuickChatActiveEntry` (Fortnite-only, from reflection),
        `FGameplayEffectSpecForRPC`, `FAssetData`, `FTransform` (`TransformRecovered.h`) and
        soft object pointers. Interfaces' thunks are `I<Name>` members (27 native
-       interfaces). 1,550 of the 1,661 virtual-native UFunctions have thunks, and 1,283 of
-       their 1,298 addresses match.
-     - Next: recover the `TEnumAsByte` form of byte-enum returns and parameters (7 partial
-       thunks, e.g. `IFortTeamActorInterface::GetTeam`), `FFortItemEntry` (Fortnite-only),
-       `FPointerEvent`, and `FSlateBrush` (the reference's layout differs from 4.20's).
+       interfaces). Byte enums declared as `TEnumAsByte` are recovered from the call. 1,550
+       of the 1,661 virtual-native UFunctions have thunks, and 1,290 of their 1,298
+       addresses match.
+     - Next: `FFortItemEntry` (Fortnite-only), `FPointerEvent`, `FSlateBrush` (the
+       reference's layout differs from 4.20's), and the 3 thunks whose natives are inlined
+       from headers.
      - Known fragility: a unit's `.rdata` section order changes with header content, so a
        few literal predictions come and go with shim changes (`FKey`'s registrar,
        `FFoliageTypeObject::StaticStruct`).

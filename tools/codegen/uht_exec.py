@@ -88,6 +88,61 @@ def strings_by_reference(dimg, base: int, rec: int, exec_rva: int, rfs: dict) ->
     return True if copies == 0 else False if copies == 2 * n else None
 
 
+_MD_DETAIL = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
+_MD_DETAIL.detail = True
+
+
+def byte_enum_form(dimg, exec_rva: int, rfs: dict, n_params: int, has_ret: bool) -> tuple[bool, bool] | None:
+    """Whether the native declares its by-value byte-enum parameters and its byte-enum return
+    as TEnumAsByte<E> (True) or the raw enum (False); None if the reference does not decide it.
+
+    The thunk text is the same either way; the call differs. TEnumAsByte has a user-provided
+    copy constructor, so MSVC passes a by-value one as the address of a byte copy and returns
+    one through a hidden pointer, which the thunk reads back through rax. A raw enum travels
+    in a register. So: in the window between the last call before the native call (the
+    StepCompiledIn calls) and that call, count stack bytes stored whose address is also taken;
+    and after the call, see whether the result is read as byte ptr [rax] or stored from al.
+    The same rule as strings_by_reference: the thunk's call setup shows the declared form."""
+    from capstone import x86
+    end = rfs[exec_rva].end if exec_rva in rfs else None
+    t = natives.Thunk(_MD, dimg, exec_rva, end)
+    call = next((c for c in t.calls if c["post"] and c["kind"] == "virtual"), None)
+    if call is None:
+        return None
+    ins = list(_MD_DETAIL.disasm(dimg.read(exec_rva, (end or exec_rva + LEAF_LIMIT) - exec_rva), exec_rva))
+    params = False
+    if n_params:
+        before = [i for i in ins if i.address < call["at"]]
+        last = max((k for k, i in enumerate(before) if i.mnemonic in ("call", "jmp")), default=-1)
+        stores, leas = set(), set()
+        frame = (x86.X86_REG_RSP, x86.X86_REG_RBP)
+        for i in before[last + 1:]:
+            ops = i.operands
+            if (i.mnemonic == "mov" and len(ops) == 2 and ops[0].type == x86.X86_OP_MEM and ops[0].size == 1
+                    and ops[1].type == x86.X86_OP_REG and ops[0].mem.base in frame):
+                stores.add((ops[0].mem.base, ops[0].mem.disp))
+            if i.mnemonic == "lea" and len(ops) == 2 and ops[1].type == x86.X86_OP_MEM and ops[1].mem.base in frame:
+                leas.add((ops[1].mem.base, ops[1].mem.disp))
+        passed = len(stores & leas)
+        if passed not in (0, n_params):
+            return None
+        params = passed == n_params
+    ret = False
+    if has_ret:
+        ret = None
+        for i in [i for i in ins if i.address > call["at"]][:4]:
+            text = f"{i.mnemonic} {i.op_str}"
+            if i.mnemonic == "movzx" and "byte ptr [rax]" in text:
+                ret = True
+                break
+            if i.mnemonic == "mov" and text.endswith(", al"):
+                ret = False
+                break
+        if ret is None:
+            return None
+    return params, ret
+
+
 def signature(dimg, base: int, syms: dict, names, cls: str, ufunction: str, exec_rva: int, rfs: dict) -> dict | None:
     """The UFunction's parameters (uht_props.function_signature) and constness, or None."""
     rec = funcparams(syms, cls, ufunction)
@@ -96,7 +151,14 @@ def signature(dimg, base: int, syms: dict, names, cls: str, ufunction: str, exec
     by_ref = strings_by_reference(dimg, base, rec, exec_rva, rfs)
     if by_ref is None:
         return None
-    sig = uht_props.function_signature(dimg, base, rec, names, by_ref)
+    nprops, props = uht_props._props(dimg, rec)
+    n_enum, enum_ret = uht_props.byte_enums(uht_props.decode(dimg, base, props, nprops) if nprops else [], names, base)
+    form = (False, False)
+    if n_enum or enum_ret:
+        form = byte_enum_form(dimg, exec_rva, rfs, n_enum, enum_ret)
+        if form is None:
+            return None
+    sig = uht_props.function_signature(dimg, base, rec, names, by_ref, form)
     if sig is not None:
         sig["const"] = bool(sig["flags"] & FUNC_CONST)
     return sig

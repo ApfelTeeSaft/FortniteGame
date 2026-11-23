@@ -4641,7 +4641,7 @@ public:
 	virtual void RepairBuilding(AFortPlayerController* RepairingController, int32 ResourcesSpent);  // slot 349 (+0xAE8), UFunction ABuildingSMActor::RepairBuilding
 	virtual void FNGC_VSlot_0xAF0();
 	virtual void FNGC_VSlot_0xAF8();
-	virtual EBuildingReplacementType GetReplacementDestructionReason();  // slot 352 (+0xB00), UFunction ABuildingSMActor::GetReplacementDestructionReason
+	virtual TEnumAsByte<EBuildingReplacementType> GetReplacementDestructionReason();  // slot 352 (+0xB00), UFunction ABuildingSMActor::GetReplacementDestructionReason
 	virtual void FNGC_VSlot_0xB08();
 	virtual void AttachBuildingActorToMe(ABuildingSMActor* ActorToAttach, bool bForceAttachment);  // slot 354 (+0xB10), UFunction ABuildingSMActor::AttachBuildingActorToMe
 	virtual void DetachBuildingActorFromMe(ABuildingSMActor* ActorToAttach, bool bBeingDestroyed);  // slot 355 (+0xB18), UFunction ABuildingSMActor::DetachBuildingActorFromMe
@@ -7405,7 +7405,7 @@ public:
 	virtual float GetReloadTime() const;  // slot 255 (+0x7F8), UFunction AFortWeapon::GetReloadTime
 	virtual float GetReloadProgress() const;  // slot 256 (+0x800), UFunction AFortWeapon::GetReloadProgress
 	virtual void FNGC_VSlot_0x808();
-	virtual void PlayReloadFX(EFortReloadFXState::Type ReloadStage);  // slot 258 (+0x810), UFunction AFortWeapon::PlayReloadFX
+	virtual void PlayReloadFX(TEnumAsByte<EFortReloadFXState::Type> ReloadStage);  // slot 258 (+0x810), UFunction AFortWeapon::PlayReloadFX
 	virtual float GetRange() const;  // slot 259 (+0x818), UFunction AFortWeapon::GetRange
 	virtual bool IsProjectileWeapon() const;  // slot 260 (+0x820), UFunction AFortWeapon::IsProjectileWeapon
 	virtual void FNGC_VSlot_0x828();
@@ -14150,7 +14150,7 @@ public:
 	virtual void FNGC_VSlot_0x5E0();
 	virtual void OnRep_TimeOfDay();  // slot 189 (+0x5E8), UFunction AFortTimeOfDayManager::OnRep_TimeOfDay
 	virtual void OnRep_TimeOfDayInit();  // slot 190 (+0x5F0), UFunction AFortTimeOfDayManager::OnRep_TimeOfDayInit
-	virtual EFortDayPhase::Type GetPreviousDayPhase() const;  // slot 191 (+0x5F8), UFunction AFortTimeOfDayManager::GetPreviousDayPhase
+	virtual TEnumAsByte<EFortDayPhase::Type> GetPreviousDayPhase() const;  // slot 191 (+0x5F8), UFunction AFortTimeOfDayManager::GetPreviousDayPhase
 	virtual void OnRep_HeightFogEnabled();  // slot 192 (+0x600), UFunction AFortTimeOfDayManager::OnRep_HeightFogEnabled
 	static void StaticRegisterNativesAFortTimeOfDayManager();
 	static void execBreakExponentialHeightFogValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -53778,7 +53778,7 @@ public:
 	virtual void FNGC_VSlot_0x10();
 	virtual void FNGC_VSlot_0x18();
 	virtual void FNGC_VSlot_0x20();
-	virtual EFortTeam::Type GetTeam() const;  // slot 5 (+0x28), UFunction UFortTeamActorInterface::GetTeam
+	virtual TEnumAsByte<EFortTeam::Type> GetTeam() const;  // slot 5 (+0x28), UFunction UFortTeamActorInterface::GetTeam
 	static void execGetTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
@@ -69439,7 +69439,7 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual void FNGC_VSlot_0x238();
 	virtual void FNGC_VSlot_0x240();
-	virtual void Finish(EPawnActionResult::Type WithResult);  // slot 73 (+0x248), UFunction UPawnAction::Finish
+	virtual void Finish(TEnumAsByte<EPawnActionResult::Type> WithResult);  // slot 73 (+0x248), UFunction UPawnAction::Finish
 	static void StaticRegisterNativesUPawnAction();
 	static void execCreateActionInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFinish(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -70458,8 +70458,8 @@ public:
 	virtual void FNGC_VSlot_0x4D0();
 	virtual void FNGC_VSlot_0x4D8();
 	virtual void FireImpulse();  // slot 156 (+0x4E0), UFunction URadialForceComponent::FireImpulse
-	virtual void AddObjectTypeToAffect(EObjectTypeQuery ObjectType);  // slot 157 (+0x4E8), UFunction URadialForceComponent::AddObjectTypeToAffect
-	virtual void RemoveObjectTypeToAffect(EObjectTypeQuery ObjectType);  // slot 158 (+0x4F0), UFunction URadialForceComponent::RemoveObjectTypeToAffect
+	virtual void AddObjectTypeToAffect(TEnumAsByte<EObjectTypeQuery> ObjectType);  // slot 157 (+0x4E8), UFunction URadialForceComponent::AddObjectTypeToAffect
+	virtual void RemoveObjectTypeToAffect(TEnumAsByte<EObjectTypeQuery> ObjectType);  // slot 158 (+0x4F0), UFunction URadialForceComponent::RemoveObjectTypeToAffect
 	static void StaticRegisterNativesURadialForceComponent();
 	static void execAddObjectTypeToAffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execFireImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);

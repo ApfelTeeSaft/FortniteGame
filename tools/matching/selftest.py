@@ -174,6 +174,13 @@ def test_uht_parameters() -> None:
     assert (t["decl"], t["arg"]) == ("ERes::Type Result", "ERes::Type(Z_Param_Result)"), t
     t = P.parameter(rec("Byte", "Result", out | P.CPF_RETURNPARM, 0x300), names, base)
     assert (t["ret"], t["store"]) == ("ERes::Type", "TEnumAsByte<ERes::Type>"), t
+    # Declared as TEnumAsByte by the programmer (uht_exec.byte_enum_form): same thunk text.
+    t = P.parameter(rec("Byte", "Result", 0, 0x300), names, base, enum_as_byte=True)
+    assert (t["decl"], t["arg"]) == ("TEnumAsByte<ERes::Type> Result", "ERes::Type(Z_Param_Result)"), t
+    t = P.parameter(rec("Byte", "Result", out | P.CPF_RETURNPARM, 0x300), names, base, enum_as_byte=True)
+    assert (t["ret"], t["store"]) == ("TEnumAsByte<ERes::Type>", "TEnumAsByte<ERes::Type>"), t
+    assert P.byte_enums([rec("Byte", "A", 0, 0x300), rec("Byte", "B", out | P.CPF_RETURNPARM, 0x300),
+                         rec("Byte", "C", 0, 0x200), rec("Byte", "D", out, 0x300)], names, base) == (1, True)
     t = P.parameter(rec("Str", "Text", 0), names, base)                              # by value
     assert (t["decl"], t["line"]) == ("FString Text", "P_GET_PROPERTY(UStrProperty,Z_Param_Text);"), t
     t = P.parameter(rec("Str", "Out", out), names, base)

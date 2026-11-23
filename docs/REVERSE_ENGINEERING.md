@@ -371,9 +371,9 @@ Main units whose thunks need the decoded parameters don't compile against the ol
 | Exec thunks generated | Count |
 | --- | --- |
 | UFunction thunks defined | 1,550, at 1,298 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 879 read parameters |
-| exact | 1,283: 1,073 in the denominator, 210 leaf (no `.pdata`) |
+| exact | 1,290: 1,080 in the denominator, 210 leaf (no `.pdata`) |
 | relocation-equivalent | 5: `UPaperGroupedSpriteComponent::UpdateInstanceTransform`, `UFortItem::GetPreviewAssets`, `UGameplayAbility::GetContextFromOwner`, `APartyBeaconClient::ServerReservationRequest` and `IAssetRegistry::GetAssetByObjectPath` (below) |
-| `partial` | 10: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and seven byte enums whose native is declared with `TEnumAsByte` (below; one is `IFortTeamActorInterface::GetTeam`) |
+| `partial` | 3: natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
 and, for strings and arrays, `TArray<T>::ResizeForCopy`, `FMemory::Free` and `memcpy`
@@ -574,11 +574,10 @@ Limits:
     and `_getUObject` slot 1; the slots the thunks call come from their call offsets
     (`analysis/native-implementations.json`). `IAssetRegistry::HasAssets` is at +0x10, the
     first slot after those two.
-  - 27 interfaces, 67 slots declared by name, 63 thunk addresses. 61 are exact (8 leaf).
-    `IAssetRegistry::GetAssetByObjectPath` is relocation-equivalent: only it calls
-    `FAssetData`'s move assignment out of line. `IFortTeamActorInterface::GetTeam` is
-    `partial`: its native returns `TEnumAsByte<EFortTeam::Type>` (a return slot is passed),
-    not UHT's raw enum (the `TEnumAsByte` form below).
+  - 27 interfaces, 67 slots declared by name, 63 thunk addresses. 62 are exact (8 leaf),
+    `IFortTeamActorInterface::GetTeam` among them once its `TEnumAsByte` return was
+    recovered (below). `IAssetRegistry::GetAssetByObjectPath` is relocation-equivalent: only
+    it calls `FAssetData`'s move assignment out of line.
   - `FKey`'s struct registrar is exact again and `FFoliageTypeObject::StaticStruct` lost its
     literal, the `.rdata` ripple once more.
   - Adding these changed the `.rdata` order of `InputCore.1`, which gained no code. Its
@@ -625,10 +624,25 @@ Limits:
   on a partial range; none was followed by a chained fragment.
 - A byte enum (`TEnumAsByte` property) may be declared by the programmer as the raw enum
   or as `TEnumAsByte<E>`. The reflection data does not record which, and the thunk text is
-  the same. UHT's own form (raw for values and returns) is used. Seven natives are declared
-  with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
-  constructor; their thunks do not match. Recovering the form from the reference's
-  argument setup is a possible next step.
+  the same; only the native's declaration differs. `uht_exec.byte_enum_form` recovers it
+  from the call, as `strings_by_reference` does for strings.
+  - `TEnumAsByte` has a user-provided copy constructor. MSVC therefore passes a by-value
+    one as the address of a byte copy, and returns one through a hidden pointer that the
+    thunk reads back as `byte ptr [rax]`. A raw enum travels in a register.
+  - Rule: between the last call before the native call (the `StepCompiledIn` calls) and that
+    call, the stack bytes both stored and address-taken are the `TEnumAsByte` copies. After
+    the call, the result is read either through `rax` or from `al`. Counts that fit neither
+    form (some but not all parameters) leave the signature unsupported; none occurs.
+  - Of the 73 thunk addresses with a by-value byte-enum parameter or return, 66 show the raw
+    form. All 66 were already exact.
+  - 7 show `TEnumAsByte` and were `partial`; all 7 are exact now. Independent evidence agrees:
+    - the 4.20 headers declare `UPawnAction::Finish` and `URadialForceComponent`'s
+      `Add`/`RemoveObjectTypeToAffect` with `TEnumAsByte`;
+    - the natives at the classes' vtable slots read the parameter as `byte ptr [rdx]`
+      (`AFortWeapon::PlayReloadFX`, `UPawnAction::Finish`) or write the return through
+      `rdx` (`ABuildingSMActor::GetReplacementDestructionReason`,
+      `AFortTimeOfDayManager::GetPreviousDayPhase`);
+    - `IFortTeamActorInterface::GetTeam` has only the thunk's call to go on.
 - Of the 1,661 virtual-native UFunctions, 1,578 have a supported signature and 1,550 have
   thunks (folded bodies counted per UFunction). For the other 28, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
