@@ -114,6 +114,36 @@ def test_literal_elimination() -> None:
     got = r.resolve(obj, "o", "$SG1", exclude=3)
     assert [g[0] for g in got] == [copies[1]] and "elimination" in got[0][1], got
     assert r.resolve(obj, "o", "$SG1", exclude=2) == []                  # B's own copy is not evidence for B
+    # Unobserved copies are claimed by evidence of other ownership. One inside another object's
+    # observed literal range belongs to that object; one a `lea` in the reference targets belongs
+    # to that code. Either leaves a single free copy.
+    r.by_addr, r.entry_addrs, r._unobserved = {copies[0]: {"$SGx": {1}}}, {1: {copies[0]}}, {}
+    r.observations = {("p", "$SG7"): {0x100F: {4}}, ("p", "$SG8"): {0x1018: {4}}}
+    r._sg_ranges = None
+    got = r.resolve(obj, "o", "$SG1", exclude=3)
+    assert [g[0] for g in got] == [copies[2]], got
+    assert r._inside_other_object(copies[1], "o") and not r._inside_other_object(copies[1], "p")
+    r.observations, r._sg_ranges, r._unobserved = {}, None, {}
+    r.img, r._xrefs = NS(), {copies[2] + 2: [0x500]}   # one lea, to TEXT("ntry"): one character in
+    r.entry_ranges = {3: (0x400, 0x480)}
+    got = r.resolve(obj, "o", "$SG1", exclude=3)
+    assert [g[0] for g in got] == [copies[1]], got
+    r.data_cache, r._unobserved = {}, {}
+    r._xrefs = {copies[2]: [0x440]}   # the entry under test's own use claims nothing
+    assert r.resolve(obj, "o", "$SG1", exclude=3) == []
+    r.data_cache, r._unobserved = {}, {}
+    r._xrefs = {copies[2]: [0x500, 0x600]}   # a pooled copy claims nothing
+    assert r.resolve(obj, "o", "$SG1", exclude=3) == []
+    # A copy with another object's observed literal between it and this object's own observed
+    # literals is not this object's: it claims copies[2], leaving copies[1]. The entry under
+    # test's own observations do not place the block.
+    r._xrefs, r.data_cache, r._unobserved, r._sg_ranges, r._sg_sorted = {}, {}, {}, None, None
+    r.observations = {("o", "$SG2"): {0x100A: {5}}, ("p", "$SG9"): {0x1016: {4}}}
+    got = r.resolve(obj, "o", "$SG1", exclude=3)
+    assert [g[0] for g in got] == [copies[1]], got
+    r.data_cache, r._unobserved, r._sg_ranges, r._sg_sorted = {}, {}, None, None
+    r.observations = {("o", "$SG2"): {0x100A: {3}}, ("p", "$SG9"): {0x1016: {4}}}
+    assert r.resolve(obj, "o", "$SG1", exclude=3) == []
     print("literal elimination: ok")
 
 

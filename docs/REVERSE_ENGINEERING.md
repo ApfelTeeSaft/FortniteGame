@@ -76,7 +76,14 @@ same import, and the manifest records which.
   - **literal elimination (leave-one-out):** without `/GF` each use of a literal has its own
     copy. All copies of the content are enumerated (fewer than 4,096). If every copy but one is
     the observed target of a *different* symbol, in *other* relocation-equivalent-or-better
-    functions, the remaining copy is this symbol's;
+    functions, the remaining copy is this symbol's. A copy no entry observes is claimed by
+    other code when, with the function under test masked out:
+    - exactly one `lea [rip+disp]` in the reference targets it (or the literal one character
+      in). Two or more sites mean a pooled copy, such as `StaticPackage()`'s COMDAT literal,
+      which claims nothing;
+    - it lies inside another object's observed literal span; or
+    - another object's observed literal lies between it and the span of this object's literals
+      that *other* entries observe. One object's `$SG` literals are one contiguous block.
   - an already-exact function, iterated to a fixpoint;
   - **corroboration (leave-one-out):** the same symbol observed at one address in a
     *different* manifest function whose size and every non-relocation byte equal the
@@ -1381,10 +1388,26 @@ registrar, from a function identified by its own content:
   only, not the evidence.
 - This made 1,022 class, 355 enum and 31 struct registrars exact, with no other state change.
 
+**Package-name literal copies.** In Engine (7 extra copies), CoreUObject (4), MovieScene and
+others, hand-written code uses `TEXT("/Script/<Package>")` too. Literal elimination
+therefore found two or more free copies for 2,329 registrars. The claims above settle them:
+- Hand-written code references most extra copies with a single `lea`.
+- Four Engine copies have no reference at all: dead per-use literals that stay in their
+  object's `.rdata` after `/OPT:REF` drops the code that used them. They sit with that
+  object's `OnTimeline*__DelegateSignature` literals. Other units' observed literals lie
+  between them and every registrar's own block.
+- An earlier rule also counted `lea` sites inside the function under test. It claimed that
+  function's own copy and made 270 predictions wrong. Masking the function's range, and
+  ignoring copies referenced from several places, removed every one of them.
+
+This made 2,685 functions exact (2,655 in the denominator), with no regressions:
+- 1,017 class, 488 enum and 767 struct registrars;
+- 131 `StaticStruct`, 94 `StaticEnum` and 157 struct `StaticRegisterNatives`;
+- 30 `AutoInitialize` initializers.
+
 What remains:
-- In Engine (7 extra copies), CoreUObject (4), MovieScene and others, hand-written code uses
-  the package-name literal too. 2,329 registrars wait only on these copies
-  (`analysis/match-queue.json`).
+- 157 functions wait on string literals: 53 struct `StaticRegisterNatives` on pooled
+  `??_C@` literals, and about 100 more on `$SG` copies (`analysis/match-queue.json`).
 - 180 `AutoInitialize` objects are not predicted, mostly in units that span several of the
   reference's objects (see "Data layout").
 

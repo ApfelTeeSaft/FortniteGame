@@ -107,8 +107,12 @@ class Resolver:
         self._literal_copy_sets: dict = {}
         self.entry_addrs: dict = {}
         self.entry_names: dict[int, str] = {}
+        self.entry_ranges: dict[int, tuple[int, int]] = {}   # reference RVA range per entry
         self.blocks: dict[str, dict] = {}
         self._name_index = None
+        self._xrefs = None
+        self._sg_ranges = None
+        self.img, self.dimg = img, dimg
 
     @staticmethod
     def key(obj: CoffObject, objpath: str, symbol: str):
@@ -170,7 +174,20 @@ class Resolver:
                 unobserved = self._unobserved.get(lit)
                 if unobserved is None:
                     unobserved = self._unobserved[lit] = [h for h in hits if not self.by_addr.get(h)]
-                free = list(unobserved)
+                # A copy no entry observes belongs to some other function. Two kinds of evidence
+                # say whose, without the entry under test:
+                # - exactly one `lea` outside the entry under test references it, so it is that
+                #   code's copy. A copy referenced from several places is pooled (an inline
+                #   function's COMDAT literal, such as StaticPackage()'s) and claims nothing;
+                # - it lies inside another object's main .rdata, the span between two literals
+                #   ($SG) that entries of that object observe. An object's literals are one
+                #   contiguous section, so a copy there is not this object's;
+                # - for the same reason, a literal another object's entries observe lies between
+                #   it and this object's own observed literals (other entries' observations only).
+                free = [h for h in unobserved
+                        if not self._referenced_by_code(h, exclude)
+                        and not self._inside_other_object(h, objpath)
+                        and not self._beyond_own_block(h, objpath, exclude)]
                 if len(free) <= 1:   # with two or more unobserved copies elimination cannot conclude
                     hitset = self._literal_copy_sets.setdefault(lit, set(hits))
                     check = set(self.observations.get(mykey, {})) | self.entry_addrs.get(exclude, set())
@@ -252,6 +269,75 @@ class Resolver:
         count, pred, desc = max(runs)
         extra = f" and {count - 1} more neighbours" if count > 1 else ""
         return [(pred, "section-relative (longer run) to " + desc + extra + f" ({min(lc, rc)} dissenting)")]
+
+    def _referenced_by_code(self, addr: int, exclude: int | None = None) -> bool:
+        """Whether exactly one `lea reg, [rip+disp]` in the reference's .text, outside the entry
+        under test, targets `addr` or the same literal one character in (TEXT("C") + 1).
+        Leave-one-out: the entry's own range is masked, never read. Two or more sites mean a
+        pooled copy, which may be the entry's too."""
+        if getattr(self, "img", None) is None:
+            return False
+        if getattr(self, "_xrefs", None) is None:
+            import re as _re
+            text = self.img.sections[0]
+            code = self.dimg.read(text.rva, text.vsize) if self.dimg is not None else b""
+            xr: dict = {}
+            def _cls(bs):  # a regex class of the given bytes, each escaped
+                return b"[" + b"".join(_re.escape(bytes([x])) for x in bs) + b"]"
+            pat = _cls([0x48, 0x4C]) + _re.escape(bytes([0x8D])) + _cls([0x05, 0x0D, 0x15, 0x1D, 0x25, 0x2D, 0x35, 0x3D])
+            for m in _re.finditer(pat, code):
+                i = m.start()
+                tgt = text.rva + i + 7 + int.from_bytes(code[i + 3:i + 7], "little", signed=True)
+                xr.setdefault(tgt, []).append(text.rva + i)
+            self._xrefs = xr
+        lo, hi = getattr(self, "entry_ranges", {}).get(exclude, (0, 0))
+        sites = [x for x in self._xrefs.get(addr, []) + self._xrefs.get(addr + 2, []) if not lo <= x < hi]
+        return len(sites) == 1
+
+    def _inside_other_object(self, addr: int, objpath: str) -> bool:
+        """Whether `addr` lies strictly between two string literals ($SG) of one other object, as
+        observed by that object's entries (its main .rdata is one contiguous section)."""
+        if getattr(self, "_sg_ranges", None) is None:
+            spans: dict = {}
+            for k in self.observations:
+                if isinstance(k, tuple) and k[1].startswith("$SG"):
+                    for v in self.observations[k]:
+                        lo, hi = spans.get(k[0], (v, v))
+                        spans[k[0]] = (min(lo, v), max(hi, v))
+            self._sg_ranges = spans
+        return any(lo < addr < hi for p, (lo, hi) in self._sg_ranges.items() if p != objpath)
+
+    def _beyond_own_block(self, addr: int, objpath: str, exclude: int | None) -> bool:
+        """Whether a string literal ($SG) of another object, observed by its entries, lies
+        between `addr` and the span of this object's literals that entries other than the one
+        under test observe. One object's literals are contiguous, so `addr` is then not in it."""
+        if getattr(self, "_sg_sorted", None) is None:
+            allobs, own = [], {}
+            for k, d in self.observations.items():
+                if isinstance(k, tuple) and k[1].startswith("$SG"):
+                    for v, ents in d.items():
+                        allobs.append((v, k[0]))
+                        own.setdefault(k[0], []).append((v, ents))
+            allobs.sort()
+            for lst in own.values():
+                lst.sort(key=lambda t: t[0])
+            self._sg_sorted, self._sg_own = allobs, own
+            self._sg_addrs = [v for v, _ in allobs]
+        mine = self._sg_own.get(objpath, [])
+        lo = next((v for v, ents in mine if ents - {exclude}), None)
+        if lo is None:
+            return False
+        hi = next(v for v, ents in reversed(mine) if ents - {exclude})
+        if lo <= addr <= hi:
+            return False
+        a, b = (addr, lo) if addr < lo else (hi, addr)
+        import bisect as _bisect
+        i = _bisect.bisect_right(self._sg_addrs, a)
+        while i < len(self._sg_sorted) and self._sg_sorted[i][0] < b:
+            if self._sg_sorted[i][1] != objpath:
+                return True
+            i += 1
+        return False
 
     def _slot_elimination(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
         """A declared block of equal slots (analysis/uht-bss-blocks.json): its members fill one
@@ -717,6 +803,8 @@ def main() -> int:
     # *other* entries' fields (leave-one-out). Observations are gathered between passes only.
     for i, e in enumerate(entries):
         resolver.entry_names[i] = e["name"]
+        if e.get("start_rva") and e.get("end_rva"):
+            resolver.entry_ranges[i] = (int(e["start_rva"], 16), int(e["end_rva"], 16))
 
     def snapshot() -> int:
         return hash(frozenset((repr(k), v, frozenset(ents))
@@ -739,6 +827,8 @@ def main() -> int:
         resolver.entry_addrs = {}
         resolver._unobserved = {}
         resolver._name_index = None
+        resolver._sg_ranges = None
+        resolver._sg_sorted = None
         for i, res in results.items():
             for obj, objpath, relocs, cand_raw, ref, start in res.pop("_observe", []):
                 resolver.observe(i, obj, objpath, relocs, cand_raw, ref, start, img.image_base)
