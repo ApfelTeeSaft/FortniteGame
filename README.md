@@ -20,7 +20,6 @@ limitations are in [docs/REVERSE_ENGINEERING.md](docs/REVERSE_ENGINEERING.md).
 This repository contains no original game files, executables, assets, keys or Unreal
 Engine source. You need your own copies to build or verify anything.
 
-Donate:
-BTC: `bc1q3f3lmp4t50q4lwmty4rcql6x79gff79qh0xyc2`
+Donate BTC: `bc1q3f3lmp4t50q4lwmty4rcql6x79gff79qh0xyc2`
 
 All Donations will end up being converted into Tokens to aid this project!
