@@ -4,8 +4,8 @@
 
 // StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
 // file-static ones first (see tools/codegen/unity.py).
-#include "../Enums/Engine/EInitialOscillatorOffset.staticenum.gen.cpp"
+#include "../Enums/Engine/ReverbPreset.staticenum.gen.cpp"
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EInitialOscillatorOffset.defer.gen.cpp"
+#include "../Enums/Engine/ReverbPreset.defer.gen.cpp"

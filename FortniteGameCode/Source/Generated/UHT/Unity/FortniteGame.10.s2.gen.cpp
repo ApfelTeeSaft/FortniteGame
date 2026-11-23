@@ -4,8 +4,8 @@
 
 // StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
 // file-static ones first (see tools/codegen/unity.py).
-#include "../Enums/FortniteGame/ECameraOrigin.staticenum.gen.cpp"
+#include "../Enums/FortniteGame/EFortEncounterSequenceResult.staticenum.gen.cpp"
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/FortniteGame/ECameraOrigin.defer.gen.cpp"
+#include "../Enums/FortniteGame/EFortEncounterSequenceResult.defer.gen.cpp"

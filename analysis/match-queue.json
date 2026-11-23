@@ -7,13 +7,13 @@
   "partial",
   "unmatched"
  ],
- "total": 7154,
+ "total": 7093,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class>",
-   "count": 2026,
+   "count": 2029,
    "states": {
-    "relocation-equivalent": 2026
+    "relocation-equivalent": 2029
    },
    "examples": [
     "0x0027B4C0 UBlueprintContextBase::GetPrivateStaticClass",
@@ -25,9 +25,9 @@
   },
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class>",
-   "count": 1104,
+   "count": 1107,
    "states": {
-    "relocation-equivalent": 1104
+    "relocation-equivalent": 1107
    },
    "examples": [
     "0x0027B570 UBlueprintContextLibrary::GetPrivateStaticClass",
@@ -39,9 +39,9 @@
   },
   {
    "key": "uht-class-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 1013,
+   "count": 1019,
    "states": {
-    "relocation-equivalent": 1013
+    "relocation-equivalent": 1019
    },
    "examples": [
     "0x00099C60 dynamic initializer for Z_CompiledInDefer_UClass_APartyBeaconClient",
@@ -53,9 +53,9 @@
   },
   {
    "key": "uht-struct-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 827,
+   "count": 815,
    "states": {
-    "relocation-equivalent": 827
+    "relocation-equivalent": 815
    },
    "examples": [
     "0x00095B70 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FOperation",
@@ -67,9 +67,9 @@
   },
   {
    "key": "uht-staticenum | singleton (.bss)",
-   "count": 564,
+   "count": 565,
    "states": {
-    "relocation-equivalent": 564
+    "relocation-equivalent": 565
    },
    "examples": [
     "0x002C17E0 EDynamicBoxType_StaticEnum",
@@ -95,9 +95,9 @@
   },
   {
    "key": "uht-struct-registernatives | pooled string literal (??_C@)",
-   "count": 222,
+   "count": 210,
    "states": {
-    "relocation-equivalent": 222
+    "relocation-equivalent": 210
    },
    "examples": [
     "0x00095A00 dynamic initializer for ScriptStruct_CommonUI_StaticRegisterNativesFOperation",
@@ -109,9 +109,9 @@
   },
   {
    "key": "uht-ufunction-creator | creator singleton (.bss)",
-   "count": 202,
+   "count": 194,
    "states": {
-    "relocation-equivalent": 202
+    "relocation-equivalent": 194
    },
    "examples": [
     "0x002C2E80 Z_Construct_UDelegateFunction_CommonUI_CommonActionCommited__DelegateSignature",
@@ -123,9 +123,9 @@
   },
   {
    "key": "uht-staticstruct | string literal ($SG, per-occurrence copy)",
-   "count": 174,
+   "count": 177,
    "states": {
-    "relocation-equivalent": 174
+    "relocation-equivalent": 177
    },
    "examples": [
     "0x002C2B00 FOperation::StaticStruct",
@@ -165,9 +165,9 @@
   },
   {
    "key": "uht-class-constructor | singleton (.bss)",
-   "count": 56,
+   "count": 39,
    "states": {
-    "relocation-equivalent": 56
+    "relocation-equivalent": 39
    },
    "examples": [
     "0x002C2B60 Z_Construct_UClass_UAnalogSlider",
@@ -179,9 +179,9 @@
   },
   {
    "key": "uht-class-compiledindefer | Z_Construct_* creator",
-   "count": 37,
+   "count": 26,
    "states": {
-    "relocation-equivalent": 37
+    "relocation-equivalent": 26
    },
    "examples": [
     "0x00095BC0 dynamic initializer for Z_CompiledInDefer_UClass_UAnalogSlider",
@@ -193,9 +193,9 @@
   },
   {
    "key": "uht-staticstruct | singleton (.bss)",
-   "count": 26,
+   "count": 25,
    "states": {
-    "relocation-equivalent": 26
+    "relocation-equivalent": 25
    },
    "examples": [
     "0x002FC5A0 FNamedInterfaceDef::StaticStruct",
@@ -220,24 +220,10 @@
    ]
   },
   {
-   "key": "uht-class-compiledindefer | Z_Construct_* creator + string literal ($SG, per-occurrence copy)",
-   "count": 19,
-   "states": {
-    "relocation-equivalent": 19
-   },
-   "examples": [
-    "0x0013EA30 dynamic initializer for Z_CompiledInDefer_UClass_USlateSettings",
-    "0x001AFE40 dynamic initializer for Z_CompiledInDefer_UClass_UMovieSceneTransformTrack",
-    "0x001BB5C0 dynamic initializer for Z_CompiledInDefer_UClass_UAISenseConfig_Prediction",
-    "0x001EBEC0 dynamic initializer for Z_CompiledInDefer_UClass_AAbstractNavData",
-    "0x001F3010 dynamic initializer for Z_CompiledInDefer_UClass_UAssetMappingTable"
-   ]
-  },
-  {
    "key": "uht-package-constructor | creator singleton (.bss)",
-   "count": 18,
+   "count": 17,
    "states": {
-    "relocation-equivalent": 18
+    "relocation-equivalent": 17
    },
    "examples": [
     "0x0027B700 Z_Construct_UPackage__Script_BlueprintContext",
@@ -245,6 +231,20 @@
     "0x005896C0 Z_Construct_UPackage__Script_NetUI",
     "0x00646000 Z_Construct_UPackage__Script_OodleHandlerComponent",
     "0x0068ED80 Z_Construct_UPackage__Script_UACCommon"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + string literal ($SG, per-occurrence copy)",
+   "count": 16,
+   "states": {
+    "relocation-equivalent": 16
+   },
+   "examples": [
+    "0x0032C4F0 APartyBeaconClient::GetPrivateStaticClass",
+    "0x00F70E60 ABuildingTrap::GetPrivateStaticClass",
+    "0x00FF92A0 UFortHealthBarComponent::GetPrivateStaticClass",
+    "0x01023180 UFortMcpContext::GetPrivateStaticClass",
+    "0x01035C30 AFortMission::GetPrivateStaticClass"
    ]
   },
   {
@@ -262,17 +262,17 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + string literal ($SG, per-occurrence copy)",
-   "count": 15,
+   "key": "uht-class-compiledindefer | Z_Construct_* creator + string literal ($SG, per-occurrence copy)",
+   "count": 13,
    "states": {
-    "relocation-equivalent": 15
+    "relocation-equivalent": 13
    },
    "examples": [
-    "0x0032C4F0 APartyBeaconClient::GetPrivateStaticClass",
-    "0x00F70E60 ABuildingTrap::GetPrivateStaticClass",
-    "0x00FF92A0 UFortHealthBarComponent::GetPrivateStaticClass",
-    "0x01023180 UFortMcpContext::GetPrivateStaticClass",
-    "0x01035C30 AFortMission::GetPrivateStaticClass"
+    "0x0013EA30 dynamic initializer for Z_CompiledInDefer_UClass_USlateSettings",
+    "0x001AFE40 dynamic initializer for Z_CompiledInDefer_UClass_UMovieSceneTransformTrack",
+    "0x001EBEC0 dynamic initializer for Z_CompiledInDefer_UClass_AAbstractNavData",
+    "0x001F3010 dynamic initializer for Z_CompiledInDefer_UClass_UAssetMappingTable",
+    "0x001F3110 dynamic initializer for Z_CompiledInDefer_UClass_UAsyncActionLoadPrimaryAssetBase"
    ]
   },
   {
@@ -291,9 +291,9 @@
   },
   {
    "key": "uht-struct-constructor | creator singleton (.bss)",
-   "count": 13,
+   "count": 12,
    "states": {
-    "relocation-equivalent": 13
+    "relocation-equivalent": 12
    },
    "examples": [
     "0x002CBE20 Z_Construct_UScriptStruct_FCommonNumberFormattingOptions",
@@ -301,20 +301,6 @@
     "0x00566120 Z_Construct_UScriptStruct_FReplicatedPredictionKeyMap",
     "0x0067C520 Z_Construct_UScriptStruct_FAnimNode_WheelHandler",
     "0x007DD520 Z_Construct_UScriptStruct_FVivoxMuteList"
-   ]
-  },
-  {
-   "key": "uht-enum-compiledindefer | <Enum>_StaticEnum + string literal ($SG, per-occurrence copy)",
-   "count": 6,
-   "states": {
-    "relocation-equivalent": 6
-   },
-   "examples": [
-    "0x001066D0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EFortNamedNavmesh",
-    "0x00106720 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EMatchmakingState",
-    "0x00106770 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ESettingDisplayType",
-    "0x001067C0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ESettingTab",
-    "0x00106810 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ESettingType"
    ]
   },
   {
@@ -329,6 +315,20 @@
     "0x02402630 ECanCreateConnectionResponse_StaticEnum",
     "0x02452640 EQuitPreference_StaticEnum",
     "0x0246EED0 ERoundingMode_StaticEnum"
+   ]
+  },
+  {
+   "key": "uht-enum-compiledindefer | <Enum>_StaticEnum + string literal ($SG, per-occurrence copy)",
+   "count": 5,
+   "states": {
+    "relocation-equivalent": 5
+   },
+   "examples": [
+    "0x001066D0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EFortNamedNavmesh",
+    "0x00106720 dynamic initializer for Z_CompiledInDeferEnum_UEnum_EMatchmakingState",
+    "0x00106770 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ESettingDisplayType",
+    "0x001067C0 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ESettingTab",
+    "0x00106810 dynamic initializer for Z_CompiledInDeferEnum_UEnum_ESettingType"
    ]
   },
   {
@@ -422,18 +422,6 @@
    ]
   },
   {
-   "key": "uht-staticstruct | Z_Construct_* creator",
-   "count": 3,
-   "states": {
-    "relocation-equivalent": 3
-   },
-   "examples": [
-    "0x002CA280 FCommonNumberFormattingOptions::StaticStruct",
-    "0x0145BCF0 FSlateColor::StaticStruct",
-    "0x024DB6B0 FKSphylElem::StaticStruct"
-   ]
-  },
-  {
    "key": "uht-staticstruct | Z_Construct_* creator + string literal ($SG, per-occurrence copy)",
    "count": 3,
    "states": {
@@ -476,6 +464,17 @@
    "examples": [
     "0x010928C0 UFortQueryTest_InfluenceScore::GetPrivateStaticClass",
     "0x010955B0 UFortQueryTest_Random::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-staticstruct | Z_Construct_* creator",
+   "count": 2,
+   "states": {
+    "relocation-equivalent": 2
+   },
+   "examples": [
+    "0x002CA280 FCommonNumberFormattingOptions::StaticStruct",
+    "0x0145BCF0 FSlateColor::StaticStruct"
    ]
   },
   {
@@ -1151,16 +1150,6 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortTheaterLi",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x010B2280 UFortTheaterList::GetPrivateStaticClass"
-   ]
-  },
-  {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UFortTips@@CAP",
    "count": 1,
    "states": {
@@ -1178,16 +1167,6 @@
    },
    "examples": [
     "0x010D3290 UFortUpdateManager::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UGarbageCollec",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023F6810 UGarbageCollectionSettings::GetPrivateStaticClass"
    ]
   },
   {
@@ -1248,16 +1227,6 @@
    },
    "examples": [
     "0x02493550 UNetConnection::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + StaticRegisterNatives<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UParticleModul",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x02494B60 UParticleModuleCollision::GetPrivateStaticClass"
    ]
   },
   {
@@ -1431,16 +1400,6 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UArrowComponen",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023D4D10 UArrowComponent::GetPrivateStaticClass"
-   ]
-  },
-  {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAsyncTaskDown",
    "count": 1,
    "states": {
@@ -1448,36 +1407,6 @@
    },
    "examples": [
     "0x01BE48E0 UAsyncTaskDownloadImage::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UAthenaPlayerM",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00F58860 UAthenaPlayerMatchReport::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UBTDecorator_B",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x01D214D0 UBTDecorator_BlueprintBase::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UCharacterMove",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x023ECD50 UCharacterMovementComponent::GetPrivateStaticClass"
    ]
   },
   {
@@ -1601,16 +1530,6 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@USkeletalMeshC + string literal ($SG, per-occurrence copy)",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x024CBF80 USkeletalMeshComponent::GetPrivateStaticClass"
-   ]
-  },
-  {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@USpinBox@@CAPE",
    "count": 1,
    "states": {
@@ -1628,6 +1547,16 @@
    },
    "examples": [
     "0x024EB0E0 UTexture2D::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + InternalVTableHelperCtorCaller<Class> + other: ?PrivateStaticClass@?1??GetPrivateStaticClass@UWidgetSwitche",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01C07610 UWidgetSwitcher::GetPrivateStaticClass"
    ]
   },
   {

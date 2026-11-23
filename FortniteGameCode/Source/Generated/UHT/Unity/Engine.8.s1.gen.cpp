@@ -4,10 +4,10 @@
 
 // StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
 // file-static ones first (see tools/codegen/unity.py).
-#include "../Enums/Engine/EDistributionVectorMirrorFlags.staticenum.gen.cpp"
-#include "../Enums/Engine/EDistributionVectorLockFlags.staticenum.gen.cpp"
+#include "../Enums/Engine/EDynamicActorScene.staticenum.gen.cpp"
+#include "../Enums/Engine/EDOFMode.staticenum.gen.cpp"
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EDistributionVectorMirrorFlags.defer.gen.cpp"
-#include "../Enums/Engine/EDistributionVectorLockFlags.defer.gen.cpp"
+#include "../Enums/Engine/EDynamicActorScene.defer.gen.cpp"
+#include "../Enums/Engine/EDOFMode.defer.gen.cpp"

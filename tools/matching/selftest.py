@@ -507,7 +507,37 @@ def test_accessor_shapes() -> None:
     print("accessor shapes: ok")
 
 
+def test_split_objects() -> None:
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "analysis"))
+    from unity_order import split_objects
+
+    def cls(name, obj, lit, ti):
+        return {"kind": "class", "name": name, "auto_object": f"0x{obj:08X}", "name_literal": f"0x{lit:08X}",
+                "table_index": ti}
+
+    def enum(name, lit, ti):
+        return {"kind": "enum", "name": name, "name_literal": f"0x{lit:08X}", "table_index": ti}
+
+    # Two runs (0x1000.., 0x2000..) whose literal ranges are disjoint: two objects. The enum
+    # between them goes with the object whose literal range holds its literal.
+    items = [cls("A", 0x1000, 0x500, 0), cls("B", 0x1028, 0x510, 1), enum("E", 0x900, 2),
+             cls("C", 0x2000, 0x900, 3), cls("D", 0x2028, 0x910, 4)]
+    out, st = split_objects([{"index": 0, "marker_unit": 0, "package": "/Script/X", "items": items}])
+    assert [[i["name"] for i in u["items"]] for u in out] == [["A", "B"], ["E", "C", "D"]], out
+    assert st["units cut into objects"] == 1 and [u["index"] for u in out] == [0, 1]
+    # Interleaved literals: one object emitted in two batches, kept whole.
+    items2 = [cls("A", 0x1000, 0x500, 0), cls("B", 0x1028, 0x920, 1), cls("C", 0x2000, 0x700, 2)]
+    out, st = split_objects([{"index": 0, "marker_unit": 0, "package": "/Script/X", "items": items2}])
+    assert len(out) == 1 and st["units kept whole: runs of one object (literals interleave)"] == 1
+    # An item between the objects whose literal lies in neither range: not cut.
+    items3 = [cls("A", 0x1000, 0x500, 0), enum("E", 0x700, 1), cls("C", 0x2000, 0x900, 2)]
+    out, st = split_objects([{"index": 0, "marker_unit": 0, "package": "/Script/X", "items": items3}])
+    assert len(out) == 1 and st["units kept whole: an item between objects is not placed"] == 1
+    print("split objects: ok")
+
+
 def main() -> int:
+    test_split_objects()
     test_accessor_mangling()
     test_accessor_shapes()
     test_match_queue()

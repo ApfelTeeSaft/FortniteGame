@@ -4,8 +4,8 @@
 
 // StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
 // file-static ones first (see tools/codegen/unity.py).
-#include "../Enums/Engine/EStreamingVolumeUsage.staticenum.gen.cpp"
+#include "../Enums/Engine/EWindowMode.staticenum.gen.cpp"
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EStreamingVolumeUsage.defer.gen.cpp"
+#include "../Enums/Engine/EWindowMode.defer.gen.cpp"

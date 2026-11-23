@@ -889,14 +889,45 @@ The generators (`uht_creators.py`, `uht_packages.py`, `uht_structs.py`) now emit
 Results:
 - 3,103 of 3,283 `AutoInitialize` initializers (outside the denominator) are exact, up from
   1,248 before this model.
-- 4 more were lost; they are in units with several runs (`FortniteGame.20` has 5). One
-  object's main `.data` cannot hold several runs, so such a unit probably spans several of
-  the reference's objects. Splitting units at these boundaries is the next layout task.
+- 4 more were lost, in units with several runs (`FortniteGame.20` has 5); see below.
 - Moving the records' name literals changes the `.rdata` string order of `Engine.26`.
   `AVolume`'s class registrar loses its section-relative package-literal prediction (the known
   ripple).
 
 `ClassParams` (constant-initialized, in `.rdata`) is still a `_Statics` member.
+
+**Units that span several objects.** A unit is cut at a vector-constant marker or a package
+change (`tools/analysis/unity_order.py`). A unity file that uses no header vector constant
+has no marker, so it was merged with the unit before it.
+
+Such a unit shows several `TClassCompiledInDefer` runs, but so does one object whose data was
+emitted in more than one batch. The string literals tell them apart: an object's literals
+fill its own main `.rdata`.
+- In `FortniteGame` unit 54 and `Engine` unit 129, each run's class-name literals occupy
+  their own increasing range.
+- In units 52 and 68 the runs' literals interleave: one object.
+
+`split_objects` cuts a unit only when both measures agree:
+- each run's classes are contiguous in `.CRT$XCU` order;
+- their literal ranges are disjoint and increasing.
+
+An item between two objects' classes goes with the object whose literal range holds its own
+name literal; if neither holds it, the unit is not cut.
+
+Of 47 units with several runs:
+- 22 are cut into 64 objects;
+- 22 stay whole (one object, literals interleave);
+- 3 stay whole (an item between objects is not placed).
+
+There are now 224 units, up from 182. The new objects have no vector constants, which is why
+they had no marker. The cut makes 105 relocation-equivalent functions exact, adds 12 newly
+located `StaticStruct`s, and causes no regressions:
+- 17 class constructors, 12 struct and 11 class registrars, 12 struct-ops initializers;
+- 8 creators and 14 `StaticStruct`s;
+- 40 `AutoInitialize` initializers, outside the denominator.
+
+The other 22 multi-run units are single objects. Why their data comes in several runs is not
+modelled.
 
 ### Class constructors
 

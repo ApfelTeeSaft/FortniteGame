@@ -4,10 +4,10 @@
 
 // StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
 // file-static ones first (see tools/codegen/unity.py).
-#include "../Enums/Engine/EOpacitySourceMode.staticenum.gen.cpp"
-#include "../Enums/Engine/ESubUVBoundingVertexCount.staticenum.gen.cpp"
+#include "../Enums/Engine/EMicroTransactionResult.staticenum.gen.cpp"
+#include "../Enums/Engine/EMicroTransactionDelegate.staticenum.gen.cpp"
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EOpacitySourceMode.defer.gen.cpp"
-#include "../Enums/Engine/ESubUVBoundingVertexCount.defer.gen.cpp"
+#include "../Enums/Engine/EMicroTransactionResult.defer.gen.cpp"
+#include "../Enums/Engine/EMicroTransactionDelegate.defer.gen.cpp"

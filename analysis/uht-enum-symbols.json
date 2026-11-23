@@ -1752,6 +1752,7 @@
 "?EGameplayTaskRunResult_StaticEnum@@YAPEAVUEnum@@XZ":["0x01C9A290","static-enum-call"],
 "?EGameplayTaskState_StaticEnum@@YAPEAVUEnum@@XZ":["0x01C9A2F0","static-enum-call"],
 "?ETaskResourceOverlapPolicy_StaticEnum@@YAPEAVUEnum@@XZ":["0x01C9A350","static-enum-call"],
+"?EAISenseNotifyType_StaticEnum@@YAPEAVUEnum@@XZ":["0x01D19600","static-enum-call"],
 "?EAILockSource_StaticEnum@@YAPEAVUEnum@@XZ":["0x01D201F0","static-enum-call"],
 "?EAIOptionFlag_StaticEnum@@YAPEAVUEnum@@XZ":["0x01D20230","static-enum-call"],
 "?EAIRequestPriority_StaticEnum@@YAPEAVUEnum@@XZ":["0x01D20270","static-enum-call"],

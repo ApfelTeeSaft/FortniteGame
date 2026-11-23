@@ -4,12 +4,12 @@
 
 // StaticEnum functions first, with external linkage, in source order: MSVC compiles UHT's
 // file-static ones first (see tools/codegen/unity.py).
-#include "../Enums/Engine/ERendererStencilMask.staticenum.gen.cpp"
-#include "../Enums/Engine/EHasCustomNavigableGeometry.staticenum.gen.cpp"
-#include "../Enums/Engine/ECanBeCharacterBase.staticenum.gen.cpp"
+#include "../Enums/Engine/EFormatArgumentType.staticenum.gen.cpp"
+#include "../Enums/Engine/ETextGender.staticenum.gen.cpp"
+#include "../Enums/Engine/ERoundingMode.staticenum.gen.cpp"
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ERendererStencilMask.defer.gen.cpp"
-#include "../Enums/Engine/EHasCustomNavigableGeometry.defer.gen.cpp"
-#include "../Enums/Engine/ECanBeCharacterBase.defer.gen.cpp"
+#include "../Enums/Engine/EFormatArgumentType.defer.gen.cpp"
+#include "../Enums/Engine/ETextGender.defer.gen.cpp"
+#include "../Enums/Engine/ERoundingMode.defer.gen.cpp"

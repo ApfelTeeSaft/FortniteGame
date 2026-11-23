@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="324" viewBox="0 0 760 324" role="img" aria-labelledby="t d">
 <title id="t">Fortnite 2.5 — Exact Function Matches</title>
-<desc id="d">30465 of 157,719 identified functions match the reference bytes exactly (19.32%).</desc>
+<desc id="d">30542 of 157,719 identified functions match the reference bytes exactly (19.36%).</desc>
 <rect x="0.5" y="0.5" width="759" height="323" rx="10" fill="#0f141a" stroke="#2a323c"/>
 <text x="32" y="40" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="19" font-weight="600" fill="#e6edf3">Fortnite 2.5 — Exact Function Matches</text>
-<text x="32" y="82" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf3">30,465<tspan font-size="18" font-weight="400" fill="#8b949e"> / 157,719 functions</tspan></text>
-<text x="728" y="82" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#3fb950">19.32%</text>
+<text x="32" y="82" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf3">30,542<tspan font-size="18" font-weight="400" fill="#8b949e"> / 157,719 functions</tspan></text>
+<text x="728" y="82" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#3fb950">19.36%</text>
 <rect x="32" y="104" width="696" height="14" rx="7" fill="#21262d"/>
-<rect x="32" y="104" width="134.439" height="14" rx="7.000" fill="#3fb950"/>
-<text x="32" y="146" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">exact 30465 · relocation-equivalent 7150 · partial 4 · unmatched 0 · unknown 0 · not located 0 · absent from image 1</text>
-<text x="32" y="166" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">exact by category: SEH filters 2, hand-written 5, class deferred registrars 2,211,</text>
-<text x="32" y="184" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    UClass constructors 3,227, enum deferred registrars 598, UEnum constructors 1,071,</text>
-<text x="32" y="202" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    uht exec thunk 1,318, UPackage constructors 68, native registrars 1,155, StaticEnum 374,</text>
-<text x="32" y="220" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    StaticStruct 1,859, struct deferred registrars 1,283, UStruct constructors 2,097,</text>
-<text x="32" y="238" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    NewStructOps 1,782, struct ops registrars 1,888, UFunction creators 11,527</text>
-<text x="32" y="256" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">1,822,332 bytes · compared with on-disk bytes 2 · with the validated decrypted image 30,463</text>
-<text x="32" y="284" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text (4941 recovered functions without .pdata outside it, 4678 exact).</text>
+<rect x="32" y="104" width="134.779" height="14" rx="7.000" fill="#3fb950"/>
+<text x="32" y="146" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">exact 30542 · relocation-equivalent 7089 · partial 4 · unmatched 0 · unknown 0 · not located 0 · absent from image 1</text>
+<text x="32" y="166" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">exact by category: SEH filters 2, hand-written 5, class deferred registrars 2,222,</text>
+<text x="32" y="184" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    UClass constructors 3,244, enum deferred registrars 599, UEnum constructors 1,071,</text>
+<text x="32" y="202" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    uht exec thunk 1,318, UPackage constructors 69, native registrars 1,155, StaticEnum 374,</text>
+<text x="32" y="220" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    StaticStruct 1,873, struct deferred registrars 1,295, UStruct constructors 2,098,</text>
+<text x="32" y="238" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" xml:space="preserve">    NewStructOps 1,782, struct ops registrars 1,900, UFunction creators 11,535</text>
+<text x="32" y="256" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">1,827,721 bytes · compared with on-disk bytes 2 · with the validated decrypted image 30,540</text>
+<text x="32" y="284" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text (4941 recovered functions without .pdata outside it, 4718 exact).</text>
 <text x="32" y="299" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">Encrypted bodies are compared with a validated decrypted image. Exact = identical bytes; relocations from independent evidence.</text>
-<text x="728" y="40" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681">manifest f2fae53faaac · ref 9731a6b5e1fa</text>
+<text x="728" y="40" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681">manifest d0e73b6e76d7 · ref 9731a6b5e1fa</text>
 </svg>

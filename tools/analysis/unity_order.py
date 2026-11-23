@@ -381,6 +381,79 @@ def place_package_init(img, dimg, allrf, base, units: list[dict]) -> Counter:
     return stats
 
 
+def split_objects(units: list[dict]) -> tuple[list[dict], Counter]:
+    """Split units that hold several of the reference's objects.
+
+    An object's TClassCompiledInDefer objects (AutoInitialize<C>) fill its main .data as one
+    run, 0x28 bytes apart, and its string literals fill its main .rdata. A unit opened at a
+    marker can still hold several objects: a unity file that uses no header vector constant has
+    no marker of its own. Such a unit shows several runs. It is cut only when the runs are
+    separate objects by both measures:
+    - the classes of each run are contiguous in source order;
+    - their name literals occupy disjoint, increasing .rdata ranges.
+
+    Runs whose literals interleave are one object whose data was emitted in several batches,
+    and stay together. An item between two objects' classes goes with the object whose literal
+    range holds its name literal; if neither range does, the unit is not cut.
+    """
+    stats = Counter()
+    out = []
+    for u in units:
+        items = u["items"]
+        cls = [(k, it) for k, it in enumerate(items) if it["kind"] == "class" and it.get("auto_object")]
+        objs = sorted(int(it["auto_object"], 16) for _, it in cls)
+        starts = [objs[0]] + [b for a, b in zip(objs, objs[1:]) if b - a != 0x28] if objs else []
+        if len(starts) < 2:
+            out.append(u)
+            continue
+        stats["units with several TClassCompiledInDefer runs"] += 1
+        run = {it["name"]: bisect.bisect_right(starts, int(it["auto_object"], 16)) - 1 for _, it in cls}
+        order = [run[it["name"]] for _, it in cls]
+        lits = defaultdict(list)
+        for _, it in cls:
+            lits[run[it["name"]]].append(int(it["name_literal"], 16))
+        lo = {r: min(v) for r, v in lits.items()}
+        hi = {r: max(v) for r, v in lits.items()}
+        separate = (all(a <= b for a, b in zip(order, order[1:]))
+                    and all(hi[r] < lo[r + 1] for r in range(len(starts) - 1)))
+        if not separate:
+            stats["units kept whole: runs of one object (literals interleave)"] += 1
+            out.append(u)
+            continue
+        # Object of every item: its neighbouring classes', or between two objects, its literal's.
+        obj, ok = [], True
+        cls_at = {k: run[it["name"]] for k, it in cls}
+        for k, it in enumerate(items):
+            if k in cls_at:
+                obj.append(cls_at[k])
+                continue
+            prev = next((cls_at[j] for j in range(k - 1, -1, -1) if j in cls_at), None)
+            nxt = next((cls_at[j] for j in range(k + 1, len(items)) if j in cls_at), None)
+            if prev is None or nxt is None or prev == nxt:
+                obj.append(prev if prev is not None else nxt)
+                continue
+            lit = int(it["name_literal"], 16) if it.get("name_literal") else None
+            if lit is not None and lit <= hi[prev]:
+                obj.append(prev)
+            elif lit is not None and lit >= lo[nxt]:
+                obj.append(nxt)
+            else:
+                ok = False
+                break
+        if not ok or any(a > b for a, b in zip(obj, obj[1:])):
+            stats["units kept whole: an item between objects is not placed"] += 1
+            out.append(u)
+            continue
+        for r in sorted(set(obj)):
+            piece = [it for it, o in zip(items, obj) if o == r]
+            out.append(dict(u, items=piece, table_range=[piece[0]["table_index"], piece[-1]["table_index"] + 1]))
+        stats["units cut into objects"] += 1
+        stats["objects from cut units"] += len(set(obj))
+    for k, u in enumerate(out):
+        u["index"] = k
+    return out, stats
+
+
 def main() -> int:
     assert len(CLASS_CID_TEMPLATE) == 58, len(CLASS_CID_TEMPLATE)
     img = PEImage()
@@ -497,7 +570,9 @@ def main() -> int:
                     "compiled_in_defer": f"0x{v:08X}", "table_index": i}
             au = pending_auto.pop(name, None)
             if au is not None:
-                item.update({"auto_initialize": f"0x{au[1]:08X}", "sizeof": au[2]["size"], "crc": au[2]["crc"]})
+                item.update({"auto_initialize": f"0x{au[1]:08X}", "sizeof": au[2]["size"], "crc": au[2]["crc"],
+                             "auto_object": f"0x{au[2]['object']:08X}"})
+            item["name_literal"] = f"0x{f['name']:08X}"
             tus[tu].append(item)
             stats["classes"] += 1
         elif kind == "cid":
@@ -505,12 +580,12 @@ def main() -> int:
             if f["defer"] == struct_callee:
                 tus[tu].append({"kind": "struct", "name": name, "package": wstr(img, f["package"]),
                                 "static_struct": f"0x{f['staticstruct']:08X}", "compiled_in_defer": f"0x{v:08X}",
-                                "table_index": i})
+                                "table_index": i, "name_literal": f"0x{f['name']:08X}"})
                 stats["structs"] += 1
             elif f["defer"] == enum_callee:
                 tus[tu].append({"kind": "enum", "name": name, "package": wstr(img, f["package"]),
                                 "static_enum": f"0x{f['staticstruct']:08X}", "compiled_in_defer": f"0x{v:08X}",
-                                "table_index": i})
+                                "table_index": i, "name_literal": f"0x{f['name']:08X}"})
                 stats["enums"] += 1
         elif kind == "srn":
             name = wstr(img, f["name"])
@@ -532,6 +607,8 @@ def main() -> int:
                 piece = []
             if it is not None:
                 piece.append(it)
+    out_tus, split_stats = split_objects(out_tus)
+    stats.update(split_stats)
     stats.update(place_package_delegates(img, dimg, allrf, base, out_tus))
     stats.update(place_package_init(img, dimg, allrf, base, out_tus))
 
