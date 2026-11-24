@@ -182,11 +182,11 @@
             "offset": "0x0000002B",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 6 more"
           },
           {
             "offset": "0x00000035",
-            "symbol": "$SG98143",
+            "symbol": "$SG98156",
             "rva": "0x0353EF98",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -200,11 +200,11 @@
             "offset": "0x00000043",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 6 more"
           },
           {
             "offset": "0x0000004D",
-            "symbol": "$SG98144",
+            "symbol": "$SG98157",
             "rva": "0x0353F2E8",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -218,11 +218,11 @@
             "offset": "0x0000005B",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 6 more"
           },
           {
             "offset": "0x00000065",
-            "symbol": "$SG98145",
+            "symbol": "$SG98158",
             "rva": "0x0353F368",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -392,11 +392,11 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 6 more"
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG98143",
+            "symbol": "$SG98156",
             "rva": "0x0353EF98",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -410,11 +410,11 @@
             "offset": "0x0000001D",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 6 more"
           },
           {
             "offset": "0x00000027",
-            "symbol": "$SG98144",
+            "symbol": "$SG98157",
             "rva": "0x0353F2E8",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -428,11 +428,11 @@
             "offset": "0x00000035",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 6 more"
           },
           {
             "offset": "0x0000003F",
-            "symbol": "$SG98145",
+            "symbol": "$SG98158",
             "rva": "0x0353F368",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -537,9 +537,9 @@
           },
           {
             "offset": "0x00000057",
-            "symbol": "$SG2953",
+            "symbol": "$SG2966",
             "rva": "0x03475532",
-            "evidence": "section-relative (local) to $SG2962 (seen in FCommandLine::GetForLogging)"
+            "evidence": "section-relative (local) to $SG2975 (seen in FCommandLine::GetForLogging)"
           },
           {
             "offset": "0x0000005C",
@@ -558,25 +558,25 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2949",
+            "symbol": "$SG2962",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2950",
+            "symbol": "$SG2963",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2951",
+            "symbol": "$SG2964",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG2952",
+            "symbol": "$SG2965",
             "kind": "REL32"
           }
         ],
@@ -642,31 +642,31 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2958",
+            "symbol": "$SG2971",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2959",
+            "symbol": "$SG2972",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2960",
+            "symbol": "$SG2973",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG2961",
+            "symbol": "$SG2974",
             "kind": "REL32"
           },
           {
             "offset": "0x00000057",
             "size": 4,
-            "symbol": "$SG2962",
+            "symbol": "$SG2975",
             "kind": "REL32"
           }
         ],
@@ -732,31 +732,31 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2976",
+            "symbol": "$SG2989",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2977",
+            "symbol": "$SG2990",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2978",
+            "symbol": "$SG2991",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG2979",
+            "symbol": "$SG2992",
             "kind": "REL32"
           },
           {
             "offset": "0x00000057",
             "size": 4,
-            "symbol": "$SG2980",
+            "symbol": "$SG2993",
             "kind": "REL32"
           }
         ],
@@ -817,6 +817,449 @@
       "candidate_sha256": "e8f4ad01775c562b5553cd733905639ac6e12d75af8a82d8184c4c64aec2fd4b",
       "compiler": "prodid 261 build 24215",
       "in_denominator": false
+    },
+    {
+      "start_rva": "0x01112B50",
+      "end_rva": "0x01112B72",
+      "name": "FGenericPlatformMisc::AllowThreadHeartBeat",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/GenericPlatform/GenericPlatformMisc.cpp",
+      "object": "Source/Runtime/Core/Private/GenericPlatform/GenericPlatformMisc.obj",
+      "symbol": "?AllowThreadHeartBeat@FGenericPlatformMisc@@SA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The only function that passes L\"noheartbeatthread\" to FParse::Param(FCommandLine::Get(), ...); it returns the negated result. In the 4.20 tree that literal appears only in FGenericPlatformMisc::AllowThreadHeartBeat.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "353b7915695c88e2e2d7d9d39ce6b422565a67238104d58c78087addf1c4f5a0",
+      "decrypted_sha256": "edfcd2dfc50b9bedf0974919cc265607db18bbd4994ee03e4112161f6199152f",
+      "candidate_sha256": "edfcd2dfc50b9bedf0974919cc265607db18bbd4994ee03e4112161f6199152f",
+      "byte_diff": {
+        "reference_size": 34,
+        "candidate_size": 34,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000005",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "$SG2950",
+            "rva": "0x03464EB8",
+            "evidence": "data symbol: unique 36-byte string literal"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02517390",
+      "end_rva": "0x025173E8",
+      "name": "FLauncherCheckModule::WasRanFromLauncher",
+      "category": "source-function",
+      "module": "LauncherCheck",
+      "source": "FortniteGameCode/Source/Runtime/Portal/LauncherCheck/Private/LauncherCheckModule.cpp",
+      "object": "Source/Runtime/Portal/LauncherCheck/Private/LauncherCheckModule.obj",
+      "symbol": "?WasRanFromLauncher@FLauncherCheckModule@@UEBA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FParse::Param(FCommandLine::Get(), ...) for L\"NoEpicPortal\", L\"q\" and L\"EpicPortal\", true as soon as one is set: FLauncherCheckModule::IsEnabled() inlined into WasRanFromLauncher(). The literals occur together only there in the 4.20 tree.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "ed48a3cd08d2bdcf48a4bbf73661a962c5131e2a5cecfc0bf26212c168ea0252",
+      "decrypted_sha256": "78590559a7843481f6699faaad7125c4329b1cba5b9e4f6efee5b87309dc0a97",
+      "candidate_sha256": "ec7a69a56425d5ce786a5bfa0fc23fca9489c084dfad159bf4ac4c4bf177dbe0",
+      "byte_diff": {
+        "reference_size": 88,
+        "candidate_size": 88,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000005",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "??_C@_1BK@JBFGNJHN@?$AAN?$AAo?$AAE?$AAp?$AAi?$AAc?$AAP?$AAo?$AAr?$AAt?$AAa?$AAl?$AA?$AA@",
+            "rva": "0x039D6228",
+            "evidence": "data symbol: unique 26-byte string literal"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000001D",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000002C",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000035",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000003F",
+            "symbol": "$SG2970",
+            "rva": "0x039D6248",
+            "evidence": "data symbol: unique 22-byte string literal"
+          },
+          {
+            "offset": "0x00000044",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000027",
+            "size": 4,
+            "symbol": "??_C@_13NDIOHBK@?$AAq?$AA?$AA@",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01FFE540",
+      "end_rva": "0x01FFE56D",
+      "name": "UGameplayStatics::HasLaunchOption",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/GameplayStatics.cpp",
+      "object": "Source/Runtime/Engine/Private/GameplayStatics.obj",
+      "symbol": "?HasLaunchOption@UGameplayStatics@@SA_NAEBVFString@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The native implementation that UGameplayStatics::execHasLaunchOption calls (analysis/native-implementations.json): FString::operator* (TEXT(\"\") when empty) inlined before a tail call to FParse::Param(FCommandLine::Get(), ...).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "88fe32e988d5bdf024ea558343d188870ac6c6bd26e07a516021882e7f385a84",
+      "decrypted_sha256": "af4ac73451df440fbc56d233cd0cd90f24577c8ce7248d455885ff7a3685b00b",
+      "candidate_sha256": "c1bd70528863b9b8251cb8f4be889adf3ec9d18dee0924896389a18177ee7c96",
+      "byte_diff": {
+        "reference_size": 45,
+        "candidate_size": 45,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000019",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x00000029",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000014",
+            "size": 4,
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 3
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x008641F0",
+      "end_rva": "0x00864212",
+      "name": "FortniteGame_NoAlternateAIDirectorBalance_008641F0",
+      "category": "source-function",
+      "module": "unknown",
+      "source": "FortniteGameCode/Source/FortniteGame/Private/Unattributed/CommandLineChecks.cpp",
+      "object": "Source/FortniteGame/Private/Unattributed/CommandLineChecks.obj",
+      "symbol": "?FortniteGame_NoAlternateAIDirectorBalance_008641F0@@YA_NXZ",
+      "name_confidence": "unknown",
+      "evidence": "!FParse::Param(FCommandLine::Get(), L\"AlternateAIDirectorBalance\"). The literal is not in the 4.20 tree, so the name, owner and module are unknown; neutral name with its RVA.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "9cc3b5a523171cb8f18b4835e7453dabcc5b1d4148942d3c91d01418e95d3eeb",
+      "decrypted_sha256": "6881e7a6ae9f8eebbcc0ae9ba5dddb374a9d14b44c29b3e807d05802cc01deda",
+      "candidate_sha256": "6881e7a6ae9f8eebbcc0ae9ba5dddb374a9d14b44c29b3e807d05802cc01deda",
+      "byte_diff": {
+        "reference_size": 34,
+        "candidate_size": 34,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000005",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "$SG2949",
+            "rva": "0x02FF19E8",
+            "evidence": "data symbol: unique 54-byte string literal"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00EF0D50",
+      "end_rva": "0x00EF0D72",
+      "name": "FortniteGame_NoActivities_00EF0D50",
+      "category": "source-function",
+      "module": "unknown",
+      "source": "FortniteGameCode/Source/FortniteGame/Private/Unattributed/CommandLineChecks.cpp",
+      "object": "Source/FortniteGame/Private/Unattributed/CommandLineChecks.obj",
+      "symbol": "?FortniteGame_NoActivities_00EF0D50@@YA_NXZ",
+      "name_confidence": "unknown",
+      "evidence": "!FParse::Param(FCommandLine::Get(), L\"activities\"). The literal is not in the 4.20 tree, so the name, owner and module are unknown; neutral name with its RVA.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "5cbab3d96a9b36cb5a80d2d01978253dcb1251265ebc32fb8fb0b8d3102138c8",
+      "decrypted_sha256": "94bea226d345359d84c96a092101f13590cc2e5f6a6d3e39031f512850b7195d",
+      "candidate_sha256": "94bea226d345359d84c96a092101f13590cc2e5f6a6d3e39031f512850b7195d",
+      "byte_diff": {
+        "reference_size": 34,
+        "candidate_size": 34,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000005",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "$SG2952",
+            "rva": "0x0322A538",
+            "evidence": "data symbol: unique 22-byte string literal"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x015FECE0",
+      "end_rva": "0x015FED50",
+      "name": "D3D11RHI_PreferAdaperVendor",
+      "category": "source-function",
+      "module": "D3D11RHI",
+      "source": "FortniteGameCode/Source/Runtime/Windows/D3D11RHI/Private/Windows/WindowsD3D11Device.cpp",
+      "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
+      "symbol": "?D3D11RHI_PreferAdaperVendor@@YAHXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FParse::Param(FCommandLine::Get(), ...) for L\"preferAMD\", L\"preferIntel\" and L\"preferNvidia\", returning 0x1002, 0x8086 and 0x10DE, else -1. Of the two such functions this one lies with the D3D11RHI code, next to D3D11RHI_ShouldCreateWithD3DDebug (0x015FEDD0).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "fe28f755b499f521e796807be736a1f95ce3a1cee9e5357848b31e2781e5fd0b",
+      "decrypted_sha256": "58e1aeeaef71123517d7b9be3ba64292426e1dd1e04d13f16e890d94fac83eac",
+      "candidate_sha256": "58e1aeeaef71123517d7b9be3ba64292426e1dd1e04d13f16e890d94fac83eac",
+      "byte_diff": {
+        "reference_size": 112,
+        "candidate_size": 112,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000005",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "$SG98198",
+            "rva": "0x0353F458",
+            "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000027",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x00000031",
+            "symbol": "$SG98200",
+            "rva": "0x0353F4C8",
+            "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG98202",
+            "rva": "0x035455F0",
+            "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0164F8A0",
+      "end_rva": "0x0164F910",
+      "name": "D3D12RHI_PreferAdapterVendor",
+      "category": "source-function",
+      "module": "D3D12RHI",
+      "source": "FortniteGameCode/Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.cpp",
+      "object": "Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.obj",
+      "symbol": "?D3D12RHI_PreferAdapterVendor@@YAHXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The D3D12RHI twin of D3D11RHI_PreferAdaperVendor (0x015FECE0): the same body over its own copies of the three literals, among the D3D12RHI code. static inline in the 4.20 tree, but kept out of line in the reference.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "ffb07424f27c26deeed24f0f909aac4528f448dbcc16a8d92f3fd6db50adf0a7",
+      "decrypted_sha256": "3914443c49fcd58405146d4f4a589efc1c27119a5df7bc532a5965cd31503dbf",
+      "candidate_sha256": "3914443c49fcd58405146d4f4a589efc1c27119a5df7bc532a5965cd31503dbf",
+      "byte_diff": {
+        "reference_size": 112,
+        "candidate_size": 112,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000005",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "$SG86284",
+            "rva": "0x0354CDC8",
+            "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000027",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x00000031",
+            "symbol": "$SG86286",
+            "rva": "0x0354CE28",
+            "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG86288",
+            "rva": "0x0354D5C8",
+            "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
     }
   ]
 }

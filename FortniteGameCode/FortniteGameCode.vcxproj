@@ -97,10 +97,14 @@
     <None Include="Source\Runtime\Windows\D3D11RHI\Private\Windows\WindowsD3D11Device.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMisc.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Misc\CommandLine.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Misc\Parse.cpp" />
     <ClCompile Include="Source\Runtime\Windows\D3D11RHI\Module.D3D11RHI.cpp" />
     <ClCompile Include="Source\Runtime\D3D12RHI\Private\Windows\WindowsD3D12Device.cpp" />
+    <ClCompile Include="Source\Runtime\Engine\Private\GameplayStatics.cpp" />
+    <ClCompile Include="Source\Runtime\Portal\LauncherCheck\Private\LauncherCheckModule.cpp" />
+    <ClCompile Include="Source\FortniteGame\Private\Unattributed\CommandLineChecks.cpp" />
     <!-- Generated UHT code: per-item fragments (tools/codegen/uht_*.py) are compiled only through the
          unity units tools/codegen/unity.py assembles in the references recovered source order. -->
     <ClCompile Include="Source\Generated\UHT\Unity\*.gen.cpp" />

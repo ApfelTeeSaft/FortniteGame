@@ -638,6 +638,11 @@ public:
 	FString& operator=(FString&&) = default;
 	FString& operator=(const FString&) = default;
 
+	__forceinline const TCHAR* operator*() const
+	{
+		return Data.Num() ? Data.GetData() : TEXT("");
+	}
+
 	__forceinline void Reset(int32 NewReservedSize = 0)
 	{
 		const int32 NewSizeIncludingTerminator = (NewReservedSize > 0) ? (NewReservedSize + 1) : 0;

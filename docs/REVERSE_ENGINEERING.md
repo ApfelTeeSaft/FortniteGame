@@ -173,6 +173,46 @@ public 4.20.0 (see [ENGINE_DIFFERENCES.md](ENGINE_DIFFERENCES.md)). They also sh
 that `D3D11RHI_ShouldCreateWithD3DDebug` is inlined across files, i.e. a unity build.
 Byte comparison against the decrypted bodies confirmed both differences.
 
+## Fourth family: command-line switch checks (hand-written, 2026-11-24)
+
+`FParse::Param` (exact) and `FCommandLine::Get` are called together by 229 functions in the
+decrypted image, 145 of them primary `.pdata` functions. Each loads its switch names as wide
+literals. 101 of the 145 load a literal that the 4.20 tree passes to
+`FParse::Param(FCommandLine::Get(), TEXT("..."))`, which names the function. Most have
+function-local statics (thread-safe initialization), use members of their class, or are
+fragments of split functions.
+
+The first batch is the complete ones that touch nothing else:
+
+| RVA | Function | Result |
+| --- | --- | --- |
+| `0x01112B50` | `FGenericPlatformMisc::AllowThreadHeartBeat` | exact |
+| `0x015FECE0` | `D3D11RHI_PreferAdaperVendor` (the 4.20 spelling) | exact |
+| `0x0164F8A0` | `D3D12RHI_PreferAdapterVendor` | exact; `static inline` in the tree but out of line in the reference, kept by the TU's anchor table |
+| `0x008641F0` | neutral `FortniteGame_NoAlternateAIDirectorBalance_008641F0` | exact; Fortnite switch, no source |
+| `0x00EF0D50` | neutral `FortniteGame_NoActivities_00EF0D50` | exact; Fortnite switch, no source |
+| `0x02517390` | `FLauncherCheckModule::WasRanFromLauncher` (`IsEnabled()` inlined) | relocation-equivalent: `TEXT("q")` |
+| `0x01FFE540` | `UGameplayStatics::HasLaunchOption` | relocation-equivalent: the `TEXT("")` of `FString::operator*` |
+
+Every relocation of the exact five is evidenced:
+- `FParse::Param` by its exact match;
+- `FCommandLine::Get` by corroboration;
+- each switch literal by its unique content. The two adapter-vendor twins each hold a copy of
+  the same three literals, so those resolve by literal elimination against each other.
+
+The two others each wait on a pooled `??_C@` literal of an inline function: `L"q"`, and
+`L""`. Both are too short to find by content. A second reconstructed user of the same pooled
+literal would corroborate it.
+
+Infrastructure added:
+- `Shims/FortniteGameCode/CommandLineDecls.h` declares `FCommandLine`, `FParse` and
+  `FGenericPlatformMisc`, self-contained. Both `EngineDecls.h` and translation units built
+  on the UHT shims, which have their own `FName`, can include it.
+- `FString::operator*` in `ContainersRecovered.h`.
+- `uht_classes.py` gives `UGameplayStatics` an `FNGC_EXTRA_MEMBERS_` hook (`EXTRA_MEMBERS`).
+  A hand-written TU declares the class's recovered natives through it before including
+  `UHTRecovered.h`. The same route serves the other 5,273 named native implementations.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is

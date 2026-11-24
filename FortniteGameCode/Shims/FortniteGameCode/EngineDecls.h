@@ -108,25 +108,4 @@ struct FDebug
 		} \
 	}
 
-struct FCommandLine
-{
-	static const int32 MaxCommandLineSize = 16384;
-
-	static bool IsInitialized();
-	static const TCHAR* Get();
-	static const TCHAR* GetForLogging();
-	static const TCHAR* GetOriginal();
-	static const TCHAR* GetOriginalForLogging();
-
-private:
-	static bool bIsInitialized;
-	static TCHAR CmdLine[MaxCommandLineSize];
-	static TCHAR OriginalCmdLine[MaxCommandLineSize];
-	static TCHAR LoggingCmdLine[MaxCommandLineSize];
-	static TCHAR LoggingOriginalCmdLine[MaxCommandLineSize];
-};
-
-struct FParse
-{
-	static bool Param(const TCHAR* Stream, const TCHAR* Param);
-};
+#include "FortniteGameCode/CommandLineDecls.h"

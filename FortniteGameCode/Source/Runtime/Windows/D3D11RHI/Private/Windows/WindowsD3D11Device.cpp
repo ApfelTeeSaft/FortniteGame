@@ -103,6 +103,33 @@ static bool SafeTestD3D11CreateDevice(IDXGIAdapter* Adapter, D3D_FEATURE_LEVEL M
 	return false;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x015FECE0 (end 0x015FED50)
+// Original VA: 0x00000001415FECE0 | File offset: 0x015FE2E0
+// Recovery: high-confidence inferred (UE4 name, extern; the 4.20 tree spells it "Adaper") | Matching: see analysis/functions.json
+// Evidence: FParse::Param(FCommandLine::Get(), ...) for L"preferAMD", L"preferIntel" and
+//   L"preferNvidia", returning the PCI vendor IDs 0x1002, 0x8086 and 0x10DE, else -1. Of the two
+//   such functions in the image this one lies with the D3D11RHI code (next to
+//   D3D11RHI_ShouldCreateWithD3DDebug, 0x015FEDD0); the other is D3D12RHI's (0x0164F8A0).
+int D3D11RHI_PreferAdaperVendor()
+{
+	if (FParse::Param(FCommandLine::Get(), TEXT("preferAMD")))
+	{
+		return 0x1002;
+	}
+
+	if (FParse::Param(FCommandLine::Get(), TEXT("preferIntel")))
+	{
+		return 0x8086;
+	}
+
+	if (FParse::Param(FCommandLine::Get(), TEXT("preferNvidia")))
+	{
+		return 0x10DE;
+	}
+
+	return -1;
+}
+
 // Compiler-generated SEH filter funclets of the two functions above:
 //   0x02DAE780 (end 0x02DAE7AA): filter of SafeCreateDXGIFactory. /OPT:ICF also folded the
 //     identical filter of a second parent at RVA 0x0165FEB0 into this copy.

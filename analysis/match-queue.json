@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 663,
+ "total": 665,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -272,6 +272,17 @@
     "0x007DD470 FVivoxMuteList::StaticStruct",
     "0x01993030 FLightPropagationVolumeSettings::StaticStruct",
     "0x02562FF0 FWidgetCarouselNavigationBarStyle::StaticStruct"
+   ]
+  },
+  {
+   "key": "source-function | pooled string literal (??_C@)",
+   "count": 2,
+   "states": {
+    "relocation-equivalent": 2
+   },
+   "examples": [
+    "0x01FFE540 UGameplayStatics::HasLaunchOption",
+    "0x02517390 FLauncherCheckModule::WasRanFromLauncher"
    ]
   },
   {

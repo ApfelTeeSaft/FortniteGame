@@ -7,6 +7,7 @@
 #include <delayimp.h>
 #include <dxgi1_4.h>
 
+#include "FortniteGameCode/EngineDecls.h"
 #include "FortniteGameCode/RecoveryHarness.h"
 
 static bool IsDelayLoadException(PEXCEPTION_POINTERS ExceptionPointers)
@@ -40,9 +41,36 @@ static void SafeCreateDXGIFactory(IDXGIFactory4** DXGIFactory)
 	}
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0164F8A0 (end 0x0164F910)
+// Original VA: 0x000000014164F8A0 | File offset: 0x0164EEA0
+// Recovery: high-confidence inferred (UE4 name, static inline) | Matching: see analysis/functions.json
+// Evidence: the D3D12RHI twin of D3D11RHI_PreferAdaperVendor (0x015FECE0): the same body over its
+//   own copies of L"preferAMD", L"preferIntel" and L"preferNvidia", among the D3D12RHI code. The
+//   reference keeps it out of line; the anchor table below makes this TU emit it too.
+static inline int D3D12RHI_PreferAdapterVendor()
+{
+	if (FParse::Param(FCommandLine::Get(), TEXT("preferAMD")))
+	{
+		return 0x1002;
+	}
+
+	if (FParse::Param(FCommandLine::Get(), TEXT("preferIntel")))
+	{
+		return 0x8086;
+	}
+
+	if (FParse::Param(FCommandLine::Get(), TEXT("preferNvidia")))
+	{
+		return 0x10DE;
+	}
+
+	return -1;
+}
+
 #if FNGC_MATCHING_HARNESS
 FNGC_ANCHOR_TABLE(GFngcAnchors_WindowsD3D12Device)
 {
 	(const void*)&SafeCreateDXGIFactory,
+	(const void*)&D3D12RHI_PreferAdapterVendor,
 };
 #endif

@@ -61769,6 +61769,9 @@ public:
 	static void execSpawnSoundAttached(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSuggestProjectileVelocity_CustomArc(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execUnloadStreamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UGameplayStatics
+	FNGC_EXTRA_MEMBERS_UGameplayStatics
+#endif
 };
 
 class UGameplayTagAssetInterface : public UInterface
