@@ -31,6 +31,73 @@
 #define VectorShuffle( Vec1, Vec2, X, Y, Z, W )	_mm_shuffle_ps( Vec1, Vec2, SHUFFLEMASK(X,Y,Z,W) )
 #define VectorLoadFloat3_W0( Ptr )		MakeVectorRegister( ((const float*)(Ptr))[0], ((const float*)(Ptr))[1], ((const float*)(Ptr))[2], 0.0f )
 #define VectorAnyGreaterThan( Vec1, Vec2 )		_mm_movemask_ps( _mm_cmpgt_ps(Vec1, Vec2) )
+#define VectorReciprocal(Vec)			_mm_rcp_ps(Vec)
+
+// Math/ScalarRegister.h
+class ScalarRegister
+{
+public:
+	VectorRegister Value;
+
+	__forceinline ScalarRegister() { }
+	__forceinline ScalarRegister(const ScalarRegister& VectorValue) { Value = VectorValue.Value; }
+	explicit __forceinline ScalarRegister(const float& ScalarValue) { Value = VectorLoadFloat1(&ScalarValue); }
+	explicit __forceinline ScalarRegister(VectorRegister VectorValue) { Value = VectorValue; }
+};
+
+__forceinline VectorRegister VectorReciprocalAccurate(const VectorRegister& Vec)
+{
+	// Perform two passes of Newton-Raphson iteration on the hardware estimate
+	// Initial estimate
+	const VectorRegister x0 = VectorReciprocal(Vec);
+
+	// First iteration
+	const VectorRegister x0Squared = VectorMultiply(x0, x0);
+	const VectorRegister x0Times2 = VectorAdd(x0, x0);
+	const VectorRegister x1 = VectorSubtract(x0Times2, VectorMultiply(Vec, x0Squared));
+
+	// Second iteration
+	const VectorRegister x1Squared = VectorMultiply(x1, x1);
+	const VectorRegister x1Times2 = VectorAdd(x1, x1);
+	const VectorRegister x2 = VectorSubtract(x1Times2, VectorMultiply(Vec, x1Squared));
+
+	return x2;
+}
+
+__forceinline VectorRegister VectorCross( const VectorRegister& Vec1, const VectorRegister& Vec2 )
+{
+	VectorRegister A_YZXW = _mm_shuffle_ps( Vec1, Vec1, SHUFFLEMASK(1,2,0,3) );
+	VectorRegister B_ZXYW = _mm_shuffle_ps( Vec2, Vec2, SHUFFLEMASK(2,0,1,3) );
+	VectorRegister A_ZXYW = _mm_shuffle_ps( Vec1, Vec1, SHUFFLEMASK(2,0,1,3) );
+	VectorRegister B_YZXW = _mm_shuffle_ps( Vec2, Vec2, SHUFFLEMASK(1,2,0,3) );
+	return VectorSubtract( VectorMultiply(A_YZXW,B_ZXYW), VectorMultiply(A_ZXYW, B_YZXW) );
+}
+
+// Math/UnrealMathVectorCommon.h
+__forceinline VectorRegister VectorQuaternionInverse(const VectorRegister& NormalizedQuat)
+{
+	return VectorMultiply(GlobalVectorConstants::QINV_SIGN_MASK, NormalizedQuat);
+}
+
+__forceinline VectorRegister VectorQuaternionRotateVector(const VectorRegister& Quat, const VectorRegister& VectorW0)
+{
+	// Q * V * Q.Inverse
+	// V' = V + w*(T) + (Q x T), T = 2(Q x V)
+	const VectorRegister QW = VectorReplicate(Quat, 3);
+	VectorRegister T = VectorCross(Quat, VectorW0);
+	T = VectorAdd(T, T);
+	const VectorRegister VTemp0 = VectorMultiplyAdd(QW, T, VectorW0);
+	const VectorRegister VTemp1 = VectorCross(Quat, T);
+	const VectorRegister Rotated = VectorAdd(VTemp0, VTemp1);
+	return Rotated;
+}
+
+__forceinline VectorRegister VectorQuaternionInverseRotateVector(const VectorRegister& Quat, const VectorRegister& VectorW0)
+{
+	// Q.Inverse * V * Q
+	const VectorRegister QInv = VectorQuaternionInverse(Quat);
+	return VectorQuaternionRotateVector(QInv, VectorW0);
+}
 
 __forceinline void VectorStoreFloat3( const VectorRegister& Vec, void* Ptr )
 {
@@ -66,6 +133,17 @@ __forceinline VectorRegister VectorDot4( const VectorRegister& Vec1, const Vecto
 __forceinline VectorRegister VectorSelect(const VectorRegister& Mask, const VectorRegister& Vec1, const VectorRegister& Vec2 )
 {
 	return _mm_xor_ps( Vec2, _mm_and_ps( Mask, _mm_xor_ps( Vec1, Vec2 ) ) );
+}
+
+__forceinline VectorRegister VectorReciprocalSqrtAccurate(const VectorRegister& Vec);
+
+__forceinline VectorRegister VectorNormalizeSafe( const VectorRegister& Vector, const VectorRegister& DefaultValue )
+{
+	const VectorRegister SquareSum = VectorDot4(Vector, Vector);
+	const VectorRegister NonZeroMask = VectorCompareGE(SquareSum, GlobalVectorConstants::SmallLengthThreshold);
+	const VectorRegister InvLength = VectorReciprocalSqrtAccurate(SquareSum);
+	const VectorRegister NormalizedVector = VectorMultiply(InvLength, Vector);
+	return VectorSelect(NonZeroMask, NormalizedVector, DefaultValue);
 }
 
 __forceinline VectorRegister VectorReciprocalSqrtAccurate(const VectorRegister& Vec)
@@ -157,6 +235,36 @@ __forceinline void VectorSinCos(VectorRegister* __restrict VSinAngles, VectorReg
 	*VCosAngles = VectorMultiply(C, sign);
 }
 
+__forceinline VectorRegister VectorNormalizeSafe( const VectorRegister& Vector, const VectorRegister& DefaultValue );
+
+__forceinline VectorRegister VectorNormalizeQuaternion(const VectorRegister& UnnormalizedQuat)
+{
+	return VectorNormalizeSafe(UnnormalizedQuat, GlobalVectorConstants::Float0001);
+}
+
+__forceinline VectorRegister VectorLerpQuat(const VectorRegister& A, const VectorRegister& B, const VectorRegister& Alpha)
+{
+	// Blend rotation
+	//     To ensure the 'shortest route', we make sure the dot product between the both rotations is positive.
+	//     const float Bias = (|A.B| >= 0 ? 1 : -1)
+	//     BlendedAtom.Rotation = (B * Alpha) + (A * (Bias * (1.f - Alpha)));
+	//     BlendedAtom.Rotation.QuaternionNormalize();
+	//  Note: A and B are flipped from the reference implementation, so that this function
+	//  matches FMath::Lerp(A, B, Alpha) (and BiasedQuatLerp()), which is required by other code.
+	const VectorRegister Zero = VectorZero();
+
+	const VectorRegister OneMinusAlpha = VectorSubtract(VectorOne(), Alpha);
+
+	const VectorRegister RotationDot = VectorDot4(A, B);
+	const VectorRegister QuatRotationDirMask = VectorCompareGE(RotationDot, Zero);
+	const VectorRegister NegativeA = VectorSubtract(Zero, A);
+	const VectorRegister BiasTimesA = VectorSelect(QuatRotationDirMask, A, NegativeA);
+	const VectorRegister BTimesWeight = VectorMultiply(B, Alpha);
+	const VectorRegister UnnormalizedResult = VectorMultiplyAdd(BiasTimesA, OneMinusAlpha, BTimesWeight);
+
+	return UnnormalizedResult;
+}
+
 __forceinline VectorRegister VectorQuaternionMultiply2( const VectorRegister& Quat1, const VectorRegister& Quat2 )
 {
 	VectorRegister Result = VectorMultiply(VectorReplicate(Quat1, 3), Quat2);
@@ -234,6 +342,244 @@ __forceinline bool FRotator::IsNearlyZero(float Tolerance) const
 	return !VectorAnyGreaterThan(AbsNorm, VectorLoadFloat1(&Tolerance));
 }
 
+// Math/TransformVectorized.h
+__forceinline void FTransform::ToMatrixInternal( VectorRegister& OutDiagonals, VectorRegister& OutAdds, VectorRegister& OutSubtracts ) const
+{
+	const VectorRegister RotationX2Y2Z2 = VectorAdd(Rotation, Rotation);	// x2, y2, z2
+	const VectorRegister RotationXX2YY2ZZ2 = VectorMultiply(RotationX2Y2Z2, Rotation);	// xx2, yy2, zz2
+
+	// The diagonal terms of the rotation matrix are:
+	//   (1 - (yy2 + zz2)) * scale
+	//   (1 - (xx2 + zz2)) * scale
+	//   (1 - (xx2 + yy2)) * scale
+	const VectorRegister yy2_xx2_xx2 = VectorSwizzle(RotationXX2YY2ZZ2, 1, 0, 0, 0);
+	const VectorRegister zz2_zz2_yy2 = VectorSwizzle(RotationXX2YY2ZZ2, 2, 2, 1, 0);
+	const VectorRegister DiagonalSum = VectorAdd(yy2_xx2_xx2, zz2_zz2_yy2);
+	const VectorRegister Diagonals = VectorSubtract(VectorOne(), DiagonalSum);
+	OutDiagonals = VectorMultiply(Diagonals, Scale3D);
+
+	// Grouping the non-diagonal elements in the rotation block by operations:
+	//    ((x*y2,y*z2,x*z2) + (w*z2,w*x2,w*y2)) * scale.xyz and
+	//    ((x*y2,y*z2,x*z2) - (w*z2,w*x2,w*y2)) * scale.yxz
+	// Rearranging so the LHS and RHS are in the same order as for +
+	//    ((x*y2,y*z2,x*z2) - (w*z2,w*x2,w*y2)) * scale.yxz
+
+	// RotBase = x*y2, y*z2, x*z2
+	// RotOffset = w*z2, w*x2, w*y2
+	const VectorRegister x_y_x = VectorSwizzle(Rotation, 0, 1, 0, 0);
+	const VectorRegister y2_z2_z2 = VectorSwizzle(RotationX2Y2Z2, 1, 2, 2, 0);
+	const VectorRegister RotBase = VectorMultiply(x_y_x, y2_z2_z2);
+
+	const VectorRegister w_w_w = VectorReplicate(Rotation, 3);
+	const VectorRegister z2_x2_y2 = VectorSwizzle(RotationX2Y2Z2, 2, 0, 1, 0);
+	const VectorRegister RotOffset = VectorMultiply(w_w_w, z2_x2_y2);
+
+	// Adds = (RotBase + RotOffset)*Scale3D :  (x*y2 + w*z2) * Scale3D.X , (y*z2 + w*x2) * Scale3D.Y, (x*z2 + w*y2) * Scale3D.Z
+	// Subtracts = (RotBase - RotOffset)*Scale3DYZX :  (x*y2 - w*z2) * Scale3D.Y , (y*z2 - w*x2) * Scale3D.Z, (x*z2 - w*y2) * Scale3D.X
+	const VectorRegister Adds = VectorAdd(RotBase, RotOffset);
+	OutAdds = VectorMultiply(Adds, Scale3D);
+	const VectorRegister Scale3DYZXW = VectorSwizzle( Scale3D, 1, 2, 0, 3);
+	const VectorRegister Subtracts = VectorSubtract(RotBase, RotOffset);
+	OutSubtracts = VectorMultiply(Subtracts , Scale3DYZXW);
+}
+
+__forceinline FMatrix FTransform::ToMatrixWithScale() const
+{
+	FMatrix OutMatrix;
+	VectorRegister DiagonalsXYZ;
+	VectorRegister Adds;
+	VectorRegister Subtracts;
+
+	ToMatrixInternal( DiagonalsXYZ, Adds, Subtracts );
+	const VectorRegister DiagonalsXYZ_W0 = VectorSet_W0(DiagonalsXYZ);
+
+	// OutMatrix.M[0][0] = (1.0f - (yy2 + zz2)) * Scale.X;    // Diagonal.X
+	// OutMatrix.M[0][1] = (xy2 + wz2) * Scale.X;             // Adds.X
+	// OutMatrix.M[0][2] = (xz2 - wy2) * Scale.X;             // Subtracts.Z
+	// OutMatrix.M[0][3] = 0.0f;                              // DiagonalsXYZ_W0.W
+	const VectorRegister AddX_DC_DiagX_DC = VectorShuffle(Adds, DiagonalsXYZ_W0, 0, 0, 0, 0);
+	const VectorRegister SubZ_DC_DiagW_DC = VectorShuffle(Subtracts, DiagonalsXYZ_W0, 2, 0, 3, 0);
+	const VectorRegister Row0 = VectorShuffle(AddX_DC_DiagX_DC, SubZ_DC_DiagW_DC, 2, 0, 0, 2);
+
+	// OutMatrix.M[1][0] = (xy2 - wz2) * Scale.Y;             // Subtracts.X
+	// OutMatrix.M[1][1] = (1.0f - (xx2 + zz2)) * Scale.Y;    // Diagonal.Y
+	// OutMatrix.M[1][2] = (yz2 + wx2) * Scale.Y;             // Adds.Y
+	// OutMatrix.M[1][3] = 0.0f;                              // DiagonalsXYZ_W0.W
+	const VectorRegister SubX_DC_DiagY_DC = VectorShuffle(Subtracts, DiagonalsXYZ_W0, 0, 0, 1, 0);
+	const VectorRegister AddY_DC_DiagW_DC = VectorShuffle(Adds, DiagonalsXYZ_W0, 1, 0, 3, 0);
+	const VectorRegister Row1 = VectorShuffle(SubX_DC_DiagY_DC, AddY_DC_DiagW_DC, 0, 2, 0, 2);
+
+	// OutMatrix.M[2][0] = (xz2 + wy2) * Scale.Z;             // Adds.Z
+	// OutMatrix.M[2][1] = (yz2 - wx2) * Scale.Z;             // Subtracts.Y
+	// OutMatrix.M[2][2] = (1.0f - (xx2 + yy2)) * Scale.Z;    // Diagonals.Z
+	// OutMatrix.M[2][3] = 0.0f;                              // DiagonalsXYZ_W0.W
+	const VectorRegister AddZ_DC_SubY_DC = VectorShuffle(Adds, Subtracts, 2, 0, 1, 0);
+	const VectorRegister Row2 = VectorShuffle(AddZ_DC_SubY_DC, DiagonalsXYZ_W0, 0, 2, 2, 3);
+
+	VectorStoreAligned(Row0, &(OutMatrix.M[0][0]));
+	VectorStoreAligned(Row1, &(OutMatrix.M[1][0]));
+	VectorStoreAligned(Row2, &(OutMatrix.M[2][0]));
+
+	// OutMatrix.M[3][0] = Translation.X;
+	// OutMatrix.M[3][1] = Translation.Y;
+	// OutMatrix.M[3][2] = Translation.Z;
+	// OutMatrix.M[3][3] = 1.0f;
+	const VectorRegister Row3 = VectorSet_W1(Translation);
+	VectorStoreAligned(Row3, &(OutMatrix.M[3][0]));
+
+	return OutMatrix;
+}
+
+__forceinline VectorRegister FTransform::GetSafeScaleReciprocal(const VectorRegister& InScale, const ScalarRegister& Tolerance = ScalarRegister(GlobalVectorConstants::SmallNumber))
+{
+	// SafeReciprocalScale.X = (InScale.X == 0) ? 0.f : 1/InScale.X; // same for YZW
+	VectorRegister SafeReciprocalScale;
+
+	/// VectorRegister( 1.0f / InScale.x, 1.0f / InScale.y, 1.0f / InScale.z, 1.0f / InScale.w )
+	const VectorRegister ReciprocalScale = VectorReciprocalAccurate(InScale);
+
+	//VectorRegister( Vec1.x == Vec2.x ? 0xFFFFFFFF : 0, same for yzw )
+	const VectorRegister ScaleZeroMask = VectorCompareGE(Tolerance.Value, VectorAbs(InScale));
+
+	// VectorRegister( for each bit i: Mask[i] ? Vec1[i] : Vec2[i] )
+	SafeReciprocalScale = VectorSelect(ScaleZeroMask, VectorZero(), ReciprocalScale);
+
+	return SafeReciprocalScale;
+}
+
+__forceinline FVector FTransform::InverseTransformPosition(const FVector &V) const
+{
+	const VectorRegister InputVector = VectorLoadFloat3_W0(&V);
+
+	// (V-Translation)
+	const VectorRegister TranslatedVec = VectorSet_W0(VectorSubtract(InputVector, Translation));
+
+	// ( Rotation.Inverse() * (V-Translation) )
+	const VectorRegister VR = VectorQuaternionInverseRotateVector(Rotation, TranslatedVec);
+
+	// GetSafeScaleReciprocal(Scale3D);
+	const VectorRegister SafeReciprocal = GetSafeScaleReciprocal(Scale3D);
+
+	// ( Rotation.Inverse() * (V-Translation) ) * GetSafeScaleReciprocal(Scale3D);
+	const VectorRegister VResult = VectorMultiply(VR, SafeReciprocal);
+
+	FVector Result;
+	VectorStoreFloat3(VResult, &Result);
+	return Result;
+}
+
+// Specialization of Lerp template that works with vector registers (UnrealMathVectorCommon.h)
+template<> __forceinline VectorRegister FMath::Lerp(const VectorRegister& A, const VectorRegister& B, const VectorRegister& Alpha)
+{
+	const VectorRegister Delta = VectorSubtract(B, A);
+	return VectorMultiplyAdd(Alpha, Delta, A);
+}
+
+__forceinline FTransform::FTransform(const FQuat& InRotation, const FVector& InTranslation, const FVector& InScale3D)
+{
+	// Rotation = InRotation
+	Rotation =  VectorLoadAligned( &InRotation.X );
+	// Translation = InTranslation
+	Translation = MakeVectorRegister(InTranslation.X, InTranslation.Y, InTranslation.Z, 0.0f );
+	// Scale3D = InScale3D
+	Scale3D = MakeVectorRegister(InScale3D.X, InScale3D.Y, InScale3D.Z, 0.0f );
+}
+
+__forceinline void FTransform::NormalizeRotation()
+{
+	Rotation = VectorNormalizeQuaternion(Rotation);
+}
+
+__forceinline void FTransform::Blend(const FTransform& Atom1, const FTransform& Atom2, float Alpha)
+{
+	if( FMath::Abs(Alpha) <= ZERO_ANIMWEIGHT_THRESH )
+	{
+		// if blend is all the way for child1, then just copy its bone atoms
+		(*this) = Atom1;
+	}
+	else if( FMath::Abs(Alpha - 1.0f) <= ZERO_ANIMWEIGHT_THRESH )
+	{
+		// if blend is all the way for child2, then just copy its bone atoms
+		(*this) = Atom2;
+	}
+	else
+	{
+		// Simple linear interpolation for translation and scale.
+		ScalarRegister BlendWeight = ScalarRegister(Alpha);
+
+		Translation = FMath::Lerp(Atom1.Translation, Atom2.Translation, BlendWeight.Value);
+		Scale3D = FMath::Lerp(Atom1.Scale3D, Atom2.Scale3D, BlendWeight.Value);
+
+		VectorRegister VRotation = VectorLerpQuat(Atom1.Rotation, Atom2.Rotation, BlendWeight.Value);
+
+		// ..and renormalize
+		Rotation = VectorNormalizeQuaternion(VRotation);
+	}
+}
+
+__forceinline FRotator FTransform::Rotator() const
+{
+	FQuat OutRotation;
+	VectorStoreAligned(Rotation, &OutRotation);
+	return OutRotation.Rotator();
+}
+
+__forceinline void FTransform::SetRotation(const FQuat& NewRotation)
+{
+	Rotation = VectorLoadAligned(&NewRotation);
+}
+
+__forceinline void FTransform::SetTranslation(const FVector& NewTranslation)
+{
+	Translation = VectorLoadFloat3_W0(&NewTranslation);
+}
+
+__forceinline void FTransform::SetScale3D(const FVector& NewScale3D)
+{
+	Scale3D = VectorLoadFloat3_W0(&NewScale3D);
+}
+
+__forceinline FVector FTransform::GetTranslation() const
+{
+	FVector OutTranslation;
+	VectorStoreFloat3(Translation, &OutTranslation);
+	return OutTranslation;
+}
+
+__forceinline FVector FTransform::GetScale3D() const
+{
+	FVector OutScale3D;
+	VectorStoreFloat3(Scale3D, &OutScale3D);
+	return OutScale3D;
+}
+
+__forceinline FVector FTransform::TransformVectorNoScale(const FVector& V) const
+{
+	const VectorRegister InputVectorW0 = VectorLoadFloat3_W0(&V);
+
+	//RotatedVec = Q.Rotate(V.X, V.Y, V.Z, 0.f)
+	const VectorRegister RotatedVec = VectorQuaternionRotateVector(Rotation, InputVectorW0);
+
+	FVector Result;
+	VectorStoreFloat3(RotatedVec, &Result);
+	return Result;
+}
+
+// x = 0, y = 1, z = 2
+__forceinline FVector FTransform::GetUnitAxis( EAxis::Type InAxis ) const
+{
+	if ( InAxis == EAxis::X )
+	{
+		return TransformVectorNoScale(FVector(1.f, 0.f, 0.f));
+	}
+	else if ( InAxis == EAxis::Y )
+	{
+		return TransformVectorNoScale(FVector(0.f, 1.f, 0.f));
+	}
+
+	return TransformVectorNoScale(FVector(0.f, 0.f, 1.f));
+}
+
 __forceinline FQuat FTransform::GetRotation() const
 {
 	FQuat OutRotation;
@@ -250,3 +596,57 @@ __forceinline FQuat FTransform::InverseTransformRotation(const FQuat& Q) const
 {
 	return GetRotation().Inverse() * Q;
 }
+
+// Math/DualQuat.h. The constructor from an FTransform is inline there; the reference keeps an
+// out-of-line copy in UKismetMathLibrary's object (0x0206EDB0), as this does.
+struct FDualQuat
+{
+	/** rotation or real part */
+	FQuat R;
+	/** half trans or dual part */
+	FQuat D;
+
+	// Constructors
+	FDualQuat(const FQuat &InR, const FQuat &InD)
+		: R(InR)
+		, D(InD)
+	{}
+
+	FDualQuat(const FTransform &T)
+	{
+		FVector V = T.GetTranslation()*0.5f;
+		*this = FDualQuat(FQuat(0, 0, 0, 1), FQuat(V.X, V.Y, V.Z, 0.f)) * FDualQuat(T.GetRotation(), FQuat(0, 0, 0, 0));
+	}
+
+	/** Dual quat addition */
+	FDualQuat operator+(const FDualQuat &B) const
+	{
+		return{ R + B.R, D + B.D };
+	}
+
+	/** Dual quat product */
+	FDualQuat operator*(const FDualQuat &B) const
+	{
+		return{ R*B.R, D*B.R + B.D*R };
+	}
+
+	/** Scale dual quat */
+	FDualQuat operator*(const float S) const
+	{
+		return{ R*S, D*S };
+	}
+
+	/** Return normalized dual quat */
+	FDualQuat Normalized() const
+	{
+		float MinV = 1.0f / FMath::Sqrt(R | R);
+		return{ R*MinV, D*MinV };
+	}
+
+	/** Convert dual quat to transform */
+	FTransform AsFTransform(FVector Scale)   // = FVector(1.0f, 1.0f, 1.0f) in 4.20
+	{
+		FQuat TQ = D*FQuat(-R.X, -R.Y, -R.Z, R.W);
+		return FTransform(R, FVector(TQ.X, TQ.Y, TQ.Z)*2.0f, Scale);
+	}
+};

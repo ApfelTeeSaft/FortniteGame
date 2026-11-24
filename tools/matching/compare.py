@@ -707,9 +707,14 @@ class Resolver:
         return [(free[0], f"record-bracketed slot: the one free slot between {prev}'s and {nxt}'s statics, "
                           "whose FClassParams records bracket this package's FPackageParams in .rdata")]
 
-    _REAL = re.compile(r"__real@([0-9a-f]{8}|[0-9a-f]{16})$")
+    _REAL = re.compile(r"__(?:real@([0-9a-f]{8}|[0-9a-f]{16})|xmm@([0-9a-f]{32}))$")
     # Scalar SSE opcodes (after 0F) that read a float/double memory operand.
     _SCALAR_OPS = {0x10, 0x51, 0x58, 0x59, 0x5C, 0x5D, 0x5E, 0x5F}
+    # Packed SSE opcodes (after 0F) that read a 16-byte memory operand: movups/movaps and the
+    # arithmetic and logic ops (no prefix: ps forms), and with a 66 prefix movapd and the integer
+    # movdqa/pand/pandn/por/pxor/paddd/psubd/pcmpeqd/pcmpgtd.
+    _PACKED_OPS = {0x10, 0x28} | set(range(0x54, 0x60))
+    _PACKED_OPS_66 = {0x28, 0x6F, 0xDB, 0xDF, 0xEB, 0xEF, 0xFE, 0xFA, 0x66, 0x76}
 
     def _pooled_constant(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
         """A pooled floating-point constant (__real@<hex>, MSVC's COMDAT for a float or double
@@ -723,12 +728,17 @@ class Resolver:
         When several copies are loaded that way, the pooled one is shared by every unit using the
         literal, while a unit-local constant of the same value serves only its own unit. The copy
         then counts only if scalar code in at least POOLED_MIN functions loads it, and in at least
-        POOLED_DOMINANCE times as many functions as the next copy (-1.0: 883 against 26)."""
+        POOLED_DOMINANCE times as many functions as the next copy (-1.0: 883 against 26).
+
+        __xmm@<hex> (a 16-byte vector constant; the name is the value, highest lane first) is
+        treated the same way with packed loads (movaps, andps, mulps, pxor, ...): a unit vector
+        such as (0,1,0,0) has many aligned copies inside tables, and one that code loads."""
         m = self._REAL.match(symbol)
         if m is None or getattr(self, "hay", None) is None:
             return []
-        size = len(m.group(1)) // 2
-        pat = int(m.group(1), 16).to_bytes(size, "little")
+        hexval = m.group(1) or m.group(2)
+        size = len(hexval) // 2
+        pat = int(hexval, 16).to_bytes(size, "little")
         cache = self.__dict__.setdefault("_constant_copies", {})
         copies = cache.get(pat)
         if copies is None:
@@ -743,7 +753,7 @@ class Resolver:
         refs = self._scalar_refs(size)
         lo, hi = getattr(self, "entry_ranges", {}).get(exclude, (0, 0))
         used = [c for c in copies if any(not lo <= s < hi for s in refs.get(c, ()))]
-        kind = "float" if size == 4 else "double"
+        kind = {4: "float", 8: "double", 16: "packed"}[size]
         if len(used) == 1:
             return [(used[0], f"pooled constant: of {len(copies)} copies of its value, the only one scalar {kind} "
                               "code (outside this function) loads")]
@@ -776,6 +786,8 @@ class Resolver:
         all_refs = self.__dict__.setdefault("_scalar_ref_index", {})
         if size in all_refs:
             return all_refs[size]
+        if size == 16:
+            return all_refs.setdefault(16, self._packed_refs())
         out: dict[int, list[int]] = {}
         img, dimg = getattr(self, "img", None), getattr(self, "dimg", None)
         if img is not None and dimg is not None:
@@ -797,6 +809,32 @@ class Resolver:
                     t = text.rva + q + 5 + int.from_bytes(code[q + 1:q + 5], "little", signed=True)
                     out.setdefault(t, []).append(text.rva + q)
         all_refs[size] = out
+        return out
+
+    def _packed_refs(self) -> dict[int, list[int]]:
+        """Targets of rip-relative packed SSE loads (16-byte operands) in the decrypted .text ->
+        the ModRM positions that load them. Opcodes with an immediate (shufps, cmpps) are left
+        out, so every target is next-instruction + disp32."""
+        out: dict[int, list[int]] = {}
+        img, dimg = getattr(self, "img", None), getattr(self, "dimg", None)
+        if img is None or dimg is None:
+            return out
+        text = img.sections[0]
+        code = dimg.read(text.rva, text.vsize)
+        for mm in re.finditer(rb"[\x05\x0d\x15\x1d\x25\x2d\x35\x3d]", code):
+            q = mm.start()
+            if q < 3 or q + 5 > len(code) or code[q - 2] != 0x0F:
+                continue
+            op, pre = code[q - 1], q - 3
+            if 0x40 <= code[pre] <= 0x4F:   # REX
+                pre -= 1
+            if code[pre] == 0x66:
+                ok = op in self._PACKED_OPS_66
+            else:
+                ok = op in self._PACKED_OPS and code[pre] not in (0xF2, 0xF3)
+            if ok:
+                t = text.rva + q + 5 + int.from_bytes(code[q + 1:q + 5], "little", signed=True)
+                out.setdefault(t, []).append(text.rva + q)
         return out
 
     def _run_of(self, member: str) -> int | None:

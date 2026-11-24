@@ -9,9 +9,9 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **37,146 / 157,719** primary `.pdata` functions (23.55 %, 2,554,030 bytes):
+| Exact functions | **37,155 / 157,719** primary `.pdata` functions (23.56 %, 2,559,555 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
-- 99 hand-reconstructed functions matching the decrypted image;
+- 108 hand-reconstructed functions matching the decrypted image;
 - 53 generated GameplayAbilities attribute getters (`tools/codegen/attribute_getters.py`);
 - 36,992 generated UHT functions:
   - classes: 11,095 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,796 `GetPrivateStaticClass`,
@@ -22,8 +22,8 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
     2,101 `StaticRegisterNatives` and 2,106 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,088 `Z_Construct_UEnum_*`, 1,016 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
-Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,215 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 170 vector-constant initializers, `FCommandLine::IsInitialized`, 30 hand-written leaves without `.pdata` (Kismet math, `FmodReportError`) and 24 dynamic initializers of the Kismet and UnrealMath units |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,838 reconstructed and compiled; 37,146 exact; 692 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,215 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 170 vector-constant initializers, `FCommandLine::IsInitialized`, 30 hand-written leaves without `.pdata` (Kismet math, `FmodReportError`) and 30 dynamic initializers of the Kismet and UnrealMath units |
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,847 reconstructed and compiled; 37,155 exact; 692 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
 | Relocation-equivalent | 688 in the denominator, mostly:
 - 487 `GetPrivateStaticClass` bodies, 453 of them waiting only on `InternalConstructor<C>`;
 - 25 registrars and `StaticStruct`s waiting on string-literal copies;
@@ -68,9 +68,11 @@ Largest queue groups (2026-11-24):
   by their switch literal in the 4.20 tree (`docs/REVERSE_ENGINEERING.md`, "Fourth family").
   Thread-safe statics resolve only within reconstructed clusters of neighbouring functions
   ("Thread-safe statics"); most remaining checks need their neighbours or class members.
-- Kismet math: 53 of the 149 `UKismetMathLibrary` native targets remain (39 with `.pdata`):
-  `FTransform` code (`TransformVectorized.h`), the other vectorized `FRotator` helpers, dates
-  and times (`docs/REVERSE_ENGINEERING.md`, "Eighth family").
+- Kismet math: 47 of the 149 `UKismetMathLibrary` native targets remain (33 with `.pdata`).
+  Among them are dates and times (`FDateTime`, `FTimespan` parsing), the colour conversions,
+  `FixedTurn`/`ClampAngle`, the spring interpolators and `MinimumAreaRectangle`. Four are
+  `.inl` copies in the generated Engine unity object (`docs/REVERSE_ENGINEERING.md`, "Ninth
+  family").
 - 25 attribute getters waiting on their static: their reference run follows an object's first
   use, not declaration order ("Attribute getters").
 - 453 `GetPrivateStaticClass` bodies waiting only on `InternalConstructor<C>`. 374 of the
@@ -93,6 +95,10 @@ Largest queue groups (2026-11-24):
   are single objects whose data comes in batches; that is not modelled.
 
 Done (2026-11-24):
+- FTransform natives: 9 hand-written functions, all exact. Among them `TLerp` (2,364 bytes),
+  `TEase`, `TInterpTo`, `Transform_Determinant`, `IsPointInBoxWithTransform` and
+  `GetAzimuthAndElevation`, with `FDualQuat::operator*` and `FMatrix::Determinant`. The
+  pooled-constant rule now covers 16-byte `__xmm@` constants by packed loads. No regressions.
 - UnrealMath's 24 `GlobalVectorConstants`, defined in header order with their initializers as
   entries (13 exact). With them, 7 more functions are exact: `FRotator::Quaternion`,
   `FMath::RInterpTo`/`RInterpConstantTo`, `FQuat::FindBetweenNormals`/`FindBetweenVectors`,

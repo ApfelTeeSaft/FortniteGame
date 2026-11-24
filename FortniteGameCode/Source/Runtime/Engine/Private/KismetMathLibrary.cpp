@@ -25,6 +25,16 @@ namespace EEasingFunc
 	};
 }
 
+namespace ELerpInterpolationMode
+{
+	enum Type
+	{
+		QuatInterp,
+		EulerInterp,
+		DualQuatInterp
+	};
+}
+
 // Hand-written natives of UKismetMathLibrary, declared in its generated class body
 // (tools/codegen/uht_classes.py, EXTRA_MEMBERS).
 #define FNGC_EXTRA_MEMBERS_UKismetMathLibrary \
@@ -91,6 +101,13 @@ namespace EEasingFunc
 	static FRotator RotatorFromAxisAndAngle(FVector Axis, float Angle); \
 	static FRotator MakeRotationFromAxes(FVector Forward, FVector Right, FVector Up); \
 	static FVector RotateAngleAxis(FVector InVect, float AngleDeg, FVector Axis); \
+	static FTransform TLerp(const FTransform& A, const FTransform& B, float Alpha, TEnumAsByte<ELerpInterpolationMode::Type> InterpMode = ELerpInterpolationMode::QuatInterp); \
+	static FTransform TEase(const FTransform& A, const FTransform& B, float Alpha, TEnumAsByte<EEasingFunc::Type> EasingFunc, float BlendExp = 2, int32 Steps = 2); \
+	static FTransform TInterpTo(const FTransform& Current, const FTransform& Target, float DeltaTime, float InterpSpeed); \
+	static float Transform_Determinant(const FTransform& Transform); \
+	static bool IsPointInBoxWithTransform(FVector Point, const FTransform& BoxWorldTransform, FVector BoxExtent); \
+	static float FClamp(float Value, float Min, float Max); \
+	static void GetAzimuthAndElevation(FVector InDirection, const FTransform& ReferenceFrame, float& Azimuth, float& Elevation); \
 	static void ReportError_Divide_ByteByte(); \
 	static void ReportError_Percent_ByteByte(); \
 	static void ReportError_Divide_IntInt(); \
@@ -149,6 +166,11 @@ __forceinline float UKismetMathLibrary::Lerp(float A, float B, float V)
 __forceinline FVector UKismetMathLibrary::VLerp(FVector A, FVector B, float V)
 {
 	return A + V*(B-A);
+}
+
+__forceinline float UKismetMathLibrary::FClamp(float V, float A, float B)
+{
+	return FMath::Clamp(V, A, B);
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0207AC60 (end 0x0207B080)
@@ -1065,6 +1087,116 @@ FRotator UKismetMathLibrary::MakeRotationFromAxes(FVector Forward, FVector Right
 FVector  UKismetMathLibrary::RotateAngleAxis(FVector InVect, float AngleDeg, FVector Axis)
 {
 	return InVect.RotateAngleAxis(AngleDeg, Axis.GetSafeNormal());
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02093D00 (end 0x0209463C)
+// Original VA: 0x0000000142093D00 | File offset: 0x02093300
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execTLerp; both rotations normalized (VectorNormalizeQuaternion), then FTransform::Blend,
+//   the Euler path (FQuat::Rotator 0x011A2050 twice, RLerp inlined, FRotator::Quaternion 0x011A0970)
+//   or the dual-quaternion path (the out-of-line FDualQuat(const FTransform&), 0x0206EDB0).
+FTransform UKismetMathLibrary::TLerp(const FTransform& A, const FTransform& B, float Alpha, TEnumAsByte<ELerpInterpolationMode::Type> LerpInterpolationMode)
+{
+	FTransform Result;
+
+	FTransform NA = A;
+	FTransform NB = B;
+	NA.NormalizeRotation();
+	NB.NormalizeRotation();
+
+	// Quaternion interpolation
+	if (LerpInterpolationMode == ELerpInterpolationMode::QuatInterp)
+	{
+		Result.Blend(NA, NB, Alpha);
+		return Result;
+	}
+	// Euler Angle interpolation
+	else if (LerpInterpolationMode == ELerpInterpolationMode::EulerInterp)
+	{
+		Result.SetTranslation(FMath::Lerp(NA.GetTranslation(), NB.GetTranslation(), Alpha));
+		Result.SetScale3D(FMath::Lerp(NA.GetScale3D(), NB.GetScale3D(), Alpha));
+		Result.SetRotation(FQuat(RLerp(NA.Rotator(), NB.Rotator(), Alpha, false)));
+		return Result;
+	}
+	// Dual quaternion interpolation
+	else
+	{
+		if ((NB.GetRotation() | NA.GetRotation()) < 0.0f)
+		{
+			NB.SetRotation(NB.GetRotation()*-1.0f);
+		}
+		return (FDualQuat(NA)*(1 - Alpha) + FDualQuat(NB)*Alpha).Normalized().AsFTransform(FMath::Lerp(NA.GetScale3D(), NB.GetScale3D(), Alpha));
+	}
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02093C20 (end 0x02093C86)
+// Original VA: 0x0000000142093C20 | File offset: 0x02093220
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execTEase; EaseAlpha (0x0207AC60), then UKismetMathLibrary::TLerp (0x02093D00),
+//   with the default QuatInterp mode by reference.
+FTransform UKismetMathLibrary::TEase(const FTransform& A, const FTransform& B, float Alpha, TEnumAsByte<EEasingFunc::Type> EasingFunc, float BlendExp, int32 Steps)
+{
+	return TLerp(A, B, EaseAlpha(Alpha, EasingFunc, BlendExp, Steps));
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02093C90 (end 0x02093CFD)
+// Original VA: 0x0000000142093C90 | File offset: 0x02093290
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execTInterpTo; Target for a non-positive speed, else UKismetMathLibrary::TLerp (0x02093D00)
+//   with the clamped alpha.
+FTransform UKismetMathLibrary::TInterpTo(const FTransform& Current, const FTransform& Target, float DeltaTime, float InterpSpeed)
+{
+	if (InterpSpeed <= 0.f)
+	{
+		return Target;
+	}
+
+	const float Alpha = FClamp(DeltaTime * InterpSpeed, 0.f, 1.f);
+
+	return TLerp(Current, Target, Alpha);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02094D80 (end 0x02094E52)
+// Original VA: 0x0000000142094D80 | File offset: 0x02094380
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execTransform_Determinant; the vectorized FTransform::ToMatrixWithScale (FloatOne, XYZMask),
+//   then the out-of-line FMatrix::Determinant (0x0064F030).
+float UKismetMathLibrary::Transform_Determinant(const FTransform& Transform)
+{
+	return Transform.ToMatrixWithScale().Determinant();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02085F20 (end 0x02086082)
+// Original VA: 0x0000000142085F20 | File offset: 0x02085520
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execIsPointInBoxWithTransform; FTransform::InverseTransformPosition (QINV_SIGN_MASK, XYZMask,
+//   SignMask, SmallNumber), then the box test.
+bool UKismetMathLibrary::IsPointInBoxWithTransform(FVector Point, const FTransform& BoxWorldTransform, FVector BoxExtent)
+{
+	// Put point in component space
+	const FVector PointInComponentSpace = BoxWorldTransform.InverseTransformPosition(Point);
+	// Now it's just a normal point-in-box test, with a box at the origin.
+	const FBox Box(-BoxExtent, BoxExtent);
+	return Box.IsInsideOrOn(PointInComponentSpace);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207FDA0 (end 0x02080037)
+// Original VA: 0x000000014207FDA0 | File offset: 0x0207F3A0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execGetAzimuthAndElevation; the direction's safe normal and the frame's three unit axes
+//   (FTransform::TransformVectorNoScale), then FMath::GetAzimuthAndElevation (0x01194110).
+void UKismetMathLibrary::GetAzimuthAndElevation(FVector InDirection, const FTransform& ReferenceFrame, float& Azimuth, float& Elevation)
+{
+	FVector2D Result = FMath::GetAzimuthAndElevation
+	(
+		InDirection.GetSafeNormal(),
+		ReferenceFrame.GetUnitAxis(EAxis::X),
+		ReferenceFrame.GetUnitAxis(EAxis::Y),
+		ReferenceFrame.GetUnitAxis(EAxis::Z)
+	);
+
+	Azimuth = FMath::RadiansToDegrees(Result.X);
+	Elevation = FMath::RadiansToDegrees(Result.Y);
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0208D930 (end 0x0208D947)

@@ -7,8 +7,13 @@
 #pragma once
 
 #include "FortniteGameCode/VectorRecovered.h"
+#include "FortniteGameCode/AxisRecovered.h"
 
 struct FQuat;   // MathDecls.h; the unity units include this header before it
+struct FVector;
+struct FMatrix;
+struct FRotator;
+class ScalarRegister;   // QuatRecovered.h
 
 #define VectorZero()					_mm_setzero_ps()
 #define VectorOne()						(GlobalVectorConstants::FloatOne)
@@ -62,4 +67,21 @@ public:
 	FQuat GetRotation() const;
 	FQuat TransformRotation(const FQuat& Q) const;
 	FQuat InverseTransformRotation(const FQuat& Q) const;
+	void ToMatrixInternal( VectorRegister& OutDiagonals, VectorRegister& OutAdds, VectorRegister& OutSubtracts ) const;
+	FMatrix ToMatrixWithScale() const;
+	FVector InverseTransformPosition(const FVector &V) const;
+	// The default Tolerance (ScalarRegister(GlobalVectorConstants::SmallNumber)) is given with the
+	// definition, after the unit's constants.
+	static VectorRegister GetSafeScaleReciprocal(const VectorRegister& InScale, const ScalarRegister& Tolerance);
+	FTransform(const FQuat& InRotation, const FVector& InTranslation, const FVector& InScale3D);
+	void NormalizeRotation();
+	void Blend(const FTransform& Atom1, const FTransform& Atom2, float Alpha);
+	FRotator Rotator() const;
+	void SetRotation(const FQuat& NewRotation);
+	void SetTranslation(const FVector& NewTranslation);
+	void SetScale3D(const FVector& NewScale3D);
+	FVector GetTranslation() const;
+	FVector GetScale3D() const;
+	FVector TransformVectorNoScale(const FVector& V) const;
+	FVector GetUnitAxis( EAxis::Type InAxis ) const;
 };

@@ -90,7 +90,8 @@ same import, and the manifest records which.
     outside the function under test loads: `movss`/`addss`/`mulss`/... or `comiss`/`ucomiss`
     with a rip-relative operand. Other copies are table fields or lanes of vector constants.
     When scalar code loads several copies, the one loaded by at least 10 functions and by at
-    least 10 times as many functions as the next copy;
+    least 10 times as many functions as the next copy. 16-byte `__xmm@` constants use the same
+    rule with packed loads (`movaps`, `andps`, `mulps`, `pxor`, ...);
   - `__ImageBase` (linker-defined, RVA 0), and a label inside the function under test (a jump
     table's `$LN` case labels), placed from the function's own start as a branch inside it is;
   - an already-exact function, iterated to a fixpoint;
@@ -550,6 +551,50 @@ Still open in this unit:
 - `FQuat::CalcTangents` calls `FQuat::Log`/`Exp`;
 - the `FTransform` functions (`GetRelativeTransform` and others) need more of
   `TransformVectorized.h`.
+
+## Ninth family: FTransform natives (2026-11-24)
+
+| RVA | Function | Notes |
+| --- | --- | --- |
+| `0x02093D00` | `UKismetMathLibrary::TLerp` | 2,364 bytes. Both rotations are normalized (`VectorNormalizeQuaternion`), then one of three paths: `FTransform::Blend`, the Euler path (`RLerp` inlined), or the dual-quaternion path |
+| `0x0206EDB0` | `FDualQuat::operator*(const FDualQuat&)` | The out-of-line product called by the two inlined `FDualQuat(const FTransform&)` in `TLerp`. Inline in `DualQuat.h`; the Kismet object emits it, sorted first among its COMDATs (`??D`) |
+| `0x02093C20` | `UKismetMathLibrary::TEase` | `EaseAlpha`, then `TLerp` |
+| `0x02093C90` | `UKismetMathLibrary::TInterpTo` | `TLerp` with the clamped alpha (`UKismetMathLibrary::FClamp`) |
+| `0x02094D80` | `UKismetMathLibrary::Transform_Determinant` | The vectorized `ToMatrixWithScale`, then the out-of-line `FMatrix::Determinant` |
+| `0x0064F030` | `FMatrix::Determinant` | Inline in `Matrix.inl`; the reference calls one out-of-line copy. `UnrealMath.cpp` emits it through a member pointer |
+| `0x02085F20` | `UKismetMathLibrary::IsPointInBoxWithTransform` | `FTransform::InverseTransformPosition` (`VectorQuaternionInverseRotateVector`, `GetSafeScaleReciprocal`) |
+| `0x0207FDA0` | `UKismetMathLibrary::GetAzimuthAndElevation` | The frame's unit axes (`TransformVectorNoScale`), then the Core function |
+| `0x01194110` | `FMath::GetAzimuthAndElevation` | Sorts between `FixedTurn` and `FRotator::GetInverse` |
+
+All 9 are exact and in the denominator. The quick check matched every one outside its
+relocation fields on the first build, `TLerp` included. Six more Kismet constant initializers
+are now exact, because these functions read their constants.
+
+The transform code is the 4.20 `TransformVectorized.h` and `DualQuat.h` forms, added to
+`QuatRecovered.h`:
+- `ToMatrixInternal`/`ToMatrixWithScale`, `InverseTransformPosition`, `GetSafeScaleReciprocal`,
+  `Blend`, `NormalizeRotation`, `GetUnitAxis`, the accessors and the `FTransform(FQuat, FVector,
+  FVector)` constructor;
+- the vector helpers they use: `VectorCross`, `VectorQuaternionRotateVector`,
+  `VectorNormalizeSafe`, `VectorLerpQuat`, `VectorReciprocalAccurate`, `ScalarRegister` and
+  the `VectorRegister` specialization of `FMath::Lerp`.
+
+`TransformRecovered.h` only declares these members, because the unity units include it before
+their constants and before `MathDecls.h`. `EAxis` moved to `AxisRecovered.h` so it can declare
+`GetUnitAxis`.
+
+`GetAzimuthAndElevation` needed new evidence. Its unit vectors are 16-byte `__xmm@` constants:
+`(1,0,0,0)`, `(0,1,0,0)` and `(0,0,1,0)` have 16 to 25 aligned copies each, inside matrices and
+tables. Packed SSE code loads exactly one copy of each: 105, 88 and 123 functions. The
+pooled-constant rule now covers `__xmm@` names, with packed loads (`movaps`, `andps`, `mulps`,
+`pxor`, ...) in place of scalar ones, and the same dominance threshold. A value with two loaded
+copies, such as `(0,0,0,1)` at 296 against 32 functions, stays unresolved.
+
+Not reconstructed: `ComposeTransforms`, `InvertTransform`, `GetDirectionUnitVector` and
+`RandomPointInBoundingBox` (`0x02430650`-`0x024316AC`). They are out-of-line copies of
+`KismetMathLibrary.inl` functions. They are emitted by the generated unity unit `Engine.18`,
+whose exec thunks call them, and they read that unit's constants (`0x048B7290`-`0x048B7350`;
+initializers in `analysis/functions-vector-constants.json`).
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 

@@ -224,6 +224,7 @@ struct FMath : public FPlatformMath
 		return InMin + (InMax - InMin) * FRand();
 	}
 
+	static __forceinline float Asin( float Value ) { return asinf( (Value<-1.f) ? -1.f : ((Value<1.f) ? Value : 1.f) ); }
 	static __forceinline float Acos( float Value ) { return acosf( (Value<-1.f) ? -1.f : ((Value<1.f) ? Value : 1.f) ); }
 
 	static __forceinline float FloatSelect( float Comparand, float ValueGEZero, float ValueLTZero )
@@ -469,6 +470,7 @@ struct FMath : public FPlatformMath
 	static float FInterpConstantTo( float Current, float Target, float DeltaTime, float InterpSpeed );
 	static FRotator RInterpConstantTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed );
 	static FRotator RInterpTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed);
+	static FVector2D GetAzimuthAndElevation(const FVector &Direction, const FVector &AxisX, const FVector &AxisY, const FVector &AxisZ);
 };
 
 struct FRotator
@@ -558,6 +560,7 @@ struct FVector
 	__forceinline FVector(float InX, float InY, float InZ) : X(InX), Y(InY), Z(InZ) { }
 	explicit __forceinline FVector(EForceInit) : X(0.0f), Y(0.0f), Z(0.0f) {}
 
+	__forceinline FVector operator-() const { return FVector(-X, -Y, -Z); }
 	__forceinline FVector operator+(const FVector& V) const { return FVector(X + V.X, Y + V.Y, Z + V.Z); }
 	__forceinline FVector operator-(const FVector& V) const { return FVector(X - V.X, Y - V.Y, Z - V.Z); }
 	__forceinline FVector operator*(float Scale) const { return FVector(X * Scale, Y * Scale, Z * Scale); }
@@ -736,17 +739,7 @@ public:
 	{}
 };
 
-// Math/Axis.h
-namespace EAxis
-{
-	enum Type
-	{
-		None,
-		X,
-		Y,
-		Z,
-	};
-}
+#include "FortniteGameCode/AxisRecovered.h"   // Math/Axis.h
 
 // Math/Matrix.h, Matrix.inl
 __declspec(align(16)) struct FMatrix
@@ -770,6 +763,10 @@ public:
 	}
 
 	FRotator Rotator() const;   // CORE_API, Math/UnrealMath.cpp
+
+	// Inline in Matrix.inl (not FORCEINLINE); the reference calls an out-of-line copy, defined in
+	// UnrealMath.cpp.
+	float Determinant() const;
 
 	inline FVector GetScaledAxis( EAxis::Type InAxis ) const
 	{

@@ -908,3 +908,65 @@ FQuat FQuat::Squad(const FQuat& quat1, const FQuat& tang1, const FQuat& quat2, c
 
 	return Result;
 }
+
+// FMatrix::Determinant is inline in Math/Matrix.inl; the reference calls one out-of-line copy
+// (COMDAT), from an object not established. The member pointer below makes this unit emit it.
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0064F030 (end 0x0064F1FC)
+// Original VA: 0x000000014064F030 | File offset: 0x0064E630
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::Transform_Determinant (0x02094D80) on the matrix
+//   ToMatrixWithScale builds; the scalar 4x4 cofactor expansion of Matrix.inl.
+inline float FMatrix::Determinant() const
+{
+	return	M[0][0] * (
+				M[1][1] * (M[2][2] * M[3][3] - M[2][3] * M[3][2]) -
+				M[2][1] * (M[1][2] * M[3][3] - M[1][3] * M[3][2]) +
+				M[3][1] * (M[1][2] * M[2][3] - M[1][3] * M[2][2])
+				) -
+			M[1][0] * (
+				M[0][1] * (M[2][2] * M[3][3] - M[2][3] * M[3][2]) -
+				M[2][1] * (M[0][2] * M[3][3] - M[0][3] * M[3][2]) +
+				M[3][1] * (M[0][2] * M[2][3] - M[0][3] * M[2][2])
+				) +
+			M[2][0] * (
+				M[0][1] * (M[1][2] * M[3][3] - M[1][3] * M[3][2]) -
+				M[1][1] * (M[0][2] * M[3][3] - M[0][3] * M[3][2]) +
+				M[3][1] * (M[0][2] * M[1][3] - M[0][3] * M[1][2])
+				) -
+			M[3][0] * (
+				M[0][1] * (M[1][2] * M[2][3] - M[1][3] * M[2][2]) -
+				M[1][1] * (M[0][2] * M[2][3] - M[0][3] * M[2][2]) +
+				M[2][1] * (M[0][2] * M[1][3] - M[0][3] * M[1][2])
+				);
+}
+
+#if FNGC_MATCHING_HARNESS
+extern float (FMatrix::* const GFngcAnchor_Determinant)() const;
+float (FMatrix::* const GFngcAnchor_Determinant)() const = &FMatrix::Determinant;
+#endif
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01194110 (end 0x01194422)
+// Original VA: 0x0000000141194110 | File offset: 0x01193710
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::GetAzimuthAndElevation (0x0207FDA0) with the reference
+//   frame's unit axes; sorts between FixedTurn and FRotator::GetInverse; two safe normals
+//   (FVector::ZeroVector), acosf and asinf of the clamped cosines.
+FVector2D FMath::GetAzimuthAndElevation
+(
+	const FVector &Direction,
+	const FVector &AxisX,
+	const FVector &AxisY,
+	const FVector &AxisZ
+)
+{
+	const FVector NormalDir = Direction.GetSafeNormal();
+	// Find projected point (on AxisX and AxisY, remove AxisZ component)
+	const FVector NoZProjDir = (NormalDir - (NormalDir | AxisZ) * AxisZ).GetSafeNormal();
+	// Figure out if projection is on right or left.
+	const float AzimuthSign = ((NoZProjDir | AxisY) < 0.f) ? -1.f : 1.f;
+	const float ElevationSin = NormalDir | AxisZ;
+	const float AzimuthCos = NoZProjDir | AxisX;
+
+	// Convert to Angles in Radian.
+	return FVector2D(FMath::Acos(AzimuthCos) * AzimuthSign, FMath::Asin(ElevationSin));
+}

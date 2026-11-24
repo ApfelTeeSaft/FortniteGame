@@ -720,6 +720,16 @@ def test_pooled_constants() -> None:
     r2.dimg = NS(read=lambda a, n: code[:n])
     refs = r2._scalar_refs(4)
     assert refs == {0x1000: [0x504]}, refs
+    assert r2._packed_refs() == {0xFFF: [0x50B]}                                 # mulps only (its disp reaches 0xFFF)
+    # __xmm@ constants: the value is the name, highest lane first; packed loads decide.
+    v = _s.pack("<4f", 0.0, 1.0, 0.0, 0.0)                                         # __xmm@...3f800000 00000000
+    r.__dict__.pop("_constant_copies", None)
+    r.hay = bytes(16) + v + bytes(16) + v                                         # aligned copies at 0x1010, 0x1030
+    r._scalar_ref_index = {16: {0x1030: [0x300]}}
+    name = "__xmm@" + "00000000" + "00000000" + "3f800000" + "00000000"
+    assert [p for p, _ in r._pooled_constant(name, 7)] == [0x1030]
+    r._scalar_ref_index = {16: {0x1030: [0x300], 0x1010: [0x400]}}
+    assert r._pooled_constant(name, 7) == []
     print("pooled constants: ok")
 
 
