@@ -68,7 +68,9 @@ same import, and the manifest records which.
   - `analysis/symbols.json`;
   - import tables;
   - a unique import thunk;
-  - a unique data match: a NUL-terminated literal, or a data block at its alignment. A
+  - a unique data match: a NUL-terminated literal, or a data block at its alignment, searched
+    in the read-only data; a block of 64 bytes or more also in `.data` (an initialized table
+    such as `FLinearColor::sRGBToLinearTable`), with the occurrence unique over both. A
     literal occurrence counts if it is preceded by a zero byte and aligned to its character
     width, or to 8 bytes for a literal of 8 bytes or more (terminator included): MSVC places
     every such literal on an 8-byte boundary. A short wide literal directly after a narrow
@@ -595,6 +597,91 @@ Not reconstructed: `ComposeTransforms`, `InvertTransform`, `GetDirectionUnitVect
 `KismetMathLibrary.inl` functions. They are emitted by the generated unity unit `Engine.18`,
 whose exec thunks call them, and they read that unit's constants (`0x048B7290`-`0x048B7350`;
 initializers in `analysis/functions-vector-constants.json`).
+
+## Tenth family: dates and times, colours and rotator helpers (2026-11-24)
+
+| Group | Functions | Result |
+| --- | --- | --- |
+| Core `FDateTime` (`Misc/DateTime.cpp`, `0x011AC210`-`0x011CC377`) | the constructor, `GetDate`, `GetDay`, `GetDayOfWeek`, `GetDayOfYear`, `GetHour12`, `GetMonth`, `GetYear`, `ToIso8601`, `ToString()`, `DaysInMonth`, `DaysInYear`, `IsLeapYear`, `Now`, `ParseIso8601`, `UtcNow`, `Validate` | 17 exact (8 leaves) |
+| Core `FTimespan::Assign` (`0x011D5640`) and `FWindowsPlatformTime::SystemTime`/`UtcTime` (`0x01200190`, `0x01200490`) | | 3 exact (`Assign` a leaf) |
+| Core colours (`Math/Color.cpp`, `0x01157720`-`0x01181CFF`) | `FLinearColor(const FColor&)`, `FLinearColor(const FVector&)`, `FColor::FromRGBE`, `FGetHSV`, `LinearRGBToHSV`, `HSVToLinearRGB`, `LerpUsingHSV`, both `MakeRandomColor`, `MakeFromColorTemperature`, `MakeRedToGreenColorFromScalar`, `Quantize`, `ToFColor` | 11 exact (4 leaves), 2 relocation-equivalent |
+| Core `UnrealMath.cpp` | `FRotator::RotateVector`/`UnrotateVector`/`Euler`/`MakeFromEuler`, `FQuat::Euler`/`MakeFromEuler`, `FVector::ToOrientationQuat`/`FindBestAxisVectors`, `FMath::ClampAngle`, `FixedTurn`, `GetReflectionVector`, `PointsAreCoplanar`, `SegmentDistToSegment(Safe)` and the solver's `Solve`, `SegmentPlaneIntersection`, `ClosestPointOnLine`, `ClosestPointOnSegment2D`, `PointDistToSegmentSquared`, `RandPointInBox`, `RandPointInCircle` | 21 exact (3 leaves) |
+| Kismet natives | `BreakDateTime`, `MakeDateTime`, `ClassIsChildOf`, `FInterpEaseInOut`, `FloatSpringInterp`, `VectorSpringInterp`, `ResetFloatSpringState`, `ResetVectorSpringState`, `GetReflectionVector`, `NormalizedDeltaRotator`, `RandomUnitVectorFromStream` | 10 exact (3 leaves), `MakeDateTime` relocation-equivalent |
+| The Kismet object's out-of-line copies | `GenericSpringInterp<float>` (`0x0206B500`), `GenericSpringInterp<FVector>` (`0x0206B5B0`), `FRandomStream::GetUnitVector` (`0x01C85C00`) | 3 exact |
+
+68 functions: 65 exact (46 in the denominator, 19 leaves outside it) and 3 relocation-equivalent,
+each with one field no other entry corroborates:
+- `FColor::FromRGBE` reads `FLinearColor::Black`, which `Color.cpp` only declares;
+- `FLinearColor::MakeFromColorTemperature`'s 15000.0f clamp (`__real@466a6000`) has several
+  copies that scalar code loads, none dominant;
+- `UKismetMathLibrary::MakeDateTime` is the only entry calling `FString::PrintfImpl`.
+
+Four earlier entries became exact with them: `UGameplayStatics::HasLaunchOption` (its `TEXT("")`
+literal, now corroborated by `MakeDateTime`'s `*FString`), the `UObject::StaticClass` thunk
+(`ClassIsChildOf` calls `UObject::GetPrivateStaticClass`), and the Kismet unit's `Float180` and
+`Float360` initializers, which `NormalizedDeltaRotator` reads.
+
+**Locating.** Most of the Core functions are not reachable from the Kismet natives, so their
+addresses come from a new tool, `tools/matching/locate.py`. It compiles nothing itself: given an
+object, it masks every relocation field of each function and lists the 16-byte-aligned addresses
+of the reference where all other bytes agree. Two kinds of result need more evidence:
+- several hits, when bodies differ only in relocated operands. `ToIso8601` and `ToString()` are
+  the same 30 bytes with different literals; `Now` and `UtcNow`, and `SystemTime` and `UtcTime`,
+  differ only in their callee or import. Core's alphabetical COMDAT order decides (`ToIso8601`
+  `0x011C8860` before `ToString` `0x011C9270`, `Now` `0x011BFB90` before `UtcNow`
+  `0x011CC290`), and so do the literals and imports compare.py resolves;
+- no hit. 18 of the 4.20 functions tried have no copy in the reference and are left out:
+  `FromSRGBColor` (its body is the `FLinearColor(const FColor&)` constructor's), `FromPow22Color`,
+  `ToRGBE`, `QuantizeRound`, `Desaturate`, `FLinearColor(const FVector4&)`,
+  `FColor::MakeFromColorTemperature`, `ComputeAndFixedColorAndIntensity`,
+  `ClosestPointOnInfiniteLine`, `CreateOrthonormalBasis`, `GetWindingAndRemainder`,
+  `GetBaryCentric2D`, `ComputeBaryCentric2D`, `SphereDistToLine`, `WindRelativeAnglesDegrees`,
+  `ApplyScaleToFloat`, `CartesianToPolar` and `PolarToCartesian`. They are unused (`/OPT:REF`) or
+  differ; `ComputeBaryCentric2D` may be the function at `0x0118D320`, whose expression order is
+  different. `GetTForSegmentPlaneIntersect` stays in the source without an address: it is inlined
+  into `SegmentPlaneIntersection`.
+
+**What the reconstruction needed.**
+- New shim types in `MathDecls.h`: `FDateTime` and `EDayOfWeek`, `FWindowsPlatformTime`,
+  `FVector4`, and `FColor`, moved there from `EngineStructsRecovered.h` with its constructors.
+  `FLinearColor` gained the `Color.cpp` members, `FTimespan` its tick constructor and
+  `FromMinutes`, `FRandomStream` `GetUnitVector`/`VRand`, and `FMatrix` `TransformFVector4`,
+  `TransformVector` and `GetTransposed`.
+- These declarations are behind `FNGC_CORE_MATH_EXTRAS`, which only the Core units and
+  `KismetMathLibrary.cpp` define. With them visible to the generated UHT units, MSVC v140 emitted
+  `InputCore.1`'s functions in another order: its `FKey` literals moved from offset 1672-1688 to
+  the start of `.rdata`, and the `FKey` defer-struct initializer (`0x001398C0`) lost the
+  section-relative evidence for its `"Key"` field (exact to relocation-equivalent). Compiling
+  `InputCore.1` against each changed shim showed the `MathDecls.h` additions as the cause; with
+  the guard the unit compiles as before. `EngineStructsRecovered.h` keeps the plain `FColor` for
+  those units.
+- `Color.cpp` defines `Pow22OneOver255Table` and `sRGBToLinearTable` with the reference's own
+  values, read from its `.data` (`0x04369F00` and `0x0436A300`, 1024 bytes each, equal to the
+  4.20 tables) and printed with 9 significant digits, which round-trips every float. The
+  constructor's table field then resolves by its unique content.
+- `FVector4`'s default constructor zero-fills, as 4.20's `FVector4(float InX = 0.0f, ...)` does.
+  With an empty one, `UnrotateVector` misses the reference's three zero stores of
+  `TransformFVector4`'s result.
+- `FRotator::RotateVector` and `FTimespan::FromMinutes` need forms other than the public 4.20.0
+  ones (`docs/ENGINE_DIFFERENCES.md`, #10 and #11).
+- `FDateTime`'s constructor has no `Validate` call: the `UE_LOG(LogCore, Fatal, ...)` it guards is
+  compiled out of the shipping client.
+- `FCString::Strtoi` is `wcstoul` (`_tcstoul`), called through the import table, and the
+  platform-time functions call `GetLocalTime`/`GetSystemTime` the same way. Both are declared, not
+  taken from `Windows.h`.
+- `TSubclassOf::operator*` and `UStruct::IsChildOf` for `ClassIsChildOf`: the walk reads
+  `SuperStruct` at 0x30, because the generated class bodies are opaque (`TextRecovered.h`).
+- `FString::Printf` forwards to the out-of-line `PrintfImpl` (`MakeDateTime`'s warning).
+- `SegmentDistToSegment_Solver::Solve` is defined in its struct; v140 emits one out-of-line copy for
+  both callers, as the reference has.
+- `ResetFloatSpringState` is `PrevError = Velocity = 0.f`, one 8-byte store. The exec thunk calls
+  the 6-byte body at `0x00E71030`, which `/OPT:ICF` shares with every identical function; the entry
+  is a leaf outside the denominator.
+
+Not reconstructed: `MinimumAreaRectangle` (its `TArray` growth and `ConvexHull2D` template
+callees), the five `From*` timespan natives (`FText::Format` with `FFormatNamedArguments`),
+`FDateTime::Parse` and `FTimespan::Parse` (string splitting), and `FTransform::GetRelativeTransform`
+(`0x01195910`: a thread-safe static and the Core unity unit's vector constants).
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 

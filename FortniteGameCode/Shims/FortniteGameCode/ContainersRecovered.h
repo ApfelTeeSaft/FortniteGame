@@ -662,6 +662,17 @@ public:
 		return Data.Num() ? Data.GetData() : TEXT("");
 	}
 
+	template <typename FmtType, typename... Types>
+	static FString Printf(const FmtType& Fmt, Types... Args)
+	{
+		return PrintfImpl(Fmt, Args...);
+	}
+
+private:
+	static FString __cdecl PrintfImpl(const TCHAR* Fmt, ...);   // CORE_API, Containers/String.cpp
+
+public:
+
 	__forceinline void Reset(int32 NewReservedSize = 0)
 	{
 		const int32 NewSizeIncludingTerminator = (NewReservedSize > 0) ? (NewReservedSize + 1) : 0;

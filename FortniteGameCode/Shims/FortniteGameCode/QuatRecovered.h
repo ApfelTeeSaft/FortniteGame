@@ -553,6 +553,45 @@ __forceinline FVector FTransform::GetScale3D() const
 	return OutScale3D;
 }
 
+// Math/UnrealMathSSE.h
+__forceinline VectorRegister VectorTransformVector(const VectorRegister&  VecP,  const void* MatrixM )
+{
+	const VectorRegister *M	= (const VectorRegister *) MatrixM;
+	VectorRegister VTempX, VTempY, VTempZ, VTempW;
+
+	// Splat x,y,z and w
+	VTempX = VectorReplicate(VecP, 0);
+	VTempY = VectorReplicate(VecP, 1);
+	VTempZ = VectorReplicate(VecP, 2);
+	VTempW = VectorReplicate(VecP, 3);
+	// Mul by the matrix
+	VTempX = VectorMultiply(VTempX, M[0]);
+	VTempY = VectorMultiply(VTempY, M[1]);
+	VTempZ = VectorMultiply(VTempZ, M[2]);
+	VTempW = VectorMultiply(VTempW, M[3]);
+	// Add them all together
+	VTempX = VectorAdd(VTempX, VTempY);
+	VTempZ = VectorAdd(VTempZ, VTempW);
+	VTempX = VectorAdd(VTempX, VTempZ);
+
+	return VTempX;
+}
+
+// Math/Matrix.inl
+__forceinline FVector4 FMatrix::TransformFVector4(const FVector4 &P) const
+{
+	FVector4 Result;
+	VectorRegister VecP = VectorLoadAligned(&P);
+	VectorRegister VecR = VectorTransformVector(VecP, this);
+	VectorStoreAligned(VecR, &Result);
+	return Result;
+}
+
+__forceinline FVector4 FMatrix::TransformVector(const FVector& V) const
+{
+	return TransformFVector4(FVector4(V.X,V.Y,V.Z,0.0f));
+}
+
 __forceinline FVector FTransform::TransformVectorNoScale(const FVector& V) const
 {
 	const VectorRegister InputVectorW0 = VectorLoadFloat3_W0(&V);

@@ -7,6 +7,15 @@
 // by the UHT world, so both see one definition of each type.
 #pragma once
 
+// FNGC_CORE_MATH_EXTRAS: the declarations the Core units and KismetMathLibrary.cpp use for dates,
+// colours and the rotator helpers (FDateTime, FColor's constructors, FVector4, ...). Only those
+// units define it. The generated UHT units do not see them: adding declarations to the headers
+// they include changes the order in which MSVC v140 emits their functions and literals (for
+// example InputCore.1's FKey literals), as including <intrin.h> did (TextRecovered.h).
+#ifndef FNGC_CORE_MATH_EXTRAS
+#define FNGC_CORE_MATH_EXTRAS 0
+#endif
+
 #include <math.h>
 #include <stdlib.h>
 #include <xmmintrin.h>   // as UnrealPlatformMathSSE.h
@@ -16,6 +25,12 @@
 #pragma warning(disable : 4244) // 'expression' : conversion from 'type' to 'type', possible loss of data
 // Windows/WindowsPlatform.h: disabled for all UE4 code (FmodReportError's body is compiled out).
 #pragma warning(disable : 4100) // unreferenced formal parameter
+#if FNGC_CORE_MATH_EXTRAS
+// Windows/WindowsPlatformCompilerSetup.h: TArray's destructor keeps an unused DebugGet pointer, and
+// DefaultCalculateSlackReserve narrows QuantizeSize's SIZE_T to int32 (the Core units that use
+// containers include MathDecls.h first).
+#pragma warning(disable : 4189 4267)
+#endif
 
 typedef int int32;
 typedef unsigned int uint32;
@@ -47,6 +62,13 @@ struct FVector2D;
 struct FRotator;
 struct FLinearColor;
 struct FQuat;
+#if FNGC_CORE_MATH_EXTRAS
+struct FColor;
+struct FVector4;
+struct FPlane;
+struct FBox;
+class FDefaultAllocator;
+#endif
 template<typename InElementType, typename InAllocator> class TArray;
 
 struct FGenericPlatformMath
@@ -64,6 +86,19 @@ struct FGenericPlatformMath
 	static __forceinline float Sqrt(float Value) { return sqrtf(Value); }
 
 	static __forceinline float Fractional(float Value) { return Value - TruncToFloat(Value); }
+#if FNGC_CORE_MATH_EXTRAS
+	static __forceinline double FloorToDouble( double F ) { return floor(F); }
+	static __forceinline double CeilToDouble( double F ) { return ceil(F); }
+	static __forceinline double RoundToZero(double F)
+	{
+		return (F < 0.0) ? CeilToDouble(F) : FloorToDouble(F);
+	}
+	template< class T >
+	static constexpr __forceinline T Sign( const T A )
+	{
+		return (A > (T)0) ? (T)1 : ((A < (T)0) ? (T)-1 : (T)0);
+	}
+#endif
 
 	static __forceinline int32 Rand() { return rand(); }
 	static __forceinline float FRand() { return Rand() / (float)RAND_MAX; }
@@ -178,6 +213,17 @@ struct FWindowsPlatformMath : public FGenericPlatformMath
 	static __forceinline int32 RoundToInt( float F )
 	{
 		return _mm_cvt_ss2si( _mm_set_ss(F + F + 0.5f) ) >> 1;
+#if FNGC_CORE_MATH_EXTRAS
+	}
+	static __forceinline int32 CeilToInt(float F)
+	{
+		// Note: unlike the Generic solution and the float solution, we implicitly use banker's rounding here.
+		return -(_mm_cvt_ss2si(_mm_set_ss(-0.5f - (F + F))) >> 1);
+	}
+	static __forceinline float CeilToFloat(float F)
+	{
+		return (float)CeilToInt(F);
+#endif
 	}
 	static __forceinline int32 FloorToInt(float F)
 	{
@@ -471,6 +517,40 @@ struct FMath : public FPlatformMath
 	static FRotator RInterpConstantTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed );
 	static FRotator RInterpTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed);
 	static FVector2D GetAzimuthAndElevation(const FVector &Direction, const FVector &AxisX, const FVector &AxisY, const FVector &AxisZ);
+#if FNGC_CORE_MATH_EXTRAS
+	static FVector GetReflectionVector(const FVector& Direction, const FVector& SurfaceNormal);
+	static float ClampAngle(float AngleDegrees, float MinAngleDegrees, float MaxAngleDegrees);
+	static float FixedTurn(float InCurrent, float InDesired, float InDeltaRate);
+	static void SegmentDistToSegment(FVector A1, FVector B1, FVector A2, FVector B2, FVector& OutP1, FVector& OutP2);
+	static void SegmentDistToSegmentSafe(FVector A1, FVector B1, FVector A2, FVector B2, FVector& OutP1, FVector& OutP2);
+	static bool PointsAreCoplanar(const TArray<FVector, FDefaultAllocator>& Points, const float Tolerance = 0.1f);
+	static FVector ClosestPointOnLine(const FVector& LineStart, const FVector& LineEnd, const FVector& Point);
+	static FVector ClosestPointOnInfiniteLine(const FVector& LineStart, const FVector& LineEnd, const FVector& Point);
+	static FVector2D ClosestPointOnSegment2D(const FVector2D &Point, const FVector2D &StartPoint, const FVector2D &EndPoint);
+	static float PointDistToSegmentSquared(const FVector &Point, const FVector &StartPoint, const FVector &EndPoint);
+	static float GetTForSegmentPlaneIntersect(const FVector& StartPoint, const FVector& EndPoint, const FPlane& Plane);
+	static bool SegmentPlaneIntersection(const FVector& StartPoint, const FVector& EndPoint, const FPlane& Plane, FVector& out_IntersectionPoint);
+	static FVector GetBaryCentric2D(const FVector& Point, const FVector& A, const FVector& B, const FVector& C);
+	static FVector ComputeBaryCentric2D(const FVector& Point, const FVector& A, const FVector& B, const FVector& C);
+	static void SphereDistToLine(FVector SphereOrigin, float SphereRadius, FVector LineOrigin, FVector LineDir, FVector& OutClosestPoint);
+	static FVector2D RandPointInCircle(float CircleRadius);
+	static FVector RandPointInBox(const FBox& Box);
+	static void WindRelativeAnglesDegrees(float InAngle0, float& InOutAngle1);
+	static void ApplyScaleToFloat(float& Dst, const FVector& DeltaScale, float Magnitude = 1.0f);
+	static void CartesianToPolar(const FVector2D InCart, FVector2D& OutPolar);
+	static void PolarToCartesian(const FVector2D InPolar, FVector2D& OutCart);
+
+	template< class T >
+	static __forceinline T Max3( const T A, const T B, const T C )
+	{
+		return Max ( Max( A, B ), C );
+	}
+	template< class T >
+	static __forceinline T Min3( const T A, const T B, const T C )
+	{
+		return Min ( Min( A, B ), C );
+	}
+#endif
 };
 
 struct FRotator
@@ -508,6 +588,13 @@ struct FRotator
 	FVector Vector() const;
 	FQuat Quaternion() const;   // CORE_API (vectorized; out of line)
 	FRotator GetInverse() const;   // CORE_API
+#if FNGC_CORE_MATH_EXTRAS
+	FVector RotateVector( const FVector& V ) const;   // CORE_API
+	FVector UnrotateVector( const FVector& V ) const;   // CORE_API
+	FVector Euler() const;   // CORE_API
+	static FRotator MakeFromEuler( const FVector& Euler );   // CORE_API
+	void GetWindingAndRemainder( FRotator& Winding, FRotator& Remainder ) const;   // CORE_API
+#endif
 
 	static float ClampAxis( float Angle );
 	static float NormalizeAxis( float Angle );
@@ -622,6 +709,43 @@ struct FVector
 	// Inline in Math/Vector.h; the reference calls an out-of-line copy, defined in UnrealMath.cpp.
 	FVector RotateAngleAxis( const float AngleDeg, const FVector& Axis ) const;
 
+#if FNGC_CORE_MATH_EXTRAS
+	__forceinline FVector(const FVector4& V);   // Math/Vector4.h
+
+	__forceinline FVector operator-=(const FVector& V)
+	{
+		X -= V.X; Y -= V.Y; Z -= V.Z;
+		return *this;
+	}
+	__forceinline FVector operator*(const FVector& V) const { return FVector(X * V.X, Y * V.Y, Z * V.Z); }
+
+	__forceinline bool IsZero() const
+	{
+		return X==0.f && Y==0.f && Z==0.f;
+	}
+
+	__forceinline FVector GetUnsafeNormal() const
+	{
+		const float Scale = FMath::InvSqrt(X*X+Y*Y+Z*Z);
+		return FVector(X*Scale, Y*Scale, Z*Scale);
+	}
+
+	static __forceinline FVector CrossProduct(const FVector& A, const FVector& B)
+	{
+		return A ^ B;
+	}
+
+	static __forceinline float PointPlaneDist(const FVector &Point, const FVector &PlaneBase, const FVector &PlaneNormal)
+	{
+		return (Point - PlaneBase) | PlaneNormal;
+	}
+
+	// CORE_API, Math/UnrealMath.cpp
+	void FindBestAxisVectors( FVector& Axis1, FVector& Axis2 ) const;
+	static void CreateOrthonormalBasis(FVector& XAxis,FVector& YAxis,FVector& ZAxis);
+	FQuat ToOrientationQuat() const;
+
+#endif
 	FRotator ToOrientationRotator() const;
 	FRotator Rotation() const;
 };
@@ -663,6 +787,9 @@ struct FVector2D
 
 	__forceinline float Size() const { return FMath::Sqrt(X*X + Y*Y); }
 	__forceinline float SizeSquared() const { return X*X + Y*Y; }
+#if FNGC_CORE_MATH_EXTRAS
+	__forceinline float operator|(const FVector2D& V) const { return X*V.X + Y*V.Y; }
+#endif
 };
 
 // Not the public 4.20.0 form (GetRangePct(Range.X, Range.Y, Value), which tests IsNearlyZero of
@@ -679,12 +806,113 @@ __forceinline float FMath::GetRangeValue(FVector2D const& Range, float Pct)
 	return Lerp<float>(Range.X, Range.Y, Pct);
 }
 
+#if FNGC_CORE_MATH_EXTRAS
+// Math/Color.h (PLATFORM_LITTLE_ENDIAN, _MSC_VER). EngineStructsRecovered.h has the plain form the
+// UHT units use.
+struct FColor
+{
+public:
+#pragma warning(push)
+#pragma warning(disable : 4201) // nameless struct/union (UE4.20 disables it)
+	union { struct{ uint8 B,G,R,A; }; uint32 AlignmentDummy; };
+#pragma warning(pop)
+
+	uint32& DWColor(void) {return *((uint32*)this);}
+	const uint32& DWColor(void) const {return *((uint32*)this);}
+
+	__forceinline FColor() {}
+	__forceinline explicit FColor(EForceInit)
+	{
+		// put these into the body for proper ordering with INTEL vs non-INTEL_BYTE_ORDER
+		R = G = B = A = 0;
+	}
+	__forceinline FColor( uint8 InR, uint8 InG, uint8 InB, uint8 InA = 255 )
+	{
+		// put these into the body for proper ordering with INTEL vs non-INTEL_BYTE_ORDER
+		R = InR;
+		G = InG;
+		B = InB;
+		A = InA;
+	}
+
+	// CORE_API, Math/Color.cpp
+	FLinearColor FromRGBE() const;
+	static FColor MakeRandomColor();
+	static FColor MakeFromColorTemperature( float Temp );
+	static FColor MakeRedToGreenColorFromScalar(float Scalar);
+};
+
+// Math/Vector4.h
+__declspec(align(16)) struct FVector4
+{
+public:
+	float X;
+	float Y;
+	float Z;
+	float W;
+
+	__forceinline FVector4(const FVector& InVector, float InW = 1.0f);
+	explicit __forceinline FVector4(float InX = 0.0f, float InY = 0.0f, float InZ = 0.0f, float InW = 0.0f)
+		: X(InX)
+		, Y(InY)
+		, Z(InZ)
+		, W(InW)
+	{
+	}
+};
+
+#endif
 // Math/Color.h
 struct FLinearColor
 {
 	float R, G, B, A;
+#if FNGC_CORE_MATH_EXTRAS
+
+	// Pow table for fast FColor -> FLinearColor conversion. CORE_API data, Math/Color.cpp.
+	static float Pow22OneOver255Table[256];
+	static float sRGBToLinearTable[256];
+
+#endif
 	__forceinline FLinearColor() {}
 	__forceinline FLinearColor(float InR,float InG,float InB,float InA = 1.0f): R(InR), G(InG), B(InB), A(InA) {}
+#if FNGC_CORE_MATH_EXTRAS
+
+	// CORE_API, Math/Color.cpp
+	FLinearColor(const FColor& Color);
+	FLinearColor(const FVector& Vector);
+	explicit FLinearColor(const FVector4& Vector);
+	FColor ToRGBE() const;
+	static FLinearColor FromSRGBColor(const FColor& Color);
+	static FLinearColor FromPow22Color(const FColor& Color);
+	static FLinearColor FGetHSV(uint8 H,uint8 S,uint8 V);
+	static FLinearColor MakeRandomColor();
+	static FLinearColor MakeFromColorTemperature( float Temp );
+	FLinearColor LinearRGBToHSV() const;
+	FLinearColor HSVToLinearRGB() const;
+	static FLinearColor LerpUsingHSV( const FLinearColor& From, const FLinearColor& To, const float Progress );
+	FColor Quantize() const;
+	FColor QuantizeRound() const;
+	FColor ToFColor(const bool bSRGB) const;
+	FLinearColor Desaturate( float Desaturation ) const;
+
+	__forceinline float ComputeLuminance() const
+	{
+		return R * 0.3f + G * 0.59f + B * 0.11f;
+	}
+
+	static const FLinearColor Black;   // CORE_API
+
+	__forceinline FLinearColor operator/(float Scalar) const
+	{
+		const float	InvScalar = 1.0f / Scalar;
+		return FLinearColor(
+			this->R * InvScalar,
+			this->G * InvScalar,
+			this->B * InvScalar,
+			this->A * InvScalar
+			);
+	}
+#endif
 
 	__forceinline FLinearColor operator+(const FLinearColor& ColorB) const
 	{
@@ -721,6 +949,26 @@ struct FLinearColor
 
 	static const FLinearColor White;     // CORE_API
 };
+#if FNGC_CORE_MATH_EXTRAS
+
+__forceinline FVector4::FVector4(const FVector& InVector,float InW)
+	: X(InVector.X)
+	, Y(InVector.Y)
+	, Z(InVector.Z)
+	, W(InW)
+{
+}
+
+__forceinline FVector::FVector( const FVector4& V )
+	: X(V.X), Y(V.Y), Z(V.Z)
+{
+}
+
+__forceinline FLinearColor operator*(float Scalar,const FLinearColor& Color)
+{
+	return Color.operator*( Scalar );
+}
+#endif
 
 // Math/Plane.h
 __declspec(align(16)) struct FPlane
@@ -763,6 +1011,39 @@ public:
 	}
 
 	FRotator Rotator() const;   // CORE_API, Math/UnrealMath.cpp
+#if FNGC_CORE_MATH_EXTRAS
+
+	// Matrix.inl; the VectorRegister forms are in QuatRecovered.h.
+	FVector4 TransformFVector4(const FVector4& V) const;
+	FVector4 TransformVector(const FVector& V) const;
+	FVector InverseTransformVector(const FVector &V) const;
+	inline FMatrix GetTransposed() const
+	{
+		FMatrix	Result;
+
+		Result.M[0][0] = M[0][0];
+		Result.M[0][1] = M[1][0];
+		Result.M[0][2] = M[2][0];
+		Result.M[0][3] = M[3][0];
+
+		Result.M[1][0] = M[0][1];
+		Result.M[1][1] = M[1][1];
+		Result.M[1][2] = M[2][1];
+		Result.M[1][3] = M[3][1];
+
+		Result.M[2][0] = M[0][2];
+		Result.M[2][1] = M[1][2];
+		Result.M[2][2] = M[2][2];
+		Result.M[2][3] = M[3][2];
+
+		Result.M[3][0] = M[0][3];
+		Result.M[3][1] = M[1][3];
+		Result.M[3][2] = M[2][3];
+		Result.M[3][3] = M[3][3];
+
+		return Result;
+	}
+#endif
 
 	// Inline in Matrix.inl (not FORCEINLINE); the reference calls an out-of-line copy, defined in
 	// UnrealMath.cpp.
@@ -834,6 +1115,10 @@ public:
 	float W;
 
 	__forceinline FQuat() { }
+#if FNGC_CORE_MATH_EXTRAS
+	FVector Euler() const;   // CORE_API, Math/UnrealMath.cpp
+	static FQuat MakeFromEuler(const FVector& Euler);   // CORE_API, Math/UnrealMath.cpp
+#endif
 	__forceinline FQuat( float InX, float InY, float InZ, float InW )
 		: X(InX)
 		, Y(InY)
@@ -978,6 +1263,33 @@ struct FRandomStream
 		return InMin + (InMax - InMin) * FRand();
 	}
 
+#if FNGC_CORE_MATH_EXTRAS
+	// Inline in Math/RandomStream.h; the reference keeps an out-of-line copy (0x01C85C00), which
+	// UKismetMathLibrary::RandomUnitVectorFromStream calls. KismetMathLibrary.cpp emits it.
+	FVector GetUnitVector() const
+	{
+		FVector Result;
+		float L;
+
+		do
+		{
+			// Check random vectors in the unit sphere so result is statistically uniform.
+			Result.X = GetFraction() * 2.f - 1.f;
+			Result.Y = GetFraction() * 2.f - 1.f;
+			Result.Z = GetFraction() * 2.f - 1.f;
+			L = Result.SizeSquared();
+		}
+		while(L > 1.f || L < KINDA_SMALL_NUMBER);
+
+		return Result.GetUnsafeNormal();
+	}
+
+	__forceinline FVector VRand() const
+	{
+		return GetUnitVector();
+	}
+
+#endif
 protected:
 	__forceinline void MutateSeed() const
 	{
@@ -1007,6 +1319,16 @@ namespace ETimespan
 struct FTimespan
 {
 	__forceinline FTimespan() : Ticks(0) { }
+#if FNGC_CORE_MATH_EXTRAS
+	__forceinline FTimespan(int64 InTicks) : Ticks(InTicks) { }   // check() is compiled out
+	__forceinline int64 GetTicks() const { return Ticks; }
+	// Not the public 4.20.0 form (RoundToZero(Minutes * TicksPerMinute + 0.5)): the reference's
+	// FDateTime::ParseIso8601 truncates the product (docs/ENGINE_DIFFERENCES.md).
+	static FTimespan FromMinutes(double Minutes)
+	{
+		return FTimespan(Minutes * ETimespan::TicksPerMinute);
+	}
+#endif
 	__forceinline FTimespan(int32 Days, int32 Hours, int32 Minutes, int32 Seconds, int32 FractionNano)
 	{
 		Assign(Days, Hours, Minutes, Seconds, FractionNano);
@@ -1025,3 +1347,98 @@ protected:
 private:
 	int64 Ticks;
 };
+
+#if FNGC_CORE_MATH_EXTRAS
+// Misc/DateTime.h
+enum class EDayOfWeek
+{
+	Monday = 0,
+	Tuesday,
+	Wednesday,
+	Thursday,
+	Friday,
+	Saturday,
+	Sunday
+};
+
+class FString;
+
+struct FDateTime
+{
+protected:
+	static const int32 DaysPerMonth[];   // Misc/DateTime.cpp
+	static const int32 DaysToMonth[];
+
+public:
+	FDateTime() : Ticks(0) { }
+	FDateTime(int64 InTicks) : Ticks(InTicks) { }
+	FDateTime(int32 Year, int32 Month, int32 Day, int32 Hour = 0, int32 Minute = 0, int32 Second = 0, int32 Millisecond = 0);
+
+	FDateTime& operator-=(const FTimespan& Other)
+	{
+		Ticks -= Other.GetTicks();
+		return *this;
+	}
+
+	void GetDate(int32& OutYear, int32& OutMonth, int32& OutDay) const;
+	int32 GetDay() const;
+	EDayOfWeek GetDayOfWeek() const;
+	int32 GetDayOfYear() const;
+	int32 GetHour() const
+	{
+		return (int32)((Ticks / ETimespan::TicksPerHour) % 24);
+	}
+	int32 GetHour12() const;
+	double GetJulianDay() const
+	{
+		return (double)(1721425.5 + Ticks / ETimespan::TicksPerDay);
+	}
+	int32 GetMillisecond() const
+	{
+		return (int32)((Ticks / ETimespan::TicksPerMillisecond) % 1000);
+	}
+	int32 GetMinute() const
+	{
+		return (int32)((Ticks / ETimespan::TicksPerMinute) % 60);
+	}
+	int32 GetMonth() const;
+	int32 GetSecond() const
+	{
+		return (int32)((Ticks / ETimespan::TicksPerSecond) % 60);
+	}
+	int64 GetTicks() const
+	{
+		return Ticks;
+	}
+	int32 GetYear() const;
+	bool IsMorning() const
+	{
+		return (GetHour() < 12);
+	}
+
+	FString ToIso8601() const;
+	FString ToString() const;
+	FString ToString( const wchar_t* Format ) const;
+
+	static int32 DaysInMonth(int32 Year, int32 Month);
+	static int32 DaysInYear(int32 Year);
+	static bool IsLeapYear( int32 Year );
+	static FDateTime Now();
+	static bool Parse(const FString& DateTimeString, FDateTime& OutDateTime);
+	static bool ParseIso8601(const wchar_t* DateTimeString, FDateTime& OutDateTime);
+	static FDateTime UtcNow();
+	static bool Validate(int32 Year, int32 Month, int32 Day, int32 Hour, int32 Minute, int32 Second, int32 Millisecond);
+
+private:
+	int64 Ticks;
+};
+
+// Windows/WindowsPlatformTime.h (CORE_API, Windows/WindowsPlatformTime.cpp)
+struct FWindowsPlatformTime
+{
+	static void SystemTime( int32& Year, int32& Month, int32& DayOfWeek, int32& Day, int32& Hour, int32& Min, int32& Sec, int32& MSec );
+	static void UtcTime( int32& Year, int32& Month, int32& DayOfWeek, int32& Day, int32& Hour, int32& Min, int32& Sec, int32& MSec );
+};
+typedef FWindowsPlatformTime FPlatformTime;
+
+#endif

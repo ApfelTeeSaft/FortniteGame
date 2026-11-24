@@ -199,14 +199,23 @@ def literal_content(obj: CoffObject, symname: str) -> bytes | None:
     return _string_literal(sec.data[sym.value:offs[offs.index(sym.value) + 1]])
 
 
+# A data block at least this long is also searched in the writable data (.data): an initialized
+# table such as FLinearColor::sRGBToLinearTable (1024 bytes). Shorter blocks and literals are not,
+# so their uniqueness is judged over the same read-only data as before.
+DATA_SECTION_MIN = 64
+
+
 def resolve_data_symbol(obj: CoffObject, symname: str, haystack: bytes,
-                        hay_rva: int) -> tuple[int | None, str]:
+                        hay_rva: int, data_hay: bytes | None = None,
+                        data_rva: int = 0) -> tuple[int | None, str]:
     """Find a data symbol's bytes in `haystack` (plaintext reference data starting at hay_rva).
 
     String literals ($SG..., ??_C@...) are searched as their exact NUL-terminated content
     (see literal_hits). Other data symbols are searched as their
-    bytes up to the next symbol in their section, at the section alignment. In every case the
-    occurrence must be unique, and data containing relocations is not searched.
+    bytes up to the next symbol in their section, at the section alignment; blocks of
+    DATA_SECTION_MIN bytes or more also in `data_hay` (the reference's .data, at data_rva). In
+    every case the occurrence must be unique over everything searched, and data containing
+    relocations is not searched.
     """
     sym = next((s for s in obj.symbols if s is not None and s.name == symname and s.section > 0), None)
     if sym is None:
@@ -239,6 +248,12 @@ def resolve_data_symbol(obj: CoffObject, symname: str, haystack: bytes,
             if (hay_rva + p) % align == 0:
                 hits.append(hay_rva + p)
             p = haystack.find(window, p + 1)
+        if data_hay is not None and len(window) >= DATA_SECTION_MIN:
+            p = data_hay.find(window)
+            while p >= 0 and len(hits) < 3:
+                if (data_rva + p) % align == 0:
+                    hits.append(data_rva + p)
+                p = data_hay.find(window, p + 1)
         what = f"{len(window)}-byte data block"
     if len(hits) == 1:
         return hits[0], f"unique {what}"

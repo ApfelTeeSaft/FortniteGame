@@ -100,6 +100,10 @@ class Resolver:
         lo = symbols_auto._iat_rdata_extent(img)[1]
         exp_rva, exp_size = img.directory(0)
         self.hay_rva, self.hay = lo, img.read(lo, exp_rva + exp_size - lo)
+        # The initialized part of .data, for data blocks of symbols_auto.DATA_SECTION_MIN bytes or more.
+        dsec = next((s for s in img.sections if s.name == ".data"), None)
+        self.data_rva = dsec.rva if dsec else 0
+        self.data_hay = img.read(dsec.rva, min(dsec.vsize, dsec.rawsize)) if dsec else None
         # Leave-one-out observations: symbol key -> {observed RVA: {manifest entry indices}},
         # and the same indexed by address: RVA -> {symbol key: {manifest entry indices}}.
         self.observations: dict = {}
@@ -156,7 +160,9 @@ class Resolver:
             return self.known[symbol]
         dkey = (objpath, symbol)
         if dkey not in self.data_cache:
-            rva, why = symbols_auto.resolve_data_symbol(obj, symbol, self.hay, self.hay_rva)
+            rva, why = symbols_auto.resolve_data_symbol(obj, symbol, self.hay, self.hay_rva,
+                                                        getattr(self, "data_hay", None),
+                                                        getattr(self, "data_rva", 0))
             self.data_cache[dkey] = [(rva, f"data symbol: {why}")] if rva is not None else []
             self.data_notes[dkey] = why
         if self.data_cache[dkey]:

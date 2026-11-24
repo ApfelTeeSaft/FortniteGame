@@ -20,6 +20,11 @@ struct FRecoveredPlatformString
 	{
 		return (int32)wcslen(String);
 	}
+
+	static FORCEINLINE int32 Strtoi(const WIDECHAR* Start, WIDECHAR** End, int32 Base)
+	{
+		return wcstoul(Start, End, Base);   // _tcstoul
+	}
 };
 
 template <typename T>
@@ -46,6 +51,11 @@ struct TCString
 	static FORCEINLINE int32 Strlen(const CharType* String)
 	{
 		return FRecoveredPlatformString::Strlen(String);
+	}
+
+	static FORCEINLINE int32 Strtoi(const CharType* Start, CharType** End, int32 Base)
+	{
+		return FRecoveredPlatformString::Strtoi(Start, End, Base);
 	}
 
 	static const CharType* Strifind(const CharType* Str, const CharType* Find, bool bSkipQuotedChars = false);

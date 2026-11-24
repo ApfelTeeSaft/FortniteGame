@@ -100,6 +100,10 @@
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMath.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMisc.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Math\UnrealMath.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\Math\Color.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\Misc\DateTime.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\Misc\Timespan.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\Windows\WindowsPlatformTime.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformProcess.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Stats\Stats2.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Misc\CommandLine.cpp" />

@@ -108,6 +108,24 @@ namespace ELerpInterpolationMode
 	static bool IsPointInBoxWithTransform(FVector Point, const FTransform& BoxWorldTransform, FVector BoxExtent); \
 	static float FClamp(float Value, float Min, float Max); \
 	static void GetAzimuthAndElevation(FVector InDirection, const FTransform& ReferenceFrame, float& Azimuth, float& Elevation); \
+	static FDateTime MakeDateTime(int32 Year, int32 Month, int32 Day, int32 Hour = 0, int32 Minute = 0, int32 Second = 0, int32 Millisecond = 0); \
+	static void BreakDateTime(FDateTime InDateTime, int32& Year, int32& Month, int32& Day, int32& Hour, int32& Minute, int32& Second, int32& Millisecond); \
+	static int32 GetYear(FDateTime A); \
+	static int32 GetMonth(FDateTime A); \
+	static int32 GetDay(FDateTime A); \
+	static int32 GetHour(FDateTime A); \
+	static int32 GetMinute(FDateTime A); \
+	static int32 GetSecond(FDateTime A); \
+	static int32 GetMillisecond(FDateTime A); \
+	static bool ClassIsChildOf(TSubclassOf<class UObject> TestClass, TSubclassOf<class UObject> ParentClass); \
+	static float FInterpEaseInOut(float A, float B, float Alpha, float Exponent); \
+	static float FloatSpringInterp(float Current, float Target, FFloatSpringState& SpringState, float Stiffness, float CriticalDamping, float DeltaTime, float Mass = 1.f); \
+	static FVector VectorSpringInterp(FVector Current, FVector Target, FVectorSpringState& SpringState, float Stiffness, float CriticalDamping, float DeltaTime, float Mass = 1.f); \
+	static void ResetFloatSpringState(FFloatSpringState& SpringState); \
+	static void ResetVectorSpringState(FVectorSpringState& SpringState); \
+	static FVector GetReflectionVector(FVector Direction, FVector SurfaceNormal); \
+	static FRotator NormalizedDeltaRotator(FRotator A, FRotator B); \
+	static FVector RandomUnitVectorFromStream(const FRandomStream& Stream); \
 	static void ReportError_Divide_ByteByte(); \
 	static void ReportError_Percent_ByteByte(); \
 	static void ReportError_Divide_IntInt(); \
@@ -121,6 +139,9 @@ namespace ELerpInterpolationMode
 	static void ReportError_Divide_Vector2DVector2D(); \
 	static void ReportError_DaysInMonth();
 
+#define FNGC_CORE_MATH_EXTRAS 1   // FDateTime, FColor, FVector4, ... (MathDecls.h)
+struct FFloatSpringState;
+struct FVectorSpringState;
 #include "FortniteGameCode/UHTRecovered.h"
 
 // The engine headers' GlobalVectorConstants (UnrealMathVectorConstants.h) of this unit: the 21
@@ -171,6 +192,83 @@ __forceinline FVector UKismetMathLibrary::VLerp(FVector A, FVector B, float V)
 __forceinline float UKismetMathLibrary::FClamp(float V, float A, float B)
 {
 	return FMath::Clamp(V, A, B);
+}
+
+__forceinline int32 UKismetMathLibrary::GetYear(FDateTime A)
+{
+	return A.GetYear();
+}
+
+__forceinline int32 UKismetMathLibrary::GetMonth(FDateTime A)
+{
+	return A.GetMonth();
+}
+
+__forceinline int32 UKismetMathLibrary::GetDay(FDateTime A)
+{
+	return A.GetDay();
+}
+
+__forceinline int32 UKismetMathLibrary::GetHour(FDateTime A)
+{
+	return A.GetHour();
+}
+
+__forceinline int32 UKismetMathLibrary::GetMinute(FDateTime A)
+{
+	return A.GetMinute();
+}
+
+__forceinline int32 UKismetMathLibrary::GetSecond(FDateTime A)
+{
+	return A.GetSecond();
+}
+
+__forceinline int32 UKismetMathLibrary::GetMillisecond(FDateTime A)
+{
+	return A.GetMillisecond();
+}
+
+// Kismet/KismetMathLibrary.h
+struct FFloatSpringState
+{
+	float PrevError;
+	float Velocity;
+
+	FFloatSpringState()
+		: PrevError(0.f)
+		, Velocity(0.f)
+	{
+	}
+
+	void Reset()
+	{
+		PrevError = Velocity = 0.f;
+	}
+};
+
+struct FVectorSpringState
+{
+	FVector PrevError;
+	FVector Velocity;
+
+	FVectorSpringState()
+		: PrevError(FVector::ZeroVector)
+		, Velocity(FVector::ZeroVector)
+	{
+	}
+
+	void Reset()
+	{
+		PrevError = Velocity = FVector::ZeroVector;
+	}
+};
+
+// Kismet/KismetMathLibrary.cpp. No standalone copy in the reference: inlined into both
+// GenericSpringInterp instantiations.
+float ComputeDamping(float Mass, float Stiffness, float CriticalDampingFactor)
+{
+	return 2 * FMath::Sqrt(Mass * Stiffness) * CriticalDampingFactor;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0207AC60 (end 0x0207B080)
@@ -1197,6 +1295,157 @@ void UKismetMathLibrary::GetAzimuthAndElevation(FVector InDirection, const FTran
 
 	Azimuth = FMath::RadiansToDegrees(Result.X);
 	Elevation = FMath::RadiansToDegrees(Result.Y);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02072380 (end 0x0207250F)
+// Original VA: 0x0000000142072380 | File offset: 0x02071980
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execBreakDateTime; FDateTime::GetYear (0x011BA970), GetMonth (0x011B99A0) and GetDay
+//   (0x011B8840) out of line, the hour, minute, second and millisecond inline.
+void UKismetMathLibrary::BreakDateTime(FDateTime InDateTime, int32& Year, int32& Month, int32& Day, int32& Hour, int32& Minute, int32& Second, int32& Millisecond)
+{
+	Year = GetYear(InDateTime);
+	Month = GetMonth(InDateTime);
+	Day = GetDay(InDateTime);
+	Hour = GetHour(InDateTime);
+	Minute = GetMinute(InDateTime);
+	Second = GetSecond(InDateTime);
+	Millisecond = GetMillisecond(InDateTime);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02089C30 (end 0x02089D5B)
+// Original VA: 0x0000000142089C30 | File offset: 0x02089230
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execMakeDateTime; FDateTime::Validate (0x011CC310), FString::Printf with the unit's
+//   InvalidDateWarning, then the FDateTime constructor (0x011AC210).
+FDateTime UKismetMathLibrary::MakeDateTime(int32 Year, int32 Month, int32 Day, int32 Hour, int32 Minute, int32 Second, int32 Millisecond)
+{
+	if (!FDateTime::Validate(Year, Month, Day, Hour, Minute, Second, Millisecond))
+	{
+		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("DateTime in bad format (year %d, month %d, day %d, hour %d, minute %d, second %d, millisecond %d). E.g. year, month and day can't be zero."), Year, Month, Day, Hour, Minute, Second, Millisecond), ELogVerbosity::Warning, InvalidDateWarning);
+
+		return FDateTime(1, 1, 1, 0, 0, 0, 0);
+	}
+
+	return FDateTime(Year, Month, Day, Hour, Minute, Second, Millisecond);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02075830 (end 0x0207591B)
+// Original VA: 0x0000000142075830 | File offset: 0x02074E30
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execClassIsChildOf; TSubclassOf<UObject>::operator* on both classes (UObject::StaticClass,
+//   the SuperStruct walk at 0x30), then UStruct::IsChildOf inline.
+bool UKismetMathLibrary::ClassIsChildOf(TSubclassOf<class UObject> TestClass, TSubclassOf<class UObject> ParentClass)
+{
+	return ((*ParentClass != NULL) && (*TestClass != NULL)) ? FngcStructIsChildOf(*TestClass, *ParentClass) : false;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207CF20 (end 0x0207CFA9)
+// Original VA: 0x000000014207CF20 | File offset: 0x0207C520
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execFInterpEaseInOut; FMath::InterpEaseInOut<float> with powf.
+float UKismetMathLibrary::FInterpEaseInOut(float A, float B, float Alpha, float Exponent)
+{
+	return FMath::InterpEaseInOut<float>(A, B, Alpha, Exponent);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0206B500 (end 0x0206B5B0)
+// Original VA: 0x000000014206B500 | File offset: 0x0206AB00
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: GenericSpringInterp<float>, called by UKismetMathLibrary::FloatSpringInterp (0x0207D700); the
+//   unit's template instantiations open its COMDATs alphabetically (??$ before ??D at 0x0206EDB0).
+//   The FVector instantiation follows at 0x0206B5B0 (end 0x0206B781), called by VectorSpringInterp
+//   (0x020958F0).
+template <typename T>
+T GenericSpringInterp(T Current, T Target, T& PrevError, T& Velocity, float Stiffness, float CriticalDamping, float DeltaTime, float Mass)
+{
+	if (DeltaTime > SMALL_NUMBER)
+	{
+		if (!FMath::IsNearlyZero(Mass))
+		{
+			const float Damping = ComputeDamping(Mass, Stiffness, CriticalDamping);
+			const T Error = Target - Current;
+			const T ErrorDeriv = (Error - PrevError);	//ignore divide by delta time since we multiply later anyway
+			Velocity += (Error * Stiffness * DeltaTime + ErrorDeriv * Damping) / Mass;
+			PrevError = Error;
+
+			const T NewValue = Current + Velocity * DeltaTime;
+			return NewValue;
+		}
+		else
+		{
+			return Target;
+		}
+	}
+
+	return Current;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207D700 (end 0x0207D73F)
+// Original VA: 0x000000014207D700 | File offset: 0x0207CD00
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execFloatSpringInterp; GenericSpringInterp<float> (0x0206B500).
+float UKismetMathLibrary::FloatSpringInterp(float Current, float Target, FFloatSpringState& SpringState, float Stiffness, float CriticalDamping, float DeltaTime, float Mass)
+{
+	return GenericSpringInterp(Current, Target, SpringState.PrevError, SpringState.Velocity, Stiffness, CriticalDamping, DeltaTime, Mass);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x020958F0 (end 0x0209597A)
+// Original VA: 0x00000001420958F0 | File offset: 0x02094EF0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execVectorSpringInterp; GenericSpringInterp<FVector> (0x0206B5B0).
+FVector UKismetMathLibrary::VectorSpringInterp(FVector Current, FVector Target, FVectorSpringState& SpringState, float Stiffness, float CriticalDamping, float DeltaTime, float Mass)
+{
+	return GenericSpringInterp(Current, Target, SpringState.PrevError, SpringState.Velocity, Stiffness, CriticalDamping, DeltaTime, Mass);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00E71030 (end 0x00E71036), no .pdata (leaf)
+// Original VA: 0x0000000140E71030 | File offset: 0x00E70630
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execResetFloatSpringState calls this address: the 6-byte body (xor eax, eax; mov [rcx], rax;
+//   ret) that /OPT:ICF gives every identical COMDAT, here in another module's range.
+void UKismetMathLibrary::ResetFloatSpringState(FFloatSpringState& SpringState)
+{
+	SpringState.Reset();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208EC10 (end 0x0208EC33), no .pdata (leaf)
+// Original VA: 0x000000014208EC10 | File offset: 0x0208E210
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execResetVectorSpringState; FVector::ZeroVector into Velocity, then PrevError.
+void UKismetMathLibrary::ResetVectorSpringState(FVectorSpringState& SpringState)
+{
+	SpringState.Reset();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x020828F0 (end 0x02082907)
+// Original VA: 0x00000001420828F0 | File offset: 0x02081EF0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execGetReflectionVector; FMath::GetReflectionVector (0x01195650).
+FVector UKismetMathLibrary::GetReflectionVector(FVector Direction, FVector SurfaceNormal)
+{
+	return FMath::GetReflectionVector(Direction, SurfaceNormal);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208BA20 (end 0x0208BAC6), no .pdata (leaf)
+// Original VA: 0x000000014208BA20 | File offset: 0x0208B020
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execNormalizedDeltaRotator; the vectorized FRotator::Normalize (Float360, Float180).
+FRotator UKismetMathLibrary::NormalizedDeltaRotator(FRotator A, FRotator B)
+{
+	FRotator Delta = A - B;
+	Delta.Normalize();
+	return Delta;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208D950 (end 0x0208D970)
+// Original VA: 0x000000014208D950 | File offset: 0x0208CF50
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execRandomUnitVectorFromStream; FRandomStream::VRand, whose GetUnitVector the reference
+//   keeps out of line (0x01C85C00); this object emits that copy.
+FVector UKismetMathLibrary::RandomUnitVectorFromStream(const FRandomStream& Stream)
+{
+	return Stream.VRand();
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0208D930 (end 0x0208D947)

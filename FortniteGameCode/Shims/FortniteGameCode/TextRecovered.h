@@ -292,8 +292,22 @@ private:
 	uint32 Flags;
 };
 
-// Templates/SubclassOf.h. Construction only; the checked conversions (operator*, Get,
-// IsChildOf) are not modelled because thunks do not use them.
+// UObject/Class.h: UStruct::IsChildOf (USTRUCT_FAST_ISCHILDOF_IMPL is USTRUCT_ISCHILDOF_OUTERWALK)
+// walks UStruct::SuperStruct, at 0x30 after UField. The generated class bodies are opaque, so
+// the walk reads the member at that offset.
+template <typename TStruct>
+__forceinline bool FngcStructIsChildOf(const TStruct* This, const TStruct* SomeBase)
+{
+	for (const TStruct* Struct = This; Struct; Struct = *(const TStruct* const*)((const char*)Struct + 0x30))
+	{
+		if (Struct == SomeBase)
+			return true;
+	}
+
+	return false;
+}
+
+// Templates/SubclassOf.h: construction and the checked dereference.
 template<class TClass>
 class TSubclassOf
 {
@@ -311,6 +325,16 @@ public:
 	__forceinline TSubclassOf(UClass* From) :
 		Class(From)
 	{
+	}
+
+	/** Dereference back into a UClass*, does runtime type checking. */
+	__forceinline UClass* operator*() const
+	{
+		if (!Class || !FngcStructIsChildOf(Class, TClass::StaticClass()))
+		{
+			return nullptr;
+		}
+		return Class;
 	}
 
 private:

@@ -179,6 +179,7 @@ private:
 	FSoftObjectPtr SoftObjectPtr;
 };
 
+#if !FNGC_CORE_MATH_EXTRAS   // MathDecls.h defines FColor with its constructors
 // Math/Color.h (PLATFORM_LITTLE_ENDIAN, _MSC_VER)
 struct FColor
 {
@@ -190,6 +191,7 @@ public:
 
 	__forceinline FColor() {}
 };
+#endif
 
 // Layout/Margin.h
 struct FMargin

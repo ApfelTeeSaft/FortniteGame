@@ -918,7 +918,43 @@ def test_slot_elimination() -> None:
     print("slot elimination: ok")
 
 
+def test_locate() -> None:
+    """locate.py: relocation fields are wildcards, every other byte must agree, 16-byte steps."""
+    import locate
+    body = bytes([0x48, 0x8B, 0x05, 0, 0, 0, 0, 0xC3])           # mov rax, [rip+rel32]; ret
+    mask = bytearray([0, 0, 0, 1, 1, 1, 1, 0])                    # the rel32 is a relocation field
+    region = bytearray(0x40)
+    region[0x10:0x18] = bytes([0x48, 0x8B, 0x05, 1, 2, 3, 4, 0xC3])   # other displacement: a hit
+    region[0x30:0x38] = bytes([0x48, 0x8B, 0x0D, 1, 2, 3, 4, 0xC3])   # other register: no hit
+    region[0x21:0x29] = body                                      # not 16-byte aligned: skipped
+    assert locate.locate(bytes(region), 0x1000, body, mask) == [0x1010]
+    print("locate: ok")
+
+
+def test_data_section_blocks() -> None:
+    """resolve_data_symbol: blocks of DATA_SECTION_MIN+ bytes are also searched in .data."""
+    from types import SimpleNamespace as NS
+    import symbols_auto
+    table = bytes(range(64))
+    small = bytes(range(100, 116))
+    sec = NS(chars=0xC0000040 | (5 << 20), data=table + small, relocs=[])     # .data, 16-aligned
+    obj = NS(sections=[sec], symbols=[NS(name="?T@@3PAMA", section=1, value=0, storage=2),
+                                      NS(name="?S@@3PAMA", section=1, value=64, storage=2)])
+    rdata = bytes(32)
+    data = bytes(16) + table + bytes(16) + small
+    # Only in .data: found there with the extra haystack, not without it.
+    assert symbols_auto.resolve_data_symbol(obj, "?T@@3PAMA", rdata, 0x1000)[0] is None
+    assert symbols_auto.resolve_data_symbol(obj, "?T@@3PAMA", rdata, 0x1000, data, 0x8000)[0] == 0x8010
+    # A 16-byte block is below the minimum: .data is not searched for it.
+    assert symbols_auto.resolve_data_symbol(obj, "?S@@3PAMA", rdata, 0x1000, data, 0x8000)[0] is None
+    # Uniqueness counts both haystacks.
+    assert symbols_auto.resolve_data_symbol(obj, "?T@@3PAMA", table, 0x1000, data, 0x8000)[0] is None
+    print("data-section blocks: ok")
+
+
 def main() -> int:
+    test_data_section_blocks()
+    test_locate()
     test_native_array_runs()
     test_slot_elimination()
     test_rigid_successor()
