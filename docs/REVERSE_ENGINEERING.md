@@ -683,6 +683,67 @@ callees), the five `From*` timespan natives (`FText::Format` with `FFormatNamedA
 `FDateTime::Parse` and `FTimespan::Parse` (string splitting), and `FTransform::GetRelativeTransform`
 (`0x01195910`: a thread-safe static and the Core unity unit's vector constants).
 
+## Eleventh family: transforms and the minimum-area rectangle (2026-11-24)
+
+| Group | Functions | Result |
+| --- | --- | --- |
+| Core `TransformVectorized.cpp` (compiled through `UnrealMath.cpp`) | `FTransform::GetRelativeTransform` (`0x01195910`, the target of `ConvertTransformToRelative`), `GetRelativeTransformReverse`, `SetToRelativeTransform`, `GetRelativeTransformUsingMatrixWithScale`, the `FTransform::Identity` initializer (`0x00128F90`) | 5 exact (the initializer outside the denominator) |
+| Out-of-line copies `UnrealMath.cpp` emits | `FMatrix::Inverse` (`0x00696430`), `FMatrix::RemoveScaling` (`0x00575220`), `FQuat(const FMatrix&)` (`0x00569390`) | 2 exact; the quaternion constructor relocation-equivalent (its `nxt[3]` table has no second user) |
+| Core `UnrealMath.cpp` | `FMatrix::ToQuat`, `FQuat::ToSwingTwist`, `FQuat::CalcTangents`, `ClampFloatTangent` | 4 exact |
+| Kismet | `MinimumAreaRectangle` (`0x0208AB40`) | not exact: 8 padding bytes (below) |
+| Out-of-line copies the Kismet object emits | `FMatrix::InverseFast` (`0x00674050`), `TArray<FVector>::ResizeGrow` (`0x02508DB0`), `TArray<int32>::ResizeGrow` (`0x018F3E90`) and `ResizeTo` (`0x01F99E30`), `ConvexHull2D::ComputeConvexHull<FDefaultAllocator>` (`0x008C9CF0`) | 4 exact; `ComputeConvexHull` partial |
+
+18 functions: 15 exact (14 in the denominator), 1 relocation-equivalent and 2 partial. With them
+eight more of `UnrealMath.cpp`'s constant initializers are exact (`FloatZero`, `QINV_SIGN_MASK`,
+the three `QMULTI_SIGN_MASK`s, `SmallNumber`, `ThreshQuatNormalized`, `XYZMask`): these functions read
+their constants. `GetRelativeTransform` needed its callee exact first, and that callee needed the
+out-of-line `RemoveScaling`, located by its body (`0x00575220`).
+
+**One Core unity unit.** `GetRelativeTransform` reads the constants `UnrealMath.cpp` defines
+(`FloatOne` `0x046A0EB0`, `XYZMask` `0x046A0EC0`, `ThreshQuatNormalized`, ...), and
+`FTransform::Identity` (`0x046A0E80`) sits in the same `.bss` block. The reference builds both
+files in one Core unity unit, so `UnrealMath.cpp` includes `TransformVectorized.cpp` at its end;
+the project lists it as a unity member, as `Module.D3D11RHI.cpp`'s members are. The `Identity`
+initializer's decorated name (`??__E?Identity@FTransform`) sorts before the unit's
+`??__EDEG_TO_RAD` (`0x00129070`), where it is. `FMatrix::Identity` and `FQuat::Identity` have no
+initializer, in the reference or here: they are constant data.
+
+**What the reconstruction needed** (all behind `FNGC_CORE_MATH_EXTRAS`, see the tenth family):
+- the 4.20 matrix routines: `VectorMatrixMultiply`, the scalar `VectorMatrixInverse`,
+  `FMatrix::operator*`, `Inverse`, `InverseFast`, `RemoveScaling`, `SetAxis`, `GetOrigin`, and
+  `FQuat(const FMatrix&)`. `Inverse`, `InverseFast` and the quaternion constructor are `inline`,
+  not `FORCEINLINE`: v140 keeps them out of line, as the reference does;
+- `FTransform::IsRotationNormalized`, `Private_AnyHasNegativeScale` and
+  `ConstructTransformFromMatrixWithDesiredScale`, defined in `TransformVectorized.cpp`, where
+  the unit's `ThreshQuatNormalized` exists;
+- `TArray::Add`/`Emplace`/`AddUninitialized`, `ResizeGrow` with `DefaultCalculateSlackGrow`, and
+  `Forward` (`ContainersRecovered.h`). The growth copies are generic: `/OPT:ICF` gives every
+  TArray of the same element size one body, here named by the caller's instantiation;
+- `GetRelativeTransform` and `GetRelativeTransformUsingMatrixWithScale` each keep a thread-safe
+  `static ScalarRegister STolerance` (`_Init_thread_header`/`_footer` and the TLS epoch).
+
+**Not matched.**
+- `MinimumAreaRectangle` is byte-identical except for 8 of the 10 bytes at `+0x3D6`. That span
+  is alignment padding between an unconditional `jmp` and a loop head, and no branch reaches it.
+  v140 fills it with one 10-byte NOP. The reference has `90 35 48 8B 83 10 01 00 00 48`, which is
+  not a NOP and occurs nowhere else in `.text`. The on-disk bytes are the same as the decrypted
+  ones there, although the protector encrypts function bodies on disk. So the protector, not
+  the compiler, most likely wrote them. Under the matching rules the function stays
+  partial; the bytes are not masked.
+- `ComputeConvexHull`'s copy (818 bytes) comes out at 847: v140 keeps the hull point `C.X` in a
+  callee-saved register (one more `xmm` saved) and builds the second determinant product in the
+  other operand order. Swapping the product in the source changes nothing; the cause is upstream.
+- 9 of the 4.20 functions tried have no copy in the reference: the three `FVector4` orientation
+  helpers fold into the `FVector` ones already matched (`0x011A6B30`, `0x011A6820`), `SquadFullPath`
+  has the same masked body as `Squad` (`0x011A5EF0`), and `PlaneAABBIntersection`,
+  `SphereConeIntersection`, `QInterpTo` and `QInterpConstantTo` are absent. `FQuat::Log` and
+  `Exp` stay in the source without an address: `CalcTangents` inlines them.
+- The four `.inl` copies in the generated Engine.18 unit (`ComposeTransforms`, `InvertTransform`,
+  `GetDirectionUnitVector`, `RandomPointInBoundingBox`) read about a dozen of that unit's vector
+  constant slots (`0x048B7290`-`0x048B7350`). `tools/codegen/unity.py` defines only the constants
+  whose initializers open the unit's `.CRT$XCU` entries (`FloatOne`); modelling the others would
+  change a generated unit with exact entries, so they wait.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is

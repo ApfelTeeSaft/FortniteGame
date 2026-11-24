@@ -9,9 +9,9 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **37,202 / 157,719** primary `.pdata` functions (23.59 %, 2,573,903 bytes):
+| Exact functions | **37,216 / 157,719** primary `.pdata` functions (23.60 %, 2,582,887 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
-- 155 hand-reconstructed functions matching the decrypted image;
+- 169 hand-reconstructed functions matching the decrypted image;
 - 53 generated GameplayAbilities attribute getters (`tools/codegen/attribute_getters.py`);
 - 36,992 generated UHT functions:
   - classes: 11,095 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,796 `GetPrivateStaticClass`,
@@ -22,16 +22,17 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
     2,101 `StaticRegisterNatives` and 2,106 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,088 `Z_Construct_UEnum_*`, 1,016 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
-Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,216 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 170 vector-constant initializers, `FCommandLine::IsInitialized`, 49 hand-written leaves without `.pdata` (Kismet math, Core date and colour helpers, `FmodReportError`) and 32 dynamic initializers of the Kismet and UnrealMath units |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,896 reconstructed and compiled; 37,202 exact; 694 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 690 in the denominator, mostly:
+Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,216 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 170 vector-constant initializers, `FCommandLine::IsInitialized`, 49 hand-written leaves without `.pdata` (Kismet math, Core date and colour helpers, `FmodReportError`) and 41 dynamic initializers of the Kismet and UnrealMath units |
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,913 reconstructed and compiled; 37,216 exact; 697 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 691 in the denominator, mostly:
 - 487 `GetPrivateStaticClass` bodies, 453 of them waiting only on `InternalConstructor<C>`;
 - 25 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
 
-Four are `partial`: one enum registration initializer (shared literal copy) and three exec thunks
+Six are `partial`: one enum registration initializer (shared literal copy), three exec thunks
 whose virtual natives were misidentified (inlined natives; see `docs/REVERSE_ENGINEERING.md`, "Exec
-thunk parameters"). The per-manifest counts are in `analysis/functions-uht-*.json` |
+thunk parameters"), `MinimumAreaRectangle` (8 bytes of protector-written alignment padding) and
+the `ConvexHull2D` copy it calls (register allocation; "Eleventh family"). The per-manifest counts are in `analysis/functions-uht-*.json` |
 | Named functions | 28,028 denominator functions (17.77 %):
 - from UHT reflection tables: 7,886 exec thunks, 11,102 `Z_Construct_UFunction_*` creators, and
   registrar/`GetPrivateStaticClass` pairs for 1,180 attributed classes (`analysis/reflection-natives.json`);
@@ -68,12 +69,12 @@ Largest queue groups (2026-11-24):
   by their switch literal in the 4.20 tree (`docs/REVERSE_ENGINEERING.md`, "Fourth family").
   Thread-safe statics resolve only within reconstructed clusters of neighbouring functions
   ("Thread-safe statics"); most remaining checks need their neighbours or class members.
-- Kismet math: 17 of the 149 `UKismetMathLibrary` native targets remain (14 with `.pdata`):
-  `MakeDateTime` (relocation-equivalent: `FString::PrintfImpl`), `MinimumAreaRectangle`, the five
-  `From*` timespan natives (`FText::Format`), `FDateTime::Parse`,
-  `FTimespan::Parse`, `FTransform::GetRelativeTransform`, the four `.inl` copies in the
-  generated Engine unity object, and three CRT thunks (`logf`, `expf`, `powf`) the natives list
-  names after UFunctions (`docs/REVERSE_ENGINEERING.md`, "Tenth family").
+- Kismet math: 16 of the 149 `UKismetMathLibrary` native targets remain (13 with `.pdata`):
+  `MakeDateTime` (relocation-equivalent: `FString::PrintfImpl`), `MinimumAreaRectangle`
+  (partial: protector-written padding), the five `From*` timespan natives (`FText::Format`),
+  `FDateTime::Parse`, `FTimespan::Parse`, the four `.inl` copies in the generated Engine.18 unit
+  (they need that unit's vector constants), and three CRT thunks (`logf`, `expf`, `powf`) the
+  natives list names after UFunctions (`docs/REVERSE_ENGINEERING.md`, "Eleventh family").
 - 25 attribute getters waiting on their static: their reference run follows an object's first
   use, not declaration order ("Attribute getters").
 - 453 `GetPrivateStaticClass` bodies waiting only on `InternalConstructor<C>`. 374 of the
@@ -94,6 +95,13 @@ Largest queue groups (2026-11-24):
   registration objects and header statics, in MSVC's own order.
 - 22 units hold several `TClassCompiledInDefer` runs while their literals interleave. These
   are single objects whose data comes in batches; that is not modelled.
+
+Done (2026-11-25):
+- Transforms and the minimum-area rectangle: 18 hand-written functions, 15 exact, among them
+  `FTransform::GetRelativeTransform` (`ConvertTransformToRelative`) and its matrix fallback,
+  `FMatrix::Inverse`/`InverseFast`/`RemoveScaling`, `CalcTangents` and the TArray growth copies.
+  `TransformVectorized.cpp` compiles through `UnrealMath.cpp` (one Core unity unit).
+  `MinimumAreaRectangle` stays partial: 8 padding bytes the protector wrote. No regressions.
 
 Done (2026-11-24):
 - Dates, times, colours and rotator helpers: 68 hand-written functions in five units (new:

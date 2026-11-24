@@ -126,6 +126,7 @@ namespace ELerpInterpolationMode
 	static FVector GetReflectionVector(FVector Direction, FVector SurfaceNormal); \
 	static FRotator NormalizedDeltaRotator(FRotator A, FRotator B); \
 	static FVector RandomUnitVectorFromStream(const FRandomStream& Stream); \
+	static void MinimumAreaRectangle(class UObject* WorldContextObject, const TArray<FVector>& InVerts, const FVector& SampleSurfaceNormal, FVector& OutRectCenter, FRotator& OutRectRotation, float& OutSideLengthX, float& OutSideLengthY, bool bDebugDraw = false); \
 	static void ReportError_Divide_ByteByte(); \
 	static void ReportError_Percent_ByteByte(); \
 	static void ReportError_Divide_IntInt(); \
@@ -263,6 +264,166 @@ struct FVectorSpringState
 		PrevError = Velocity = FVector::ZeroVector;
 	}
 };
+
+// Math/ConvexHull2d.h. ComputeConvexHull is a template (not force-inlined): the reference calls
+// an out-of-line copy (0x008C9CF0), as this object emits one. That copy calls the int32 TArray's
+// ResizeGrow (0x018F3E90) and ResizeTo (0x01F99E30).
+namespace ConvexHull2D
+{
+	/** Returns <0 if C is left of A-B */
+	inline float ComputeDeterminant(const FVector& A, const FVector& B, const FVector& C)
+	{
+		const float u1 = B.X - A.X;
+		const float v1 = B.Y - A.Y;
+		const float u2 = C.X - A.X;
+		const float v2 = C.Y - A.Y;
+
+		return u1 * v2 - v1 * u2;
+	}
+
+	/** Returns true if 'a' is more lower-left than 'b'. */
+	inline bool ComparePoints(const FVector& A, const FVector& B)
+	{
+		if (A.X < B.X)
+		{
+			return true;
+		}
+
+		if (A.X > B.X)
+		{
+			return false;
+		}
+
+		if (A.Y < B.Y)
+		{
+			return true;
+		}
+
+		if (A.Y > B.Y)
+		{
+			return false;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Calculates convex hull on xy-plane of points on 'Points' and stores the indices of the resulting hull in 'OutIndices'.
+	 * This code was fixed to work with duplicated vertices and precision issues.
+	 */
+	template<typename Allocator>
+	void ComputeConvexHull(const TArray<FVector, Allocator>& Points, TArray<int32, Allocator>& OutIndices)
+	{
+		if (Points.Num() == 0)
+		{
+			// Early exit here, otherwise an invalid index will be added to the output.
+			return;
+		}
+
+		// Find lower-leftmost point.
+		int32 HullStart = 0;
+		int32 HullEnd = 0;
+
+		for (int32 i = 1; i < Points.Num(); ++i)
+		{
+			if (ComparePoints(Points[i], Points[HullStart]))
+			{
+				HullStart = i;
+			}
+			if (ComparePoints(Points[HullEnd], Points[i]))
+			{
+				HullEnd = i;
+			}
+		}
+
+		OutIndices.Add(HullStart);
+
+		if(HullStart == HullEnd)
+		{
+			// convex hull degenerated to a single point
+			return;
+		}
+
+		// Gift wrap Hull.
+		int32 Hull = HullStart;
+		int LocalEnd = HullEnd;
+		bool bGoRight = true;
+		bool bFinished = false;
+
+		// sometimes it hangs on infinite loop, repeating sequence of indices (e.g. 4,9,8,9,8,...)
+		while (OutIndices.Num() <= Points.Num())
+		{
+			int32 NextPoint = LocalEnd;
+
+			for (int j = 0; j < Points.Num(); ++j)
+			{
+				if(j == NextPoint || j == Hull)
+				{
+					continue;
+				}
+
+				FVector A = Points[Hull];
+				FVector B = Points[NextPoint];
+				FVector C = Points[j];
+				float Deter = ComputeDeterminant(A, B, C);
+
+				// 0.001 Bias is to stop floating point errors, when comparing points on a straight line; KINDA_SMALL_NUMBER was slightly too small to use.
+				if(Deter < -0.001)
+				{
+					// C is left of AB, take it
+					NextPoint = j;
+				}
+				else if(Deter < 0.001)
+				{
+					if(bGoRight)
+					{
+						if(ComparePoints(B, C))
+						{
+							// we go right, take it
+							NextPoint = j;
+						}
+					}
+					else
+					{
+						if(ComparePoints(C, B))
+						{
+							// we go left, take it
+							NextPoint = j;
+						}
+					}
+				}
+				else
+				{
+					// C is right of AB, don't take it
+				}
+			}
+
+			if(NextPoint == HullEnd)
+			{
+				// turn around
+				bGoRight = false;
+				LocalEnd = HullStart;
+			}
+
+			if(NextPoint == HullStart)
+			{
+				// finish
+				bFinished = true;
+				break;
+			}
+
+			OutIndices.Add(NextPoint);
+
+			Hull = NextPoint;
+		}
+
+		// clear all indices if main loop was left without finishing shape
+		if (!bFinished)
+		{
+			OutIndices.Reset();
+		}
+	}
+}
 
 // Kismet/KismetMathLibrary.cpp. No standalone copy in the reference: inlined into both
 // GenericSpringInterp instantiations.
@@ -1446,6 +1607,102 @@ FRotator UKismetMathLibrary::NormalizedDeltaRotator(FRotator A, FRotator B)
 FVector UKismetMathLibrary::RandomUnitVectorFromStream(const FRandomStream& Stream)
 {
 	return Stream.VRand();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208AB40 (end 0x0208B3A1)
+// Original VA: 0x000000014208AB40 | File offset: 0x0208A140
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execMinimumAreaRectangle; FRotationMatrix::MakeFromZX (0x0119D370) twice, FMatrix::Rotator
+//   (0x011A1EC0), and out-of-line copies of FMatrix::InverseFast (0x00674050), TArray<FVector>::ResizeGrow
+//   (0x02508DB0) and ConvexHull2D::ComputeConvexHull (0x008C9CF0), which this object emits. The debug
+//   drawing is compiled out (ENABLE_DRAW_DEBUG is 0 in shipping).
+void UKismetMathLibrary::MinimumAreaRectangle(class UObject* WorldContextObject, const TArray<FVector>& InVerts, const FVector& SampleSurfaceNormal, FVector& OutRectCenter, FRotator& OutRectRotation, float& OutSideLengthX, float& OutSideLengthY, bool bDebugDraw)
+{
+	float MinArea = -1.f;
+	float CurrentArea = -1.f;
+	FVector SupportVectorA, SupportVectorB;
+	FVector RectSideA, RectSideB;
+	float MinDotResultA, MinDotResultB, MaxDotResultA, MaxDotResultB;
+	FVector TestEdge;
+	float TestEdgeDot = 0.f;
+	FVector PolyNormal(0.f, 0.f, 1.f);
+	TArray<int32> PolyVertIndices;
+
+	// Bail if we receive an empty InVerts array
+	if (InVerts.Num() == 0)
+	{
+		return;
+	}
+
+	// Compute the approximate normal of the poly, using the direction of SampleSurfaceNormal for guidance
+	PolyNormal = (InVerts[InVerts.Num() / 3] - InVerts[0]) ^ (InVerts[InVerts.Num() * 2 / 3] - InVerts[InVerts.Num() / 3]);
+	if ((PolyNormal | SampleSurfaceNormal) < 0.f)
+	{
+		PolyNormal = -PolyNormal;
+	}
+
+	// Transform the sample points to 2D
+	FMatrix SurfaceNormalMatrix = FRotationMatrix::MakeFromZX(PolyNormal, FVector(1.f, 0.f, 0.f));
+	TArray<FVector> TransformedVerts;
+	OutRectCenter = FVector(0.f);
+	for (int32 Idx = 0; Idx < InVerts.Num(); ++Idx)
+	{
+		OutRectCenter += InVerts[Idx];
+		TransformedVerts.Add(SurfaceNormalMatrix.InverseTransformVector(InVerts[Idx]));
+	}
+	OutRectCenter /= InVerts.Num();
+
+	// Compute the convex hull of the sample points
+	ConvexHull2D::ComputeConvexHull(TransformedVerts, PolyVertIndices);
+
+	// Minimum area rectangle as computed by http://www.geometrictools.com/Documentation/MinimumAreaRectangle.pdf
+	for (int32 Idx = 1; Idx < PolyVertIndices.Num() - 1; ++Idx)
+	{
+		SupportVectorA = (TransformedVerts[PolyVertIndices[Idx]] - TransformedVerts[PolyVertIndices[Idx-1]]).GetSafeNormal();
+		SupportVectorA.Z = 0.f;
+		SupportVectorB.X = -SupportVectorA.Y;
+		SupportVectorB.Y = SupportVectorA.X;
+		SupportVectorB.Z = 0.f;
+		MinDotResultA = MinDotResultB = MaxDotResultA = MaxDotResultB = 0.f;
+
+		for (int TestVertIdx = 1; TestVertIdx < PolyVertIndices.Num(); ++TestVertIdx)
+		{
+			TestEdge = TransformedVerts[PolyVertIndices[TestVertIdx]] - TransformedVerts[PolyVertIndices[0]];
+			TestEdgeDot = SupportVectorA | TestEdge;
+			if (TestEdgeDot < MinDotResultA)
+			{
+				MinDotResultA = TestEdgeDot;
+			}
+			else if (TestEdgeDot > MaxDotResultA)
+			{
+				MaxDotResultA = TestEdgeDot;
+			}
+
+			TestEdgeDot = SupportVectorB | TestEdge;
+			if (TestEdgeDot < MinDotResultB)
+			{
+				MinDotResultB = TestEdgeDot;
+			}
+			else if (TestEdgeDot > MaxDotResultB)
+			{
+				MaxDotResultB = TestEdgeDot;
+			}
+		}
+
+		CurrentArea = (MaxDotResultA - MinDotResultA) * (MaxDotResultB - MinDotResultB);
+		if (MinArea < 0.f || CurrentArea < MinArea)
+		{
+			MinArea = CurrentArea;
+			RectSideA = SupportVectorA * (MaxDotResultA - MinDotResultA);
+			RectSideB = SupportVectorB * (MaxDotResultB - MinDotResultB);
+		}
+	}
+
+	RectSideA = SurfaceNormalMatrix.TransformVector(RectSideA);
+	RectSideB = SurfaceNormalMatrix.TransformVector(RectSideB);
+	OutRectRotation = FRotationMatrix::MakeFromZX(PolyNormal, RectSideA).Rotator();
+	OutSideLengthX = RectSideA.Size();
+	OutSideLengthY = RectSideB.Size();
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0208D930 (end 0x0208D947)

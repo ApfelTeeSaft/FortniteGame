@@ -95,6 +95,8 @@
     <!-- Unity members: compiled only through Module.D3D11RHI.cpp. -->
     <None Include="Source\Runtime\Windows\D3D11RHI\Private\D3D11Device.cpp" />
     <None Include="Source\Runtime\Windows\D3D11RHI\Private\Windows\WindowsD3D11Device.cpp" />
+    <!-- Core unity member: compiled only through UnrealMath.cpp, which includes it. -->
+    <None Include="Source\Runtime\Core\Private\Math\TransformVectorized.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMath.cpp" />

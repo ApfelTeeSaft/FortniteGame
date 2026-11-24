@@ -82,6 +82,18 @@ public:
 	void SetScale3D(const FVector& NewScale3D);
 	FVector GetTranslation() const;
 	FVector GetScale3D() const;
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+	static const FTransform Identity;   // CORE_API, Math/TransformVectorized.cpp
+	FTransform GetRelativeTransform(const FTransform& Other) const;
+	FTransform GetRelativeTransformReverse(const FTransform& Other) const;
+	void SetToRelativeTransform(const FTransform& ParentTransform);
+	static void GetRelativeTransformUsingMatrixWithScale(FTransform* OutTransform, const FTransform* Base, const FTransform* Relative);
+	static void ConstructTransformFromMatrixWithDesiredScale(const FMatrix& AMatrix, const FMatrix& BMatrix, const VectorRegister& DesiredScale, FTransform& OutTransform);
+	bool IsRotationNormalized() const;
+private:
+	static bool Private_AnyHasNegativeScale(const VectorRegister& InScale3D, const  VectorRegister& InOtherScale3D);
+public:
+#endif
 	FVector TransformVectorNoScale(const FVector& V) const;
 	FVector GetUnitAxis( EAxis::Type InAxis ) const;
 };

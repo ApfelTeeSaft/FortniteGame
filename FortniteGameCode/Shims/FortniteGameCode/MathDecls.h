@@ -539,6 +539,12 @@ struct FMath : public FPlatformMath
 	static void ApplyScaleToFloat(float& Dst, const FVector& DeltaScale, float Magnitude = 1.0f);
 	static void CartesianToPolar(const FVector2D InCart, FVector2D& OutPolar);
 	static void PolarToCartesian(const FVector2D InPolar, FVector2D& OutCart);
+#if FNGC_CORE_MATH_EXTRAS
+	static bool PlaneAABBIntersection(const FPlane& P, const FBox& AABB);
+	static bool SphereConeIntersection(const FVector& SphereCenter, float SphereRadius, const FVector& ConeAxis, float ConeAngleSin, float ConeAngleCos);
+	static FQuat QInterpConstantTo(const FQuat& Current, const FQuat& Target, float DeltaTime, float InterpSpeed);
+	static FQuat QInterpTo(const FQuat& Current, const FQuat& Target, float DeltaTime, float InterpSpeed);
+#endif
 
 	template< class T >
 	static __forceinline T Max3( const T A, const T B, const T C )
@@ -724,6 +730,21 @@ struct FVector
 		return X==0.f && Y==0.f && Z==0.f;
 	}
 
+	__forceinline bool IsNearlyZero(float Tolerance=KINDA_SMALL_NUMBER) const
+	{
+		return
+			FMath::Abs(X)<=Tolerance
+			&&	FMath::Abs(Y)<=Tolerance
+			&&	FMath::Abs(Z)<=Tolerance;
+	}
+
+	__forceinline FVector operator/=(float V)
+	{
+		const float RV = 1.f/V;
+		X *= RV; Y *= RV; Z *= RV;
+		return *this;
+	}
+
 	__forceinline FVector GetUnsafeNormal() const
 	{
 		const float Scale = FMath::InvSqrt(X*X+Y*Y+Z*Z);
@@ -733,6 +754,11 @@ struct FVector
 	static __forceinline FVector CrossProduct(const FVector& A, const FVector& B)
 	{
 		return A ^ B;
+	}
+
+	static __forceinline float DotProduct(const FVector& A, const FVector& B)
+	{
+		return A | B;
 	}
 
 	static __forceinline float PointPlaneDist(const FVector &Point, const FVector &PlaneBase, const FVector &PlaneNormal)
@@ -852,6 +878,11 @@ public:
 	float W;
 
 	__forceinline FVector4(const FVector& InVector, float InW = 1.0f);
+	// CORE_API, Math/UnrealMath.cpp
+	FRotator ToOrientationRotator() const;
+	FRotator Rotation() const;
+	FQuat ToOrientationQuat() const;
+
 	explicit __forceinline FVector4(float InX = 0.0f, float InY = 0.0f, float InZ = 0.0f, float InW = 0.0f)
 		: X(InX)
 		, Y(InY)
@@ -985,6 +1016,17 @@ public:
 		:	FVector(InNormal)
 		,	W(InBase | InNormal)
 	{}
+#if FNGC_CORE_MATH_EXTRAS
+	__forceinline FPlane(float InX, float InY, float InZ, float InW)
+		:	FVector(InX,InY,InZ)
+		,	W(InW)
+	{}
+
+	__forceinline float PlaneDot(const FVector &P) const
+	{
+		return X*P.X + Y*P.Y + Z*P.Z - W;
+	}
+#endif
 };
 
 #include "FortniteGameCode/AxisRecovered.h"   // Math/Axis.h
@@ -1017,6 +1059,26 @@ public:
 	FVector4 TransformFVector4(const FVector4& V) const;
 	FVector4 TransformVector(const FVector& V) const;
 	FVector InverseTransformVector(const FVector &V) const;
+	FMatrix operator*(const FMatrix& Other) const;
+	FMatrix Inverse() const;
+	FMatrix InverseFast() const;
+	FQuat ToQuat() const;   // CORE_API, Math/UnrealMath.cpp
+	void RemoveScaling(float Tolerance=SMALL_NUMBER);
+	__forceinline FMatrix(const FPlane& InX,const FPlane& InY,const FPlane& InZ,const FPlane& InW);
+	static const FMatrix Identity;   // CORE_API, Math/UnrealMath.cpp
+
+	inline void SetAxis( int32 i, const FVector& Axis )
+	{
+		// checkSlow(i >= 0 && i <= 2) is compiled out.
+		M[i][0] = Axis.X;
+		M[i][1] = Axis.Y;
+		M[i][2] = Axis.Z;
+	}
+
+	inline FVector GetOrigin() const
+	{
+		return FVector(M[3][0],M[3][1],M[3][2]);
+	}
 	inline FMatrix GetTransposed() const
 	{
 		FMatrix	Result;
@@ -1076,6 +1138,16 @@ public:
 	}
 };
 
+#if FNGC_CORE_MATH_EXTRAS
+__forceinline FMatrix::FMatrix(const FPlane& InX,const FPlane& InY,const FPlane& InZ,const FPlane& InW)
+{
+	M[0][0] = InX.X; M[0][1] = InX.Y;  M[0][2] = InX.Z;  M[0][3] = InX.W;
+	M[1][0] = InY.X; M[1][1] = InY.Y;  M[1][2] = InY.Z;  M[1][3] = InY.W;
+	M[2][0] = InZ.X; M[2][1] = InZ.Y;  M[2][2] = InZ.Z;  M[2][3] = InZ.W;
+	M[3][0] = InW.X; M[3][1] = InW.Y;  M[3][2] = InW.Z;  M[3][3] = InW.W;
+}
+#endif
+
 // Math/RotationTranslationMatrix.h, RotationMatrix.h. FRotationMatrix's constructor is inline
 // there, but the reference calls an out-of-line copy (0x009C4CB0), so it is only declared.
 class FRotationTranslationMatrix
@@ -1117,6 +1189,19 @@ public:
 	__forceinline FQuat() { }
 #if FNGC_CORE_MATH_EXTRAS
 	FVector Euler() const;   // CORE_API, Math/UnrealMath.cpp
+	explicit FQuat(const FMatrix& M);   // inline in Math/Quat.h, QuatRecovered.h
+	static const FQuat Identity;   // CORE_API, Math/UnrealMath.cpp
+	FQuat Log() const;   // CORE_API, Math/UnrealMath.cpp
+	FQuat Exp() const;
+	void ToSwingTwist(const FVector& InTwistAxis, FQuat& OutSwing, FQuat& OutTwist) const;
+	static FQuat SquadFullPath(const FQuat& quat1, const FQuat& tang1, const FQuat& quat2, const FQuat& tang2, float Alpha);
+	static void CalcTangents(const FQuat& PrevP, const FQuat& P, const FQuat& NextP, float Tension, FQuat& OutTan);
+	bool Equals(const FQuat& Q, float Tolerance=KINDA_SMALL_NUMBER) const;   // QuatRecovered.h
+	__forceinline float SizeSquared() const
+	{
+		return (X * X + Y * Y + Z * Z + W * W);
+	}
+	__forceinline float AngularDistance(const FQuat& Q) const;
 	static FQuat MakeFromEuler(const FVector& Euler);   // CORE_API, Math/UnrealMath.cpp
 #endif
 	__forceinline FQuat( float InX, float InY, float InZ, float InW )

@@ -128,6 +128,21 @@ template <typename T> struct TRemoveReference      { typedef T Type; };
 template <typename T> struct TRemoveReference<T& > { typedef T Type; };
 template <typename T> struct TRemoveReference<T&&> { typedef T Type; };
 
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+// Templates/UnrealTemplate.h
+template <typename T>
+__forceinline T&& Forward(typename TRemoveReference<T>::Type& Obj)
+{
+	return (T&&)Obj;
+}
+
+template <typename T>
+__forceinline T&& Forward(typename TRemoveReference<T>::Type&& Obj)
+{
+	return (T&&)Obj;
+}
+#endif
+
 template <typename T>
 __forceinline typename TRemoveReference<T>::Type&& MoveTemp(T&& Obj)
 {
@@ -273,6 +288,36 @@ __forceinline typename TEnableIf<UE4MemoryOps_Private::TCanBitwiseRelocate<Desti
 }
 
 // Containers/ContainerAllocationPolicies.h
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+__forceinline int32 DefaultCalculateSlackGrow(int32 NumElements, int32 NumAllocatedElements, SIZE_T BytesPerElement, bool bAllowQuantize, uint32 Alignment = DEFAULT_ALIGNMENT)
+{
+	int32 Retval;
+	// checkSlow(NumElements > NumAllocatedElements && NumElements > 0) is compiled out.
+
+	SIZE_T Grow = 4; // this is the amount for the first alloc
+	if (NumAllocatedElements || SIZE_T(NumElements) > Grow)
+	{
+		// Allocate slack for the array proportional to its size.
+		Grow = SIZE_T(NumElements) + 3 * SIZE_T(NumElements) / 8 + 16;
+	}
+	if (bAllowQuantize)
+	{
+		Retval = FMemory::QuantizeSize(Grow * BytesPerElement, Alignment) / BytesPerElement;
+	}
+	else
+	{
+		Retval = Grow;
+	}
+	// NumElements and MaxElements are stored in 32 bit signed integers so we must be careful not to overflow here.
+	if (NumElements > Retval)
+	{
+		Retval = MAX_int32;
+	}
+
+	return Retval;
+}
+#endif
+
 __forceinline int32 DefaultCalculateSlackReserve(int32 NumElements, SIZE_T BytesPerElement, bool bAllowQuantize, uint32 Alignment = DEFAULT_ALIGNMENT)
 {
 	int32 Retval = NumElements;
@@ -341,6 +386,12 @@ public:
 		{
 			return DefaultCalculateSlackReserve(NumElements, NumBytesPerElement, true);
 		}
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+		__forceinline int32 CalculateSlackGrow(int32 NumElements, int32 NumAllocatedElements, int32 NumBytesPerElement) const
+		{
+			return DefaultCalculateSlackGrow(NumElements, NumAllocatedElements, NumBytesPerElement, true);
+		}
+#endif
 
 	private:
 		ForAnyElementType(const ForAnyElementType&);
@@ -571,6 +622,29 @@ public:
 		}
 	}
 
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+	__forceinline int32 AddUninitialized(int32 Count = 1)
+	{
+		const int32 OldNum = ArrayNum;
+		if ((ArrayNum += Count) > ArrayMax)
+		{
+			ResizeGrow(OldNum);
+		}
+		return OldNum;
+	}
+
+	template <typename... ArgsType>
+	__forceinline int32 Emplace(ArgsType&&... Args)
+	{
+		const int32 Index = AddUninitialized(1);
+		new(GetData() + Index) ElementType(Forward<ArgsType>(Args)...);
+		return Index;
+	}
+
+	__forceinline int32 Add(ElementType&& Item) { return Emplace(MoveTemp(Item)); }
+	__forceinline int32 Add(const ElementType& Item) { return Emplace(Item); }
+#endif
+
 	void Empty(int32 Slack = 0)
 	{
 		DestructItems(GetData(), ArrayNum);
@@ -588,6 +662,14 @@ private:
 	{
 		return GetData()[Index];
 	}
+
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+	__declspec(noinline) void ResizeGrow(int32 OldNum)
+	{
+		ArrayMax = AllocatorInstance.CalculateSlackGrow(ArrayNum, ArrayMax, sizeof(ElementType));
+		AllocatorInstance.ResizeAllocation(OldNum, ArrayMax, sizeof(ElementType));
+	}
+#endif
 
 	__declspec(noinline) void ResizeTo(int32 NewMax)
 	{

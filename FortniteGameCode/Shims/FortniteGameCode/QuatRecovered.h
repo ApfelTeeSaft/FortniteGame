@@ -553,6 +553,301 @@ __forceinline FVector FTransform::GetScale3D() const
 	return OutScale3D;
 }
 
+#if FNGC_CORE_MATH_EXTRAS
+#define VectorMin( Vec1, Vec2 )			_mm_min_ps( Vec1, Vec2 )
+
+// Math/UnrealMathVectorCommon.h
+__forceinline uint32 VectorAnyLesserThan( VectorRegister Vec1, VectorRegister Vec2 )
+{
+	return VectorAnyGreaterThan( Vec2, Vec1 );
+}
+
+__forceinline VectorRegister VectorSign(const VectorRegister& X)
+{
+	VectorRegister Mask = VectorCompareGE(X, (GlobalVectorConstants::FloatZero));
+	return VectorSelect(Mask, (GlobalVectorConstants::FloatOne), (GlobalVectorConstants::FloatMinusOne));
+}
+
+__forceinline void VectorMatrixMultiply( void *Result, const void* Matrix1, const void* Matrix2 )
+{
+	const VectorRegister *A	= (const VectorRegister *) Matrix1;
+	const VectorRegister *B	= (const VectorRegister *) Matrix2;
+	VectorRegister *R		= (VectorRegister *) Result;
+	VectorRegister Temp, R0, R1, R2, R3;
+
+	// First row of result (Matrix1[0] * Matrix2).
+	Temp	= VectorMultiply( VectorReplicate( A[0], 0 ), B[0] );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[0], 1 ), B[1], Temp );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[0], 2 ), B[2], Temp );
+	R0		= VectorMultiplyAdd( VectorReplicate( A[0], 3 ), B[3], Temp );
+
+	// Second row of result (Matrix1[1] * Matrix2).
+	Temp	= VectorMultiply( VectorReplicate( A[1], 0 ), B[0] );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[1], 1 ), B[1], Temp );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[1], 2 ), B[2], Temp );
+	R1		= VectorMultiplyAdd( VectorReplicate( A[1], 3 ), B[3], Temp );
+
+	// Third row of result (Matrix1[2] * Matrix2).
+	Temp	= VectorMultiply( VectorReplicate( A[2], 0 ), B[0] );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[2], 1 ), B[1], Temp );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[2], 2 ), B[2], Temp );
+	R2		= VectorMultiplyAdd( VectorReplicate( A[2], 3 ), B[3], Temp );
+
+	// Fourth row of result (Matrix1[3] * Matrix2).
+	Temp	= VectorMultiply( VectorReplicate( A[3], 0 ), B[0] );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[3], 1 ), B[1], Temp );
+	Temp	= VectorMultiplyAdd( VectorReplicate( A[3], 2 ), B[2], Temp );
+	R3		= VectorMultiplyAdd( VectorReplicate( A[3], 3 ), B[3], Temp );
+
+	// Store result
+	R[0] = R0;
+	R[1] = R1;
+	R[2] = R2;
+	R[3] = R3;
+}
+
+// Math/UnrealMathSSE.h (scalar code, as in 4.20)
+__forceinline void VectorMatrixInverse( void* DstMatrix, const void* SrcMatrix )
+{
+	typedef float Float4x4[4][4];
+	const Float4x4& M = *((const Float4x4*) SrcMatrix);
+	Float4x4 Result;
+	float Det[4];
+	Float4x4 Tmp;
+
+	Tmp[0][0]	= M[2][2] * M[3][3] - M[2][3] * M[3][2];
+	Tmp[0][1]	= M[1][2] * M[3][3] - M[1][3] * M[3][2];
+	Tmp[0][2]	= M[1][2] * M[2][3] - M[1][3] * M[2][2];
+
+	Tmp[1][0]	= M[2][2] * M[3][3] - M[2][3] * M[3][2];
+	Tmp[1][1]	= M[0][2] * M[3][3] - M[0][3] * M[3][2];
+	Tmp[1][2]	= M[0][2] * M[2][3] - M[0][3] * M[2][2];
+
+	Tmp[2][0]	= M[1][2] * M[3][3] - M[1][3] * M[3][2];
+	Tmp[2][1]	= M[0][2] * M[3][3] - M[0][3] * M[3][2];
+	Tmp[2][2]	= M[0][2] * M[1][3] - M[0][3] * M[1][2];
+
+	Tmp[3][0]	= M[1][2] * M[2][3] - M[1][3] * M[2][2];
+	Tmp[3][1]	= M[0][2] * M[2][3] - M[0][3] * M[2][2];
+	Tmp[3][2]	= M[0][2] * M[1][3] - M[0][3] * M[1][2];
+
+	Det[0]		= M[1][1]*Tmp[0][0] - M[2][1]*Tmp[0][1] + M[3][1]*Tmp[0][2];
+	Det[1]		= M[0][1]*Tmp[1][0] - M[2][1]*Tmp[1][1] + M[3][1]*Tmp[1][2];
+	Det[2]		= M[0][1]*Tmp[2][0] - M[1][1]*Tmp[2][1] + M[3][1]*Tmp[2][2];
+	Det[3]		= M[0][1]*Tmp[3][0] - M[1][1]*Tmp[3][1] + M[2][1]*Tmp[3][2];
+
+	float Determinant = M[0][0]*Det[0] - M[1][0]*Det[1] + M[2][0]*Det[2] - M[3][0]*Det[3];
+	const float	RDet = 1.0f / Determinant;
+
+	Result[0][0] =  RDet * Det[0];
+	Result[0][1] = -RDet * Det[1];
+	Result[0][2] =  RDet * Det[2];
+	Result[0][3] = -RDet * Det[3];
+	Result[1][0] = -RDet * (M[1][0]*Tmp[0][0] - M[2][0]*Tmp[0][1] + M[3][0]*Tmp[0][2]);
+	Result[1][1] =  RDet * (M[0][0]*Tmp[1][0] - M[2][0]*Tmp[1][1] + M[3][0]*Tmp[1][2]);
+	Result[1][2] = -RDet * (M[0][0]*Tmp[2][0] - M[1][0]*Tmp[2][1] + M[3][0]*Tmp[2][2]);
+	Result[1][3] =  RDet * (M[0][0]*Tmp[3][0] - M[1][0]*Tmp[3][1] + M[2][0]*Tmp[3][2]);
+	Result[2][0] =  RDet * (
+		M[1][0] * (M[2][1] * M[3][3] - M[2][3] * M[3][1]) -
+		M[2][0] * (M[1][1] * M[3][3] - M[1][3] * M[3][1]) +
+		M[3][0] * (M[1][1] * M[2][3] - M[1][3] * M[2][1])
+		);
+	Result[2][1] = -RDet * (
+		M[0][0] * (M[2][1] * M[3][3] - M[2][3] * M[3][1]) -
+		M[2][0] * (M[0][1] * M[3][3] - M[0][3] * M[3][1]) +
+		M[3][0] * (M[0][1] * M[2][3] - M[0][3] * M[2][1])
+		);
+	Result[2][2] =  RDet * (
+		M[0][0] * (M[1][1] * M[3][3] - M[1][3] * M[3][1]) -
+		M[1][0] * (M[0][1] * M[3][3] - M[0][3] * M[3][1]) +
+		M[3][0] * (M[0][1] * M[1][3] - M[0][3] * M[1][1])
+		);
+	Result[2][3] = -RDet * (
+		M[0][0] * (M[1][1] * M[2][3] - M[1][3] * M[2][1]) -
+		M[1][0] * (M[0][1] * M[2][3] - M[0][3] * M[2][1]) +
+		M[2][0] * (M[0][1] * M[1][3] - M[0][3] * M[1][1])
+		);
+	Result[3][0] = -RDet * (
+		M[1][0] * (M[2][1] * M[3][2] - M[2][2] * M[3][1]) -
+		M[2][0] * (M[1][1] * M[3][2] - M[1][2] * M[3][1]) +
+		M[3][0] * (M[1][1] * M[2][2] - M[1][2] * M[2][1])
+		);
+	Result[3][1] =  RDet * (
+		M[0][0] * (M[2][1] * M[3][2] - M[2][2] * M[3][1]) -
+		M[2][0] * (M[0][1] * M[3][2] - M[0][2] * M[3][1]) +
+		M[3][0] * (M[0][1] * M[2][2] - M[0][2] * M[2][1])
+		);
+	Result[3][2] = -RDet * (
+		M[0][0] * (M[1][1] * M[3][2] - M[1][2] * M[3][1]) -
+		M[1][0] * (M[0][1] * M[3][2] - M[0][2] * M[3][1]) +
+		M[3][0] * (M[0][1] * M[1][2] - M[0][2] * M[1][1])
+		);
+	Result[3][3] =  RDet * (
+		M[0][0] * (M[1][1] * M[2][2] - M[1][2] * M[2][1]) -
+		M[1][0] * (M[0][1] * M[2][2] - M[0][2] * M[2][1]) +
+		M[2][0] * (M[0][1] * M[1][2] - M[0][2] * M[1][1])
+		);
+
+	memcpy( DstMatrix, &Result, 16*sizeof(float) );
+}
+
+// Math/Matrix.inl
+__forceinline FMatrix FMatrix::operator*(const FMatrix& Other) const
+{
+	FMatrix Result;
+	VectorMatrixMultiply( &Result, this, &Other );
+	return Result;
+}
+
+// Remove any scaling from this matrix (ie magnitude of each row is 1)
+inline void FMatrix::RemoveScaling(float Tolerance/*=SMALL_NUMBER*/)
+{
+	// For each row, find magnitude, and if its non-zero re-scale so its unit length.
+	const float SquareSum0 = (M[0][0] * M[0][0]) + (M[0][1] * M[0][1]) + (M[0][2] * M[0][2]);
+	const float SquareSum1 = (M[1][0] * M[1][0]) + (M[1][1] * M[1][1]) + (M[1][2] * M[1][2]);
+	const float SquareSum2 = (M[2][0] * M[2][0]) + (M[2][1] * M[2][1]) + (M[2][2] * M[2][2]);
+	const float Scale0 = FMath::FloatSelect( SquareSum0 - Tolerance, FMath::InvSqrt(SquareSum0), 1.0f );
+	const float Scale1 = FMath::FloatSelect( SquareSum1 - Tolerance, FMath::InvSqrt(SquareSum1), 1.0f );
+	const float Scale2 = FMath::FloatSelect( SquareSum2 - Tolerance, FMath::InvSqrt(SquareSum2), 1.0f );
+	M[0][0] *= Scale0;
+	M[0][1] *= Scale0;
+	M[0][2] *= Scale0;
+	M[1][0] *= Scale1;
+	M[1][1] *= Scale1;
+	M[1][2] *= Scale1;
+	M[2][0] *= Scale2;
+	M[2][1] *= Scale2;
+	M[2][2] *= Scale2;
+}
+
+// Inline in Matrix.inl (not FORCEINLINE); the reference calls an out-of-line copy (0x00674050),
+// which UKismetMathLibrary::MinimumAreaRectangle's object emits. The zero-scale check is
+// compiled out of shipping builds.
+inline FMatrix FMatrix::InverseFast() const
+{
+	FMatrix Result;
+	VectorMatrixInverse( &Result, this );
+	return Result;
+}
+
+inline FMatrix FMatrix::Inverse() const
+{
+	FMatrix Result;
+
+	// Check for zero scale matrix to invert
+	if(	GetScaledAxis( EAxis::X ).IsNearlyZero(SMALL_NUMBER) &&
+		GetScaledAxis( EAxis::Y ).IsNearlyZero(SMALL_NUMBER) &&
+		GetScaledAxis( EAxis::Z ).IsNearlyZero(SMALL_NUMBER) )
+	{
+		// just set to zero - avoids unsafe inverse of zero and duplicates what QNANs were resulting in before (scaling away all children)
+		Result = FMatrix::Identity;
+	}
+	else
+	{
+		const float	Det = Determinant();
+
+		if(Det == 0.0f)
+		{
+			Result = FMatrix::Identity;
+		}
+		else
+		{
+			VectorMatrixInverse( &Result, this );
+		}
+	}
+
+	return Result;
+}
+
+/** Faster version of InverseTransformVector that assumes no scaling. WARNING: Will NOT work correctly if there is scaling in the matrix. */
+__forceinline FVector FMatrix::InverseTransformVector(const FVector &V) const
+{
+	FMatrix InvSelf = this->InverseFast();
+	return InvSelf.TransformVector(V);
+}
+
+// Math/Quat.h
+__forceinline bool FQuat::Equals(const FQuat& Q, float Tolerance) const
+{
+	const VectorRegister ToleranceV = VectorLoadFloat1(&Tolerance);
+	const VectorRegister A = VectorLoadAligned(this);
+	const VectorRegister B = VectorLoadAligned(&Q);
+
+	const VectorRegister RotationSub = VectorAbs(VectorSubtract(A, B));
+	const VectorRegister RotationAdd = VectorAbs(VectorAdd(A, B));
+	return !VectorAnyGreaterThan(RotationSub, ToleranceV) || !VectorAnyGreaterThan(RotationAdd, ToleranceV);
+}
+
+__forceinline float FQuat::AngularDistance(const FQuat& Q) const
+{
+	float InnerProd = X*Q.X + Y*Q.Y + Z*Q.Z + W*Q.W;
+	return FMath::Acos((2 * InnerProd * InnerProd) - 1.f);
+}
+
+// Math/Quat.h. The ensure() on the unit-length axes is compiled out of shipping builds.
+inline FQuat::FQuat(const FMatrix& M)
+{
+	// If Matrix is NULL, return Identity quaternion. If any of them is 0, you won't be able to construct rotation
+	// if you have two plane at least, we can reconstruct the frame using cross product, but that's a bit expensive op to do here
+	// for now, if you convert to matrix from 0 scale and convert back, you'll lose rotation. Don't do that.
+	if (M.GetScaledAxis(EAxis::X).IsNearlyZero() || M.GetScaledAxis(EAxis::Y).IsNearlyZero() || M.GetScaledAxis(EAxis::Z).IsNearlyZero())
+	{
+		*this = FQuat::Identity;
+		return;
+	}
+
+	//const MeReal *const t = (MeReal *) tm;
+	float	s;
+
+	// Check diagonal (trace)
+	const float tr = M.M[0][0] + M.M[1][1] + M.M[2][2];
+
+	if (tr > 0.0f)
+	{
+		float InvS = FMath::InvSqrt(tr + 1.f);
+		this->W = 0.5f * (1.f / InvS);
+		s = 0.5f * InvS;
+
+		this->X = (M.M[1][2] - M.M[2][1]) * s;
+		this->Y = (M.M[2][0] - M.M[0][2]) * s;
+		this->Z = (M.M[0][1] - M.M[1][0]) * s;
+	}
+	else
+	{
+		// diagonal is negative
+		int32 i = 0;
+
+		if (M.M[1][1] > M.M[0][0])
+			i = 1;
+
+		if (M.M[2][2] > M.M[i][i])
+			i = 2;
+
+		static const int32 nxt[3] = { 1, 2, 0 };
+		const int32 j = nxt[i];
+		const int32 k = nxt[j];
+
+		s = M.M[i][i] - M.M[j][j] - M.M[k][k] + 1.0f;
+
+		float InvS = FMath::InvSqrt(s);
+
+		float qt[4];
+		qt[i] = 0.5f * (1.f / InvS);
+
+		s = 0.5f * InvS;
+
+		qt[3] = (M.M[j][k] - M.M[k][j]) * s;
+		qt[j] = (M.M[i][j] + M.M[j][i]) * s;
+		qt[k] = (M.M[i][k] + M.M[k][i]) * s;
+
+		this->X = qt[0];
+		this->Y = qt[1];
+		this->Z = qt[2];
+		this->W = qt[3];
+	}
+}
+#endif
+
 // Math/UnrealMathSSE.h
 __forceinline VectorRegister VectorTransformVector(const VectorRegister&  VecP,  const void* MatrixM )
 {
