@@ -9,23 +9,23 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **36,793 / 157,719** primary `.pdata` functions (23.33 %, 2,496,105 bytes):
+| Exact functions | **36,923 / 157,719** primary `.pdata` functions (23.41 %, 2,507,648 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 36,786 generated UHT functions:
+- 36,916 generated UHT functions:
   - classes: 11,093 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,772 `GetPrivateStaticClass`,
     1,155 `StaticRegisterNatives*`, 3,277 `FCompiledInDefer` initializers and 1,320 exec thunks
     (1,113 of virtual natives, 207 of native accessors);
   - packages: 622 package-scope delegate creators and 69 `Z_Construct_UPackage_*`;
-  - USTRUCTs: 2,102 `Z_Construct_UScriptStruct_*`, 2,010 `StaticStruct`, 1,782 `NewStructOps`,
-    2,057 `StaticRegisterNatives` and 2,062 `FCompiledInDeferStruct` initializers;
+  - USTRUCTs: 2,102 `Z_Construct_UScriptStruct_*`, 2,052 `StaticStruct`, 1,782 `NewStructOps`,
+    2,101 `StaticRegisterNatives` and 2,106 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,087 `Z_Construct_UEnum_*`, 1,008 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,190 `StaticClass` thunks, 3,173 `AutoInitialize` initializers, 212 leaf exec thunks, 207 native accessors, 136 vector-constant initializers and `FCommandLine::IsInitialized` |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,635 reconstructed and compiled; 36,793 exact; 842 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 838 in the denominator, mostly:
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,635 reconstructed and compiled; 36,923 exact; 712 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 708 in the denominator, mostly:
 - 511 `GetPrivateStaticClass` bodies, 452 of them waiting only on `InternalConstructor<C>`;
-- about 100 registrars and `StaticStruct`s waiting on string-literal copies;
+- 25 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
 
 Four are `partial`: one enum registration initializer (shared literal copy) and three exec thunks
@@ -71,8 +71,8 @@ Largest queue groups (2026-11-24):
 - 14 creators and package delegates and 7 enum constructors whose static is not predicted:
   at an end of their object's record run, or with several free slots between their record
   neighbours.
-- 157 functions waiting on string literals: 53 struct `StaticRegisterNatives` on pooled
-  `??_C@` literals, the rest on `$SG` copies.
+- 25 functions waiting on string literals, with two or more plausible copies left: 9 struct
+  `StaticRegisterNatives` on pooled `??_C@` literals, the rest on `$SG` copies.
 - 73 `StaticEnum` singletons. Their block has both ends free with no `PrivateStaticClass`
   below (47), their run lies outside a split unit's observed runs (5), or they are a unit's
   only enum (23). Pinning block ends needs a model of what follows a block: the unit's 1-byte
@@ -81,6 +81,9 @@ Largest queue groups (2026-11-24):
   are single objects whose data comes in batches; that is not modelled.
 
 Done (2026-11-24):
+- Literal copies of 8 bytes or more must be 8-byte aligned, which drops the tails of longer
+  wide strings: 130 struct functions exact (`StaticStruct`, registration and
+  `StaticRegisterNatives` initializers), no regressions.
 - `InternalConstructor<C>` runs: a side whose prediction another unit's instance holds is
   dropped when the sides disagree, and declared-only instances are checked by their inlined
   prologue: 88 `GetPrivateStaticClass` bodies exact, no regressions.

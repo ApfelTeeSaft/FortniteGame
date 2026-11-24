@@ -63,10 +63,15 @@ def test_literals() -> None:
     assert _string_literal(b"abc\0\0\0\0\0") == b"abc\0"
     assert _string_literal(bytes.fromhex("78ae0a776ff2ba4d")) is None  # GUID bytes are not a literal
     from symbols_auto import literal_hits
-    w = "Entry".encode("utf-16le") + b"\0\0"
-    hay = b"idx\0" + w + b"\0\0" + w + "Big".encode("utf-16le") + w
-    # After a narrow string, after wide NULs, and as a suffix of a wide string: all three count.
-    assert literal_hits(w, hay, 0x1000) == [0x1004, 0x1012, 0x1024], literal_hits(w, hay, 0x1000)
+    w = "Entry".encode("utf-16le") + b"\0\0"                  # 12 bytes: 8-byte aligned copies only
+    hay = b"idxxxxx\0" + w + b"\0" * 4 + w + "Big".encode("utf-16le") + w
+    # After a narrow string and after NULs, 8-byte aligned, both count. The tail of the wide
+    # "BigEntry" at 0x102A is not a copy: MSVC aligns every literal of 8 bytes or more to 8.
+    assert literal_hits(w, hay, 0x1000) == [0x1008, 0x1018], literal_hits(w, hay, 0x1000)
+    # A wide tail that happens to be 8-byte aligned still counts (indistinguishable).
+    assert literal_hits(w, "Bigg".encode("utf-16le") + w, 0x2000) == [0x2008]
+    s = "ab".encode("utf-16le") + b"\0\0"                     # 6 bytes: character-width aligned
+    assert literal_hits(s, b"\0\0" + s, 0x3000) == [0x3002]
     assert literal_hits(b"dx\0", b"\0idx\0\0dx\0", 0) == [6]  # a narrow suffix is not a start
     print("literals: ok")
 
@@ -103,8 +108,8 @@ def test_literal_elimination() -> None:
     r = Resolver.__new__(Resolver)
     r.functions, r.known, r.data_cache, r.data_notes, r._literal_copies, r._groups = {}, {}, {}, {}, {}, {}
     r._unobserved, r._literal_copy_sets, r.entry_addrs = {}, {}, {}
-    r.hay_rva, r.hay = 0x1000, b"\0\0" + lit + b"\0\0" + lit + b"\0\0" + lit
-    copies = [0x1002, 0x1010, 0x101E]
+    r.hay_rva, r.hay = 0x1000, b"\0" * 8 + lit + b"\0" * 4 + lit + b"\0" * 4 + lit
+    copies = [0x1008, 0x1018, 0x1028]                                    # 8-byte aligned copies
     r.entry_names, r.observations = {1: "A", 2: "B", 3: "T"}, {}
     r.by_addr = {copies[0]: {"$SGx": {1}}}
     assert r.resolve(obj, "o", "$SG1", exclude=3) == []                  # two copies still free
@@ -118,7 +123,7 @@ def test_literal_elimination() -> None:
     # observed literal range belongs to that object; one a `lea` in the reference targets belongs
     # to that code. Either leaves a single free copy.
     r.by_addr, r.entry_addrs, r._unobserved = {copies[0]: {"$SGx": {1}}}, {1: {copies[0]}}, {}
-    r.observations = {("p", "$SG7"): {0x100F: {4}}, ("p", "$SG8"): {0x1018: {4}}}
+    r.observations = {("p", "$SG7"): {0x1017: {4}}, ("p", "$SG8"): {0x1020: {4}}}
     r._sg_ranges = None
     got = r.resolve(obj, "o", "$SG1", exclude=3)
     assert [g[0] for g in got] == [copies[2]], got
@@ -138,11 +143,11 @@ def test_literal_elimination() -> None:
     # literals is not this object's: it claims copies[2], leaving copies[1]. The entry under
     # test's own observations do not place the block.
     r._xrefs, r.data_cache, r._unobserved, r._sg_ranges, r._sg_sorted = {}, {}, {}, None, None
-    r.observations = {("o", "$SG2"): {0x100A: {5}}, ("p", "$SG9"): {0x1016: {4}}}
+    r.observations = {("o", "$SG2"): {0x1010: {5}}, ("p", "$SG9"): {0x1020: {4}}}
     got = r.resolve(obj, "o", "$SG1", exclude=3)
     assert [g[0] for g in got] == [copies[1]], got
     r.data_cache, r._unobserved, r._sg_ranges, r._sg_sorted = {}, {}, None, None
-    r.observations = {("o", "$SG2"): {0x100A: {3}}, ("p", "$SG9"): {0x1016: {4}}}
+    r.observations = {("o", "$SG2"): {0x1010: {3}}, ("p", "$SG9"): {0x1020: {4}}}
     assert r.resolve(obj, "o", "$SG1", exclude=3) == []
     print("literal elimination: ok")
 

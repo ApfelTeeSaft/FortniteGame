@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 842,
+ "total": 712,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -35,48 +35,6 @@
     "0x002E32B0 EDateType_StaticEnum",
     "0x002FC0C0 EInAppPurchaseState_StaticEnum",
     "0x0032C110 EBeaconConnectionState_StaticEnum"
-   ]
-  },
-  {
-   "key": "uht-struct-registernatives | pooled string literal (??_C@)",
-   "count": 53,
-   "states": {
-    "relocation-equivalent": 53
-   },
-   "examples": [
-    "0x000988E0 dynamic initializer for ScriptStruct_OnlineSubsystem_StaticRegisterNativesFNamedInterfaceDef",
-    "0x00099850 dynamic initializer for ScriptStruct_OnlineSubsystemUtils_StaticRegisterNativesFPartyReservation",
-    "0x000A1760 dynamic initializer for ScriptStruct_GameplayAbilities_StaticRegisterNativesFGameplayEffectQuery",
-    "0x000A3050 dynamic initializer for ScriptStruct_GameplayAbilities_StaticRegisterNativesFPredictionKey",
-    "0x000A7B20 dynamic initializer for ScriptStruct_Qos_StaticRegisterNativesFQosSearchPass"
-   ]
-  },
-  {
-   "key": "uht-struct-compiledindefer | string literal ($SG, per-occurrence copy)",
-   "count": 48,
-   "states": {
-    "relocation-equivalent": 48
-   },
-   "examples": [
-    "0x00099AC0 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FPartyReservation",
-    "0x000A2830 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FGameplayEffectQuery",
-    "0x000A3210 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FPredictionKey",
-    "0x0013C1C0 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FButtonStyle",
-    "0x0013C260 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FCheckBoxStyle"
-   ]
-  },
-  {
-   "key": "uht-staticstruct | string literal ($SG, per-occurrence copy)",
-   "count": 46,
-   "states": {
-    "relocation-equivalent": 46
-   },
-   "examples": [
-    "0x0032E620 FPartyReservation::StaticStruct",
-    "0x00563F90 FGameplayEffectQuery::StaticStruct",
-    "0x00565EA0 FPredictionKey::StaticStruct",
-    "0x0145ACF0 FButtonStyle::StaticStruct",
-    "0x0145ADF0 FCheckBoxStyle::StaticStruct"
    ]
   },
   {
@@ -133,6 +91,20 @@
     "0x00F82290 Z_Construct_UDelegateFunction_FortniteGame_MoveToLocationDelegate__DelegateSignature",
     "0x00F82320 Z_Construct_UDelegateFunction_FortniteGame_WaitTargetSelectionDelegate__DelegateSignature",
     "0x00F8C5C0 Z_Construct_UDelegateFunction_FortniteGame_OnAIDirectorEventFired__DelegateSignature"
+   ]
+  },
+  {
+   "key": "uht-struct-registernatives | pooled string literal (??_C@)",
+   "count": 9,
+   "states": {
+    "relocation-equivalent": 9
+   },
+   "examples": [
+    "0x000988E0 dynamic initializer for ScriptStruct_OnlineSubsystem_StaticRegisterNativesFNamedInterfaceDef",
+    "0x00099850 dynamic initializer for ScriptStruct_OnlineSubsystemUtils_StaticRegisterNativesFPartyReservation",
+    "0x000A3050 dynamic initializer for ScriptStruct_GameplayAbilities_StaticRegisterNativesFPredictionKey",
+    "0x000A7B20 dynamic initializer for ScriptStruct_Qos_StaticRegisterNativesFQosSearchPass",
+    "0x000ADE30 dynamic initializer for ScriptStruct_PurchaseFlow_StaticRegisterNativesFPurchaseFlowReceiptParam"
    ]
   },
   {
@@ -206,6 +178,46 @@
    ]
   },
   {
+   "key": "uht-staticstruct | Z_Construct_* creator + singleton (.bss)",
+   "count": 5,
+   "states": {
+    "relocation-equivalent": 5
+   },
+   "examples": [
+    "0x0067B870 FAnimNode_WheelHandler::StaticStruct",
+    "0x007DD470 FVivoxMuteList::StaticStruct",
+    "0x007E01C0 FDropTimecode::StaticStruct",
+    "0x01993030 FLightPropagationVolumeSettings::StaticStruct",
+    "0x02562FF0 FWidgetCarouselNavigationBarStyle::StaticStruct"
+   ]
+  },
+  {
+   "key": "uht-staticstruct | string literal ($SG, per-occurrence copy)",
+   "count": 4,
+   "states": {
+    "relocation-equivalent": 4
+   },
+   "examples": [
+    "0x0032E620 FPartyReservation::StaticStruct",
+    "0x00565EA0 FPredictionKey::StaticStruct",
+    "0x01AC3AE0 FMovieSceneEvalTemplate::StaticStruct",
+    "0x023E2F30 FBlendSample::StaticStruct"
+   ]
+  },
+  {
+   "key": "uht-struct-compiledindefer | string literal ($SG, per-occurrence copy)",
+   "count": 4,
+   "states": {
+    "relocation-equivalent": 4
+   },
+   "examples": [
+    "0x00099AC0 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FPartyReservation",
+    "0x000A3210 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FPredictionKey",
+    "0x001A6320 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FMovieSceneEvalTemplate",
+    "0x001F41B0 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FBlendSample"
+   ]
+  },
+  {
    "key": "source-function | string literal ($SG, per-occurrence copy)",
    "count": 3,
    "states": {
@@ -266,18 +278,6 @@
    ]
   },
   {
-   "key": "uht-staticstruct | Z_Construct_* creator + singleton (.bss)",
-   "count": 3,
-   "states": {
-    "relocation-equivalent": 3
-   },
-   "examples": [
-    "0x0067B870 FAnimNode_WheelHandler::StaticStruct",
-    "0x007DD470 FVivoxMuteList::StaticStruct",
-    "0x007E01C0 FDropTimecode::StaticStruct"
-   ]
-  },
-  {
    "key": "uht-getprivatestaticclass | <Class>::StaticClass",
    "count": 2,
    "states": {
@@ -297,17 +297,6 @@
    "examples": [
     "0x013A7430 ELifetimeCondition_StaticEnum",
     "0x01D658E0 EMoviePlaybackType_StaticEnum"
-   ]
-  },
-  {
-   "key": "uht-staticstruct | Z_Construct_* creator + singleton (.bss) + string literal ($SG, per-occurrence copy)",
-   "count": 2,
-   "states": {
-    "relocation-equivalent": 2
-   },
-   "examples": [
-    "0x01993030 FLightPropagationVolumeSettings::StaticStruct",
-    "0x02562FF0 FWidgetCarouselNavigationBarStyle::StaticStruct"
    ]
   },
   {

@@ -69,10 +69,11 @@ same import, and the manifest records which.
   - import tables;
   - a unique import thunk;
   - a unique data match: a NUL-terminated literal, or a data block at its alignment. A
-    literal occurrence counts if it is aligned to its character width and preceded by a zero
-    byte. A wide literal directly after a narrow string ("idx\0" then L"...") cannot be told
-    apart from a wide suffix, so both count; over-counting only turns a unique result into
-    an ambiguous one;
+    literal occurrence counts if it is preceded by a zero byte and aligned to its character
+    width, or to 8 bytes for a literal of 8 bytes or more (terminator included): MSVC places
+    every such literal on an 8-byte boundary. A short wide literal directly after a narrow
+    string ("idx\0" then L"...") cannot be told apart from a wide suffix, so both count;
+    over-counting only turns a unique result into an ambiguous one;
   - **literal elimination (leave-one-out):** without `/GF` each use of a literal has its own
     copy. All copies of the content are enumerated (fewer than 4,096). If every copy but one is
     the observed target of a *different* symbol, in *other* relocation-equivalent-or-better
@@ -1034,6 +1035,38 @@ Locating the other functions:
 
 `ICppStructOps` is shimmed with the engine layout and constructor only. Construction code
 does not depend on the vtable's contents, and only its address is resolved.
+
+**Literal copies: 8-byte alignment (2026-11-24).** 147 struct functions waited on their name
+literal. A struct's `TEXT("<S>")` typically has four copies in the reference:
+- the `StaticStruct`'s;
+- the `FCompiledInDeferStruct` initializer's;
+- the pooled `??_C@` copy of the `StaticRegisterNatives` initializer's `FName`;
+- a match inside a longer wide string, such as `L"AnimationState"` at the end of
+  `L"BakedAnimationState"`.
+
+The last passed the old test (preceded by a zero byte, 2-byte aligned) because a wide
+character's high byte is zero. So two copies were left free and elimination declined.
+
+MSVC places every string literal of 8 bytes or more on an 8-byte boundary:
+- 3,244 of 3,244 such `$SG` literals in our objects;
+- 22,943 of 22,946 `$SG` addresses observed in the reference. The other 3 are not string
+  literals.
+
+The tails of longer strings sit at other offsets. So `literal_hits` now requires 8-byte
+alignment for such literals, and character-width alignment only for shorter ones.
+
+Offline, all 29,633 literal relocations of exact entries still resolved to their observed
+addresses, and 130 more entries resolved completely. The comparer made them exact, with no regressions:
+- 42 `StaticStruct`s;
+- 44 `FCompiledInDeferStruct` initializers;
+- 44 `StaticRegisterNatives` initializers.
+
+25 functions still wait on a literal with two or more plausible copies left:
+- 9 `StaticRegisterNatives` on pooled literals;
+- 8 `StaticStruct`s and struct registrations;
+- 3 class registrations;
+- 2 enum functions;
+- 3 hand-reconstructed `FCommandLine` functions.
 
 **Statics layout.** MSVC puts each function-local static in its own COMDAT `.bss` section,
 but every zero-initialized namespace-scope object of a translation unit shares one plain

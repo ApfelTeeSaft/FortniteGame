@@ -167,14 +167,20 @@ def literal_hits(lit: bytes, haystack: bytes, hay_rva: int, limit: int = 3) -> l
 
     A candidate is aligned to the literal's character width and preceded by a zero byte. A
     narrow match inside a longer narrow string is thereby excluded. A wide literal directly
-    after a narrow string ("idx\0" then L"...") is indistinguishable from a wide suffix, so
-    both count. Over-counting can only turn a unique result into an ambiguous one.
+    after a narrow string ("idx\0" then L"...") is indistinguishable from a wide suffix by
+    that test. MSVC places every literal of 8 bytes or more (terminator included) at an
+    8-byte boundary (3,244 of 3,244 in our objects; 22,943 of 22,946 observed $SG addresses in
+    the reference, the other 3 not string literals), so such a literal's candidates must be
+    8-byte aligned,
+    which excludes the tails of longer strings. Over-counting can only turn a unique result
+    into an ambiguous one.
     """
     width = 2 if lit[1:2] == b"\0" else 1
+    align = 8 if len(lit) >= 8 else width
     hits: list[int] = []
     p = haystack.find(lit)
     while p >= 0 and len(hits) < limit:
-        if (hay_rva + p) % width == 0 and p >= 1 and haystack[p - 1] == 0:
+        if (hay_rva + p) % align == 0 and p >= 1 and haystack[p - 1] == 0:
             hits.append(hay_rva + p)
         p = haystack.find(lit, p + 1)
     return hits
