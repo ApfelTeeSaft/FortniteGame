@@ -47,6 +47,7 @@ SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
 # Literal elimination needs every copy enumerated; content with this many copies is skipped.
 ELIMINATION_LIMIT = 4096
+HELD_SLOTS = True   # section-relative: never predict a .bss/.data slot another symbol is observed at
 FOLD_LIMIT = 16   # longest relocation-free leaf body treated as ICF-folded (bytes)
 GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json",
                      "uht-class-symbols.json", "uht-package-symbols.json")
@@ -267,8 +268,12 @@ class Resolver:
                     nearest_at.append(j)
                     break
                 j += step
+        # Writable data is never folded, so a slot other entries observe holding another symbol
+        # cannot be this one's: a prediction there walked past a static the layout does not hold.
+        writable = HELD_SLOTS and obj.sections[sym.section - 1].name in (".bss", ".data")
+        taken = lambda p: writable and self._held_by_others(p, symbol, exclude)
         local = local_prediction(mine, nearest)
-        if local is not None:
+        if local is not None and not taken(local[0]):
             pred, basis = local
             extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
             return [(pred, "section-relative (local) to " + basis[0] + extra)]
@@ -280,6 +285,11 @@ class Resolver:
         # The sides disagree. A side whose neighbour is the symbol's rigid partner, directly
         # next to it in the layout, decides (rigid_successor).
         (_, lpred, ldesc), (_, rpred, rdesc) = nearest
+        if taken(lpred) != taken(rpred):
+            pred, desc = (rpred, rdesc) if taken(lpred) else (lpred, ldesc)
+            return [(pred, "section-relative (local) to " + desc + "; the other side's slot holds another symbol")]
+        if taken(lpred):
+            return self._slot_elimination(symbol, exclude)
         if nearest_at[0] == i - 1 and rigid_successor(items[i - 1][1], symbol):
             return [(lpred, "section-relative (rigid pair) to " + ldesc + " (the other side disagrees)")]
         if nearest_at[1] == i + 1 and rigid_successor(symbol, items[i + 1][1]):

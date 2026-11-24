@@ -452,6 +452,18 @@ def test_section_relative_runs() -> None:
     assert r.resolve(obj, "o", "s3", exclude=13) == []
     got = r.resolve(obj, "o", "s1", exclude=11)                                    # both sides in block A
     assert [g[0] for g in got] == [0x1008] and "(local)" in got[0][1], got
+    # A .bss slot another entry observes holding another symbol is not this one's: that side
+    # walked past a static the layout lacks, so the other side decides.
+    del r.observations[("o", "s6")]
+    r.by_addr = {0x1018: {("p", "x"): {99}}}
+    got = r.resolve(obj, "o", "s3", exclude=13)
+    assert [g[0] for g in got] == [0x2018] and "holds another symbol" in got[0][1], got
+    r.by_addr[0x2018] = {("p", "y"): {98}}                                       # both taken: nothing
+    assert r.resolve(obj, "o", "s3", exclude=13) == []
+    r.by_addr = {0x1008: {("p", "x"): {99}}}                                     # the agreed slot is taken
+    assert r.resolve(obj, "o", "s1", exclude=11) == []
+    r.by_addr = {0x1008: {("o", "s1"): {11}}}                                    # its own observation is no claim
+    assert [g[0] for g in r.resolve(obj, "o", "s1", exclude=11)] == [0x1008]
     print("section-relative runs: ok")
 
 

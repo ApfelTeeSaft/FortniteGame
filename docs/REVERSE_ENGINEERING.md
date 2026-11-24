@@ -107,7 +107,10 @@ same import, and the manifest records which.
     neighbours. A layout gap elsewhere in a large unit therefore cannot outvote the
     symbol's immediate neighbours. If the two sides disagree (a gap next to the symbol),
     each side's run of agreeing observed neighbours is counted, and the strictly longer run
-    decides; equal runs resolve nothing. A prediction that then fails to reproduce the
+    decides; equal runs resolve nothing. In `.bss` and `.data` a slot that other entries
+    observe holding another symbol is never predicted, since writable data is not folded. A
+    side whose prediction lands there is dropped and the other side decides. If both sides
+    land on such slots, nothing is resolved. A prediction that then fails to reproduce the
     reference bytes is reported as an unresolved field, not as a byte difference.
 
   Nothing is masked. Every resolved field records its evidence in `analysis/functions.json`,
@@ -1750,6 +1753,42 @@ What it cannot settle:
 - a bracket holding statics the model has none of. Examples are 2 unknown slots between a
   struct's `Singleton` and `ReturnStruct`, or a slot after a class's `PrivateStaticClass`.
   The bracket then has two or more free slots.
+
+**Taken slots (2026-11-24).** Of the 25 `StaticStruct` singletons left, most were predicted,
+but wrongly. For example, `FProfileUpdateNotification`:
+- in our layout its `Singleton` follows `FMcpAddItemRequest`'s `ReturnStruct`;
+- in the reference, the package's `ReturnPackage` sits between the two. So the left side
+  predicted the `ReturnPackage`'s slot, which other entries observe;
+- the longer run chose that side.
+
+A `.bss` or `.data` slot cannot hold two statics (writable data is not folded). So in those
+sections `compare.py` no longer predicts a slot that other entries observe holding another
+symbol:
+- a one-sided or agreed local prediction onto such a slot is dropped;
+- when the sides disagree and exactly one lands on such a slot, the other decides.
+
+Rerun offline over all 44,241 observed `.bss`/`.data` relocations, all 43,074 in exact entries
+still resolved to their observed addresses. 57 relocations in other entries went from wrong or unresolved to
+right. The comparer made 23 functions exact in the denominator, with no regressions:
+- 8 `StaticEnum`s;
+- 6 `StaticStruct`s;
+- 4 package delegates;
+- 2 creators;
+- 2 struct constructors;
+- 1 enum constructor.
+
+Outside the denominator it made 34 vector-constant initializers and 1 `AutoInitialize`
+initializer exact.
+
+Two patterns hold most of the 21 `StaticStruct` singletons still open:
+- *After the enum block.* 10 sit directly after their unit's `StaticEnum` singletons, away
+  from their own `ReturnStruct`. Their `StaticStruct` functions are where name order puts
+  them, and no other code references the singleton. Nothing found so far says which
+  struct of a unit this is.
+- *After `ReturnPackage`, before a gap.* Several follow their package's `ReturnPackage`,
+  with one or two unknown slots before their `ReturnStruct`. `ReturnPackage` is not a rigid
+  predecessor: of 30 struct singletons that follow it in our layout, 11 follow it in the
+  reference.
 
 ## Naming confidence
 
