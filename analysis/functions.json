@@ -182,11 +182,11 @@
             "offset": "0x0000002B",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 14 more"
           },
           {
             "offset": "0x00000035",
-            "symbol": "$SG98156",
+            "symbol": "$SG98182",
             "rva": "0x0353EF98",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -200,11 +200,11 @@
             "offset": "0x00000043",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 14 more"
           },
           {
             "offset": "0x0000004D",
-            "symbol": "$SG98157",
+            "symbol": "$SG98183",
             "rva": "0x0353F2E8",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -218,11 +218,11 @@
             "offset": "0x0000005B",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, FGenericPlatformMisc::AllowThreadHeartBeat and 14 more"
           },
           {
             "offset": "0x00000065",
-            "symbol": "$SG98158",
+            "symbol": "$SG98184",
             "rva": "0x0353F368",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -392,11 +392,11 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG98156",
+            "symbol": "$SG98182",
             "rva": "0x0353EF98",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -410,11 +410,11 @@
             "offset": "0x0000001D",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x00000027",
-            "symbol": "$SG98157",
+            "symbol": "$SG98183",
             "rva": "0x0353F2E8",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -428,11 +428,11 @@
             "offset": "0x00000035",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMisc::AllowThreadHeartBeat, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000003F",
-            "symbol": "$SG98158",
+            "symbol": "$SG98184",
             "rva": "0x0353F368",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -537,9 +537,9 @@
           },
           {
             "offset": "0x00000057",
-            "symbol": "$SG2966",
+            "symbol": "$SG2992",
             "rva": "0x03475532",
-            "evidence": "section-relative (local) to $SG2975 (seen in FCommandLine::GetForLogging)"
+            "evidence": "section-relative (local) to $SG3001 (seen in FCommandLine::GetForLogging)"
           },
           {
             "offset": "0x0000005C",
@@ -558,25 +558,25 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2962",
+            "symbol": "$SG2988",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2963",
+            "symbol": "$SG2989",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2964",
+            "symbol": "$SG2990",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG2965",
+            "symbol": "$SG2991",
             "kind": "REL32"
           }
         ],
@@ -642,31 +642,31 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2971",
+            "symbol": "$SG2997",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2972",
+            "symbol": "$SG2998",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2973",
+            "symbol": "$SG2999",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG2974",
+            "symbol": "$SG3000",
             "kind": "REL32"
           },
           {
             "offset": "0x00000057",
             "size": 4,
-            "symbol": "$SG2975",
+            "symbol": "$SG3001",
             "kind": "REL32"
           }
         ],
@@ -732,31 +732,31 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2989",
+            "symbol": "$SG3015",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2990",
+            "symbol": "$SG3016",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2991",
+            "symbol": "$SG3017",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG2992",
+            "symbol": "$SG3018",
             "kind": "REL32"
           },
           {
             "offset": "0x00000057",
             "size": 4,
-            "symbol": "$SG2993",
+            "symbol": "$SG3019",
             "kind": "REL32"
           }
         ],
@@ -845,11 +845,11 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG2950",
+            "symbol": "$SG2976",
             "rva": "0x03464EB8",
             "evidence": "data symbol: unique 36-byte string literal"
           },
@@ -892,7 +892,7 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000000F",
@@ -910,7 +910,7 @@
             "offset": "0x0000001D",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000002C",
@@ -922,11 +922,11 @@
             "offset": "0x00000035",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000003F",
-            "symbol": "$SG2970",
+            "symbol": "$SG2996",
             "rva": "0x039D6248",
             "evidence": "data symbol: unique 22-byte string literal"
           },
@@ -976,7 +976,7 @@
             "offset": "0x00000019",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x00000029",
@@ -1024,11 +1024,11 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG2949",
+            "symbol": "$SG2975",
             "rva": "0x02FF19E8",
             "evidence": "data symbol: unique 54-byte string literal"
           },
@@ -1071,11 +1071,11 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG2952",
+            "symbol": "$SG2978",
             "rva": "0x0322A538",
             "evidence": "data symbol: unique 22-byte string literal"
           },
@@ -1118,11 +1118,11 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG98198",
+            "symbol": "$SG98232",
             "rva": "0x0353F458",
             "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
           },
@@ -1136,11 +1136,11 @@
             "offset": "0x00000027",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x00000031",
-            "symbol": "$SG98200",
+            "symbol": "$SG98234",
             "rva": "0x0353F4C8",
             "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
           },
@@ -1154,11 +1154,11 @@
             "offset": "0x00000049",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG98202",
+            "symbol": "$SG98236",
             "rva": "0x035455F0",
             "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
           },
@@ -1201,11 +1201,11 @@
             "offset": "0x00000005",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG86284",
+            "symbol": "$SG86338",
             "rva": "0x0354CDC8",
             "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
           },
@@ -1219,11 +1219,11 @@
             "offset": "0x00000027",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x00000031",
-            "symbol": "$SG86286",
+            "symbol": "$SG86340",
             "rva": "0x0354CE28",
             "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
           },
@@ -1237,11 +1237,11 @@
             "offset": "0x00000049",
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
             "rva": "0x01193BC0",
-            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 6 more"
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG86288",
+            "symbol": "$SG86342",
             "rva": "0x0354D5C8",
             "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
           },
@@ -1258,6 +1258,1095 @@
       "structure": {
         "pdata_size_matches": true,
         "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011E61B0",
+      "end_rva": "0x011E6226",
+      "name": "FStats::EnabledForCommandlet",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Stats/Stats2.cpp",
+      "object": "Source/Runtime/Core/Private/Stats/Stats2.obj",
+      "symbol": "?EnabledForCommandlet@FStats@@SA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from FStats::HasLoadTimeStatsForCommandletToken (0x011E64B0) || HasLoadTimeFileForCommandletToken (0x011E6440), called not inlined: the only caller of both. Its static and guard directly precede theirs (0x046AEBD8), as the source order gives.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "76a49b434d1db9db77d14767efcf12f345078418ec5382d0b9c2cdbd6e8d0760",
+      "decrypted_sha256": "134ae84fb8e79ecbef699fd7f6c7716c94d003a7d887db2a968589bd0ce03766",
+      "candidate_sha256": "134ae84fb8e79ecbef699fd7f6c7716c94d003a7d887db2a968589bd0ce03766",
+      "byte_diff": {
+        "reference_size": 118,
+        "candidate_size": 118,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBDC",
+            "evidence": "section-relative (local) to ?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?bHasStatsForCommandletsToken@?1??EnabledForCommandlet@FStats@@SA_NXZ@4_NA",
+            "rva": "0x046AEBD8",
+            "evidence": "section-relative (local) to ?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBDC",
+            "evidence": "section-relative (local) to ?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBDC",
+            "evidence": "section-relative (local) to ?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ",
+            "rva": "0x011E64B0",
+            "evidence": "exact match of manifest entry 0x011E64B0"
+          },
+          {
+            "offset": "0x00000052",
+            "symbol": "?HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ",
+            "rva": "0x011E6440",
+            "evidence": "exact match of manifest entry 0x011E6440"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?bHasStatsForCommandletsToken@?1??EnabledForCommandlet@FStats@@SA_NXZ@4_NA",
+            "rva": "0x046AEBD8",
+            "evidence": "section-relative (local) to ?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x00000063",
+            "symbol": "?bHasStatsForCommandletsToken@?1??EnabledForCommandlet@FStats@@SA_NXZ@4_NA",
+            "rva": "0x046AEBD8",
+            "evidence": "section-relative (local) to ?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x0000006B",
+            "symbol": "?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBDC",
+            "evidence": "section-relative (local) to ?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x00000070",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011E64B0",
+      "end_rva": "0x011E6520",
+      "name": "FStats::HasLoadTimeStatsForCommandletToken",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Stats/Stats2.cpp",
+      "object": "Source/Runtime/Core/Private/Stats/Stats2.obj",
+      "symbol": "?HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from FParse::Param(FCommandLine::Get(), L\"LoadTimeStatsForCommandlet\"), the literal used only there in the 4.20 tree.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "fd6d7a4171401403a3a7525189c71b7ad17eb2e26d8d3df4db813146b7a920d5",
+      "decrypted_sha256": "3f90f353890e56e52cdd7712973c041953fe5c9671c234c2fae19f08d928ce7a",
+      "candidate_sha256": "3f90f353890e56e52cdd7712973c041953fe5c9671c234c2fae19f08d928ce7a",
+      "byte_diff": {
+        "reference_size": 112,
+        "candidate_size": 112,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBE4",
+            "evidence": "section-relative (local) to ?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA (seen in FStats::EnabledForCommandlet) and 1 more neighbours"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA",
+            "rva": "0x046AEBE0",
+            "evidence": "section-relative (local) to ?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA (seen in FStats::EnabledForCommandlet) and 1 more neighbours"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBE4",
+            "evidence": "section-relative (local) to ?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA (seen in FStats::EnabledForCommandlet) and 1 more neighbours"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBE4",
+            "evidence": "section-relative (local) to ?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA (seen in FStats::EnabledForCommandlet) and 1 more neighbours"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG2987",
+            "rva": "0x03487410",
+            "evidence": "data symbol: unique 54-byte string literal"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000005F",
+            "symbol": "?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBE4",
+            "evidence": "section-relative (local) to ?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA (seen in FStats::EnabledForCommandlet) and 1 more neighbours"
+          },
+          {
+            "offset": "0x00000065",
+            "symbol": "?bHasLoadTimeStatsForCommandletToken@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4_NA",
+            "rva": "0x046AEBE0",
+            "evidence": "section-relative (local) to ?$TSS0@?1??EnabledForCommandlet@FStats@@SA_NXZ@4HA (seen in FStats::EnabledForCommandlet) and 1 more neighbours"
+          },
+          {
+            "offset": "0x0000006A",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011E6440",
+      "end_rva": "0x011E64B0",
+      "name": "FStats::HasLoadTimeFileForCommandletToken",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Stats/Stats2.cpp",
+      "object": "Source/Runtime/Core/Private/Stats/Stats2.obj",
+      "symbol": "?HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from FParse::Param(FCommandLine::Get(), L\"LoadTimeFileForCommandlet\"), the literal used only there in the 4.20 tree.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "7f91a9a5d90d85e3608bad64cd8fb87408d088155c437d4aa7d3a27c1020f876",
+      "decrypted_sha256": "5ce116558021b864a3fb4d30c77084fbc582aa3d85e23dadc3a743df7bd5bddf",
+      "candidate_sha256": "5ce116558021b864a3fb4d30c77084fbc582aa3d85e23dadc3a743df7bd5bddf",
+      "byte_diff": {
+        "reference_size": 112,
+        "candidate_size": 112,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "?$TSS0@?1??HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBEC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?bHasLoadTimeFileForCommandletToken@?1??HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ@4_NA",
+            "rva": "0x046AEBE8",
+            "evidence": "section-relative (local) to ?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?$TSS0@?1??HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBEC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "?$TSS0@?1??HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBEC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG2995",
+            "rva": "0x03487448",
+            "evidence": "data symbol: unique 52-byte string literal"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000005F",
+            "symbol": "?$TSS0@?1??HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ@4HA",
+            "rva": "0x046AEBEC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x00000065",
+            "symbol": "?bHasLoadTimeFileForCommandletToken@?1??HasLoadTimeFileForCommandletToken@FStats@@SA_NXZ@4_NA",
+            "rva": "0x046AEBE8",
+            "evidence": "section-relative (local) to ?$TSS0@?1??HasLoadTimeStatsForCommandletToken@FStats@@SA_NXZ@4HA (seen in FStats::HasLoadTimeStatsForCommandletToken)"
+          },
+          {
+            "offset": "0x0000006A",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01123730",
+      "end_rva": "0x011237A3",
+      "name": "FGenericPlatformProcess::SupportsMultithreading",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/GenericPlatform/GenericPlatformProcess.cpp",
+      "object": "Source/Runtime/Core/Private/GenericPlatform/GenericPlatformProcess.obj",
+      "symbol": "?SupportsMultithreading@FGenericPlatformProcess@@SA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from !FParse::Param(FCommandLine::Get(), L\"nothreading\"), the literal used only there in the 4.20 tree.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "85e119492ecacc2e141b934197196e6444ff42c802fc84bfb769ea2b54722076",
+      "decrypted_sha256": "ac130f0385717c79654a052798ea9977dcc0c5cd0107ca508bca848e7ceee58d",
+      "candidate_sha256": "e2d10cf27bbcb1e8b83f64fe412e00579cd9dc925f6bf4cfad5f8f53baf1a8c0",
+      "byte_diff": {
+        "reference_size": 115,
+        "candidate_size": 115,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG2980",
+            "rva": "0x0345D758",
+            "evidence": "data symbol: unique 24-byte string literal"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000006D",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000021",
+            "size": 4,
+            "symbol": "?$TSS0@?1??SupportsMultithreading@FGenericPlatformProcess@@SA_NXZ@4HA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000002A",
+            "size": 4,
+            "symbol": "?bSupportsMultithreading@?1??SupportsMultithreading@FGenericPlatformProcess@@SA_NXZ@4_NA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000036",
+            "size": 4,
+            "symbol": "?$TSS0@?1??SupportsMultithreading@FGenericPlatformProcess@@SA_NXZ@4HA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000041",
+            "size": 4,
+            "symbol": "?$TSS0@?1??SupportsMultithreading@FGenericPlatformProcess@@SA_NXZ@4HA",
+            "kind": "REL32_1"
+          },
+          {
+            "offset": "0x00000061",
+            "size": 4,
+            "symbol": "?$TSS0@?1??SupportsMultithreading@FGenericPlatformProcess@@SA_NXZ@4HA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000068",
+            "size": 4,
+            "symbol": "?bSupportsMultithreading@?1??SupportsMultithreading@FGenericPlatformProcess@@SA_NXZ@4_NA",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 24
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0162C1D0",
+      "end_rva": "0x0162C27F",
+      "name": "D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0)",
+      "category": "source-function",
+      "module": "D3D12RHI",
+      "source": "FortniteGameCode/Source/Runtime/D3D12RHI/Private/D3D12RHIPrivate.h",
+      "object": "Source/Runtime/D3D12RHI/Private/Unattributed/D3D12RHIPrivateUser_0162C1D0.obj",
+      "symbol": "?D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from FParse::Param(FCommandLine::Get(), ...) over L\"d3ddebug\", L\"d3debug\" and L\"dxdebug\": one of two copies of the file-static check of D3D12RHIPrivate.h; its static directly precedes D3D12RHI_ShouldForceCompatibility's (0x0162C280).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "d53127e161ee5c38f5fdfc2790292a1ad34482b86828df2069951a34bae95e00",
+      "decrypted_sha256": "d26f1a0de5a5ce80c81f2207c75306d31f62a9f76476a61fa23dfc9f786a4c6d",
+      "candidate_sha256": "d26f1a0de5a5ce80c81f2207c75306d31f62a9f76476a61fa23dfc9f786a4c6d",
+      "byte_diff": {
+        "reference_size": 175,
+        "candidate_size": 175,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C91F4",
+            "evidence": "section-relative (local) to ?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldForceCompatibility)"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?bCreateWithD3DDebug@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4_NA",
+            "rva": "0x047C91F0",
+            "evidence": "section-relative (local) to ?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldForceCompatibility)"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C91F4",
+            "evidence": "section-relative (local) to ?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldForceCompatibility)"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C91F4",
+            "evidence": "section-relative (local) to ?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldForceCompatibility)"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG82632",
+            "rva": "0x035483E8",
+            "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910)"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000061",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x0000006B",
+            "symbol": "$SG82633",
+            "rva": "0x03548458",
+            "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910)"
+          },
+          {
+            "offset": "0x00000070",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000079",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000083",
+            "symbol": "$SG82634",
+            "rva": "0x03548538",
+            "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910)"
+          },
+          {
+            "offset": "0x00000088",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000008E",
+            "symbol": "?bCreateWithD3DDebug@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4_NA",
+            "rva": "0x047C91F0",
+            "evidence": "section-relative (local) to ?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldForceCompatibility)"
+          },
+          {
+            "offset": "0x00000099",
+            "symbol": "?bCreateWithD3DDebug@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4_NA",
+            "rva": "0x047C91F0",
+            "evidence": "section-relative (local) to ?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldForceCompatibility)"
+          },
+          {
+            "offset": "0x000000A1",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C91F4",
+            "evidence": "section-relative (local) to ?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldForceCompatibility)"
+          },
+          {
+            "offset": "0x000000A6",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0162C280",
+      "end_rva": "0x0162C314",
+      "name": "D3D12RHI_ShouldForceCompatibility",
+      "category": "source-function",
+      "module": "D3D12RHI",
+      "source": "FortniteGameCode/Source/Runtime/D3D12RHI/Private/D3D12RHIPrivate.h",
+      "object": "Source/Runtime/D3D12RHI/Private/Unattributed/D3D12RHIPrivateUser_0162C1D0.obj",
+      "symbol": "?D3D12RHI_ShouldForceCompatibility@@YA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from FParse::Param(FCommandLine::Get(), ...) over L\"d3dcompat\" and L\"d3d12compat\", used only there in the 4.20 tree.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "73d2a685d9d5c4822d88c2cbebb24557c8aaebbdc8d68f073bc00e713522d98d",
+      "decrypted_sha256": "190dad7860b83fbb8ea209c1f91fd84f3820237ffbd3d1a37fe0f7a85b40e5b7",
+      "candidate_sha256": "190dad7860b83fbb8ea209c1f91fd84f3820237ffbd3d1a37fe0f7a85b40e5b7",
+      "byte_diff": {
+        "reference_size": 148,
+        "candidate_size": 148,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4HA",
+            "rva": "0x047C91FC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0))"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA",
+            "rva": "0x047C91F8",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0))"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4HA",
+            "rva": "0x047C91FC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0))"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4HA",
+            "rva": "0x047C91FC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0))"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG82650",
+            "rva": "0x035487D8",
+            "evidence": "literal elimination: 2 copies, the others used by "
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000061",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x0000006B",
+            "symbol": "$SG82651",
+            "rva": "0x03548910",
+            "evidence": "literal elimination: 2 copies, the others used by "
+          },
+          {
+            "offset": "0x00000070",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000076",
+            "symbol": "?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA",
+            "rva": "0x047C91F8",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0))"
+          },
+          {
+            "offset": "0x00000081",
+            "symbol": "?bForceCompatibility@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4_NA",
+            "rva": "0x047C91F8",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0))"
+          },
+          {
+            "offset": "0x00000089",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldForceCompatibility@@YA_NXZ@4HA",
+            "rva": "0x047C91FC",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0))"
+          },
+          {
+            "offset": "0x0000008E",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0164F910",
+      "end_rva": "0x0164F9BF",
+      "name": "D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910)",
+      "category": "source-function",
+      "module": "D3D12RHI",
+      "source": "FortniteGameCode/Source/Runtime/D3D12RHI/Private/D3D12RHIPrivate.h",
+      "object": "Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.obj",
+      "symbol": "?D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The second copy of the d3ddebug/d3debug/dxdebug check, in the code right after D3D12RHI_PreferAdapterVendor (0x0164F8A0); its static directly precedes D3D12RHI_ShouldCreateWithWarp's (0x0164F9C0).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "5c01d5efa40e796ee4518669d6703d456adb56d250a5ba050303b347cdb79255",
+      "decrypted_sha256": "11295785cb195f73edffbdab723bb5e24928728439788049cedc872e99e0dc11",
+      "candidate_sha256": "11295785cb195f73edffbdab723bb5e24928728439788049cedc872e99e0dc11",
+      "byte_diff": {
+        "reference_size": 175,
+        "candidate_size": 175,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C941C",
+            "evidence": "section-relative (local) to ?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldCreateWithWarp)"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?bCreateWithD3DDebug@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4_NA",
+            "rva": "0x047C9418",
+            "evidence": "section-relative (local) to ?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldCreateWithWarp)"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C941C",
+            "evidence": "section-relative (local) to ?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldCreateWithWarp)"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C941C",
+            "evidence": "section-relative (local) to ?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldCreateWithWarp)"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG86301",
+            "rva": "0x0354EE28",
+            "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0)"
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000061",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x0000006B",
+            "symbol": "$SG86302",
+            "rva": "0x0354EEE8",
+            "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0)"
+          },
+          {
+            "offset": "0x00000070",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000079",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000083",
+            "symbol": "$SG86303",
+            "rva": "0x0354EF78",
+            "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0)"
+          },
+          {
+            "offset": "0x00000088",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000008E",
+            "symbol": "?bCreateWithD3DDebug@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4_NA",
+            "rva": "0x047C9418",
+            "evidence": "section-relative (local) to ?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldCreateWithWarp)"
+          },
+          {
+            "offset": "0x00000099",
+            "symbol": "?bCreateWithD3DDebug@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4_NA",
+            "rva": "0x047C9418",
+            "evidence": "section-relative (local) to ?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldCreateWithWarp)"
+          },
+          {
+            "offset": "0x000000A1",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA",
+            "rva": "0x047C941C",
+            "evidence": "section-relative (local) to ?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA (seen in D3D12RHI_ShouldCreateWithWarp)"
+          },
+          {
+            "offset": "0x000000A6",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0164F9C0",
+      "end_rva": "0x0164FA30",
+      "name": "D3D12RHI_ShouldCreateWithWarp",
+      "category": "source-function",
+      "module": "D3D12RHI",
+      "source": "FortniteGameCode/Source/Runtime/D3D12RHI/Private/D3D12RHIPrivate.h",
+      "object": "Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.obj",
+      "symbol": "?D3D12RHI_ShouldCreateWithWarp@@YA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from FParse::Param(FCommandLine::Get(), L\"warp\"), the D3D12RHIPrivate.h check that uses it.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "2cee0cf60f2bda0240e79dfb0cceb7b41228a8134993587c1f13fed5b1795bbc",
+      "decrypted_sha256": "32efce2dc77dada2b66ca644e719bd2c298c106fff1e5ce9e2c25953614aa5c8",
+      "candidate_sha256": "32efce2dc77dada2b66ca644e719bd2c298c106fff1e5ce9e2c25953614aa5c8",
+      "byte_diff": {
+        "reference_size": 112,
+        "candidate_size": 112,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4HA",
+            "rva": "0x047C9424",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910))"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA",
+            "rva": "0x047C9420",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910))"
+          },
+          {
+            "offset": "0x00000036",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4HA",
+            "rva": "0x047C9424",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910))"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4HA",
+            "rva": "0x047C9424",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910))"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG86311",
+            "rva": "0x035501D0",
+            "evidence": "literal elimination: 2 copies, the others used by "
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000005F",
+            "symbol": "?$TSS0@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4HA",
+            "rva": "0x047C9424",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910))"
+          },
+          {
+            "offset": "0x00000065",
+            "symbol": "?bCreateWithWarp@?1??D3D12RHI_ShouldCreateWithWarp@@YA_NXZ@4_NA",
+            "rva": "0x047C9420",
+            "evidence": "section-relative (local) to ?$TSS0@?1??D3D12RHI_ShouldCreateWithD3DDebug@@YA_NXZ@4HA (seen in D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910))"
+          },
+          {
+            "offset": "0x0000006A",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x015FED50",
+      "end_rva": "0x015FEDC3",
+      "name": "D3D11RHI_ShouldAllowAsyncResourceCreation",
+      "category": "source-function",
+      "module": "D3D11RHI",
+      "source": "FortniteGameCode/Source/Runtime/Windows/D3D11RHI/Private/D3D11Device.cpp",
+      "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
+      "symbol": "?D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A thread-safe static set from !FParse::Param(FCommandLine::Get(), L\"nod3dasync\"), among the D3D11RHI code; the D3D12RHI version is file-static and not its own function in the image.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "c5569e7aa2c08569d3d07c439b8179ca37448d15d6e9c760607abd11cf657ea9",
+      "decrypted_sha256": "5c4e25bb221ad6123c9c976e2bd717ad2747149365bc73770b352af981b7e6a4",
+      "candidate_sha256": "1885cb985b5829a9799da69572b973b02722951b81793c15cc0e58f4a00011d2",
+      "byte_diff": {
+        "reference_size": 115,
+        "candidate_size": 115,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "_tls_index",
+            "rva": "0x04916AF8",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000014",
+            "symbol": "_Init_thread_epoch",
+            "rva": "0x04BFE018",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "_Init_thread_header",
+            "rva": "0x02D98B14",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug, SafeTestD3D11CreateDevice and 14 more"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "$SG98192",
+            "rva": "0x0353F2F8",
+            "evidence": "literal elimination: 3 copies, the others used by "
+          },
+          {
+            "offset": "0x00000058",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000006D",
+            "symbol": "_Init_thread_footer",
+            "rva": "0x02D98AB4",
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000021",
+            "size": 4,
+            "symbol": "?$TSS0@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ@4HA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000002A",
+            "size": 4,
+            "symbol": "?bAllowAsyncResourceCreation@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ@4_NA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000036",
+            "size": 4,
+            "symbol": "?$TSS0@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ@4HA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000041",
+            "size": 4,
+            "symbol": "?$TSS0@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ@4HA",
+            "kind": "REL32_1"
+          },
+          {
+            "offset": "0x00000061",
+            "size": 4,
+            "symbol": "?$TSS0@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ@4HA",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000068",
+            "size": 4,
+            "symbol": "?bAllowAsyncResourceCreation@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ@4_NA",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 24
       },
       "compiler": "prodid 261 build 24215"
     }

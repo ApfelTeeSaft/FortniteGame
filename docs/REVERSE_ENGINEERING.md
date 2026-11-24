@@ -213,6 +213,43 @@ Infrastructure added:
   A hand-written TU declares the class's recovered natives through it before including
   `UHTRecovered.h`. The same route serves the other 5,273 named native implementations.
 
+### Thread-safe statics (2026-11-24)
+
+Most of the other switch checks cache their result: `static bool b = FParse::Param(...)`. MSVC's
+thread-safe initialization adds five fields to such a function:
+- `_tls_index` (`.data`);
+- the CRT's `_Init_thread_epoch`, read through the thread's TLS block. Its field is a `SECREL`
+  offset into `.tls` (`mov edx, 0x18`);
+- `_Init_thread_header` and `_Init_thread_footer`;
+- the static itself and its guard `$TSS0`, a pair in `.bss`: the 1-byte static, then the
+  4-byte guard, 8 bytes in all.
+
+`compare.py` now handles `SECREL` fields as offsets into the reference's `.tls` section, for
+both observation and resolution. The four CRT fields are shared by every such function, so
+they resolve by corroboration once two of them are reconstructed.
+
+The static and guard are referenced by their own function only. The only evidence for them
+is layout: the slots of neighbouring statics, observed by other entries. Of the image's 2,307
+thread-safe-static functions, 1,092 have another's static within 24 bytes. Three clusters
+hold only command-line checks. Each lies in its source order, so each is reconstructed whole,
+in that order, and its pairs place each other section-relatively:
+
+| Cluster (reference `.bss`) | Functions | Result |
+| --- | --- | --- |
+| `0x046AEBD8..0x046AEBEF` (`Stats2.cpp`) | `FStats::EnabledForCommandlet`, `HasLoadTimeStatsForCommandletToken`, `HasLoadTimeFileForCommandletToken` | all exact. The first calls the other two, which resolve by their exact matches |
+| `0x047C9418..0x047C9427` (`WindowsD3D12Device.cpp`'s unit) | `D3D12RHI_ShouldCreateWithD3DDebug`, `D3D12RHI_ShouldCreateWithWarp` | both exact |
+| `0x047C91F0..0x047C91FF` (another D3D12RHI unit) | `D3D12RHI_ShouldCreateWithD3DDebug` (second copy), `D3D12RHI_ShouldForceCompatibility` | both exact |
+
+The D3D12 checks are file-static functions of `D3D12RHIPrivate.h`. The recovered header
+defines them, and each recovered unit keeps the ones the reference holds through its anchor
+table. In both units our compiler emits the two pairs in definition order, as the reference
+holds them. Two singles keep every byte but their
+static and guard, whose neighbours belong to functions not reconstructed:
+- `FGenericPlatformProcess::SupportsMultithreading`;
+- `D3D11RHI_ShouldAllowAsyncResourceCreation`.
+
+Both are relocation-equivalent.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is

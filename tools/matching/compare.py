@@ -47,6 +47,7 @@ SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
 # Literal elimination needs every copy enumerated; content with this many copies is skipped.
 ELIMINATION_LIMIT = 4096
+TLS_RVA: int | None = None   # the reference's .tls section; SECREL fields are offsets into it (set in main)
 HELD_SLOTS = True   # section-relative: never predict a .bss/.data slot another symbol is observed at
 FOLD_LIMIT = 16   # longest relocation-free leaf body treated as ICF-folded (bytes)
 GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json",
@@ -831,6 +832,8 @@ class Resolver:
             elif r.kind.startswith("REL32"):
                 extra = 0 if r.kind == "REL32" else int(r.kind[-1])
                 target = val + start + r.offset + 4 + extra - addend
+            elif r.kind == "SECREL" and TLS_RVA is not None:
+                target = TLS_RVA + val - addend
             else:
                 continue
             key = self.key(obj, objpath, r.symbol)
@@ -917,6 +920,8 @@ def _field_value(kind: str, target: int, addend: int, start: int, offset: int, i
     if kind.startswith("REL32"):
         extra = 0 if kind == "REL32" else int(kind[-1])
         return target + addend - (start + offset + 4 + extra)
+    if kind == "SECREL" and TLS_RVA is not None:
+        return target - TLS_RVA + addend
     return None
 
 
@@ -1212,6 +1217,8 @@ def main() -> int:
         print("reference SHA-256 differs from manifest", file=sys.stderr)
         return 2
     dimg = load_decrypted(img)
+    global TLS_RVA
+    TLS_RVA = next((s.rva for s in img.sections if s.name == ".tls"), None)
     resolver = Resolver(img, dimg, load_manual_symbols())
     resolver.blocks = load_blocks()
     rfs = img.runtime_functions()

@@ -682,6 +682,21 @@ def test_folded_and_code_run() -> None:
     print("folded bodies and code runs: ok")
 
 
+def test_secrel_fields() -> None:
+    """SECREL fields (thread_local variables such as _Init_thread_epoch) are offsets into .tls."""
+    import compare
+    saved = compare.TLS_RVA
+    try:
+        compare.TLS_RVA = None
+        assert compare._field_value("SECREL", 0x4BFE018, 0, 0, 0, 0) is None    # no .tls: unresolved
+        compare.TLS_RVA = 0x4BFE000
+        assert compare._field_value("SECREL", 0x4BFE018, 0, 0x1000, 0x13, 0x140000000) == 0x18
+        assert compare._field_value("SECREL", 0x4BFE018, 4, 0x1000, 0x13, 0x140000000) == 0x1C
+    finally:
+        compare.TLS_RVA = saved
+    print("secrel fields: ok")
+
+
 def test_package_bracket() -> None:
     """ReturnPackage: the one free slot between the statics of the classes whose FClassParams
     records bracket the package's FPackageParams record in .rdata."""
@@ -831,6 +846,7 @@ def main() -> int:
     test_rigid_successor()
     test_record_bracket()
     test_package_bracket()
+    test_secrel_fields()
     test_split_objects()
     test_accessor_mangling()
     test_accessor_shapes()

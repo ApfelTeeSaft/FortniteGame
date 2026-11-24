@@ -40,3 +40,17 @@ struct FGenericPlatformMisc
 {
 	static bool AllowThreadHeartBeat();
 };
+
+// GenericPlatform/GenericPlatformProcess.h (the same)
+struct FGenericPlatformProcess
+{
+	static bool SupportsMultithreading();
+};
+
+// Stats/Stats2.h (the same)
+struct FStats
+{
+	static bool EnabledForCommandlet();
+	static bool HasLoadTimeStatsForCommandletToken();
+	static bool HasLoadTimeFileForCommandletToken();
+};

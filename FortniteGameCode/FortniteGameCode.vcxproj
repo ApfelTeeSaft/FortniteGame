@@ -98,10 +98,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMisc.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformProcess.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\Stats\Stats2.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Misc\CommandLine.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Misc\Parse.cpp" />
     <ClCompile Include="Source\Runtime\Windows\D3D11RHI\Module.D3D11RHI.cpp" />
     <ClCompile Include="Source\Runtime\D3D12RHI\Private\Windows\WindowsD3D12Device.cpp" />
+    <ClCompile Include="Source\Runtime\D3D12RHI\Private\Unattributed\D3D12RHIPrivateUser_0162C1D0.cpp" />
     <ClCompile Include="Source\Runtime\Engine\Private\GameplayStatics.cpp" />
     <ClCompile Include="Source\Runtime\Portal\LauncherCheck\Private\LauncherCheckModule.cpp" />
     <ClCompile Include="Source\FortniteGame\Private\Unattributed\CommandLineChecks.cpp" />

@@ -9,6 +9,22 @@
 
 #include "FortniteGameCode/EngineDecls.h"
 #include "FortniteGameCode/RecoveryHarness.h"
+#include "../D3D12RHIPrivate.h"
+
+// From D3D12RHIPrivate.h this unit keeps (anchor table below):
+// D3D12RHI_ShouldCreateWithD3DDebug
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0164F910 (end 0x0164F9BF)
+// Original VA: 0x000000014164F910 | File offset: 0x0164EF10
+// Recovery: high-confidence inferred (UE4 name, file-static) | Matching: see analysis/functions.json
+// Evidence: the second copy of the d3ddebug/d3debug/dxdebug check (the other is 0x0162C1D0),
+//   among this unit's code, right after D3D12RHI_PreferAdapterVendor (0x0164F8A0).
+//
+// D3D12RHI_ShouldCreateWithWarp
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0164F9C0 (end 0x0164FA30)
+// Original VA: 0x000000014164F9C0 | File offset: 0x0164EFC0
+// Recovery: high-confidence inferred (UE4 name, file-static) | Matching: see analysis/functions.json
+// Evidence: a thread-safe static set from FParse::Param(FCommandLine::Get(), L"warp"); its static
+//   directly follows the copy above's.
 
 static bool IsDelayLoadException(PEXCEPTION_POINTERS ExceptionPointers)
 {
@@ -72,5 +88,7 @@ FNGC_ANCHOR_TABLE(GFngcAnchors_WindowsD3D12Device)
 {
 	(const void*)&SafeCreateDXGIFactory,
 	(const void*)&D3D12RHI_PreferAdapterVendor,
+	(const void*)&D3D12RHI_ShouldCreateWithD3DDebug,
+	(const void*)&D3D12RHI_ShouldCreateWithWarp,
 };
 #endif

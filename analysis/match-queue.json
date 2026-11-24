@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 665,
+ "total": 667,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -305,6 +305,26 @@
    "examples": [
     "0x013A7430 ELifetimeCondition_StaticEnum",
     "0x01D658E0 EMoviePlaybackType_StaticEnum"
+   ]
+  },
+  {
+   "key": "source-function | other: ?$TSS0@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ + other: ?bAllowAsyncResourceCreation@?1??D3D11RHI_ShouldAllowAsyncRe",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x015FED50 D3D11RHI_ShouldAllowAsyncResourceCreation"
+   ]
+  },
+  {
+   "key": "source-function | other: ?$TSS0@?1??SupportsMultithreading@FGenericPlatformProcess@@S + other: ?bSupportsMultithreading@?1??SupportsMultithreading@FGeneric",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01123730 FGenericPlatformProcess::SupportsMultithreading"
    ]
   },
   {

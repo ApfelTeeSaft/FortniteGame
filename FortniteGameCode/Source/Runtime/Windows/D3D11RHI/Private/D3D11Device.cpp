@@ -20,3 +20,14 @@ bool D3D11RHI_ShouldCreateWithD3DDebug()
 		FParse::Param(FCommandLine::Get(), TEXT("d3debug")) ||
 		FParse::Param(FCommandLine::Get(), TEXT("dxdebug"));
 }
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x015FED50 (end 0x015FEDC3)
+// Original VA: 0x00000001415FED50 | File offset: 0x015FE350
+// Recovery: high-confidence inferred (UE4 name, extern) | Matching: see analysis/functions.json
+// Evidence: a thread-safe static set from !FParse::Param(FCommandLine::Get(), L"nod3dasync"), among
+//   the D3D11RHI code; the D3D12RHI version is file-static and not in the image as its own function.
+bool D3D11RHI_ShouldAllowAsyncResourceCreation()
+{
+	static bool bAllowAsyncResourceCreation = !FParse::Param(FCommandLine::Get(), TEXT("nod3dasync"));
+	return bAllowAsyncResourceCreation;
+}
