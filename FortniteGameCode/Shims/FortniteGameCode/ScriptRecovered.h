@@ -16,6 +16,7 @@
 
 #include "FortniteGameCode/ContainersRecovered.h"
 #include "FortniteGameCode/TextRecovered.h"
+#include "FortniteGameCode/LogVerbosity.h"
 
 typedef unsigned char uint8;
 typedef signed char int8;
@@ -58,6 +59,8 @@ public:
 
 	void Step(UObject* Context, void* const Z_Param__Result);
 	void StepExplicitProperty(void* const Result, UProperty* Property);
+
+	static void KismetExecutionMessage(const TCHAR* Message, ELogVerbosity::Type Verbosity, FName WarningId = FName());
 
 	// FORCEINLINE_DEBUGGABLE is FORCEINLINE in shipping builds.
 	template<class TProperty>
@@ -182,49 +185,12 @@ private:
 void RPC_ValidateFailed(const TCHAR* Reason);
 
 // Structs passed to and from exec thunks, with their UE4.20 members and default constructors
-// (Math/Vector.h, Rotator.h, Vector2D.h, Color.h; Misc/Guid.h; GameplayTags'
-// GameplayTagContainer.h; GameplayAbilities' GameplayAbilitySpec.h). Copies are implicit, as
-// there. Other members and methods are not modelled. tools/codegen/uht_props.py uses them
-// only where the reference's FStructParams give the same SizeOf and AlignOf.
-enum EForceInit { ForceInit, ForceInitToZero };   // Misc/CoreMiscDefines.h
-
-struct FVector
-{
-	float X;
-	float Y;
-	float Z;
-	__forceinline FVector() {}
-	explicit __forceinline FVector(EForceInit) : X(0.0f), Y(0.0f), Z(0.0f) {}   // DiagnosticCheckNaN() is empty in shipping
-};
-
-struct FRotator
-{
-	float Pitch;
-	float Yaw;
-	float Roll;
-	__forceinline FRotator() { }
-
-	FVector Vector() const;   // Core: Math/UnrealMath.cpp
-};
-
-struct FVector2D
-{
-	float X;
-	float Y;
-	__forceinline FVector2D() { }
-	__forceinline FVector2D(float InX, float InY) : X(InX), Y(InY) { }
-
-	static const FVector2D ZeroVector;   // Core: Math/Vector2D.h (CORE_API; monolithic)
-};
-
-struct FLinearColor
-{
-	float R, G, B, A;
-	__forceinline FLinearColor() {}
-	__forceinline FLinearColor(float InR,float InG,float InB,float InA = 1.0f): R(InR), G(InG), B(InB), A(InA) {}
-
-	static const FLinearColor White;     // Core: Math/Color.h (CORE_API; monolithic)
-};
+// (Misc/Guid.h; GameplayTags' GameplayTagContainer.h; GameplayAbilities' GameplayAbilitySpec.h).
+// Copies are implicit, as there. Other members and methods are not modelled.
+// tools/codegen/uht_props.py uses them only where the reference's FStructParams give the same
+// SizeOf and AlignOf. The Core math types (FVector, FRotator, FVector2D, FLinearColor, ...) come
+// from MathDecls.h, which Core's recovered math shares.
+#include "FortniteGameCode/MathDecls.h"
 
 struct FGuid
 {

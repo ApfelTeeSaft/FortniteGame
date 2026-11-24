@@ -29,6 +29,7 @@ public:
 	__forceinline FName() : ComparisonIndex(0), Number(0) {}
 	__forceinline FName( EName N ) : ComparisonIndex( N ), Number( 0 ) {}  // NAME_NO_NUMBER_INTERNAL; check() is compiled out
 	FName(const TCHAR* Name, EFindName FindType = FNAME_Add);
+	FName(const char* Name, EFindName FindType = FNAME_Add);   // const ANSICHAR*
 
 private:
 	// As in UnrealNames.h without WITH_CASE_PRESERVING_NAME: the union makes FName 8-aligned,

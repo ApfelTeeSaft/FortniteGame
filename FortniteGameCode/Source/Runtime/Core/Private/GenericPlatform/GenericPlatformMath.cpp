@@ -54,3 +54,14 @@ float FGenericPlatformMath::Atan2(float Y, float X)
 
 	return t3;
 }
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0126F320 (end 0x0126F323), no .pdata (leaf)
+// Original VA: 0x000000014126F320
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: the call FMath::Fmod's zero-divisor branch makes (UKismetMathLibrary::GenericPercent_FloatFloat,
+//   ClampAxis, NormalizeAxis, FMod). In shipping ensureMsgf is compiled out and the body is empty:
+//   `ret 0`, which /OPT:ICF folds with every other empty function at this address.
+void FGenericPlatformMath::FmodReportError(float X, float Y)
+{
+	// if (Y == 0) { ensureMsgf(Y != 0, TEXT("FMath::FMod(X=%f, Y=%f) : Y is zero, this is invalid and would result in NaN!"), X, Y); }
+}

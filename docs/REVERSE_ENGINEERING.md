@@ -91,6 +91,8 @@ same import, and the manifest records which.
     with a rip-relative operand. Other copies are table fields or lanes of vector constants.
     When scalar code loads several copies, the one loaded by at least 10 functions and by at
     least 10 times as many functions as the next copy;
+  - `__ImageBase` (linker-defined, RVA 0), and a label inside the function under test (a jump
+    table's `$LN` case labels), placed from the function's own start as a branch inside it is;
   - an already-exact function, iterated to a fixpoint;
   - **corroboration (leave-one-out):** the same symbol observed at one address in a
     *different* manifest function whose size and every non-relocation byte equal the
@@ -373,6 +375,76 @@ to each other (leave-one-out). The cause of the change is not established:
 
 Every getter object was recompiled in this run, because the shared generated header changed,
 so the objects the previous runs compared may have differed.
+
+## Sixth family: Kismet math natives (2026-11-24)
+
+75 functions, all compiled from the 4.20 bodies:
+- `KismetMathLibrary.cpp` (Engine): 50 natives, the static `EaseAlpha` and the twelve
+  `ReportError_*` helpers;
+- `UnrealMath.cpp` (Core): the interpolation and segment helpers the inlined Kismet functions
+  call;
+- `GenericPlatformMath.cpp` (Core): `FGenericPlatformMath::FmodReportError`.
+
+72 are exact, 45 of them in the denominator. 27 are leaves without `.pdata`: `ResetRandomStream`,
+the `FRandomStream` natives, the range and `InRange_*` helpers, nine of the `ReportError_*`
+leaves and `FmodReportError`. The other three `ReportError_*` leaves are relocation-equivalent
+(see below).
+
+| Group | Functions | Result |
+| --- | --- | --- |
+| Core `FMath` (`0x0118B150`-`0x011A7F30`) | `ClosestPointOnSegment`, `PointDistToSegment`, `PointDistToLine`, `FInterpTo`, `FInterpConstantTo`, `VInterpTo`, `VInterpConstantTo`, `Vector2DInterpTo`, `Vector2DInterpConstantTo`, `CInterpTo` | 10 exact |
+| Kismet, `.pdata` | `RandomBoolWithWeight`, `GenericPercent_FloatFloat`, `Log`, `FMod`, `MakePulsatingValue`, the six `Max/MinOf*Array`, `Ease`, `VEase`, `EaseAlpha`, `RandomRotator`, `FindClosestPointOnLine`, `ClampVectorSize`, `GetVectorArrayAverage`, `ClampAxis`, `NormalizeAxis`, `MakeTimespan(2)`, `BreakTimespan(2)`, `CreateVectorFromYawPitch`, `GetYawPitchFromVector`, `SeedRandomStream`, `IsPointInBox`, `GetRightVector`, `GetUpVector`, `GetAxes`, `BreakRotIntoAxes`, `MakePlaneFromPointAndNormal`, `LinePlaneIntersection(_OriginNormal)` | 35 exact |
+| Kismet leaves | `Hypotenuse`, `InRange_FloatFloat`, `InRange_IntInt`, `MapRangeClamped`, `MapRangeUnclamped`, `NormalizeToRange`, `ResetRandomStream`, the nine stream natives (`MakeRandomStream` ... `RandomRotatorFromStream`) | 16 exact |
+| `ReportError_*` (`0x0208EA80`-`0x0208EBE0`) | twelve 21-byte tail calls to `FFrame::KismetExecutionMessage` | 9 exact, 3 relocation-equivalent |
+| `FGenericPlatformMath::FmodReportError` (`0x0126F320`) | `ret 0` | exact |
+
+**Names.**
+- `native-implementations.json` names a native's callee after the UFunction. For the Core
+  callees of inlined Kismet functions, it records that name at low confidence; they are Core
+  functions. One `UnrealMath.obj` run has its COMDATs in alphabetical order of their
+  decorated names, which confirms the Core names: `?CInterpTo@FMath` `0x0118B150`,
+  `?ClosestPointOnSegment` `0x0118BD30`, `?FInterpConstantTo` `0x01190A40`, `?FInterpTo`
+  `0x01190AA0`, ... `?Vector2DInterpTo` `0x011A7F30`, `?Vector@FRotator` `0x011A8000`.
+- The same order places `GenericPercent_FloatFloat` between `FromSeconds` and `GetAxes`. Its
+  UFunction `Percent_FloatFloat` is custom-thunked.
+- It also maps the twelve leaves at `0x0208EA80` + 0x20·k, which the natives list under
+  `Divide_ByteByte` and the like, to `ReportError_DaysInMonth`, `ReportError_Divide_ByteByte`,
+  ... `ReportError_Sqrt`. Their literals and warning ids agree.
+
+**What the reconstruction needed.**
+- `MathDecls.h` is now the one definition of the Core math types for both Core's code and the
+  UHT world, which `ScriptRecovered.h` now takes from it. It adds the `FWindowsPlatformMath`
+  SSE forms (`FloorToInt`, `TruncToInt`, `InvSqrt`) and the `FMath` interpolation templates.
+  The UHT units were rebuilt with no changed result.
+- `FMatrix` needs its user-declared default constructor. Without one, v140 treats a
+  `FRotationMatrix` temporary as a `/GS` buffer and adds a cookie the reference lacks.
+- `FRotationMatrix`'s constructor is inline in 4.20, but the reference calls an out-of-line copy
+  at `0x009C4CB0`. It is only declared, and the call resolves by corroboration among the four
+  reconstructed callers (two more, `FRotator::RotateVector`/`UnrotateVector`, are not yet
+  reconstructed).
+- `MapRangeClamped`/`Unclamped` use the pre-4.20 `GetRangePct` (`docs/ENGINE_DIFFERENCES.md`,
+  #9).
+- `EaseAlpha`'s jump table follows the code inside its `.pdata` range. Its `$LN` case labels
+  and the `__ImageBase` base now resolve: the labels from the function's own start, as
+  branches inside it do, and `__ImageBase` as RVA 0.
+- `FmodReportError` is empty in shipping (`ensureMsgf` is compiled out): `ret 0`, which
+  `/OPT:ICF` shares with other empty functions. Its address is where all four reconstructed
+  callers (`GenericPercent_FloatFloat`, `ClampAxis`, `NormalizeAxis`, `FMod`) call. The calls
+  resolve to the exact entry; each also has the other three callers as corroboration.
+
+**Open.**
+- `ReportError_Sqrt`, `ReportError_ProjectVectorOnToVector` and `ReportError_DaysInMonth`
+  each use one warning `FName` that no other entry uses. The reference keeps the four ids in
+  declaration order (`DivideByZeroWarning` `0x04897810`, then +8, +0x10, +0x18). Our object
+  orders them by v140's own per-name order: `InvalidDate`, `DivideByZero`, `ZeroLength`,
+  `NegativeSqrt`. That order does not depend on use order or symbol count, so section-relative
+  prediction fails. The cause is not established; a unity build or `/Gw` are candidates.
+- Not attempted yet:
+  - the vectorized `FRotator` helpers (`RInterpTo`, `NormalizedDeltaRotator`; they use
+    `GlobalVectorConstants`);
+  - `FQuat`/`FTransform` functions (`ComposeRotators`, `RLerp`, `TLerp`, ...);
+  - the date and time natives;
+  - `FRotator::RotateVector`/`UnrotateVector` (SSE `TransformFVector4`).
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 

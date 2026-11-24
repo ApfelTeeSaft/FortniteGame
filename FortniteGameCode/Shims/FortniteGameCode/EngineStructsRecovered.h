@@ -20,7 +20,7 @@
 #include "FortniteGameCode/ContainersRecovered.h"
 #include "FortniteGameCode/TextRecovered.h"
 
-enum { INDEX_NONE = -1 };
+// INDEX_NONE: MathDecls.h (Misc/CoreMiscDefines.h).
 
 class UObject;
 class UPackageMap;

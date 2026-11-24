@@ -186,7 +186,7 @@
           },
           {
             "offset": "0x00000035",
-            "symbol": "$SG98182",
+            "symbol": "$SG98183",
             "rva": "0x0353EF98",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -204,7 +204,7 @@
           },
           {
             "offset": "0x0000004D",
-            "symbol": "$SG98183",
+            "symbol": "$SG98184",
             "rva": "0x0353F2E8",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -222,7 +222,7 @@
           },
           {
             "offset": "0x00000065",
-            "symbol": "$SG98184",
+            "symbol": "$SG98185",
             "rva": "0x0353F368",
             "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
           },
@@ -396,7 +396,7 @@
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG98182",
+            "symbol": "$SG98183",
             "rva": "0x0353EF98",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -414,7 +414,7 @@
           },
           {
             "offset": "0x00000027",
-            "symbol": "$SG98183",
+            "symbol": "$SG98184",
             "rva": "0x0353F2E8",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -432,7 +432,7 @@
           },
           {
             "offset": "0x0000003F",
-            "symbol": "$SG98184",
+            "symbol": "$SG98185",
             "rva": "0x0353F368",
             "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
@@ -537,9 +537,9 @@
           },
           {
             "offset": "0x00000057",
-            "symbol": "$SG2992",
+            "symbol": "$SG2993",
             "rva": "0x03475532",
-            "evidence": "section-relative (local) to $SG3001 (seen in FCommandLine::GetForLogging)"
+            "evidence": "section-relative (local) to $SG3002 (seen in FCommandLine::GetForLogging)"
           },
           {
             "offset": "0x0000005C",
@@ -558,25 +558,25 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2988",
+            "symbol": "$SG2989",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2989",
+            "symbol": "$SG2990",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2990",
+            "symbol": "$SG2991",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG2991",
+            "symbol": "$SG2992",
             "kind": "REL32"
           }
         ],
@@ -642,31 +642,31 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG2997",
+            "symbol": "$SG2998",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG2998",
+            "symbol": "$SG2999",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG2999",
+            "symbol": "$SG3000",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG3000",
+            "symbol": "$SG3001",
             "kind": "REL32"
           },
           {
             "offset": "0x00000057",
             "size": 4,
-            "symbol": "$SG3001",
+            "symbol": "$SG3002",
             "kind": "REL32"
           }
         ],
@@ -732,31 +732,31 @@
           {
             "offset": "0x00000027",
             "size": 4,
-            "symbol": "$SG3015",
+            "symbol": "$SG3016",
             "kind": "REL32"
           },
           {
             "offset": "0x0000002E",
             "size": 4,
-            "symbol": "$SG3016",
+            "symbol": "$SG3017",
             "kind": "REL32"
           },
           {
             "offset": "0x00000043",
             "size": 4,
-            "symbol": "$SG3017",
+            "symbol": "$SG3018",
             "kind": "REL32"
           },
           {
             "offset": "0x00000050",
             "size": 4,
-            "symbol": "$SG3018",
+            "symbol": "$SG3019",
             "kind": "REL32"
           },
           {
             "offset": "0x00000057",
             "size": 4,
-            "symbol": "$SG3019",
+            "symbol": "$SG3020",
             "kind": "REL32"
           }
         ],
@@ -849,7 +849,7 @@
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG2976",
+            "symbol": "$SG2977",
             "rva": "0x03464EB8",
             "evidence": "data symbol: unique 36-byte string literal"
           },
@@ -926,7 +926,7 @@
           },
           {
             "offset": "0x0000003F",
-            "symbol": "$SG2996",
+            "symbol": "$SG2997",
             "rva": "0x039D6248",
             "evidence": "data symbol: unique 22-byte string literal"
           },
@@ -1028,7 +1028,7 @@
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG2975",
+            "symbol": "$SG2976",
             "rva": "0x02FF19E8",
             "evidence": "data symbol: unique 54-byte string literal"
           },
@@ -1075,7 +1075,7 @@
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG2978",
+            "symbol": "$SG2979",
             "rva": "0x0322A538",
             "evidence": "data symbol: unique 22-byte string literal"
           },
@@ -1122,7 +1122,7 @@
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG98232",
+            "symbol": "$SG98233",
             "rva": "0x0353F458",
             "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
           },
@@ -1140,7 +1140,7 @@
           },
           {
             "offset": "0x00000031",
-            "symbol": "$SG98234",
+            "symbol": "$SG98235",
             "rva": "0x0353F4C8",
             "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
           },
@@ -1158,7 +1158,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG98236",
+            "symbol": "$SG98237",
             "rva": "0x035455F0",
             "evidence": "literal elimination: 2 copies, the others used by D3D12RHI_PreferAdapterVendor"
           },
@@ -1205,7 +1205,7 @@
           },
           {
             "offset": "0x0000000F",
-            "symbol": "$SG86338",
+            "symbol": "$SG86339",
             "rva": "0x0354CDC8",
             "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
           },
@@ -1223,7 +1223,7 @@
           },
           {
             "offset": "0x00000031",
-            "symbol": "$SG86340",
+            "symbol": "$SG86341",
             "rva": "0x0354CE28",
             "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
           },
@@ -1241,7 +1241,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG86342",
+            "symbol": "$SG86343",
             "rva": "0x0354D5C8",
             "evidence": "literal elimination: 2 copies, the others used by D3D11RHI_PreferAdaperVendor"
           },
@@ -1441,7 +1441,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG2987",
+            "symbol": "$SG2988",
             "rva": "0x03487410",
             "evidence": "data symbol: unique 54-byte string literal"
           },
@@ -1548,7 +1548,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG2995",
+            "symbol": "$SG2996",
             "rva": "0x03487448",
             "evidence": "data symbol: unique 52-byte string literal"
           },
@@ -1631,7 +1631,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG2980",
+            "symbol": "$SG2981",
             "rva": "0x0345D758",
             "evidence": "data symbol: unique 24-byte string literal"
           },
@@ -1763,7 +1763,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG82632",
+            "symbol": "$SG82633",
             "rva": "0x035483E8",
             "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910)"
           },
@@ -1781,7 +1781,7 @@
           },
           {
             "offset": "0x0000006B",
-            "symbol": "$SG82633",
+            "symbol": "$SG82634",
             "rva": "0x03548458",
             "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910)"
           },
@@ -1799,7 +1799,7 @@
           },
           {
             "offset": "0x00000083",
-            "symbol": "$SG82634",
+            "symbol": "$SG82635",
             "rva": "0x03548538",
             "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0164F910)"
           },
@@ -1916,7 +1916,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG82650",
+            "symbol": "$SG82651",
             "rva": "0x035487D8",
             "evidence": "literal elimination: 2 copies, the others used by "
           },
@@ -1934,7 +1934,7 @@
           },
           {
             "offset": "0x0000006B",
-            "symbol": "$SG82651",
+            "symbol": "$SG82652",
             "rva": "0x03548910",
             "evidence": "literal elimination: 2 copies, the others used by "
           },
@@ -2051,7 +2051,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG86301",
+            "symbol": "$SG86302",
             "rva": "0x0354EE28",
             "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0)"
           },
@@ -2069,7 +2069,7 @@
           },
           {
             "offset": "0x0000006B",
-            "symbol": "$SG86302",
+            "symbol": "$SG86303",
             "rva": "0x0354EEE8",
             "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0)"
           },
@@ -2087,7 +2087,7 @@
           },
           {
             "offset": "0x00000083",
-            "symbol": "$SG86303",
+            "symbol": "$SG86304",
             "rva": "0x0354EF78",
             "evidence": "literal elimination: 3 copies, the others used by SafeTestD3D11CreateDevice, D3D12RHI_ShouldCreateWithD3DDebug (copy at 0x0162C1D0)"
           },
@@ -2204,7 +2204,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG86311",
+            "symbol": "$SG86312",
             "rva": "0x035501D0",
             "evidence": "literal elimination: 2 copies, the others used by "
           },
@@ -2291,7 +2291,7 @@
           },
           {
             "offset": "0x00000053",
-            "symbol": "$SG98192",
+            "symbol": "$SG98193",
             "rva": "0x0353F2F8",
             "evidence": "literal elimination: 3 copies, the others used by "
           },
@@ -2425,19 +2425,19 @@
             "offset": "0x000000A1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in ABuildingTrap::execOnTriggerTouch, UProjectileMovementComponent::execStopSimulating and 13 more"
+            "evidence": "corroborated: same symbol at this address in FMath::VRand, FRotator::Vector and 39 more"
           },
           {
             "offset": "0x000000B1",
             "symbol": "__real@3fc90fdb",
             "rva": "0x02E623F8",
-            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
           },
           {
             "offset": "0x000000C5",
             "symbol": "__real@40490fdb",
             "rva": "0x02E623FC",
-            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::MakePulsatingValue and 1 more"
           },
           {
             "offset": "0x000000D8",
@@ -2484,7 +2484,7 @@
             "offset": "0x0000002B",
             "symbol": "__real@42652ee0",
             "rva": "0x02F8EEF4",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::GetYawPitchFromVector"
           },
           {
             "offset": "0x0000004D",
@@ -2496,7 +2496,7 @@
             "offset": "0x00000055",
             "symbol": "__real@42652ee0",
             "rva": "0x02F8EEF4",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::GetYawPitchFromVector"
           }
         ],
         "unresolved_relocations": [],
@@ -2566,187 +2566,187 @@
             "offset": "0x0000000F",
             "symbol": "__real@3c8efa35",
             "rva": "0x02E623E0",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000017",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "pooled constant: of 100 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
           },
           {
             "offset": "0x0000002F",
             "symbol": "__real@3e22f983",
             "rva": "0x02E623E8",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000054",
             "symbol": "__real@40490fdb",
             "rva": "0x02E623FC",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 1 more"
           },
           {
             "offset": "0x0000005D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in ABuildingTrap::execOnTriggerTouch, UProjectileMovementComponent::execStopSimulating and 13 more"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FMath::VRand and 39 more"
           },
           {
             "offset": "0x00000066",
             "symbol": "__real@c0490fdb",
             "rva": "0x02E62418",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x0000006E",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "pooled constant: of 7 copies of its value that scalar float code loads, the one 882 functions load (the next: 26)"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000081",
             "symbol": "__real@40c90fdb",
             "rva": "0x02E62400",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x0000008C",
             "symbol": "__real@3fc90fdb",
             "rva": "0x02E623F8",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::MakePulsatingValue and 2 more"
           },
           {
             "offset": "0x000000A4",
             "symbol": "__real@bfc90fdb",
             "rva": "0x02E62414",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x000000C2",
             "symbol": "__real@3638b88e",
             "rva": "0x02E623CC",
-            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x000000D8",
             "symbol": "__real@32cd365b",
             "rva": "0x02E623C4",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x000000E8",
             "symbol": "__real@348bdd11",
             "rva": "0x02E623C8",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x000000F6",
             "symbol": "__real@39500bf1",
             "rva": "0x02E623D4",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000104",
             "symbol": "__real@3c088886",
             "rva": "0x02E623DC",
-            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000112",
             "symbol": "__real@3e2aaaab",
             "rva": "0x02E623EC",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000129",
             "symbol": "__real@37cfb4c2",
             "rva": "0x02E623D0",
-            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000147",
             "symbol": "__real@3ab609aa",
             "rva": "0x02E623D8",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000155",
             "symbol": "__real@3d2aaaa3",
             "rva": "0x02E623E4",
-            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x0000017E",
             "symbol": "__real@3c8efa35",
             "rva": "0x02E623E0",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x0000018C",
             "symbol": "__real@3e22f983",
             "rva": "0x02E623E8",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x000001AB",
             "symbol": "__real@40c90fdb",
             "rva": "0x02E62400",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x000001B6",
             "symbol": "__real@3fc90fdb",
             "rva": "0x02E623F8",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::MakePulsatingValue and 2 more"
           },
           {
             "offset": "0x000001C8",
             "symbol": "__real@bfc90fdb",
             "rva": "0x02E62414",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x000001F9",
             "symbol": "__real@348bdd11",
             "rva": "0x02E623C8",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000208",
             "symbol": "__real@32cd365b",
             "rva": "0x02E623C4",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000223",
             "symbol": "__real@3ab609aa",
             "rva": "0x02E623D8",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x0000022F",
             "symbol": "__real@39500bf1",
             "rva": "0x02E623D4",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x0000023B",
             "symbol": "__real@3d2aaaa3",
             "rva": "0x02E623E4",
-            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x00000247",
             "symbol": "__real@3c088886",
             "rva": "0x02E623DC",
-            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           },
           {
             "offset": "0x0000025B",
             "symbol": "__real@3e2aaaab",
             "rva": "0x02E623EC",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch"
           }
         ],
         "unresolved_relocations": [],
@@ -2781,19 +2781,19 @@
             "offset": "0x00000012",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in ABuildingTrap::execOnTriggerTouch, UProjectileMovementComponent::execStopSimulating and 13 more"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
           },
           {
             "offset": "0x0000002C",
             "symbol": "__real@38d1b717",
             "rva": "0x02E760D4",
-            "evidence": "pooled constant: of 13 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in FMath::CInterpTo, FMath::Vector2DInterpTo and 1 more"
           },
           {
             "offset": "0x0000003B",
             "symbol": "__real@38000100",
             "rva": "0x02E65ACC",
-            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::RandomBoolWithWeight"
           },
           {
             "offset": "0x00000042",
@@ -2882,6 +2882,3642 @@
             "symbol": "?Vector@FRotator@@QEBA?AUFVector@@XZ",
             "rva": "0x011A8000",
             "evidence": "exact match of manifest entry 0x011A8000"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0126F320",
+      "end_rva": "0x0126F323",
+      "name": "FGenericPlatformMath::FmodReportError",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/GenericPlatform/GenericPlatformMath.cpp",
+      "object": "Source/Runtime/Core/Private/GenericPlatform/GenericPlatformMath.obj",
+      "symbol": "?FmodReportError@FGenericPlatformMath@@CAXMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "the call FMath::Fmod's zero-divisor branch makes (UKismetMathLibrary::GenericPercent_FloatFloat, ClampAxis, NormalizeAxis, FMod). In shipping ensureMsgf is compiled out and the body is empty: `ret 0`, which /OPT:ICF folds with every other empty function at this address.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "880ae7b113c609d9dbca4ce587699c261022f6a8f7e8cabebb7f7057c11e186e",
+      "decrypted_sha256": "b6cbececf1b07e74f37d57710c68c31f0b92cb08d51093252b321b07542e177b",
+      "candidate_sha256": "b6cbececf1b07e74f37d57710c68c31f0b92cb08d51093252b321b07542e177b",
+      "byte_diff": {
+        "reference_size": 3,
+        "candidate_size": 3,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0118BD30",
+      "end_rva": "0x0118BE2A",
+      "name": "FMath::ClosestPointOnSegment",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?ClosestPointOnSegment@FMath@@SA?AUFVector@@AEBU2@00@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execFindClosestPointOnSegment (the Kismet function is inlined into its thunk) and by FMath::PointDistToSegment (0x0119F670).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "32f433a2f0f7e59d9db218b8f25a27227100f83b778deeb2620992c496d6eefd",
+      "decrypted_sha256": "e649deba15e141c4681ef1ef7271afc9cc0d767c6e252634eb20f2b3ea06f17a",
+      "candidate_sha256": "e649deba15e141c4681ef1ef7271afc9cc0d767c6e252634eb20f2b3ea06f17a",
+      "byte_diff": {
+        "reference_size": 250,
+        "candidate_size": 250,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0119F670",
+      "end_rva": "0x0119F6CD",
+      "name": "FMath::PointDistToSegment",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?PointDistToSegment@FMath@@SAMAEBUFVector@@00@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execGetPointDistanceToSegment; calls FMath::ClosestPointOnSegment (0x0118BD30), then the length of the difference.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "8e323a03e5b275c3202c184037c4e28a9e620492d5c2ba29fd0064d91afd2e6f",
+      "decrypted_sha256": "7299c39518fa902e2a62e31d1facfdce9a38f62d0c1cc0c00d71b8891f27b794",
+      "candidate_sha256": "7299c39518fa902e2a62e31d1facfdce9a38f62d0c1cc0c00d71b8891f27b794",
+      "byte_diff": {
+        "reference_size": 93,
+        "candidate_size": 93,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000018",
+            "symbol": "?ClosestPointOnSegment@FMath@@SA?AUFVector@@AEBU2@00@Z",
+            "rva": "0x0118BD30",
+            "evidence": "exact match of manifest entry 0x0118BD30"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A73C0",
+      "end_rva": "0x011A74BD",
+      "name": "FMath::VInterpConstantTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?VInterpConstantTo@FMath@@SA?AUFVector@@U2@AEBU2@MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execVInterpTo_Constant (Kismet function inlined).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "04fdd9d347a076cf9f391b274ac5751f32df1ddfc682ea276094f9ffa6a2da4c",
+      "decrypted_sha256": "ce6e11005183613442983c617718d37c610df783909ab38d1a43ebfd251dab0a",
+      "candidate_sha256": "ce6e11005183613442983c617718d37c610df783909ab38d1a43ebfd251dab0a",
+      "byte_diff": {
+        "reference_size": 253,
+        "candidate_size": 253,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000083",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A74C0",
+      "end_rva": "0x011A75E9",
+      "name": "FMath::VInterpTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?VInterpTo@FMath@@SA?AUFVector@@AEBU2@0MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execVInterpTo (Kismet function inlined).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "281fb708a7965c1d090df6fe809a6a8590c75da7afe648008a173235f0b63868",
+      "decrypted_sha256": "3d96059e81b65d972767c38b842795b9b3e1c3d1ae8efdc1ca0033a51ea959b5",
+      "candidate_sha256": "3d96059e81b65d972767c38b842795b9b3e1c3d1ae8efdc1ca0033a51ea959b5",
+      "byte_diff": {
+        "reference_size": 297,
+        "candidate_size": 297,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x000000A3",
+            "symbol": "__real@38d1b717",
+            "rva": "0x02E760D4",
+            "evidence": "corroborated: same symbol at this address in FMath::VRand, FMath::Vector2DInterpTo and 1 more"
+          },
+          {
+            "offset": "0x000000CB",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A7E60",
+      "end_rva": "0x011A7F23",
+      "name": "FMath::Vector2DInterpConstantTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?Vector2DInterpConstantTo@FMath@@SA?AUFVector2D@@AEBU2@0MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execVector2DInterpTo_Constant (Kismet function inlined).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "2ca99855408c4a06e27655e4152e6e67e3c70cc861cdecbb5a90cb245d7dd030",
+      "decrypted_sha256": "2aec9223c154e5ca1ce52f992f2a89c444342490573e28498ec7ce92db961a55",
+      "candidate_sha256": "2aec9223c154e5ca1ce52f992f2a89c444342490573e28498ec7ce92db961a55",
+      "byte_diff": {
+        "reference_size": 195,
+        "candidate_size": 195,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000005C",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A7F30",
+      "end_rva": "0x011A7FF3",
+      "name": "FMath::Vector2DInterpTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?Vector2DInterpTo@FMath@@SA?AUFVector2D@@AEBU2@0MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execVector2DInterpTo (Kismet function inlined).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "a9aa775b5d07c1875023f094066cbd9e6213b705efd6478c6f024f12b46a6e4c",
+      "decrypted_sha256": "c8f5a200aa6c44a213e7f38989480c193540a87c5f63b2524306b25b5b780663",
+      "candidate_sha256": "c8f5a200aa6c44a213e7f38989480c193540a87c5f63b2524306b25b5b780663",
+      "byte_diff": {
+        "reference_size": 195,
+        "candidate_size": 195,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000006A",
+            "symbol": "__real@38d1b717",
+            "rva": "0x02E760D4",
+            "evidence": "corroborated: same symbol at this address in FMath::CInterpTo, FMath::VRand and 1 more"
+          },
+          {
+            "offset": "0x0000008C",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01190AA0",
+      "end_rva": "0x01190AFE",
+      "name": "FMath::FInterpTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?FInterpTo@FMath@@SAMMMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execFInterpTo (Kismet function inlined).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "37b421c9f0a32c5e833856b1e9f9766abd231bf5fdc04ceb6517db6d26d453aa",
+      "decrypted_sha256": "556fa8e1886ba0ccb220130ad7ca7a8ff320d79738a6d3fea2e703f93a3c66eb",
+      "candidate_sha256": "556fa8e1886ba0ccb220130ad7ca7a8ff320d79738a6d3fea2e703f93a3c66eb",
+      "byte_diff": {
+        "reference_size": 94,
+        "candidate_size": 94,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000030",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x00000043",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01190A40",
+      "end_rva": "0x01190A95",
+      "name": "FMath::FInterpConstantTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?FInterpConstantTo@FMath@@SAMMMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execFInterpTo_Constant (Kismet function inlined).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "9b2fbddab97a41520ead6105480859a0ba80005005f5d62022ab35876f8531da",
+      "decrypted_sha256": "be7b6d3bc31076e05ce7f5a7fdd959bb6b67c0739555d2cf25e50a8588cc7294",
+      "candidate_sha256": "be7b6d3bc31076e05ce7f5a7fdd959bb6b67c0739555d2cf25e50a8588cc7294",
+      "byte_diff": {
+        "reference_size": 85,
+        "candidate_size": 85,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001C",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x00000038",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207AC60",
+      "end_rva": "0x0207B080",
+      "name": "EaseAlpha",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?EaseAlpha@@YAMMEMH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "the static helper Ease (0x0207AC10), VEase, REase and TEase call: a 13-case jump table (EEasingFunc::Step .. CircularInOut; Linear falls to the default), after the code inside the function's .pdata range. Its address sorts right after UKismetMathLibrary::Ease.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "3960c48c40e85d8309ba423b3975f2b7a1a8870c9502ec54de248ad656962992",
+      "decrypted_sha256": "ddb862f1d315eeafab1c9ea2cce7eb985539954616a84bd41768b5f961983f33",
+      "candidate_sha256": "ddb862f1d315eeafab1c9ea2cce7eb985539954616a84bd41768b5f961983f33",
+      "byte_diff": {
+        "reference_size": 1056,
+        "candidate_size": 1056,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000022",
+            "symbol": "__ImageBase",
+            "rva": "0x00000000",
+            "evidence": "linker-defined: __ImageBase is the image base, RVA 0"
+          },
+          {
+            "offset": "0x0000002B",
+            "symbol": "$LN158",
+            "rva": "0x0207B04C",
+            "evidence": "label at offset 0x3ec of this function"
+          },
+          {
+            "offset": "0x00000046",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000006A",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x00000098",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+          },
+          {
+            "offset": "0x000000A0",
+            "symbol": "cosf",
+            "rva": "0x02D9AE88",
+            "evidence": "import thunk jmp [0x04DDC26C] (cosf)"
+          },
+          {
+            "offset": "0x000000A8",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x000000C6",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+          },
+          {
+            "offset": "0x000000DC",
+            "symbol": "sinf",
+            "rva": "0x02D9AEB2",
+            "evidence": "import thunk jmp [0x04DDC1AC] (sinf)"
+          },
+          {
+            "offset": "0x000000E4",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x000000F1",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+          },
+          {
+            "offset": "0x000000F9",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+          },
+          {
+            "offset": "0x00000102",
+            "symbol": "cosf",
+            "rva": "0x02D9AE88",
+            "evidence": "import thunk jmp [0x04DDC26C] (cosf)"
+          },
+          {
+            "offset": "0x0000010A",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000130",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000138",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+          },
+          {
+            "offset": "0x00000140",
+            "symbol": "sinf",
+            "rva": "0x02D9AEB2",
+            "evidence": "import thunk jmp [0x04DDC1AC] (sinf)"
+          },
+          {
+            "offset": "0x0000014B",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000177",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x0000017F",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000018E",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x000001AC",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x000001C0",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x000001E1",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x000001F1",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x00000226",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000022E",
+            "symbol": "__real@40000000",
+            "rva": "0x02E76108",
+            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, APlayerController::execServerViewSelf"
+          },
+          {
+            "offset": "0x00000236",
+            "symbol": "__real@41200000",
+            "rva": "0x02E65AEC",
+            "evidence": "pooled constant: of 24 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000024C",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x00000254",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000261",
+            "symbol": "__real@c1200000",
+            "rva": "0x0324CF6C",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x00000269",
+            "symbol": "__real@40000000",
+            "rva": "0x02E76108",
+            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, APlayerController::execServerViewSelf"
+          },
+          {
+            "offset": "0x00000271",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x0000028F",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x000002AC",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x000002B4",
+            "symbol": "__real@40000000",
+            "rva": "0x02E76108",
+            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, APlayerController::execServerViewSelf"
+          },
+          {
+            "offset": "0x000002BC",
+            "symbol": "__real@41200000",
+            "rva": "0x02E65AEC",
+            "evidence": "pooled constant: of 24 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000002C4",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x000002D4",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x000002ED",
+            "symbol": "__real@c1200000",
+            "rva": "0x0324CF6C",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000002F5",
+            "symbol": "__real@40000000",
+            "rva": "0x02E76108",
+            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, APlayerController::execServerViewSelf"
+          },
+          {
+            "offset": "0x000002FD",
+            "symbol": "powf",
+            "rva": "0x02D9AE64",
+            "evidence": "import thunk jmp [0x04DDC254] (powf)"
+          },
+          {
+            "offset": "0x00000326",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000340",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000357",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000037E",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x00000386",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x000003A9",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x000003EC",
+            "symbol": "$LN4",
+            "rva": "0x0207AC94",
+            "evidence": "label at offset 0x34 of this function"
+          },
+          {
+            "offset": "0x000003F0",
+            "symbol": "$LN5",
+            "rva": "0x0207ACF4",
+            "evidence": "label at offset 0x94 of this function"
+          },
+          {
+            "offset": "0x000003F4",
+            "symbol": "$LN6",
+            "rva": "0x0207AD22",
+            "evidence": "label at offset 0xc2 of this function"
+          },
+          {
+            "offset": "0x000003F8",
+            "symbol": "$LN7",
+            "rva": "0x0207AD40",
+            "evidence": "label at offset 0xe0 of this function"
+          },
+          {
+            "offset": "0x000003FC",
+            "symbol": "$LN8",
+            "rva": "0x0207ADC5",
+            "evidence": "label at offset 0x165 of this function"
+          },
+          {
+            "offset": "0x00000400",
+            "symbol": "$LN9",
+            "rva": "0x0207ADDB",
+            "evidence": "label at offset 0x17b of this function"
+          },
+          {
+            "offset": "0x00000404",
+            "symbol": "$LN10",
+            "rva": "0x0207AE08",
+            "evidence": "label at offset 0x1a8 of this function"
+          },
+          {
+            "offset": "0x00000408",
+            "symbol": "$LN11",
+            "rva": "0x0207AE76",
+            "evidence": "label at offset 0x216 of this function"
+          },
+          {
+            "offset": "0x0000040C",
+            "symbol": "$LN12",
+            "rva": "0x0207AEB0",
+            "evidence": "label at offset 0x250 of this function"
+          },
+          {
+            "offset": "0x00000410",
+            "symbol": "$LN13",
+            "rva": "0x0207AEEB",
+            "evidence": "label at offset 0x28b of this function"
+          },
+          {
+            "offset": "0x00000414",
+            "symbol": "$LN14",
+            "rva": "0x0207AF82",
+            "evidence": "label at offset 0x322 of this function"
+          },
+          {
+            "offset": "0x00000418",
+            "symbol": "$LN15",
+            "rva": "0x0207AFB3",
+            "evidence": "label at offset 0x353 of this function"
+          },
+          {
+            "offset": "0x0000041C",
+            "symbol": "$LN16",
+            "rva": "0x0207AFDA",
+            "evidence": "label at offset 0x37a of this function"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EAA0",
+      "end_rva": "0x0208EAB5",
+      "name": "UKismetMathLibrary::ReportError_Divide_ByteByte",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Divide_ByteByte@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: Divide_ByteByte\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "21b2d1f548e488745a320862957817b1c35341ad6c85972abaa37349a9813416",
+      "decrypted_sha256": "d9b43b16fea56046457327b7574499ccb848e70caa0a6900c6ddae3f6eeec331",
+      "candidate_sha256": "d9b43b16fea56046457327b7574499ccb848e70caa0a6900c6ddae3f6eeec331",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_IntInt, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210427",
+            "rva": "0x037C89B0",
+            "evidence": "data symbol: unique 64-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_IntInt, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EB80",
+      "end_rva": "0x0208EB95",
+      "name": "UKismetMathLibrary::ReportError_Percent_ByteByte",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Percent_ByteByte@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Modulo by zero\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "ea861e4a1c75b7aff462d53a10a2095df7c120e0ecf5ffa7cf2de3a9f062b4e7",
+      "decrypted_sha256": "9974d747743faaf6aab4b155d894dafce527cb990e9b099b6a3dc20b8ddef48b",
+      "candidate_sha256": "9974d747743faaf6aab4b155d894dafce527cb990e9b099b6a3dc20b8ddef48b",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Divide_IntInt and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210430",
+            "rva": "0x037C89F0",
+            "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_IntInt"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Divide_IntInt and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EAC0",
+      "end_rva": "0x0208EAD5",
+      "name": "UKismetMathLibrary::ReportError_Divide_IntInt",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Divide_IntInt@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: Divide_IntInt\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "f8ffe6f76ef1ef8df0dd247a50ef4421a467845d4fd72ce96ca90cf60335f8c6",
+      "decrypted_sha256": "550256dac38d4638c512622a68e12a976d0f367d6275d10c6664ac5bbac5038a",
+      "candidate_sha256": "550256dac38d4638c512622a68e12a976d0f367d6275d10c6664ac5bbac5038a",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210433",
+            "rva": "0x037C8A90",
+            "evidence": "data symbol: unique 60-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EBA0",
+      "end_rva": "0x0208EBB5",
+      "name": "UKismetMathLibrary::ReportError_Percent_IntInt",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Percent_IntInt@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Modulo by zero\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "b054d2339807fe7814e3bf80503744ac253d38fa7cedb457dc9fe54a8f719a0a",
+      "decrypted_sha256": "1009140db3444e79911c649fbbe3d5ff8cd8b9e88cd6635fab5bcd8d86b7af38",
+      "candidate_sha256": "1009140db3444e79911c649fbbe3d5ff8cd8b9e88cd6635fab5bcd8d86b7af38",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210436",
+            "rva": "0x037C8AE0",
+            "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_ByteByte"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EBE0",
+      "end_rva": "0x0208EBF5",
+      "name": "UKismetMathLibrary::ReportError_Sqrt",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Sqrt@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Attempt to take Sqrt() of negative number - returning 0.\" literal and NegativeSqrtWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "4c686c0620e20c31b7257f09376a465bdb2f11fa79fb3bad305acb4409fb1092",
+      "decrypted_sha256": "d8573d4127dd024c5d0a28ca0a5ce38bbb587e9fe2f9f078a5fe9a93f09b1a26",
+      "candidate_sha256": "ee7ecf822364aa3d49abf1177d20d60ac75521513e64f1885ac88330feecf5a9",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210439",
+            "rva": "0x037C8C70",
+            "evidence": "data symbol: unique 114-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "size": 4,
+            "symbol": "?NegativeSqrtWarning@@3VFName@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EB20",
+      "end_rva": "0x0208EB35",
+      "name": "UKismetMathLibrary::ReportError_Divide_VectorFloat",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Divide_VectorFloat@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: Divide_VectorFloat\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "1db329da00da5604f89b1d02b826445dbe8c64575b0f0208f0ad1ed0840a372a",
+      "decrypted_sha256": "a50da7332d0d3529ef33f4501a36b1af5ec8606fb9f5be23ca7a339327396a32",
+      "candidate_sha256": "a50da7332d0d3529ef33f4501a36b1af5ec8606fb9f5be23ca7a339327396a32",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210442",
+            "rva": "0x037C8D50",
+            "evidence": "data symbol: unique 70-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EB40",
+      "end_rva": "0x0208EB55",
+      "name": "UKismetMathLibrary::ReportError_Divide_VectorInt",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Divide_VectorInt@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: Divide_VectorInt\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "6b7dd05e7f20062ec397f359052822c45d10a5329fbffab079b8161508298598",
+      "decrypted_sha256": "3a25e4b0b26ad5ea88fc2c9b9e53d28bde5387f55c118e483685bfc344325f6c",
+      "candidate_sha256": "3a25e4b0b26ad5ea88fc2c9b9e53d28bde5387f55c118e483685bfc344325f6c",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210445",
+            "rva": "0x037C8DB0",
+            "evidence": "data symbol: unique 66-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EB60",
+      "end_rva": "0x0208EB75",
+      "name": "UKismetMathLibrary::ReportError_Divide_VectorVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Divide_VectorVector@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: Divide_VectorVector\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "49d678a79db9045e3601e850044cebaca95bae92a7fea4bfa4f67f06751b306f",
+      "decrypted_sha256": "1af0b2d82bbd94b8f542936fb205933891a5c7e4f95625370c8a077f20277f59",
+      "candidate_sha256": "1af0b2d82bbd94b8f542936fb205933891a5c7e4f95625370c8a077f20277f59",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210448",
+            "rva": "0x037C8E50",
+            "evidence": "data symbol: unique 72-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EB00",
+      "end_rva": "0x0208EB15",
+      "name": "UKismetMathLibrary::ReportError_Divide_Vector2DVector2D",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Divide_Vector2DVector2D@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: Divide_Vector2DVector2D\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "41352b0368460d9c5c1cfd32a4765f17e91b8e88eb07df857414c31fbb08b27a",
+      "decrypted_sha256": "c5008c60acc1c962de117819d178eb2e45f46f99edf14db6a8c5ab95438ec4d1",
+      "candidate_sha256": "c5008c60acc1c962de117819d178eb2e45f46f99edf14db6a8c5ab95438ec4d1",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210451",
+            "rva": "0x037C8ED0",
+            "evidence": "data symbol: unique 80-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EBC0",
+      "end_rva": "0x0208EBD5",
+      "name": "UKismetMathLibrary::ReportError_ProjectVectorOnToVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_ProjectVectorOnToVector@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: ProjectVectorOnToV...\" literal and ZeroLengthProjectionWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "e444eb2b5b79127262695c3b9e112654148e70ec3b9df15598d5572af171ef8f",
+      "decrypted_sha256": "ce6ab2eac55cba785c06227a4c2e581382d42acc656d6ffad192ab34217e7461",
+      "candidate_sha256": "674fc5086d1f9346293fc42e22dab70c988b3bec277dec6a04f5ace6616ce309",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210454",
+            "rva": "0x037C8F20",
+            "evidence": "data symbol: unique 128-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "size": 4,
+            "symbol": "?ZeroLengthProjectionWarning@@3VFName@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EAE0",
+      "end_rva": "0x0208EAF5",
+      "name": "UKismetMathLibrary::ReportError_Divide_Vector2DFloat",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_Divide_Vector2DFloat@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Divide by zero: Divide_Vector2DFloat\" literal and DivideByZeroWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "7b57d67727102b1e4ec4f029229da1c62ac15a471a7dc4e26e8f2328b45d25b2",
+      "decrypted_sha256": "c8498acca988eadeab53eb1b3d366d33eaf42a1445e7e529c02fa40853d214c3",
+      "candidate_sha256": "c8498acca988eadeab53eb1b3d366d33eaf42a1445e7e529c02fa40853d214c3",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210457",
+            "rva": "0x037C8FA0",
+            "evidence": "data symbol: unique 74-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EA80",
+      "end_rva": "0x0208EA95",
+      "name": "UKismetMathLibrary::ReportError_DaysInMonth",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ReportError_DaysInMonth@UKismetMathLibrary@@SAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a 21-byte leaf tail-calling FFrame::KismetExecutionMessage (0x0137CC10) with the \"Invalid month (must be between 1 and 12): DaysInMonth\" literal and InvalidDateWarning. The inlined Kismet math functions call these from their exec thunks (analysis/native-implementations.json lists the address under the UFunction's name); the twelve leaves sort alphabetically by name.",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "1f945c6bec4f26e5f9ec6fdcda21e7e6def2176836cbbb8eceb74db491d394a5",
+      "decrypted_sha256": "3a0a02965a3266edb507b145bb679f39b7887ff89f5b3efdff5d380aec410622",
+      "candidate_sha256": "67562628f946923454432e6a52e40ac90ec1e7b21ad4ab987576b082552f7a00",
+      "byte_diff": {
+        "reference_size": 21,
+        "candidate_size": 21,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "$SG210460",
+            "rva": "0x037C8FF0",
+            "evidence": "data symbol: unique 108-byte string literal"
+          },
+          {
+            "offset": "0x00000011",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "size": 4,
+            "symbol": "?InvalidDateWarning@@3VFName@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D1E0",
+      "end_rva": "0x0208D227",
+      "name": "UKismetMathLibrary::RandomBoolWithWeight",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomBoolWithWeight@UKismetMathLibrary@@SA_NM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execRandomBoolWithWeight; one rand() per call, scaled by 1/RAND_MAX (FMath::FRandRange(0, 1)).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "dccd70f0ac82b48785310fc0a4c512a11776c9710c974e3e0227cd975f5c7663",
+      "decrypted_sha256": "ce5bd983240150f3f857abb0072a25ac80f9eb941606ce1de7502037b12d0559",
+      "candidate_sha256": "ce5bd983240150f3f857abb0072a25ac80f9eb941606ce1de7502037b12d0559",
+      "byte_diff": {
+        "reference_size": 71,
+        "candidate_size": 71,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000022",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          },
+          {
+            "offset": "0x00000033",
+            "symbol": "__real@38000100",
+            "rva": "0x02E65ACC",
+            "evidence": "corroborated: same symbol at this address in FMath::VRand"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207F8A0",
+      "end_rva": "0x0207F915",
+      "name": "UKismetMathLibrary::GenericPercent_FloatFloat",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?GenericPercent_FloatFloat@UKismetMathLibrary@@SAMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execPercent_FloatFloat (CustomThunk) calls it, so natives.py lists it as Percent_FloatFloat; the body is GenericPercent_FloatFloat's (B != 0 ? FMath::Fmod(A, B) : 0), and its address sorts between FromSeconds (0x0207E500) and GetAxes (0x0207FD00).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "3de780a7e8d2e74d0a4242e39352fc7c9d3937edb1d45c5e63e8a00bff3e9c6a",
+      "decrypted_sha256": "62b3943c130a597f7ee211f7cefaddc3b628c5f7f3ab2c316ceaec313a90ae55",
+      "candidate_sha256": "62b3943c130a597f7ee211f7cefaddc3b628c5f7f3ab2c316ceaec313a90ae55",
+      "byte_diff": {
+        "reference_size": 117,
+        "candidate_size": 117,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000018",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000025",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x0000002C",
+            "symbol": "?FmodReportError@FGenericPlatformMath@@CAXMM@Z",
+            "rva": "0x0126F320",
+            "evidence": "exact match of manifest entry 0x0126F320"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02089BC0",
+      "end_rva": "0x02089C26",
+      "name": "UKismetMathLibrary::Log",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?Log@UKismetMathLibrary@@SAMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execLog; KismetExecutionMessage with DivideByZeroWarning when Base <= 0, else logf(A) / logf(Base).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "fb45c981984a9d798ae972efc3d63681bad63807fd392d77971e41028f65f478",
+      "decrypted_sha256": "f13344ae269fe7780717b7599798726aa8e56daf44a5858f3e7d4ad92ab4c4a8",
+      "candidate_sha256": "f13344ae269fe7780717b7599798726aa8e56daf44a5858f3e7d4ad92ab4c4a8",
+      "byte_diff": {
+        "reference_size": 102,
+        "candidate_size": 102,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001C",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x00000023",
+            "symbol": "$SG210477",
+            "rva": "0x037C8878",
+            "evidence": "data symbol: unique 40-byte string literal"
+          },
+          {
+            "offset": "0x0000002A",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "logf",
+            "rva": "0x02D9AE5E",
+            "evidence": "import thunk jmp [0x04DDC24C] (logf)"
+          },
+          {
+            "offset": "0x0000004C",
+            "symbol": "logf",
+            "rva": "0x02D9AE5E",
+            "evidence": "import thunk jmp [0x04DDC24C] (logf)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207CFB0",
+      "end_rva": "0x0207D09C",
+      "name": "UKismetMathLibrary::FMod",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?FMod@UKismetMathLibrary@@SAHMMAEAM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execFMod; the quotient's sign times FloorToInt(|quotient|), then FMath::Fmod.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "e5691114f29541776eed4cfab1589e006bbdde5c847325ed951811287a0b9d7a",
+      "decrypted_sha256": "fea3806c8a2988aa7f396ff178b3cf4edb8a218158148c78c058d4bd3093e4bf",
+      "candidate_sha256": "fea3806c8a2988aa7f396ff178b3cf4edb8a218158148c78c058d4bd3093e4bf",
+      "byte_diff": {
+        "reference_size": 236,
+        "candidate_size": 236,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000021",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000004D",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x00000063",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x0000006D",
+            "symbol": "?FmodReportError@FGenericPlatformMath@@CAXMM@Z",
+            "rva": "0x0126F320",
+            "evidence": "exact match of manifest entry 0x0126F320"
+          },
+          {
+            "offset": "0x000000C7",
+            "symbol": "?DivideByZeroWarning@@3VFName@@B",
+            "rva": "0x04897810",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 8 more"
+          },
+          {
+            "offset": "0x000000CE",
+            "symbol": "$SG210487",
+            "rva": "0x037C9520",
+            "evidence": "data symbol: unique 68-byte string literal"
+          },
+          {
+            "offset": "0x000000D5",
+            "symbol": "?KismetExecutionMessage@FFrame@@SAXPEB_WW4Type@ELogVerbosity@@VFName@@@Z",
+            "rva": "0x0137CC10",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ReportError_Divide_ByteByte, UKismetMathLibrary::ReportError_Percent_ByteByte and 11 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02089F40",
+      "end_rva": "0x02089F86",
+      "name": "UKismetMathLibrary::MakePulsatingValue",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MakePulsatingValue@UKismetMathLibrary@@SAMMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMakePulsatingValue; 0.5 + 0.5 * sinf(...), computed in float under /fp:fast.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "4079baeba1d56ee42393e3c953f24404faf9972766b740531d67c80489abc7f2",
+      "decrypted_sha256": "983a78ab4e2b1fd51944b40adcccd1a7ddbc925167d33e614e45990ce6c17f1e",
+      "candidate_sha256": "983a78ab4e2b1fd51944b40adcccd1a7ddbc925167d33e614e45990ce6c17f1e",
+      "byte_diff": {
+        "reference_size": 70,
+        "candidate_size": 70,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000008",
+            "symbol": "__real@40490fdb",
+            "rva": "0x02E623FC",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 1 more"
+          },
+          {
+            "offset": "0x00000010",
+            "symbol": "__real@40490fdb",
+            "rva": "0x02E623FC",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::CreateVectorFromYawPitch and 1 more"
+          },
+          {
+            "offset": "0x00000028",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+          },
+          {
+            "offset": "0x0000002D",
+            "symbol": "sinf",
+            "rva": "0x02D9AEB2",
+            "evidence": "import thunk jmp [0x04DDC1AC] (sinf)"
+          },
+          {
+            "offset": "0x00000035",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000003D",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A7D0",
+      "end_rva": "0x0208A83B",
+      "name": "UKismetMathLibrary::MaxOfIntArray",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MaxOfIntArray@UKismetMathLibrary@@SAXAEBV?$TArray@HVFDefaultAllocator@@@@AEAH1@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMaxOfIntArray; FMath::Max over the array, INDEX_NONE and T() when empty.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "2f34283a054defd1032eb4b3979a025a550e59c98d635ad891309450d389c1ef",
+      "decrypted_sha256": "9ab1ae3a286f22676e0a78c9bcc0f9c88328441aef983592815b66dd6e3b6c8b",
+      "candidate_sha256": "9ab1ae3a286f22676e0a78c9bcc0f9c88328441aef983592815b66dd6e3b6c8b",
+      "byte_diff": {
+        "reference_size": 107,
+        "candidate_size": 107,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208AAD0",
+      "end_rva": "0x0208AB3B",
+      "name": "UKismetMathLibrary::MinOfIntArray",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MinOfIntArray@UKismetMathLibrary@@SAXAEBV?$TArray@HVFDefaultAllocator@@@@AEAH1@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMinOfIntArray; FMath::Min over the array, INDEX_NONE and T() when empty.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "1bfd0583a811b5de90c28f965de06177fdec9bc9ae51d7ca443ff2584f1ee567",
+      "decrypted_sha256": "48ac0a44851914b5dcd937242bd50f099653b152b149767c19070f13a4ee71b9",
+      "candidate_sha256": "48ac0a44851914b5dcd937242bd50f099653b152b149767c19070f13a4ee71b9",
+      "byte_diff": {
+        "reference_size": 107,
+        "candidate_size": 107,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A6F0",
+      "end_rva": "0x0208A7CD",
+      "name": "UKismetMathLibrary::MaxOfFloatArray",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MaxOfFloatArray@UKismetMathLibrary@@SAXAEBV?$TArray@MVFDefaultAllocator@@@@AEAHAEAM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMaxOfFloatArray; FMath::Max over the array, INDEX_NONE and T() when empty.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "e89b5fe339ba62b6dc8fb5e226662d55a884504e49762918f9b82476c0b9075d",
+      "decrypted_sha256": "cdbe8a60fca633de0c56d859889c49a37d9fdddcb7aeecd6e6bd7b6b79985f93",
+      "candidate_sha256": "cdbe8a60fca633de0c56d859889c49a37d9fdddcb7aeecd6e6bd7b6b79985f93",
+      "byte_diff": {
+        "reference_size": 221,
+        "candidate_size": 221,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A9F0",
+      "end_rva": "0x0208AACD",
+      "name": "UKismetMathLibrary::MinOfFloatArray",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MinOfFloatArray@UKismetMathLibrary@@SAXAEBV?$TArray@MVFDefaultAllocator@@@@AEAHAEAM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMinOfFloatArray; FMath::Min over the array, INDEX_NONE and T() when empty.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "39f47ea5a86a2a8a61791fc1841aac6faa95a26e2a4900285db70956fbc69a20",
+      "decrypted_sha256": "5b12d200c9ee3989edb77a4c9cf81da06994337bf960db1ba9a57d150cd921f0",
+      "candidate_sha256": "5b12d200c9ee3989edb77a4c9cf81da06994337bf960db1ba9a57d150cd921f0",
+      "byte_diff": {
+        "reference_size": 221,
+        "candidate_size": 221,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A680",
+      "end_rva": "0x0208A6EA",
+      "name": "UKismetMathLibrary::MaxOfByteArray",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MaxOfByteArray@UKismetMathLibrary@@SAXAEBV?$TArray@EVFDefaultAllocator@@@@AEAHAEAE@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMaxOfByteArray; FMath::Max over the array, INDEX_NONE and T() when empty.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "61e91b51da20685c58ae3887b63a07d18444672ff889a7cf8a05d027b0d89b21",
+      "decrypted_sha256": "35cc32a3118cfcb31fc602c12048a347aa94713223be2bb22d85e948a39928dd",
+      "candidate_sha256": "35cc32a3118cfcb31fc602c12048a347aa94713223be2bb22d85e948a39928dd",
+      "byte_diff": {
+        "reference_size": 106,
+        "candidate_size": 106,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A980",
+      "end_rva": "0x0208A9EA",
+      "name": "UKismetMathLibrary::MinOfByteArray",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MinOfByteArray@UKismetMathLibrary@@SAXAEBV?$TArray@EVFDefaultAllocator@@@@AEAHAEAE@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMinOfByteArray; FMath::Min over the array, INDEX_NONE and T() when empty.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "6bb1106a9c6467cf0189d060374a4eebc995089c6b011693c9c22384726ab3e1",
+      "decrypted_sha256": "3aab35e037f40e34cd23c1d7a4c3e9901728793d4933e592c87e2c1d7e3622e1",
+      "candidate_sha256": "3aab35e037f40e34cd23c1d7a4c3e9901728793d4933e592c87e2c1d7e3622e1",
+      "byte_diff": {
+        "reference_size": 106,
+        "candidate_size": 106,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207AC10",
+      "end_rva": "0x0207AC59",
+      "name": "UKismetMathLibrary::Ease",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?Ease@UKismetMathLibrary@@SAMMMMV?$TEnumAsByte@W4Type@EEasingFunc@@@@MH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execEase; Lerp(A, B, EaseAlpha(...)) with the TEnumAsByte argument passed by reference (it has a user copy constructor).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "5be62a94867f0ef2b21060f92efab9cbc445048aa9a2286c5945c4e7b722acbd",
+      "decrypted_sha256": "9b5743a5a92568f367ea9699e8f1b0b5d7f05e564e37ab48ea97faf75b08f2c9",
+      "candidate_sha256": "9b5743a5a92568f367ea9699e8f1b0b5d7f05e564e37ab48ea97faf75b08f2c9",
+      "byte_diff": {
+        "reference_size": 73,
+        "candidate_size": 73,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000002A",
+            "symbol": "?EaseAlpha@@YAMMEMH@Z",
+            "rva": "0x0207AC60",
+            "evidence": "exact match of manifest entry 0x0207AC60"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02095830",
+      "end_rva": "0x020958E4",
+      "name": "UKismetMathLibrary::VEase",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?VEase@UKismetMathLibrary@@SA?AUFVector@@U2@0MV?$TEnumAsByte@W4Type@EEasingFunc@@@@MH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execVEase; VLerp(A, B, EaseAlpha(...)).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "244cb45e5132e1481d4dffd7834322f0c3a5d319800d6ba61d5fcf84dbd934f7",
+      "decrypted_sha256": "98d0979d1e18d428f7b8e396e240c4352c42939027a5d2bd63d74efa0f67deb5",
+      "candidate_sha256": "98d0979d1e18d428f7b8e396e240c4352c42939027a5d2bd63d74efa0f67deb5",
+      "byte_diff": {
+        "reference_size": 180,
+        "candidate_size": 180,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000052",
+            "symbol": "?EaseAlpha@@YAMMEMH@Z",
+            "rva": "0x0207AC60",
+            "evidence": "exact match of manifest entry 0x0207AC60"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D420",
+      "end_rva": "0x0208D4A4",
+      "name": "UKismetMathLibrary::RandomRotator",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomRotator@UKismetMathLibrary@@SA?AUFRotator@@_N@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execRandomRotator; FRand() * 360 for yaw and pitch, and for roll when bRoll.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "bd00bd2b8c221f2c49a1a361e61d365733cb442ce853f954fd43d616756a67e9",
+      "decrypted_sha256": "c84016b248f07b38c1f5d1a5ea9aad80f4becab200a7961d33b3077980ab2b0d",
+      "candidate_sha256": "c84016b248f07b38c1f5d1a5ea9aad80f4becab200a7961d33b3077980ab2b0d",
+      "byte_diff": {
+        "reference_size": 132,
+        "candidate_size": 132,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000012",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          },
+          {
+            "offset": "0x00000021",
+            "symbol": "__real@3c340168",
+            "rva": "0x0304A148",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x0000002C",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "__real@3c340168",
+            "rva": "0x0304A148",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000049",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          },
+          {
+            "offset": "0x0000005B",
+            "symbol": "__real@3c340168",
+            "rva": "0x0304A148",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207D4A0",
+      "end_rva": "0x0207D629",
+      "name": "UKismetMathLibrary::FindClosestPointOnLine",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?FindClosestPointOnLine@UKismetMathLibrary@@SA?AUFVector@@U2@00@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execFindClosestPointOnLine; GetSafeNormal (FVector::ZeroVector, InvSqrt) of the direction.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "275dfd9d8251babbf3606e29a059c6d497daf155d5efcb8b06967332f31debeb",
+      "decrypted_sha256": "fa7b1df1cdbbbc8fa17c54f7409ce2f0c3fcbb9c2f895fd6aa6371df055c2f57",
+      "candidate_sha256": "fa7b1df1cdbbbc8fa17c54f7409ce2f0c3fcbb9c2f895fd6aa6371df055c2f57",
+      "byte_diff": {
+        "reference_size": 393,
+        "candidate_size": 393,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000047",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000079",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in FMath::FInterpTo, UKismetMathLibrary::ClampVectorSize and 8 more"
+          },
+          {
+            "offset": "0x00000083",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::GetYawPitchFromVector and 4 more"
+          },
+          {
+            "offset": "0x0000008B",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::GetYawPitchFromVector and 4 more"
+          },
+          {
+            "offset": "0x00000094",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::GetYawPitchFromVector and 4 more"
+          },
+          {
+            "offset": "0x0000009E",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::CreateVectorFromYawPitch and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02075730",
+      "end_rva": "0x0207582F",
+      "name": "UKismetMathLibrary::ClampVectorSize",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ClampVectorSize@UKismetMathLibrary@@SA?AUFVector@@U2@MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execClampVectorSize; FVector::GetClampedToSize.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "b9771eea0b21ec3be26f527465fcf3fcb588b1f80a299be73618f8b6ad0d5901",
+      "decrypted_sha256": "ef7ec17aa99a7393f35d9fa8f350a3b6f12562c2ab001fc341985c0bd17c6731",
+      "candidate_sha256": "ef7ec17aa99a7393f35d9fa8f350a3b6f12562c2ab001fc341985c0bd17c6731",
+      "byte_diff": {
+        "reference_size": 255,
+        "candidate_size": 255,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000004D",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in FMath::FInterpTo, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x00000057",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000083",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FindClosestPointOnLine, UKismetMathLibrary::GetYawPitchFromVector and 4 more"
+          },
+          {
+            "offset": "0x00000089",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FindClosestPointOnLine, UKismetMathLibrary::GetYawPitchFromVector and 4 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02083DE0",
+      "end_rva": "0x02083EE8",
+      "name": "UKismetMathLibrary::GetVectorArrayAverage",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?GetVectorArrayAverage@UKismetMathLibrary@@SA?AUFVector@@AEBV?$TArray@UFVector@@VFDefaultAllocator@@@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execGetVectorArrayAverage; the sum over the array divided by Num().",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "b39dc359dd17f72f10cb3cdbe5b745f94a45c3fad34207e9a4eecb7d004d817d",
+      "decrypted_sha256": "1acc34963a7836afa75bb2e6dbbf5a931e626fb39933d326da6853d6ec13899e",
+      "candidate_sha256": "1acc34963a7836afa75bb2e6dbbf5a931e626fb39933d326da6853d6ec13899e",
+      "byte_diff": {
+        "reference_size": 264,
+        "candidate_size": 264,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x000000C7",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x020756B0",
+      "end_rva": "0x02075730",
+      "name": "UKismetMathLibrary::ClampAxis",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ClampAxis@UKismetMathLibrary@@SAMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execClampAxis; FRotator::ClampAxis (FMath::Fmod by 360, FmodReportError 0x0126F320).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "d21ca2393974245fa7780a97d7fc329e4cbe0bcd1941e7b2f0e6ad5f6dc9ff15",
+      "decrypted_sha256": "c9abe6bed692d8cabcf56d23b6616967cef15931e219e4bba2db750e43227759",
+      "candidate_sha256": "c9abe6bed692d8cabcf56d23b6616967cef15931e219e4bba2db750e43227759",
+      "byte_diff": {
+        "reference_size": 128,
+        "candidate_size": 128,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000008",
+            "symbol": "__real@43b40000",
+            "rva": "0x02F8EF04",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::NormalizeAxis, UKismetMathLibrary::RandomRotatorFromStream"
+          },
+          {
+            "offset": "0x00000015",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000001C",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x00000029",
+            "symbol": "?FmodReportError@FGenericPlatformMath@@CAXMM@Z",
+            "rva": "0x0126F320",
+            "evidence": "exact match of manifest entry 0x0126F320"
+          },
+          {
+            "offset": "0x00000039",
+            "symbol": "__real@3b360b61",
+            "rva": "0x02F8EEE8",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::NormalizeAxis"
+          },
+          {
+            "offset": "0x00000043",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000005C",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208B950",
+      "end_rva": "0x0208B9D9",
+      "name": "UKismetMathLibrary::NormalizeAxis",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?NormalizeAxis@UKismetMathLibrary@@SAMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execNormalizeAxis; FRotator::NormalizeAxis.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "93c748d7e2348350e59c3fd7a6eb94cc928536cd5cb87658f2421be2fd4965b3",
+      "decrypted_sha256": "37df596f442b454f2a458ecfdc613b9cef72e518efa66d8d9bade505498801f4",
+      "candidate_sha256": "37df596f442b454f2a458ecfdc613b9cef72e518efa66d8d9bade505498801f4",
+      "byte_diff": {
+        "reference_size": 137,
+        "candidate_size": 137,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000008",
+            "symbol": "__real@43b40000",
+            "rva": "0x02F8EF04",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampAxis, UKismetMathLibrary::RandomRotatorFromStream"
+          },
+          {
+            "offset": "0x00000013",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000020",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x0000002D",
+            "symbol": "?FmodReportError@FGenericPlatformMath@@CAXMM@Z",
+            "rva": "0x0126F320",
+            "evidence": "exact match of manifest entry 0x0126F320"
+          },
+          {
+            "offset": "0x0000003D",
+            "symbol": "__real@3b360b61",
+            "rva": "0x02F8EEE8",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampAxis"
+          },
+          {
+            "offset": "0x00000077",
+            "symbol": "__real@43340000",
+            "rva": "0x02E62408",
+            "evidence": "pooled constant: of 7 copies of its value, the only one scalar float code (outside this function) loads"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A5B0",
+      "end_rva": "0x0208A5DB",
+      "name": "UKismetMathLibrary::MakeTimespan",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MakeTimespan@UKismetMathLibrary@@SA?AUFTimespan@@HHHHH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMakeTimespan; FTimespan's constructor calls FTimespan::Assign (0x011D5640, Core).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "a32da33a14a9ba183fbcb782a8f43eac38b270afb11566d491072327815972ac",
+      "decrypted_sha256": "af6db13960b75af0ec5fa7756e72a7ef11639544f30afeb86e993c010aede4d4",
+      "candidate_sha256": "af6db13960b75af0ec5fa7756e72a7ef11639544f30afeb86e993c010aede4d4",
+      "byte_diff": {
+        "reference_size": 43,
+        "candidate_size": 43,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001E",
+            "symbol": "?Assign@FTimespan@@IEAAXHHHHH@Z",
+            "rva": "0x011D5640",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::MakeTimespan2"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A580",
+      "end_rva": "0x0208A5A7",
+      "name": "UKismetMathLibrary::MakeTimespan2",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MakeTimespan2@UKismetMathLibrary@@SA?AUFTimespan@@HHHHH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMakeTimespan2; FTimespan::Assign (0x011D5640).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "04f990c8d58af38e02c1481e3f552b9eacd987d39663d98073c6f52027343a9c",
+      "decrypted_sha256": "c6a00abd0482b6fbb5417ffdade9eddc442a64f9116b912e283929016171a1bf",
+      "candidate_sha256": "c6a00abd0482b6fbb5417ffdade9eddc442a64f9116b912e283929016171a1bf",
+      "byte_diff": {
+        "reference_size": 39,
+        "candidate_size": 39,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001A",
+            "symbol": "?Assign@FTimespan@@IEAAXHHHHH@Z",
+            "rva": "0x011D5640",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::MakeTimespan"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x020727D0",
+      "end_rva": "0x020728F3",
+      "name": "UKismetMathLibrary::BreakTimespan",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?BreakTimespan@UKismetMathLibrary@@SAXUFTimespan@@AEAH1111@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execBreakTimespan; 64-bit tick divisions by the ETimespan constants.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "1b3122e36af5a07248f633da5494b676a556cb26380d6cbd14061e93dd99af5a",
+      "decrypted_sha256": "4ecfe03633c7e4d5e8d3e8c2ee0f2ff81d434cea56e0216c62e5892ade50fc42",
+      "candidate_sha256": "4ecfe03633c7e4d5e8d3e8c2ee0f2ff81d434cea56e0216c62e5892ade50fc42",
+      "byte_diff": {
+        "reference_size": 291,
+        "candidate_size": 291,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x020726C0",
+      "end_rva": "0x020727CA",
+      "name": "UKismetMathLibrary::BreakTimespan2",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?BreakTimespan2@UKismetMathLibrary@@SAXUFTimespan@@AEAH1111@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execBreakTimespan2; as BreakTimespan with the fraction in nanoseconds.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "ab6ecdd756422068fa7e636ae1c1f33e6fc9a2bd4ba330316587dad33065a580",
+      "decrypted_sha256": "013fa8e8937eb5f3fa92959abb104e6d5c04692091cceb8a2eefb46ff0b1db41",
+      "candidate_sha256": "013fa8e8937eb5f3fa92959abb104e6d5c04692091cceb8a2eefb46ff0b1db41",
+      "byte_diff": {
+        "reference_size": 266,
+        "candidate_size": 266,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02079F20",
+      "end_rva": "0x0207A1E1",
+      "name": "UKismetMathLibrary::CreateVectorFromYawPitch",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?CreateVectorFromYawPitch@UKismetMathLibrary@@SA?AUFVector@@MMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execCreateVectorFromYawPitch; two FMath::SinCos expansions, as FRotator::Vector, times Length.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "62a0f1763886f5ff06e54e246e943eb98101d465d060be81c03692f1d1539d92",
+      "decrypted_sha256": "1f103e0d96bab812f23b303c165c3df3dd2f7f9a0a0b995e54ef589b1c03001e",
+      "candidate_sha256": "1f103e0d96bab812f23b303c165c3df3dd2f7f9a0a0b995e54ef589b1c03001e",
+      "byte_diff": {
+        "reference_size": 705,
+        "candidate_size": 705,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000010",
+            "symbol": "__real@3c8efa35",
+            "rva": "0x02E623E0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x0000001B",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x00000034",
+            "symbol": "__real@3e22f983",
+            "rva": "0x02E623E8",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000061",
+            "symbol": "__real@40490fdb",
+            "rva": "0x02E623FC",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UKismetMathLibrary::MakePulsatingValue and 1 more"
+          },
+          {
+            "offset": "0x0000006A",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000073",
+            "symbol": "__real@c0490fdb",
+            "rva": "0x02E62418",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x0000007B",
+            "symbol": "__real@bf800000",
+            "rva": "0x02E62410",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x0000008E",
+            "symbol": "__real@40c90fdb",
+            "rva": "0x02E62400",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000099",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::MakePulsatingValue and 2 more"
+          },
+          {
+            "offset": "0x000000B2",
+            "symbol": "__real@bfc90fdb",
+            "rva": "0x02E62414",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x000000D1",
+            "symbol": "__real@3638b88e",
+            "rva": "0x02E623CC",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x000000DC",
+            "symbol": "__real@3c8efa35",
+            "rva": "0x02E623E0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x000000EF",
+            "symbol": "__real@32cd365b",
+            "rva": "0x02E623C4",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x000000FF",
+            "symbol": "__real@348bdd11",
+            "rva": "0x02E623C8",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x0000010D",
+            "symbol": "__real@39500bf1",
+            "rva": "0x02E623D4",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x0000011B",
+            "symbol": "__real@3c088886",
+            "rva": "0x02E623DC",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000129",
+            "symbol": "__real@3e2aaaab",
+            "rva": "0x02E623EC",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000140",
+            "symbol": "__real@37cfb4c2",
+            "rva": "0x02E623D0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000154",
+            "symbol": "__real@3e22f983",
+            "rva": "0x02E623E8",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000162",
+            "symbol": "__real@3ab609aa",
+            "rva": "0x02E623D8",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000170",
+            "symbol": "__real@3d2aaaa3",
+            "rva": "0x02E623E4",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x000001AE",
+            "symbol": "__real@40c90fdb",
+            "rva": "0x02E62400",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x000001B9",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::MakePulsatingValue and 2 more"
+          },
+          {
+            "offset": "0x000001CB",
+            "symbol": "__real@bfc90fdb",
+            "rva": "0x02E62414",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000202",
+            "symbol": "__real@348bdd11",
+            "rva": "0x02E623C8",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000211",
+            "symbol": "__real@32cd365b",
+            "rva": "0x02E623C4",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x0000022F",
+            "symbol": "__real@3ab609aa",
+            "rva": "0x02E623D8",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000247",
+            "symbol": "__real@39500bf1",
+            "rva": "0x02E623D4",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000253",
+            "symbol": "__real@3d2aaaa3",
+            "rva": "0x02E623E4",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x0000025F",
+            "symbol": "__real@3c088886",
+            "rva": "0x02E623DC",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          },
+          {
+            "offset": "0x00000273",
+            "symbol": "__real@3e2aaaab",
+            "rva": "0x02E623EC",
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x020845D0",
+      "end_rva": "0x02084748",
+      "name": "UKismetMathLibrary::GetYawPitchFromVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?GetYawPitchFromVector@UKismetMathLibrary@@SAXUFVector@@AEAM1@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execGetYawPitchFromVector; GetSafeNormal, then FGenericPlatformMath::Atan2 (0x01112E50) twice.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "5fcc9a500a4f895e9e64d374c964d5df79eb69915ae0caf7e80bfe9f6a8aa14e",
+      "decrypted_sha256": "07e45b23f807a2dee98ae42b97371c830aed032b141d486378bc76df586fdc9d",
+      "candidate_sha256": "07e45b23f807a2dee98ae42b97371c830aed032b141d486378bc76df586fdc9d",
+      "byte_diff": {
+        "reference_size": 376,
+        "candidate_size": 376,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000055",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000088",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x00000093",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x0000009B",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000A4",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000AE",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          },
+          {
+            "offset": "0x00000122",
+            "symbol": "?Atan2@FGenericPlatformMath@@SAMMM@Z",
+            "rva": "0x01112E50",
+            "evidence": "exact match of manifest entry 0x01112E50"
+          },
+          {
+            "offset": "0x0000012A",
+            "symbol": "__real@42652ee0",
+            "rva": "0x02F8EEF4",
+            "evidence": "corroborated: same symbol at this address in FVector::ToOrientationRotator"
+          },
+          {
+            "offset": "0x0000014C",
+            "symbol": "?Atan2@FGenericPlatformMath@@SAMMM@Z",
+            "rva": "0x01112E50",
+            "evidence": "exact match of manifest entry 0x01112E50"
+          },
+          {
+            "offset": "0x00000154",
+            "symbol": "__real@42652ee0",
+            "rva": "0x02F8EEF4",
+            "evidence": "corroborated: same symbol at this address in FVector::ToOrientationRotator"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208EC00",
+      "end_rva": "0x0208EC06",
+      "name": "UKismetMathLibrary::ResetRandomStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ResetRandomStream@UKismetMathLibrary@@SAXAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execResetRandomStream; a 6-byte leaf storing InitialSeed into the mutable Seed (FRandomStream::Reset).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "7ad99abf7aca6eab72a8cbccdfdbad55ae571fb34cc1f3c2dc8ccd3dd002fee1",
+      "decrypted_sha256": "d8b263e63bd989ef857b036af83543850638b57ea35b615998f53b9d0d61721b",
+      "candidate_sha256": "d8b263e63bd989ef857b036af83543850638b57ea35b615998f53b9d0d61721b",
+      "byte_diff": {
+        "reference_size": 6,
+        "candidate_size": 6,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208FBC0",
+      "end_rva": "0x0208FBDA",
+      "name": "UKismetMathLibrary::SeedRandomStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?SeedRandomStream@UKismetMathLibrary@@SAXAEAUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execSeedRandomStream; FRandomStream::GenerateNewSeed, Initialize(rand()).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "e48882347bc9935754e7c2f5dd97ab42b39f856123be9253ea6a7e12aa6ec7de",
+      "decrypted_sha256": "f02e8863354828a4ca096e09a3580eccd9aca9fa3c836e2c441e18ecd5b73f11",
+      "candidate_sha256": "f02e8863354828a4ca096e09a3580eccd9aca9fa3c836e2c441e18ecd5b73f11",
+      "byte_diff": {
+        "reference_size": 26,
+        "candidate_size": 26,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000B",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02085E70",
+      "end_rva": "0x02085F1E",
+      "name": "UKismetMathLibrary::IsPointInBox",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?IsPointInBox@UKismetMathLibrary@@SA_NUFVector@@00@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execIsPointInBox; FBox(Origin - Extent, Origin + Extent).IsInsideOrOn(Point).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "fde1b42ac6e4732cf00774a1052825ada452b33273fc2dfab16a070c8af48d74",
+      "decrypted_sha256": "c10daf79c6f87065e8f6e01cd41fa337bc4e7a22c3e3c04ce9a4fa1fb6db82f0",
+      "candidate_sha256": "c10daf79c6f87065e8f6e01cd41fa337bc4e7a22c3e3c04ce9a4fa1fb6db82f0",
+      "byte_diff": {
+        "reference_size": 174,
+        "candidate_size": 174,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0119F2B0",
+      "end_rva": "0x0119F496",
+      "name": "FMath::PointDistToLine",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?PointDistToLine@FMath@@SAMAEBUFVector@@00@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execGetPointDistanceToLine (Kismet function inlined); the three-argument overload, which sorts before the four-argument one.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "25ca53b7ce7243d8232c55a7275268fa441a98e6c8b174bdea2305d0e4c2cddc",
+      "decrypted_sha256": "bf473802e1c7d0c1612635df836a4a94d82d7f7eaebd358e57e3c8a70398679c",
+      "candidate_sha256": "bf473802e1c7d0c1612635df836a4a94d82d7f7eaebd358e57e3c8a70398679c",
+      "byte_diff": {
+        "reference_size": 486,
+        "candidate_size": 486,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000005D",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000008F",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x0000009A",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000A3",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000AC",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000B6",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0118B150",
+      "end_rva": "0x0118B2EF",
+      "name": "FMath::CInterpTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?CInterpTo@FMath@@SA?AUFLinearColor@@AEBU2@0MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execCInterpTo (Kismet function inlined).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "98bf2682302ed23f130de47b53fc7d1843ebfea007840cab71d6e2ac668ede09",
+      "decrypted_sha256": "902bf18bf9d18fff4b5462dc3aeb287f85b9ee47c86a743860241eadd88d3f9e",
+      "candidate_sha256": "902bf18bf9d18fff4b5462dc3aeb287f85b9ee47c86a743860241eadd88d3f9e",
+      "byte_diff": {
+        "reference_size": 415,
+        "candidate_size": 415,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x000000E1",
+            "symbol": "__real@38d1b717",
+            "rva": "0x02E760D4",
+            "evidence": "corroborated: same symbol at this address in FMath::VRand, FMath::Vector2DInterpTo and 1 more"
+          },
+          {
+            "offset": "0x00000100",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02082AC0",
+      "end_rva": "0x02082AED",
+      "name": "UKismetMathLibrary::GetRightVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?GetRightVector@UKismetMathLibrary@@SA?AUFVector@@UFRotator@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execGetRightVector; the out-of-line FRotationMatrix constructor (0x009C4CB0), then the matrix's Y axis.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "ea73df805bd686d5fee0e248990d0b33a4cb87890ba7f2a805b0472cc5d09449",
+      "decrypted_sha256": "8fcc021d77e362c798d82ae7ec47847ddef971dbfe2e5f5039035a5f056c845d",
+      "candidate_sha256": "8fcc021d77e362c798d82ae7ec47847ddef971dbfe2e5f5039035a5f056c845d",
+      "byte_diff": {
+        "reference_size": 45,
+        "candidate_size": 45,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "??0FRotationMatrix@@QEAA@AEBUFRotator@@@Z",
+            "rva": "0x009C4CB0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::GetAxes, UKismetMathLibrary::GetUpVector and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02083D60",
+      "end_rva": "0x02083D8D",
+      "name": "UKismetMathLibrary::GetUpVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?GetUpVector@UKismetMathLibrary@@SA?AUFVector@@UFRotator@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execGetUpVector; the out-of-line FRotationMatrix constructor (0x009C4CB0), then the matrix's Z axis.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "6816700a42b7a9614cade82333d24f935b2941ff023c512f161686a3a5193386",
+      "decrypted_sha256": "5148ea1ca4d9653fc080db1fe72bb54cd76058162f5bdbc81ba18d29ea1e33ce",
+      "candidate_sha256": "5148ea1ca4d9653fc080db1fe72bb54cd76058162f5bdbc81ba18d29ea1e33ce",
+      "byte_diff": {
+        "reference_size": 45,
+        "candidate_size": 45,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "??0FRotationMatrix@@QEAA@AEBUFRotator@@@Z",
+            "rva": "0x009C4CB0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::BreakRotIntoAxes, UKismetMathLibrary::GetAxes and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207FD00",
+      "end_rva": "0x0207FD95",
+      "name": "UKismetMathLibrary::GetAxes",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?GetAxes@UKismetMathLibrary@@SAXUFRotator@@AEAUFVector@@11@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execGetAxes; the out-of-line FRotationMatrix constructor (0x009C4CB0), then its three axes from the named local.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "c00184a2bdc3142fda0e0e689400a01533e7d84e60f39f79fd2cd357e5fc5294",
+      "decrypted_sha256": "b4a8d11832dae1beb7ae19bf5ee4daa1e458eae586143dacf295e81d60053dee",
+      "candidate_sha256": "b4a8d11832dae1beb7ae19bf5ee4daa1e458eae586143dacf295e81d60053dee",
+      "byte_diff": {
+        "reference_size": 149,
+        "candidate_size": 149,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000021",
+            "symbol": "??0FRotationMatrix@@QEAA@AEBUFRotator@@@Z",
+            "rva": "0x009C4CB0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::BreakRotIntoAxes, UKismetMathLibrary::GetUpVector and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02072560",
+      "end_rva": "0x020725CA",
+      "name": "UKismetMathLibrary::BreakRotIntoAxes",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?BreakRotIntoAxes@UKismetMathLibrary@@SAXAEBUFRotator@@AEAUFVector@@11@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execBreakRotIntoAxes; the out-of-line FRotationMatrix constructor (0x009C4CB0), then its three axes through the returned temporary.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "caf06281ea88413f1feedd661374787a8edd0126533e70a714035e4147181150",
+      "decrypted_sha256": "d4675333b2b635ce4644918aa50171c235c8e1d991f9360abf7e7ca93623edd0",
+      "candidate_sha256": "d4675333b2b635ce4644918aa50171c235c8e1d991f9360abf7e7ca93623edd0",
+      "byte_diff": {
+        "reference_size": 106,
+        "candidate_size": 106,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000021",
+            "symbol": "??0FRotationMatrix@@QEAA@AEBUFRotator@@@Z",
+            "rva": "0x009C4CB0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::GetAxes, UKismetMathLibrary::GetUpVector and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02089DB0",
+      "end_rva": "0x02089F32",
+      "name": "UKismetMathLibrary::MakePlaneFromPointAndNormal",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MakePlaneFromPointAndNormal@UKismetMathLibrary@@SA?AUFPlane@@UFVector@@0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execMakePlaneFromPointAndNormal; FPlane(Point, Normal.GetSafeNormal()).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "8e3741279f9a2a5a9ebaf8b83968e119c669fb1df9dbeaecd142e422a99817da",
+      "decrypted_sha256": "c1cc5c98d954cca9000096150e9434e8805621cabbe5414f95c84f1dc6161d9f",
+      "candidate_sha256": "c1cc5c98d954cca9000096150e9434e8805621cabbe5414f95c84f1dc6161d9f",
+      "byte_diff": {
+        "reference_size": 386,
+        "candidate_size": 386,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000057",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000008B",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 8 more"
+          },
+          {
+            "offset": "0x00000096",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x0000009E",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000A6",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000B0",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in EaseAlpha, UKismetMathLibrary::FindClosestPointOnLine and 6 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02088D60",
+      "end_rva": "0x02088E76",
+      "name": "UKismetMathLibrary::LinePlaneIntersection",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?LinePlaneIntersection@UKismetMathLibrary@@SA_NAEBUFVector@@0AEBUFPlane@@AEAMAEAU2@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execLinePlaneIntersection; -1 and FVector::ZeroVector outside the segment.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "9547110ed05a69c31801d90a31fe0885038258a2f04779b2535b0b9b65cf9b00",
+      "decrypted_sha256": "2344bd6efef3e61932a42e41bf3c1a10af00d1a05d46491c15c8ceabb14c4b18",
+      "candidate_sha256": "2344bd6efef3e61932a42e41bf3c1a10af00d1a05d46491c15c8ceabb14c4b18",
+      "byte_diff": {
+        "reference_size": 278,
+        "candidate_size": 278,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000079",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x00000083",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x000000D2",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02088E80",
+      "end_rva": "0x02088FDA",
+      "name": "UKismetMathLibrary::LinePlaneIntersection_OriginNormal",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?LinePlaneIntersection_OriginNormal@UKismetMathLibrary@@SA_NAEBUFVector@@0U2@1AEAMAEAU2@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execLinePlaneIntersection_OriginNormal; as LinePlaneIntersection, the plane given by a point.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "d1d917b2472b4c2a1eedad3b07e5cc2546689d2a0d2f8dd4f5f3a1f632817bb5",
+      "decrypted_sha256": "35ad1bf84ce3e7b139bfc98c03d9895dabda1426d1cd2fe660dd672479eb1e2f",
+      "candidate_sha256": "35ad1bf84ce3e7b139bfc98c03d9895dabda1426d1cd2fe660dd672479eb1e2f",
+      "byte_diff": {
+        "reference_size": 346,
+        "candidate_size": 346,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000090",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x0000009A",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampVectorSize, UKismetMathLibrary::FindClosestPointOnLine and 4 more"
+          },
+          {
+            "offset": "0x00000110",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02084810",
+      "end_rva": "0x02084842",
+      "name": "UKismetMathLibrary::Hypotenuse",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?Hypotenuse@UKismetMathLibrary@@SAMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); minss/maxss of the absolute values, then Max * sqrt(1 + Ratio^2).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "a2c92bb6f963229cfab82418383be788c86852b9bccc7a86a2867699ee8fa2a1",
+      "decrypted_sha256": "e8436c627f2f94d8f17abb37a2fa9b6f75d0f0aedac5dc31f6751a6c66367fcb",
+      "candidate_sha256": "e8436c627f2f94d8f17abb37a2fa9b6f75d0f0aedac5dc31f6751a6c66367fcb",
+      "byte_diff": {
+        "reference_size": 50,
+        "candidate_size": 50,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000025",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02084D70",
+      "end_rva": "0x02084DA9",
+      "name": "UKismetMathLibrary::InRange_FloatFloat",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?InRange_FloatFloat@UKismetMathLibrary@@SA_NMMM_N0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); the InclusiveMin test first (r9b).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "b81355377c79ebe7b87e579b44ad49d499b80c52c30ef9a06d28990aa2d03331",
+      "decrypted_sha256": "459c5aa12ccf54b3066124a4df1f9c3263cec26465ef038e4ce84d8b8a6e883f",
+      "candidate_sha256": "459c5aa12ccf54b3066124a4df1f9c3263cec26465ef038e4ce84d8b8a6e883f",
+      "byte_diff": {
+        "reference_size": 57,
+        "candidate_size": 57,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02084DB0",
+      "end_rva": "0x02084DE7",
+      "name": "UKismetMathLibrary::InRange_IntInt",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?InRange_IntInt@UKismetMathLibrary@@SA_NHHH_N0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); the integer form of InRange_FloatFloat.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "527cd2cf3fd4fd17096c5e77ece404db340c8d7181e467128eec0f1ff0fb9ba9",
+      "decrypted_sha256": "a567c7079858a2db2783d010fe743392b9a8c475838bf890713da7c94d51c557",
+      "candidate_sha256": "a567c7079858a2db2783d010fe743392b9a8c475838bf890713da7c94d51c557",
+      "byte_diff": {
+        "reference_size": 55,
+        "candidate_size": 55,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A620",
+      "end_rva": "0x0208A65D",
+      "name": "UKismetMathLibrary::MapRangeUnclamped",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MapRangeUnclamped@UKismetMathLibrary@@SAMMMMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FMath::GetMappedRangeValueUnclamped.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "fce2a67c12175503766fea01c6fb33163c3805f15713550300afa69b8d7b798d",
+      "decrypted_sha256": "a86290b50207398b3b389ba71c2e619d85a04006aa5b069cbce7c33707bf3a04",
+      "candidate_sha256": "a86290b50207398b3b389ba71c2e619d85a04006aa5b069cbce7c33707bf3a04",
+      "byte_diff": {
+        "reference_size": 61,
+        "candidate_size": 61,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208A5E0",
+      "end_rva": "0x0208A61C",
+      "name": "UKismetMathLibrary::MapRangeClamped",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MapRangeClamped@UKismetMathLibrary@@SAMMMMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FMath::GetMappedRangeValueClamped.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "d3932cdc7cfe4d13d687f2e3d07a44ed3a6fc93148ea19388d96b34e793f657c",
+      "decrypted_sha256": "d4e9510fd971c7738d2f19c60850de1d95f634452ec22216e492b81adddd6029",
+      "candidate_sha256": "d4e9510fd971c7738d2f19c60850de1d95f634452ec22216e492b81adddd6029",
+      "byte_diff": {
+        "reference_size": 60,
+        "candidate_size": 60,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000025",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208B9E0",
+      "end_rva": "0x0208BA18",
+      "name": "UKismetMathLibrary::NormalizeToRange",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?NormalizeToRange@UKismetMathLibrary@@SAMMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); 0 or 1 for an empty range, else the fraction of the (swapped) range.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "2fb2a90ad50e75edc81adbfab4ecd42298d784ef92a8e6cd26e14b1df2c7f3de",
+      "decrypted_sha256": "cb2acd3c5e710be764f406939acb9168e8274a792136377f53b30fde87c13b56",
+      "candidate_sha256": "cb2acd3c5e710be764f406939acb9168e8274a792136377f53b30fde87c13b56",
+      "byte_diff": {
+        "reference_size": 56,
+        "candidate_size": 56,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000015",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02089F90",
+      "end_rva": "0x02089F99",
+      "name": "UKismetMathLibrary::MakeRandomStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?MakeRandomStream@UKismetMathLibrary@@SA?AUFRandomStream@@H@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream(InitialSeed) into the return slot.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "bf9ee0651c67cf27a83cdf9331dd5847d57527e0cce13bd434b55a1bb8900add",
+      "decrypted_sha256": "da66953d9bf615279a7345430402c9c74efa78b46e370aa377fdc6f244ecface",
+      "candidate_sha256": "da66953d9bf615279a7345430402c9c74efa78b46e370aa377fdc6f244ecface",
+      "byte_diff": {
+        "reference_size": 9,
+        "candidate_size": 9,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02072550",
+      "end_rva": "0x02072555",
+      "name": "UKismetMathLibrary::BreakRandomStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?BreakRandomStream@UKismetMathLibrary@@SAXAEBUFRandomStream@@AEAH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); copies InitialSeed out.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "36d3390bb41967cdf46671aff917ad6789d79ecc1b7ba013052affa443b1874e",
+      "decrypted_sha256": "83eb7e2269bd81cde44372a3f6b3856433122e3330902fa0762e838b39f42bc3",
+      "candidate_sha256": "83eb7e2269bd81cde44372a3f6b3856433122e3330902fa0762e838b39f42bc3",
+      "byte_diff": {
+        "reference_size": 5,
+        "candidate_size": 5,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02090EB0",
+      "end_rva": "0x02090EB6",
+      "name": "UKismetMathLibrary::SetRandomStreamSeed",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?SetRandomStreamSeed@UKismetMathLibrary@@SAXAEAUFRandomStream@@H@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream::Initialize.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "4350024de6786a1a41ec505573c19b076e9157b6c7d516cbe48cee24037cbb5f",
+      "decrypted_sha256": "9107b289103ae565a479d2f1be2195f775b27b0657eae34c3b3c8f92e0545e1e",
+      "candidate_sha256": "9107b289103ae565a479d2f1be2195f775b27b0657eae34c3b3c8f92e0545e1e",
+      "byte_diff": {
+        "reference_size": 6,
+        "candidate_size": 6,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D180",
+      "end_rva": "0x0208D1D4",
+      "name": "UKismetMathLibrary::RandomBoolFromStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomBoolFromStream@UKismetMathLibrary@@SA_NAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream's seed mutation (196314165, 907633515) and GetFraction's mantissa trick, RandRange(0, 1).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "2d7c74d2c3b1cca46c74b8aa558d6a5a8477af491aa93fc7fbaf24ed7fa7902c",
+      "decrypted_sha256": "159b6c7dd1af261e28a0680bf01df2aa8d6f941cbbe207499b715e324a92f2b8",
+      "candidate_sha256": "159b6c7dd1af261e28a0680bf01df2aa8d6f941cbbe207499b715e324a92f2b8",
+      "byte_diff": {
+        "reference_size": 84,
+        "candidate_size": 84,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000B",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000045",
+            "symbol": "__real@3fffffac",
+            "rva": "0x037CBE50",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D290",
+      "end_rva": "0x0208D2D2",
+      "name": "UKismetMathLibrary::RandomFloatFromStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomFloatFromStream@UKismetMathLibrary@@SAMAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream's seed mutation (196314165, 907633515) and GetFraction's mantissa trick.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "26076e8616be2d55ebbd7be73caf2a7bb1339434c89c1e3d65ca56f4e2fbe57a",
+      "decrypted_sha256": "4a220b6ba6650901141caf59be7a09a5e4f396cdccc1ec949d40e128a4a4c222",
+      "candidate_sha256": "4a220b6ba6650901141caf59be7a09a5e4f396cdccc1ec949d40e128a4a4c222",
+      "byte_diff": {
+        "reference_size": 66,
+        "candidate_size": 66,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000B",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D2E0",
+      "end_rva": "0x0208D336",
+      "name": "UKismetMathLibrary::RandomFloatInRangeFromStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomFloatInRangeFromStream@UKismetMathLibrary@@SAMMMAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream's seed mutation (196314165, 907633515) and GetFraction's mantissa trick, scaled to [Min, Max).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "2857790490b449a037ced06a11243a20a68d5249a539a2b19fe027ddb7861525",
+      "decrypted_sha256": "0580bf4a54f044f9e247da4335c94013070d14c25e303675cc8631f208235661",
+      "candidate_sha256": "0580bf4a54f044f9e247da4335c94013070d14c25e303675cc8631f208235661",
+      "byte_diff": {
+        "reference_size": 86,
+        "candidate_size": 86,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D230",
+      "end_rva": "0x0208D288",
+      "name": "UKismetMathLibrary::RandomBoolWithWeightFromStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomBoolWithWeightFromStream@UKismetMathLibrary@@SA_NMAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream's seed mutation (196314165, 907633515) and GetFraction's mantissa trick, compared with Weight.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "4177dceb077e2e419fa0d734e28f5119a38c878b482568c9fd8b2a3ac071bbb6",
+      "decrypted_sha256": "562ac9486bc0d4794a4ba9fa1dd533fb923b0358481d126253a2f261579e46ea",
+      "candidate_sha256": "562ac9486bc0d4794a4ba9fa1dd533fb923b0358481d126253a2f261579e46ea",
+      "byte_diff": {
+        "reference_size": 88,
+        "candidate_size": 88,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000019",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D340",
+      "end_rva": "0x0208D3A6",
+      "name": "UKismetMathLibrary::RandomIntegerFromStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomIntegerFromStream@UKismetMathLibrary@@SAHHAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream's seed mutation (196314165, 907633515) and GetFraction's mantissa trick, RandHelper(Max).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "8134c11ad5ab5006cf459b5c729e8869e8578e4ed4642bfb145e0f4fe010cbd0",
+      "decrypted_sha256": "65631da9fb9fb613aa5ce4eb0c09241e3c9216fb6e001d9b6720c969bbf07efe",
+      "candidate_sha256": "65631da9fb9fb613aa5ce4eb0c09241e3c9216fb6e001d9b6720c969bbf07efe",
+      "byte_diff": {
+        "reference_size": 102,
+        "candidate_size": 102,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000010",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x00000047",
+            "symbol": "__real@3727c5ac",
+            "rva": "0x02F8EEE0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::RandomIntegerInRangeFromStream"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D3B0",
+      "end_rva": "0x0208D41E",
+      "name": "UKismetMathLibrary::RandomIntegerInRangeFromStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomIntegerInRangeFromStream@UKismetMathLibrary@@SAHHHAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream's seed mutation (196314165, 907633515) and GetFraction's mantissa trick, RandRange(Min, Max).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "b8277c686df513b7a6bc72637b6bb4ac14d1fabbe47ce7172c1bcfae6b4c3830",
+      "decrypted_sha256": "47becc545d8d1369be6a0b59f8766428d1b600319436993e7c264dce29627051",
+      "candidate_sha256": "47becc545d8d1369be6a0b59f8766428d1b600319436993e7c264dce29627051",
+      "byte_diff": {
+        "reference_size": 110,
+        "candidate_size": 110,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000014",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, FRotator::Vector and 39 more"
+          },
+          {
+            "offset": "0x0000004B",
+            "symbol": "__real@3727c5ac",
+            "rva": "0x02F8EEE0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::RandomIntegerFromStream"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D4B0",
+      "end_rva": "0x0208D5A7",
+      "name": "UKismetMathLibrary::RandomRotatorFromStream",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomRotatorFromStream@UKismetMathLibrary@@SA?AUFRotator@@_NAEBUFRandomStream@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "a leaf without .pdata the exec thunk calls (analysis/native-implementations.json); FRandomStream's seed mutation (196314165, 907633515) and GetFraction's mantissa trick, three times for a rotator with bRoll.",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "e6dad59fc6f2391a370f52aef11270e59831c7354400276c135e84c974820592",
+      "decrypted_sha256": "4981ad69a56cf79d85f69387ac5d903cd6c214440210327c59d4780baa235dbb",
+      "candidate_sha256": "4981ad69a56cf79d85f69387ac5d903cd6c214440210327c59d4780baa235dbb",
+      "byte_diff": {
+        "reference_size": 247,
+        "candidate_size": 247,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "__real@43b40000",
+            "rva": "0x02F8EF04",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ClampAxis, UKismetMathLibrary::NormalizeAxis"
           }
         ],
         "unresolved_relocations": [],

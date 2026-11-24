@@ -149,6 +149,9 @@ class Resolver:
         """
         if symbol in self.functions:
             return [self.functions[symbol]]
+        if symbol == "__ImageBase":
+            # Linker-defined: the image's own base, RVA 0 (a jump table's `lea reg, __ImageBase`).
+            return [(0, "linker-defined: __ImageBase is the image base, RVA 0")]
         if symbol in self.known:
             return self.known[symbol]
         dkey = (objpath, symbol)
@@ -1021,8 +1024,24 @@ def _field_value(kind: str, target: int, addend: int, start: int, offset: int, i
     return None
 
 
+def own_label(obj: CoffObject, func_symbol: str | None, symbol: str) -> int | None:
+    """Offset, from the function's start, of `symbol` when it is a label or static symbol defined
+    inside the function `func_symbol` itself (a jump table's $LN case labels): its address follows
+    from the function's own placement, as a branch inside the function does."""
+    if not func_symbol or not symbol.startswith("$"):
+        return None
+    own = obj.function_index().get(func_symbol)
+    if own is None:
+        return None
+    fstart, fend, sec = own
+    hits = [s.value - fstart for s in obj.symbols
+            if s is not None and s.name == symbol and s.section == sec.index and fstart <= s.value < fend]
+    return hits[0] if len(hits) == 1 else None
+
+
 def resolve_fields(cand: bytes, relocs, start: int, image_base: int, resolver: Resolver,
-                   obj: CoffObject, objpath: str, ref: bytes | None = None, exclude: int | None = None):
+                   obj: CoffObject, objpath: str, ref: bytes | None = None, exclude: int | None = None,
+                   func_symbol: str | None = None):
     """Apply resolvable relocations as the linker would at the original placement.
 
     When a symbol has several independently evidenced addresses (an import with both an
@@ -1034,7 +1053,11 @@ def resolve_fields(cand: bytes, relocs, start: int, image_base: int, resolver: R
     unresolved, resolved = [], []
     for r in relocs:
         size = REL_FIELD_SIZE.get(r.kind)
-        targets = resolver.resolve(obj, objpath, r.symbol, exclude) if size else []
+        label = own_label(obj, func_symbol, r.symbol) if size else None
+        if label is not None:
+            targets = [(start + label, f"label at offset {label:#x} of this function")]
+        else:
+            targets = resolver.resolve(obj, objpath, r.symbol, exclude) if size else []
         if not targets:
             unresolved.append((r.offset, size or 4, r.symbol, r.kind))
             continue
@@ -1227,7 +1250,7 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
             return {"match": "unimplemented", "compare_note": f"symbol {symbol} not defined in {objpath}"}
         ref = ref_dec if ref_dec is not None else ref_file
         cand, unresolved, resolved = resolve_fields(cand_raw, relocs, start, img.image_base,
-                                                    resolver, obj, objpath, ref, idx)
+                                                    resolver, obj, objpath, ref, idx, symbol)
         if ref_dec is not None:
             state = decrypted_state(dimg, rf, ref_file, ref_dec, cand)
         else:

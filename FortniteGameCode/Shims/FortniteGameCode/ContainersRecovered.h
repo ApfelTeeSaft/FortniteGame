@@ -190,6 +190,14 @@ inline void Swap(T& A, T& B)
 	}
 }
 
+// The register-type form (!TUseBitwiseSwap: arithmetic, pointer and enum types), for float.
+inline void Swap(float& A, float& B)
+{
+	float Temp = MoveTemp(A);
+	A = MoveTemp(B);
+	B = MoveTemp(Temp);
+}
+
 // Templates/MemoryOps.h
 namespace UE4MemoryOps_Private
 {
@@ -536,6 +544,17 @@ public:
 	__forceinline int32 Num() const
 	{
 		return ArrayNum;
+	}
+
+	// RangeCheck is checkSlow, compiled out in shipping.
+	__forceinline ElementType& operator[](int32 Index)
+	{
+		return GetData()[Index];
+	}
+
+	__forceinline const ElementType& operator[](int32 Index) const
+	{
+		return GetData()[Index];
 	}
 
 	void Reset(int32 NewSize = 0)

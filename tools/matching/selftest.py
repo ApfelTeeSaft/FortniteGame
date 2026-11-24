@@ -738,6 +738,33 @@ def test_secrel_fields() -> None:
     print("secrel fields: ok")
 
 
+def test_own_labels() -> None:
+    """A jump table's $LN labels resolve inside their own function only; __ImageBase is RVA 0."""
+    import compare
+    from coff import CoffSection, CoffSymbol
+
+    class Obj:
+        def __init__(self):
+            sec = CoffSection.__new__(CoffSection)
+            sec.index = 3
+            self.symbols = [CoffSymbol("f", 0x10, 3, 0x20, 2), CoffSymbol("$LN4", 0x30, 3, 0, 6),
+                            None, CoffSymbol("$LN9", 0x80, 3, 0, 6), CoffSymbol("$LN4", 0x08, 4, 0, 6)]
+            self._idx = {"f": (0x10, 0x60, sec)}
+
+        def function_index(self):
+            return self._idx
+
+    o = Obj()
+    assert compare.own_label(o, "f", "$LN4") == 0x20         # in f's section and range
+    assert compare.own_label(o, "f", "$LN9") is None         # past f's end
+    assert compare.own_label(o, None, "$LN4") is None
+    assert compare.own_label(o, "f", "__ImageBase") is None
+    r = compare.Resolver.__new__(compare.Resolver)
+    r.functions, r.known = {}, {}
+    assert r.resolve(None, "", "__ImageBase")[0][0] == 0
+    print("own labels: ok")
+
+
 def test_package_bracket() -> None:
     """ReturnPackage: the one free slot between the statics of the classes whose FClassParams
     records bracket the package's FPackageParams record in .rdata."""
@@ -888,6 +915,7 @@ def main() -> int:
     test_record_bracket()
     test_package_bracket()
     test_secrel_fields()
+    test_own_labels()
     test_pooled_constants()
     test_split_objects()
     test_accessor_mangling()
