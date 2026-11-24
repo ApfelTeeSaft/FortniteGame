@@ -1288,13 +1288,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1318,7 +1318,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1360,7 +1360,7 @@
             "offset": "0x00000070",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1395,13 +1395,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1425,7 +1425,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1467,7 +1467,7 @@
             "offset": "0x0000006A",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1502,13 +1502,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1532,7 +1532,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1574,7 +1574,7 @@
             "offset": "0x0000006A",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1609,19 +1609,19 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000049",
@@ -1645,7 +1645,7 @@
             "offset": "0x0000006D",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [
@@ -1717,13 +1717,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1747,7 +1747,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1831,7 +1831,7 @@
             "offset": "0x000000A6",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1870,13 +1870,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1900,7 +1900,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1966,7 +1966,7 @@
             "offset": "0x0000008E",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -2005,13 +2005,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -2035,7 +2035,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -2119,7 +2119,7 @@
             "offset": "0x000000A6",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -2158,13 +2158,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -2188,7 +2188,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -2230,7 +2230,7 @@
             "offset": "0x0000006A",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -2269,19 +2269,19 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           },
           {
             "offset": "0x00000049",
@@ -2305,7 +2305,7 @@
             "offset": "0x0000006D",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
+            "evidence": "corroborated: same symbol at this address in UFortAdvancedMovementSet::GetMaxAccelerationAttribute, UFortAdvancedMovementSet::GetMinAnalogWalkSpeedAttribute and 84 more"
           }
         ],
         "unresolved_relocations": [
@@ -2425,7 +2425,7 @@
             "offset": "0x000000A1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000000B1",
@@ -2590,7 +2590,7 @@
             "offset": "0x0000005D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000066",
@@ -2602,7 +2602,7 @@
             "offset": "0x0000006E",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 3 more"
           },
           {
             "offset": "0x00000081",
@@ -2781,13 +2781,13 @@
             "offset": "0x00000012",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000002C",
             "symbol": "__real@38d1b717",
             "rva": "0x02E760D4",
-            "evidence": "corroborated: same symbol at this address in FMath::CInterpTo, FMath::Vector2DInterpTo and 1 more"
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, FMath::VInterpTo and 3 more"
           },
           {
             "offset": "0x0000003B",
@@ -3007,7 +3007,7 @@
             "offset": "0x00000083",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3042,13 +3042,13 @@
             "offset": "0x000000A3",
             "symbol": "__real@38d1b717",
             "rva": "0x02E760D4",
-            "evidence": "corroborated: same symbol at this address in FMath::VRand, FMath::Vector2DInterpTo and 1 more"
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, FMath::VRand and 3 more"
           },
           {
             "offset": "0x000000CB",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3083,7 +3083,7 @@
             "offset": "0x0000005C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3118,13 +3118,13 @@
             "offset": "0x0000006A",
             "symbol": "__real@38d1b717",
             "rva": "0x02E760D4",
-            "evidence": "corroborated: same symbol at this address in FMath::CInterpTo, FMath::VRand and 1 more"
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, FMath::VRand and 3 more"
           },
           {
             "offset": "0x0000008C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3159,13 +3159,13 @@
             "offset": "0x00000030",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000043",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3200,7 +3200,7 @@
             "offset": "0x0000001C",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000038",
@@ -3253,7 +3253,7 @@
             "offset": "0x00000046",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000006A",
@@ -3277,7 +3277,7 @@
             "offset": "0x000000A8",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000000C6",
@@ -3319,13 +3319,13 @@
             "offset": "0x0000010A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000130",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000138",
@@ -3343,7 +3343,7 @@
             "offset": "0x0000014B",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000177",
@@ -3355,7 +3355,7 @@
             "offset": "0x0000017F",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000018E",
@@ -3379,7 +3379,7 @@
             "offset": "0x000001E1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000001F1",
@@ -3391,7 +3391,7 @@
             "offset": "0x00000226",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000022E",
@@ -3415,7 +3415,7 @@
             "offset": "0x00000254",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000261",
@@ -3445,7 +3445,7 @@
             "offset": "0x000002AC",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000002B4",
@@ -3469,7 +3469,7 @@
             "offset": "0x000002D4",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000002ED",
@@ -3493,7 +3493,7 @@
             "offset": "0x00000326",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000340",
@@ -3505,7 +3505,7 @@
             "offset": "0x00000357",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000037E",
@@ -3517,7 +3517,7 @@
             "offset": "0x00000386",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000003A9",
@@ -3640,7 +3640,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211597",
+            "symbol": "$SG211809",
             "rva": "0x037C89B0",
             "evidence": "data symbol: unique 64-byte string literal"
           },
@@ -3687,7 +3687,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211600",
+            "symbol": "$SG211812",
             "rva": "0x037C89F0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_IntInt"
           },
@@ -3734,7 +3734,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211603",
+            "symbol": "$SG211815",
             "rva": "0x037C8A90",
             "evidence": "data symbol: unique 60-byte string literal"
           },
@@ -3781,7 +3781,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211606",
+            "symbol": "$SG211818",
             "rva": "0x037C8AE0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_ByteByte"
           },
@@ -3828,7 +3828,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211609",
+            "symbol": "$SG211821",
             "rva": "0x037C8C70",
             "evidence": "data symbol: unique 114-byte string literal"
           },
@@ -3875,7 +3875,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211612",
+            "symbol": "$SG211824",
             "rva": "0x037C8D50",
             "evidence": "data symbol: unique 70-byte string literal"
           },
@@ -3922,7 +3922,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211615",
+            "symbol": "$SG211827",
             "rva": "0x037C8DB0",
             "evidence": "data symbol: unique 66-byte string literal"
           },
@@ -3969,7 +3969,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211618",
+            "symbol": "$SG211830",
             "rva": "0x037C8E50",
             "evidence": "data symbol: unique 72-byte string literal"
           },
@@ -4016,7 +4016,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211621",
+            "symbol": "$SG211833",
             "rva": "0x037C8ED0",
             "evidence": "data symbol: unique 80-byte string literal"
           },
@@ -4063,7 +4063,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211624",
+            "symbol": "$SG211836",
             "rva": "0x037C8F20",
             "evidence": "data symbol: unique 128-byte string literal"
           },
@@ -4110,7 +4110,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211627",
+            "symbol": "$SG211839",
             "rva": "0x037C8FA0",
             "evidence": "data symbol: unique 74-byte string literal"
           },
@@ -4157,7 +4157,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG211630",
+            "symbol": "$SG211842",
             "rva": "0x037C8FF0",
             "evidence": "data symbol: unique 108-byte string literal"
           },
@@ -4247,7 +4247,7 @@
             "offset": "0x00000025",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000002C",
@@ -4292,7 +4292,7 @@
           },
           {
             "offset": "0x00000023",
-            "symbol": "$SG211647",
+            "symbol": "$SG211859",
             "rva": "0x037C8878",
             "evidence": "data symbol: unique 40-byte string literal"
           },
@@ -4359,7 +4359,7 @@
             "offset": "0x00000063",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000006D",
@@ -4375,7 +4375,7 @@
           },
           {
             "offset": "0x000000CE",
-            "symbol": "$SG211657",
+            "symbol": "$SG211869",
             "rva": "0x037C9520",
             "evidence": "data symbol: unique 68-byte string literal"
           },
@@ -4442,7 +4442,7 @@
             "offset": "0x00000035",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000003D",
@@ -4786,13 +4786,13 @@
             "offset": "0x00000047",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000079",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000083",
@@ -4851,13 +4851,13 @@
             "offset": "0x0000004D",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000057",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000083",
@@ -4904,7 +4904,7 @@
             "offset": "0x000000C7",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -4951,7 +4951,7 @@
             "offset": "0x0000001C",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000029",
@@ -5022,7 +5022,7 @@
             "offset": "0x00000020",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000002D",
@@ -5225,7 +5225,7 @@
             "offset": "0x0000006A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000073",
@@ -5237,7 +5237,7 @@
             "offset": "0x0000007B",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, FVector::RotateAngleAxis and 2 more"
+            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, FVector::RotateAngleAxis and 3 more"
           },
           {
             "offset": "0x0000008E",
@@ -5416,13 +5416,13 @@
             "offset": "0x00000055",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000088",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000093",
@@ -5596,13 +5596,13 @@
             "offset": "0x0000005D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000008F",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000009A",
@@ -5661,13 +5661,13 @@
             "offset": "0x000000E1",
             "symbol": "__real@38d1b717",
             "rva": "0x02E760D4",
-            "evidence": "corroborated: same symbol at this address in FMath::VRand, FMath::Vector2DInterpTo and 1 more"
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, FMath::VRand and 3 more"
           },
           {
             "offset": "0x00000100",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -5842,13 +5842,13 @@
             "offset": "0x00000057",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000008B",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000096",
@@ -5919,7 +5919,7 @@
             "offset": "0x000000D2",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -5966,7 +5966,7 @@
             "offset": "0x00000110",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6013,7 +6013,7 @@
             "offset": "0x00000025",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6132,7 +6132,7 @@
             "offset": "0x00000025",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6167,7 +6167,7 @@
             "offset": "0x00000015",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6286,7 +6286,7 @@
             "offset": "0x0000000B",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000045",
@@ -6327,7 +6327,7 @@
             "offset": "0x0000000B",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6362,7 +6362,7 @@
             "offset": "0x0000000F",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6397,7 +6397,7 @@
             "offset": "0x00000019",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6432,7 +6432,7 @@
             "offset": "0x00000010",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000047",
@@ -6473,7 +6473,7 @@
             "offset": "0x00000014",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000004B",
@@ -6590,7 +6590,7 @@
             "offset": "0x00000076",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000000A3",
@@ -6644,7 +6644,7 @@
             "offset": "0x000000F5",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000106",
@@ -6716,7 +6716,7 @@
             "offset": "0x000001D1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001E2",
@@ -6847,7 +6847,7 @@
             "offset": "0x0000000F",
             "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
             "rva": "0x011A0970",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ComposeRotators, UKismetMathLibrary::TransformRotation and 2 more"
+            "evidence": "exact match of manifest entry 0x011A0970"
           },
           {
             "offset": "0x00000017",
@@ -6906,13 +6906,13 @@
             "offset": "0x00000092",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000009C",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::CreateVectorFromYawPitch, UKismetMathLibrary::RotatorFromAxisAndAngle and 2 more"
+            "evidence": "corroborated: same symbol at this address in FVector::RotateAngleAxis, UKismetMathLibrary::CreateVectorFromYawPitch and 3 more"
           },
           {
             "offset": "0x000000BB",
@@ -7084,7 +7084,7 @@
             "offset": "0x0000005E",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000071",
@@ -7108,7 +7108,7 @@
             "offset": "0x0000008E",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 3 more"
           },
           {
             "offset": "0x0000009E",
@@ -7126,7 +7126,7 @@
             "offset": "0x000000B0",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 3 more"
           },
           {
             "offset": "0x000000D8",
@@ -7215,13 +7215,13 @@
             "offset": "0x00000021",
             "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
             "rva": "0x011A0970",
-            "evidence": "corroborated: same symbol at this address in FRotator::GetInverse, UKismetMathLibrary::TransformRotation and 2 more"
+            "evidence": "exact match of manifest entry 0x011A0970"
           },
           {
             "offset": "0x00000031",
             "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
             "rva": "0x011A0970",
-            "evidence": "corroborated: same symbol at this address in FRotator::GetInverse, UKismetMathLibrary::TransformRotation and 2 more"
+            "evidence": "exact match of manifest entry 0x011A0970"
           },
           {
             "offset": "0x00000065",
@@ -7280,7 +7280,7 @@
             "offset": "0x00000019",
             "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
             "rva": "0x011A0970",
-            "evidence": "corroborated: same symbol at this address in FRotator::GetInverse, UKismetMathLibrary::ComposeRotators and 2 more"
+            "evidence": "exact match of manifest entry 0x011A0970"
           },
           {
             "offset": "0x00000050",
@@ -7339,7 +7339,7 @@
             "offset": "0x00000019",
             "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
             "rva": "0x011A0970",
-            "evidence": "corroborated: same symbol at this address in FRotator::GetInverse, UKismetMathLibrary::ComposeRotators and 2 more"
+            "evidence": "exact match of manifest entry 0x011A0970"
           },
           {
             "offset": "0x00000029",
@@ -7404,13 +7404,13 @@
             "offset": "0x00000065",
             "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
             "rva": "0x011A0970",
-            "evidence": "corroborated: same symbol at this address in FRotator::GetInverse, UKismetMathLibrary::ComposeRotators and 2 more"
+            "evidence": "exact match of manifest entry 0x011A0970"
           },
           {
             "offset": "0x0000007A",
             "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
             "rva": "0x011A0970",
-            "evidence": "corroborated: same symbol at this address in FRotator::GetInverse, UKismetMathLibrary::ComposeRotators and 2 more"
+            "evidence": "exact match of manifest entry 0x011A0970"
           },
           {
             "offset": "0x00000099",
@@ -7516,13 +7516,13 @@
             "offset": "0x00000068",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000000A2",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000AD",
@@ -7576,7 +7576,7 @@
             "offset": "0x0000018E",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 3 more"
           },
           {
             "offset": "0x0000019E",
@@ -7594,7 +7594,7 @@
             "offset": "0x000001B0",
             "symbol": "__real@bf800000",
             "rva": "0x02E62410",
-            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 2 more"
+            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 3 more"
           },
           {
             "offset": "0x000001C5",
@@ -7689,7 +7689,7 @@
             "offset": "0x0000004C",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000056",
@@ -7701,7 +7701,7 @@
             "offset": "0x00000101",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000010F",
@@ -7713,7 +7713,7 @@
             "offset": "0x000001C4",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001D2",
@@ -7737,7 +7737,7 @@
             "offset": "0x000002DC",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x000002EA",
@@ -7784,13 +7784,13 @@
             "offset": "0x00000059",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000007A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000084",
@@ -7855,7 +7855,7 @@
             "offset": "0x00000013",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000001B",
@@ -7885,13 +7885,13 @@
             "offset": "0x000000C1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000122",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000013C",
@@ -7915,7 +7915,7 @@
             "offset": "0x0000020A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -7950,7 +7950,7 @@
             "offset": "0x00000013",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000001B",
@@ -7980,13 +7980,13 @@
             "offset": "0x000000C1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000122",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000013C",
@@ -8010,7 +8010,7 @@
             "offset": "0x0000020A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8045,7 +8045,7 @@
             "offset": "0x00000013",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000001B",
@@ -8075,13 +8075,13 @@
             "offset": "0x000000C1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000122",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x0000013C",
@@ -8105,7 +8105,7 @@
             "offset": "0x0000020A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8146,13 +8146,13 @@
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008E",
@@ -8206,7 +8206,7 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000341",
@@ -8277,13 +8277,13 @@
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 58 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x0000008E",
@@ -8337,7 +8337,7 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 58 more"
           },
           {
             "offset": "0x00000341",
@@ -8408,13 +8408,13 @@
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 58 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x0000008E",
@@ -8468,7 +8468,7 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 58 more"
           },
           {
             "offset": "0x00000341",
@@ -8539,13 +8539,13 @@
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008E",
@@ -8599,7 +8599,7 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000341",
@@ -8670,13 +8670,13 @@
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008E",
@@ -8730,7 +8730,7 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000341",
@@ -8801,13 +8801,13 @@
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 21 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008E",
@@ -8861,7 +8861,7 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 54 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
           },
           {
             "offset": "0x00000341",
@@ -8965,7 +8965,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG211575",
+            "symbol": "$SG211787",
             "rva": "0x037C7CA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9014,7 +9014,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::Float0001 (AnimationCore.1)"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 1 more"
           },
           {
             "offset": "0x0000000A",
@@ -9139,7 +9139,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@bf800000bf800000bf800000bf800000",
             "rva": "0x02E62640",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (GameplayTags.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1)"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (GameplayTags.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1) and 1 more"
           }
         ],
         "unresolved_relocations": [
@@ -9181,7 +9181,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f8000003f8000003f8000003f800000",
             "rva": "0x02E624F0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Landscape.1), dynamic initializer for GlobalVectorConstants::FloatOne (MovieScene.1) and 127 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (FortniteGame.38), dynamic initializer for GlobalVectorConstants::FloatOne (FortniteGame.39) and 128 more"
           }
         ],
         "unresolved_relocations": [
@@ -9223,7 +9223,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f0000003f0000003f0000003f000000",
             "rva": "0x02E624C0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimationCore.1)"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 1 more"
           },
           {
             "offset": "0x0000000A",
@@ -9297,7 +9297,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG211593",
+            "symbol": "$SG211805",
             "rva": "0x037C8058",
             "evidence": "data symbol: unique 19-byte string literal"
           },
@@ -9344,7 +9344,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG211581",
+            "symbol": "$SG211793",
             "rva": "0x037C7EA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9893,7 +9893,7 @@
             "offset": "0x00000004",
             "symbol": "__xmm@00000000ffffffffffffffffffffffff",
             "rva": "0x02E62420",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Foliage.1), dynamic initializer for GlobalVectorConstants::XYZMask (Landscape.1) and 120 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (FortniteGame.38), dynamic initializer for GlobalVectorConstants::XYZMask (FortniteUI.20) and 121 more"
           }
         ],
         "unresolved_relocations": [
@@ -9933,7 +9933,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG211587",
+            "symbol": "$SG211799",
             "rva": "0x037C8150",
             "evidence": "data symbol: unique 28-byte string literal"
           },
@@ -9948,6 +9948,1551 @@
             "symbol": "??0FName@@QEAA@PEBDW4EFindName@@@Z",
             "rva": "0x011E7FC0",
             "evidence": "corroborated: same symbol at this address in dynamic initializer for DivideByZeroWarning (KismetMathLibrary), dynamic initializer for InvalidDateWarning (KismetMathLibrary) and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A0970",
+      "end_rva": "0x011A0AFE",
+      "name": "FRotator::Quaternion",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?Quaternion@FRotator@@QEBA?AUFQuat@@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "the out-of-line call before every quaternion product in the Kismet rotator natives (ComposeRotators, RLerp, TransformRotation, ...) and in FRotator::GetInverse; VectorSinCos of the half angles (DEG_TO_RAD_HALF, OneOverTwoPi, TwoPi, SignBit, Pi, SignMask, PiByTwo, FloatMinusOne, FloatOne: this unit's constants) and the sign-bit shuffles. SCOPE_CYCLE_COUNTER is commented out in 4.20; NaN checks are compiled out in shipping.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "abfe9ffaa9f27b2a07184d532a75554e49bd91d7cc63427c97b997cd733bd59b",
+      "decrypted_sha256": "dc3e5d5d31bafaec707e7683dfe779fa1f1b744bd060582229271446bcb0c805",
+      "candidate_sha256": "dc3e5d5d31bafaec707e7683dfe779fa1f1b744bd060582229271446bcb0c805",
+      "byte_diff": {
+        "reference_size": 398,
+        "candidate_size": 398,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000018",
+            "symbol": "?PiByTwo@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FB0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::PiByTwo (UnrealMath)"
+          },
+          {
+            "offset": "0x00000022",
+            "symbol": "?OneOverTwoPi@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FF0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::OneOverTwoPi (UnrealMath)"
+          },
+          {
+            "offset": "0x0000002F",
+            "symbol": "?DEG_TO_RAD_HALF@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1020",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::DEG_TO_RAD_HALF (UnrealMath)"
+          },
+          {
+            "offset": "0x00000044",
+            "symbol": "?TwoPi@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FE0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::TwoPi (UnrealMath)"
+          },
+          {
+            "offset": "0x0000004E",
+            "symbol": "__xmm@b9500bf13c088886be2aaaab3f800000",
+            "rva": "0x030770E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000005B",
+            "symbol": "?SignMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0ED0",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, dynamic initializer for GlobalVectorConstants::SignMask (UnrealMath)"
+          },
+          {
+            "offset": "0x00000062",
+            "symbol": "?SignBit@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FD0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::SignBit (UnrealMath)"
+          },
+          {
+            "offset": "0x00000069",
+            "symbol": "?Pi@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FC0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Pi (UnrealMath)"
+          },
+          {
+            "offset": "0x00000074",
+            "symbol": "__xmm@0000000000000000b2cd365b3638b88e",
+            "rva": "0x03077090",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x000000C9",
+            "symbol": "__xmm@0000000000000000b48bdd1137cfb4c2",
+            "rva": "0x030770A0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x000000E7",
+            "symbol": "__xmm@bab609aa3d2aaaa3bf0000003f800000",
+            "rva": "0x030770F0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000125",
+            "symbol": "?FloatMinusOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F50",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (UnrealMath)"
+          },
+          {
+            "offset": "0x0000012C",
+            "symbol": "?FloatOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0EB0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (UnrealMath)"
+          },
+          {
+            "offset": "0x00000136",
+            "symbol": "?FloatOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0EB0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (UnrealMath)"
+          },
+          {
+            "offset": "0x00000178",
+            "symbol": "__xmm@00000000000000008000000000000000",
+            "rva": "0x0347CAC0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000017F",
+            "symbol": "__xmm@00000000800000008000000080000000",
+            "rva": "0x0347CAD0",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A0B00",
+      "end_rva": "0x011A0D2D",
+      "name": "FMath::RInterpConstantTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?RInterpConstantTo@FMath@@SA?AUFRotator@@AEBU2@0MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execRInterpTo_Constant (Kismet function inlined); the vectorized FRotator::GetNormalized (Float360, Float180) twice, the per-axis clamps between.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "961150d5dfbb0c718f06d487897689bffb58c6b0693931ba4a856a8475b31fa6",
+      "decrypted_sha256": "05ee9393d967b8717c0c0f2d45c24dcdb87d524d3a404ee1da7707618257d264",
+      "candidate_sha256": "05ee9393d967b8717c0c0f2d45c24dcdb87d524d3a404ee1da7707618257d264",
+      "byte_diff": {
+        "reference_size": 557,
+        "candidate_size": 557,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000070",
+            "symbol": "?Float360@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1040",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, dynamic initializer for GlobalVectorConstants::Float360 (UnrealMath)"
+          },
+          {
+            "offset": "0x000000A4",
+            "symbol": "?Float180@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1030",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, dynamic initializer for GlobalVectorConstants::Float180 (UnrealMath)"
+          },
+          {
+            "offset": "0x0000010F",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000018B",
+            "symbol": "?Float360@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1040",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, dynamic initializer for GlobalVectorConstants::Float360 (UnrealMath)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A0D30",
+      "end_rva": "0x011A101C",
+      "name": "FMath::RInterpTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?RInterpTo@FMath@@SA?AUFRotator@@AEBU2@0MM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called by UKismetMathLibrary::execRInterpTo (Kismet function inlined); the vectorized FRotator::GetNormalized and IsNearlyZero (Float360, Float180, SignMask).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "a57cb8dc35d6ac2b3685bfb092b2e167e67b288e2f32c589037652e758eb9725",
+      "decrypted_sha256": "5c739a0791c54cf1be3edd52c34eff4ae6b721d7f5dfbc400d4320f9153fcde5",
+      "candidate_sha256": "5c739a0791c54cf1be3edd52c34eff4ae6b721d7f5dfbc400d4320f9153fcde5",
+      "byte_diff": {
+        "reference_size": 748,
+        "candidate_size": 748,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000071",
+            "symbol": "?Float360@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1040",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpConstantTo, dynamic initializer for GlobalVectorConstants::Float360 (UnrealMath)"
+          },
+          {
+            "offset": "0x000000A5",
+            "symbol": "?Float180@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1030",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpConstantTo, dynamic initializer for GlobalVectorConstants::Float180 (UnrealMath)"
+          },
+          {
+            "offset": "0x00000127",
+            "symbol": "__real@38d1b717",
+            "rva": "0x02E760D4",
+            "evidence": "corroborated: same symbol at this address in FMath::VInterpTo, FMath::VRand and 3 more"
+          },
+          {
+            "offset": "0x000001B0",
+            "symbol": "?SignMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0ED0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion, dynamic initializer for GlobalVectorConstants::SignMask (UnrealMath)"
+          },
+          {
+            "offset": "0x00000222",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
+          },
+          {
+            "offset": "0x00000260",
+            "symbol": "?Float360@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1040",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpConstantTo, dynamic initializer for GlobalVectorConstants::Float360 (UnrealMath)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129070",
+      "end_rva": "0x0012907F",
+      "name": "dynamic initializer for GlobalVectorConstants::DEG_TO_RAD (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EDEG_TO_RAD@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@35fa8e3c35fa8e3c35fa8e3c35fa8e3c to the unit's slot 0x046A0FA0; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "205fd058467822f52f8672f6d05f7d4467d623ea47dc75d3c63328f40f319576",
+      "decrypted_sha256": "c4db02efb37b1b53ad36c5d728b4435b0e8eda1cd5a524f5e7d9553649430283",
+      "candidate_sha256": "6e00c4cc6a3487315a2177226bf700e7eeb7ee587d71c124e3e2564f84dca2fe",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3c8efa353c8efa353c8efa353c8efa35",
+            "rva": "0x02E62490",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?DEG_TO_RAD@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129080",
+      "end_rva": "0x0012908F",
+      "name": "dynamic initializer for GlobalVectorConstants::DEG_TO_RAD_HALF (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EDEG_TO_RAD_HALF@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@35fa0e3c35fa0e3c35fa0e3c35fa0e3c to the unit's slot 0x046A1020; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "d7315c8007c9d23d2d0670b3d3e0b15662510d009e6dad4c34ff76100c03c31c",
+      "decrypted_sha256": "17547c925818e5bf6f97811097b1fe1f60e2528f8d592946a7490481865e9568",
+      "candidate_sha256": "17547c925818e5bf6f97811097b1fe1f60e2528f8d592946a7490481865e9568",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3c0efa353c0efa353c0efa353c0efa35",
+            "rva": "0x02E62470",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?DEG_TO_RAD_HALF@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1020",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001290D0",
+      "end_rva": "0x001290DF",
+      "name": "dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloat0001@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@0000000000000000000000000000803f to the unit's slot 0x046A0F30; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "499e949a1488dc14fbbf96df1549ba76166e43410ec23bff5f90ab3843f3a9aa",
+      "decrypted_sha256": "6edfd1432bc08bb10b0a7053064359f74a276e6433240899daf16780b2e77ffa",
+      "candidate_sha256": "6edfd1432bc08bb10b0a7053064359f74a276e6433240899daf16780b2e77ffa",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3f800000000000000000000000000000",
+            "rva": "0x02E624E0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::Float0001 (AnimationCore.1) and 1 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F30",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals, FQuat::FindBetweenVectors and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001290E0",
+      "end_rva": "0x001290EF",
+      "name": "dynamic initializer for GlobalVectorConstants::Float180 (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloat180@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@00003443000034430000344300003443 to the unit's slot 0x046A1030; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "e6565d40de9df757fb164a40cc6a342b5af6e94011f3da0fb98583cefdd63662",
+      "decrypted_sha256": "d977ebe2126d4f1a4566023fed0403e040a9cf983175295302d76bb55a4ba741",
+      "candidate_sha256": "d977ebe2126d4f1a4566023fed0403e040a9cf983175295302d76bb55a4ba741",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@43340000433400004334000043340000",
+            "rva": "0x02E62580",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?Float180@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1030",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpConstantTo, FMath::RInterpTo"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001290F0",
+      "end_rva": "0x001290FF",
+      "name": "dynamic initializer for GlobalVectorConstants::Float360 (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloat360@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@0000b4430000b4430000b4430000b443 to the unit's slot 0x046A1040; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "21d920cbea13fcf15d1b9e2f076e4f1354da9e979a300f1743cd9cc300c94aa7",
+      "decrypted_sha256": "b0bebf7b619ff994256ad38eade664b7ddab2618841ba09455639a5522e45cb4",
+      "candidate_sha256": "b0bebf7b619ff994256ad38eade664b7ddab2618841ba09455639a5522e45cb4",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@43b4000043b4000043b4000043b40000",
+            "rva": "0x02E625A0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?Float360@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A1040",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpConstantTo, FMath::RInterpTo"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129100",
+      "end_rva": "0x0012910F",
+      "name": "dynamic initializer for GlobalVectorConstants::FloatMinus1_111 (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloatMinus1_111@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@000080bf0000803f0000803f0000803f to the unit's slot 0x046A0F90; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "651a42c6fdafa3a37e4fafd68a2490d28237ab20e42faa37b72a4587798ffa1b",
+      "decrypted_sha256": "84a41d60e9ea40efc086d63da41dedadb5cb4ab8f62ea84572183385c2e491b0",
+      "candidate_sha256": "61cbfd7ff553bf5554305a7e3e52da91b253d0e7fefb7b77cbec87af1ddbef9c",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3f8000003f8000003f800000bf800000",
+            "rva": "0x02E62500",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?FloatMinus1_111@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129110",
+      "end_rva": "0x0012911F",
+      "name": "dynamic initializer for GlobalVectorConstants::FloatMinusOne (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloatMinusOne@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@000080bf000080bf000080bf000080bf to the unit's slot 0x046A0F50; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "af6c061e35431ed5098259a743a3b7471994fb6cc5a2787e1be798370eac5a7c",
+      "decrypted_sha256": "ee6c60286e0f9f033517bb1dd554450932da7cc8c866bbd03ec3bf6d37e484c7",
+      "candidate_sha256": "ee6c60286e0f9f033517bb1dd554450932da7cc8c866bbd03ec3bf6d37e484c7",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@bf800000bf800000bf800000bf800000",
+            "rva": "0x02E62640",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (GameplayTags.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (KismetMathLibrary) and 1 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?FloatMinusOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F50",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129120",
+      "end_rva": "0x0012912F",
+      "name": "dynamic initializer for GlobalVectorConstants::FloatOne (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloatOne@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@0000803f0000803f0000803f0000803f to the unit's slot 0x046A0EB0; the value names it; RotationSignificantThreshold rounds to the same 1.0f, but this initializer sorts between FloatMinusOne and FloatOneHalf",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "8ed4636b0fb321ab9fc1c1535c183f8cf690423ecea00d7b9ad4cd874872590c",
+      "decrypted_sha256": "e3a3e2b1c5585ea7f334cb3ce69b5020690e0284aa34e970f424b387844a2a7a",
+      "candidate_sha256": "e3a3e2b1c5585ea7f334cb3ce69b5020690e0284aa34e970f424b387844a2a7a",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3f8000003f8000003f8000003f800000",
+            "rva": "0x02E624F0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (FortniteGame.38), dynamic initializer for GlobalVectorConstants::FloatOne (FortniteGame.39) and 128 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?FloatOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0EB0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129130",
+      "end_rva": "0x0012913F",
+      "name": "dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloatOneHalf@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@0000003f0000003f0000003f0000003f to the unit's slot 0x046A0F40; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "a0c08825f4d3a0fe31bae1eb517975a138b732cc32c0343c952d7776a13108a2",
+      "decrypted_sha256": "be706d3cc2df578ad1d0fa7b92877caba59e8bfc187f28ed59234eb5e4351f81",
+      "candidate_sha256": "be706d3cc2df578ad1d0fa7b92877caba59e8bfc187f28ed59234eb5e4351f81",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3f0000003f0000003f0000003f000000",
+            "rva": "0x02E624C0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (KismetMathLibrary) and 1 more"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?FloatOneHalf@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F40",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals, FQuat::FindBetweenVectors and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129140",
+      "end_rva": "0x0012914B",
+      "name": "dynamic initializer for GlobalVectorConstants::FloatZero (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EFloatZero@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing zero to the unit's slot 0x046A0F60; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "d457e7ad3cb0b894d7f988d0a2716f66763adade8b86b8c51959fbcdf1929984",
+      "decrypted_sha256": "cb02c172846646ed623280528124cffd4e67066e25298e01fd56b27805796f22",
+      "candidate_sha256": "44a50ce23567f814144c9b9f891b8998544e718554bae812c5c23480cecf82c1",
+      "byte_diff": {
+        "reference_size": 11,
+        "candidate_size": 11,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000006",
+            "size": 4,
+            "symbol": "?FloatZero@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129270",
+      "end_rva": "0x0012927F",
+      "name": "dynamic initializer for GlobalVectorConstants::OneOverTwoPi (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EOneOverTwoPi@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@83f9223e83f9223e83f9223e83f9223e to the unit's slot 0x046A0FF0; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "08b33856eb2b3a1b00d6b00a09993417819225c48682c0e173deec3c97d00bb9",
+      "decrypted_sha256": "bbc19beebadc00b9740cca0bca2a1977bb53bec746c8e4da53f26f562bb9c731",
+      "candidate_sha256": "bbc19beebadc00b9740cca0bca2a1977bb53bec746c8e4da53f26f562bb9c731",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3e22f9833e22f9833e22f9833e22f983",
+            "rva": "0x02E624A0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?OneOverTwoPi@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FF0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129280",
+      "end_rva": "0x0012928F",
+      "name": "dynamic initializer for GlobalVectorConstants::Pi (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EPi@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@db0f4940db0f4940db0f4940db0f4940 to the unit's slot 0x046A0FC0; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "1f47573ee0d9b275ad9b3feb62a3c7047b04ca34c5e3ee796e83e50deb975fb5",
+      "decrypted_sha256": "ecdab3dba77a0c914a26c665fedac0c76abf9f63f2a38f83c813c6071868bc04",
+      "candidate_sha256": "ecdab3dba77a0c914a26c665fedac0c76abf9f63f2a38f83c813c6071868bc04",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@40490fdb40490fdb40490fdb40490fdb",
+            "rva": "0x02E62550",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?Pi@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FC0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129290",
+      "end_rva": "0x0012929F",
+      "name": "dynamic initializer for GlobalVectorConstants::PiByTwo (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EPiByTwo@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@db0fc93fdb0fc93fdb0fc93fdb0fc93f to the unit's slot 0x046A0FB0; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "abd374e37ad5a560d346d90ea40dfcc79224130516a2e5e9b6906e7641a4a86e",
+      "decrypted_sha256": "92b9793c5afd6a41f824360a860519bcb4c77842c357b56c1b75092793d8ee35",
+      "candidate_sha256": "92b9793c5afd6a41f824360a860519bcb4c77842c357b56c1b75092793d8ee35",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3fc90fdb3fc90fdb3fc90fdb3fc90fdb",
+            "rva": "0x02E62520",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?PiByTwo@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FB0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001292A0",
+      "end_rva": "0x001292AF",
+      "name": "dynamic initializer for GlobalVectorConstants::QINV_SIGN_MASK (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EQINV_SIGN_MASK@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@000080bf000080bf000080bf0000803f to the unit's slot 0x046A0EF0; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "26f4d95bef094e628fe4ccc1c70e6c9b0e734700e6d31f69b73942afd91e7eec",
+      "decrypted_sha256": "9f511d46e4715cbeb486898f7239d7d74757080a5e39f66a8bdb070ce3890ce7",
+      "candidate_sha256": "cfaf13a056f75a8af2560e083adc52038f01c578e06d656375fdaa8bbdb0ab53",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3f800000bf800000bf800000bf800000",
+            "rva": "0x02E62510",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?QINV_SIGN_MASK@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001292B0",
+      "end_rva": "0x001292BF",
+      "name": "dynamic initializer for GlobalVectorConstants::QMULTI_SIGN_MASK0 (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EQMULTI_SIGN_MASK0@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@0000803f000080bf0000803f000080bf to the unit's slot 0x046A0F20; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "9ffd51e4cf402f877380e3c7f6aeb906b9d9b3e712e86eb8d6e223f34e2685cd",
+      "decrypted_sha256": "3c49795e57274720feaf16c5391224f9c12fb27fe1397f922cf3a4b91d424b20",
+      "candidate_sha256": "51a73102068cf2234b9d511af825353c5d20eedb69d6908ee4e2d30a8dfc724d",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@bf8000003f800000bf8000003f800000",
+            "rva": "0x02E62620",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?QMULTI_SIGN_MASK0@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001292C0",
+      "end_rva": "0x001292CF",
+      "name": "dynamic initializer for GlobalVectorConstants::QMULTI_SIGN_MASK1 (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EQMULTI_SIGN_MASK1@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@0000803f0000803f000080bf000080bf to the unit's slot 0x046A0F10; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "4af4acdb20f78f32bd731aad1d8485295ee3627e2d6c6d7301b436134d71bd67",
+      "decrypted_sha256": "09132f88c33cb4c94cfb514cc5faed92d47efc7c7fe787a690afe1455779a079",
+      "candidate_sha256": "51a73102068cf2234b9d511af825353c5d20eedb69d6908ee4e2d30a8dfc724d",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@bf800000bf8000003f8000003f800000",
+            "rva": "0x02E62630",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?QMULTI_SIGN_MASK1@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001292D0",
+      "end_rva": "0x001292DF",
+      "name": "dynamic initializer for GlobalVectorConstants::QMULTI_SIGN_MASK2 (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EQMULTI_SIGN_MASK2@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@000080bf0000803f0000803f000080bf to the unit's slot 0x046A0F00; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "e5ee9e15006d049f7d65f69cbd45f4fde6e1ff7c42dd38ccc42d9acf112a0131",
+      "decrypted_sha256": "08ca120862284dec3b1a96cf88968ff97545872cfe04166dc10e0d1be2425327",
+      "candidate_sha256": "2d2cad9c234b0fee6faedbdf66378f2cbacb989ad6b14a7a52a9490c4f2a5fa5",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@bf8000003f8000003f800000bf800000",
+            "rva": "0x02E62610",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?QMULTI_SIGN_MASK2@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x001292E0",
+      "end_rva": "0x001292F1",
+      "name": "dynamic initializer for GlobalVectorConstants::SignBit (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__ESignBit@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@00000080000000800000008000000080 to the unit's slot 0x046A0FD0; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "ab1210a02af03fff505ce7d9e2c9623e2400fbf415ea82f4629ad03bf81a1f31",
+      "decrypted_sha256": "4cbcf045f4de220b084f3ebad3976695bbe3bee9e1ce7c379b0b39f92ebfd2bf",
+      "candidate_sha256": "4cbcf045f4de220b084f3ebad3976695bbe3bee9e1ce7c379b0b39f92ebfd2bf",
+      "byte_diff": {
+        "reference_size": 17,
+        "candidate_size": 17,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000004",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000C",
+            "symbol": "?SignBit@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FD0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129300",
+      "end_rva": "0x00129311",
+      "name": "dynamic initializer for GlobalVectorConstants::SignMask (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__ESignMask@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@ffffff7fffffff7fffffff7fffffff7f to the unit's slot 0x046A0ED0; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "ce22f5e912557b753384943a7c63f3e1ee36adff762e4f98cddd9bdfc91e1ca7",
+      "decrypted_sha256": "29763b2735e43d0fe300de36f2423996a543fb1969e6a3ee589d3941a66de28d",
+      "candidate_sha256": "29763b2735e43d0fe300de36f2423996a543fb1969e6a3ee589d3941a66de28d",
+      "byte_diff": {
+        "reference_size": 17,
+        "candidate_size": 17,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000004",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000C",
+            "symbol": "?SignMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0ED0",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129320",
+      "end_rva": "0x0012932F",
+      "name": "dynamic initializer for GlobalVectorConstants::SmallLengthThreshold (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__ESmallLengthThreshold@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@77cc2b3277cc2b3277cc2b3277cc2b32 to the unit's slot 0x046A0F80; the value names it; SmallLengthThreshold and SmallNumber are both 1e-8, and the unit's ??__E initializers sort alphabetically, so the first is SmallLengthThreshold",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "b59e4d3a9eeb8e1aaa99bb9c7b28855367abdb1bca03556be1595a51d0f65eab",
+      "decrypted_sha256": "686c76b898c6940a2ebcb778534432169b018870485348c4f80d517eb63988a6",
+      "candidate_sha256": "5a551a0a82f5f1abd13a4b725ae1a5a3514227c587910f2e9d02577e3a45012d",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@322bcc77322bcc77322bcc77322bcc77",
+            "rva": "0x02E62440",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?SmallLengthThreshold@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129330",
+      "end_rva": "0x0012933F",
+      "name": "dynamic initializer for GlobalVectorConstants::SmallNumber (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__ESmallNumber@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@77cc2b3277cc2b3277cc2b3277cc2b32 to the unit's slot 0x046A0EE0; the value names it; SmallLengthThreshold and SmallNumber are both 1e-8, and the unit's ??__E initializers sort alphabetically, so the first is SmallLengthThreshold",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "64110e3a8ccb6e4eea3e753613183b3b0fdd509d4e675bc4655024cc1187ea12",
+      "decrypted_sha256": "7e8eb778e21bcd27c72e8409efd071ea4032f0aa071ff0c46b52eaed47ff68fc",
+      "candidate_sha256": "2df28dc33a59f999a90966435a4ddd602b96e4689a0675c0113de6dc424b5a4a",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@322bcc77322bcc77322bcc77322bcc77",
+            "rva": "0x02E62440",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?SmallNumber@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129340",
+      "end_rva": "0x0012934F",
+      "name": "dynamic initializer for GlobalVectorConstants::ThreshQuatNormalized (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EThreshQuatNormalized@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@0ad7233c0ad7233c0ad7233c0ad7233c to the unit's slot 0x046A0F70; the value names it; FloatOneHundredth and ThreshQuatNormalized are both 0.01, and this initializer sorts between SmallNumber and TwoPi",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "ab186d3ff4b6c0dd170346175511f9b3439136e78c43f8ceb9fed9738281b0bd",
+      "decrypted_sha256": "1f13397794eb5739b83460390d21b901a90a68102b327f0cfaceb10ef0dd8e92",
+      "candidate_sha256": "8ee5fca14714baf86aa87cc52f76fe0c0a13177db20c29853f71ac58e0a9522d",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@3c23d70a3c23d70a3c23d70a3c23d70a",
+            "rva": "0x02E62480",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "size": 4,
+            "symbol": "?ThreshQuatNormalized@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129350",
+      "end_rva": "0x0012935F",
+      "name": "dynamic initializer for GlobalVectorConstants::TwoPi (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__ETwoPi@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@db0fc940db0fc940db0fc940db0fc940 to the unit's slot 0x046A0FE0; the value names it",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "6e4d16e0e937608d79d771e2ce815932b9218961899c0edfac996cb892789f0d",
+      "decrypted_sha256": "55ee021546a76f00b5f010eb307077ccd7a45a7914423c7645c82d7d28838312",
+      "candidate_sha256": "55ee021546a76f00b5f010eb307077ccd7a45a7914423c7645c82d7d28838312",
+      "byte_diff": {
+        "reference_size": 15,
+        "candidate_size": 15,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "__xmm@40c90fdb40c90fdb40c90fdb40c90fdb",
+            "rva": "0x02E62560",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000A",
+            "symbol": "?TwoPi@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0FE0",
+            "evidence": "corroborated: same symbol at this address in FRotator::Quaternion"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00129360",
+      "end_rva": "0x00129371",
+      "name": "dynamic initializer for GlobalVectorConstants::XYZMask (UnrealMath)",
+      "category": "vector-constant-initializer",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "??__EXYZMask@GlobalVectorConstants@@YAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Leaf dynamic initializer storing __xmm@ffffffffffffffffffffffff00000000 to the unit's slot 0x046A0EC0; the value names it",
+      "reference_state": "decrypted-unverified",
+      "in_denominator": false,
+      "match": "relocation-equivalent",
+      "original_sha256": "380a147fcfbe095686dd0f723364dc541367f3902cd655ec61cc23330167a841",
+      "decrypted_sha256": "79bc54de441fc64b95b311133eba4a21ba3480f98e2f383f193e95b724f9931f",
+      "candidate_sha256": "72ca1e732eb839571ae0958e380b4252b99f2e514b6804d51950d0722876a0cf",
+      "byte_diff": {
+        "reference_size": 17,
+        "candidate_size": 17,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000004",
+            "symbol": "__xmm@00000000ffffffffffffffffffffffff",
+            "rva": "0x02E62420",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (FortniteGame.38), dynamic initializer for GlobalVectorConstants::XYZMask (FortniteUI.20) and 121 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000000C",
+            "size": 4,
+            "symbol": "?XYZMask@GlobalVectorConstants@@3T__m128@@B",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 4
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011912C0",
+      "end_rva": "0x0119145A",
+      "name": "FQuat::FindBetweenNormals",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?FindBetweenNormals@FQuat@@SA?AU1@AEBUFVector@@0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "sorts between FInterpTo and FindBetweenVectors in Core's alphabetical run; the inlined FindBetween_Helper with NormAB 1 and the vectorized FQuat::Normalize (Float0001, FloatOneHalf).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "8c6851dab3702c527dc3dee31ea89b58c2e5e3fa3b4ca1579ca34f4986f6957f",
+      "decrypted_sha256": "71aa8e676d85cced41bc4595744a91e3b8f535a615f60bdf036821733c446e66",
+      "candidate_sha256": "71aa8e676d85cced41bc4595744a91e3b8f535a615f60bdf036821733c446e66",
+      "byte_diff": {
+        "reference_size": 410,
+        "candidate_size": 410,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000004B",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
+          },
+          {
+            "offset": "0x00000052",
+            "symbol": "__real@358637bd",
+            "rva": "0x02F49F00",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenVectors"
+          },
+          {
+            "offset": "0x000000A9",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x000000BF",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x000000C9",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000010B",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
+          },
+          {
+            "offset": "0x00000115",
+            "symbol": "?FloatOneHalf@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F40",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenVectors, dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 1 more"
+          },
+          {
+            "offset": "0x00000184",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F30",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenVectors, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 1 more"
+          },
+          {
+            "offset": "0x0000018E",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F30",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenVectors, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01191460",
+      "end_rva": "0x0119165C",
+      "name": "FQuat::FindBetweenVectors",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?FindBetweenVectors@FQuat@@SA?AU1@AEBUFVector@@0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "follows FindBetweenNormals; NormAB = Sqrt(|A|^2 |B|^2), then the same helper.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "1686ff65c60dabc1b3120af930c871835e4d52b00d507ae0c090e06a1498ca3b",
+      "decrypted_sha256": "a5140e44a20766ab1ae95bd4867584482a478f739cb527156fe6568c396a51fe",
+      "candidate_sha256": "a5140e44a20766ab1ae95bd4867584482a478f739cb527156fe6568c396a51fe",
+      "byte_diff": {
+        "reference_size": 508,
+        "candidate_size": 508,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x000000A5",
+            "symbol": "__real@358637bd",
+            "rva": "0x02F49F00",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals"
+          },
+          {
+            "offset": "0x000000FF",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000115",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000011F",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000161",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
+          },
+          {
+            "offset": "0x0000016B",
+            "symbol": "?FloatOneHalf@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F40",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals, dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 1 more"
+          },
+          {
+            "offset": "0x000001E6",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F30",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 1 more"
+          },
+          {
+            "offset": "0x000001F0",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F30",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 1 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A5870",
+      "end_rva": "0x011A5A48",
+      "name": "FQuat::SlerpFullPath_NotNormalized",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?SlerpFullPath_NotNormalized@FQuat@@SA?AU1@AEBU1@0M@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "called twice by FQuat::Squad (0x011A5EF0); sorts before Slerp_NotNormalized (\"SlerpF\" < \"Slerp_\"); acosf of the clamped dot product and three sinf.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "75135bcb5a99b27ef5bff3ace42335d8981e96388cf8eb8c37216ebc2dc7808a",
+      "decrypted_sha256": "fc2f96f46efe17be4c4b1629f3d6a8d00d020451c9da2bc952dc25c580267138",
+      "candidate_sha256": "fc2f96f46efe17be4c4b1629f3d6a8d00d020451c9da2bc952dc25c580267138",
+      "byte_diff": {
+        "reference_size": 472,
+        "candidate_size": 472,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001F",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
+          },
+          {
+            "offset": "0x000000AF",
+            "symbol": "__real@bf800000",
+            "rva": "0x02E62410",
+            "evidence": "corroborated: same symbol at this address in FQuat::Slerp_NotNormalized, UKismetMathLibrary::CreateVectorFromYawPitch and 3 more"
+          },
+          {
+            "offset": "0x000000CE",
+            "symbol": "acosf",
+            "rva": "0x02D9AE70",
+            "evidence": "import thunk jmp [0x04DDC1FC] (acosf)"
+          },
+          {
+            "offset": "0x000000D9",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x000000E0",
+            "symbol": "__real@38d1b717",
+            "rva": "0x02E760D4",
+            "evidence": "corroborated: same symbol at this address in FMath::RInterpTo, FMath::VRand and 3 more"
+          },
+          {
+            "offset": "0x000000F7",
+            "symbol": "sinf",
+            "rva": "0x02D9AEB2",
+            "evidence": "import thunk jmp [0x04DDC1AC] (sinf)"
+          },
+          {
+            "offset": "0x00000114",
+            "symbol": "sinf",
+            "rva": "0x02D9AEB2",
+            "evidence": "import thunk jmp [0x04DDC1AC] (sinf)"
+          },
+          {
+            "offset": "0x0000012E",
+            "symbol": "sinf",
+            "rva": "0x02D9AEB2",
+            "evidence": "import thunk jmp [0x04DDC1AC] (sinf)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A5EF0",
+      "end_rva": "0x011A6017",
+      "name": "FQuat::Squad",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?Squad@FQuat@@SA?AU1@AEBU1@000M@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "sorts after Slerp_NotNormalized; FQuat::Slerp_NotNormalized (0x011A5A50), then SlerpFullPath_NotNormalized (0x011A5870) twice and the vectorized normalization.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "0f55bf29deca59a2ac1af666a5d458e34a1188ee7ff2ff7d41d48541e1149345",
+      "decrypted_sha256": "5bea752f6f082567afc9054b73709f1b0a17d2bd6956a980be2eb33116457c30",
+      "candidate_sha256": "5bea752f6f082567afc9054b73709f1b0a17d2bd6956a980be2eb33116457c30",
+      "byte_diff": {
+        "reference_size": 295,
+        "candidate_size": 295,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000002A",
+            "symbol": "?Slerp_NotNormalized@FQuat@@SA?AU1@AEBU1@0M@Z",
+            "rva": "0x011A5A50",
+            "evidence": "exact match of manifest entry 0x011A5A50"
+          },
+          {
+            "offset": "0x00000042",
+            "symbol": "?SlerpFullPath_NotNormalized@FQuat@@SA?AU1@AEBU1@0M@Z",
+            "rva": "0x011A5870",
+            "evidence": "exact match of manifest entry 0x011A5870"
+          },
+          {
+            "offset": "0x0000004A",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 58 more"
+          },
+          {
+            "offset": "0x0000006D",
+            "symbol": "?SlerpFullPath_NotNormalized@FQuat@@SA?AU1@AEBU1@0M@Z",
+            "rva": "0x011A5870",
+            "evidence": "exact match of manifest entry 0x011A5870"
+          },
+          {
+            "offset": "0x00000075",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
+          },
+          {
+            "offset": "0x0000007C",
+            "symbol": "?FloatOneHalf@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F40",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenVectors, dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 1 more"
+          },
+          {
+            "offset": "0x00000110",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F30",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals, FQuat::FindBetweenVectors and 1 more"
+          },
+          {
+            "offset": "0x0000011A",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x046A0F30",
+            "evidence": "corroborated: same symbol at this address in FQuat::FindBetweenNormals, FQuat::FindBetweenVectors and 1 more"
           }
         ],
         "unresolved_relocations": [],

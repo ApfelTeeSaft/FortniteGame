@@ -6,6 +6,42 @@
 #include "FortniteGameCode/MathDecls.h"
 #include "FortniteGameCode/RecoveryHarness.h"
 
+// The engine headers' GlobalVectorConstants (UnrealMathVectorConstants.h) of this unit: the 24
+// whose leaf dynamic initializers store to its .bss in the reference (0x046A0EB0-0x046A1040; the
+// initializers at 0x00129070-0x00129371), in header order. QuatRecovered.h reads them.
+#include "FortniteGameCode/VectorRecovered.h"
+namespace GlobalVectorConstants
+{
+#define SIGN_BIT ((1 << 31))
+	static const VectorRegister FloatOne = MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f);
+	static const VectorRegister FloatZero = MakeVectorRegister(0.0f, 0.0f, 0.0f, 0.0f);
+	static const VectorRegister FloatMinusOne = MakeVectorRegister(-1.0f, -1.0f, -1.0f, -1.0f);
+	static const VectorRegister Float0001 = MakeVectorRegister( 0.0f, 0.0f, 0.0f, 1.0f );
+	static const VectorRegister SmallLengthThreshold = MakeVectorRegister(1.e-8f, 1.e-8f, 1.e-8f, 1.e-8f);
+	static const VectorRegister FloatMinus1_111 = MakeVectorRegister( -1.f, 1.f, 1.f, 1.f );
+	static const VectorRegister FloatOneHalf = MakeVectorRegister( 0.5f, 0.5f, 0.5f, 0.5f );
+	static const VectorRegister SmallNumber = MakeVectorRegister( SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER );
+	static const VectorRegister ThreshQuatNormalized = MakeVectorRegister( THRESH_QUAT_NORMALIZED, THRESH_QUAT_NORMALIZED, THRESH_QUAT_NORMALIZED, THRESH_QUAT_NORMALIZED );
+	static const VectorRegister QINV_SIGN_MASK = MakeVectorRegister( -1.f, -1.f, -1.f, 1.f );
+	static const VectorRegister QMULTI_SIGN_MASK0 = MakeVectorRegister( 1.f, -1.f, 1.f, -1.f );
+	static const VectorRegister QMULTI_SIGN_MASK1 = MakeVectorRegister( 1.f, 1.f, -1.f, -1.f );
+	static const VectorRegister QMULTI_SIGN_MASK2 = MakeVectorRegister( -1.f, 1.f, 1.f, -1.f );
+	static const VectorRegister DEG_TO_RAD = MakeVectorRegister(PI/(180.f), PI/(180.f), PI/(180.f), PI/(180.f));
+	static const VectorRegister DEG_TO_RAD_HALF = MakeVectorRegister((PI/180.f)*0.5f, (PI/180.f)*0.5f, (PI/180.f)*0.5f, (PI/180.f)*0.5f);
+	static const VectorRegister XYZMask = MakeVectorRegister((uint32)0xffffffff, (uint32)0xffffffff, (uint32)0xffffffff, (uint32)0x00000000);
+	static const VectorRegister SignBit = MakeVectorRegister((uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT);
+	static const VectorRegister SignMask = MakeVectorRegister((uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT));
+	static const VectorRegister Pi = MakeVectorRegister(PI, PI, PI, PI);
+	static const VectorRegister TwoPi = MakeVectorRegister(2.0f*PI, 2.0f*PI, 2.0f*PI, 2.0f*PI);
+	static const VectorRegister PiByTwo = MakeVectorRegister(0.5f*PI, 0.5f*PI, 0.5f*PI, 0.5f*PI);
+	static const VectorRegister OneOverTwoPi = MakeVectorRegister(1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI));
+	static const VectorRegister Float360 = MakeVectorRegister(360.f, 360.f, 360.f, 360.f);
+	static const VectorRegister Float180 = MakeVectorRegister(180.f, 180.f, 180.f, 180.f);
+#undef SIGN_BIT
+}
+#include "FortniteGameCode/TransformRecovered.h"
+#include "FortniteGameCode/QuatRecovered.h"
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x011A6B30 (end 0x011A6BA2)
 // Original VA: 0x00000001411A6B30 | File offset: 0x011A6130
 // Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
@@ -675,4 +711,200 @@ FMatrix FRotationMatrix::MakeFromZY(FVector const& ZAxis, FVector const& YAxis)
 	const FVector NewY = NewZ ^ NewX;
 
 	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A0970 (end 0x011A0AFE)
+// Original VA: 0x00000001411A0970 | File offset: 0x011A0F70
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: the out-of-line call before every quaternion product in the Kismet rotator natives
+//   (ComposeRotators, RLerp, TransformRotation, ...) and in FRotator::GetInverse; VectorSinCos of
+//   the half angles (DEG_TO_RAD_HALF, OneOverTwoPi, TwoPi, SignBit, Pi, SignMask, PiByTwo,
+//   FloatMinusOne, FloatOne: this unit's constants) and the sign-bit shuffles.
+//   SCOPE_CYCLE_COUNTER is commented out in 4.20; NaN checks are compiled out in shipping.
+FQuat FRotator::Quaternion() const
+{
+	const VectorRegister Angles = MakeVectorRegister(Pitch, Yaw, Roll, 0.0f);
+	const VectorRegister HalfAngles = VectorMultiply(Angles, GlobalVectorConstants::DEG_TO_RAD_HALF);
+
+	VectorRegister SinAngles, CosAngles;
+	VectorSinCos(&SinAngles, &CosAngles, &HalfAngles);
+
+	// Vectorized conversion, measured 20% faster than using scalar version after VectorSinCos.
+	// Indices within VectorRegister (for shuffles): P=0, Y=1, R=2
+	const VectorRegister SR = VectorReplicate(SinAngles, 2);
+	const VectorRegister CR = VectorReplicate(CosAngles, 2);
+
+	const VectorRegister SY_SY_CY_CY_Temp = VectorShuffle(SinAngles, CosAngles, 1, 1, 1, 1);
+
+	const VectorRegister SP_SP_CP_CP = VectorShuffle(SinAngles, CosAngles, 0, 0, 0, 0);
+	const VectorRegister SY_CY_SY_CY = VectorShuffle(SY_SY_CY_CY_Temp, SY_SY_CY_CY_Temp, 0, 2, 0, 2);
+
+	const VectorRegister CP_CP_SP_SP = VectorShuffle(CosAngles, SinAngles, 0, 0, 0, 0);
+	const VectorRegister CY_SY_CY_SY = VectorShuffle(SY_SY_CY_CY_Temp, SY_SY_CY_CY_Temp, 2, 0, 2, 0);
+
+	const uint32 Neg = uint32(1 << 31);
+	const uint32 Pos = uint32(0);
+	const VectorRegister SignBitsLeft  = MakeVectorRegister(Pos, Neg, Pos, Pos);
+	const VectorRegister SignBitsRight = MakeVectorRegister(Neg, Neg, Neg, Pos);
+	const VectorRegister LeftTerm  = VectorBitwiseXor(SignBitsLeft , VectorMultiply(CR, VectorMultiply(SP_SP_CP_CP, SY_CY_SY_CY)));
+	const VectorRegister RightTerm = VectorBitwiseXor(SignBitsRight, VectorMultiply(SR, VectorMultiply(CP_CP_SP_SP, CY_SY_CY_SY)));
+
+	FQuat RotationQuat;
+	const VectorRegister Result = VectorAdd(LeftTerm, RightTerm);
+	VectorStoreAligned(Result, &RotationQuat);
+
+	return RotationQuat;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A0B00 (end 0x011A0D2D)
+// Original VA: 0x00000001411A0B00 | File offset: 0x011A0100
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::execRInterpTo_Constant (Kismet function inlined); the
+//   vectorized FRotator::GetNormalized (Float360, Float180) twice, the per-axis clamps between.
+FRotator FMath::RInterpConstantTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed )
+{
+	// if DeltaTime is 0, do not perform any interpolation (Location was already calculated for that frame)
+	if( DeltaTime == 0.f || Current == Target )
+	{
+		return Current;
+	}
+
+	// If no interp speed, jump to target value
+	if( InterpSpeed <= 0.f )
+	{
+		return Target;
+	}
+
+	const float DeltaInterpSpeed = InterpSpeed * DeltaTime;
+
+	const FRotator DeltaMove = (Target - Current).GetNormalized();
+	FRotator Result = Current;
+	Result.Pitch += FMath::Clamp(DeltaMove.Pitch, -DeltaInterpSpeed, DeltaInterpSpeed);
+	Result.Yaw += FMath::Clamp(DeltaMove.Yaw, -DeltaInterpSpeed, DeltaInterpSpeed);
+	Result.Roll += FMath::Clamp(DeltaMove.Roll, -DeltaInterpSpeed, DeltaInterpSpeed);
+	return Result.GetNormalized();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A0D30 (end 0x011A101C)
+// Original VA: 0x00000001411A0D30 | File offset: 0x011A0330
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::execRInterpTo (Kismet function inlined); the vectorized
+//   FRotator::GetNormalized and IsNearlyZero (Float360, Float180, SignMask).
+FRotator FMath::RInterpTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed)
+{
+	// if DeltaTime is 0, do not perform any interpolation (Location was already calculated for that frame)
+	if( DeltaTime == 0.f || Current == Target )
+	{
+		return Current;
+	}
+
+	// If no interp speed, jump to target value
+	if( InterpSpeed <= 0.f )
+	{
+		return Target;
+	}
+
+	const float DeltaInterpSpeed = InterpSpeed * DeltaTime;
+
+	const FRotator Delta = (Target - Current).GetNormalized();
+
+	// If steps are too small, just return Target and assume we have reached our destination.
+	if (Delta.IsNearlyZero())
+	{
+		return Target;
+	}
+
+	// Delta Move, Clamp so we do not over shoot.
+	const FRotator DeltaMove = Delta * FMath::Clamp<float>(DeltaInterpSpeed, 0.f, 1.f);
+	return (Current + DeltaMove).GetNormalized();
+}
+
+// FORCEINLINE_DEBUGGABLE (FORCEINLINE in shipping): inlined into both FindBetween functions.
+__forceinline FQuat FindBetween_Helper(const FVector& A, const FVector& B, float NormAB)
+{
+	float W = NormAB + (A | B);   // FVector::DotProduct(A, B)
+	FQuat Result;
+
+	if (W >= 1e-6f * NormAB)
+	{
+		//Axis = FVector::CrossProduct(A, B);
+		Result = FQuat(A.Y * B.Z - A.Z * B.Y,
+					   A.Z * B.X - A.X * B.Z,
+					   A.X * B.Y - A.Y * B.X,
+					   W);
+	}
+	else
+	{
+		// A and B point in opposite directions
+		W = 0.f;
+		Result = FMath::Abs(A.X) > FMath::Abs(A.Y)
+				? FQuat(-A.Z, 0.f, A.X, W)
+				: FQuat(0.f, -A.Z, A.Y, W);
+	}
+
+	Result.Normalize();
+	return Result;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011912C0 (end 0x0119145A)
+// Original VA: 0x00000001411912C0 | File offset: 0x011908C0
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: sorts between FInterpTo and FindBetweenVectors in Core's alphabetical run; the inlined
+//   FindBetween_Helper with NormAB 1 and the vectorized FQuat::Normalize (Float0001, FloatOneHalf).
+FQuat FQuat::FindBetweenNormals(const FVector& A, const FVector& B)
+{
+	const float NormAB = 1.f;
+	return FindBetween_Helper(A, B, NormAB);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01191460 (end 0x0119165C)
+// Original VA: 0x0000000141191460 | File offset: 0x01190A60
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: follows FindBetweenNormals; NormAB = Sqrt(|A|^2 |B|^2), then the same helper.
+FQuat FQuat::FindBetweenVectors(const FVector& A, const FVector& B)
+{
+	const float NormAB = FMath::Sqrt(A.SizeSquared() * B.SizeSquared());
+	return FindBetween_Helper(A, B, NormAB);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A5870 (end 0x011A5A48)
+// Original VA: 0x00000001411A5870 | File offset: 0x011A4E70
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called twice by FQuat::Squad (0x011A5EF0); sorts before Slerp_NotNormalized
+//   ("SlerpF" < "Slerp_"); acosf of the clamped dot product and three sinf.
+FQuat FQuat::SlerpFullPath_NotNormalized(const FQuat &quat1, const FQuat &quat2, float Alpha )
+{
+	const float CosAngle = FMath::Clamp(quat1 | quat2, -1.f, 1.f);
+	const float Angle = FMath::Acos(CosAngle);
+
+	//UE_LOG(LogUnrealMath, Log,  TEXT("CosAngle: %f Angle: %f"), CosAngle, Angle );
+
+	if ( FMath::Abs(Angle) < KINDA_SMALL_NUMBER )
+	{
+		return quat1;
+	}
+
+	const float SinAngle = FMath::Sin(Angle);
+	const float InvSinAngle = 1.f/SinAngle;
+
+	const float Scale0 = FMath::Sin((1.0f-Alpha)*Angle)*InvSinAngle;
+	const float Scale1 = FMath::Sin(Alpha*Angle)*InvSinAngle;
+
+	return quat1*Scale0 + quat2*Scale1;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A5EF0 (end 0x011A6017)
+// Original VA: 0x00000001411A5EF0 | File offset: 0x011A54F0
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: sorts after Slerp_NotNormalized; FQuat::Slerp_NotNormalized (0x011A5A50), then
+//   SlerpFullPath_NotNormalized (0x011A5870) twice and the vectorized normalization.
+FQuat FQuat::Squad(const FQuat& quat1, const FQuat& tang1, const FQuat& quat2, const FQuat& tang2, float Alpha)
+{
+	// Always slerp along the short path from quat1 to quat2 to prevent axis flipping.
+	// This approach is taken by OGRE engine, amongst others.
+	const FQuat Q1 = FQuat::Slerp_NotNormalized(quat1, quat2, Alpha);
+	const FQuat Q2 = FQuat::SlerpFullPath_NotNormalized(tang1, tang2, Alpha);
+	const FQuat Result = FQuat::SlerpFullPath(Q1, Q2, 2.f * Alpha * (1.f - Alpha));
+
+	return Result;
 }

@@ -506,7 +506,50 @@ initializers relocation-equivalent, with nothing to corroborate them.
   - the date and time natives;
   - `FRotator::RotateVector`/`UnrotateVector`.
 - `UnrealMath.obj`'s constants (`0x046A0EB0`-`0x046A1040`) are the next set of initializers
-  to recover. `FRotator::Quaternion` uses eleven of them.
+  to recover. `FRotator::Quaternion` uses nine of them (eighth family).
+
+## Eighth family: UnrealMath's constants and their users (2026-11-24)
+
+`UnrealMath.cpp`'s reference unit has 24 `GlobalVectorConstants`, at
+`0x046A0EB0`-`0x046A1040`. Their leaf initializers sit in two alphabetical runs, before and
+after the unit's six log-category initializers (`??__ELog...`): `0x00129070`-`0x00129140` and
+`0x00129270`-`0x00129371`. Each is named by the value it stores. Equal values are told apart
+by position in the run:
+- the 1.0 at `0x00129120` sorts between `FloatMinusOne` and `FloatOneHalf`, so it is
+  `FloatOne`, not `RotationSignificantThreshold`, which also rounds to 1.0f;
+- the 0.01 at `0x00129340` sorts between `SmallNumber` and `TwoPi`, so it is
+  `ThreshQuatNormalized`, not `FloatOneHundredth`;
+- the two 1e-8 constants follow the same rule as in the Kismet unit.
+
+`UnrealMath.cpp` now defines the 24 in header order, and the 24 initializers are manifest
+entries. With them, these became exact:
+
+| RVA | Function | Constants it reads |
+| --- | --- | --- |
+| `0x011A0970` | `FRotator::Quaternion` | `VectorSinCos`: `DEG_TO_RAD_HALF`, `OneOverTwoPi`, `TwoPi`, `SignBit`, `Pi`, `SignMask`, `PiByTwo`, `FloatMinusOne`, `FloatOne` |
+| `0x011A0B00` | `FMath::RInterpConstantTo` | the vectorized `FRotator::GetNormalized`: `Float360`, `Float180` |
+| `0x011A0D30` | `FMath::RInterpTo` | the same, and `IsNearlyZero` (`SignMask`) |
+| `0x011912C0` | `FQuat::FindBetweenNormals` | `FQuat::Normalize`: `Float0001`, `FloatOneHalf` |
+| `0x01191460` | `FQuat::FindBetweenVectors` | the same |
+| `0x011A5870` | `FQuat::SlerpFullPath_NotNormalized` | none (`acosf`, `sinf`) |
+| `0x011A5EF0` | `FQuat::Squad` | the normalization |
+
+13 of the 24 initializers are exact. The other 11 store constants that no reconstructed
+function reads yet, so they are relocation-equivalent.
+
+The names follow the alphabetical COMDAT order:
+- `FindBetweenNormals`/`FindBetweenVectors` sit between `FInterpTo` and `FixedTurn`;
+- `SlerpFullPath_NotNormalized` sorts before `Slerp_NotNormalized` (`F` < `_`);
+- `Squad` sorts after `Slerp_NotNormalized`.
+
+`FRotator::Normalize`, `GetNormalized` and `IsNearlyZero` take the 4.20 vector forms
+(`VectorNormalizeRotator`), with `VectorSinCos`, in `QuatRecovered.h`.
+
+Still open in this unit:
+- `FQuat::ToSwingTwist` reads `FQuat::Identity`, which nothing else reconstructed uses;
+- `FQuat::CalcTangents` calls `FQuat::Log`/`Exp`;
+- the `FTransform` functions (`GetRelativeTransform` and others) need more of
+  `TransformVectorized.h`.
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 

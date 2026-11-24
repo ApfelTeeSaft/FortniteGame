@@ -467,6 +467,8 @@ struct FMath : public FPlatformMath
 	static FVector2D Vector2DInterpTo( const FVector2D& Current, const FVector2D& Target, float DeltaTime, float InterpSpeed );
 	static float FInterpTo( float Current, float Target, float DeltaTime, float InterpSpeed );
 	static float FInterpConstantTo( float Current, float Target, float DeltaTime, float InterpSpeed );
+	static FRotator RInterpConstantTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed );
+	static FRotator RInterpTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed);
 };
 
 struct FRotator
@@ -490,6 +492,16 @@ struct FRotator
 	{
 		return FRotator( Pitch*Scale, Yaw*Scale, Roll*Scale );
 	}
+
+	__forceinline bool operator==( const FRotator& R ) const
+	{
+		return Pitch==R.Pitch && Yaw==R.Yaw && Roll==R.Roll;
+	}
+
+	// VectorRegister forms (PLATFORM_ENABLE_VECTORINTRINSICS): QuatRecovered.h.
+	void Normalize();
+	FRotator GetNormalized() const;
+	bool IsNearlyZero(float Tolerance=KINDA_SMALL_NUMBER) const;
 
 	FVector Vector() const;
 	FQuat Quaternion() const;   // CORE_API (vectorized; out of line)
@@ -854,6 +866,20 @@ public:
 	}
 
 	FQuat operator*( const FQuat& Q ) const;
+
+	__forceinline FQuat operator+(const FQuat& Q) const
+	{
+		return FQuat(X + Q.X, Y + Q.Y, Z + Q.Z, W + Q.W);
+	}
+	__forceinline FQuat operator*(const float Scale) const
+	{
+		return FQuat(Scale * X, Scale * Y, Scale * Z, Scale * W);
+	}
+	__forceinline float operator|(const FQuat& Q) const
+	{
+		return X * Q.X + Y * Q.Y + Z * Q.Z + W * Q.W;
+	}
+
 	void Normalize(float Tolerance = SMALL_NUMBER);
 	FQuat GetNormalized(float Tolerance = SMALL_NUMBER) const;
 
@@ -866,6 +892,11 @@ public:
 
 	static FQuat Slerp_NotNormalized(const FQuat &Quat1, const FQuat &Quat2, float Slerp);   // CORE_API
 	static FQuat Slerp(const FQuat &Quat1, const FQuat &Quat2, float Slerp);
+	static FQuat SlerpFullPath_NotNormalized(const FQuat &quat1, const FQuat &quat2, float Alpha);   // CORE_API
+	static FQuat SlerpFullPath(const FQuat &quat1, const FQuat &quat2, float Alpha);
+	static FQuat Squad(const FQuat& quat1, const FQuat& tang1, const FQuat& quat2, const FQuat& tang2, float Alpha);   // CORE_API
+	static FQuat FindBetweenNormals(const FVector& Normal1, const FVector& Normal2);   // CORE_API
+	static FQuat FindBetweenVectors(const FVector& Vector1, const FVector& Vector2);   // CORE_API
 };
 
 // Math/Box.h
