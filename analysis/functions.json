@@ -1288,13 +1288,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1318,7 +1318,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1360,7 +1360,7 @@
             "offset": "0x00000070",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::HasLoadTimeFileForCommandletToken, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1395,13 +1395,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1425,7 +1425,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1467,7 +1467,7 @@
             "offset": "0x0000006A",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeFileForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1502,13 +1502,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1532,7 +1532,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1574,7 +1574,7 @@
             "offset": "0x0000006A",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1609,19 +1609,19 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000049",
@@ -1645,7 +1645,7 @@
             "offset": "0x0000006D",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [
@@ -1717,13 +1717,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1747,7 +1747,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1831,7 +1831,7 @@
             "offset": "0x000000A6",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -1870,13 +1870,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -1900,7 +1900,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -1966,7 +1966,7 @@
             "offset": "0x0000008E",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -2005,13 +2005,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -2035,7 +2035,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -2119,7 +2119,7 @@
             "offset": "0x000000A6",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -2158,13 +2158,13 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000021",
@@ -2188,7 +2188,7 @@
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000041",
@@ -2230,7 +2230,7 @@
             "offset": "0x0000006A",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [],
@@ -2269,19 +2269,19 @@
             "offset": "0x0000000F",
             "symbol": "_tls_index",
             "rva": "0x04916AF8",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000014",
             "symbol": "_Init_thread_epoch",
             "rva": "0x04BFE018",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x0000003B",
             "symbol": "_Init_thread_header",
             "rva": "0x02D98B14",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           },
           {
             "offset": "0x00000049",
@@ -2305,7 +2305,7 @@
             "offset": "0x0000006D",
             "symbol": "_Init_thread_footer",
             "rva": "0x02D98AB4",
-            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 6 more"
+            "evidence": "corroborated: same symbol at this address in FStats::EnabledForCommandlet, FStats::HasLoadTimeStatsForCommandletToken and 84 more"
           }
         ],
         "unresolved_relocations": [

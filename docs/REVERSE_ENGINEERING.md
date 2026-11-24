@@ -250,6 +250,59 @@ static and guard, whose neighbours belong to functions not reconstructed:
 
 Both are relocation-equivalent.
 
+### Attribute getters (`tools/codegen/attribute_getters.py`, 2026-11-24)
+
+The largest family of thread-safe-static functions sitting next to each other in `.bss` is
+GameplayAbilities' `GAMEPLAYATTRIBUTE_PROPERTY_GETTER`. Each attribute set class has an inline
+static getter per attribute:
+
+```cpp
+static FGameplayAttribute Get<Property>Attribute()
+{
+    static UProperty* Prop = FindFieldChecked<UProperty>(<Class>::StaticClass(), FName(TEXT("<Property>")));
+    return Prop;
+}
+```
+
+84 instances share one 162-byte shape, in 12 classes:
+- the class comes from the `GetPrivateStaticClass` they call, with `StaticClass()` inlined;
+- the property comes from their `FName` literal.
+
+Each instance's static (pointer, then guard: 16 bytes) is a COMDAT. The copy the reference
+keeps comes from the first object that uses the getter, inlined or not. So a run of adjacent
+statics is one object's first-use order, which nothing independent of those statics shows:
+- the getters' code does not group them. The code comes from the first object that emits a
+  getter out of line, and within an object it is sorted by name;
+- declaration order matches some runs, such as `UFortDamageSet`'s 13. Others follow first
+  use: `UFortHealthSet`'s `HealingSourceBaseMultiplier` sits between `Shield` and `Damage`.
+
+The generator therefore emits each class's getters in one unit, in declaration order. That
+order is read from the property offsets in the class's `FClassParams` property array (records
+`{Type, NameUTF8, ObjectFlags, PropertyFlags, ArrayDim, RepNotifyFuncUTF8, Offset, ...}`), not
+from the statics. The section-relative rule does the rest:
+- a getter whose reference neighbours are its declaration neighbours resolves;
+- elsewhere a side lands on another getter's observed slot and is dropped, or the prediction
+  fails the byte comparison.
+
+`uht_classes.py` gives each of these classes a member hook, through which the unit declares
+the getters; they are defined out of line as `inline`, each with its RVA. The getters'
+callees resolve by corroboration across the family:
+- `FGameplayAttribute(UProperty*)`;
+- `FindFieldChecked<UProperty>`;
+- `FName::FName`;
+- the CRT's thread-init functions.
+
+`UFortRegenHealthSet`'s 6 are left out, because its `FClassParams` is not located.
+
+Result: all 78 generated getters match outside their relocations. 51 are exact. The other 27
+are relocation-equivalent, waiting on their own static (one also on a pooled literal), with
+no regressions. Two classes are fully exact:
+- `UFortAdvancedMovementSet` (7);
+- `UFortCharacterAttrSet` (4).
+
+`UFortDamageSet` has 12 of 14 exact; its `WeaponSkill` getter keeps its static in another
+object.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is

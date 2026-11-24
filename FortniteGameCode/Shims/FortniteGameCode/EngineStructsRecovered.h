@@ -749,6 +749,8 @@ struct FGameplayAttribute
 	{
 	}
 
+	FGameplayAttribute(UProperty* NewProperty);   // out of line, AttributeSet.cpp
+
 	/** Name of the attribute, usually the same as property name */
 	FString AttributeName;
 

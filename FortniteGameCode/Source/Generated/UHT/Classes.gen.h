@@ -34436,6 +34436,9 @@ public:
 	static void execOnRep_Offense(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_Resistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_Tech(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortCharacterAttrSet
+	FNGC_EXTRA_MEMBERS_UFortCharacterAttrSet
+#endif
 private:
 	unsigned char Opaque[0xA0];  // sizeof(UFortCharacterAttrSet) = 0xD0
 };
@@ -36265,6 +36268,9 @@ public:
 	static void execOnRep_JumpZVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_MaxAcceleration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_MinAnalogWalkSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortAdvancedMovementSet
+	FNGC_EXTRA_MEMBERS_UFortAdvancedMovementSet
+#endif
 private:
 	unsigned char Opaque[0xE0];  // sizeof(UFortAdvancedMovementSet) = 0x110
 };
@@ -38840,6 +38846,9 @@ public:
 	static void execOnRep_Health(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_MaxHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_Shield(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortHealthSet
+	FNGC_EXTRA_MEMBERS_UFortHealthSet
+#endif
 private:
 	unsigned char Opaque[0x4A0];  // sizeof(UFortHealthSet) = 0x4D0
 };
@@ -39072,6 +39081,9 @@ public:
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UFortBuildingTrapSet(X); }
 	static void StaticRegisterNativesUFortBuildingTrapSet();
 	static void execOnRep_Durability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortBuildingTrapSet
+	FNGC_EXTRA_MEMBERS_UFortBuildingTrapSet
+#endif
 private:
 	unsigned char Opaque[0x180];  // sizeof(UFortBuildingTrapSet) = 0x690
 };
@@ -41627,6 +41639,9 @@ public:
 	static void execOnRep_TrapHealingSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_TrapMaxDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_TrapReloadSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortConstructionSet
+	FNGC_EXTRA_MEMBERS_UFortConstructionSet
+#endif
 private:
 	unsigned char Opaque[0x1A0];  // sizeof(UFortConstructionSet) = 0x1D0
 };
@@ -41929,6 +41944,9 @@ public:
 	static void StaticRegisterNativesUFortControlResistanceSet();
 	static void execOnRep_ControlResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_MaxControlResistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortControlResistanceSet
+	FNGC_EXTRA_MEMBERS_UFortControlResistanceSet
+#endif
 private:
 	unsigned char Opaque[0x210];  // sizeof(UFortControlResistanceSet) = 0x240
 };
@@ -42289,6 +42307,9 @@ public:
 	static void execOnRep_StunTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_WeaponSkill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_ZoneCritMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortDamageSet
+	FNGC_EXTRA_MEMBERS_UFortDamageSet
+#endif
 private:
 	unsigned char Opaque[0x200];  // sizeof(UFortDamageSet) = 0x230
 };
@@ -47536,6 +47557,9 @@ public:
 	static void execOnRep_SupplyDrop_Level(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_SupplyDrop_Magnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_WorldInventorySizeBonus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortHomebaseSet
+	FNGC_EXTRA_MEMBERS_UFortHomebaseSet
+#endif
 private:
 	unsigned char Opaque[0x520];  // sizeof(UFortHomebaseSet) = 0x550
 };
@@ -51343,6 +51367,9 @@ public:
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UFortMovementSet(X); }
 	static void StaticRegisterNativesUFortMovementSet();
 	static void execOnRep_SpeedMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortMovementSet
+	FNGC_EXTRA_MEMBERS_UFortMovementSet
+#endif
 private:
 	unsigned char Opaque[0x120];  // sizeof(UFortMovementSet) = 0x150
 };
@@ -53578,6 +53605,9 @@ public:
 	static void execOnRep_StaminaRegenDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_StaminaRegenRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_Tech_Team(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortPlayerAttrSet
+	FNGC_EXTRA_MEMBERS_UFortPlayerAttrSet
+#endif
 private:
 	unsigned char Opaque[0x3F0];  // sizeof(UFortPlayerAttrSet) = 0x420
 };
@@ -60817,6 +60847,9 @@ public:
 	static void execOnRep_WeaponRateOfFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_WeaponReloadSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execOnRep_WeaponVerticalRecoil(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UFortWeaponAttrSet
+	FNGC_EXTRA_MEMBERS_UFortWeaponAttrSet
+#endif
 private:
 	unsigned char Opaque[0x100];  // sizeof(UFortWeaponAttrSet) = 0x130
 };

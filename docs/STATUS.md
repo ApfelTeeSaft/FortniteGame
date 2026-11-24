@@ -9,9 +9,10 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **37,011 / 157,719** primary `.pdata` functions (23.47 %, 2,515,662 bytes):
+| Exact functions | **37,062 / 157,719** primary `.pdata` functions (23.50 %, 2,523,924 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 17 hand-reconstructed functions matching the decrypted image;
+- 51 generated GameplayAbilities attribute getters (`tools/codegen/attribute_getters.py`);
 - 36,992 generated UHT functions:
   - classes: 11,095 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,796 `GetPrivateStaticClass`,
     1,180 `StaticRegisterNatives*`, 3,277 `FCompiledInDefer` initializers and 1,322 exec thunks
@@ -22,8 +23,8 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
   - UENUMs: 1,088 `Z_Construct_UEnum_*`, 1,016 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,215 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 170 vector-constant initializers and `FCommandLine::IsInitialized` |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,678 reconstructed and compiled; 37,011 exact; 667 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 663 in the denominator, mostly:
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,756 reconstructed and compiled; 37,062 exact; 694 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 690 in the denominator, mostly:
 - 487 `GetPrivateStaticClass` bodies, 453 of them waiting only on `InternalConstructor<C>`;
 - 25 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
@@ -67,6 +68,8 @@ Largest queue groups (2026-11-24):
   by their switch literal in the 4.20 tree (`docs/REVERSE_ENGINEERING.md`, "Fourth family").
   Thread-safe statics resolve only within reconstructed clusters of neighbouring functions
   ("Thread-safe statics"); most remaining checks need their neighbours or class members.
+- 27 attribute getters waiting on their static: their reference run follows an object's first
+  use, not declaration order ("Attribute getters").
 - 453 `GetPrivateStaticClass` bodies waiting only on `InternalConstructor<C>`. 374 of the
   instances are ICF-folded into another class's identical copy. No evidence independent of
   the field says which classes' constructors and vtables are identical. Of the 79 others,
@@ -87,6 +90,8 @@ Largest queue groups (2026-11-24):
   are single objects whose data comes in batches; that is not modelled.
 
 Done (2026-11-24):
+- GameplayAbilities attribute getters generated from their shape (78 of 84; one class's
+  `FClassParams` not located): 51 exact, 27 relocation-equivalent, no regressions.
 - Thread-safe statics: `SECREL` fields, and three clusters of command-line checks reconstructed
   whole (`FStats`, two D3D12RHI units): 7 exact, 2 singles relocation-equivalent, no regressions.
 - First hand-written batch, command-line switch checks: 5 exact (two RHI adapter-vendor

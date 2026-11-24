@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 667,
+ "total": 694,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -305,6 +305,276 @@
    "examples": [
     "0x013A7430 ELifetimeCondition_StaticEnum",
     "0x01D658E0 EMoviePlaybackType_StaticEnum"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetActiveEffectDurationAttribute@UFortPlayerAttrS + other: ?Prop@?1??GetActiveEffectDurationAttribute@UFortPlayerAttrSe",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00C20700 UFortPlayerAttrSet::GetActiveEffectDurationAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetBackwardSpeedMultiplierAttribute@UFortMovement + other: ?Prop@?1??GetBackwardSpeedMultiplierAttribute@UFortMovementS",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00E5C130 UFortMovementSet::GetBackwardSpeedMultiplierAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetBuildingSkillAttribute@UFortConstructionSet@@S + other: ?Prop@?1??GetBuildingSkillAttribute@UFortConstructionSet@@SA",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00B53A00 UFortConstructionSet::GetBuildingSkillAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetCraftingTimeMultiplierAttribute@UFortPlayerAtt + other: ?Prop@?1??GetCraftingTimeMultiplierAttribute@UFortPlayerAttr",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00E5CC30 UFortPlayerAttrSet::GetCraftingTimeMultiplierAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetCurrentShieldAttribute@UFortHealthSet@@SA?AUFG + other: ?Prop@?1??GetCurrentShieldAttribute@UFortHealthSet@@SA?AUFGa",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00940790 UFortHealthSet::GetCurrentShieldAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetExtraLivesAttribute@UFortPlayerAttrSet@@SA?AUF + other: ?Prop@?1??GetExtraLivesAttribute@UFortPlayerAttrSet@@SA?AUFG",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00E5D000 UFortPlayerAttrSet::GetExtraLivesAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetHealthAttribute@UFortHealthSet@@SA?AUFGameplay + other: ?Prop@?1??GetHealthAttribute@UFortHealthSet@@SA?AUFGameplayA + pooled string literal (??_C@)",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00940870 UFortHealthSet::GetHealthAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetImpactDamageAttribute@UFortControlResistanceSe + other: ?Prop@?1??GetImpactDamageAttribute@UFortControlResistanceSet",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009D42C0 UFortControlResistanceSet::GetImpactDamageAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetInventorySizeBonusAttribute@UFortHomebaseSet@@ + other: ?Prop@?1??GetInventorySizeBonusAttribute@UFortHomebaseSet@@S",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009D4470 UFortHomebaseSet::GetInventorySizeBonusAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetItemMaxStackAttribute@UFortPlayerAttrSet@@SA?A + other: ?Prop@?1??GetItemMaxStackAttribute@UFortPlayerAttrSet@@SA?AU",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00C4CE30 UFortPlayerAttrSet::GetItemMaxStackAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetItemRegenCooldownAttribute@UFortPlayerAttrSet@ + other: ?Prop@?1??GetItemRegenCooldownAttribute@UFortPlayerAttrSet@@",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009D4520 UFortPlayerAttrSet::GetItemRegenCooldownAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetJumpHeightAttribute@UFortMovementSet@@SA?AUFGa + other: ?Prop@?1??GetJumpHeightAttribute@UFortMovementSet@@SA?AUFGam",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00DCCCD0 UFortMovementSet::GetJumpHeightAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetMaxControlResistanceAttribute@UFortControlResi + other: ?Prop@?1??GetMaxControlResistanceAttribute@UFortControlResis",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009E1750 UFortControlResistanceSet::GetMaxControlResistanceAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetMaxDurabilityAttribute@UFortBuildingTrapSet@@S + other: ?Prop@?1??GetMaxDurabilityAttribute@UFortBuildingTrapSet@@SA",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00A54180 UFortBuildingTrapSet::GetMaxDurabilityAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetMaxHealthAttribute@UFortHealthSet@@SA?AUFGamep + other: ?Prop@?1??GetMaxHealthAttribute@UFortHealthSet@@SA?AUFGamepl",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009E1850 UFortHealthSet::GetMaxHealthAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetMaxStaminaAttribute@UFortPlayerAttrSet@@SA?AUF + other: ?Prop@?1??GetMaxStaminaAttribute@UFortPlayerAttrSet@@SA?AUFG",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009E19C0 UFortPlayerAttrSet::GetMaxStaminaAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetShieldAttribute@UFortHealthSet@@SA?AUFGameplay + other: ?Prop@?1??GetShieldAttribute@UFortHealthSet@@SA?AUFGameplayA",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009E2E50 UFortHealthSet::GetShieldAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetShieldDamageScaleAttribute@UFortDamageSet@@SA? + other: ?Prop@?1??GetShieldDamageScaleAttribute@UFortDamageSet@@SA?A",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00C2A750 UFortDamageSet::GetShieldDamageScaleAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetSprintCostAttribute@UFortPlayerAttrSet@@SA?AUF + other: ?Prop@?1??GetSprintCostAttribute@UFortPlayerAttrSet@@SA?AUFG",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00E64330 UFortPlayerAttrSet::GetSprintCostAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetSprintSpeedAttribute@UFortMovementSet@@SA?AUFG + other: ?Prop@?1??GetSprintSpeedAttribute@UFortMovementSet@@SA?AUFGa",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00E643E0 UFortMovementSet::GetSprintSpeedAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetStaminaAttribute@UFortPlayerAttrSet@@SA?AUFGam + other: ?Prop@?1??GetStaminaAttribute@UFortPlayerAttrSet@@SA?AUFGame",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00854140 UFortPlayerAttrSet::GetStaminaAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetStaminaRegenDelayAttribute@UFortPlayerAttrSet@ + other: ?Prop@?1??GetStaminaRegenDelayAttribute@UFortPlayerAttrSet@@",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00E64490 UFortPlayerAttrSet::GetStaminaRegenDelayAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetStaminaRegenRateAttribute@UFortPlayerAttrSet@@ + other: ?Prop@?1??GetStaminaRegenRateAttribute@UFortPlayerAttrSet@@S",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00E64540 UFortPlayerAttrSet::GetStaminaRegenRateAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetWeaponRateOfFireAttribute@UFortWeaponAttrSet@@ + other: ?Prop@?1??GetWeaponRateOfFireAttribute@UFortWeaponAttrSet@@S",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00854930 UFortWeaponAttrSet::GetWeaponRateOfFireAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetWeaponSkillAttribute@UFortDamageSet@@SA?AUFGam + other: ?Prop@?1??GetWeaponSkillAttribute@UFortDamageSet@@SA?AUFGame",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00EE9E60 UFortDamageSet::GetWeaponSkillAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?$TSS0@?1??GetWorldInventorySizeBonusAttribute@UFortHomebase + other: ?Prop@?1??GetWorldInventorySizeBonusAttribute@UFortHomebaseS",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00C2C440 UFortHomebaseSet::GetWorldInventorySizeBonusAttribute"
+   ]
+  },
+  {
+   "key": "attribute-getter | other: ?Prop@?1??GetDurabilityAttribute@UFortBuildingTrapSet@@SA?AU",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x009D30B0 UFortBuildingTrapSet::GetDurabilityAttribute"
    ]
   },
   {

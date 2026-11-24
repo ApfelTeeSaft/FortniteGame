@@ -50,6 +50,9 @@ template<class T> UObject* InternalVTableHelperCtorCaller(FVTableHelper& Helper)
 	typedef void (*ClassAddReferencedObjectsType)(UObject*, class FReferenceCollector&); \
 	typedef UClass* (*StaticClassFunctionType)();
 
+// UObject/UnrealType.h: declared only; the reference's instances are out of line.
+template<typename T> T* FindFieldChecked(const UStruct* Owner, FName FieldName);
+
 #include "UHT/Classes.gen.h"
 
 void GetPrivateStaticClassBody(
