@@ -1563,6 +1563,45 @@ jump to them, with no regressions. Of the 662 bodies left:
 - 63 wait only on `PrivateStaticClass`, 23 on `AddReferencedObjects`, and the rest on
   several fields or a `StaticRegisterNatives` with natives.
 
+**Interleaved runs and inlined constructors (2026-11-24).** 540 bodies were left that wait
+only on `InternalConstructor<C>`. In the reference, 374 of these instances sit at an address
+where another class's instance is also observed. ICF merged them because the two constructors
+are identical: the same superclass constructor call and the same vtable. The constructor
+behind RVA 0x00544ED0 stores one vtable for all its classes, so their vtables were folded too.
+Nothing independent of the field under test says which classes these are:
+- `analysis/vtables.json` was derived through `InternalConstructor<C>` itself;
+- grouping by superclass and form gets the fold address wrong 27 times. For example, 84
+  `UInterface` children fold to RVA 0x00544ED0 and 4 fold elsewhere;
+- taking a subclass's constructor's first call as the superclass constructor is right 5
+  times and wrong 17 times.
+
+These stay open. Two changes help the 166 unfolded instances:
+- *Interleaved runs.* In some units the reference run also holds instances from a
+  neighbouring unit, one original object compiled here as two. Example:
+  `OnlineSubsystemUtils.1`'s `UAchievementQueryCallbackProxy` … `UEndTurnCallbackProxy`
+  sit between `.2`'s `ATestBeaconHost` and `UFindSessionsCallbackProxy`. The far side then
+  predicts a slot where such an instance is observed. When the sides disagree and exactly one
+  side's prediction is held by another symbol, that side is dropped, and the other is
+  checked as a one-sided prediction.
+  - Dropping a held side even when the two sides agree lost 32 exact matches. In those, both
+    sides arrive at a folded neighbour's copy, which is right.
+- *Declared-only instances* (inlined constructors) may now be one-sided. At the prediction,
+  the reference must start a `.pdata` function whose prologue loads `X.GetObj()` from
+  `[rcx]` and tests it for null, or hold a `jmp` to such a function (some instances are
+  5-byte jumps). Without a left side, such an instance is sized by the reference function that ends,
+  16-byte aligned, where the right walk arrived (only an end no other function shares).
+
+Run offline on the dumped observations, the real `_internal_constructor_run` made 94 more
+predictions, 88 of them for bodies waiting only on the instance. None was wrong, and all
+2,684 exact bodies kept theirs. The comparer made 88 `GetPrivateStaticClass` bodies and 2
+`StaticClass` thunks exact, with no regressions.
+
+Of the 452 bodies still waiting only on `InternalConstructor<C>`:
+- 374 are folded;
+- 35 have no other member of their run observed unfolded;
+- in 35 the sides disagree and neither prediction is held;
+- in 8 a single side's prediction fails its body or shape check.
+
 ### `.bss` statics: creator order and rigid pairs
 
 The remaining `.bss` statics were studied offline from `compare.py --dump-observations`: the

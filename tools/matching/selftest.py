@@ -629,6 +629,25 @@ def test_folded_and_code_run() -> None:
     r.dimg = NS(read=lambda a, n: bytes(n))
     assert run("B", {"A": 0x1000}) is None
     assert r._internal_constructor_run(o, "u", gp("A"), 9) is None
+    # The sides disagree, and the right side's prediction is another unit's instance, observed
+    # (the runs interleave): only the left side is left, checked against the reference body.
+    r.dimg = NS(read=lambda a, n: (body if a == 0x1020 else bytes(n))[:n])
+    r._rf_end = {}
+    assert run("B", {"A": 0x1000, "C": 0x1060}, {0x1040: {ic("Foreign"): {5}}}) == 0x1020
+    assert run("B", {"A": 0x1000, "C": 0x1060}) is None                        # neither side held
+    # Declared only (C), one side: the reference must start an InternalConstructor with an
+    # inlined constructor there: [rcx] (X.GetObj()) loaded and tested for null, or a jump to one.
+    shape = bytes.fromhex("40534883ec20488b194885db7453488b")
+    code = {0x1040: shape, 0x2000: shape, 0x3000: bytes.fromhex("e9fbefffffcc") + bytes(10),
+            0x4000: bytes.fromhex("40534883ec20488b1a4885db7453488b")}
+    r.dimg = NS(read=lambda a, n: code.get(a, bytes(16))[:n])
+    r._rf_end = {0x1040: 0x1069, 0x2000: 0x2029, 0x4000: 0x4029}
+    assert run("C", {"A": 0x1000, "B": 0x1020}) == 0x1040
+    r._rf_end = {0x2000: 0x2029}
+    assert run("C", {"A": 0x1000, "B": 0x1020}) is None                        # no function starts there
+    assert r._inlined_constructor_shape(0x3000)                                # jmp to such a function
+    r._rf_end = {0x4000: 0x4029}
+    assert not r._inlined_constructor_shape(0x4000)                            # [rdx], not X.GetObj()
     print("folded bodies and code runs: ok")
 
 

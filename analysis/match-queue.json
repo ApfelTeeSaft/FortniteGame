@@ -7,13 +7,13 @@
   "partial",
   "unmatched"
  ],
- "total": 930,
+ "total": 842,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
-   "count": 540,
+   "count": 452,
    "states": {
-    "relocation-equivalent": 540
+    "relocation-equivalent": 452
    },
    "examples": [
     "0x0027B4C0 UBlueprintContextBase::GetPrivateStaticClass",
@@ -80,6 +80,20 @@
    ]
   },
   {
+   "key": "uht-getprivatestaticclass | StaticRegisterNatives<Class>",
+   "count": 29,
+   "states": {
+    "relocation-equivalent": 29
+   },
+   "examples": [
+    "0x005B8C30 UPartyMemberState::GetPrivateStaticClass",
+    "0x00805E50 UAppleARKitPlaneAnchor::GetPrivateStaticClass",
+    "0x00FC9990 UFortConsumableAccountItem::GetPrivateStaticClass",
+    "0x0102CF40 UFortMcpProfileAccount::GetPrivateStaticClass",
+    "0x0102D0A0 UFortMcpProfileCollectionBook::GetPrivateStaticClass"
+   ]
+  },
+  {
    "key": "uht-staticstruct | singleton (.bss)",
    "count": 25,
    "states": {
@@ -91,20 +105,6 @@
     "0x006A7FE0 FPurchaseFlowReceiptParam::StaticStruct",
     "0x0077F740 FChatChromeColorScheme::StaticStruct",
     "0x007AF510 FProfileUpdateNotification::StaticStruct"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | StaticRegisterNatives<Class>",
-   "count": 24,
-   "states": {
-    "relocation-equivalent": 24
-   },
-   "examples": [
-    "0x005B8C30 UPartyMemberState::GetPrivateStaticClass",
-    "0x00805E50 UAppleARKitPlaneAnchor::GetPrivateStaticClass",
-    "0x00FC9990 UFortConsumableAccountItem::GetPrivateStaticClass",
-    "0x0102CF40 UFortMcpProfileAccount::GetPrivateStaticClass",
-    "0x0102D0A0 UFortMcpProfileCollectionBook::GetPrivateStaticClass"
    ]
   },
   {
@@ -161,20 +161,6 @@
     "0x023CE660 Z_Construct_UEnum_Engine_AnimationCompressionFormat",
     "0x023D6980 Z_Construct_UEnum_Engine_ETemperatureSeverityType",
     "0x023E39E0 Z_Construct_UEnum_Engine_EApplicationState"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + StaticRegisterNatives<Class>",
-   "count": 6,
-   "states": {
-    "relocation-equivalent": 6
-   },
-   "examples": [
-    "0x0102D150 UFortMcpProfileMetadata::GetPrivateStaticClass",
-    "0x028D59F0 UFortLoginResultWidget::GetPrivateStaticClass",
-    "0x028D5AA0 UFortLoginStatus::GetPrivateStaticClass",
-    "0x028FA0C0 UFortSquadSlotItemDetailElementWidget::GetPrivateStaticClass",
-    "0x02902FB0 UFortSurvivorSquadStatMatchesBase::GetPrivateStaticClass"
    ]
   },
   {
@@ -365,13 +351,13 @@
    ]
   },
   {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + other: ?AddReferencedObjects@ULandscapeComponent@@SAXPEAVUObject@@A",
+   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + StaticRegisterNatives<Class>",
    "count": 1,
    "states": {
     "relocation-equivalent": 1
    },
    "examples": [
-    "0x01A73BB0 ULandscapeComponent::GetPrivateStaticClass"
+    "0x028FA0C0 UFortSquadSlotItemDetailElementWidget::GetPrivateStaticClass"
    ]
   },
   {
@@ -532,6 +518,16 @@
    },
    "examples": [
     "0x02910130 UFortUIMessageManager::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | other: ?AddReferencedObjects@ULandscapeComponent@@SAXPEAVUObject@@A",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01A73BB0 ULandscapeComponent::GetPrivateStaticClass"
    ]
   },
   {

@@ -426,25 +426,71 @@ class Resolver:
                 if af + s == cur:
                     cur = af
             mine = slot(symbol, preds["left"][0] if "left" in preds else None)
+            if mine is None and symbol not in bodies and cur is not None:
+                # Declared only, with no left side to size it: the reference function that ends
+                # (16-byte aligned) where the walk arrived, if exactly one does.
+                begin = self._rf_by_aligned_end().get(cur)
+                mine = cur - begin if begin is not None else None
             if cur is not None and mine:
                 preds["right"] = (cur - mine, items[j])
         if "left" in preds and "right" in preds:
-            if preds["left"][0] != preds["right"][0]:
+            if preds["left"][0] == preds["right"][0]:
+                return [(preds["left"][0], f"code layout (InternalConstructor run in GetPrivateStaticClass order) "
+                                           f"between {preds['left'][1]} and {preds['right'][1]}")]
+            # The sides disagree. A side whose prediction another symbol is observed at walked past
+            # instances this run does not hold: in the reference a unit's run can interleave with
+            # a neighbouring unit's (one original object, compiled here as two). Only the other
+            # side, checked as a one-sided prediction below, is left.
+            held = [s for s, (p, _) in preds.items()
+                    if any(ents - {exclude} for k, ents in self.by_addr.get(p, {}).items() if k != symbol)]
+            if len(held) != 1:
                 return None
-            return [(preds["left"][0], f"code layout (InternalConstructor run in GetPrivateStaticClass order) "
-                                       f"between {preds['left'][1]} and {preds['right'][1]}")]
-        if len(preds) != 1 or symbol not in bodies or getattr(self, "dimg", None) is None:
+            del preds[held[0]]
+        if len(preds) != 1 or getattr(self, "dimg", None) is None:
             return None
         side, (p, anchor) = next(iter(preds.items()))
-        body, rels = bodies[symbol]
-        ref = self.dimg.read(p, len(body))
-        masked = {o + d for o in rels for d in range(4)}
-        if any(body[k] != ref[k] for k in range(len(body)) if k not in masked):
-            return None
         if any(ents - {exclude} for k, ents in self.by_addr.get(p, {}).items() if k != symbol):
             return None
-        return [(p, f"code layout (InternalConstructor run, {side} side only, from {anchor}); "
-                    "the reference holds this instance's body there")]
+        if symbol in bodies:
+            body, rels = bodies[symbol]
+            ref = self.dimg.read(p, len(body))
+            masked = {o + d for o in rels for d in range(4)}
+            if any(body[k] != ref[k] for k in range(len(body)) if k not in masked):
+                return None
+            what = "the reference holds this instance's body there"
+        elif self._inlined_constructor_shape(p):
+            what = "the reference starts an InternalConstructor with an inlined constructor there"
+        else:
+            return None
+        return [(p, f"code layout (InternalConstructor run, {side} side only, from {anchor}); {what}")]
+
+    def _rf_by_aligned_end(self) -> dict[int, int]:
+        """Reference .pdata functions by their end rounded up to 16 (only ends no other function shares)."""
+        m = getattr(self, "_rf_aligned_end", None)
+        if m is None:
+            img = getattr(self, "img", None)
+            seen = Counter()
+            pairs = [(((r.end + 15) & ~15), r.begin) for r in img.runtime_functions()] if img is not None else []
+            for e, _ in pairs:
+                seen[e] += 1
+            m = self._rf_aligned_end = {e: b for e, b in pairs if seen[e] == 1}
+        return m
+
+    def _inlined_constructor_shape(self, addr: int) -> bool:
+        """Whether the reference at `addr` starts an InternalConstructor<C> whose constructor is
+        inlined (an instance this build declares only), or jumps straight to one: a .pdata function
+        whose prologue loads X.GetObj() from [rcx] into a register and tests it for null."""
+        b = self.dimg.read(addr, 16)
+        if b[:1] == b"\xe9":
+            addr += 5 + int.from_bytes(b[1:5], "little", signed=True)
+            b = self.dimg.read(addr, 16)
+        if addr not in (getattr(self, "_rf_end", None) or {}):
+            return False
+        m = re.match(rb"(?:\x40?[\x50-\x57])?\x48\x83\xec[\x08-\x78]\x48\x8b([\x00-\x3f])\x48\x85([\xc0-\xff])", b, re.S)
+        if not m or m.group(1)[0] & 7 != 1:
+            return False
+        reg = m.group(1)[0] >> 3 & 7
+        return m.group(2)[0] == 0xC0 | reg << 3 | reg
 
     def _referenced_by_code(self, addr: int, exclude: int | None = None) -> bool:
         """Whether exactly one `lea reg, [rip+disp]` in the reference's .text, outside the entry
