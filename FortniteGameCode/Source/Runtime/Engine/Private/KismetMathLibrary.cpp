@@ -83,6 +83,14 @@ namespace EEasingFunc
 	static int32 RandomIntegerFromStream(int32 Max, const FRandomStream& Stream); \
 	static int32 RandomIntegerInRangeFromStream(int32 Min, int32 Max, const FRandomStream& Stream); \
 	static FRotator RandomRotatorFromStream(bool bRoll, const FRandomStream& Stream); \
+	static FRotator ComposeRotators(FRotator A, FRotator B); \
+	static FRotator TransformRotation(const FTransform& T, FRotator Rotation); \
+	static FRotator InverseTransformRotation(const FTransform& T, FRotator Rotation); \
+	static FRotator RLerp(FRotator A, FRotator B, float Alpha, bool bShortestPath); \
+	static FRotator REase(FRotator A, FRotator B, float Alpha, bool bShortestPath, TEnumAsByte<EEasingFunc::Type> EasingFunc, float BlendExp = 2, int32 Steps = 2); \
+	static FRotator RotatorFromAxisAndAngle(FVector Axis, float Angle); \
+	static FRotator MakeRotationFromAxes(FVector Forward, FVector Right, FVector Up); \
+	static FVector RotateAngleAxis(FVector InVect, float AngleDeg, FVector Axis); \
 	static void ReportError_Divide_ByteByte(); \
 	static void ReportError_Percent_ByteByte(); \
 	static void ReportError_Divide_IntInt(); \
@@ -97,6 +105,40 @@ namespace EEasingFunc
 	static void ReportError_DaysInMonth();
 
 #include "FortniteGameCode/UHTRecovered.h"
+
+// The engine headers' GlobalVectorConstants (UnrealMathVectorConstants.h) of this unit: the 21
+// whose leaf dynamic initializers store to its .bss in the reference (0x04897730-0x04897890,
+// around the Blueprint warning ids; the initializers at 0x001D0730-0x001D0A30), in header order.
+// QuatRecovered.h reads them.
+#include "FortniteGameCode/VectorRecovered.h"
+namespace GlobalVectorConstants
+{
+#define SIGN_BIT ((1 << 31))
+	static const VectorRegister FloatOne = MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f);
+	static const VectorRegister FloatZero = MakeVectorRegister(0.0f, 0.0f, 0.0f, 0.0f);
+	static const VectorRegister FloatMinusOne = MakeVectorRegister(-1.0f, -1.0f, -1.0f, -1.0f);
+	static const VectorRegister Float0001 = MakeVectorRegister( 0.0f, 0.0f, 0.0f, 1.0f );
+	static const VectorRegister SmallLengthThreshold = MakeVectorRegister(1.e-8f, 1.e-8f, 1.e-8f, 1.e-8f);
+	static const VectorRegister FloatOneHalf = MakeVectorRegister( 0.5f, 0.5f, 0.5f, 0.5f );
+	static const VectorRegister SmallNumber = MakeVectorRegister( SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER );
+	static const VectorRegister QINV_SIGN_MASK = MakeVectorRegister( -1.f, -1.f, -1.f, 1.f );
+	static const VectorRegister QMULTI_SIGN_MASK0 = MakeVectorRegister( 1.f, -1.f, 1.f, -1.f );
+	static const VectorRegister QMULTI_SIGN_MASK1 = MakeVectorRegister( 1.f, 1.f, -1.f, -1.f );
+	static const VectorRegister QMULTI_SIGN_MASK2 = MakeVectorRegister( -1.f, 1.f, 1.f, -1.f );
+	static const VectorRegister DEG_TO_RAD = MakeVectorRegister(PI/(180.f), PI/(180.f), PI/(180.f), PI/(180.f));
+	static const VectorRegister XYZMask = MakeVectorRegister((uint32)0xffffffff, (uint32)0xffffffff, (uint32)0xffffffff, (uint32)0x00000000);
+	static const VectorRegister SignBit = MakeVectorRegister((uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT, (uint32)SIGN_BIT);
+	static const VectorRegister SignMask = MakeVectorRegister((uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT));
+	static const VectorRegister Pi = MakeVectorRegister(PI, PI, PI, PI);
+	static const VectorRegister TwoPi = MakeVectorRegister(2.0f*PI, 2.0f*PI, 2.0f*PI, 2.0f*PI);
+	static const VectorRegister PiByTwo = MakeVectorRegister(0.5f*PI, 0.5f*PI, 0.5f*PI, 0.5f*PI);
+	static const VectorRegister OneOverTwoPi = MakeVectorRegister(1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI), 1.0f / (2.0f*PI));
+	static const VectorRegister Float360 = MakeVectorRegister(360.f, 360.f, 360.f, 360.f);
+	static const VectorRegister Float180 = MakeVectorRegister(180.f, 180.f, 180.f, 180.f);
+#undef SIGN_BIT
+}
+#include "FortniteGameCode/TransformRecovered.h"
+#include "FortniteGameCode/QuatRecovered.h"
 
 // Kismet/KismetMathLibrary.inl (KISMET_MATH_FORCEINLINE: inline outside debug builds).
 __forceinline float UKismetMathLibrary::Lerp(float A, float B, float V)
@@ -923,6 +965,106 @@ FRotator UKismetMathLibrary::RandomRotatorFromStream(bool bRoll, const FRandomSt
 		RRot.Roll = 0;
 	}
 	return RRot;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02076420 (end 0x020764D2)
+// Original VA: 0x0000000142076420 | File offset: 0x02075A20
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execComposeRotators; FRotator::Quaternion (0x011A0970), the VectorQuaternionMultiply product (QMULTI_SIGN_MASK0-2), FQuat::Rotator (0x011A2050) through FRotator(const FQuat&) (0x01188C70).
+FRotator UKismetMathLibrary::ComposeRotators(FRotator A, FRotator B)
+{
+	FQuat AQuat = FQuat(A);
+	FQuat BQuat = FQuat(B);
+
+	return FRotator(BQuat*AQuat);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02094CE0 (end 0x02094D78)
+// Original VA: 0x0000000142094CE0 | File offset: 0x020942E0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execTransformRotation; FRotator::Quaternion (0x011A0970), the VectorQuaternionMultiply product (QMULTI_SIGN_MASK0-2), FQuat::Rotator (0x011A2050), the transform's rotation first.
+FRotator UKismetMathLibrary::TransformRotation(const FTransform& T, FRotator Rotation)
+{
+	return T.TransformRotation(Rotation.Quaternion()).Rotator();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02085B40 (end 0x02085C1B)
+// Original VA: 0x0000000142085B40 | File offset: 0x02085140
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execInverseTransformRotation; as TransformRotation with the rotation's scalar inverse (sign-mask xorps).
+FRotator UKismetMathLibrary::InverseTransformRotation(const FTransform& T, FRotator Rotation)
+{
+	return T.InverseTransformRotation(Rotation.Quaternion()).Rotator();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208CF60 (end 0x0208D17A)
+// Original VA: 0x000000014208CF60 | File offset: 0x0208C560
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execRLerp; for the shortest path FQuat::Slerp_NotNormalized (0x011A5A50), two vector
+//   normalizations (Float0001, FloatOneHalf) and FQuat::Rotator, else A + Alpha * (B - A).
+FRotator UKismetMathLibrary::RLerp(FRotator A, FRotator B, float Alpha, bool bShortestPath)
+{
+	FRotator DeltaAngle = B - A;
+
+	// if shortest path, we use Quaternion to interpolate instead of using FRotator
+	if (bShortestPath)
+	{
+		FQuat AQuat(A);
+		FQuat BQuat(B);
+
+		FQuat Result = FQuat::Slerp(AQuat, BQuat, Alpha);
+		Result.Normalize();
+
+		return Result.Rotator();
+	}
+
+	return A + Alpha*DeltaAngle;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208CEE0 (end 0x0208CF5B)
+// Original VA: 0x000000014208CEE0 | File offset: 0x0208C4E0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execREase; RLerp (0x0208CF60) with EaseAlpha (0x0207AC60).
+FRotator UKismetMathLibrary::REase(FRotator A, FRotator B, float Alpha, bool bShortestPath, TEnumAsByte<EEasingFunc::Type> EasingFunc, float BlendExp, int32 Steps)
+{
+	return RLerp(A, B, EaseAlpha(Alpha, EasingFunc, BlendExp, Steps), bShortestPath);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208F0A0 (end 0x0208F35F)
+// Original VA: 0x000000014208F0A0 | File offset: 0x0208E6A0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execRotatorFromAxisAndAngle; the axis's safe normal, FQuat(Axis, Angle) by FMath::SinCos,
+//   then FQuat::Rotator (0x011A2050).
+FRotator UKismetMathLibrary::RotatorFromAxisAndAngle(FVector Axis, float Angle)
+{
+	FVector SafeAxis = Axis.GetSafeNormal(); // Make sure axis is unit length
+	return FQuat(SafeAxis, FMath::DegreesToRadians(Angle)).Rotator();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02089FA0 (end 0x0208A2D6)
+// Original VA: 0x0000000142089FA0 | File offset: 0x020895A0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execMakeRotationFromAxes; three FVector::Normalize, the matrix of the axes and
+//   FVector::ZeroVector, then FMatrix::Rotator (0x011A1EC0).
+FRotator UKismetMathLibrary::MakeRotationFromAxes(FVector Forward, FVector Right, FVector Up)
+{
+	Forward.Normalize();
+	Right.Normalize();
+	Up.Normalize();
+
+	FMatrix RotMatrix(Forward, Right, Up, FVector::ZeroVector);
+
+	return RotMatrix.Rotator();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0208EF30 (end 0x0208F09A)
+// Original VA: 0x000000014208EF30 | File offset: 0x0208E530
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execRotateAngleAxis; the out-of-line FVector::RotateAngleAxis (0x00579DF0) with the axis's
+//   safe normal.
+FVector  UKismetMathLibrary::RotateAngleAxis(FVector InVect, float AngleDeg, FVector Axis)
+{
+	return InVect.RotateAngleAxis(AngleDeg, Axis.GetSafeNormal());
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0208D930 (end 0x0208D947)

@@ -46,6 +46,7 @@ struct FVector;
 struct FVector2D;
 struct FRotator;
 struct FLinearColor;
+struct FQuat;
 template<typename InElementType, typename InAllocator> class TArray;
 
 struct FGenericPlatformMath
@@ -223,8 +224,40 @@ struct FMath : public FPlatformMath
 		return InMin + (InMax - InMin) * FRand();
 	}
 
+	static __forceinline float Acos( float Value ) { return acosf( (Value<-1.f) ? -1.f : ((Value<1.f) ? Value : 1.f) ); }
+
+	static __forceinline float FloatSelect( float Comparand, float ValueGEZero, float ValueLTZero )
+	{
+		return Comparand >= 0.f ? ValueGEZero : ValueLTZero;
+	}
+
+#define FASTASIN_HALF_PI (1.5707963050f)
+	static __forceinline float FastAsin(float Value)
+	{
+		// Clamp input to [-1,1].
+		bool nonnegative = (Value >= 0.0f);
+		float x = FMath::Abs(Value);
+		float omx = 1.0f - x;
+		if (omx < 0.0f)
+		{
+			omx = 0.0f;
+		}
+		float root = FMath::Sqrt(omx);
+		// 7-degree minimax approximation
+		float result = ((((((-0.0012624911f * x + 0.0066700901f) * x - 0.0170881256f) * x + 0.0308918810f) * x - 0.0501743046f) * x + 0.0889789874f) * x - 0.2145988016f) * x + FASTASIN_HALF_PI;
+		result *= root;  // acos(|x|)
+		// acos(x) = pi - acos(-x) when x < 0, asin(x) = pi/2 - acos(x)
+		return (nonnegative ? FASTASIN_HALF_PI - result : result - FASTASIN_HALF_PI);
+	}
+#undef FASTASIN_HALF_PI
+
 	template< class T >
 	static __forceinline T Square( const T A ) { return A*A; }
+
+	static __forceinline bool IsNearlyEqual(float A, float B, float ErrorTolerance = SMALL_NUMBER)
+	{
+		return Abs<float>( A - B ) <= ErrorTolerance;
+	}
 
 	static __forceinline bool IsNearlyZero(float Value, float ErrorTolerance = SMALL_NUMBER)
 	{
@@ -442,12 +475,34 @@ struct FRotator
 	float Yaw;
 	float Roll;
 	__forceinline FRotator() { }
+	__forceinline FRotator( float InPitch, float InYaw, float InRoll ) : Pitch(InPitch), Yaw(InYaw), Roll(InRoll) { }
+	explicit FRotator( const FQuat& Quat );   // CORE_API, Math/UnrealMath.cpp
+
+	__forceinline FRotator operator+( const FRotator& R ) const
+	{
+		return FRotator( Pitch+R.Pitch, Yaw+R.Yaw, Roll+R.Roll );
+	}
+	__forceinline FRotator operator-( const FRotator& R ) const
+	{
+		return FRotator( Pitch-R.Pitch, Yaw-R.Yaw, Roll-R.Roll );
+	}
+	__forceinline FRotator operator*( float Scale ) const
+	{
+		return FRotator( Pitch*Scale, Yaw*Scale, Roll*Scale );
+	}
 
 	FVector Vector() const;
+	FQuat Quaternion() const;   // CORE_API (vectorized; out of line)
+	FRotator GetInverse() const;   // CORE_API
 
 	static float ClampAxis( float Angle );
 	static float NormalizeAxis( float Angle );
 };
+
+__forceinline FRotator operator*( float Scale, const FRotator& R )
+{
+	return R.operator*( Scale );
+}
 
 __forceinline float FRotator::ClampAxis( float Angle )
 {
@@ -500,6 +555,15 @@ struct FVector
 		return FVector(X * RScale, Y * RScale, Z * RScale);
 	}
 	__forceinline float operator|(const FVector& V) const { return X*V.X + Y*V.Y + Z*V.Z; }
+	__forceinline FVector operator^(const FVector& V) const
+	{
+		return FVector
+			(
+			Y * V.Z - Z * V.Y,
+			Z * V.X - X * V.Z,
+			X * V.Y - Y * V.X
+			);
+	}
 	__forceinline FVector operator+=(const FVector& V)
 	{
 		X += V.X; Y += V.Y; Z += V.Z;
@@ -527,6 +591,21 @@ struct FVector
 	}
 
 	__forceinline FVector GetClampedToSize(float Min, float Max) const;
+
+	__forceinline bool Normalize(float Tolerance=SMALL_NUMBER)
+	{
+		const float SquareSum = X*X + Y*Y + Z*Z;
+		if(SquareSum > Tolerance)
+		{
+			const float Scale = FMath::InvSqrt(SquareSum);
+			X *= Scale; Y *= Scale; Z *= Scale;
+			return true;
+		}
+		return false;
+	}
+
+	// Inline in Math/Vector.h; the reference calls an out-of-line copy, defined in UnrealMath.cpp.
+	FVector RotateAngleAxis( const float AngleDeg, const FVector& Axis ) const;
 
 	FRotator ToOrientationRotator() const;
 	FRotator Rotation() const;
@@ -670,6 +749,16 @@ public:
 	// matrix local as a buffer: the reference's FRotationMatrix temporaries have no cookie.
 	__forceinline FMatrix() { }
 
+	__forceinline FMatrix(const FVector& InX,const FVector& InY,const FVector& InZ,const FVector& InW)
+	{
+		M[0][0] = InX.X; M[0][1] = InX.Y;  M[0][2] = InX.Z;  M[0][3] = 0.0f;
+		M[1][0] = InY.X; M[1][1] = InY.Y;  M[1][2] = InY.Z;  M[1][3] = 0.0f;
+		M[2][0] = InZ.X; M[2][1] = InZ.Y;  M[2][2] = InZ.Z;  M[2][3] = 0.0f;
+		M[3][0] = InW.X; M[3][1] = InW.Y;  M[3][2] = InW.Z;  M[3][3] = 1.0f;
+	}
+
+	FRotator Rotator() const;   // CORE_API, Math/UnrealMath.cpp
+
 	inline FVector GetScaledAxis( EAxis::Type InAxis ) const
 	{
 		switch ( InAxis )
@@ -711,6 +800,72 @@ class FRotationMatrix
 {
 public:
 	FRotationMatrix(const FRotator& Rot);
+
+	// CORE_API, Math/UnrealMath.cpp
+	static FMatrix MakeFromX(FVector const& XAxis);
+	static FMatrix MakeFromY(FVector const& YAxis);
+	static FMatrix MakeFromZ(FVector const& ZAxis);
+	static FMatrix MakeFromXY(FVector const& XAxis, FVector const& YAxis);
+	static FMatrix MakeFromXZ(FVector const& XAxis, FVector const& ZAxis);
+	static FMatrix MakeFromYX(FVector const& YAxis, FVector const& XAxis);
+	static FMatrix MakeFromYZ(FVector const& YAxis, FVector const& ZAxis);
+	static FMatrix MakeFromZX(FVector const& ZAxis, FVector const& XAxis);
+	static FMatrix MakeFromZY(FVector const& ZAxis, FVector const& YAxis);
+};
+
+// Math/Quat.h. The members that use VectorRegister code and the unit's GlobalVectorConstants
+// (operator*, Normalize, GetNormalized, Slerp) are defined in QuatRecovered.h, which a unit
+// includes after defining its constants.
+__declspec(align(16)) struct FQuat
+{
+public:
+	float X;
+	float Y;
+	float Z;
+	float W;
+
+	__forceinline FQuat() { }
+	__forceinline FQuat( float InX, float InY, float InZ, float InW )
+		: X(InX)
+		, Y(InY)
+		, Z(InZ)
+		, W(InW)
+	{ }
+	__forceinline FQuat(const FQuat& Q)   // user-provided in 4.20: copies member by member
+		: X(Q.X)
+		, Y(Q.Y)
+		, Z(Q.Z)
+		, W(Q.W)
+	{ }
+	explicit __forceinline FQuat(const FRotator& R)
+	{
+		*this = R.Quaternion();
+	}
+	__forceinline FQuat( FVector Axis, float AngleRad )
+	{
+		const float half_a = 0.5f * AngleRad;
+		float s, c;
+		FMath::SinCos(&s, &c, half_a);
+
+		X = s * Axis.X;
+		Y = s * Axis.Y;
+		Z = s * Axis.Z;
+		W = c;
+	}
+
+	FQuat operator*( const FQuat& Q ) const;
+	void Normalize(float Tolerance = SMALL_NUMBER);
+	FQuat GetNormalized(float Tolerance = SMALL_NUMBER) const;
+
+	__forceinline FQuat Inverse() const
+	{
+		return FQuat(-X, -Y, -Z, W);
+	}
+
+	FRotator Rotator() const;   // CORE_API, Math/UnrealMath.cpp
+
+	static FQuat Slerp_NotNormalized(const FQuat &Quat1, const FQuat &Quat2, float Slerp);   // CORE_API
+	static FQuat Slerp(const FQuat &Quat1, const FQuat &Quat2, float Slerp);
 };
 
 // Math/Box.h

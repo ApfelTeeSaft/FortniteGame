@@ -308,3 +308,371 @@ FLinearColor FMath::CInterpTo(const FLinearColor& Current, const FLinearColor& T
 
 	return Current + DeltaMove;
 }
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01188C70 (end 0x01188CA0)
+// Original VA: 0x0000000141188C70 | File offset: 0x01188270
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::ComposeRotators (0x02076420) on a quaternion product;
+//   forwards to FQuat::Rotator (0x011A2050). Constructors sort first in UnrealMath.obj's run.
+FRotator::FRotator(const FQuat& Quat)
+{
+	*this = Quat.Rotator();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A2050 (end 0x011A23CF)
+// Original VA: 0x00000001411A2050 | File offset: 0x011A1650
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called after every quaternion result in the Kismet rotator natives (RLerp,
+//   TransformRotation, RotatorFromAxisAndAngle, ...); three branches on the 0.4999995
+//   singularity threshold, FGenericPlatformMath::Atan2 (0x01112E50), FMath::FastAsin and
+//   FRotator::NormalizeAxis (FmodReportError, 0x0126F320). SCOPE_CYCLE_COUNTER is empty in shipping.
+FRotator FQuat::Rotator() const
+{
+	const float SingularityTest = Z*X-W*Y;
+	const float YawY = 2.f*(W*Z+X*Y);
+	const float YawX = (1.f-2.f*(FMath::Square(Y) + FMath::Square(Z)));
+
+	// reference 
+	// http://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
+	// http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/
+
+	// this value was found from experience, the above websites recommend different values
+	// but that isn't the case for us, so I went through different testing, and finally found the case 
+	// where both of world lives happily. 
+	const float SINGULARITY_THRESHOLD = 0.4999995f;
+	const float RAD_TO_DEG = (180.f)/PI;
+	FRotator RotatorFromQuat;
+
+	if (SingularityTest < -SINGULARITY_THRESHOLD)
+	{
+		RotatorFromQuat.Pitch = -90.f;
+		RotatorFromQuat.Yaw = FMath::Atan2(YawY, YawX) * RAD_TO_DEG;
+		RotatorFromQuat.Roll = FRotator::NormalizeAxis(-RotatorFromQuat.Yaw - (2.f * FMath::Atan2(X, W) * RAD_TO_DEG));
+	}
+	else if (SingularityTest > SINGULARITY_THRESHOLD)
+	{
+		RotatorFromQuat.Pitch = 90.f;
+		RotatorFromQuat.Yaw = FMath::Atan2(YawY, YawX) * RAD_TO_DEG;
+		RotatorFromQuat.Roll = FRotator::NormalizeAxis(RotatorFromQuat.Yaw - (2.f * FMath::Atan2(X, W) * RAD_TO_DEG));
+	}
+	else
+	{
+		RotatorFromQuat.Pitch = FMath::FastAsin(2.f*(SingularityTest)) * RAD_TO_DEG;
+		RotatorFromQuat.Yaw = FMath::Atan2(YawY, YawX) * RAD_TO_DEG;
+		RotatorFromQuat.Roll = FMath::Atan2(-2.f*(W*X+Y*Z), (1.f-2.f*(FMath::Square(X) + FMath::Square(Y)))) * RAD_TO_DEG;
+	}
+
+	return RotatorFromQuat;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01194C60 (end 0x01194CC5)
+// Original VA: 0x0000000141194C60 | File offset: 0x01194260
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::execNegateRotator (Kismet function inlined): the
+//   out-of-line FRotator::Quaternion (0x011A0970), the scalar FQuat::Inverse (a sign-mask xorps),
+//   then FQuat::Rotator (0x011A2050).
+FRotator FRotator::GetInverse() const
+{
+	return Quaternion().Inverse().Rotator();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A5A50 (end 0x011A5BC1)
+// Original VA: 0x00000001411A5A50 | File offset: 0x011A5050
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::RLerp (0x0208CF60) between two FRotator::Quaternion
+//   calls; acosf of the clamped cosine, three sinf calls below 0.9999, else linear weights.
+FQuat FQuat::Slerp_NotNormalized(const FQuat& Quat1,const FQuat& Quat2, float Slerp)
+{
+	// Get cosine of angle between quats.
+	const float RawCosom = 
+		    Quat1.X * Quat2.X +
+			Quat1.Y * Quat2.Y +
+			Quat1.Z * Quat2.Z +
+			Quat1.W * Quat2.W;
+	// Unaligned quats - compensate, results in taking shorter route.
+	const float Cosom = FMath::FloatSelect( RawCosom, RawCosom, -RawCosom );
+
+	float Scale0, Scale1;
+
+	if( Cosom < 0.9999f )
+	{	
+		const float Omega = FMath::Acos(Cosom);
+		const float InvSin = 1.f/FMath::Sin(Omega);
+		Scale0 = FMath::Sin( (1.f - Slerp) * Omega ) * InvSin;
+		Scale1 = FMath::Sin( Slerp * Omega ) * InvSin;
+	}
+	else
+	{
+		// Use linear interpolation.
+		Scale0 = 1.0f - Slerp;
+		Scale1 = Slerp;	
+	}
+
+	// In keeping with our flipped Cosom:
+	Scale1 = FMath::FloatSelect( RawCosom, Scale1, -Scale1 );
+
+	FQuat Result;
+		
+	Result.X = Scale0 * Quat1.X + Scale1 * Quat2.X;
+	Result.Y = Scale0 * Quat1.Y + Scale1 * Quat2.Y;
+	Result.Z = Scale0 * Quat1.Z + Scale1 * Quat2.Z;
+	Result.W = Scale0 * Quat1.W + Scale1 * Quat2.W;
+
+	return Result;
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011A1EC0 (end 0x011A2049)
+// Original VA: 0x00000001411A1EC0 | File offset: 0x011A14C0
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::MakeRotationFromAxes (0x02089FA0); pitch and yaw from
+//   the X axis (Atan2, 0x01112E50), then the out-of-line FRotationMatrix constructor
+//   (0x009C4CB0) for the roll's Y axis.
+FRotator FMatrix::Rotator() const
+{
+	const FVector		XAxis	= GetScaledAxis( EAxis::X );
+	const FVector		YAxis	= GetScaledAxis( EAxis::Y );
+	const FVector		ZAxis	= GetScaledAxis( EAxis::Z );
+
+	FRotator	Rotator	= FRotator( 
+									FMath::Atan2( XAxis.Z, FMath::Sqrt(FMath::Square(XAxis.X)+FMath::Square(XAxis.Y)) ) * 180.f / PI, 
+									FMath::Atan2( XAxis.Y, XAxis.X ) * 180.f / PI, 
+									0 
+								);
+	
+	const FVector		SYAxis	= FRotationMatrix( Rotator ).GetScaledAxis( EAxis::Y );
+	Rotator.Roll		= FMath::Atan2( ZAxis | SYAxis, YAxis | SYAxis ) * 180.f / PI;
+
+	return Rotator;
+}
+
+// FVector::RotateAngleAxis is inline in Math/Vector.h; the reference calls one out-of-line copy
+// (COMDAT), from an object not established. The anchor table below makes this unit emit it.
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00579DF0 (end 0x0057A07F)
+// Original VA: 0x0000000140579DF0 | File offset: 0x005793F0
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by UKismetMathLibrary::RotateAngleAxis (0x0208EF30) with the safe-normal
+//   axis; FMath::SinCos of the angle in radians, then the axis-angle rotation matrix applied.
+inline FVector FVector::RotateAngleAxis(const float AngleDeg, const FVector& Axis) const
+{
+	float S, C;
+	FMath::SinCos(&S, &C, FMath::DegreesToRadians(AngleDeg));
+
+	const float XX	= Axis.X * Axis.X;
+	const float YY	= Axis.Y * Axis.Y;
+	const float ZZ	= Axis.Z * Axis.Z;
+
+	const float XY	= Axis.X * Axis.Y;
+	const float YZ	= Axis.Y * Axis.Z;
+	const float ZX	= Axis.Z * Axis.X;
+
+	const float XS	= Axis.X * S;
+	const float YS	= Axis.Y * S;
+	const float ZS	= Axis.Z * S;
+
+	const float OMC	= 1.f - C;
+
+	return FVector(
+		(OMC * XX + C) * X + (OMC * XY - ZS) * Y + (OMC * ZX + YS) * Z,
+		(OMC * XY + ZS) * X + (OMC * YY + C) * Y + (OMC * YZ - XS) * Z,
+		(OMC * ZX - YS) * X + (OMC * YZ + XS) * Y + (OMC * ZZ + C) * Z
+		);
+}
+
+#if FNGC_MATCHING_HARNESS
+// A member function's address does not convert to the anchor table's const void*; an external
+// member pointer keeps the out-of-line copy the same way, without changing its code.
+extern FVector (FVector::* const GFngcAnchor_RotateAngleAxis)(const float, const FVector&) const;
+FVector (FVector::* const GFngcAnchor_RotateAngleAxis)(const float, const FVector&) const = &FVector::RotateAngleAxis;
+#endif
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119B690 (end 0x0119B9E8)
+// Original VA: 0x000000014119B690 | File offset: 0x0119AC90
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotX (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); one axis: its safe normal, the world up (or X when nearly vertical), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromX(FVector const& XAxis)
+{
+	FVector const NewX = XAxis.GetSafeNormal();
+
+	// try to use up if possible
+	FVector const UpVector = ( FMath::Abs(NewX.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+
+	const FVector NewY = (UpVector ^ NewX).GetSafeNormal();
+	const FVector NewZ = NewX ^ NewY;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119C350 (end 0x0119C6A8)
+// Original VA: 0x000000014119C350 | File offset: 0x0119B950
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotY (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); one axis: its safe normal, the world up (or X when nearly vertical), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromY(FVector const& YAxis)
+{
+	FVector const NewY = YAxis.GetSafeNormal();
+
+	// try to use up if possible
+	FVector const UpVector = ( FMath::Abs(NewY.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+
+	const FVector NewZ = (UpVector ^ NewY).GetSafeNormal();
+	const FVector NewX = NewY ^ NewZ;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119D010 (end 0x0119D368)
+// Original VA: 0x000000014119D010 | File offset: 0x0119C610
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotZ (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); one axis: its safe normal, the world up (or X when nearly vertical), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromZ(FVector const& ZAxis)
+{
+	FVector const NewZ = ZAxis.GetSafeNormal();
+
+	// try to use up if possible
+	FVector const UpVector = ( FMath::Abs(NewZ.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+
+	const FVector NewX = (UpVector ^ NewZ).GetSafeNormal();
+	const FVector NewY = NewZ ^ NewX;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119B9F0 (end 0x0119BE9D)
+// Original VA: 0x000000014119B9F0 | File offset: 0x0119AFF0
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotXY (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); two axes: their safe normals, an arbitrary axis when nearly parallel (IsNearlyEqual), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromXY(FVector const& XAxis, FVector const& YAxis)
+{
+	FVector NewX = XAxis.GetSafeNormal();
+	FVector Norm = YAxis.GetSafeNormal();
+
+	// if they're almost same, we need to find arbitrary vector
+	if ( FMath::IsNearlyEqual(FMath::Abs(NewX | Norm), 1.f) )
+	{
+		// make sure we don't ever pick the same as NewX
+		Norm = ( FMath::Abs(NewX.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+	}
+
+	const FVector NewZ = (NewX ^ Norm).GetSafeNormal();
+	const FVector NewY = NewZ ^ NewX;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119BEA0 (end 0x0119C34D)
+// Original VA: 0x000000014119BEA0 | File offset: 0x0119B4A0
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotXZ (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); two axes: their safe normals, an arbitrary axis when nearly parallel (IsNearlyEqual), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromXZ(FVector const& XAxis, FVector const& ZAxis)
+{
+	FVector const NewX = XAxis.GetSafeNormal();
+	FVector Norm = ZAxis.GetSafeNormal();
+
+	// if they're almost same, we need to find arbitrary vector
+	if ( FMath::IsNearlyEqual(FMath::Abs(NewX | Norm), 1.f) )
+	{
+		// make sure we don't ever pick the same as NewX
+		Norm = ( FMath::Abs(NewX.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+	}
+
+	const FVector NewY = (Norm ^ NewX).GetSafeNormal();
+	const FVector NewZ = NewX ^ NewY;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119C6B0 (end 0x0119CB5D)
+// Original VA: 0x000000014119C6B0 | File offset: 0x0119BCB0
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotYX (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); two axes: their safe normals, an arbitrary axis when nearly parallel (IsNearlyEqual), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromYX(FVector const& YAxis, FVector const& XAxis)
+{
+	FVector const NewY = YAxis.GetSafeNormal();
+	FVector Norm = XAxis.GetSafeNormal();
+
+	// if they're almost same, we need to find arbitrary vector
+	if ( FMath::IsNearlyEqual(FMath::Abs(NewY | Norm), 1.f) )
+	{
+		// make sure we don't ever pick the same as NewX
+		Norm = ( FMath::Abs(NewY.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+	}
+	
+	const FVector NewZ = (Norm ^ NewY).GetSafeNormal();
+	const FVector NewX = NewY ^ NewZ;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119CB60 (end 0x0119D00D)
+// Original VA: 0x000000014119CB60 | File offset: 0x0119C160
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotYZ (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); two axes: their safe normals, an arbitrary axis when nearly parallel (IsNearlyEqual), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromYZ(FVector const& YAxis, FVector const& ZAxis)
+{
+	FVector const NewY = YAxis.GetSafeNormal();
+	FVector Norm = ZAxis.GetSafeNormal();
+
+	// if they're almost same, we need to find arbitrary vector
+	if ( FMath::IsNearlyEqual(FMath::Abs(NewY | Norm), 1.f) )
+	{
+		// make sure we don't ever pick the same as NewX
+		Norm = ( FMath::Abs(NewY.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+	}
+
+	const FVector NewX = (NewY ^ Norm).GetSafeNormal();
+	const FVector NewZ = NewX ^ NewY;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119D370 (end 0x0119D81D)
+// Original VA: 0x000000014119D370 | File offset: 0x0119C970
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotZX (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); two axes: their safe normals, an arbitrary axis when nearly parallel (IsNearlyEqual), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromZX(FVector const& ZAxis, FVector const& XAxis)
+{
+	FVector const NewZ = ZAxis.GetSafeNormal();
+	FVector Norm = XAxis.GetSafeNormal();
+
+	// if they're almost same, we need to find arbitrary vector
+	if ( FMath::IsNearlyEqual(FMath::Abs(NewZ | Norm), 1.f) )
+	{
+		// make sure we don't ever pick the same as NewX
+		Norm = ( FMath::Abs(NewZ.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+	}
+
+	const FVector NewY = (NewZ ^ Norm).GetSafeNormal();
+	const FVector NewX = NewY ^ NewZ;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0119D820 (end 0x0119DCCD)
+// Original VA: 0x000000014119D820 | File offset: 0x0119CE20
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: called by the exec thunk of UKismetMathLibrary::MakeRotZY (Kismet function inlined),
+//   before FMatrix::Rotator (0x011A1EC0); two axes: their safe normals, an arbitrary axis when nearly parallel (IsNearlyEqual), two cross products. The nine sort alphabetically in UnrealMath.obj's run.
+FMatrix FRotationMatrix::MakeFromZY(FVector const& ZAxis, FVector const& YAxis)
+{
+	FVector const NewZ = ZAxis.GetSafeNormal();
+	FVector Norm = YAxis.GetSafeNormal();
+
+	// if they're almost same, we need to find arbitrary vector
+	if ( FMath::IsNearlyEqual(FMath::Abs(NewZ | Norm), 1.f) )
+	{
+		// make sure we don't ever pick the same as NewX
+		Norm = ( FMath::Abs(NewZ.Z) < (1.f - KINDA_SMALL_NUMBER) ) ? FVector(0,0,1.f) : FVector(1.f,0,0);
+	}
+
+	const FVector NewX = (Norm ^ NewZ).GetSafeNormal();
+	const FVector NewY = NewZ ^ NewX;
+
+	return FMatrix(NewX, NewY, NewZ, FVector::ZeroVector);
+}

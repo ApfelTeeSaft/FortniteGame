@@ -8,6 +8,8 @@
 
 #include "FortniteGameCode/VectorRecovered.h"
 
+struct FQuat;   // MathDecls.h; the unity units include this header before it
+
 #define VectorZero()					_mm_setzero_ps()
 #define VectorOne()						(GlobalVectorConstants::FloatOne)
 #define VectorSet_W0( Vec )		_mm_and_ps( Vec, GlobalVectorConstants::XYZMask )
@@ -55,4 +57,9 @@ public:
 
 		return *this;
 	}
+
+	// QuatRecovered.h
+	FQuat GetRotation() const;
+	FQuat TransformRotation(const FQuat& Q) const;
+	FQuat InverseTransformRotation(const FQuat& Q) const;
 };

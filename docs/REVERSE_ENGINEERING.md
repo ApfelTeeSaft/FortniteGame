@@ -432,19 +432,81 @@ leaves and `FmodReportError`. The other three `ReportError_*` leaves are relocat
   callers (`GenericPercent_FloatFloat`, `ClampAxis`, `NormalizeAxis`, `FMod`) call. The calls
   resolve to the exact entry; each also has the other three callers as corroboration.
 
-**Open.**
+**Open at the time** (both since resolved or taken up in the seventh family):
 - `ReportError_Sqrt`, `ReportError_ProjectVectorOnToVector` and `ReportError_DaysInMonth`
   each use one warning `FName` that no other entry uses. The reference keeps the four ids in
   declaration order (`DivideByZeroWarning` `0x04897810`, then +8, +0x10, +0x18). Our object
   orders them by v140's own per-name order: `InvalidDate`, `DivideByZero`, `ZeroLength`,
-  `NegativeSqrt`. That order does not depend on use order or symbol count, so section-relative
-  prediction fails. The cause is not established; a unity build or `/Gw` are candidates.
-- Not attempted yet:
-  - the vectorized `FRotator` helpers (`RInterpTo`, `NormalizedDeltaRotator`; they use
-    `GlobalVectorConstants`);
-  - `FQuat`/`FTransform` functions (`ComposeRotators`, `RLerp`, `TLerp`, ...);
+  `NegativeSqrt`. That order does not depend on use order, symbol count or `/Gw`, so
+  section-relative prediction fails. The unit's dynamic initializers now resolve them (seventh
+  family).
+- Not attempted then: the vectorized `FRotator` helpers, `FQuat`/`FTransform` functions, the
+  date and time natives, and `FRotator::RotateVector`/`UnrotateVector`.
+
+## Seventh family: FQuat, FRotationMatrix and the Kismet unit's initializers (2026-11-24)
+
+| Group | Functions | Result |
+| --- | --- | --- |
+| Core quaternion and matrix code | `FRotator::FRotator(const FQuat&)` `0x01188C70`, `FQuat::Rotator` `0x011A2050`, `FRotator::GetInverse` `0x01194C60`, `FQuat::Slerp_NotNormalized` `0x011A5A50`, `FMatrix::Rotator` `0x011A1EC0`, `FVector::RotateAngleAxis` `0x00579DF0` | 6 exact |
+| `FRotationMatrix::MakeFrom*` (`0x0119B690`-`0x0119DCCD`) | `X`, `Y`, `Z`, `XY`, `XZ`, `YX`, `YZ`, `ZX`, `ZY` | 9 exact |
+| Kismet natives | `ComposeRotators`, `TransformRotation`, `InverseTransformRotation`, `RLerp`, `REase`, `RotatorFromAxisAndAngle`, `MakeRotationFromAxes`, `RotateAngleAxis` | 8 exact |
+| Kismet unit's dynamic initializers (`0x001D0730`-`0x001D0A69`) | 21 `GlobalVectorConstants`, the 4 Blueprint warning ids | 11 exact, 14 relocation-equivalent |
+
+All 23 functions are in the denominator. The initializers are leaves outside it.
+
+**Names.**
+- The Kismet natives' Core callees are named, as in the sixth family, by their place in Core's
+  alphabetical COMDAT order: `??0FRotator` sorts first, then `?GetInverse@FRotator`,
+  `?MakeFromX@FRotationMatrix` ... `?MakeFromZY`, `?Rotator@FMatrix` before
+  `?Rotator@FQuat`, and `?Slerp_NotNormalized@FQuat`.
+- The nine `MakeFrom*` bodies are what the exec thunks of `MakeRotFrom*` call before
+  `FMatrix::Rotator`.
+- `FVector::RotateAngleAxis` is inline in `Vector.h`; the reference calls an out-of-line copy.
+  `UnrealMath.cpp` emits it through an external member pointer, since a member function's
+  address does not fit the anchor table.
+
+**What the reconstruction needed.**
+- `FQuat` has a user-provided copy constructor in 4.20 that copies member by member.
+  `IMPLEMENT_ASSIGNMENT_OPERATOR_MANUALLY` gates only `operator=`. Without the constructor,
+  `RLerp` copied the slerp result with one `movaps` where the reference copies four floats.
+- The VectorRegister parts of `FQuat` and `FTransform` live in `QuatRecovered.h`:
+  - `VectorQuaternionMultiply2`, which reads `QMULTI_SIGN_MASK0`-`2`;
+  - `Normalize`, which reads `Float0001` and `FloatOneHalf`;
+  - `FTransform::TransformRotation`.
+
+  A unit includes `QuatRecovered.h` after defining its own constants, as each original unity
+  file has its own copies.
+- `KismetMathLibrary.cpp` defines the 21 constants its reference unit has, in header order.
+
+**Constant slots.** Our object lays out the 21 constants and the 4 warning ids in v140's own
+per-name order. The reference's order is not reproduced:
+- it holds `FloatOne`, `XYZMask`, `SignMask`, `Float180`, ... from `0x04897730`, and the warning
+  ids in declaration order at `0x04897810`;
+- `/Gw` does not change v140's order (tested on the four warning ids).
+
+The unit's own dynamic initializers resolve the slots instead, with no layout model.
+- Each is a leaf at `0x001D0730`-`0x001D0A69` that stores the constant's value, or constructs the
+  warning's `FName`, into its slot. The value or the literal names it.
+- The unit's `??__E` functions sort alphabetically, at every position. That order also tells the
+  two 1e-8 constants apart: `SmallLengthThreshold` (`0x04897890`), then `SmallNumber`
+  (`0x04897780`).
+- As manifest entries, each initializer observes its slot. A function using the constant is then
+  corroborated without the initializer under test, and the reverse.
+
+This resolved `RLerp`'s `Float0001` and `FloatOneHalf`, and the three `ReportError_*` leaves
+left open in the sixth family. The 14 constants no reconstructed function uses yet leave their
+initializers relocation-equivalent, with nothing to corroborate them.
+
+**Open.**
+- The remaining Kismet natives: 56 of the 149 targets, 42 with `.pdata`. They include:
+  - the `FTransform` functions (`TLerp`, `TEase`, `TInterpTo`, `ComposeTransforms`,
+    `InvertTransform`, `Transform_Determinant`, `IsPointInBoxWithTransform`);
+  - `FRotator::Quaternion` (`UnrealMath`'s own constants);
+  - the vectorized `FRotator` helpers;
   - the date and time natives;
-  - `FRotator::RotateVector`/`UnrotateVector` (SSE `TransformFVector4`).
+  - `FRotator::RotateVector`/`UnrotateVector`.
+- `UnrealMath.obj`'s constants (`0x046A0EB0`-`0x046A1040`) are the next set of initializers
+  to recover. `FRotator::Quaternion` uses eleven of them.
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
