@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 1143,
+ "total": 930,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -25,16 +25,16 @@
   },
   {
    "key": "uht-staticenum | singleton (.bss)",
-   "count": 286,
+   "count": 73,
    "states": {
-    "relocation-equivalent": 286
+    "relocation-equivalent": 73
    },
    "examples": [
     "0x002C17E0 EDynamicBoxType_StaticEnum",
     "0x002C1820 EOperation_StaticEnum",
-    "0x002C8A20 ECommonNumericType_StaticEnum",
     "0x002E32B0 EDateType_StaticEnum",
-    "0x002FC0C0 EInAppPurchaseState_StaticEnum"
+    "0x002FC0C0 EInAppPurchaseState_StaticEnum",
+    "0x0032C110 EBeaconConnectionState_StaticEnum"
    ]
   },
   {
@@ -207,11 +207,12 @@
   },
   {
    "key": "uht-staticenum | Z_Construct_* creator",
-   "count": 4,
+   "count": 5,
    "states": {
-    "relocation-equivalent": 4
+    "relocation-equivalent": 5
    },
    "examples": [
+    "0x023CB540 AnimationCompressionFormat_StaticEnum",
     "0x023D4200 ETemperatureSeverityType_StaticEnum",
     "0x023E0A50 EApplicationState_StaticEnum",
     "0x02402630 ECanCreateConnectionResponse_StaticEnum",
@@ -267,18 +268,6 @@
    ]
   },
   {
-   "key": "uht-staticenum | Z_Construct_* creator + singleton (.bss)",
-   "count": 3,
-   "states": {
-    "relocation-equivalent": 3
-   },
-   "examples": [
-    "0x013A7430 ELifetimeCondition_StaticEnum",
-    "0x01D658E0 EMoviePlaybackType_StaticEnum",
-    "0x023CB540 AnimationCompressionFormat_StaticEnum"
-   ]
-  },
-  {
    "key": "uht-staticstruct | Z_Construct_* creator",
    "count": 3,
    "states": {
@@ -311,6 +300,17 @@
    "examples": [
     "0x023E1B20 UBlueprintGeneratedClass::GetPrivateStaticClass",
     "0x024EBAF0 UUserDefinedStruct::GetPrivateStaticClass"
+   ]
+  },
+  {
+   "key": "uht-staticenum | Z_Construct_* creator + singleton (.bss)",
+   "count": 2,
+   "states": {
+    "relocation-equivalent": 2
+   },
+   "examples": [
+    "0x013A7430 ELifetimeCondition_StaticEnum",
+    "0x01D658E0 EMoviePlaybackType_StaticEnum"
    ]
   },
   {

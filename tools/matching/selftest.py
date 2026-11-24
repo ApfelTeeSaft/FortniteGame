@@ -713,21 +713,38 @@ def test_slot_elimination() -> None:
     assert [p for p, _ in r._slot_elimination("A", None)] == [0x100]
     setup({"B": 0x108, "C": 0x110, "D": 0x118})                           # either end: declined
     assert r._slot_elimination("A", None) == []
-    setup({"A": 0x100, "B": 0x108, "D": 0x140})                           # not one block: declined
+    setup({"A": 0x100, "B": 0x108, "D": 0x140})                           # B..D wide, no run info: declined
     assert r._slot_elimination("C", None) == []
-    # Both ends free, but just below the block another unit's .bss closes with a class's
-    # PrivateStaticClass: the block starts directly above it, so A takes the lower end.
+    setup({"A": 0x100, "C": 0x110, "D": 0x120})                           # two gaps: declined
+    assert r._slot_elimination("B", None) == []
+    setup({"A": 0x100, "C": 0x110, "D": 0x118}, {"X": 0x108})            # the gap is someone else's
+    assert r._slot_elimination("B", None) == []
+    # Both ends free, but a class's PrivateStaticClass is observed just below: the block starts
+    # directly above it, so A takes the lower end. Anything else there decides nothing.
     psc = "?PrivateStaticClass@?1??GetPrivateStaticClass@AOther@@CAPEAVUClass@@XZ@4PEAV3@EA"
-    other_obj = "Source/Generated/UHT/Unity/V.1.gen.obj"
-    r.symbol_objects = {"?GetPrivateStaticClass@AOther@@CAPEAVUClass@@XZ": other_obj}
-    r._last_bss = {other_obj: psc}
     setup({"B": 0x108, "C": 0x110, "D": 0x118}, {psc: 0xF8})
     assert [p for p, _ in r._slot_elimination("A", None)] == [0x100]
-    r._last_bss = {other_obj: "?Something@@3PEAXEA"}                    # not its object's last static
+    setup({"B": 0x108, "C": 0x110, "D": 0x118}, {"?ReturnStruct@?1??Z_Construct_UScriptStruct_FS@@YAPEAVUScriptStruct@@XZ@4PEAV2@EA": 0xF8})
     assert r._slot_elimination("A", None) == []
-    r._last_bss = {"Source/Generated/UHT/Unity/U.1.s2.gen.obj": psc}     # the block's own unit
-    r.symbol_objects = {"?GetPrivateStaticClass@AOther@@CAPEAVUClass@@XZ": "Source/Generated/UHT/Unity/U.1.s2.gen.obj"}
-    assert r._slot_elimination("A", None) == []
+    # Clusters: a unit whose singletons sit in two places. Runs (.s<k> objects) are ascending
+    # ranges of clusters; a member's cluster comes from its own run or the runs around it.
+    sg = lambda n: f"?Singleton@?1??{n}_StaticEnum@@YAPEAVUEnum@@XZ@4PEAV2@EA"
+    runs = {"P": 1, "Q": 1, "R": 2, "S": 3, "T": 3, "V": 4}
+    block2 = {"unit": "U.2", "slot": 8, "symbols": [sg(n) for n in runs]}
+    r.blocks = {m: block2 for m in block2["symbols"]}
+    r.symbol_objects = {f"?{n}_StaticEnum@@YAPEAVUEnum@@XZ": f"Source/Generated/UHT/Unity/U.2.s{k}.gen.obj"
+                        for n, k in runs.items()}
+    setup({sg("P"): 0x200, sg("R"): 0x208, sg("S"): 0x400, sg("T"): 0x408, sg("V"): 0x410}, {"?Other@@3PEAXEA": 0x1F8})
+    assert [p for p, _ in r._slot_elimination(sg("Q"), None)] == [0x210]   # run 1's cluster, its free end
+    setup({sg("P"): 0x200, sg("Q"): 0x208, sg("R"): 0x210, sg("S"): 0x400, sg("V"): 0x410})
+    assert [p for p, _ in r._slot_elimination(sg("T"), None)] == [0x408]   # a gap, whatever the cluster
+    setup({sg("P"): 0x200, sg("Q"): 0x208, sg("R"): 0x210, sg("T"): 0x408, sg("V"): 0x410}, {psc: 0x3F8})
+    assert [p for p, _ in r._slot_elimination(sg("S"), None)] == [0x400]   # after a PrivateStaticClass
+    setup({sg("P"): 0x200, sg("Q"): 0x208, sg("S"): 0x400, sg("T"): 0x408, sg("V"): 0x410})
+    assert r._slot_elimination(sg("R"), None) == []                        # between clusters, 4 free ends
+    setup({sg("P"): 0x400, sg("Q"): 0x408, sg("R"): 0x200, sg("T"): 0x208, sg("V"): 0x210})
+    assert r._slot_elimination(sg("S"), None) == []                        # runs out of order
+    r.blocks = {m: block for m in block["symbols"]}
     print("slot elimination: ok")
 
 

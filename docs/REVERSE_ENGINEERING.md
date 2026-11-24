@@ -1151,6 +1151,55 @@ An offline simulation gave 44 right and none wrong. Two weaker variants were rej
 Two structural guesses failed outright: the block start is not 16-byte aligned (62 of 128
 contiguous blocks are), and the unit's plain `.bss` alignment does not predict it either.
 
+**Slot elimination first, and clusters (2026-11-24).** Two things left 286 singletons open.
+
+- *The order of evidence.* The section-relative prediction ran first. Inside a block it
+  follows our source order, which MSVC rotates in 40 of 179 units. There its wrong prediction
+  came before slot elimination, so 103 singletons stayed open although they sat in the only
+  gap of their block. Slot elimination now runs first for block members, and section-relative
+  is the fallback. Against the last run's observations, slot elimination decides 781 of the
+  795 exact singletons and agrees with all of them.
+- *Clusters.* In 9 units the singletons sit in two to four places, 900 to 3,700 bytes apart.
+  Each run (the `.s<k>` object of consecutive enums, numbered in source order) lies in one
+  place. The places hold ascending ranges of runs, in all 9 units. Example, `FortniteUI.6`:
+  - runs 1 and 2 open the unit's `.bss`;
+  - runs 3 to 5 sit between `UFortGridPickerButton`'s `PrivateStaticClass` and
+    `UFortGridPickerGrid`'s `OuterClass`.
+
+  Whether these are separate original objects is not known.
+
+`_slot_elimination` now works like this:
+1. A single one-slot gap among the other members, which no other symbol is observed holding,
+   is the symbol's slot, in whichever cluster. Members more than one slot apart start a new
+   cluster.
+2. Otherwise the symbol's cluster is the one holding its own run's other members, or the one
+   holding the runs on both sides (both clusters if they differ). That needs every run in one
+   cluster and the clusters in run order. Of those clusters' end slots no other symbol holds:
+   - the lower end directly above an observed `PrivateStaticClass` is taken. A class's statics
+     end with it, and a cluster above one starts directly after it: 76 of 76 measured,
+     including 5 later clusters. This replaces the rule that required another unit's closing
+     `PrivateStaticClass`;
+   - otherwise the only one.
+3. Two gaps, runs out of order, or two or more candidates resolve nothing.
+
+Below other kinds of static both ends occur: after a `ReturnStruct`, 5 lower and 1 upper.
+
+The real `_slot_elimination`, run offline on the dumped observations, settled 219 of the open
+singletons and got none wrong. The comparer made 213 `StaticEnum`s exact (795 to 1,008), with
+no regressions. The other 6 also wait on another relocation.
+
+Of the 81 `StaticEnum`s still not exact:
+- 47 have both block ends free, with no `PrivateStaticClass` observed below;
+- 5 have a run outside the observed runs of a unit with several clusters;
+- 23 are a unit's only `StaticEnum`;
+- 6 also wait on another relocation.
+
+What follows a block is not modelled. After a fully observed block, the next observed slot
+follows directly in 42 blocks (34 times a generated static, 8 times a vector constant). In the
+others it lies 8 bytes or more further on. In our objects the unit's 1-byte registration objects
+(`FCompiledInDefer*`, struct `StaticRegisterNatives`) open the plain `.bss` in MSVC's own order,
+with the vector constants among them.
+
 **Vector-constant initializers.** Each unit's `GlobalVectorConstants` are written by leaf
 initializers that open its `.CRT$XCU` range. `unity_order.py` records their addresses next
 to the constants' names, and `unity.py` lists them in

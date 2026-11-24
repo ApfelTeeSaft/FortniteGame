@@ -220,6 +220,13 @@ class Resolver:
                              for i in sorted(ents - {exclude})[:1]]
                     return [(free[0], f"literal elimination: {len(hits)} copies, the others used by "
                                       + ", ".join(users[:2]) + (f" and {len(hits) - 3} more" if len(hits) > 3 else ""))]
+        # A declared block's members (StaticEnum singletons) come in an order of MSVC's own, often a
+        # rotation of the source order, which the layout does not reproduce; their extent it
+        # does. So slot elimination goes first for them, and section-relative is the fallback.
+        if symbol in getattr(self, "blocks", {}):
+            hit = self._slot_elimination(symbol, exclude)
+            if hit:
+                return hit
         # Section-relative: neighbours in the object's data layout (same section name, sections
         # in object order), observed by other functions. Local first: the nearest observed
         # neighbour on each side gives that side's prediction. If the two sides agree, or only
@@ -509,39 +516,101 @@ class Resolver:
         return False
 
     def _slot_elimination(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
-        """A declared block of equal slots (analysis/uht-bss-blocks.json): its members fill one
-        contiguous run. With every other member observed once, by entries other than the one
-        under test, the symbol's slot is the only one left: the single gap between them, or, when
-        they are contiguous, the end slot the other end's neighbour does not already hold (an
-        observed slot of a symbol outside the block). The byte comparison checks the result."""
+        """A declared block of equal slots (analysis/uht-bss-blocks.json): a unit's StaticEnum
+        singletons, the statics of its file-static functions. Every other member must be observed
+        once, by entries other than the one under test. The symbol's slot is then the one they
+        leave:
+        1. the single one-slot gap between them that no other symbol is observed holding. A
+           unit's singletons fill contiguous slots, so only the missing member can leave one;
+        2. else an end of the symbol's own cluster. Members more than one slot apart start a new
+           cluster: a unit whose singletons sit in several places (9 units). Each run (the
+           .s<k> object of consecutive enums, numbered in source order) lies in one cluster,
+           and the clusters are ascending ranges of runs. The symbol's cluster is that of its
+           own run's other members, or of the runs on both sides (both clusters when those
+           differ). Of those clusters' end slots that no other symbol is observed holding:
+           - the lower end directly above an observed PrivateStaticClass, which closes a class's
+             statics (the previous unit's last, or the class before the cluster's header). A
+             cluster above one starts directly after it (76 of 76 measured);
+           - else the only one.
+        Anything else (two gaps, runs out of order, two or more candidates) resolves nothing.
+        The byte comparison checks every prediction."""
         block = getattr(self, "blocks", {}).get(symbol)
         if not block:
             return []
-        step, addrs = block["slot"], []
+        step, mates = block["slot"], []
         for m in block["symbols"]:
             if m == symbol:
                 continue
             vals = self._observed_by_name(m, exclude)
             if len(vals) != 1:
                 return []
-            addrs.append(next(iter(vals)))
-        a = sorted(addrs)
+            mates.append((next(iter(vals)), self._run_of(m)))
+        mates.sort()
+        a = [x for x, _ in mates]
         if not a or len(set(a)) != len(a) or any((y - x) % step for x, y in zip(a, a[1:])):
             return []
+        where = f"{len(a)} other slots of {block['unit']}'s {len(block['symbols'])}-slot block"
         gaps = [x + step for x, y in zip(a, a[1:]) if y - x == 2 * step]
-        if any(y - x > 2 * step for x, y in zip(a, a[1:])) or len(gaps) > 1:
+        if any(self._held_by_others(g, symbol, exclude) for g in gaps) or len(gaps) > 1:
             return []
         if gaps:
-            cand, how = gaps, "the gap between"
+            return [(gaps[0], f"slot elimination: the gap between the {where}")]
+        cluster, k = [], 0
+        for i, x in enumerate(a):
+            if i and x - a[i - 1] > step:
+                k += 1
+            cluster.append(k)
+        if k == 0:
+            mine = {0}
         else:
-            cand = [c for c in (a[0] - step, a[-1] + step) if not self._held_by_other(c, block, exclude)]
-            how = "the free end of"
-            if len(cand) == 2 and self._closes_other_unit(a[0] - 2 * step, block, exclude):
-                cand, how = [a[0] - step], "the lower end (another unit's .bss closes just below it) of"
-        if len(cand) != 1:
+            runs: dict = {}
+            for (_, run), c in zip(mates, cluster):
+                if run is None or runs.setdefault(run, c) != c:
+                    return []
+            order = sorted(runs)
+            if any(runs[x] > runs[y] for x, y in zip(order, order[1:])):
+                return []
+            run = self._run_of(symbol)
+            below = [x for x in order if run is not None and x < run]
+            above = [x for x in order if run is not None and x > run]
+            if run in runs:
+                mine = {runs[run]}
+            elif below and above:
+                mine = {runs[below[-1]], runs[above[0]]}
+            else:
+                return []
+        cand = []
+        for c in sorted(mine):
+            ac = [x for x, cc in zip(a, cluster) if cc == c]
+            for slot, lower in ((ac[0] - step, True), (ac[-1] + step, False)):
+                if not self._held_by_others(slot, symbol, exclude):
+                    cand.append((slot, lower))
+        clusters = f" ({k + 1} clusters)" if k else ""
+        after = [slot for slot, lower in cand if lower and self._private_static_class_at(slot - step, exclude)]
+        if len(after) == 1:
+            return [(after[0], f"slot elimination: the lower end, directly above a PrivateStaticClass, "
+                               f"of the {where}{clusters}")]
+        if after or len(cand) != 1:
             return []
-        return [(cand[0], f"slot elimination: {how} the {len(a)} other slots of {block['unit']}'s "
-                          f"{len(block['symbols'])}-slot block")]
+        return [(cand[0][0], f"slot elimination: the free end of the {where}{clusters}")]
+
+    def _run_of(self, member: str) -> int | None:
+        """The run of a block member: k of the .s<k> object its StaticEnum is compiled in (runs
+        are consecutive enums' records, numbered in source order by tools/codegen/uht_enums.py);
+        0 for a unit's own object. None when the function is not known."""
+        if "??" not in member or "@4" not in member:
+            return None
+        scope = member.split("??", 1)[1]
+        objpath = getattr(self, "symbol_objects", {}).get("?" + scope[:scope.index("@4")])
+        if objpath is None:
+            return None
+        m = re.search(r"\.s(\d+)\.gen\.obj$", objpath.replace("\\", "/"))
+        return int(m.group(1)) if m else 0
+
+    def _private_static_class_at(self, addr: int, exclude: int | None) -> bool:
+        """Whether other entries observe exactly one symbol at `addr`, a class's PrivateStaticClass."""
+        held = {k if isinstance(k, str) else k[1] for k, ents in self.by_addr.get(addr, {}).items() if ents - {exclude}}
+        return len(held) == 1 and next(iter(held)).startswith("?PrivateStaticClass@")
 
     # Generated singletons with a parameter record in .data: (entry symbol suffix, record
     # symbol, static symbol), each formatted with the function's name.
@@ -612,33 +681,6 @@ class Resolver:
         return [(free[0], f"record-bracketed slot: the one free slot between the statics of {short(prev_next[0])} "
                           f"and {short(prev_next[1])}, whose records bracket this one's")]
 
-    def _closes_other_unit(self, addr: int, block: dict, exclude: int | None) -> bool:
-        """Whether other entries observe, at `addr`, the PrivateStaticClass that is the last .bss
-        static of another unit's object. A unit's singleton block opens its .bss, so the block
-        then starts directly above it. Measured on the reference: no 8-byte hole follows such a
-        static (44 of 44 blocks); after other kinds of statics one can (2 cases)."""
-        held = {k if isinstance(k, str) else k[1] for k, ents in self.by_addr.get(addr, {}).items() if ents - {exclude}}
-        if len(held) != 1:
-            return False
-        psc = next(iter(held))
-        m = re.match(r"\?PrivateStaticClass@\?1\?\?(GetPrivateStaticClass@\w+@@CAPEAVUClass@@XZ)@", psc)
-        objpath = getattr(self, "symbol_objects", {}).get("?" + m.group(1)) if m else None
-        if objpath is None:
-            return False
-        unit = objpath.replace("\\", "/").rsplit("/", 1)[-1].split(".gen.obj")[0]
-        if unit.split(".s")[0] == block["unit"]:
-            return False
-        last = getattr(self, "_last_bss", None)
-        if last is None:
-            last = self._last_bss = {}
-        if objpath not in last:
-            try:
-                items = (_OBJ_CACHE.get(objpath) or CoffObject(OBJ_ROOT / objpath)).data_layout().get(".bss", [])
-            except FileNotFoundError:
-                items = []
-            last[objpath] = max(items, key=lambda t: t[1])[0] if items else None
-        return last[objpath] == psc
-
     def _observed_by_name(self, name: str, exclude: int | None) -> set[int]:
         if getattr(self, "_name_index", None) is None:
             self._name_index = defaultdict(list)
@@ -651,11 +693,10 @@ class Resolver:
                     out.add(val)
         return out
 
-    def _held_by_other(self, addr: int, block: dict, exclude: int | None) -> bool:
-        members = set(block["symbols"])
+    def _held_by_others(self, addr: int, symbol: str, exclude: int | None) -> bool:
+        """Whether entries other than the one under test observe a symbol other than `symbol` at `addr`."""
         for k, ents in self.by_addr.get(addr, {}).items():
-            name = k if isinstance(k, str) else k[1]
-            if name not in members and ents - {exclude}:
+            if (k if isinstance(k, str) else k[1]) != symbol and ents - {exclude}:
                 return True
         return False
 
