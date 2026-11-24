@@ -682,6 +682,36 @@ def test_folded_and_code_run() -> None:
     print("folded bodies and code runs: ok")
 
 
+def test_pooled_constants() -> None:
+    """__real@ constants: the only aligned copy, or the only copy scalar code elsewhere loads."""
+    import struct as _s
+    from types import SimpleNamespace as NS
+    from compare import Resolver
+    r = Resolver.__new__(Resolver)
+    one = _s.pack("<f", 1.0)
+    r.hay_rva, r.hay = 0x1000, bytes(4) + one + bytes(4) + one + bytes(4)       # copies at 0x1004, 0x100C
+    r.entry_ranges = {7: (0x200, 0x240)}
+    r._scalar_ref_index = {4: {0x100C: [0x300]}}                                 # movss loads 0x100C
+    assert [p for p, _ in r._pooled_constant("__real@3f800000", 7)] == [0x100C]
+    r._scalar_ref_index = {4: {0x100C: [0x210]}}                                 # only the entry under test
+    assert r._pooled_constant("__real@3f800000", 7) == []
+    r._scalar_ref_index = {4: {0x100C: [0x300], 0x1004: [0x400]}}               # two loaded copies
+    assert r._pooled_constant("__real@3f800000", 7) == []
+    r.__dict__.pop("_constant_copies", None)
+    r.hay = bytes(4) + _s.pack("<f", 0.25) + bytes(8)                            # unique value
+    assert [p for p, _ in r._pooled_constant("__real@3e800000", 7)] == [0x1004]
+    assert r._pooled_constant("?Other@@3MA", 7) == []
+    # The scan itself: F3 0F 59 05 <disp32> is mulss xmm0, [rip+disp].
+    code = bytes.fromhex("90") + bytes.fromhex("f30f5905") + (0x1000 - 0x500 - 9).to_bytes(4, "little", signed=True)
+    code += bytes.fromhex("0f5905") + (0x1000 - 0x500 - 17).to_bytes(4, "little", signed=True)   # mulps: packed
+    r2 = Resolver.__new__(Resolver)
+    r2.img = NS(sections=[NS(rva=0x500, vsize=len(code))])
+    r2.dimg = NS(read=lambda a, n: code[:n])
+    refs = r2._scalar_refs(4)
+    assert refs == {0x1000: [0x504]}, refs
+    print("pooled constants: ok")
+
+
 def test_secrel_fields() -> None:
     """SECREL fields (thread_local variables such as _Init_thread_epoch) are offsets into .tls."""
     import compare
@@ -847,6 +877,7 @@ def main() -> int:
     test_record_bracket()
     test_package_bracket()
     test_secrel_fields()
+    test_pooled_constants()
     test_split_objects()
     test_accessor_mangling()
     test_accessor_shapes()

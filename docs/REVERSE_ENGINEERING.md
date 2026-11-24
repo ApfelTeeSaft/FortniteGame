@@ -85,6 +85,10 @@ same import, and the manifest records which.
     - it lies inside another object's observed literal span; or
     - another object's observed literal lies between it and the span of this object's literals
       that *other* entries observe. One object's `$SG` literals are one contiguous block.
+  - **pooled float constants** (`__real@<hex>`, named by their value): the only aligned copy
+    of the value in `.rdata`. Among several copies, the only one that scalar float/double code
+    outside the function under test loads: `movss`/`addss`/`mulss`/... or `comiss`/`ucomiss`
+    with a rip-relative operand. Other copies are table fields or lanes of vector constants;
   - an already-exact function, iterated to a fixpoint;
   - **corroboration (leave-one-out):** the same symbol observed at one address in a
     *different* manifest function whose size and every non-relocation byte equal the
@@ -302,6 +306,34 @@ no regressions. Two classes are fully exact:
 
 `UFortDamageSet` has 12 of 14 exact; its `WeaponSkill` getter keeps its static in another
 object.
+
+## Fifth family: Core vector math (2026-11-24)
+
+| RVA | Function | Result |
+| --- | --- | --- |
+| `0x01112E50` | `FGenericPlatformMath::Atan2` | exact |
+| `0x011A6B30` | `FVector::ToOrientationRotator` | exact |
+| `0x011A1EA0` | `FVector::Rotation` | exact |
+
+The chain was found from `UKismetMathLibrary::execConv_VectorToRotator`. Its callee at
+`0x011A1EA0` passes `this` and the return slot straight on, so it is a member function:
+`FVector::Rotation`. The Kismet function itself is inlined into its thunk, and
+`native-implementations.json` names the callee after it at low confidence.
+
+`Atan2` is the 4.20 minimax polynomial. The source keeps its coefficients in a
+`static const float c[7]` with negative entries. The compiler folds the array into pooled
+scalar constants, so the reference subtracts positive ones, and the reconstruction compiled
+from the same source does the same.
+
+The pooled constants needed new evidence. A `__real@` float is 4 bytes, too short for the
+unique-data search:
+- the six coefficients are each the only aligned copy of their value in `.rdata`;
+- `1.0`, `PI`, `PI/2` and `180/PI` have 339, 5, 5 and 5 copies. In each case exactly one copy
+  is loaded by scalar float instructions elsewhere; the others are lanes of vector constants
+  or table fields;
+- values with two scalar-loaded copies, such as `2.0` and `1e-8`, stay unresolved.
+
+`Shims/FortniteGameCode/MathDecls.h` declares the few Core math members the chain uses.
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 

@@ -164,6 +164,9 @@ class Resolver:
             return [(next(iter(vals)), "corroborated: same symbol at this address in " + who)]
         if len(vals) > 1:
             return []
+        pooled = self._pooled_constant(symbol, exclude)
+        if pooled:
+            return pooled
         # ICF-folded body (leave-one-out). /OPT:ICF gives identical COMDAT functions one address,
         # so a relocation-free leaf body identifies its function as well as a name does: other
         # entries' observations of any function with the same body give its address.
@@ -699,6 +702,72 @@ class Resolver:
             return []
         return [(free[0], f"record-bracketed slot: the one free slot between {prev}'s and {nxt}'s statics, "
                           "whose FClassParams records bracket this package's FPackageParams in .rdata")]
+
+    _REAL = re.compile(r"__real@([0-9a-f]{8}|[0-9a-f]{16})$")
+    # Scalar SSE opcodes (after 0F) that read a float/double memory operand.
+    _SCALAR_OPS = {0x10, 0x51, 0x58, 0x59, 0x5C, 0x5D, 0x5E, 0x5F}
+
+    def _pooled_constant(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
+        """A pooled floating-point constant (__real@<hex>, MSVC's COMDAT for a float or double
+        literal; the name is the value). Its copy in the reference is either the only aligned
+        copy of the value in .rdata, or, among several, the only one that scalar float (or
+        double) code outside the function under test loads: movss/addss/mulss/... (F3 0F, or
+        F2 0F for doubles) or comiss/ucomiss (0F 2E/2F, 66 for doubles) with a rip-relative
+        operand. Other copies are fields of tables or lanes of vector constants, which packed
+        instructions or base registers reach."""
+        m = self._REAL.match(symbol)
+        if m is None or getattr(self, "hay", None) is None:
+            return []
+        size = len(m.group(1)) // 2
+        pat = int(m.group(1), 16).to_bytes(size, "little")
+        cache = self.__dict__.setdefault("_constant_copies", {})
+        copies = cache.get(pat)
+        if copies is None:
+            copies, p = [], self.hay.find(pat)
+            while p >= 0 and len(copies) < 4096:
+                if (self.hay_rva + p) % size == 0:
+                    copies.append(self.hay_rva + p)
+                p = self.hay.find(pat, p + 1)
+            cache[pat] = copies
+        if len(copies) == 1:
+            return [(copies[0], f"pooled constant: the only {size}-byte-aligned copy of its value in .rdata")]
+        refs = self._scalar_refs(size)
+        lo, hi = getattr(self, "entry_ranges", {}).get(exclude, (0, 0))
+        used = [c for c in copies if any(not lo <= s < hi for s in refs.get(c, ()))]
+        if len(used) != 1:
+            return []
+        kind = "float" if size == 4 else "double"
+        return [(used[0], f"pooled constant: of {len(copies)} copies of its value, the only one scalar {kind} "
+                          "code (outside this function) loads")]
+
+    def _scalar_refs(self, size: int) -> dict[int, list[int]]:
+        """Targets of rip-relative scalar float (size 4) or double (size 8) loads in the decrypted
+        .text -> the ModRM positions that load them. Built once per size."""
+        all_refs = self.__dict__.setdefault("_scalar_ref_index", {})
+        if size in all_refs:
+            return all_refs[size]
+        out: dict[int, list[int]] = {}
+        img, dimg = getattr(self, "img", None), getattr(self, "dimg", None)
+        if img is not None and dimg is not None:
+            text = img.sections[0]
+            code = dimg.read(text.rva, text.vsize)
+            prefix = 0xF3 if size == 4 else 0xF2
+            for mm in re.finditer(rb"[\x05\x0d\x15\x1d\x25\x2d\x35\x3d]", code):
+                q = mm.start()
+                if q < 3 or q + 5 > len(code) or code[q - 2] != 0x0F:
+                    continue
+                op, pre = code[q - 1], q - 3
+                if 0x40 <= code[pre] <= 0x4F:   # REX
+                    pre -= 1
+                if op in (0x2E, 0x2F):
+                    ok = code[pre] == 0x66 if size == 8 else code[pre] not in (0x66, 0xF2, 0xF3)
+                else:
+                    ok = op in self._SCALAR_OPS and code[pre] == prefix
+                if ok:
+                    t = text.rva + q + 5 + int.from_bytes(code[q + 1:q + 5], "little", signed=True)
+                    out.setdefault(t, []).append(text.rva + q)
+        all_refs[size] = out
+        return out
 
     def _run_of(self, member: str) -> int | None:
         """The run of a block member: k of the .s<k> object its StaticEnum is compiled in (runs

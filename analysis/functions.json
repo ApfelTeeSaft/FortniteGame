@@ -2349,6 +2349,195 @@
         "bytes_differing_only_in_unresolved_fields": 24
       },
       "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01112E50",
+      "end_rva": "0x01112F38",
+      "name": "FGenericPlatformMath::Atan2",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/GenericPlatform/GenericPlatformMath.cpp",
+      "object": "Source/Runtime/Core/Private/GenericPlatform/GenericPlatformMath.obj",
+      "symbol": "?Atan2@FGenericPlatformMath@@SAMMM@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called twice by FVector::ToOrientationRotator (0x011A6B30): the 4.20 minimax atan2 polynomial (|Y|, |X| by mask, the coefficients 7.2128853e-03 ... 1.0, then PI/2 and PI corrections and the sign of Y).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "c15a0ef4777aabbe55c6bbff670b50c9f7223994dee575c1901d95a231f50819",
+      "decrypted_sha256": "3c8d28b7dbb7d7ca1a6baf98efd34f6226c946d28a7553777bcece2a8ae72049",
+      "candidate_sha256": "3c8d28b7dbb7d7ca1a6baf98efd34f6226c946d28a7553777bcece2a8ae72049",
+      "byte_diff": {
+        "reference_size": 232,
+        "candidate_size": 232,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000E",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x00000018",
+            "symbol": "__xmm@7fffffff7fffffff7fffffff7fffffff",
+            "rva": "0x02E625D0",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000005D",
+            "symbol": "__real@3bec5a11",
+            "rva": "0x03467340",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000065",
+            "symbol": "__real@3d0f9abd",
+            "rva": "0x03467344",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000071",
+            "symbol": "__real@3da745af",
+            "rva": "0x03467348",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x0000007D",
+            "symbol": "__real@3e08f4dd",
+            "rva": "0x0346734C",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000089",
+            "symbol": "__real@3e4b54ca",
+            "rva": "0x03467350",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000095",
+            "symbol": "__real@3eaa9fbe",
+            "rva": "0x03467354",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x000000A1",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in AFortProjectileAthena::execServerNotifyPawnHit, UCharacterMovementComponent::execIsWalkable and 11 more"
+          },
+          {
+            "offset": "0x000000B1",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000000C5",
+            "symbol": "__real@40490fdb",
+            "rva": "0x02E623FC",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000000D8",
+            "symbol": "__xmm@80000000800000008000000080000000",
+            "rva": "0x02E625E0",
+            "evidence": "data symbol: unique 16-byte data block"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A6B30",
+      "end_rva": "0x011A6BA2",
+      "name": "FVector::ToOrientationRotator",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?ToOrientationRotator@FVector@@QEBA?AUFRotator@@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Yaw Atan2(Y, X) and pitch Atan2(Z, Sqrt(X*X + Y*Y)), each times 180/PI, roll 0; called only by FVector::Rotation (0x011A1EA0).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "78da90cb8154bcd154e7f3f1ea8efbfe5e2402917836143a55bd3e16ce7a6912",
+      "decrypted_sha256": "1cfdfc2dd7584213e588723ecf5ebd83bad290349c841234bfb4f5cd2fc4174a",
+      "candidate_sha256": "1cfdfc2dd7584213e588723ecf5ebd83bad290349c841234bfb4f5cd2fc4174a",
+      "byte_diff": {
+        "reference_size": 114,
+        "candidate_size": 114,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001A",
+            "symbol": "?Atan2@FGenericPlatformMath@@SAMMM@Z",
+            "rva": "0x01112E50",
+            "evidence": "exact match of manifest entry 0x01112E50"
+          },
+          {
+            "offset": "0x0000002B",
+            "symbol": "__real@42652ee0",
+            "rva": "0x02F8EEF4",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000004D",
+            "symbol": "?Atan2@FGenericPlatformMath@@SAMMM@Z",
+            "rva": "0x01112E50",
+            "evidence": "exact match of manifest entry 0x01112E50"
+          },
+          {
+            "offset": "0x00000055",
+            "symbol": "__real@42652ee0",
+            "rva": "0x02F8EEF4",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A1EA0",
+      "end_rva": "0x011A1EB7",
+      "name": "FVector::Rotation",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?Rotation@FVector@@QEBA?AUFRotator@@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "A member forwarding this and the return slot to FVector::ToOrientationRotator. UKismetMathLibrary::execConv_VectorToRotator calls it with the Kismet function inlined, so analysis/native-implementations.json lists it as Conv_VectorToRotator (low confidence).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "d76cc6be7e1dc2de4c8f089ff41aff32ca2c947a68ce2adc4e345f59c755b0df",
+      "decrypted_sha256": "b006c51070ddfbf061559967319d373e9b4e9c2d2a7d33283b0295dc19d6ba23",
+      "candidate_sha256": "b006c51070ddfbf061559967319d373e9b4e9c2d2a7d33283b0295dc19d6ba23",
+      "byte_diff": {
+        "reference_size": 23,
+        "candidate_size": 23,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "?ToOrientationRotator@FVector@@QEBA?AUFRotator@@XZ",
+            "rva": "0x011A6B30",
+            "evidence": "exact match of manifest entry 0x011A6B30"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
     }
   ]
 }
