@@ -277,7 +277,7 @@ class Resolver:
             pred, basis = local
             extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
             return [(pred, "section-relative (local) to " + basis[0] + extra)]
-        bracket = self._record_bracket(symbol, exclude)
+        bracket = self._record_bracket(symbol, exclude) or self._package_bracket(symbol, exclude)
         if bracket:
             return bracket
         if len(nearest) < 2:
@@ -649,6 +649,55 @@ class Resolver:
         if after or len(cand) != 1:
             return []
         return [(cand[0][0], f"slot elimination: the free end of the {where}{clusters}")]
+
+    def _package_bracket(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
+        """A package's ReturnPackage between the statics of the classes whose FClassParams
+        records directly precede and follow its FPackageParams record in .rdata.
+
+        Both records are constant UHT data emitted in definition order, so where
+        <Module>.init.gen.cpp sat in the original unity file shows in .rdata even when no
+        struct or enum inlines the package constructor to place it (tools/analysis/
+        unity_order.py; such packages are compiled in units of their own). In all 84 packages
+        measured, ReturnPackage lies between the earlier class's PrivateStaticClass and the
+        later class's statics. When exactly one 8-byte slot there is not observed holding a
+        symbol by other entries, it is this one. Records come from analysis/uht-class-symbols.json,
+        uht-creator-symbols.json and uht-package-symbols.json (located by content)."""
+        m = re.match(r"\?ReturnPackage@\?1\?\?(Z_Construct_UPackage__Script_\w+)@@YAPEAVUPackage@@XZ@4PEAV2@EA$", symbol)
+        if not m:
+            return []
+        recs = getattr(self, "_rdata_records", None)
+        if recs is None:
+            recs = []
+            for f in ("uht-class-symbols.json", "uht-creator-symbols.json", "uht-package-symbols.json"):
+                p = REPO_ROOT / "analysis" / f
+                if not p.exists():
+                    continue
+                for k, v in json.loads(p.read_text(encoding="utf-8"))["symbols"].items():
+                    c = re.match(r"\?ClassParams@Z_Construct_UClass_(\w+)_Statics@@", k)
+                    q = re.match(r"\?PackageParams@\?4\?\?(Z_Construct_UPackage__Script_\w+)@@", k)
+                    if c:
+                        recs.append((int(v[0], 16), "class", c.group(1)))
+                    elif q:
+                        recs.append((int(v[0], 16), "package", q.group(1)))
+            recs.sort()
+            self._rdata_records = recs
+        i = next((k for k, r in enumerate(recs) if r[1] == "package" and r[2] == m.group(1)), None)
+        if i is None:
+            return []
+        prev = next((recs[k][2] for k in range(i - 1, -1, -1) if recs[k][1] == "class"), None)
+        nxt = next((recs[k][2] for k in range(i + 1, len(recs)) if recs[k][1] == "class"), None)
+        if prev is None or nxt is None:
+            return []
+        lo = self._observed_by_name(f"?PrivateStaticClass@?1??GetPrivateStaticClass@{prev}@@CAPEAVUClass@@XZ@4PEAV3@EA", exclude)
+        hi = self._observed_by_name(f"?OuterClass@?1??Z_Construct_UClass_{nxt}@@YAPEAVUClass@@XZ@4PEAV2@EA", exclude)
+        if len(lo) != 1 or len(hi) != 1:
+            return []
+        lo, hi = next(iter(lo)), next(iter(hi))
+        free = [s for s in range(lo + 8, hi, 8) if not self._held_by_others(s, symbol, exclude)]
+        if len(free) != 1:
+            return []
+        return [(free[0], f"record-bracketed slot: the one free slot between {prev}'s and {nxt}'s statics, "
+                          "whose FClassParams records bracket this package's FPackageParams in .rdata")]
 
     def _run_of(self, member: str) -> int | None:
         """The run of a block member: k of the .s<k> object its StaticEnum is compiled in (runs

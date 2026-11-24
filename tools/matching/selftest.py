@@ -682,6 +682,33 @@ def test_folded_and_code_run() -> None:
     print("folded bodies and code runs: ok")
 
 
+def test_package_bracket() -> None:
+    """ReturnPackage: the one free slot between the statics of the classes whose FClassParams
+    records bracket the package's FPackageParams record in .rdata."""
+    from compare import Resolver
+    r = Resolver.__new__(Resolver)
+    rp = "?ReturnPackage@?1??Z_Construct_UPackage__Script_P@@YAPEAVUPackage@@XZ@4PEAV2@EA"
+    psc = "?PrivateStaticClass@?1??GetPrivateStaticClass@UA@@CAPEAVUClass@@XZ@4PEAV3@EA"
+    outer = "?OuterClass@?1??Z_Construct_UClass_UB@@YAPEAVUClass@@XZ@4PEAV2@EA"
+    r._rdata_records = [(0x100, "class", "UA"), (0x200, "package", "Z_Construct_UPackage__Script_P"),
+                        (0x300, "class", "UB")]
+
+    def setup(obs):
+        r.observations = {k: {v: {e}} for k, (v, e) in obs.items()}
+        r.by_addr = {}
+        for k, (v, e) in obs.items():
+            r.by_addr.setdefault(v, {})[k] = {e}
+        r._name_index = None
+    setup({psc: (0x1000, 1), outer: (0x1018, 2), "?ReturnFunction@?1??Z_Construct_UFunction_UB_F@@YAPEAVUFunction@@XZ@4PEAV2@EA": (0x1010, 3)})
+    assert [p for p, _ in r._package_bracket(rp, 9)] == [0x1008]
+    setup({psc: (0x1000, 1), outer: (0x1018, 2)})                    # two free slots: nothing
+    assert r._package_bracket(rp, 9) == []
+    setup({psc: (0x1000, 1), outer: (0x1010, 2), rp: (0x1008, 9)})   # its own observation is no claim
+    assert [p for p, _ in r._package_bracket(rp, 9)] == [0x1008]
+    assert r._package_bracket(psc, 9) == []                           # not a package's static
+    print("package bracket: ok")
+
+
 def test_record_bracket() -> None:
     """A creator's static is the one free slot between its record-neighbours' statics."""
     from compare import Resolver
@@ -803,6 +830,7 @@ def main() -> int:
     test_slot_elimination()
     test_rigid_successor()
     test_record_bracket()
+    test_package_bracket()
     test_split_objects()
     test_accessor_mangling()
     test_accessor_shapes()

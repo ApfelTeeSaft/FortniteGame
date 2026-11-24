@@ -1813,6 +1813,30 @@ Two patterns hold most of the 21 `StaticStruct` singletons still open:
   predecessor: of 30 struct singletons that follow it in our layout, 11 follow it in the
   reference.
 
+**Package statics (2026-11-24).** 17 package constructors waited on their `ReturnPackage`.
+Their `<Module>.init.gen.cpp` was never placed in a unit. `unity_order.py` places it by the
+structs and enums that inline the package constructor. 16 of these modules have none, and
+one has inconsistent forms. So each is compiled in a unit of its own, where its static has no
+neighbours.
+
+Three models of where the static lies were measured against the dump:
+- *Name order.* `init.gen.cpp` sorted by name among the module's items. This fails: header
+  names are not class names, and large modules have several unity files.
+- *Code layout.* Package constructors sit at the end of their module's code, which says
+  nothing about the source position.
+- *`.rdata` record order.* `FPackageParams` and `FClassParams` are both constant UHT records
+  in `.rdata`. In all 84 packages measured, `ReturnPackage` lies between the statics of the
+  classes whose records directly precede and follow the package's record.
+
+The record bracket is rarely tight. In 57 of the 84 it holds three or more free slots, and
+no end is reliable: `ReturnPackage` follows the earlier class directly 29 times, precedes
+the later class directly 21 times, and sits inside 34 times.
+
+`_package_bracket` takes the slot only when exactly one is free between the earlier class's
+`PrivateStaticClass` and the later class's `OuterClass`. That resolved 2 of the 17,
+`FortniteGame` and `SocialDefaults`, with none wrong. The comparer made both exact, with no
+regressions. The other 15 have two or more free slots.
+
 ## Naming confidence
 
 `confirmed` needs direct evidence such as an exported symbol, reflection string or
