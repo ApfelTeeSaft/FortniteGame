@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails();  // RVA 0x028F58C0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5110 (end 0x028F5132)
+// Original VA: 0x00000001428F5110 | File offset: 0x028F4710
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D15BC8) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadLandingPageDefenderSquadDetails::StaticRegisterNativesUFortSquadLandingPageDefenderSquadDetails()
+{
+	UClass* Class = UFortSquadLandingPageDefenderSquadDetails::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetDefenderSquadInfo", &UFortSquadLandingPageDefenderSquadDetails::execSetDefenderSquadInfo },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSquadLandingPageDefenderSquadDetails_HandleAddDefenderSquadMemberBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

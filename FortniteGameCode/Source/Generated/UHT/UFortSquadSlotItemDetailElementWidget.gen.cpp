@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotItemDetailElementWidget();  // RVA 0x028FB560 (registered by its FCompiledInDefer)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB170 (end 0x028FB192)
+// Original VA: 0x00000001428FB170 | File offset: 0x028FA770
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D225B0) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSlotItemDetailElementWidget::StaticRegisterNativesUFortSquadSlotItemDetailElementWidget()
+{
+	UClass* Class = UFortSquadSlotItemDetailElementWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIdOfSquadSlotToManageBP", &UFortSquadSlotItemDetailElementWidget::execGetIdOfSquadSlotToManageBP },
+		{ "GetItemInSquadSlotBP", &UFortSquadSlotItemDetailElementWidget::execGetItemInSquadSlotBP },
+		{ "IsSquadSlotLockedBP", &UFortSquadSlotItemDetailElementWidget::execIsSquadSlotLockedBP },
+		{ "SetIdOfSquadSlotToManageBP", &UFortSquadSlotItemDetailElementWidget::execSetIdOfSquadSlotToManageBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetIdOfSquadSlotToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

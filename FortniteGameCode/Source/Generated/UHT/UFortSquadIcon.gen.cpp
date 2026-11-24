@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadIcon();  // RVA 0x028F5890 (registered by its FCompiledInDefer)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F50E0 (end 0x028F5102)
+// Original VA: 0x00000001428F50E0 | File offset: 0x028F46E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D152E0) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadIcon::StaticRegisterNativesUFortSquadIcon()
+{
+	UClass* Class = UFortSquadIcon::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetSquad", &UFortSquadIcon::execSetSquad },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F69D0 (end 0x028F69FF)
 // Original VA: 0x00000001428F69D0 | File offset: 0x028F5FD0
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json

@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementItemPopupMenu();  // RVA 0x028C9FD0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9AB0 (end 0x028C9AD2)
+// Original VA: 0x00000001428C9AB0 | File offset: 0x028C90B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCE568) | Matching: see analysis/functions-uht-natives.json
+void UFortItemManagementItemPopupMenu::StaticRegisterNativesUFortItemManagementItemPopupMenu()
+{
+	UClass* Class = UFortItemManagementItemPopupMenu::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHostButton", &UFortItemManagementItemPopupMenu::execGetHostButton },
+		{ "HandleCompareAction", &UFortItemManagementItemPopupMenu::execHandleCompareAction },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemManagementItemPopupMenu_GetHostButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

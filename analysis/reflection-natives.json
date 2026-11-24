@@ -3,15 +3,15 @@
  "generated_by": "tools/analysis/reflection.py",
  "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
  "summary": {
-  "native_arrays": 1171,
-  "native_functions": 9918,
-  "native_arrays_with_class": 1155,
+  "native_arrays": 1196,
+  "native_functions": 9993,
+  "native_arrays_with_class": 1180,
   "function_link_arrays": 1243,
   "function_link_arrays_with_class": 1238,
   "function_link_entries": 11102,
-  "distinct_exec_rvas": 9203,
+  "distinct_exec_rvas": 9271,
   "distinct_construct_rvas": 11102,
-  "distinct_named_function_rvas": 22615
+  "distinct_named_function_rvas": 22733
  },
  "native_classes": [
   {
@@ -3387,6 +3387,23 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x02F61D88",
+   "functions": [
+    {
+     "name": "IsLocalPlayer",
+     "exec_rva": "0x005B90B0"
+    },
+    {
+     "name": "IsPartyLeader",
+     "exec_rva": "0x005B90E0"
+    }
+   ],
+   "static_register_natives_rva": "0x005B8D60",
+   "get_private_static_class_rva": "0x005B8C30",
+   "class": "UPartyMemberState",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x02F66F40",
    "functions": [
     {
@@ -4252,6 +4269,27 @@
    "static_register_natives_rva": "0x00806130",
    "get_private_static_class_rva": "0x00805DA0",
    "class": "UAppleARKitBlueprintLibrary",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x02FE3370",
+   "functions": [
+    {
+     "name": "GetCenter",
+     "exec_rva": "0x00806700"
+    },
+    {
+     "name": "GetExtent",
+     "exec_rva": "0x00806840"
+    },
+    {
+     "name": "GetTransformToCenter",
+     "exec_rva": "0x008068E0"
+    }
+   ],
+   "static_register_natives_rva": "0x00806160",
+   "get_private_static_class_rva": "0x00805E50",
+   "class": "UAppleARKitPlaneAnchor",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -10046,6 +10084,23 @@
    "static_register_natives_rva": "0x00FC54E0",
    "get_private_static_class_rva": "0x00FC45D0",
    "class": "AFortConstructorBASE",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x032F71A8",
+   "functions": [
+    {
+     "name": "CanActivateOnOthers",
+     "exec_rva": "0x00FCCD90"
+    },
+    {
+     "name": "CanActivateOnSelf",
+     "exec_rva": "0x00FCCDC0"
+    }
+   ],
+   "static_register_natives_rva": "0x00FCB080",
+   "get_private_static_class_rva": "0x00FC9990",
+   "class": "UFortConsumableAccountItem",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -39028,6 +39083,19 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x039CF058",
+   "functions": [
+    {
+     "name": "SetIntensity",
+     "exec_rva": "0x024F1DD0"
+    }
+   ],
+   "static_register_natives_rva": "0x024F0660",
+   "get_private_static_class_rva": "0x024EFB90",
+   "class": "UVectorFieldComponent",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x039CF310",
    "functions": [
     {
@@ -40316,6 +40384,19 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x03C5E820",
+   "functions": [
+    {
+     "name": "UserDismissedDialog",
+     "exec_rva": "0x0288A970"
+    }
+   ],
+   "static_register_natives_rva": "0x02886B10",
+   "get_private_static_class_rva": "0x02884710",
+   "class": "UAthenaMatchReadyDesktopPopup",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x03C5E8B8",
    "functions": [
     {
@@ -40490,6 +40571,23 @@
    "static_register_natives_rva": "0x02886CC0",
    "get_private_static_class_rva": "0x02885370",
    "class": "UCommonTagVisibilityWidget",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03C60020",
+   "functions": [
+    {
+     "name": "RegisterForAttributeChanged",
+     "exec_rva": "0x02889EC0"
+    },
+    {
+     "name": "RemoveDelegatesFromWidget",
+     "exec_rva": "0x0288A090"
+    }
+   ],
+   "static_register_natives_rva": "0x02886CF0",
+   "get_private_static_class_rva": "0x028854D0",
+   "class": "UFortAbilitySystemContext",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -41059,6 +41157,111 @@
    "static_register_natives_rva": "0x0288C6B0",
    "get_private_static_class_rva": "0x0288BB00",
    "class": "UFortAttributeListItem_NUI",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03C6B600",
+   "functions": [
+    {
+     "name": "ChatVolumeChanged",
+     "exec_rva": "0x0288E270"
+    },
+    {
+     "name": "DialogVolumeChanged",
+     "exec_rva": "0x0288E390"
+    },
+    {
+     "name": "GetAvailableVoiceChatInputDevices",
+     "exec_rva": "0x0288E4A0"
+    },
+    {
+     "name": "GetChatVolumeValue",
+     "exec_rva": "0x0288E520"
+    },
+    {
+     "name": "GetDialogVolumeValue",
+     "exec_rva": "0x0288E710"
+    },
+    {
+     "name": "GetMusicVolumeValue",
+     "exec_rva": "0x0288EAC0"
+    },
+    {
+     "name": "GetQuality",
+     "exec_rva": "0x0288EAF0"
+    },
+    {
+     "name": "GetSoundFXVolumeValue",
+     "exec_rva": "0x0288EB80"
+    },
+    {
+     "name": "GetSubtitlesEnabled",
+     "exec_rva": "0x0288EBB0"
+    },
+    {
+     "name": "GetVoiceChat3DEnabled",
+     "exec_rva": "0x0288EBE0"
+    },
+    {
+     "name": "GetVoiceChatEnabled",
+     "exec_rva": "0x0288EC10"
+    },
+    {
+     "name": "GetVoiceChatInputDevice",
+     "exec_rva": "0x0288EC40"
+    },
+    {
+     "name": "GetVoiceChatPTTEnabled",
+     "exec_rva": "0x0288ECC0"
+    },
+    {
+     "name": "IsUsingCustomVoiceChatInputDevice",
+     "exec_rva": "0x01057D90"
+    },
+    {
+     "name": "MusicVolumeChanged",
+     "exec_rva": "0x0288EFE0"
+    },
+    {
+     "name": "SetQuality",
+     "exec_rva": "0x0288FCF0"
+    },
+    {
+     "name": "SetSubtitlesEnabled",
+     "exec_rva": "0x0288FDF0"
+    },
+    {
+     "name": "SetVoiceChat3DEnabled",
+     "exec_rva": "0x0288FFC0"
+    },
+    {
+     "name": "SetVoiceChatEnabled",
+     "exec_rva": "0x02890050"
+    },
+    {
+     "name": "SetVoiceChatInputDevice",
+     "exec_rva": "0x028900E0"
+    },
+    {
+     "name": "SetVoiceChatPTTEnabled",
+     "exec_rva": "0x02890180"
+    },
+    {
+     "name": "ShowChatVolume",
+     "exec_rva": "0x01025A20"
+    },
+    {
+     "name": "ShowQuality",
+     "exec_rva": "0x01025A20"
+    },
+    {
+     "name": "SoundFXVolumeChanged",
+     "exec_rva": "0x02891980"
+    }
+   ],
+   "static_register_natives_rva": "0x0288C710",
+   "get_private_static_class_rva": "0x0288BC60",
+   "class": "UFortAudioOptions",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -41954,6 +42157,23 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x03C846C8",
+   "functions": [
+    {
+     "name": "TryGetPowerLevel",
+     "exec_rva": "0x0289FEB0"
+    },
+    {
+     "name": "TryGetTheaterUniqueId",
+     "exec_rva": "0x0289FF50"
+    }
+   ],
+   "static_register_natives_rva": "0x0289AF70",
+   "get_private_static_class_rva": "0x0289A470",
+   "class": "UFortDefenderSquadSelectorButton",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x03C847B0",
    "functions": [
     {
@@ -42206,6 +42426,27 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x03C8E988",
+   "functions": [
+    {
+     "name": "HandleOKSelected",
+     "exec_rva": "0x028A9840"
+    },
+    {
+     "name": "HandleTextCommitted",
+     "exec_rva": "0x028A9990"
+    },
+    {
+     "name": "UpdateSignInButton",
+     "exec_rva": "0x028AAE30"
+    }
+   ],
+   "static_register_natives_rva": "0x028A2EC0",
+   "get_private_static_class_rva": "0x028A1A10",
+   "class": "UFortDisplayNameWidget",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x03C8EAA8",
    "functions": [
     {
@@ -42224,6 +42465,23 @@
    "static_register_natives_rva": "0x028A2EF0",
    "get_private_static_class_rva": "0x028A1AC0",
    "class": "UFortErrorWindow",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03C8F068",
+   "functions": [
+    {
+     "name": "HandleConfirmClicked",
+     "exec_rva": "0x028A9560"
+    },
+    {
+     "name": "HandleDeclineClicked",
+     "exec_rva": "0x028A95E0"
+    }
+   ],
+   "static_register_natives_rva": "0x028A2F20",
+   "get_private_static_class_rva": "0x028A1B70",
+   "class": "UFortEulaWidget",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -44929,6 +45187,23 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x03CCE568",
+   "functions": [
+    {
+     "name": "GetHostButton",
+     "exec_rva": "0x028CB990"
+    },
+    {
+     "name": "HandleCompareAction",
+     "exec_rva": "0x028CBD60"
+    }
+   ],
+   "static_register_natives_rva": "0x028C9AB0",
+   "get_private_static_class_rva": "0x028C86D0",
+   "class": "UFortItemManagementItemPopupMenu",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x03CCE648",
    "functions": [
     {
@@ -45246,6 +45521,27 @@
    "static_register_natives_rva": "0x028CF150",
    "get_private_static_class_rva": "0x028CE260",
    "class": "UFortItemQuantityListBase",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03CD91B0",
+   "functions": [
+    {
+     "name": "SetItemToCompareWith",
+     "exec_rva": "0x028D3F30"
+    },
+    {
+     "name": "SetItemToRepresent",
+     "exec_rva": "0x028D3FB0"
+    },
+    {
+     "name": "SetItemViewContext",
+     "exec_rva": "0x028D4130"
+    }
+   ],
+   "static_register_natives_rva": "0x028CF1B0",
+   "get_private_static_class_rva": "0x028CE3C0",
+   "class": "UFortItemRatingIndicator",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -45698,6 +45994,36 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x03CE4E48",
+   "functions": [
+    {
+     "name": "HandleContinueClicked",
+     "exec_rva": "0x028D94A0"
+    }
+   ],
+   "static_register_natives_rva": "0x028D6D50",
+   "get_private_static_class_rva": "0x028D59F0",
+   "class": "UFortLoginResultWidget",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03CE5340",
+   "functions": [
+    {
+     "name": "SetTitleText",
+     "exec_rva": "0x028DA700"
+    },
+    {
+     "name": "UpdateLoginStatusText",
+     "exec_rva": "0x028DA7D0"
+    }
+   ],
+   "static_register_natives_rva": "0x028D6D80",
+   "get_private_static_class_rva": "0x028D5AA0",
+   "class": "UFortLoginStatus",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x03CE5418",
    "functions": [
     {
@@ -46085,6 +46411,23 @@
    "static_register_natives_rva": "0x028DDFD0",
    "get_private_static_class_rva": "0x028DD400",
    "class": "UFortMultiSizeItemCard",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03CF0CD8",
+   "functions": [
+    {
+     "name": "HandleBackClicked",
+     "exec_rva": "0x028EFA50"
+    },
+    {
+     "name": "HandleNewAccountClicked",
+     "exec_rva": "0x028E1AC0"
+    }
+   ],
+   "static_register_natives_rva": "0x028DE000",
+   "get_private_static_class_rva": "0x028DD4B0",
+   "class": "UFortNewAccountWarning",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -46792,6 +47135,23 @@
    "static_register_natives_rva": "0x028E6530",
    "get_private_static_class_rva": "0x028E5270",
    "class": "UFortPickerContext",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03CFF578",
+   "functions": [
+    {
+     "name": "HandleNoClicked",
+     "exec_rva": "0x028E9460"
+    },
+    {
+     "name": "HandleYesClicked",
+     "exec_rva": "0x028E9930"
+    }
+   ],
+   "static_register_natives_rva": "0x028E6560",
+   "get_private_static_class_rva": "0x028E53D0",
+   "class": "UFortPlayedBeforeSelect",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -47878,6 +48238,45 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x03D152E0",
+   "functions": [
+    {
+     "name": "SetSquad",
+     "exec_rva": "0x028F81B0"
+    }
+   ],
+   "static_register_natives_rva": "0x028F50E0",
+   "get_private_static_class_rva": "0x028F3E80",
+   "class": "UFortSquadIcon",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03D15BC8",
+   "functions": [
+    {
+     "name": "SetDefenderSquadInfo",
+     "exec_rva": "0x028F7CD0"
+    }
+   ],
+   "static_register_natives_rva": "0x028F5110",
+   "get_private_static_class_rva": "0x028F3F30",
+   "class": "UFortSquadLandingPageDefenderSquadDetails",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03D160E0",
+   "functions": [
+    {
+     "name": "SetDefenderSquadInfo",
+     "exec_rva": "0x028F7DC0"
+    }
+   ],
+   "static_register_natives_rva": "0x028F5140",
+   "get_private_static_class_rva": "0x028F3FE0",
+   "class": "UFortSquadLandingPageDefenderSquadDetailsLocked",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x03D216A0",
    "functions": [
     {
@@ -47997,6 +48396,31 @@
    "static_register_natives_rva": "0x028FB140",
    "get_private_static_class_rva": "0x028FA010",
    "class": "UFortSquadSlotDetailsPanel",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03D225B0",
+   "functions": [
+    {
+     "name": "GetIdOfSquadSlotToManageBP",
+     "exec_rva": "0x028FDD00"
+    },
+    {
+     "name": "GetItemInSquadSlotBP",
+     "exec_rva": "0x028FE230"
+    },
+    {
+     "name": "IsSquadSlotLockedBP",
+     "exec_rva": "0x028FF080"
+    },
+    {
+     "name": "SetIdOfSquadSlotToManageBP",
+     "exec_rva": "0x028FF7A0"
+    }
+   ],
+   "static_register_natives_rva": "0x028FB170",
+   "get_private_static_class_rva": "0x028FA0C0",
+   "class": "UFortSquadSlotItemDetailElementWidget",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -48274,6 +48698,19 @@
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
+   "array_rva": "0x03D24900",
+   "functions": [
+    {
+     "name": "SetAttribute",
+     "exec_rva": "0x028FF5A0"
+    }
+   ],
+   "static_register_natives_rva": "0x028FB350",
+   "get_private_static_class_rva": "0x028FA9B0",
+   "class": "UFortStatIcon",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
    "array_rva": "0x03D24FC0",
    "functions": [
     {
@@ -48479,6 +48916,44 @@
    "static_register_natives_rva": "0x029043A0",
    "get_private_static_class_rva": "0x02902E50",
    "class": "UFortSurvivorSquadSelectorButton",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03D30560",
+   "functions": [
+    {
+     "name": "GetIdOfSquadToManageBP",
+     "exec_rva": "0x028FE100"
+    },
+    {
+     "name": "SetIdOfSquadToManageBP",
+     "exec_rva": "0x028FFC00"
+    },
+    {
+     "name": "SetSummaryView",
+     "exec_rva": "0x02908BB0"
+    },
+    {
+     "name": "TryGetStaticSquadDataBP",
+     "exec_rva": "0x02908FA0"
+    }
+   ],
+   "static_register_natives_rva": "0x029043D0",
+   "get_private_static_class_rva": "0x02902FB0",
+   "class": "UFortSurvivorSquadStatMatchesBase",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03D30B00",
+   "functions": [
+    {
+     "name": "SetAttributeModifierAccumulation",
+     "exec_rva": "0x02908590"
+    }
+   ],
+   "static_register_natives_rva": "0x02904400",
+   "get_private_static_class_rva": "0x02903060",
+   "class": "UFortSurvivorSquadSummaryStatItem",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -48897,6 +49372,43 @@
    "static_register_natives_rva": "0x0290A6E0",
    "get_private_static_class_rva": "0x02909B50",
    "class": "UFortTwitchLoginModalWidget",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03D3CBE0",
+   "functions": [
+    {
+     "name": "GetItemDefinitionSmallPreviewImageBrush",
+     "exec_rva": "0x0290C650"
+    },
+    {
+     "name": "GetItemDefinitionSmallPreviewImageMultiSizeBrush",
+     "exec_rva": "0x0290C770"
+    },
+    {
+     "name": "GetItemSmallPreviewImageBrush",
+     "exec_rva": "0x0290C820"
+    },
+    {
+     "name": "GetItemSmallPreviewImageMultiSizeBrush",
+     "exec_rva": "0x0290C940"
+    },
+    {
+     "name": "GetMetaBoolOnOffer",
+     "exec_rva": "0x0290CA70"
+    },
+    {
+     "name": "GetMetaIntOnOffer",
+     "exec_rva": "0x0290CBF0"
+    },
+    {
+     "name": "GetMetaStringOnOffer",
+     "exec_rva": "0x0290CD70"
+    }
+   ],
+   "static_register_natives_rva": "0x0290A710",
+   "get_private_static_class_rva": "0x02909C00",
+   "class": "UFortUIBlueprintFunctionLibrary",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {
@@ -49665,6 +50177,19 @@
    "static_register_natives_rva": "0x02918860",
    "get_private_static_class_rva": "0x02917930",
    "class": "UFortVideoOptions",
+   "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
+  },
+  {
+   "array_rva": "0x03D55488",
+   "functions": [
+    {
+     "name": "SetGameplayTag",
+     "exec_rva": "0x0291BDE0"
+    }
+   ],
+   "static_register_natives_rva": "0x02918890",
+   "get_private_static_class_rva": "0x02917A80",
+   "class": "UFortWorkerSetBonusIcon",
    "evidence": "array referenced only by StaticRegisterNatives, whose address is referenced only by GetPrivateStaticClass, which passes TEXT(\"<class>\") + 1"
   },
   {

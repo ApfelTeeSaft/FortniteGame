@@ -6,6 +6,21 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase();  // RVA 0x02904B40 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029043D0 (end 0x029043F2)
+// Original VA: 0x00000001429043D0 | File offset: 0x029039D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D30560) | Matching: see analysis/functions-uht-natives.json
+void UFortSurvivorSquadStatMatchesBase::StaticRegisterNativesUFortSurvivorSquadStatMatchesBase()
+{
+	UClass* Class = UFortSurvivorSquadStatMatchesBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIdOfSquadToManageBP", &UFortSurvivorSquadStatMatchesBase::execGetIdOfSquadToManageBP },
+		{ "SetIdOfSquadToManageBP", &UFortSurvivorSquadStatMatchesBase::execSetIdOfSquadToManageBP },
+		{ "SetSummaryView", &UFortSurvivorSquadStatMatchesBase::execSetSummaryView },
+		{ "TryGetStaticSquadDataBP", &UFortSurvivorSquadStatMatchesBase::execTryGetStaticSquadDataBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

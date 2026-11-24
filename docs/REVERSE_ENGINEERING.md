@@ -180,12 +180,24 @@ UHT-generated tables in plaintext `.rdata` name functions directly. The output i
 
 | Table | Layout | Found |
 | --- | --- | --- |
-| `FNameNativePtrPair[]` (per class, in `StaticRegisterNatives<Class>`) | {name, exec thunk} | 1,155 class arrays, 9,902 entries, 9,193 distinct exec thunks (some ICF-folded) |
+| `FNameNativePtrPair[]` (per class, in `StaticRegisterNatives<Class>`) | {name, exec thunk} | 1,180 class arrays, 9,977 entries, 9,261 distinct exec thunks (some ICF-folded) |
 | `FClassFunctionLinkInfo[]` (per class, in `FClassParams`) | {`Z_Construct_UFunction_*`, name} | 1,243 arrays, 11,102 entries |
 
 The two layouts interleave the same pointer kinds, so a run read at the wrong 8-byte
 alignment looks like the other table with one entry fewer. A run is kept only when it is
 longer than every run of the other kind that overlaps its shifted reading.
+
+A native array directly after an array of function pointers (2026-11-24) breaks that rule.
+An example is a class's `DependentSingletons`: read 8 bytes off, the native array is a link
+array as long as itself. Its "creators" are the preceding pointer and the exec thunks, so
+both readings were dropped. 25 classes lost their array this way, and their
+`StaticRegisterNatives` stayed declared only. 24 of their `GetPrivateStaticClass` bodies
+waited on it.
+
+A real function-link array points only at `Z_Construct_UFunction` creators, 47-byte
+singletons of one template (`uht_creators.py`). So on a tie the native reading is now kept
+unless the link reading is all creators (`keep_runs`). Regenerated, the analysis gained
+exactly these 25 arrays and nothing else changed. The function-link arrays are identical.
 
 An exec thunk with no parameters is P_FINISH and a tail call. It is a leaf function without
 a `.pdata` entry, and 1,374 thunks are of this kind. Pointers to them are accepted when the
@@ -198,11 +210,22 @@ function-link arrays; they are now dropped. The 16 remaining unattributed arrays
 Class attribution follows unique RIP-relative `LEA` references in the decrypted code: the
 native array is loaded by exactly one function (`StaticRegisterNatives<Class>`). That
 function's address is loaded by exactly one function (`GetPrivateStaticClass`), which also
-loads `TEXT("<Class>") + 1`, i.e. a wide string + 2. This attributes 1,155 of 1,171 arrays.
+loads `TEXT("<Class>") + 1`, i.e. a wide string + 2. This attributes 1,180 of 1,196 arrays.
 No class, registrar or `GetPrivateStaticClass` is shared between attributions. In total
-21,231 denominator functions now carry reflection-derived names. Names from these tables
+21,348 denominator functions now carry reflection-derived names. Names from these tables
 count as `confirmed`; class attribution as `high-confidence inferred`. With the corrected
-arrays, all 1,155 `StaticRegisterNatives<Class>` match exactly.
+arrays, all 1,180 `StaticRegisterNatives<Class>` match exactly.
+
+With the 25 arrays recovered (2026-11-24), the generators emit those classes' registrars with
+their tables. This made exact, with no regressions:
+- the 25 registrars;
+- 24 of the waiting `GetPrivateStaticClass` bodies;
+- 25 `StaticClass` thunks;
+- 2 newly known exec thunks and 1 native accessor.
+
+The last body still waits on `InternalConstructor<C>`. 6 `UMcpProfile` classes have native
+UFunctions, but the reference uses the shared empty registrar. Their table is not located,
+so they stay declared only.
 
 ## Native implementations (`tools/analysis/natives.py`)
 

@@ -44,7 +44,34 @@ from pe import PEImage  # noqa: E402
 
 IDENT = re.compile(rb"[A-Za-z_][A-Za-z0-9_]{0,200}\x00")
 LEAF_THUNK = re.compile(rb"[\x48\x4c]\x8b[\x42\x4a\x52\x5a\x62\x6a\x72\x7a]\x20")
+# Z_Construct_UFunction_<C>_<F>: the 47-byte singleton every function-link entry points to
+# (the same template as tools/codegen/uht_creators.py; masked bytes are its displacements).
+CREATOR_SIZE = 47
+CREATOR_MASK = set(range(7, 11)) | set(range(0x13, 0x17)) | set(range(0x1A, 0x1E)) | set(range(0x1F, 0x23)) | set(range(0x26, 0x2A))
+CREATOR_TEMPLATE = bytes.fromhex("4883ec28488b05000000004885c0751a488d1500000000488d0d00000000e800000000488b05000000004883c428c3")
 OUT = ROOT / "analysis" / "reflection-natives.json"
+
+
+def keep_runs(own: list[list[int]], other: list[list[int]], tie=None) -> list[list[int]]:
+    """Runs (lists of 16-byte-spaced offsets) of one array kind that survive the other kind.
+
+    An array of one kind read 8 bytes off looks like the other kind, one entry shorter, or in
+    fragments where a leaf exec thunk is not a .pdata start. A run is kept when it is longer
+    than every run of the other kind overlapping its shifted reading, or, with `tie`, when it
+    is as long as the longest of them and `tie` rejects every one of those."""
+    length = {o: len(r) for r in other for o in r}
+    run_of = {o: r for r in other for o in r}
+    out = []
+    for r in own:
+        shadow = max((length.get(o + d, 0) for o in r for d in (-8, 8)), default=0)
+        if len(r) > shadow:
+            out.append(r)
+        elif tie is not None and len(r) == shadow:
+            rivals = {id(run_of[o + d]): run_of[o + d] for o in r for d in (-8, 8)
+                      if length.get(o + d, 0) == shadow}
+            if not any(tie(x) for x in rivals.values()):
+                out.append(r)
+    return out
 
 
 def main() -> int:
@@ -109,19 +136,20 @@ def main() -> int:
 
     native_runs, link_runs = runs(nf), runs(fn)
 
-    def keep(own: list[list[int]], other: list[list[int]]) -> list[list[int]]:
-        # An array of one kind read 8 bytes off looks like the other kind, one entry shorter,
-        # or in fragments where a leaf exec thunk is not a .pdata start. A run is kept only
-        # when it is longer than every run of the other kind overlapping its shifted reading.
-        length = {o: len(r) for r in other for o in r}
-        out = []
-        for r in own:
-            shadow = max((length.get(o + d, 0) for o in r for d in (-8, 8)), default=0)
-            if len(r) > shadow:
-                out.append(r)
-        return out
+    end_of = dict(rfs)
 
-    natives, links = keep(native_runs, link_runs), keep(link_runs, native_runs)
+    def is_creator(rva: int) -> bool:
+        if end_of.get(rva, 0) - rva != CREATOR_SIZE:
+            return False
+        b = dimg.read(rva, CREATOR_SIZE)
+        return all(b[i] == CREATOR_TEMPLATE[i] for i in range(CREATOR_SIZE) if i not in CREATOR_MASK)
+
+    # A native array directly after an array of function pointers (a class's dependency
+    # singletons, say) reads 8 bytes off as a link array of the same length: the preceding
+    # pointer and the exec thunks would be its creators. A real link array points only at
+    # creators, so on a tie the native reading wins unless the link reading is all creators.
+    natives = keep_runs(native_runs, link_runs, tie=lambda run: all(is_creator(fn[o][0]) for o in run))
+    links = keep_runs(link_runs, native_runs)
 
     # RIP-relative LEA index over the decrypted main .text: target -> [site RVA].
     code = dimg.read(text.rva, text.rawsize)

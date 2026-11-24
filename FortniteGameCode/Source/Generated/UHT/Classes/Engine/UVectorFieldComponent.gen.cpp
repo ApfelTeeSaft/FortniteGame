@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1DD0 (end 0x024F1E4F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIntensity) | Matching: see analysis/functions-uht-exec.json
+void UVectorFieldComponent::execSetIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewIntensity);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIntensity(Z_Param_NewIntensity);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UVectorFieldComponent, 2653400682u)
 // Original dynamic initializer: RVA 0x002219C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UVectorFieldComponent> AutoInitializeUVectorFieldComponent(TEXT("UVectorFieldComponent"), sizeof(UVectorFieldComponent), 2653400682u);

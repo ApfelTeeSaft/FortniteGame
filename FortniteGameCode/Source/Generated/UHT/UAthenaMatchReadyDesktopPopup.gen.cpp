@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaMatchReadyDesktopPopup();  // RVA 0x02887240 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886B10 (end 0x02886B32)
+// Original VA: 0x0000000142886B10 | File offset: 0x02886110
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C5E820) | Matching: see analysis/functions-uht-natives.json
+void UAthenaMatchReadyDesktopPopup::StaticRegisterNativesUAthenaMatchReadyDesktopPopup()
+{
+	UClass* Class = UAthenaMatchReadyDesktopPopup::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "UserDismissedDialog", &UAthenaMatchReadyDesktopPopup::execUserDismissedDialog },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaMatchReadyDesktopPopup_UserDismissedDialog_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemRatingIndicator();  // RVA 0x028CF5A0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF1B0 (end 0x028CF1D2)
+// Original VA: 0x00000001428CF1B0 | File offset: 0x028CE7B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD91B0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemRatingIndicator::StaticRegisterNativesUFortItemRatingIndicator()
+{
+	UClass* Class = UFortItemRatingIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetItemToCompareWith", &UFortItemRatingIndicator::execSetItemToCompareWith },
+		{ "SetItemToRepresent", &UFortItemRatingIndicator::execSetItemToRepresent },
+		{ "SetItemViewContext", &UFortItemRatingIndicator::execSetItemViewContext },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D0590 (end 0x028D05BF)
 // Original VA: 0x00000001428D0590 | File offset: 0x028CFB90
 // Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json

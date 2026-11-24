@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02908BB0 (end 0x02908C32)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSummaryView); calls the native accessor UFortSurvivorSquadStatMatchesBase::SetSummaryView | Matching: see analysis/functions-uht-exec.json
+void UFortSurvivorSquadStatMatchesBase::execSetSummaryView(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInSummaryView);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSummaryView(Z_Param_bInSummaryView);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortSurvivorSquadStatMatchesBase, 2407525008u)
 // Original dynamic initializer: RVA 0x0025E3F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSurvivorSquadStatMatchesBase> AutoInitializeUFortSurvivorSquadStatMatchesBase(TEXT("UFortSurvivorSquadStatMatchesBase"), sizeof(UFortSurvivorSquadStatMatchesBase), 2407525008u);

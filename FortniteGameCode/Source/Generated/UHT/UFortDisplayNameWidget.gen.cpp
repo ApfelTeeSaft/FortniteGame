@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDisplayNameWidget();  // RVA 0x028A3460 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2EC0 (end 0x028A2EE2)
+// Original VA: 0x00000001428A2EC0 | File offset: 0x028A24C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8E988) | Matching: see analysis/functions-uht-natives.json
+void UFortDisplayNameWidget::StaticRegisterNativesUFortDisplayNameWidget()
+{
+	UClass* Class = UFortDisplayNameWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleOKSelected", &UFortDisplayNameWidget::execHandleOKSelected },
+		{ "HandleTextCommitted", &UFortDisplayNameWidget::execHandleTextCommitted },
+		{ "UpdateSignInButton", &UFortDisplayNameWidget::execUpdateSignInButton },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDisplayNameWidget_HandleOKSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

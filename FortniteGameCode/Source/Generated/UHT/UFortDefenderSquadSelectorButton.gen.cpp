@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDefenderSquadSelectorButton();  // RVA 0x0289B5E0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AF70 (end 0x0289AF92)
+// Original VA: 0x000000014289AF70 | File offset: 0x0289A570
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C846C8) | Matching: see analysis/functions-uht-natives.json
+void UFortDefenderSquadSelectorButton::StaticRegisterNativesUFortDefenderSquadSelectorButton()
+{
+	UClass* Class = UFortDefenderSquadSelectorButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TryGetPowerLevel", &UFortDefenderSquadSelectorButton::execTryGetPowerLevel },
+		{ "TryGetTheaterUniqueId", &UFortDefenderSquadSelectorButton::execTryGetTheaterUniqueId },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

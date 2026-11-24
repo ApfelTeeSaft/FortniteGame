@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortNewAccountWarning();  // RVA 0x028DE450 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE000 (end 0x028DE022)
+// Original VA: 0x00000001428DE000 | File offset: 0x028DD600
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF0CD8) | Matching: see analysis/functions-uht-natives.json
+void UFortNewAccountWarning::StaticRegisterNativesUFortNewAccountWarning()
+{
+	UClass* Class = UFortNewAccountWarning::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleBackClicked", &UFortNewAccountWarning::execHandleBackClicked },
+		{ "HandleNewAccountClicked", &UFortNewAccountWarning::execHandleNewAccountClicked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

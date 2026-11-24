@@ -6,6 +6,24 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIBlueprintFunctionLibrary();  // RVA 0x0290A970 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A710 (end 0x0290A732)
+// Original VA: 0x000000014290A710 | File offset: 0x02909D10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3CBE0) | Matching: see analysis/functions-uht-natives.json
+void UFortUIBlueprintFunctionLibrary::StaticRegisterNativesUFortUIBlueprintFunctionLibrary()
+{
+	UClass* Class = UFortUIBlueprintFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetItemDefinitionSmallPreviewImageBrush", &UFortUIBlueprintFunctionLibrary::execGetItemDefinitionSmallPreviewImageBrush },
+		{ "GetItemDefinitionSmallPreviewImageMultiSizeBrush", &UFortUIBlueprintFunctionLibrary::execGetItemDefinitionSmallPreviewImageMultiSizeBrush },
+		{ "GetItemSmallPreviewImageBrush", &UFortUIBlueprintFunctionLibrary::execGetItemSmallPreviewImageBrush },
+		{ "GetItemSmallPreviewImageMultiSizeBrush", &UFortUIBlueprintFunctionLibrary::execGetItemSmallPreviewImageMultiSizeBrush },
+		{ "GetMetaBoolOnOffer", &UFortUIBlueprintFunctionLibrary::execGetMetaBoolOnOffer },
+		{ "GetMetaIntOnOffer", &UFortUIBlueprintFunctionLibrary::execGetMetaIntOnOffer },
+		{ "GetMetaStringOnOffer", &UFortUIBlueprintFunctionLibrary::execGetMetaStringOnOffer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetItemDefinitionSmallPreviewImageBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

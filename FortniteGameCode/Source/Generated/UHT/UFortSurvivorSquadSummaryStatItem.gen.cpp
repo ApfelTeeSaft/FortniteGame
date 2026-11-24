@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSurvivorSquadSummaryStatItem();  // RVA 0x02904B80 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904400 (end 0x02904422)
+// Original VA: 0x0000000142904400 | File offset: 0x02903A00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D30B00) | Matching: see analysis/functions-uht-natives.json
+void UFortSurvivorSquadSummaryStatItem::StaticRegisterNativesUFortSurvivorSquadSummaryStatItem()
+{
+	UClass* Class = UFortSurvivorSquadSummaryStatItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetAttributeModifierAccumulation", &UFortSurvivorSquadSummaryStatItem::execSetAttributeModifierAccumulation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSurvivorSquadSummaryStatItem_SetAttributeModifierAccumulation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAudioOptions();  // RVA 0x0288CC30 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C710 (end 0x0288C732)
+// Original VA: 0x000000014288C710 | File offset: 0x0288BD10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6B600) | Matching: see analysis/functions-uht-natives.json
+void UFortAudioOptions::StaticRegisterNativesUFortAudioOptions()
+{
+	UClass* Class = UFortAudioOptions::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ChatVolumeChanged", &UFortAudioOptions::execChatVolumeChanged },
+		{ "DialogVolumeChanged", &UFortAudioOptions::execDialogVolumeChanged },
+		{ "GetAvailableVoiceChatInputDevices", &UFortAudioOptions::execGetAvailableVoiceChatInputDevices },
+		{ "GetChatVolumeValue", &UFortAudioOptions::execGetChatVolumeValue },
+		{ "GetDialogVolumeValue", &UFortAudioOptions::execGetDialogVolumeValue },
+		{ "GetMusicVolumeValue", &UFortAudioOptions::execGetMusicVolumeValue },
+		{ "GetQuality", &UFortAudioOptions::execGetQuality },
+		{ "GetSoundFXVolumeValue", &UFortAudioOptions::execGetSoundFXVolumeValue },
+		{ "GetSubtitlesEnabled", &UFortAudioOptions::execGetSubtitlesEnabled },
+		{ "GetVoiceChat3DEnabled", &UFortAudioOptions::execGetVoiceChat3DEnabled },
+		{ "GetVoiceChatEnabled", &UFortAudioOptions::execGetVoiceChatEnabled },
+		{ "GetVoiceChatInputDevice", &UFortAudioOptions::execGetVoiceChatInputDevice },
+		{ "GetVoiceChatPTTEnabled", &UFortAudioOptions::execGetVoiceChatPTTEnabled },
+		{ "IsUsingCustomVoiceChatInputDevice", &UFortAudioOptions::execIsUsingCustomVoiceChatInputDevice },
+		{ "MusicVolumeChanged", &UFortAudioOptions::execMusicVolumeChanged },
+		{ "SetQuality", &UFortAudioOptions::execSetQuality },
+		{ "SetSubtitlesEnabled", &UFortAudioOptions::execSetSubtitlesEnabled },
+		{ "SetVoiceChat3DEnabled", &UFortAudioOptions::execSetVoiceChat3DEnabled },
+		{ "SetVoiceChatEnabled", &UFortAudioOptions::execSetVoiceChatEnabled },
+		{ "SetVoiceChatInputDevice", &UFortAudioOptions::execSetVoiceChatInputDevice },
+		{ "SetVoiceChatPTTEnabled", &UFortAudioOptions::execSetVoiceChatPTTEnabled },
+		{ "ShowChatVolume", &UFortAudioOptions::execShowChatVolume },
+		{ "ShowQuality", &UFortAudioOptions::execShowQuality },
+		{ "SoundFXVolumeChanged", &UFortAudioOptions::execSoundFXVolumeChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

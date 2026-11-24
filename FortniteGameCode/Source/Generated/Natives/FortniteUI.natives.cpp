@@ -149,6 +149,14 @@ int32 UFortSquadSlotsView::GetIndexOfSelectedSquadSlot() const
 	return IndexOfSelectedSquadSlot;
 }
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028732A0 (end 0x028732A7), leaf (no .pdata)
+// Original VA: 0x00000001428732A0 | File offset: 0x028728A0
+// Recovery: high-confidence inferred (called by execSetSummaryView at RVA 0x02908BB0; UFortSurvivorSquadStatMatchesBase::bSummaryView reflected at +0x248) | Matching: see analysis/functions-native-accessors.json
+void UFortSurvivorSquadStatMatchesBase::SetSummaryView(bool bInSummaryView)
+{
+	bSummaryView = bInSummaryView;
+}
+
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02740E70 (end 0x02740E78), leaf (no .pdata)
 // Original VA: 0x0000000142740E70 | File offset: 0x02740470
 // Recovery: high-confidence inferred (called by execGetCurrentUIStateWidget at RVA 0x0290C430; UFortUIManagerWidget::CurrentStateWidget reflected at +0x428) | Matching: see analysis/functions-native-accessors.json

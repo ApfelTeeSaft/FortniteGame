@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayedBeforeSelect();  // RVA 0x028E6CD0 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6560 (end 0x028E6582)
+// Original VA: 0x00000001428E6560 | File offset: 0x028E5B60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFF578) | Matching: see analysis/functions-uht-natives.json
+void UFortPlayedBeforeSelect::StaticRegisterNativesUFortPlayedBeforeSelect()
+{
+	UClass* Class = UFortPlayedBeforeSelect::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleNoClicked", &UFortPlayedBeforeSelect::execHandleNoClicked },
+		{ "HandleYesClicked", &UFortPlayedBeforeSelect::execHandleYesClicked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

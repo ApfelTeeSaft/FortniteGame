@@ -6,6 +6,20 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAppleARKitPlaneAnchor();  // RVA 0x00806430 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00806160 (end 0x00806182)
+// Original VA: 0x0000000140806160 | File offset: 0x00805760
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FE3370) | Matching: see analysis/functions-uht-natives.json
+void UAppleARKitPlaneAnchor::StaticRegisterNativesUAppleARKitPlaneAnchor()
+{
+	UClass* Class = UAppleARKitPlaneAnchor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCenter", &UAppleARKitPlaneAnchor::execGetCenter },
+		{ "GetExtent", &UAppleARKitPlaneAnchor::execGetExtent },
+		{ "GetTransformToCenter", &UAppleARKitPlaneAnchor::execGetTransformToCenter },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

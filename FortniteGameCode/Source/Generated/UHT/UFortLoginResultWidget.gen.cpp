@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortLoginResultWidget();  // RVA 0x028D7370 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6D50 (end 0x028D6D72)
+// Original VA: 0x00000001428D6D50 | File offset: 0x028D6350
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE4E48) | Matching: see analysis/functions-uht-natives.json
+void UFortLoginResultWidget::StaticRegisterNativesUFortLoginResultWidget()
+{
+	UClass* Class = UFortLoginResultWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleContinueClicked", &UFortLoginResultWidget::execHandleContinueClicked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortLoginResultWidget_HandleContinueClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

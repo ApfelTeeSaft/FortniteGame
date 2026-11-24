@@ -6,6 +6,18 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UVectorFieldComponent();  // RVA 0x024F0BD0 (registered by its FCompiledInDefer)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0660 (end 0x024F0682)
+// Original VA: 0x00000001424F0660 | File offset: 0x024EFC60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039CF058) | Matching: see analysis/functions-uht-natives.json
+void UVectorFieldComponent::StaticRegisterNativesUVectorFieldComponent()
+{
+	UClass* Class = UVectorFieldComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetIntensity", &UVectorFieldComponent::execSetIntensity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UVectorFieldComponent_SetIntensity_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

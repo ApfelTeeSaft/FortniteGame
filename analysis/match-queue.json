@@ -7,13 +7,13 @@
   "partial",
   "unmatched"
  ],
- "total": 689,
+ "total": 665,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
-   "count": 452,
+   "count": 453,
    "states": {
-    "relocation-equivalent": 452
+    "relocation-equivalent": 453
    },
    "examples": [
     "0x0027B4C0 UBlueprintContextBase::GetPrivateStaticClass",
@@ -35,20 +35,6 @@
     "0x002E32B0 EDateType_StaticEnum",
     "0x002FC0C0 EInAppPurchaseState_StaticEnum",
     "0x0032C110 EBeaconConnectionState_StaticEnum"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | StaticRegisterNatives<Class>",
-   "count": 29,
-   "states": {
-    "relocation-equivalent": 29
-   },
-   "examples": [
-    "0x005B8C30 UPartyMemberState::GetPrivateStaticClass",
-    "0x00805E50 UAppleARKitPlaneAnchor::GetPrivateStaticClass",
-    "0x00FC9990 UFortConsumableAccountItem::GetPrivateStaticClass",
-    "0x0102CF40 UFortMcpProfileAccount::GetPrivateStaticClass",
-    "0x0102D0A0 UFortMcpProfileCollectionBook::GetPrivateStaticClass"
    ]
   },
   {
@@ -161,6 +147,20 @@
     "0x01013EC0 UFortItemDefinition::execGetSmallPreviewImageBrush",
     "0x01073C80 AFortPlayerController::execServerSetInventoryStateValue",
     "0x01C80A30 IAssetRegistry::execGetAssetByObjectPath"
+   ]
+  },
+  {
+   "key": "uht-getprivatestaticclass | StaticRegisterNatives<Class>",
+   "count": 5,
+   "states": {
+    "relocation-equivalent": 5
+   },
+   "examples": [
+    "0x0102CF40 UFortMcpProfileAccount::GetPrivateStaticClass",
+    "0x0102D0A0 UFortMcpProfileCollectionBook::GetPrivateStaticClass",
+    "0x0102D150 UFortMcpProfileMetadata::GetPrivateStaticClass",
+    "0x01035CE0 UFortMcpProfileQuest::GetPrivateStaticClass",
+    "0x01035D90 UFortMcpProfileWorld::GetPrivateStaticClass"
    ]
   },
   {
@@ -334,16 +334,6 @@
    },
    "examples": [
     "0x013A7730 UObject::GetPrivateStaticClass"
-   ]
-  },
-  {
-   "key": "uht-getprivatestaticclass | InternalConstructor<Class> + StaticRegisterNatives<Class>",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x028FA0C0 UFortSquadSlotItemDetailElementWidget::GetPrivateStaticClass"
    ]
   },
   {

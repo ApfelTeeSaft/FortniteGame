@@ -9,32 +9,32 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **36,946 / 157,719** primary `.pdata` functions (23.43 %, 2,509,306 bytes):
+| Exact functions | **36,997 / 157,719** primary `.pdata` functions (23.46 %, 2,514,290 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 36,939 generated UHT functions:
-  - classes: 11,095 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,772 `GetPrivateStaticClass`,
-    1,155 `StaticRegisterNatives*`, 3,277 `FCompiledInDefer` initializers and 1,320 exec thunks
-    (1,113 of virtual natives, 207 of native accessors);
+- 36,990 generated UHT functions:
+  - classes: 11,095 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,796 `GetPrivateStaticClass`,
+    1,180 `StaticRegisterNatives*`, 3,277 `FCompiledInDefer` initializers and 1,322 exec thunks
+    (1,114 of virtual natives, 208 of native accessors);
   - packages: 626 package-scope delegate creators and 69 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,104 `Z_Construct_UScriptStruct_*`, 2,058 `StaticStruct`, 1,782 `NewStructOps`,
     2,101 `StaticRegisterNatives` and 2,106 `FCompiledInDeferStruct` initializers;
   - UENUMs: 1,088 `Z_Construct_UEnum_*`, 1,016 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
-Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,190 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 207 native accessors, 170 vector-constant initializers and `FCommandLine::IsInitialized` |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,635 reconstructed and compiled; 36,946 exact; 689 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 685 in the denominator, mostly:
-- 511 `GetPrivateStaticClass` bodies, 452 of them waiting only on `InternalConstructor<C>`;
+Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,215 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 170 vector-constant initializers and `FCommandLine::IsInitialized` |
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,662 reconstructed and compiled; 36,997 exact; 665 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 661 in the denominator, mostly:
+- 487 `GetPrivateStaticClass` bodies, 453 of them waiting only on `InternalConstructor<C>`;
 - 25 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
 
 Four are `partial`: one enum registration initializer (shared literal copy) and three exec thunks
 whose virtual natives were misidentified (inlined natives; see `docs/REVERSE_ENGINEERING.md`, "Exec
 thunk parameters"). The per-manifest counts are in `analysis/functions-uht-*.json` |
-| Named functions | 27,855 denominator functions (17.66 %):
-- from UHT reflection tables: 7,819 exec thunks, 11,102 `Z_Construct_UFunction_*` creators, and
-  registrar/`GetPrivateStaticClass` pairs for 1,155 attributed classes (`analysis/reflection-natives.json`);
-- 5,217 native implementations called by their exec thunks, 5,176 of them high-confidence
+| Named functions | 28,028 denominator functions (17.77 %):
+- from UHT reflection tables: 7,886 exec thunks, 11,102 `Z_Construct_UFunction_*` creators, and
+  registrar/`GetPrivateStaticClass` pairs for 1,180 attributed classes (`analysis/reflection-natives.json`);
+- 5,273 native implementations called by their exec thunks, 5,232 of them high-confidence
   (`analysis/native-implementations.json`);
 - 1,407 more virtual-function implementations from class vtables (`analysis/vtables.json`).
 
@@ -63,11 +63,11 @@ Work follows `CLAUDE.md`'s adaptive workflow:
 - `tools/matching/regressions.py` gates each commit.
 
 Largest queue groups (2026-11-24):
-- 452 `GetPrivateStaticClass` bodies waiting only on `InternalConstructor<C>`. 374 of the
+- 453 `GetPrivateStaticClass` bodies waiting only on `InternalConstructor<C>`. 374 of the
   instances are ICF-folded into another class's identical copy. No evidence independent of
-  the field says which classes' constructors and vtables are identical. Of the rest, 35 runs
-  have no other member observed unfolded, and in 35 the walk's sides disagree with neither
-  prediction held.
+  the field says which classes' constructors and vtables are identical. Of the 79 others,
+  most have no other member of their run observed unfolded, or sides that disagree with
+  neither prediction held.
 - 8 creators and package delegates and 6 enum constructors whose static is not predicted:
   at an end of their object's record run, or with several free slots between their record
   neighbours.
@@ -81,6 +81,9 @@ Largest queue groups (2026-11-24):
   are single objects whose data comes in batches; that is not modelled.
 
 Done (2026-11-24):
+- 25 native arrays the scanner had dropped (a tie with their shifted reading) are recovered:
+  their registrars, 24 `GetPrivateStaticClass` bodies and 2 exec thunks exact, plus 25
+  `StaticClass` thunks and 1 accessor outside the denominator, no regressions.
 - Section-relative predictions never land on a `.bss`/`.data` slot another symbol is observed
   at: 23 functions exact (8 `StaticEnum`, 6 `StaticStruct`, 9 creators and constructors),
   35 outside the denominator, no regressions.

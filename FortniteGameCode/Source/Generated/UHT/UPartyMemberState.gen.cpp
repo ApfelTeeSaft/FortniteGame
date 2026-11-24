@@ -6,6 +6,19 @@
 #include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPartyMemberState();  // RVA 0x005B8F20 (consensus OuterFunc)
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005B8D60 (end 0x005B8D82)
+// Original VA: 0x00000001405B8D60 | File offset: 0x005B8360
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F61D88) | Matching: see analysis/functions-uht-natives.json
+void UPartyMemberState::StaticRegisterNativesUPartyMemberState()
+{
+	UClass* Class = UPartyMemberState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsLocalPlayer", &UPartyMemberState::execIsLocalPlayer },
+		{ "IsPartyLeader", &UPartyMemberState::execIsPartyLeader },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPartyMemberState_IsLocalPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery

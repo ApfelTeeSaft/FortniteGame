@@ -21893,6 +21893,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAppleARKitPlaneAnchor();
+	static void execGetCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExtent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTransformToCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UAppleARKitPlaneAnchor) = 0xB0
 };
@@ -24131,6 +24134,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUAthenaMatchReadyDesktopPopup();
+	static void execUserDismissedDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x78];  // sizeof(UAthenaMatchReadyDesktopPopup) = 0x280
 };
@@ -35535,6 +35539,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAbilitySystemContext();
+	static void execRegisterForAttributeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveDelegatesFromWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x50];  // sizeof(UFortAbilitySystemContext) = 0x78
 };
@@ -37728,6 +37734,30 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortAudioOptions();
+	static void execChatVolumeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDialogVolumeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAvailableVoiceChatInputDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChatVolumeValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDialogVolumeValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMusicVolumeValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSoundFXVolumeValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSubtitlesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVoiceChat3DEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVoiceChatEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVoiceChatInputDevice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVoiceChatPTTEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingCustomVoiceChatInputDevice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMusicVolumeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSubtitlesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVoiceChat3DEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVoiceChatEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVoiceChatInputDevice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVoiceChatPTTEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowChatVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowQuality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSoundFXVolumeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortAutoFireTargetInterface : public UInterface
@@ -41616,6 +41646,8 @@ public:
 	UFortConsumableAccountItem(const FObjectInitializer& ObjectInitializer);
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UFortConsumableAccountItem(X); }
 	static void StaticRegisterNativesUFortConsumableAccountItem();
+	static void execCanActivateOnOthers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanActivateOnSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortConsumableItemDefinition : public UFortWorldItemDefinition
@@ -42606,6 +42638,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortDefenderSquadSelectorButton();
+	static void execTryGetPowerLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetTheaterUniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortDeployableBaseAnalytics : public UBlueprintFunctionLibrary
@@ -43833,6 +43867,9 @@ public:
 	UFortDisplayNameWidget(const FObjectInitializer& ObjectInitializer);
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UFortDisplayNameWidget(X); }
 	static void StaticRegisterNativesUFortDisplayNameWidget();
+	static void execHandleOKSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleTextCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateSignInButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0xA0];  // sizeof(UFortDisplayNameWidget) = 0x460
 };
@@ -44063,6 +44100,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortEulaWidget();
+	static void execHandleConfirmClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleDeclineClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x80];  // sizeof(UFortEulaWidget) = 0x440
 };
@@ -48777,6 +48816,8 @@ public:
 	UFortItemManagementItemPopupMenu(const FObjectInitializer& ObjectInitializer);
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UFortItemManagementItemPopupMenu(X); }
 	static void StaticRegisterNativesUFortItemManagementItemPopupMenu();
+	static void execGetHostButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCompareAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortItemManagementItemPopupMenu) = 0x3E0
 };
@@ -48974,6 +49015,9 @@ public:
 	UFortItemRatingIndicator(const FObjectInitializer& ObjectInitializer);
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UFortItemRatingIndicator(X); }
 	static void StaticRegisterNativesUFortItemRatingIndicator();
+	static void execSetItemToCompareWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemViewContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x308];  // sizeof(UFortItemRatingIndicator) = 0x518
 };
@@ -49841,6 +49885,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortLoginResultWidget();
+	static void execHandleContinueClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x70];  // sizeof(UFortLoginResultWidget) = 0x430
 };
@@ -49858,6 +49903,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortLoginStatus();
+	static void execSetTitleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateLoginStatusText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortLoginStatus) = 0x220
 };
@@ -52120,6 +52167,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortNewAccountWarning();
+	static void execHandleBackClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleNewAccountClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x90];  // sizeof(UFortNewAccountWarning) = 0x450
 };
@@ -53026,6 +53075,8 @@ public:
 	UPartyMemberState(const FObjectInitializer& ObjectInitializer);
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UPartyMemberState(X); }
 	static void StaticRegisterNativesUPartyMemberState();
+	static void execIsLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPartyLeader(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UPartyMemberState) = 0x88
 };
@@ -53440,6 +53491,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortPlayedBeforeSelect();
+	static void execHandleNoClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleYesClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x60];  // sizeof(UFortPlayedBeforeSelect) = 0x420
 };
@@ -57751,6 +57804,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadIcon();
+	static void execSetSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortSquadIcon) = 0x228
 };
@@ -57768,6 +57822,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadLandingPageDefenderSquadDetails();
+	static void execSetDefenderSquadInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x10];  // sizeof(UFortSquadLandingPageDefenderSquadDetails) = 0x220
 };
@@ -57785,6 +57840,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadLandingPageDefenderSquadDetailsLocked();
+	static void execSetDefenderSquadInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x8];  // sizeof(UFortSquadLandingPageDefenderSquadDetailsLocked) = 0x218
 };
@@ -57881,6 +57937,10 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSquadSlotItemDetailElementWidget();
+	static void execGetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemInSquadSlotBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadSlotLockedBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x28];  // sizeof(UFortSquadSlotItemDetailElementWidget) = 0x280
 };
@@ -58216,6 +58276,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortStatIcon();
+	static void execSetAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UFortStatIcon) = 0x240
 };
@@ -58510,9 +58571,18 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/FortniteUI"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
+	void SetSummaryView(bool bInSummaryView);  // native accessor of bSummaryView
 	static void StaticRegisterNativesUFortSurvivorSquadStatMatchesBase();
+	static void execGetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSummaryView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetStaticSquadDataBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
-	unsigned char Opaque[0x30];  // sizeof(UFortSurvivorSquadStatMatchesBase) = 0x270
+	unsigned char Opaque_240[0x8];
+public:
+	bool bSummaryView;  // +0x248, reflected property
+private:
+	unsigned char Opaque_249[0x27];  // sizeof(UFortSurvivorSquadStatMatchesBase) = 0x270
 };
 
 class UFortSurvivorSquadSummaryStatItem : public UCommonUserWidget
@@ -58528,6 +58598,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortSurvivorSquadSummaryStatItem();
+	static void execSetAttributeModifierAccumulation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x20];  // sizeof(UFortSurvivorSquadSummaryStatItem) = 0x230
 };
@@ -59905,6 +59976,13 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortUIBlueprintFunctionLibrary();
+	static void execGetItemDefinitionSmallPreviewImageBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemDefinitionSmallPreviewImageMultiSizeBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemSmallPreviewImageBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemSmallPreviewImageMultiSizeBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMetaBoolOnOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMetaIntOnOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMetaStringOnOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 };
 
 class UFortUIDataConfiguration : public UPrimaryDataAsset
@@ -60893,6 +60971,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUFortWorkerSetBonusIcon();
+	static void execSetGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x18];  // sizeof(UFortWorkerSetBonusIcon) = 0x228
 };
@@ -80693,7 +80772,10 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	UVectorFieldComponent(const FObjectInitializer& ObjectInitializer);
 	static void __DefaultConstructor(const FObjectInitializer& X) { new((EInternal*)X.GetObj())UVectorFieldComponent(X); }
+	virtual void FNGC_VSlot_0x7F8();
+	virtual void SetIntensity(float NewIntensity);  // slot 256 (+0x800), UFunction UVectorFieldComponent::SetIntensity
 	static void StaticRegisterNativesUVectorFieldComponent();
+	static void execSetIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
 	unsigned char Opaque[0x30];  // sizeof(UVectorFieldComponent) = 0x690
 };

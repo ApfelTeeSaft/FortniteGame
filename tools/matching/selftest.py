@@ -56,6 +56,20 @@ def test_unwind() -> None:
     print("unwind: ok")
 
 
+def test_native_array_runs() -> None:
+    """A native array right after a function pointer ties with its shifted link reading."""
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "analysis"))
+    from reflection import keep_runs
+    native = [[0x100, 0x110, 0x120]]                 # three (name, exec) pairs
+    shifted = [[0xF8, 0x108, 0x118]]                  # read 8 bytes off: the same length
+    assert keep_runs(native, shifted) == []           # strict rule: neither kind wins
+    assert keep_runs(native, shifted, tie=lambda r: False) == native   # rivals are not all creators
+    assert keep_runs(native, shifted, tie=lambda r: True) == []        # a real link array wins
+    assert keep_runs(native, [[0x108, 0x118]]) == native               # one entry shorter: kept
+    assert keep_runs([[0x108, 0x118]], native, tie=lambda r: False) == []
+    print("native array runs: ok")
+
+
 def test_literals() -> None:
     from symbols_auto import _string_literal
     wide = "d3ddebug".encode("utf-16le") + b"\0\0" + b"\0" * 6
@@ -785,6 +799,7 @@ def test_slot_elimination() -> None:
 
 
 def main() -> int:
+    test_native_array_runs()
     test_slot_elimination()
     test_rigid_successor()
     test_record_bracket()
