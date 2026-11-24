@@ -76,7 +76,7 @@ AUTO_INITIALIZER_SIZE = 31
 SYMBOLS = ROOT / "analysis" / "uht-class-symbols.json"
 UNITY_ORDER = ROOT / "analysis" / "unity-order.json"
 # Classes whose extra (non-DECLARE_CLASS) members come from the shim headers.
-EXTRA_MEMBERS = ("UGameplayStatics", "UClass", "UScriptStruct", "UEnum", "UByteProperty", "UInt8Property", "UInt16Property",
+EXTRA_MEMBERS = ("UGameplayStatics", "UKismetMathLibrary", "UClass", "UScriptStruct", "UEnum", "UByteProperty", "UInt8Property", "UInt16Property",
                  "UIntProperty", "UInt64Property", "UUInt16Property", "UUInt32Property", "UUInt64Property",
                  "UFloatProperty", "UDoubleProperty", "UNameProperty", "UStrProperty", "UTextProperty")
 # Intrinsic classes whose GetPrivateStaticClass is not decoded, with what the thunks need:

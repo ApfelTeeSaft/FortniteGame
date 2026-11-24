@@ -2425,19 +2425,19 @@
             "offset": "0x000000A1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in AFortProjectileAthena::execServerNotifyPawnHit, UCharacterMovementComponent::execIsWalkable and 11 more"
+            "evidence": "corroborated: same symbol at this address in ABuildingTrap::execOnTriggerTouch, UProjectileMovementComponent::execStopSimulating and 13 more"
           },
           {
             "offset": "0x000000B1",
             "symbol": "__real@3fc90fdb",
             "rva": "0x02E623F8",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
           },
           {
             "offset": "0x000000C5",
             "symbol": "__real@40490fdb",
             "rva": "0x02E623FC",
-            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+            "evidence": "corroborated: same symbol at this address in FRotator::Vector"
           },
           {
             "offset": "0x000000D8",
@@ -2532,6 +2532,356 @@
             "symbol": "?ToOrientationRotator@FVector@@QEBA?AUFRotator@@XZ",
             "rva": "0x011A6B30",
             "evidence": "exact match of manifest entry 0x011A6B30"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011A8000",
+      "end_rva": "0x011A82A1",
+      "name": "FRotator::Vector",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?Vector@FRotator@@QEBA?AUFVector@@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called by UKismetMathLibrary::GetForwardVector (0x020812F0): two FMath::SinCos expansions (4.20 minimax polynomials) of Pitch and Yaw in radians, returning (CP*CY, CP*SY, SP).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "8519df2649d17317ea70863ae4deb09b6c413abac04dceb35d85a952bbbd3a94",
+      "decrypted_sha256": "c1a015e695c6f1028719a836888bef2509c27b7af637f7f6bcf11146202c097e",
+      "candidate_sha256": "c1a015e695c6f1028719a836888bef2509c27b7af637f7f6bcf11146202c097e",
+      "byte_diff": {
+        "reference_size": 673,
+        "candidate_size": 673,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000F",
+            "symbol": "__real@3c8efa35",
+            "rva": "0x02E623E0",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x00000017",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "pooled constant: of 100 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000002F",
+            "symbol": "__real@3e22f983",
+            "rva": "0x02E623E8",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x00000054",
+            "symbol": "__real@40490fdb",
+            "rva": "0x02E623FC",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2"
+          },
+          {
+            "offset": "0x0000005D",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in ABuildingTrap::execOnTriggerTouch, UProjectileMovementComponent::execStopSimulating and 13 more"
+          },
+          {
+            "offset": "0x00000066",
+            "symbol": "__real@c0490fdb",
+            "rva": "0x02E62418",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x0000006E",
+            "symbol": "__real@bf800000",
+            "rva": "0x02E62410",
+            "evidence": "pooled constant: of 7 copies of its value that scalar float code loads, the one 882 functions load (the next: 26)"
+          },
+          {
+            "offset": "0x00000081",
+            "symbol": "__real@40c90fdb",
+            "rva": "0x02E62400",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000008C",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2"
+          },
+          {
+            "offset": "0x000000A4",
+            "symbol": "__real@bfc90fdb",
+            "rva": "0x02E62414",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x000000C2",
+            "symbol": "__real@3638b88e",
+            "rva": "0x02E623CC",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000000D8",
+            "symbol": "__real@32cd365b",
+            "rva": "0x02E623C4",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x000000E8",
+            "symbol": "__real@348bdd11",
+            "rva": "0x02E623C8",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x000000F6",
+            "symbol": "__real@39500bf1",
+            "rva": "0x02E623D4",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000104",
+            "symbol": "__real@3c088886",
+            "rva": "0x02E623DC",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x00000112",
+            "symbol": "__real@3e2aaaab",
+            "rva": "0x02E623EC",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000129",
+            "symbol": "__real@37cfb4c2",
+            "rva": "0x02E623D0",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x00000147",
+            "symbol": "__real@3ab609aa",
+            "rva": "0x02E623D8",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000155",
+            "symbol": "__real@3d2aaaa3",
+            "rva": "0x02E623E4",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000017E",
+            "symbol": "__real@3c8efa35",
+            "rva": "0x02E623E0",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000018C",
+            "symbol": "__real@3e22f983",
+            "rva": "0x02E623E8",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000001AB",
+            "symbol": "__real@40c90fdb",
+            "rva": "0x02E62400",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000001B6",
+            "symbol": "__real@3fc90fdb",
+            "rva": "0x02E623F8",
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2"
+          },
+          {
+            "offset": "0x000001C8",
+            "symbol": "__real@bfc90fdb",
+            "rva": "0x02E62414",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x000001F9",
+            "symbol": "__real@348bdd11",
+            "rva": "0x02E623C8",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000208",
+            "symbol": "__real@32cd365b",
+            "rva": "0x02E623C4",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000223",
+            "symbol": "__real@3ab609aa",
+            "rva": "0x02E623D8",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x0000022F",
+            "symbol": "__real@39500bf1",
+            "rva": "0x02E623D4",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x0000023B",
+            "symbol": "__real@3d2aaaa3",
+            "rva": "0x02E623E4",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x00000247",
+            "symbol": "__real@3c088886",
+            "rva": "0x02E623DC",
+            "evidence": "pooled constant: of 2 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000025B",
+            "symbol": "__real@3e2aaaab",
+            "rva": "0x02E623EC",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00AA95F0",
+      "end_rva": "0x00AA96FD",
+      "name": "FMath::VRand",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Math/UnrealMath.cpp",
+      "object": "Source/Runtime/Core/Private/Math/UnrealMath.obj",
+      "symbol": "?VRand@FMath@@SA?AUFVector@@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called by UKismetMathLibrary::RandomUnitVector (0x0208D930): three rand()/RAND_MAX draws per try until 1e-4 <= |V|^2 <= 1, then V / Sqrt(|V|^2). Inline in Math/Vector.h; the reference keeps one out-of-line copy, from an object not established.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "619552f0fa3d9dede8e2fbc9fbcf969f883ee0f1522812ba9aadfc48ab4c1e1d",
+      "decrypted_sha256": "31e9ef77e57f44f50b462ad4b7fe480ec790cb4783bdabc3b5dac982d297d90e",
+      "candidate_sha256": "31e9ef77e57f44f50b462ad4b7fe480ec790cb4783bdabc3b5dac982d297d90e",
+      "byte_diff": {
+        "reference_size": 269,
+        "candidate_size": 269,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000012",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in ABuildingTrap::execOnTriggerTouch, UProjectileMovementComponent::execStopSimulating and 13 more"
+          },
+          {
+            "offset": "0x0000002C",
+            "symbol": "__real@38d1b717",
+            "rva": "0x02E760D4",
+            "evidence": "pooled constant: of 13 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x0000003B",
+            "symbol": "__real@38000100",
+            "rva": "0x02E65ACC",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x00000042",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          },
+          {
+            "offset": "0x0000005C",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          },
+          {
+            "offset": "0x0000007A",
+            "symbol": "__imp_rand",
+            "rva": "0x04DDC64C",
+            "evidence": "protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0208D930",
+      "end_rva": "0x0208D947",
+      "name": "UKismetMathLibrary::RandomUnitVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?RandomUnitVector@UKismetMathLibrary@@SA?AUFVector@@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The native implementation execRandomUnitVector calls (analysis/native-implementations.json, high confidence), forwarding its return slot to FMath::VRand (0x00AA95F0).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "c84ced31a18ccaa42b945e0a0c82bac5a5b260ac53c180edc441e830729bde02",
+      "decrypted_sha256": "bdbf970ccc75be2ab10d08ce0a26c1309c746a929e1b3f457d816c065b2ee813",
+      "candidate_sha256": "bdbf970ccc75be2ab10d08ce0a26c1309c746a929e1b3f457d816c065b2ee813",
+      "byte_diff": {
+        "reference_size": 23,
+        "candidate_size": 23,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "?VRand@FMath@@SA?AUFVector@@XZ",
+            "rva": "0x00AA95F0",
+            "evidence": "exact match of manifest entry 0x00AA95F0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x020812F0",
+      "end_rva": "0x02081310",
+      "name": "UKismetMathLibrary::GetForwardVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?GetForwardVector@UKismetMathLibrary@@SA?AUFVector@@UFRotator@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The native implementation execGetForwardVector calls: a static function (it swaps its return slot and by-reference FRotator argument) calling FRotator::Vector (0x011A8000).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "41a7fa9b3f332bce704f53727f9e8c60817dc1692fe3cf857a207e5a6ff5f823",
+      "decrypted_sha256": "7335f18e8d62145e14e16f096575302d7be4715c03dc866b0e77e5a4f4412205",
+      "candidate_sha256": "7335f18e8d62145e14e16f096575302d7be4715c03dc866b0e77e5a4f4412205",
+      "byte_diff": {
+        "reference_size": 32,
+        "candidate_size": 32,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000013",
+            "symbol": "?Vector@FRotator@@QEBA?AUFVector@@XZ",
+            "rva": "0x011A8000",
+            "evidence": "exact match of manifest entry 0x011A8000"
           }
         ],
         "unresolved_relocations": [],

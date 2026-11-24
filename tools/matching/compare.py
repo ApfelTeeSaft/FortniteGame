@@ -47,6 +47,7 @@ SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
 # Literal elimination needs every copy enumerated; content with this many copies is skipped.
 ELIMINATION_LIMIT = 4096
+POOLED_MIN, POOLED_DOMINANCE = 10, 10   # pooled __real@ constants among several scalar-loaded copies
 TLS_RVA: int | None = None   # the reference's .tls section; SECREL fields are offsets into it (set in main)
 HELD_SLOTS = True   # section-relative: never predict a .bss/.data slot another symbol is observed at
 FOLD_LIMIT = 16   # longest relocation-free leaf body treated as ICF-folded (bytes)
@@ -714,7 +715,12 @@ class Resolver:
         double) code outside the function under test loads: movss/addss/mulss/... (F3 0F, or
         F2 0F for doubles) or comiss/ucomiss (0F 2E/2F, 66 for doubles) with a rip-relative
         operand. Other copies are fields of tables or lanes of vector constants, which packed
-        instructions or base registers reach."""
+        instructions or base registers reach.
+
+        When several copies are loaded that way, the pooled one is shared by every unit using the
+        literal, while a unit-local constant of the same value serves only its own unit. The copy
+        then counts only if scalar code in at least POOLED_MIN functions loads it, and in at least
+        POOLED_DOMINANCE times as many functions as the next copy (-1.0: 883 against 26)."""
         m = self._REAL.match(symbol)
         if m is None or getattr(self, "hay", None) is None:
             return []
@@ -734,11 +740,32 @@ class Resolver:
         refs = self._scalar_refs(size)
         lo, hi = getattr(self, "entry_ranges", {}).get(exclude, (0, 0))
         used = [c for c in copies if any(not lo <= s < hi for s in refs.get(c, ()))]
-        if len(used) != 1:
-            return []
         kind = "float" if size == 4 else "double"
-        return [(used[0], f"pooled constant: of {len(copies)} copies of its value, the only one scalar {kind} "
-                          "code (outside this function) loads")]
+        if len(used) == 1:
+            return [(used[0], f"pooled constant: of {len(copies)} copies of its value, the only one scalar {kind} "
+                              "code (outside this function) loads")]
+        if len(used) < 2:
+            return []
+        funcs = sorted(((len({self._function_of(s) for s in refs[c] if not lo <= s < hi}), c) for c in used), reverse=True)
+        (top, best), (second, _) = funcs[0], funcs[1]
+        if top < POOLED_MIN or top < POOLED_DOMINANCE * second:
+            return []
+        return [(best, f"pooled constant: of {len(used)} copies of its value that scalar {kind} code loads, the one "
+                       f"{top} functions load (the next: {second})")]
+
+    def _function_of(self, rva: int) -> int | None:
+        """The start of the reference .pdata function containing `rva`."""
+        begins = getattr(self, "_rf_begins", None)
+        if begins is None:
+            img = getattr(self, "img", None)
+            pairs = sorted((r.begin, r.end) for r in img.runtime_functions()) if img is not None else []
+            self._rf_begins, self._rf_pairs = [b for b, _ in pairs], pairs
+            begins = self._rf_begins
+        import bisect as _bisect
+        i = _bisect.bisect_right(begins, rva) - 1
+        if i >= 0 and self._rf_pairs[i][0] <= rva < self._rf_pairs[i][1]:
+            return self._rf_pairs[i][0]
+        return None
 
     def _scalar_refs(self, size: int) -> dict[int, list[int]]:
         """Targets of rip-relative scalar float (size 4) or double (size 8) loads in the decrypted

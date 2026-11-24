@@ -88,7 +88,9 @@ same import, and the manifest records which.
   - **pooled float constants** (`__real@<hex>`, named by their value): the only aligned copy
     of the value in `.rdata`. Among several copies, the only one that scalar float/double code
     outside the function under test loads: `movss`/`addss`/`mulss`/... or `comiss`/`ucomiss`
-    with a rip-relative operand. Other copies are table fields or lanes of vector constants;
+    with a rip-relative operand. Other copies are table fields or lanes of vector constants.
+    When scalar code loads several copies, the one loaded by at least 10 functions and by at
+    least 10 times as many functions as the next copy;
   - an already-exact function, iterated to a fixpoint;
   - **corroboration (leave-one-out):** the same symbol observed at one address in a
     *different* manifest function whose size and every non-relocation byte equal the
@@ -314,6 +316,10 @@ object.
 | `0x01112E50` | `FGenericPlatformMath::Atan2` | exact |
 | `0x011A6B30` | `FVector::ToOrientationRotator` | exact |
 | `0x011A1EA0` | `FVector::Rotation` | exact |
+| `0x011A8000` | `FRotator::Vector` | exact |
+| `0x00AA95F0` | `FMath::VRand` | exact |
+| `0x0208D930` | `UKismetMathLibrary::RandomUnitVector` | exact |
+| `0x020812F0` | `UKismetMathLibrary::GetForwardVector` | exact |
 
 The chain was found from `UKismetMathLibrary::execConv_VectorToRotator`. Its callee at
 `0x011A1EA0` passes `this` and the return slot straight on, so it is a member function:
@@ -331,9 +337,42 @@ unique-data search:
 - `1.0`, `PI`, `PI/2` and `180/PI` have 339, 5, 5 and 5 copies. In each case exactly one copy
   is loaded by scalar float instructions elsewhere; the others are lanes of vector constants
   or table fields;
-- values with two scalar-loaded copies, such as `2.0` and `1e-8`, stay unresolved.
+- some values have several scalar-loaded copies. The pooled copy is shared by every unit that
+  uses the value, while a unit's own constant of the same value serves only that unit, so the
+  pooled copy is loaded by far more functions. A copy counts when at least 10 functions load
+  it, and at least 10 times as many as load the next copy. Measured on the reference:
+
+  | Value | Copies | Scalar-loaded | Functions loading the top two |
+  | --- | --- | --- | --- |
+  | `-1.0` | 87 | 7 | 883, 26 |
+  | `2.0` | 71 | 2 | 774, 1 |
+  | `1e-8` | 7 | 3 | 1,061, 3 |
+
+  Closer counts resolve nothing.
 
 `Shims/FortniteGameCode/MathDecls.h` declares the few Core math members the chain uses.
+
+The second batch follows the Kismet natives `execGetForwardVector` and
+`execRandomUnitVector`:
+- `UKismetMathLibrary::GetForwardVector` forwards to `FRotator::Vector`, which expands
+  `FMath::SinCos` (the 4.20 minimax polynomials) for pitch and yaw;
+- `UKismetMathLibrary::RandomUnitVector` forwards to `FMath::VRand`.
+
+`FMath::VRand` is inline in `Math/Vector.h`, but the reference calls one out-of-line copy. Which
+object emitted that copy is not established. `UnrealMath.cpp` emits it through an anchor table,
+and the comparison checks only its bytes and relocations.
+
+The two Kismet functions are declared in the generated class body through the
+`FNGC_EXTRA_MEMBERS_UKismetMathLibrary` hook.
+
+In the same run, two attribute getters became exact: `UFortBuildingTrapSet::GetDurabilityAttribute`
+and `GetMaxDurabilityAttribute`. Their `Prop` statics and guards resolve section-relative
+to each other (leave-one-out). The cause of the change is not established:
+- the previous run's observations, replayed offline, resolve them by the same rule;
+- no rule that applies to them changed.
+
+Every getter object was recompiled in this run, because the shared generated header changed,
+so the objects the previous runs compared may have differed.
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 

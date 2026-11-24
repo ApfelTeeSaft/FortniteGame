@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 694,
+ "total": 692,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -438,16 +438,6 @@
    ]
   },
   {
-   "key": "attribute-getter | other: ?$TSS0@?1??GetMaxDurabilityAttribute@UFortBuildingTrapSet@@S + other: ?Prop@?1??GetMaxDurabilityAttribute@UFortBuildingTrapSet@@SA",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x00A54180 UFortBuildingTrapSet::GetMaxDurabilityAttribute"
-   ]
-  },
-  {
    "key": "attribute-getter | other: ?$TSS0@?1??GetMaxHealthAttribute@UFortHealthSet@@SA?AUFGamep + other: ?Prop@?1??GetMaxHealthAttribute@UFortHealthSet@@SA?AUFGamepl",
    "count": 1,
    "states": {
@@ -565,16 +555,6 @@
    },
    "examples": [
     "0x00C2C440 UFortHomebaseSet::GetWorldInventorySizeBonusAttribute"
-   ]
-  },
-  {
-   "key": "attribute-getter | other: ?Prop@?1??GetDurabilityAttribute@UFortBuildingTrapSet@@SA?AU",
-   "count": 1,
-   "states": {
-    "relocation-equivalent": 1
-   },
-   "examples": [
-    "0x009D30B0 UFortBuildingTrapSet::GetDurabilityAttribute"
    ]
   },
   {

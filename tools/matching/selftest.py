@@ -696,6 +696,17 @@ def test_pooled_constants() -> None:
     r._scalar_ref_index = {4: {0x100C: [0x210]}}                                 # only the entry under test
     assert r._pooled_constant("__real@3f800000", 7) == []
     r._scalar_ref_index = {4: {0x100C: [0x300], 0x1004: [0x400]}}               # two loaded copies
+    r._rf_begins, r._rf_pairs = [], []
+    assert r._pooled_constant("__real@3f800000", 7) == []
+    # Two loaded copies, one loaded by far more functions: the pooled one (10 and 10x).
+    sites = [0x1000 + 0x10 * k for k in range(20)]
+    r._rf_pairs = [(s, s + 8) for s in sites] + [(0x5000, 0x5008)]
+    r._rf_begins = [b for b, _ in r._rf_pairs]
+    r._scalar_ref_index = {4: {0x100C: sites, 0x1004: [0x5000]}}
+    assert [p for p, _ in r._pooled_constant("__real@3f800000", 7)] == [0x100C]
+    r._scalar_ref_index = {4: {0x100C: sites[:9], 0x1004: [0x5000]}}            # under 10 functions
+    assert r._pooled_constant("__real@3f800000", 7) == []
+    r._scalar_ref_index = {4: {0x100C: sites, 0x1004: [0x5000, 0x1000, 0x1010]}}  # 20 against 3: under 10x
     assert r._pooled_constant("__real@3f800000", 7) == []
     r.__dict__.pop("_constant_copies", None)
     r.hay = bytes(4) + _s.pack("<f", 0.25) + bytes(8)                            # unique value

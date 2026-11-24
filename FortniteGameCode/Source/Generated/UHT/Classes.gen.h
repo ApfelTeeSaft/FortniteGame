@@ -65067,6 +65067,9 @@ public:
 	static void execVSizeSquared(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execVSizeXY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execXor_IntInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+#ifdef FNGC_EXTRA_MEMBERS_UKismetMathLibrary
+	FNGC_EXTRA_MEMBERS_UKismetMathLibrary
+#endif
 };
 
 class UKismetNodeHelperLibrary : public UBlueprintFunctionLibrary

@@ -108,6 +108,7 @@
     <ClCompile Include="Source\Runtime\D3D12RHI\Private\Windows\WindowsD3D12Device.cpp" />
     <ClCompile Include="Source\Runtime\D3D12RHI\Private\Unattributed\D3D12RHIPrivateUser_0162C1D0.cpp" />
     <ClCompile Include="Source\Runtime\Engine\Private\GameplayStatics.cpp" />
+    <ClCompile Include="Source\Runtime\Engine\Private\KismetMathLibrary.cpp" />
     <ClCompile Include="Source\Runtime\Portal\LauncherCheck\Private\LauncherCheckModule.cpp" />
     <ClCompile Include="Source\FortniteGame\Private\Unattributed\CommandLineChecks.cpp" />
     <!-- Generated UHT code: per-item fragments (tools/codegen/uht_*.py) are compiled only through the

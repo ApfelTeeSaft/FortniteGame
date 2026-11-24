@@ -203,6 +203,8 @@ struct FRotator
 	float Yaw;
 	float Roll;
 	__forceinline FRotator() { }
+
+	FVector Vector() const;   // Core: Math/UnrealMath.cpp
 };
 
 struct FVector2D
