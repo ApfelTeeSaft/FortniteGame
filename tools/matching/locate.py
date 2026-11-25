@@ -36,6 +36,72 @@ def masked(obj: CoffObject, name: str) -> tuple[bytes, bytearray]:
     return data[:n], mask[:n]
 
 
+class PdataIndex:
+    """The reference's primary .pdata functions by length, for locating whole objects at once.
+
+    A function's extent is its primary entry plus the contiguous chained entries that unwind to
+    it (only int3 padding between them), as compare.py reads it. find() returns the starts
+    whose bytes equal the candidate's outside its relocation fields. It proposes; compare.py
+    resolves the relocations and decides the match state.
+    """
+
+    def __init__(self, img: PEImage, dimg):
+        from unwind import UNW_FLAG_CHAININFO, parse_unwind
+        text = img.sections[0]
+        rfs = sorted((r for r in img.runtime_functions() if text.contains_rva(r.begin)), key=lambda r: r.begin)
+        by_begin = {r.begin: r for r in rfs}
+
+        def root(r):
+            for _ in range(32):
+                ui = parse_unwind(img, r.unwind)
+                if not (ui.flags & UNW_FLAG_CHAININFO) or not ui.chained:
+                    return r.begin
+                nxt = by_begin.get(ui.chained[0])
+                if nxt is None:
+                    return ui.chained[0]
+                r = nxt
+            return r.begin
+
+        roots = [root(r) for r in rfs]
+        self.extent: dict[int, int] = {}
+        i = 0
+        while i < len(rfs):
+            if roots[i] != rfs[i].begin:
+                i += 1
+                continue
+            start, end, j = rfs[i].begin, rfs[i].end, i + 1
+            while j < len(rfs) and roots[j] == start and 0 <= rfs[j].begin - end <= 16:
+                gap = dimg.read(end, rfs[j].begin - end)
+                if gap.strip(b"\xcc"):
+                    break
+                end, j = rfs[j].end, j + 1
+            self.extent[start] = end
+            i += 1
+        self.by_len: dict[int, list[tuple[int, bytes]]] = {}
+        for start, end in self.extent.items():
+            try:
+                self.by_len.setdefault(end - start, []).append((start, dimg.read(start, end - start)))
+            except ValueError:
+                pass
+
+    def find(self, data: bytes, mask: bytearray) -> list[int]:
+        bucket = self.by_len.get(len(data))
+        if not bucket:
+            return []
+        runs, k, n = [], 0, len(data)
+        while k < n:
+            if mask[k]:
+                k += 1
+                continue
+            j = k
+            while j < n and not mask[j]:
+                j += 1
+            runs.append((k, j, data[k:j]))
+            k = j
+        runs.sort(key=lambda r: r[0] - r[1])   # longest run first: it rejects most quickly
+        return [s for s, ref in bucket if all(ref[a:b] == piece for a, b, piece in runs)]
+
+
 def locate(region: bytes, lo: int, data: bytes, mask: bytearray, step: int = 16) -> list[int]:
     hits = []
     for off in range(0, len(region) - len(data) + 1, step):

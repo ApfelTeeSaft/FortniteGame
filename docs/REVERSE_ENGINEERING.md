@@ -868,6 +868,81 @@ objects are unchanged apart from string-literal names. `Misc/RecoveredCString.h`
 copies of `L" "`, and `FTimespan::Parse` five of `L":"`. Leaving the entry under test out of
 its own evidence, nothing assigns them.
 
+## Bulk engine reconstruction (`tools/engine/`, 2026-11-25)
+
+Engine code is no longer recovered one function at a time. The supplied UE4.20.0 tree is
+compiled module by module with the reference's toolchain, and every compiled function is
+located in the reference and verified by `compare.py`. Hand-written reconstructions and the UHT
+generators keep their entries; the bulk pass fills the addresses they do not hold.
+
+**Compile environments come from UnrealBuildTool itself.** UBT is built from the engine tree and
+run for UE4Game Win64 Shipping with `-JsonExport -SkipBuild`, pinned to VS2015 v140 and Windows
+SDK 10.0.10586.0. It builds and runs UnrealHeaderTool (real `.generated.h` files for the
+target's UObject modules) and writes every module's unity files and the exact compiler response
+file of each. `tools/engine/build.py` runs those 285 actions for 92 modules unchanged except for
+the object path, no precompiled header (its wrapper header is still force-included) and no debug
+information. All 285 compile, in about 15 minutes.
+
+**One project setting differs from UE4Game.** Fortnite's shipping client logs:
+`USE_LOGGING_IN_SHIPPING=1` places 3,884 of Core's functions uniquely instead of 3,803, while
+`USE_CHECKS_IN_SHIPPING=1` drops it to 2,819. The definition is applied to copies of the
+wrapper headers (`ue_target.PROJECT_DEFINITIONS`).
+
+**Mapping** (`tools/engine/map.py`, `locate.PdataIndex`). The reference's 157,719 primary
+`.pdata` functions are indexed by length (a primary entry plus its contiguous chained entries).
+A compiled function is compared with the functions of its length, relocation fields masked:
+- one equal function: proposed there;
+- several (identical bodies that differ only in their targets, such as `FString::ToUpper` and
+  `ToLower`): each candidate's relocation fields are read in the reference, and only a candidate
+  that agrees with every independently known target (an import slot, a literal or data block
+  unique by content, a function another manifest already matches) stays. Exactly one: proposed;
+- none: not proposed.
+An address another manifest already holds is left to it, and one address gets one name.
+
+**Verification.** A proposal is only a location. `compare.py` resolves every relocation as for
+any other entry. One rule is new: bulk entries contribute observations only once exact, and
+never as ICF-folded bodies. Without it a misplaced relocation-equivalent entry put shared
+symbols at a second address: the first full run cost 1,886 existing exact matches (bodies such
+as `GetPrivateStaticClass` lost their ICF-folded `StaticRegisterNatives` call) and never reached
+a fixpoint. With it, no existing match changed.
+
+**Results.** 92 modules, 285 compile actions, 24,461 proposed functions:
+14,855 exact (14,855 in the denominator),
+9,333 relocation-equivalent, 273 partial (a field
+resolved by evidence to an address the reference does not hold). No existing match changed.
+
+| Module | Exact | Relocation-equivalent | Partial |
+| --- | --- | --- | --- |
+| Engine | 4,936 | 3,350 | 66 |
+| Renderer | 2,141 | 1,091 | 6 |
+| Core | 1,416 | 765 | 41 |
+| CoreUObject | 791 | 475 | 60 |
+| AIModule | 681 | 344 | 25 |
+| BuildPatchServices | 477 | 264 | 20 |
+| Slate | 278 | 234 | 2 |
+| Navmesh | 256 | 30 | 0 |
+| UMG | 251 | 163 | 2 |
+| AnimGraphRuntime | 251 | 112 | 3 |
+| SlateCore | 234 | 161 | 3 |
+| MovieScene | 197 | 165 | 4 |
+
+**Systematic causes of the unplaced functions** (`tools/engine/nearmiss.py`, Core: 388 of 2,593
+unplaced functions of 24 bytes or more have a same-length reference function at 85% or more):
+- **Line numbers.** `__LINE__` immediates differ by a few lines (`FMallocBinned2::MallocExternal`
+  passes 775, the reference 769): Fortnite's files have extra or fewer lines. Shipping logging
+  passes `__LINE__` even where the file name is suppressed.
+- **Class layouts.** `FText` functions allocate `0x160` bytes where the reference allocates
+  `0x210`; an `IFileManager` virtual is at `0xE0` instead of `0xD8`; a `TSetElement` of
+  `FDisplayStringEntry` is 72 bytes instead of 40. The internal fork's classes differ.
+- **Different literals.** Path lengths differ (`FPaths::ScreenShotDir`).
+- **Build root.** The reference's `__FILE__` strings start `D:\Build\++FN25\Sync\` (1,061 engine
+  paths; 32 more from `D:\Build\++FNS\Sync\`), with absolute include directories
+  (`...\Runtime\Slate\Public\Widgets/Views/STreeView.h`). Literals compiled from `E:\FortniteGame`
+  can never resolve by content; only three are in Core.
+- **Unity composition.** Inlining across the `.cpp` files of one unity unit depends on which
+  files share it (`FPaths::ProjectUserDir` is 1,045 bytes in the reference, 333 here). UBT groups
+  the public tree's files; Fortnite's tree had other files and sizes.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is

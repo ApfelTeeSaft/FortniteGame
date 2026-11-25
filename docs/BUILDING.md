@@ -87,6 +87,36 @@ objects of each run of consecutive enums are compiled in a unit of their own (`<
 The generators rewrite only files whose content changed, so MSBuild recompiles only those.
 The generated sources are committed, so a checkout builds without the decrypted image.
 
+## Engine modules (bulk, from the local UE4.20 tree)
+
+The engine's own code is compiled from the supplied engine tree (`Engine/`, local and not
+tracked), not rewritten. Prerequisites beyond the above: the engine tree with its `Setup.bat`
+dependencies (`Engine/Source/ThirdParty`), and the .NET Framework 4.5 targeting pack to build
+UnrealBuildTool. Nothing from `Engine/` or its outputs is committed.
+
+```
+python tools/engine/ue_target.py export   # build UBT, run it for UE4Game Win64 Shipping (runs UHT)
+python tools/engine/build.py --all        # compile every module's UBT actions (about 15 minutes)
+python tools/engine/map.py --all          # locate the functions, write analysis/functions-engine-*.json
+python tools/matching/compare.py --quiet  # decide every match
+```
+
+- `ue_target.py export` pins UBT to the reference's toolchain in
+  `Engine/Saved/UnrealBuildTool/BuildConfiguration.xml` (VS2015 v140, SDK 10.0.10586.0) and
+  runs it with `-JsonExport -SkipBuild`. UBT then builds and runs UnrealHeaderTool and writes,
+  per module, the unity files and the compiler response files it would use
+  (`Engine/Intermediate/Build/Win64/UE4/Shipping/<Module>/`).
+- `build.py` runs those actions with three changes that do not alter code: objects go to
+  `FortniteGameCode/Build/ClientShipping/obj/Engine/<Module>/`, no precompiled header (the
+  wrapper header is still force-included) and no debug information. The wrappers carry the
+  definitions; the project's (`ue_target.PROJECT_DEFINITIONS`: logging in shipping) are applied
+  to copies.
+- `map.py` proposes addresses; `compare.py` decides. Engine entries depend on the local engine
+  tree: without it they compare as not compiled.
+
+Diagnostics: `python tools/engine/nearmiss.py <Module>` classifies the first difference of
+unplaced functions against their most similar same-length reference function.
+
 ## Verify
 
 ```

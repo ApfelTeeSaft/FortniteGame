@@ -928,7 +928,30 @@ def test_locate() -> None:
     region[0x30:0x38] = bytes([0x48, 0x8B, 0x0D, 1, 2, 3, 4, 0xC3])   # other register: no hit
     region[0x21:0x29] = body                                      # not 16-byte aligned: skipped
     assert locate.locate(bytes(region), 0x1000, body, mask) == [0x1010]
+    # The indexed form: same-length .pdata bodies, relocation fields as wildcards.
+    ix = locate.PdataIndex.__new__(locate.PdataIndex)
+    ix.by_len = {8: [(0x2000, bytes([0x48, 0x8B, 0x05, 9, 9, 9, 9, 0xC3])),
+                     (0x3000, bytes([0x48, 0x8B, 0x0D, 9, 9, 9, 9, 0xC3]))],
+                 9: [(0x4000, body + b"\xcc")]}
+    assert ix.find(body, mask) == [0x2000]
+    assert ix.find(body + b"\x90", mask + bytearray(1)) == []
     print("locate: ok")
+
+
+def test_engine_map() -> None:
+    """tools/engine/map.py: relocation targets in the reference, and compact undecorated names."""
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "engine"))
+    import map as M
+    cand = bytes([0xE8, 0, 0, 0, 0])                       # call rel32, addend 0
+    ref = bytes([0xE8]) + (0x100 - 5).to_bytes(4, "little", signed=True)
+    assert M.ref_target("REL32", cand, ref, 1, 0x1000, 0x140000000) == 0x1100
+    assert M.ref_target("ADDR64", bytes(8), (0x140001234).to_bytes(8, "little"), 0, 0, 0x140000000) == 0x1234
+    assert M.compact_name("public: int __cdecl FString::Find(wchar_t const * __ptr64,enum ESearchCase::Type)"
+                          "const __ptr64") == "FString::Find"
+    assert M.compact_name("private: void __cdecl TArray<FString,FDefaultAllocator>::ResizeGrow(int) __ptr64") \
+        == "TArray<FString,FDefaultAllocator>::ResizeGrow"
+    assert M.compact_name("void __cdecl `dynamic initializer for 'GFoo''(void)") == "dynamic initializer for GFoo"
+    print("engine map: ok")
 
 
 def test_data_section_blocks() -> None:
@@ -955,6 +978,7 @@ def test_data_section_blocks() -> None:
 def main() -> int:
     test_data_section_blocks()
     test_locate()
+    test_engine_map()
     test_native_array_runs()
     test_slot_elimination()
     test_rigid_successor()

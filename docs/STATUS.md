@@ -9,10 +9,12 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **37,235 / 157,719** primary `.pdata` functions (23.61 %, 2,589,309 bytes):
+| Exact functions | **52,095 / 157,719** primary `.pdata` functions (33.03 %, 6,263,078 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 188 hand-reconstructed functions matching the decrypted image;
 - 53 generated GameplayAbilities attribute getters (`tools/codegen/attribute_getters.py`);
+- 14,855 engine functions compiled from the local UE4.20 tree (`tools/engine/`;
+  `docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction");
 - 36,992 generated UHT functions:
   - classes: 11,095 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,796 `GetPrivateStaticClass`,
     1,180 `StaticRegisterNatives*`, 3,277 `FCompiledInDefer` initializers and 1,322 exec thunks
@@ -23,13 +25,15 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
   - UENUMs: 1,088 `Z_Construct_UEnum_*`, 1,016 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,216 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 182 vector-constant initializers, `FCommandLine::IsInitialized`, 50 hand-written leaves without `.pdata` (Kismet math, Core date, colour and string helpers, `FmodReportError`) and 41 dynamic initializers of the Kismet and UnrealMath units |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 37,939 reconstructed and compiled; 37,235 exact; 704 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 698 in the denominator, mostly:
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 62,400 reconstructed and compiled; 52,095 exact; 10,305 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 10,026 in the denominator, mostly:
+- 9,333 engine functions (`tools/engine/`): each still has a field no independent evidence resolves;
 - 487 `GetPrivateStaticClass` bodies, 453 of them waiting only on `InternalConstructor<C>`;
 - 25 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
 
-Six are `partial`: one enum registration initializer (shared literal copy), three exec thunks
+279 are `partial`: 273 engine functions whose masked bytes match but one field resolves, by
+evidence, to an address the reference does not hold; one enum registration initializer (shared literal copy), three exec thunks
 whose virtual natives were misidentified (inlined natives; see `docs/REVERSE_ENGINEERING.md`, "Exec
 thunk parameters"), `MinimumAreaRectangle` (8 bytes of protector-written alignment padding) and
 the `ConvexHull2D` copy it calls (register allocation; "Eleventh family"). The per-manifest counts are in `analysis/functions-uht-*.json` |
@@ -65,6 +69,12 @@ Work follows `CLAUDE.md`'s adaptive workflow:
 - `tools/matching/regressions.py` gates each commit.
 
 Largest queue groups (2026-11-24):
+- Engine (bulk, `tools/engine/`): 9,333 relocation-equivalent engine functions; 34,594 compiled
+  functions match several reference functions and 93,628 none (per-module symbol counts). Systematic
+  fixes first (`docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction"): `__LINE__` offsets
+  (shift the source lines, found by compiling each unit twice with a known line offset); the build
+  root `D:\Build\++FN25\Sync\` for `__FILE__` literals; the internal fork's class layouts (`FText`
+  histories, `IFileManager`'s vtable); unity composition.
 - Hand-written code: 145 primary callers of `FParse::Param` and `FCommandLine::Get`, 101 named
   by their switch literal in the 4.20 tree (`docs/REVERSE_ENGINEERING.md`, "Fourth family").
   Thread-safe statics resolve only within reconstructed clusters of neighbouring functions
@@ -98,6 +108,11 @@ Largest queue groups (2026-11-24):
   are single objects whose data comes in batches; that is not modelled.
 
 Done (2026-11-25):
+- Bulk engine reconstruction (`tools/engine/`): UBT built from the engine tree and run for UE4Game
+  Win64 Shipping (v140, SDK 10.0.10586.0) gives every module's compile actions and UHT's headers;
+  all 285 actions of 92 modules compile. 24,461 functions located: 14,855 exact
+  (14,855 in the denominator), 9,333 relocation-equivalent.
+  compare.py checks bulk entries in a second phase that cannot change other results. No regressions.
 - The date and time parsers: `FDateTime::Parse` and `FTimespan::Parse` reconstructed,
   relocation-equivalent (one-character literals). The nine `FString` members they call
   (new Core `Containers/String.cpp`) and five template copies are exact: 14 exact, 13 in

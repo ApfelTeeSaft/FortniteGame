@@ -1,0 +1,18 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "StreamingPauseRendering",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 StreamingPauseRendering compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x001C20F0","end_rva":"0x001C2163","name":"dynamic initializer for CVarRenderLastFrameInStreamingPause","source":"Engine/Source/Runtime/StreamingPauseRendering/Private/StreamingPauseRendering.cpp","object":"Engine/StreamingPauseRendering/Module.StreamingPauseRendering.obj","symbol":"??__ECVarRenderLastFrameInStreamingPause@@YAXXZ","evidence":"masked bytes identical to 44 .pdata functions of 115 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"c72050b4837617d6","byte_diff":{"reference_size":115,"candidate_size":115,"differing_bytes":0,"first_difference":null,"resolved_relocations":7,"resolved_by":{"corroborated":5,"data symbol":2},"unresolved_relocations":[{"offset":"0x00000048","symbol":"?CVarRenderLastFrameInStreamingPause@@3V?$TAutoConsoleVariable@H@@A"},{"offset":"0x0000004F","symbol":"?CVarRenderLastFrameInStreamingPause@@3V?$TAutoConsoleVariable@H@@A"},{"offset":"0x0000005F","symbol":"??__FCVarRenderLastFrameInStreamingPause@@YAXXZ"},{"offset":"0x00000066","symbol":"?CVarRenderLastFrameInStreamingPause@@3V?$TAutoConsoleVariable@H@@A"}]}},
+{"start_rva":"0x01D65E50","end_rva":"0x01D65F31","name":"FBackgroundView::FBackgroundView","source":"Engine/Source/Runtime/StreamingPauseRendering/Private/StreamingPauseRendering.cpp","object":"Engine/StreamingPauseRendering/Module.StreamingPauseRendering.obj","symbol":"??0FBackgroundView@@QEAA@V?$TRefCountPtr@VFRHITexture2D@@@@UFIntPoint@@@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"efd860cf21c8ecd0","byte_diff":{"reference_size":225,"candidate_size":225,"differing_bytes":0,"first_difference":null,"resolved_relocations":6,"resolved_by":{"corroborated":6},"unresolved_relocations":[{"offset":"0x0000006D","symbol":"??_7FSlateRenderTargetRHI@@6B?$TSlateTexture@V?$TRefCountPtr@VFRHITexture2D@@@@@@@"},{"offset":"0x0000008A","symbol":"??_7FSlateRenderTargetRHI@@6BFRenderResource@@@"}]}},
+{"start_rva":"0x01D660A0","end_rva":"0x01D6610E","name":"destructor'","source":"Engine/Source/Runtime/StreamingPauseRendering/Private/StreamingPauseRendering.cpp","object":"Engine/StreamingPauseRendering/Module.StreamingPauseRendering.obj","symbol":"??_GFBackgroundView@@UEAAPEAXI@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"c45c9bae1134c9bc","byte_diff":{"reference_size":110,"candidate_size":110,"differing_bytes":0,"first_difference":null,"resolved_relocations":3,"resolved_by":{"corroborated":3},"unresolved_relocations":[{"offset":"0x00000046","symbol":"??_7ISlateViewport@@6B@"}]}}
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "Networking",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 Networking compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x015AB890","end_rva":"0x015AB8BF","name":"FNetworkingModule::StartupModule","source":"Engine/Source/Runtime/Networking/Private/NetworkingModule.cpp","object":"Engine/Networking/Module.Networking.obj","symbol":"?StartupModule@FNetworkingModule@@UEAAXXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"dcaca39b60a2a9c5","byte_diff":{"reference_size":47,"candidate_size":47,"differing_bytes":0,"first_difference":null,"resolved_relocations":3,"resolved_by":{"corroborated":1,"exact match of manifest entry 0x011E8040":1,"literal elimination":1},"unresolved_relocations":[{"offset":"0x00000026","symbol":"?CachedSocketSubsystem@FIPv4Endpoint@@0PEAVISocketSubsystem@@EA"}]}},
+{"start_rva":"0x015ABA70","end_rva":"0x015ABB6F","name":"FIPv4Address::Parse","source":"Engine/Source/Runtime/Networking/Private/IPv4/IPv4Address.cpp","object":"Engine/Networking/Module.Networking.obj","symbol":"?Parse@FIPv4Address@@SA_NAEBVFString@@AEAU1@@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"2b6327c6de5a0307","byte_diff":{"reference_size":255,"candidate_size":255,"differing_bytes":0,"first_difference":null,"resolved_relocations":8,"resolved_by":{"corroborated":3,"exact match of manifest entry 0x01105410":1,"protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi":4},"unresolved_relocations":[{"offset":"0x00000029","symbol":"$SG133625"}]}},
+{"start_rva":"0x015ABB70","end_rva":"0x015ABC3C","name":"FIPv4Endpoint::Parse","source":"Engine/Source/Runtime/Networking/Private/IPv4/IPv4Endpoint.cpp","object":"Engine/Networking/Module.Networking.obj","symbol":"?Parse@FIPv4Endpoint@@SA_NAEBVFString@@AEAU1@@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"e8b7d728f499d496","byte_diff":{"reference_size":204,"candidate_size":204,"differing_bytes":0,"first_difference":null,"resolved_relocations":7,"resolved_by":{"corroborated":3,"exact match of manifest entry 0x01105410":1,"literal elimination":1,"protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi":2},"unresolved_relocations":[{"offset":"0x00000040","symbol":"?Parse@FIPv4Address@@SA_NAEBVFString@@AEAU1@@Z"}]}},
+{"start_rva":"0x015ABC40","end_rva":"0x015ABC7C","name":"FIPv4Address::ToString","source":"Engine/Source/Runtime/Networking/Private/IPv4/IPv4Address.cpp","object":"Engine/Networking/Module.Networking.obj","symbol":"?ToString@FIPv4Address@@QEBA?AVFString@@XZ","in_denominator":true,"match":"exact","candidate_sha256":"259a982a475d6673","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":1,"exact match of manifest entry 0x01107040":1}}},
+{"start_rva":"0x015ABC80","end_rva":"0x015ABCFF","name":"FIPv4Endpoint::ToString","source":"Engine/Source/Runtime/Networking/Private/IPv4/IPv4Endpoint.cpp","object":"Engine/Networking/Module.Networking.obj","symbol":"?ToString@FIPv4Endpoint@@QEBA?AVFString@@XZ","in_denominator":true,"match":"exact","candidate_sha256":"91867d23d5890f3c","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":3,"exact match of manifest entry 0x01107040":2,"section-relative":1}}}
+ ]
+}

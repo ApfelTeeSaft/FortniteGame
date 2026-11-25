@@ -1,0 +1,19 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "TimeManagement",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 TimeManagement compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x00713B80","end_rva":"0x00713BFB","name":"TBaseSPMethodDelegateInstance<0,class SFrameRatePicker,0,void __cdecl(struct FFrameRate)>::ExecuteIfSafe","source":"Engine/Source/Runtime/TimeManagement/Private/CommonFrameRates.cpp","object":"Engine/TimeManagement/Module.TimeManagement.obj","symbol":"?ExecuteIfSafe@?$TBaseSPMethodDelegateInstance@$0A@VSFrameRatePicker@@$0A@$$A6AXUFFrameRate@@@Z$$V@@UEBA_NUFFrameRate@@@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"86ec9e17e56dc144","byte_diff":{"reference_size":123,"candidate_size":123,"differing_bytes":0,"first_difference":null,"resolved_relocations":0,"resolved_by":{},"unresolved_relocations":[{"offset":"0x00000036","symbol":"?Execute@?$TBaseSPMethodDelegateInstance@$0A@VSFrameRatePicker@@$0A@$$A6A?AU?$TTypeWrapper@X@@UFFrameRate@@@Z$$V@@UEBAXUFFrameRate@@@Z"}]}},
+{"start_rva":"0x00E525D0","end_rva":"0x00E52696","name":"UE4Function_Private::TFunctionRefCaller<struct TOptional<struct FExpressionError> (__cdecl*)(class FExpressionTokenConsumer &),struct TOptional<struct FExpressionError> __cdecl(class FExpressionTokenConsumer &)>::Call","source":"Engine/Source/Runtime/TimeManagement/Private/CommonFrameRates.cpp","object":"Engine/TimeManagement/Module.TimeManagement.obj","symbol":"?Call@?$TFunctionRefCaller@P6A?AU?$TOptional@UFExpressionError@@@@AEAVFExpressionTokenConsumer@@@Z$$A6A?AU1@0@Z@UE4Function_Private@@SA?AU?$TOptional@UFExpressionError@@@@PEAXAEAVFExpressionTokenConsumer@@@Z","in_denominator":true,"match":"exact","candidate_sha256":"a3ee3569c467e192","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":4}}},
+{"start_rva":"0x028B9820","end_rva":"0x028B98F4","name":"TArray<struct FCommonFrameRateInfo,class FDefaultAllocator>::~TArray<struct FCommonFrameRateInfo,class FDefaultAllocator>","source":"Engine/Source/Runtime/TimeManagement/Private/CommonFrameRates.cpp","object":"Engine/TimeManagement/Module.TimeManagement.obj","symbol":"??1?$TArray@UFCommonFrameRateInfo@@VFDefaultAllocator@@@@QEAA@XZ","in_denominator":true,"match":"exact","candidate_sha256":"969bc8401472c67b","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":1}}},
+{"start_rva":"0x028BA080","end_rva":"0x028BA182","name":"TArray<struct FCommonFrameRateInfo,class FDefaultAllocator>::operator=","source":"Engine/Source/Runtime/TimeManagement/Private/CommonFrameRates.cpp","object":"Engine/TimeManagement/Module.TimeManagement.obj","symbol":"??4?$TArray@UFCommonFrameRateInfo@@VFDefaultAllocator@@@@QEAAAEAV0@$$QEAV0@@Z","in_denominator":true,"match":"exact","candidate_sha256":"bb792d7b813ea74c","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":1}}}
+ ]
+}

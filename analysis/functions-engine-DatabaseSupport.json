@@ -1,0 +1,16 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "DatabaseSupport",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 DatabaseSupport compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x001BFD70","end_rva":"0x001BFD9D","name":"dynamic initializer for LogDataBase","source":"Engine/Source/Runtime/DatabaseSupport/Private/Database.cpp","object":"Engine/DatabaseSupport/Module.DatabaseSupport.obj","symbol":"??__ELogDataBase@@YAXXZ","evidence":"masked bytes identical to 338 .pdata functions of 45 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"8d84e9ba16c27d9f","byte_diff":{"reference_size":45,"candidate_size":45,"differing_bytes":0,"first_difference":null,"resolved_relocations":3,"resolved_by":{"corroborated":1,"data symbol":1,"exact match of manifest entry 0x01157CB0":1},"unresolved_relocations":[{"offset":"0x00000014","symbol":"?LogDataBase@@3UFLogCategoryLogDataBase@@A"},{"offset":"0x00000020","symbol":"??__FLogDataBase@@YAXXZ"}]}}
+ ]
+}

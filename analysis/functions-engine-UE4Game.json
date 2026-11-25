@@ -1,0 +1,17 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "UE4Game",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 UE4Game compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x000C3CA0","end_rva":"0x000C3CB5","name":"dynamic initializer for GFNameTableForDebuggerVisualizers_MT","source":"Engine/Source/Runtime/UE4Game/Private/UE4Game.cpp","object":"Engine/UE4Game/Module.UE4Game.obj","symbol":"??__EGFNameTableForDebuggerVisualizers_MT@@YAXXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"8a2b12640f6656b2","byte_diff":{"reference_size":21,"candidate_size":21,"differing_bytes":0,"first_difference":null,"resolved_relocations":0,"resolved_by":{},"unresolved_relocations":[{"offset":"0x00000005","symbol":"?GetNameTableForDebuggerVisualizers_MT@FName@@SAPEAPEAPEAUFNameEntry@@XZ"},{"offset":"0x0000000C","symbol":"?GFNameTableForDebuggerVisualizers_MT@@3PEAPEAPEAUFNameEntry@@EA"}]}},
+{"start_rva":"0x00BD71B0","end_rva":"0x00BD71D7","name":"FStaticallyLinkedModuleRegistrant<class FDefaultModuleImpl>::InitializeModule","source":"Engine/Source/Runtime/UE4Game/Private/UE4Game.cpp","object":"Engine/UE4Game/Module.UE4Game.obj","symbol":"?InitializeModule@?$FStaticallyLinkedModuleRegistrant@VFDefaultModuleImpl@@@@QEAAPEAVIModuleInterface@@XZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"b3bb9265bbc8a32f","byte_diff":{"reference_size":39,"candidate_size":39,"differing_bytes":0,"first_difference":null,"resolved_relocations":1,"resolved_by":{"corroborated":1},"unresolved_relocations":[{"offset":"0x00000016","symbol":"??_7FDefaultModuleImpl@@6B@"}]}}
+ ]
+}

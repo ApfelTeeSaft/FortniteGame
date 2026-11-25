@@ -51,6 +51,10 @@ POOLED_MIN, POOLED_DOMINANCE = 10, 10   # pooled __real@ constants among several
 TLS_RVA: int | None = None   # the reference's .tls section; SECREL fields are offsets into it (set in main)
 HELD_SLOTS = True   # section-relative: never predict a .bss/.data slot another symbol is observed at
 FOLD_LIMIT = 16   # longest relocation-free leaf body treated as ICF-folded (bytes)
+# Manifest categories placed in bulk by their masked bytes (tools/engine/map.py): they observe
+# only when exact, and never as ICF-folded bodies (their objects bring many tiny leaf bodies
+# from libraries the reference does not fold with the rest).
+BULK_CATEGORIES = {"engine-source"}
 GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json",
                      "uht-class-symbols.json", "uht-package-symbols.json")
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
@@ -125,6 +129,8 @@ class Resolver:
         self._xrefs = None
         self._sg_ranges = None
         self.img, self.dimg = img, dimg
+        self.bulk_entries: set[int] = set()   # entry indices in BULK_CATEGORIES (set in main)
+        self.bulk_peers = False   # phase 2: relocation-equivalent bulk entries observe too
 
     @staticmethod
     def key(obj: CoffObject, objpath: str, symbol: str):
@@ -981,7 +987,7 @@ class Resolver:
                 continue
             key = self.key(obj, objpath, r.symbol)
             self.observations.setdefault(key, {}).setdefault(target, set()).add(idx)
-            fb = self._folded_body(obj, r.symbol)
+            fb = self._folded_body(obj, r.symbol) if idx not in self.bulk_entries else None
             if fb is not None:
                 self.folded_obs.setdefault(fb, {}).setdefault(target, set()).add(idx)
             self.by_addr.setdefault(target, {}).setdefault(key, set()).add(idx)
@@ -1301,7 +1307,13 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
             state = "plaintext" if ref_file == cand else file_state
         diff = byte_diff(ref, cand, unresolved, resolved)
         status = classify(state, diff)
-        if status in ("exact", "relocation-equivalent"):
+        # Bulk-proposed engine functions (tools/engine/map.py) are placed by their masked bytes
+        # alone, so an unverified one may sit at the wrong address. They observe only once exact:
+        # every relocation independently resolved. Otherwise a misplaced one would put shared
+        # symbols at a second address and unresolve other entries' fields.
+        observer = status == "exact" or (status == "relocation-equivalent" and (
+            entry.get("category") not in BULK_CATEGORIES or resolver.bulk_peers))
+        if observer:
             res.setdefault("_observe", []).append((obj, objpath, relocs, cand_raw, ref, start))
         if (objpath, symbol) == sources[0]:
             if not compact:
@@ -1411,6 +1423,7 @@ def main() -> int:
     # and relocation-equivalent-or-better functions contribute observations that resolve
     # *other* entries' fields (leave-one-out). Observations are gathered between passes only.
     resolver.symbol_objects = {e["symbol"]: e["object"] for e in entries if e.get("symbol") and e.get("object")}
+    resolver.bulk_entries = {i for i, e in enumerate(entries) if e.get("category") in BULK_CATEGORIES}
     for i, e in enumerate(entries):
         resolver.entry_names[i] = e["name"]
         if e.get("start_rva") and e.get("end_rva"):
@@ -1422,38 +1435,71 @@ def main() -> int:
 
     results: dict = {}
     import time
-    for npass in range(1, 33):
-        t0 = time.perf_counter()
-        results = {i: evaluate(i, e, img, dimg, rfmap, resolver, funclet_rvas)
-                   for i, e in enumerate(entries) if i not in skip}
-        print(f"pass {npass}: {sum(r.get('match') == 'exact' for r in results.values())} exact, "
-              f"{time.perf_counter() - t0:.1f}s", file=sys.stderr)
-        for i, res in results.items():
-            e = entries[i]
-            res["in_denominator"] = bool(e.get("start_rva")) and int(e["start_rva"], 16) in primary_set
-        before = snapshot()
-        resolver.observations = {}
-        resolver.by_addr = {}
-        resolver.entry_addrs = {}
-        resolver._unobserved = {}
-        resolver._name_index = None
-        resolver._sg_ranges = None
-        resolver._sg_sorted = None
-        resolver.folded_obs = {}
-        for i, res in results.items():
-            for obj, objpath, relocs, cand_raw, ref, start in res.pop("_observe", []):
-                resolver.observe(i, obj, objpath, relocs, cand_raw, ref, start, img.image_base)
-        added = before != snapshot()
-        for i, res in results.items():
-            e = entries[i]
-            if res.get("match") == "exact" and e.get("start_rva"):
-                for sym in [e["symbol"]] + [s["symbol"] for s in e.get("folded_sources", [])]:
-                    if sym not in resolver.functions:
-                        resolver.functions[sym] = (int(e["start_rva"], 16),
-                                                   f"exact match of manifest entry {e['start_rva']}")
-                        added = True
-        if not added:
-            break
+    def fixpoint(evaluated: list[int], fixed_obs: dict, label: str) -> dict:
+        """Evaluate `evaluated` to a fixpoint; `fixed_obs` adds observations of entries not
+        re-evaluated. Returns the last pass's observation lists of the evaluated entries."""
+        obs_lists: dict = {}
+        history: list[tuple[frozenset, dict]] = []   # (exact entries, results) of earlier passes
+        for npass in range(1, 33):
+            t0 = time.perf_counter()
+            for i in evaluated:
+                results[i] = evaluate(i, entries[i], img, dimg, rfmap, resolver, funclet_rvas)
+                results[i]["in_denominator"] = (bool(entries[i].get("start_rva"))
+                                                and int(entries[i]["start_rva"], 16) in primary_set)
+            exact_now = frozenset(i for i in evaluated if results[i].get("match") == "exact")
+            if len(history) >= 2 and exact_now == history[-2][0] and exact_now != history[-1][0]:
+                # A two-pass cycle: some fields resolve only while others do not. Keep the
+                # conservative state: exact only where both passes agree.
+                prev = history[-1][1]
+                for i in exact_now - history[-1][0]:
+                    results[i] = prev[i]
+                print(f"{label}pass {npass}: cycle of two passes; {len(exact_now - history[-1][0])} entries "
+                      "exact in only one of them are left at their other result", file=sys.stderr)
+                for i in evaluated:
+                    results[i].pop("_observe", None)
+                break
+            history.append((exact_now, {i: dict(results[i]) for i in evaluated}))
+            if len(history) > 2:
+                history.pop(0)
+            print(f"{label}pass {npass}: {sum(r.get('match') == 'exact' for r in results.values())} exact, "
+                  f"{time.perf_counter() - t0:.1f}s", file=sys.stderr)
+            before = snapshot()
+            resolver.observations = {}
+            resolver.by_addr = {}
+            resolver.entry_addrs = {}
+            resolver._unobserved = {}
+            resolver._name_index = None
+            resolver._sg_ranges = None
+            resolver._sg_sorted = None
+            resolver.folded_obs = {}
+            obs_lists = {i: results[i].pop("_observe", []) for i in evaluated}
+            for source in (fixed_obs, obs_lists):
+                for i, lst in source.items():
+                    for obj, objpath, relocs, cand_raw, ref, start in lst:
+                        resolver.observe(i, obj, objpath, relocs, cand_raw, ref, start, img.image_base)
+            added = before != snapshot()
+            for i in evaluated:
+                e, res = entries[i], results[i]
+                if res.get("match") == "exact" and e.get("start_rva"):
+                    for sym in [e["symbol"]] + [s["symbol"] for s in e.get("folded_sources", [])]:
+                        if sym not in resolver.functions:
+                            resolver.functions[sym] = (int(e["start_rva"], 16),
+                                                       f"exact match of manifest entry {e['start_rva']}")
+                            added = True
+            if not added:
+                break
+        return obs_lists
+
+    # Phase 1: every entry. Bulk entries (BULK_CATEGORIES) observe only when exact, so no
+    # unverified placement can change another entry's result.
+    final_obs = fixpoint([i for i in range(len(entries)) if i not in skip], {}, "")
+    # Phase 2: only the bulk entries again, now also corroborating one another while
+    # relocation-equivalent (a different function's field at the same address, leave-one-out).
+    # Every other entry keeps its phase-1 result and observations, so it cannot be affected.
+    bulk = [i for i in sorted(resolver.bulk_entries) if i not in skip]
+    if bulk:
+        resolver.bulk_peers = True
+        fixpoint(bulk, {i: lst for i, lst in final_obs.items() if i not in resolver.bulk_entries}, "bulk ")
 
     if args.dump_observations:
         obs = []

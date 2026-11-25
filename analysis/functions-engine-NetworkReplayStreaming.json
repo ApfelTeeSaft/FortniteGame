@@ -1,0 +1,16 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "NetworkReplayStreaming",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 NetworkReplayStreaming compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x01D68090","end_rva":"0x01D6831F","name":"FNetworkReplayStreaming::GetFactory","source":"Engine/Source/Runtime/NetworkReplayStreaming/NetworkReplayStreaming/Private/NetworkReplayStreaming.cpp","object":"Engine/NetworkReplayStreaming/Module.NetworkReplayStreaming.obj","symbol":"?GetFactory@FNetworkReplayStreaming@@UEAAAEAVINetworkReplayStreamingFactory@@PEB_W@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"a17ffa54499af032","byte_diff":{"reference_size":655,"candidate_size":655,"differing_bytes":0,"first_difference":null,"resolved_relocations":32,"resolved_by":{"corroborated":14,"data symbol":2,"exact match of manifest entry 0x0056A0A0":1,"exact match of manifest entry 0x005757C0":3,"exact match of manifest entry 0x0111CAE0":1,"exact match of manifest entry 0x01197DF0":1,"exact match of manifest entry 0x011DE0F0":2,"exact match of manifest entry 0x011E8040":4,"exact match of manifest entry 0x019D1E90":2,"import thunk jmp [0x04DDBC94]":1,"literal elimination":1},"unresolved_relocations":[{"offset":"0x0000003E","symbol":"$SG153150"},{"offset":"0x000001AE","symbol":"$SG153159"},{"offset":"0x000001EF","symbol":"$SG153159"},{"offset":"0x000001FD","symbol":"$SG153159"},{"offset":"0x00000208","symbol":"$SG153159"},{"offset":"0x00000212","symbol":"$SG153159"},{"offset":"0x0000021C","symbol":"$SG153159"}]}}
+ ]
+}

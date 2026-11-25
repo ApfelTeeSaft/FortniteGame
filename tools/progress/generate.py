@@ -122,6 +122,7 @@ def wrap(prefix: str, items: list[str], width: int) -> list[str]:
 
 def render(s: dict) -> str:
     labels = {"seh-filter-funclet": "SEH filters", "source-function": "hand-written",
+              "engine-source": "UE4.20 engine source",
               "uht-ufunction-creator": "UFunction creators", "uht-class-constructor": "UClass constructors",
               "uht-static-register-natives": "native registrars", "uht-struct-constructor": "UStruct constructors",
               "uht-staticstruct": "StaticStruct", "uht-struct-ops": "NewStructOps",

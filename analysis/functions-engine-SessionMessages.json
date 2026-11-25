@@ -1,0 +1,20 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "SessionMessages",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 SessionMessages compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x02524D80","end_rva":"0x02524DEB","name":"FSessionServicePong::~FSessionServicePong","source":"Engine/Intermediate/Build/Win64/UE4/Inc/SessionMessages/SessionMessages.init.gen.cpp","object":"Engine/SessionMessages/Module.SessionMessages.gen.obj","symbol":"??1FSessionServicePong@@QEAA@XZ","in_denominator":true,"match":"exact","candidate_sha256":"9faf061844b924bb","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":6}}},
+{"start_rva":"0x02524DF0","end_rva":"0x02524E8B","name":"FSessionServicePong::operator=","source":"Engine/Intermediate/Build/Win64/UE4/Inc/SessionMessages/SessionMessages.init.gen.cpp","object":"Engine/SessionMessages/Module.SessionMessages.gen.obj","symbol":"??4FSessionServicePong@@QEAAAEAU0@AEBU0@@Z","in_denominator":true,"match":"exact","candidate_sha256":"0938b41707b9c1ed","byte_diff":{"differing_bytes":0,"resolved_by":{"exact match of manifest entry 0x0056A0A0":6}}},
+{"start_rva":"0x02524E90","end_rva":"0x02524EFB","name":"UScriptStruct::TCppStructOps<struct FSessionServicePong>::Construct","source":"Engine/Intermediate/Build/Win64/UE4/Inc/SessionMessages/SessionMessages.init.gen.cpp","object":"Engine/SessionMessages/Module.SessionMessages.gen.obj","symbol":"?Construct@?$TCppStructOps@UFSessionServicePong@@@UScriptStruct@@UEAAXPEAX@Z","in_denominator":true,"match":"exact","candidate_sha256":"5d1660115fb27f64","byte_diff":{"differing_bytes":0,"resolved_by":{"import thunk jmp [0x04DDBC9C]":1}}},
+{"start_rva":"0x02524F00","end_rva":"0x02524FD9","name":"UScriptStruct::TCppStructOps<struct FSessionServiceLog>::Copy","source":"Engine/Intermediate/Build/Win64/UE4/Inc/SessionMessages/SessionMessages.init.gen.cpp","object":"Engine/SessionMessages/Module.SessionMessages.gen.obj","symbol":"?Copy@?$TCppStructOps@UFSessionServiceLog@@@UScriptStruct@@UEAA_NPEAXPEBXH@Z","in_denominator":true,"match":"exact","candidate_sha256":"ac78fc016d265d06","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":1,"import thunk jmp [0x04DDBC94]":1}}},
+{"start_rva":"0x02524FE0","end_rva":"0x0252502A","name":"UScriptStruct::TCppStructOps<struct FSessionServicePong>::Copy","source":"Engine/Intermediate/Build/Win64/UE4/Inc/SessionMessages/SessionMessages.init.gen.cpp","object":"Engine/SessionMessages/Module.SessionMessages.gen.obj","symbol":"?Copy@?$TCppStructOps@UFSessionServicePong@@@UScriptStruct@@UEAA_NPEAXPEBXH@Z","evidence":"masked bytes identical to 8 .pdata functions of 74 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"exact","candidate_sha256":"71490c5af069ea11","byte_diff":{"differing_bytes":0,"resolved_by":{"exact match of manifest entry 0x02524DF0":1}}}
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "schema_version": 1,
+ "generated_by": "tools/engine/map.py",
+ "evidence": "Functions of the local UE4.20 engine tree, compiled by tools/engine/build.py from UnrealBuildTool's own compile actions for UE4Game Win64 Shipping, and located in the reference by tools/engine/map.py. compare.py decides each match.",
+ "entry_defaults": {
+  "category": "engine-source",
+  "module": "SynthBenchmark",
+  "name_confidence": "high-confidence inferred",
+  "reference_state": "decrypted",
+  "compact": true,
+  "evidence": "UE4.20 SynthBenchmark compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+ },
+ "functions": [
+{"start_rva":"0x01C856C0","end_rva":"0x01C85834","name":"FSynthBenchmark::GetRHIDisplay","source":"Engine/Source/Runtime/SynthBenchmark/Private/SynthBenchmarkPrivate.cpp","object":"Engine/SynthBenchmark/Module.SynthBenchmark.obj","symbol":"?GetRHIDisplay@FSynthBenchmark@@EEBAXAEAUFGPUAdpater@@@Z","in_denominator":true,"match":"exact","candidate_sha256":"9bd0d8ded4ae500f","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":8,"import thunk jmp [0x04DDBC9C]":4}}},
+{"start_rva":"0x01C85840","end_rva":"0x01C85908","name":"PrintGPUStats<7>","source":"Engine/Source/Runtime/SynthBenchmark/Private/SynthBenchmarkPrivate.cpp","object":"Engine/SynthBenchmark/Module.SynthBenchmark.obj","symbol":"??$PrintGPUStats@$06@@YAXAEAY06UFSynthBenchmarkStat@@PEB_W@Z","in_denominator":true,"match":"exact","candidate_sha256":"c37cae5169f47113","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":3,"data symbol":1,"exact match of manifest entry 0x01177BF0":1}}},
+{"start_rva":"0x01C85A90","end_rva":"0x01C85BFE","name":"FractalBenchmark","source":"Engine/Source/Runtime/SynthBenchmark/Private/FractalBenchmark.cpp","object":"Engine/SynthBenchmark/Module.SynthBenchmark.obj","symbol":"?FractalBenchmark@@YAMXZ","in_denominator":true,"match":"exact","candidate_sha256":"cd0e666b98514184","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":3,"pooled constant":5,"protector import table slot of api-ms-win-crt-utility-l1-1-0.dll!rand":1}}},
+{"start_rva":"0x01C85E40","end_rva":"0x01C860F8","name":"RayIntersectBenchmark","source":"Engine/Source/Runtime/SynthBenchmark/Private/RayIntersectBenchmark.cpp","object":"Engine/SynthBenchmark/Module.SynthBenchmark.obj","symbol":"?RayIntersectBenchmark@@YAMXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"d578764a18b7b5b3","byte_diff":{"reference_size":696,"candidate_size":696,"differing_bytes":0,"first_difference":null,"resolved_relocations":14,"resolved_by":{"corroborated":9,"exact match of manifest entry 0x01C85C00":2,"pooled constant":3},"unresolved_relocations":[{"offset":"0x00000064","symbol":"__real@3fffffff"},{"offset":"0x00000143","symbol":"__real@400ccccc"}]}},
+{"start_rva":"0x01C86100","end_rva":"0x01C861DF","name":"RunBenchmark","source":"Engine/Source/Runtime/SynthBenchmark/Private/SynthBenchmarkPrivate.cpp","object":"Engine/SynthBenchmark/Module.SynthBenchmark.obj","symbol":"?RunBenchmark@@YA?AUFTimeSample@@MP6AMXZ@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"26d9a53339e18f48","byte_diff":{"reference_size":223,"candidate_size":223,"differing_bytes":0,"first_difference":null,"resolved_relocations":4,"resolved_by":{"corroborated":2,"protector import table slot of KERNEL32.dll!QueryPerformanceCounter":2},"unresolved_relocations":[{"offset":"0x00000069","symbol":"?GGlobalStateObject@@3MA"},{"offset":"0x00000075","symbol":"?GGlobalStateObject@@3MA"}]}}
+ ]
+}
