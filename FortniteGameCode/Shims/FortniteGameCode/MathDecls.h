@@ -1401,6 +1401,8 @@ namespace ETimespan
 	const int64 TicksPerWeek = 6048000000000;
 }
 
+class FString;   // FTimespan::Parse
+
 struct FTimespan
 {
 	__forceinline FTimespan() : Ticks(0) { }
@@ -1458,6 +1460,8 @@ struct FTimespan
 	{
 		return ((double)Ticks / ETimespan::TicksPerSecond);
 	}
+
+	static bool Parse(const FString& TimespanString, FTimespan& OutTimespan);   // CORE_API, Misc/Timespan.cpp
 #endif
 	__forceinline FTimespan(int32 Days, int32 Hours, int32 Minutes, int32 Seconds, int32 FractionNano)
 	{

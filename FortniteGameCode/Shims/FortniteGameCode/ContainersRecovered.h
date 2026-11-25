@@ -10,6 +10,12 @@
 #include <new>   // placement new, as Core's headers include it
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
+// FNGC_STRING_EXTRAS: FString's search and parse members and the TArray insertion they use, for
+// the units that define it after MathDecls.h (Misc/DateTime.cpp, Misc/Timespan.cpp).
+#ifndef FNGC_STRING_EXTRAS
+#define FNGC_STRING_EXTRAS 0
+#endif
+
 typedef unsigned char uint8;
 typedef long long PTRINT;   // SSIZE_T on Win64
 
@@ -286,6 +292,39 @@ __forceinline typename TEnableIf<UE4MemoryOps_Private::TCanBitwiseRelocate<Desti
 {
 	FMemory::Memmove(Dest, Source, sizeof(SourceElementType) * Count);
 }
+
+#if FNGC_STRING_EXTRAS   // the string parsers' units (DateTime.cpp, Timespan.cpp), after MathDecls.h
+// Templates/IsZeroConstructType.h (FString's specialization follows the class) and MemoryOps.h
+template <typename T>
+struct TIsZeroConstructType
+{
+	enum { Value = false };
+};
+
+template <typename ElementType>
+__forceinline typename TEnableIf<!TIsZeroConstructType<ElementType>::Value>::Type DefaultConstructItems(void* Address, int32 Count)
+{
+	ElementType* Element = (ElementType*)Address;
+	while (Count)
+	{
+		new (Element) ElementType;
+		++Element;
+		--Count;
+	}
+}
+
+template <typename ElementType>
+__forceinline typename TEnableIf<TIsZeroConstructType<ElementType>::Value>::Type DefaultConstructItems(void* Elements, int32 Count)
+{
+	memset(Elements, 0, sizeof(ElementType) * Count);   // FMemory::Memset
+}
+
+template <typename ElementType>
+__forceinline void CopyAssignItems(ElementType* Dest, const ElementType* Source, int32 Count)
+{
+	FMemory::Memcpy(Dest, Source, sizeof(ElementType) * Count);   // TIsTriviallyCopyAssignable
+}
+#endif
 
 // Containers/ContainerAllocationPolicies.h
 #if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
@@ -645,6 +684,39 @@ public:
 	__forceinline int32 Add(const ElementType& Item) { return Emplace(Item); }
 #endif
 
+#if FNGC_STRING_EXTRAS   // see DefaultConstructItems
+	int32 AddDefaulted(int32 Count = 1)
+	{
+		const int32 Index = AddUninitialized(Count);
+		DefaultConstructItems<ElementType>((uint8*)AllocatorInstance.GetAllocation() + Index * sizeof(ElementType), Count);
+		return Index;
+	}
+
+	void InsertUninitialized(int32 Index, int32 Count = 1)
+	{
+		// CheckInvariants() and checkSlow() are compiled out.
+		const int32 OldNum = ArrayNum;
+		if ((ArrayNum += Count) > ArrayMax)
+		{
+			ResizeGrow(OldNum);
+		}
+		ElementType* Data = GetData() + Index;
+		RelocateConstructItems<ElementType>(Data + Count, Data, OldNum - Index);
+	}
+
+	void InsertDefaulted(int32 Index, int32 Count = 1)
+	{
+		InsertUninitialized(Index, Count);
+		DefaultConstructItems<ElementType>(GetData() + Index, Count);
+	}
+
+	// Ranged for: TARRAY_RANGED_FOR_CHECKS is 0 in shipping, so the iterators are pointers.
+	__forceinline friend       ElementType* begin(      TArray& Array) { return Array.GetData(); }
+	__forceinline friend const ElementType* begin(const TArray& Array) { return Array.GetData(); }
+	__forceinline friend       ElementType* end  (      TArray& Array) { return Array.GetData() + Array.Num(); }
+	__forceinline friend const ElementType* end  (const TArray& Array) { return Array.GetData() + Array.Num(); }
+#endif
+
 	void Empty(int32 Slack = 0)
 	{
 		DestructItems(GetData(), ArrayNum);
@@ -766,8 +838,43 @@ struct FWindowsPlatformString : public FGenericPlatformString
 	{
 		return (int32)wcslen( String );
 	}
+
+	static __forceinline TCHAR* Strncpy(TCHAR* Dest, const TCHAR* Src, SIZE_T MaxLen)
+	{
+#pragma warning(suppress : 4996)   // UE builds define _CRT_SECURE_NO_WARNINGS
+		wcsncpy(Dest, Src, MaxLen-1);   // _tcsncpy
+		Dest[MaxLen-1] = 0;
+		return Dest;
+	}
 };
 typedef FWindowsPlatformString FPlatformString;
+#endif
+
+#if FNGC_STRING_EXTRAS   // see DefaultConstructItems
+// Containers/UnrealString.h
+namespace ESearchCase
+{
+	enum Type
+	{
+		/** Case sensitive. Upper/lower casing must match for strings to be considered equal. */
+		CaseSensitive,
+
+		/** Ignore case. Upper/lower casing does not matter when making a comparison. */
+		IgnoreCase,
+	};
+};
+
+namespace ESearchDir
+{
+	enum Type
+	{
+		/** Search from the start, moving forward through the string. */
+		FromStart,
+
+		/** Search from the end, moving backward through the string. */
+		FromEnd,
+	};
+}
 #endif
 
 // Containers/UnrealString.h
@@ -800,6 +907,123 @@ public:
 	}
 #endif
 
+#if FNGC_STRING_EXTRAS   // see DefaultConstructItems; needs MathDecls.h (FMath::Clamp, INDEX_NONE)
+	__forceinline explicit FString( int32 InCount, const TCHAR* InSrc )
+	{
+		Data.AddUninitialized(InCount ? InCount + 1 : 0);
+
+		if( Data.Num() > 0 )
+		{
+			FPlatformString::Strncpy(Data.GetData(), InSrc, InCount + 1);   // FCString::Strncpy
+		}
+	}
+
+	__forceinline bool IsEmpty() const
+	{
+		return Data.Num() <= 1;
+	}
+
+	__forceinline void AppendChars(const TCHAR* Array, int32 Count)
+	{
+		// check(Count >= 0) and checkSlow(Array) are compiled out.
+		if (!Count)
+			return;
+
+		int32 Index = Data.Num();
+
+		// Reserve enough space - including an extra gap for a null terminator if we don't already have a string allocated
+		Data.AddUninitialized(Count + (Index ? 0 : 1));
+
+		TCHAR* EndPtr = Data.GetData() + Index - (Index ? 1 : 0);
+
+		// Copy characters to end of string, overwriting null terminator if we already have one
+		CopyAssignItems(EndPtr, Array, Count);
+
+		// (Re-)establish the null terminator
+		*(EndPtr + Count) = 0;
+	}
+
+	// checkSlow is compiled out; the unused local stays.
+	__forceinline void CheckInvariants() const
+	{
+		int32 Num = Data.Num();
+	}
+
+	__forceinline FString& operator+=( const FString& Str )
+	{
+		CheckInvariants();
+		Str.CheckInvariants();
+
+		AppendChars(Str.Data.GetData(), Str.Len());
+
+		return *this;
+	}
+
+	__forceinline int32 Len() const
+	{
+		return Data.Num() ? Data.Num() - 1 : 0;
+	}
+
+	// checkSlow(Str) is compiled out.
+	__forceinline FString& operator+=( const TCHAR* Str )
+	{
+		CheckInvariants();
+
+		AppendChars(Str, FPlatformString::Strlen(Str));   // FCString::Strlen
+
+		return *this;
+	}
+
+	// checkf(IsValidIndex(Index), ...) is compiled out.
+	__forceinline TCHAR& operator[]( int32 Index )
+	{
+		return Data.GetData()[Index];
+	}
+
+	__forceinline const TCHAR& operator[]( int32 Index ) const
+	{
+		return Data.GetData()[Index];
+	}
+
+	__forceinline void Empty( int32 Slack=0 )
+	{
+		Data.Empty(Slack);
+	}
+
+	// Out of line in Core (Containers/String.cpp).
+	FString ToUpper() const &;
+	FString ToUpper() &&;
+	void ToUpperInline();
+
+	/** @return the left most given number of characters */
+	__forceinline FString Left( int32 Count ) const
+	{
+		return FString( FMath::Clamp(Count,0,Len()), **this );
+	}
+
+	// Out of line in Core (Containers/String.cpp).
+	int32 Find( const TCHAR* SubStr, ESearchCase::Type SearchCase = ESearchCase::IgnoreCase,
+				ESearchDir::Type SearchDir = ESearchDir::FromStart, int32 StartPosition=INDEX_NONE ) const;
+
+	__forceinline int32 Find( const FString& SubStr, ESearchCase::Type SearchCase = ESearchCase::IgnoreCase,
+							ESearchDir::Type SearchDir = ESearchDir::FromStart, int32 StartPosition=INDEX_NONE ) const
+	{
+		return Find( *SubStr, SearchCase, SearchDir, StartPosition );
+	}
+
+	__forceinline bool Contains(const TCHAR* SubStr, ESearchCase::Type SearchCase = ESearchCase::IgnoreCase,
+							  ESearchDir::Type SearchDir = ESearchDir::FromStart ) const
+	{
+		return Find(SubStr, SearchCase, SearchDir) != INDEX_NONE;
+	}
+
+	bool IsNumeric() const;
+	bool StartsWith(const TCHAR* InSuffix, ESearchCase::Type SearchCase = ESearchCase::IgnoreCase) const;
+	int32 ParseIntoArray( TArray<FString>& OutArray, const TCHAR* pchDelim, bool InCullEmpty = true ) const;
+	FString Replace(const TCHAR* From, const TCHAR* To, ESearchCase::Type SearchCase = ESearchCase::IgnoreCase) const;
+	int32 ReplaceInline( const TCHAR* SearchText, const TCHAR* ReplacementText, ESearchCase::Type SearchCase = ESearchCase::IgnoreCase );
+#endif
+
 	__forceinline const TCHAR* operator*() const
 	{
 		return Data.Num() ? Data.GetData() : TEXT("");
@@ -826,3 +1050,7 @@ public:
 		}
 	}
 };
+
+#if FNGC_STRING_EXTRAS
+template<> struct TIsZeroConstructType<FString> { enum { Value = true }; };   // Containers/UnrealString.h
+#endif

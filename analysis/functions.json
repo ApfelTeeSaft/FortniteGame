@@ -976,7 +976,7 @@
             "offset": "0x00000014",
             "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
             "rva": "0x02E656A8",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::MakeDateTime"
+            "evidence": "corroborated: same symbol at this address in FString::Find, FString::StartsWith and 4 more"
           },
           {
             "offset": "0x00000019",
@@ -3639,7 +3639,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214226",
+            "symbol": "$SG214234",
             "rva": "0x037C89B0",
             "evidence": "data symbol: unique 64-byte string literal"
           },
@@ -3686,7 +3686,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214229",
+            "symbol": "$SG214237",
             "rva": "0x037C89F0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_IntInt"
           },
@@ -3733,7 +3733,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214232",
+            "symbol": "$SG214240",
             "rva": "0x037C8A90",
             "evidence": "data symbol: unique 60-byte string literal"
           },
@@ -3780,7 +3780,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214235",
+            "symbol": "$SG214243",
             "rva": "0x037C8AE0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_ByteByte"
           },
@@ -3827,7 +3827,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214238",
+            "symbol": "$SG214246",
             "rva": "0x037C8C70",
             "evidence": "data symbol: unique 114-byte string literal"
           },
@@ -3874,7 +3874,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214241",
+            "symbol": "$SG214249",
             "rva": "0x037C8D50",
             "evidence": "data symbol: unique 70-byte string literal"
           },
@@ -3921,7 +3921,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214244",
+            "symbol": "$SG214252",
             "rva": "0x037C8DB0",
             "evidence": "data symbol: unique 66-byte string literal"
           },
@@ -3968,7 +3968,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214247",
+            "symbol": "$SG214255",
             "rva": "0x037C8E50",
             "evidence": "data symbol: unique 72-byte string literal"
           },
@@ -4015,7 +4015,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214250",
+            "symbol": "$SG214258",
             "rva": "0x037C8ED0",
             "evidence": "data symbol: unique 80-byte string literal"
           },
@@ -4062,7 +4062,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214253",
+            "symbol": "$SG214261",
             "rva": "0x037C8F20",
             "evidence": "data symbol: unique 128-byte string literal"
           },
@@ -4109,7 +4109,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214256",
+            "symbol": "$SG214264",
             "rva": "0x037C8FA0",
             "evidence": "data symbol: unique 74-byte string literal"
           },
@@ -4156,7 +4156,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG214259",
+            "symbol": "$SG214267",
             "rva": "0x037C8FF0",
             "evidence": "data symbol: unique 108-byte string literal"
           },
@@ -4291,7 +4291,7 @@
           },
           {
             "offset": "0x00000023",
-            "symbol": "$SG214276",
+            "symbol": "$SG214284",
             "rva": "0x037C8878",
             "evidence": "data symbol: unique 40-byte string literal"
           },
@@ -4374,7 +4374,7 @@
           },
           {
             "offset": "0x000000CE",
-            "symbol": "$SG214286",
+            "symbol": "$SG214294",
             "rva": "0x037C9520",
             "evidence": "data symbol: unique 68-byte string literal"
           },
@@ -8964,7 +8964,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG214204",
+            "symbol": "$SG214212",
             "rva": "0x037C7CA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9013,7 +9013,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1) and 6 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -9136,7 +9136,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@bf800000bf800000bf800000bf800000",
             "rva": "0x02E62640",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (SocialTypes.1) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (UMG.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (UnrealMath) and 4 more"
           }
         ],
         "unresolved_relocations": [
@@ -9178,7 +9178,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f8000003f8000003f8000003f800000",
             "rva": "0x02E624F0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Hotfix.1), dynamic initializer for GlobalVectorConstants::FloatOne (Rejoin.1) and 128 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (NVIDIAGfeSDK.1), dynamic initializer for GlobalVectorConstants::FloatOne (NetUI.1) and 128 more"
           },
           {
             "offset": "0x0000000A",
@@ -9219,7 +9219,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f0000003f0000003f0000003f000000",
             "rva": "0x02E624C0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimationCore.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (SocialTypes.1) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (UMG.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -9293,7 +9293,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG214222",
+            "symbol": "$SG214230",
             "rva": "0x037C8058",
             "evidence": "data symbol: unique 19-byte string literal"
           },
@@ -9340,7 +9340,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG214210",
+            "symbol": "$SG214218",
             "rva": "0x037C7EA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9885,7 +9885,7 @@
             "offset": "0x00000004",
             "symbol": "__xmm@00000000ffffffffffffffffffffffff",
             "rva": "0x02E62420",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.9), dynamic initializer for GlobalVectorConstants::XYZMask (Hotfix.1) and 124 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (NVIDIAGfeSDK.1), dynamic initializer for GlobalVectorConstants::XYZMask (NetUI.1) and 124 more"
           },
           {
             "offset": "0x0000000C",
@@ -9924,7 +9924,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG214216",
+            "symbol": "$SG214224",
             "rva": "0x037C8150",
             "evidence": "data symbol: unique 28-byte string literal"
           },
@@ -10299,7 +10299,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1) and 6 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (UMG.1) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -10464,7 +10464,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@bf800000bf800000bf800000bf800000",
             "rva": "0x02E62640",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (SocialTypes.1) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Engine.18), dynamic initializer for GlobalVectorConstants::FloatMinusOne (UMG.1) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -10505,7 +10505,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f8000003f8000003f8000003f800000",
             "rva": "0x02E624F0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Hotfix.1), dynamic initializer for GlobalVectorConstants::FloatOne (Rejoin.1) and 128 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (NVIDIAGfeSDK.1), dynamic initializer for GlobalVectorConstants::FloatOne (NetUI.1) and 128 more"
           },
           {
             "offset": "0x0000000A",
@@ -10546,7 +10546,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f0000003f0000003f0000003f000000",
             "rva": "0x02E624C0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimationCore.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (SocialTypes.1) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (Engine.18), dynamic initializer for GlobalVectorConstants::FloatOneHalf (UMG.1) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -11156,7 +11156,7 @@
             "offset": "0x00000004",
             "symbol": "__xmm@00000000ffffffffffffffffffffffff",
             "rva": "0x02E62420",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.9), dynamic initializer for GlobalVectorConstants::XYZMask (Hotfix.1) and 124 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (NVIDIAGfeSDK.1), dynamic initializer for GlobalVectorConstants::XYZMask (NetUI.1) and 124 more"
           },
           {
             "offset": "0x0000000C",
@@ -11811,7 +11811,7 @@
             "offset": "0x0000054E",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (UMG.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x000005AA",
@@ -11823,7 +11823,7 @@
             "offset": "0x0000066E",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (UMG.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x000006AA",
@@ -12336,7 +12336,7 @@
             "offset": "0x00000135",
             "symbol": "?DaysPerMonth@FDateTime@@1QBHB",
             "rva": "0x03480A38",
-            "evidence": "data symbol: unique 56-byte data block"
+            "evidence": "data symbol: unique 52-byte data block"
           }
         ],
         "unresolved_relocations": [],
@@ -12491,7 +12491,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG13651",
+            "symbol": "$SG13887",
             "rva": "0x0347D298",
             "evidence": "data symbol: unique 44-byte string literal"
           },
@@ -12532,7 +12532,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG13659",
+            "symbol": "$SG13893",
             "rva": "0x0347D308",
             "evidence": "literal elimination: 2 copies, the others used by "
           },
@@ -12575,7 +12575,7 @@
             "offset": "0x00000060",
             "symbol": "?DaysPerMonth@FDateTime@@1QBHB",
             "rva": "0x03480A38",
-            "evidence": "data symbol: unique 56-byte data block"
+            "evidence": "data symbol: unique 52-byte data block"
           }
         ],
         "unresolved_relocations": [],
@@ -12912,7 +12912,7 @@
             "offset": "0x00000014",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000053",
@@ -12924,7 +12924,7 @@
             "offset": "0x0000009F",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [],
@@ -12959,7 +12959,7 @@
             "offset": "0x00000014",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000053",
@@ -12971,7 +12971,7 @@
             "offset": "0x0000009F",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [],
@@ -13497,7 +13497,7 @@
             "offset": "0x0000000C",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000022",
@@ -13515,7 +13515,7 @@
             "offset": "0x00000163",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [],
@@ -15415,7 +15415,7 @@
           },
           {
             "offset": "0x00000071",
-            "symbol": "$SG215347",
+            "symbol": "$SG215355",
             "rva": "0x037CA980",
             "evidence": "data symbol: unique 278-byte string literal"
           },
@@ -15423,7 +15423,7 @@
             "offset": "0x000000A0",
             "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
             "rva": "0x02E656A8",
-            "evidence": "corroborated: same symbol at this address in UGameplayStatics::HasLaunchOption"
+            "evidence": "corroborated: same symbol at this address in FString::Find, FString::StartsWith and 4 more"
           },
           {
             "offset": "0x000000A7",
@@ -15441,7 +15441,7 @@
             "offset": "0x000000C3",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000106",
@@ -15916,7 +15916,7 @@
             "offset": "0x00000106",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FMatrix::Inverse, FRandomStream::GetUnitVector and 86 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameplayEffectDeliveryActor::execOnComponentOverlap, FRandomStream::GetUnitVector and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -15951,7 +15951,7 @@
             "offset": "0x0000000A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FMatrix::Inverse, GenericSpringInterp<FVector> and 86 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameplayEffectDeliveryActor::execOnComponentOverlap, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000001B",
@@ -16516,7 +16516,7 @@
             "offset": "0x00000035",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UCharacterMovementComponent::execCapsuleTouched and 87 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameplayEffectDeliveryActor::execOnComponentOverlap, AFortGameplayEffectDeliveryActor::execOnComponentTouch and 87 more"
           },
           {
             "offset": "0x0000004D",
@@ -16582,7 +16582,7 @@
             "offset": "0x00000617",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UCharacterMovementComponent::execCapsuleTouched and 87 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameplayEffectDeliveryActor::execOnComponentOverlap, AFortGameplayEffectDeliveryActor::execOnComponentTouch and 87 more"
           },
           {
             "offset": "0x00000746",
@@ -16600,13 +16600,13 @@
             "offset": "0x00000824",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 175 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 180 more"
           },
           {
             "offset": "0x00000831",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 175 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 180 more"
           }
         ],
         "unresolved_relocations": [
@@ -16761,7 +16761,7 @@
             "offset": "0x0000000C",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000023",
@@ -16809,7 +16809,7 @@
             "offset": "0x000002BE",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [
@@ -16892,13 +16892,13 @@
             "offset": "0x0000003B",
             "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
             "rva": "0x011455C0",
-            "evidence": "corroborated: same symbol at this address in TArray<int32>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<TCHAR>::ResizeGrow, TArray<int32>::ResizeGrow and 4 more"
           },
           {
             "offset": "0x0000007B",
             "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
             "rva": "0x01145BB0",
-            "evidence": "corroborated: same symbol at this address in TArray<int32>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<TCHAR>::ResizeGrow, TArray<int32>::ResizeGrow and 4 more"
           }
         ],
         "unresolved_relocations": [],
@@ -16933,13 +16933,13 @@
             "offset": "0x0000003B",
             "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
             "rva": "0x011455C0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
           },
           {
             "offset": "0x00000067",
             "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
             "rva": "0x01145BB0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
           }
         ],
         "unresolved_relocations": [],
@@ -16974,13 +16974,13 @@
             "offset": "0x0000001E",
             "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
             "rva": "0x011455C0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
           },
           {
             "offset": "0x00000051",
             "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
             "rva": "0x01145BB0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
           }
         ],
         "unresolved_relocations": [],
@@ -17074,7 +17074,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1) and 6 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -17832,7 +17832,7 @@
             "offset": "0x00000026",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000038",
@@ -17862,13 +17862,13 @@
             "offset": "0x000000FE",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000014E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000159",
@@ -17880,13 +17880,13 @@
             "offset": "0x00000167",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000179",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000001F1",
@@ -17910,13 +17910,13 @@
             "offset": "0x0000023E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000028E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000299",
@@ -17928,13 +17928,13 @@
             "offset": "0x000002A7",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002B5",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002C6",
@@ -17946,20 +17946,20 @@
             "offset": "0x000002E0",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [
           {
             "offset": "0x000000C1",
             "size": 4,
-            "symbol": "$SG214825",
+            "symbol": "$SG214833",
             "kind": "REL32"
           },
           {
             "offset": "0x00000201",
             "size": 4,
-            "symbol": "$SG214827",
+            "symbol": "$SG214835",
             "kind": "REL32"
           }
         ],
@@ -17994,7 +17994,7 @@
             "offset": "0x00000026",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000038",
@@ -18024,13 +18024,13 @@
             "offset": "0x000000FE",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000014E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000159",
@@ -18042,13 +18042,13 @@
             "offset": "0x00000167",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000179",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000001F1",
@@ -18072,13 +18072,13 @@
             "offset": "0x0000023E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000028E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000299",
@@ -18090,13 +18090,13 @@
             "offset": "0x000002A7",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002B5",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002C6",
@@ -18108,20 +18108,20 @@
             "offset": "0x000002E0",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [
           {
             "offset": "0x000000C1",
             "size": 4,
-            "symbol": "$SG214862",
+            "symbol": "$SG214870",
             "kind": "REL32"
           },
           {
             "offset": "0x00000201",
             "size": 4,
-            "symbol": "$SG214864",
+            "symbol": "$SG214872",
             "kind": "REL32"
           }
         ],
@@ -18156,7 +18156,7 @@
             "offset": "0x00000026",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000038",
@@ -18186,13 +18186,13 @@
             "offset": "0x000000FE",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000014E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000159",
@@ -18204,13 +18204,13 @@
             "offset": "0x00000167",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000179",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000001F1",
@@ -18234,13 +18234,13 @@
             "offset": "0x0000023E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000028E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000299",
@@ -18252,13 +18252,13 @@
             "offset": "0x000002A7",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002B5",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002BF",
@@ -18270,20 +18270,20 @@
             "offset": "0x000002D9",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [
           {
             "offset": "0x000000C1",
             "size": 4,
-            "symbol": "$SG214882",
+            "symbol": "$SG214890",
             "kind": "REL32"
           },
           {
             "offset": "0x00000201",
             "size": 4,
-            "symbol": "$SG214884",
+            "symbol": "$SG214892",
             "kind": "REL32"
           }
         ],
@@ -18318,7 +18318,7 @@
             "offset": "0x00000026",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000038",
@@ -18348,13 +18348,13 @@
             "offset": "0x000000FE",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000014E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000159",
@@ -18366,13 +18366,13 @@
             "offset": "0x00000167",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000179",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000001F1",
@@ -18396,13 +18396,13 @@
             "offset": "0x0000023E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000028E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000299",
@@ -18414,13 +18414,13 @@
             "offset": "0x000002A7",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002B5",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002BF",
@@ -18432,20 +18432,20 @@
             "offset": "0x000002D9",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [
           {
             "offset": "0x000000C1",
             "size": 4,
-            "symbol": "$SG214902",
+            "symbol": "$SG214910",
             "kind": "REL32"
           },
           {
             "offset": "0x00000201",
             "size": 4,
-            "symbol": "$SG214904",
+            "symbol": "$SG214912",
             "kind": "REL32"
           }
         ],
@@ -18480,7 +18480,7 @@
             "offset": "0x00000026",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           },
           {
             "offset": "0x00000038",
@@ -18510,13 +18510,13 @@
             "offset": "0x000000FE",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000014E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000159",
@@ -18528,13 +18528,13 @@
             "offset": "0x00000167",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000179",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000001F1",
@@ -18558,13 +18558,13 @@
             "offset": "0x0000023E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x0000028E",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x00000299",
@@ -18576,13 +18576,13 @@
             "offset": "0x000002A7",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002B5",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
           },
           {
             "offset": "0x000002BF",
@@ -18594,20 +18594,20 @@
             "offset": "0x000002D9",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+            "evidence": "corroborated: same symbol at this address in IFortTargetSelectionInterface::execGetTargetingTransform, UGameplayAbility::execSendGameplayEvent and 29 more"
           }
         ],
         "unresolved_relocations": [
           {
             "offset": "0x000000C1",
             "size": 4,
-            "symbol": "$SG214922",
+            "symbol": "$SG214930",
             "kind": "REL32"
           },
           {
             "offset": "0x00000201",
             "size": 4,
-            "symbol": "$SG214924",
+            "symbol": "$SG214932",
             "kind": "REL32"
           }
         ],
@@ -18677,13 +18677,1367 @@
             "offset": "0x00000036",
             "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
             "rva": "0x011455C0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 4 more"
           },
           {
             "offset": "0x00000060",
             "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
             "rva": "0x01145BB0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 4 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01103630",
+      "end_rva": "0x011038A9",
+      "name": "FString::Find",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?Find@FString@@QEBAHPEB_WW4Type@ESearchCase@@W42ESearchDir@@H@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FTimespan::Parse (0x011DEC10) calls it twice for Contains(\".\"), Contains(\",\") (IgnoreCase, FromStart, INDEX_NONE); TCString::Stristr (0x00276040), wcsstr, and the reverse search through ToUpper (0x0110D720).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "24ba539922e8df72998c69c3b7d4c1fdd3a1f94e24e0078f8f60d44c7bfd9769",
+      "decrypted_sha256": "65b29e328c89d09a0b4a42806cc30fcde3095142a54519959df3ba8a769a985f",
+      "candidate_sha256": "65b29e328c89d09a0b4a42806cc30fcde3095142a54519959df3ba8a769a985f",
+      "byte_diff": {
+        "reference_size": 633,
+        "candidate_size": 633,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000041",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::StartsWith, UGameplayStatics::HasLaunchOption and 4 more"
+          },
+          {
+            "offset": "0x0000008B",
+            "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+            "rva": "0x00276040",
+            "evidence": "exact match of manifest entry 0x00276040"
+          },
+          {
+            "offset": "0x00000093",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x00000106",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000127",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x00000149",
+            "symbol": "__imp_towupper",
+            "rva": "0x04DDC5A4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!towupper"
+          },
+          {
+            "offset": "0x00000168",
+            "symbol": "?ToUpper@FString@@QEGBA?AV1@XZ",
+            "rva": "0x0110D720",
+            "evidence": "exact match of manifest entry 0x0110D720"
+          },
+          {
+            "offset": "0x00000176",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::StartsWith, UGameplayStatics::HasLaunchOption and 4 more"
+          },
+          {
+            "offset": "0x00000193",
+            "symbol": "?Find@FString@@QEBAHPEB_WW4Type@ESearchCase@@W42ESearchDir@@H@Z",
+            "rva": "0x01103630",
+            "evidence": "exact match of manifest entry 0x01103630"
+          },
+          {
+            "offset": "0x000001A4",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x000001B1",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0110D720",
+      "end_rva": "0x0110D7C6",
+      "name": "FString::ToUpper() const &",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ToUpper@FString@@QEGBA?AV1@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FString::Find's reverse case-insensitive search calls it on *this: the copy (TArray<TCHAR>::ResizeForCopy 0x005756A0, memcpy), then ToUpperInline's towupper loop inlined.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "47136e78e9495263908c1c6361af6f7cb8de8adcb02730c2df7db8d47400b05c",
+      "decrypted_sha256": "30f612a7fbdc0a591fd191de8c529dc0d98326b2adbf359716f12b1a090b5d0a",
+      "candidate_sha256": "30f612a7fbdc0a591fd191de8c529dc0d98326b2adbf359716f12b1a090b5d0a",
+      "byte_diff": {
+        "reference_size": 166,
+        "candidate_size": 166,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000003E",
+            "symbol": "?ResizeForCopy@?$TArray@_WVFDefaultAllocator@@@@AEAAXHH@Z",
+            "rva": "0x005756A0",
+            "evidence": "corroborated: same symbol at this address in FString::Replace, UWidgetInteractionComponent::execSendKeyChar and 4 more"
+          },
+          {
+            "offset": "0x0000004F",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x00000077",
+            "symbol": "__imp_towupper",
+            "rva": "0x04DDC5A4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!towupper"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0110D7D0",
+      "end_rva": "0x0110D860",
+      "name": "FString::ToUpper() &&",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ToUpper@FString@@QEHAA?AV1@XZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "its masked body also matches ToLower() && (0x0110D630); this one calls towupper (import slot 0x04DDC5A4, as Stristr) and sorts after ToUpper() const & (0x0110D720).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "4029aaec304aff80c9cce7e1f9d037ce9e5cf43b00082aa881128f894bb48272",
+      "decrypted_sha256": "5eb641969edf0d3becbfec0c711ff5f901fb58722ad78d12189aebba38cd875e",
+      "candidate_sha256": "5eb641969edf0d3becbfec0c711ff5f901fb58722ad78d12189aebba38cd875e",
+      "byte_diff": {
+        "reference_size": 144,
+        "candidate_size": 144,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000047",
+            "symbol": "__imp_towupper",
+            "rva": "0x04DDC5A4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!towupper"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0110D860",
+      "end_rva": "0x0110D8B6",
+      "name": "FString::ToUpperInline",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ToUpperInline@FString@@QEAAXXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "its masked body also matches ToLowerInline (0x0110D6C0); this one calls towupper (import slot 0x04DDC5A4) and sorts after ToUpper() && (0x0110D7D0).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "36e514bb5f99065a2324c855f0761575442b7f855fc63797c30ba36957bbac30",
+      "decrypted_sha256": "e0fd04d8e40c1c5cce2d3d0d46eaefa879f502c6eb0b291f561beb78de514ccd",
+      "candidate_sha256": "e0fd04d8e40c1c5cce2d3d0d46eaefa879f502c6eb0b291f561beb78de514ccd",
+      "byte_diff": {
+        "reference_size": 86,
+        "candidate_size": 86,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000036",
+            "symbol": "__imp_towupper",
+            "rva": "0x04DDC5A4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!towupper"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0110A820",
+      "end_rva": "0x0110A8BA",
+      "name": "FString::StartsWith",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?StartsWith@FString@@QEBA_NPEB_WW4Type@ESearchCase@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FTimespan::Parse (0x011DEC10) calls it for StartsWith(\"-\"); _wcsnicmp or wcsncmp by the search case, after wcslen of the prefix.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "d775006af002c3995ab586bcbbaeaf79b13144cd7fbb3be43155f2f3a3423991",
+      "decrypted_sha256": "353d41a3b8092594735757ef91743c727029c020eedb7a1d1c8bb6432a31403f",
+      "candidate_sha256": "353d41a3b8092594735757ef91743c727029c020eedb7a1d1c8bb6432a31403f",
+      "byte_diff": {
+        "reference_size": 154,
+        "candidate_size": 154,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000038",
+            "symbol": "__imp__wcsnicmp",
+            "rva": "0x04DDC5DC",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!_wcsnicmp"
+          },
+          {
+            "offset": "0x00000041",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::Find, UGameplayStatics::HasLaunchOption and 4 more"
+          },
+          {
+            "offset": "0x0000004A",
+            "symbol": "__imp__wcsnicmp",
+            "rva": "0x04DDC5DC",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!_wcsnicmp"
+          },
+          {
+            "offset": "0x00000078",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::Find, UGameplayStatics::HasLaunchOption and 4 more"
+          },
+          {
+            "offset": "0x00000081",
+            "symbol": "__imp_wcsncmp",
+            "rva": "0x04DDC5BC",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!wcsncmp"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01104260",
+      "end_rva": "0x01104271",
+      "name": "FString::IsNumeric",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?IsNumeric@FString@@QEBA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FTimespan::Parse (0x011DEC10) calls it for each non-empty token; IsEmpty, then a tail jump to TCString<TCHAR>::IsNumeric (0x007B94B0).",
+      "reference_state": "decrypted",
+      "in_denominator": false,
+      "match": "exact",
+      "original_sha256": "ef9299b5abd89dce82dffc08863f7f38d3d729d0d7f1a59fda921c4a2eee224a",
+      "decrypted_sha256": "f8b48038d3d430bb44aa557048f9df5a2d9f009b601e934d9f4ca801c47b51ef",
+      "candidate_sha256": "f8b48038d3d430bb44aa557048f9df5a2d9f009b601e934d9f4ca801c47b51ef",
+      "byte_diff": {
+        "reference_size": 17,
+        "candidate_size": 17,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000D",
+            "symbol": "?IsNumeric@?$TCString@_W@@SA_NPEB_W@Z",
+            "rva": "0x007B94B0",
+            "evidence": "exact match of manifest entry 0x007B94B0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01105410",
+      "end_rva": "0x0110563B",
+      "name": "FString::ParseIntoArray",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ParseIntoArray@FString@@QEBAHAEAV?$TArray@VFString@@VFDefaultAllocator@@@@PEB_W_N@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FDateTime::Parse (0x011C0050) and FTimespan::Parse (0x011DEC10) call it; Reset, wcsstr, and the two Emplace forms (TArray<FString>::ResizeGrow 0x025605C0; FString(Count, Src) with wcsncpy, FString(Src) with FGenericPlatformString::Memcpy).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "b4e08889332eec4e85c02b25a97fd7ab8a9b3aa8852bb175a24c39d402c02013",
+      "decrypted_sha256": "a009ea741b33cd625ad5bb5ab65ef1f7cc5377a4840563dc742343ffc336f691",
+      "candidate_sha256": "a009ea741b33cd625ad5bb5ab65ef1f7cc5377a4840563dc742343ffc336f691",
+      "byte_diff": {
+        "reference_size": 555,
+        "candidate_size": 555,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000040",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x00000069",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x00000089",
+            "symbol": "?ResizeTo@?$TArray@VFString@@VFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x0139F3B0",
+            "evidence": "exact match of manifest entry 0x0139F3B0"
+          },
+          {
+            "offset": "0x000000C4",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x0000011E",
+            "symbol": "?ResizeGrow@?$TArray@VFString@@VFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x025605C0",
+            "evidence": "exact match of manifest entry 0x025605C0"
+          },
+          {
+            "offset": "0x0000014C",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000168",
+            "symbol": "__imp_wcsncpy",
+            "rva": "0x04DDC5D4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!wcsncpy"
+          },
+          {
+            "offset": "0x0000018B",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x000001C0",
+            "symbol": "?ResizeGrow@?$TArray@VFString@@VFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x025605C0",
+            "evidence": "exact match of manifest entry 0x025605C0"
+          },
+          {
+            "offset": "0x00000202",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000213",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x01108D80",
+      "end_rva": "0x01109047",
+      "name": "FString::Replace",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?Replace@FString@@QEBA?AV1@PEB_W0W4Type@ESearchCase@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FDateTime::Parse (0x011C0050) calls it for Replace(\"-\", \" \") (IgnoreCase); Stristr (0x00276040) or wcsstr, the inlined AppendChars, and the copy for an empty search.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "e5c169c9a0dac849c667d77dc8163f5ee6a6c4c822614511ef80a2c9d549a5ba",
+      "decrypted_sha256": "db7e5bac2b67bb5327c57fe2fc5a3d7b3970b146895f83dd6ae80810c35f935d",
+      "candidate_sha256": "db7e5bac2b67bb5327c57fe2fc5a3d7b3970b146895f83dd6ae80810c35f935d",
+      "byte_diff": {
+        "reference_size": 711,
+        "candidate_size": 711,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x000000B1",
+            "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+            "rva": "0x00276040",
+            "evidence": "exact match of manifest entry 0x00276040"
+          },
+          {
+            "offset": "0x000000B9",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x000000FB",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000130",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x0000015F",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x0000019B",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x00000206",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x0000023B",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x000002A5",
+            "symbol": "?ResizeForCopy@?$TArray@_WVFDefaultAllocator@@@@AEAAXHH@Z",
+            "rva": "0x005756A0",
+            "evidence": "corroborated: same symbol at this address in FString::ToUpper() const &, UWidgetInteractionComponent::execSendKeyChar and 4 more"
+          },
+          {
+            "offset": "0x000002B6",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011092B0",
+      "end_rva": "0x011096BE",
+      "name": "FString::ReplaceInline",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ReplaceInline@FString@@QEAAHPEB_W0W4Type@ESearchCase@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FDateTime::Parse (0x011C0050) and FTimespan::Parse (0x011DEC10) call it (six calls); the in-place path for equal lengths and the rebuilding path through Contains and +=.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "6e7a28c48960b7f7dbc0de7804735d5030d1aa7689868b9ec6d11615ba993f79",
+      "decrypted_sha256": "0c72af73d439d49c37200514560a9a7aeebb91f0c3d6b63726d26c90310f8dc5",
+      "candidate_sha256": "0c72af73d439d49c37200514560a9a7aeebb91f0c3d6b63726d26c90310f8dc5",
+      "byte_diff": {
+        "reference_size": 1038,
+        "candidate_size": 1038,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x000000C7",
+            "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+            "rva": "0x00276040",
+            "evidence": "exact match of manifest entry 0x00276040"
+          },
+          {
+            "offset": "0x000000CF",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x000000E8",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::Find, FString::StartsWith and 4 more"
+          },
+          {
+            "offset": "0x0000016F",
+            "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+            "rva": "0x00276040",
+            "evidence": "exact match of manifest entry 0x00276040"
+          },
+          {
+            "offset": "0x00000177",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x00000193",
+            "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+            "rva": "0x00276040",
+            "evidence": "exact match of manifest entry 0x00276040"
+          },
+          {
+            "offset": "0x0000019B",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x000001B8",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::Find, FString::StartsWith and 4 more"
+          },
+          {
+            "offset": "0x000001E9",
+            "symbol": "?ResizeForCopy@?$TArray@_WVFDefaultAllocator@@@@AEAAXHH@Z",
+            "rva": "0x005756A0",
+            "evidence": "corroborated: same symbol at this address in FString::ToUpper() const &, UWidgetInteractionComponent::execSendKeyChar and 4 more"
+          },
+          {
+            "offset": "0x000001FF",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x00000220",
+            "symbol": "?ResizeTo@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x019D1E90",
+            "evidence": "exact match of manifest entry 0x019D1E90"
+          },
+          {
+            "offset": "0x00000238",
+            "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+            "rva": "0x00276040",
+            "evidence": "exact match of manifest entry 0x00276040"
+          },
+          {
+            "offset": "0x00000240",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x00000299",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000002C2",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x00000300",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x0000032A",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x00000354",
+            "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+            "rva": "0x00276040",
+            "evidence": "exact match of manifest entry 0x00276040"
+          },
+          {
+            "offset": "0x0000035C",
+            "symbol": "__imp_wcsstr",
+            "rva": "0x04DDBCA4",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!wcsstr"
+          },
+          {
+            "offset": "0x000003A3",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000003CD",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x000003E1",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011C0050",
+      "end_rva": "0x011C02E4",
+      "name": "FDateTime::Parse",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/DateTime.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/DateTime.obj",
+      "symbol": "?Parse@FDateTime@@SA_NAEBVFString@@AEAU1@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "the target execDateTimeFromString (0x0243CC30) calls (KismetMathLibrary.inl's DateTimeFromString inlined); FString::Replace (0x01108D80), ReplaceInline (0x011092B0) twice, ParseIntoArray (0x01105410), _wtoi through the import table, Validate inlined (DaysInMonth 0x011B30C0) and the constructor (0x011AC210).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "ad8c28688b95b4128975296db892c9e619a60bc713c087d67c0fe7784abc3830",
+      "decrypted_sha256": "87000c27aa93bc6521e2b10adb2e241e26e8821268ba3249db79a45fb1bc1551",
+      "candidate_sha256": "87a72ff94050ab4252ebe204ab1204c8dcf90073aef5ce3cce5bd822559badee",
+      "byte_diff": {
+        "reference_size": 660,
+        "candidate_size": 660,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000045",
+            "symbol": "?Replace@FString@@QEBA?AV1@PEB_W0W4Type@ESearchCase@@@Z",
+            "rva": "0x01108D80",
+            "evidence": "exact match of manifest entry 0x01108D80"
+          },
+          {
+            "offset": "0x00000060",
+            "symbol": "?ReplaceInline@FString@@QEAAHPEB_W0W4Type@ESearchCase@@@Z",
+            "rva": "0x011092B0",
+            "evidence": "exact match of manifest entry 0x011092B0"
+          },
+          {
+            "offset": "0x0000007B",
+            "symbol": "?ReplaceInline@FString@@QEAAHPEB_W0W4Type@ESearchCase@@@Z",
+            "rva": "0x011092B0",
+            "evidence": "exact match of manifest entry 0x011092B0"
+          },
+          {
+            "offset": "0x000000A1",
+            "symbol": "?ParseIntoArray@FString@@QEBAHAEAV?$TArray@VFString@@VFDefaultAllocator@@@@PEB_W_N@Z",
+            "rva": "0x01105410",
+            "evidence": "exact match of manifest entry 0x01105410"
+          },
+          {
+            "offset": "0x000000BD",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::Find, FString::StartsWith and 4 more"
+          },
+          {
+            "offset": "0x000000D1",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x000000EE",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x0000010A",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x00000126",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x00000147",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x00000164",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x00000188",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x000001B1",
+            "symbol": "?DaysInMonth@FDateTime@@SAHHH@Z",
+            "rva": "0x011B30C0",
+            "evidence": "exact match of manifest entry 0x011B30C0"
+          },
+          {
+            "offset": "0x000001FF",
+            "symbol": "??0FDateTime@@QEAA@HHHHHHH@Z",
+            "rva": "0x011AC210",
+            "evidence": "exact match of manifest entry 0x011AC210"
+          },
+          {
+            "offset": "0x00000249",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x0000026C",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x00000283",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000016",
+            "size": 4,
+            "symbol": "$SG14082",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000021",
+            "size": 4,
+            "symbol": "$SG14083",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000004F",
+            "size": 4,
+            "symbol": "$SG14084",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000056",
+            "size": 4,
+            "symbol": "$SG14085",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000006A",
+            "size": 4,
+            "symbol": "$SG14086",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000071",
+            "size": 4,
+            "symbol": "$SG14087",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000085",
+            "size": 4,
+            "symbol": "$SG14088",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 28
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x011DEC10",
+      "end_rva": "0x011DF1BA",
+      "name": "FTimespan::Parse",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/Timespan.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/Timespan.obj",
+      "symbol": "?Parse@FTimespan@@SA_NAEBVFString@@AEAU1@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "the target execTimespanFromString (0x02450E00) calls; FString::Find (0x01103630) twice for Contains, ReplaceInline (0x011092B0) four times, StartsWith (0x0110A820), ParseIntoArray (0x01105410), IsNumeric (0x01104260), the inlined AddDefaulted/InsertDefaulted (TArray<FString>::ResizeGrow 0x025605C0, memmove, memset), Left and the fraction padding, then Assign inlined.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "4dac2f0dcdd4eddc639711240521bece061027b683cdb283e6e2fcc00a645e23",
+      "decrypted_sha256": "5d44027153868f5145348d656ec27a8a60214ff2b7d29bb0e7edcf5ac351e36e",
+      "candidate_sha256": "9bc315128db1725fe4df1a5d85e8526867bc944dec6e7dab9d303e227f1d5942",
+      "byte_diff": {
+        "reference_size": 1450,
+        "candidate_size": 1450,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000003C",
+            "symbol": "?Find@FString@@QEBAHPEB_WW4Type@ESearchCase@@W42ESearchDir@@H@Z",
+            "rva": "0x01103630",
+            "evidence": "exact match of manifest entry 0x01103630"
+          },
+          {
+            "offset": "0x0000005B",
+            "symbol": "?Find@FString@@QEBAHPEB_WW4Type@ESearchCase@@W42ESearchDir@@H@Z",
+            "rva": "0x01103630",
+            "evidence": "exact match of manifest entry 0x01103630"
+          },
+          {
+            "offset": "0x00000091",
+            "symbol": "?ResizeForCopy@?$TArray@_WVFDefaultAllocator@@@@AEAAXHH@Z",
+            "rva": "0x005756A0",
+            "evidence": "corroborated: same symbol at this address in FString::ToUpper() const &, UWidgetInteractionComponent::execSendKeyChar and 4 more"
+          },
+          {
+            "offset": "0x000000A3",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x000000C0",
+            "symbol": "?ReplaceInline@FString@@QEAAHPEB_W0W4Type@ESearchCase@@@Z",
+            "rva": "0x011092B0",
+            "evidence": "exact match of manifest entry 0x011092B0"
+          },
+          {
+            "offset": "0x000000DD",
+            "symbol": "?ReplaceInline@FString@@QEAAHPEB_W0W4Type@ESearchCase@@@Z",
+            "rva": "0x011092B0",
+            "evidence": "exact match of manifest entry 0x011092B0"
+          },
+          {
+            "offset": "0x000000F3",
+            "symbol": "?StartsWith@FString@@QEBA_NPEB_WW4Type@ESearchCase@@@Z",
+            "rva": "0x0110A820",
+            "evidence": "exact match of manifest entry 0x0110A820"
+          },
+          {
+            "offset": "0x00000117",
+            "symbol": "?ReplaceInline@FString@@QEAAHPEB_W0W4Type@ESearchCase@@@Z",
+            "rva": "0x011092B0",
+            "evidence": "exact match of manifest entry 0x011092B0"
+          },
+          {
+            "offset": "0x00000134",
+            "symbol": "?ReplaceInline@FString@@QEAAHPEB_W0W4Type@ESearchCase@@@Z",
+            "rva": "0x011092B0",
+            "evidence": "exact match of manifest entry 0x011092B0"
+          },
+          {
+            "offset": "0x00000153",
+            "symbol": "?ParseIntoArray@FString@@QEBAHAEAV?$TArray@VFString@@VFDefaultAllocator@@@@PEB_W_N@Z",
+            "rva": "0x01105410",
+            "evidence": "exact match of manifest entry 0x01105410"
+          },
+          {
+            "offset": "0x00000174",
+            "symbol": "?ResizeGrow@?$TArray@VFString@@VFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x025605C0",
+            "evidence": "exact match of manifest entry 0x025605C0"
+          },
+          {
+            "offset": "0x000001AD",
+            "symbol": "?IsNumeric@FString@@QEBA_NXZ",
+            "rva": "0x01104260",
+            "evidence": "exact match of manifest entry 0x01104260"
+          },
+          {
+            "offset": "0x000001E5",
+            "symbol": "?ResizeGrow@?$TArray@VFString@@VFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x025605C0",
+            "evidence": "exact match of manifest entry 0x025605C0"
+          },
+          {
+            "offset": "0x00000204",
+            "symbol": "__imp_memmove",
+            "rva": "0x04DDBC84",
+            "evidence": "protector import table slot of VCRUNTIME140.dll!memmove"
+          },
+          {
+            "offset": "0x00000212",
+            "symbol": "memset",
+            "rva": "0x02D9ADE6",
+            "evidence": "import thunk jmp [0x04DDBC9C] (memset)"
+          },
+          {
+            "offset": "0x00000221",
+            "symbol": "??_C@_11LOCGONAA@?$AA?$AA@",
+            "rva": "0x02E656A8",
+            "evidence": "corroborated: same symbol at this address in FString::Find, FString::StartsWith and 4 more"
+          },
+          {
+            "offset": "0x00000294",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000002B7",
+            "symbol": "__imp_wcsncpy",
+            "rva": "0x04DDC5D4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!wcsncpy"
+          },
+          {
+            "offset": "0x000002DC",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x000002FF",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x00000326",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000331",
+            "symbol": "$SG14023",
+            "rva": "0x03483638",
+            "evidence": "data symbol: unique 20-byte string literal"
+          },
+          {
+            "offset": "0x0000033F",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x00000390",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000003AE",
+            "symbol": "__imp_wcsncpy",
+            "rva": "0x04DDC5D4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!wcsncpy"
+          },
+          {
+            "offset": "0x000003EE",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x0000041B",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          },
+          {
+            "offset": "0x0000042E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x0000043B",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x00000458",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x00000474",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x00000490",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x000004AC",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x000004C6",
+            "symbol": "__imp__wtoi",
+            "rva": "0x04DDC074",
+            "evidence": "protector import table slot of api-ms-win-crt-convert-l1-1-0.dll!_wtoi"
+          },
+          {
+            "offset": "0x0000055C",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x00000576",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          },
+          {
+            "offset": "0x00000584",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, AFortGameplayEffectDeliveryActor::execBroadcastExplosion and 179 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000033",
+            "size": 4,
+            "symbol": "$SG14000",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000056",
+            "size": 4,
+            "symbol": "$SG14001",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x000000B0",
+            "size": 4,
+            "symbol": "$SG14002",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x000000B7",
+            "size": 4,
+            "symbol": "$SG14003",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x000000CD",
+            "size": 4,
+            "symbol": "$SG14004",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x000000D4",
+            "size": 4,
+            "symbol": "$SG14005",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x000000EA",
+            "size": 4,
+            "symbol": "$SG14006",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000103",
+            "size": 4,
+            "symbol": "$SG14007",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000010E",
+            "size": 4,
+            "symbol": "$SG14008",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000124",
+            "size": 4,
+            "symbol": "$SG14009",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000012B",
+            "size": 4,
+            "symbol": "$SG14010",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000142",
+            "size": 4,
+            "symbol": "$SG14011",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 48
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x00276040",
+      "end_rva": "0x002760F8",
+      "name": "TCString<TCHAR>::Stristr",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?Stristr@?$TCString@_W@@SAPEB_WPEB_W0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called by FString::Find (0x01103630), Replace (0x01108D80) and ReplaceInline (0x011092B0) for IgnoreCase searches: Misc/CString.h's template (towupper of the first letter, wcslen inlined, _wcsnicmp).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "73f000f6f27f7a5563367e58f065d1803b25a41acdd8cdd6d546213f392c8048",
+      "decrypted_sha256": "8ef2131db5455eda25033a2eab19a6eeb681fdbed7e66b94a2442935962e9359",
+      "candidate_sha256": "8ef2131db5455eda25033a2eab19a6eeb681fdbed7e66b94a2442935962e9359",
+      "byte_diff": {
+        "reference_size": 184,
+        "candidate_size": 184,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000031",
+            "symbol": "__imp_towupper",
+            "rva": "0x04DDC5A4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!towupper"
+          },
+          {
+            "offset": "0x00000065",
+            "symbol": "__imp_towupper",
+            "rva": "0x04DDC5A4",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!towupper"
+          },
+          {
+            "offset": "0x0000007A",
+            "symbol": "__imp__wcsnicmp",
+            "rva": "0x04DDC5DC",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!_wcsnicmp"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x007B94B0",
+      "end_rva": "0x007B9524",
+      "name": "TCString<TCHAR>::IsNumeric",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?IsNumeric@?$TCString@_W@@SA_NPEB_W@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FString::IsNumeric (0x01104260) tail-jumps to it: Misc/CString.h's in-class template (sign, one dot, iswdigit). The reference keeps this out-of-line copy.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "fdd35cdec39c25151f406e42a5f638dc3605f5ae97d5ed443faaabe51077bbff",
+      "decrypted_sha256": "fcc9b4be9667b5cda9591b0c9b6f44b70f5977e08e97a796200bcd3a6e5da242",
+      "candidate_sha256": "fcc9b4be9667b5cda9591b0c9b6f44b70f5977e08e97a796200bcd3a6e5da242",
+      "byte_diff": {
+        "reference_size": 116,
+        "candidate_size": 116,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000045",
+            "symbol": "__imp_iswdigit",
+            "rva": "0x04DDC54C",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!iswdigit"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x025605C0",
+      "end_rva": "0x02560635",
+      "name": "TArray<FString>::ResizeGrow",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ResizeGrow@?$TArray@VFString@@VFDefaultAllocator@@@@AEAAXH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called by FString::ParseIntoArray (0x01105410) through Emplace and by FTimespan::Parse (0x011DEC10) through AddDefaulted/InsertDefaulted: DefaultCalculateSlackGrow for 16-byte elements (FMemory::QuantizeSize), then FMemory::Realloc. /OPT:ICF gives every 16-byte TArray's ResizeGrow this body.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "977cbdb7271921eb8714fdc87c60c325f40d16c5da0598fc3b2a295c500040cf",
+      "decrypted_sha256": "ef79846de0d16bb57b611a8cbef1e4807d293effbfb08ee068ef559ceacd982d",
+      "candidate_sha256": "ef79846de0d16bb57b611a8cbef1e4807d293effbfb08ee068ef559ceacd982d",
+      "byte_diff": {
+        "reference_size": 117,
+        "candidate_size": 117,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000037",
+            "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
+            "rva": "0x011455C0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
+          },
+          {
+            "offset": "0x00000063",
+            "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
+            "rva": "0x01145BB0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0139F3B0",
+      "end_rva": "0x0139F413",
+      "name": "TArray<FString>::ResizeTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ResizeTo@?$TArray@VFString@@VFDefaultAllocator@@@@AEAAXH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called by FString::ParseIntoArray (0x01105410) through OutArray.Reset (Empty when the new size exceeds the allocation): CalculateSlackReserve for 16-byte elements and ResizeAllocation. /OPT:ICF shares the body among 16-byte TArrays.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "1306035d47039d3cb8519a7e2f52de098e969083dd5b1d6aba2ebbbe20b008cc",
+      "decrypted_sha256": "cd6efab05e7717b591bb336b8c4f1821d21f2f82099c98cf94c6942da83560ef",
+      "candidate_sha256": "cd6efab05e7717b591bb336b8c4f1821d21f2f82099c98cf94c6942da83560ef",
+      "byte_diff": {
+        "reference_size": 99,
+        "candidate_size": 99,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001E",
+            "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
+            "rva": "0x011455C0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
+          },
+          {
+            "offset": "0x00000051",
+            "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
+            "rva": "0x01145BB0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x019D1E90",
+      "end_rva": "0x019D1EF0",
+      "name": "TArray<TCHAR>::ResizeTo",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Containers/String.cpp",
+      "object": "Source/Runtime/Core/Private/Containers/String.obj",
+      "symbol": "?ResizeTo@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called by FString::ReplaceInline (0x011092B0) through Empty(Len()): CalculateSlackReserve for 2-byte elements and ResizeAllocation. /OPT:ICF shares the body among 2-byte TArrays.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "ebe72ac01e7375f116bfc4c5eb3e4ebc7471b7cb2ffc7082451158111d79bd53",
+      "decrypted_sha256": "dc88fdea21d4c8d0dc12de75de879b4966950c238d87b3cfd6fa5b25da07d2e1",
+      "candidate_sha256": "dc88fdea21d4c8d0dc12de75de879b4966950c238d87b3cfd6fa5b25da07d2e1",
+      "byte_diff": {
+        "reference_size": 96,
+        "candidate_size": 96,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000001D",
+            "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
+            "rva": "0x011455C0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
+          },
+          {
+            "offset": "0x0000004E",
+            "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
+            "rva": "0x01145BB0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<TCHAR>::ResizeGrow and 4 more"
           }
         ],
         "unresolved_relocations": [],

@@ -107,6 +107,7 @@
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMath.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformString.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\Containers\String.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMisc.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Math\UnrealMath.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Math\Color.cpp" />

@@ -4,6 +4,7 @@
 // Reconstruction written from image evidence; see analysis/functions.json.
 
 #define FNGC_CORE_MATH_EXTRAS 1   // FDateTime, FColor, FVector4, ... (MathDecls.h)
+#define FNGC_STRING_EXTRAS 1      // FString's parse members (ContainersRecovered.h)
 #include "FortniteGameCode/MathDecls.h"
 #include "FortniteGameCode/ContainersRecovered.h"   // FString
 #include "Misc/RecoveredCString.h"                 // FCString::Strtoi
@@ -236,6 +237,48 @@ FDateTime FDateTime::Now()
 	FPlatformTime::SystemTime(Year, Month, DayOfWeek, Day, Hour, Minute, Second, Millisecond);
 
 	return FDateTime(Year, Month, Day, Hour, Minute, Second, Millisecond);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x011C0050 (end 0x011C02E4)
+// Original VA: 0x00000001411C0050 | File offset: 0x011BF650
+// Recovery: high-confidence inferred (UE4 name) | Matching: see analysis/functions.json
+// Evidence: the target execDateTimeFromString (0x0243CC30) calls (KismetMathLibrary.inl's DateTimeFromString
+//   inlined); FString::Replace (0x01108D80), ReplaceInline (0x011092B0) twice, ParseIntoArray (0x01105410),
+//   _wtoi through the import table, Validate inlined (DaysInMonth 0x011B30C0) and the constructor (0x011AC210).
+bool FDateTime::Parse(const FString& DateTimeString, FDateTime& OutDateTime)
+{
+	// first replace -, : and . with space
+	FString FixedString = DateTimeString.Replace(TEXT("-"), TEXT(" "));
+	FixedString.ReplaceInline(TEXT(":"), TEXT(" "), ESearchCase::CaseSensitive);
+	FixedString.ReplaceInline(TEXT("."), TEXT(" "), ESearchCase::CaseSensitive);
+
+	// split up on a single delimiter
+	TArray<FString> Tokens;
+	FixedString.ParseIntoArray(Tokens, TEXT(" "), true);
+
+	// make sure it parsed it properly (within reason)
+	if ((Tokens.Num() < 6) || (Tokens.Num() > 7))
+	{
+		return false;
+	}
+
+	const int32 Year = FCString::Atoi(*Tokens[0]);
+	const int32 Month = FCString::Atoi(*Tokens[1]);
+	const int32 Day = FCString::Atoi(*Tokens[2]);
+	const int32 Hour = FCString::Atoi(*Tokens[3]);
+	const int32 Minute = FCString::Atoi(*Tokens[4]);
+	const int32 Second = FCString::Atoi(*Tokens[5]);
+	const int32 Millisecond = Tokens.Num() > 6 ? FCString::Atoi(*Tokens[6]) : 0;
+
+	if (!Validate(Year, Month, Day, Hour, Minute, Second, Millisecond))
+	{
+		return false;
+	}
+
+	// convert the tokens to numbers
+	OutDateTime.Ticks = FDateTime(Year, Month, Day, Hour, Minute, Second, Millisecond).Ticks;
+
+	return true;
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x011C30B0 (end 0x011C3395)

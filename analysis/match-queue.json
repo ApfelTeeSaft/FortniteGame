@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 702,
+ "total": 704,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -66,6 +66,20 @@
    ]
   },
   {
+   "key": "source-function | string literal ($SG, per-occurrence copy)",
+   "count": 10,
+   "states": {
+    "relocation-equivalent": 10
+   },
+   "examples": [
+    "0x01193BC0 FCommandLine::Get",
+    "0x01194B20 FCommandLine::GetForLogging",
+    "0x011953C0 FCommandLine::GetOriginalForLogging",
+    "0x011C0050 FDateTime::Parse",
+    "0x011DEC10 FTimespan::Parse"
+   ]
+  },
+  {
    "key": "uht-struct-registernatives | pooled string literal (??_C@)",
    "count": 9,
    "states": {
@@ -77,20 +91,6 @@
     "0x000A3050 dynamic initializer for ScriptStruct_GameplayAbilities_StaticRegisterNativesFPredictionKey",
     "0x000A7B20 dynamic initializer for ScriptStruct_Qos_StaticRegisterNativesFQosSearchPass",
     "0x000ADE30 dynamic initializer for ScriptStruct_PurchaseFlow_StaticRegisterNativesFPurchaseFlowReceiptParam"
-   ]
-  },
-  {
-   "key": "source-function | string literal ($SG, per-occurrence copy)",
-   "count": 8,
-   "states": {
-    "relocation-equivalent": 8
-   },
-   "examples": [
-    "0x01193BC0 FCommandLine::Get",
-    "0x01194B20 FCommandLine::GetForLogging",
-    "0x011953C0 FCommandLine::GetOriginalForLogging",
-    "0x0207D8E0 UKismetMathLibrary::FromDays",
-    "0x0207DBF0 UKismetMathLibrary::FromHours"
    ]
   },
   {

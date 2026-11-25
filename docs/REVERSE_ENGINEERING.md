@@ -826,6 +826,48 @@ reference holds two per-occurrence copies of that literal (for example `DaysValu
 leaves the entry under test out of its own evidence, so both copies stay free for each relocation.
 Nothing else says which copy belongs to which branch. All other bytes and relocations match.
 
+## Fourteenth family: the date and time parsers and their FString members (2026-11-25)
+
+| Group | Functions | Result |
+| --- | --- | --- |
+| Core `Misc/DateTime.cpp`, `Misc/Timespan.cpp` | `FDateTime::Parse` (`0x011C0050`), `FTimespan::Parse` (`0x011DEC10`) | 2 relocation-equivalent: their one-character literals (below) |
+| Core `Containers/String.cpp` (new) | `FString::Find` (`0x01103630`), `IsNumeric` (`0x01104260`, a leaf), `ParseIntoArray` (`0x01105410`), `Replace` (`0x01108D80`), `ReplaceInline` (`0x011092B0`), `StartsWith` (`0x0110A820`), `ToUpper() const &` (`0x0110D720`), `ToUpper() &&` (`0x0110D7D0`), `ToUpperInline` (`0x0110D860`) | 9 exact |
+| Out-of-line copies `String.cpp`'s object emits | `TCString<TCHAR>::Stristr` (`0x00276040`), `TCString<TCHAR>::IsNumeric` (`0x007B94B0`), `TArray<FString>::ResizeGrow` (`0x025605C0`) and `ResizeTo` (`0x0139F3B0`), `TArray<TCHAR>::ResizeTo` (`0x019D1E90`) | 5 exact |
+
+16 functions: 14 exact (13 in the denominator) and 2 relocation-equivalent. These are the
+Kismet natives `DateTimeFromString` and `TimespanFromString`: `KismetMathLibrary.inl` inlines
+their wrappers, so the exec thunks call Core's parsers directly.
+
+**Both parsers follow the 4.20 source.** Every byte matches with the relocations masked.
+- `FDateTime::Parse`: `Replace`, two `ReplaceInline`s, `ParseIntoArray`, seven `Atoi`s through
+  `_wtoi`'s import slot. `Validate` is inlined (it calls `DaysInMonth`), then the constructor.
+- `FTimespan::Parse` needed 4.20's header forms of `TArray::AddDefaulted`, `InsertDefaulted`
+  (`memmove`, then `memset`: `FString` is a zero-construct type), the pointer iterators of
+  ranged for in shipping, and `FString::Left`, `operator+=` and `AppendChars`.
+- One byte depended on `FString::CheckInvariants`: in shipping its `checkSlow`s are empty, but
+  its unused `int32 Num = Data.Num()` stays. Without it, the null-terminator store after
+  `AppendChars`' `memcpy` encoded as `[rdi+rbx]`, not the reference's `[rbx+rdi]`. The reference
+  uses both orders elsewhere (321 and 252 times after a `memcpy` call), so the context decides.
+
+**The FString members are 4.20's, with one older condition.** `ParseIntoArray` splits
+`if (Start && DelimLength)`: the reference does not test the first character as 4.20.0 does
+(`docs/ENGINE_DIFFERENCES.md` #13). `ToUpper() &&` and `ToUpperInline` were located by their
+masked bodies. Each has a `ToLower` twin with the same masked body; the `towupper` import slot
+and the decorated-name order pick these. `TCString::IsNumeric` is defined in its class in 4.20,
+but the reference keeps it out of line: `FString::IsNumeric` tail-jumps to it. v140 does the
+same here.
+
+**Shims.** `ContainersRecovered.h` has the members behind `FNGC_STRING_EXTRAS`. Only the units
+that parse define it (`DateTime.cpp`, `Timespan.cpp`, `String.cpp`, after `MathDecls.h`), so other
+objects are unchanged apart from string-literal names. `Misc/RecoveredCString.h` gains `Atoi`,
+`Strcmp`, `Strncmp`, `Strstr`, `Stristr`, `IsNumeric` and `TChar::ToUpper`/`IsDigit`.
+
+**Why the parsers are not exact.** Their literals are one-character strings: `L"-"`, `L" "`,
+`L":"`, `L"."`, `L","`, `L"+"`. The image holds dozens of copies of each (72 of `L"-"`, 320 of
+`L" "`), and several stay free after literal elimination. `FDateTime::Parse` alone uses four
+copies of `L" "`, and `FTimespan::Parse` five of `L":"`. Leaving the entry under test out of
+its own evidence, nothing assigns them.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is
