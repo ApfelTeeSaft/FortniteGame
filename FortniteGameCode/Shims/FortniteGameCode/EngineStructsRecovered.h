@@ -960,7 +960,11 @@ enum class EGestureEvent : uint8
 
 // Containers/Set.h: only declared. FTouchKeySet derives from TSet<FKey>, and FPointerEvent binds
 // a reference to FTouchKeySet::EmptySet; neither touches the set's members, which are not
-// modelled, so TSet is an empty stand-in here.
+// modelled, so TSet is an empty stand-in here. A unit that builds maps (FNGC_SET_RECOVERED)
+// gets the real layout from SetRecovered.h instead.
+#if defined(FNGC_SET_RECOVERED)
+#include "FortniteGameCode/SetRecovered.h"
+#else
 template<typename ElementType, bool bInAllowDuplicateKeys = false> struct DefaultKeyFuncs;
 class FDefaultSetAllocator;
 
@@ -968,6 +972,7 @@ template<typename InElementType, typename KeyFuncs = DefaultKeyFuncs<InElementTy
 class TSet
 {
 };
+#endif
 
 // SlateCore: Input/Events.h. The reference's FPointerEvent is older than 4.20's: no Force (its
 // SizeOf is 104, 4.20's 112; the inlined constructor in the thunks stores no 1.0f and puts

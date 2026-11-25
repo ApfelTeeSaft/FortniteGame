@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 697,
+ "total": 702,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -77,6 +77,20 @@
     "0x000A3050 dynamic initializer for ScriptStruct_GameplayAbilities_StaticRegisterNativesFPredictionKey",
     "0x000A7B20 dynamic initializer for ScriptStruct_Qos_StaticRegisterNativesFQosSearchPass",
     "0x000ADE30 dynamic initializer for ScriptStruct_PurchaseFlow_StaticRegisterNativesFPurchaseFlowReceiptParam"
+   ]
+  },
+  {
+   "key": "source-function | string literal ($SG, per-occurrence copy)",
+   "count": 8,
+   "states": {
+    "relocation-equivalent": 8
+   },
+   "examples": [
+    "0x01193BC0 FCommandLine::Get",
+    "0x01194B20 FCommandLine::GetForLogging",
+    "0x011953C0 FCommandLine::GetOriginalForLogging",
+    "0x0207D8E0 UKismetMathLibrary::FromDays",
+    "0x0207DBF0 UKismetMathLibrary::FromHours"
    ]
   },
   {
@@ -200,18 +214,6 @@
     "0x000A3210 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FPredictionKey",
     "0x001A6320 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FMovieSceneEvalTemplate",
     "0x001F41B0 dynamic initializer for Z_CompiledInDeferStruct_UScriptStruct_FBlendSample"
-   ]
-  },
-  {
-   "key": "source-function | string literal ($SG, per-occurrence copy)",
-   "count": 3,
-   "states": {
-    "relocation-equivalent": 3
-   },
-   "examples": [
-    "0x01193BC0 FCommandLine::Get",
-    "0x01194B20 FCommandLine::GetForLogging",
-    "0x011953C0 FCommandLine::GetOriginalForLogging"
    ]
   },
   {

@@ -1413,6 +1413,51 @@ struct FTimespan
 	{
 		return FTimespan(Minutes * ETimespan::TicksPerMinute);
 	}
+	// The same older form: UKismetMathLibrary's From* natives truncate the product too.
+	static FTimespan FromDays(double Days)
+	{
+		return FTimespan(Days * ETimespan::TicksPerDay);
+	}
+	static FTimespan FromHours(double Hours)
+	{
+		return FTimespan(Hours * ETimespan::TicksPerHour);
+	}
+	static FTimespan FromMilliseconds(double Milliseconds)
+	{
+		return FTimespan(Milliseconds * ETimespan::TicksPerMillisecond);
+	}
+	static FTimespan FromSeconds(double Seconds)
+	{
+		return FTimespan(Seconds * ETimespan::TicksPerSecond);
+	}
+	static FTimespan MaxValue()
+	{
+		return FTimespan(ETimespan::MaxTicks);
+	}
+	static FTimespan MinValue()
+	{
+		return FTimespan(ETimespan::MinTicks);
+	}
+	double GetTotalDays() const
+	{
+		return ((double)Ticks / ETimespan::TicksPerDay);
+	}
+	double GetTotalHours() const
+	{
+		return ((double)Ticks / ETimespan::TicksPerHour);
+	}
+	double GetTotalMilliseconds() const
+	{
+		return ((double)Ticks / ETimespan::TicksPerMillisecond);
+	}
+	double GetTotalMinutes() const
+	{
+		return ((double)Ticks / ETimespan::TicksPerMinute);
+	}
+	double GetTotalSeconds() const
+	{
+		return ((double)Ticks / ETimespan::TicksPerSecond);
+	}
 #endif
 	__forceinline FTimespan(int32 Days, int32 Hours, int32 Minutes, int32 Seconds, int32 FractionNano)
 	{

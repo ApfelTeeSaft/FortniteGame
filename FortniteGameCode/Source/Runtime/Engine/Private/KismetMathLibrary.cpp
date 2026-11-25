@@ -126,6 +126,11 @@ namespace ELerpInterpolationMode
 	static FVector GetReflectionVector(FVector Direction, FVector SurfaceNormal); \
 	static FRotator NormalizedDeltaRotator(FRotator A, FRotator B); \
 	static FVector RandomUnitVectorFromStream(const FRandomStream& Stream); \
+	static FTimespan FromDays(float Days); \
+	static FTimespan FromHours(float Hours); \
+	static FTimespan FromMinutes(float Minutes); \
+	static FTimespan FromSeconds(float Seconds); \
+	static FTimespan FromMilliseconds(float Milliseconds); \
 	static void MinimumAreaRectangle(class UObject* WorldContextObject, const TArray<FVector>& InVerts, const FVector& SampleSurfaceNormal, FVector& OutRectCenter, FRotator& OutRectRotation, float& OutSideLengthX, float& OutSideLengthY, bool bDebugDraw = false); \
 	static void ReportError_Divide_ByteByte(); \
 	static void ReportError_Percent_ByteByte(); \
@@ -141,6 +146,7 @@ namespace ELerpInterpolationMode
 	static void ReportError_DaysInMonth();
 
 #define FNGC_CORE_MATH_EXTRAS 1   // FDateTime, FColor, FVector4, ... (MathDecls.h)
+#define FNGC_SET_RECOVERED 1      // TSet's layout for FFormatNamedArguments (SetRecovered.h)
 struct FFloatSpringState;
 struct FVectorSpringState;
 #include "FortniteGameCode/UHTRecovered.h"
@@ -178,6 +184,11 @@ namespace GlobalVectorConstants
 }
 #include "FortniteGameCode/TransformRecovered.h"
 #include "FortniteGameCode/QuatRecovered.h"
+#include "FortniteGameCode/FormatArgumentsRecovered.h"
+
+// Misc/RuntimeErrors.h: UE_RAISE_RUNTIME_ERRORS is 0 in shipping builds, so the message, with
+// its FText::Format and LOCTEXT, is not compiled.
+#define LogRuntimeError(Message)
 
 // Kismet/KismetMathLibrary.inl (KISMET_MATH_FORCEINLINE: inline outside debug builds).
 __forceinline float UKismetMathLibrary::Lerp(float A, float B, float V)
@@ -889,6 +900,141 @@ void UKismetMathLibrary::BreakTimespan2(FTimespan InTimespan, int32& Days, int32
 	Minutes = InTimespan.GetMinutes();
 	Seconds = InTimespan.GetSeconds();
 	FractionNano = InTimespan.GetFractionNano();
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207D8E0 (end 0x0207DBE1)
+// Original VA: 0x000000014207D8E0 | File offset: 0x0207CEE0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execFromDays; outside FTimespan's range it builds an FFormatNamedArguments with DaysValue
+//   (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy
+//   0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError
+//   is compiled out. Otherwise FTimespan::FromDays, truncating the product (double).
+FTimespan UKismetMathLibrary::FromDays(float Days)
+{
+	if (Days < FTimespan::MinValue().GetTotalDays())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("DaysValue"), Days);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampDaysToMinTimespan", "Days value {DaysValue} is less than minimum days TimeSpan can represent. Clamping to MinValue."), Args));
+		return FTimespan::MinValue();
+	}
+	else if (Days > FTimespan::MaxValue().GetTotalDays())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("DaysValue"), Days);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampDaysToMaxTimespan", "Days value {DaysValue} is greater than maximum days TimeSpan can represent. Clamping to MaxValue."), Args));
+		return FTimespan::MaxValue();
+	}
+
+	return FTimespan::FromDays(Days);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207DBF0 (end 0x0207DEF1)
+// Original VA: 0x000000014207DBF0 | File offset: 0x0207D1F0
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execFromHours; outside FTimespan's range it builds an FFormatNamedArguments with HoursValue
+//   (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy
+//   0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError
+//   is compiled out. Otherwise FTimespan::FromHours, truncating the product (double).
+FTimespan UKismetMathLibrary::FromHours(float Hours)
+{
+	if (Hours < FTimespan::MinValue().GetTotalHours())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("HoursValue"), Hours);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampHoursToMinTimespan", "Hours value {HoursValue} is less than minimum hours TimeSpan can represent. Clamping to MinValue."), Args));
+		return FTimespan::MinValue();
+	}
+	else if (Hours > FTimespan::MaxValue().GetTotalHours())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("HoursValue"), Hours);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampHoursToMaxTimespan", "Hours value {HoursValue} is greater than maximum hours TimeSpan can represent. Clamping to MaxValue."), Args));
+		return FTimespan::MaxValue();
+	}
+
+	return FTimespan::FromHours(Hours);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207E200 (end 0x0207E4FA)
+// Original VA: 0x000000014207E200 | File offset: 0x0207D800
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execFromMinutes; outside FTimespan's range it builds an FFormatNamedArguments with MinutesValue
+//   (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy
+//   0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError
+//   is compiled out. Otherwise FTimespan::FromMinutes, truncating the product (in float: /fp:fast, 6e8 is exact in float).
+FTimespan UKismetMathLibrary::FromMinutes(float Minutes)
+{
+	if (Minutes < FTimespan::MinValue().GetTotalMinutes())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("MinutesValue"), Minutes);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampMinutesToMinTimespan", "Minutes value {MinutesValue} is less than minimum minutes TimeSpan can represent. Clamping to MinValue."), Args));
+		return FTimespan::MinValue();
+	}
+	else if (Minutes > FTimespan::MaxValue().GetTotalMinutes())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("MinutesValue"), Minutes);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampMinutesToMaxTimespan", "Minutes value {MinutesValue} is greater than maximum minutes TimeSpan can represent. Clamping to MaxValue."), Args));
+		return FTimespan::MaxValue();
+	}
+
+	return FTimespan::FromMinutes(Minutes);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207E500 (end 0x0207E7FA)
+// Original VA: 0x000000014207E500 | File offset: 0x0207DB00
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execFromSeconds; outside FTimespan's range it builds an FFormatNamedArguments with SecondsValue
+//   (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy
+//   0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError
+//   is compiled out. Otherwise FTimespan::FromSeconds, truncating the product (in float: /fp:fast, 1e7 is exact in float).
+FTimespan UKismetMathLibrary::FromSeconds(float Seconds)
+{
+	if (Seconds < FTimespan::MinValue().GetTotalSeconds())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("SecondsValue"), Seconds);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampSecondsToMinTimespan", "Seconds value {SecondsValue} is less than minimum seconds TimeSpan can represent. Clamping to MinValue."), Args));
+		return FTimespan::MinValue();
+	}
+	else if (Seconds > FTimespan::MaxValue().GetTotalSeconds())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("SecondsValue"), Seconds);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampSecondsToMaxTimespan", "Seconds value {SecondsValue} is greater than maximum seconds TimeSpan can represent. Clamping to MaxValue."), Args));
+		return FTimespan::MaxValue();
+	}
+
+	return FTimespan::FromSeconds(Seconds);
+}
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0207DF00 (end 0x0207E1FA)
+// Original VA: 0x000000014207DF00 | File offset: 0x0207D500
+// Recovery: high-confidence inferred (called by its exec thunk) | Matching: see analysis/functions.json
+// Evidence: execFromMilliseconds; outside FTimespan's range it builds an FFormatNamedArguments with MillisecondsValue
+//   (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy
+//   0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError
+//   is compiled out. Otherwise FTimespan::FromMilliseconds, truncating the product (in float: /fp:fast, 1e4 is exact in float).
+FTimespan UKismetMathLibrary::FromMilliseconds(float Milliseconds)
+{
+	if (Milliseconds < FTimespan::MinValue().GetTotalMilliseconds())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("MillisecondsValue"), Milliseconds);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampMillisecondsToMinTimespan", "Milliseconds value {MillisecondsValue} is less than minimum milliseconds TimeSpan can represent. Clamping to MinValue."), Args));
+		return FTimespan::MinValue();
+	}
+	else if (Milliseconds > FTimespan::MaxValue().GetTotalMilliseconds())
+	{
+		FFormatNamedArguments Args;
+		Args.Add(TEXT("MillisecondsValue"), Milliseconds);
+		LogRuntimeError(FText::Format(LOCTEXT("ClampMillisecondsToMaxTimespan", "Milliseconds value {MillisecondsValue} is greater than maximum milliseconds TimeSpan can represent. Clamping to MaxValue."), Args));
+		return FTimespan::MaxValue();
+	}
+
+	return FTimespan::FromMilliseconds(Milliseconds);
 }
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02079F20 (end 0x0207A1E1)

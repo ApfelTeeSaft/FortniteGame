@@ -3639,7 +3639,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213460",
+            "symbol": "$SG214226",
             "rva": "0x037C89B0",
             "evidence": "data symbol: unique 64-byte string literal"
           },
@@ -3686,7 +3686,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213463",
+            "symbol": "$SG214229",
             "rva": "0x037C89F0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_IntInt"
           },
@@ -3733,7 +3733,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213466",
+            "symbol": "$SG214232",
             "rva": "0x037C8A90",
             "evidence": "data symbol: unique 60-byte string literal"
           },
@@ -3780,7 +3780,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213469",
+            "symbol": "$SG214235",
             "rva": "0x037C8AE0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_ByteByte"
           },
@@ -3827,7 +3827,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213472",
+            "symbol": "$SG214238",
             "rva": "0x037C8C70",
             "evidence": "data symbol: unique 114-byte string literal"
           },
@@ -3874,7 +3874,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213475",
+            "symbol": "$SG214241",
             "rva": "0x037C8D50",
             "evidence": "data symbol: unique 70-byte string literal"
           },
@@ -3921,7 +3921,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213478",
+            "symbol": "$SG214244",
             "rva": "0x037C8DB0",
             "evidence": "data symbol: unique 66-byte string literal"
           },
@@ -3968,7 +3968,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213481",
+            "symbol": "$SG214247",
             "rva": "0x037C8E50",
             "evidence": "data symbol: unique 72-byte string literal"
           },
@@ -4015,7 +4015,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213484",
+            "symbol": "$SG214250",
             "rva": "0x037C8ED0",
             "evidence": "data symbol: unique 80-byte string literal"
           },
@@ -4062,7 +4062,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213487",
+            "symbol": "$SG214253",
             "rva": "0x037C8F20",
             "evidence": "data symbol: unique 128-byte string literal"
           },
@@ -4109,7 +4109,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213490",
+            "symbol": "$SG214256",
             "rva": "0x037C8FA0",
             "evidence": "data symbol: unique 74-byte string literal"
           },
@@ -4156,7 +4156,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213493",
+            "symbol": "$SG214259",
             "rva": "0x037C8FF0",
             "evidence": "data symbol: unique 108-byte string literal"
           },
@@ -4291,7 +4291,7 @@
           },
           {
             "offset": "0x00000023",
-            "symbol": "$SG213510",
+            "symbol": "$SG214276",
             "rva": "0x037C8878",
             "evidence": "data symbol: unique 40-byte string literal"
           },
@@ -4374,7 +4374,7 @@
           },
           {
             "offset": "0x000000CE",
-            "symbol": "$SG213520",
+            "symbol": "$SG214286",
             "rva": "0x037C9520",
             "evidence": "data symbol: unique 68-byte string literal"
           },
@@ -8964,7 +8964,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213438",
+            "symbol": "$SG214204",
             "rva": "0x037C7CA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9013,7 +9013,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1) and 6 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -9136,7 +9136,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@bf800000bf800000bf800000bf800000",
             "rva": "0x02E62640",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (GameplayTags.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (UnrealMath) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (SocialTypes.1) and 4 more"
           }
         ],
         "unresolved_relocations": [
@@ -9178,7 +9178,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f8000003f8000003f8000003f800000",
             "rva": "0x02E624F0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (OodleHandlerComponent.1), dynamic initializer for GlobalVectorConstants::FloatOne (Paper2D.1) and 128 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Hotfix.1), dynamic initializer for GlobalVectorConstants::FloatOne (Rejoin.1) and 128 more"
           },
           {
             "offset": "0x0000000A",
@@ -9219,7 +9219,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f0000003f0000003f0000003f000000",
             "rva": "0x02E624C0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimationCore.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (SocialTypes.1) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -9293,7 +9293,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213456",
+            "symbol": "$SG214222",
             "rva": "0x037C8058",
             "evidence": "data symbol: unique 19-byte string literal"
           },
@@ -9340,7 +9340,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213444",
+            "symbol": "$SG214210",
             "rva": "0x037C7EA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9885,7 +9885,7 @@
             "offset": "0x00000004",
             "symbol": "__xmm@00000000ffffffffffffffffffffffff",
             "rva": "0x02E62420",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.14), dynamic initializer for GlobalVectorConstants::XYZMask (OodleHandlerComponent.1) and 124 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.9), dynamic initializer for GlobalVectorConstants::XYZMask (Hotfix.1) and 124 more"
           },
           {
             "offset": "0x0000000C",
@@ -9924,7 +9924,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213450",
+            "symbol": "$SG214216",
             "rva": "0x037C8150",
             "evidence": "data symbol: unique 28-byte string literal"
           },
@@ -10299,7 +10299,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1) and 6 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -10464,7 +10464,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@bf800000bf800000bf800000bf800000",
             "rva": "0x02E62640",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (GameplayTags.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (UMG.1) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (SocialTypes.1) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -10505,7 +10505,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f8000003f8000003f8000003f800000",
             "rva": "0x02E624F0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (OodleHandlerComponent.1), dynamic initializer for GlobalVectorConstants::FloatOne (Paper2D.1) and 128 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Hotfix.1), dynamic initializer for GlobalVectorConstants::FloatOne (Rejoin.1) and 128 more"
           },
           {
             "offset": "0x0000000A",
@@ -10546,7 +10546,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f0000003f0000003f0000003f000000",
             "rva": "0x02E624C0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (KismetMathLibrary) and 4 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimationCore.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (SocialTypes.1) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -11156,7 +11156,7 @@
             "offset": "0x00000004",
             "symbol": "__xmm@00000000ffffffffffffffffffffffff",
             "rva": "0x02E62420",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.14), dynamic initializer for GlobalVectorConstants::XYZMask (OodleHandlerComponent.1) and 124 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.9), dynamic initializer for GlobalVectorConstants::XYZMask (Hotfix.1) and 124 more"
           },
           {
             "offset": "0x0000000C",
@@ -11811,7 +11811,7 @@
             "offset": "0x0000054E",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x000005AA",
@@ -11823,7 +11823,7 @@
             "offset": "0x0000066E",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x000006AA",
@@ -11853,7 +11853,7 @@
             "offset": "0x00000877",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in FLinearColor::MakeFromColorTemperature, GenericSpringInterp<float> and 5 more"
           },
           {
             "offset": "0x00000888",
@@ -12491,7 +12491,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG13542",
+            "symbol": "$SG13651",
             "rva": "0x0347D298",
             "evidence": "data symbol: unique 44-byte string literal"
           },
@@ -12532,7 +12532,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG13550",
+            "symbol": "$SG13659",
             "rva": "0x0347D308",
             "evidence": "literal elimination: 2 copies, the others used by "
           },
@@ -12912,7 +12912,7 @@
             "offset": "0x00000014",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           },
           {
             "offset": "0x00000053",
@@ -12924,7 +12924,7 @@
             "offset": "0x0000009F",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           }
         ],
         "unresolved_relocations": [],
@@ -12959,7 +12959,7 @@
             "offset": "0x00000014",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           },
           {
             "offset": "0x00000053",
@@ -12971,7 +12971,7 @@
             "offset": "0x0000009F",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           }
         ],
         "unresolved_relocations": [],
@@ -13497,7 +13497,7 @@
             "offset": "0x0000000C",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           },
           {
             "offset": "0x00000022",
@@ -13515,7 +13515,7 @@
             "offset": "0x00000163",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           }
         ],
         "unresolved_relocations": [],
@@ -15415,7 +15415,7 @@
           },
           {
             "offset": "0x00000071",
-            "symbol": "$SG214220",
+            "symbol": "$SG215347",
             "rva": "0x037CA980",
             "evidence": "data symbol: unique 278-byte string literal"
           },
@@ -15441,7 +15441,7 @@
             "offset": "0x000000C3",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 169 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
           },
           {
             "offset": "0x00000106",
@@ -15613,7 +15613,7 @@
             "offset": "0x00000060",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, UKismetMathLibrary::TLerp and 5 more"
+            "evidence": "corroborated: same symbol at this address in FLinearColor::MakeFromColorTemperature, UKismetMathLibrary::TLerp and 5 more"
           }
         ],
         "unresolved_relocations": [],
@@ -16600,13 +16600,13 @@
             "offset": "0x00000824",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 170 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 175 more"
           },
           {
             "offset": "0x00000831",
             "symbol": "?Free@FMemory@@SAXPEAX@Z",
             "rva": "0x01138AC0",
-            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 170 more"
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 175 more"
           }
         ],
         "unresolved_relocations": [
@@ -16761,7 +16761,7 @@
             "offset": "0x0000000C",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           },
           {
             "offset": "0x00000023",
@@ -16809,7 +16809,7 @@
             "offset": "0x000002BE",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
           }
         ],
         "unresolved_relocations": [
@@ -16892,13 +16892,13 @@
             "offset": "0x0000003B",
             "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
             "rva": "0x011455C0",
-            "evidence": "corroborated: same symbol at this address in TArray<int32>::ResizeGrow, TArray<int32>::ResizeTo"
+            "evidence": "corroborated: same symbol at this address in TArray<int32>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
           },
           {
             "offset": "0x0000007B",
             "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
             "rva": "0x01145BB0",
-            "evidence": "corroborated: same symbol at this address in TArray<int32>::ResizeGrow, TArray<int32>::ResizeTo"
+            "evidence": "corroborated: same symbol at this address in TArray<int32>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
           }
         ],
         "unresolved_relocations": [],
@@ -16933,13 +16933,13 @@
             "offset": "0x0000003B",
             "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
             "rva": "0x011455C0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeTo"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
           },
           {
             "offset": "0x00000067",
             "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
             "rva": "0x01145BB0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeTo"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeTo and 1 more"
           }
         ],
         "unresolved_relocations": [],
@@ -16974,13 +16974,13 @@
             "offset": "0x0000001E",
             "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
             "rva": "0x011455C0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
           },
           {
             "offset": "0x00000051",
             "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
             "rva": "0x01145BB0",
-            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow"
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
           }
         ],
         "unresolved_relocations": [],
@@ -17074,7 +17074,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1) and 6 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (SocialTypes.1) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -17798,6 +17798,892 @@
             "symbol": "?RandPointInBox@FMath@@SA?AUFVector@@AEBUFBox@@@Z",
             "rva": "0x011A1020",
             "evidence": "exact match of manifest entry 0x011A1020"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207D8E0",
+      "end_rva": "0x0207DBE1",
+      "name": "UKismetMathLibrary::FromDays",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?FromDays@UKismetMathLibrary@@SA?AUFTimespan@@M@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execFromDays; outside FTimespan's range it builds an FFormatNamedArguments with DaysValue (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy 0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError is compiled out. Otherwise FTimespan::FromDays, truncating the product (double).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "1d805789fe50d2b9fe52bfcab13ff79b95725760d572c740ac36cffccf15f85b",
+      "decrypted_sha256": "149ed3f552d4b98f70cc139e3df6b3c182b371bf4090f367415007c5549c0234",
+      "candidate_sha256": "bda2b23fd60fdef750157a1a6ca16d1dcd9455a3d410abd21cd7767d4b773e25",
+      "byte_diff": {
+        "reference_size": 769,
+        "candidate_size": 769,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000026",
+            "symbol": "__security_cookie",
+            "rva": "0x0462E0F0",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          },
+          {
+            "offset": "0x00000038",
+            "symbol": "__real@3d745c7fe3bc40b0",
+            "rva": "0x030F00C8",
+            "evidence": "data symbol: unique 8-byte data block"
+          },
+          {
+            "offset": "0x000000B1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000000C6",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x000000EF",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromHours, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x000000FE",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000014E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000159",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromHours, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x00000167",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000179",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000001F1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000206",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x0000022F",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromHours, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x0000023E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000028E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000299",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromHours, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x000002A7",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002B5",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002C6",
+            "symbol": "__real@4269254d38000000",
+            "rva": "0x03467368",
+            "evidence": "data symbol: unique 8-byte data block"
+          },
+          {
+            "offset": "0x000002E0",
+            "symbol": "__security_check_cookie",
+            "rva": "0x02D98D00",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x000000C1",
+            "size": 4,
+            "symbol": "$SG214825",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000201",
+            "size": 4,
+            "symbol": "$SG214827",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 8
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207DBF0",
+      "end_rva": "0x0207DEF1",
+      "name": "UKismetMathLibrary::FromHours",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?FromHours@UKismetMathLibrary@@SA?AUFTimespan@@M@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execFromHours; outside FTimespan's range it builds an FFormatNamedArguments with HoursValue (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy 0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError is compiled out. Otherwise FTimespan::FromHours, truncating the product (double).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "78eb83b92f28cc73c6189b875b9f4eac21a08ffdeba4b5cfd90259ab254074ad",
+      "decrypted_sha256": "9338712b337332cee4de80cc38d525f0c36c6ebd9a3a3aa2f07c24d1822f4556",
+      "candidate_sha256": "53537f95c2434735b6d654fbe306f35017cd758986e8c86578017812ce456e63",
+      "byte_diff": {
+        "reference_size": 769,
+        "candidate_size": 769,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000026",
+            "symbol": "__security_cookie",
+            "rva": "0x0462E0F0",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          },
+          {
+            "offset": "0x00000038",
+            "symbol": "__real@3dbe8abfd59a6108",
+            "rva": "0x03475490",
+            "evidence": "data symbol: unique 8-byte data block"
+          },
+          {
+            "offset": "0x000000B1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000000C6",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x000000EF",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x000000FE",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000014E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000159",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x00000167",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000179",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000001F1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000206",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x0000022F",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x0000023E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000028E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000299",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromMinutes and 2 more"
+          },
+          {
+            "offset": "0x000002A7",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002B5",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002C6",
+            "symbol": "__real@4220c388d0000000",
+            "rva": "0x02FA4158",
+            "evidence": "data symbol: unique 8-byte data block"
+          },
+          {
+            "offset": "0x000002E0",
+            "symbol": "__security_check_cookie",
+            "rva": "0x02D98D00",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x000000C1",
+            "size": 4,
+            "symbol": "$SG214862",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000201",
+            "size": 4,
+            "symbol": "$SG214864",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 8
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207E200",
+      "end_rva": "0x0207E4FA",
+      "name": "UKismetMathLibrary::FromMinutes",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?FromMinutes@UKismetMathLibrary@@SA?AUFTimespan@@M@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execFromMinutes; outside FTimespan's range it builds an FFormatNamedArguments with MinutesValue (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy 0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError is compiled out. Otherwise FTimespan::FromMinutes, truncating the product (in float: /fp:fast, 6e8 is exact in float).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "fb8ac277d7c2765c5183552305f55bcd3e6e255d22efa96c12b688301a9d313f",
+      "decrypted_sha256": "8c99fbc097961bb52b755fd3fa94d388566b51f2845ccc07c495fc1bf69af5ac",
+      "candidate_sha256": "55b831e7afa4f1617deab72f504480882828db4002d505057d312142744a94ce",
+      "byte_diff": {
+        "reference_size": 762,
+        "candidate_size": 762,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000026",
+            "symbol": "__security_cookie",
+            "rva": "0x0462E0F0",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          },
+          {
+            "offset": "0x00000038",
+            "symbol": "__real@3e1ca213d840baf8",
+            "rva": "0x030F00D8",
+            "evidence": "data symbol: unique 8-byte data block"
+          },
+          {
+            "offset": "0x000000B1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000000C6",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x000000EF",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x000000FE",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000014E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000159",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x00000167",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000179",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000001F1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000206",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x0000022F",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x0000023E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000028E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000299",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x000002A7",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002B5",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002BF",
+            "symbol": "__real@4e0f0d18",
+            "rva": "0x037CBE54",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x000002D9",
+            "symbol": "__security_check_cookie",
+            "rva": "0x02D98D00",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x000000C1",
+            "size": 4,
+            "symbol": "$SG214882",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000201",
+            "size": 4,
+            "symbol": "$SG214884",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 8
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207E500",
+      "end_rva": "0x0207E7FA",
+      "name": "UKismetMathLibrary::FromSeconds",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?FromSeconds@UKismetMathLibrary@@SA?AUFTimespan@@M@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execFromSeconds; outside FTimespan's range it builds an FFormatNamedArguments with SecondsValue (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy 0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError is compiled out. Otherwise FTimespan::FromSeconds, truncating the product (in float: /fp:fast, 1e7 is exact in float).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "ff0ed157696ec1401c24ae5ded982318f425b3272c93d0d21951a2cbe21ebe99",
+      "decrypted_sha256": "faed3804227d504bc9d99dba48d70ced7301bb5be9a322c62a5e7aad56530070",
+      "candidate_sha256": "f0fb41a2859334cf28c260792ca14c6b7f72e51fdf71e1520831b9923ccdb410",
+      "byte_diff": {
+        "reference_size": 762,
+        "candidate_size": 762,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000026",
+            "symbol": "__security_cookie",
+            "rva": "0x0462E0F0",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          },
+          {
+            "offset": "0x00000038",
+            "symbol": "__real@3e7ad7f29abcaf48",
+            "rva": "0x02E760E8",
+            "evidence": "data symbol: unique 8-byte data block"
+          },
+          {
+            "offset": "0x000000B1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000000C6",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x000000EF",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x000000FE",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000014E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000159",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x00000167",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000179",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000001F1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000206",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x0000022F",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x0000023E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000028E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000299",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x000002A7",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002B5",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002BF",
+            "symbol": "__real@4b189680",
+            "rva": "0x02E76120",
+            "evidence": "pooled constant: the only 4-byte-aligned copy of its value in .rdata"
+          },
+          {
+            "offset": "0x000002D9",
+            "symbol": "__security_check_cookie",
+            "rva": "0x02D98D00",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x000000C1",
+            "size": 4,
+            "symbol": "$SG214902",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000201",
+            "size": 4,
+            "symbol": "$SG214904",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 8
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0207DF00",
+      "end_rva": "0x0207E1FA",
+      "name": "UKismetMathLibrary::FromMilliseconds",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?FromMilliseconds@UKismetMathLibrary@@SA?AUFTimespan@@M@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execFromMilliseconds; outside FTimespan's range it builds an FFormatNamedArguments with MillisecondsValue (FString's literal constructor: TArray<TCHAR>::ResizeGrow 0x005757C0, FGenericPlatformString::Memcpy 0x0111CAE0; TSet::Emplace 0x0027C9A0) and destroys it (TSparseArray::Empty 0x00295B40); LogRuntimeError is compiled out. Otherwise FTimespan::FromMilliseconds, truncating the product (in float: /fp:fast, 1e4 is exact in float).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "relocation-equivalent",
+      "original_sha256": "5c9dcc796f29fa97e73186345b5cf96773e0ac6fc0d193f8531ec8ddca76c0ef",
+      "decrypted_sha256": "bbbb0c4a668d14e894183f26e130387aadeb22c135904723519e2ea89e075091",
+      "candidate_sha256": "4f47130ee8ed71170ca7e1469a8429bb57e5e42988c3ff667217eb28c8f30311",
+      "byte_diff": {
+        "reference_size": 762,
+        "candidate_size": 762,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000026",
+            "symbol": "__security_cookie",
+            "rva": "0x0462E0F0",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          },
+          {
+            "offset": "0x00000038",
+            "symbol": "__real@3f1a36e2eb1c432d",
+            "rva": "0x02E91340",
+            "evidence": "data symbol: unique 8-byte data block"
+          },
+          {
+            "offset": "0x000000B1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x000000C6",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x000000EF",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x000000FE",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000014E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000159",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x00000167",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000179",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000001F1",
+            "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+            "rva": "0x005757C0",
+            "evidence": "exact match of manifest entry 0x005757C0"
+          },
+          {
+            "offset": "0x00000206",
+            "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+            "rva": "0x0111CAE0",
+            "evidence": "exact match of manifest entry 0x0111CAE0"
+          },
+          {
+            "offset": "0x0000022F",
+            "symbol": "??$Emplace@V?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@@?$TSet@U?$TTuple@VFString@@VFFormatArgumentValue@@@@U?$FLocKeyMapFuncs@VFFormatArgumentValue@@@@VFDefaultSetAllocator@@@@QEAA?AVFSetElementId@@$$QEAV?$TPairInitializer@$$QEAVFString@@$$QEAVFFormatArgumentValue@@@@PEA_N@Z",
+            "rva": "0x0027C9A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x0000023E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x0000028E",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x00000299",
+            "symbol": "?Empty@?$TSparseArray@V?$TSetElement@U?$TTuple@VFString@@VFFormatArgumentValue@@@@@@V?$TSparseArrayAllocator@VFDefaultAllocator@@VFDefaultBitArrayAllocator@@@@@@QEAAXH@Z",
+            "rva": "0x00295B40",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::FromDays, UKismetMathLibrary::FromHours and 2 more"
+          },
+          {
+            "offset": "0x000002A7",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002B5",
+            "symbol": "?Free@FMemory@@SAXPEAX@Z",
+            "rva": "0x01138AC0",
+            "evidence": "corroborated: same symbol at this address in AFortGameStateZone::execOnWaveBasedModifiersAppliedMulticast, UFortItem::execGetLargePreviewImage and 174 more"
+          },
+          {
+            "offset": "0x000002BF",
+            "symbol": "__real@461c4000",
+            "rva": "0x02F99D9C",
+            "evidence": "pooled constant: of 5 copies of its value, the only one scalar float code (outside this function) loads"
+          },
+          {
+            "offset": "0x000002D9",
+            "symbol": "__security_check_cookie",
+            "rva": "0x02D98D00",
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, USceneComponent::execGetSocketTransform and 29 more"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x000000C1",
+            "size": 4,
+            "symbol": "$SG214922",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000201",
+            "size": 4,
+            "symbol": "$SG214924",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 8
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0111CAE0",
+      "end_rva": "0x0111CAF7",
+      "name": "FGenericPlatformString::Memcpy",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/GenericPlatform/GenericPlatformString.cpp",
+      "object": "Source/Runtime/Core/Private/GenericPlatform/GenericPlatformString.obj",
+      "symbol": "?Memcpy@FGenericPlatformString@@CAPEAXPEAXPEBX_K@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "FString's literal constructor calls it through FPlatformString::Convert with the copy's byte count (UKismetMathLibrary::FromDays 0x0207D8E0 and the other From* natives); the CRT memcpy (0x02D9ADE0), then Dest as the result.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "64ca940ee9fb4573e6c88e92c19216e650929e7fb426ec0f8394155a88b4bf26",
+      "decrypted_sha256": "4085befcb7d773252a6c85a38e9248cde5f1d495d16f5900c9d12eda6073b917",
+      "candidate_sha256": "4085befcb7d773252a6c85a38e9248cde5f1d495d16f5900c9d12eda6073b917",
+      "byte_diff": {
+        "reference_size": 23,
+        "candidate_size": 23,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "memcpy",
+            "rva": "0x02D9ADE0",
+            "evidence": "import thunk jmp [0x04DDBC94] (memcpy)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x005757C0",
+      "end_rva": "0x00575832",
+      "name": "TArray<TCHAR>::ResizeGrow",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Private/KismetMathLibrary.cpp",
+      "object": "Source/Runtime/Engine/Private/KismetMathLibrary.obj",
+      "symbol": "?ResizeGrow@?$TArray@_WVFDefaultAllocator@@@@AEAAXH@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Called by UKismetMathLibrary::FromDays (0x0207D8E0) and the other From* natives through FString's literal constructor (AddUninitialized): DefaultCalculateSlackGrow for 2-byte elements (FMemory::QuantizeSize), then FMemory::Realloc. /OPT:ICF gives every 2-byte TArray's ResizeGrow this body; KismetMathLibrary.cpp's object emits the copy compared.",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "2793ac7c82626600acbf05f46b61dc893adc07f85b2f6d70f86aae60a8f757b2",
+      "decrypted_sha256": "253ee8705ee273d5d4af3633739cb10cbc81e0404e500342fc51ae5fbf57f392",
+      "candidate_sha256": "253ee8705ee273d5d4af3633739cb10cbc81e0404e500342fc51ae5fbf57f392",
+      "byte_diff": {
+        "reference_size": 114,
+        "candidate_size": 114,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000036",
+            "symbol": "?QuantizeSize@FMemory@@SA_K_KI@Z",
+            "rva": "0x011455C0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
+          },
+          {
+            "offset": "0x00000060",
+            "symbol": "?Realloc@FMemory@@SAPEAXPEAX_KI@Z",
+            "rva": "0x01145BB0",
+            "evidence": "corroborated: same symbol at this address in TArray<FVector>::ResizeGrow, TArray<int32>::ResizeGrow and 1 more"
           }
         ],
         "unresolved_relocations": [],

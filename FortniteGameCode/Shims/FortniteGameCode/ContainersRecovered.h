@@ -724,6 +724,52 @@ protected:
 	int32	  ArrayMax;
 };
 
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+// GenericPlatform/GenericPlatformString.h: the TCHAR to TCHAR conversion, a copy. Memcpy is out
+// of line in Core (GenericPlatformString.cpp), private to the class.
+struct FGenericPlatformString
+{
+	template <typename DestEncoding, typename SourceEncoding>
+	static __forceinline int32 ConvertedLength(const SourceEncoding* Src, int32 SrcSize)
+	{
+		return SrcSize;
+	}
+
+	template <typename SourceEncoding, typename DestEncoding>
+	static __forceinline DestEncoding* Convert(DestEncoding* Dest, int32 DestSize, const SourceEncoding* Src, int32 SrcSize, DestEncoding BogusChar = (DestEncoding)'?')
+	{
+		if (DestSize < SrcSize)
+		{
+			return nullptr;
+		}
+
+		return (DestEncoding*)Memcpy(Dest, Src, SrcSize * sizeof(SourceEncoding)) + SrcSize;
+	}
+
+private:
+	/**
+	 * Forwarding function because we can't call FMemory::Memcpy directly due to #include ordering issues.
+	 *
+	 * @param Dest  The destination buffer.
+	 * @param Src   The source buffer.
+	 * @param Count The number of bytes to copy.
+	 *
+	 * @return Dest
+	 */
+	static void* Memcpy(void* Dest, const void* Src, SIZE_T Count);
+};
+
+// Microsoft/MicrosoftPlatformString.h (Strlen), Windows/WindowsPlatformString.h
+struct FWindowsPlatformString : public FGenericPlatformString
+{
+	static __forceinline int32 Strlen( const TCHAR* String )
+	{
+		return (int32)wcslen( String );
+	}
+};
+typedef FWindowsPlatformString FPlatformString;
+#endif
+
 // Containers/UnrealString.h
 class FString
 {
@@ -738,6 +784,21 @@ public:
 	FString(const FString&) = default;
 	FString& operator=(FString&&) = default;
 	FString& operator=(const FString&) = default;
+
+#if FNGC_CORE_MATH_EXTRAS   // MathDecls.h
+	// The 4.20 template for any character type, for TCHAR: TCString<TCHAR>::Strlen is wcslen.
+	__forceinline FString(const TCHAR* Src)
+	{
+		if (Src && *Src)
+		{
+			int32 SrcLen  = FPlatformString::Strlen(Src) + 1;
+			int32 DestLen = FPlatformString::ConvertedLength<TCHAR>(Src, SrcLen);
+			Data.AddUninitialized(DestLen);
+
+			FPlatformString::Convert(Data.GetData(), DestLen, Src, SrcLen);
+		}
+	}
+#endif
 
 	__forceinline const TCHAR* operator*() const
 	{

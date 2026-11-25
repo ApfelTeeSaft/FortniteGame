@@ -787,6 +787,45 @@ names normalised. MSVC's order of the unnamed string literals in `.rdata` change
 for `InputCore.1` in the tenth family, but no match changed. The 28 new initializers of `UMG.1`
 and `SocialTypes.1` are relocation-equivalent: nothing reconstructed reads those constants yet.
 
+## Thirteenth family: the timespan From* natives (2026-11-25)
+
+| Group | Functions | Result |
+| --- | --- | --- |
+| Kismet natives | `FromDays` (`0x0207D8E0`), `FromHours` (`0x0207DBF0`), `FromMilliseconds` (`0x0207DF00`), `FromMinutes` (`0x0207E200`), `FromSeconds` (`0x0207E500`) | 5 relocation-equivalent: their argument-name literals (below) |
+| Out-of-line copy the Kismet object emits | `TArray<TCHAR>::ResizeGrow` (`0x005757C0`) | exact |
+| Core `GenericPlatform/GenericPlatformString.cpp` | `FGenericPlatformString::Memcpy` (`0x0111CAE0`) | exact |
+
+**What the natives compile to.** In 4.20 each one clamps to `FTimespan::MinValue()` or
+`MaxValue()` and reports the clamp: `Args.Add(TEXT("DaysValue"), Days)`, then
+`LogRuntimeError(FText::Format(LOCTEXT(...), Args))`. In shipping `UE_RAISE_RUNTIME_ERRORS` is 0, so
+`LogRuntimeError(Message)` expands to nothing and neither `FText::Format` nor `LOCTEXT` is
+compiled. What remains is the `FFormatNamedArguments` map built and destroyed around one `Add`.
+The reference matches that:
+- `FString`'s literal constructor, inlined: `TArray<TCHAR>::ResizeGrow` and
+  `FGenericPlatformString::Memcpy`, the out-of-line forwarder `FPlatformString::Convert` calls;
+- the `FFormatArgumentValue(float)` temporary (type 2, an unset `TOptional<FText>`);
+- `TSet::Emplace` (`0x0027C9A0`) and the map's destruction, inlined except
+  `TSparseArray::Empty` (`0x00295B40`).
+
+`SetRecovered.h` models the 4.20 layouts of `TBitArray`, `TSparseArray`, `TSet` and `TMap`, with
+their construction and destruction. `Emplace` and `Empty` are only declared: `Emplace` calls six
+more out-of-line set helpers. Their addresses are corroborated across the five natives.
+`EngineStructsRecovered.h` swaps its empty `TSet` stand-in for this header only in a unit that
+defines `FNGC_SET_RECOVERED` (`KismetMathLibrary.cpp`). The other units' objects are unchanged
+apart from string-literal names and positions; no match changed.
+
+**The normal path is an older form.** The reference truncates `Days * TicksPerDay` with no
+`+ 0.5` and no rounding, as `FromMinutes` does (`docs/ENGINE_DIFFERENCES.md` #11 and #12).
+Minutes, seconds and milliseconds multiply in single precision (`mulss`, `cvttss2si`): their tick
+counts are exact as floats, and v140's `/fp:fast` then keeps `(double)float * constant` in float.
+The four new `FTimespan` helpers, with `MinValue`, `MaxValue` and `GetTotal*`, are in `MathDecls.h`.
+
+**Why the natives are not exact.** Each one names its argument twice, once per branch, and the
+reference holds two per-occurrence copies of that literal (for example `DaysValue` at
+`0x037CAD50` and `0x037CADF0`). Only the native itself references either copy. Literal elimination
+leaves the entry under test out of its own evidence, so both copies stay free for each relocation.
+Nothing else says which copy belongs to which branch. All other bytes and relocations match.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is

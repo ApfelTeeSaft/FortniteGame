@@ -89,6 +89,8 @@
     <ClInclude Include="Shims\FortniteGameCode\ContainersRecovered.h" />
     <ClInclude Include="Shims\FortniteGameCode\TextRecovered.h" />
     <ClInclude Include="Shims\FortniteGameCode\EngineStructsRecovered.h" />
+    <ClInclude Include="Shims\FortniteGameCode\SetRecovered.h" />
+    <ClInclude Include="Shims\FortniteGameCode\FormatArgumentsRecovered.h" />
     <ClInclude Include="Source\Generated\UHT\Classes.gen.h" />
     <ClInclude Include="Source\Runtime\Core\Public\Misc\RecoveredCString.h" />
     <ClInclude Include="Source\Runtime\Windows\D3D11RHI\Private\D3D11RHIRecoveredPrivate.h" />
@@ -104,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMath.cpp" />
+    <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformString.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMisc.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Math\UnrealMath.cpp" />
     <ClCompile Include="Source\Runtime\Core\Private\Math\Color.cpp" />
