@@ -20,41 +20,8 @@ __forceinline bool FTransform::IsRotationNormalized() const
 	return !VectorAnyGreaterThan(TestValue, GlobalVectorConstants::ThreshQuatNormalized);
 }
 
-inline bool FTransform::Private_AnyHasNegativeScale(const VectorRegister& InScale3D, const  VectorRegister& InOtherScale3D)
-{
-	return !!VectorAnyLesserThan(VectorMin(InScale3D, InOtherScale3D), GlobalVectorConstants::FloatZero);
-}
-
-__forceinline void FTransform::ConstructTransformFromMatrixWithDesiredScale(const FMatrix& AMatrix, const FMatrix& BMatrix, const VectorRegister& DesiredScale, FTransform& OutTransform)
-{
-	// the goal of using M is to get the correct orientation
-	// but for translation, we still need scale
-	FMatrix M = AMatrix * BMatrix;
-	M.RemoveScaling();
-
-	// apply negative scale back to axes
-	FVector SignedScale;
-	VectorStoreFloat3(VectorSign(DesiredScale), &SignedScale);
-
-	M.SetAxis(0, SignedScale.X * M.GetScaledAxis(EAxis::X));
-	M.SetAxis(1, SignedScale.Y * M.GetScaledAxis(EAxis::Y));
-	M.SetAxis(2, SignedScale.Z * M.GetScaledAxis(EAxis::Z));
-
-	// @note: if you have negative with 0 scale, this will return rotation that is identity
-	// since matrix loses that axes
-	FQuat Rotation = FQuat(M);
-	Rotation.Normalize();
-
-	// set values back to output
-	OutTransform.Scale3D = DesiredScale;
-	OutTransform.Rotation = VectorLoadAligned(&Rotation);
-
-	// technically I could calculate this using FTransform but then it does more quat multiplication
-	// instead of using Scale in matrix multiplication
-	// it's a question of between RemoveScaling vs using FTransform to move translation
-	FVector Translation = M.GetOrigin();
-	OutTransform.Translation = VectorLoadFloat3_W0(&Translation);
-}
+// Private_AnyHasNegativeScale, ConstructTransformFromMatrixWithDesiredScale, Multiply, Inverse.
+#include "FortniteGameCode/TransformMathRecovered.h"
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01195BD0 (end 0x01195D03)
 // Original VA: 0x0000000141195BD0 | File offset: 0x011951D0

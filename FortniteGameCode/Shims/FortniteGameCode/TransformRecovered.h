@@ -90,6 +90,13 @@ public:
 	static void GetRelativeTransformUsingMatrixWithScale(FTransform* OutTransform, const FTransform* Base, const FTransform* Relative);
 	static void ConstructTransformFromMatrixWithDesiredScale(const FMatrix& AMatrix, const FMatrix& BMatrix, const VectorRegister& DesiredScale, FTransform& OutTransform);
 	bool IsRotationNormalized() const;
+	// TransformMathRecovered.h
+	FTransform(const VectorRegister& InRotation, const VectorRegister& InTranslation, const VectorRegister& InScale3D);
+	FTransform Inverse() const;
+	FTransform InverseFast() const;
+	static void MultiplyUsingMatrixWithScale(FTransform* OutTransform, const FTransform* A, const FTransform* B);
+	static void Multiply(FTransform* OutTransform, const FTransform* A, const FTransform* B);
+	FTransform operator*(const FTransform& Other) const;
 private:
 	static bool Private_AnyHasNegativeScale(const VectorRegister& InScale3D, const  VectorRegister& InOtherScale3D);
 public:

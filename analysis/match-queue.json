@@ -7,7 +7,7 @@
   "partial",
   "unmatched"
  ],
- "total": 692,
+ "total": 697,
  "groups": [
   {
    "key": "uht-getprivatestaticclass | InternalConstructor<Class>",
@@ -272,17 +272,6 @@
     "0x007DD470 FVivoxMuteList::StaticStruct",
     "0x01993030 FLightPropagationVolumeSettings::StaticStruct",
     "0x02562FF0 FWidgetCarouselNavigationBarStyle::StaticStruct"
-   ]
-  },
-  {
-   "key": "source-function | pooled string literal (??_C@)",
-   "count": 2,
-   "states": {
-    "relocation-equivalent": 2
-   },
-   "examples": [
-    "0x01FFE540 UGameplayStatics::HasLaunchOption",
-    "0x02517390 FLauncherCheckModule::WasRanFromLauncher"
    ]
   },
   {
@@ -558,6 +547,16 @@
    ]
   },
   {
+   "key": "source-function | differing bytes",
+   "count": 1,
+   "states": {
+    "partial": 1
+   },
+   "examples": [
+    "0x008C9CF0 ConvexHull2D::ComputeConvexHull<FDefaultAllocator>"
+   ]
+  },
+  {
    "key": "source-function | other: ?$TSS0@?1??D3D11RHI_ShouldAllowAsyncResourceCreation@@YA_NXZ + other: ?bAllowAsyncResourceCreation@?1??D3D11RHI_ShouldAllowAsyncRe",
    "count": 1,
    "states": {
@@ -575,6 +574,66 @@
    },
    "examples": [
     "0x01123730 FGenericPlatformProcess::SupportsMultithreading"
+   ]
+  },
+  {
+   "key": "source-function | other: ??$ComputeConvexHull@VFDefaultAllocator@@@ConvexHull2D@@YAXA + differing bytes",
+   "count": 1,
+   "states": {
+    "partial": 1
+   },
+   "examples": [
+    "0x0208AB40 UKismetMathLibrary::MinimumAreaRectangle"
+   ]
+  },
+  {
+   "key": "source-function | other: ?Black@FLinearColor@@2U1@B",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01171260 FColor::FromRGBE"
+   ]
+  },
+  {
+   "key": "source-function | other: ?PrintfImpl@FString@@CA?AV1@PEB_WZZ",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x02089C30 UKismetMathLibrary::MakeDateTime"
+   ]
+  },
+  {
+   "key": "source-function | other: ?nxt@?9???0FQuat@@QEAA@AEBUFMatrix@@@Z@4QBHB",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x00569390 FQuat::FQuat(const FMatrix&)"
+   ]
+  },
+  {
+   "key": "source-function | other: __real@466a6000",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x01177E40 FLinearColor::MakeFromColorTemperature"
+   ]
+  },
+  {
+   "key": "source-function | pooled string literal (??_C@)",
+   "count": 1,
+   "states": {
+    "relocation-equivalent": 1
+   },
+   "examples": [
+    "0x02517390 FLauncherCheckModule::WasRanFromLauncher"
    ]
   },
   {

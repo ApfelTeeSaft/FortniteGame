@@ -2424,7 +2424,7 @@
             "offset": "0x000000A1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000B1",
@@ -2571,7 +2571,7 @@
             "offset": "0x00000017",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000002F",
@@ -2589,7 +2589,7 @@
             "offset": "0x0000005D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000066",
@@ -2780,7 +2780,7 @@
             "offset": "0x00000012",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000002C",
@@ -3006,7 +3006,7 @@
             "offset": "0x00000083",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3047,7 +3047,7 @@
             "offset": "0x000000CB",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3082,7 +3082,7 @@
             "offset": "0x0000005C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3123,7 +3123,7 @@
             "offset": "0x0000008C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3158,13 +3158,13 @@
             "offset": "0x00000030",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000043",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -3199,7 +3199,7 @@
             "offset": "0x0000001C",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000038",
@@ -3252,13 +3252,13 @@
             "offset": "0x00000046",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000006A",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000098",
@@ -3276,7 +3276,7 @@
             "offset": "0x000000A8",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000C6",
@@ -3294,7 +3294,7 @@
             "offset": "0x000000E4",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000000F1",
@@ -3318,13 +3318,13 @@
             "offset": "0x0000010A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000130",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000138",
@@ -3342,7 +3342,7 @@
             "offset": "0x0000014B",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000177",
@@ -3354,7 +3354,7 @@
             "offset": "0x0000017F",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000018E",
@@ -3366,7 +3366,7 @@
             "offset": "0x000001AC",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000001C0",
@@ -3378,7 +3378,7 @@
             "offset": "0x000001E1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000001F1",
@@ -3390,13 +3390,13 @@
             "offset": "0x00000226",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000022E",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x00000236",
@@ -3414,7 +3414,7 @@
             "offset": "0x00000254",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000261",
@@ -3426,7 +3426,7 @@
             "offset": "0x00000269",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x00000271",
@@ -3438,19 +3438,19 @@
             "offset": "0x0000028F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000002AC",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000002B4",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x000002BC",
@@ -3468,7 +3468,7 @@
             "offset": "0x000002D4",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000002ED",
@@ -3480,7 +3480,7 @@
             "offset": "0x000002F5",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x000002FD",
@@ -3492,7 +3492,7 @@
             "offset": "0x00000326",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000340",
@@ -3504,19 +3504,19 @@
             "offset": "0x00000357",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000037E",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000386",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000003A9",
@@ -3639,7 +3639,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213444",
+            "symbol": "$SG213460",
             "rva": "0x037C89B0",
             "evidence": "data symbol: unique 64-byte string literal"
           },
@@ -3686,7 +3686,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213447",
+            "symbol": "$SG213463",
             "rva": "0x037C89F0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_IntInt"
           },
@@ -3733,7 +3733,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213450",
+            "symbol": "$SG213466",
             "rva": "0x037C8A90",
             "evidence": "data symbol: unique 60-byte string literal"
           },
@@ -3780,7 +3780,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213453",
+            "symbol": "$SG213469",
             "rva": "0x037C8AE0",
             "evidence": "literal elimination: 2 copies, the others used by UKismetMathLibrary::ReportError_Percent_ByteByte"
           },
@@ -3827,7 +3827,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213456",
+            "symbol": "$SG213472",
             "rva": "0x037C8C70",
             "evidence": "data symbol: unique 114-byte string literal"
           },
@@ -3874,7 +3874,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213459",
+            "symbol": "$SG213475",
             "rva": "0x037C8D50",
             "evidence": "data symbol: unique 70-byte string literal"
           },
@@ -3921,7 +3921,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213462",
+            "symbol": "$SG213478",
             "rva": "0x037C8DB0",
             "evidence": "data symbol: unique 66-byte string literal"
           },
@@ -3968,7 +3968,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213465",
+            "symbol": "$SG213481",
             "rva": "0x037C8E50",
             "evidence": "data symbol: unique 72-byte string literal"
           },
@@ -4015,7 +4015,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213468",
+            "symbol": "$SG213484",
             "rva": "0x037C8ED0",
             "evidence": "data symbol: unique 80-byte string literal"
           },
@@ -4062,7 +4062,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213471",
+            "symbol": "$SG213487",
             "rva": "0x037C8F20",
             "evidence": "data symbol: unique 128-byte string literal"
           },
@@ -4109,7 +4109,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213474",
+            "symbol": "$SG213490",
             "rva": "0x037C8FA0",
             "evidence": "data symbol: unique 74-byte string literal"
           },
@@ -4156,7 +4156,7 @@
           },
           {
             "offset": "0x0000000A",
-            "symbol": "$SG213477",
+            "symbol": "$SG213493",
             "rva": "0x037C8FF0",
             "evidence": "data symbol: unique 108-byte string literal"
           },
@@ -4246,7 +4246,7 @@
             "offset": "0x00000025",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000002C",
@@ -4291,7 +4291,7 @@
           },
           {
             "offset": "0x00000023",
-            "symbol": "$SG213494",
+            "symbol": "$SG213510",
             "rva": "0x037C8878",
             "evidence": "data symbol: unique 40-byte string literal"
           },
@@ -4352,13 +4352,13 @@
             "offset": "0x0000004D",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000063",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000006D",
@@ -4374,7 +4374,7 @@
           },
           {
             "offset": "0x000000CE",
-            "symbol": "$SG213504",
+            "symbol": "$SG213520",
             "rva": "0x037C9520",
             "evidence": "data symbol: unique 68-byte string literal"
           },
@@ -4441,13 +4441,13 @@
             "offset": "0x00000035",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000003D",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -4785,37 +4785,37 @@
             "offset": "0x00000047",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000079",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000083",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008B",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000094",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000009E",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -4850,25 +4850,25 @@
             "offset": "0x0000004D",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000057",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000083",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000089",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -4903,7 +4903,7 @@
             "offset": "0x000000C7",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -4950,7 +4950,7 @@
             "offset": "0x0000001C",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000029",
@@ -5021,7 +5021,7 @@
             "offset": "0x00000020",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000002D",
@@ -5206,7 +5206,7 @@
             "offset": "0x0000001B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000034",
@@ -5224,7 +5224,7 @@
             "offset": "0x0000006A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000073",
@@ -5415,37 +5415,37 @@
             "offset": "0x00000055",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000088",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000093",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000009B",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000A4",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000AE",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000122",
@@ -5595,37 +5595,37 @@
             "offset": "0x0000005D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000008F",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000009A",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000A3",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000AC",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000B6",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -5666,7 +5666,7 @@
             "offset": "0x00000100",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -5841,37 +5841,37 @@
             "offset": "0x00000057",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000008B",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000096",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000009E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000A6",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000B0",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -5906,19 +5906,19 @@
             "offset": "0x00000079",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000083",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000D2",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -5953,19 +5953,19 @@
             "offset": "0x00000090",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000009A",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000110",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6012,7 +6012,7 @@
             "offset": "0x00000025",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6131,7 +6131,7 @@
             "offset": "0x00000025",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6166,7 +6166,7 @@
             "offset": "0x00000015",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6285,7 +6285,7 @@
             "offset": "0x0000000B",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000045",
@@ -6326,7 +6326,7 @@
             "offset": "0x0000000B",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6361,7 +6361,7 @@
             "offset": "0x0000000F",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6396,7 +6396,7 @@
             "offset": "0x00000019",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -6431,7 +6431,7 @@
             "offset": "0x00000010",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000047",
@@ -6472,7 +6472,7 @@
             "offset": "0x00000014",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000004B",
@@ -6589,7 +6589,7 @@
             "offset": "0x00000076",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000A3",
@@ -6619,7 +6619,7 @@
             "offset": "0x000000D0",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x000000D8",
@@ -6643,7 +6643,7 @@
             "offset": "0x000000F5",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000106",
@@ -6691,7 +6691,7 @@
             "offset": "0x000001A7",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x000001B4",
@@ -6715,7 +6715,7 @@
             "offset": "0x000001D1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000001E2",
@@ -6905,7 +6905,7 @@
             "offset": "0x00000092",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000009C",
@@ -7071,7 +7071,7 @@
             "offset": "0x00000013",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000002C",
@@ -7083,7 +7083,7 @@
             "offset": "0x0000005E",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000071",
@@ -7509,37 +7509,37 @@
             "offset": "0x00000048",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000068",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000A2",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000000AD",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000B6",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000BE",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000013A",
@@ -7688,61 +7688,61 @@
             "offset": "0x0000004C",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000056",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000101",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000010F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000001C4",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000001D2",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000002C0",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000002CE",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000002DC",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000002EA",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000313",
@@ -7783,37 +7783,37 @@
             "offset": "0x00000059",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000007A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000084",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008C",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000009A",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000B3",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000147",
@@ -7854,49 +7854,49 @@
             "offset": "0x00000013",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000001B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000005E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000C1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000122",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000013C",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000157",
@@ -7914,7 +7914,7 @@
             "offset": "0x0000020A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           }
         ],
         "unresolved_relocations": [],
@@ -7949,49 +7949,49 @@
             "offset": "0x00000013",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000001B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000005E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000C1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000122",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000013C",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000157",
@@ -8009,7 +8009,7 @@
             "offset": "0x0000020A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8044,49 +8044,49 @@
             "offset": "0x00000013",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000001B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000005E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000008D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000C1",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000122",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000013C",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000157",
@@ -8104,7 +8104,7 @@
             "offset": "0x0000020A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8139,55 +8139,55 @@
             "offset": "0x00000013",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000008E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000CB",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000D7",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000139",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000015D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000165",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000245",
@@ -8205,37 +8205,37 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000341",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000034D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000035F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000003CD",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000003D5",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8270,55 +8270,55 @@
             "offset": "0x00000013",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 39 more"
           },
           {
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 44 more"
           },
           {
             "offset": "0x0000008E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x000000CB",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x000000D7",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x00000139",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 39 more"
           },
           {
             "offset": "0x0000015D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x00000165",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x00000245",
@@ -8336,37 +8336,37 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000341",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x0000034D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x0000035F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 39 more"
           },
           {
             "offset": "0x000003CD",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x000003D5",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromYX, FRotationMatrix::MakeFromYZ and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8401,55 +8401,55 @@
             "offset": "0x00000013",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 39 more"
           },
           {
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 44 more"
           },
           {
             "offset": "0x0000008E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x000000CB",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x000000D7",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x00000139",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 39 more"
           },
           {
             "offset": "0x0000015D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x00000165",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x00000245",
@@ -8467,37 +8467,37 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000341",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x0000034D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x0000035F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 39 more"
           },
           {
             "offset": "0x000003CD",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           },
           {
             "offset": "0x000003D5",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYZ and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8532,55 +8532,55 @@
             "offset": "0x00000013",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000008E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000CB",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000D7",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000139",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000015D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000165",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000245",
@@ -8598,37 +8598,37 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000341",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000034D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000035F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000003CD",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000003D5",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8663,55 +8663,55 @@
             "offset": "0x00000013",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000008E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000CB",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000D7",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000139",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000015D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000165",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000245",
@@ -8729,37 +8729,37 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000341",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000034D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000035F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000003CD",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000003D5",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8794,55 +8794,55 @@
             "offset": "0x00000013",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000053",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000072",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000008E",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000CB",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000D7",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000139",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000015D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000165",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000245",
@@ -8860,37 +8860,37 @@
             "offset": "0x0000032D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000341",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000034D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000035F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000003CD",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000003D5",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -8964,7 +8964,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213422",
+            "symbol": "$SG213438",
             "rva": "0x037C7CA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9013,7 +9013,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 3 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -9136,7 +9136,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@bf800000bf800000bf800000bf800000",
             "rva": "0x02E62640",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (UnrealMath) and 1 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (GameplayTags.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (UnrealMath) and 4 more"
           }
         ],
         "unresolved_relocations": [
@@ -9178,7 +9178,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f8000003f8000003f8000003f800000",
             "rva": "0x02E624F0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Paper2D.1), dynamic initializer for GlobalVectorConstants::FloatOne (PhysXVehicles.1) and 128 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (OodleHandlerComponent.1), dynamic initializer for GlobalVectorConstants::FloatOne (Paper2D.1) and 128 more"
           },
           {
             "offset": "0x0000000A",
@@ -9219,7 +9219,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f0000003f0000003f0000003f000000",
             "rva": "0x02E624C0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 1 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (UnrealMath) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -9293,7 +9293,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213440",
+            "symbol": "$SG213456",
             "rva": "0x037C8058",
             "evidence": "data symbol: unique 19-byte string literal"
           },
@@ -9340,7 +9340,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213428",
+            "symbol": "$SG213444",
             "rva": "0x037C7EA8",
             "evidence": "data symbol: unique 20-byte string literal"
           },
@@ -9885,7 +9885,7 @@
             "offset": "0x00000004",
             "symbol": "__xmm@00000000ffffffffffffffffffffffff",
             "rva": "0x02E62420",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.31), dynamic initializer for GlobalVectorConstants::XYZMask (Paper2D.1) and 121 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.14), dynamic initializer for GlobalVectorConstants::XYZMask (OodleHandlerComponent.1) and 124 more"
           },
           {
             "offset": "0x0000000C",
@@ -9924,7 +9924,7 @@
         "resolved_relocations": [
           {
             "offset": "0x00000009",
-            "symbol": "$SG213434",
+            "symbol": "$SG213450",
             "rva": "0x037C8150",
             "evidence": "data symbol: unique 28-byte string literal"
           },
@@ -10175,7 +10175,7 @@
             "offset": "0x00000222",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000260",
@@ -10299,7 +10299,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (KismetMathLibrary) and 3 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -10464,7 +10464,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@bf800000bf800000bf800000bf800000",
             "rva": "0x02E62640",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (KismetMathLibrary), dynamic initializer for GlobalVectorConstants::FloatMinusOne (Renderer.1) and 1 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (GameplayTags.1), dynamic initializer for GlobalVectorConstants::FloatMinusOne (UMG.1) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -10505,7 +10505,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f8000003f8000003f8000003f800000",
             "rva": "0x02E624F0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Paper2D.1), dynamic initializer for GlobalVectorConstants::FloatOne (PhysXVehicles.1) and 128 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (OodleHandlerComponent.1), dynamic initializer for GlobalVectorConstants::FloatOne (Paper2D.1) and 128 more"
           },
           {
             "offset": "0x0000000A",
@@ -10546,7 +10546,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f0000003f0000003f0000003f000000",
             "rva": "0x02E624C0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (KismetMathLibrary) and 1 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::FloatOneHalf (KismetMathLibrary) and 4 more"
           },
           {
             "offset": "0x0000000A",
@@ -11156,7 +11156,7 @@
             "offset": "0x00000004",
             "symbol": "__xmm@00000000ffffffffffffffffffffffff",
             "rva": "0x02E62420",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.31), dynamic initializer for GlobalVectorConstants::XYZMask (Paper2D.1) and 121 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::XYZMask (Engine.14), dynamic initializer for GlobalVectorConstants::XYZMask (OodleHandlerComponent.1) and 124 more"
           },
           {
             "offset": "0x0000000C",
@@ -11197,7 +11197,7 @@
             "offset": "0x0000004B",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000052",
@@ -11227,7 +11227,7 @@
             "offset": "0x0000010B",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000115",
@@ -11304,7 +11304,7 @@
             "offset": "0x00000161",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000016B",
@@ -11357,7 +11357,7 @@
             "offset": "0x0000001F",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000AF",
@@ -11446,7 +11446,7 @@
             "offset": "0x0000004A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000006D",
@@ -11458,7 +11458,7 @@
             "offset": "0x00000075",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000007C",
@@ -11580,7 +11580,7 @@
             "offset": "0x0000004C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000060",
@@ -11763,7 +11763,7 @@
             "offset": "0x0000019D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000220",
@@ -11805,13 +11805,13 @@
             "offset": "0x000004C5",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000054E",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (KismetMathLibrary), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 3 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x000005AA",
@@ -11823,7 +11823,7 @@
             "offset": "0x0000066E",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (KismetMathLibrary), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 3 more"
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1), dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 6 more"
           },
           {
             "offset": "0x000006AA",
@@ -11835,7 +11835,7 @@
             "offset": "0x000006B3",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000007DB",
@@ -11977,37 +11977,37 @@
             "offset": "0x00000174",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000191",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000019B",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001A3",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001B0",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001BF",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000257",
@@ -12060,55 +12060,55 @@
             "offset": "0x00000043",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000055",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000070",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000AA",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000000B4",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000C6",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000001B7",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000001C1",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001D3",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000249",
@@ -12208,7 +12208,7 @@
             "offset": "0x00000053",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -12255,7 +12255,7 @@
             "offset": "0x0000003B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -12330,7 +12330,7 @@
             "offset": "0x00000040",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000135",
@@ -12411,7 +12411,7 @@
             "offset": "0x0000003B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -12458,7 +12458,7 @@
             "offset": "0x0000003B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -12912,7 +12912,7 @@
             "offset": "0x00000014",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           },
           {
             "offset": "0x00000053",
@@ -12924,7 +12924,7 @@
             "offset": "0x0000009F",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -12959,7 +12959,7 @@
             "offset": "0x00000014",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           },
           {
             "offset": "0x00000053",
@@ -12971,7 +12971,7 @@
             "offset": "0x0000009F",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -13075,7 +13075,7 @@
             "offset": "0x0000000A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000008C",
@@ -13195,7 +13195,7 @@
             "offset": "0x0000013F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -13319,7 +13319,7 @@
             "offset": "0x00000027",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000036",
@@ -13420,7 +13420,7 @@
             "offset": "0x0000007B",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000088",
@@ -13497,7 +13497,7 @@
             "offset": "0x0000000C",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           },
           {
             "offset": "0x00000022",
@@ -13509,13 +13509,13 @@
             "offset": "0x0000005C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000163",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -13580,7 +13580,7 @@
             "offset": "0x00000085",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000009A",
@@ -13598,7 +13598,7 @@
             "offset": "0x00000102",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000133",
@@ -13745,7 +13745,7 @@
             "offset": "0x0000002C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000037",
@@ -13811,7 +13811,7 @@
             "offset": "0x000000C3",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x000000CB",
@@ -13925,7 +13925,7 @@
             "offset": "0x00000004",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000038",
@@ -13984,7 +13984,7 @@
             "offset": "0x0000006E",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000086",
@@ -14002,7 +14002,7 @@
             "offset": "0x000000A3",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000AC",
@@ -14199,43 +14199,43 @@
             "offset": "0x00000047",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000005F",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000103",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000010D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000115",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000122",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000013B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -14276,7 +14276,7 @@
             "offset": "0x00000091",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -14576,7 +14576,7 @@
             "offset": "0x00000151",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000171",
@@ -14635,73 +14635,73 @@
             "offset": "0x000000DC",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000000FC",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000109",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000114",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000011C",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000125",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000017B",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000001D2",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000001DF",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000001EA",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001F2",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000001FB",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000002E9",
@@ -14836,37 +14836,37 @@
             "offset": "0x000000C1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000CE",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000000D9",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000E1",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000E9",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x000000F3",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000189",
@@ -14907,7 +14907,7 @@
             "offset": "0x00000017",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000026",
@@ -15025,55 +15025,55 @@
             "offset": "0x00000021",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000002F",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000003D",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x00000086",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000092",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000C8",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000012D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x00000161",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000198",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           }
         ],
         "unresolved_relocations": [],
@@ -15120,7 +15120,7 @@
             "offset": "0x00000049",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000056",
@@ -15150,7 +15150,7 @@
             "offset": "0x000000CE",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000000DC",
@@ -15174,7 +15174,7 @@
             "offset": "0x00000150",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000015B",
@@ -15192,7 +15192,7 @@
             "offset": "0x000001A6",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000001B4",
@@ -15222,7 +15222,7 @@
             "offset": "0x00000267",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000027B",
@@ -15281,7 +15281,7 @@
             "offset": "0x00000062",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000007E",
@@ -15299,7 +15299,7 @@
             "offset": "0x000000DF",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000000F6",
@@ -15415,7 +15415,7 @@
           },
           {
             "offset": "0x00000071",
-            "symbol": "$SG214204",
+            "symbol": "$SG214220",
             "rva": "0x037CA980",
             "evidence": "data symbol: unique 278-byte string literal"
           },
@@ -15542,7 +15542,7 @@
             "offset": "0x00000007",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x0000002A",
@@ -15554,7 +15554,7 @@
             "offset": "0x0000003C",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000004C",
@@ -15566,7 +15566,7 @@
             "offset": "0x00000064",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -15601,7 +15601,7 @@
             "offset": "0x00000011",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000002E",
@@ -15746,13 +15746,13 @@
             "offset": "0x00000004",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           },
           {
             "offset": "0x0000000F",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 23 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
           }
         ],
         "unresolved_relocations": [],
@@ -15898,7 +15898,7 @@
             "offset": "0x00000008",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000035",
@@ -15910,13 +15910,13 @@
             "offset": "0x00000083",
             "symbol": "__real@40000000",
             "rva": "0x02E76108",
-            "evidence": "corroborated: same symbol at this address in APlayerController::execClientSetViewTarget, GenericSpringInterp<float> and 5 more"
+            "evidence": "corroborated: same symbol at this address in GenericSpringInterp<float>, UKismetMathLibrary::TLerp and 5 more"
           },
           {
             "offset": "0x00000106",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FMatrix::Inverse, FRandomStream::GetUnitVector and 85 more"
+            "evidence": "corroborated: same symbol at this address in FMatrix::Inverse, FRandomStream::GetUnitVector and 86 more"
           }
         ],
         "unresolved_relocations": [],
@@ -15951,7 +15951,7 @@
             "offset": "0x0000000A",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FMatrix::Inverse, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FMatrix::Inverse, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000001B",
@@ -15963,7 +15963,7 @@
             "offset": "0x0000014F",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           }
         ],
         "unresolved_relocations": [],
@@ -16075,7 +16075,7 @@
             "offset": "0x00000008",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000044",
@@ -16212,7 +16212,7 @@
             "offset": "0x00000342",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000369",
@@ -16242,7 +16242,7 @@
             "offset": "0x00000434",
             "symbol": "??0FQuat@@QEAA@AEBUFMatrix@@@Z",
             "rva": "0x00569390",
-            "evidence": "corroborated: same symbol at this address in FMatrix::ToQuat"
+            "evidence": "corroborated: same symbol at this address in FMatrix::ToQuat, UKismetMathLibrary::ComposeTransforms"
           },
           {
             "offset": "0x00000440",
@@ -16355,19 +16355,19 @@
             "offset": "0x0000008A",
             "symbol": "?Identity@FTransform@@2U1@B",
             "rva": "0x046A0E80",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for FTransform::Identity (UnrealMath)"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::InvertTransform, dynamic initializer for FTransform::Identity (UnrealMath)"
           },
           {
             "offset": "0x00000091",
             "symbol": "?Identity@FTransform@@2U1@B",
             "rva": "0x046A0E80",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for FTransform::Identity (UnrealMath)"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::InvertTransform, dynamic initializer for FTransform::Identity (UnrealMath)"
           },
           {
             "offset": "0x0000009B",
             "symbol": "?Identity@FTransform@@2U1@B",
             "rva": "0x046A0E80",
-            "evidence": "corroborated: same symbol at this address in dynamic initializer for FTransform::Identity (UnrealMath)"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::InvertTransform, dynamic initializer for FTransform::Identity (UnrealMath)"
           },
           {
             "offset": "0x000000BE",
@@ -16463,7 +16463,7 @@
             "offset": "0x0000028C",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x00000293",
@@ -16516,7 +16516,7 @@
             "offset": "0x00000035",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UCharacterMovementComponent::execCapsuleTouched and 86 more"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UCharacterMovementComponent::execCapsuleTouched and 87 more"
           },
           {
             "offset": "0x0000004D",
@@ -16558,31 +16558,31 @@
             "offset": "0x00000447",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 43 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 45 more"
           },
           {
             "offset": "0x00000451",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 25 more"
           },
           {
             "offset": "0x0000045A",
             "symbol": "?ZeroVector@FVector@@2U1@B",
             "rva": "0x046A1130",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 25 more"
           },
           {
             "offset": "0x00000464",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 40 more"
           },
           {
             "offset": "0x00000617",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UCharacterMovementComponent::execCapsuleTouched and 86 more"
+            "evidence": "corroborated: same symbol at this address in FGenericPlatformMath::Atan2, UCharacterMovementComponent::execCapsuleTouched and 87 more"
           },
           {
             "offset": "0x00000746",
@@ -16654,7 +16654,7 @@
             "offset": "0x00000023",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000000AD",
@@ -16714,7 +16714,7 @@
             "offset": "0x000002D3",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000002FE",
@@ -16761,7 +16761,7 @@
             "offset": "0x0000000C",
             "symbol": "__security_cookie",
             "rva": "0x0462E0F0",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           },
           {
             "offset": "0x00000023",
@@ -16785,31 +16785,31 @@
             "offset": "0x000000D5",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000DD",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000194",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x000001F1",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000002BE",
             "symbol": "__security_check_cookie",
             "rva": "0x02D98D00",
-            "evidence": "corroborated: same symbol at this address in AGameModeBase::execSpawnDefaultPawnAtTransform, USceneComponent::execGetSocketTransform and 24 more"
+            "evidence": "corroborated: same symbol at this address in AGameModeBase::execRestartPlayerAtTransform, UAbilitySystemComponent::execClientActivateAbilitySucceedWithEventData and 24 more"
           }
         ],
         "unresolved_relocations": [
@@ -16851,7 +16851,7 @@
             "offset": "0x000001D2",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000021D",
@@ -17074,7 +17074,7 @@
             "offset": "0x00000003",
             "symbol": "__xmm@3f800000000000000000000000000000",
             "rva": "0x02E624E0",
-            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (UnrealMath) and 3 more"
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::TLerp, dynamic initializer for GlobalVectorConstants::Float0001 (AnimGraphRuntime.1) and 6 more"
           },
           {
             "offset": "0x0000000A",
@@ -17086,19 +17086,19 @@
             "offset": "0x00000011",
             "symbol": "?Identity@FTransform@@2U1@B",
             "rva": "0x046A0E80",
-            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform"
+            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform, UKismetMathLibrary::InvertTransform"
           },
           {
             "offset": "0x0000001B",
             "symbol": "?Identity@FTransform@@2U1@B",
             "rva": "0x046A0E80",
-            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform"
+            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform, UKismetMathLibrary::InvertTransform"
           },
           {
             "offset": "0x00000022",
             "symbol": "?Identity@FTransform@@2U1@B",
             "rva": "0x046A0E80",
-            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform"
+            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform, UKismetMathLibrary::InvertTransform"
           }
         ],
         "unresolved_relocations": [],
@@ -17133,7 +17133,7 @@
             "offset": "0x00000010",
             "symbol": "??0FQuat@@QEAA@AEBUFMatrix@@@Z",
             "rva": "0x00569390",
-            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransformUsingMatrixWithScale"
+            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransformUsingMatrixWithScale, UKismetMathLibrary::ComposeTransforms"
           }
         ],
         "unresolved_relocations": [],
@@ -17174,7 +17174,7 @@
             "offset": "0x000000B0",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000000B7",
@@ -17263,7 +17263,7 @@
             "offset": "0x0000009D",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000A9",
@@ -17305,7 +17305,7 @@
             "offset": "0x00000148",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x000001A6",
@@ -17341,7 +17341,7 @@
             "offset": "0x0000020A",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000024A",
@@ -17365,7 +17365,7 @@
             "offset": "0x000002B8",
             "symbol": "__real@322bcc77",
             "rva": "0x02E760D0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 42 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
           },
           {
             "offset": "0x0000034A",
@@ -17436,7 +17436,7 @@
             "offset": "0x000000D0",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x000000F7",
@@ -17454,7 +17454,7 @@
             "offset": "0x00000128",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
           },
           {
             "offset": "0x0000014F",
@@ -17495,13 +17495,309 @@
             "offset": "0x000000F0",
             "symbol": "__real@3f000000",
             "rva": "0x02E623F0",
-            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 38 more"
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
           },
           {
             "offset": "0x00000105",
             "symbol": "__real@3f800000",
             "rva": "0x02E623F4",
-            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 85 more"
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02430650",
+      "end_rva": "0x02430B9E",
+      "name": "UKismetMathLibrary::ComposeTransforms",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl",
+      "object": "Source/Generated/UHT/Unity/Engine.18.gen.obj",
+      "symbol": "?ComposeTransforms@UKismetMathLibrary@@SA?AUFTransform@@AEBU2@0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execComposeTransforms (0x0243B730) calls it; FTransform::operator* inlined: the default FTransform, Private_AnyHasNegativeScale (minps, cmpltps FloatZero), the MultiplyUsingMatrixWithScale path (FMatrix::RemoveScaling 0x00575220, FQuat(const FMatrix&) 0x00569390) and VectorQuaternionMultiply2 (QMULTI_SIGN_MASK0-2).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "73bc933d80cd2c77551b191863e393ed093a8c2e4029287e3f18e439ca682e6a",
+      "decrypted_sha256": "e6801c533d80c7a41f783636757a26b3d149ed6a8fec64588f994bd15239dd64",
+      "candidate_sha256": "e6801c533d80c7a41f783636757a26b3d149ed6a8fec64588f994bd15239dd64",
+      "byte_diff": {
+        "reference_size": 1358,
+        "candidate_size": 1358,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000041",
+            "symbol": "?FloatOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7290",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOne (Engine.18)"
+          },
+          {
+            "offset": "0x00000053",
+            "symbol": "?FloatZero@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7360",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatZero (Engine.18)"
+          },
+          {
+            "offset": "0x00000068",
+            "symbol": "?XYZMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::InvertTransform, dynamic initializer for GlobalVectorConstants::XYZMask (Engine.18)"
+          },
+          {
+            "offset": "0x00000116",
+            "symbol": "?XYZMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::InvertTransform, dynamic initializer for GlobalVectorConstants::XYZMask (Engine.18)"
+          },
+          {
+            "offset": "0x000001B5",
+            "symbol": "?XYZMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::InvertTransform, dynamic initializer for GlobalVectorConstants::XYZMask (Engine.18)"
+          },
+          {
+            "offset": "0x000002C3",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
+          },
+          {
+            "offset": "0x000002CF",
+            "symbol": "?RemoveScaling@FMatrix@@QEAAXM@Z",
+            "rva": "0x00575220",
+            "evidence": "exact match of manifest entry 0x00575220"
+          },
+          {
+            "offset": "0x000002D6",
+            "symbol": "?FloatMinusOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7350",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Engine.18)"
+          },
+          {
+            "offset": "0x000002EB",
+            "symbol": "?FloatMinusOne@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7350",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatMinusOne (Engine.18)"
+          },
+          {
+            "offset": "0x0000038B",
+            "symbol": "??0FQuat@@QEAA@AEBUFMatrix@@@Z",
+            "rva": "0x00569390",
+            "evidence": "corroborated: same symbol at this address in FMatrix::ToQuat, FTransform::GetRelativeTransformUsingMatrixWithScale"
+          },
+          {
+            "offset": "0x00000397",
+            "symbol": "?FloatOneHalf@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7340",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::FloatOneHalf (Engine.18)"
+          },
+          {
+            "offset": "0x00000438",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7330",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (Engine.18)"
+          },
+          {
+            "offset": "0x00000447",
+            "symbol": "?Float0001@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7330",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::Float0001 (Engine.18)"
+          },
+          {
+            "offset": "0x00000490",
+            "symbol": "?QMULTI_SIGN_MASK0@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7320",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::QMULTI_SIGN_MASK0 (Engine.18)"
+          },
+          {
+            "offset": "0x000004BC",
+            "symbol": "?QMULTI_SIGN_MASK1@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7310",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::QMULTI_SIGN_MASK1 (Engine.18)"
+          },
+          {
+            "offset": "0x000004C7",
+            "symbol": "?QMULTI_SIGN_MASK2@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B7300",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::QMULTI_SIGN_MASK2 (Engine.18)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02430CE0",
+      "end_rva": "0x02430E21",
+      "name": "UKismetMathLibrary::GetDirectionUnitVector",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl",
+      "object": "Source/Generated/UHT/Unity/Engine.18.gen.obj",
+      "symbol": "?GetDirectionUnitVector@UKismetMathLibrary@@SA?AUFVector@@U2@0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execGetDirectionUnitVector (0x02440F90) calls it; FVector::GetSafeNormal inlined (the 1.0f and SMALL_NUMBER tests, FVector::ZeroVector 0x046A1130).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "d075d5ba5fc41b6d4487c744713f6f6f7baf5282de421511b3800a8e7623d921",
+      "decrypted_sha256": "7b53b729696b8752d92b643db8654f31ac5181e6f45c96aaba60a8e93c6e4202",
+      "candidate_sha256": "7b53b729696b8752d92b643db8654f31ac5181e6f45c96aaba60a8e93c6e4202",
+      "byte_diff": {
+        "reference_size": 321,
+        "candidate_size": 321,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000068",
+            "symbol": "__real@3f800000",
+            "rva": "0x02E623F4",
+            "evidence": "corroborated: same symbol at this address in FRandomStream::GetUnitVector, GenericSpringInterp<FVector> and 86 more"
+          },
+          {
+            "offset": "0x00000086",
+            "symbol": "__real@322bcc77",
+            "rva": "0x02E760D0",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 44 more"
+          },
+          {
+            "offset": "0x00000090",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
+          },
+          {
+            "offset": "0x00000096",
+            "symbol": "?ZeroVector@FVector@@2U1@B",
+            "rva": "0x046A1130",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 24 more"
+          },
+          {
+            "offset": "0x000000AA",
+            "symbol": "__real@3f000000",
+            "rva": "0x02E623F0",
+            "evidence": "corroborated: same symbol at this address in FRotationMatrix::MakeFromXZ, FRotationMatrix::MakeFromYX and 39 more"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x024313F0",
+      "end_rva": "0x0243152F",
+      "name": "UKismetMathLibrary::InvertTransform",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl",
+      "object": "Source/Generated/UHT/Unity/Engine.18.gen.obj",
+      "symbol": "?InvertTransform@UKismetMathLibrary@@SA?AUFTransform@@AEBU2@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execInvertTransform (0x02444600) calls it; FTransform::Inverse inlined: the SignMask and SmallNumber scale test, InverseFast (QINV_SIGN_MASK, XYZMask) and the copy of FTransform::Identity (0x046A0E80).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "ff0b0a8f09f5b6f25f87dae87e4a27de5e2018375dfa794de1900894a025ab74",
+      "decrypted_sha256": "118b87f4f7ec31f4090f2631a08d75ed7d1e8e76a93ad16da6e6d7f94334937f",
+      "candidate_sha256": "118b87f4f7ec31f4090f2631a08d75ed7d1e8e76a93ad16da6e6d7f94334937f",
+      "byte_diff": {
+        "reference_size": 319,
+        "candidate_size": 319,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000007",
+            "symbol": "?SignMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72B0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::SignMask (Engine.18)"
+          },
+          {
+            "offset": "0x0000000E",
+            "symbol": "?SmallNumber@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72E0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::SmallNumber (Engine.18)"
+          },
+          {
+            "offset": "0x0000003D",
+            "symbol": "?QINV_SIGN_MASK@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72F0",
+            "evidence": "corroborated: same symbol at this address in dynamic initializer for GlobalVectorConstants::QINV_SIGN_MASK (Engine.18)"
+          },
+          {
+            "offset": "0x000000AA",
+            "symbol": "?XYZMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ComposeTransforms, dynamic initializer for GlobalVectorConstants::XYZMask (Engine.18)"
+          },
+          {
+            "offset": "0x00000103",
+            "symbol": "?XYZMask@GlobalVectorConstants@@3T__m128@@B",
+            "rva": "0x048B72A0",
+            "evidence": "corroborated: same symbol at this address in UKismetMathLibrary::ComposeTransforms, dynamic initializer for GlobalVectorConstants::XYZMask (Engine.18)"
+          },
+          {
+            "offset": "0x0000011A",
+            "symbol": "?Identity@FTransform@@2U1@B",
+            "rva": "0x046A0E80",
+            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform, dynamic initializer for FTransform::Identity (UnrealMath)"
+          },
+          {
+            "offset": "0x00000124",
+            "symbol": "?Identity@FTransform@@2U1@B",
+            "rva": "0x046A0E80",
+            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform, dynamic initializer for FTransform::Identity (UnrealMath)"
+          },
+          {
+            "offset": "0x0000012E",
+            "symbol": "?Identity@FTransform@@2U1@B",
+            "rva": "0x046A0E80",
+            "evidence": "corroborated: same symbol at this address in FTransform::GetRelativeTransform, dynamic initializer for FTransform::Identity (UnrealMath)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x024315F0",
+      "end_rva": "0x024316AC",
+      "name": "UKismetMathLibrary::RandomPointInBoundingBox",
+      "category": "source-function",
+      "module": "Engine",
+      "source": "FortniteGameCode/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl",
+      "object": "Source/Generated/UHT/Unity/Engine.18.gen.obj",
+      "symbol": "?RandomPointInBoundingBox@UKismetMathLibrary@@SA?AUFVector@@AEBU2@0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "execRandomPointInBoundingBox (0x0244D8F0) calls it; builds the FBox and calls FMath::RandPointInBox (0x011A1020).",
+      "reference_state": "decrypted",
+      "in_denominator": true,
+      "match": "exact",
+      "original_sha256": "f1e77b74a17c65f752facd37f26b301335dee25533d14ae5f7f16172dfdfbc12",
+      "decrypted_sha256": "a63c76dd4266218991aa43ef081b0ee5abe018315a9b9c3cf681856ff8a4fbc3",
+      "candidate_sha256": "a63c76dd4266218991aa43ef081b0ee5abe018315a9b9c3cf681856ff8a4fbc3",
+      "byte_diff": {
+        "reference_size": 188,
+        "candidate_size": 188,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000099",
+            "symbol": "?RandPointInBox@FMath@@SA?AUFVector@@AEBUFBox@@@Z",
+            "rva": "0x011A1020",
+            "evidence": "exact match of manifest entry 0x011A1020"
           }
         ],
         "unresolved_relocations": [],

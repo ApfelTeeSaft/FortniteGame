@@ -2,13 +2,31 @@
 // Unity translation unit Engine.18 of /Script/Engine: the fragments of 14 UHT items in the
 // source order recovered from .CRT$XCU entries 20512..20535 (analysis/unity-order.json).
 
+#include "../../../Runtime/Engine/Classes/Kismet/KismetMathLibraryUnity.h"  // hand-written (UNIT_SOURCES)
+
 // The engine headers' GlobalVectorConstants of this unit: the constants whose initializers
 // open its .CRT$XCU entries in the reference (analysis/unity-order.json), in header order.
 #include "FortniteGameCode/VectorRecovered.h"
 namespace GlobalVectorConstants
 {
+#define SIGN_BIT ((1 << 31))
 	static const VectorRegister FloatOne = MakeVectorRegister(1.0f, 1.0f, 1.0f, 1.0f);
+	static const VectorRegister FloatZero = MakeVectorRegister(0.0f, 0.0f, 0.0f, 0.0f);
+	static const VectorRegister FloatMinusOne = MakeVectorRegister(-1.0f, -1.0f, -1.0f, -1.0f);
+	static const VectorRegister Float0001 = MakeVectorRegister( 0.0f, 0.0f, 0.0f, 1.0f );
+	static const VectorRegister FloatOneHalf = MakeVectorRegister( 0.5f, 0.5f, 0.5f, 0.5f );
+	static const VectorRegister SmallNumber = MakeVectorRegister( SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER, SMALL_NUMBER );
+	static const VectorRegister QINV_SIGN_MASK = MakeVectorRegister( -1.f, -1.f, -1.f, 1.f );
+	static const VectorRegister QMULTI_SIGN_MASK0 = MakeVectorRegister( 1.f, -1.f, 1.f, -1.f );
+	static const VectorRegister QMULTI_SIGN_MASK1 = MakeVectorRegister( 1.f, 1.f, -1.f, -1.f );
+	static const VectorRegister QMULTI_SIGN_MASK2 = MakeVectorRegister( -1.f, 1.f, 1.f, -1.f );
+	static const VectorRegister XYZMask = MakeVectorRegister((uint32)0xffffffff, (uint32)0xffffffff, (uint32)0xffffffff, (uint32)0x00000000);
+	static const VectorRegister SignMask = MakeVectorRegister((uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT), (uint32)(~SIGN_BIT));
+	static const VectorRegister Float360 = MakeVectorRegister(360.f, 360.f, 360.f, 360.f);
+	static const VectorRegister Float180 = MakeVectorRegister(180.f, 180.f, 180.f, 180.f);
+#undef SIGN_BIT
 }
+#include "FortniteGameCode/TransformRecovered.h"
 
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
@@ -33,3 +51,5 @@ namespace GlobalVectorConstants
 #include "../Structs/Engine/FFloatSpringState.gen.cpp"
 #include "../UKismetMathLibrary.gen.cpp"
 #include "../Classes/Engine/UKismetMathLibrary.gen.cpp"
+
+#include "../../../Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl"  // hand-written (UNIT_SOURCES)

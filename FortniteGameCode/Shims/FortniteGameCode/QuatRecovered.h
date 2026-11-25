@@ -137,6 +137,10 @@ __forceinline VectorRegister VectorSelect(const VectorRegister& Mask, const Vect
 
 __forceinline VectorRegister VectorReciprocalSqrtAccurate(const VectorRegister& Vec);
 
+// A unit whose constants lack SmallLengthThreshold and VectorSinCos's (OneOverTwoPi, TwoPi,
+// SignBit, Pi, PiByTwo) defines FNGC_QUAT_WITHOUT_SINCOS: the reference keeps only the constants
+// a unit uses, and these two functions are then only declared (a use would not link).
+#if !defined(FNGC_QUAT_WITHOUT_SINCOS)
 __forceinline VectorRegister VectorNormalizeSafe( const VectorRegister& Vector, const VectorRegister& DefaultValue )
 {
 	const VectorRegister SquareSum = VectorDot4(Vector, Vector);
@@ -145,6 +149,7 @@ __forceinline VectorRegister VectorNormalizeSafe( const VectorRegister& Vector, 
 	const VectorRegister NormalizedVector = VectorMultiply(InvLength, Vector);
 	return VectorSelect(NonZeroMask, NormalizedVector, DefaultValue);
 }
+#endif
 
 __forceinline VectorRegister VectorReciprocalSqrtAccurate(const VectorRegister& Vec)
 {
@@ -183,6 +188,9 @@ __forceinline VectorRegister VectorNormalizeRotator(const VectorRegister& Unnorm
 	return  V4;
 }
 
+#if defined(FNGC_QUAT_WITHOUT_SINCOS)
+__forceinline void VectorSinCos(VectorRegister* __restrict VSinAngles, VectorRegister* __restrict VCosAngles, const VectorRegister* __restrict VAngles);
+#else
 __forceinline void VectorSinCos(VectorRegister* __restrict VSinAngles, VectorRegister* __restrict VCosAngles, const VectorRegister* __restrict VAngles)
 {
 	// Map to [-pi, pi]
@@ -234,6 +242,7 @@ __forceinline void VectorSinCos(VectorRegister* __restrict VSinAngles, VectorReg
 	C = VectorMultiplyAdd(XSquared, C, VectorReplicate(CosCoeff0, 0));
 	*VCosAngles = VectorMultiply(C, sign);
 }
+#endif
 
 __forceinline VectorRegister VectorNormalizeSafe( const VectorRegister& Vector, const VectorRegister& DefaultValue );
 

@@ -596,7 +596,7 @@ Not reconstructed: `ComposeTransforms`, `InvertTransform`, `GetDirectionUnitVect
 `RandomPointInBoundingBox` (`0x02430650`-`0x024316AC`). They are out-of-line copies of
 `KismetMathLibrary.inl` functions. They are emitted by the generated unity unit `Engine.18`,
 whose exec thunks call them, and they read that unit's constants (`0x048B7290`-`0x048B7350`;
-initializers in `analysis/functions-vector-constants.json`).
+initializers in `analysis/functions-vector-constants.json`). The twelfth family matches them.
 
 ## Tenth family: dates and times, colours and rotator helpers (2026-11-24)
 
@@ -742,7 +742,50 @@ initializer, in the reference or here: they are constant data.
   `GetDirectionUnitVector`, `RandomPointInBoundingBox`) read about a dozen of that unit's vector
   constant slots (`0x048B7290`-`0x048B7350`). `tools/codegen/unity.py` defines only the constants
   whose initializers open the unit's `.CRT$XCU` entries (`FloatOne`); modelling the others would
-  change a generated unit with exact entries, so they wait.
+  change a generated unit with exact entries, so they wait. The twelfth family matches them.
+
+## Twelfth family: the Engine.18 transform copies (2026-11-25)
+
+| Group | Functions | Result |
+| --- | --- | --- |
+| `KismetMathLibrary.inl` copies in the generated unit `Engine.18` | `ComposeTransforms` (`0x02430650`), `GetDirectionUnitVector` (`0x02430CE0`), `InvertTransform` (`0x024313F0`), `RandomPointInBoundingBox` (`0x024315F0`) | 4 exact |
+| `Engine.18`'s `GlobalVectorConstants` initializers (`0x00204630`-`0x00204841`, `.CRT$XCU` entries 20497-20510) | 13 new, and `FloatOne`'s (relocation-equivalent before) | 12 exact, outside the denominator; `Float360` and `Float180` relocation-equivalent |
+
+All four copies matched on the first build. With them 12 of the unit's 14 constants have a
+reader, so their initializers are exact too.
+
+**The constants the analysis missed.** `tools/analysis/unity_order.py` reads a unit's header
+constants from the leaf initializers after its `FloatOne` marker. It stopped at the first
+initializer of another form. `FloatZero`'s loads nothing:
+`xorps xmm0, xmm0; movaps [slot], xmm0; ret`. Three units therefore recorded only `FloatOne`:
+- `Engine.18`, with 14 constants;
+- `UMG.1`, with 17;
+- `SocialTypes.1`, with 13.
+
+The analysis now reads the zero form too. The table holds 59 initializers of that form; the
+other 56 are outside the UHT units' constant runs.
+
+**Placement.** In 4.20 the four are `KISMET_MATH_INLINE`, plain `inline`. v140 keeps
+out-of-line copies where `Engine.18`'s exec thunks call them. Those thunks are not
+reconstructed, so `Classes/Kismet/KismetMathLibrary.inl` defines the four without `inline`,
+which gives the same code. `tools/codegen/unity.py` compiles it at the end of `Engine.18`
+(`UNIT_SOURCES`), after the unit's constants and fragments. `KismetMathLibraryUnity.h` opens
+the unit with `FNGC_CORE_MATH_EXTRAS` and the class-body declarations.
+
+**Headers.**
+- `TransformMathRecovered.h` holds 4.20's `FTransform::Multiply`,
+  `MultiplyUsingMatrixWithScale`, `operator*`, `Inverse`, `InverseFast` and the
+  `VectorRegister` constructor.
+- `Private_AnyHasNegativeScale` and `ConstructTransformFromMatrixWithDesiredScale` moved
+  there from `TransformVectorized.cpp`. `UnrealMath.obj` is byte-identical afterwards.
+- `Engine.18` has no `SmallLengthThreshold` and none of `VectorSinCos`'s constants. A unit
+  that defines `FNGC_QUAT_WITHOUT_SINCOS` therefore gets only declarations of those two
+  functions from `QuatRecovered.h`.
+
+**The three units.** Their existing functions compile to the same code, with string-literal
+names normalised. MSVC's order of the unnamed string literals in `.rdata` changed, as it did
+for `InputCore.1` in the tenth family, but no match changed. The 28 new initializers of `UMG.1`
+and `SocialTypes.1` are relocation-equivalent: nothing reconstructed reads those constants yet.
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
@@ -1988,7 +2031,8 @@ objects. Three modelling points:
 - **Per-unit vector constants.** The engine headers define `GlobalVectorConstants`
   (`UnrealMathVectorConstants.h`) in every original unity file. The reference keeps only those
   a unit uses, and their leaf initializers open the unit's `.CRT$XCU` entries: `FloatOne`
-  (the unit marker), then the rest in header order. `unity_order.py` records them, by value,
+  (the unit marker), then the rest in header order. `FloatZero`'s loads nothing (`xorps xmm0,
+  xmm0; movaps [slot], xmm0; ret`). `unity_order.py` records them, by value,
   for each of the 131 units that open at a marker. `unity.py` defines exactly those, with the
   header's definitions, after the `StaticEnum` functions (`VectorRecovered.h` for the
   helpers).

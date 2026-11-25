@@ -19,7 +19,8 @@ also starts a new unit.
 
 The constant is GlobalVectorConstants::FloatOne (UnrealMathVectorConstants.h). A unit's other
 such constants follow it, one leaf initializer each; the reference keeps only those a unit
-uses. Each unit that opens at a marker records them ("vector_constants") by value, named in
+uses. FloatZero's has nothing to load: "xorps xmm0, xmm0; movaps [slot], xmm0; ret". Each unit
+that opens at a marker records them ("vector_constants") by value, named in
 header definition order (the order of .CRT$XCU). Two values are ambiguous: FloatOne is also
 RotationSignificantThreshold (1 - DELTA*DELTA rounds to 1.0f), and SignMask's bits are also
 IntSignMask's. Header order settles the first (a later constant cannot precede XYZMask), and
@@ -117,6 +118,21 @@ def constant_initializer(code: bytes | None, rva: int) -> int | None:
         return rva + 7 + struct.unpack_from("<i", code, 3)[0]
     if code[:4] == b"\x66\x0f\x6f\x05" and code[8:12] == b"\x66\x0f\x7f\x05" and code[16] == 0xC3:
         return rva + 8 + struct.unpack_from("<i", code, 4)[0]
+    return None
+
+
+ZERO_INITIALIZER = bytes.fromhex("0f57c00f2905")   # xorps xmm0, xmm0; movaps [slot], xmm0 (then ret)
+
+
+def leaf_constant(code: bytes | None, rva: int, read) -> tuple[bytes, int] | None:
+    """(value, size) of a unit's leaf constant initializer: the load form above, or the zero
+    form 'xorps xmm0, xmm0; movaps [slot], xmm0; ret' v140 compiles MakeVectorRegister(0, 0, 0, 0)
+    to (FloatZero: nothing to load)."""
+    K = constant_initializer(code, rva)
+    if K is not None:
+        return read(K, 16), 15 if code[:3] == b"\x0f\x28\x05" else 17
+    if code and code[:6] == ZERO_INITIALIZER and code[10] == 0xC3:
+        return bytes(16), 11
     return None
 
 
@@ -622,12 +638,11 @@ def main() -> int:
         opened.add(k)
         values, inits, i = [], [], markers[k]
         while i < t["table_range"][0]:
-            K = constant_initializer(read(table[i], 20), table[i])
-            if K is None:
+            leaf = leaf_constant(read(table[i], 20), table[i], read)
+            if leaf is None:
                 break
-            values.append(read(K, 16))
-            form = read(table[i], 3)
-            inits.append([f"0x{table[i]:08X}", f"0x{table[i] + (15 if form == bytes.fromhex('0f2805') else 17):08X}"])
+            values.append(leaf[0])
+            inits.append([f"0x{table[i]:08X}", f"0x{table[i] + leaf[1]:08X}"])
             i += 1
         names = name_vector_constants(values)
         if names is None:
