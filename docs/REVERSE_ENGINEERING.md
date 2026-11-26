@@ -930,7 +930,8 @@ resolved by evidence to an address the reference does not hold). No existing mat
 unplaced functions of 24 bytes or more have a same-length reference function at 85% or more):
 - **Line numbers.** `__LINE__` immediates differ by a few lines (`FMallocBinned2::MallocExternal`
   passes 775, the reference 769): Fortnite's files have extra or fewer lines. Shipping logging
-  passes `__LINE__` even where the file name is suppressed.
+  passes `__LINE__` even where the file name is suppressed. Recovered and applied:
+  "Engine line numbers" below.
 - **Class layouts.** `FText` functions allocate `0x160` bytes where the reference allocates
   `0x210`; an `IFileManager` virtual is at `0xE0` instead of `0xD8`; a `TSetElement` of
   `FDisplayStringEntry` is 72 bytes instead of 40. The internal fork's classes differ.
@@ -942,6 +943,74 @@ unplaced functions of 24 bytes or more have a same-length reference function at 
 - **Unity composition.** Inlining across the `.cpp` files of one unity unit depends on which
   files share it (`FPaths::ProjectUserDir` is 1,045 bytes in the reference, 333 here). UBT groups
   the public tree's files; Fortnite's tree had other files and sizes.
+
+## Engine line numbers (`tools/engine/lines.py`, `overlay.py`, 2026-11-26)
+
+Shipping logging and fatal errors pass `__LINE__` (`UE_LOG` passes `"Unknown"` for the file, but
+the real line), so a function of a file in which Fortnite added or removed lines differs from the
+reference in those immediates alone.
+
+**Measuring.** Every compile action is compiled a second time with each of its engine `.cpp` files
+renumbered through an overlay copy: file *i* of the unit starts at line (*i* + 1) · 50,000 + 1
+(`#line` accepts at most 16,777,215). A 4-byte field below 50,000 in the regular object and
+(*i* + 1) · 50,000 + *L* in the renumbered one is a `__LINE__` of file *i*, line *L*; any other
+difference is reported. A macro invocation spanning lines gets the number of its last line. The
+renumbered build gives each file the reference's `__FILE__`
+(`D:\Build\++FN25\Sync\Engine\Source\...\X.cpp`), so its literals resolve by content. Of all
+engine functions, 802 have line fields and 74 change size instead (a line below 128 becomes a
+`lea reg, [reg + disp8]`).
+
+**Locating.** A function with line fields is located with them masked as well as its relocation
+fields: at its manifest address if it is exact there (an anchor, weight 1000), else at the
+same-length `.pdata` functions with equal masked bytes that its relocation targets confirm: every
+independently known target agrees, at least one does, and every string literal's text is what the
+reference holds where the function points. The last test matters: `FGenericPlatformProcess`'s
+"not implemented on this platform" stubs differ only in their message and line, and without it
+they matched other stubs (`ClosePipe` matched `UField::AddCppProperty`'s, which gave its line 535
+the number 196).
+109 functions are located (4 anchors) and 680 are not; their other bytes differ too. In Slate
+(118) and UMG (59) that is every one: `SNew` construction code whose most similar same-length
+reference function is 13 to 45 % alike (the widgets' `FArguments` differ).
+
+**Numbering** (`overlay.py`). Per line the value with two thirds of the weight, else none: 132
+lines of 58 files, 42 of them renumbered (`analysis/engine-lines.json`). `MallocBinned2.cpp`
+keeps its numbers up to line 479 (anchored by exact functions) and has six fewer from line 775
+on. Where the offset changes between two known lines, a `#line` directive goes at the latest
+line of the least brace depth between them (between functions where it can: nothing says where
+in that stretch the lines changed) that is safe: not in a comment, string, continued line or
+macro arguments (no parenthesis open), and in the preprocessor branch of the line it renumbers or
+one enclosing it. Only renumbered files are compiled through an overlay, under their own file
+name; quote includes that resolve beside the original are made absolute, and the original
+directory is passed with `/I`.
+
+**Not the build root as well.** Compiling every file under the reference's `__FILE__` made 7 more
+functions exact, but its longer literals changed other objects' data layout and every lambda's
+name (MSVC derives them from the file). That tipped compare.py's section-relative inference and
+map.py's choice between folded bodies for 11 exact functions, so the build-root fix stays a
+separate step.
+
+**Name choice at folded addresses** (`map.py`, `choose_names`). When several symbols are proposed
+at one address, the one already exact there stays; otherwise the one whose relocations the
+evidence supports best: independently known targets, string literal text at the target, the
+targets the module's uniquely placed functions see, and callers whose relocation lands there.
+The choices are revised until they agree (a lambda's outer and inner function stay one lambda's),
+then the first by name decides. Name order alone had given `UParticleModuleColorOverLife::
+InitializeDefaults` the address of `ColorScaleOverLife`'s, whose string only the latter matches.
+
+**Vtables by known slots** (`compare.py`, `_known_pointers`). Where a data symbol's layout
+neighbours resolve nothing, a vtable whose first slot (and any others) are exact functions is
+placed at the one 8-aligned place in `.rdata` holding all those pointers at their offsets. The
+first slot must be among them: Fortnite's `UObject` has one virtual fewer (ENGINE_DIFFERENCES
+#14), and without RTTI vtables lie back to back, so the later slots of a `UObject` class match
+one slot off. 15 entries resolve a field this way. One is `TPromiseBase<TTuple<TSet<FString>,
+TSet<FString>>>`'s constructor: new matches observe the vtable's left neighbours, and its layout
+inference now ties two neighbours to two.
+
+**Results.** 52,409 exact (52,095 before), no regression against the previous commit. 25 of the
+314 are functions of renumbered files and 4 resolve through known pointers; the other 285 are
+placements map.py makes now that the engine's 14,855 exact functions are known targets (16,497
+ambiguous functions decided by relocations instead of 14,602), and the name choice. Engine
+manifests: 24,814 entries, 15,169 exact, 9,413 relocation-equivalent, 232 partial.
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 

@@ -954,6 +954,88 @@ def test_engine_map() -> None:
     print("engine map: ok")
 
 
+def test_known_pointers() -> None:
+    """compare.Resolver._known_pointers: a vtable is where its exact slots' pointers are, at
+    their offsets, if there is exactly one such place; a slot inside the entry under test is
+    not used."""
+    from types import SimpleNamespace as NS
+    import compare
+    base = 0x140000000
+    r = compare.Resolver.__new__(compare.Resolver)
+    r.img = NS(image_base=base, sections=[NS(rva=0x1000, vsize=0x10000)])
+    f1, f2 = base + 0x1100, base + 0x1200
+    # .rdata at 0x20000: one vtable [f1, f2] at 0x20010, and f1 alone (another class) at 0x20040.
+    hay = bytearray(0x80)
+    hay[0x10:0x18], hay[0x18:0x20] = f1.to_bytes(8, "little"), f2.to_bytes(8, "little")
+    hay[0x40:0x48] = f1.to_bytes(8, "little")
+    r.hay, r.hay_rva, r._pointers = bytes(hay), 0x20000, None
+    r.dimg = NS(read=lambda rva, n: r.hay[rva - r.hay_rva:rva - r.hay_rva + n])
+    r.functions = {"F1": (0x1100, "exact"), "F2": (0x1200, "exact")}
+    r.entry_ranges = {7: (0x1200, 0x1300)}
+    sec = NS(chars=0x40000040, data=bytes(16),
+             relocs=[NS(kind="ADDR64", offset=0, symbol="F1"), NS(kind="ADDR64", offset=8, symbol="F2")])
+    vt = NS(name="??_7X@@6B@", section=1, value=0, storage=2)
+    obj = NS(sections=[sec], symbols=[vt], symbol=lambda n: vt if n == vt.name else None)
+    assert r._known_pointers(obj, vt.name, None)[0][0] == 0x20010
+    # Without F2 (the entry under test), F1 alone is at two places: nothing.
+    assert r._known_pointers(obj, vt.name, 7) == []
+    # Without F1 the first slot is unknown, so the start is not pinned: nothing.
+    del r.functions["F1"]
+    assert r._known_pointers(obj, vt.name, None) == []
+    print("known pointers: ok")
+
+
+def test_engine_lines() -> None:
+    """tools/engine/overlay.py and lines.py: __LINE__ fields, and #line directives that give
+    every known line its original number without landing in macro arguments, comments or
+    another preprocessor branch."""
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "engine"))
+    import lines as Lm
+    import overlay as O
+    # mov r8d, 775 / the same with file 2's offset; a call's rel32 is the same in both.
+    a = bytes([0x41, 0xB8]) + (775).to_bytes(4, "little") + bytes([0xE8, 1, 2, 3, 4])
+    b = bytes([0x41, 0xB8]) + (3 * Lm.OFFSET + 775).to_bytes(4, "little") + bytes([0xE8, 1, 2, 3, 4])
+    assert Lm.line_fields(a, b, 3) == ([(2, 2, 775)], True)
+    assert Lm.line_fields(a, b, 2) == ([], False)          # no third file: not a line field
+    c = bytes([0x41, 0xB8]) + (775).to_bytes(4, "little") + bytes([0xE8, 9, 2, 3, 4])
+    assert Lm.line_fields(a, c, 3)[1] is False            # any other difference is reported
+    src = "\n".join([
+        "#include \"A.h\"",                  # 1
+        "void F()",                         # 2
+        "{",                                # 3
+        "\tLOG(1);",                        # 4
+        "}",                                # 5
+        "/* a comment",                     # 6
+        "   spanning lines */",             # 7
+        "void G()",                         # 8
+        "{",                                # 9
+        "#if WITH_X",                       # 10
+        "\tX();",                           # 11
+        "#endif",                           # 12
+        "\tLOG(Fatal,",                     # 13
+        "\t\tTEXT(\"(\"));",                # 14: the macro ends here: __LINE__ is 14
+        "}",                                # 15
+    ])
+    safe, depth, boundary, region = O.scan(src)
+    assert not safe[7] and not safe[14] and safe[13] and safe[8]
+    assert depth[11] == 1 and region[11] != region[13] and region[13] == region[8]
+    cons = [(4, 4), (14, 20)]
+    first, inserts, dropped = O.plan(cons, src)
+    assert not dropped and all(O.number(L, first, inserts) == R for L, R in cons)
+    assert inserts == [(8, 14)]                            # between the functions, after the comment
+    first, inserts, dropped = O.plan([(4, 2)], src)        # not before line 1 or 2: they would be < 1
+    assert (first, inserts) == (1, [(3, 1)]) and O.number(4, first, inserts) == 2
+    x = REPO_ROOT / "Engine" / "Source" / "X.cpp"
+    text = O.overlay_text(x, src, 1, [(8, 14)], O.reference_file(x))
+    assert text.startswith('#line 1 "D:\\\\Build\\\\++FN25\\\\Sync\\\\Engine\\\\Source\\\\X.cpp"\n')
+    assert "\n#line 14\nvoid G()" in text
+    assert O.original_file(x) == str(x).replace("\\", "\\\\")
+    # Files whose numbers do not change are compiled as they are.
+    num = O.final_numbering({"Engine/Source/X.cpp": [(4, 4)]})
+    assert num(0, REPO_ROOT / "Engine" / "Source" / "Y.cpp") is None
+    print("engine lines: ok")
+
+
 def test_data_section_blocks() -> None:
     """resolve_data_symbol: blocks of DATA_SECTION_MIN+ bytes are also searched in .data."""
     from types import SimpleNamespace as NS
@@ -979,6 +1061,8 @@ def main() -> int:
     test_data_section_blocks()
     test_locate()
     test_engine_map()
+    test_engine_lines()
+    test_known_pointers()
     test_native_array_runs()
     test_slot_elimination()
     test_rigid_successor()

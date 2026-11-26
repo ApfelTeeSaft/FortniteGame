@@ -7,8 +7,8 @@
   "module": "UE4Game",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 UE4Game compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 UE4Game compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x000C3CA0","end_rva":"0x000C3CB5","name":"dynamic initializer for GFNameTableForDebuggerVisualizers_MT","source":"Engine/Source/Runtime/UE4Game/Private/UE4Game.cpp","object":"Engine/UE4Game/Module.UE4Game.obj","symbol":"??__EGFNameTableForDebuggerVisualizers_MT@@YAXXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"8a2b12640f6656b2","byte_diff":{"reference_size":21,"candidate_size":21,"differing_bytes":0,"first_difference":null,"resolved_relocations":0,"resolved_by":{},"unresolved_relocations":[{"offset":"0x00000005","symbol":"?GetNameTableForDebuggerVisualizers_MT@FName@@SAPEAPEAPEAUFNameEntry@@XZ"},{"offset":"0x0000000C","symbol":"?GFNameTableForDebuggerVisualizers_MT@@3PEAPEAPEAUFNameEntry@@EA"}]}},

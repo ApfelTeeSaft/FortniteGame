@@ -258,11 +258,11 @@ class Resolver:
         # a failed prediction is reported as unresolved.
         sym = obj.symbol(symbol)
         if sym is None or sym.section <= 0:
-            return self._slot_elimination(symbol, exclude)
+            return self._known_pointers(obj, symbol, exclude) or self._slot_elimination(symbol, exclude)
         items, index = self._layout_group(obj, objpath, obj.sections[sym.section - 1].name)
         i = index.get(symbol)
         if i is None:
-            return self._slot_elimination(symbol, exclude)
+            return self._known_pointers(obj, symbol, exclude) or self._slot_elimination(symbol, exclude)
         mine = items[i][0]
 
         def observed_pred(j: int):
@@ -301,7 +301,7 @@ class Resolver:
         if bracket:
             return bracket
         if len(nearest) < 2:
-            return self._slot_elimination(symbol, exclude)
+            return self._known_pointers(obj, symbol, exclude) or self._slot_elimination(symbol, exclude)
         # The sides disagree. A side whose neighbour is the symbol's rigid partner, directly
         # next to it in the layout, decides (rigid_successor).
         (_, lpred, ldesc), (_, rpred, rdesc) = nearest
@@ -309,7 +309,7 @@ class Resolver:
             pred, desc = (rpred, rdesc) if taken(lpred) else (lpred, ldesc)
             return [(pred, "section-relative (local) to " + desc + "; the other side's slot holds another symbol")]
         if taken(lpred):
-            return self._slot_elimination(symbol, exclude)
+            return self._known_pointers(obj, symbol, exclude) or self._slot_elimination(symbol, exclude)
         if nearest_at[0] == i - 1 and rigid_successor(items[i - 1][1], symbol):
             return [(lpred, "section-relative (rigid pair) to " + ldesc + " (the other side disagrees)")]
         if nearest_at[1] == i + 1 and rigid_successor(symbol, items[i + 1][1]):
@@ -331,7 +331,7 @@ class Resolver:
             runs.append((count, first, desc))
         (lc, lp, ld), (rc, rp, rd) = runs
         if lc == rc:
-            return self._slot_elimination(symbol, exclude)
+            return self._known_pointers(obj, symbol, exclude) or self._slot_elimination(symbol, exclude)
         count, pred, desc = max(runs)
         extra = f" and {count - 1} more neighbours" if count > 1 else ""
         return [(pred, "section-relative (longer run) to " + desc + extra + f" ({min(lc, rc)} dissenting)")]
@@ -590,6 +590,65 @@ class Resolver:
                 return True
             i += 1
         return False
+
+    def _pointer_index(self) -> dict[int, list[int]]:
+        """8-aligned 64-bit values in the reference's read-only data that point into its code
+        -> where they are (RVAs), built once."""
+        if getattr(self, "_pointers", None) is None:
+            from array import array
+            text = self.img.sections[0]
+            lo, hi = self.img.image_base + text.rva, self.img.image_base + text.rva + text.vsize
+            start = (-self.hay_rva) % 8
+            words = array("Q", self.hay[start:start + (len(self.hay) - start) // 8 * 8])
+            index: dict[int, list[int]] = {}
+            for k, v in enumerate(words):
+                if lo <= v < hi:
+                    index.setdefault(v, []).append(self.hay_rva + start + 8 * k)
+            self._pointers = index
+        return self._pointers
+
+    def _known_pointers(self, obj: CoffObject, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
+        """A data symbol holding pointers to functions whose addresses are known (a vtable whose
+        slots are exact matches), its first slot among them: the one 8-aligned place in the
+        reference's read-only data where every such pointer is, at its offset. A slot pointing
+        into the entry under test is not used. Tried only where nothing else resolves the
+        symbol; the byte comparison checks the prediction."""
+        sym = obj.symbol(symbol)
+        if sym is None or sym.section <= 0:
+            return []
+        sec = obj.sections[sym.section - 1]
+        if sec.chars & 0x20 or not sec.chars & 0x40 or sec.chars & 0x80000000:   # code, not data, writable
+            return []
+        offs = sorted({s.value for s in obj.symbols
+                       if s is not None and s.section == sym.section and s.storage in (2, 3)} | {len(sec.data)})
+        hi = offs[offs.index(sym.value) + 1]
+        own = getattr(self, "entry_ranges", {}).get(exclude) if exclude is not None else None
+        functions = getattr(self, "functions", {})
+        slots = []
+        for r in sec.relocs:
+            if r.kind != "ADDR64" or not sym.value <= r.offset < hi or r.symbol not in functions:
+                continue
+            target = functions[r.symbol][0]
+            if own is not None and own[0] <= target < own[1]:
+                continue
+            addend = int.from_bytes(sec.data[r.offset:r.offset + 8], "little", signed=True)
+            slots.append((r.offset - sym.value, self.img.image_base + target + addend, r.symbol))
+        # The first slot must be among them: it pins the start. Without it, slots of a class whose
+        # virtuals differ (Fortnite's UObject has one virtual fewer, and its vtables lie back to
+        # back without RTTI) match one slot off.
+        if not slots or min(s[0] for s in slots) != 0:
+            return []
+        index = self._pointer_index()
+        first = min(slots, key=lambda s: len(index.get(s[1], ())))
+        cands = []
+        for at in index.get(first[1], ()):
+            base = at - first[0]
+            if all(self.dimg.read(base + off, 8) == val.to_bytes(8, "little") for off, val, _ in slots):
+                cands.append(base)
+        if len(cands) != 1:
+            return []
+        return [(cands[0], f"known pointers: {len(slots)} slot(s) of exact functions "
+                           f"({slots[0][2][:60]}) are there and nowhere else together")]
 
     def _slot_elimination(self, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
         """A declared block of equal slots (analysis/uht-bss-blocks.json): a unit's StaticEnum

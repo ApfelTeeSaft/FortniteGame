@@ -113,6 +113,60 @@ def independent_targets(resolver, obj, objpath: str, symbol: str) -> set[int]:
     return _DATA_CACHE[key]
 
 
+def literal_agrees(obj, symbol: str, target: int, dimg) -> bool | None:
+    """Does the reference hold the string literal's text where the relocation points? None if
+    the symbol is not a string literal."""
+    if not symbol.startswith(("$SG", "??_C@")):
+        return None
+    import symbols_auto
+    lit = symbols_auto.literal_content(obj, symbol)
+    if lit is None:
+        return None
+    return dimg.read(target, len(lit)) == lit
+
+
+def absent_literal(resolver, obj, symbol: str) -> bool:
+    """Is the symbol a string literal whose text the reference's data does not contain?"""
+    if not symbol.startswith(("$SG", "??_C@")):
+        return False
+    import symbols_auto
+    lit = symbols_auto.literal_content(obj, symbol)
+    return lit is not None and not symbols_auto.literal_hits(lit, resolver.hay, resolver.hay_rva, limit=1)
+
+
+def evidence(obj, objpath, name, rva, resolver, functions, proposed, observed, dimg, image_base,
+             elsewhere=frozenset()) -> tuple[int, int]:
+    """(-disagreeing, agreeing) relocation targets of a function placed at rva: against the
+    independently known targets, else against what the module's uniquely placed functions
+    see in the reference (observed: symbol -> targets). A symbol in elsewhere lost its
+    proposed address to another: a target there disagrees."""
+    raw, relocs = obj.function_bytes(name)
+    ref = dimg.read(rva, len(raw))
+    agree = disagree = 0
+    for r in relocs:
+        t = ref_target(r.kind, raw, ref, r.offset, rva, image_base)
+        if t is None:
+            continue
+        if r.symbol in elsewhere:
+            disagree += t == proposed[r.symbol]
+            continue
+        lit = literal_agrees(obj, r.symbol, t, dimg)
+        if lit is not None:
+            agree += lit
+            disagree += not lit
+            continue
+        if r.symbol in functions:
+            exp = {functions[r.symbol]}
+        elif r.symbol in proposed and r.symbol != name:
+            exp = {proposed[r.symbol]}
+        else:
+            exp = independent_targets(resolver, obj, objpath, r.symbol) or observed.get(r.symbol, set())
+        if exp:
+            agree += t in exp
+            disagree += t not in exp
+    return -disagree, agree
+
+
 def disambiguate(obj, objpath, name, hits, resolver, functions, proposed, dimg, image_base):
     """The one hit every independently known relocation target agrees with, if exactly one."""
     raw, relocs = obj.function_bytes(name)
@@ -211,6 +265,74 @@ def source_of(name: str, demangled: str, sources: list[str], texts: dict) -> str
     return sources[0] if sources else ""
 
 
+def choose_names(cands, proposed, resolver, functions, dimg, image_base, previous=None) -> dict[int, str]:
+    """Address -> the one symbol it is proposed for. Where several are (/OPT:ICF folds equal
+    bodies, and masked bytes cannot tell functions apart that differ only in their targets):
+    the symbol the module's manifest already has there as an exact match, if it is one of
+    them (previous: address -> symbol); else the one whose relocation targets the evidence
+    supports best (evidence()), then the first by name. Choices are revised until they agree
+    with one another: a function calling a symbol that lost its address to another counts
+    that call as a disagreement (a lambda's outer and inner functions stay one lambda's)."""
+    previous = previous or {}
+    by_rva = {}
+    for c in sorted(cands, key=lambda c: c[0]):
+        rva = proposed.get(c[0])
+        if rva is not None:
+            by_rva.setdefault(rva, []).append(c)
+    contested = {rva: cs for rva, cs in by_rva.items() if len(cs) > 1}
+    wanted = {r.symbol for cs in contested.values() for c in cs for r in c[1].function_bytes(c[0])[1]}
+    observed: dict[str, set[int]] = {}
+    for name, obj, objpath, srcs, hits, n in cands:
+        rva = proposed.get(name)
+        if rva is None or len(hits) != 1 or rva in contested:
+            continue
+        raw, relocs = obj.function_bytes(name)
+        ref = dimg.read(rva, len(raw))
+        for r in relocs:
+            if r.symbol in wanted:
+                t = ref_target(r.kind, raw, ref, r.offset, rva, image_base)
+                if t is not None:
+                    observed.setdefault(r.symbol, set()).add(t)
+    out = {rva: cs[0][0] for rva, cs in by_rva.items()}
+    fixed = {rva for rva, cs in contested.items() if previous.get(rva) in {c[0] for c in cs}}
+    for rva in fixed:
+        out[rva] = previous[rva]
+    # Callers: a placed function whose relocation to a contested symbol lands on that symbol's
+    # address in the reference supports it there (ICF leaves one copy of equal bodies; the
+    # name it gets should be the one its callers use).
+    contenders = {c[0]: rva for rva, cs in contested.items() for c in cs}
+    callers: dict[str, set[str]] = {}
+    for name, obj, objpath, srcs, hits, n in cands:
+        rva = proposed.get(name)
+        if rva is None or rva in contested:
+            continue
+        raw, relocs = obj.function_bytes(name)
+        ref = None
+        for r in relocs:
+            if r.symbol in contenders and r.symbol != name:
+                ref = ref if ref is not None else dimg.read(rva, len(raw))
+                if ref_target(r.kind, raw, ref, r.offset, rva, image_base) == contenders[r.symbol]:
+                    callers.setdefault(r.symbol, set()).add(name)
+    for _ in range(4):
+        elsewhere = frozenset(c[0] for rva, cs in contested.items() for c in cs if out[rva] != c[0])
+        changed = False
+        for rva, cs in contested.items():
+            if rva in fixed:
+                continue
+            scores = []
+            for c in cs:
+                neg, agree = evidence(c[1], c[2], c[0], rva, resolver, functions, proposed, observed, dimg,
+                                      image_base, elsewhere - {c[0]})
+                scores.append((neg, agree + len(callers.get(c[0], ()))))
+            best = max(scores)
+            pick = next(c[0] for c, s in zip(cs, scores) if s == best)
+            changed |= pick != out[rva]
+            out[rva] = pick
+        if not changed:
+            break
+    return out
+
+
 def map_module(module: str, ix: PdataIndex, img, dimg, resolver, functions) -> Counter:
     rec = json.loads((T.BUILD_DIR / f"{module}.build.json").read_text(encoding="utf-8"))
     taken = claimed(module)
@@ -246,7 +368,11 @@ def map_module(module: str, ix: PdataIndex, img, dimg, resolver, functions) -> C
             stats["unique"] += 1
         else:
             stats["none"] += 1
-    entries, used = [], {}
+    entries = []
+    own = ANALYSIS / f"functions-engine-{module}.json"
+    previous = ({int(e["start_rva"], 16): e["symbol"] for e in expand(json.loads(own.read_text(encoding="utf-8")))
+                 if e.get("match") == "exact"} if own.exists() else {})
+    winner = choose_names(cands, proposed, resolver, functions, dimg, img.image_base, previous)
     names = demangle(sorted(proposed))
     texts: dict = {}
     for name, obj, objpath, srcs, hits, n in sorted(cands, key=lambda c: c[0]):
@@ -256,10 +382,9 @@ def map_module(module: str, ix: PdataIndex, img, dimg, resolver, functions) -> C
         if rva in taken:
             stats[f"already in {taken[rva]}"] += 1
             continue
-        if rva in used:
+        if winner[rva] != name:
             stats["same address as another symbol (folded)"] += 1
             continue
-        used[rva] = name
         e = {"start_rva": f"0x{rva:08X}", "end_rva": f"0x{ix.extent[rva]:08X}",
              "name": names.get(name, name), "source": source_of(name, names.get(name, name), srcs, texts),
              "object": objpath, "symbol": name}

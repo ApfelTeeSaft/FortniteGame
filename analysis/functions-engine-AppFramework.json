@@ -7,8 +7,8 @@
   "module": "AppFramework",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 AppFramework compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 AppFramework compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x0013DA80","end_rva":"0x0013DAE7","name":"dynamic initializer for public: static class FText const SNumericEntryBox<float>::DefaultUndeterminedString","source":"Engine/Source/Runtime/AppFramework/Private/AppFrameworkModule.cpp","object":"Engine/AppFramework/Module.AppFramework.obj","symbol":"??__E?DefaultUndeterminedString@?$SNumericEntryBox@M@@2VFText@@B@@YAXXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"79949ada41a36ece","byte_diff":{"reference_size":103,"candidate_size":103,"differing_bytes":0,"first_difference":null,"resolved_relocations":6,"resolved_by":{"corroborated":2,"exact match of manifest entry 0x005757C0":1,"exact match of manifest entry 0x0111CAE0":1,"exact match of manifest entry 0x01171300":1,"literal elimination":1},"unresolved_relocations":[{"offset":"0x0000003F","symbol":"?DefaultUndeterminedString@?$SNumericEntryBox@M@@2VFText@@B"},{"offset":"0x0000005A","symbol":"??__F?DefaultUndeterminedString@?$SNumericEntryBox@M@@2VFText@@B@@YAXXZ"}]}},

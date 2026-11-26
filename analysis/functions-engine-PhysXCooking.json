@@ -7,8 +7,8 @@
   "module": "PhysXCooking",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 PhysXCooking compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 PhysXCooking compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x01D79D60","end_rva":"0x01D7A01A","name":"FPhysXCooking::CookConvexImp<1>","source":"Engine/Source/Runtime/PhysXCooking/Private/PhysXCooking.cpp","object":"Engine/PhysXCooking/Module.PhysXCooking.obj","symbol":"??$CookConvexImp@$00@FPhysXCooking@@AEBA?AW4EPhysXCookingResult@@VFName@@W4EPhysXMeshCookFlags@@AEBV?$TArray@UFVector@@VFDefaultAllocator@@@@AEAV?$TArray@EVFDefaultAllocator@@@@AEAPEAVPxConvexMesh@physx@@@Z","in_denominator":true,"match":"exact","candidate_sha256":"c170469c233c2360","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":4,"exact match of manifest entry 0x00660190":1,"import thunk jmp [0x04DDBC94]":1}}},

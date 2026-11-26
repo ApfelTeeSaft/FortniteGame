@@ -7,8 +7,8 @@
   "module": "Networking",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 Networking compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 Networking compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x015AB890","end_rva":"0x015AB8BF","name":"FNetworkingModule::StartupModule","source":"Engine/Source/Runtime/Networking/Private/NetworkingModule.cpp","object":"Engine/Networking/Module.Networking.obj","symbol":"?StartupModule@FNetworkingModule@@UEAAXXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"dcaca39b60a2a9c5","byte_diff":{"reference_size":47,"candidate_size":47,"differing_bytes":0,"first_difference":null,"resolved_relocations":3,"resolved_by":{"corroborated":1,"exact match of manifest entry 0x011E8040":1,"literal elimination":1},"unresolved_relocations":[{"offset":"0x00000026","symbol":"?CachedSocketSubsystem@FIPv4Endpoint@@0PEAVISocketSubsystem@@EA"}]}},

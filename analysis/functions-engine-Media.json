@@ -7,8 +7,8 @@
   "module": "Media",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 Media compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 Media compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x0255F760","end_rva":"0x0255F7D2","name":"FMediaModule::GetPlayerFactory","source":"Engine/Source/Runtime/Media/Private/MediaClock.cpp","object":"Engine/Media/Module.Media.obj","symbol":"?GetPlayerFactory@FMediaModule@@UEBAPEAVIMediaPlayerFactory@@AEBVFName@@@Z","in_denominator":true,"match":"exact","candidate_sha256":"433b32fe50e9974c","byte_diff":{"differing_bytes":0,"resolved_by":{}}},

@@ -7,8 +7,8 @@
   "module": "Slate",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 Slate compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 Slate compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x0013D6D0","end_rva":"0x0013D743","name":"dynamic initializer for AllowSlateToSleep","source":"Engine/Source/Runtime/Slate/Private/Framework/Application/AnalogCursor.cpp","object":"Engine/Slate/Module.Slate.1_of_5.obj","symbol":"??__EAllowSlateToSleep@@YAXXZ","evidence":"masked bytes identical to 134 .pdata functions of 115 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"14df579cdd3fd645","byte_diff":{"reference_size":115,"candidate_size":115,"differing_bytes":0,"first_difference":null,"resolved_relocations":7,"resolved_by":{"corroborated":5,"data symbol":2},"unresolved_relocations":[{"offset":"0x00000048","symbol":"?AllowSlateToSleep@@3V?$TAutoConsoleVariable@H@@A"},{"offset":"0x0000004F","symbol":"?AllowSlateToSleep@@3V?$TAutoConsoleVariable@H@@A"},{"offset":"0x0000005F","symbol":"??__FAllowSlateToSleep@@YAXXZ"},{"offset":"0x00000066","symbol":"?AllowSlateToSleep@@3V?$TAutoConsoleVariable@H@@A"}]}},

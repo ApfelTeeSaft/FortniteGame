@@ -7,8 +7,8 @@
   "module": "MRMesh",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 MRMesh compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 MRMesh compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x01D5A760","end_rva":"0x01D5A821","name":"TArray<class TArray<struct FVector,class FDefaultAllocator>,class FDefaultAllocator>::CopyToEmpty<class TArray<struct FVector,class FDefaultAllocator> >","source":"Engine/Source/Runtime/MRMesh/Private/MRMeshComponent.cpp","object":"Engine/MRMesh/Module.MRMesh.obj","symbol":"??$CopyToEmpty@V?$TArray@UFVector@@VFDefaultAllocator@@@@@?$TArray@V?$TArray@UFVector@@VFDefaultAllocator@@@@VFDefaultAllocator@@@@AEAAXPEBV?$TArray@UFVector@@VFDefaultAllocator@@@@HHH@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"b2f73ddcc94f2a50","byte_diff":{"reference_size":193,"candidate_size":193,"differing_bytes":0,"first_difference":null,"resolved_relocations":2,"resolved_by":{"corroborated":1,"import thunk jmp [0x04DDBC94]":1},"unresolved_relocations":[{"offset":"0x00000047","symbol":"?ResizeForCopy@?$TArray@V?$TArray@UFVector@@VFDefaultAllocator@@@@VFDefaultAllocator@@@@AEAAXHH@Z"}]}},

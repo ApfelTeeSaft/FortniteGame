@@ -7,8 +7,8 @@
   "module": "CinematicCamera",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 CinematicCamera compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 CinematicCamera compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x007D6C40","end_rva":"0x007D6C74","name":"destructor'","source":"Engine/Source/Runtime/CinematicCamera/Private/CameraRig_Crane.cpp","object":"Engine/CinematicCamera/Module.CinematicCamera.obj","symbol":"??_GUCineCameraComponent@@UEAAPEAXI@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"8bdeb44ffa65b8b5","byte_diff":{"reference_size":52,"candidate_size":52,"differing_bytes":0,"first_difference":null,"resolved_relocations":1,"resolved_by":{"corroborated":1},"unresolved_relocations":[{"offset":"0x00000010","symbol":"??1UCineCameraComponent@@UEAA@XZ"}]}},

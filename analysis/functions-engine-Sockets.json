@@ -7,8 +7,8 @@
   "module": "Sockets",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 Sockets compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 Sockets compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x0013EBF0","end_rva":"0x0013EC1D","name":"dynamic initializer for LogMultichannelTCP","source":"Engine/Source/Runtime/Sockets/Private/BSDIPv6Sockets/SocketsBSDIPv6.cpp","object":"Engine/Sockets/Module.Sockets.obj","symbol":"??__ELogMultichannelTCP@@YAXXZ","evidence":"masked bytes identical to 338 .pdata functions of 45 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"d84fa812f0288489","byte_diff":{"reference_size":45,"candidate_size":45,"differing_bytes":0,"first_difference":null,"resolved_relocations":3,"resolved_by":{"corroborated":1,"data symbol":1,"exact match of manifest entry 0x01157CB0":1},"unresolved_relocations":[{"offset":"0x00000014","symbol":"?LogMultichannelTCP@@3UFLogCategoryLogMultichannelTCP@@A"},{"offset":"0x00000020","symbol":"??__FLogMultichannelTCP@@YAXXZ"}]}},

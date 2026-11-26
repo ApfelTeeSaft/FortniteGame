@@ -7,8 +7,8 @@
   "module": "SlateCore",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 SlateCore compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 SlateCore compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x00139A60","end_rva":"0x00139B21","name":"dynamic initializer for public: static class FArrangedWidget FArrangedWidget::NullWidget","source":"Engine/Source/Runtime/SlateCore/Private/Animation/CurveHandle.cpp","object":"Engine/SlateCore/Module.SlateCore.obj","symbol":"??__E?NullWidget@FArrangedWidget@@2V1@A@@YAXXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"e4caeb3f0b58d14d","byte_diff":{"reference_size":193,"candidate_size":193,"differing_bytes":0,"first_difference":null,"resolved_relocations":11,"resolved_by":{"corroborated":11},"unresolved_relocations":[{"offset":"0x000000B3","symbol":"??__F?NullWidget@FArrangedWidget@@2V1@A@@YAXXZ"}]}},

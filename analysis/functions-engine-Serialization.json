@@ -7,8 +7,8 @@
   "module": "Serialization",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 Serialization compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 Serialization compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x0250E370","end_rva":"0x0250E4E1","name":"TJsonWriter<unsigned short,struct TPrettyJsonPrintPolicy<unsigned short> >::WriteValue<std::nullptr_t>","source":"Engine/Source/Runtime/Serialization/Private/Backends/JsonStructDeserializerBackend.cpp","object":"Engine/Serialization/Module.Serialization.obj","symbol":"??$WriteValue@$$T@?$TJsonWriter@GU?$TPrettyJsonPrintPolicy@G@@@@QEAAX$$T@Z","in_denominator":true,"match":"exact","candidate_sha256":"221d986555cfc8ca","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":3,"exact match of manifest entry 0x005757C0":1,"exact match of manifest entry 0x0111CAE0":1,"exact match of manifest entry 0x02512840":1}}},

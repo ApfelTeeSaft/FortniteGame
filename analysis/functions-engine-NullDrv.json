@@ -7,8 +7,8 @@
   "module": "NullDrv",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 NullDrv compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 NullDrv compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x015AC600","end_rva":"0x015AC661","name":"FNullDynamicRHI::Init","source":"Engine/Source/Runtime/NullDrv/Private/NullRHI.cpp","object":"Engine/NullDrv/Module.NullDrv.obj","symbol":"?Init@FNullDynamicRHI@@UEAAXXZ","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"778745d00bb9462b","byte_diff":{"reference_size":97,"candidate_size":97,"differing_bytes":0,"first_difference":null,"resolved_relocations":3,"resolved_by":{"corroborated":2,"data symbol":1},"unresolved_relocations":[{"offset":"0x00000017","symbol":"?GetResourceList@FRenderResource@@SAAEAPEAV?$TLinkedList@PEAVFRenderResource@@@@XZ"},{"offset":"0x00000036","symbol":"?GetResourceList@FRenderResource@@SAAEAPEAV?$TLinkedList@PEAVFRenderResource@@@@XZ"}]}},

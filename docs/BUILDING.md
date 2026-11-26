@@ -101,6 +101,18 @@ python tools/engine/map.py --all          # locate the functions, write analysis
 python tools/matching/compare.py --quiet  # decide every match
 ```
 
+An engine `.cpp` whose line numbers differ in the reference (`analysis/engine-lines.json`) is
+compiled through an overlay (`tools/engine/overlay.py`): a local copy under
+`FortniteGameCode/Build/Engine/overlay/` with `#line` directives that give its lines the
+original numbers, under the file's own name. Every other file is compiled as it is; `--plain`
+compiles all of them as they are. To measure the line numbers again (a second compilation of
+every action, renumbered, under `FortniteGameCode/Build/Engine/lines/`):
+
+```
+python tools/engine/lines.py measure --all   # needs the plain or current objects of build.py
+python tools/engine/lines.py derive          # write analysis/engine-lines.json
+```
+
 - `ue_target.py export` pins UBT to the reference's toolchain in
   `Engine/Saved/UnrealBuildTool/BuildConfiguration.xml` (VS2015 v140, SDK 10.0.10586.0) and
   runs it with `-JsonExport -SkipBuild`. UBT then builds and runs UnrealHeaderTool and writes,

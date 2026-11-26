@@ -7,8 +7,8 @@
   "module": "SessionServices",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 SessionServices compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 SessionServices compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x00713D70","end_rva":"0x00713DDC","name":"TBaseSPMethodDelegateInstance<0,class FSessionManager,0,void __cdecl(class TSharedRef<class ISessionInfo,0> const &,class TSharedRef<class ISessionInstanceInfo,0> const &,class TSharedRef<struct FSessionLogMessage,0> const &)>::ExecuteIfSafe","source":"Engine/Source/Runtime/SessionServices/Private/SessionInfo.cpp","object":"Engine/SessionServices/Module.SessionServices.obj","symbol":"?ExecuteIfSafe@?$TBaseSPMethodDelegateInstance@$0A@VFSessionManager@@$0A@$$A6AXAEBV?$TSharedRef@VISessionInfo@@$0A@@@AEBV?$TSharedRef@VISessionInstanceInfo@@$0A@@@AEBV?$TSharedRef@UFSessionLogMessage@@$0A@@@@Z$$V@@UEBA_NAEBV?$TSharedRef@VISessionInfo@@$0A@@@AEBV?$TSharedRef@VISessionInstanceInfo@@$0A@@@AEBV?$TSharedRef@UFSessionLogMessage@@$0A@@@@Z","evidence":"masked bytes identical to 26 .pdata functions of 108 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"exact","candidate_sha256":"f3f5dce93b6e0ec6","byte_diff":{"differing_bytes":0,"resolved_by":{"exact match of manifest entry 0x027DE1F0":1}}},

@@ -7,8 +7,8 @@
   "module": "ReliableHComp",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 ReliableHComp compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 ReliableHComp compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x01D33A50","end_rva":"0x01D33AC9","name":"FReliabilityHandlerComponentModuleInterface::CreateComponentInstance","source":"Engine/Source/Runtime/PacketHandlers/ReliabilityHandlerComponent/Private/ReliabilityHandlerComponent.cpp","object":"Engine/ReliableHComp/Module.ReliableHComp.obj","symbol":"?CreateComponentInstance@FReliabilityHandlerComponentModuleInterface@@UEAA?AV?$TSharedPtr@VHandlerComponent@@$0A@@@AEAVFString@@@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"55f93770abd36480","byte_diff":{"reference_size":121,"candidate_size":121,"differing_bytes":0,"first_difference":null,"resolved_relocations":3,"resolved_by":{"corroborated":3},"unresolved_relocations":[{"offset":"0x00000020","symbol":"??0ReliabilityHandlerComponent@@QEAA@XZ"},{"offset":"0x0000003D","symbol":"??_7?$TReferenceControllerWithDeleter@VReliabilityHandlerComponent@@U?$DefaultDeleter@VReliabilityHandlerComponent@@@SharedPointerInternals@@@SharedPointerInternals@@6B@"}]}},

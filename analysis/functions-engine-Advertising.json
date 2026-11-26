@@ -7,8 +7,8 @@
   "module": "Advertising",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 Advertising compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 Advertising compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x001C2410","end_rva":"0x001C243D","name":"dynamic initializer for LogAdvertising","source":"Engine/Source/Runtime/Advertising/Advertising/Private/Advertising.cpp","object":"Engine/Advertising/Module.Advertising.obj","symbol":"??__ELogAdvertising@@YAXXZ","evidence":"masked bytes identical to 48 .pdata functions of 45 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"98937975e9983263","byte_diff":{"reference_size":45,"candidate_size":45,"differing_bytes":0,"first_difference":null,"resolved_relocations":4,"resolved_by":{"corroborated":2,"data symbol":1,"exact match of manifest entry 0x01157CB0":1},"unresolved_relocations":[{"offset":"0x00000020","symbol":"??__FLogAdvertising@@YAXXZ"}]}},

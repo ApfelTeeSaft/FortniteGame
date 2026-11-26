@@ -7,8 +7,8 @@
   "module": "MSQS",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 MSQS compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 MSQS compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x01663AB0","end_rva":"0x01663B07","name":"UShaderPlatformQualitySettings::UShaderPlatformQualitySettings","source":"Engine/Source/Runtime/MaterialShaderQualitySettings/Private/MaterialShaderQualitySettings.cpp","object":"Engine/MSQS/Module.MSQS.obj","symbol":"??0UShaderPlatformQualitySettings@@QEAA@AEBVFObjectInitializer@@@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"88c3068a58c8d8ce","byte_diff":{"reference_size":87,"candidate_size":87,"differing_bytes":0,"first_difference":null,"resolved_relocations":1,"resolved_by":{"corroborated":1},"unresolved_relocations":[{"offset":"0x00000011","symbol":"??_7UShaderPlatformQualitySettings@@6B@"}]}},

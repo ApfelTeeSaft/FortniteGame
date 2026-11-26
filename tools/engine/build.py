@@ -11,7 +11,10 @@ would run it, from Engine/Source, with three changes that do not alter code:
 - no debug information (/Z7, /Zo dropped).
 
 The force-included wrappers that carry the definitions are copied with the project's
-definitions (ue_target.PROJECT_DEFINITIONS) applied. A build record per module
+definitions (ue_target.PROJECT_DEFINITIONS) applied. An engine .cpp whose line numbers differ
+in the reference is compiled through an overlay (tools/engine/overlay.py): a local copy whose
+#line directives give its lines the original numbers of analysis/engine-lines.json, under its
+own file name (--plain: every file as it is). A build record per module
 (FortniteGameCode/Build/Engine/<Module>.build.json) lists each action's object, the sources it
 includes and any errors. Usage:
 
@@ -40,6 +43,7 @@ import ue_target as T  # noqa: E402
 OBJ_ROOT = T.ROOT / "FortniteGameCode" / "Build" / "ClientShipping" / "obj"
 ENGINE_OBJ = OBJ_ROOT / "Engine"
 WRAPPERS = T.BUILD_DIR / "wrappers"
+OVERLAY_ROOT = T.BUILD_DIR / "overlay"
 DROP = ("/Yu", "/Fp", "/Fo", "/Yc")
 DROP_EXACT = {"/Z7", "/Zo"}
 
@@ -92,10 +96,11 @@ def wrapper_copy(path: Path, overrides: dict) -> Path:
     return out
 
 
-def rewrite(response: Path, obj: Path, overrides: dict) -> tuple[Path, Path]:
-    """(our response file, the action's source) from UBT's response file."""
+def rewrite(response: Path, obj: Path, overrides: dict, tag: str, transform=None) -> tuple[Path, Path, list[Path]]:
+    """(our response file, the action's source, overlay files) from UBT's response file.
+    transform(source) -> (source to compile, directories to search last, files it wrote)."""
     lines = response.read_text(encoding="utf-8", errors="replace").splitlines()
-    out, source = [], None
+    out, source, extra, written = [], None, [], []
     for line in lines:
         s = line.strip()
         if not s or s in DROP_EXACT or s.startswith(DROP):
@@ -105,14 +110,28 @@ def rewrite(response: Path, obj: Path, overrides: dict) -> tuple[Path, Path]:
             continue
         if s.startswith('"') and not s.startswith('"/'):
             source = Path(s.strip('"'))
+            if transform is not None:
+                compiled, extra, written = transform(source)
+                s = f'"{compiled}"'
         out.append(s)
+    out += [f'/I "{d}"' for d in extra]
     out.append(f'/Fo"{obj}"')
-    rsp = T.BUILD_DIR / "rsp" / response.parent.name / response.name
+    rsp_dir = T.BUILD_DIR / "rsp" / tag if tag else T.BUILD_DIR / "rsp"
+    rsp = rsp_dir / response.parent.name / response.name
     rsp.parent.mkdir(parents=True, exist_ok=True)
     text = "\n".join(out) + "\n"
     if not rsp.exists() or rsp.read_text(encoding="utf-8") != text:   # unchanged: keep its time stamp
         rsp.write_text(text, encoding="utf-8")
-    return rsp, source
+    return rsp, source, written
+
+
+def action_source(response: Path) -> Path:
+    """The source file UBT's response file compiles."""
+    for line in response.read_text(encoding="utf-8", errors="replace").splitlines():
+        s = line.strip()
+        if s.startswith('"') and not s.startswith('"/'):
+            return Path(s.strip('"'))
+    raise ValueError(f"no source in {response}")
 
 
 def included_sources(unit: Path) -> list[str]:
@@ -122,16 +141,29 @@ def included_sources(unit: Path) -> list[str]:
     return re.findall(r'^#include "([^"]+\.cpp)"', unit.read_text(encoding="utf-8", errors="replace"), re.M)
 
 
-def compile_action(response: Path, overrides: dict, env: dict) -> dict:
+def compile_action(response: Path, overrides: dict, env: dict, obj_root: Path = ENGINE_OBJ, tag: str = "",
+                   numbering=None, overlay_root: Path | None = None) -> dict:
+    """Compile one action. With numbering, its engine .cpp files are compiled through overlays
+    (tools/engine/overlay.py) written under overlay_root; tag keeps response files apart."""
     module = response.parent.name
     unit_name = response.name[:-len(".cpp.obj.response")]
-    obj = ENGINE_OBJ / module / f"{unit_name}.obj"
+    obj = obj_root / module / f"{unit_name}.obj"
     obj.parent.mkdir(parents=True, exist_ok=True)
-    rsp, source = rewrite(response, obj, overrides)
-    rec = {"unit": unit_name, "object": str(obj.relative_to(OBJ_ROOT)).replace("\\", "/"),
+    transform = None
+    if numbering is not None:
+        import overlay
+        transform = lambda src: overlay.overlay_unit(src, overlay_root, module, numbering)  # noqa: E731
+    rsp, source, written = rewrite(response, obj, overrides, tag, transform)
+    try:
+        objrel = str(obj.relative_to(OBJ_ROOT)).replace("\\", "/")
+    except ValueError:
+        objrel = str(obj)
+    rec = {"unit": unit_name, "object": objrel,
            "sources": [str(Path(p).relative_to(T.ROOT)).replace("\\", "/") if Path(p).is_absolute() else p
                        for p in included_sources(source)]}
-    inputs = [source] + [Path(p) for p in included_sources(source)] + [rsp]
+    if numbering is not None:
+        rec["overlay"] = True
+    inputs = [source] + [Path(p) for p in included_sources(source)] + [rsp] + written
     if obj.exists() and obj.stat().st_mtime > max(p.stat().st_mtime for p in inputs if p.exists()):
         rec["ok"] = True
         return rec
@@ -145,13 +177,15 @@ def compile_action(response: Path, overrides: dict, env: dict) -> dict:
     return rec
 
 
-def build_module(module: str, jobs: int, overrides: dict) -> dict:
+def build_module(module: str, jobs: int, overrides: dict, numbering=None) -> dict:
     env = vc_environment()
     acts = T.actions(module)
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=jobs) as ex:
-        units = list(ex.map(lambda a: compile_action(a, overrides, env), acts))
-    record = {"module": module, "overrides": overrides, "seconds": round(time.time() - t0, 1), "units": units}
+        units = list(ex.map(lambda a: compile_action(a, overrides, env, numbering=numbering,
+                                                      overlay_root=OVERLAY_ROOT), acts))
+    record = {"module": module, "overrides": overrides, "seconds": round(time.time() - t0, 1),
+              "overlays": numbering is not None, "units": units}
     (T.BUILD_DIR / f"{module}.build.json").write_text(json.dumps(record, indent=1), encoding="utf-8")
     ok = sum(u["ok"] for u in units)
     print(f"{module}: {ok}/{len(units)} units compiled in {record['seconds']}s", flush=True)
@@ -164,13 +198,19 @@ def main() -> int:
     ap.add_argument("--all", action="store_true", help="every module UBT wrote compile actions for")
     ap.add_argument("--jobs", type=int, default=os.cpu_count() or 8)
     ap.add_argument("--define", action="append", default=[], help="override a definition, NAME=VALUE")
+    ap.add_argument("--plain", action="store_true",
+                    help="compile the engine files as they are, without the overlays (tools/engine/overlay.py)")
     a = ap.parse_args()
     T.export()
     overrides = dict(T.PROJECT_DEFINITIONS)
     overrides.update(dict(d.split("=", 1) for d in a.define))
     names = T.compiled_modules() if a.all else a.modules
+    numbering = None
+    if not a.plain:
+        import overlay
+        numbering = overlay.final_numbering(overlay.load_lines())
     for n in names:
-        build_module(n, a.jobs, overrides)
+        build_module(n, a.jobs, overrides, numbering)
     return 0
 
 

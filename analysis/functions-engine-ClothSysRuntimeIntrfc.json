@@ -7,8 +7,8 @@
   "module": "ClothSysRuntimeIntrfc",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 ClothSysRuntimeIntrfc compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 ClothSysRuntimeIntrfc compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x01D3AAE0","end_rva":"0x01D3ABA9","name":"TArray<struct FClothCollisionPrim_Convex,class FDefaultAllocator>::CopyToEmpty<struct FClothCollisionPrim_Convex>","source":"Engine/Intermediate/Build/Win64/UE4/Inc/ClothingSystemRuntimeInterface/ClothingAssetInterface.gen.cpp","object":"Engine/ClothSysRuntimeIntrfc/Module.ClothSysRuntimeIntrfc.gen.obj","symbol":"??$CopyToEmpty@UFClothCollisionPrim_Convex@@@?$TArray@UFClothCollisionPrim_Convex@@VFDefaultAllocator@@@@AEAAXPEBUFClothCollisionPrim_Convex@@HHH@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"f9b5f9faa30354fe","byte_diff":{"reference_size":201,"candidate_size":201,"differing_bytes":0,"first_difference":null,"resolved_relocations":2,"resolved_by":{"corroborated":1,"import thunk jmp [0x04DDBC94]":1},"unresolved_relocations":[{"offset":"0x00000047","symbol":"?ResizeForCopy@?$TArray@UFClothCollisionPrim_Convex@@VFDefaultAllocator@@@@AEAAXHH@Z"}]}},

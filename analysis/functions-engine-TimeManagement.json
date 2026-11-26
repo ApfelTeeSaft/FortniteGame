@@ -7,8 +7,8 @@
   "module": "TimeManagement",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 TimeManagement compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 TimeManagement compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x00713B80","end_rva":"0x00713BFB","name":"TBaseSPMethodDelegateInstance<0,class SFrameRatePicker,0,void __cdecl(struct FFrameRate)>::ExecuteIfSafe","source":"Engine/Source/Runtime/TimeManagement/Private/CommonFrameRates.cpp","object":"Engine/TimeManagement/Module.TimeManagement.obj","symbol":"?ExecuteIfSafe@?$TBaseSPMethodDelegateInstance@$0A@VSFrameRatePicker@@$0A@$$A6AXUFFrameRate@@@Z$$V@@UEBA_NUFFrameRate@@@Z","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"86ec9e17e56dc144","byte_diff":{"reference_size":123,"candidate_size":123,"differing_bytes":0,"first_difference":null,"resolved_relocations":0,"resolved_by":{},"unresolved_relocations":[{"offset":"0x00000036","symbol":"?Execute@?$TBaseSPMethodDelegateInstance@$0A@VSFrameRatePicker@@$0A@$$A6A?AU?$TTypeWrapper@X@@UFFrameRate@@@Z$$V@@UEBAXUFFrameRate@@@Z"}]}},

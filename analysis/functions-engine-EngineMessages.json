@@ -7,8 +7,8 @@
   "module": "EngineMessages",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 EngineMessages compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 EngineMessages compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x01C822D0","end_rva":"0x01C82312","name":"UScriptStruct::TCppStructOps<struct FEngineServicePong>::Construct","source":"Engine/Intermediate/Build/Win64/UE4/Inc/EngineMessages/EngineMessages.init.gen.cpp","object":"Engine/EngineMessages/Module.EngineMessages.gen.obj","symbol":"?Construct@?$TCppStructOps@UFEngineServicePong@@@UScriptStruct@@UEAAXPEAX@Z","in_denominator":true,"match":"exact","candidate_sha256":"34233dec9d94267d","byte_diff":{"differing_bytes":0,"resolved_by":{"import thunk jmp [0x04DDBC9C]":1}}},

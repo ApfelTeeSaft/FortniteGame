@@ -7,8 +7,8 @@
   "module": "XAudio2",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 XAudio2 compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 XAudio2 compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x00224030","end_rva":"0x00224085","name":"dynamic initializer for private: static class TConsoleVariableData<float> * FXAudio2RadioEffect::Radio_ChebyshevCubedMultiplier","source":"Engine/Source/Runtime/Windows/XAudio2/Private/XAudio2Buffer.cpp","object":"Engine/XAudio2/Module.XAudio2.obj","symbol":"??__E?Radio_ChebyshevCubedMultiplier@FXAudio2RadioEffect@@0PEAV?$TConsoleVariableData@M@@EA@@YAXXZ","evidence":"masked bytes identical to 4 .pdata functions of 85 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"exact","candidate_sha256":"ed821e6cc1a0c687","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":5,"data symbol":1,"literal elimination":1}}},

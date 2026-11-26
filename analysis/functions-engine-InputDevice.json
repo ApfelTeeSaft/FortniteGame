@@ -7,8 +7,8 @@
   "module": "InputDevice",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 InputDevice compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 InputDevice compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x00781B90","end_rva":"0x00781C2C","name":"IInputDeviceModule::StartupModule","source":"Engine/Source/Runtime/InputDevice/Private/InputDeviceModule.cpp","object":"Engine/InputDevice/Module.InputDevice.obj","symbol":"?StartupModule@IInputDeviceModule@@UEAAXXZ","evidence":"masked bytes identical to 2 .pdata functions of 156 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"77dab08e98e79804","byte_diff":{"reference_size":156,"candidate_size":156,"differing_bytes":0,"first_difference":null,"resolved_relocations":7,"resolved_by":{"corroborated":5,"data symbol":1,"exact match of manifest entry 0x011E8040":1},"unresolved_relocations":[{"offset":"0x0000003C","symbol":"?$TSS0@?1??GetModularFeatureName@IInputDeviceModule@@SA?AVFName@@XZ@4HA"},{"offset":"0x0000004B","symbol":"?FeatureName@?1??GetModularFeatureName@IInputDeviceModule@@SA?AVFName@@XZ@4V3@A"},{"offset":"0x00000063","symbol":"?$TSS0@?1??GetModularFeatureName@IInputDeviceModule@@SA?AVFName@@XZ@4HA"},{"offset":"0x0000006E","symbol":"?$TSS0@?1??GetModularFeatureName@IInputDeviceModule@@SA?AVFName@@XZ@4HA"},{"offset":"0x00000085","symbol":"?FeatureName@?1??GetModularFeatureName@IInputDeviceModule@@SA?AVFName@@XZ@4V3@A"},{"offset":"0x00000091","symbol":"?$TSS0@?1??GetModularFeatureName@IInputDeviceModule@@SA?AVFName@@XZ@4HA"}]}}

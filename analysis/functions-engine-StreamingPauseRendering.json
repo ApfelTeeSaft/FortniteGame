@@ -7,8 +7,8 @@
   "module": "StreamingPauseRendering",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 StreamingPauseRendering compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 StreamingPauseRendering compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x001C20F0","end_rva":"0x001C2163","name":"dynamic initializer for CVarRenderLastFrameInStreamingPause","source":"Engine/Source/Runtime/StreamingPauseRendering/Private/StreamingPauseRendering.cpp","object":"Engine/StreamingPauseRendering/Module.StreamingPauseRendering.obj","symbol":"??__ECVarRenderLastFrameInStreamingPause@@YAXXZ","evidence":"masked bytes identical to 44 .pdata functions of 115 bytes; the independently known relocation targets agree with this one only","in_denominator":true,"match":"relocation-equivalent","candidate_sha256":"c72050b4837617d6","byte_diff":{"reference_size":115,"candidate_size":115,"differing_bytes":0,"first_difference":null,"resolved_relocations":7,"resolved_by":{"corroborated":5,"data symbol":2},"unresolved_relocations":[{"offset":"0x00000048","symbol":"?CVarRenderLastFrameInStreamingPause@@3V?$TAutoConsoleVariable@H@@A"},{"offset":"0x0000004F","symbol":"?CVarRenderLastFrameInStreamingPause@@3V?$TAutoConsoleVariable@H@@A"},{"offset":"0x0000005F","symbol":"??__FCVarRenderLastFrameInStreamingPause@@YAXXZ"},{"offset":"0x00000066","symbol":"?CVarRenderLastFrameInStreamingPause@@3V?$TAutoConsoleVariable@H@@A"}]}},

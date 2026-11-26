@@ -9,12 +9,12 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **52,095 / 157,719** primary `.pdata` functions (33.03 %, 6,263,078 bytes):
+| Exact functions | **52,409 / 157,719** primary `.pdata` functions (33.23 %, 6,308,189 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 188 hand-reconstructed functions matching the decrypted image;
 - 53 generated GameplayAbilities attribute getters (`tools/codegen/attribute_getters.py`);
-- 14,855 engine functions compiled from the local UE4.20 tree (`tools/engine/`;
-  `docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction");
+- 15,169 engine functions compiled from the local UE4.20 tree (`tools/engine/`;
+  `docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction" and "Engine line numbers");
 - 36,992 generated UHT functions:
   - classes: 11,095 UFunction creators, 3,283 `Z_Construct_UClass_*`, 2,796 `GetPrivateStaticClass`,
     1,180 `StaticRegisterNatives*`, 3,277 `FCompiledInDefer` initializers and 1,322 exec thunks
@@ -25,9 +25,9 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
   - UENUMs: 1,088 `Z_Construct_UEnum_*`, 1,016 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,216 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 182 vector-constant initializers, `FCommandLine::IsInitialized`, 50 hand-written leaves without `.pdata` (Kismet math, Core date, colour and string helpers, `FmodReportError`) and 41 dynamic initializers of the Kismet and UnrealMath units |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 62,400 reconstructed and compiled; 52,095 exact; 10,305 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 10,026 in the denominator, mostly:
-- 9,333 engine functions (`tools/engine/`): each still has a field no independent evidence resolves;
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 62,753 reconstructed and compiled; 52,409 exact; 10,344 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 10,106 in the denominator, mostly:
+- 9,413 engine functions (`tools/engine/`): each still has a field no independent evidence resolves;
 - 487 `GetPrivateStaticClass` bodies, 453 of them waiting only on `InternalConstructor<C>`;
 - 25 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
@@ -69,12 +69,13 @@ Work follows `CLAUDE.md`'s adaptive workflow:
 - `tools/matching/regressions.py` gates each commit.
 
 Largest queue groups (2026-11-24):
-- Engine (bulk, `tools/engine/`): 9,333 relocation-equivalent engine functions; 34,594 compiled
-  functions match several reference functions and 93,628 none (per-module symbol counts). Systematic
-  fixes first (`docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction"): `__LINE__` offsets
-  (shift the source lines, found by compiling each unit twice with a known line offset); the build
-  root `D:\Build\++FN25\Sync\` for `__FILE__` literals; the internal fork's class layouts (`FText`
-  histories, `IFileManager`'s vtable); unity composition.
+- Engine (bulk, `tools/engine/`): 9,413 relocation-equivalent engine functions; 32,701 compiled
+  functions match several reference functions and 93,543 none (per-module symbol counts). Systematic
+  fixes next (`docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction"): the internal fork's
+  class layouts (`FText` histories, `IFileManager`'s vtable, `UObject`'s one virtual fewer, Slate's
+  `FArguments`: 680 functions with line fields are unplaced for such reasons); the build root
+  `D:\Build\++FN25\Sync\` for `__FILE__` literals (with a fix for what it does to data layout
+  inference and lambda names); unity composition. `__LINE__` offsets are done (42 files).
 - Hand-written code: 145 primary callers of `FParse::Param` and `FCommandLine::Get`, 101 named
   by their switch literal in the 4.20 tree (`docs/REVERSE_ENGINEERING.md`, "Fourth family").
   Thread-safe statics resolve only within reconstructed clusters of neighbouring functions
@@ -106,6 +107,14 @@ Largest queue groups (2026-11-24):
   registration objects and header statics, in MSVC's own order.
 - 22 units hold several `TClassCompiledInDefer` runs while their literals interleave. These
   are single objects whose data comes in batches; that is not modelled.
+
+Done (2026-11-26):
+- Engine line numbers (`tools/engine/lines.py`, `overlay.py`): each action compiled again with its
+  files renumbered by known offsets finds the `__LINE__` fields of 802 functions; 109 located
+  give 132 original line numbers of 58 files, and 42 renumbered files compile through `#line`
+  overlays. map.py chooses among folded bodies by evidence; compare.py places vtables whose
+  first slot is exact by their known pointers. 314 more exact (25 in renumbered files, 4 by
+  known pointers, 285 from remapping with the engine's exact functions known). No regressions.
 
 Done (2026-11-25):
 - Bulk engine reconstruction (`tools/engine/`): UBT built from the engine tree and run for UE4Game

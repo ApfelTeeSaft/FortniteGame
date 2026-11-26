@@ -7,8 +7,8 @@
   "module": "EngineSettings",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 EngineSettings compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 EngineSettings compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x01088C30","end_rva":"0x01088D36","name":"UScriptStruct::TCppStructOps<struct FAutoCompleteCommand>::Copy","source":"Engine/Intermediate/Build/Win64/UE4/Inc/EngineSettings/ConsoleSettings.gen.cpp","object":"Engine/EngineSettings/Module.EngineSettings.gen.obj","symbol":"?Copy@?$TCppStructOps@UFAutoCompleteCommand@@@UScriptStruct@@UEAA_NPEAXPEBXH@Z","in_denominator":true,"match":"exact","candidate_sha256":"c1f94bdc8217bc31","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":2,"import thunk jmp [0x04DDBC94]":2}}},

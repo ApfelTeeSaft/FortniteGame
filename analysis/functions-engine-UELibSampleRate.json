@@ -7,8 +7,8 @@
   "module": "UELibSampleRate",
   "name_confidence": "high-confidence inferred",
   "reference_state": "decrypted",
-  "compact": true,
-  "evidence": "UE4.20 UELibSampleRate compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length"
+  "evidence": "UE4.20 UELibSampleRate compiled with v140 from UBT's compile action: masked bytes identical to exactly one .pdata function of the same length",
+  "compact": true
  },
  "functions": [
 {"start_rva":"0x02534AB0","end_rva":"0x02534E95","name":"linear_vari_process","source":"Engine/Source/ThirdParty/libSampleRate/Private/src_linear.cpp","object":"Engine/UELibSampleRate/Module.UELibSampleRate.obj","symbol":"?linear_vari_process@@YAHPEAUSRC_PRIVATE_tag@@PEAUSRC_DATA@@@Z","in_denominator":true,"match":"exact","candidate_sha256":"4434f5c67367ba8b","byte_diff":{"differing_bytes":0,"resolved_by":{"corroborated":1,"data symbol":4}}},
